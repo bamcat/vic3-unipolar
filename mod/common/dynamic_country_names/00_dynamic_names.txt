@@ -1,0 +1,71 @@
+﻿### Try to keep tags in alphabetical order if it's not too far gone, please.
+
+################################################################
+## DEFAULT COUNTRY NAMES EXAMPLE CAN BE USED WITH ANY COUNTRY ##
+################################################################
+
+# Uncomment when need a dynamic_country_name for any country
+LIT = { # Lithuania
+	dynamic_country_name = {
+		name = dyn_c_kralovec
+		adjective = dyn_c_kralovec_adj
+		
+		is_main_tag_only = yes
+		priority = 0
+		
+		trigger = {
+			coa_def_independent_trigger = yes
+			owns_entire_state_region = STATE_KRALOVEC
+			owns_entire_state_region = STATE_SIAULIAU
+			owns_entire_state_region = STATE_VILNIUS
+			owns_entire_state_region = STATE_LITHUANIA
+		}
+	}
+	dynamic_country_name = {
+		name = dyn_c_poland_lithuania
+		adjective = dyn_c_poland_lithuania_adj
+		
+		is_main_tag_only = yes
+		priority = 0
+		
+		trigger = {
+			coa_def_independent_trigger = yes
+			owns_entire_state_region = STATE_KRALOVEC
+			owns_entire_state_region = STATE_SIAULIAU
+			owns_entire_state_region = STATE_VILNIUS
+			owns_entire_state_region = STATE_LITHUANIA
+			owns_entire_state_region = STATE_KURZEME
+			owns_entire_state_region = STATE_WEST_PRUSSIA
+			owns_entire_state_region = STATE_EAST_PRUSSIA
+			owns_entire_state_region = STATE_WEST_GALICIA
+			owns_entire_state_region = STATE_EAST_GALICIA
+			owns_entire_state_region = STATE_POSEN
+			owns_entire_state_region = STATE_VICIEBSK
+			owns_entire_state_region = STATE_MINSK
+			owns_entire_state_region = STATE_HRODNO
+			owns_entire_state_region = STATE_BREST
+			owns_entire_state_region = STATE_MAZOVIA
+			owns_entire_state_region = STATE_ORSHA
+			owns_entire_state_region = STATE_MAZYR
+			owns_entire_state_region = STATE_KHMELNYT
+			owns_entire_state_region = STATE_ZHYTOMYR
+			owns_entire_state_region = STATE_VOLHYNIA
+			owns_entire_state_region = STATE_LESSER_POLAND
+			owns_entire_state_region = STATE_GREATER_POLAND
+		}
+	}
+}
+
+EUR = { # EEC -> EU
+	dynamic_country_name = {
+		name = dyn_c_european_economic_community
+		adjective = EUR_ADJ
+		
+		is_main_tag_only = yes
+		priority = 1
+		
+		trigger = {
+			game_date <= 1993.11.1
+		}
+	}
+}

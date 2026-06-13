@@ -1,0 +1,111 @@
+﻿l_english:
+#################### JE ####################
+# The Internet
+
+economic_union:0 "Economic Union"
+economic_union_pact_desc:0 "A diplomatic pact in which there is a unified market and currency between two states."
+subject_type_economic_union:0 "Economic Union"
+subject_type_economic_union:0 "Economic Union"
+subject_type_economic_union_desc:0 "A diplomatic pact in which there is a unified market and currency between two states."
+concept_economic_union:0 "Economic Union"
+concept_subject_type_economic_union:0 "Economic Union"
+subject_type_economic_union_no_icon:0 "Economic Union"
+concept_economic_union_desc:0 "A diplomatic pact in which there is a unified market and currency between two states."
+
+economic_union2:0 "Economic Union"
+economic_union2_pact_desc:0 "A diplomatic pact in which there is a unified market and currency between two states."
+
+eu_events.400:0 "European Union"
+
+support_revolution:0 "Support Revolution"
+support_revolution_action_propose_name:0 "Support Revolution"
+support_revolution_action_break_name:0 "Halt Support"
+
+impose_sanctions:0 "Impose Sanctions"
+impose_sanctions_desc: "Seize the financial assets of this country. In game terms, this creates a reverse bank-roll in which money is directly transferred from the treasury of the target based on the difference in GDP between the two countries."
+impose_sanctions_action_propose_name:0 "Financial Sanctions"
+impose_sanctions_action_break_name:0 "Lift Sanctions"
+impose_sanctions_pact_desc: "[SCOPE.GetRootScope.GetDiplomaticPact.GetFirstCountry.GetName] has imposed sanctions against us!"
+impose_sanctions_notification_name: "[INITIATOR_COUNTRY.GetName] has imposed sanctions against us!"
+impose_sanctions_notification_desc: "We've been hit with financial sanctions!"
+
+humanitarian_aid:0 "Send Humanitarian Aid"
+humanitarian_aid_desc: "Provide financial assistance to pops living in this country. Transfers money from our treasury directly into the pockets of pops living in this country."
+humanitarian_aid_action_propose_name:0 "Humanitarian Aid"
+humanitarian_aid_action_break_name:0 "Halt Humanitarian Aid"
+humanitarian_aid_pact_desc:0 "Provide financial assistance to pops living in this country. Transfers money from our treasury directly into the pockets of pops living in this country."
+humanitarian_aid_notification_name: "[INITIATOR_COUNTRY.GetName] is sending us humanitarian aid!"
+humanitarian_aid_notification_desc: "We are recieving humanitarian aid."
+humanitarian_aid_proposal_accepted_name: "Humanitarian aid accepted"
+humanitarian_aid_proposal_accepted_desc: "We are now providing humanitarian aid."
+
+
+host_military_bases_desc: ""
+host_military_bases_effects_desc: "• Establishes a military agreement between two [Concept('concept_country', '$concept_countries$')] where one $concept_country$ is allowed to launch $concept_missile$ using the airbases of the other $concept_country$"
+host_military_bases_article_short_desc: "[TARGET_COUNTRY.GetNameNoFormatting] can launch missiles through [SOURCE_COUNTRY.GetNameNoFormatting]"
+
+ smd_create_economic_union:0 "Propose Economic Union"
+ smd_create_economic_union_action_name:0 "Propose Economic Union"
+ smd_create_economic_union_action_propose_name:0 "Propose Economic Union"
+ smd_create_economic_union_desc:0 "Propose an economic union built around trade privileges and reciprocal transit rights."
+ smd_create_economic_union_action_notification_name:0 "Economic Union Proposed"
+ smd_create_economic_union_action_notification_desc:0 "[INITIATOR_COUNTRY.GetName] has proposed an economic union with [TARGET_COUNTRY.GetName]."
+ smd_create_economic_union_action_notification_third_party_name:0 "Economic Union Proposed"
+ smd_create_economic_union_action_notification_third_party_desc:0 "[INITIATOR_COUNTRY.GetName] has proposed an economic union with [TARGET_COUNTRY.GetName]."
+
+ smd_diplomatic_unification:0 "Diplomatic Unification"
+ smd_diplomatic_unification_action_name:0 "Diplomatic Unification"
+ smd_diplomatic_unification_action_propose_name:0 "Propose Unification"
+ smd_diplomatic_unification_desc:0 "Propose a peaceful political unification after economic integration and cultural alignment."
+ smd_diplomatic_unification_action_notification_name:0 "Diplomatic Unification Proposed"
+ smd_diplomatic_unification_action_notification_desc:0 "[INITIATOR_COUNTRY.GetName] has proposed diplomatic unification with [TARGET_COUNTRY.GetName]."
+ smd_diplomatic_unification_action_notification_third_party_name:0 "Diplomatic Unification Proposed"
+ smd_diplomatic_unification_action_notification_third_party_desc:0 "[INITIATOR_COUNTRY.GetName] has proposed diplomatic unification with [TARGET_COUNTRY.GetName]."
+
+ smd_diplomatic_unification_annexation_effect_tt:0 "The accepting country will be fully annexed by the initiator."
+ smd_create_economic_union_proposal_accepted_name:0 "Economic Union Accepted"
+ smd_create_economic_union_proposal_accepted_desc:0 "[TARGET_COUNTRY.GetName] has accepted [INITIATOR_COUNTRY.GetName]'s proposal to create an economic union."
+ smd_create_economic_union_proposal_declined_name:0 "Economic Union Rejected"
+ smd_create_economic_union_proposal_declined_desc:0 "[TARGET_COUNTRY.GetName] has rejected [INITIATOR_COUNTRY.GetName]'s proposal to create an economic union."
+ smd_diplomatic_unification_proposal_accepted_name:0 "Unification Accepted"
+ smd_diplomatic_unification_proposal_accepted_desc:0 "[TARGET_COUNTRY.GetName] has accepted [INITIATOR_COUNTRY.GetName]'s proposal for diplomatic unification and will be annexed."
+ smd_diplomatic_unification_proposal_declined_name:0 "Unification Rejected"
+ smd_diplomatic_unification_proposal_declined_desc:0 "[TARGET_COUNTRY.GetName] has rejected [INITIATOR_COUNTRY.GetName]'s proposal for diplomatic unification."
+ smd_economic_union_base_resistance_tt:0 "Countries have a base reluctance to enter economic unions."
+ smd_unification_base_resistance_tt:0 "Countries have a strong base reluctance to accept annexation through diplomatic unification."
+ 
+ treaty_name_smd_economic_union:0 "Economic Union"
+ treaty_name_smd_diplomatic_unification:0 "Diplomatic Unification Treaty"
+
+ smd_economic_union_requires_independence_tt:0 "Both countries must be sufficiently independent."
+ smd_economic_union_requires_peace_tt:0 "Both countries must be at peace with each other and not committed to a diplomatic play."
+ smd_economic_union_requires_no_subject_relation_tt:0 "Neither country can already be the subject or overlord of the other."
+ smd_economic_union_requires_no_isolationism_tt:0 "Neither country can have an isolationist economic policy."
+ smd_economic_union_requires_no_duplicate_tt:0 "The countries must not already have an economic union."
+
+ smd_unification_requires_independence_tt:0 "Both countries must be sufficiently independent."
+ smd_unification_requires_peace_tt:0 "Both countries must be at peace with each other and not committed to a diplomatic play."
+ smd_unification_requires_no_subject_relation_tt:0 "Neither country can already be the subject or overlord of the other."
+ smd_unification_requires_economic_union_tt:0 "The countries must already have an economic union."
+ smd_unification_requires_culture_tt:0 "The countries must have similar primary cultures, sharing a primary culture, heritage group and language group, or heritage and language traits."
+ smd_unification_requires_good_relations_tt:0 "Relations must be at least amicable."
+ smd_diplomatic_unification_effect_tt:0 "The accepting country becomes a dominion of the initiator."
+ 
+ threaten_nuclear_hostilities:0 "Threaten Nuclear Hostilities"
+ threaten_nuclear_hostilities_action_name:0 "Threaten Nuclear Hostilities"
+ threaten_nuclear_hostilities_action_propose_name:0 "Threaten Nuclear Hostilities"
+ threaten_nuclear_hostilities_desc:0 "Issue a nuclear threat against another country. Nuclear brinkmanship temporarily increases our diplomatic reputation, making other countries more likely to accept treaties from us."
+ threaten_nuclear_hostilities_action_notification_name:0 "Nuclear Hostilities Threatened"
+ threaten_nuclear_hostilities_action_notification_desc:0 "[INITIATOR_COUNTRY.GetName] has threatened nuclear hostilities against [TARGET_COUNTRY.GetName]."
+ threaten_nuclear_hostilities_action_notification_third_party_name:0 "Nuclear Hostilities Threatened"
+ threaten_nuclear_hostilities_action_notification_third_party_desc:0 "[INITIATOR_COUNTRY.GetName] has threatened nuclear hostilities against [TARGET_COUNTRY.GetName]."
+
+ threaten_nuclear_hostilities_requires_nuclear_capable_tt:0 "Our country must be nuclear capable."
+ threaten_nuclear_hostilities_cooldown_tt:0 "We must not have recently threatened nuclear hostilities."
+ threaten_nuclear_hostilities_target_valid_tt:0 "The target must be a valid, non-decentralized country."
+
+ threatened_nuclear_hostilities_diplomatic_reputation:0 "Threatened Nuclear Hostilities"
+ threatened_nuclear_hostilities_diplomatic_reputation_desc:0 "Nuclear brinkmanship has temporarily increased this country's diplomatic reputation, making other countries more likely to accept treaties from it."
+ 
+ war_goal_nuclear_disarmament:0 "Destroy [concept_nuclear_weapon]"
+ southern_tour_market_push:0 "Southern Tour Market Push"

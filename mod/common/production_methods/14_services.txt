@@ -1,0 +1,1641 @@
+﻿#####################################
+# PRODUCTION METHODS
+#####################################
+
+### BANKING PRODUCTION METHODS
+
+pm_basic_banking = {
+	texture = "gfx/interface/icons/production_method_icons/basic_lending.dds"
+
+	building_modifiers = {
+		workforce_scaled = {
+			goods_input_paper_add = 5
+			goods_output_credit_add = 15
+		}
+
+		level_scaled = {
+			building_employment_clerks_add = 3000
+			building_employment_shopkeepers_add = 800
+		}
+	}
+}
+
+pm_commercial_banking = {
+	texture = "gfx/interface/icons/production_method_icons/commercial_banking.dds"
+
+	unlocking_technologies = {
+		stock_exchange
+	}
+
+	building_modifiers = {
+		workforce_scaled = {
+			goods_input_paper_add = 10
+			goods_output_credit_add = 25
+		}
+
+		level_scaled = {
+			building_employment_clerks_add = 1000
+			building_employment_shopkeepers_add = 300
+			building_employment_capitalists_add = 500
+		}
+	}
+}
+
+pm_electronic_transfers = {
+	texture = "gfx/interface/icons/production_method_icons/payday_loan.dds"
+
+	unlocking_technologies = {
+		currency_standards
+	}
+
+	building_modifiers = {
+		workforce_scaled = {
+			goods_input_paper_add = 15
+			goods_output_credit_add = 40
+		}
+
+		level_scaled = {
+			building_employment_clerks_add = 2000
+			building_employment_engineers_add = 200
+			building_employment_shopkeepers_add = 300
+			building_employment_capitalists_add = 100
+		}
+	}
+}
+
+pm_online_banking = {
+	texture = "gfx/interface/icons/production_method_icons/buy_now_pay_later.dds"
+
+	unlocking_technologies = {
+		modern_sewerage
+	}
+
+	building_modifiers = {
+		workforce_scaled = {
+			goods_input_paper_add = 5
+			goods_input_computers_add = 3
+			goods_output_credit_add = 55
+		}
+
+		level_scaled = {
+			building_employment_clerks_add = 1500
+			building_employment_engineers_add = 400
+			building_employment_shopkeepers_add = 200
+			building_employment_capitalists_add = 15
+		}
+	}
+}
+
+pm_no_securities_trading = {
+	texture = "gfx/interface/icons/production_method_icons/no_securities_trading.dds"
+}
+
+pm_securities_brokerage = {
+	texture = "gfx/interface/icons/production_method_icons/brokerage.dds"
+
+	building_modifiers = {
+		workforce_scaled = {
+			goods_input_securities_add = 5
+			goods_output_credit_add = 20
+		}
+
+		level_scaled = {
+			building_employment_clerks_add = 2000
+			building_employment_capitalists_add = 100
+		}
+	}
+}
+
+pm_derivatives_trading = {
+	texture = "gfx/interface/icons/production_method_icons/hedge_fund.dds"
+
+	unlocking_technologies = {
+		postal_savings
+	}
+
+	building_modifiers = {
+		workforce_scaled = {
+			goods_input_securities_add = 8
+			goods_output_credit_add = 40
+		}
+
+		level_scaled = {
+			building_employment_clerks_add = 1500
+			building_employment_capitalists_add = 150
+		}
+	}
+}
+
+pm_algorithmic_trading = {
+	texture = "gfx/interface/icons/production_method_icons/quant_trading.dds"
+
+	unlocking_technologies = {
+		electrical_generation
+	}
+
+	building_modifiers = {
+		workforce_scaled = {
+			goods_input_securities_add = 12
+			goods_output_credit_add = 60
+		}
+
+		level_scaled = {
+			building_employment_engineers_add = 200
+			building_employment_clerks_add = 800
+			building_employment_capitalists_add = 20
+		}
+	}
+}
+
+pm_manual_tellers = {
+	texture = "gfx/interface/icons/production_method_icons/manual_tellers.dds"
+
+	building_modifiers = {
+		level_scaled = {
+			building_employment_clerks_add = 5000
+		}
+	}
+}
+
+pm_atm_network = {
+	texture = "gfx/interface/icons/production_method_icons/atm.dds"
+
+	unlocking_technologies = {
+		mass_communication
+	}
+
+	building_modifiers = {
+		workforce_scaled = {
+			goods_output_credit_add = 10
+			goods_input_telecommunications_add = 2
+			goods_input_telephones_add = 2
+		}
+		level_scaled = {
+			building_employment_clerks_add = 3000
+			building_employment_engineers_add = 500
+		}
+	}
+}
+
+pm_automated_banking_systems = {
+	texture = "gfx/interface/icons/production_method_icons/automated_banking.dds"
+
+	unlocking_technologies = {
+		chemical_bleaching
+	}
+
+	building_modifiers = {
+		workforce_scaled = {
+			goods_output_credit_add = 20
+			goods_input_telecommunications_add = 5
+			goods_input_telephones_add = 10
+		}
+		level_scaled = {
+			building_employment_clerks_add = 2000
+			building_employment_engineers_add = 200
+		}
+	}
+}
+
+pm_ai_financial_advisors = {
+	texture = "gfx/interface/icons/production_method_icons/ai_automation.dds"
+
+	unlocking_technologies = {
+		investment_banks
+	}
+
+	building_modifiers = {
+		workforce_scaled = {
+			goods_output_credit_add = 35
+			goods_input_telecommunications_add = 5
+			goods_input_telephones_add = 10
+		}
+		level_scaled = {
+			building_employment_clerks_add = 500
+			building_employment_engineers_add = 300
+			building_employment_capitalists_add = 10
+		}
+	}
+}
+
+### FOOD SERVICE PRODUCTION METHODS
+
+pm_corner_grocery = {
+	texture = "gfx/interface/icons/production_method_icons/corner_grocer.dds"
+
+	building_modifiers = {
+		workforce_scaled = {
+			goods_input_groceries_add = 10
+			goods_output_food_services_add = 12
+		}
+
+		level_scaled = {
+			building_employment_laborers_add = 50
+			building_employment_shopkeepers_add = 500
+			building_employment_clerks_add = 1500
+		}
+	}
+}
+
+pm_supermarket = {
+	texture = "gfx/interface/icons/production_method_icons/supermarket.dds"
+
+	building_modifiers = {
+		workforce_scaled = {
+			goods_input_groceries_add = 20
+			goods_output_food_services_add = 28
+		}
+
+		level_scaled = {
+			building_employment_laborers_add = 250
+			building_employment_shopkeepers_add = 800
+			building_employment_clerks_add = 2500
+		}
+	}
+}
+
+pm_hypermarket = {
+	texture = "gfx/interface/icons/production_method_icons/superstore.dds"
+
+	unlocking_technologies = {
+		international_trade
+	}
+
+	building_modifiers = {
+		workforce_scaled = {
+			goods_input_groceries_add = 35
+			goods_output_food_services_add = 50
+		}
+
+		level_scaled = {
+			building_employment_laborers_add = 100
+			building_employment_shopkeepers_add = 840
+			building_employment_clerks_add = 2000
+		}
+	}
+}
+
+pm_online_grocery = {
+	texture = "gfx/interface/icons/production_method_icons/online_grocer.dds"
+
+	unlocking_technologies = {
+		currency_standards
+	}
+
+	building_modifiers = {
+		workforce_scaled = {
+			goods_input_groceries_add = 30
+			goods_output_food_services_add = 55
+		}
+
+		level_scaled = {
+			building_employment_laborers_add = 600
+			building_employment_engineers_add = 300
+			building_employment_clerks_add = 2000
+			building_employment_shopkeepers_add = 500
+		}
+	}
+}
+
+pm_no_restaurants = {
+	texture = "gfx/interface/icons/production_method_icons/no_restaurant.dds"
+}
+
+pm_local_restaurants = {
+	texture = "gfx/interface/icons/production_method_icons/local_restaurants.dds"
+
+	building_modifiers = {
+		workforce_scaled = {
+			goods_input_groceries_add = 5
+			goods_input_storage_add = 5
+			goods_output_food_services_add = 10
+		}
+
+		level_scaled = {
+			building_employment_clerks_add = 300
+			building_employment_shopkeepers_add = 120
+		}
+	}
+}
+
+pm_fast_food_chains = {
+	texture = "gfx/interface/icons/production_method_icons/fast_food.dds"
+
+	building_modifiers = {
+		workforce_scaled = {
+			goods_input_groceries_add = 5
+			goods_input_storage_add = 10
+			goods_output_food_services_add = 25
+		}
+
+		level_scaled = {
+			building_employment_laborers_add = 60
+			building_employment_shopkeepers_add = 200
+			building_employment_clerks_add = 350
+		}
+	}
+}
+
+pm_fine_dining = {
+	texture = "gfx/interface/icons/production_method_icons/fine_dining.dds"
+
+	building_modifiers = {
+		workforce_scaled = {
+			goods_input_groceries_add = 10
+			goods_input_storage_add = 12
+			goods_output_food_services_add = 20
+		}
+
+		level_scaled = {
+			building_employment_clerks_add = 250
+			building_employment_shopkeepers_add = 250
+			building_employment_capitalists_add = 5
+		}
+	}
+}
+
+pm_manual_food_checkout = {
+	texture = "gfx/interface/icons/production_method_icons/manual_checkout.dds"
+
+	building_modifiers = {
+		level_scaled = {
+			building_employment_laborers_add = 30
+		}
+	}
+}
+
+pm_self_checkout_food = {
+	texture = "gfx/interface/icons/production_method_icons/self_checkout.dds"
+
+	unlocking_technologies = {
+		mechanized_workshops
+	}
+
+	building_modifiers = {
+		workforce_scaled = {
+			goods_output_food_services_add = 8
+		}
+		level_scaled = {
+			building_employment_clerks_add = -15
+			building_employment_engineers_add = 5
+		}
+	}
+}
+
+pm_food_delivery_services = {
+	texture = "gfx/interface/icons/production_method_icons/food_delivery.dds"
+
+	unlocking_technologies = {
+		mass_communication
+	}
+
+	building_modifiers = {
+		workforce_scaled = {
+			goods_input_storage_add = 5
+			goods_output_food_services_add = 15
+		}
+
+		level_scaled = {
+			building_employment_clerks_add = 10
+		}
+	}
+}
+
+pm_drone_food_delivery = {
+	texture = "gfx/interface/icons/production_method_icons/drone.dds"
+
+	unlocking_technologies = {
+		vulcanization
+	}
+
+	building_modifiers = {
+		workforce_scaled = {
+			goods_input_storage_add = 8
+			goods_output_food_services_add = 25
+		}
+
+		level_scaled = {
+			building_employment_laborers_add = -10
+			building_employment_engineers_add = 20
+		}
+	}
+}
+
+### RETAIL PRODUCTION METHODS
+
+pm_small_shops = {
+	texture = "gfx/interface/icons/production_method_icons/corner_grocer.dds"
+
+	building_modifiers = {
+		workforce_scaled = {
+			goods_input_furniture_add = 5
+			goods_input_appliances_add = 5
+			goods_input_clothes_add = 5
+			goods_input_tools_add = 5
+			goods_input_storage_add = 5
+			goods_output_retail_services_add = 27
+		}
+
+		level_scaled = {
+			building_employment_laborers_add = 600
+			building_employment_shopkeepers_add = 600
+			building_employment_clerks_add = 2000
+		}
+	}
+}
+
+pm_department_stores_retail = {
+	texture = "gfx/interface/icons/production_method_icons/superstore.dds"
+
+	building_modifiers = {
+		workforce_scaled = {
+			goods_input_furniture_add = 10
+			goods_input_clothes_add = 10
+			goods_input_tools_add = 5
+			goods_input_appliances_add = 5
+			goods_input_storage_add = 5
+			goods_output_retail_services_add = 38
+		}
+
+		level_scaled = {
+			building_employment_laborers_add = 800
+			building_employment_shopkeepers_add = 400
+			building_employment_clerks_add = 1500
+		}
+	}
+}
+
+pm_big_box_retail = {
+	texture = "gfx/interface/icons/production_method_icons/big_box_store.dds"
+
+	unlocking_technologies = {
+		international_trade
+	}
+
+	building_modifiers = {
+		workforce_scaled = {
+			goods_input_furniture_add = 15
+			goods_input_clothes_add = 15
+			goods_input_tools_add = 10
+			goods_input_storage_add = 10
+			goods_input_appliances_add = 5
+			goods_output_retail_services_add = 62
+		}
+
+		level_scaled = {
+			building_employment_laborers_add = 100
+			building_employment_shopkeepers_add = 400
+			building_employment_clerks_add = 2000
+		}
+	}
+}
+
+pm_outlet_retail = {
+	texture = "gfx/interface/icons/production_method_icons/outlet_centers.dds"
+
+	building_modifiers = {
+		workforce_scaled = {
+			goods_input_furniture_add = 12
+			goods_input_clothes_add = 12
+			goods_input_tools_add = 8
+			goods_input_storage_add = 5
+			goods_input_appliances_add = 5
+			goods_output_retail_services_add = 48
+		}
+
+		level_scaled = {
+			building_employment_laborers_add = 60
+			building_employment_shopkeepers_add = 500
+			building_employment_clerks_add = 2000
+		}
+	}
+}
+
+pm_no_retail_specialization = {
+	texture = "gfx/interface/icons/production_method_icons/no_radios.dds"
+}
+
+pm_home_goods_retail = {
+	texture = "gfx/interface/icons/production_method_icons/identification_documents.dds"
+
+	building_modifiers = {
+		workforce_scaled = {
+			goods_input_furniture_add = 8
+			goods_input_luxury_furniture_add = 4
+			goods_input_luxury_clothes_add = 4
+			goods_output_retail_services_add = 24
+		}
+
+		level_scaled = {
+			building_employment_shopkeepers_add = 200
+			building_employment_clerks_add = 1000
+		}
+	}
+}
+
+pm_electronics_retail = {
+	texture = "gfx/interface/icons/production_method_icons/smartphone_2.dds"
+
+	unlocking_technologies = {
+		mass_communication
+	}
+
+	building_modifiers = {
+		workforce_scaled = {
+			goods_input_telephones_add = 4
+			goods_input_radios_add = 4
+			goods_output_retail_services_add = 20
+		}
+
+		level_scaled = {
+			building_employment_shopkeepers_add = 150
+			building_employment_engineers_add = 100
+			building_employment_clerks_add = 1000
+		}
+	}
+}
+
+pm_luxury_retail = {
+	texture = "gfx/interface/icons/production_method_icons/luxury_retail.dds"
+
+	building_modifiers = {
+		workforce_scaled = {
+			goods_input_luxury_clothes_add = 5
+			goods_input_luxury_furniture_add = 5
+			goods_output_retail_services_add = 25
+		}
+
+		level_scaled = {
+			building_employment_shopkeepers_add = 500
+			building_employment_clerks_add = 500
+		}
+	}
+}
+
+pm_manual_retail_checkout = {
+	texture = "gfx/interface/icons/production_method_icons/placeholder1.dds"
+
+	building_modifiers = {
+		level_scaled = {
+			building_employment_laborers_add = 30
+		}
+	}
+}
+
+pm_self_checkout_retail = {
+	texture = "gfx/interface/icons/production_method_icons/manual_checkout.dds"
+
+	unlocking_technologies = {
+		chemical_bleaching
+	}
+
+	building_modifiers = {
+		workforce_scaled = {
+			goods_output_retail_services_add = 10
+		}
+		level_scaled = {
+			building_employment_laborers_add = -15
+			building_employment_engineers_add = 5
+		}
+	}
+}
+
+pm_ecommerce_retail = {
+	texture = "gfx/interface/icons/production_method_icons/web_2.dds"
+
+	unlocking_technologies = {
+		currency_standards
+	}
+
+	building_modifiers = {
+		workforce_scaled = {
+			goods_input_storage_add = 8
+			goods_output_retail_services_add = 20
+		}
+		level_scaled = {
+			building_employment_laborers_add = -20
+			building_employment_engineers_add = 200
+			building_employment_clerks_add = 100
+		}
+	}
+}
+
+pm_drone_retail_delivery = {
+	texture = "gfx/interface/icons/production_method_icons/drone.dds"
+
+	unlocking_technologies = {
+		vulcanization
+	}
+
+	building_modifiers = {
+		workforce_scaled = {
+			goods_input_storage_add = 12
+			goods_output_retail_services_add = 35
+		}
+		level_scaled = {
+			building_employment_laborers_add = -25
+			building_employment_engineers_add = 25
+		}
+	}
+}
+
+### ADVERTISING PRODUCTION METHODS
+
+pm_print_advertising = {
+	texture = "gfx/interface/icons/production_method_icons/obnoxious_billboard.dds"
+
+	building_modifiers = {
+		workforce_scaled = {
+			goods_input_paper_add = 2.5
+			goods_input_intellectual_property_add = 3
+			goods_output_advertising_add = 25
+		}
+
+		level_scaled = {
+			building_employment_clerks_add = 1500
+			building_employment_shopkeepers_add = 200
+		}
+	}
+}
+
+pm_broadcast_advertising = {
+	texture = "gfx/interface/icons/production_method_icons/wifi_1.dds"
+
+	unlocking_technologies = {
+		mass_communication
+	}
+
+	building_modifiers = {
+		workforce_scaled = {
+			goods_input_paper_add = 5.0
+			goods_input_intellectual_property_add = 6
+			goods_output_advertising_add = 35
+		}
+
+		level_scaled = {
+			building_employment_clerks_add = 1000
+			building_employment_engineers_add = 200
+			building_employment_shopkeepers_add = 200
+		}
+	}
+}
+
+pm_direct_mail_advertising = {
+	texture = "gfx/interface/icons/production_method_icons/mail.dds"
+
+	unlocking_technologies = {
+		banking
+	}
+
+	building_modifiers = {
+		workforce_scaled = {
+			goods_input_paper_add = 1.0
+			goods_input_intellectual_property_add = 4
+			goods_output_advertising_add = 45
+		}
+
+		level_scaled = {
+			building_employment_clerks_add = 2000
+			building_employment_shopkeepers_add = 200
+		}
+	}
+}
+
+pm_outdoor_advertising = {
+	texture = "gfx/interface/icons/production_method_icons/propaganda_posters.dds"
+
+	unlocking_technologies = {
+		corporate_charters
+	}
+
+	building_modifiers = {
+		workforce_scaled = {
+			goods_input_paper_add = 12
+			goods_input_intellectual_property_add = 5
+			goods_output_advertising_add = 35
+		}
+
+		level_scaled = {
+			building_employment_laborers_add = 250
+			building_employment_clerks_add = 1000
+		}
+	}
+}
+
+pm_no_digital_advertising = {
+	texture = "gfx/interface/icons/production_method_icons/personal_files.dds"
+}
+
+pm_banner_advertising = {
+	texture = "gfx/interface/icons/production_method_icons/web_2.dds"
+
+	unlocking_technologies = {
+		currency_standards
+	}
+
+	building_modifiers = {
+		workforce_scaled = {
+			goods_input_paper_add = 5
+			goods_input_intellectual_property_add = 8
+			goods_input_professional_services_add = 0.1
+			goods_output_advertising_add = 45
+		}
+
+		level_scaled = {
+			building_employment_clerks_add = 2500
+			building_employment_engineers_add = 10
+		}
+	}
+}
+
+pm_social_media_advertising = {
+	texture = "gfx/interface/icons/production_method_icons/web_2.dds"
+
+	unlocking_technologies = {
+		dialectics
+	}
+
+	building_modifiers = {
+		workforce_scaled = {
+			goods_input_paper_add = 3
+			goods_input_intellectual_property_add = 12
+			goods_input_professional_services_add = 0.1
+			goods_output_advertising_add = 60
+		}
+
+		level_scaled = {
+			building_employment_clerks_add = 2500
+			building_employment_engineers_add = 20
+			building_employment_shopkeepers_add = 100
+		}
+	}
+}
+
+pm_algorithmic_targeted_ads = {
+	texture = "gfx/interface/icons/production_method_icons/web_3.dds"
+
+	unlocking_technologies = {
+		aniline
+	}
+
+	building_modifiers = {
+		workforce_scaled = {
+			goods_input_paper_add = 2
+			goods_input_intellectual_property_add = 15
+			goods_input_professional_services_add = 0.1
+			goods_output_advertising_add = 75
+		}
+
+		level_scaled = {
+			building_employment_engineers_add = 300
+			building_employment_clerks_add = 1000
+			building_employment_capitalists_add = 10
+		}
+	}
+}
+
+pm_focus_groups = {
+	texture = "gfx/interface/icons/production_method_icons/manual_tellers.dds"
+
+	building_modifiers = {
+		workforce_scaled = {
+			
+		}
+		level_scaled = {
+			building_employment_clerks_add = 200
+		}
+	}
+}
+
+pm_consumer_analytics = {
+	texture = "gfx/interface/icons/production_method_icons/analytics.dds"
+
+	unlocking_technologies = {
+		empiricism
+	}
+
+	building_modifiers = {
+		workforce_scaled = {
+			goods_input_computers_add = 0.5
+			goods_input_electricity_add = 0.5
+		}
+		level_scaled = {
+			building_employment_clerks_add = -100
+			building_employment_engineers_add = 150
+		}
+	}
+}
+
+pm_ai_ad_generation = {
+	texture = "gfx/interface/icons/production_method_icons/data_harvesting_2.dds"
+
+	unlocking_technologies = {
+		aniline
+	}
+
+	building_modifiers = {
+		workforce_scaled = {
+			goods_input_computers_add = 0.5
+			goods_input_electricity_add = 2.5
+			goods_input_intellectual_property_add = 1.5
+		}
+		level_scaled = {
+			building_employment_clerks_add = -20
+			building_employment_engineers_add = 25
+		}
+	}
+}
+
+### WAREHOUSING PRODUCTION METHODS
+
+pm_basic_warehousing = {
+	texture = "gfx/interface/icons/production_method_icons/basic_storage.dds"
+
+	building_modifiers = {
+		workforce_scaled = {
+			goods_input_transportation_add = 8
+			goods_output_storage_add = 10
+		}
+
+		level_scaled = {
+			building_employment_laborers_add = 800
+			building_employment_clerks_add = 1000
+			building_employment_shopkeepers_add = 250
+		}
+	}
+}
+
+pm_climate_controlled_storage = {
+	texture = "gfx/interface/icons/production_method_icons/flash_refrigerated.dds"
+
+	unlocking_technologies = {
+		shift_work
+	}
+
+	building_modifiers = {
+		workforce_scaled = {
+			goods_input_transportation_add = 12
+			goods_output_storage_add = 18
+		}
+
+		level_scaled = {
+			building_employment_laborers_add = 600
+			building_employment_engineers_add = 200
+			building_employment_clerks_add = 1000
+			building_employment_shopkeepers_add = 250
+		}
+	}
+}
+
+pm_automated_warehouse = {
+	texture = "gfx/interface/icons/production_method_icons/warehouse.dds"
+
+	unlocking_technologies = {
+		conveyors
+	}
+
+	building_modifiers = {
+		workforce_scaled = {
+			goods_input_transportation_add = 15
+			goods_output_storage_add = 30
+		}
+
+		level_scaled = {
+			building_employment_laborers_add = 150
+			building_employment_clerks_add = 1500
+			building_employment_shopkeepers_add = 250
+		}
+	}
+}
+
+pm_fulfillment_center = {
+	texture = "gfx/interface/icons/production_method_icons/warehouse.dds"
+
+	unlocking_technologies = {
+		paved_roads
+	}
+
+	building_modifiers = {
+		workforce_scaled = {
+			goods_input_transportation_add = 20
+			goods_output_storage_add = 45
+		}
+
+		level_scaled = {
+			building_employment_laborers_add = 70
+			building_employment_engineers_add = 40
+			building_employment_clerks_add = 850
+			building_employment_shopkeepers_add = 250
+		}
+	}
+}
+
+pm_manual_inventory = {
+	texture = "gfx/interface/icons/production_method_icons/basic_inventory.dds"
+
+	building_modifiers = {
+		level_scaled = {
+			building_employment_clerks_add = 100
+		}
+	}
+}
+
+pm_barcode_tracking = {
+	texture = "gfx/interface/icons/production_method_icons/bar_codes.dds"
+
+	unlocking_technologies = {
+		academia
+	}
+
+	building_modifiers = {
+		workforce_scaled = {
+			goods_input_computers_add = 0.5
+			goods_input_electricity_add = 0.5
+		}
+		level_scaled = {
+			building_employment_clerks_add = -100
+			building_employment_engineers_add = 5
+		}
+	}
+}
+
+pm_rfid_tracking = {
+	texture = "gfx/interface/icons/production_method_icons/rfid.dds"
+
+	unlocking_technologies = {
+		shift_work
+	}
+
+	building_modifiers = {
+		workforce_scaled = {
+			goods_input_computers_add = 1.0
+			goods_input_electricity_add = 0.5
+		}
+		level_scaled = {
+			building_employment_clerks_add = -200
+			building_employment_engineers_add = 15
+		}
+	}
+}
+
+pm_ai_inventory_management = {
+	texture = "gfx/interface/icons/production_method_icons/ai_automation.dds"
+
+	unlocking_technologies = {
+		aniline
+	}
+
+	building_modifiers = {
+		workforce_scaled = {
+			goods_input_computers_add = 1.5
+			goods_input_electricity_add = 0.5
+			goods_input_intellectual_property_add = 0.5
+		}
+		level_scaled = {
+			building_employment_clerks_add = -250
+			building_employment_engineers_add = 25
+		}
+	}
+}
+
+### PHARMACEUTICAL SERVICES PRODUCTION METHODS
+
+pm_apothecary = {
+	texture = "gfx/interface/icons/production_method_icons/medication.dds"
+
+	building_modifiers = {
+		workforce_scaled = {
+			goods_input_opium_add = 5
+			goods_output_pharmaceuticals_add = 8
+		}
+
+		level_scaled = {
+			building_employment_laborers_add = 20
+			building_employment_clerks_add = 1000
+			building_employment_shopkeepers_add = 200
+		}
+	}
+}
+
+pm_pharmacy_dispensing = {
+	texture = "gfx/interface/icons/production_method_icons/medication.dds"
+
+	unlocking_technologies = {
+		international_relations
+	}
+
+	building_modifiers = {
+		workforce_scaled = {
+			goods_input_opium_add = 8
+			goods_output_pharmaceuticals_add = 16
+		}
+
+		level_scaled = {
+			building_employment_clerks_add = 900
+			building_employment_shopkeepers_add = 250
+			building_employment_engineers_add = 100
+		}
+	}
+}
+
+pm_hospital_pharmacy = {
+	texture = "gfx/interface/icons/production_method_icons/medication.dds"
+
+	unlocking_technologies = {
+		currency_standards
+	}
+
+	building_modifiers = {
+		workforce_scaled = {
+			goods_input_opium_add = 12
+			goods_output_pharmaceuticals_add = 28
+		}
+
+		level_scaled = {
+			building_employment_clerks_add = 120
+			building_employment_engineers_add = 200
+			building_employment_capitalists_add = 5
+		}
+	}
+}
+
+pm_mail_order_pharmacy = {
+	texture = "gfx/interface/icons/production_method_icons/medication.dds"
+
+	unlocking_technologies = {
+		behaviorism
+	}
+
+	building_modifiers = {
+		workforce_scaled = {
+			goods_input_opium_add = 10
+			goods_output_pharmaceuticals_add = 32
+		}
+
+		level_scaled = {
+			building_employment_laborers_add = 20
+			building_employment_clerks_add = 1300
+			building_employment_engineers_add = 200
+		}
+	}
+}
+
+pm_no_drug_research = {
+	texture = "gfx/interface/icons/production_method_icons/mrna.dds"
+}
+
+pm_clinical_trials = {
+	texture = "gfx/interface/icons/production_method_icons/vaccine.dds"
+
+	unlocking_technologies = {
+		international_relations
+	}
+
+	building_modifiers = {
+		workforce_scaled = {
+			goods_input_opium_add = 4
+			goods_output_pharmaceuticals_add = 12
+		}
+
+		level_scaled = {
+			building_employment_engineers_add = 20
+			building_employment_clerks_add = 150
+		}
+	}
+}
+
+pm_biotech_research = {
+	texture = "gfx/interface/icons/production_method_icons/vaccine.dds"
+
+	unlocking_technologies = {
+		quinine
+	}
+
+	building_modifiers = {
+		workforce_scaled = {
+			goods_input_opium_add = 6
+			goods_output_pharmaceuticals_add = 25
+		}
+
+		level_scaled = {
+			building_employment_engineers_add = 300
+			building_employment_capitalists_add = 5
+		}
+	}
+}
+
+pm_gene_therapy = {
+	texture = "gfx/interface/icons/production_method_icons/vaccine.dds"
+
+	unlocking_technologies = {
+		antibiotics
+	}
+
+	building_modifiers = {
+		workforce_scaled = {
+			goods_input_opium_add = 5
+			goods_output_pharmaceuticals_add = 40
+		}
+
+		level_scaled = {
+			building_employment_engineers_add = 40
+			building_employment_capitalists_add = 10
+		}
+	}
+}
+
+pm_manual_compounding = {
+	texture = "gfx/interface/icons/production_method_icons/no_automation.dds"
+
+	building_modifiers = {
+		level_scaled = {
+			building_employment_clerks_add = 100
+		}
+	}
+}
+
+pm_automated_dispensing = {
+	texture = "gfx/interface/icons/production_method_icons/robotic_arm.dds"
+
+	unlocking_technologies = {
+		mass_communication
+	}
+
+	building_modifiers = {
+		workforce_scaled = {
+			goods_input_computers_add = 0.5
+			goods_input_electricity_add = 0.5
+		}
+		level_scaled = {
+			building_employment_clerks_add = -100
+			building_employment_engineers_add = -50
+		}
+	}
+}
+
+pm_robotic_pharmacy = {
+	texture = "gfx/interface/icons/production_method_icons/robotic_arm.dds"
+
+	unlocking_technologies = {
+		aniline
+	}
+
+	building_modifiers = {
+		workforce_scaled = {
+			goods_input_computers_add = 0.5
+			goods_input_electricity_add = 1.0
+		}
+		level_scaled = {
+			building_employment_clerks_add = -200
+			building_employment_engineers_add = 250
+		}
+	}
+}
+
+
+pm_dishwashers = {
+	texture = "gfx/interface/icons/production_method_icons/washing_machine.dds"
+	
+	state_modifiers = {
+		workforce_scaled = {
+			state_pollution_generation_add = 10
+		}
+	}
+	
+	building_modifiers = {
+		workforce_scaled = {
+			goods_input_steel_add = 10
+			goods_input_plastic_add = 15
+			goods_input_microchips_add = 2
+			goods_input_electricity_add = 10
+			
+			# output goods
+			goods_output_appliances_add = 35
+		}
+
+		level_scaled = {
+			# employment
+			building_employment_shopkeepers_add = 500
+			building_employment_laborers_add = 250
+			building_employment_machinists_add = 725
+			building_employment_engineers_add = 415
+		}
+	}
+}
+
+pm_microwave = {
+	texture = "gfx/interface/icons/production_method_icons/bessemer_process.dds"
+	state_modifiers = {
+		workforce_scaled = {
+			state_pollution_generation_add = 15
+		}
+	}
+	
+	unlocking_technologies = {
+		canneries
+	}
+	
+	building_modifiers = {
+		workforce_scaled = {
+			goods_input_steel_add = 20
+			goods_input_plastic_add = 15
+			goods_input_electricity_add = 20
+			goods_input_microchips_add = 5
+			# output goods
+			goods_output_appliances_add = 45
+		}
+
+		level_scaled = {
+			# employment
+			building_employment_shopkeepers_add = 500
+			building_employment_laborers_add = 200
+			building_employment_machinists_add = 575
+			building_employment_engineers_add = 400
+		}
+	}
+}
+
+pm_airfryer = {
+	texture = "gfx/interface/icons/production_method_icons/vaccum_evaporation.dds"
+	
+	state_modifiers = {
+		workforce_scaled = {
+			state_pollution_generation_add = 20
+		}
+	}
+	
+	unlocking_technologies = {
+		mechanized_workshops
+	}
+	
+	building_modifiers = {
+		workforce_scaled = {
+			goods_input_steel_add = 5
+			goods_input_plastic_add = 25
+			goods_input_electricity_add = 25
+			goods_input_microchips_add = 15
+			
+			# output goods
+			goods_output_appliances_add = 65
+		}
+
+		level_scaled = {
+			# employment
+			building_employment_shopkeepers_add = 500
+			building_employment_laborers_add = 150
+			building_employment_machinists_add = 600
+			building_employment_engineers_add = 300
+		}
+	}
+}
+
+pm_cooking_robots = {
+	texture = "gfx/interface/icons/production_method_icons/cooking_robot.dds"
+	
+	state_modifiers = {
+		workforce_scaled = {
+			state_pollution_generation_add = 20
+		}
+	}
+	
+	unlocking_technologies = {
+		rotary_valve_engine
+	}
+	
+	building_modifiers = {
+		workforce_scaled = {
+			goods_input_steel_add = 15
+			goods_input_plastic_add = 30
+			goods_input_electricity_add = 30
+			goods_input_computers_add = 15
+			goods_input_microchips_add = 15
+			# output goods
+			goods_output_appliances_add = 75
+		}
+
+		level_scaled = {
+			# employment
+			building_employment_shopkeepers_add = 500
+			building_employment_laborers_add = 100
+			building_employment_machinists_add = 500
+			building_employment_engineers_add = 300
+		}
+	}
+}
+pm_portable_freezedryer = {
+	texture = "gfx/interface/icons/production_method_icons/washing_machine.dds"
+	
+	state_modifiers = {
+		workforce_scaled = {
+			state_pollution_generation_add = 25
+		}
+	}
+	
+	unlocking_technologies = {
+		flash_freezing
+	}
+	
+	building_modifiers = {
+		workforce_scaled = {
+			goods_input_steel_add = 30
+			goods_input_plastic_add = 40
+			goods_input_computers_add = 5
+			goods_input_microchips_add = 25
+			goods_input_electricity_add = 65
+			
+			# output goods
+			goods_output_appliances_add = 100
+		}
+
+		level_scaled = {
+			# employment
+			building_employment_shopkeepers_add = 500
+			building_employment_laborers_add = 50
+			building_employment_machinists_add = 500
+			building_employment_engineers_add = 450
+		}
+	}
+}
+
+pm_watertube_boiler_building_appliances = {
+	texture = "gfx/interface/icons/production_method_icons/robotic_arm.dds"
+	
+	unlocking_technologies = {
+		watertube_boiler
+	}
+
+	state_modifiers = {
+		workforce_scaled = {
+			state_pollution_generation_add = 5
+		}
+	}
+
+	building_modifiers = {
+		workforce_scaled = {
+			goods_input_electricity_add = 3
+			goods_input_tools_add = 5
+			goods_input_oil_add = 5
+			goods_input_coal_add = 5
+		}
+
+		level_scaled = {
+			building_employment_laborers_add = -125
+			building_employment_machinists_add = -338
+			building_employment_engineers_add = -338
+		}
+	}
+}
+
+pm_rotary_valve_engine_building_appliances = {
+	texture = "gfx/interface/icons/production_method_icons/computerized.dds"
+	
+	unlocking_technologies = {
+		rotary_valve_engine
+	}
+
+	state_modifiers = {
+		workforce_scaled = {
+			state_pollution_generation_add = 10
+		}
+	}
+
+	building_modifiers = {
+		workforce_scaled = {
+			goods_input_electricity_add = 6
+			goods_input_computers_add = 2
+			goods_input_telecommunications_add = 1
+			goods_input_tools_add = 5
+			goods_input_oil_add = 5
+			goods_input_coal_add = 10
+		}
+
+		level_scaled = {
+			building_employment_laborers_add = -25
+			building_employment_machinists_add = -100
+			building_employment_engineers_add = -100
+		}
+	}
+}
+
+pm_assembly_lines_building_appliances = {
+	texture = "gfx/interface/icons/production_method_icons/3d_printing.dds"
+	
+	unlocking_technologies = {
+		conveyors
+	}
+
+	state_modifiers = {
+		workforce_scaled = {
+			state_pollution_generation_add = 10
+		}
+	}
+
+	building_modifiers = {
+		workforce_scaled = {
+			goods_input_electricity_add = 10
+			goods_input_computers_add = 5
+			goods_input_telecommunications_add = 1
+			goods_input_tools_add = 5
+			goods_input_oil_add = 7.5
+		}
+
+		level_scaled = {
+			building_employment_laborers_add = -50
+			building_employment_machinists_add = -200
+			building_employment_engineers_add = -200
+		}
+	}
+}
+
+pm_no_casino = {
+	texture = "gfx/interface/icons/production_method_icons/no_securities_trading.dds"
+
+	# Default — no change to output
+}
+
+pm_casino = {
+	texture = "gfx/interface/icons/production_method_icons/brokerage.dds"
+
+	building_modifiers = {
+		workforce_scaled = {
+			goods_input_luxury_furniture_add = 2
+			goods_input_liquor_add = 3
+			goods_output_luxury_services_add = 8
+		}
+
+		level_scaled = {
+			building_employment_laborers_add = 200
+			building_employment_clerks_add = 400
+			building_employment_shopkeepers_add = 100
+		}
+	}
+}
+
+pm_online_gambling = {
+	texture = "gfx/interface/icons/production_method_icons/quant_trading.dds"
+
+	unlocking_technologies = {
+		modern_sewerage
+	}
+
+	building_modifiers = {
+		workforce_scaled = {
+			goods_input_computers_add = 2
+			goods_input_telecommunications_add = 2
+			goods_output_luxury_services_add = 14
+		}
+
+		level_scaled = {
+			building_employment_laborers_add = -200
+			building_employment_clerks_add = 100
+			building_employment_engineers_add = 300
+		}
+	}
+
+	required_input_goods = computers
+}
+
+# ── SOFTWARE INDUSTRY PRODUCTION METHODS ───────────────────────
+
+# PMG: SOFTWARE PRODUCTION
+# Determines what kind of software the building develops.
+# All methods produce intellectual_property.
+# Higher tiers add video_games or professional_services output.
+
+pm_basic_software_development = {
+	texture = "gfx/interface/icons/production_method_icons/cooking_robot.dds"
+
+	building_modifiers = {
+		workforce_scaled = {
+			goods_input_paper_add = 2
+			goods_output_intellectual_property_add = 15
+		}
+
+		level_scaled = {
+			building_employment_clerks_add = 800
+			building_employment_engineers_add = 500
+		}
+	}
+}
+
+pm_commercial_software = {
+	texture = "gfx/interface/icons/production_method_icons/cooking_robot.dds"
+
+	unlocking_technologies = {
+		dialectics
+	}
+
+	building_modifiers = {
+		workforce_scaled = {
+			goods_input_paper_add = 3
+			goods_input_computers_add = 1
+			goods_output_intellectual_property_add = 20
+			goods_output_professional_services_add = 2
+		}
+
+		level_scaled = {
+			building_employment_clerks_add = 600
+			building_employment_engineers_add = 700
+		}
+	}
+}
+
+pm_enterprise_software = {
+	texture = "gfx/interface/icons/production_method_icons/cooking_robot.dds"
+
+	unlocking_technologies = {
+		aniline
+	}
+
+	building_modifiers = {
+		workforce_scaled = {
+			goods_input_computers_add = 2
+			goods_input_telecommunications_add = 1
+			goods_output_intellectual_property_add = 25
+		}
+
+		level_scaled = {
+			building_employment_clerks_add = 400
+			building_employment_engineers_add = 900
+		}
+	}
+
+	required_input_goods = computers
+}
+
+pm_ai_software = {
+	texture = "gfx/interface/icons/production_method_icons/cooking_robot.dds"
+
+	unlocking_technologies = {
+		corporate_management
+	}
+
+	building_modifiers = {
+		workforce_scaled = {
+			goods_input_computers_add = 3
+			goods_input_microchips_add = 2
+			goods_input_telecommunications_add = 2
+			goods_output_intellectual_property_add = 30
+		}
+
+		level_scaled = {
+			building_employment_clerks_add = 200
+			building_employment_engineers_add = 1100
+		}
+	}
+
+	required_input_goods = computers
+}
+
+# PMG: SOFTWARE AUTOMATION
+# Controls internal tooling and infrastructure.
+# Reduces clerks, adds engineers, minor throughput effects.
+
+pm_manual_development = {
+	texture = "gfx/interface/icons/production_method_icons/no_automation.dds"
+
+	# Default — no modifiers
+}
+
+pm_dev_tooling = {
+	texture = "gfx/interface/icons/production_method_icons/computerized.dds"
+
+	unlocking_technologies = {
+		mass_communication
+	}
+
+	building_modifiers = {
+		workforce_scaled = {
+			goods_input_paper_add = 5
+			goods_input_electricity_add = 2
+			goods_input_computers_add = 3
+		}
+
+		level_scaled = {
+			building_employment_clerks_add = -200
+			building_employment_engineers_add = -200
+		}
+	}
+}
+
+pm_cloud_infrastructure = {
+	texture = "gfx/interface/icons/production_method_icons/computerized.dds"
+
+	unlocking_technologies = {
+		internet
+	}
+
+	building_modifiers = {
+		workforce_scaled = {
+			goods_input_electricity_add = 2
+			goods_input_computers_add = 8
+		}
+
+		level_scaled = {
+			building_employment_clerks_add = -300
+			building_employment_engineers_add = -400
+		}
+	}
+
+	required_input_goods = electricity
+}

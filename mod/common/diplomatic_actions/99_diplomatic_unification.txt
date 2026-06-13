@@ -1,0 +1,585 @@
+# Diplomatic Economic Union + Unification Actions
+
+REPLACE_OR_CREATE:smd_create_economic_union = {
+	groups = { general }
+	requires_approval = yes
+	should_notify_third_parties = yes
+	show_effect_in_tooltip = yes
+
+	selectable = {
+		NOT = { is_country_type = decentralized }
+	}
+
+	potential = {
+		scope:target_country = {
+			NOT = { is_country_type = decentralized }
+		}
+	}
+
+	possible = {
+		custom_tooltip = {
+			text = smd_economic_union_base_resistance_tt
+			always = yes
+		}
+
+		custom_tooltip = {
+			text = smd_economic_union_requires_independence_tt
+			is_sufficiently_independent = yes
+			scope:target_country = { is_sufficiently_independent = yes }
+		}
+		custom_tooltip = {
+			text = smd_economic_union_requires_peace_tt
+			NOT = { has_war_with = scope:target_country }
+			is_diplomatic_play_committed_participant = no
+			scope:target_country = { is_diplomatic_play_committed_participant = no }
+		}
+		custom_tooltip = {
+			text = smd_economic_union_requires_no_subject_relation_tt
+			NOT = { has_subject_relation_with = scope:target_country }
+			NOT = { scope:target_country = { is_subject_of = scope:actor } }
+		}
+		custom_tooltip = {
+			text = smd_economic_union_requires_no_isolationism_tt
+			NOR = {
+				has_law_or_variant = law_type:law_isolationism
+				scope:target_country = { has_law_or_variant = law_type:law_isolationism }
+			}
+		}
+		custom_tooltip = {
+			text = smd_economic_union_requires_no_duplicate_tt
+			NOT = { smd_has_economic_union_with_target = yes }
+		}
+	}
+
+	accept_effect = {
+		smd_create_economic_union_with_target = yes
+	}
+
+	ai = {
+		check_acceptance_for_will_break = no
+		max_influence_spending_fraction = 0.15
+
+		evaluation_chance = {
+			value = 0.08
+
+			add = {
+				value = country_rank
+				multiply = 0.03
+			}
+		}
+
+		accept_score = {
+			value = 0
+
+			add = {
+				desc = "DIPLOMATIC_ACCEPTANCE_BASE"
+				value = -35
+			}
+
+			add = {
+				desc = "DIPLOMATIC_ACCEPTANCE_RELATIONS"
+				value = scope:target_country.relations:root
+				divide = 5
+				min = -25
+				max = 25
+			}
+
+			add = {
+				desc = "DIPLOMATIC_ACCEPTANCE_MUTUAL_TRADE_VALUE"
+				value = "mutual_trade_value_with_country(scope:target_country)"
+				multiply = 50000
+				divide = {
+					value = gdp
+					min = 1000000
+				}
+				min = 0
+				max = 20
+			}
+
+			if = {
+				limit = { smd_primary_cultures_similar_to_target = yes }
+				add = {
+					desc = "DIPLOMATIC_ACCEPTANCE_CULTURAL_ACCEPTANCE"
+					value = 10
+				}
+			}
+
+			if = {
+				limit = { is_in_same_power_bloc = scope:target_country }
+				add = {
+					desc = "DIPLOMATIC_ACCEPTANCE_POWER_BLOC"
+					value = 15
+				}
+			}
+
+			if = {
+				limit = {
+					scope:target_country = {
+						OR = {
+							has_attitude = { who = root attitude = cooperative }
+							has_attitude = { who = root attitude = conciliatory }
+						}
+					}
+				}
+				add = {
+					desc = "DIPLOMATIC_ACCEPTANCE_ATTITUDE"
+					value = 20
+				}
+			}
+
+			if = {
+				limit = {
+					scope:target_country = {
+						OR = {
+							has_attitude = { who = root attitude = antagonistic }
+							has_attitude = { who = root attitude = belligerent }
+							has_attitude = { who = root attitude = domineering }
+							has_attitude = { who = root attitude = rebellious }
+						}
+					}
+				}
+				add = {
+					desc = "DIPLOMATIC_ACCEPTANCE_ATTITUDE"
+					value = -1000
+				}
+			}
+
+			if = {
+				limit = { infamy >= infamy_threshold:infamous }
+				add = {
+					desc = "DIPLOMATIC_ACCEPTANCE_INFAMY"
+					value = -20
+				}
+			}
+		}
+
+
+		propose_score = {
+			value = -10
+
+			if = {
+				limit = {
+					smd_can_create_economic_union_with_target = yes
+				}
+				add = 10
+			}
+
+			if = {
+				limit = {
+					scope:target_country.relations:root >= relations_threshold:cordial
+				}
+				add = 15
+			}
+
+			if = {
+				limit = {
+					scope:target_country.relations:root >= relations_threshold:friendly
+				}
+				add = 15
+			}
+
+			if = {
+				limit = {
+					smd_primary_cultures_similar_to_target = yes
+				}
+				add = 10
+			}
+
+			if = {
+				limit = {
+					is_in_same_power_bloc = scope:target_country
+				}
+				add = 15
+			}
+
+			add = {
+				value = "mutual_trade_value_with_country(scope:target_country)"
+				multiply = 50000
+				divide = {
+					value = gdp
+					min = 1000000
+				}
+				min = 0
+				max = 25
+			}
+
+			if = {
+				limit = {
+					OR = {
+						has_attitude = {
+							who = scope:target_country
+							attitude = conciliatory
+						}
+						has_attitude = {
+							who = scope:target_country
+							attitude = protective
+						}
+						has_attitude = {
+							who = scope:target_country
+							attitude = cooperative
+						}
+					}
+				}
+				add = 20
+			}
+
+			if = {
+				limit = {
+					OR = {
+						has_attitude = {
+							who = scope:target_country
+							attitude = antagonistic
+						}
+						has_attitude = {
+							who = scope:target_country
+							attitude = belligerent
+						}
+						has_attitude = {
+							who = scope:target_country
+							attitude = domineering
+						}
+					}
+				}
+				add = -1000
+			}
+		}
+
+		will_propose = {
+			smd_can_create_economic_union_with_target = yes
+			scope:target_country.relations:root >= relations_threshold:cordial
+
+			NOR = {
+				has_attitude = {
+					who = scope:target_country
+					attitude = antagonistic
+				}
+				has_attitude = {
+					who = scope:target_country
+					attitude = belligerent
+				}
+				has_attitude = {
+					who = scope:target_country
+					attitude = domineering
+				}
+				has_attitude = {
+					who = scope:target_country
+					attitude = rebellious
+				}
+			}
+		}
+
+		will_break = {
+			OR = {
+				has_war_with = scope:target_country
+				scope:target_country.relations:root <= relations_threshold:poor
+				has_law_or_variant = law_type:law_isolationism
+				scope:target_country = {
+					has_law_or_variant = law_type:law_isolationism
+				}
+			}
+		}
+	}
+}
+
+REPLACE_OR_CREATE:smd_diplomatic_unification = {
+	groups = { general }
+	requires_approval = yes
+	should_notify_third_parties = yes
+	show_effect_in_tooltip = yes
+
+	selectable = {
+		NOT = { is_country_type = decentralized }
+	}
+
+	potential = {
+		# Always visible against proper non-decentralized countries.
+		scope:target_country = {
+			NOT = { is_country_type = decentralized }
+		}
+	}
+
+	possible = {
+		custom_tooltip = {
+			text = smd_unification_base_resistance_tt
+			always = yes
+		}
+
+		custom_tooltip = {
+			text = smd_unification_requires_independence_tt
+			is_sufficiently_independent = yes
+			scope:target_country = { is_sufficiently_independent = yes }
+		}
+		custom_tooltip = {
+			text = smd_unification_requires_peace_tt
+			NOT = { has_war_with = scope:target_country }
+			is_diplomatic_play_committed_participant = no
+			scope:target_country = { is_diplomatic_play_committed_participant = no }
+		}
+		custom_tooltip = {
+			text = smd_unification_requires_no_subject_relation_tt
+			NOT = { has_subject_relation_with = scope:target_country }
+			NOT = { scope:target_country = { is_subject_of = scope:actor } }
+		}
+		custom_tooltip = {
+			text = smd_unification_requires_economic_union_tt
+			smd_has_economic_union_with_target = yes
+		}
+		custom_tooltip = {
+			text = smd_unification_requires_culture_tt
+			smd_primary_cultures_similar_to_target = yes
+		}
+		custom_tooltip = {
+			text = smd_unification_requires_good_relations_tt
+			scope:target_country.relations:root >= relations_threshold:amicable
+		}
+	}
+
+	accept_effect = {
+		smd_complete_diplomatic_unification_with_target = yes
+	}
+
+	ai = {
+		check_acceptance_for_will_break = no
+		max_influence_spending_fraction = 0.20
+
+		evaluation_chance = {
+			value = 0.05
+
+			add = {
+				value = country_rank
+				multiply = 0.02
+			}
+		}
+
+		accept_score = {
+			value = 0
+
+			add = {
+				desc = "DIPLOMATIC_ACCEPTANCE_BASE"
+				value = -100
+			}
+
+			add = {
+				desc = "DIPLOMATIC_ACCEPTANCE_RELATIONS"
+				value = scope:target_country.relations:root
+				divide = 4
+				min = -30
+				max = 30
+			}
+
+			if = {
+				limit = { NOT = { smd_has_economic_union_with_target = yes } }
+				add = {
+					desc = "DIPLOMATIC_ACCEPTANCE_NO_ECONOMIC_UNION"
+					value = -1000
+				}
+			}
+
+			if = {
+				limit = { NOT = { smd_primary_cultures_similar_to_target = yes } }
+				add = {
+					desc = "DIPLOMATIC_ACCEPTANCE_CULTURAL_ACCEPTANCE"
+					value = -1000
+				}
+			}
+
+			if = {
+				limit = { smd_primary_cultures_similar_to_target = yes }
+				add = {
+					desc = "DIPLOMATIC_ACCEPTANCE_CULTURAL_ACCEPTANCE"
+					value = 30
+				}
+			}
+
+			if = {
+				limit = { scope:target_country.relations:root >= relations_threshold:friendly }
+				add = {
+					desc = "DIPLOMATIC_ACCEPTANCE_RELATIONS"
+					value = 20
+				}
+			}
+
+			if = {
+				limit = { scope:target_country.relations:root >= relations_threshold:genial }
+				add = {
+					desc = "DIPLOMATIC_ACCEPTANCE_RELATIONS"
+					value = 25
+				}
+			}
+
+			if = {
+				limit = { is_in_same_power_bloc = scope:target_country }
+				add = {
+					desc = "DIPLOMATIC_ACCEPTANCE_POWER_BLOC"
+					value = 10
+				}
+			}
+
+			if = {
+				limit = { gdp > scope:target_country.gdp }
+				add = {
+					desc = "DIPLOMATIC_ACCEPTANCE_GDP"
+					value = 15
+				}
+			}
+
+			if = {
+				limit = { army_size > scope:target_country.army_size }
+				add = {
+					desc = "DIPLOMATIC_ACCEPTANCE_MILITARY_STRENGTH"
+					value = 10
+				}
+			}
+
+			if = {
+				limit = {
+					scope:target_country = {
+						has_attitude = { who = root attitude = protective }
+					}
+				}
+				add = {
+					desc = "DIPLOMATIC_ACCEPTANCE_ATTITUDE"
+					value = 25
+				}
+			}
+
+			if = {
+				limit = {
+					scope:target_country = {
+						OR = {
+							has_attitude = { who = root attitude = antagonistic }
+							has_attitude = { who = root attitude = belligerent }
+							has_attitude = { who = root attitude = domineering }
+							has_attitude = { who = root attitude = rebellious }
+						}
+					}
+				}
+				add = {
+					desc = "DIPLOMATIC_ACCEPTANCE_ATTITUDE"
+					value = -1000
+				}
+			}
+
+			if = {
+				limit = { infamy >= infamy_threshold:infamous }
+				add = {
+					desc = "DIPLOMATIC_ACCEPTANCE_INFAMY"
+					value = -35
+				}
+			}
+		}
+
+
+		propose_score = {
+			value = -50
+
+			if = {
+				limit = {
+					smd_can_propose_diplomatic_unification_with_target = yes
+				}
+				add = 25
+			}
+
+			if = {
+				limit = {
+					scope:target_country.relations:root >= relations_threshold:friendly
+				}
+				add = 20
+			}
+
+			if = {
+				limit = {
+					scope:target_country.relations:root >= relations_threshold:genial
+				}
+				add = 20
+			}
+
+			if = {
+				limit = {
+					is_in_same_power_bloc = scope:target_country
+				}
+				add = 10
+			}
+
+			if = {
+				limit = {
+					gdp > scope:target_country.gdp
+				}
+				add = 15
+			}
+
+			if = {
+				limit = {
+					army_size > scope:target_country.army_size
+				}
+				add = 10
+			}
+
+			if = {
+				limit = {
+					scope:target_country = {
+						has_attitude = {
+							who = root
+							attitude = protective
+						}
+					}
+				}
+				add = 20
+			}
+
+			if = {
+				limit = {
+					scope:target_country = {
+						OR = {
+							has_attitude = {
+								who = root
+								attitude = antagonistic
+							}
+							has_attitude = {
+								who = root
+								attitude = belligerent
+							}
+							has_attitude = {
+								who = root
+								attitude = rebellious
+							}
+							has_attitude = {
+								who = root
+								attitude = domineering
+							}
+						}
+					}
+				}
+				add = -1000
+			}
+		}
+
+		will_propose = {
+			smd_can_propose_diplomatic_unification_with_target = yes
+			scope:target_country.relations:root >= relations_threshold:amicable
+
+			NOR = {
+				has_attitude = {
+					who = scope:target_country
+					attitude = antagonistic
+				}
+				has_attitude = {
+					who = scope:target_country
+					attitude = belligerent
+				}
+				has_attitude = {
+					who = scope:target_country
+					attitude = domineering
+				}
+				has_attitude = {
+					who = scope:target_country
+					attitude = rebellious
+				}
+			}
+		}
+
+		will_break = {
+			always = no
+		}
+	}
+}
