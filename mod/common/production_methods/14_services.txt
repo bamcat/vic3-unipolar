@@ -1,4 +1,5 @@
-﻿#####################################
+﻿
+#####################################
 # PRODUCTION METHODS
 #####################################
 
@@ -9,8 +10,8 @@ pm_basic_banking = {
 
 	building_modifiers = {
 		workforce_scaled = {
-			goods_input_paper_add = 5
-			goods_output_credit_add = 15
+			goods_input_paper_add = 3.75
+			goods_output_credit_add = 26
 		}
 
 		level_scaled = {
@@ -29,8 +30,9 @@ pm_commercial_banking = {
 
 	building_modifiers = {
 		workforce_scaled = {
-			goods_input_paper_add = 10
-			goods_output_credit_add = 25
+			goods_input_paper_add = 7.5
+			goods_input_professional_services_add = 0.4
+			goods_output_credit_add = 44
 		}
 
 		level_scaled = {
@@ -50,8 +52,9 @@ pm_electronic_transfers = {
 
 	building_modifiers = {
 		workforce_scaled = {
-			goods_input_paper_add = 15
-			goods_output_credit_add = 40
+			goods_input_paper_add = 11
+			goods_input_professional_services_add = 0.75
+			goods_output_credit_add = 70
 		}
 
 		level_scaled = {
@@ -72,9 +75,10 @@ pm_online_banking = {
 
 	building_modifiers = {
 		workforce_scaled = {
-			goods_input_paper_add = 5
-			goods_input_computers_add = 3
-			goods_output_credit_add = 55
+			goods_input_paper_add = 3.75
+			goods_input_professional_services_add = 1
+			goods_input_computers_add = 2.25
+			goods_output_credit_add = 96
 		}
 
 		level_scaled = {
@@ -95,8 +99,8 @@ pm_securities_brokerage = {
 
 	building_modifiers = {
 		workforce_scaled = {
-			goods_input_securities_add = 5
-			goods_output_credit_add = 20
+			goods_input_securities_add = 3.75
+			goods_output_credit_add = 35
 		}
 
 		level_scaled = {
@@ -115,8 +119,8 @@ pm_derivatives_trading = {
 
 	building_modifiers = {
 		workforce_scaled = {
-			goods_input_securities_add = 8
-			goods_output_credit_add = 40
+			goods_input_securities_add = 6
+			goods_output_credit_add = 70
 		}
 
 		level_scaled = {
@@ -135,8 +139,8 @@ pm_algorithmic_trading = {
 
 	building_modifiers = {
 		workforce_scaled = {
-			goods_input_securities_add = 12
-			goods_output_credit_add = 60
+			goods_input_securities_add = 9
+			goods_output_credit_add = 105
 		}
 
 		level_scaled = {
@@ -166,9 +170,9 @@ pm_atm_network = {
 
 	building_modifiers = {
 		workforce_scaled = {
-			goods_output_credit_add = 10
-			goods_input_telecommunications_add = 2
-			goods_input_telephones_add = 2
+			goods_output_credit_add = 17.5
+			goods_input_telecommunications_add = 1.5
+			goods_input_telephones_add = 1.5
 		}
 		level_scaled = {
 			building_employment_clerks_add = 3000
@@ -186,9 +190,9 @@ pm_automated_banking_systems = {
 
 	building_modifiers = {
 		workforce_scaled = {
-			goods_output_credit_add = 20
-			goods_input_telecommunications_add = 5
-			goods_input_telephones_add = 10
+			goods_output_credit_add = 35
+			goods_input_telecommunications_add = 3.75
+			goods_input_telephones_add = 7.5
 		}
 		level_scaled = {
 			building_employment_clerks_add = 2000
@@ -206,9 +210,9 @@ pm_ai_financial_advisors = {
 
 	building_modifiers = {
 		workforce_scaled = {
-			goods_output_credit_add = 35
-			goods_input_telecommunications_add = 5
-			goods_input_telephones_add = 10
+			goods_output_credit_add = 61
+			goods_input_telecommunications_add = 3.75
+			goods_input_telephones_add = 7.5
 		}
 		level_scaled = {
 			building_employment_clerks_add = 500
@@ -225,8 +229,8 @@ pm_corner_grocery = {
 
 	building_modifiers = {
 		workforce_scaled = {
-			goods_input_groceries_add = 10
-			goods_output_food_services_add = 12
+			goods_input_groceries_add = 20
+			goods_output_food_services_add = 85
 		}
 
 		level_scaled = {
@@ -242,8 +246,8 @@ pm_supermarket = {
 
 	building_modifiers = {
 		workforce_scaled = {
-			goods_input_groceries_add = 20
-			goods_output_food_services_add = 28
+			goods_input_groceries_add = 40
+			goods_output_food_services_add = 180
 		}
 
 		level_scaled = {
@@ -263,8 +267,8 @@ pm_hypermarket = {
 
 	building_modifiers = {
 		workforce_scaled = {
-			goods_input_groceries_add = 35
-			goods_output_food_services_add = 50
+			goods_input_groceries_add = 70
+			goods_output_food_services_add = 330
 		}
 
 		level_scaled = {
@@ -284,8 +288,8 @@ pm_online_grocery = {
 
 	building_modifiers = {
 		workforce_scaled = {
-			goods_input_groceries_add = 30
-			goods_output_food_services_add = 55
+			goods_input_groceries_add = 65
+			goods_output_food_services_add = 360
 		}
 
 		level_scaled = {
@@ -306,9 +310,9 @@ pm_local_restaurants = {
 
 	building_modifiers = {
 		workforce_scaled = {
-			goods_input_groceries_add = 5
-			goods_input_storage_add = 5
-			goods_output_food_services_add = 10
+			goods_input_groceries_add = 12
+			goods_input_storage_add = 6
+			goods_output_food_services_add = 80
 		}
 
 		level_scaled = {
@@ -323,9 +327,9 @@ pm_fast_food_chains = {
 
 	building_modifiers = {
 		workforce_scaled = {
-			goods_input_groceries_add = 5
+			goods_input_groceries_add = 20
 			goods_input_storage_add = 10
-			goods_output_food_services_add = 25
+			goods_output_food_services_add = 160
 		}
 
 		level_scaled = {
@@ -341,9 +345,9 @@ pm_fine_dining = {
 
 	building_modifiers = {
 		workforce_scaled = {
-			goods_input_groceries_add = 10
-			goods_input_storage_add = 12
-			goods_output_food_services_add = 20
+			goods_input_groceries_add = 22
+			goods_input_storage_add = 14
+			goods_output_food_services_add = 230
 		}
 
 		level_scaled = {
@@ -373,7 +377,7 @@ pm_self_checkout_food = {
 
 	building_modifiers = {
 		workforce_scaled = {
-			goods_output_food_services_add = 8
+			goods_output_food_services_add = 60
 		}
 		level_scaled = {
 			building_employment_clerks_add = -15
@@ -391,8 +395,8 @@ pm_food_delivery_services = {
 
 	building_modifiers = {
 		workforce_scaled = {
-			goods_input_storage_add = 5
-			goods_output_food_services_add = 15
+			goods_input_storage_add = 8
+			goods_output_food_services_add = 110
 		}
 
 		level_scaled = {
@@ -410,8 +414,8 @@ pm_drone_food_delivery = {
 
 	building_modifiers = {
 		workforce_scaled = {
-			goods_input_storage_add = 8
-			goods_output_food_services_add = 25
+			goods_input_storage_add = 12
+			goods_output_food_services_add = 180
 		}
 
 		level_scaled = {
@@ -428,12 +432,12 @@ pm_small_shops = {
 
 	building_modifiers = {
 		workforce_scaled = {
-			goods_input_furniture_add = 5
-			goods_input_appliances_add = 5
-			goods_input_clothes_add = 5
-			goods_input_tools_add = 5
-			goods_input_storage_add = 5
-			goods_output_retail_services_add = 27
+			goods_input_furniture_add = 3.75
+			goods_input_appliances_add = 3.75
+			goods_input_clothes_add = 3.75
+			goods_input_tools_add = 3.75
+			goods_input_storage_add = 3.75
+			goods_output_retail_services_add = 110
 		}
 
 		level_scaled = {
@@ -449,12 +453,12 @@ pm_department_stores_retail = {
 
 	building_modifiers = {
 		workforce_scaled = {
-			goods_input_furniture_add = 10
-			goods_input_clothes_add = 10
-			goods_input_tools_add = 5
-			goods_input_appliances_add = 5
-			goods_input_storage_add = 5
-			goods_output_retail_services_add = 38
+			goods_input_furniture_add = 7.5
+			goods_input_clothes_add = 7.5
+			goods_input_tools_add = 3.75
+			goods_input_appliances_add = 3.75
+			goods_input_storage_add = 3.75
+			goods_output_retail_services_add = 165
 		}
 
 		level_scaled = {
@@ -474,12 +478,12 @@ pm_big_box_retail = {
 
 	building_modifiers = {
 		workforce_scaled = {
-			goods_input_furniture_add = 15
-			goods_input_clothes_add = 15
-			goods_input_tools_add = 10
-			goods_input_storage_add = 10
-			goods_input_appliances_add = 5
-			goods_output_retail_services_add = 62
+			goods_input_furniture_add = 11
+			goods_input_clothes_add = 11
+			goods_input_tools_add = 7.5
+			goods_input_storage_add = 7.5
+			goods_input_appliances_add = 3.75
+			goods_output_retail_services_add = 260
 		}
 
 		level_scaled = {
@@ -495,12 +499,12 @@ pm_outlet_retail = {
 
 	building_modifiers = {
 		workforce_scaled = {
-			goods_input_furniture_add = 12
-			goods_input_clothes_add = 12
-			goods_input_tools_add = 8
-			goods_input_storage_add = 5
-			goods_input_appliances_add = 5
-			goods_output_retail_services_add = 48
+			goods_input_furniture_add = 9
+			goods_input_clothes_add = 9
+			goods_input_tools_add = 6
+			goods_input_storage_add = 3.75
+			goods_input_appliances_add = 3.75
+			goods_output_retail_services_add = 210
 		}
 
 		level_scaled = {
@@ -520,10 +524,10 @@ pm_home_goods_retail = {
 
 	building_modifiers = {
 		workforce_scaled = {
-			goods_input_furniture_add = 8
-			goods_input_luxury_furniture_add = 4
-			goods_input_luxury_clothes_add = 4
-			goods_output_retail_services_add = 24
+			goods_input_furniture_add = 6
+			goods_input_luxury_furniture_add = 3
+			goods_input_luxury_clothes_add = 3
+			goods_output_retail_services_add = 145
 		}
 
 		level_scaled = {
@@ -542,9 +546,9 @@ pm_electronics_retail = {
 
 	building_modifiers = {
 		workforce_scaled = {
-			goods_input_telephones_add = 4
-			goods_input_radios_add = 4
-			goods_output_retail_services_add = 20
+			goods_input_telephones_add = 3
+			goods_input_radios_add = 3
+			goods_output_retail_services_add = 125
 		}
 
 		level_scaled = {
@@ -560,9 +564,9 @@ pm_luxury_retail = {
 
 	building_modifiers = {
 		workforce_scaled = {
-			goods_input_luxury_clothes_add = 5
-			goods_input_luxury_furniture_add = 5
-			goods_output_retail_services_add = 25
+			goods_input_luxury_clothes_add = 3.75
+			goods_input_luxury_furniture_add = 3.75
+			goods_output_retail_services_add = 150
 		}
 
 		level_scaled = {
@@ -591,7 +595,7 @@ pm_self_checkout_retail = {
 
 	building_modifiers = {
 		workforce_scaled = {
-			goods_output_retail_services_add = 10
+			goods_output_retail_services_add = 70
 		}
 		level_scaled = {
 			building_employment_laborers_add = -15
@@ -609,8 +613,8 @@ pm_ecommerce_retail = {
 
 	building_modifiers = {
 		workforce_scaled = {
-			goods_input_storage_add = 8
-			goods_output_retail_services_add = 20
+			goods_input_storage_add = 12
+			goods_output_retail_services_add = 135
 		}
 		level_scaled = {
 			building_employment_laborers_add = -20
@@ -629,8 +633,8 @@ pm_drone_retail_delivery = {
 
 	building_modifiers = {
 		workforce_scaled = {
-			goods_input_storage_add = 12
-			goods_output_retail_services_add = 35
+			goods_input_storage_add = 18
+			goods_output_retail_services_add = 220
 		}
 		level_scaled = {
 			building_employment_laborers_add = -25
@@ -646,9 +650,9 @@ pm_print_advertising = {
 
 	building_modifiers = {
 		workforce_scaled = {
-			goods_input_paper_add = 2.5
-			goods_input_intellectual_property_add = 3
-			goods_output_advertising_add = 25
+			goods_input_paper_add = 2
+			goods_input_intellectual_property_add = 2.25
+			goods_output_advertising_add = 44
 		}
 
 		level_scaled = {
@@ -667,9 +671,9 @@ pm_broadcast_advertising = {
 
 	building_modifiers = {
 		workforce_scaled = {
-			goods_input_paper_add = 5.0
-			goods_input_intellectual_property_add = 6
-			goods_output_advertising_add = 35
+			goods_input_paper_add = 3.75
+			goods_input_intellectual_property_add = 4.5
+			goods_output_advertising_add = 61
 		}
 
 		level_scaled = {
@@ -689,9 +693,9 @@ pm_direct_mail_advertising = {
 
 	building_modifiers = {
 		workforce_scaled = {
-			goods_input_paper_add = 1.0
-			goods_input_intellectual_property_add = 4
-			goods_output_advertising_add = 45
+			goods_input_paper_add = 0.75
+			goods_input_intellectual_property_add = 3
+			goods_output_advertising_add = 79
 		}
 
 		level_scaled = {
@@ -710,9 +714,9 @@ pm_outdoor_advertising = {
 
 	building_modifiers = {
 		workforce_scaled = {
-			goods_input_paper_add = 12
-			goods_input_intellectual_property_add = 5
-			goods_output_advertising_add = 35
+			goods_input_paper_add = 9
+			goods_input_intellectual_property_add = 3.75
+			goods_output_advertising_add = 61
 		}
 
 		level_scaled = {
@@ -735,10 +739,10 @@ pm_banner_advertising = {
 
 	building_modifiers = {
 		workforce_scaled = {
-			goods_input_paper_add = 5
-			goods_input_intellectual_property_add = 8
+			goods_input_paper_add = 3.75
+			goods_input_intellectual_property_add = 6
 			goods_input_professional_services_add = 0.1
-			goods_output_advertising_add = 45
+			goods_output_advertising_add = 79
 		}
 
 		level_scaled = {
@@ -757,10 +761,10 @@ pm_social_media_advertising = {
 
 	building_modifiers = {
 		workforce_scaled = {
-			goods_input_paper_add = 3
-			goods_input_intellectual_property_add = 12
+			goods_input_paper_add = 2.25
+			goods_input_intellectual_property_add = 9
 			goods_input_professional_services_add = 0.1
-			goods_output_advertising_add = 60
+			goods_output_advertising_add = 105
 		}
 
 		level_scaled = {
@@ -780,10 +784,10 @@ pm_algorithmic_targeted_ads = {
 
 	building_modifiers = {
 		workforce_scaled = {
-			goods_input_paper_add = 2
-			goods_input_intellectual_property_add = 15
+			goods_input_paper_add = 1.5
+			goods_input_intellectual_property_add = 11
 			goods_input_professional_services_add = 0.1
-			goods_output_advertising_add = 75
+			goods_output_advertising_add = 131
 		}
 
 		level_scaled = {
@@ -816,8 +820,8 @@ pm_consumer_analytics = {
 
 	building_modifiers = {
 		workforce_scaled = {
-			goods_input_computers_add = 0.5
-			goods_input_electricity_add = 0.5
+			goods_input_computers_add = 0.4
+			goods_input_electricity_add = 0.4
 		}
 		level_scaled = {
 			building_employment_clerks_add = -100
@@ -835,9 +839,9 @@ pm_ai_ad_generation = {
 
 	building_modifiers = {
 		workforce_scaled = {
-			goods_input_computers_add = 0.5
-			goods_input_electricity_add = 2.5
-			goods_input_intellectual_property_add = 1.5
+			goods_input_computers_add = 0.4
+			goods_input_electricity_add = 2
+			goods_input_intellectual_property_add = 1
 		}
 		level_scaled = {
 			building_employment_clerks_add = -20
@@ -853,8 +857,8 @@ pm_basic_warehousing = {
 
 	building_modifiers = {
 		workforce_scaled = {
-			goods_input_transportation_add = 8
-			goods_output_storage_add = 10
+			goods_input_transportation_add = 6
+			goods_output_storage_add = 44
 		}
 
 		level_scaled = {
@@ -874,8 +878,8 @@ pm_climate_controlled_storage = {
 
 	building_modifiers = {
 		workforce_scaled = {
-			goods_input_transportation_add = 12
-			goods_output_storage_add = 18
+			goods_input_transportation_add = 9
+			goods_output_storage_add = 88
 		}
 
 		level_scaled = {
@@ -896,8 +900,8 @@ pm_automated_warehouse = {
 
 	building_modifiers = {
 		workforce_scaled = {
-			goods_input_transportation_add = 15
-			goods_output_storage_add = 30
+			goods_input_transportation_add = 11
+			goods_output_storage_add = 131
 		}
 
 		level_scaled = {
@@ -917,8 +921,8 @@ pm_fulfillment_center = {
 
 	building_modifiers = {
 		workforce_scaled = {
-			goods_input_transportation_add = 20
-			goods_output_storage_add = 45
+			goods_input_transportation_add = 15
+			goods_output_storage_add = 175
 		}
 
 		level_scaled = {
@@ -949,8 +953,8 @@ pm_barcode_tracking = {
 
 	building_modifiers = {
 		workforce_scaled = {
-			goods_input_computers_add = 0.5
-			goods_input_electricity_add = 0.5
+			goods_input_computers_add = 0.4
+			goods_input_electricity_add = 0.4
 		}
 		level_scaled = {
 			building_employment_clerks_add = -100
@@ -968,8 +972,8 @@ pm_rfid_tracking = {
 
 	building_modifiers = {
 		workforce_scaled = {
-			goods_input_computers_add = 1.0
-			goods_input_electricity_add = 0.5
+			goods_input_computers_add = 0.75
+			goods_input_electricity_add = 0.4
 		}
 		level_scaled = {
 			building_employment_clerks_add = -200
@@ -987,9 +991,9 @@ pm_ai_inventory_management = {
 
 	building_modifiers = {
 		workforce_scaled = {
-			goods_input_computers_add = 1.5
-			goods_input_electricity_add = 0.5
-			goods_input_intellectual_property_add = 0.5
+			goods_input_computers_add = 1
+			goods_input_electricity_add = 0.4
+			goods_input_intellectual_property_add = 0.4
 		}
 		level_scaled = {
 			building_employment_clerks_add = -250
@@ -1005,8 +1009,8 @@ pm_apothecary = {
 
 	building_modifiers = {
 		workforce_scaled = {
-			goods_input_opium_add = 5
-			goods_output_pharmaceuticals_add = 8
+			goods_input_opium_add = 3.75
+			goods_output_pharmaceuticals_add = 14
 		}
 
 		level_scaled = {
@@ -1026,8 +1030,8 @@ pm_pharmacy_dispensing = {
 
 	building_modifiers = {
 		workforce_scaled = {
-			goods_input_opium_add = 8
-			goods_output_pharmaceuticals_add = 16
+			goods_input_opium_add = 6
+			goods_output_pharmaceuticals_add = 28
 		}
 
 		level_scaled = {
@@ -1047,8 +1051,8 @@ pm_hospital_pharmacy = {
 
 	building_modifiers = {
 		workforce_scaled = {
-			goods_input_opium_add = 12
-			goods_output_pharmaceuticals_add = 28
+			goods_input_opium_add = 9
+			goods_output_pharmaceuticals_add = 49
 		}
 
 		level_scaled = {
@@ -1068,8 +1072,8 @@ pm_mail_order_pharmacy = {
 
 	building_modifiers = {
 		workforce_scaled = {
-			goods_input_opium_add = 10
-			goods_output_pharmaceuticals_add = 32
+			goods_input_opium_add = 7.5
+			goods_output_pharmaceuticals_add = 56
 		}
 
 		level_scaled = {
@@ -1093,8 +1097,8 @@ pm_clinical_trials = {
 
 	building_modifiers = {
 		workforce_scaled = {
-			goods_input_opium_add = 4
-			goods_output_pharmaceuticals_add = 12
+			goods_input_opium_add = 3
+			goods_output_pharmaceuticals_add = 21
 		}
 
 		level_scaled = {
@@ -1113,8 +1117,8 @@ pm_biotech_research = {
 
 	building_modifiers = {
 		workforce_scaled = {
-			goods_input_opium_add = 6
-			goods_output_pharmaceuticals_add = 25
+			goods_input_opium_add = 4.5
+			goods_output_pharmaceuticals_add = 44
 		}
 
 		level_scaled = {
@@ -1133,8 +1137,8 @@ pm_gene_therapy = {
 
 	building_modifiers = {
 		workforce_scaled = {
-			goods_input_opium_add = 5
-			goods_output_pharmaceuticals_add = 40
+			goods_input_opium_add = 3.75
+			goods_output_pharmaceuticals_add = 70
 		}
 
 		level_scaled = {
@@ -1163,8 +1167,8 @@ pm_automated_dispensing = {
 
 	building_modifiers = {
 		workforce_scaled = {
-			goods_input_computers_add = 0.5
-			goods_input_electricity_add = 0.5
+			goods_input_computers_add = 0.4
+			goods_input_electricity_add = 0.4
 		}
 		level_scaled = {
 			building_employment_clerks_add = -100
@@ -1182,8 +1186,8 @@ pm_robotic_pharmacy = {
 
 	building_modifiers = {
 		workforce_scaled = {
-			goods_input_computers_add = 0.5
-			goods_input_electricity_add = 1.0
+			goods_input_computers_add = 0.4
+			goods_input_electricity_add = 0.75
 		}
 		level_scaled = {
 			building_employment_clerks_add = -200
@@ -1204,13 +1208,13 @@ pm_dishwashers = {
 	
 	building_modifiers = {
 		workforce_scaled = {
-			goods_input_steel_add = 10
-			goods_input_plastic_add = 15
-			goods_input_microchips_add = 2
-			goods_input_electricity_add = 10
+			goods_input_steel_add = 7.5
+			goods_input_plastic_add = 11
+			goods_input_microchips_add = 1.5
+			goods_input_electricity_add = 7.5
 			
 			# output goods
-			goods_output_appliances_add = 35
+			goods_output_appliances_add = 58
 		}
 
 		level_scaled = {
@@ -1237,12 +1241,12 @@ pm_microwave = {
 	
 	building_modifiers = {
 		workforce_scaled = {
-			goods_input_steel_add = 20
-			goods_input_plastic_add = 15
-			goods_input_electricity_add = 20
-			goods_input_microchips_add = 5
+			goods_input_steel_add = 15
+			goods_input_plastic_add = 11
+			goods_input_electricity_add = 15
+			goods_input_microchips_add = 3.75
 			# output goods
-			goods_output_appliances_add = 45
+			goods_output_appliances_add = 74
 		}
 
 		level_scaled = {
@@ -1270,13 +1274,13 @@ pm_airfryer = {
 	
 	building_modifiers = {
 		workforce_scaled = {
-			goods_input_steel_add = 5
-			goods_input_plastic_add = 25
-			goods_input_electricity_add = 25
-			goods_input_microchips_add = 15
+			goods_input_steel_add = 3.75
+			goods_input_plastic_add = 19
+			goods_input_electricity_add = 19
+			goods_input_microchips_add = 11
 			
 			# output goods
-			goods_output_appliances_add = 65
+			goods_output_appliances_add = 107
 		}
 
 		level_scaled = {
@@ -1304,13 +1308,13 @@ pm_cooking_robots = {
 	
 	building_modifiers = {
 		workforce_scaled = {
-			goods_input_steel_add = 15
-			goods_input_plastic_add = 30
-			goods_input_electricity_add = 30
-			goods_input_computers_add = 15
-			goods_input_microchips_add = 15
+			goods_input_steel_add = 11
+			goods_input_plastic_add = 22
+			goods_input_electricity_add = 22
+			goods_input_computers_add = 11
+			goods_input_microchips_add = 11
 			# output goods
-			goods_output_appliances_add = 75
+			goods_output_appliances_add = 124
 		}
 
 		level_scaled = {
@@ -1337,14 +1341,14 @@ pm_portable_freezedryer = {
 	
 	building_modifiers = {
 		workforce_scaled = {
-			goods_input_steel_add = 30
-			goods_input_plastic_add = 40
-			goods_input_computers_add = 5
-			goods_input_microchips_add = 25
-			goods_input_electricity_add = 65
+			goods_input_steel_add = 22
+			goods_input_plastic_add = 30
+			goods_input_computers_add = 3.75
+			goods_input_microchips_add = 19
+			goods_input_electricity_add = 49
 			
 			# output goods
-			goods_output_appliances_add = 100
+			goods_output_appliances_add = 165
 		}
 
 		level_scaled = {
@@ -1372,10 +1376,10 @@ pm_watertube_boiler_building_appliances = {
 
 	building_modifiers = {
 		workforce_scaled = {
-			goods_input_electricity_add = 3
-			goods_input_tools_add = 5
-			goods_input_oil_add = 5
-			goods_input_coal_add = 5
+			goods_input_electricity_add = 2.25
+			goods_input_tools_add = 3.75
+			goods_input_oil_add = 3.75
+			goods_input_coal_add = 3.75
 		}
 
 		level_scaled = {
@@ -1401,12 +1405,12 @@ pm_rotary_valve_engine_building_appliances = {
 
 	building_modifiers = {
 		workforce_scaled = {
-			goods_input_electricity_add = 6
-			goods_input_computers_add = 2
-			goods_input_telecommunications_add = 1
-			goods_input_tools_add = 5
-			goods_input_oil_add = 5
-			goods_input_coal_add = 10
+			goods_input_electricity_add = 4.5
+			goods_input_computers_add = 1.5
+			goods_input_telecommunications_add = 0.75
+			goods_input_tools_add = 3.75
+			goods_input_oil_add = 3.75
+			goods_input_coal_add = 7.5
 		}
 
 		level_scaled = {
@@ -1432,11 +1436,11 @@ pm_assembly_lines_building_appliances = {
 
 	building_modifiers = {
 		workforce_scaled = {
-			goods_input_electricity_add = 10
-			goods_input_computers_add = 5
-			goods_input_telecommunications_add = 1
-			goods_input_tools_add = 5
-			goods_input_oil_add = 7.5
+			goods_input_electricity_add = 7.5
+			goods_input_computers_add = 3.75
+			goods_input_telecommunications_add = 0.75
+			goods_input_tools_add = 3.75
+			goods_input_oil_add = 5.5
 		}
 
 		level_scaled = {
@@ -1458,9 +1462,9 @@ pm_casino = {
 
 	building_modifiers = {
 		workforce_scaled = {
-			goods_input_luxury_furniture_add = 2
-			goods_input_liquor_add = 3
-			goods_output_luxury_services_add = 8
+			goods_input_luxury_furniture_add = 1.5
+			goods_input_liquor_add = 2.25
+			goods_output_luxury_services_add = 14
 		}
 
 		level_scaled = {
@@ -1480,9 +1484,9 @@ pm_online_gambling = {
 
 	building_modifiers = {
 		workforce_scaled = {
-			goods_input_computers_add = 2
-			goods_input_telecommunications_add = 2
-			goods_output_luxury_services_add = 14
+			goods_input_computers_add = 1.5
+			goods_input_telecommunications_add = 1.5
+			goods_output_luxury_services_add = 24
 		}
 
 		level_scaled = {
@@ -1507,8 +1511,8 @@ pm_basic_software_development = {
 
 	building_modifiers = {
 		workforce_scaled = {
-			goods_input_paper_add = 2
-			goods_output_intellectual_property_add = 15
+			goods_input_paper_add = 1.5
+			goods_output_intellectual_property_add = 26
 		}
 
 		level_scaled = {
@@ -1527,10 +1531,10 @@ pm_commercial_software = {
 
 	building_modifiers = {
 		workforce_scaled = {
-			goods_input_paper_add = 3
-			goods_input_computers_add = 1
-			goods_output_intellectual_property_add = 20
-			goods_output_professional_services_add = 2
+			goods_input_paper_add = 2.25
+			goods_input_computers_add = 0.75
+			goods_output_intellectual_property_add = 35
+			goods_output_professional_services_add = 3.5
 		}
 
 		level_scaled = {
@@ -1549,9 +1553,9 @@ pm_enterprise_software = {
 
 	building_modifiers = {
 		workforce_scaled = {
-			goods_input_computers_add = 2
-			goods_input_telecommunications_add = 1
-			goods_output_intellectual_property_add = 25
+			goods_input_computers_add = 1.5
+			goods_input_telecommunications_add = 0.75
+			goods_output_intellectual_property_add = 44
 		}
 
 		level_scaled = {
@@ -1572,10 +1576,10 @@ pm_ai_software = {
 
 	building_modifiers = {
 		workforce_scaled = {
-			goods_input_computers_add = 3
-			goods_input_microchips_add = 2
-			goods_input_telecommunications_add = 2
-			goods_output_intellectual_property_add = 30
+			goods_input_computers_add = 2.25
+			goods_input_microchips_add = 1.5
+			goods_input_telecommunications_add = 1.5
+			goods_output_intellectual_property_add = 52
 		}
 
 		level_scaled = {
@@ -1606,9 +1610,9 @@ pm_dev_tooling = {
 
 	building_modifiers = {
 		workforce_scaled = {
-			goods_input_paper_add = 5
-			goods_input_electricity_add = 2
-			goods_input_computers_add = 3
+			goods_input_paper_add = 3.75
+			goods_input_electricity_add = 1.5
+			goods_input_computers_add = 2.25
 		}
 
 		level_scaled = {
@@ -1627,8 +1631,8 @@ pm_cloud_infrastructure = {
 
 	building_modifiers = {
 		workforce_scaled = {
-			goods_input_electricity_add = 2
-			goods_input_computers_add = 8
+			goods_input_electricity_add = 1.5
+			goods_input_computers_add = 6
 		}
 
 		level_scaled = {

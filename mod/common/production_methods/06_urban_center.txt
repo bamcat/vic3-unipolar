@@ -1,12 +1,13 @@
-﻿REPLACE_OR_CREATE:pm_market_stalls = {
+﻿
+REPLACE_OR_CREATE:pm_market_stalls = {
 	texture = "gfx/interface/icons/production_method_icons/market_stalls.dds"
 
 	building_modifiers = {
 		workforce_scaled = {
-			goods_output_services_add = 15
-			goods_output_real_estate_add = 1
-			goods_input_professional_services_add = 0.1
-			goods_input_advertising_add = 0.15
+			goods_output_services_add = 60
+			goods_output_real_estate_add = 2
+			goods_input_professional_services_add = 0.75
+			goods_input_advertising_add = 0.2
 		}
 
 		level_scaled = {
@@ -24,12 +25,12 @@ REPLACE_OR_CREATE:pm_market_squares = {
 
 	building_modifiers = {
 		workforce_scaled = {
-			goods_input_wood_add = 1
-			goods_input_glass_add = 1
-			goods_output_services_add = 20
-			goods_output_real_estate_add = 2
-			goods_input_professional_services_add = 0.15
-			goods_input_advertising_add = 0.25
+			goods_input_wood_add = 0.4
+			goods_input_glass_add = 0.4
+			goods_output_services_add = 85
+			goods_output_real_estate_add = 4
+			goods_input_professional_services_add = 1
+			goods_input_advertising_add = 0.3
 		}
 
 		level_scaled = {
@@ -48,12 +49,12 @@ REPLACE_OR_CREATE:pm_covered_markets = {
 
 	building_modifiers = {
 		workforce_scaled = {
-			goods_input_glass_add = 2
-			goods_input_steel_add = 1
-			goods_output_services_add = 25
-			goods_output_real_estate_add = 3
-			goods_input_professional_services_add = 0.25
-			goods_input_advertising_add = 0.35
+			goods_input_glass_add = 0.8
+			goods_input_steel_add = 0.4
+			goods_output_services_add = 120
+			goods_output_real_estate_add = 6
+			goods_input_professional_services_add = 1.25
+			goods_input_advertising_add = 0.4
 		}
 
 		level_scaled = {
@@ -72,13 +73,13 @@ REPLACE_OR_CREATE:pm_arcades = {
 
 	building_modifiers = {
 		workforce_scaled = {
-			goods_input_glass_add = 2
-			goods_input_steel_add = 2
-			goods_input_electricity_add = 1
-			goods_output_services_add = 30
-			goods_output_real_estate_add = 4
-			goods_input_professional_services_add = 0.40
-			goods_input_advertising_add = 0.45
+			goods_input_glass_add = 0.8
+			goods_input_steel_add = 0.8
+			goods_input_electricity_add = 0.4
+			goods_output_services_add = 165
+			goods_output_real_estate_add = 9
+			goods_input_professional_services_add = 1.5
+			goods_input_advertising_add = 0.55
 		}
 
 		level_scaled = {
@@ -107,8 +108,8 @@ REPLACE_OR_CREATE:pm_gas_streetlights = {
 
 	building_modifiers = {
 		workforce_scaled = {
-			goods_input_coal_add = 2
-			goods_output_services_add = 5
+			goods_input_coal_add = 1
+			goods_output_services_add = 20
 		}
 
 		level_scaled = {
@@ -134,8 +135,8 @@ REPLACE_OR_CREATE:pm_electric_streetlights = {
 
 	building_modifiers = {
 		workforce_scaled = {
-			goods_input_electricity_add = 3
-			goods_output_services_add = 10
+			goods_input_electricity_add = 2
+			goods_output_services_add = 40
 		}
 
 		level_scaled = {
@@ -158,7 +159,7 @@ REPLACE_OR_CREATE:pm_no_public_transport = {
 	
 	building_modifiers = {
 		workforce_scaled = {
-			goods_output_transportation_add = 2
+			goods_output_transportation_add = 6
 		}
 	}
 }
@@ -175,7 +176,7 @@ REPLACE_OR_CREATE:pm_public_trams = {
 	building_modifiers = {
 		workforce_scaled = {
 			goods_input_engines_add = 0.5
-			goods_output_transportation_add = 4
+			goods_output_transportation_add = 18
 		}
 
 		level_scaled = {
@@ -198,7 +199,7 @@ REPLACE_OR_CREATE:pm_public_motor_carriages = {
 	building_modifiers = {
 		workforce_scaled = {
 			goods_input_automobiles_add = 1
-			goods_output_transportation_add = 8
+			goods_output_transportation_add = 36
 		}
 
 		level_scaled = {
@@ -258,9 +259,9 @@ REPLACE_OR_CREATE:pm_traditional_art = {
 
 	building_modifiers = {
 		workforce_scaled = { # 500 profit
-			goods_input_paper_add = 10 # 300
-			goods_output_fine_art_add = 4 # 800
-			goods_output_intellectual_property_add = 3
+			goods_input_paper_add = 4 # 300
+			goods_output_fine_art_add = 7.5 # 800
+			goods_output_intellectual_property_add = 23
 		}
 	}
 }
@@ -271,9 +272,9 @@ REPLACE_OR_CREATE:pm_realist_art = {
 	building_modifiers = {
 
 		workforce_scaled = { # 550 profit
-			goods_input_paper_add = 15 # 450
-			goods_output_fine_art_add = 5 # 1000
-			goods_output_intellectual_property_add = 4
+			goods_input_paper_add = 6 # 450
+			goods_output_fine_art_add = 9.5 # 1000
+			goods_output_intellectual_property_add = 34
 		}
 	}
 }
@@ -284,11 +285,11 @@ REPLACE_OR_CREATE:pm_photographic_art = {
 	building_modifiers = {
 
 		workforce_scaled = { # 630 profit
-			goods_input_paper_add = 15 # 450
-			goods_input_tools_add = 8 # 320
+			goods_input_paper_add = 6 # 450
+			goods_input_tools_add = 3.25 # 320
 
-			goods_output_fine_art_add = 7 # 1400
-			goods_output_intellectual_property_add = 5
+			goods_output_fine_art_add = 13.5 # 1400
+			goods_output_intellectual_property_add = 46
 		}
 	}
 }
@@ -303,12 +304,12 @@ REPLACE_OR_CREATE:pm_film_art = {
 	building_modifiers = {
 
 		workforce_scaled = { # 690 profit
-			goods_input_tools_add = 10 # 400
-			goods_input_paper_add = 15 # 450
-			goods_input_electricity_add = 2 # 60
-			goods_input_telecommunications_add = 1
-			goods_output_intellectual_property_add = 6
-			goods_output_video_games_add = 5
+			goods_input_tools_add = 4 # 400
+			goods_input_paper_add = 6 # 450
+			goods_input_electricity_add = 0.8 # 60
+			goods_input_telecommunications_add = 0.4
+			goods_output_intellectual_property_add = 61
+			goods_output_video_games_add = 9.5
 		}
 	}
 
@@ -402,8 +403,8 @@ REPLACE_OR_CREATE:pm_hydroelectric_plant = {
 	
 	building_modifiers = {
 		workforce_scaled = {
-			goods_input_engines_add = 10
-			goods_output_electricity_add = 75
+			goods_input_engines_add = 4
+			goods_output_electricity_add = 142
 		}
 
 		level_scaled = {
@@ -479,9 +480,9 @@ REPLACE_OR_CREATE:pm_mass_transit_system = {
 
 	building_modifiers = {
 		workforce_scaled = {
-			goods_input_automobiles_add = 10
-			goods_input_engines_add = 5
-			goods_output_transportation_add = 10
+			goods_input_automobiles_add = 4
+			goods_input_engines_add = 2
+			goods_output_transportation_add = 19
 		}
 
 		level_scaled = {
@@ -505,10 +506,10 @@ REPLACE_OR_CREATE:pm_fission_plant = {
 
 	building_modifiers = {
 		workforce_scaled = {
-			goods_input_engines_add = 75
-			goods_input_gold_add = 350
-			goods_input_computers_add = 5
-			goods_output_electricity_add = 450
+			goods_input_engines_add = 30
+			goods_input_gold_add = 112
+			goods_input_computers_add = 1.5
+			goods_output_electricity_add = 855
 		}
 
 		level_scaled = {
@@ -530,11 +531,11 @@ REPLACE_OR_CREATE:pm_fusion_plant = {
 
 	building_modifiers = {
 		workforce_scaled = {
-			goods_input_engines_add = 175
-			goods_input_oil_add = 10
-			goods_input_gold_add = 450
-			goods_input_computers_add = 5
-			goods_output_electricity_add = 650
+			goods_input_engines_add = 70
+			goods_input_oil_add = 4
+			goods_input_gold_add = 144
+			goods_input_computers_add = 1.5
+			goods_output_electricity_add = 1235
 		}
 
 		level_scaled = {
@@ -558,9 +559,9 @@ REPLACE_OR_CREATE:pm_solar_field = {
 
 	building_modifiers = {
 		workforce_scaled = {
-			goods_input_engines_add = 15
-			goods_input_computers_add = 15
-			goods_output_electricity_add = 50
+			goods_input_engines_add = 6
+			goods_input_computers_add = 4.75
+			goods_output_electricity_add = 95
 		}
 
 		level_scaled = {
@@ -582,8 +583,8 @@ REPLACE_OR_CREATE:pm_windmill_field = {
 
 	building_modifiers = {
 		workforce_scaled = {
-			goods_input_engines_add = 20
-			goods_output_electricity_add = 75
+			goods_input_engines_add = 8
+			goods_output_electricity_add = 142
 		}
 
 		level_scaled = {
@@ -607,12 +608,12 @@ REPLACE_OR_CREATE:pm_base_airport = {
 
 	building_modifiers = {
 		workforce_scaled = {
-			goods_input_engines_add = 15
-			goods_input_coal_add = 30
-			goods_input_electricity_add = 75
-			goods_input_aeroplanes_add = 1
+			goods_input_engines_add = 6
+			goods_input_coal_add = 12
+			goods_input_electricity_add = 30
+			goods_input_aeroplanes_add = 0.3
 			
-			goods_input_electricity_add = 100
+			goods_input_electricity_add = 40
 		}
 
 		level_scaled = {
@@ -634,7 +635,7 @@ REPLACE_OR_CREATE:pm_cargo_plane_prioritization = {
 
 	building_modifiers = {
 		workforce_scaled = {
-			goods_input_aeroplanes_add = 2
+			goods_input_aeroplanes_add = 0.65
 			
 			country_convoys_capacity_add = 40
 		}
@@ -651,9 +652,9 @@ REPLACE_OR_CREATE:pm_regional_port = {
 
 	building_modifiers = {
 		workforce_scaled = {
-			goods_input_aeroplanes_add = 10
+			goods_input_aeroplanes_add = 3.25
 			
-			goods_output_transportation_add = 16
+			goods_output_transportation_add = 30
 		}
 		level_scaled = {
 			building_employment_clergymen_add = 200
@@ -669,9 +670,9 @@ REPLACE_OR_CREATE:pm_passenger_port = {
 
 	building_modifiers = {
 		workforce_scaled = {
-			goods_input_aeroplanes_add = 20
-			goods_input_electricity_add = 25
-			goods_output_transportation_add = 24
+			goods_input_aeroplanes_add = 6.5
+			goods_input_electricity_add = 10
+			goods_output_transportation_add = 46
 		}
 		level_scaled = {
 			building_employment_clergymen_add = 200
@@ -686,17 +687,17 @@ REPLACE_OR_CREATE:pm_launchpads = {
 
 	state_modifiers = {
 		workforce_scaled = {
-			goods_input_aeroplanes_add = 35
+			goods_input_aeroplanes_add = 8
 			state_pollution_generation_add = 50
 		}
 	}
 
 	building_modifiers = {
 		workforce_scaled = {
-			goods_input_engines_add = 15
-			goods_input_coal_add = 30
-			goods_input_electricity_add = 100
-			goods_output_spacecraft_add = 1
+			goods_input_engines_add = 6
+			goods_input_coal_add = 8
+			goods_input_electricity_add = 35
+			goods_output_spacecraft_add = 18
 		}
 
 		level_scaled = {
@@ -716,17 +717,17 @@ REPLACE_OR_CREATE:pm_space_shuttle = {
 
 	state_modifiers = {
 		workforce_scaled = {
-			goods_input_aeroplanes_add = 55
+			goods_input_aeroplanes_add = 12
 			state_pollution_generation_add = 50
 		}
 	}
 
 	building_modifiers = {
 		workforce_scaled = {
-			goods_input_engines_add = 20
-			goods_input_oil_add = 40
-			goods_input_electricity_add = 150
-			goods_output_spacecraft_add = 2
+			goods_input_engines_add = 8
+			goods_input_oil_add = 12
+			goods_input_electricity_add = 50
+			goods_output_spacecraft_add = 35
 		}
 
 		level_scaled = {
@@ -752,10 +753,10 @@ REPLACE_OR_CREATE:pm_reusable_rocket = {
 
 	building_modifiers = {
 		workforce_scaled = {
-			goods_input_aeroplanes_add = 75
+			goods_input_aeroplanes_add = 16
 			state_pollution_generation_add = 50
-			goods_output_spacecraft_add = 5
-			goods_input_electricity_add = 55
+			goods_output_spacecraft_add = 55
+			goods_input_electricity_add = 40
 		}
 
 		level_scaled = {
@@ -781,10 +782,10 @@ REPLACE_OR_CREATE:pm_starship = {
 
 	building_modifiers = {
 		workforce_scaled = {
-			goods_input_aeroplanes_add = 100
+			goods_input_aeroplanes_add = 20
 			state_pollution_generation_add = 50
-			goods_output_spacecraft_add = 10
-			goods_input_electricity_add = 75
+			goods_output_spacecraft_add = 85
+			goods_input_electricity_add = 55
 		}
 
 		level_scaled = {
@@ -830,8 +831,8 @@ REPLACE_OR_CREATE:pm_satellite_assisted_control = {
 
 	building_modifiers = {
 		workforce_scaled = {
-			goods_input_computers_add = 35
-			goods_output_spacecraft_add = 1
+			goods_input_computers_add = 18
+			goods_output_spacecraft_add = 20
 		}
 
 		level_scaled = {
@@ -849,8 +850,8 @@ REPLACE_OR_CREATE:pm_autonomous_mission_control = {
 	}
 
 	building_modifiers = {
-	workforce_scaled = { goods_input_computers_add = 70
-			goods_output_spacecraft_add = 5 }
+	workforce_scaled = { goods_input_computers_add = 28
+			goods_output_spacecraft_add = 45 }
 		level_scaled = {
 			building_employment_clergymen_add = 200
 		}
@@ -862,7 +863,7 @@ pm_no_public_housing = {
  
 	building_modifiers = {
 		workforce_scaled = {
-			goods_output_real_estate_add  = 1
+			goods_output_real_estate_add  = 3
 		}
 	}
 }
@@ -876,9 +877,9 @@ pm_the_projects = {
  
 	building_modifiers = {
 		workforce_scaled = {
-			goods_input_wood_add          = 3
-			goods_input_tools_add         = 2
-			goods_output_real_estate_add  = 4
+			goods_input_wood_add          = 2
+			goods_input_tools_add         = 1.5
+			goods_output_real_estate_add  = 12
 		}
  
 		level_scaled = {
@@ -897,10 +898,10 @@ pm_affordable_construction = {
  
 	building_modifiers = {
 		workforce_scaled = {
-			goods_input_wood_add          = 3
-			goods_input_tools_add         = 4
-			goods_input_steel_add         = 2
-			goods_output_real_estate_add  = 7
+			goods_input_wood_add          = 2.5
+			goods_input_tools_add         = 2.5
+			goods_input_steel_add         = 1.5
+			goods_output_real_estate_add  = 20
 		}
  
 		level_scaled = {
@@ -920,11 +921,11 @@ pm_housing_for_all = {
  
 	building_modifiers = {
 		workforce_scaled = {
-			goods_input_wood_add          = 4
-			goods_input_tools_add         = 6
-			goods_input_steel_add         = 4
-			goods_input_glass_add         = 2
-			goods_output_real_estate_add  = 12
+			goods_input_wood_add          = 3
+			goods_input_tools_add         = 3.5
+			goods_input_steel_add         = 2.5
+			goods_input_glass_add         = 1.5
+			goods_output_real_estate_add  = 34
 		}
  
 		level_scaled = {
