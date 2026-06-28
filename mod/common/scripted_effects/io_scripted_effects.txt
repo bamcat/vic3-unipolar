@@ -101,7 +101,7 @@ io_setup_opec_members = {
 	every_country = { limit = { c:LBY ?= this } add_to_global_variable_list = { name = io_opec_members target = this } }
 	every_country = { limit = { c:ALG ?= this } add_to_global_variable_list = { name = io_opec_members target = this } }
 	every_country = { limit = { c:NRI ?= this } add_to_global_variable_list = { name = io_opec_members target = this } }
-	every_country = { limit = { c:IDA ?= this } add_to_global_variable_list = { name = io_opec_members target = this } }
+	every_country = { limit = { c:BHT ?= this } add_to_global_variable_list = { name = io_opec_members target = this } }
 	every_country = { limit = { c:QAT ?= this } add_to_global_variable_list = { name = io_opec_members target = this } }
 	every_country = { limit = { c:ECU ?= this } add_to_global_variable_list = { name = io_opec_members target = this } }
 	every_country = { limit = { c:GBN ?= this } add_to_global_variable_list = { name = io_opec_members target = this } }
@@ -181,7 +181,7 @@ io_setup_asean_members = {
 }
  
 io_setup_saarc_members = {
-	every_country = { limit = { c:IDA ?= this } add_to_global_variable_list = { name = io_saarc_members target = this } }
+	every_country = { limit = { c:BHT ?= this } add_to_global_variable_list = { name = io_saarc_members target = this } }
 	every_country = { limit = { c:PAK ?= this } add_to_global_variable_list = { name = io_saarc_members target = this } }
 	every_country = { limit = { c:BNG ?= this } add_to_global_variable_list = { name = io_saarc_members target = this } }
 	every_country = { limit = { c:SRI ?= this } add_to_global_variable_list = { name = io_saarc_members target = this } }
@@ -230,7 +230,7 @@ io_setup_default_treaties = {
 		limit = {
 			is_country_type = recognized
 			NOT = { this = c:ISR }
-			NOT = { this = c:IDA }
+			NOT = { this = c:BHT }
 			NOT = { this = c:PAK }
 		}
 		set_variable = io_treaty_npt_signed
