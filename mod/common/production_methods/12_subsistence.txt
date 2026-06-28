@@ -2,15 +2,15 @@
 	texture = "gfx/interface/icons/production_method_icons/subsistence_farming.dds"
 	
 	building_modifiers = {
-		workforce_scaled = { # 55
-			goods_output_grain_add = 1.0 # 20
-			goods_output_fabric_add = 0.5 # 10
-			goods_output_wood_add = 0.5 # 10
-			goods_output_services_add = 0.5 # 15
+		workforce_scaled = {
+			goods_output_grain_add = 25
+			goods_output_fabric_add = 12.5
+			goods_output_wood_add = 12.5
+			goods_output_services_add = 12.5
 		}
 
 		level_scaled = {
-			building_employment_peasants_add = 150000
+			building_employment_peasants_add = 37500
 		}
 	}
 }
@@ -102,16 +102,16 @@ REPLACE_OR_CREATE:default_building_subsistence_orchard = {
 	texture = "gfx/interface/icons/production_method_icons/subsistence_farming.dds"
 	
 	building_modifiers = {
-		workforce_scaled = { # 55
-			goods_output_grain_add = 0.25 # 5 
-			goods_output_fruit_add = 0.5 # 15
-			goods_output_fabric_add = 0.5 # 10
-			goods_output_wood_add = 0.5 # 10
-			goods_output_services_add = 0.5 # 15
+		workforce_scaled = {
+			goods_output_grain_add = 6.25
+			goods_output_fruit_add = 12.5
+			goods_output_fabric_add = 12.5
+			goods_output_wood_add = 12.5
+			goods_output_services_add = 12.5
 		}
 
 		level_scaled = {
-			building_employment_peasants_add = 150000
+			building_employment_peasants_add = 37500
 		}
 	}
 }
@@ -166,16 +166,16 @@ REPLACE_OR_CREATE:default_building_subsistence_pasture = {
 	texture = "gfx/interface/icons/production_method_icons/subsistence_farming.dds"
 	
 	building_modifiers = {
-		workforce_scaled = { # 55
-			goods_output_grain_add = 0.25 # 5
-			goods_output_meat_add = 0.5 # 15
-			goods_output_fabric_add = 0.75 # 15
-			goods_output_wood_add = 0.25 # 5
-			goods_output_services_add = 0.5 # 15
+		workforce_scaled = {
+			goods_output_grain_add = 6.25
+			goods_output_meat_add = 12.5
+			goods_output_fabric_add = 18.75
+			goods_output_wood_add = 6.25
+			goods_output_services_add = 12.5
 		}
 
 		level_scaled = {
-			building_employment_peasants_add = 150000
+			building_employment_peasants_add = 37500
 		}
 	}
 }
@@ -229,16 +229,16 @@ REPLACE_OR_CREATE:default_building_subsistence_fishing_village = {
 	texture = "gfx/interface/icons/production_method_icons/subsistence_farming.dds"
 	
 	building_modifiers = {
-		workforce_scaled = { # 55
-			goods_output_grain_add = 0.5 # 10
-			goods_output_fish_add = 1.0 # 20
-			goods_output_fabric_add = 0.25 # 5
-			goods_output_wood_add = 0.25 # 5
-			goods_output_services_add = 0.5 # 15
+		workforce_scaled = {
+			goods_output_grain_add = 12.5
+			goods_output_fish_add = 25
+			goods_output_fabric_add = 6.25
+			goods_output_wood_add = 6.25
+			goods_output_services_add = 12.5
 		}
 
 		level_scaled = {
-			building_employment_peasants_add = 150000
+			building_employment_peasants_add = 37500
 		}
 	}
 }
@@ -293,15 +293,15 @@ REPLACE_OR_CREATE:default_building_subsistence_rice_farm = {
 	texture = "gfx/interface/icons/production_method_icons/subsistence_farming.dds"
 	
 	building_modifiers = {
-		workforce_scaled = { # 100
-			goods_output_grain_add = 2 # 40
-			goods_output_fabric_add = 0.75 # 15
-			goods_output_wood_add = 0.75 # 15
-			goods_output_services_add = 1 # 30
+		workforce_scaled = {
+			goods_output_grain_add = 50
+			goods_output_fabric_add = 18.75
+			goods_output_wood_add = 18.75
+			goods_output_services_add = 25
 		}
 
 		level_scaled = {
-			building_employment_peasants_add = 250000
+			building_employment_peasants_add = 62500
 		}
 	}
 }

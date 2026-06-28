@@ -124,6 +124,20 @@
 		}
 	}
 
+	fail = {
+		OR = {
+			has_law = law_type:law_safe_injection_sites
+			has_law = law_type:law_trafficking_allowed
+			has_law = law_type:law_hard_drugs_decriminalized
+		}
+	}
+
+	on_fail = {
+		custom_tooltip = {
+			text = wod_fail_tt
+		}
+	}
+
 	transferable = no
 	can_revolution_inherit = no
 	weight = 5000

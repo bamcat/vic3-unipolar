@@ -57,14 +57,14 @@ GLOBAL = {
 			}
 		}
 	}
-	c:IDA = {
+	c:BHT = {
 		every_scope_state = { limit = { state_has_sufficient_population = yes }
 			effect_starting_buildings_PRC_IDA_1 = yes
 			#effect_starting_buildings_2 = yes
 			effect_prune_excess_buildings = yes
 		}
 		s:STATE_RAJPUTANA = {
-			region_state:IDA = {
+			region_state:BHT = {
 				create_building = {
 					building = "building_taj_mahal"
 					level = 1
@@ -73,7 +73,7 @@ GLOBAL = {
 			}
 		}
 		s:STATE_BOMBAY = {
-			region_state:IDA = {
+			region_state:BHT = {
 				create_building = {
 					building = "building_victoria_terminus"
 					level = 1

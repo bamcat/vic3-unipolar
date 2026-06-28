@@ -1,4 +1,4 @@
-MILITARY_FORMATIONS = {
+﻿MILITARY_FORMATIONS = {
 
 	### GREAT BRITAIN ###
 	# ~293,000 active in 1992. Post-Options for Change cuts underway (~18% reduction).
@@ -181,12 +181,6 @@ MILITARY_FORMATIONS = {
 				state_region = s:STATE_CHAMPAGNE
 				count = 10
 			}
-			combat_unit = {
-				type = unit_type:combat_unit_type_missile_artillery
-				state_region = s:STATE_ALSACE_LORRAINE
-				count = 6
-			}
-
 			save_scope_as = fra_ire_armee_scope
 		}
 
@@ -781,12 +775,6 @@ MILITARY_FORMATIONS = {
 				state_region = s:STATE_SCHLESWIG_HOLSTEIN
 				count = 10
 			}
-			combat_unit = {
-				type = unit_type:combat_unit_type_missile_artillery
-				state_region = s:STATE_WESTPHALIA
-				count = 6
-			}
-
 			save_scope_as = ger_i_korps_scope
 		}
 
@@ -1327,12 +1315,6 @@ MILITARY_FORMATIONS = {
 				state_region = s:STATE_BIALYSTOK
 				count = 10
 			}
-			combat_unit = {
-				type = unit_type:combat_unit_type_missile_artillery
-				state_region = s:STATE_MAZOVIA
-				count = 6
-			}
-
 			save_scope_as = pol_warszawski_okreg_wojskowy_scope
 		}
 
@@ -1967,12 +1949,6 @@ MILITARY_FORMATIONS = {
 				state_region = s:STATE_VOLHYNIA
 				count = 10
 			}
-			combat_unit = {
-				type = unit_type:combat_unit_type_missile_artillery
-				state_region = s:STATE_KIEV
-				count = 8
-			}
-
 			save_scope_as = ukr_sukhoputni_viiska_ukrainy_scope
 		}
 
@@ -2088,12 +2064,6 @@ MILITARY_FORMATIONS = {
 				state_region = s:STATE_HRODNO
 				count = 10
 			}
-			combat_unit = {
-				type = unit_type:combat_unit_type_missile_artillery
-				state_region = s:STATE_MINSK
-				count = 8
-			}
-
 			save_scope_as = byl_sukhaputnyya_voyski_belarusi_scope
 		}
 
@@ -2173,12 +2143,6 @@ MILITARY_FORMATIONS = {
 				state_region = s:STATE_RYAZAN
 				count = 12
 			}
-			combat_unit = {
-				type = unit_type:combat_unit_type_missile_artillery
-				state_region = s:STATE_MOSCOW
-				count = 10
-			}
-
 			save_scope_as = rus_moskovski_voyenny_okrug_scope
 		}
 

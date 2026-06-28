@@ -1,4 +1,4 @@
-MILITARY_FORMATIONS = {
+﻿MILITARY_FORMATIONS = {
 
 	### USA ###
 	# ~750k Army, ~540k Navy/Marines, ~470k Air Force active in 1992.
@@ -29,12 +29,6 @@ MILITARY_FORMATIONS = {
 				state_region = s:STATE_COLORADO
 				count = 14
 			}
-			combat_unit = {
-				type = unit_type:combat_unit_type_missile_artillery
-				state_region = s:STATE_TEXAS
-				count = 6
-			}
-
 			save_scope_as = usa_iii_corps_formation
 		}
 

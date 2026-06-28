@@ -81,7 +81,10 @@ dissolve_european_union = {
 			text = io_dissolve_eu_no_members_tt
 			NOT = {
 				any_country = {
-					is_target_in_global_variable_list = { name = io_eec_members target = this }
+					OR = {
+						is_target_in_global_variable_list = { name = io_eec_members target = this }
+						is_target_in_global_variable_list = { name = io_eu_members target = this }
+					}
 				}
 			}
 		}
@@ -99,7 +102,21 @@ dissolve_european_union = {
 				}
 			}
 		}
+		# Clear any remaining stale entries from both lists
+		every_country = {
+			limit = { is_target_in_global_variable_list = { name = io_eec_members target = this } }
+			remove_list_global_variable = { name = io_eec_members target = this }
+			remove_modifier = io_free_trade_agreement_member
+		}
+		every_country = {
+			limit = { is_target_in_global_variable_list = { name = io_eu_members target = this } }
+			remove_list_global_variable = { name = io_eu_members target = this }
+			remove_modifier = io_free_trade_agreement_member
+			remove_modifier = modifier_eu_member_state
+			remove_variable = eu_member_state
+		}
 		set_global_variable = io_eu_dissolved
+		set_global_variable = io_eec_dissolved
 		custom_tooltip = {
 			text = io_dissolve_eu_effect_tt
 		}

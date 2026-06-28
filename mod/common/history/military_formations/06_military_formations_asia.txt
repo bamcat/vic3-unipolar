@@ -1,4 +1,4 @@
-MILITARY_FORMATIONS = {
+﻿MILITARY_FORMATIONS = {
  
 	### CHINA (PRC) ###
 	# ~3,030,000 active in 1992. World's largest standing army.
@@ -29,12 +29,6 @@ MILITARY_FORMATIONS = {
 				state_region = s:STATE_SHANXI
 				count = 20
 			}
-			combat_unit = {
-				type = unit_type:combat_unit_type_missile_artillery
-				state_region = s:STATE_BEIJING
-				count = 10
-			}
-
 			save_scope_as = prc_beijing_junqu_formation
 		}
 
@@ -335,12 +329,6 @@ MILITARY_FORMATIONS = {
 				state_region = s:STATE_BUSAN
 				count = 15
 			}
-			combat_unit = {
-				type = unit_type:combat_unit_type_missile_artillery
-				state_region = s:STATE_SEOUL
-				count = 10
-			}
-
 			save_scope_as = stk_republic_of_korea_army_formation
 		}
 
@@ -414,13 +402,7 @@ MILITARY_FORMATIONS = {
 				type = unit_type:combat_unit_type_light_infantry
 				state_region = s:STATE_SARIWON
 				count = 60
-			}
-			combat_unit = {
-				type = unit_type:combat_unit_type_missile_artillery
-				state_region = s:STATE_PYONGYANG
-				count = 15
-			}
-			combat_unit = {
+			}			combat_unit = {
 				type = unit_type:combat_unit_type_fixed_wing_aircraft
 				state_region = s:STATE_PYONGYANG
 				count = 8
@@ -720,13 +702,7 @@ MILITARY_FORMATIONS = {
 				type = unit_type:combat_unit_type_mechanized_infantry
 				state_region = s:STATE_FORMOSA
 				count = 50
-			}
-			combat_unit = {
-				type = unit_type:combat_unit_type_missile_artillery
-				state_region = s:STATE_FORMOSA
-				count = 10
-			}
-			combat_unit = {
+			}			combat_unit = {
 				type = unit_type:combat_unit_type_multirole_aircraft
 				state_region = s:STATE_FORMOSA
 				count = 8
@@ -833,7 +809,7 @@ MILITARY_FORMATIONS = {
 	# Three commands: Western (Pakistan), Northern (Kashmir/China), Eastern (China/Bangladesh).
 	# IN: carrier Viraat (ex-HMS Hermes), Godavari frigates, Type 209 subs.
  
-	c:IDA ?= {
+	c:BHT ?= {
  
 		create_military_formation = {
 			type = army
@@ -861,12 +837,6 @@ MILITARY_FORMATIONS = {
 				state_region = s:STATE_SINDH
 				count = 20
 			}
-			combat_unit = {
-				type = unit_type:combat_unit_type_missile_artillery
-				state_region = s:STATE_PUNJAB
-				count = 10
-			}
-
 			save_scope_as = ida_western_command_india_formation
 		}
 
@@ -875,8 +845,8 @@ MILITARY_FORMATIONS = {
 			save_scope_as = IDA_western_command_india_commander_scope
 		}
 
-		scope:IDA_western_command_india_commander_scope = {
-			transfer_to_formation = scope:ida_western_command_india_formation
+		scope:BHT_western_command_india_commander_scope = {
+			transfer_to_formation = scope:BHT_western_command_india_formation
 		}
  
 		create_military_formation = {
@@ -924,8 +894,8 @@ MILITARY_FORMATIONS = {
 			save_scope_as = IDA_central_southern_command_india_commander_scope
 		}
 
-		scope:IDA_central_southern_command_india_commander_scope = {
-			transfer_to_formation = scope:ida_central_southern_command_india_formation
+		scope:BHT_central_southern_command_india_commander_scope = {
+			transfer_to_formation = scope:BHT_central_southern_command_india_formation
 		}
  
 		create_military_formation = {
@@ -968,8 +938,8 @@ MILITARY_FORMATIONS = {
 			save_scope_as = IDA_eastern_northern_command_india_commander_scope
 		}
 
-		scope:IDA_eastern_northern_command_india_commander_scope = {
-			transfer_to_formation = scope:ida_eastern_northern_command_india_formation
+		scope:BHT_eastern_northern_command_india_commander_scope = {
+			transfer_to_formation = scope:BHT_eastern_northern_command_india_formation
 		}
  
 		create_military_formation = {
@@ -1007,8 +977,8 @@ MILITARY_FORMATIONS = {
 			save_scope_as = IDA_indian_air_force_commander_scope
 		}
 
-		scope:IDA_indian_air_force_commander_scope = {
-			transfer_to_formation = scope:ida_indian_air_force_formation
+		scope:BHT_indian_air_force_commander_scope = {
+			transfer_to_formation = scope:BHT_indian_air_force_formation
 		}
  
 		create_military_formation = {
@@ -1049,8 +1019,8 @@ MILITARY_FORMATIONS = {
 			save_scope_as = IDA_indian_navy_commander_scope
 		}
 
-		scope:IDA_indian_navy_commander_scope = {
-			transfer_to_formation = scope:ida_indian_navy_formation
+		scope:BHT_indian_navy_commander_scope = {
+			transfer_to_formation = scope:BHT_indian_navy_formation
 		}
 	}
  
@@ -1278,13 +1248,7 @@ MILITARY_FORMATIONS = {
 				type = unit_type:combat_unit_type_mechanized_infantry
 				state_region = s:STATE_KHUZESTAN
 				count = 20
-			}
-			combat_unit = {
-				type = unit_type:combat_unit_type_missile_artillery
-				state_region = s:STATE_ISFAHAN
-				count = 8
-			}
-			# IRIAF: F-14A (grounded mostly), MiG-29, Su-24MK, F-4E
+			}			# IRIAF: F-14A (grounded mostly), MiG-29, Su-24MK, F-4E
 			combat_unit = {
 				type = unit_type:combat_unit_type_multirole_aircraft
 				state_region = s:STATE_ISFAHAN
@@ -1990,13 +1954,7 @@ MILITARY_FORMATIONS = {
 				type = unit_type:combat_unit_type_mechanized_infantry
 				state_region = s:STATE_DEIR_EZ_ZOR
 				count = 25
-			}
-			combat_unit = {
-				type = unit_type:combat_unit_type_missile_artillery
-				state_region = s:STATE_SYRIA
-				count = 10
-			}
-			combat_unit = {
+			}			combat_unit = {
 				type = unit_type:combat_unit_type_multirole_aircraft
 				state_region = s:STATE_SYRIA
 				count = 6
@@ -2067,13 +2025,7 @@ MILITARY_FORMATIONS = {
 				type = unit_type:combat_unit_type_mechanized_infantry
 				state_region = s:STATE_PALESTINE
 				count = 35
-			}
-			combat_unit = {
-				type = unit_type:combat_unit_type_missile_artillery
-				state_region = s:STATE_PALESTINE
-				count = 8
-			}
-			combat_unit = {
+			}			combat_unit = {
 				type = unit_type:combat_unit_type_multirole_aircraft
 				state_region = s:STATE_PALESTINE
 				count = 8
@@ -2183,13 +2135,7 @@ MILITARY_FORMATIONS = {
 				type = unit_type:combat_unit_type_light_infantry
 				state_region = s:STATE_NEJD
 				count = 15
-			}
-			combat_unit = {
-				type = unit_type:combat_unit_type_missile_artillery
-				state_region = s:STATE_NEJD
-				count = 6
-			}
-			combat_unit = {
+			}			combat_unit = {
 				type = unit_type:combat_unit_type_multirole_aircraft
 				state_region = s:STATE_NEJD
 				count = 8

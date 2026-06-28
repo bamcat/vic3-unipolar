@@ -499,14 +499,14 @@ combat_unit_type_field_artillery = {
     }
     
     battle_modifier = {
+		unit_offense_add = 15
+        unit_defense_add = 15
         unit_morale_loss_add = 8
         unit_kill_rate_add = 0.2
         unit_devastation_mult = 0.15
     }
 
     formation_modifier = {
-		unit_offense_add = 15
-        unit_defense_add = 15
         military_formation_mobilization_speed_mult = -0.2
         military_formation_movement_speed_mult = -0.2
     }
