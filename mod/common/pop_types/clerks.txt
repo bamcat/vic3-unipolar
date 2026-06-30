@@ -41,10 +41,12 @@
 	
 	qualifications_growth_desc = "CLERKS_QUALIFICATIONS_DESC"
 	qualifications = {
-		# baseline: literacy * 20, norm 10 for Laborers with Literacy 25%
+		# baseline: ( literacy - 0.10 ) * 60, clerks need real schooling
 		add = {
 			value = literacy_rate
-			multiply = 20
+			subtract = 0.10
+			min = 0
+			multiply = 60
 			desc = "QUALIFICATIONS_LITERACY_FACTOR"
 		}
 		if = {

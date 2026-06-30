@@ -39,13 +39,13 @@
 		if = {
 			limit = {
 				is_peasant_under_serfdom = no 
-				literacy_rate > 0.2
+				literacy_rate > 0.25
 			}
-			# baseline: ( literacy - 0.2 ) * 10 * ( 2 if accepted culture and religion), norm 6 for Literacy 50% and Accepted C/R
+			# baseline: ( literacy - 0.25 ) * 80, education is essential for bureaucratic work
 			add = {
 				value = literacy_rate
-				subtract = 0.2
-				multiply = 20
+				subtract = 0.25
+				multiply = 80
 				desc = "QUALIFICATIONS_LITERACY_FACTOR"
 			}
 
