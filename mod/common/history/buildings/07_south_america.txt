@@ -13284,6 +13284,17 @@
 				reserves=1
 				activate_production_methods={ "pm_simple_organization" "pm_professional_bureaucrats" "pm_secular_bureaucrats" }
 			}
+			create_building = {
+				building = building_cristo_redentor
+				add_ownership = {
+					building = {
+						country = c:BRA
+						levels = 1
+						region = STATE_RIO_DE_JANEIRO
+					}
+				}
+				reserves = 1
+			}
 			create_building={
 				building="building_railway"
 				add_ownership={

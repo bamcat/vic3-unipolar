@@ -2084,6 +2084,17 @@
 				activate_production_methods={ "pm_automobile_production" "pm_automation_disabled" }
 			}
 			create_building={
+				building="building_big_ben"
+				add_ownership={
+					country={
+						country="c:GBR"
+						levels=1
+					}
+				}
+				reserves=1
+				activate_production_methods={ "pm_default_building_big_ben" }
+			}
+			create_building={
 				building="building_appliance_manufactory"
 				add_ownership={
 					country={
@@ -6584,6 +6595,17 @@
 				}
 				reserves=1
 				activate_production_methods={ "pm_dishwashers" "pm_automation_disabled" }
+			}
+			create_building={
+				building="building_eiffel_tower"
+				add_ownership={
+					country={
+						country="c:FRA"
+						levels=1
+					}
+				}
+				reserves=1
+				activate_production_methods={ "pm_default_building_eiffel_tower" }
 			}
 			create_building={
 				building="building_automotive_industry"

@@ -3492,6 +3492,10 @@
 				activate_production_methods={ "pm_trade_center_trade_quantity_high" "pm_trade_center" }
 			}
 			create_building={
+				building="building_vatican_city"
+				level=1
+			}
+			create_building={
 				building="building_construction_sector"
 				add_ownership={
 					country={
@@ -9357,6 +9361,10 @@
 				}
 				reserves=1
 				activate_production_methods={ "pm_wooden_buildings" }
+			}
+			create_building={
+				building="building_hagia_sophia"
+				level=1
 			}
 			create_building={
 				building="building_government_administration"
