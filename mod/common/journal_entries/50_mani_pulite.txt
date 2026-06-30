@@ -163,7 +163,10 @@ je_mani_pulite = {
 
 	# Investigation wins — First Republic falls
 	complete = {
-		var:investigation_progress >= 100
+		scripted_bar_progress = {
+			name = investigation_progress_bar
+			value > 0.98
+		}
 		var:investigation_progress > var:political_resistance
 	}
 
