@@ -24,7 +24,7 @@
 # }
 
 REPLACE_OR_CREATE:building_professional_service = { #food processing, buy all foods, turn into procressed, which sell more. give skyscraper model
-	building_group = bg_service_industry
+	building_group = bg_services
 	icon = "gfx/interface/icons/building_icons/professional_service.dds"
 	city_type = city
 	levels_per_mesh = 1
@@ -191,15 +191,15 @@ building_software_industry = {
 ### missile silo
 
 building_nuclear_silo = {
-	building_group = bg_army
+	building_group = bg_missile_silo
 	icon = "gfx/interface/icons/building_icons/nuclear_silo.dds"
- 
-	required_construction = construction_cost_monument
-	can_build_private = no
 	city_type = city
-	expandable = no
-	max_level = 1
+	required_construction = construction_cost_monument
+
 	unique = yes
+	expandable = no
+	downsizeable = yes
+	max_level = 1
 	
 	background = "gfx/interface/icons/building_icons/backgrounds/building_panel_bg_military.dds"
 	

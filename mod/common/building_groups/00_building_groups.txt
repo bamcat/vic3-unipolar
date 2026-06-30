@@ -762,7 +762,7 @@ bg_naval_logistics_center = {
 	}
 }
 
-bg_land_logistics_center = {
+bg_army_logistics_center = {
 	parent_group = bg_army
 	urbanization = 2
 
@@ -776,11 +776,17 @@ bg_land_logistics_center = {
 
 	infrastructure_usage_per_level = 0.1
 
-	default_building = building_land_logistics_center
+	default_building = building_army_logistics_center
 
 	should_auto_expand = {
 		always = no
 	}
+}
+
+bg_missile_silo = {
+	parent_group = bg_military
+
+	economy_of_scale = no
 }
 
 bg_skyscraper = {

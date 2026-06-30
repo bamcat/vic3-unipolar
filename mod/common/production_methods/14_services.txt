@@ -1643,3 +1643,15 @@ pm_cloud_infrastructure = {
 
 	required_input_goods = electricity
 }
+
+pm_base_building_nuclear_silo = {
+	texture = "gfx/interface/icons/production_method_icons/logistics_center.dds"
+
+	building_modifiers = {
+		level_scaled = {
+			building_employment_machinists_add = 20
+			building_employment_bureaucrats_add = 30
+			building_employment_officers_add = 50
+		}
+	}
+}
