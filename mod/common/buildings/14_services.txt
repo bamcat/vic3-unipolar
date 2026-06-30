@@ -194,13 +194,15 @@ building_nuclear_silo = {
 	building_group = bg_army
 	icon = "gfx/interface/icons/building_icons/nuclear_silo.dds"
  
-	levels_per_state_building = 1
 	required_construction = construction_cost_monument
 	can_build_private = no
 	city_type = city
 	expandable = no
 	max_level = 1
-
+	unique = yes
+	
+	background = "gfx/interface/icons/building_icons/backgrounds/building_panel_bg_military.dds"
+	
 	production_method_groups = {
 		pmg_base_building_nuclear_silo
 	}

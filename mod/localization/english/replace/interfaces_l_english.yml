@@ -9,7 +9,7 @@
  COUNTRY_ALL_OWNERSHIP: "#u [Country.GetDomesticallyOwnedGDPFraction|%1b]#![ConcatIfNeitherEmpty(' + ', AddLocalizationIf(NotZero_CFixedPoint(Country.GetGDPOwnedInForeignCountries), 'FOREIGN_COUNTRY_GDP'))]"
  
  COUNTRY_POPULATION:1 "#title [Concept('concept_pop','$concept_population$')]#!:\n [Country.MakeScope.ScriptValue('smd_population')|Dv]"
- COUNTRY_GDP:0 "#title $GDP_SHORT$#!:\nCountry.MakeScope.ScriptValue('cwp_gdp')|Dv]"
+ COUNTRY_GDP:0 "#title $GDP_SHORT$#!:\n[Country.MakeScope.ScriptValue('cwp_gdp')|Dv]"
 
  ERROR_DEER_TOOLTIP:0 "#header Dangnabit!#!\n#instruction Left-Click#! to open Error Log\n#instruction Right-Click#! to make it go away (until you upset it again)"
  ERROR_MANUL_TOOLTIP: "#header Fool me once, shame on— shame on you. You fool me—you can’t get fooled again!#!\n#instruction Left-Click#! to open Error Log\n#instruction Right-Click#! to make it go away (until you upset it again)"

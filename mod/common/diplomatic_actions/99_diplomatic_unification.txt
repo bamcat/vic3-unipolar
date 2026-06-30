@@ -3,11 +3,14 @@
 REPLACE_OR_CREATE:smd_create_economic_union = {
 	groups = { general }
 	requires_approval = yes
+	can_use_obligations = yes
+	uses_random_approval = yes
 	should_notify_third_parties = yes
 	show_effect_in_tooltip = yes
 
 	selectable = {
 		NOT = { is_country_type = decentralized }
+		is_revolutionary = no
 	}
 
 	potential = {
@@ -49,10 +52,17 @@ REPLACE_OR_CREATE:smd_create_economic_union = {
 			text = smd_economic_union_requires_no_duplicate_tt
 			NOT = { smd_has_economic_union_with_target = yes }
 		}
+		scope:target_country = {
+			is_revolutionary = no
+		}
 	}
 
 	accept_effect = {
 		smd_create_economic_union_with_target = yes
+	}
+
+	decline_effect = {
+		change_relations = { country = scope:target_country value = -20 }
 	}
 
 	ai = {
@@ -60,11 +70,11 @@ REPLACE_OR_CREATE:smd_create_economic_union = {
 		max_influence_spending_fraction = 0.15
 
 		evaluation_chance = {
-			value = 0.08
+			value = 0.5
 
 			add = {
 				value = country_rank
-				multiply = 0.03
+				multiply = 0.05
 			}
 		}
 
@@ -73,198 +83,206 @@ REPLACE_OR_CREATE:smd_create_economic_union = {
 
 			add = {
 				desc = "DIPLOMATIC_ACCEPTANCE_BASE"
-				value = -35
+				value = -125
 			}
 
+			### Leverage
 			add = {
-				desc = "DIPLOMATIC_ACCEPTANCE_RELATIONS"
-				value = scope:target_country.relations:root
-				divide = 5
-				min = -25
-				max = 25
+				desc = "DIPLOMATIC_ACCEPTANCE_LEVERAGE"
+				value = "scope:actor.leverage(root)"
+
+				multiply = 0.5
+
+				min = 0
+				max = 200
+			}
+
+			### Relative rank
+			add = {
+				desc = "DIPLOMATIC_ACCEPTANCE_RANK"
+				value = scope:actor.country_rank
+				subtract = 2
+				subtract = country_rank
+				multiply = 10
+			}
+
+			if = {
+				limit = {
+					scope:actor.gdp >= 2000000
+				}
+
+				add = {
+					desc = "DIPLOMATIC_ACCEPTANCE_HIGH_GDP"
+					value = scope:actor.gdp
+					subtract = 1000000
+					divide = 1000000
+					min = 1
+					max = 50
+				}
 			}
 
 			add = {
 				desc = "DIPLOMATIC_ACCEPTANCE_MUTUAL_TRADE_VALUE"
-				value = "mutual_trade_value_with_country(scope:target_country)"
+				value = "mutual_trade_value_with_country(scope:actor)"
 				multiply = 50000
 				divide = {
 					value = gdp
 					min = 1000000
 				}
 				min = 0
-				max = 20
+				max = 30
 			}
 
 			if = {
 				limit = { smd_primary_cultures_similar_to_target = yes }
 				add = {
 					desc = "DIPLOMATIC_ACCEPTANCE_CULTURAL_ACCEPTANCE"
-					value = 10
-				}
-			}
-
-			if = {
-				limit = { is_in_same_power_bloc = scope:target_country }
-				add = {
-					desc = "DIPLOMATIC_ACCEPTANCE_POWER_BLOC"
-					value = 15
-				}
-			}
-
-			if = {
-				limit = {
-					scope:target_country = {
-						OR = {
-							has_attitude = { who = root attitude = cooperative }
-							has_attitude = { who = root attitude = conciliatory }
-						}
-					}
-				}
-				add = {
-					desc = "DIPLOMATIC_ACCEPTANCE_ATTITUDE"
 					value = 20
 				}
 			}
 
 			if = {
-				limit = {
-					scope:target_country = {
-						OR = {
-							has_attitude = { who = root attitude = antagonistic }
-							has_attitude = { who = root attitude = belligerent }
-							has_attitude = { who = root attitude = domineering }
-							has_attitude = { who = root attitude = rebellious }
-						}
-					}
-				}
+				limit = { is_in_same_power_bloc = scope:actor }
 				add = {
-					desc = "DIPLOMATIC_ACCEPTANCE_ATTITUDE"
-					value = -1000
+					desc = "DIPLOMATIC_ACCEPTANCE_POWER_BLOC"
+					value = 30
 				}
-			}
-
-			if = {
-				limit = { infamy >= infamy_threshold:infamous }
-				add = {
-					desc = "DIPLOMATIC_ACCEPTANCE_INFAMY"
-					value = -20
-				}
-			}
-		}
-
-
-		propose_score = {
-			value = -10
-
-			if = {
-				limit = {
-					smd_can_create_economic_union_with_target = yes
-				}
-				add = 10
-			}
-
-			if = {
-				limit = {
-					scope:target_country.relations:root >= relations_threshold:cordial
-				}
-				add = 15
-			}
-
-			if = {
-				limit = {
-					scope:target_country.relations:root >= relations_threshold:friendly
-				}
-				add = 15
-			}
-
-			if = {
-				limit = {
-					smd_primary_cultures_similar_to_target = yes
-				}
-				add = 10
-			}
-
-			if = {
-				limit = {
-					is_in_same_power_bloc = scope:target_country
-				}
-				add = 15
 			}
 
 			add = {
-				value = "mutual_trade_value_with_country(scope:target_country)"
-				multiply = 50000
-				divide = {
-					value = gdp
-					min = 1000000
-				}
-				min = 0
-				max = 25
-			}
-
-			if = {
-				limit = {
-					OR = {
+				desc = "DIPLOMATIC_ACCEPTANCE_ATTITUDE"
+				if = {
+					limit = {
 						has_attitude = {
-							who = scope:target_country
-							attitude = conciliatory
-						}
-						has_attitude = {
-							who = scope:target_country
-							attitude = protective
-						}
-						has_attitude = {
-							who = scope:target_country
-							attitude = cooperative
+							who = scope:actor
+							attitude = genial
 						}
 					}
+					value = 50
 				}
-				add = 20
-			}
-
-			if = {
-				limit = {
-					OR = {
-						has_attitude = {
-							who = scope:target_country
-							attitude = antagonistic
-						}
-						has_attitude = {
-							who = scope:target_country
-							attitude = belligerent
-						}
-						has_attitude = {
-							who = scope:target_country
-							attitude = domineering
+				else_if = {
+					limit = {
+						OR = {
+							has_attitude = {
+								who = scope:actor
+								attitude = cooperative
+							}
+							has_attitude = {
+								who = scope:actor
+								attitude = conciliatory
+							}
+							has_attitude = {
+								who = scope:actor
+								attitude = protective
+							}
 						}
 					}
+					value = 25
 				}
-				add = -1000
+				else_if = {
+					limit = {
+						OR = {
+							has_attitude = {
+								who = scope:actor
+								attitude = antagonistic
+							}
+							has_attitude = {
+								who = scope:actor
+								attitude = domineering
+							}
+							has_attitude = {
+								who = scope:actor
+								attitude = belligerent
+							}
+						}
+					}
+					value = -50
+				}
+				else = {
+					value = -25
+				}
+			}
+
+			add = {
+				desc = "DIPLOMATIC_ACCEPTANCE_RELATIONS"
+				if = {
+					limit = {
+						"relations(scope:actor)" >= relations_threshold:friendly
+					}
+					value = 30
+				}
+				else_if = {
+					limit = {
+						"relations(scope:actor)" >= relations_threshold:amicable
+					}
+					value = 15
+				}
+				else = {
+					value = 0
+				}
+			}
+
+			add = {
+				desc = "DIPLOMATIC_ACCEPTANCE_INFAMY"
+				if = {
+					limit = {
+						"scope:actor.infamy" >= infamy_threshold:infamous
+						"scope:actor.infamy" < infamy_threshold:notorious
+					}
+					value = -10
+				}
+				if = {
+					limit = {
+						"scope:actor.infamy" >= infamy_threshold:notorious
+						"scope:actor.infamy" < infamy_threshold:pariah
+					}
+					value = -25
+				}
+				if = {
+					limit = {
+						"scope:actor.infamy" >= infamy_threshold:pariah
+					}
+					value = -50
+				}
 			}
 		}
 
 		will_propose = {
-			smd_can_create_economic_union_with_target = yes
-			scope:target_country.relations:root >= relations_threshold:cordial
+			would_accept_diplomatic_action = {
+				actor = scope:target_country
+				type = smd_create_economic_union
+			}
+		}
 
-			NOR = {
-				has_attitude = {
-					who = scope:target_country
-					attitude = antagonistic
+		propose_score = {
+			value = 20
+		}
+
+		use_obligation_chance = {
+			value = 75
+		}
+
+		owe_obligation_chance = {
+			value = 0
+
+			if = {
+				limit = {
+					scope:target_country = {
+						country_rank >= rank_value:major_power
+					}
 				}
-				has_attitude = {
-					who = scope:target_country
-					attitude = belligerent
-				}
+
+				add = 50
+			}
+		}
+
+		will_propose_even_if_not_accepted = {
+			OR = {
 				has_attitude = {
 					who = scope:target_country
 					attitude = domineering
 				}
-				has_attitude = {
-					who = scope:target_country
-					attitude = rebellious
-				}
+				"leverage(scope:target_country)" >= 500
 			}
 		}
 
@@ -284,11 +302,14 @@ REPLACE_OR_CREATE:smd_create_economic_union = {
 REPLACE_OR_CREATE:smd_diplomatic_unification = {
 	groups = { general }
 	requires_approval = yes
+	can_use_obligations = yes
+	uses_random_approval = yes
 	should_notify_third_parties = yes
 	show_effect_in_tooltip = yes
 
 	selectable = {
 		NOT = { is_country_type = decentralized }
+		is_revolutionary = no
 	}
 
 	potential = {
@@ -328,9 +349,8 @@ REPLACE_OR_CREATE:smd_diplomatic_unification = {
 			text = smd_unification_requires_culture_tt
 			smd_primary_cultures_similar_to_target = yes
 		}
-		custom_tooltip = {
-			text = smd_unification_requires_good_relations_tt
-			scope:target_country.relations:root >= relations_threshold:amicable
+		scope:target_country = {
+			is_revolutionary = no
 		}
 	}
 
@@ -338,16 +358,20 @@ REPLACE_OR_CREATE:smd_diplomatic_unification = {
 		smd_complete_diplomatic_unification_with_target = yes
 	}
 
+	decline_effect = {
+		change_relations = { country = scope:target_country value = -30 }
+	}
+
 	ai = {
 		check_acceptance_for_will_break = no
-		max_influence_spending_fraction = 0.20
+		max_influence_spending_fraction = 0.25
 
 		evaluation_chance = {
-			value = 0.05
+			value = 0.3
 
 			add = {
 				value = country_rank
-				multiply = 0.02
+				multiply = 0.03
 			}
 		}
 
@@ -356,225 +380,206 @@ REPLACE_OR_CREATE:smd_diplomatic_unification = {
 
 			add = {
 				desc = "DIPLOMATIC_ACCEPTANCE_BASE"
-				value = -100
+				value = -150
 			}
 
+			### Leverage
 			add = {
-				desc = "DIPLOMATIC_ACCEPTANCE_RELATIONS"
-				value = scope:target_country.relations:root
-				divide = 4
-				min = -30
-				max = 30
+				desc = "DIPLOMATIC_ACCEPTANCE_LEVERAGE"
+				value = "scope:actor.leverage(root)"
+
+				multiply = 0.5
+
+				min = 0
+				max = 250
 			}
 
-			if = {
-				limit = { NOT = { smd_has_economic_union_with_target = yes } }
-				add = {
-					desc = "DIPLOMATIC_ACCEPTANCE_NO_ECONOMIC_UNION"
-					value = -1000
-				}
-			}
-
-			if = {
-				limit = { NOT = { smd_primary_cultures_similar_to_target = yes } }
-				add = {
-					desc = "DIPLOMATIC_ACCEPTANCE_CULTURAL_ACCEPTANCE"
-					value = -1000
-				}
-			}
-
+			### Cultural acceptance - major factor for unification
 			if = {
 				limit = { smd_primary_cultures_similar_to_target = yes }
 				add = {
 					desc = "DIPLOMATIC_ACCEPTANCE_CULTURAL_ACCEPTANCE"
-					value = 30
+					value = 40
 				}
 			}
 
+			### Relative rank
+			add = {
+				desc = "DIPLOMATIC_ACCEPTANCE_RANK"
+				value = scope:actor.country_rank
+				subtract = 2
+				subtract = country_rank
+				multiply = 10
+			}
+
 			if = {
-				limit = { scope:target_country.relations:root >= relations_threshold:friendly }
+				limit = {
+					scope:actor.gdp >= 2000000
+				}
+
 				add = {
-					desc = "DIPLOMATIC_ACCEPTANCE_RELATIONS"
-					value = 20
+					desc = "DIPLOMATIC_ACCEPTANCE_HIGH_GDP"
+					value = scope:actor.gdp
+					subtract = 1000000
+					divide = 1000000
+					min = 1
+					max = 50
 				}
 			}
 
 			if = {
-				limit = { scope:target_country.relations:root >= relations_threshold:genial }
-				add = {
-					desc = "DIPLOMATIC_ACCEPTANCE_RELATIONS"
-					value = 25
-				}
-			}
-
-			if = {
-				limit = { is_in_same_power_bloc = scope:target_country }
+				limit = { is_in_same_power_bloc = scope:actor }
 				add = {
 					desc = "DIPLOMATIC_ACCEPTANCE_POWER_BLOC"
-					value = 10
-				}
-			}
-
-			if = {
-				limit = { gdp > scope:target_country.gdp }
-				add = {
-					desc = "DIPLOMATIC_ACCEPTANCE_GDP"
-					value = 15
-				}
-			}
-
-			if = {
-				limit = { army_size > scope:target_country.army_size }
-				add = {
-					desc = "DIPLOMATIC_ACCEPTANCE_MILITARY_STRENGTH"
-					value = 10
-				}
-			}
-
-			if = {
-				limit = {
-					scope:target_country = {
-						has_attitude = { who = root attitude = protective }
-					}
-				}
-				add = {
-					desc = "DIPLOMATIC_ACCEPTANCE_ATTITUDE"
 					value = 25
 				}
 			}
 
-			if = {
-				limit = {
-					scope:target_country = {
-						OR = {
-							has_attitude = { who = root attitude = antagonistic }
-							has_attitude = { who = root attitude = belligerent }
-							has_attitude = { who = root attitude = domineering }
-							has_attitude = { who = root attitude = rebellious }
+			add = {
+				desc = "DIPLOMATIC_ACCEPTANCE_ATTITUDE"
+				if = {
+					limit = {
+						has_attitude = {
+							who = scope:actor
+							attitude = genial
 						}
 					}
+					value = 60
 				}
-				add = {
-					desc = "DIPLOMATIC_ACCEPTANCE_ATTITUDE"
-					value = -1000
-				}
-			}
-
-			if = {
-				limit = { infamy >= infamy_threshold:infamous }
-				add = {
-					desc = "DIPLOMATIC_ACCEPTANCE_INFAMY"
-					value = -35
-				}
-			}
-		}
-
-
-		propose_score = {
-			value = -50
-
-			if = {
-				limit = {
-					smd_can_propose_diplomatic_unification_with_target = yes
-				}
-				add = 25
-			}
-
-			if = {
-				limit = {
-					scope:target_country.relations:root >= relations_threshold:friendly
-				}
-				add = 20
-			}
-
-			if = {
-				limit = {
-					scope:target_country.relations:root >= relations_threshold:genial
-				}
-				add = 20
-			}
-
-			if = {
-				limit = {
-					is_in_same_power_bloc = scope:target_country
-				}
-				add = 10
-			}
-
-			if = {
-				limit = {
-					gdp > scope:target_country.gdp
-				}
-				add = 15
-			}
-
-			if = {
-				limit = {
-					army_size > scope:target_country.army_size
-				}
-				add = 10
-			}
-
-			if = {
-				limit = {
-					scope:target_country = {
+				else_if = {
+					limit = {
 						has_attitude = {
-							who = root
+							who = scope:actor
 							attitude = protective
 						}
 					}
+					value = 40
 				}
-				add = 20
-			}
-
-			if = {
-				limit = {
-					scope:target_country = {
+				else_if = {
+					limit = {
 						OR = {
 							has_attitude = {
-								who = root
-								attitude = antagonistic
+								who = scope:actor
+								attitude = cooperative
 							}
 							has_attitude = {
-								who = root
-								attitude = belligerent
-							}
-							has_attitude = {
-								who = root
-								attitude = rebellious
-							}
-							has_attitude = {
-								who = root
-								attitude = domineering
+								who = scope:actor
+								attitude = conciliatory
 							}
 						}
 					}
+					value = 25
 				}
-				add = -1000
+				else_if = {
+					limit = {
+						OR = {
+							has_attitude = {
+								who = scope:actor
+								attitude = antagonistic
+							}
+							has_attitude = {
+								who = scope:actor
+								attitude = domineering
+							}
+							has_attitude = {
+								who = scope:actor
+								attitude = belligerent
+							}
+						}
+					}
+					value = -75
+				}
+				else = {
+					value = -30
+				}
+			}
+
+			add = {
+				desc = "DIPLOMATIC_ACCEPTANCE_RELATIONS"
+				if = {
+					limit = {
+						"relations(scope:actor)" >= relations_threshold:genial
+					}
+					value = 40
+				}
+				else_if = {
+					limit = {
+						"relations(scope:actor)" >= relations_threshold:friendly
+					}
+					value = 25
+				}
+				else_if = {
+					limit = {
+						"relations(scope:actor)" >= relations_threshold:amicable
+					}
+					value = 10
+				}
+				else = {
+					value = 0
+				}
+			}
+
+			add = {
+				desc = "DIPLOMATIC_ACCEPTANCE_INFAMY"
+				if = {
+					limit = {
+						"scope:actor.infamy" >= infamy_threshold:infamous
+						"scope:actor.infamy" < infamy_threshold:notorious
+					}
+					value = -15
+				}
+				if = {
+					limit = {
+						"scope:actor.infamy" >= infamy_threshold:notorious
+						"scope:actor.infamy" < infamy_threshold:pariah
+					}
+					value = -35
+				}
+				if = {
+					limit = {
+						"scope:actor.infamy" >= infamy_threshold:pariah
+					}
+					value = -75
+				}
 			}
 		}
 
 		will_propose = {
-			smd_can_propose_diplomatic_unification_with_target = yes
-			scope:target_country.relations:root >= relations_threshold:amicable
+			would_accept_diplomatic_action = {
+				actor = scope:target_country
+				type = smd_diplomatic_unification
+			}
+		}
 
-			NOR = {
-				has_attitude = {
-					who = scope:target_country
-					attitude = antagonistic
+		propose_score = {
+			value = 20
+		}
+
+		use_obligation_chance = {
+			value = 90
+		}
+
+		owe_obligation_chance = {
+			value = 0
+
+			if = {
+				limit = {
+					scope:target_country = {
+						country_rank >= rank_value:major_power
+					}
 				}
-				has_attitude = {
-					who = scope:target_country
-					attitude = belligerent
-				}
+
+				add = 75
+			}
+		}
+
+		will_propose_even_if_not_accepted = {
+			OR = {
 				has_attitude = {
 					who = scope:target_country
 					attitude = domineering
 				}
-				has_attitude = {
-					who = scope:target_country
-					attitude = rebellious
-				}
+				"leverage(scope:target_country)" >= 750
 			}
 		}
 
