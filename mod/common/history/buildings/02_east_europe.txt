@@ -1,4 +1,4 @@
-BUILDINGS={
+﻿BUILDINGS={
 	s:STATE_MAZOVIA={
 		region_state:POL={
 			create_building={
@@ -10,7 +10,7 @@ BUILDINGS={
 					}
 				}
 				reserves=1
-				activate_production_methods={ "pm_trade_center_trade_quantity_normal" "pm_trade_center_principle_external_trade_2" }
+				activate_production_methods={ "pm_trade_center_trade_quantity_normal" "pm_trade_center" }
 			}
 			create_building={
 				building="building_construction_sector"
@@ -243,7 +243,7 @@ BUILDINGS={
 				reserves=1
 				activate_production_methods={ "pm_muskets" "pm_automation_disabled" }
 			}
-					}
+		}
 	}
 	s:STATE_LOWER_SILESIA={
 		region_state:POL={
@@ -383,7 +383,7 @@ BUILDINGS={
 					}
 				}
 				reserves=1
-				activate_production_methods={ "pm_scholastic_education" "pm_religious_academia" "pm_principle_freedom_of_movement_3" }
+				activate_production_methods={ "pm_scholastic_education" "pm_religious_academia" "pm_freedom_of_movement_no_effect" }
 			}
 			create_building={
 				building="building_professional_service"
@@ -407,11 +407,11 @@ BUILDINGS={
 				add_ownership={
 					country={
 						country="c:POL"
-						levels=12
+						levels=32
 					}
 				}
 				reserves=1
-				activate_production_methods={ "pm_trade_center_trade_quantity_normal" "pm_trade_center_principle_external_trade_2" }
+				activate_production_methods={ "pm_trade_center_trade_quantity_normal" "pm_trade_center" }
 			}
 			create_building={
 				building="building_construction_sector"
@@ -644,7 +644,7 @@ BUILDINGS={
 					building={
 						type="building_financial_district"
 						country="c:POL"
-						levels=1
+						levels=2
 						region="STATE_WEST_GALICIA"
 					}
 				}
@@ -710,7 +710,7 @@ BUILDINGS={
 					}
 				}
 				reserves=1
-				activate_production_methods={ "pm_scholastic_education" "pm_religious_academia" "pm_principle_freedom_of_movement_3" }
+				activate_production_methods={ "pm_scholastic_education" "pm_religious_academia" "pm_freedom_of_movement_no_effect" }
 			}
 			create_building={
 				building="building_airport"
@@ -779,7 +779,7 @@ BUILDINGS={
 				reserves=1
 				activate_production_methods={ "pm_aeroplane_production" "pm_no_tank_production" }
 			}
-						create_building={
+			create_building={
 				building="building_automotive_industry"
 				add_ownership={
 					building={
@@ -805,7 +805,7 @@ BUILDINGS={
 					}
 				}
 				reserves=1
-				activate_production_methods={ "pm_trade_center_trade_quantity_normal" "pm_trade_center_principle_external_trade_2" }
+				activate_production_methods={ "pm_trade_center_trade_quantity_normal" "pm_trade_center" }
 			}
 			create_building={
 				building="building_construction_sector"
@@ -1049,7 +1049,7 @@ BUILDINGS={
 				reserves=1
 				activate_production_methods={ "pm_muskets" "pm_automation_disabled" }
 			}
-					}
+		}
 	}
 	s:STATE_WEST_PRUSSIA={
 		region_state:POL={
@@ -1062,7 +1062,7 @@ BUILDINGS={
 					}
 				}
 				reserves=1
-				activate_production_methods={ "pm_trade_center_trade_quantity_normal" "pm_trade_center_principle_external_trade_2" }
+				activate_production_methods={ "pm_trade_center_trade_quantity_normal" "pm_trade_center" }
 			}
 			create_building={
 				building="building_government_administration"
@@ -1237,13 +1237,6 @@ BUILDINGS={
 				reserves=1
 				activate_production_methods={ "pm_basic_warehousing" "pm_manual_inventory" }
 			}
-			create_building={
-				building="building_retail_services"
-				add_ownership={
-				}
-				reserves=1
-				activate_production_methods={ "pm_small_shops" "pm_no_retail_specialization" "pm_manual_retail_checkout" }
-			}
 		}
 	}
 	s:STATE_EAST_PRUSSIA={
@@ -1287,7 +1280,7 @@ BUILDINGS={
 					building={
 						type="building_financial_district"
 						country="c:POL"
-						levels=1
+						levels=2
 						region="STATE_GREATER_POLAND"
 					}
 					building={
@@ -1299,13 +1292,6 @@ BUILDINGS={
 				}
 				reserves=1
 				activate_production_methods={ "pm_dishwashers" "pm_automation_disabled" }
-			}
-			create_building={
-				building="building_professional_service"
-				add_ownership={
-				}
-				reserves=1
-				activate_production_methods={ "pm_general_mills_office" "pm_accountants" "pm_no_casino" }
 			}
 		}
 		region_state:RUS={
@@ -1392,7 +1378,7 @@ BUILDINGS={
 					}
 				}
 				reserves=1
-				activate_production_methods={ "pm_trade_center_trade_quantity_normal" "pm_trade_center_principle_external_trade_2" }
+				activate_production_methods={ "pm_trade_center_trade_quantity_normal" "pm_trade_center" }
 			}
 			create_building={
 				building="building_construction_sector"
@@ -1576,7 +1562,7 @@ BUILDINGS={
 					building={
 						type="building_financial_district"
 						country="c:POL"
-						levels=4
+						levels=5
 						region="STATE_GREATER_POLAND"
 					}
 					building={
@@ -1657,7 +1643,7 @@ BUILDINGS={
 					}
 				}
 				reserves=1
-				activate_production_methods={ "pm_trade_center_trade_quantity_normal" "pm_trade_center_principle_external_trade_2" }
+				activate_production_methods={ "pm_trade_center_trade_quantity_normal" "pm_trade_center" }
 			}
 			create_building={
 				building="building_construction_sector"
@@ -1926,7 +1912,7 @@ BUILDINGS={
 					building={
 						type="building_financial_district"
 						country="c:POL"
-						levels=15
+						levels=17
 						region="STATE_WEST_GALICIA"
 					}
 					building={
@@ -1940,6 +1926,12 @@ BUILDINGS={
 						country="c:POL"
 						levels=1
 						region="STATE_MAZOVIA"
+					}
+					building={
+						type="building_financial_district"
+						country="c:POL"
+						levels=2
+						region="STATE_LOWER_SILESIA"
 					}
 				}
 				reserves=1
@@ -1973,6 +1965,12 @@ BUILDINGS={
 			create_building={
 				building="building_advertising_agency"
 				add_ownership={
+					building={
+						type="building_advertising_agency"
+						country="c:POL"
+						levels=1
+						region="STATE_WEST_GALICIA"
+					}
 				}
 				reserves=1
 				activate_production_methods={ "pm_print_advertising" "pm_no_digital_advertising" "pm_focus_groups" }
@@ -1990,7 +1988,7 @@ BUILDINGS={
 					}
 				}
 				reserves=1
-				activate_production_methods={ "pm_trade_center_trade_quantity_normal" "pm_trade_center_principle_external_trade_2" }
+				activate_production_methods={ "pm_trade_center_trade_quantity_normal" "pm_trade_center" }
 			}
 			create_building={
 				building="building_construction_sector"
@@ -2143,7 +2141,7 @@ BUILDINGS={
 				reserves=1
 				activate_production_methods={ "pm_handsewn_clothes" "pm_no_luxury_clothes" "pm_traditional_looms" }
 			}
-						create_building={
+			create_building={
 				building="building_arms_industry"
 				add_ownership={
 					country={
@@ -2318,7 +2316,7 @@ BUILDINGS={
 					}
 				}
 				reserves=1
-				activate_production_methods={ "pm_trade_center_trade_quantity_normal" "pm_trade_center_principle_external_trade_2" }
+				activate_production_methods={ "pm_trade_center_trade_quantity_normal" "pm_trade_center" }
 			}
 			create_building={
 				building="building_government_administration"
@@ -2418,7 +2416,7 @@ BUILDINGS={
 					building={
 						type="building_financial_district"
 						country="c:HUN"
-						levels=4
+						levels=5
 						region="STATE_CENTRAL_HUNGARY"
 					}
 				}
@@ -2508,7 +2506,7 @@ BUILDINGS={
 				reserves=1
 				activate_production_methods={ "pm_basic_banking" "pm_no_securities_trading" "pm_manual_tellers" }
 			}
-						create_building={
+			create_building={
 				building="building_arms_industry"
 				add_ownership={
 					country={
@@ -2623,7 +2621,7 @@ BUILDINGS={
 					}
 				}
 				reserves=1
-				activate_production_methods={ "pm_trade_center_trade_quantity_normal" "pm_trade_center_principle_external_trade_2" }
+				activate_production_methods={ "pm_trade_center_trade_quantity_normal" "pm_trade_center" }
 			}
 			create_building={
 				building="building_government_administration"
@@ -2772,7 +2770,7 @@ BUILDINGS={
 					}
 				}
 				reserves=1
-				activate_production_methods={ "pm_trade_center_trade_quantity_high" "pm_trade_center_principle_external_trade_2" }
+				activate_production_methods={ "pm_trade_center_trade_quantity_high" "pm_trade_center" }
 			}
 			create_building={
 				building="building_construction_sector"
@@ -2871,6 +2869,12 @@ BUILDINGS={
 						country="c:HUN"
 						levels=1
 					}
+					building={
+						type="building_financial_district"
+						country="c:HUN"
+						levels=1
+						region="STATE_TRANSDANUBIA"
+					}
 				}
 				reserves=1
 				activate_production_methods={ "pm_picks_and_shovels_building_coal_mine" "pm_no_explosives" "pm_no_steam_automation" "pm_road_carts" }
@@ -2943,6 +2947,12 @@ BUILDINGS={
 						country="c:HUN"
 						levels=1
 					}
+					building={
+						type="building_retail_services"
+						country="c:HUN"
+						levels=1
+						region="STATE_TRANSDANUBIA"
+					}
 				}
 				reserves=1
 				activate_production_methods={ "pm_manual_retail_checkout" "pm_no_retail_specialization" "pm_outlet_retail" }
@@ -2958,7 +2968,7 @@ BUILDINGS={
 				reserves=1
 				activate_production_methods={ "pm_basic_banking" "pm_no_securities_trading" "pm_manual_tellers" }
 			}
-						create_building={
+			create_building={
 				building="building_arms_industry"
 				add_ownership={
 					country={
@@ -3048,6 +3058,19 @@ BUILDINGS={
 				reserves=1
 				activate_production_methods={ "pm_leblanc_process" }
 			}
+			create_building={
+				building="building_art_academy"
+				add_ownership={
+					building={
+						type="building_financial_district"
+						country="c:HUN"
+						levels=1
+						region="STATE_CENTRAL_HUNGARY"
+					}
+				}
+				reserves=1
+				activate_production_methods={ "pm_traditional_art" "pm_traditional_patronage" "pm_freedom_of_movement_no_effect" }
+			}
 		}
 		region_state:OST={
 			create_building={
@@ -3059,7 +3082,7 @@ BUILDINGS={
 					}
 				}
 				reserves=1
-				activate_production_methods={ "pm_trade_center_trade_quantity_normal" "pm_trade_center_principle_external_trade_2" }
+				activate_production_methods={ "pm_trade_center_trade_quantity_normal" "pm_trade_center" }
 			}
 			create_building={
 				building="building_government_administration"
@@ -3109,6 +3132,13 @@ BUILDINGS={
 				reserves=1
 				activate_production_methods={ "pm_power_lines" "pm_1g" }
 			}
+			create_building={
+				building="building_nuclear_plant"
+				add_ownership={
+				}
+				reserves=1
+				activate_production_methods={ "pm_fission_plant" }
+			}
 		}
 		region_state:SVN={
 			create_building={
@@ -3146,7 +3176,7 @@ BUILDINGS={
 					}
 				}
 				reserves=1
-				activate_production_methods={ "pm_trade_center_trade_quantity_normal" "pm_trade_center_principle_external_trade_2" }
+				activate_production_methods={ "pm_trade_center_trade_quantity_normal" "pm_trade_center" }
 			}
 			create_building={
 				building="building_government_administration"
@@ -3191,7 +3221,7 @@ BUILDINGS={
 					building={
 						type="building_financial_district"
 						country="c:YUG"
-						levels=1
+						levels=2
 						region="STATE_DELVIDEK"
 					}
 				}
@@ -3293,7 +3323,7 @@ BUILDINGS={
 					building={
 						type="building_financial_district"
 						country="c:YUG"
-						levels=1
+						levels=2
 						region="STATE_EASTERN_SERBIA"
 					}
 					building={
@@ -3312,13 +3342,6 @@ BUILDINGS={
 				reserves=1
 				activate_production_methods={ "pm_steam_derricks" "pm_road_carts" }
 			}
-			create_building={
-				building="building_arms_industry"
-				add_ownership={
-				}
-				reserves=1
-				activate_production_methods={ "pm_muskets" "pm_automation_disabled" }
-			}
 		}
 	}
 	s:STATE_BANAT={
@@ -3332,7 +3355,7 @@ BUILDINGS={
 					}
 				}
 				reserves=1
-				activate_production_methods={ "pm_trade_center_trade_quantity_normal" "pm_trade_center_principle_external_trade_2" }
+				activate_production_methods={ "pm_trade_center_trade_quantity_normal" "pm_trade_center" }
 			}
 			create_building={
 				building="building_government_administration"
@@ -3486,7 +3509,7 @@ BUILDINGS={
 					}
 				}
 				reserves=1
-				activate_production_methods={ "pm_trade_center_trade_quantity_normal" "pm_trade_center_principle_external_trade_2" }
+				activate_production_methods={ "pm_trade_center_trade_quantity_normal" "pm_trade_center" }
 			}
 			create_building={
 				building="building_construction_sector"
@@ -3630,7 +3653,7 @@ BUILDINGS={
 					}
 				}
 				reserves=1
-				activate_production_methods={ "pm_scholastic_education" "pm_religious_academia" "pm_principle_freedom_of_movement_3" }
+				activate_production_methods={ "pm_scholastic_education" "pm_religious_academia" "pm_freedom_of_movement_no_effect" }
 			}
 			create_building={
 				building="building_arms_industry"
@@ -3749,6 +3772,12 @@ BUILDINGS={
 						country="c:CZH"
 						levels=1
 					}
+					building={
+						type="building_food_service"
+						country="c:CZH"
+						levels=1
+						region="STATE_SLOVAKIA"
+					}
 				}
 				reserves=1
 				activate_production_methods={ "pm_corner_grocery" "pm_no_restaurants" "pm_manual_food_checkout" }
@@ -3799,6 +3828,13 @@ BUILDINGS={
 				reserves=1
 				activate_production_methods={ "pm_print_advertising" "pm_no_digital_advertising" "pm_focus_groups" }
 			}
+			create_building={
+				building="building_art_academy"
+				add_ownership={
+				}
+				reserves=1
+				activate_production_methods={ "pm_traditional_art" "pm_traditional_patronage" "pm_freedom_of_movement_no_effect" }
+			}
 		}
 		region_state:UKR={
 			create_building={
@@ -3810,7 +3846,7 @@ BUILDINGS={
 					}
 				}
 				reserves=1
-				activate_production_methods={ "pm_trade_center_trade_quantity_normal" "pm_trade_center_principle_external_trade_2" }
+				activate_production_methods={ "pm_trade_center_trade_quantity_normal" "pm_trade_center" }
 			}
 			create_building={
 				building="building_government_administration"
@@ -3880,7 +3916,7 @@ BUILDINGS={
 					}
 				}
 				reserves=1
-				activate_production_methods={ "pm_trade_center_trade_quantity_normal" "pm_trade_center_principle_external_trade_2" }
+				activate_production_methods={ "pm_trade_center_trade_quantity_normal" "pm_trade_center" }
 			}
 			create_building={
 				building="building_construction_sector"
@@ -3981,7 +4017,7 @@ BUILDINGS={
 					}
 				}
 				reserves=1
-				activate_production_methods={ "pm_trade_center_trade_quantity_normal" "pm_trade_center_principle_external_trade_2" }
+				activate_production_methods={ "pm_trade_center_trade_quantity_normal" "pm_trade_center" }
 			}
 			create_building={
 				building="building_construction_sector"
@@ -4084,7 +4120,7 @@ BUILDINGS={
 					}
 				}
 				reserves=1
-				activate_production_methods={ "pm_trade_center_trade_quantity_normal" "pm_trade_center_principle_external_trade_2" }
+				activate_production_methods={ "pm_trade_center_trade_quantity_normal" "pm_trade_center" }
 			}
 			create_building={
 				building="building_government_administration"
@@ -4265,7 +4301,7 @@ BUILDINGS={
 					}
 				}
 				reserves=1
-				activate_production_methods={ "pm_trade_center_trade_quantity_normal" "pm_trade_center_principle_external_trade_2" }
+				activate_production_methods={ "pm_trade_center_trade_quantity_normal" "pm_trade_center" }
 			}
 			create_building={
 				building="building_government_administration"
@@ -4334,7 +4370,7 @@ BUILDINGS={
 				reserves=1
 				activate_production_methods={ "pm_bakery" "pm_disabled_canning" "pm_disabled_distillery" "pm_manual_dough_processing" }
 			}
-						create_building={
+			create_building={
 				building="building_telecommunications"
 				add_ownership={
 					country={
@@ -4413,7 +4449,7 @@ BUILDINGS={
 					}
 				}
 				reserves=1
-				activate_production_methods={ "pm_trade_center_trade_quantity_normal" "pm_trade_center_principle_external_trade_2" }
+				activate_production_methods={ "pm_trade_center_trade_quantity_normal" "pm_trade_center" }
 			}
 			create_building={
 				building="building_construction_sector"
@@ -4514,7 +4550,7 @@ BUILDINGS={
 					building={
 						type="building_financial_district"
 						country="c:ROM"
-						levels=3
+						levels=4
 						region="STATE_MOLDAVIA"
 					}
 				}
@@ -4560,7 +4596,7 @@ BUILDINGS={
 				reserves=1
 				activate_production_methods={ "pm_handsewn_clothes" "pm_no_luxury_clothes" "pm_traditional_looms" }
 			}
-						create_building={
+			create_building={
 				building="building_arms_industry"
 				add_ownership={
 					country={
@@ -4727,7 +4763,7 @@ BUILDINGS={
 					}
 				}
 				reserves=1
-				activate_production_methods={ "pm_trade_center_trade_quantity_normal" "pm_trade_center_principle_external_trade_2" }
+				activate_production_methods={ "pm_trade_center_trade_quantity_normal" "pm_trade_center" }
 			}
 			create_building={
 				building="building_government_administration"
@@ -4774,11 +4810,11 @@ BUILDINGS={
 				activate_production_methods={ "pm_power_lines" "pm_1g" }
 			}
 			create_building={
-				building="building_food_service"
+				building="building_nuclear_plant"
 				add_ownership={
 				}
 				reserves=1
-				activate_production_methods={ "pm_corner_grocery" "pm_no_restaurants" "pm_manual_food_checkout" }
+				activate_production_methods={ "pm_fission_plant" }
 			}
 		}
 	}
@@ -4801,7 +4837,7 @@ BUILDINGS={
 					}
 				}
 				reserves=1
-				activate_production_methods={ "pm_trade_center_trade_quantity_normal" "pm_trade_center_principle_external_trade_2" }
+				activate_production_methods={ "pm_trade_center_trade_quantity_normal" "pm_trade_center" }
 			}
 			create_building={
 				building="building_construction_sector"
@@ -4932,6 +4968,12 @@ BUILDINGS={
 						country="c:ROM"
 						levels=1
 					}
+					building={
+						type="building_financial_district"
+						country="c:ROM"
+						levels=1
+						region="STATE_WALLACHIA"
+					}
 				}
 				reserves=1
 				activate_production_methods={ "pm_picks_and_shovels_building_sulfur_mine" "pm_no_explosives" "pm_no_steam_automation" "pm_road_carts" }
@@ -4946,7 +4988,7 @@ BUILDINGS={
 					building={
 						type="building_financial_district"
 						country="c:ROM"
-						levels=1
+						levels=3
 						region="STATE_WALLACHIA"
 					}
 				}
@@ -5039,7 +5081,7 @@ BUILDINGS={
 					}
 				}
 				reserves=1
-				activate_production_methods={ "pm_philosophy_department" "pm_secular_academia" "pm_principle_freedom_of_movement_3" }
+				activate_production_methods={ "pm_philosophy_department" "pm_secular_academia" "pm_freedom_of_movement_no_effect" }
 			}
 			create_building={
 				building="building_airport"
@@ -5052,7 +5094,7 @@ BUILDINGS={
 				reserves=1
 				activate_production_methods={ "pm_base_airport" "pm_cargo_plane_prioritization" }
 			}
-						create_building={
+			create_building={
 				building="building_arms_industry"
 				add_ownership={
 					country={
@@ -5286,7 +5328,7 @@ BUILDINGS={
 					}
 				}
 				reserves=1
-				activate_production_methods={ "pm_trade_center_trade_quantity_normal" "pm_trade_center_principle_external_trade_2" }
+				activate_production_methods={ "pm_trade_center_trade_quantity_normal" "pm_trade_center" }
 			}
 			create_building={
 				building="building_construction_sector"
@@ -5487,7 +5529,7 @@ BUILDINGS={
 					}
 				}
 				reserves=1
-				activate_production_methods={ "pm_trade_center_trade_quantity_normal" "pm_trade_center_principle_external_trade_2" }
+				activate_production_methods={ "pm_trade_center_trade_quantity_normal" "pm_trade_center" }
 			}
 			create_building={
 				building="building_government_administration"
@@ -5586,7 +5628,7 @@ BUILDINGS={
 					}
 				}
 				reserves=1
-				activate_production_methods={ "pm_scholastic_education" "pm_religious_academia" "pm_principle_freedom_of_movement_3" }
+				activate_production_methods={ "pm_scholastic_education" "pm_religious_academia" "pm_freedom_of_movement_no_effect" }
 			}
 			create_building={
 				building="building_arms_industry"
@@ -5630,6 +5672,13 @@ BUILDINGS={
 				}
 				reserves=1
 				activate_production_methods={ "pm_leblanc_process" }
+			}
+			create_building={
+				building="building_nuclear_plant"
+				add_ownership={
+				}
+				reserves=1
+				activate_production_methods={ "pm_fission_plant" }
 			}
 		}
 	}

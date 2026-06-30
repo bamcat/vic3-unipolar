@@ -1,4 +1,4 @@
-BUILDINGS={
+﻿BUILDINGS={
 	s:STATE_URAL={
 		region_state:RUS={
 			create_building={
@@ -10,7 +10,7 @@ BUILDINGS={
 					}
 				}
 				reserves=1
-				activate_production_methods={ "pm_trade_center_trade_quantity_normal" "pm_trade_center_principle_external_trade_2" }
+				activate_production_methods={ "pm_trade_center_trade_quantity_normal" "pm_trade_center" }
 			}
 			create_building={
 				building="building_construction_sector"
@@ -315,7 +315,7 @@ BUILDINGS={
 					}
 				}
 				reserves=1
-				activate_production_methods={ "pm_scholastic_education" "pm_religious_academia" "pm_principle_freedom_of_movement_3" }
+				activate_production_methods={ "pm_scholastic_education" "pm_religious_academia" "pm_freedom_of_movement_no_effect" }
 			}
 			create_building={
 				building="building_airport"
@@ -385,7 +385,7 @@ BUILDINGS={
 					}
 				}
 				reserves=1
-				activate_production_methods={ "pm_trade_center_trade_quantity_normal" "pm_trade_center_principle_external_trade_2" }
+				activate_production_methods={ "pm_trade_center_trade_quantity_normal" "pm_trade_center" }
 			}
 			create_building={
 				building="building_construction_sector"
@@ -661,7 +661,7 @@ BUILDINGS={
 					}
 				}
 				reserves=1
-				activate_production_methods={ "pm_scholastic_education" "pm_religious_academia" "pm_principle_freedom_of_movement_3" }
+				activate_production_methods={ "pm_scholastic_education" "pm_religious_academia" "pm_freedom_of_movement_no_effect" }
 			}
 			create_building={
 				building="building_airport"
@@ -718,13 +718,6 @@ BUILDINGS={
 				reserves=1
 				activate_production_methods={ "pm_aeroplane_production" "pm_no_tank_production" }
 			}
-			create_building={
-				building="building_automotive_industry"
-				add_ownership={
-				}
-				reserves=1
-				activate_production_methods={ "pm_automobile_production" "pm_automation_disabled" }
-			}
 		}
 	}
 	s:STATE_TUVA={
@@ -740,7 +733,7 @@ BUILDINGS={
 					}
 				}
 				reserves=1
-				activate_production_methods={ "pm_trade_center_trade_quantity_normal" "pm_trade_center_principle_external_trade_2" }
+				activate_production_methods={ "pm_trade_center_trade_quantity_normal" "pm_trade_center" }
 			}
 			create_building={
 				building="building_construction_sector"
@@ -988,7 +981,7 @@ BUILDINGS={
 					}
 				}
 				reserves=1
-				activate_production_methods={ "pm_scholastic_education" "pm_religious_academia" "pm_principle_freedom_of_movement_3" }
+				activate_production_methods={ "pm_scholastic_education" "pm_religious_academia" "pm_freedom_of_movement_no_effect" }
 			}
 			create_building={
 				building="building_airport"
@@ -1117,7 +1110,7 @@ BUILDINGS={
 					}
 				}
 				reserves=1
-				activate_production_methods={ "pm_trade_center_trade_quantity_normal" "pm_trade_center_principle_external_trade_2" }
+				activate_production_methods={ "pm_trade_center_trade_quantity_normal" "pm_trade_center" }
 			}
 			create_building={
 				building="building_government_administration"
@@ -1205,7 +1198,7 @@ BUILDINGS={
 					}
 				}
 				reserves=1
-				activate_production_methods={ "pm_scholastic_education" "pm_religious_academia" "pm_principle_freedom_of_movement_3" }
+				activate_production_methods={ "pm_scholastic_education" "pm_religious_academia" "pm_freedom_of_movement_no_effect" }
 			}
 			create_building={
 				building="building_arms_industry"
@@ -1395,7 +1388,7 @@ BUILDINGS={
 					}
 				}
 				reserves=1
-				activate_production_methods={ "pm_trade_center_trade_quantity_normal" "pm_trade_center_principle_external_trade_2" }
+				activate_production_methods={ "pm_trade_center_trade_quantity_normal" "pm_trade_center" }
 			}
 			create_building={
 				building="building_construction_sector"
@@ -1583,7 +1576,7 @@ BUILDINGS={
 					}
 				}
 				reserves=1
-				activate_production_methods={ "pm_scholastic_education" "pm_religious_academia" "pm_principle_freedom_of_movement_3" }
+				activate_production_methods={ "pm_scholastic_education" "pm_religious_academia" "pm_freedom_of_movement_no_effect" }
 			}
 			create_building={
 				building="building_arms_industry"
@@ -1652,7 +1645,7 @@ BUILDINGS={
 					}
 				}
 				reserves=1
-				activate_production_methods={ "pm_trade_center_trade_quantity_normal" "pm_trade_center_principle_external_trade_2" }
+				activate_production_methods={ "pm_trade_center_trade_quantity_normal" "pm_trade_center" }
 			}
 			create_building={
 				building="building_government_administration"
@@ -1786,7 +1779,7 @@ BUILDINGS={
 					}
 				}
 				reserves=1
-				activate_production_methods={ "pm_trade_center_trade_quantity_normal" "pm_trade_center_principle_external_trade_2" }
+				activate_production_methods={ "pm_trade_center_trade_quantity_normal" "pm_trade_center" }
 			}
 			create_building={
 				building="building_construction_sector"
@@ -2034,7 +2027,7 @@ BUILDINGS={
 					}
 				}
 				reserves=1
-				activate_production_methods={ "pm_scholastic_education" "pm_religious_academia" "pm_principle_freedom_of_movement_3" }
+				activate_production_methods={ "pm_scholastic_education" "pm_religious_academia" "pm_freedom_of_movement_no_effect" }
 			}
 			create_building={
 				building="building_airport"
@@ -2086,7 +2079,7 @@ BUILDINGS={
 					building={
 						type="building_advertising_agency"
 						country="c:RUS"
-						levels=1
+						levels=2
 						region="STATE_IRKUTSK"
 					}
 				}

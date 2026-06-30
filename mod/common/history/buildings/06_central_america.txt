@@ -1,4 +1,4 @@
-BUILDINGS={
+﻿BUILDINGS={
 	s:STATE_SAN_SALVADOR={
 		region_state:ELS={
 			create_building={
@@ -16,7 +16,7 @@ BUILDINGS={
 					}
 				}
 				reserves=1
-				activate_production_methods={ "pm_trade_center_trade_quantity_normal" "pm_trade_center_principle_external_trade_2" }
+				activate_production_methods={ "pm_trade_center_trade_quantity_normal" "pm_trade_center" }
 			}
 			create_building={
 				building="building_construction_sector"
@@ -128,7 +128,7 @@ BUILDINGS={
 				reserves=1
 				activate_production_methods={ "pm_handsewn_clothes" "pm_no_luxury_clothes" "pm_traditional_looms" }
 			}
-						create_building={
+			create_building={
 				building="building_telecommunications"
 				add_ownership={
 					country={
@@ -207,7 +207,7 @@ BUILDINGS={
 					}
 				}
 				reserves=1
-				activate_production_methods={ "pm_trade_center_trade_quantity_normal" "pm_trade_center_principle_external_trade_2" }
+				activate_production_methods={ "pm_trade_center_trade_quantity_normal" "pm_trade_center" }
 			}
 			create_building={
 				building="building_construction_sector"
@@ -236,6 +236,12 @@ BUILDINGS={
 				add_ownership={
 					building={
 						type="building_manor_house"
+						country="c:GUT"
+						levels=1
+						region="STATE_GUATEMALA"
+					}
+					building={
+						type="building_financial_district"
 						country="c:GUT"
 						levels=1
 						region="STATE_GUATEMALA"
@@ -288,7 +294,7 @@ BUILDINGS={
 					building={
 						type="building_financial_district"
 						country="c:GUT"
-						levels=5
+						levels=7
 						region="STATE_GUATEMALA"
 					}
 				}
@@ -446,7 +452,7 @@ BUILDINGS={
 				reserves=1
 				activate_production_methods={ "pm_basic_banking" "pm_no_securities_trading" "pm_manual_tellers" }
 			}
-						create_building={
+			create_building={
 				building="building_arms_industry"
 				add_ownership={
 					building={
@@ -512,18 +518,31 @@ BUILDINGS={
 				activate_production_methods={ "pm_steam_engines" "pm_automation_disabled" }
 			}
 			create_building={
-				building="building_explosives_factory"
-				add_ownership={
-				}
-				reserves=1
-				activate_production_methods={ "pm_leblanc_process" }
-			}
-			create_building={
 				building="building_furniture_manufactory"
 				add_ownership={
+					building={
+						type="building_financial_district"
+						country="c:GUT"
+						levels=1
+						region="STATE_GUATEMALA"
+					}
 				}
 				reserves=1
 				activate_production_methods={ "pm_handcrafted_furniture" "pm_no_luxuries" "pm_automation_disabled" }
+			}
+			create_building={
+				building="building_tobacco_plantation"
+				add_ownership={
+				}
+				reserves=1
+				activate_production_methods={ "default_building_tobacco_plantation" "pm_road_carts" }
+			}
+			create_building={
+				building="building_coffee_plantation"
+				add_ownership={
+				}
+				reserves=1
+				activate_production_methods={ "default_building_coffee_plantation" "pm_road_carts" "pm_no_pesticides" }
 			}
 		}
 		region_state:BLZ={
@@ -536,7 +555,7 @@ BUILDINGS={
 					}
 				}
 				reserves=1
-				activate_production_methods={ "pm_trade_center_trade_quantity_normal" "pm_trade_center_principle_external_trade_2" }
+				activate_production_methods={ "pm_trade_center_trade_quantity_normal" "pm_trade_center" }
 			}
 			create_building={
 				building="building_government_administration"
@@ -590,7 +609,7 @@ BUILDINGS={
 					}
 				}
 				reserves=1
-				activate_production_methods={ "pm_trade_center_trade_quantity_normal" "pm_trade_center_principle_external_trade_2" }
+				activate_production_methods={ "pm_trade_center_trade_quantity_normal" "pm_trade_center" }
 			}
 			create_building={
 				building="building_construction_sector"
@@ -759,7 +778,7 @@ BUILDINGS={
 					building={
 						type="building_financial_district"
 						country="c:HON"
-						levels=3
+						levels=4
 						region="STATE_HONDURAS"
 					}
 				}
@@ -776,7 +795,7 @@ BUILDINGS={
 					building={
 						type="building_financial_district"
 						country="c:HON"
-						levels=2
+						levels=3
 						region="STATE_HONDURAS"
 					}
 				}
@@ -856,7 +875,7 @@ BUILDINGS={
 				reserves=1
 				activate_production_methods={ "pm_basic_banking" "pm_no_securities_trading" "pm_manual_tellers" }
 			}
-						create_building={
+			create_building={
 				building="building_arms_industry"
 				add_ownership={
 					country={
@@ -941,11 +960,37 @@ BUILDINGS={
 				activate_production_methods={ "default_building_coffee_plantation" "pm_road_carts" "pm_no_pesticides" }
 			}
 			create_building={
+				building="building_motor_industry"
+				add_ownership={
+					building={
+						type="building_financial_district"
+						country="c:HON"
+						levels=1
+						region="STATE_HONDURAS"
+					}
+				}
+				reserves=1
+				activate_production_methods={ "pm_steam_engines" "pm_automation_disabled" }
+			}
+			create_building={
 				building="building_advertising_agency"
 				add_ownership={
+					building={
+						type="building_advertising_agency"
+						country="c:HON"
+						levels=1
+						region="STATE_HONDURAS"
+					}
 				}
 				reserves=1
 				activate_production_methods={ "pm_print_advertising" "pm_no_digital_advertising" "pm_focus_groups" }
+			}
+			create_building={
+				building="building_paper_mill"
+				add_ownership={
+				}
+				reserves=1
+				activate_production_methods={ "pm_pulp_pressing" "pm_automation_disabled" }
 			}
 		}
 	}
@@ -966,7 +1011,7 @@ BUILDINGS={
 					}
 				}
 				reserves=1
-				activate_production_methods={ "pm_trade_center_trade_quantity_normal" "pm_trade_center_principle_external_trade_2" }
+				activate_production_methods={ "pm_trade_center_trade_quantity_normal" "pm_trade_center" }
 			}
 			create_building={
 				building="building_construction_sector"
@@ -1086,6 +1131,12 @@ BUILDINGS={
 						country="c:NIC"
 						levels=4
 					}
+					building={
+						type="building_financial_district"
+						country="c:NIC"
+						levels=1
+						region="STATE_NICARAGUA"
+					}
 				}
 				reserves=1
 				activate_production_methods={ "default_building_dye_plantation" "pm_road_carts" }
@@ -1100,7 +1151,7 @@ BUILDINGS={
 					building={
 						type="building_financial_district"
 						country="c:NIC"
-						levels=2
+						levels=4
 						region="STATE_NICARAGUA"
 					}
 				}
@@ -1118,7 +1169,7 @@ BUILDINGS={
 				reserves=1
 				activate_production_methods={ "pm_handsewn_clothes" "pm_no_luxury_clothes" "pm_traditional_looms" }
 			}
-						create_building={
+			create_building={
 				building="building_arms_industry"
 				add_ownership={
 					country={
@@ -1271,18 +1322,31 @@ BUILDINGS={
 				activate_production_methods={ "pm_blister_steel_process" "pm_automation_disabled" }
 			}
 			create_building={
-				building="building_advertising_agency"
+				building="building_furniture_manufactory"
 				add_ownership={
+					building={
+						type="building_financial_district"
+						country="c:NIC"
+						levels=1
+						region="STATE_NICARAGUA"
+					}
 				}
 				reserves=1
-				activate_production_methods={ "pm_print_advertising" "pm_no_digital_advertising" "pm_focus_groups" }
+				activate_production_methods={ "pm_handcrafted_furniture" "pm_no_luxuries" "pm_automation_disabled" }
 			}
 			create_building={
-				building="building_warehouse"
+				building="building_motor_industry"
 				add_ownership={
 				}
 				reserves=1
-				activate_production_methods={ "pm_basic_warehousing" "pm_manual_inventory" }
+				activate_production_methods={ "pm_steam_engines" "pm_automation_disabled" }
+			}
+			create_building={
+				building="building_tooling_workshop"
+				add_ownership={
+				}
+				reserves=1
+				activate_production_methods={ "pm_crude_tools" "pm_automation_disabled" }
 			}
 		}
 	}
@@ -1303,7 +1367,7 @@ BUILDINGS={
 					}
 				}
 				reserves=1
-				activate_production_methods={ "pm_trade_center_trade_quantity_normal" "pm_trade_center_principle_external_trade_2" }
+				activate_production_methods={ "pm_trade_center_trade_quantity_normal" "pm_trade_center" }
 			}
 			create_building={
 				building="building_construction_sector"
@@ -1432,7 +1496,7 @@ BUILDINGS={
 				reserves=1
 				activate_production_methods={ "pm_handsewn_clothes" "pm_no_luxury_clothes" "pm_traditional_looms" }
 			}
-						create_building={
+			create_building={
 				building="building_telecommunications"
 				add_ownership={
 					country={
@@ -1454,7 +1518,7 @@ BUILDINGS={
 					building={
 						type="building_financial_district"
 						country="c:COS"
-						levels=4
+						levels=6
 						region="STATE_COSTA_RICA"
 					}
 				}
@@ -1523,18 +1587,37 @@ BUILDINGS={
 				activate_production_methods={ "pm_print_advertising" "pm_no_digital_advertising" "pm_focus_groups" }
 			}
 			create_building={
-				building="building_chemical_plant"
+				building="building_banana_plantation"
 				add_ownership={
+					building={
+						type="building_manor_house"
+						country="c:COS"
+						levels=1
+						region="STATE_COSTA_RICA"
+					}
 				}
 				reserves=1
-				activate_production_methods={ "pm_artificial_fertilizers" "pm_bakelite" "pm_automation_disabled" }
+				activate_production_methods={ "default_building_banana_plantation" "pm_road_carts" "pm_no_pesticides" }
 			}
 			create_building={
-				building="building_motor_industry"
+				building="building_furniture_manufactory"
+				add_ownership={
+					building={
+						type="building_financial_district"
+						country="c:COS"
+						levels=1
+						region="STATE_COSTA_RICA"
+					}
+				}
+				reserves=1
+				activate_production_methods={ "pm_handcrafted_furniture" "pm_no_luxuries" "pm_automation_disabled" }
+			}
+			create_building={
+				building="building_nuclear_plant"
 				add_ownership={
 				}
 				reserves=1
-				activate_production_methods={ "pm_steam_engines" "pm_automation_disabled" }
+				activate_production_methods={ "pm_fission_plant" }
 			}
 		}
 	}
@@ -1549,7 +1632,7 @@ BUILDINGS={
 					}
 				}
 				reserves=1
-				activate_production_methods={ "pm_trade_center_trade_quantity_normal" "pm_trade_center_principle_external_trade_2" }
+				activate_production_methods={ "pm_trade_center_trade_quantity_normal" "pm_trade_center" }
 			}
 			create_building={
 				building="building_construction_sector"
@@ -1695,7 +1778,7 @@ BUILDINGS={
 				reserves=1
 				activate_production_methods={ "pm_handsewn_clothes" "pm_no_luxury_clothes" "pm_traditional_looms" }
 			}
-						create_building={
+			create_building={
 				building="building_telecommunications"
 				add_ownership={
 					country={
@@ -1795,7 +1878,7 @@ BUILDINGS={
 					}
 				}
 				reserves=1
-				activate_production_methods={ "pm_trade_center_trade_quantity_normal" "pm_trade_center_principle_external_trade_2" }
+				activate_production_methods={ "pm_trade_center_trade_quantity_normal" "pm_trade_center" }
 			}
 			create_building={
 				building="building_construction_sector"
@@ -1840,7 +1923,7 @@ BUILDINGS={
 					building={
 						type="building_financial_district"
 						country="c:HAI"
-						levels=7
+						levels=8
 						region="STATE_HAITI"
 					}
 				}
@@ -1976,7 +2059,7 @@ BUILDINGS={
 					building={
 						type="building_financial_district"
 						country="c:HAI"
-						levels=4
+						levels=5
 						region="STATE_HAITI"
 					}
 				}
@@ -2023,6 +2106,12 @@ BUILDINGS={
 						country="c:HAI"
 						levels=6
 					}
+					building={
+						type="building_food_service"
+						country="c:HAI"
+						levels=3
+						region="STATE_HAITI"
+					}
 				}
 				reserves=1
 				activate_production_methods={ "pm_corner_grocery" "pm_no_restaurants" "pm_manual_food_checkout" }
@@ -2064,7 +2153,7 @@ BUILDINGS={
 					}
 				}
 				reserves=1
-				activate_production_methods={ "pm_scholastic_education" "pm_religious_academia" "pm_principle_freedom_of_movement_3" }
+				activate_production_methods={ "pm_scholastic_education" "pm_religious_academia" "pm_freedom_of_movement_no_effect" }
 			}
 			create_building={
 				building="building_airport"
@@ -2077,7 +2166,7 @@ BUILDINGS={
 				reserves=1
 				activate_production_methods={ "pm_base_airport" "pm_cargo_plane_prioritization" }
 			}
-						create_building={
+			create_building={
 				building="building_arms_industry"
 				add_ownership={
 					country={
@@ -2302,9 +2391,15 @@ BUILDINGS={
 			create_building={
 				building="building_art_academy"
 				add_ownership={
+					building={
+						type="building_financial_district"
+						country="c:HAI"
+						levels=1
+						region="STATE_HAITI"
+					}
 				}
 				reserves=1
-				activate_production_methods={ "pm_traditional_art" "pm_traditional_patronage" "pm_principle_freedom_of_movement_3" }
+				activate_production_methods={ "pm_traditional_art" "pm_traditional_patronage" "pm_freedom_of_movement_no_effect" }
 			}
 		}
 	}
@@ -2325,7 +2420,7 @@ BUILDINGS={
 					}
 				}
 				reserves=1
-				activate_production_methods={ "pm_trade_center_trade_quantity_normal" "pm_trade_center_principle_external_trade_2" }
+				activate_production_methods={ "pm_trade_center_trade_quantity_normal" "pm_trade_center" }
 			}
 			create_building={
 				building="building_construction_sector"
@@ -2403,7 +2498,7 @@ BUILDINGS={
 					building={
 						type="building_financial_district"
 						country="c:DCR"
-						levels=3
+						levels=4
 						region="STATE_SANTO_DOMINGO"
 					}
 				}
@@ -2479,6 +2574,12 @@ BUILDINGS={
 						country="c:DCR"
 						levels=9
 					}
+					building={
+						type="building_financial_district"
+						country="c:DCR"
+						levels=1
+						region="STATE_SANTO_DOMINGO"
+					}
 				}
 				reserves=1
 				activate_production_methods={ "pm_bakery" "pm_disabled_canning" "pm_disabled_distillery" "pm_manual_dough_processing" }
@@ -2549,7 +2650,7 @@ BUILDINGS={
 				reserves=1
 				activate_production_methods={ "pm_basic_banking" "pm_no_securities_trading" "pm_manual_tellers" }
 			}
-						create_building={
+			create_building={
 				building="building_arms_industry"
 				add_ownership={
 					country={
@@ -2600,6 +2701,12 @@ BUILDINGS={
 			create_building={
 				building="building_motor_industry"
 				add_ownership={
+					building={
+						type="building_financial_district"
+						country="c:DCR"
+						levels=1
+						region="STATE_SANTO_DOMINGO"
+					}
 				}
 				reserves=1
 				activate_production_methods={ "pm_steam_engines" "pm_automation_disabled" }
@@ -2607,9 +2714,22 @@ BUILDINGS={
 			create_building={
 				building="building_tooling_workshop"
 				add_ownership={
+					building={
+						type="building_financial_district"
+						country="c:DCR"
+						levels=1
+						region="STATE_SANTO_DOMINGO"
+					}
 				}
 				reserves=1
 				activate_production_methods={ "pm_crude_tools" "pm_automation_disabled" }
+			}
+			create_building={
+				building="building_advertising_agency"
+				add_ownership={
+				}
+				reserves=1
+				activate_production_methods={ "pm_print_advertising" "pm_no_digital_advertising" "pm_focus_groups" }
 			}
 		}
 	}
@@ -2630,7 +2750,7 @@ BUILDINGS={
 					}
 				}
 				reserves=1
-				activate_production_methods={ "pm_trade_center_trade_quantity_normal" "pm_trade_center_principle_external_trade_2" }
+				activate_production_methods={ "pm_trade_center_trade_quantity_normal" "pm_trade_center" }
 			}
 			create_building={
 				building="building_construction_sector"
@@ -2720,7 +2840,7 @@ BUILDINGS={
 					building={
 						type="building_financial_district"
 						country="c:UPR"
-						levels=11
+						levels=13
 						region="STATE_PUERTO_RICO"
 					}
 				}
@@ -2744,7 +2864,7 @@ BUILDINGS={
 					building={
 						type="building_financial_district"
 						country="c:UPR"
-						levels=4
+						levels=5
 						region="STATE_PUERTO_RICO"
 					}
 				}
@@ -2807,11 +2927,38 @@ BUILDINGS={
 				add_ownership={
 					country={
 						country="c:UPR"
-						levels=2
+						levels=1
+					}
+					building={
+						type="building_manor_house"
+						country="c:UPR"
+						levels=1
+						region="STATE_PUERTO_RICO"
 					}
 				}
 				reserves=1
 				activate_production_methods={ "pm_simple_forestry" "pm_no_equipment" "pm_road_carts" }
+			}
+			create_building={
+				building="building_sugar_plantation"
+				add_ownership={
+				}
+				reserves=1
+				activate_production_methods={ "default_building_sugar_plantation" "pm_road_carts" "pm_no_pesticides" }
+			}
+			create_building={
+				building="building_warehouse"
+				add_ownership={
+				}
+				reserves=1
+				activate_production_methods={ "pm_basic_warehousing" "pm_manual_inventory" }
+			}
+			create_building={
+				building="building_advertising_agency"
+				add_ownership={
+				}
+				reserves=1
+				activate_production_methods={ "pm_print_advertising" "pm_no_digital_advertising" "pm_focus_groups" }
 			}
 		}
 	}
@@ -3464,7 +3611,7 @@ BUILDINGS={
 					}
 				}
 				reserves=1
-				activate_production_methods={ "pm_trade_center_trade_quantity_normal" "pm_trade_center_principle_external_trade_2" }
+				activate_production_methods={ "pm_trade_center_trade_quantity_normal" "pm_trade_center" }
 			}
 			create_building={
 				building="building_construction_sector"
@@ -3667,7 +3814,7 @@ BUILDINGS={
 					}
 				}
 				reserves=1
-				activate_production_methods={ "pm_trade_center_trade_quantity_normal" "pm_trade_center_principle_external_trade_2" }
+				activate_production_methods={ "pm_trade_center_trade_quantity_normal" "pm_trade_center" }
 			}
 			create_building={
 				building="building_construction_sector"
@@ -3801,7 +3948,7 @@ BUILDINGS={
 				reserves=1
 				activate_production_methods={ "pm_handsewn_clothes" "pm_no_luxury_clothes" "pm_traditional_looms" }
 			}
-					}
+		}
 	}
 	s:STATE_EASTERN_CUBA={
 		region_state:CUB={
@@ -3814,7 +3961,7 @@ BUILDINGS={
 					}
 				}
 				reserves=1
-				activate_production_methods={ "pm_trade_center_trade_quantity_normal" "pm_trade_center_principle_external_trade_2" }
+				activate_production_methods={ "pm_trade_center_trade_quantity_normal" "pm_trade_center" }
 			}
 			create_building={
 				building="building_construction_sector"
@@ -3970,7 +4117,7 @@ BUILDINGS={
 				reserves=1
 				activate_production_methods={ "pm_handsewn_clothes" "pm_no_luxury_clothes" "pm_traditional_looms" }
 			}
-					}
+		}
 	}
 	s:STATE_CENTRAL_CUBA={
 		region_state:CUB={
@@ -3983,7 +4130,7 @@ BUILDINGS={
 					}
 				}
 				reserves=1
-				activate_production_methods={ "pm_trade_center_trade_quantity_normal" "pm_trade_center_principle_external_trade_2" }
+				activate_production_methods={ "pm_trade_center_trade_quantity_normal" "pm_trade_center" }
 			}
 			create_building={
 				building="building_construction_sector"
@@ -4117,6 +4264,6 @@ BUILDINGS={
 				reserves=1
 				activate_production_methods={ "pm_handsewn_clothes" "pm_no_luxury_clothes" "pm_traditional_looms" }
 			}
-					}
+		}
 	}
 }

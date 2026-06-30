@@ -1,4 +1,4 @@
-BUILDINGS={
+﻿BUILDINGS={
 	s:STATE_SVEALAND={
 		region_state:SWD={
 			create_building={
@@ -10,7 +10,7 @@ BUILDINGS={
 					}
 				}
 				reserves=1
-				activate_production_methods={ "pm_trade_center_trade_quantity_high" "pm_trade_center_principle_external_trade_2" }
+				activate_production_methods={ "pm_trade_center_trade_quantity_high" "pm_trade_center" }
 			}
 			create_building={
 				building="building_construction_sector"
@@ -159,9 +159,9 @@ BUILDINGS={
 					}
 				}
 				reserves=1
-				activate_production_methods={ "pm_scholastic_education" "pm_secular_academia" "pm_principle_freedom_of_movement_3" }
+				activate_production_methods={ "pm_scholastic_education" "pm_secular_academia" "pm_freedom_of_movement_no_effect" }
 			}
-						create_building={
+			create_building={
 				building="building_paper_mill"
 				add_ownership={
 					country={
@@ -339,7 +339,7 @@ BUILDINGS={
 					}
 				}
 				reserves=1
-				activate_production_methods={ "pm_trade_center_trade_quantity_high" "pm_trade_center_principle_external_trade_2" }
+				activate_production_methods={ "pm_trade_center_trade_quantity_high" "pm_trade_center" }
 			}
 			create_building={
 				building="building_government_administration"
@@ -403,6 +403,12 @@ BUILDINGS={
 						country="c:SWD"
 						levels=1
 					}
+					building={
+						type="building_financial_district"
+						country="c:SWD"
+						levels=2
+						region="STATE_GOTALAND"
+					}
 				}
 				reserves=1
 				activate_production_methods={ "pm_picks_and_shovels_building_iron_mine" "pm_no_explosives" "pm_no_steam_automation" "pm_road_carts" }
@@ -418,7 +424,7 @@ BUILDINGS={
 				reserves=1
 				activate_production_methods={ "pm_bakery" "pm_disabled_canning" "pm_disabled_distillery" "pm_manual_dough_processing" }
 			}
-						create_building={
+			create_building={
 				building="building_telecommunications"
 				add_ownership={
 					country={
@@ -499,6 +505,19 @@ BUILDINGS={
 				reserves=1
 				activate_production_methods={ "pm_basic_warehousing" "pm_manual_inventory" }
 			}
+			create_building={
+				building="building_nuclear_plant"
+				add_ownership={
+					building={
+						type="building_financial_district"
+						country="c:SWD"
+						levels=1
+						region="STATE_GOTALAND"
+					}
+				}
+				reserves=1
+				activate_production_methods={ "pm_fission_plant" }
+			}
 		}
 	}
 	s:STATE_SCANIA={
@@ -524,7 +543,7 @@ BUILDINGS={
 					}
 				}
 				reserves=1
-				activate_production_methods={ "pm_trade_center_trade_quantity_high" "pm_trade_center_principle_external_trade_2" }
+				activate_production_methods={ "pm_trade_center_trade_quantity_high" "pm_trade_center" }
 			}
 			create_building={
 				building="building_government_administration"
@@ -609,7 +628,7 @@ BUILDINGS={
 				reserves=1
 				activate_production_methods={ "pm_bakery" "pm_disabled_canning" "pm_disabled_distillery" "pm_manual_dough_processing" }
 			}
-						create_building={
+			create_building={
 				building="building_telecommunications"
 				add_ownership={
 					country={
@@ -707,6 +726,19 @@ BUILDINGS={
 				reserves=1
 				activate_production_methods={ "pm_hydroelectric_plant" }
 			}
+			create_building={
+				building="building_textile_mill"
+				add_ownership={
+					building={
+						type="building_financial_district"
+						country="c:SWD"
+						levels=1
+						region="STATE_SCANIA"
+					}
+				}
+				reserves=1
+				activate_production_methods={ "pm_handsewn_clothes" "pm_no_luxury_clothes" "pm_traditional_looms" }
+			}
 		}
 	}
 	s:STATE_NORRLAND={
@@ -788,7 +820,7 @@ BUILDINGS={
 				reserves=1
 				activate_production_methods={ "pm_bakery" "pm_disabled_canning" "pm_disabled_distillery" "pm_manual_dough_processing" }
 			}
-						create_building={
+			create_building={
 				building="building_telecommunications"
 				add_ownership={
 					country={
@@ -883,7 +915,7 @@ BUILDINGS={
 					}
 				}
 				reserves=1
-				activate_production_methods={ "pm_trade_center_trade_quantity_high" "pm_trade_center_principle_external_trade_2" }
+				activate_production_methods={ "pm_trade_center_trade_quantity_high" "pm_trade_center" }
 			}
 			create_building={
 				building="building_government_administration"
@@ -969,7 +1001,7 @@ BUILDINGS={
 				reserves=1
 				activate_production_methods={ "pm_bakery" "pm_disabled_canning" "pm_disabled_distillery" "pm_manual_dough_processing" }
 			}
-						create_building={
+			create_building={
 				building="building_telecommunications"
 				add_ownership={
 					country={
@@ -1002,7 +1034,7 @@ BUILDINGS={
 					building={
 						type="building_food_service"
 						country="c:XDE"
-						levels=3
+						levels=4
 						region="STATE_JUTLAND"
 					}
 				}
@@ -1015,6 +1047,12 @@ BUILDINGS={
 					country={
 						country="c:XDE"
 						levels=3
+					}
+					building={
+						type="building_retail_services"
+						country="c:XDE"
+						levels=1
+						region="STATE_JUTLAND"
 					}
 				}
 				reserves=1
@@ -1036,7 +1074,7 @@ BUILDINGS={
 					building={
 						type="building_financial_district"
 						country="c:XDE"
-						levels=4
+						levels=5
 						region="STATE_ZEALAND"
 					}
 				}
@@ -1086,7 +1124,7 @@ BUILDINGS={
 					}
 				}
 				reserves=1
-				activate_production_methods={ "pm_trade_center_trade_quantity_normal" "pm_trade_center_principle_external_trade_2" }
+				activate_production_methods={ "pm_trade_center_trade_quantity_normal" "pm_trade_center" }
 			}
 			create_building={
 				building="building_construction_sector"
@@ -1167,6 +1205,18 @@ BUILDINGS={
 						country="c:XDE"
 						levels=1
 					}
+					building={
+						type="building_manor_house"
+						country="c:XDE"
+						levels=1
+						region="STATE_ZEALAND"
+					}
+					building={
+						type="building_financial_district"
+						country="c:XDE"
+						levels=1
+						region="STATE_ZEALAND"
+					}
 				}
 				reserves=1
 				activate_production_methods={ "pm_simple_farming" "pm_no_secondary" "pm_tools_disabled" "pm_no_pesticides" }
@@ -1221,7 +1271,7 @@ BUILDINGS={
 				reserves=1
 				activate_production_methods={ "pm_scholastic_education" "pm_secular_academia" "pm_principle_freedom_of_movement_3" }
 			}
-						create_building={
+			create_building={
 				building="building_telecommunications"
 				add_ownership={
 					country={
@@ -1377,6 +1427,13 @@ BUILDINGS={
 				reserves=1
 				activate_production_methods={ "pm_fission_plant" }
 			}
+			create_building={
+				building="building_appliance_manufactory"
+				add_ownership={
+				}
+				reserves=1
+				activate_production_methods={ "pm_dishwashers" "pm_automation_disabled" }
+			}
 		}
 	}
 	s:STATE_WESTERN_NORWAY={
@@ -1390,7 +1447,7 @@ BUILDINGS={
 					}
 				}
 				reserves=1
-				activate_production_methods={ "pm_trade_center_trade_quantity_normal" "pm_trade_center_principle_external_trade_2" }
+				activate_production_methods={ "pm_trade_center_trade_quantity_normal" "pm_trade_center" }
 			}
 			create_building={
 				building="building_government_administration"
@@ -1492,7 +1549,7 @@ BUILDINGS={
 				reserves=1
 				activate_production_methods={ "pm_bakery" "pm_disabled_canning" "pm_disabled_distillery" "pm_manual_dough_processing" }
 			}
-						create_building={
+			create_building={
 				building="building_electrics_industry"
 				add_ownership={
 					country={
@@ -1628,7 +1685,7 @@ BUILDINGS={
 				reserves=1
 				activate_production_methods={ "pm_picks_and_shovels_building_iron_mine" "pm_no_explosives" "pm_no_steam_automation" "pm_road_carts" }
 			}
-						create_building={
+			create_building={
 				building="building_electrics_industry"
 				add_ownership={
 					country={
@@ -1652,7 +1709,7 @@ BUILDINGS={
 					}
 				}
 				reserves=1
-				activate_production_methods={ "pm_trade_center_trade_quantity_normal" "pm_trade_center_principle_external_trade_2" }
+				activate_production_methods={ "pm_trade_center_trade_quantity_normal" "pm_trade_center" }
 			}
 			create_building={
 				building="building_government_administration"
@@ -1742,7 +1799,7 @@ BUILDINGS={
 				reserves=1
 				activate_production_methods={ "pm_picks_and_shovels_building_iron_mine" "pm_no_explosives" "pm_no_steam_automation" "pm_road_carts" }
 			}
-						create_building={
+			create_building={
 				building="building_electrics_industry"
 				add_ownership={
 					country={
@@ -1821,7 +1878,7 @@ BUILDINGS={
 					}
 				}
 				reserves=1
-				activate_production_methods={ "pm_scholastic_education" "pm_secular_academia" "pm_principle_freedom_of_movement_3" }
+				activate_production_methods={ "pm_scholastic_education" "pm_secular_academia" "pm_freedom_of_movement_no_effect" }
 			}
 			create_building={
 				building="building_airport"
@@ -1898,7 +1955,7 @@ BUILDINGS={
 					}
 				}
 				reserves=1
-				activate_production_methods={ "pm_trade_center_trade_quantity_normal" "pm_trade_center_principle_external_trade_2" }
+				activate_production_methods={ "pm_trade_center_trade_quantity_normal" "pm_trade_center" }
 			}
 		}
 		region_state:XDE={
@@ -1996,7 +2053,7 @@ BUILDINGS={
 					}
 				}
 				reserves=1
-				activate_production_methods={ "pm_trade_center_trade_quantity_normal" "pm_trade_center_principle_external_trade_2" }
+				activate_production_methods={ "pm_trade_center_trade_quantity_normal" "pm_trade_center" }
 			}
 			create_building={
 				building="building_government_administration"
@@ -2015,6 +2072,12 @@ BUILDINGS={
 					country={
 						country="c:GBR"
 						levels=1
+					}
+					building={
+						type="building_financial_district"
+						country="c:GBR"
+						levels=1
+						region="STATE_HOME_COUNTIES"
 					}
 				}
 				reserves=1
@@ -2136,14 +2199,14 @@ BUILDINGS={
 					}
 				}
 				reserves=1
-				activate_production_methods={ "pm_basic_banking" "pm_no_securities_trading" "pm_manual_tellers" }
+				activate_production_methods={ "pm_basic_banking" "pm_no_securities_trading" "pm_atm_network" }
 			}
 			create_building={
 				building="building_food_service"
 				add_ownership={
 					country={
 						country="c:GBR"
-						levels=6
+						levels=67
 					}
 					building={
 						type="building_food_service"
@@ -2153,18 +2216,18 @@ BUILDINGS={
 					}
 				}
 				reserves=1
-				activate_production_methods={ "pm_corner_grocery" "pm_no_restaurants" "pm_manual_food_checkout" }
+				activate_production_methods={ "pm_corner_grocery" "pm_fine_dining" "pm_food_delivery_services" }
 			}
 			create_building={
 				building="building_retail_services"
 				add_ownership={
 					country={
 						country="c:GBR"
-						levels=19
+						levels=74
 					}
 				}
 				reserves=1
-				activate_production_methods={ "pm_small_shops" "pm_no_retail_specialization" "pm_manual_retail_checkout" }
+				activate_production_methods={ "pm_luxury_retail" "pm_manual_retail_checkout" "pm_outlet_retail" }
 			}
 			create_building={
 				building="building_advertising_agency"
@@ -2175,14 +2238,14 @@ BUILDINGS={
 					}
 				}
 				reserves=1
-				activate_production_methods={ "pm_print_advertising" "pm_no_digital_advertising" "pm_focus_groups" }
+				activate_production_methods={ "pm_focus_groups" "pm_no_digital_advertising" "pm_broadcast_advertising" }
 			}
 			create_building={
 				building="building_warehouse"
 				add_ownership={
 					country={
 						country="c:GBR"
-						levels=10
+						levels=20
 					}
 				}
 				reserves=1
@@ -2243,7 +2306,7 @@ BUILDINGS={
 					building={
 						type="building_financial_district"
 						country="c:GBR"
-						levels=5
+						levels=6
 						region="STATE_HOME_COUNTIES"
 					}
 				}
@@ -2436,7 +2499,7 @@ BUILDINGS={
 				reserves=1
 				activate_production_methods={ "pm_base_airport" "pm_cargo_plane_prioritization" }
 			}
-						create_building={
+			create_building={
 				building="building_arms_industry"
 				add_ownership={
 					country={
@@ -2644,7 +2707,7 @@ BUILDINGS={
 					}
 				}
 				reserves=1
-				activate_production_methods={ "pm_trade_center_trade_quantity_normal" "pm_trade_center_principle_external_trade_2" }
+				activate_production_methods={ "pm_trade_center_trade_quantity_normal" "pm_trade_center" }
 			}
 			create_building={
 				building="building_paper_mill"
@@ -2777,29 +2840,29 @@ BUILDINGS={
 					}
 				}
 				reserves=1
-				activate_production_methods={ "pm_basic_banking" "pm_no_securities_trading" "pm_manual_tellers" }
+				activate_production_methods={ "pm_basic_banking" "pm_no_securities_trading" "pm_atm_network" }
 			}
 			create_building={
 				building="building_food_service"
 				add_ownership={
 					country={
 						country="c:GBR"
-						levels=1
+						levels=31
 					}
 				}
 				reserves=1
-				activate_production_methods={ "pm_corner_grocery" "pm_no_restaurants" "pm_manual_food_checkout" }
+				activate_production_methods={ "pm_corner_grocery" "pm_fine_dining" "pm_food_delivery_services" }
 			}
 			create_building={
 				building="building_retail_services"
 				add_ownership={
 					country={
 						country="c:GBR"
-						levels=3
+						levels=43
 					}
 				}
 				reserves=1
-				activate_production_methods={ "pm_small_shops" "pm_no_retail_specialization" "pm_manual_retail_checkout" }
+				activate_production_methods={ "pm_luxury_retail" "pm_manual_retail_checkout" "pm_outlet_retail" }
 			}
 			create_building={
 				building="building_advertising_agency"
@@ -2810,14 +2873,14 @@ BUILDINGS={
 					}
 				}
 				reserves=1
-				activate_production_methods={ "pm_print_advertising" "pm_no_digital_advertising" "pm_focus_groups" }
+				activate_production_methods={ "pm_focus_groups" "pm_no_digital_advertising" "pm_broadcast_advertising" }
 			}
 			create_building={
 				building="building_warehouse"
 				add_ownership={
 					country={
 						country="c:GBR"
-						levels=1
+						levels=6
 					}
 				}
 				reserves=1
@@ -3169,7 +3232,7 @@ BUILDINGS={
 					}
 				}
 				reserves=1
-				activate_production_methods={ "pm_trade_center_trade_quantity_normal" "pm_trade_center_principle_external_trade_2" }
+				activate_production_methods={ "pm_trade_center_trade_quantity_normal" "pm_trade_center" }
 			}
 			create_building={
 				building="building_construction_sector"
@@ -3260,22 +3323,22 @@ BUILDINGS={
 				add_ownership={
 					country={
 						country="c:GBR"
-						levels=4
+						levels=14
 					}
 				}
 				reserves=1
-				activate_production_methods={ "pm_corner_grocery" "pm_no_restaurants" "pm_manual_food_checkout" }
+				activate_production_methods={ "pm_corner_grocery" "pm_fine_dining" "pm_food_delivery_services" }
 			}
 			create_building={
 				building="building_retail_services"
 				add_ownership={
 					country={
 						country="c:GBR"
-						levels=4
+						levels=44
 					}
 				}
 				reserves=1
-				activate_production_methods={ "pm_small_shops" "pm_no_retail_specialization" "pm_manual_retail_checkout" }
+				activate_production_methods={ "pm_luxury_retail" "pm_manual_retail_checkout" "pm_outlet_retail" }
 			}
 			create_building={
 				building="building_advertising_agency"
@@ -3286,14 +3349,14 @@ BUILDINGS={
 					}
 				}
 				reserves=1
-				activate_production_methods={ "pm_print_advertising" "pm_no_digital_advertising" "pm_focus_groups" }
+				activate_production_methods={ "pm_focus_groups" "pm_no_digital_advertising" "pm_broadcast_advertising" }
 			}
 			create_building={
 				building="building_warehouse"
 				add_ownership={
 					country={
 						country="c:GBR"
-						levels=1
+						levels=11
 					}
 				}
 				reserves=1
@@ -3462,7 +3525,7 @@ BUILDINGS={
 					}
 				}
 				reserves=1
-				activate_production_methods={ "pm_trade_center_trade_quantity_normal" "pm_trade_center_principle_external_trade_2" }
+				activate_production_methods={ "pm_trade_center_trade_quantity_normal" "pm_trade_center" }
 			}
 			create_building={
 				building="building_paper_mill"
@@ -3595,29 +3658,29 @@ BUILDINGS={
 					}
 				}
 				reserves=1
-				activate_production_methods={ "pm_basic_banking" "pm_no_securities_trading" "pm_manual_tellers" }
+				activate_production_methods={ "pm_basic_banking" "pm_no_securities_trading" "pm_atm_network" }
 			}
 			create_building={
 				building="building_food_service"
 				add_ownership={
 					country={
 						country="c:GBR"
-						levels=1
+						levels=32
 					}
 				}
 				reserves=1
-				activate_production_methods={ "pm_corner_grocery" "pm_no_restaurants" "pm_manual_food_checkout" }
+				activate_production_methods={ "pm_corner_grocery" "pm_fine_dining" "pm_food_delivery_services" }
 			}
 			create_building={
 				building="building_retail_services"
 				add_ownership={
 					country={
 						country="c:GBR"
-						levels=1
+						levels=31
 					}
 				}
 				reserves=1
-				activate_production_methods={ "pm_small_shops" "pm_no_retail_specialization" "pm_manual_retail_checkout" }
+				activate_production_methods={ "pm_luxury_retail" "pm_manual_retail_checkout" "pm_outlet_retail" }
 			}
 			create_building={
 				building="building_advertising_agency"
@@ -3628,14 +3691,14 @@ BUILDINGS={
 					}
 				}
 				reserves=1
-				activate_production_methods={ "pm_print_advertising" "pm_no_digital_advertising" "pm_focus_groups" }
+				activate_production_methods={ "pm_focus_groups" "pm_no_digital_advertising" "pm_broadcast_advertising" }
 			}
 			create_building={
 				building="building_warehouse"
 				add_ownership={
 					country={
 						country="c:GBR"
-						levels=1
+						levels=16
 					}
 				}
 				reserves=1
@@ -3769,6 +3832,12 @@ BUILDINGS={
 						country="c:GBR"
 						levels=1
 					}
+					building={
+						type="building_financial_district"
+						country="c:GBR"
+						levels=1
+						region="STATE_HOME_COUNTIES"
+					}
 				}
 				reserves=1
 				activate_production_methods={ "pm_crude_tools" "pm_automation_disabled" }
@@ -3806,7 +3875,7 @@ BUILDINGS={
 				reserves=1
 				activate_production_methods={ "pm_base_airport" "pm_cargo_plane_prioritization" }
 			}
-						create_building={
+			create_building={
 				building="building_arms_industry"
 				add_ownership={
 					country={
@@ -3834,7 +3903,7 @@ BUILDINGS={
 					building={
 						type="building_financial_district"
 						country="c:GBR"
-						levels=24
+						levels=25
 						region="STATE_HOME_COUNTIES"
 					}
 					country={
@@ -3969,7 +4038,7 @@ BUILDINGS={
 				reserves=1
 				activate_production_methods={ "pm_power_lines" "pm_1g" }
 			}
-						create_building={
+			create_building={
 				building="building_retail_services"
 				add_ownership={
 					country={
@@ -3978,7 +4047,7 @@ BUILDINGS={
 					}
 				}
 				reserves=1
-				activate_production_methods={ "pm_small_shops" "pm_no_retail_specialization" "pm_manual_retail_checkout" }
+				activate_production_methods={ "pm_luxury_retail" "pm_manual_retail_checkout" "pm_outlet_retail" }
 			}
 			create_building={
 				building="building_fishing_wharf"
@@ -4000,14 +4069,14 @@ BUILDINGS={
 					}
 				}
 				reserves=1
-				activate_production_methods={ "pm_print_advertising" "pm_no_digital_advertising" "pm_focus_groups" }
+				activate_production_methods={ "pm_focus_groups" "pm_no_digital_advertising" "pm_broadcast_advertising" }
 			}
 			create_building={
 				building="building_warehouse"
 				add_ownership={
 					country={
 						country="c:GBR"
-						levels=1
+						levels=6
 					}
 				}
 				reserves=1
@@ -4144,7 +4213,7 @@ BUILDINGS={
 				reserves=1
 				activate_production_methods={ "pm_steam_engines" "pm_automation_disabled" }
 			}
-						create_building={
+			create_building={
 				building="building_steel_mill"
 				add_ownership={
 					building={
@@ -4221,6 +4290,12 @@ BUILDINGS={
 						country="c:GBR"
 						levels=2
 						region="STATE_HOME_COUNTIES"
+					}
+					building={
+						type="building_financial_district"
+						country="c:GBR"
+						levels=1
+						region="STATE_LANCASHIRE"
 					}
 				}
 				reserves=1
@@ -4300,18 +4375,18 @@ BUILDINGS={
 				add_ownership={
 					country={
 						country="c:GBR"
-						levels=3
+						levels=18
 					}
 				}
 				reserves=1
-				activate_production_methods={ "pm_small_shops" "pm_no_retail_specialization" "pm_manual_retail_checkout" }
+				activate_production_methods={ "pm_luxury_retail" "pm_manual_retail_checkout" "pm_outlet_retail" }
 			}
 			create_building={
 				building="building_warehouse"
 				add_ownership={
 					country={
 						country="c:GBR"
-						levels=3
+						levels=18
 					}
 				}
 				reserves=1
@@ -4341,7 +4416,7 @@ BUILDINGS={
 					}
 				}
 				reserves=1
-				activate_production_methods={ "pm_trade_center_trade_quantity_normal" "pm_trade_center_principle_external_trade_2" }
+				activate_production_methods={ "pm_trade_center_trade_quantity_normal" "pm_trade_center" }
 			}
 			create_building={
 				building="building_construction_sector"
@@ -4481,29 +4556,29 @@ BUILDINGS={
 					}
 				}
 				reserves=1
-				activate_production_methods={ "pm_basic_banking" "pm_no_securities_trading" "pm_manual_tellers" }
+				activate_production_methods={ "pm_basic_banking" "pm_no_securities_trading" "pm_atm_network" }
 			}
 			create_building={
 				building="building_food_service"
 				add_ownership={
 					country={
 						country="c:GBR"
-						levels=2
+						levels=24
 					}
 				}
 				reserves=1
-				activate_production_methods={ "pm_corner_grocery" "pm_no_restaurants" "pm_manual_food_checkout" }
+				activate_production_methods={ "pm_corner_grocery" "pm_fine_dining" "pm_food_delivery_services" }
 			}
 			create_building={
 				building="building_retail_services"
 				add_ownership={
 					country={
 						country="c:GBR"
-						levels=3
+						levels=33
 					}
 				}
 				reserves=1
-				activate_production_methods={ "pm_small_shops" "pm_no_retail_specialization" "pm_manual_retail_checkout" }
+				activate_production_methods={ "pm_luxury_retail" "pm_manual_retail_checkout" "pm_outlet_retail" }
 			}
 			create_building={
 				building="building_advertising_agency"
@@ -4514,14 +4589,14 @@ BUILDINGS={
 					}
 				}
 				reserves=1
-				activate_production_methods={ "pm_print_advertising" "pm_no_digital_advertising" "pm_focus_groups" }
+				activate_production_methods={ "pm_focus_groups" "pm_no_digital_advertising" "pm_broadcast_advertising" }
 			}
 			create_building={
 				building="building_warehouse"
 				add_ownership={
 					country={
 						country="c:GBR"
-						levels=2
+						levels=7
 					}
 				}
 				reserves=1
@@ -4637,7 +4712,7 @@ BUILDINGS={
 				reserves=1
 				activate_production_methods={ "pm_scholastic_education" "pm_secular_academia" "pm_principle_freedom_of_movement_3" }
 			}
-						create_building={
+			create_building={
 				building="building_shipyard"
 				add_ownership={
 					country={
@@ -4757,15 +4832,15 @@ BUILDINGS={
 						levels=1
 						region="STATE_EAST_ANGLIA"
 					}
-					building={
-						type="building_livestock_ranch"
-						country="c:GBR"
-						levels=1
-						region="STATE_EAST_ANGLIA"
-					}
 					country={
 						country="c:GBR"
 						levels=1
+					}
+					building={
+						type="building_manor_house"
+						country="c:GBR"
+						levels=1
+						region="STATE_YORKSHIRE"
 					}
 				}
 				reserves=1
@@ -4794,7 +4869,7 @@ BUILDINGS={
 					building={
 						type="building_financial_district"
 						country="c:GBR"
-						levels=3
+						levels=4
 						region="STATE_EAST_ANGLIA"
 					}
 					building={
@@ -4878,7 +4953,7 @@ BUILDINGS={
 					}
 				}
 				reserves=1
-				activate_production_methods={ "pm_trade_center_trade_quantity_normal" "pm_trade_center_principle_external_trade_2" }
+				activate_production_methods={ "pm_trade_center_trade_quantity_normal" "pm_trade_center" }
 			}
 			create_building={
 				building="building_construction_sector"
@@ -4994,29 +5069,29 @@ BUILDINGS={
 					}
 				}
 				reserves=1
-				activate_production_methods={ "pm_basic_banking" "pm_no_securities_trading" "pm_manual_tellers" }
+				activate_production_methods={ "pm_basic_banking" "pm_no_securities_trading" "pm_atm_network" }
 			}
 			create_building={
 				building="building_food_service"
 				add_ownership={
 					country={
 						country="c:GBR"
-						levels=1
+						levels=31
 					}
 				}
 				reserves=1
-				activate_production_methods={ "pm_corner_grocery" "pm_no_restaurants" "pm_manual_food_checkout" }
+				activate_production_methods={ "pm_corner_grocery" "pm_fine_dining" "pm_food_delivery_services" }
 			}
 			create_building={
 				building="building_retail_services"
 				add_ownership={
 					country={
 						country="c:GBR"
-						levels=1
+						levels=36
 					}
 				}
 				reserves=1
-				activate_production_methods={ "pm_small_shops" "pm_no_retail_specialization" "pm_manual_retail_checkout" }
+				activate_production_methods={ "pm_luxury_retail" "pm_manual_retail_checkout" "pm_outlet_retail" }
 			}
 			create_building={
 				building="building_advertising_agency"
@@ -5027,14 +5102,14 @@ BUILDINGS={
 					}
 				}
 				reserves=1
-				activate_production_methods={ "pm_print_advertising" "pm_no_digital_advertising" "pm_focus_groups" }
+				activate_production_methods={ "pm_focus_groups" "pm_no_digital_advertising" "pm_broadcast_advertising" }
 			}
 			create_building={
 				building="building_warehouse"
 				add_ownership={
 					country={
 						country="c:GBR"
-						levels=1
+						levels=16
 					}
 				}
 				reserves=1
@@ -5150,7 +5225,7 @@ BUILDINGS={
 				reserves=1
 				activate_production_methods={ "pm_scholastic_education" "pm_secular_academia" "pm_principle_freedom_of_movement_3" }
 			}
-						create_building={
+			create_building={
 				building="building_shipyard"
 				add_ownership={
 					country={
@@ -5271,7 +5346,7 @@ BUILDINGS={
 					}
 				}
 				reserves=1
-				activate_production_methods={ "pm_trade_center_trade_quantity_normal" "pm_trade_center_principle_external_trade_2" }
+				activate_production_methods={ "pm_trade_center_trade_quantity_normal" "pm_trade_center" }
 			}
 			create_building={
 				building="building_paper_mill"
@@ -5382,29 +5457,29 @@ BUILDINGS={
 					}
 				}
 				reserves=1
-				activate_production_methods={ "pm_basic_banking" "pm_no_securities_trading" "pm_manual_tellers" }
+				activate_production_methods={ "pm_basic_banking" "pm_no_securities_trading" "pm_atm_network" }
 			}
 			create_building={
 				building="building_food_service"
 				add_ownership={
 					country={
 						country="c:GBR"
-						levels=1
+						levels=46
 					}
 				}
 				reserves=1
-				activate_production_methods={ "pm_corner_grocery" "pm_no_restaurants" "pm_manual_food_checkout" }
+				activate_production_methods={ "pm_corner_grocery" "pm_fine_dining" "pm_food_delivery_services" }
 			}
 			create_building={
 				building="building_retail_services"
 				add_ownership={
 					country={
 						country="c:GBR"
-						levels=2
+						levels=27
 					}
 				}
 				reserves=1
-				activate_production_methods={ "pm_small_shops" "pm_no_retail_specialization" "pm_manual_retail_checkout" }
+				activate_production_methods={ "pm_luxury_retail" "pm_manual_retail_checkout" "pm_outlet_retail" }
 			}
 			create_building={
 				building="building_advertising_agency"
@@ -5415,14 +5490,14 @@ BUILDINGS={
 					}
 				}
 				reserves=1
-				activate_production_methods={ "pm_print_advertising" "pm_no_digital_advertising" "pm_focus_groups" }
+				activate_production_methods={ "pm_focus_groups" "pm_no_digital_advertising" "pm_broadcast_advertising" }
 			}
 			create_building={
 				building="building_warehouse"
 				add_ownership={
 					country={
 						country="c:GBR"
-						levels=1
+						levels=11
 					}
 				}
 				reserves=1
@@ -5597,12 +5672,6 @@ BUILDINGS={
 						region="STATE_HOME_COUNTIES"
 					}
 					building={
-						type="building_fishing_wharf"
-						country="c:GBR"
-						levels=1
-						region="STATE_LOWLANDS"
-					}
-					building={
 						type="building_financial_district"
 						country="c:GBR"
 						levels=1
@@ -5611,6 +5680,12 @@ BUILDINGS={
 					country={
 						country="c:GBR"
 						levels=7
+					}
+					building={
+						type="building_manor_house"
+						country="c:GBR"
+						levels=1
+						region="STATE_HOME_COUNTIES"
 					}
 				}
 				reserves=1
@@ -5650,15 +5725,15 @@ BUILDINGS={
 						levels=1
 						region="STATE_LOWLANDS"
 					}
-					building={
-						type="building_livestock_ranch"
-						country="c:GBR"
-						levels=1
-						region="STATE_LOWLANDS"
-					}
 					country={
 						country="c:GBR"
 						levels=6
+					}
+					building={
+						type="building_manor_house"
+						country="c:GBR"
+						levels=1
+						region="STATE_HOME_COUNTIES"
 					}
 				}
 				reserves=1
@@ -5696,7 +5771,7 @@ BUILDINGS={
 					}
 				}
 				reserves=1
-				activate_production_methods={ "pm_trade_center_trade_quantity_normal" "pm_trade_center_principle_external_trade_2" }
+				activate_production_methods={ "pm_trade_center_trade_quantity_normal" "pm_trade_center" }
 			}
 			create_building={
 				building="building_government_administration"
@@ -5779,29 +5854,29 @@ BUILDINGS={
 					}
 				}
 				reserves=1
-				activate_production_methods={ "pm_basic_banking" "pm_no_securities_trading" "pm_manual_tellers" }
+				activate_production_methods={ "pm_basic_banking" "pm_no_securities_trading" "pm_atm_network" }
 			}
 			create_building={
 				building="building_food_service"
 				add_ownership={
 					country={
 						country="c:GBR"
-						levels=1
+						levels=26
 					}
 				}
 				reserves=1
-				activate_production_methods={ "pm_corner_grocery" "pm_no_restaurants" "pm_manual_food_checkout" }
+				activate_production_methods={ "pm_corner_grocery" "pm_fine_dining" "pm_food_delivery_services" }
 			}
 			create_building={
 				building="building_retail_services"
 				add_ownership={
 					country={
 						country="c:GBR"
-						levels=1
+						levels=16
 					}
 				}
 				reserves=1
-				activate_production_methods={ "pm_small_shops" "pm_no_retail_specialization" "pm_manual_retail_checkout" }
+				activate_production_methods={ "pm_luxury_retail" "pm_manual_retail_checkout" "pm_outlet_retail" }
 			}
 			create_building={
 				building="building_food_industry"
@@ -5836,7 +5911,7 @@ BUILDINGS={
 				reserves=1
 				activate_production_methods={ "pm_automobile_production" "pm_automation_disabled" }
 			}
-						create_building={
+			create_building={
 				building="building_artillery_foundry"
 				add_ownership={
 					building={
@@ -5866,6 +5941,17 @@ BUILDINGS={
 				reserves=1
 				activate_production_methods={ "pm_simple_forestry" "pm_no_equipment" "pm_road_carts" }
 			}
+			create_building={
+				building="building_warehouse"
+				add_ownership={
+					country={
+						country="c:GBR"
+						levels=5
+					}
+				}
+				reserves=1
+				activate_production_methods={ "pm_basic_warehousing" "pm_manual_inventory" }
+			}
 		}
 	}
 	s:STATE_MUNSTER={
@@ -5879,7 +5965,7 @@ BUILDINGS={
 					}
 				}
 				reserves=1
-				activate_production_methods={ "pm_trade_center_trade_quantity_normal" "pm_trade_center_principle_external_trade_2" }
+				activate_production_methods={ "pm_trade_center_trade_quantity_normal" "pm_trade_center" }
 			}
 			create_building={
 				building="building_government_administration"
@@ -5947,7 +6033,7 @@ BUILDINGS={
 				reserves=1
 				activate_production_methods={ "pm_bakery" "pm_disabled_canning" "pm_disabled_distillery" "pm_manual_dough_processing" }
 			}
-						create_building={
+			create_building={
 				building="building_telecommunications"
 				add_ownership={
 					country={
@@ -6106,7 +6192,7 @@ BUILDINGS={
 				reserves=1
 				activate_production_methods={ "pm_bakery" "pm_disabled_canning" "pm_disabled_distillery" "pm_manual_dough_processing" }
 			}
-						create_building={
+			create_building={
 				building="building_telecommunications"
 				add_ownership={
 					country={
@@ -6440,7 +6526,7 @@ BUILDINGS={
 				reserves=1
 				activate_production_methods={ "pm_automobile_production" "pm_automation_disabled" }
 			}
-						create_building={
+			create_building={
 				building="building_food_industry"
 				add_ownership={
 					country={
@@ -6464,7 +6550,7 @@ BUILDINGS={
 					}
 				}
 				reserves=1
-				activate_production_methods={ "pm_trade_center_trade_quantity_normal" "pm_trade_center_principle_external_trade_2" }
+				activate_production_methods={ "pm_trade_center_trade_quantity_normal" "pm_trade_center" }
 			}
 			create_building={
 				building="building_construction_sector"
@@ -6598,22 +6684,22 @@ BUILDINGS={
 				add_ownership={
 					country={
 						country="c:FRA"
-						levels=26
+						levels=86
 					}
 				}
 				reserves=1
-				activate_production_methods={ "pm_corner_grocery" "pm_no_restaurants" "pm_manual_food_checkout" }
+				activate_production_methods={ "pm_fine_dining" "pm_food_delivery_services" "pm_corner_grocery" }
 			}
 			create_building={
 				building="building_retail_services"
 				add_ownership={
 					country={
 						country="c:FRA"
-						levels=6
+						levels=126
 					}
 				}
 				reserves=1
-				activate_production_methods={ "pm_small_shops" "pm_no_retail_specialization" "pm_manual_retail_checkout" }
+				activate_production_methods={ "pm_luxury_retail" "pm_manual_retail_checkout" "pm_outlet_retail" }
 			}
 			create_building={
 				building="building_advertising_agency"
@@ -6653,7 +6739,13 @@ BUILDINGS={
 				add_ownership={
 					country={
 						country="c:FRA"
-						levels=24
+						levels=84
+					}
+					building={
+						type="building_financial_district"
+						country="c:FRA"
+						levels=1
+						region="STATE_ILE_DE_FRANCE"
 					}
 				}
 				reserves=1
@@ -6801,6 +6893,12 @@ BUILDINGS={
 						country="c:FRA"
 						levels=2
 					}
+					building={
+						type="building_financial_district"
+						country="c:FRA"
+						levels=1
+						region="STATE_ILE_DE_FRANCE"
+					}
 				}
 				reserves=1
 				activate_production_methods={ "pm_crude_tools" "pm_automation_disabled" }
@@ -6826,7 +6924,7 @@ BUILDINGS={
 					building={
 						type="building_manor_house"
 						country="c:FRA"
-						levels=1
+						levels=3
 						region="STATE_ILE_DE_FRANCE"
 					}
 				}
@@ -6850,7 +6948,7 @@ BUILDINGS={
 				reserves=1
 				activate_production_methods={ "pm_base_airport" "pm_cargo_plane_prioritization" }
 			}
-						create_building={
+			create_building={
 				building="building_arms_industry"
 				add_ownership={
 					country={
@@ -6928,7 +7026,7 @@ BUILDINGS={
 						region="STATE_ILE_DE_FRANCE"
 					}
 					building={
-						type="building_wheat_farm"
+						type="building_financial_district"
 						country="c:FRA"
 						levels=1
 						region="STATE_ILE_DE_FRANCE"
@@ -6985,7 +7083,7 @@ BUILDINGS={
 					}
 				}
 				reserves=1
-				activate_production_methods={ "pm_trade_center_trade_quantity_normal" "pm_trade_center_principle_external_trade_2" }
+				activate_production_methods={ "pm_trade_center_trade_quantity_normal" "pm_trade_center" }
 			}
 			create_building={
 				building="building_construction_sector"
@@ -7120,22 +7218,22 @@ BUILDINGS={
 				add_ownership={
 					country={
 						country="c:FRA"
-						levels=1
+						levels=41
 					}
 				}
 				reserves=1
-				activate_production_methods={ "pm_corner_grocery" "pm_no_restaurants" "pm_manual_food_checkout" }
+				activate_production_methods={ "pm_fine_dining" "pm_food_delivery_services" "pm_corner_grocery" }
 			}
 			create_building={
 				building="building_retail_services"
 				add_ownership={
 					country={
 						country="c:FRA"
-						levels=1
+						levels=41
 					}
 				}
 				reserves=1
-				activate_production_methods={ "pm_small_shops" "pm_no_retail_specialization" "pm_manual_retail_checkout" }
+				activate_production_methods={ "pm_luxury_retail" "pm_manual_retail_checkout" "pm_outlet_retail" }
 			}
 			create_building={
 				building="building_advertising_agency"
@@ -7175,7 +7273,7 @@ BUILDINGS={
 				add_ownership={
 					country={
 						country="c:FRA"
-						levels=6
+						levels=21
 					}
 				}
 				reserves=1
@@ -7275,7 +7373,7 @@ BUILDINGS={
 				reserves=1
 				activate_production_methods={ "pm_scholastic_education" "pm_secular_academia" "pm_principle_freedom_of_movement_3" }
 			}
-						create_building={
+			create_building={
 				building="building_shipyard"
 				add_ownership={
 					country={
@@ -7296,15 +7394,9 @@ BUILDINGS={
 				building="building_wheat_farm"
 				add_ownership={
 					building={
-						type="building_wheat_farm"
-						country="c:FRA"
-						levels=1
-						region="STATE_PROVENCE"
-					}
-					building={
 						type="building_manor_house"
 						country="c:FRA"
-						levels=1
+						levels=2
 						region="STATE_PROVENCE"
 					}
 					building={
@@ -7375,7 +7467,7 @@ BUILDINGS={
 					}
 				}
 				reserves=1
-				activate_production_methods={ "pm_trade_center_trade_quantity_normal" "pm_trade_center_principle_external_trade_2" }
+				activate_production_methods={ "pm_trade_center_trade_quantity_normal" "pm_trade_center" }
 			}
 			create_building={
 				building="building_construction_sector"
@@ -7498,22 +7590,22 @@ BUILDINGS={
 				add_ownership={
 					country={
 						country="c:FRA"
-						levels=11
+						levels=51
 					}
 				}
 				reserves=1
-				activate_production_methods={ "pm_corner_grocery" "pm_no_restaurants" "pm_manual_food_checkout" }
+				activate_production_methods={ "pm_fine_dining" "pm_food_delivery_services" "pm_corner_grocery" }
 			}
 			create_building={
 				building="building_retail_services"
 				add_ownership={
 					country={
 						country="c:FRA"
-						levels=11
+						levels=21
 					}
 				}
 				reserves=1
-				activate_production_methods={ "pm_small_shops" "pm_no_retail_specialization" "pm_manual_retail_checkout" }
+				activate_production_methods={ "pm_luxury_retail" "pm_manual_retail_checkout" "pm_outlet_retail" }
 			}
 			create_building={
 				building="building_advertising_agency"
@@ -7553,7 +7645,7 @@ BUILDINGS={
 				add_ownership={
 					country={
 						country="c:FRA"
-						levels=15
+						levels=40
 					}
 				}
 				reserves=1
@@ -7647,7 +7739,7 @@ BUILDINGS={
 				reserves=1
 				activate_production_methods={ "pm_scholastic_education" "pm_secular_academia" "pm_principle_freedom_of_movement_3" }
 			}
-						create_building={
+			create_building={
 				building="building_shipyard"
 				add_ownership={
 					country={
@@ -7833,22 +7925,22 @@ BUILDINGS={
 				add_ownership={
 					country={
 						country="c:FRA"
-						levels=1
+						levels=21
 					}
 				}
 				reserves=1
-				activate_production_methods={ "pm_corner_grocery" "pm_no_restaurants" "pm_manual_food_checkout" }
+				activate_production_methods={ "pm_fine_dining" "pm_food_delivery_services" "pm_corner_grocery" }
 			}
 			create_building={
 				building="building_retail_services"
 				add_ownership={
 					country={
 						country="c:FRA"
-						levels=1
+						levels=21
 					}
 				}
 				reserves=1
-				activate_production_methods={ "pm_small_shops" "pm_no_retail_specialization" "pm_manual_retail_checkout" }
+				activate_production_methods={ "pm_luxury_retail" "pm_manual_retail_checkout" "pm_outlet_retail" }
 			}
 			create_building={
 				building="building_advertising_agency"
@@ -7888,7 +7980,7 @@ BUILDINGS={
 				add_ownership={
 					country={
 						country="c:FRA"
-						levels=6
+						levels=16
 					}
 				}
 				reserves=1
@@ -8094,7 +8186,7 @@ BUILDINGS={
 					}
 				}
 				reserves=1
-				activate_production_methods={ "pm_trade_center_trade_quantity_normal" "pm_trade_center_principle_external_trade_2" }
+				activate_production_methods={ "pm_trade_center_trade_quantity_normal" "pm_trade_center" }
 			}
 			create_building={
 				building="building_paper_mill"
@@ -8202,22 +8294,22 @@ BUILDINGS={
 				add_ownership={
 					country={
 						country="c:FRA"
-						levels=1
+						levels=41
 					}
 				}
 				reserves=1
-				activate_production_methods={ "pm_corner_grocery" "pm_no_restaurants" "pm_manual_food_checkout" }
+				activate_production_methods={ "pm_fine_dining" "pm_food_delivery_services" "pm_corner_grocery" }
 			}
 			create_building={
 				building="building_retail_services"
 				add_ownership={
 					country={
 						country="c:FRA"
-						levels=1
+						levels=31
 					}
 				}
 				reserves=1
-				activate_production_methods={ "pm_small_shops" "pm_no_retail_specialization" "pm_manual_retail_checkout" }
+				activate_production_methods={ "pm_luxury_retail" "pm_manual_retail_checkout" "pm_outlet_retail" }
 			}
 			create_building={
 				building="building_advertising_agency"
@@ -8257,7 +8349,7 @@ BUILDINGS={
 				add_ownership={
 					country={
 						country="c:FRA"
-						levels=8
+						levels=18
 					}
 				}
 				reserves=1
@@ -8433,10 +8525,10 @@ BUILDINGS={
 						region="STATE_RHONE"
 					}
 					building={
-						type="building_wheat_farm"
+						type="building_financial_district"
 						country="c:FRA"
 						levels=1
-						region="STATE_RHONE"
+						region="STATE_PROVENCE"
 					}
 				}
 				reserves=1
@@ -8456,6 +8548,12 @@ BUILDINGS={
 						country="c:FRA"
 						levels=1
 						region="STATE_RHONE"
+					}
+					building={
+						type="building_financial_district"
+						country="c:FRA"
+						levels=1
+						region="STATE_PROVENCE"
 					}
 				}
 				reserves=1
@@ -8555,7 +8653,7 @@ BUILDINGS={
 					}
 				}
 				reserves=1
-				activate_production_methods={ "pm_trade_center_trade_quantity_normal" "pm_trade_center_principle_external_trade_2" }
+				activate_production_methods={ "pm_trade_center_trade_quantity_normal" "pm_trade_center" }
 			}
 			create_building={
 				building="building_construction_sector"
@@ -8678,22 +8776,22 @@ BUILDINGS={
 				add_ownership={
 					country={
 						country="c:FRA"
-						levels=6
+						levels=26
 					}
 				}
 				reserves=1
-				activate_production_methods={ "pm_corner_grocery" "pm_no_restaurants" "pm_manual_food_checkout" }
+				activate_production_methods={ "pm_fine_dining" "pm_food_delivery_services" "pm_corner_grocery" }
 			}
 			create_building={
 				building="building_retail_services"
 				add_ownership={
 					country={
 						country="c:FRA"
-						levels=1
+						levels=21
 					}
 				}
 				reserves=1
-				activate_production_methods={ "pm_small_shops" "pm_no_retail_specialization" "pm_manual_retail_checkout" }
+				activate_production_methods={ "pm_luxury_retail" "pm_manual_retail_checkout" "pm_outlet_retail" }
 			}
 			create_building={
 				building="building_advertising_agency"
@@ -8733,7 +8831,7 @@ BUILDINGS={
 				add_ownership={
 					country={
 						country="c:FRA"
-						levels=9
+						levels=24
 					}
 				}
 				reserves=1
@@ -8877,7 +8975,7 @@ BUILDINGS={
 					}
 				}
 				reserves=1
-				activate_production_methods={ "pm_trade_center_trade_quantity_normal" "pm_trade_center_principle_external_trade_2" }
+				activate_production_methods={ "pm_trade_center_trade_quantity_normal" "pm_trade_center" }
 			}
 			create_building={
 				building="building_government_administration"
@@ -8939,29 +9037,29 @@ BUILDINGS={
 				add_ownership={
 					country={
 						country="c:FRA"
-						levels=1
+						levels=11
 					}
 				}
 				reserves=1
-				activate_production_methods={ "pm_corner_grocery" "pm_no_restaurants" "pm_manual_food_checkout" }
+				activate_production_methods={ "pm_fine_dining" "pm_food_delivery_services" "pm_corner_grocery" }
 			}
 			create_building={
 				building="building_retail_services"
 				add_ownership={
 					country={
 						country="c:FRA"
-						levels=1
+						levels=31
 					}
 				}
 				reserves=1
-				activate_production_methods={ "pm_small_shops" "pm_no_retail_specialization" "pm_manual_retail_checkout" }
+				activate_production_methods={ "pm_luxury_retail" "pm_manual_retail_checkout" "pm_outlet_retail" }
 			}
 			create_building={
 				building="building_food_industry"
 				add_ownership={
 					country={
 						country="c:FRA"
-						levels=3
+						levels=8
 					}
 				}
 				reserves=1
@@ -9000,6 +9098,12 @@ BUILDINGS={
 						levels=1
 						region="STATE_ALSACE_LORRAINE"
 					}
+					building={
+						type="building_financial_district"
+						country="c:FRA"
+						levels=1
+						region="STATE_ILE_DE_FRANCE"
+					}
 				}
 				reserves=1
 				activate_production_methods={ "pm_road_carts" "pm_no_explosives" "pm_no_steam_automation" "pm_atmospheric_engine_pump_building_iron_mine" }
@@ -9030,7 +9134,7 @@ BUILDINGS={
 				reserves=1
 				activate_production_methods={ "pm_simple_farming" "pm_no_secondary" "pm_tools_disabled" "pm_no_pesticides" }
 			}
-						create_building={
+			create_building={
 				building="building_warehouse"
 				add_ownership={
 					building={
@@ -9056,7 +9160,7 @@ BUILDINGS={
 					}
 				}
 				reserves=1
-				activate_production_methods={ "pm_trade_center_trade_quantity_normal" "pm_trade_center_principle_external_trade_2" }
+				activate_production_methods={ "pm_trade_center_trade_quantity_normal" "pm_trade_center" }
 			}
 			create_building={
 				building="building_government_administration"
@@ -9146,11 +9250,11 @@ BUILDINGS={
 				add_ownership={
 					country={
 						country="c:FRA"
-						levels=1
+						levels=11
 					}
 				}
 				reserves=1
-				activate_production_methods={ "pm_corner_grocery" "pm_no_restaurants" "pm_manual_food_checkout" }
+				activate_production_methods={ "pm_fine_dining" "pm_food_delivery_services" "pm_corner_grocery" }
 			}
 			create_building={
 				building="building_retail_services"
@@ -9161,14 +9265,14 @@ BUILDINGS={
 					}
 				}
 				reserves=1
-				activate_production_methods={ "pm_small_shops" "pm_no_retail_specialization" "pm_manual_retail_checkout" }
+				activate_production_methods={ "pm_luxury_retail" "pm_manual_retail_checkout" "pm_outlet_retail" }
 			}
 			create_building={
 				building="building_food_industry"
 				add_ownership={
 					country={
 						country="c:FRA"
-						levels=7
+						levels=17
 					}
 				}
 				reserves=1
@@ -9309,7 +9413,7 @@ BUILDINGS={
 					}
 				}
 				reserves=1
-				activate_production_methods={ "pm_trade_center_trade_quantity_normal" "pm_trade_center_principle_external_trade_2" }
+				activate_production_methods={ "pm_trade_center_trade_quantity_normal" "pm_trade_center" }
 			}
 			create_building={
 				building="building_government_administration"
@@ -9420,7 +9524,7 @@ BUILDINGS={
 					}
 				}
 				reserves=1
-				activate_production_methods={ "pm_corner_grocery" "pm_no_restaurants" "pm_manual_food_checkout" }
+				activate_production_methods={ "pm_fine_dining" "pm_food_delivery_services" "pm_corner_grocery" }
 			}
 		}
 	}
@@ -9511,7 +9615,7 @@ BUILDINGS={
 					}
 				}
 				reserves=1
-				activate_production_methods={ "pm_small_shops" "pm_no_retail_specialization" "pm_manual_retail_checkout" }
+				activate_production_methods={ "pm_luxury_retail" "pm_manual_retail_checkout" "pm_outlet_retail" }
 			}
 			create_building={
 				building="building_food_service"
@@ -9522,7 +9626,7 @@ BUILDINGS={
 					}
 				}
 				reserves=1
-				activate_production_methods={ "pm_corner_grocery" "pm_no_restaurants" "pm_manual_food_checkout" }
+				activate_production_methods={ "pm_fine_dining" "pm_food_delivery_services" "pm_corner_grocery" }
 			}
 			create_building={
 				building="building_university"
@@ -9548,7 +9652,7 @@ BUILDINGS={
 					}
 				}
 				reserves=1
-				activate_production_methods={ "pm_trade_center_trade_quantity_normal" "pm_trade_center_principle_external_trade_2" }
+				activate_production_methods={ "pm_trade_center_trade_quantity_normal" "pm_trade_center" }
 			}
 			create_building={
 				building="building_construction_sector"
@@ -9672,22 +9776,22 @@ BUILDINGS={
 				add_ownership={
 					country={
 						country="c:FRA"
-						levels=7
+						levels=37
 					}
 				}
 				reserves=1
-				activate_production_methods={ "pm_corner_grocery" "pm_no_restaurants" "pm_manual_food_checkout" }
+				activate_production_methods={ "pm_fine_dining" "pm_food_delivery_services" "pm_corner_grocery" }
 			}
 			create_building={
 				building="building_retail_services"
 				add_ownership={
 					country={
 						country="c:FRA"
-						levels=6
+						levels=26
 					}
 				}
 				reserves=1
-				activate_production_methods={ "pm_small_shops" "pm_no_retail_specialization" "pm_manual_retail_checkout" }
+				activate_production_methods={ "pm_luxury_retail" "pm_manual_retail_checkout" "pm_outlet_retail" }
 			}
 			create_building={
 				building="building_advertising_agency"
@@ -9727,7 +9831,7 @@ BUILDINGS={
 				add_ownership={
 					country={
 						country="c:FRA"
-						levels=7
+						levels=12
 					}
 				}
 				reserves=1
@@ -9990,22 +10094,22 @@ BUILDINGS={
 				add_ownership={
 					country={
 						country="c:FRA"
-						levels=1
+						levels=11
 					}
 				}
 				reserves=1
-				activate_production_methods={ "pm_corner_grocery" "pm_no_restaurants" "pm_manual_food_checkout" }
+				activate_production_methods={ "pm_fine_dining" "pm_food_delivery_services" "pm_corner_grocery" }
 			}
 			create_building={
 				building="building_retail_services"
 				add_ownership={
 					country={
 						country="c:FRA"
-						levels=11
+						levels=51
 					}
 				}
 				reserves=1
-				activate_production_methods={ "pm_small_shops" "pm_no_retail_specialization" "pm_manual_retail_checkout" }
+				activate_production_methods={ "pm_luxury_retail" "pm_manual_retail_checkout" "pm_outlet_retail" }
 			}
 			create_building={
 				building="building_food_industry"
@@ -10152,13 +10256,6 @@ BUILDINGS={
 				reserves=1
 				activate_production_methods={ "pm_basic_warehousing" "pm_manual_inventory" }
 			}
-			create_building={
-				building="building_nuclear_plant"
-				add_ownership={
-				}
-				reserves=1
-				activate_production_methods={ "pm_fission_plant" }
-			}
 		}
 	}
 	s:STATE_CHAMPAGNE={
@@ -10172,7 +10269,7 @@ BUILDINGS={
 					}
 				}
 				reserves=1
-				activate_production_methods={ "pm_trade_center_trade_quantity_normal" "pm_trade_center_principle_external_trade_2" }
+				activate_production_methods={ "pm_trade_center_trade_quantity_normal" "pm_trade_center" }
 			}
 			create_building={
 				building="building_government_administration"
@@ -10255,25 +10352,25 @@ BUILDINGS={
 					}
 				}
 				reserves=1
-				activate_production_methods={ "pm_corner_grocery" "pm_no_restaurants" "pm_manual_food_checkout" }
+				activate_production_methods={ "pm_fine_dining" "pm_food_delivery_services" "pm_corner_grocery" }
 			}
 			create_building={
 				building="building_retail_services"
 				add_ownership={
 					country={
 						country="c:FRA"
-						levels=6
+						levels=26
 					}
 				}
 				reserves=1
-				activate_production_methods={ "pm_small_shops" "pm_no_retail_specialization" "pm_manual_retail_checkout" }
+				activate_production_methods={ "pm_luxury_retail" "pm_manual_retail_checkout" "pm_outlet_retail" }
 			}
 			create_building={
 				building="building_food_industry"
 				add_ownership={
 					country={
 						country="c:FRA"
-						levels=1
+						levels=6
 					}
 				}
 				reserves=1
@@ -10301,7 +10398,7 @@ BUILDINGS={
 				reserves=1
 				activate_production_methods={ "pm_steam_engines" "pm_automation_disabled" }
 			}
-						create_building={
+			create_building={
 				building="building_wheat_farm"
 				add_ownership={
 					building={
@@ -10397,7 +10494,7 @@ BUILDINGS={
 					}
 				}
 				reserves=1
-				activate_production_methods={ "pm_trade_center_trade_quantity_normal" "pm_trade_center_principle_external_trade_2" }
+				activate_production_methods={ "pm_trade_center_trade_quantity_normal" "pm_trade_center" }
 			}
 			create_building={
 				building="building_construction_sector"
@@ -10513,18 +10610,18 @@ BUILDINGS={
 					}
 				}
 				reserves=1
-				activate_production_methods={ "pm_corner_grocery" "pm_no_restaurants" "pm_manual_food_checkout" }
+				activate_production_methods={ "pm_fine_dining" "pm_food_delivery_services" "pm_corner_grocery" }
 			}
 			create_building={
 				building="building_retail_services"
 				add_ownership={
 					country={
 						country="c:FRA"
-						levels=6
+						levels=46
 					}
 				}
 				reserves=1
-				activate_production_methods={ "pm_small_shops" "pm_no_retail_specialization" "pm_manual_retail_checkout" }
+				activate_production_methods={ "pm_luxury_retail" "pm_manual_retail_checkout" "pm_outlet_retail" }
 			}
 			create_building={
 				building="building_advertising_agency"
@@ -10564,7 +10661,7 @@ BUILDINGS={
 				add_ownership={
 					country={
 						country="c:FRA"
-						levels=1
+						levels=6
 					}
 				}
 				reserves=1
@@ -10697,7 +10794,7 @@ BUILDINGS={
 					}
 				}
 				reserves=1
-				activate_production_methods={ "pm_trade_center_trade_quantity_normal" "pm_trade_center_principle_external_trade_2" }
+				activate_production_methods={ "pm_trade_center_trade_quantity_normal" "pm_trade_center" }
 			}
 			create_building={
 				building="building_construction_sector"
@@ -10820,11 +10917,11 @@ BUILDINGS={
 				add_ownership={
 					country={
 						country="c:FRA"
-						levels=1
+						levels=11
 					}
 				}
 				reserves=1
-				activate_production_methods={ "pm_corner_grocery" "pm_no_restaurants" "pm_manual_food_checkout" }
+				activate_production_methods={ "pm_fine_dining" "pm_food_delivery_services" "pm_corner_grocery" }
 			}
 			create_building={
 				building="building_retail_services"
@@ -10835,7 +10932,7 @@ BUILDINGS={
 					}
 				}
 				reserves=1
-				activate_production_methods={ "pm_small_shops" "pm_no_retail_specialization" "pm_manual_retail_checkout" }
+				activate_production_methods={ "pm_luxury_retail" "pm_manual_retail_checkout" "pm_outlet_retail" }
 			}
 			create_building={
 				building="building_advertising_agency"
@@ -10875,7 +10972,7 @@ BUILDINGS={
 				add_ownership={
 					country={
 						country="c:FRA"
-						levels=1
+						levels=6
 					}
 				}
 				reserves=1
@@ -10958,7 +11055,7 @@ BUILDINGS={
 				reserves=1
 				activate_production_methods={ "pm_dishwashers" "pm_automation_disabled" }
 			}
-						create_building={
+			create_building={
 				building="building_wheat_farm"
 				add_ownership={
 					building={
@@ -11034,7 +11131,7 @@ BUILDINGS={
 					}
 				}
 				reserves=1
-				activate_production_methods={ "pm_trade_center_trade_quantity_normal" "pm_trade_center_principle_external_trade_2" }
+				activate_production_methods={ "pm_trade_center_trade_quantity_normal" "pm_trade_center" }
 			}
 			create_building={
 				building="building_construction_sector"
@@ -11146,22 +11243,22 @@ BUILDINGS={
 				add_ownership={
 					country={
 						country="c:FRA"
-						levels=6
+						levels=46
 					}
 				}
 				reserves=1
-				activate_production_methods={ "pm_corner_grocery" "pm_no_restaurants" "pm_manual_food_checkout" }
+				activate_production_methods={ "pm_fine_dining" "pm_food_delivery_services" "pm_corner_grocery" }
 			}
 			create_building={
 				building="building_retail_services"
 				add_ownership={
 					country={
 						country="c:FRA"
-						levels=16
+						levels=26
 					}
 				}
 				reserves=1
-				activate_production_methods={ "pm_small_shops" "pm_no_retail_specialization" "pm_manual_retail_checkout" }
+				activate_production_methods={ "pm_luxury_retail" "pm_manual_retail_checkout" "pm_outlet_retail" }
 			}
 			create_building={
 				building="building_advertising_agency"
@@ -11207,7 +11304,7 @@ BUILDINGS={
 				add_ownership={
 					country={
 						country="c:FRA"
-						levels=13
+						levels=18
 					}
 				}
 				reserves=1
@@ -11359,7 +11456,7 @@ BUILDINGS={
 					}
 				}
 				reserves=1
-				activate_production_methods={ "pm_trade_center_trade_quantity_normal" "pm_trade_center_principle_external_trade_2" }
+				activate_production_methods={ "pm_trade_center_trade_quantity_normal" "pm_trade_center" }
 			}
 			create_building={
 				building="building_construction_sector"
@@ -11483,11 +11580,11 @@ BUILDINGS={
 				add_ownership={
 					country={
 						country="c:NDL"
-						levels=6
+						levels=16
 					}
 				}
 				reserves=1
-				activate_production_methods={ "pm_corner_grocery" "pm_no_restaurants" "pm_manual_food_checkout" }
+				activate_production_methods={ "pm_corner_grocery" "pm_manual_food_checkout" "pm_fine_dining" }
 			}
 			create_building={
 				building="building_retail_services"
@@ -11498,7 +11595,7 @@ BUILDINGS={
 					}
 				}
 				reserves=1
-				activate_production_methods={ "pm_small_shops" "pm_no_retail_specialization" "pm_manual_retail_checkout" }
+				activate_production_methods={ "pm_small_shops" "pm_manual_retail_checkout" "pm_luxury_retail" }
 			}
 			create_building={
 				building="building_bank"
@@ -11713,7 +11810,7 @@ BUILDINGS={
 					}
 				}
 				reserves=1
-				activate_production_methods={ "pm_trade_center_trade_quantity_normal" "pm_trade_center_principle_external_trade_2" }
+				activate_production_methods={ "pm_trade_center_trade_quantity_normal" "pm_trade_center" }
 			}
 			create_building={
 				building="building_construction_sector"
@@ -11819,7 +11916,7 @@ BUILDINGS={
 					building={
 						type="building_financial_district"
 						country="c:NDL"
-						levels=9
+						levels=14
 						region="STATE_FRIESLAND"
 					}
 				}
@@ -11919,7 +12016,7 @@ BUILDINGS={
 				add_ownership={
 					country={
 						country="c:NDL"
-						levels=1
+						levels=7
 					}
 					building={
 						type="building_food_service"
@@ -11929,7 +12026,7 @@ BUILDINGS={
 					}
 				}
 				reserves=1
-				activate_production_methods={ "pm_corner_grocery" "pm_no_restaurants" "pm_manual_food_checkout" }
+				activate_production_methods={ "pm_corner_grocery" "pm_manual_food_checkout" "pm_fine_dining" }
 			}
 			create_building={
 				building="building_retail_services"
@@ -11940,7 +12037,7 @@ BUILDINGS={
 					}
 				}
 				reserves=1
-				activate_production_methods={ "pm_small_shops" "pm_no_retail_specialization" "pm_manual_retail_checkout" }
+				activate_production_methods={ "pm_small_shops" "pm_manual_retail_checkout" "pm_luxury_retail" }
 			}
 			create_building={
 				building="building_advertising_agency"
@@ -11959,6 +12056,12 @@ BUILDINGS={
 					country={
 						country="c:NDL"
 						levels=4
+					}
+					building={
+						type="building_warehouse"
+						country="c:NDL"
+						levels=1
+						region="STATE_FRIESLAND"
 					}
 				}
 				reserves=1
@@ -12056,7 +12159,7 @@ BUILDINGS={
 					}
 				}
 				reserves=1
-				activate_production_methods={ "pm_trade_center_trade_quantity_normal" "pm_trade_center_principle_external_trade_2" }
+				activate_production_methods={ "pm_trade_center_trade_quantity_normal" "pm_trade_center" }
 			}
 			create_building={
 				building="building_construction_sector"
@@ -12222,7 +12325,7 @@ BUILDINGS={
 					}
 				}
 				reserves=1
-				activate_production_methods={ "pm_corner_grocery" "pm_no_restaurants" "pm_manual_food_checkout" }
+				activate_production_methods={ "pm_corner_grocery" "pm_manual_food_checkout" "pm_fine_dining" }
 			}
 			create_building={
 				building="building_retail_services"
@@ -12233,7 +12336,7 @@ BUILDINGS={
 					}
 				}
 				reserves=1
-				activate_production_methods={ "pm_small_shops" "pm_no_retail_specialization" "pm_manual_retail_checkout" }
+				activate_production_methods={ "pm_small_shops" "pm_manual_retail_checkout" "pm_luxury_retail" }
 			}
 			create_building={
 				building="building_advertising_agency"
@@ -12308,13 +12411,15 @@ BUILDINGS={
 			create_building={
 				building="building_trade_center"
 				add_ownership={
-					country={
+					building={
+						type="building_financial_district"
 						country="c:XLU"
 						levels=7
+						region="STATE_WALLONIA"
 					}
 				}
 				reserves=1
-				activate_production_methods={ "pm_trade_center_trade_quantity_normal" "pm_trade_center_principle_external_trade_2" }
+				activate_production_methods={ "pm_trade_center_trade_quantity_normal" "pm_trade_center" }
 			}
 			create_building={
 				building="building_construction_sector"
@@ -12341,9 +12446,11 @@ BUILDINGS={
 			create_building={
 				building="building_railway"
 				add_ownership={
-					country={
+					building={
+						type="building_financial_district"
 						country="c:XLU"
 						levels=1
+						region="STATE_WALLONIA"
 					}
 				}
 				reserves=1
@@ -12376,7 +12483,13 @@ BUILDINGS={
 				add_ownership={
 					country={
 						country="c:XLU"
-						levels=15
+						levels=12
+					}
+					building={
+						type="building_financial_district"
+						country="c:XLU"
+						levels=3
+						region="STATE_WALLONIA"
 					}
 				}
 				reserves=1
@@ -12409,7 +12522,13 @@ BUILDINGS={
 				add_ownership={
 					country={
 						country="c:XLU"
-						levels=3
+						levels=2
+					}
+					building={
+						type="building_manor_house"
+						country="c:XLU"
+						levels=1
+						region="STATE_WALLONIA"
 					}
 				}
 				reserves=1
@@ -12428,7 +12547,7 @@ BUILDINGS={
 					}
 				}
 				reserves=1
-				activate_production_methods={ "pm_trade_center_trade_quantity_normal" "pm_trade_center_principle_external_trade_2" }
+				activate_production_methods={ "pm_trade_center_trade_quantity_normal" "pm_trade_center" }
 			}
 			create_building={
 				building="building_construction_sector"
@@ -12536,7 +12655,7 @@ BUILDINGS={
 					building={
 						type="building_financial_district"
 						country="c:XBE"
-						levels=1
+						levels=3
 						region="STATE_WALLONIA"
 					}
 					building={
@@ -12561,7 +12680,7 @@ BUILDINGS={
 					building={
 						type="building_financial_district"
 						country="c:XBE"
-						levels=2
+						levels=3
 						region="STATE_WALLONIA"
 					}
 				}
@@ -12679,12 +12798,8 @@ BUILDINGS={
 					building={
 						type="building_financial_district"
 						country="c:XBE"
-						levels=1
+						levels=11
 						region="STATE_WALLONIA"
-					}
-					country={
-						country="c:XBE"
-						levels=10
 					}
 				}
 				reserves=1
@@ -12788,7 +12903,7 @@ BUILDINGS={
 					}
 				}
 				reserves=1
-				activate_production_methods={ "pm_trade_center_trade_quantity_normal" "pm_trade_center_principle_external_trade_2" }
+				activate_production_methods={ "pm_trade_center_trade_quantity_normal" "pm_trade_center" }
 			}
 			create_building={
 				building="building_construction_sector"
@@ -12879,9 +12994,11 @@ BUILDINGS={
 			create_building={
 				building="building_fishing_wharf"
 				add_ownership={
-					country={
+					building={
+						type="building_financial_district"
 						country="c:XBE"
 						levels=1
+						region="STATE_FLANDERS"
 					}
 				}
 				reserves=1
@@ -13028,12 +13145,8 @@ BUILDINGS={
 					building={
 						type="building_financial_district"
 						country="c:XBE"
-						levels=11
+						levels=16
 						region="STATE_FLANDERS"
-					}
-					country={
-						country="c:XBE"
-						levels=5
 					}
 				}
 				reserves=1
@@ -13121,7 +13234,7 @@ BUILDINGS={
 					}
 				}
 				reserves=1
-				activate_production_methods={ "pm_trade_center_trade_quantity_normal" "pm_trade_center_principle_external_trade_2" }
+				activate_production_methods={ "pm_trade_center_trade_quantity_normal" "pm_trade_center" }
 			}
 			create_building={
 				building="building_construction_sector"
@@ -13215,7 +13328,7 @@ BUILDINGS={
 					}
 				}
 				reserves=1
-				activate_production_methods={ "pm_trade_center_trade_quantity_normal" "pm_trade_center_principle_external_trade_2" }
+				activate_production_methods={ "pm_trade_center_trade_quantity_normal" "pm_trade_center" }
 			}
 			create_building={
 				building="building_construction_sector"
@@ -13535,7 +13648,7 @@ BUILDINGS={
 					}
 				}
 				reserves=1
-				activate_production_methods={ "pm_trade_center_trade_quantity_normal" "pm_trade_center_principle_external_trade_2" }
+				activate_production_methods={ "pm_trade_center_trade_quantity_normal" "pm_trade_center" }
 			}
 			create_building={
 				building="building_construction_sector"
@@ -13653,7 +13766,7 @@ BUILDINGS={
 					building={
 						type="building_financial_district"
 						country="c:CZH"
-						levels=7
+						levels=8
 						region="STATE_BOHEMIA"
 					}
 				}
@@ -13670,8 +13783,14 @@ BUILDINGS={
 					building={
 						type="building_financial_district"
 						country="c:CZH"
-						levels=4
+						levels=6
 						region="STATE_BOHEMIA"
+					}
+					building={
+						type="building_financial_district"
+						country="c:CZH"
+						levels=1
+						region="STATE_SLOVAKIA"
 					}
 				}
 				reserves=1
@@ -13745,6 +13864,12 @@ BUILDINGS={
 						country="c:CZH"
 						levels=8
 					}
+					building={
+						type="building_retail_services"
+						country="c:CZH"
+						levels=1
+						region="STATE_BOHEMIA"
+					}
 				}
 				reserves=1
 				activate_production_methods={ "pm_small_shops" "pm_no_retail_specialization" "pm_manual_retail_checkout" }
@@ -13769,7 +13894,7 @@ BUILDINGS={
 					}
 				}
 				reserves=1
-				activate_production_methods={ "pm_scholastic_education" "pm_religious_academia" "pm_principle_freedom_of_movement_3" }
+				activate_production_methods={ "pm_scholastic_education" "pm_religious_academia" "pm_freedom_of_movement_no_effect" }
 			}
 			create_building={
 				building="building_airport"
@@ -13942,6 +14067,13 @@ BUILDINGS={
 				reserves=1
 				activate_production_methods={ "pm_general_mills_office" "pm_accountants" "pm_no_casino" }
 			}
+			create_building={
+				building="building_art_academy"
+				add_ownership={
+				}
+				reserves=1
+				activate_production_methods={ "pm_traditional_art" "pm_traditional_patronage" "pm_freedom_of_movement_no_effect" }
+			}
 		}
 	}
 	s:STATE_MORAVIA={
@@ -13955,7 +14087,7 @@ BUILDINGS={
 					}
 				}
 				reserves=1
-				activate_production_methods={ "pm_trade_center_trade_quantity_normal" "pm_trade_center_principle_external_trade_2" }
+				activate_production_methods={ "pm_trade_center_trade_quantity_normal" "pm_trade_center" }
 			}
 			create_building={
 				building="building_construction_sector"
@@ -14218,13 +14350,15 @@ BUILDINGS={
 			create_building={
 				building="building_trade_center"
 				add_ownership={
-					country={
+					building={
+						type="building_financial_district"
 						country="c:OST"
 						levels=1
+						region="STATE_STYRIA"
 					}
 				}
 				reserves=1
-				activate_production_methods={ "pm_trade_center_trade_quantity_normal" "pm_trade_center_principle_external_trade_2" }
+				activate_production_methods={ "pm_trade_center_trade_quantity_normal" "pm_trade_center" }
 			}
 			create_building={
 				building="building_construction_sector"
@@ -14363,7 +14497,7 @@ BUILDINGS={
 					building={
 						type="building_financial_district"
 						country="c:OST"
-						levels=1
+						levels=3
 						region="STATE_STYRIA"
 					}
 				}
@@ -14427,6 +14561,12 @@ BUILDINGS={
 						country="c:OST"
 						levels=1
 					}
+					building={
+						type="building_food_service"
+						country="c:OST"
+						levels=1
+						region="STATE_STYRIA"
+					}
 				}
 				reserves=1
 				activate_production_methods={ "pm_corner_grocery" "pm_no_restaurants" "pm_manual_food_checkout" }
@@ -14436,12 +14576,12 @@ BUILDINGS={
 				add_ownership={
 					country={
 						country="c:OST"
-						levels=4
+						levels=3
 					}
 					building={
 						type="building_retail_services"
 						country="c:OST"
-						levels=2
+						levels=3
 						region="STATE_STYRIA"
 					}
 				}
@@ -14468,7 +14608,7 @@ BUILDINGS={
 					}
 				}
 				reserves=1
-				activate_production_methods={ "pm_scholastic_education" "pm_secular_academia" "pm_principle_freedom_of_movement_3" }
+				activate_production_methods={ "pm_scholastic_education" "pm_secular_academia" "pm_freedom_of_movement_no_effect" }
 			}
 			create_building={
 				building="building_airport"
@@ -14512,9 +14652,11 @@ BUILDINGS={
 			create_building={
 				building="building_nuclear_plant"
 				add_ownership={
-					country={
+					building={
+						type="building_financial_district"
 						country="c:OST"
 						levels=2
+						region="STATE_STYRIA"
 					}
 				}
 				reserves=1
@@ -14525,12 +14667,12 @@ BUILDINGS={
 				add_ownership={
 					country={
 						country="c:OST"
-						levels=7
+						levels=6
 					}
 					building={
 						type="building_financial_district"
 						country="c:OST"
-						levels=1
+						levels=2
 						region="STATE_STYRIA"
 					}
 				}
@@ -14689,7 +14831,7 @@ BUILDINGS={
 					}
 				}
 				reserves=1
-				activate_production_methods={ "pm_trade_center_trade_quantity_normal" "pm_trade_center_principle_external_trade_2" }
+				activate_production_methods={ "pm_trade_center_trade_quantity_normal" "pm_trade_center" }
 			}
 			create_building={
 				building="building_government_administration"
@@ -14924,7 +15066,7 @@ BUILDINGS={
 				reserves=1
 				activate_production_methods={ "pm_bakery" "pm_disabled_canning" "pm_disabled_distillery" "pm_manual_dough_processing" }
 			}
-						create_building={
+			create_building={
 				building="building_telecommunications"
 				add_ownership={
 					country={
@@ -14962,22 +15104,22 @@ BUILDINGS={
 				add_ownership={
 					country={
 						country="c:ITA"
-						levels=6
+						levels=11
 					}
 				}
 				reserves=1
-				activate_production_methods={ "pm_corner_grocery" "pm_no_restaurants" "pm_manual_food_checkout" }
+				activate_production_methods={ "pm_corner_grocery" "pm_manual_food_checkout" "pm_fine_dining" }
 			}
 			create_building={
 				building="building_retail_services"
 				add_ownership={
 					country={
 						country="c:ITA"
-						levels=11
+						levels=21
 					}
 				}
 				reserves=1
-				activate_production_methods={ "pm_small_shops" "pm_no_retail_specialization" "pm_manual_retail_checkout" }
+				activate_production_methods={ "pm_manual_retail_checkout" "pm_outlet_retail" "pm_luxury_retail" }
 			}
 			create_building={
 				building="building_automotive_industry"
@@ -15014,7 +15156,7 @@ BUILDINGS={
 					}
 				}
 				reserves=1
-				activate_production_methods={ "pm_trade_center_trade_quantity_normal" "pm_trade_center_principle_external_trade_2" }
+				activate_production_methods={ "pm_trade_center_trade_quantity_normal" "pm_trade_center" }
 			}
 			create_building={
 				building="building_government_administration"
@@ -15148,7 +15290,7 @@ BUILDINGS={
 				reserves=1
 				activate_production_methods={ "pm_corner_grocery" "pm_no_restaurants" "pm_manual_food_checkout" }
 			}
-						create_building={
+			create_building={
 				building="building_retail_services"
 				add_ownership={
 					country={
@@ -15292,7 +15434,7 @@ BUILDINGS={
 					}
 				}
 				reserves=1
-				activate_production_methods={ "pm_trade_center_trade_quantity_normal" "pm_trade_center_principle_external_trade_2" }
+				activate_production_methods={ "pm_trade_center_trade_quantity_normal" "pm_trade_center" }
 			}
 			create_building={
 				building="building_construction_sector"
@@ -15415,22 +15557,22 @@ BUILDINGS={
 				add_ownership={
 					country={
 						country="c:GER"
-						levels=21
+						levels=36
 					}
 				}
 				reserves=1
-				activate_production_methods={ "pm_corner_grocery" "pm_no_restaurants" "pm_manual_food_checkout" }
+				activate_production_methods={ "pm_fine_dining" "pm_supermarket" "pm_food_delivery_services" }
 			}
 			create_building={
 				building="building_retail_services"
 				add_ownership={
 					country={
 						country="c:GER"
-						levels=6
+						levels=21
 					}
 				}
 				reserves=1
-				activate_production_methods={ "pm_small_shops" "pm_no_retail_specialization" "pm_manual_retail_checkout" }
+				activate_production_methods={ "pm_luxury_retail" "pm_manual_retail_checkout" "pm_outlet_retail" }
 			}
 			create_building={
 				building="building_advertising_agency"
@@ -15624,6 +15766,12 @@ BUILDINGS={
 						levels=1
 						region="STATE_NORTH_RHINE"
 					}
+					building={
+						type="building_financial_district"
+						country="c:GER"
+						levels=1
+						region="STATE_FRANCONIA"
+					}
 				}
 				reserves=1
 				activate_production_methods={ "pm_steam_derricks" "pm_road_carts" }
@@ -15641,7 +15789,7 @@ BUILDINGS={
 					}
 				}
 				reserves=1
-				activate_production_methods={ "pm_trade_center_trade_quantity_normal" "pm_trade_center_principle_external_trade_2" }
+				activate_production_methods={ "pm_trade_center_trade_quantity_normal" "pm_trade_center" }
 			}
 			create_building={
 				building="building_construction_sector"
@@ -15671,6 +15819,12 @@ BUILDINGS={
 					country={
 						country="c:SWS"
 						levels=3
+					}
+					building={
+						type="building_financial_district"
+						country="c:SWS"
+						levels=1
+						region="STATE_WEST_SWITZERLAND"
 					}
 				}
 				reserves=1
@@ -15750,6 +15904,12 @@ BUILDINGS={
 						country="c:SWS"
 						levels=1
 					}
+					building={
+						type="building_financial_district"
+						country="c:SWS"
+						levels=1
+						region="STATE_EAST_SWITZERLAND"
+					}
 				}
 				reserves=1
 				activate_production_methods={ "pm_bakery" "pm_disabled_canning" "pm_disabled_distillery" "pm_manual_dough_processing" }
@@ -15765,7 +15925,7 @@ BUILDINGS={
 				reserves=1
 				activate_production_methods={ "pm_handsewn_clothes" "pm_no_luxury_clothes" "pm_traditional_looms" }
 			}
-						create_building={
+			create_building={
 				building="building_telecommunications"
 				add_ownership={
 					country={
@@ -15986,7 +16146,7 @@ BUILDINGS={
 					}
 				}
 				reserves=1
-				activate_production_methods={ "pm_trade_center_trade_quantity_normal" "pm_trade_center_principle_external_trade_2" }
+				activate_production_methods={ "pm_trade_center_trade_quantity_normal" "pm_trade_center" }
 			}
 			create_building={
 				building="building_construction_sector"
@@ -16016,6 +16176,12 @@ BUILDINGS={
 					country={
 						country="c:SWS"
 						levels=3
+					}
+					building={
+						type="building_financial_district"
+						country="c:SWS"
+						levels=1
+						region="STATE_WEST_SWITZERLAND"
 					}
 				}
 				reserves=1
@@ -16051,6 +16217,12 @@ BUILDINGS={
 						country="c:SWS"
 						levels=1
 					}
+					building={
+						type="building_manor_house"
+						country="c:SWS"
+						levels=1
+						region="STATE_WEST_SWITZERLAND"
+					}
 				}
 				reserves=1
 				activate_production_methods={ "pm_open_air_stockyards" "pm_simple_ranch" "pm_standard_fences" "pm_unrefrigerated" }
@@ -16076,7 +16248,7 @@ BUILDINGS={
 					building={
 						type="building_financial_district"
 						country="c:SWS"
-						levels=2
+						levels=3
 						region="STATE_WEST_SWITZERLAND"
 					}
 				}
@@ -16093,7 +16265,7 @@ BUILDINGS={
 					building={
 						type="building_financial_district"
 						country="c:SWS"
-						levels=2
+						levels=3
 						region="STATE_WEST_SWITZERLAND"
 					}
 				}
@@ -16128,7 +16300,7 @@ BUILDINGS={
 				reserves=1
 				activate_production_methods={ "pm_handsewn_clothes" "pm_no_luxury_clothes" "pm_traditional_looms" }
 			}
-						create_building={
+			create_building={
 				building="building_telecommunications"
 				add_ownership={
 					country={
@@ -16342,7 +16514,7 @@ BUILDINGS={
 					}
 				}
 				reserves=1
-				activate_production_methods={ "pm_trade_center_trade_quantity_normal" "pm_trade_center_principle_external_trade_2" }
+				activate_production_methods={ "pm_trade_center_trade_quantity_normal" "pm_trade_center" }
 			}
 			create_building={
 				building="building_construction_sector"
@@ -16448,22 +16620,22 @@ BUILDINGS={
 				add_ownership={
 					country={
 						country="c:GER"
-						levels=16
+						levels=46
 					}
 				}
 				reserves=1
-				activate_production_methods={ "pm_corner_grocery" "pm_no_restaurants" "pm_manual_food_checkout" }
+				activate_production_methods={ "pm_fine_dining" "pm_supermarket" "pm_food_delivery_services" }
 			}
 			create_building={
 				building="building_retail_services"
 				add_ownership={
 					country={
 						country="c:GER"
-						levels=6
+						levels=16
 					}
 				}
 				reserves=1
-				activate_production_methods={ "pm_small_shops" "pm_no_retail_specialization" "pm_manual_retail_checkout" }
+				activate_production_methods={ "pm_luxury_retail" "pm_manual_retail_checkout" "pm_outlet_retail" }
 			}
 			create_building={
 				building="building_advertising_agency"
@@ -16597,7 +16769,7 @@ BUILDINGS={
 				reserves=1
 				activate_production_methods={ "pm_scholastic_education" "pm_secular_academia" "pm_principle_freedom_of_movement_3" }
 			}
-						create_building={
+			create_building={
 				building="building_arms_industry"
 				add_ownership={
 					country={
@@ -16731,7 +16903,7 @@ BUILDINGS={
 					}
 				}
 				reserves=1
-				activate_production_methods={ "pm_trade_center_trade_quantity_normal" "pm_trade_center_principle_external_trade_2" }
+				activate_production_methods={ "pm_trade_center_trade_quantity_normal" "pm_trade_center" }
 			}
 			create_building={
 				building="building_government_administration"
@@ -16808,7 +16980,7 @@ BUILDINGS={
 					}
 				}
 				reserves=1
-				activate_production_methods={ "pm_corner_grocery" "pm_no_restaurants" "pm_manual_food_checkout" }
+				activate_production_methods={ "pm_fine_dining" "pm_supermarket" "pm_food_delivery_services" }
 			}
 			create_building={
 				building="building_retail_services"
@@ -16819,7 +16991,7 @@ BUILDINGS={
 					}
 				}
 				reserves=1
-				activate_production_methods={ "pm_small_shops" "pm_no_retail_specialization" "pm_manual_retail_checkout" }
+				activate_production_methods={ "pm_luxury_retail" "pm_manual_retail_checkout" "pm_outlet_retail" }
 			}
 			create_building={
 				building="building_food_industry"
@@ -16876,7 +17048,7 @@ BUILDINGS={
 				reserves=1
 				activate_production_methods={ "pm_steam_engines" "pm_automation_disabled" }
 			}
-						create_building={
+			create_building={
 				building="building_rye_farm"
 				add_ownership={
 					building={
@@ -16955,7 +17127,7 @@ BUILDINGS={
 					}
 				}
 				reserves=1
-				activate_production_methods={ "pm_trade_center_trade_quantity_normal" "pm_trade_center_principle_external_trade_2" }
+				activate_production_methods={ "pm_trade_center_trade_quantity_normal" "pm_trade_center" }
 			}
 			create_building={
 				building="building_construction_sector"
@@ -17080,22 +17252,22 @@ BUILDINGS={
 				add_ownership={
 					country={
 						country="c:GER"
-						levels=11
+						levels=16
 					}
 				}
 				reserves=1
-				activate_production_methods={ "pm_corner_grocery" "pm_no_restaurants" "pm_manual_food_checkout" }
+				activate_production_methods={ "pm_fine_dining" "pm_supermarket" "pm_food_delivery_services" }
 			}
 			create_building={
 				building="building_retail_services"
 				add_ownership={
 					country={
 						country="c:GER"
-						levels=1
+						levels=21
 					}
 				}
 				reserves=1
-				activate_production_methods={ "pm_small_shops" "pm_no_retail_specialization" "pm_manual_retail_checkout" }
+				activate_production_methods={ "pm_luxury_retail" "pm_manual_retail_checkout" "pm_outlet_retail" }
 			}
 			create_building={
 				building="building_advertising_agency"
@@ -17235,7 +17407,7 @@ BUILDINGS={
 				reserves=1
 				activate_production_methods={ "pm_scholastic_education" "pm_secular_academia" "pm_principle_freedom_of_movement_3" }
 			}
-						create_building={
+			create_building={
 				building="building_explosives_factory"
 				add_ownership={
 					building={
@@ -17311,7 +17483,7 @@ BUILDINGS={
 					}
 				}
 				reserves=1
-				activate_production_methods={ "pm_trade_center_trade_quantity_normal" "pm_trade_center_principle_external_trade_2" }
+				activate_production_methods={ "pm_trade_center_trade_quantity_normal" "pm_trade_center" }
 			}
 			create_building={
 				building="building_construction_sector"
@@ -17505,22 +17677,22 @@ BUILDINGS={
 				add_ownership={
 					country={
 						country="c:GER"
-						levels=11
+						levels=81
 					}
 				}
 				reserves=1
-				activate_production_methods={ "pm_corner_grocery" "pm_no_restaurants" "pm_manual_food_checkout" }
+				activate_production_methods={ "pm_fine_dining" "pm_supermarket" "pm_food_delivery_services" }
 			}
 			create_building={
 				building="building_retail_services"
 				add_ownership={
 					country={
 						country="c:GER"
-						levels=1
+						levels=6
 					}
 				}
 				reserves=1
-				activate_production_methods={ "pm_small_shops" "pm_no_retail_specialization" "pm_manual_retail_checkout" }
+				activate_production_methods={ "pm_luxury_retail" "pm_manual_retail_checkout" "pm_outlet_retail" }
 			}
 			create_building={
 				building="building_advertising_agency"
@@ -18035,7 +18207,7 @@ BUILDINGS={
 					}
 				}
 				reserves=1
-				activate_production_methods={ "pm_trade_center_trade_quantity_normal" "pm_trade_center_principle_external_trade_2" }
+				activate_production_methods={ "pm_trade_center_trade_quantity_normal" "pm_trade_center" }
 			}
 			create_building={
 				building="building_food_industry"
@@ -18070,6 +18242,19 @@ BUILDINGS={
 				reserves=1
 				activate_production_methods={ "pm_general_mills_office" "pm_accountants" "pm_no_casino" }
 			}
+			create_building={
+				building="building_nuclear_plant"
+				add_ownership={
+					building={
+						type="building_financial_district"
+						country="c:GER"
+						levels=1
+						region="STATE_BRANDENBURG"
+					}
+				}
+				reserves=1
+				activate_production_methods={ "pm_fission_plant" }
+			}
 		}
 	}
 	s:STATE_SCHLESWIG_HOLSTEIN={
@@ -18083,7 +18268,7 @@ BUILDINGS={
 					}
 				}
 				reserves=1
-				activate_production_methods={ "pm_trade_center_trade_quantity_normal" "pm_trade_center_principle_external_trade_2" }
+				activate_production_methods={ "pm_trade_center_trade_quantity_normal" "pm_trade_center" }
 			}
 			create_building={
 				building="building_government_administration"
@@ -18173,22 +18358,22 @@ BUILDINGS={
 				add_ownership={
 					country={
 						country="c:GER"
-						levels=16
+						levels=41
 					}
 				}
 				reserves=1
-				activate_production_methods={ "pm_corner_grocery" "pm_no_restaurants" "pm_manual_food_checkout" }
+				activate_production_methods={ "pm_fine_dining" "pm_supermarket" "pm_food_delivery_services" }
 			}
 			create_building={
 				building="building_retail_services"
 				add_ownership={
 					country={
 						country="c:GER"
-						levels=11
+						levels=46
 					}
 				}
 				reserves=1
-				activate_production_methods={ "pm_small_shops" "pm_no_retail_specialization" "pm_manual_retail_checkout" }
+				activate_production_methods={ "pm_luxury_retail" "pm_manual_retail_checkout" "pm_outlet_retail" }
 			}
 			create_building={
 				building="building_food_industry"
@@ -18223,7 +18408,7 @@ BUILDINGS={
 				reserves=1
 				activate_production_methods={ "pm_steam_engines" "pm_automation_disabled" }
 			}
-						create_building={
+			create_building={
 				building="building_shipyard"
 				add_ownership={
 					country={
@@ -18336,7 +18521,7 @@ BUILDINGS={
 					}
 				}
 				reserves=1
-				activate_production_methods={ "pm_trade_center_trade_quantity_normal" "pm_trade_center_principle_external_trade_2" }
+				activate_production_methods={ "pm_trade_center_trade_quantity_normal" "pm_trade_center" }
 			}
 			create_building={
 				building="building_construction_sector"
@@ -18448,22 +18633,22 @@ BUILDINGS={
 				add_ownership={
 					country={
 						country="c:GER"
-						levels=21
+						levels=46
 					}
 				}
 				reserves=1
-				activate_production_methods={ "pm_corner_grocery" "pm_no_restaurants" "pm_manual_food_checkout" }
+				activate_production_methods={ "pm_fine_dining" "pm_supermarket" "pm_food_delivery_services" }
 			}
 			create_building={
 				building="building_retail_services"
 				add_ownership={
 					country={
 						country="c:GER"
-						levels=8
+						levels=33
 					}
 				}
 				reserves=1
-				activate_production_methods={ "pm_small_shops" "pm_no_retail_specialization" "pm_manual_retail_checkout" }
+				activate_production_methods={ "pm_luxury_retail" "pm_manual_retail_checkout" "pm_outlet_retail" }
 			}
 			create_building={
 				building="building_advertising_agency"
@@ -18603,7 +18788,7 @@ BUILDINGS={
 				reserves=1
 				activate_production_methods={ "pm_scholastic_education" "pm_secular_academia" "pm_principle_freedom_of_movement_3" }
 			}
-						create_building={
+			create_building={
 				building="building_logging_camp"
 				add_ownership={
 					building={
@@ -18633,7 +18818,7 @@ BUILDINGS={
 					}
 				}
 				reserves=1
-				activate_production_methods={ "pm_trade_center_trade_quantity_normal" "pm_trade_center_principle_external_trade_2" }
+				activate_production_methods={ "pm_trade_center_trade_quantity_normal" "pm_trade_center" }
 			}
 			create_building={
 				building="building_construction_sector"
@@ -18803,22 +18988,22 @@ BUILDINGS={
 				add_ownership={
 					country={
 						country="c:GER"
-						levels=6
+						levels=36
 					}
 				}
 				reserves=1
-				activate_production_methods={ "pm_corner_grocery" "pm_no_restaurants" "pm_manual_food_checkout" }
+				activate_production_methods={ "pm_fine_dining" "pm_supermarket" "pm_food_delivery_services" }
 			}
 			create_building={
 				building="building_retail_services"
 				add_ownership={
 					country={
 						country="c:GER"
-						levels=1
+						levels=11
 					}
 				}
 				reserves=1
-				activate_production_methods={ "pm_small_shops" "pm_no_retail_specialization" "pm_manual_retail_checkout" }
+				activate_production_methods={ "pm_luxury_retail" "pm_manual_retail_checkout" "pm_outlet_retail" }
 			}
 			create_building={
 				building="building_advertising_agency"
@@ -18946,7 +19131,7 @@ BUILDINGS={
 					}
 				}
 				reserves=1
-				activate_production_methods={ "pm_no_chip_production" "pm_automation_disabled" }
+				activate_production_methods={ "pm_automation_disabled" "pm_robotic_assembly" }
 			}
 			create_building={
 				building="building_motor_industry"
@@ -19049,7 +19234,7 @@ BUILDINGS={
 					}
 				}
 				reserves=1
-				activate_production_methods={ "pm_trade_center_trade_quantity_normal" "pm_trade_center_principle_external_trade_2" }
+				activate_production_methods={ "pm_trade_center_trade_quantity_normal" "pm_trade_center" }
 			}
 			create_building={
 				building="building_construction_sector"
@@ -19172,22 +19357,22 @@ BUILDINGS={
 				add_ownership={
 					country={
 						country="c:GER"
-						levels=16
+						levels=31
 					}
 				}
 				reserves=1
-				activate_production_methods={ "pm_corner_grocery" "pm_no_restaurants" "pm_manual_food_checkout" }
+				activate_production_methods={ "pm_fine_dining" "pm_supermarket" "pm_food_delivery_services" }
 			}
 			create_building={
 				building="building_retail_services"
 				add_ownership={
 					country={
 						country="c:GER"
-						levels=11
+						levels=41
 					}
 				}
 				reserves=1
-				activate_production_methods={ "pm_small_shops" "pm_no_retail_specialization" "pm_manual_retail_checkout" }
+				activate_production_methods={ "pm_luxury_retail" "pm_manual_retail_checkout" "pm_outlet_retail" }
 			}
 			create_building={
 				building="building_advertising_agency"
@@ -19321,7 +19506,7 @@ BUILDINGS={
 				reserves=1
 				activate_production_methods={ "pm_scholastic_education" "pm_secular_academia" "pm_principle_freedom_of_movement_3" }
 			}
-						create_building={
+			create_building={
 				building="building_shipyard"
 				add_ownership={
 					country={
@@ -19397,7 +19582,7 @@ BUILDINGS={
 					building={
 						type="building_financial_district"
 						country="c:GER"
-						levels=4
+						levels=5
 						region="STATE_HANNOVER"
 					}
 					building={
@@ -19458,7 +19643,7 @@ BUILDINGS={
 					}
 				}
 				reserves=1
-				activate_production_methods={ "pm_trade_center_trade_quantity_normal" "pm_trade_center_principle_external_trade_2" }
+				activate_production_methods={ "pm_trade_center_trade_quantity_normal" "pm_trade_center" }
 			}
 			create_building={
 				building="building_government_administration"
@@ -19580,22 +19765,22 @@ BUILDINGS={
 				add_ownership={
 					country={
 						country="c:GER"
-						levels=11
+						levels=31
 					}
 				}
 				reserves=1
-				activate_production_methods={ "pm_corner_grocery" "pm_no_restaurants" "pm_manual_food_checkout" }
+				activate_production_methods={ "pm_fine_dining" "pm_supermarket" "pm_food_delivery_services" }
 			}
 			create_building={
 				building="building_retail_services"
 				add_ownership={
 					country={
 						country="c:GER"
-						levels=1
+						levels=31
 					}
 				}
 				reserves=1
-				activate_production_methods={ "pm_small_shops" "pm_no_retail_specialization" "pm_manual_retail_checkout" }
+				activate_production_methods={ "pm_luxury_retail" "pm_manual_retail_checkout" "pm_outlet_retail" }
 			}
 			create_building={
 				building="building_food_industry"
@@ -19678,7 +19863,7 @@ BUILDINGS={
 					}
 				}
 				reserves=1
-				activate_production_methods={ "pm_trade_center_trade_quantity_normal" "pm_trade_center_principle_external_trade_2" }
+				activate_production_methods={ "pm_trade_center_trade_quantity_normal" "pm_trade_center" }
 			}
 			create_building={
 				building="building_construction_sector"
@@ -19812,22 +19997,22 @@ BUILDINGS={
 				add_ownership={
 					country={
 						country="c:GER"
-						levels=26
+						levels=76
 					}
 				}
 				reserves=1
-				activate_production_methods={ "pm_corner_grocery" "pm_no_restaurants" "pm_manual_food_checkout" }
+				activate_production_methods={ "pm_fine_dining" "pm_supermarket" "pm_food_delivery_services" }
 			}
 			create_building={
 				building="building_retail_services"
 				add_ownership={
 					country={
 						country="c:GER"
-						levels=11
+						levels=91
 					}
 				}
 				reserves=1
-				activate_production_methods={ "pm_small_shops" "pm_no_retail_specialization" "pm_manual_retail_checkout" }
+				activate_production_methods={ "pm_luxury_retail" "pm_manual_retail_checkout" "pm_outlet_retail" }
 			}
 			create_building={
 				building="building_advertising_agency"
@@ -20005,7 +20190,7 @@ BUILDINGS={
 				reserves=1
 				activate_production_methods={ "pm_base_airport" "pm_cargo_plane_prioritization" }
 			}
-						create_building={
+			create_building={
 				building="building_arms_industry"
 				add_ownership={
 					country={
@@ -20105,7 +20290,7 @@ BUILDINGS={
 					}
 				}
 				reserves=1
-				activate_production_methods={ "pm_trade_center_trade_quantity_normal" "pm_trade_center_principle_external_trade_2" }
+				activate_production_methods={ "pm_trade_center_trade_quantity_normal" "pm_trade_center" }
 			}
 			create_building={
 				building="building_construction_sector"
@@ -20217,22 +20402,22 @@ BUILDINGS={
 				add_ownership={
 					country={
 						country="c:GER"
-						levels=21
+						levels=51
 					}
 				}
 				reserves=1
-				activate_production_methods={ "pm_corner_grocery" "pm_no_restaurants" "pm_manual_food_checkout" }
+				activate_production_methods={ "pm_fine_dining" "pm_supermarket" "pm_food_delivery_services" }
 			}
 			create_building={
 				building="building_retail_services"
 				add_ownership={
 					country={
 						country="c:GER"
-						levels=6
+						levels=51
 					}
 				}
 				reserves=1
-				activate_production_methods={ "pm_small_shops" "pm_no_retail_specialization" "pm_manual_retail_checkout" }
+				activate_production_methods={ "pm_luxury_retail" "pm_manual_retail_checkout" "pm_outlet_retail" }
 			}
 			create_building={
 				building="building_advertising_agency"
@@ -20425,6 +20610,19 @@ BUILDINGS={
 				reserves=1
 				activate_production_methods={ "pm_picks_and_shovels_building_iron_mine" "pm_no_explosives" "pm_no_steam_automation" "pm_road_carts" }
 			}
+			create_building={
+				building="building_nuclear_plant"
+				add_ownership={
+					building={
+						type="building_financial_district"
+						country="c:GER"
+						levels=1
+						region="STATE_BADEN"
+					}
+				}
+				reserves=1
+				activate_production_methods={ "pm_fission_plant" }
+			}
 		}
 	}
 	s:STATE_SAXONY={
@@ -20438,7 +20636,7 @@ BUILDINGS={
 					}
 				}
 				reserves=1
-				activate_production_methods={ "pm_trade_center_trade_quantity_normal" "pm_trade_center_principle_external_trade_2" }
+				activate_production_methods={ "pm_trade_center_trade_quantity_normal" "pm_trade_center" }
 			}
 			create_building={
 				building="building_construction_sector"
@@ -20566,7 +20764,7 @@ BUILDINGS={
 					}
 				}
 				reserves=1
-				activate_production_methods={ "pm_corner_grocery" "pm_no_restaurants" "pm_manual_food_checkout" }
+				activate_production_methods={ "pm_fine_dining" "pm_supermarket" "pm_food_delivery_services" }
 			}
 			create_building={
 				building="building_retail_services"
@@ -20577,7 +20775,7 @@ BUILDINGS={
 					}
 				}
 				reserves=1
-				activate_production_methods={ "pm_small_shops" "pm_no_retail_specialization" "pm_manual_retail_checkout" }
+				activate_production_methods={ "pm_luxury_retail" "pm_manual_retail_checkout" "pm_outlet_retail" }
 			}
 			create_building={
 				building="building_advertising_agency"
@@ -20723,7 +20921,7 @@ BUILDINGS={
 				reserves=1
 				activate_production_methods={ "pm_scholastic_education" "pm_secular_academia" "pm_principle_freedom_of_movement_3" }
 			}
-						create_building={
+			create_building={
 				building="building_sulfur_mine"
 				add_ownership={
 					building={
@@ -20743,6 +20941,18 @@ BUILDINGS={
 						country="c:GER"
 						levels=3
 						region="STATE_NORTH_RHINE"
+					}
+					building={
+						type="building_financial_district"
+						country="c:GER"
+						levels=1
+						region="STATE_FRANCONIA"
+					}
+					building={
+						type="building_financial_district"
+						country="c:GER"
+						levels=1
+						region="STATE_SAXONY"
 					}
 				}
 				reserves=1
@@ -20769,6 +20979,12 @@ BUILDINGS={
 						country="c:GER"
 						levels=9
 						region="STATE_BRANDENBURG"
+					}
+					building={
+						type="building_financial_district"
+						country="c:GER"
+						levels=1
+						region="STATE_SAXONY"
 					}
 				}
 				reserves=1
@@ -20841,7 +21057,7 @@ BUILDINGS={
 					}
 				}
 				reserves=1
-				activate_production_methods={ "pm_trade_center_trade_quantity_normal" "pm_trade_center_principle_external_trade_2" }
+				activate_production_methods={ "pm_trade_center_trade_quantity_normal" "pm_trade_center" }
 			}
 			create_building={
 				building="building_construction_sector"
@@ -20975,6 +21191,12 @@ BUILDINGS={
 						country="c:GER"
 						levels=28
 					}
+					building={
+						type="building_professional_service"
+						country="c:GER"
+						levels=1
+						region="STATE_HESSE"
+					}
 				}
 				reserves=1
 				activate_production_methods={ "pm_general_mills_office" "pm_law_offices" "pm_casino" }
@@ -20995,22 +21217,22 @@ BUILDINGS={
 				add_ownership={
 					country={
 						country="c:GER"
-						levels=26
+						levels=41
 					}
 				}
 				reserves=1
-				activate_production_methods={ "pm_corner_grocery" "pm_no_restaurants" "pm_manual_food_checkout" }
+				activate_production_methods={ "pm_fine_dining" "pm_supermarket" "pm_food_delivery_services" }
 			}
 			create_building={
 				building="building_retail_services"
 				add_ownership={
 					country={
 						country="c:GER"
-						levels=6
+						levels=21
 					}
 				}
 				reserves=1
-				activate_production_methods={ "pm_small_shops" "pm_no_retail_specialization" "pm_manual_retail_checkout" }
+				activate_production_methods={ "pm_luxury_retail" "pm_manual_retail_checkout" "pm_outlet_retail" }
 			}
 			create_building={
 				building="building_advertising_agency"
@@ -21051,6 +21273,12 @@ BUILDINGS={
 					country={
 						country="c:GER"
 						levels=1
+					}
+					building={
+						type="building_financial_district"
+						country="c:GER"
+						levels=1
+						region="STATE_HESSE"
 					}
 				}
 				reserves=1
@@ -21162,7 +21390,7 @@ BUILDINGS={
 				reserves=1
 				activate_production_methods={ "pm_scholastic_education" "pm_secular_academia" "pm_principle_freedom_of_movement_3" }
 			}
-						create_building={
+			create_building={
 				building="building_arms_industry"
 				add_ownership={
 					country={
@@ -21236,6 +21464,19 @@ BUILDINGS={
 				}
 				reserves=1
 				activate_production_methods={ "pm_simple_forestry" "pm_no_equipment" "pm_road_carts" }
+			}
+			create_building={
+				building="building_nuclear_plant"
+				add_ownership={
+					building={
+						type="building_financial_district"
+						country="c:GER"
+						levels=1
+						region="STATE_BADEN"
+					}
+				}
+				reserves=1
+				activate_production_methods={ "pm_fission_plant" }
 			}
 		}
 	}
@@ -21330,7 +21571,7 @@ BUILDINGS={
 				reserves=1
 				activate_production_methods={ "pm_steam_engines" "pm_automation_disabled" }
 			}
-						create_building={
+			create_building={
 				building="building_shipyard"
 				add_ownership={
 					country={
@@ -21366,6 +21607,17 @@ BUILDINGS={
 				}
 				reserves=1
 				activate_production_methods={ "pm_fission_plant" }
+			}
+			create_building={
+				building="building_food_service"
+				add_ownership={
+					country={
+						country="c:GER"
+						levels=5
+					}
+				}
+				reserves=1
+				activate_production_methods={ "pm_corner_grocery" "pm_no_restaurants" "pm_manual_food_checkout" }
 			}
 		}
 	}
@@ -21417,18 +21669,18 @@ BUILDINGS={
 				add_ownership={
 					country={
 						country="c:FRA"
-						levels=1
+						levels=11
 					}
 				}
 				reserves=1
-				activate_production_methods={ "pm_small_shops" "pm_no_retail_specialization" "pm_manual_retail_checkout" }
+				activate_production_methods={ "pm_luxury_retail" "pm_manual_retail_checkout" "pm_outlet_retail" }
 			}
 			create_building={
 				building="building_food_industry"
 				add_ownership={
 					country={
 						country="c:FRA"
-						levels=6
+						levels=16
 					}
 				}
 				reserves=1
@@ -21471,10 +21723,10 @@ BUILDINGS={
 				building="building_livestock_ranch"
 				add_ownership={
 					building={
-						type="building_livestock_ranch"
+						type="building_manor_house"
 						country="c:FRA"
 						levels=1
-						region="STATE_MAINE_ANJOU"
+						region="STATE_ILE_DE_FRANCE"
 					}
 				}
 				reserves=1

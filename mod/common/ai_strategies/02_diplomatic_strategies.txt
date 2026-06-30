@@ -1,4 +1,4 @@
-# Generic
+﻿# Generic
 ai_strategy_maintain_power_balance = {
 	icon = "gfx/interface/icons/ai_strategy_icons/maintain_power_balance.dds"
 
@@ -12,11 +12,15 @@ ai_strategy_maintain_power_balance = {
 		value = 25
 
 		if = {
-			limit = { always = yes }
+			limit = {
+				has_technology_researched = pan-nationalism
+			}
 			multiply = 1.5
 		}
 		else_if = {
-			limit = { always = yes }
+			limit = {
+				has_technology_researched = nationalism
+			}
 			multiply = 1.25
 		}
 	}
@@ -25,11 +29,15 @@ ai_strategy_maintain_power_balance = {
 		value = 50
 
 		if = {
-			limit = { always = yes }
+			limit = {
+				has_technology_researched = pan-nationalism
+			}
 			multiply = 1.5
 		}
 		else_if = {
-			limit = { always = yes }
+			limit = {
+				has_technology_researched = nationalism
+			}
 			multiply = 1.25
 		}
 	}
@@ -61,6 +69,7 @@ ai_strategy_maintain_power_balance = {
 			limit = {
 				NOT = { is_country_type = unrecognized }
 				scope:target_country = { is_country_type = unrecognized }
+				has_technology_researched = colonization
 				institution_investment_level = {
 					institution = institution_colonial_affairs
 					value >= 1
@@ -76,6 +85,7 @@ ai_strategy_maintain_power_balance = {
 			}
 
 			if = {
+				limit = { has_technology_researched = civilizing_mission }
 				add = 0.5
 
 				if = {
@@ -167,6 +177,7 @@ ai_strategy_territorial_expansion = {
 			global_country_ranking <= 3
 			AND = {
 				country_rank >= rank_value:great_power
+				has_technology_researched = nationalism
 			}
 		}
 	}
@@ -175,11 +186,15 @@ ai_strategy_territorial_expansion = {
 		value = 50
 
 		if = {
-			limit = { always = yes }
+			limit = {
+				has_technology_researched = pan-nationalism
+			}
 			multiply = 1.5
 		}
 		else_if = {
-			limit = { always = yes }
+			limit = {
+				has_technology_researched = nationalism
+			}
 			multiply = 1.25
 		}
 	}
@@ -348,6 +363,7 @@ ai_strategy_colonial_expansion = {
 			global_country_ranking <= 3
 			AND = {
 				country_rank >= rank_value:great_power
+				has_technology_researched = nationalism
 			}
 		}
 	}
@@ -356,11 +372,15 @@ ai_strategy_colonial_expansion = {
 		value = 25
 
 		if = {
-			limit = { always = yes }
+			limit = {
+				has_technology_researched = pan-nationalism
+			}
 			multiply = 1.5
 		}
 		else_if = {
-			limit = { always = yes }
+			limit = {
+				has_technology_researched = nationalism
+			}
 			multiply = 1.25
 		}
 	}
@@ -369,11 +389,15 @@ ai_strategy_colonial_expansion = {
 		value = 50
 
 		if = {
-			limit = { always = yes }
+			limit = {
+				has_technology_researched = pan-nationalism
+			}
 			multiply = 1.5
 		}
 		else_if = {
-			limit = { always = yes }
+			limit = {
+				has_technology_researched = nationalism
+			}
 			multiply = 1.25
 		}
 	}
@@ -411,7 +435,8 @@ ai_strategy_colonial_expansion = {
 		if = {
 			limit = {
 				NOT = { is_country_type = unrecognized }
-				scope:target_country = { is_country_type = unrecognized }
+				scope:target_country = { ai_country_is_valid_colonization_target = yes }
+				has_technology_researched = colonization
 				institution_investment_level = {
 					institution = institution_colonial_affairs
 					value >= 1
@@ -427,6 +452,7 @@ ai_strategy_colonial_expansion = {
 			}
 
 			if = {
+				limit = { has_technology_researched = civilizing_mission }
 				add = 1.5
 
 				if = {
@@ -435,6 +461,7 @@ ai_strategy_colonial_expansion = {
 				}
 
 				if = {
+					limit = { has_technology_researched = malaria_prevention }
 					add = 1
 				}
 
@@ -448,23 +475,11 @@ ai_strategy_colonial_expansion = {
 					add = 10
 				}
 			}
-
-			if = {
-				limit = {
-					scope:target_country = {
-						is_subject = yes
-						is_country_type = unrecognized
-						top_overlord ?= {
-							NOT = { is_country_type = unrecognized }
-						}
-					}
-				}
-				multiply = 0.0
-			}
 		}
 		if = {
 			limit = {
 				country_has_primary_culture = cu:british
+				has_technology_researched = malaria_prevention
 				any_subject_or_below = {
 					capital.region = sr:region_southern_africa
 				}
@@ -560,15 +575,13 @@ ai_strategy_colonial_expansion = {
 			score = {
 				if = {
 					limit = {
-						scope:target_country = { NOT = { is_country_type = unrecognized } }
+						scope:target_country = { ai_country_is_valid_colonization_target = no }
 					}
 					add = -100
 				}
-				if = {
+				else_if = {
 					limit = {
-						NOT = { scope:target_country = { is_subject_of = root } }
-						has_strategic_adjacency = scope:target_country
-						scope:target_country = { is_country_type = unrecognized }
+						ai_country_is_valid_colonization_target = yes
 					}
 					add = 200
 
@@ -582,9 +595,12 @@ ai_strategy_colonial_expansion = {
 						add = 600
 					}
 				}
+
+				# Cleaning up Boers and Zulu
 				if = {
 					limit = {
 						country_has_primary_culture = cu:british
+						has_technology_researched = malaria_prevention
 						any_subject_or_below = {
 							capital.region = sr:region_southern_africa
 						}
@@ -621,10 +637,24 @@ ai_strategy_colonial_expansion = {
 						}
 						add = 600
 					}
+
+					if = {
+						limit = {
+							scope:target_country = {
+								is_subject = yes
+								is_country_type = unrecognized
+								top_overlord ?= {
+									NOT = { is_country_type = unrecognized }
+								}
+							}
+						}
+						multiply = 0.0
+					}
 				}
 				if = {
 					limit = {
 						country_has_primary_culture = cu:british
+						has_technology_researched = malaria_prevention
 						any_subject_or_below = {
 							capital.region = sr:region_southern_africa
 						}
@@ -706,6 +736,7 @@ ai_strategy_colonial_expansion = {
 		}
 
 		if = {
+			limit = { has_technology_researched = civilizing_mission }
 			multiply = 1.5
 		}
 
@@ -739,11 +770,15 @@ ai_strategy_armed_isolationism = {
 		value = 25
 
 		if = {
-			limit = { always = yes }
+			limit = {
+				has_technology_researched = pan-nationalism
+			}
 			multiply = 1.5
 		}
 		else_if = {
-			limit = { always = yes }
+			limit = {
+				has_technology_researched = nationalism
+			}
 			multiply = 1.25
 		}
 	}
@@ -752,11 +787,15 @@ ai_strategy_armed_isolationism = {
 		value = 50
 
 		if = {
-			limit = { always = yes }
+			limit = {
+				has_technology_researched = pan-nationalism
+			}
 			multiply = 1.5
 		}
 		else_if = {
-			limit = { always = yes }
+			limit = {
+				has_technology_researched = nationalism
+			}
 			multiply = 1.25
 		}
 	}
@@ -858,6 +897,7 @@ ai_strategy_economic_imperialism = {
 			global_country_ranking <= 3
 			AND = {
 				country_rank >= rank_value:great_power
+				has_technology_researched = nationalism
 			}
 		}
 	}
@@ -866,11 +906,15 @@ ai_strategy_economic_imperialism = {
 		value = 25
 
 		if = {
-			limit = { always = yes }
+			limit = {
+				has_technology_researched = pan-nationalism
+			}
 			multiply = 1.5
 		}
 		else_if = {
-			limit = { always = yes }
+			limit = {
+				has_technology_researched = nationalism
+			}
 			multiply = 1.25
 		}
 	}
@@ -879,11 +923,15 @@ ai_strategy_economic_imperialism = {
 		value = 50
 
 		if = {
-			limit = { always = yes }
+			limit = {
+				has_technology_researched = pan-nationalism
+			}
 			multiply = 1.5
 		}
 		else_if = {
-			limit = { always = yes }
+			limit = {
+				has_technology_researched = nationalism
+			}
 			multiply = 1.25
 		}
 	}
@@ -934,6 +982,7 @@ ai_strategy_economic_imperialism = {
 			limit = {
 				NOT = { is_country_type = unrecognized }
 				scope:target_country = { is_country_type = unrecognized }
+				has_technology_researched = colonization
 				institution_investment_level = {
 					institution = institution_colonial_affairs
 					value >= 1
@@ -949,6 +998,7 @@ ai_strategy_economic_imperialism = {
 			}
 
 			if = {
+				limit = { has_technology_researched = civilizing_mission }
 				add = 0.5
 
 				if = {
@@ -974,6 +1024,7 @@ ai_strategy_economic_imperialism = {
 		# Very aggressive about opening up Japan
 		if = {
 			limit = {
+				has_technology_researched = nationalism # Just to make sure it doesn't happen immediately in 1836
 				country_rank = rank_value:great_power
 				navy_size >= 25
 				scope:target_country = {
@@ -1060,6 +1111,7 @@ ai_strategy_economic_imperialism = {
 				if = {
 					limit = {
 						NOT = { scope:target_country = { is_subject_of = root } }
+						has_technology_researched = nationalism  # Just to make sure it doesn't happen immediately in 1836
 						country_rank = rank_value:great_power
 						navy_size >= 25
 						scope:target_country = {
@@ -1076,10 +1128,9 @@ ai_strategy_economic_imperialism = {
 						NOT = { scope:target_country = { is_subject_of = root } }
 						has_strategic_adjacency = scope:target_country
 						scope:target_country = {
-							country_has_primary_culture = cu:japanese
 							has_law_or_variant = law_type:law_isolationism
 							gdp >= 2000000
-							NOT = { capital.region = sr:region_northeast_asia }
+							NOT = { country_has_primary_culture = cu:japanese }
 						}
 					}
 					add = 100
@@ -1365,7 +1416,9 @@ ai_strategy_unify_germany = {
 		value = 0.5
 
 		if = {
-			limit = { always = yes }
+			limit = {
+				has_technology_researched = enlistment_offices
+			}
 			add = 0.25
 		}
 	}
@@ -1383,7 +1436,9 @@ ai_strategy_unify_germany = {
 			add = 0.25
 
 			if = {
-				limit = { always = yes }
+				limit = {
+					has_technology_researched = enlistment_offices
+				}
 				add = 10
 			}
 		}
@@ -1400,7 +1455,9 @@ ai_strategy_unify_germany = {
 			add = 0.25
 
 			if = {
-				limit = { always = yes }
+				limit = {
+					has_technology_researched = enlistment_offices
+				}
 				add = 2
 			}
 		}
@@ -1463,7 +1520,9 @@ ai_strategy_unify_germany = {
 		unification_leadership = {
 			value = 5
 			if = { # Fervour
-				limit = { always = yes }
+				limit = {
+					has_technology_researched = pan-nationalism
+				}
 				add = {
 					value = country_fervor_primary_culture
 					divide = 2
@@ -1580,7 +1639,9 @@ ai_strategy_unify_germany = {
 	weight = {
 		value = 5
 		if = { # Fervour
-			limit = { always = yes }
+			limit = {
+				has_technology_researched = pan-nationalism
+			}
 			add = {
 				value = country_fervor_primary_culture
 				divide = 2
@@ -1751,7 +1812,9 @@ ai_strategy_unify_italy = {
 		unification_leadership = {
 			value = 5
 			if = { # Fervour
-				limit = { always = yes }
+				limit = {
+					has_technology_researched = pan-nationalism
+				}
 				add = {
 					value = country_fervor_primary_culture
 					divide = 2
@@ -1868,7 +1931,9 @@ ai_strategy_unify_italy = {
 	weight = {
 		value = 5
 		if = { # Fervour
-			limit = { always = yes }
+			limit = {
+				has_technology_researched = pan-nationalism
+			}
 			add = {
 				value = country_fervor_primary_culture
 				divide = 2
@@ -2107,6 +2172,7 @@ ai_strategy_unify_ethiopia = {
 
 		# Delay the Ethiopian Thunderdome a bit
 		if = {
+			limit = { NOT = { has_technology_researched = centralization } }
 			multiply = 0.1
 		}
 	}
@@ -2296,11 +2362,15 @@ ai_strategy_socialism_in_one_country = {
 		value = 25
 
 		if = {
-			limit = { always = yes }
+			limit = {
+				has_technology_researched = pan-nationalism
+			}
 			multiply = 1.5
 		}
 		else_if = {
-			limit = { always = yes }
+			limit = {
+				has_technology_researched = nationalism
+			}
 			multiply = 1.25
 		}
 	}
@@ -2309,11 +2379,15 @@ ai_strategy_socialism_in_one_country = {
 		value = 50
 
 		if = {
-			limit = { always = yes }
+			limit = {
+				has_technology_researched = pan-nationalism
+			}
 			multiply = 1.5
 		}
 		else_if = {
-			limit = { always = yes }
+			limit = {
+				has_technology_researched = nationalism
+			}
 			multiply = 1.25
 		}
 	}
@@ -2647,11 +2721,15 @@ ai_strategy_anti_imperialism = {
 		value = 25
 
 		if = {
-			limit = { always = yes }
+			limit = {
+				has_technology_researched = pan-nationalism
+			}
 			multiply = 1.5
 		}
 		else_if = {
-			limit = { always = yes }
+			limit = {
+				has_technology_researched = nationalism
+			}
 			multiply = 1.25
 		}
 	}
@@ -2660,11 +2738,15 @@ ai_strategy_anti_imperialism = {
 		value = 50
 
 		if = {
-			limit = { always = yes }
+			limit = {
+				has_technology_researched = pan-nationalism
+			}
 			multiply = 1.5
 		}
 		else_if = {
-			limit = { always = yes }
+			limit = {
+				has_technology_researched = nationalism
+			}
 			multiply = 1.25
 		}
 	}
@@ -2876,11 +2958,15 @@ ai_strategy_restore_natural_borders = {
 		value = 50
 
 		if = {
-			limit = { always = yes }
+			limit = {
+				has_technology_researched = pan-nationalism
+			}
 			multiply = 1.5
 		}
 		else_if = {
-			limit = { always = yes }
+			limit = {
+				has_technology_researched = nationalism
+			}
 			multiply = 1.25
 		}
 	}
@@ -2916,6 +3002,7 @@ ai_strategy_restore_natural_borders = {
 			limit = {
 				NOT = { is_country_type = unrecognized }
 				scope:target_country = { is_country_type = unrecognized }
+				has_technology_researched = colonization
 				institution_investment_level = {
 					institution = institution_colonial_affairs
 					value >= 1
@@ -2931,6 +3018,7 @@ ai_strategy_restore_natural_borders = {
 			}
 
 			if = {
+				limit = { has_technology_researched = civilizing_mission }
 				add = 1.0
 
 				if = {
@@ -3156,7 +3244,9 @@ ai_strategy_prussia_of_the_balkans = {
 		value = 0.5
 
 		if = {
-			limit = { always = yes }
+			limit = {
+				has_technology_researched = enlistment_offices
+			}
 			add = 0.25
 		}
 	}
@@ -3186,7 +3276,9 @@ ai_strategy_prussia_of_the_balkans = {
 				add = 0.25
 
 				if = {
-					limit = { always = yes }
+					limit = {
+						has_technology_researched = enlistment_offices
+					}
 					add = 10
 				}
 			}
@@ -3202,7 +3294,9 @@ ai_strategy_prussia_of_the_balkans = {
 				add = 0.25
 
 				if = {
-					limit = { always = yes }
+					limit = {
+						has_technology_researched = enlistment_offices
+					}
 					add = 2
 				}
 			}
@@ -3384,6 +3478,7 @@ ai_strategy_prussia_of_the_balkans = {
 			limit = {
 				OR = {
 					has_variable = bul_pursued_bulgarian_empire
+					has_technology_researched = pan-nationalism
 				}
 			}
 			add = 1000

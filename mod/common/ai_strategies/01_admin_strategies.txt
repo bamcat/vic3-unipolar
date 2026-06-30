@@ -22,13 +22,13 @@
 		fertilizer = {
 			stance = wants_high_supply
 			trigger = {
-				always = yes
+				has_technology_researched = intensive_agriculture
 			}
 		}
 		tools = {
 			stance = wants_high_supply
 			trigger = {
-				always = yes
+				has_technology_researched = intensive_agriculture
 			}
 		}
 	}
@@ -128,7 +128,7 @@ ai_strategy_plantation_economy = {
 		opium = { stance = wants_export }
 		tobacco = { stance = wants_export }
 		dye = { stance = wants_export }
-#		silk = { stance = wants_export }
+		silk = { stance = wants_export }
 	}
 
 	building_group_weights = {
@@ -215,7 +215,7 @@ ai_strategy_resource_expansion = {
 		explosives = {
 			stance = wants_high_supply
 			trigger = {
-				always = yes
+				has_technology_researched = nitroglycerin
 			}
 		}
 		tools = { stance = wants_high_supply }
@@ -224,7 +224,7 @@ ai_strategy_resource_expansion = {
 		oil = { stance = wants_export }
 		lead = { stance = wants_export }
 		wood = { stance = wants_export }
-#		hardwood = { stance = wants_export }
+		hardwood = { stance = wants_export }
 		sulfur = { stance = wants_export }
 	}
 
@@ -274,7 +274,7 @@ ai_strategy_resource_expansion = {
 
 		if = {
 			limit = {
-				always = yes
+				has_technology_researched = railways
 			}
 			multiply = 2.0
 		}
@@ -314,17 +314,17 @@ ai_strategy_industrial_expansion = {
 		rubber = {
 			stance = wants_high_supply
 			trigger = {
-				always = yes
+				has_technology_researched = rubber_mastication
 			}
 		}
 		oil = {
 			stance = wants_high_supply
 			trigger = {
-				always = yes
+				has_technology_researched = pumpjacks
 			}
 		}
 		dye = { stance = wants_high_supply }
-#		silk = { stance = wants_high_supply }
+		silk = { stance = wants_high_supply }
 		tools = { stance = wants_high_supply }
 		coal = { stance = wants_high_supply }
 		iron = { stance = wants_high_supply }
@@ -462,7 +462,7 @@ ai_strategy_industrial_expansion = {
 
 		if = {
 			limit = {
-				always = yes
+				has_technology_researched = railways
 			}
 			multiply = 1.5
 		}
@@ -526,7 +526,7 @@ ai_strategy_placate_population = {
 
 		if = {
 			limit = {
-				always = yes
+				has_technology_researched = railways
 			}
 			multiply = 0.5
 		}
@@ -578,7 +578,7 @@ ai_strategy_colonial_extraction = {
         explosives = {
             stance = wants_high_supply
             trigger = {
-               always = yes
+                has_technology_researched = nitroglycerin
             }
         }
         tools = { stance = wants_high_supply }
@@ -587,7 +587,7 @@ ai_strategy_colonial_extraction = {
         oil = { stance = wants_export }
         lead = { stance = wants_export }
         wood = { stance = wants_export }
-#        hardwood = { stance = wants_export }
+        hardwood = { stance = wants_export }
         sulfur = { stance = wants_export }
         fruit = { stance = wants_export }
         fabric = { stance = wants_export }
@@ -597,7 +597,7 @@ ai_strategy_colonial_extraction = {
         opium = { stance = wants_export }
         tobacco = { stance = wants_export }
         dye = { stance = wants_export }
-#        silk = { stance = wants_export }
+        silk = { stance = wants_export }
     }
     possible = {
     	is_subject = yes

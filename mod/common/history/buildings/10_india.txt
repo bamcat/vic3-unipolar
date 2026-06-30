@@ -1,4 +1,4 @@
-BUILDINGS={
+﻿BUILDINGS={
 	s:STATE_BIHAR={
 		region_state:BHT={
 			create_building={
@@ -140,6 +140,12 @@ BUILDINGS={
 						country="c:BHT"
 						levels=3
 					}
+					building={
+						type="building_financial_district"
+						country="c:BHT"
+						levels=1
+						region="STATE_BIHAR"
+					}
 				}
 				reserves=1
 				activate_production_methods={ "pm_crude_tools" "pm_automation_disabled" }
@@ -264,7 +270,7 @@ BUILDINGS={
 					}
 				}
 				reserves=1
-				activate_production_methods={ "pm_scholastic_education" "pm_secular_academia" "pm_principle_freedom_of_movement_3" }
+				activate_production_methods={ "pm_scholastic_education" "pm_secular_academia" "pm_freedom_of_movement_no_effect" }
 			}
 			create_building={
 				building="building_airport"
@@ -390,7 +396,7 @@ BUILDINGS={
 					}
 				}
 				reserves=1
-				activate_production_methods={ "pm_trade_center_trade_quantity_normal" "pm_trade_center_principle_external_trade_2" }
+				activate_production_methods={ "pm_trade_center_trade_quantity_normal" "pm_trade_center" }
 			}
 		}
 	}
@@ -655,7 +661,7 @@ BUILDINGS={
 					}
 				}
 				reserves=1
-				activate_production_methods={ "pm_scholastic_education" "pm_secular_academia" "pm_principle_freedom_of_movement_3" }
+				activate_production_methods={ "pm_scholastic_education" "pm_secular_academia" "pm_freedom_of_movement_no_effect" }
 			}
 			create_building={
 				building="building_airport"
@@ -736,7 +742,7 @@ BUILDINGS={
 				reserves=1
 				activate_production_methods={ "default_building_sugar_plantation" "pm_road_carts" "pm_no_pesticides" }
 			}
-						create_building={
+			create_building={
 				building="building_rice_farm"
 				add_ownership={
 					country={
@@ -753,7 +759,7 @@ BUILDINGS={
 					building={
 						type="building_financial_district"
 						country="c:BHT"
-						levels=2
+						levels=3
 						region="STATE_AWADH"
 					}
 					building={
@@ -766,6 +772,19 @@ BUILDINGS={
 				reserves=1
 				activate_production_methods={ "pm_automobile_production" "pm_automation_disabled" }
 			}
+			create_building={
+				building="building_warehouse"
+				add_ownership={
+					building={
+						type="building_warehouse"
+						country="c:BHT"
+						levels=1
+						region="STATE_WEST_BENGAL"
+					}
+				}
+				reserves=1
+				activate_production_methods={ "pm_basic_warehousing" "pm_manual_inventory" }
+			}
 		}
 	}
 	s:STATE_EAST_BENGAL={
@@ -775,17 +794,17 @@ BUILDINGS={
 				add_ownership={
 					country={
 						country="c:BNG"
-						levels=44
+						levels=43
 					}
 					building={
 						type="building_financial_district"
 						country="c:BNG"
-						levels=2
+						levels=3
 						region="STATE_EAST_BENGAL"
 					}
 				}
 				reserves=1
-				activate_production_methods={ "pm_trade_center_trade_quantity_normal" "pm_trade_center_principle_external_trade_2" }
+				activate_production_methods={ "pm_trade_center_trade_quantity_normal" "pm_trade_center" }
 			}
 			create_building={
 				building="building_construction_sector"
@@ -914,13 +933,13 @@ BUILDINGS={
 					building={
 						type="building_manor_house"
 						country="c:BNG"
-						levels=1
+						levels=2
 						region="STATE_EAST_BENGAL"
 					}
 					building={
 						type="building_financial_district"
 						country="c:BNG"
-						levels=8
+						levels=10
 						region="STATE_EAST_BENGAL"
 					}
 				}
@@ -1068,7 +1087,7 @@ BUILDINGS={
 					}
 				}
 				reserves=1
-				activate_production_methods={ "pm_scholastic_education" "pm_secular_academia" "pm_principle_freedom_of_movement_3" }
+				activate_production_methods={ "pm_scholastic_education" "pm_secular_academia" "pm_freedom_of_movement_no_effect" }
 			}
 			create_building={
 				building="building_airport"
@@ -1081,7 +1100,7 @@ BUILDINGS={
 				reserves=1
 				activate_production_methods={ "pm_base_airport" "pm_cargo_plane_prioritization" }
 			}
-						create_building={
+			create_building={
 				building="building_arms_industry"
 				add_ownership={
 					building={
@@ -1305,18 +1324,11 @@ BUILDINGS={
 				activate_production_methods={ "pm_print_advertising" "pm_no_digital_advertising" "pm_focus_groups" }
 			}
 			create_building={
-				building="building_automotive_industry"
+				building="building_art_academy"
 				add_ownership={
 				}
 				reserves=1
-				activate_production_methods={ "pm_automobile_production" "pm_automation_disabled" }
-			}
-			create_building={
-				building="building_sugar_plantation"
-				add_ownership={
-				}
-				reserves=1
-				activate_production_methods={ "default_building_sugar_plantation" "pm_road_carts" "pm_no_pesticides" }
+				activate_production_methods={ "pm_traditional_art" "pm_traditional_patronage" "pm_freedom_of_movement_no_effect" }
 			}
 		}
 	}
@@ -1582,7 +1594,7 @@ BUILDINGS={
 					}
 				}
 				reserves=1
-				activate_production_methods={ "pm_scholastic_education" "pm_secular_academia" "pm_principle_freedom_of_movement_3" }
+				activate_production_methods={ "pm_scholastic_education" "pm_secular_academia" "pm_freedom_of_movement_no_effect" }
 			}
 			create_building={
 				building="building_airport"
@@ -1667,11 +1679,17 @@ BUILDINGS={
 						levels=1
 						region="STATE_BIHAR"
 					}
+					building={
+						type="building_financial_district"
+						country="c:BHT"
+						levels=1
+						region="STATE_HYDERABAD"
+					}
 				}
 				reserves=1
 				activate_production_methods={ "default_building_rubber_plantation" "pm_road_carts" }
 			}
-						create_building={
+			create_building={
 				building="building_rice_farm"
 				add_ownership={
 					country={
@@ -1681,6 +1699,19 @@ BUILDINGS={
 				}
 				reserves=1
 				activate_production_methods={ "pm_simple_farming_building_rice_farm" "pm_no_secondary" "pm_tools_disabled" "pm_no_pesticides" }
+			}
+			create_building={
+				building="building_warehouse"
+				add_ownership={
+					building={
+						type="building_warehouse"
+						country="c:BHT"
+						levels=1
+						region="STATE_ASSAM"
+					}
+				}
+				reserves=1
+				activate_production_methods={ "pm_basic_warehousing" "pm_manual_inventory" }
 			}
 		}
 	}
@@ -1703,7 +1734,7 @@ BUILDINGS={
 					}
 				}
 				reserves=1
-				activate_production_methods={ "pm_trade_center_trade_quantity_normal" "pm_trade_center_principle_external_trade_2" }
+				activate_production_methods={ "pm_trade_center_trade_quantity_normal" "pm_trade_center" }
 			}
 			create_building={
 				building="building_construction_sector"
@@ -1910,7 +1941,7 @@ BUILDINGS={
 					building={
 						type="building_food_service"
 						country="c:BHT"
-						levels=2
+						levels=3
 						region="STATE_DELHI"
 					}
 				}
@@ -1959,7 +1990,7 @@ BUILDINGS={
 					}
 				}
 				reserves=1
-				activate_production_methods={ "pm_scholastic_education" "pm_secular_academia" "pm_principle_freedom_of_movement_3" }
+				activate_production_methods={ "pm_scholastic_education" "pm_secular_academia" "pm_freedom_of_movement_no_effect" }
 			}
 			create_building={
 				building="building_airport"
@@ -2051,7 +2082,7 @@ BUILDINGS={
 				reserves=1
 				activate_production_methods={ "pm_simple_farming" "pm_no_secondary" "pm_tools_disabled" "pm_no_pesticides" }
 			}
-						create_building={
+			create_building={
 				building="building_automotive_industry"
 				add_ownership={
 					building={
@@ -2059,6 +2090,12 @@ BUILDINGS={
 						country="c:BHT"
 						levels=1
 						region="STATE_DELHI"
+					}
+					building={
+						type="building_financial_district"
+						country="c:BHT"
+						levels=1
+						region="STATE_WEST_BENGAL"
 					}
 				}
 				reserves=1
@@ -2077,7 +2114,7 @@ BUILDINGS={
 					}
 				}
 				reserves=1
-				activate_production_methods={ "pm_trade_center_trade_quantity_normal" "pm_trade_center_principle_external_trade_2" }
+				activate_production_methods={ "pm_trade_center_trade_quantity_normal" "pm_trade_center" }
 			}
 			create_building={
 				building="building_construction_sector"
@@ -2307,6 +2344,12 @@ BUILDINGS={
 						country="c:BHT"
 						levels=1
 					}
+					building={
+						type="building_warehouse"
+						country="c:BHT"
+						levels=1
+						region="STATE_AWADH"
+					}
 				}
 				reserves=1
 				activate_production_methods={ "pm_basic_warehousing" "pm_manual_inventory" }
@@ -2320,7 +2363,7 @@ BUILDINGS={
 					}
 				}
 				reserves=1
-				activate_production_methods={ "pm_scholastic_education" "pm_secular_academia" "pm_principle_freedom_of_movement_3" }
+				activate_production_methods={ "pm_scholastic_education" "pm_secular_academia" "pm_freedom_of_movement_no_effect" }
 			}
 			create_building={
 				building="building_airport"
@@ -2645,7 +2688,7 @@ BUILDINGS={
 					}
 				}
 				reserves=1
-				activate_production_methods={ "pm_scholastic_education" "pm_secular_academia" "pm_principle_freedom_of_movement_3" }
+				activate_production_methods={ "pm_scholastic_education" "pm_secular_academia" "pm_freedom_of_movement_no_effect" }
 			}
 			create_building={
 				building="building_airport"
@@ -2702,7 +2745,7 @@ BUILDINGS={
 				reserves=1
 				activate_production_methods={ "default_building_opium_plantation" "pm_road_carts" }
 			}
-						create_building={
+			create_building={
 				building="building_rice_farm"
 				add_ownership={
 					country={
@@ -2712,6 +2755,19 @@ BUILDINGS={
 				}
 				reserves=1
 				activate_production_methods={ "pm_simple_farming_building_rice_farm" "pm_no_secondary" "pm_tools_disabled" "pm_no_pesticides" }
+			}
+			create_building={
+				building="building_warehouse"
+				add_ownership={
+					building={
+						type="building_warehouse"
+						country="c:BHT"
+						levels=1
+						region="STATE_AGRA"
+					}
+				}
+				reserves=1
+				activate_production_methods={ "pm_basic_warehousing" "pm_manual_inventory" }
 			}
 		}
 	}
@@ -3027,7 +3083,7 @@ BUILDINGS={
 					}
 				}
 				reserves=1
-				activate_production_methods={ "pm_scholastic_education" "pm_secular_academia" "pm_principle_freedom_of_movement_3" }
+				activate_production_methods={ "pm_scholastic_education" "pm_secular_academia" "pm_freedom_of_movement_no_effect" }
 			}
 			create_building={
 				building="building_airport"
@@ -3345,7 +3401,7 @@ BUILDINGS={
 					}
 				}
 				reserves=1
-				activate_production_methods={ "pm_scholastic_education" "pm_secular_academia" "pm_principle_freedom_of_movement_3" }
+				activate_production_methods={ "pm_scholastic_education" "pm_secular_academia" "pm_freedom_of_movement_no_effect" }
 			}
 			create_building={
 				building="building_airport"
@@ -3391,6 +3447,19 @@ BUILDINGS={
 				reserves=1
 				activate_production_methods={ "pm_percussion_caps" "pm_no_missile_production" "pm_automation_disabled" }
 			}
+			create_building={
+				building="building_warehouse"
+				add_ownership={
+					building={
+						type="building_warehouse"
+						country="c:BHT"
+						levels=1
+						region="STATE_BUNDELKHAND"
+					}
+				}
+				reserves=1
+				activate_production_methods={ "pm_basic_warehousing" "pm_manual_inventory" }
+			}
 		}
 	}
 	s:STATE_MALWA={
@@ -3404,7 +3473,7 @@ BUILDINGS={
 					}
 				}
 				reserves=1
-				activate_production_methods={ "pm_trade_center_trade_quantity_normal" "pm_trade_center_principle_external_trade_2" }
+				activate_production_methods={ "pm_trade_center_trade_quantity_normal" "pm_trade_center" }
 			}
 			create_building={
 				building="building_construction_sector"
@@ -3665,7 +3734,7 @@ BUILDINGS={
 					}
 				}
 				reserves=1
-				activate_production_methods={ "pm_scholastic_education" "pm_secular_academia" "pm_principle_freedom_of_movement_3" }
+				activate_production_methods={ "pm_scholastic_education" "pm_secular_academia" "pm_freedom_of_movement_no_effect" }
 			}
 			create_building={
 				building="building_airport"
@@ -3980,7 +4049,7 @@ BUILDINGS={
 					}
 				}
 				reserves=1
-				activate_production_methods={ "pm_scholastic_education" "pm_secular_academia" "pm_principle_freedom_of_movement_3" }
+				activate_production_methods={ "pm_scholastic_education" "pm_secular_academia" "pm_freedom_of_movement_no_effect" }
 			}
 			create_building={
 				building="building_airport"
@@ -4037,7 +4106,7 @@ BUILDINGS={
 				reserves=1
 				activate_production_methods={ "default_building_opium_plantation" "pm_road_carts" }
 			}
-						create_building={
+			create_building={
 				building="building_rice_farm"
 				add_ownership={
 					country={
@@ -4047,6 +4116,19 @@ BUILDINGS={
 				}
 				reserves=1
 				activate_production_methods={ "pm_simple_farming_building_rice_farm" "pm_no_secondary" "pm_tools_disabled" "pm_no_pesticides" }
+			}
+			create_building={
+				building="building_warehouse"
+				add_ownership={
+					building={
+						type="building_warehouse"
+						country="c:BHT"
+						levels=1
+						region="STATE_KASHMIR"
+					}
+				}
+				reserves=1
+				activate_production_methods={ "pm_basic_warehousing" "pm_manual_inventory" }
 			}
 		}
 		region_state:PAK={
@@ -4065,7 +4147,7 @@ BUILDINGS={
 					}
 				}
 				reserves=1
-				activate_production_methods={ "pm_trade_center_trade_quantity_normal" "pm_trade_center_principle_external_trade_2" }
+				activate_production_methods={ "pm_trade_center_trade_quantity_normal" "pm_trade_center" }
 			}
 			create_building={
 				building="building_construction_sector"
@@ -4213,6 +4295,13 @@ BUILDINGS={
 				reserves=1
 				activate_production_methods={ "pm_power_lines" "pm_1g" }
 			}
+			create_building={
+				building="building_professional_service"
+				add_ownership={
+				}
+				reserves=1
+				activate_production_methods={ "pm_general_mills_office" "pm_accountants" "pm_no_casino" }
+			}
 		}
 		region_state:PRC={
 			create_building={
@@ -4224,7 +4313,7 @@ BUILDINGS={
 					}
 				}
 				reserves=1
-				activate_production_methods={ "pm_trade_center_trade_quantity_normal" "pm_trade_center_principle_external_trade_2" }
+				activate_production_methods={ "pm_trade_center_trade_quantity_normal" "pm_trade_center" }
 			}
 			create_building={
 				building="building_construction_sector"
@@ -4294,7 +4383,7 @@ BUILDINGS={
 					}
 				}
 				reserves=1
-				activate_production_methods={ "pm_trade_center_trade_quantity_normal" "pm_trade_center_principle_external_trade_2" }
+				activate_production_methods={ "pm_trade_center_trade_quantity_normal" "pm_trade_center" }
 			}
 			create_building={
 				building="building_construction_sector"
@@ -4334,7 +4423,7 @@ BUILDINGS={
 					building={
 						type="building_financial_district"
 						country="c:PAK"
-						levels=3
+						levels=4
 						region="STATE_PUNJAB"
 					}
 				}
@@ -4414,6 +4503,12 @@ BUILDINGS={
 					country={
 						country="c:PAK"
 						levels=1
+					}
+					building={
+						type="building_financial_district"
+						country="c:PAK"
+						levels=1
+						region="STATE_PUNJAB"
 					}
 				}
 				reserves=1
@@ -4498,6 +4593,12 @@ BUILDINGS={
 						country="c:PAK"
 						levels=3
 					}
+					building={
+						type="building_financial_district"
+						country="c:PAK"
+						levels=3
+						region="STATE_PUNJAB"
+					}
 				}
 				reserves=1
 				activate_production_methods={ "pm_crude_tools" "pm_automation_disabled" }
@@ -4567,7 +4668,7 @@ BUILDINGS={
 					}
 				}
 				reserves=1
-				activate_production_methods={ "pm_scholastic_education" "pm_religious_academia" "pm_principle_freedom_of_movement_3" }
+				activate_production_methods={ "pm_scholastic_education" "pm_religious_academia" "pm_freedom_of_movement_no_effect" }
 			}
 			create_building={
 				building="building_airport"
@@ -4580,7 +4681,7 @@ BUILDINGS={
 				reserves=1
 				activate_production_methods={ "pm_base_airport" "pm_cargo_plane_prioritization" }
 			}
-						create_building={
+			create_building={
 				building="building_arms_industry"
 				add_ownership={
 					country={
@@ -4783,7 +4884,7 @@ BUILDINGS={
 					building={
 						type="building_advertising_agency"
 						country="c:PAK"
-						levels=1
+						levels=2
 						region="STATE_PUNJAB"
 					}
 				}
@@ -4809,7 +4910,7 @@ BUILDINGS={
 					}
 				}
 				reserves=1
-				activate_production_methods={ "pm_trade_center_trade_quantity_normal" "pm_trade_center_principle_external_trade_2" }
+				activate_production_methods={ "pm_trade_center_trade_quantity_normal" "pm_trade_center" }
 			}
 			create_building={
 				building="building_construction_sector"
@@ -5046,7 +5147,7 @@ BUILDINGS={
 					}
 				}
 				reserves=1
-				activate_production_methods={ "pm_scholastic_education" "pm_secular_academia" "pm_principle_freedom_of_movement_3" }
+				activate_production_methods={ "pm_scholastic_education" "pm_secular_academia" "pm_freedom_of_movement_no_effect" }
 			}
 			create_building={
 				building="building_airport"
@@ -5092,7 +5193,7 @@ BUILDINGS={
 				reserves=1
 				activate_production_methods={ "pm_percussion_caps" "pm_no_missile_production" "pm_automation_disabled" }
 			}
-						create_building={
+			create_building={
 				building="building_tea_plantation"
 				add_ownership={
 					building={
@@ -5132,7 +5233,7 @@ BUILDINGS={
 					}
 				}
 				reserves=1
-				activate_production_methods={ "pm_trade_center_trade_quantity_normal" "pm_trade_center_principle_external_trade_2" }
+				activate_production_methods={ "pm_trade_center_trade_quantity_normal" "pm_trade_center" }
 			}
 			create_building={
 				building="building_construction_sector"
@@ -5387,7 +5488,7 @@ BUILDINGS={
 					}
 				}
 				reserves=1
-				activate_production_methods={ "pm_scholastic_education" "pm_secular_academia" "pm_principle_freedom_of_movement_3" }
+				activate_production_methods={ "pm_scholastic_education" "pm_secular_academia" "pm_freedom_of_movement_no_effect" }
 			}
 			create_building={
 				building="building_airport"
@@ -5547,7 +5648,7 @@ BUILDINGS={
 				reserves=1
 				activate_production_methods={ "default_building_opium_plantation" "pm_road_carts" }
 			}
-					}
+		}
 		region_state:PAK={
 			create_building={
 				building="building_trade_center"
@@ -5558,7 +5659,7 @@ BUILDINGS={
 					}
 				}
 				reserves=1
-				activate_production_methods={ "pm_trade_center_trade_quantity_normal" "pm_trade_center_principle_external_trade_2" }
+				activate_production_methods={ "pm_trade_center_trade_quantity_normal" "pm_trade_center" }
 			}
 			create_building={
 				building="building_construction_sector"
@@ -5809,7 +5910,7 @@ BUILDINGS={
 					}
 				}
 				reserves=1
-				activate_production_methods={ "pm_scholastic_education" "pm_religious_academia" "pm_principle_freedom_of_movement_3" }
+				activate_production_methods={ "pm_scholastic_education" "pm_religious_academia" "pm_freedom_of_movement_no_effect" }
 			}
 			create_building={
 				building="building_airport"
@@ -5971,7 +6072,7 @@ BUILDINGS={
 					}
 				}
 				reserves=1
-				activate_production_methods={ "pm_trade_center_trade_quantity_normal" "pm_trade_center_principle_external_trade_2" }
+				activate_production_methods={ "pm_trade_center_trade_quantity_normal" "pm_trade_center" }
 			}
 			create_building={
 				building="building_construction_sector"
@@ -6273,7 +6374,7 @@ BUILDINGS={
 					}
 				}
 				reserves=1
-				activate_production_methods={ "pm_scholastic_education" "pm_secular_academia" "pm_principle_freedom_of_movement_3" }
+				activate_production_methods={ "pm_scholastic_education" "pm_secular_academia" "pm_freedom_of_movement_no_effect" }
 			}
 			create_building={
 				building="building_airport"
@@ -6352,7 +6453,7 @@ BUILDINGS={
 				reserves=1
 				activate_production_methods={ "default_building_opium_plantation" "pm_road_carts" }
 			}
-						create_building={
+			create_building={
 				building="building_rice_farm"
 				add_ownership={
 					country={
@@ -6362,6 +6463,19 @@ BUILDINGS={
 				}
 				reserves=1
 				activate_production_methods={ "pm_simple_farming_building_rice_farm" "pm_no_secondary" "pm_tools_disabled" "pm_no_pesticides" }
+			}
+			create_building={
+				building="building_professional_service"
+				add_ownership={
+					building={
+						type="building_professional_service"
+						country="c:BHT"
+						levels=1
+						region="STATE_RAJPUTANA"
+					}
+				}
+				reserves=1
+				activate_production_methods={ "pm_general_mills_office" "pm_accountants" "pm_no_casino" }
 			}
 		}
 	}
@@ -6376,7 +6490,7 @@ BUILDINGS={
 					}
 				}
 				reserves=1
-				activate_production_methods={ "pm_trade_center_trade_quantity_normal" "pm_trade_center_principle_external_trade_2" }
+				activate_production_methods={ "pm_trade_center_trade_quantity_normal" "pm_trade_center" }
 			}
 			create_building={
 				building="building_construction_sector"
@@ -6460,7 +6574,7 @@ BUILDINGS={
 					building={
 						type="building_financial_district"
 						country="c:SRI"
-						levels=6
+						levels=9
 						region="STATE_CEYLON"
 					}
 				}
@@ -6549,7 +6663,7 @@ BUILDINGS={
 					building={
 						type="building_financial_district"
 						country="c:SRI"
-						levels=3
+						levels=6
 						region="STATE_CEYLON"
 					}
 				}
@@ -6638,7 +6752,7 @@ BUILDINGS={
 					}
 				}
 				reserves=1
-				activate_production_methods={ "pm_scholastic_education" "pm_secular_academia" "pm_principle_freedom_of_movement_3" }
+				activate_production_methods={ "pm_scholastic_education" "pm_secular_academia" "pm_freedom_of_movement_no_effect" }
 			}
 			create_building={
 				building="building_airport"
@@ -6827,7 +6941,7 @@ BUILDINGS={
 					}
 				}
 				reserves=1
-				activate_production_methods={ "pm_traditional_art" "pm_traditional_patronage" "pm_principle_freedom_of_movement_3" }
+				activate_production_methods={ "pm_traditional_art" "pm_traditional_patronage" "pm_freedom_of_movement_no_effect" }
 			}
 		}
 		region_state:GBR={
@@ -6840,7 +6954,7 @@ BUILDINGS={
 					}
 				}
 				reserves=1
-				activate_production_methods={ "pm_trade_center_trade_quantity_normal" "pm_trade_center_principle_external_trade_2" }
+				activate_production_methods={ "pm_trade_center_trade_quantity_normal" "pm_trade_center" }
 			}
 			create_building={
 				building="building_construction_sector"
@@ -6939,7 +7053,7 @@ BUILDINGS={
 					}
 				}
 				reserves=1
-				activate_production_methods={ "pm_corner_grocery" "pm_no_restaurants" "pm_manual_food_checkout" }
+				activate_production_methods={ "pm_corner_grocery" "pm_fine_dining" "pm_food_delivery_services" }
 			}
 			create_building={
 				building="building_retail_services"
@@ -6950,7 +7064,7 @@ BUILDINGS={
 					}
 				}
 				reserves=1
-				activate_production_methods={ "pm_small_shops" "pm_no_retail_specialization" "pm_manual_retail_checkout" }
+				activate_production_methods={ "pm_luxury_retail" "pm_manual_retail_checkout" "pm_outlet_retail" }
 			}
 			create_building={
 				building="building_bank"
@@ -6961,7 +7075,7 @@ BUILDINGS={
 					}
 				}
 				reserves=1
-				activate_production_methods={ "pm_basic_banking" "pm_no_securities_trading" "pm_manual_tellers" }
+				activate_production_methods={ "pm_basic_banking" "pm_no_securities_trading" "pm_atm_network" }
 			}
 			create_building={
 				building="building_food_industry"
@@ -7002,7 +7116,7 @@ BUILDINGS={
 					}
 				}
 				reserves=1
-				activate_production_methods={ "pm_trade_center_trade_quantity_normal" "pm_trade_center_principle_external_trade_2" }
+				activate_production_methods={ "pm_trade_center_trade_quantity_normal" "pm_trade_center" }
 			}
 			create_building={
 				building="building_construction_sector"
@@ -7164,7 +7278,7 @@ BUILDINGS={
 					}
 				}
 				reserves=1
-				activate_production_methods={ "pm_trade_center_trade_quantity_normal" "pm_trade_center_principle_external_trade_2" }
+				activate_production_methods={ "pm_trade_center_trade_quantity_normal" "pm_trade_center" }
 			}
 			create_building={
 				building="building_government_administration"
@@ -7298,7 +7412,7 @@ BUILDINGS={
 					}
 				}
 				reserves=1
-				activate_production_methods={ "pm_trade_center_trade_quantity_normal" "pm_trade_center_principle_external_trade_2" }
+				activate_production_methods={ "pm_trade_center_trade_quantity_normal" "pm_trade_center" }
 			}
 			create_building={
 				building="building_government_administration"
@@ -7481,7 +7595,7 @@ BUILDINGS={
 					}
 				}
 				reserves=1
-				activate_production_methods={ "pm_trade_center_trade_quantity_normal" "pm_trade_center_principle_external_trade_2" }
+				activate_production_methods={ "pm_trade_center_trade_quantity_normal" "pm_trade_center" }
 			}
 			create_building={
 				building="building_construction_sector"
@@ -7724,7 +7838,7 @@ BUILDINGS={
 					}
 				}
 				reserves=1
-				activate_production_methods={ "pm_scholastic_education" "pm_secular_academia" "pm_principle_freedom_of_movement_3" }
+				activate_production_methods={ "pm_scholastic_education" "pm_secular_academia" "pm_freedom_of_movement_no_effect" }
 			}
 			create_building={
 				building="building_airport"
@@ -7792,6 +7906,19 @@ BUILDINGS={
 				reserves=1
 				activate_production_methods={ "pm_simple_farming_building_rice_farm" "pm_no_secondary" "pm_tools_disabled" "pm_no_pesticides" }
 			}
+			create_building={
+				building="building_warehouse"
+				add_ownership={
+					building={
+						type="building_warehouse"
+						country="c:BHT"
+						levels=1
+						region="STATE_ORISSA"
+					}
+				}
+				reserves=1
+				activate_production_methods={ "pm_basic_warehousing" "pm_manual_inventory" }
+			}
 		}
 	}
 	s:STATE_CIRCARS={
@@ -7805,7 +7932,7 @@ BUILDINGS={
 					}
 				}
 				reserves=1
-				activate_production_methods={ "pm_trade_center_trade_quantity_normal" "pm_trade_center_principle_external_trade_2" }
+				activate_production_methods={ "pm_trade_center_trade_quantity_normal" "pm_trade_center" }
 			}
 			create_building={
 				building="building_construction_sector"
@@ -7960,8 +8087,14 @@ BUILDINGS={
 					building={
 						type="building_financial_district"
 						country="c:BHT"
-						levels=1
+						levels=5
 						region="STATE_DELHI"
+					}
+					building={
+						type="building_financial_district"
+						country="c:BHT"
+						levels=3
+						region="STATE_GUJARAT"
 					}
 				}
 				reserves=1
@@ -8077,7 +8210,7 @@ BUILDINGS={
 					}
 				}
 				reserves=1
-				activate_production_methods={ "pm_scholastic_education" "pm_secular_academia" "pm_principle_freedom_of_movement_3" }
+				activate_production_methods={ "pm_scholastic_education" "pm_secular_academia" "pm_freedom_of_movement_no_effect" }
 			}
 			create_building={
 				building="building_airport"
@@ -8217,7 +8350,7 @@ BUILDINGS={
 					}
 				}
 				reserves=1
-				activate_production_methods={ "pm_trade_center_trade_quantity_normal" "pm_trade_center_principle_external_trade_2" }
+				activate_production_methods={ "pm_trade_center_trade_quantity_normal" "pm_trade_center" }
 			}
 			create_building={
 				building="building_construction_sector"
@@ -8443,7 +8576,7 @@ BUILDINGS={
 					}
 				}
 				reserves=1
-				activate_production_methods={ "pm_scholastic_education" "pm_secular_academia" "pm_principle_freedom_of_movement_3" }
+				activate_production_methods={ "pm_scholastic_education" "pm_secular_academia" "pm_freedom_of_movement_no_effect" }
 			}
 			create_building={
 				building="building_airport"
@@ -8513,7 +8646,7 @@ BUILDINGS={
 				reserves=1
 				activate_production_methods={ "pm_fission_plant" }
 			}
-						create_building={
+			create_building={
 				building="building_rice_farm"
 				add_ownership={
 					country={
@@ -8523,6 +8656,19 @@ BUILDINGS={
 				}
 				reserves=1
 				activate_production_methods={ "pm_simple_farming_building_rice_farm" "pm_no_secondary" "pm_tools_disabled" "pm_no_pesticides" }
+			}
+			create_building={
+				building="building_warehouse"
+				add_ownership={
+					building={
+						type="building_warehouse"
+						country="c:BHT"
+						levels=1
+						region="STATE_MYSORE"
+					}
+				}
+				reserves=1
+				activate_production_methods={ "pm_basic_warehousing" "pm_manual_inventory" }
 			}
 		}
 	}
@@ -8539,7 +8685,7 @@ BUILDINGS={
 					}
 				}
 				reserves=1
-				activate_production_methods={ "pm_trade_center_trade_quantity_normal" "pm_trade_center_principle_external_trade_2" }
+				activate_production_methods={ "pm_trade_center_trade_quantity_normal" "pm_trade_center" }
 			}
 			create_building={
 				building="building_construction_sector"
@@ -8748,7 +8894,7 @@ BUILDINGS={
 					}
 				}
 				reserves=1
-				activate_production_methods={ "pm_scholastic_education" "pm_secular_academia" "pm_principle_freedom_of_movement_3" }
+				activate_production_methods={ "pm_scholastic_education" "pm_secular_academia" "pm_freedom_of_movement_no_effect" }
 			}
 			create_building={
 				building="building_airport"
@@ -8849,8 +8995,14 @@ BUILDINGS={
 					building={
 						type="building_financial_district"
 						country="c:BHT"
-						levels=2
+						levels=3
 						region="STATE_DELHI"
+					}
+					building={
+						type="building_financial_district"
+						country="c:BHT"
+						levels=1
+						region="STATE_MALWA"
 					}
 				}
 				reserves=1
@@ -8867,6 +9019,19 @@ BUILDINGS={
 				reserves=1
 				activate_production_methods={ "pm_simple_farming_building_rice_farm" "pm_no_secondary" "pm_tools_disabled" "pm_no_pesticides" }
 			}
+			create_building={
+				building="building_warehouse"
+				add_ownership={
+					building={
+						type="building_warehouse"
+						country="c:BHT"
+						levels=1
+						region="STATE_TRAVANCORE"
+					}
+				}
+				reserves=1
+				activate_production_methods={ "pm_basic_warehousing" "pm_manual_inventory" }
+			}
 		}
 	}
 	s:STATE_MADRAS={
@@ -8880,7 +9045,7 @@ BUILDINGS={
 					}
 				}
 				reserves=1
-				activate_production_methods={ "pm_trade_center_trade_quantity_normal" "pm_trade_center_principle_external_trade_2" }
+				activate_production_methods={ "pm_trade_center_trade_quantity_normal" "pm_trade_center" }
 			}
 			create_building={
 				building="building_construction_sector"
@@ -9139,7 +9304,7 @@ BUILDINGS={
 					}
 				}
 				reserves=1
-				activate_production_methods={ "pm_scholastic_education" "pm_secular_academia" "pm_principle_freedom_of_movement_3" }
+				activate_production_methods={ "pm_scholastic_education" "pm_secular_academia" "pm_freedom_of_movement_no_effect" }
 			}
 			create_building={
 				building="building_airport"
@@ -9293,7 +9458,7 @@ BUILDINGS={
 				reserves=1
 				activate_production_methods={ "pm_simple_forestry" "pm_no_equipment" "pm_road_carts" }
 			}
-						create_building={
+			create_building={
 				building="building_rice_farm"
 				add_ownership={
 					country={
@@ -9319,7 +9484,7 @@ BUILDINGS={
 					}
 				}
 				reserves=1
-				activate_production_methods={ "pm_trade_center_trade_quantity_normal" "pm_trade_center_principle_external_trade_2" }
+				activate_production_methods={ "pm_trade_center_trade_quantity_normal" "pm_trade_center" }
 			}
 			create_building={
 				building="building_construction_sector"
@@ -9596,7 +9761,7 @@ BUILDINGS={
 					}
 				}
 				reserves=1
-				activate_production_methods={ "pm_scholastic_education" "pm_secular_academia" "pm_principle_freedom_of_movement_3" }
+				activate_production_methods={ "pm_scholastic_education" "pm_secular_academia" "pm_freedom_of_movement_no_effect" }
 			}
 			create_building={
 				building="building_airport"
@@ -9675,7 +9840,7 @@ BUILDINGS={
 				reserves=1
 				activate_production_methods={ "default_building_opium_plantation" "pm_road_carts" }
 			}
-						create_building={
+			create_building={
 				building="building_rice_farm"
 				add_ownership={
 					country={
@@ -9699,7 +9864,7 @@ BUILDINGS={
 					}
 				}
 				reserves=1
-				activate_production_methods={ "pm_trade_center_trade_quantity_normal" "pm_trade_center_principle_external_trade_2" }
+				activate_production_methods={ "pm_trade_center_trade_quantity_normal" "pm_trade_center" }
 			}
 			create_building={
 				building="building_construction_sector"
@@ -9975,7 +10140,7 @@ BUILDINGS={
 					}
 				}
 				reserves=1
-				activate_production_methods={ "pm_scholastic_education" "pm_secular_academia" "pm_principle_freedom_of_movement_3" }
+				activate_production_methods={ "pm_scholastic_education" "pm_secular_academia" "pm_freedom_of_movement_no_effect" }
 			}
 			create_building={
 				building="building_airport"
@@ -10089,7 +10254,7 @@ BUILDINGS={
 					}
 				}
 				reserves=1
-				activate_production_methods={ "pm_trade_center_trade_quantity_high" "pm_trade_center_principle_external_trade_2" }
+				activate_production_methods={ "pm_trade_center_trade_quantity_high" "pm_trade_center" }
 			}
 			create_building={
 				building="building_construction_sector"
@@ -10186,6 +10351,12 @@ BUILDINGS={
 						country="c:MYM"
 						levels=1
 					}
+					building={
+						type="building_manor_house"
+						country="c:MYM"
+						levels=1
+						region="STATE_KACHIN"
+					}
 				}
 				reserves=1
 				activate_production_methods={ "pm_simple_forestry" "pm_no_equipment" "pm_road_carts" }
@@ -10223,7 +10394,7 @@ BUILDINGS={
 				reserves=1
 				activate_production_methods={ "pm_handsewn_clothes" "pm_no_luxury_clothes" "pm_traditional_looms" }
 			}
-						create_building={
+			create_building={
 				building="building_telecommunications"
 				add_ownership={
 					country={
@@ -10343,7 +10514,7 @@ BUILDINGS={
 					building={
 						type="building_financial_district"
 						country="c:MYM"
-						levels=2
+						levels=3
 						region="STATE_TENASSERIM"
 					}
 				}
@@ -10361,6 +10532,13 @@ BUILDINGS={
 				reserves=1
 				activate_production_methods={ "default_building_opium_plantation" "pm_road_carts" }
 			}
+			create_building={
+				building="building_cotton_plantation"
+				add_ownership={
+				}
+				reserves=1
+				activate_production_methods={ "default_building_cotton_plantation" "pm_road_carts" }
+			}
 		}
 		region_state:THA={
 			create_building={
@@ -10372,7 +10550,7 @@ BUILDINGS={
 					}
 				}
 				reserves=1
-				activate_production_methods={ "pm_trade_center_trade_quantity_normal" "pm_trade_center_principle_external_trade_2" }
+				activate_production_methods={ "pm_trade_center_trade_quantity_normal" "pm_trade_center" }
 			}
 			create_building={
 				building="building_construction_sector"
@@ -10599,7 +10777,7 @@ BUILDINGS={
 					}
 				}
 				reserves=1
-				activate_production_methods={ "pm_scholastic_education" "pm_secular_academia" "pm_principle_freedom_of_movement_3" }
+				activate_production_methods={ "pm_scholastic_education" "pm_secular_academia" "pm_freedom_of_movement_no_effect" }
 			}
 			create_building={
 				building="building_airport"
@@ -10801,7 +10979,7 @@ BUILDINGS={
 					}
 				}
 				reserves=1
-				activate_production_methods={ "pm_trade_center_trade_quantity_normal" "pm_trade_center_principle_external_trade_2" }
+				activate_production_methods={ "pm_trade_center_trade_quantity_normal" "pm_trade_center" }
 			}
 			create_building={
 				building="building_construction_sector"
@@ -11055,7 +11233,7 @@ BUILDINGS={
 					}
 				}
 				reserves=1
-				activate_production_methods={ "pm_trade_center_trade_quantity_normal" "pm_trade_center_principle_external_trade_2" }
+				activate_production_methods={ "pm_trade_center_trade_quantity_normal" "pm_trade_center" }
 			}
 			create_building={
 				building="building_construction_sector"
@@ -11191,7 +11369,7 @@ BUILDINGS={
 				reserves=1
 				activate_production_methods={ "pm_handsewn_clothes" "pm_no_luxury_clothes" "pm_traditional_looms" }
 			}
-						create_building={
+			create_building={
 				building="building_telecommunications"
 				add_ownership={
 					country={
@@ -11350,7 +11528,7 @@ BUILDINGS={
 					}
 				}
 				reserves=1
-				activate_production_methods={ "pm_trade_center_trade_quantity_normal" "pm_trade_center_principle_external_trade_2" }
+				activate_production_methods={ "pm_trade_center_trade_quantity_normal" "pm_trade_center" }
 			}
 			create_building={
 				building="building_construction_sector"
@@ -11502,7 +11680,7 @@ BUILDINGS={
 				reserves=1
 				activate_production_methods={ "pm_handsewn_clothes" "pm_no_luxury_clothes" "pm_traditional_looms" }
 			}
-						create_building={
+			create_building={
 				building="building_telecommunications"
 				add_ownership={
 					country={
@@ -11667,6 +11845,13 @@ BUILDINGS={
 				reserves=1
 				activate_production_methods={ "pm_general_mills_office" "pm_accountants" "pm_no_casino" }
 			}
+			create_building={
+				building="building_cotton_plantation"
+				add_ownership={
+				}
+				reserves=1
+				activate_production_methods={ "default_building_cotton_plantation" "pm_road_carts" }
+			}
 		}
 	}
 	s:STATE_MANDALAY={
@@ -11680,7 +11865,7 @@ BUILDINGS={
 					}
 				}
 				reserves=1
-				activate_production_methods={ "pm_trade_center_trade_quantity_normal" "pm_trade_center_principle_external_trade_2" }
+				activate_production_methods={ "pm_trade_center_trade_quantity_normal" "pm_trade_center" }
 			}
 			create_building={
 				building="building_construction_sector"
@@ -11756,6 +11941,12 @@ BUILDINGS={
 						country="c:MYM"
 						levels=1
 					}
+					building={
+						type="building_financial_district"
+						country="c:MYM"
+						levels=1
+						region="STATE_MANDALAY"
+					}
 				}
 				reserves=1
 				activate_production_methods={ "pm_simple_forestry" "pm_no_equipment" "pm_road_carts" }
@@ -11795,6 +11986,12 @@ BUILDINGS={
 						levels=2
 						region="STATE_PEGU"
 					}
+					building={
+						type="building_financial_district"
+						country="c:MYM"
+						levels=1
+						region="STATE_MANDALAY"
+					}
 				}
 				reserves=1
 				activate_production_methods={ "default_building_dye_plantation" "pm_road_carts" }
@@ -11821,7 +12018,7 @@ BUILDINGS={
 				reserves=1
 				activate_production_methods={ "pm_handsewn_clothes" "pm_no_luxury_clothes" "pm_traditional_looms" }
 			}
-						create_building={
+			create_building={
 				building="building_telecommunications"
 				add_ownership={
 					country={
@@ -11971,9 +12168,22 @@ BUILDINGS={
 			create_building={
 				building="building_banana_plantation"
 				add_ownership={
+					building={
+						type="building_manor_house"
+						country="c:MYM"
+						levels=1
+						region="STATE_KACHIN"
+					}
 				}
 				reserves=1
 				activate_production_methods={ "default_building_banana_plantation" "pm_road_carts" "pm_no_pesticides" }
+			}
+			create_building={
+				building="building_automotive_industry"
+				add_ownership={
+				}
+				reserves=1
+				activate_production_methods={ "pm_automobile_production" "pm_automation_disabled" }
 			}
 		}
 	}
@@ -11988,7 +12198,7 @@ BUILDINGS={
 					}
 				}
 				reserves=1
-				activate_production_methods={ "pm_trade_center_trade_quantity_normal" "pm_trade_center_principle_external_trade_2" }
+				activate_production_methods={ "pm_trade_center_trade_quantity_normal" "pm_trade_center" }
 			}
 			create_building={
 				building="building_construction_sector"
@@ -12033,7 +12243,7 @@ BUILDINGS={
 					building={
 						type="building_financial_district"
 						country="c:MYM"
-						levels=1
+						levels=2
 						region="STATE_PEGU"
 					}
 				}
@@ -12078,7 +12288,7 @@ BUILDINGS={
 					building={
 						type="building_financial_district"
 						country="c:MYM"
-						levels=1
+						levels=2
 						region="STATE_KACHIN"
 					}
 				}
@@ -12195,7 +12405,7 @@ BUILDINGS={
 					building={
 						type="building_financial_district"
 						country="c:MYM"
-						levels=2
+						levels=3
 						region="STATE_PEGU"
 					}
 				}
@@ -12252,7 +12462,7 @@ BUILDINGS={
 				reserves=1
 				activate_production_methods={ "pm_basic_banking" "pm_no_securities_trading" "pm_manual_tellers" }
 			}
-						create_building={
+			create_building={
 				building="building_arms_industry"
 				add_ownership={
 					country={
