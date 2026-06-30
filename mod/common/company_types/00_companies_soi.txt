@@ -519,73 +519,73 @@ company_sherkate_eslamiya = {
 }
 
 # MM. Nicolas Portalis et Cie.
-company_nicolas_portalis = {
-	icon = "gfx/interface/icons/company_icons/historical_company_icons/historical_mm_nicolas_portalis_et_cie.dds"
-	background = "gfx/interface/icons/company_icons/company_backgrounds/comp_illu_plantation.dds"
-
-	flavored_company = yes
-
-	preferred_headquarters = { STATE_LEBANON }
-
-	building_types = {
-		building_silk_plantation
-	}
-
-	extension_building_types = {
-		building_cotton_plantation
-	}
-
-	potential = {
-		has_dlc_feature = ep1_content
-		has_interest_marker_in_region = region_arabic
-	}
-
-	attainable = {
-		hidden_trigger = { # Hide attainable if it's always fulfilled by possible
-			any_scope_state = {
-				state_region = s:STATE_LEBANON
-			}
-		}
-	}
-
-	possible = {
-		any_scope_state = {
-			state_region = s:STATE_LEBANON
-			is_incorporated = yes
-			any_scope_building = {
-				is_building_type = building_silk_plantation
-				level >= 5
-			}
-		}
-	}
-
-	prosperity_modifier = {
-		country_prestige_mult = 0.1
-		state_radicalism_increases_violent_hostility_mult = -0.05
-		state_radicalism_increases_cultural_erasure_mult = -0.05
-		state_radicalism_increases_open_prejudice_mult = -0.05
-	}
-
-	ai_will_do = {
-		any_scope_state = {
-			state_region = s:STATE_LEBANON
-			is_incorporated = yes
-		}
-	}
-
-	ai_construction_targets = {
-		building_silk_plantation = {
-			level = 5
-			state_trigger = {
-				state_region = s:STATE_LEBANON
-			}
-		}
-	}
-
-	ai_weight = {
-		value = 3 # Higher base value for flavored companies
-	}
-}
+#company_nicolas_portalis = {
+#	icon = "gfx/interface/icons/company_icons/historical_company_icons/historical_mm_nicolas_portalis_et_cie.dds"
+#	background = "gfx/interface/icons/company_icons/company_backgrounds/comp_illu_plantation.dds"
+#
+#	flavored_company = yes
+#
+#	preferred_headquarters = { STATE_LEBANON }
+#
+#	building_types = {
+##		building_silk_plantation
+#	}
+#
+#	extension_building_types = {
+#		building_cotton_plantation
+#	}
+#
+#	potential = {
+#		has_dlc_feature = ep1_content
+#		has_interest_marker_in_region = region_arabic
+#	}
+#
+#	attainable = {
+#		hidden_trigger = { # Hide attainable if it's always fulfilled by possible
+#			any_scope_state = {
+#				state_region = s:STATE_LEBANON
+#			}
+#		}
+#	}
+#
+#	possible = {
+#		any_scope_state = {
+#			state_region = s:STATE_LEBANON
+#			is_incorporated = yes
+#			any_scope_building = {
+##				is_building_type = building_silk_plantation
+#				level >= 5
+#			}
+#		}
+#	}
+#
+#	prosperity_modifier = {
+#		country_prestige_mult = 0.1
+#		state_radicalism_increases_violent_hostility_mult = -0.05
+#		state_radicalism_increases_cultural_erasure_mult = -0.05
+#		state_radicalism_increases_open_prejudice_mult = -0.05
+#	}
+#
+#	ai_will_do = {
+#		any_scope_state = {
+#			state_region = s:STATE_LEBANON
+#			is_incorporated = yes
+#		}
+#	}
+#
+#	ai_construction_targets = {
+##		building_silk_plantation = {
+#			level = 5
+#			state_trigger = {
+#				state_region = s:STATE_LEBANON
+#			}
+#		}
+#	}
+#
+#	ai_weight = {
+#		value = 3 # Higher base value for flavored companies
+#	}
+#}
 
 # Hanseong Jeongi Hoesa
 company_hanseong_jeongi_hoesa = {
@@ -727,85 +727,85 @@ company_kirgizian_mining_company= {
 }
 
 # Persshelk
-company_persshelk = {
-	icon = "gfx/interface/icons/company_icons/historical_company_icons/historical_persshelk.dds"
-	background = "gfx/interface/icons/company_icons/company_backgrounds/comp_illu_plantation.dds"
-
-	flavored_company = yes
-
-	building_types = {
-		building_silk_plantation
-	}
-
-	extension_building_types = {
-		building_textile_mill
-	}
-
-	potential = {
-		has_dlc_feature = ep1_content
-		has_interest_marker_in_region = region_persia
-	}
-
-	attainable = {
-		hidden_trigger = { # Hide attainable if it's always fulfilled by possible
-			any_scope_state = {
-				state_region = {
-					is_homeland = cu:persian
-				}
-			}
-		}
-	}
-
-	possible = {
-		OR = {
-			country_has_primary_culture = cu:russian
-			any_scope_ally = {
-				country_has_primary_culture = cu:russian
-			}
-		}
-		any_scope_state = {
-			region = sr:region_persia
-			is_incorporated = yes
-			any_scope_building = {
-				is_building_type = building_silk_plantation
-				level >= 5
-			}
-			count >= 2
-		}
-	}
-
-	prosperity_modifier = {
-		country_prestige_mult = 0.05
-		interest_group_ig_petty_bourgeoisie_pop_attraction_mult = 0.1
-	}
-
-	ai_will_do = {
-		OR = {
-			country_has_primary_culture = cu:russian
-			any_scope_ally = {
-				country_has_primary_culture = cu:russian
-			}
-		}
-		any_scope_state = {
-			region = sr:region_persia
-			is_incorporated = yes
-		}
-	}
-
-	ai_construction_targets = {
-		building_silk_plantation = {
-			level = 5
-			state_trigger = {
-				region = sr:region_persia
-				is_incorporated = yes
-			}
-		}
-	}
-
-	ai_weight = {
-		value = 3 # Higher base value for flavored companies
-	}
-}
+#company_persshelk = {
+#	icon = "gfx/interface/icons/company_icons/historical_company_icons/historical_persshelk.dds"
+#	background = "gfx/interface/icons/company_icons/company_backgrounds/comp_illu_plantation.dds"
+#
+#	flavored_company = yes
+#
+#	building_types = {
+##		building_silk_plantation
+#	}
+#
+#	extension_building_types = {
+#		building_textile_mill
+#	}
+#
+#	potential = {
+#		has_dlc_feature = ep1_content
+#		has_interest_marker_in_region = region_persia
+#	}
+#
+#	attainable = {
+#		hidden_trigger = { # Hide attainable if it's always fulfilled by possible
+#			any_scope_state = {
+#				state_region = {
+#					is_homeland = cu:persian
+#				}
+#			}
+#		}
+#	}
+#
+#	possible = {
+#		OR = {
+#			country_has_primary_culture = cu:russian
+#			any_scope_ally = {
+#				country_has_primary_culture = cu:russian
+#			}
+#		}
+#		any_scope_state = {
+#			region = sr:region_persia
+#			is_incorporated = yes
+#			any_scope_building = {
+##				is_building_type = building_silk_plantation
+#				level >= 5
+#			}
+#			count >= 2
+#		}
+#	}
+#
+#	prosperity_modifier = {
+#		country_prestige_mult = 0.05
+#		interest_group_ig_petty_bourgeoisie_pop_attraction_mult = 0.1
+#	}
+#
+#	ai_will_do = {
+#		OR = {
+#			country_has_primary_culture = cu:russian
+#			any_scope_ally = {
+#				country_has_primary_culture = cu:russian
+#			}
+#		}
+#		any_scope_state = {
+#			region = sr:region_persia
+#			is_incorporated = yes
+#		}
+#	}
+#
+#	ai_construction_targets = {
+##		building_silk_plantation = {
+#			level = 5
+#			state_trigger = {
+#				region = sr:region_persia
+#				is_incorporated = yes
+#			}
+#		}
+#	}
+#
+#	ai_weight = {
+#		value = 3 # Higher base value for flavored companies
+#	}
+#}
 
 # Perskhlopok
 company_perskhlopok = {

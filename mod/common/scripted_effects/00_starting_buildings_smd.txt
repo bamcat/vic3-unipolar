@@ -1871,14 +1871,7 @@ effect_starting_buildings_third_world_tiny = {
 		building = "building_livestock_ranch"
 		level = 2
 		reserves = 1
-	}
-
-	# Basic Industry
-	create_building = {
-		building = "building_food_industry"
-		level = 1
-		reserves = 1
-	}
+	} 
 
 	# Military
 	create_building = {
@@ -1933,44 +1926,44 @@ effect_starting_buildings_third_world_small = {
 	# Agriculture (dominant)
 	create_building = {
 		building = "building_wheat_farm"
-		level = 5
+		level = 15
 		reserves = 1
 	}
 	create_building = {
 		building = "building_maize_farm"
-		level = 4
+		level = 14
 		reserves = 1
 	}
 	create_building = {
 		building = "building_millet_farm"
-		level = 3
+		level = 13
 		reserves = 1
 	}
 	create_building = {
 		building = "building_rice_farm"
-		level = 3
+		level = 13
 		reserves = 1
 	}
 	create_building = {
 		building = "building_livestock_ranch"
-		level = 4
+		level = 14
 		reserves = 1
 	}
 
 	# Resource Extraction
 	create_building = {
 		building = "building_logging_camp"
-		level = 3
+		level = 13
 		reserves = 1
 	}
 	create_building = {
 		building = "building_coal_mine"
-		level = 2
+		level = 12
 		reserves = 1
 	}
 	create_building = {
 		building = "building_iron_mine"
-		level = 2
+		level = 12
 		reserves = 1
 	}
 
@@ -1978,23 +1971,6 @@ effect_starting_buildings_third_world_small = {
 	create_building = {
 		building = "building_food_industry"
 		level = 3
-		reserves = 1
-	}
-	create_building = {
-		building = "building_textile_mill"
-		level = 2
-		reserves = 1
-	}
-
-	# Basic Services
-	create_building = {
-		building = "building_food_service"
-		level = 2
-		reserves = 1
-	}
-	create_building = {
-		building = "building_retail_services"
-		level = 2
 		reserves = 1
 	}
 
@@ -2068,32 +2044,32 @@ effect_starting_buildings_third_world_medium = {
 	# Agriculture (dominant)
 	create_building = {
 		building = "building_wheat_farm"
-		level = 10
+		level = 20
 		reserves = 1
 	}
 	create_building = {
 		building = "building_maize_farm"
-		level = 8
+		level = 28
 		reserves = 1
 	}
 	create_building = {
 		building = "building_rice_farm"
-		level = 6
+		level = 26
 		reserves = 1
 	}
 	create_building = {
 		building = "building_millet_farm"
-		level = 6
+		level = 26
 		reserves = 1
 	}
 	create_building = {
 		building = "building_rye_farm"
-		level = 4
+		level = 24
 		reserves = 1
 	}
 	create_building = {
 		building = "building_livestock_ranch"
-		level = 8
+		level = 28
 		reserves = 1
 	}
 	if = {
@@ -2113,12 +2089,12 @@ effect_starting_buildings_third_world_medium = {
 	}
 	create_building = {
 		building = "building_coal_mine"
-		level = 4
+		level = 12
 		reserves = 1
 	}
 	create_building = {
 		building = "building_iron_mine"
-		level = 4
+		level = 12
 		reserves = 1
 	}
 	create_building = {
@@ -2142,37 +2118,18 @@ effect_starting_buildings_third_world_medium = {
 	# Basic Industry
 	create_building = {
 		building = "building_food_industry"
-		level = 6
+		level = 2
 		reserves = 1
 	}
 	create_building = {
 		building = "building_textile_mill"
-		level = 4
-		reserves = 1
-	}
-
-	# Basic Services
-	create_building = {
-		building = "building_food_service"
-		level = 4
-		reserves = 1
-	}
-	create_building = {
-		building = "building_retail_services"
-		level = 3
+		level = 2
 		reserves = 1
 	}
 
 	# Education (minimal)
 	create_building = {
 		building = "building_university"
-		level = 1
-		reserves = 1
-	}
-
-	# Airport (basic)
-	create_building = {
-		building = "building_airport"
 		level = 1
 		reserves = 1
 	}
@@ -2242,7 +2199,7 @@ effect_starting_buildings_third_world_large = {
 	# Power
 	create_building = {
 		building = "building_power_plant"
-		level = 6
+		level = 2
 		reserves = 1
 	}
 
@@ -2256,7 +2213,7 @@ effect_starting_buildings_third_world_large = {
 	# Agriculture (dominant)
 	create_building = {
 		building = "building_livestock_ranch"
-		level = 18
+		level = 66
 		reserves = 1
 	}
 	if = {
@@ -2271,32 +2228,32 @@ effect_starting_buildings_third_world_large = {
 	# Agriculture (dominant)
 	create_building = {
 		building = "building_wheat_farm"
-		level = 25
+		level = 45
 		reserves = 1
 	}
 	create_building = {
 		building = "building_maize_farm"
-		level = 20
+		level = 60
 		reserves = 1
 	}
 	create_building = {
 		building = "building_rice_farm"
-		level = 15
+		level = 65
 		reserves = 1
 	}
 	create_building = {
 		building = "building_millet_farm"
-		level = 14
+		level = 54
 		reserves = 1
 	}
 	create_building = {
 		building = "building_rye_farm"
-		level = 8
+		level = 82
 		reserves = 1
 	}
 	create_building = {
 		building = "building_livestock_ranch"
-		level = 18
+		level = 58
 		reserves = 1
 	}
 	if = {
@@ -2468,7 +2425,7 @@ effect_starting_buildings_third_world_huge = {
 	# Agriculture (overwhelmingly dominant)
 	create_building = {
 		building = "building_wheat_farm"
-		level = 55
+		level = 75
 		reserves = 1
 	}
 	create_building = {
@@ -2478,7 +2435,7 @@ effect_starting_buildings_third_world_huge = {
 	}
 	create_building = {
 		building = "building_rice_farm"
-		level = 40
+		level = 75
 		reserves = 1
 	}
 	create_building = {

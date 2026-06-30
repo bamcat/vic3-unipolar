@@ -1693,6 +1693,15 @@ BRZ = { # Brazil
 			coa_def_american_ensign_trigger = yes
 		}
 	}
+
+	flag_definition = {
+		coa = BRZ_absolute_monarchy
+		subject_canton = BRZ_absolute_monarchy
+		priority = 20
+		trigger = {
+			coa_def_absolute_monarchy_flag_trigger = yes
+		}
+	}
 }
 
 BST = { # Basutoland/Lesotho
@@ -7626,7 +7635,7 @@ NZL = { # New Zealand
 		}
 	}
 	flag_definition = {
-		coa = NZL_republic
+		coa = NZL
 		priority = 10
 		allow_overlord_canton = yes
 		overlord_canton_scale = { 0.25 0.25 }
@@ -8156,13 +8165,13 @@ PEU = { # Peru
 		}
 	}
 	flag_definition = {
-		coa = PEU_republic
-		subject_canton = PEU_republic
+		coa = PEU_c
+		subject_canton = PEU_c
 		priority = 10
 		trigger = {
 			coa_def_republic_flag_trigger = yes
 			scope:actor ?= {
-				has_law_or_variant = law_type:law_universal_suffrage
+				has_law_or_variant = law_type:law_parliamentary_republic
 			}
 		}
 	}
@@ -8182,7 +8191,7 @@ PEU = { # Peru
 		trigger = {
 			coa_def_republic_flag_trigger = yes
 			scope:actor ?= {
-				NOT = { has_law_or_variant = law_type:law_universal_suffrage }
+				NOT = { has_law_or_variant = law_type:law_parliamentary_republic }
 			}
 		}
 	}
@@ -9751,6 +9760,15 @@ SYR = { # Syria
 		priority = 1
 	}
 	flag_definition = {
+		coa = SYR
+		subject_canton = SYR
+		allow_overlord_canton = yes
+		priority = 10
+		trigger = {
+			coa_def_dictatorship_flag_trigger = yes
+		}
+	}
+	flag_definition = {
 		coa = SYR_republic
 		subject_canton = SYR_republic
 		allow_overlord_canton = yes
@@ -10485,8 +10503,8 @@ VNZ = { # Venezuela
 		}
 	}
 	flag_definition = {
-		coa = VNZ_republic
-		subject_canton = VNZ_republic
+		coa = VNZ
+		subject_canton = VNZ
 		allow_overlord_canton = yes
 		coa_with_overlord_canton = VNZ_subject
 		priority = 10
@@ -10948,6 +10966,43 @@ PRC = { # Paris Commune
 		priority = 1500
 		trigger = {
 			coa_def_communist_flag_trigger = yes
+		}
+	}
+
+	flag_definition = {
+		coa = PRC_absolute_monarchy
+		subject_canton = PRC_absolute_monarchy
+		coa_with_overlord_canton = PRC_subject
+		allow_overlord_canton = yes
+		priority = 20
+		trigger = {
+			coa_def_absolute_monarchy_flag_trigger = yes
+		}
+	}
+	flag_definition = {
+		coa = PRC_republic
+		subject_canton = PRC_republic
+		allow_overlord_canton = yes
+		priority = 10
+		trigger = {
+			coa_def_republic_flag_trigger = yes
+		}
+	}
+	flag_definition = {
+		coa = PRC
+		subject_canton = PRC
+		priority = 20
+		trigger = {
+			coa_def_dictatorship_flag_trigger = yes
+		}
+	}
+	flag_definition = {
+		coa = PRC_theocracy
+		subject_canton = PRC_theocracy
+		subject_canton = PRC_absolute_monarchy
+		priority = 20
+		trigger = {
+			coa_def_theocracy_flag_trigger = yes
 		}
 	}
 }
@@ -12351,8 +12406,8 @@ REPLACE_OR_CREATE:IRA = { # Iran
 		}
 	}
 	flag_definition = {
-		coa = IRA_theocracy
-		subject_canton = IRA_theocracy
+		coa = IRA
+		subject_canton = IRA
 		priority = 20
 		trigger = {
 			coa_def_theocracy_flag_trigger = yes
@@ -12409,8 +12464,8 @@ REPLACE_OR_CREATE:ROC = { # Republic of China
 		}
 	}
 	flag_definition = {
-		coa = CHI_republic
-		subject_canton = CHI_republic
+		coa = ROC
+		subject_canton = CHI_subject
 		allow_overlord_canton = yes
 		priority = 10
 		trigger = {

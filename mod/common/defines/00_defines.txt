@@ -470,7 +470,7 @@ NEconomy = {
 	CREDIT_RATIO_MAX_OVERRUN = 0.01 			# Countries can accumulate this percentage more of a debt "hole" than their credit limit when in default
 	GOLD_RESERVE_RATIO_AT_START = 0.25			# Unless a country history's 'treasury' parameter is set to a non-zero value, countries start with this ratio of their gold reserve in gold
 	BUILDING_INITIAL_WAGE_WEEKS = 2				# A building will not adjust its wages for the first this many weeks of its existence
-	MAX_WAGE_STEP_CHANGE = 0.1					# Wage rates can change at most this much each week
+	MAX_WAGE_STEP_CHANGE = 10000				# Wage rates can change at most this much each week
 	SUBSIDIES_MIN_GAIN = 0						# If a building is subsidized, it will always collect enough subsidies to ensure at least this weekly cash reserve growth
 	DEFAULT_MIN_HIRING_RATE = 0.01 				# Default weekly min hiring limit applied in a building per profession as a ratio of full employment
 	DEFAULT_MAX_HIRING_RATE = 0.1 				# Default weekly max hiring limit applied in a building per profession as a ratio of full employment
@@ -1419,7 +1419,7 @@ NPops = {
 	OBSESSION_POP_NEED_EXPENSE_MULT = 0.25		# Total spent on pop needs including obsessions is changed by this (scaled by number of obsessions, money is given or taken from other needs)
 	TABOO_POP_NEED_EXPENSE_MULT = -0.25			# Total spent on pop needs including taboos is changed by this (scaled by number of taboos, money is given or taken from other needs)
 
-	WORKING_ADULT_RATIO_BASE = 0.25				# Base ratio of working adults to dependents, this can be overridden by pop type definition and country modifiers.
+	WORKING_ADULT_RATIO_BASE = 0.40				# Base ratio of working adults to dependents, this can be overridden by pop type definition and country modifiers.
 	WORKING_ADULT_RATIO_SKEW_MAXIMUM = 2.0		# When the ratio of working adults to dependents is skewed, it tends to correct itself, this value clamps the maximum effect of this
 	DEPENDENT_CONSUMPTION_RATIO = 0.5			# Dependents consume this multiple of Needs compared to Working Adults
 
@@ -2066,6 +2066,9 @@ NTravelNetwork = {
 	FORMATION_REPATH_MAX_DAYS_EXTRA = 60			# Maximum nr of days an automatic formation re-pathing may take (when travel access changes in ongoing travel)
 
 	HARSH_ENVIRONMENT_TERRAIN_LABEL = "label_travel_harsh_environment"	# Terrain label which marks nodes in them as being in harsh environment, triggering 'UNDEVELOPED_HARSH' connection type
+
+	PAVED_ROAD_TECH = "urbanization"												# Technology required for paved roads
+	PAVED_ROAD_MIN_INFRASTRUCTURE = 500.0										# Minimum infrastructure for paved roads
 }
 
 NHarvestConditions = {

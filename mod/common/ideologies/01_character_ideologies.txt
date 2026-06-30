@@ -45,10 +45,9 @@ REPLACE_OR_CREATE:ideology_marxist_leader = {
 		law_collectivized_agriculture = strongly_approve
 	}
 	lawgroup_labor_rights = {
-		law_no_workers_rights = disapprove
+		law_serfdom_banned = strongly_disapprove
 		law_regulatory_bodies = approve
 		law_worker_protections = strongly_approve
-		law_serfdom_banned = neutral
 	}
 	lawgroup_taxation = {
 		law_consumption_based_taxation = strongly_disapprove
@@ -198,10 +197,9 @@ REPLACE_OR_CREATE:ideology_anarchist_leader = {
 		law_corporatized_unions = disapprove
 	}
 	lawgroup_labor_rights = {
-		law_no_workers_rights = strongly_disapprove
+		law_serfdom_banned = strongly_disapprove
 		law_regulatory_bodies = neutral
 		law_worker_protections = approve
-		law_serfdom_banned = approve
 	}
 	lawgroup_free_speech = {
 		law_outlawed_dissent = strongly_disapprove
@@ -419,6 +417,11 @@ REPLACE_OR_CREATE:ideology_state_socialist_leader = {
 		law_licensed_firearms = approve
 		law_banned_firearms = approve
 	}
+	lawgroup_labor_rights = {
+		law_serfdom_banned = strongly_disapprove
+		law_regulatory_bodies = approve
+		law_worker_protections = strongly_approve
+	}
 
 country_trigger = {
 		always = yes
@@ -563,10 +566,9 @@ REPLACE_OR_CREATE:ideology_left_wing_populist_leader = {
 		law_universal_basic_income = disapprove
 	}
 	lawgroup_labor_rights = {
-		law_no_workers_rights = disapprove
-		law_regulatory_bodies = neutral
-		law_worker_protections = approve
-		law_serfdom_banned = neutral
+		law_serfdom_banned = disapprove
+		law_regulatory_bodies = approve
+		law_worker_protections = strongly_approve
 	}
 	lawgroup_citizenship = {
 		law_ethnostate = strongly_disapprove
@@ -750,6 +752,11 @@ REPLACE_OR_CREATE:ideology_democratic_socialist_leader = {
 		law_licensed_firearms = strongly_approve
 		law_banned_firearms = neutral
 	}
+	lawgroup_labor_rights = {
+		law_serfdom_banned = strongly_disapprove
+		law_regulatory_bodies = approve
+		law_worker_protections = strongly_approve
+	}
 
 country_trigger = {
 		always = yes
@@ -908,6 +915,11 @@ REPLACE_OR_CREATE:ideology_green_leader = {
 		law_safe_injection_sites = strongly_approve
 		law_trafficking_allowed = strongly_disapprove
 	}
+	lawgroup_labor_rights = {
+		law_serfdom_banned = disapprove
+		law_regulatory_bodies = approve
+		law_worker_protections = strongly_approve
+	}
 
 country_trigger = {
 		always = yes
@@ -1024,10 +1036,9 @@ REPLACE_OR_CREATE:ideology_state_capitalist_leader = {
 		law_single_party_state = strongly_approve
 	}
 	lawgroup_labor_rights = {
-		law_no_workers_rights = neutral
+		law_serfdom_banned = neutral
 		law_regulatory_bodies = approve
 		law_worker_protections = neutral
-		law_serfdom_banned = disapprove
 	}
 	lawgroup_education_system = {
 		law_no_schools = strongly_disapprove
@@ -1171,10 +1182,9 @@ REPLACE_OR_CREATE:ideology_market_socialist_leader = {
 		law_corporatized_unions = neutral
 	}
 	lawgroup_labor_rights = {
-		law_no_workers_rights = disapprove
-		law_regulatory_bodies = neutral
-		law_worker_protections = approve
-		law_serfdom_banned = neutral
+		law_serfdom_banned = disapprove
+		law_regulatory_bodies = approve
+		law_worker_protections = strongly_approve
 	}
 	lawgroup_taxation = {
 		law_consumption_based_taxation = strongly_disapprove
@@ -1357,6 +1367,11 @@ REPLACE_OR_CREATE:ideology_progressive_leader = {
 		law_safe_injection_sites = strongly_approve
 		law_trafficking_allowed = strongly_disapprove
 	}
+	lawgroup_labor_rights = {
+		law_serfdom_banned = disapprove
+		law_regulatory_bodies = approve
+		law_worker_protections = strongly_approve
+	}
 
 country_trigger = {
 		always = yes
@@ -1522,6 +1537,11 @@ REPLACE_OR_CREATE:ideology_social_liberal_leader = {
 		law_licensed_firearms = strongly_approve
 		law_banned_firearms = neutral
 	}
+	lawgroup_labor_rights = {
+		law_serfdom_banned = disapprove
+		law_regulatory_bodies = approve
+		law_worker_protections = approve
+	}
 
 country_trigger = {
 		always = yes
@@ -1680,6 +1700,11 @@ REPLACE_OR_CREATE:ideology_technocrat_leader = {
 		law_unrestricted_firearms = strongly_disapprove
 		law_licensed_firearms = strongly_approve
 		law_banned_firearms = neutral
+	}
+	lawgroup_labor_rights = {
+		law_serfdom_banned = neutral
+		law_regulatory_bodies = approve
+		law_worker_protections = approve
 	}
 
 country_trigger = {
@@ -1851,6 +1876,11 @@ REPLACE_OR_CREATE:ideology_liberal_leader = {
 		law_licensed_firearms = neutral
 		law_banned_firearms = neutral
 	}
+	lawgroup_labor_rights = {
+		law_serfdom_banned = neutral
+		law_regulatory_bodies = approve
+		law_worker_protections = neutral
+	}
 
 country_trigger = {
 		always = yes
@@ -1967,6 +1997,11 @@ REPLACE_OR_CREATE:ideology_moderate_leader = {
 		law_unrestricted_firearms = disapprove
 		law_licensed_firearms = strongly_approve
 		law_banned_firearms = neutral
+	}
+	lawgroup_labor_rights = {
+		law_serfdom_banned = neutral
+		law_regulatory_bodies = neutral
+		law_worker_protections = neutral
 	}
 
 country_trigger = {
@@ -2106,6 +2141,11 @@ REPLACE_OR_CREATE:ideology_neoliberal_leader = {
 		law_hard_drugs_decriminalized = neutral
 		law_safe_injection_sites = neutral
 		law_trafficking_allowed = disapprove
+	}
+	lawgroup_labor_rights = {
+		law_serfdom_banned = approve
+		law_regulatory_bodies = neutral
+		law_worker_protections = disapprove
 	}
 
 country_trigger = {
@@ -2276,6 +2316,11 @@ REPLACE_OR_CREATE:ideology_conservative_leader = {
 		law_licensed_firearms = neutral
 		law_banned_firearms = disapprove
 	}
+	lawgroup_labor_rights = {
+		law_serfdom_banned = approve
+		law_regulatory_bodies = neutral
+		law_worker_protections = disapprove
+	}
 
 country_trigger = {
 		always = yes
@@ -2407,10 +2452,9 @@ REPLACE_OR_CREATE:ideology_corporatist_leader = {
 		law_corporatized_unions = strongly_approve
 	}
 	lawgroup_labor_rights = {
-		law_no_workers_rights = neutral
-		law_regulatory_bodies = approve
-		law_worker_protections = neutral
 		law_serfdom_banned = disapprove
+		law_regulatory_bodies = strongly_approve
+		law_worker_protections = approve
 	}
 	lawgroup_trade_policy = {
 		law_mercantilism = neutral
@@ -2588,6 +2632,11 @@ REPLACE_OR_CREATE:ideology_theocrat_leader = {
 		law_safe_injection_sites = strongly_disapprove
 		law_trafficking_allowed = strongly_disapprove
 	}
+	lawgroup_labor_rights = {
+		law_serfdom_banned = neutral
+		law_regulatory_bodies = approve
+		law_worker_protections = neutral
+	}
 
 country_trigger = {
 		always = yes
@@ -2737,6 +2786,11 @@ REPLACE_OR_CREATE:ideology_right_wing_libertarian_leader = {
 		law_unrestricted_firearms = strongly_approve
 		law_licensed_firearms = neutral
 		law_banned_firearms = strongly_disapprove
+	}
+	lawgroup_labor_rights = {
+		law_serfdom_banned = strongly_approve
+		law_regulatory_bodies = disapprove
+		law_worker_protections = strongly_disapprove
 	}
 
 country_trigger = {
@@ -2900,6 +2954,11 @@ REPLACE_OR_CREATE:ideology_classical_liberal_leader = {
 		law_licensed_firearms = disapprove
 		law_banned_firearms = strongly_disapprove
 	}
+	lawgroup_labor_rights = {
+		law_serfdom_banned = approve
+		law_regulatory_bodies = neutral
+		law_worker_protections = disapprove
+	}
 
 country_trigger = {
 		always = yes
@@ -3050,6 +3109,11 @@ REPLACE_OR_CREATE:ideology_neocon_leader = {
 		law_licensed_firearms = disapprove
 		law_banned_firearms = disapprove
 	}
+	lawgroup_labor_rights = {
+		law_serfdom_banned = approve
+		law_regulatory_bodies = neutral
+		law_worker_protections = disapprove
+	}
 
 country_trigger = {
 		always = yes
@@ -3192,7 +3256,11 @@ REPLACE_OR_CREATE:ideology_jihadist_leader = {
 		law_safe_injection_sites = strongly_disapprove
 		law_trafficking_allowed = strongly_disapprove
 	}
-
+	lawgroup_labor_rights = {
+		law_serfdom_banned = approve
+		law_regulatory_bodies = disapprove
+		law_worker_protections = strongly_disapprove
+	}
 
 country_trigger = {
 		always = yes
@@ -3349,6 +3417,11 @@ REPLACE_OR_CREATE:ideology_minarchist_leader = {
 		law_unrestricted_firearms = strongly_approve
 		law_licensed_firearms = neutral
 		law_banned_firearms = strongly_disapprove
+	}
+	lawgroup_labor_rights = {
+		law_serfdom_banned = strongly_approve
+		law_regulatory_bodies = strongly_disapprove
+		law_worker_protections = strongly_disapprove
 	}
 
 country_trigger = {
@@ -3508,6 +3581,11 @@ REPLACE_OR_CREATE:ideology_right_wing_populist_leader = {
 		law_unrestricted_firearms = strongly_approve
 		law_licensed_firearms = strongly_disapprove
 		law_banned_firearms = strongly_disapprove
+	}
+	lawgroup_labor_rights = {
+		law_serfdom_banned = neutral
+		law_regulatory_bodies = approve
+		law_worker_protections = approve
 	}
 
 country_trigger = {
@@ -3672,6 +3750,11 @@ REPLACE_OR_CREATE:ideology_authoritarian_capitalist_leader = {
 		law_hard_drugs_decriminalized = strongly_disapprove
 		law_safe_injection_sites = strongly_disapprove
 		law_trafficking_allowed = strongly_disapprove
+	}
+	lawgroup_labor_rights = {
+		law_serfdom_banned = approve
+		law_regulatory_bodies = neutral
+		law_worker_protections = disapprove
 	}
 
 country_trigger = {
@@ -3838,6 +3921,11 @@ REPLACE_OR_CREATE:ideology_monarchist_leader = {
 		law_safe_injection_sites = strongly_disapprove
 		law_trafficking_allowed = strongly_disapprove
 	}
+	lawgroup_labor_rights = {
+		law_serfdom_banned = approve
+		law_regulatory_bodies = neutral
+		law_worker_protections = disapprove
+	}
 
 country_trigger = {
 		always = yes
@@ -3984,6 +4072,11 @@ REPLACE_OR_CREATE:ideology_fascist_leader = {
 		law_unrestricted_firearms = strongly_disapprove
 		law_licensed_firearms = approve
 		law_banned_firearms = strongly_approve
+	}
+	lawgroup_labor_rights = {
+		law_serfdom_banned = disapprove
+		law_regulatory_bodies = approve
+		law_worker_protections = neutral
 	}
 
 country_trigger = {

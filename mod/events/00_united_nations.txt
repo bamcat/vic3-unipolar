@@ -352,6 +352,12 @@ un_events.1 = {
 		if = { limit = { has_variable = already_got_peacekeep }
 			remove_variable = already_got_peacekeep
 		}
+		# Count actual P5 members before sending vote events
+		set_global_variable = { name = un_p5_count value = 0 }
+		every_country = {
+			limit = { has_modifier = permanent_unsc_member }
+			change_global_variable = { name = un_p5_count add = 1 }
+		}
 		every_country = {
 			limit = { has_modifier = permanent_unsc_member }
 			trigger_event = { id = un_events.2 }
@@ -435,7 +441,7 @@ un_events.3 = {
 	
 	trigger = { 
 		global_var:un_peacekeeping_votes >= 2.5
-		global_var:un_peacekeeping_num_votes >= 5
+		global_var:un_peacekeeping_num_votes >= global_var:un_p5_count
 		NOT = { has_variable = already_got_peacekeep }
 	}
 	
@@ -468,7 +474,7 @@ un_events.4 = {
 	
 	trigger = {
 		global_var:un_peacekeeping_votes <= 2.5
-		global_var:un_peacekeeping_num_votes >= 5
+		global_var:un_peacekeeping_num_votes >= global_var:un_p5_count
 		has_variable = already_got_peacekeep
 	}
 	

@@ -16,7 +16,7 @@
     }
     resource = {
         type = "building_oil_rig"
-        undiscovered_amount = 60
+        undiscovered_amount = 160
     }
     naval_exit_id = 3046
 }
@@ -37,7 +37,7 @@ STATE_OMAN = {
     }
     resource = {
         type = "building_oil_rig"
-        undiscovered_amount = 30
+        undiscovered_amount = 130
     }
     naval_exit_id = 3073
 }
@@ -60,7 +60,7 @@ STATE_ABU_DHABI = {
     }
     resource = {
         type = "building_oil_rig"
-        undiscovered_amount = 80
+        undiscovered_amount = 180
     }
     naval_exit_id = 3046
 }
@@ -85,7 +85,7 @@ STATE_YEMEN = {
     }
     resource = {
         type = "building_oil_rig"
-        undiscovered_amount = 30
+        undiscovered_amount = 98
     }
     naval_exit_id = 3047
 }
@@ -103,7 +103,7 @@ STATE_HEDJAZ = {
     arable_land = 20
     arable_resources = { "building_livestock_ranch" }
     capped_resources = {
-        building_sulfur_mine = 28
+        building_sulfur_mine = 42
         building_fishing_wharf = 5
     }
     naval_exit_id = 3047
@@ -124,6 +124,10 @@ STATE_HAIL = {
     arable_resources = { "building_livestock_ranch" }
     capped_resources = {
         building_fishing_wharf = 2
+    }
+	resource = {
+        type = "building_oil_rig"
+        undiscovered_amount = 122
     }
     naval_exit_id = 3046
 }
@@ -177,7 +181,7 @@ STATE_PALESTINE = {
     mine = "xE05060"
     wood = "x365E8F"
     arable_land = 30
-    arable_resources = { "building_millet_farm" "building_livestock_ranch" "building_cotton_plantation" "building_silk_plantation" "building_tobacco_plantation" "building_banana_plantation" "building_vineyard" }
+    arable_resources = { "building_millet_farm" "building_livestock_ranch" "building_cotton_plantation" "building_tobacco_plantation" "building_banana_plantation" "building_vineyard" }
     capped_resources = {
         building_iron_mine = 24
         building_logging_camp = 5
@@ -198,7 +202,7 @@ STATE_LEBANON = {
     mine = "xECCAC7"
     wood = "xA050E0"
     arable_land = 30
-    arable_resources = { "building_millet_farm" "building_livestock_ranch" "building_cotton_plantation" "building_tobacco_plantation" "building_banana_plantation" "building_vineyard" "building_silk_plantation" }
+    arable_resources = { "building_millet_farm" "building_livestock_ranch" "building_cotton_plantation" "building_tobacco_plantation" "building_banana_plantation" "building_vineyard" }
     capped_resources = {
         building_coal_mine = 44
         building_logging_camp = 4
@@ -217,7 +221,7 @@ STATE_SYRIA = {
     mine = "xE09060"
     wood = "xCB0113"
     arable_land = 30
-    arable_resources = { "building_millet_farm" "building_livestock_ranch" "building_cotton_plantation" "building_silk_plantation" "building_tobacco_plantation" "building_vineyard" }
+    arable_resources = { "building_millet_farm" "building_livestock_ranch" "building_cotton_plantation" "building_tobacco_plantation" "building_vineyard" }
     capped_resources = {
         building_logging_camp = 2
     }
@@ -234,7 +238,7 @@ STATE_ALEPPO = {
     mine = "xE01160"
     wood = "x14AB01"
     arable_land = 40
-    arable_resources = { "building_wheat_farm" "building_livestock_ranch" "building_banana_plantation" "building_cotton_plantation" "building_silk_plantation" "building_tobacco_plantation" "building_vineyard" }
+    arable_resources = { "building_wheat_farm" "building_livestock_ranch" "building_banana_plantation" "building_cotton_plantation" "building_tobacco_plantation" "building_vineyard" }
     capped_resources = {
         building_logging_camp = 6
         building_fishing_wharf = 5
@@ -252,10 +256,10 @@ STATE_BAGHDAD = {
     mine = "x4F90CC"
     wood = "x0CA064"
     arable_land = 40
-    arable_resources = { "building_rice_farm" "building_livestock_ranch" "building_silk_plantation" "building_tobacco_plantation" }
+    arable_resources = { "building_rice_farm" "building_livestock_ranch" "building_tobacco_plantation" }
     resource = {
         type = "building_oil_rig"
-        undiscovered_amount = 40
+        undiscovered_amount = 140
     }
 }
 
@@ -303,14 +307,14 @@ STATE_BASRA = {
     mine = "x88ADC8"
     wood = "x7CAD29"
     arable_land = 30
-    arable_resources = { "building_rice_farm" "building_livestock_ranch" "building_silk_plantation" "building_tobacco_plantation" }
+    arable_resources = { "building_rice_farm" "building_livestock_ranch" "building_tobacco_plantation" }
     capped_resources = {
         building_sulfur_mine = 32
         building_fishing_wharf = 6
     }
     resource = {
         type = "building_oil_rig"
-        undiscovered_amount = 60
+        undiscovered_amount = 200
     }
     naval_exit_id = 3046
 }
@@ -326,7 +330,7 @@ STATE_FARS = {
     mine = "xB5A598"
     wood = "x8030DF"
     arable_land = 70
-    arable_resources = { "building_wheat_farm" "building_livestock_ranch" "building_cotton_plantation" "building_silk_plantation" "building_opium_plantation" "building_vineyard" "building_tobacco_plantation" "building_dye_plantation" }
+    arable_resources = { "building_wheat_farm" "building_livestock_ranch" "building_cotton_plantation" "building_opium_plantation" "building_vineyard" "building_tobacco_plantation" "building_dye_plantation" }
     capped_resources = {
         building_sulfur_mine = 28
         building_iron_mine = 5
@@ -335,7 +339,7 @@ STATE_FARS = {
     }
     resource = {
         type = "building_oil_rig"
-        undiscovered_amount = 60
+        undiscovered_amount = 90
     }
     naval_exit_id = 3046
 }
@@ -351,7 +355,7 @@ STATE_LARISTAN = {
     mine = "x407020"
     wood = "x8070A0"
     arable_land = 30
-    arable_resources = { "building_wheat_farm" "building_livestock_ranch" "building_tobacco_plantation" "building_opium_plantation" "building_dye_plantation" "building_cotton_plantation" "building_silk_plantation" "building_vineyard" }
+    arable_resources = { "building_wheat_farm" "building_livestock_ranch" "building_tobacco_plantation" "building_opium_plantation" "building_dye_plantation" "building_cotton_plantation" "building_vineyard" }
     capped_resources = {
         building_iron_mine = 11
         building_fishing_wharf = 10
@@ -359,7 +363,7 @@ STATE_LARISTAN = {
     }
     resource = {
         type = "building_oil_rig"
-        undiscovered_amount = 40
+        undiscovered_amount = 120
     }
     naval_exit_id = 3046
 }
@@ -374,12 +378,16 @@ STATE_KERMAN = {
     mine = "x901598"
     wood = "x901598"
     arable_land = 20
-    arable_resources = { "building_wheat_farm" "building_livestock_ranch" "building_tobacco_plantation" "building_opium_plantation" "building_dye_plantation" "building_cotton_plantation" "building_silk_plantation" "building_vineyard" }
+    arable_resources = { "building_wheat_farm" "building_livestock_ranch" "building_tobacco_plantation" "building_opium_plantation" "building_dye_plantation" "building_cotton_plantation" "building_vineyard" }
     capped_resources = {
         building_coal_mine = 14
         building_iron_mine = 40
         building_sulfur_mine = 22
         building_logging_camp = 2
+    }
+	resource = {
+        type = "building_oil_rig"
+        undiscovered_amount = 65
     }
 }
 
@@ -412,7 +420,7 @@ STATE_KHORASAN = {
     mine = "x98DCCC"
     wood = "x943855"
     arable_land = 90
-    arable_resources = { "building_wheat_farm" "building_livestock_ranch" "building_dye_plantation" "building_opium_plantation" "building_tobacco_plantation" "building_cotton_plantation" "building_silk_plantation" "building_vineyard" }
+    arable_resources = { "building_wheat_farm" "building_livestock_ranch" "building_dye_plantation" "building_opium_plantation" "building_tobacco_plantation" "building_cotton_plantation" "building_vineyard" }
     capped_resources = {
         building_logging_camp = 4
         building_iron_mine = 22
@@ -420,7 +428,7 @@ STATE_KHORASAN = {
     }
     resource = {
         type = "building_oil_rig"
-        undiscovered_amount = 20
+        undiscovered_amount = 90
     }
 }
 
@@ -434,7 +442,7 @@ STATE_KHUZESTAN = {
     mine = "x80E4E1"
     wood = "xF5BD8F"
     arable_land = 60
-    arable_resources = { "building_wheat_farm" "building_livestock_ranch" "building_cotton_plantation" "building_opium_plantation" "building_tobacco_plantation" "building_dye_plantation" "building_sugar_plantation" "building_silk_plantation" }
+    arable_resources = { "building_wheat_farm" "building_livestock_ranch" "building_cotton_plantation" "building_opium_plantation" "building_tobacco_plantation" "building_dye_plantation" "building_sugar_plantation" }
     capped_resources = {
         building_sulfur_mine = 22
         building_fishing_wharf = 5
@@ -442,7 +450,7 @@ STATE_KHUZESTAN = {
     }
     resource = {
         type = "building_oil_rig"
-        undiscovered_amount = 60
+        undiscovered_amount = 130
     }
     naval_exit_id = 3046
 }
@@ -457,7 +465,7 @@ STATE_ISFAHAN = {
     mine = "x8D9CEC"
     wood = "x527229"
     arable_land = 90
-    arable_resources = { "building_wheat_farm" "building_livestock_ranch" "building_tobacco_plantation" "building_opium_plantation" "building_dye_plantation" "building_cotton_plantation" "building_silk_plantation" "building_vineyard" }
+    arable_resources = { "building_wheat_farm" "building_livestock_ranch" "building_tobacco_plantation" "building_opium_plantation" "building_dye_plantation" "building_cotton_plantation" "building_vineyard" }
     capped_resources = {
         building_coal_mine = 22
         building_iron_mine = 51
@@ -476,7 +484,7 @@ STATE_MAZANDARAN = {
     mine = "x3834CF"
     wood = "x51E7A3"
     arable_land = 70
-    arable_resources = { "building_rice_farm" "building_livestock_ranch" "building_cotton_plantation" "building_silk_plantation" "building_opium_plantation" "building_tea_plantation" "building_sugar_plantation" "building_tobacco_plantation" }
+    arable_resources = { "building_rice_farm" "building_livestock_ranch" "building_cotton_plantation" "building_opium_plantation" "building_tea_plantation" "building_sugar_plantation" "building_tobacco_plantation" }
     capped_resources = {
         building_coal_mine = 22
         building_iron_mine = 11
@@ -484,7 +492,7 @@ STATE_MAZANDARAN = {
     }
     resource = {
         type = "building_oil_rig"
-        undiscovered_amount = 20
+        undiscovered_amount = 70
     }
 }
 
@@ -497,7 +505,7 @@ STATE_IRAKAJEMI = {
     mine = "x41B060"
     wood = "x2E8EE8"
     arable_land = 50
-    arable_resources = { "building_wheat_farm" "building_livestock_ranch" "building_tobacco_plantation" "building_opium_plantation" "building_dye_plantation" "building_cotton_plantation" "building_silk_plantation" "building_vineyard" }
+    arable_resources = { "building_wheat_farm" "building_livestock_ranch" "building_tobacco_plantation" "building_opium_plantation" "building_dye_plantation" "building_cotton_plantation" "building_vineyard" }
     capped_resources = {
         building_logging_camp = 6
         building_coal_mine = 28
@@ -532,7 +540,7 @@ STATE_TABRIZ = {
     mine = "xC277FE"
     wood = "xCA2489"
     arable_land = 110
-    arable_resources = { "building_wheat_farm" "building_livestock_ranch" "building_cotton_plantation" "building_silk_plantation" "building_tea_plantation" "building_vineyard" "building_tobacco_plantation" "building_opium_plantation" "building_dye_plantation" }
+    arable_resources = { "building_wheat_farm" "building_livestock_ranch" "building_cotton_plantation" "building_tea_plantation" "building_vineyard" "building_tobacco_plantation" "building_opium_plantation" "building_dye_plantation" }
     capped_resources = {
         building_coal_mine = 20
         building_iron_mine = 20
@@ -551,7 +559,7 @@ STATE_URMIA = {
     mine = "x0256AF"
     wood = "xA010DF"
     arable_land = 50
-    arable_resources = { "building_wheat_farm" "building_livestock_ranch" "building_cotton_plantation" "building_silk_plantation" "building_tea_plantation" "building_vineyard" "building_tobacco_plantation" "building_opium_plantation" "building_dye_plantation" }
+    arable_resources = { "building_wheat_farm" "building_livestock_ranch" "building_cotton_plantation" "building_tea_plantation" "building_vineyard" "building_tobacco_plantation" "building_opium_plantation" "building_dye_plantation" }
     capped_resources = {
         building_iron_mine = 10
         building_logging_camp = 2
@@ -568,10 +576,10 @@ STATE_LURISTAN = {
     mine = "xC82A67"
     wood = "x2EA8EE"
     arable_land = 40
-    arable_resources = { "building_wheat_farm" "building_livestock_ranch" "building_cotton_plantation" "building_opium_plantation" "building_dye_plantation" "building_silk_plantation" "building_vineyard" "building_tobacco_plantation" }
+    arable_resources = { "building_wheat_farm" "building_livestock_ranch" "building_cotton_plantation" "building_opium_plantation" "building_dye_plantation" "building_vineyard" "building_tobacco_plantation" }
     resource = {
         type = "building_oil_rig"
-        undiscovered_amount = 20
+        undiscovered_amount = 60
     }
     capped_resources = {
         building_logging_camp = 3
@@ -589,7 +597,7 @@ STATE_PERSIAN_KURDISTAN = {
     mine = "x51BDFA"
     wood = "x80F060"
     arable_land = 50
-    arable_resources = { "building_wheat_farm" "building_livestock_ranch" "building_cotton_plantation" "building_opium_plantation" "building_dye_plantation" "building_silk_plantation" "building_vineyard" "building_tobacco_plantation" }
+    arable_resources = { "building_wheat_farm" "building_livestock_ranch" "building_cotton_plantation" "building_opium_plantation" "building_dye_plantation" "building_vineyard" "building_tobacco_plantation" }
     resource = {
         type = "building_oil_rig"
         undiscovered_amount = 20
@@ -610,7 +618,7 @@ STATE_HUDAVENDIGAR = {
     mine = "xB8FEBB"
     wood = "xB4D60B"
     arable_land = 40
-    arable_resources = { "building_wheat_farm" "building_livestock_ranch" "building_cotton_plantation" "building_silk_plantation" "building_tea_plantation" "building_tobacco_plantation" "building_vineyard" }
+    arable_resources = { "building_wheat_farm" "building_livestock_ranch" "building_cotton_plantation" "building_tea_plantation" "building_tobacco_plantation" "building_vineyard" }
     capped_resources = {
         building_logging_camp = 9
         building_fishing_wharf = 8
@@ -629,7 +637,7 @@ STATE_AYDIN = {
     mine = "xABD1D0"
     wood = "x205020"
     arable_land = 35
-    arable_resources = { "building_wheat_farm" "building_livestock_ranch" "building_cotton_plantation" "building_silk_plantation" "building_tea_plantation" "building_tobacco_plantation" "building_vineyard" }
+    arable_resources = { "building_wheat_farm" "building_livestock_ranch" "building_cotton_plantation" "building_tea_plantation" "building_tobacco_plantation" "building_vineyard" }
     capped_resources = {
         building_coal_mine = 48
         building_logging_camp = 5

@@ -114,7 +114,7 @@ popneed_basic_food = {
 	entry = {
 		goods = food_services
 		
-		weight = 2.5
+		weight = 3
 		max_supply_share = 0.75
 		min_supply_share = 0.0
 	}
@@ -126,7 +126,7 @@ popneed_housing = {
 	entry = {
 		goods = real_estate
 		
-		weight = 3
+		weight = 3.0
 		max_supply_share = 1.0
 		min_supply_share = 0.0
 	}
@@ -223,8 +223,8 @@ popneed_household_items = {
 	entry = {
 		goods = retail_services
 		
-		weight = 1.5
-		max_supply_share = 0.75
+		weight = 2.5
+		max_supply_share = 1.0
 		min_supply_share = 0.0
 	}
 	
@@ -250,12 +250,16 @@ popneed_standard_clothing = {
 
 	entry = {
 		goods = clothes
+		
+		weight = 1
+		max_supply_share = 1.0
+		min_supply_share = 0.0
 	}
 	
 	entry = {
 		goods = retail_services
 		
-		weight = 1
+		weight = 2
 		max_supply_share = 1.0
 		min_supply_share = 0.0
 	}
@@ -266,7 +270,20 @@ popneed_services = {
 
 	entry = {
 		goods = services
+		
+		weight = 1.5
+		max_supply_share = 1.0
+		min_supply_share = 0.25
 	}
+	
+	entry = {
+		goods = professional_services
+		
+		weight = 5
+		max_supply_share = 0.75
+		min_supply_share = 0.0
+	}
+	
 }
 
 popneed_intoxicants = {
@@ -469,14 +486,6 @@ popneed_luxury_items = {
 		min_supply_share = 0.1
 	}
 	
-	entry = {
-		goods = porcelain
-		
-		weight = 1
-		max_supply_share = 0.5
-		min_supply_share = 0.1
-	}
-
 	entry = {
 		goods = radios
 		
