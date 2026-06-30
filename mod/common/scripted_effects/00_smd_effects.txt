@@ -341,33 +341,67 @@ oslo_ii_acceptance_effect = {
 yugo_monthly_pressure_drift = {
 	if = {
 		limit = { c:YUG ?= this }
-		change_variable = { name = yugo_secession_pressure add = 2 }
-		change_variable = { name = yugo_stability add = -1 }
+		change_variable = { name = yugo_secession_pressure add = 1 }
+		change_variable = { name = yugo_stability add = -0.5 }
 
 		if = {
 			limit = { infamy >= infamy_threshold:infamous }
-			change_variable = { name = yugo_secession_pressure add = 3 }
+			change_variable = { name = yugo_secession_pressure add = 1 }
 		}
 		if = {
 			limit = { legitimacy < 50 }
-			change_variable = { name = yugo_secession_pressure add = 3 }
-			change_variable = { name = yugo_stability add = -2 }
+			change_variable = { name = yugo_secession_pressure add = 1 }
+			change_variable = { name = yugo_stability add = -1 }
 		}
 		if = {
 			limit = { has_law = law_type:law_outlawed_dissent }
-			change_variable = { name = yugo_secession_pressure add = 2 }
+			change_variable = { name = yugo_secession_pressure add = 1 }
+		}
+
+		# Player-side stabilising factors
+		if = {
+			limit = { has_law = law_type:law_universal_suffrage }
+			change_variable = { name = yugo_secession_pressure add = -1 }
+			change_variable = { name = yugo_stability add = 0.5 }
+		}
+		if = {
+			limit = { has_modifier = yugoslav_confederal_negotiations }
+			change_variable = { name = yugo_secession_pressure add = -1 }
+			change_variable = { name = yugo_stability add = 1 }
+		}
+		if = {
+			limit = { has_modifier = peacekeeping_force_present }
+			change_variable = { name = yugo_secession_pressure add = -0.5 }
+		}
+
+		# Hard clamps so the bar can't go off scale
+		if = {
+			limit = { var:yugo_secession_pressure > 100 }
+			set_variable = { name = yugo_secession_pressure value = 100 }
+		}
+		if = {
+			limit = { var:yugo_secession_pressure < 0 }
+			set_variable = { name = yugo_secession_pressure value = 0 }
+		}
+		if = {
+			limit = { var:yugo_stability > 100 }
+			set_variable = { name = yugo_stability value = 100 }
+		}
+		if = {
+			limit = { var:yugo_stability < 0 }
+			set_variable = { name = yugo_stability value = 0 }
 		}
 	}
 }
 
 yugo_reduce_pressure_small = {
 	change_variable = { name = yugo_secession_pressure add = -8 }
-	change_variable = { name = yugo_stability add = 4 }
+	change_variable = { name = yugo_stability add = 5 }
 }
 
 yugo_reduce_pressure_large = {
-	change_variable = { name = yugo_secession_pressure add = -20 }
-	change_variable = { name = yugo_stability add = 12 }
+	change_variable = { name = yugo_secession_pressure add = -15 }
+	change_variable = { name = yugo_stability add = 10 }
 }
 
 yugo_increase_pressure_small = {

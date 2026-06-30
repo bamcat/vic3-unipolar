@@ -227,7 +227,7 @@ types topbar_components
 				minimumsize = { 66 30 }
 				maximumsize = { 66 30 }
 				spacing = 1
-				tooltip = "NUCLEAR_WEAPONS_TOOLTIP"
+				tooltip = "[GetPlayer.GetCustom('GetNuclearFullTooltip')]"
 				using = tooltip_below
 				onmousehierarchyenter = "Nuclear warheads at our disposal."
 				alwaystransparent = no

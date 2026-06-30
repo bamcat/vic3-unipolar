@@ -34,3 +34,15 @@ on_monthly_pulse_country = {
 		}
 	}
 }
+
+# ==========================================
+# NUCLEAR TOP 5 — TRACKING
+# Recomputes the global list of the 5 largest nuclear powers
+# monthly so the topbar tooltip can display them.
+# ==========================================
+
+on_monthly_pulse = {
+	effect = {
+		nuclear_recompute_top_5 = yes
+	}
+}

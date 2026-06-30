@@ -41,11 +41,11 @@ olympics.1 = {
 		remove_variable = olympics_declined_host
 		add_modifier = {
 			name = olympics_hosting
-			months = 24
+			months = 48
 		}
 		add_modifier = {
 			name = olympics_hosting_prestige
-			months = 24
+			months = 48
 		}
 		# Notify all countries that games are coming
 		every_country = {
@@ -53,7 +53,7 @@ olympics.1 = {
 		}
 		# Queue closing ceremony at end of hosting modifier
 		hidden_effect = {
-			trigger_event = { id = olympics.9 days = 700 }
+			trigger_event = { id = olympics.9 days = 1400 }
 		}
 		ai_chance = { base = 75 }
 	}
@@ -106,7 +106,7 @@ olympics.3 = {
 		set_variable = olympics_participating
 		# Queue results event — fires when games actually happen (~18 months)
 		hidden_effect = {
-			trigger_event = { id = olympics.11 days = 540 }
+			trigger_event = { id = olympics.11 days = 1260 }
 		}
 		ai_chance = { base = 90 }
 	}

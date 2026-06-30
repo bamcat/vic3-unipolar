@@ -156,6 +156,7 @@ yugoslav_collapse.4 = {
 		default_option = yes
 		custom_tooltip = peacekeeping_mission_tt
 		change_variable = { name = yugo_international_pressure add = 20 }
+		add_modifier = { name = peacekeeping_force_present days = 1095 }
 		if = { limit = { exists = c:SRP } c:SRP = { trigger_event = { id = srpskas.1 days = 1 } } }
 		ai_chance = { base = 100 }
 	}
@@ -252,7 +253,7 @@ yugoslav_collapse.20 = {
 		NOT = { has_variable = yugoslavia_has_collapsed }
 		NOT = { has_variable = yugoslavia_salvaged }
 		var:yugo_stability >= 70
-		var:yugo_secession_pressure <= 35
+		var:yugo_secession_pressure <= 30
 	}
 
 	option = {

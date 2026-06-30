@@ -166,3 +166,13 @@ conventional_missiles_to_use_sv = {
 		min = 1
 	}
 }
+
+# Returns the country's nuke count, or 0 if no variable.
+# Used to order countries when computing the global top-5 list.
+country_nukes_count_sv = {
+	value = 0
+	if = {
+		limit = { has_variable = nukes }
+		add = var:nukes
+	}
+}

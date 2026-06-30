@@ -463,3 +463,64 @@ strategic_bombing_run = {
 		}
 	}
 }
+
+# ==========================================
+# Recompute the top 5 nuclear powers.
+# Stores their tags in 5 separate global variables that the
+# customizable_localization reads. Uses ordered_country to
+# rank by the 'nukes' variable.
+# ==========================================
+nuclear_recompute_top_5 = {
+	# Wipe previous values
+	remove_global_variable = nuclear_top_1
+	remove_global_variable = nuclear_top_2
+	remove_global_variable = nuclear_top_3
+	remove_global_variable = nuclear_top_4
+	remove_global_variable = nuclear_top_5
+
+	ordered_country = {
+		limit = {
+			has_variable = nukes
+			var:nukes > 0
+		}
+		order_by = country_nukes_count_sv
+		position = 0
+		set_global_variable = { name = nuclear_top_1 value = this }
+	}
+	ordered_country = {
+		limit = {
+			has_variable = nukes
+			var:nukes > 0
+		}
+		order_by = country_nukes_count_sv
+		position = 1
+		set_global_variable = { name = nuclear_top_2 value = this }
+	}
+	ordered_country = {
+		limit = {
+			has_variable = nukes
+			var:nukes > 0
+		}
+		order_by = country_nukes_count_sv
+		position = 2
+		set_global_variable = { name = nuclear_top_3 value = this }
+	}
+	ordered_country = {
+		limit = {
+			has_variable = nukes
+			var:nukes > 0
+		}
+		order_by = country_nukes_count_sv
+		position = 3
+		set_global_variable = { name = nuclear_top_4 value = this }
+	}
+	ordered_country = {
+		limit = {
+			has_variable = nukes
+			var:nukes > 0
+		}
+		order_by = country_nukes_count_sv
+		position = 4
+		set_global_variable = { name = nuclear_top_5 value = this }
+	}
+}

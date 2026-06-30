@@ -904,7 +904,7 @@ types country_panel_types
 				#NUKES
 				country_stats_entry = {
 					blockoverride "stats_tooltip" {
-						tooltip = "NUCLEAR_WEAPONS"
+						tooltip = "[GetPlayer.GetCustom('GetNuclearFullTooltip')]"
 					}
 					blockoverride "information_icon" {
 						texture = "gfx/interface/icons/generic_icons/00_nuclear_warheads.dds"
