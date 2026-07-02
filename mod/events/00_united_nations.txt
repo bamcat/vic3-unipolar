@@ -188,7 +188,7 @@ un_events.101 = {
 	title = un_events.101.t
 	desc = un_events.101.d
 	event_image = { video = "africa_diplomats_negotiating" }
- 
+	duration = 1
 	# Acknowledged — will vote via journal entry buttons
 	option = {
 		name = un_events.101.a
@@ -257,7 +257,7 @@ un_events.102 = {
 	title = un_events.102.t
 	desc = un_events.102.d
 	event_image = { video = "africa_diplomats_negotiating" }
- 
+
 	option = {
 		name = un_events.102.a
 		
@@ -690,9 +690,12 @@ un_events.300 = {
  
 	trigger = {}
  
+	immediate = { set_variable = cannot_propose_un_motions }
+	
 	option = {
 		name = un_events.300.a
 		default_option = yes
+		remove_variable = cannot_propose_un_motions
 		ai_chance = { base = 100 }
 		# Environmental Protection modifier
 				if = {

@@ -596,7 +596,7 @@ opec_vote_yay_button = {
 			trigger = {
 				global_var:opec_vote_type = flag:opec_embargo
 				has_global_variable = opec_embargo_target
-				has_attitude = { who = global_var:opec_embargo_target attitude = attitude_friendly }
+				has_attitude = { who = global_var:opec_embargo_target attitude = friendly }
 			}
 			add = -50
 		}

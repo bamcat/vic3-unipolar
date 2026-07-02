@@ -54,6 +54,7 @@ un_propose_motion_button = {
 			text = un_no_motion_active_tt
 			NOT = { has_global_variable = un_motion_active }
 		}
+		NOT = { has_variable = cannot_propose_un_motions }
 	}
  
 	possible = {

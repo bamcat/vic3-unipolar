@@ -53,7 +53,7 @@ law_religious_schools = {
 	institution = institution_schools
 	institution_modifier = {
 		state_conversion_mult = 0.2
-		state_education_access_add = 0.035
+		state_education_access_wealth_add = 0.0025
 		interest_group_ig_devout_pol_str_mult = 0.1
 	}
 
@@ -152,7 +152,7 @@ law_private_schools = {
 
 	institution = institution_schools
 	institution_modifier = {
-		state_education_access_wealth_add = 0.002
+		state_education_access_wealth_add = 0.005
 		interest_group_ig_intelligentsia_pol_str_mult = 0.1
 	}
 
@@ -249,7 +249,7 @@ law_public_schools = {
 	institution = institution_schools
 	institution_modifier = {
 		state_assimilation_mult = 0.125
-		state_education_access_add = 0.045
+		state_education_access_add = 0.06
 		country_education_fervor_add = 5
 	}
 
@@ -349,8 +349,8 @@ law_universal_college = {
 
 	institution = institution_schools
 	institution_modifier = {
-		state_education_access_add                      = 0.075
-		state_education_access_wealth_add               = 0.001
+		state_education_access_add                      = 0.08
+		state_education_access_wealth_add               = 0.002
 		state_expected_sol_from_literacy                = 0.5
 		state_assimilation_mult                         = 0.05
 		interest_group_ig_intelligentsia_pol_str_mult   = 0.10
