@@ -338,7 +338,7 @@ REPLACE_OR_CREATE:propose_un_condemnation = {
 		custom_tooltip = {
 			text = condemn_requires_infamy_tt
 			scope:target_country = {
-				infamy >= infamy_threshold:notorious
+				infamy >= infamy_threshold:infamous
 			}
 		}
 		NOT = { is_in_same_power_bloc = scope:target_country }
