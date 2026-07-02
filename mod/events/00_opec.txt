@@ -126,6 +126,7 @@ opec_events.11 = {
 
 	option = {
 		name = opec_events.11.a
+		every_country = { post_notification = io_opec_increased_production }
 		default_option = yes
 	}
 }
@@ -142,6 +143,7 @@ opec_events.12 = {
 
 	option = {
 		name = opec_events.12.a
+		every_country = { post_notification = io_opec_decreased_production }
 		default_option = yes
 	}
 }

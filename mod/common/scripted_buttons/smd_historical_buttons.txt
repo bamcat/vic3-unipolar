@@ -446,7 +446,7 @@ opec_propose_increase_button = {
 			text = opec_no_vote_active_tt
 			NOT = { has_global_variable = opec_vote_active }
 		}
-		NOT = { has_modifier = opec_increased_production }
+		NOR = { has_modifier = opec_decreased_production has_modifier = opec_increased_production }
 	}
 
 	ai_chance = {
@@ -472,6 +472,12 @@ opec_propose_increase_button = {
 		set_global_variable = { name = opec_vote_type value = flag:opec_increase }
 		set_global_variable = { name = opec_yes_votes value = 0 }
 		set_global_variable = { name = opec_no_votes value = 0 }
+		je:je_opec = {
+			add_progress = {
+				value = -12
+				name = opec_vote_progress_bar
+			}
+		}
 		# Clear prior vote flags
 		every_country = {
 			limit = { has_variable = opec_voted }
@@ -506,7 +512,7 @@ opec_propose_decrease_button = {
 			text = opec_no_vote_active_tt
 			NOT = { has_global_variable = opec_vote_active }
 		}
-		NOT = { has_modifier = opec_decreased_production }
+		NOR = { has_modifier = opec_decreased_production has_modifier = opec_increased_production }
 	}
 
 	ai_chance = {
@@ -532,6 +538,12 @@ opec_propose_decrease_button = {
 		set_global_variable = { name = opec_vote_type value = flag:opec_decrease }
 		set_global_variable = { name = opec_yes_votes value = 0 }
 		set_global_variable = { name = opec_no_votes value = 0 }
+		je:je_opec = {
+			add_progress = {
+				value = -12
+				name = opec_vote_progress_bar
+			}
+		}
 		every_country = {
 			limit = { has_variable = opec_voted }
 			remove_variable = opec_voted
