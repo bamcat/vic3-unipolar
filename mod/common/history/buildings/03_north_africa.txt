@@ -24,6 +24,10 @@
 				activate_production_methods={ "pm_wooden_buildings" }
 			}
 			create_building={
+				building="building_giza_necropolis"
+				level=1
+			}
+			create_building={
 				building="building_government_administration"
 				add_ownership={
 					country={
@@ -1491,6 +1495,17 @@
 				}
 				reserves=1
 				activate_production_methods={ "pm_trade_center_trade_quantity_normal" "pm_trade_center" }
+			}
+			create_building={
+				building="building_suez_canal"
+				add_ownership={
+					country={
+						country="c:XEG"
+						levels=1
+					}
+				}
+				reserves=1
+				activate_production_methods={ "pm_canal" }
 			}
 			create_building={
 				building="building_government_administration"
