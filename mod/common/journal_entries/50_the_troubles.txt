@@ -6,13 +6,13 @@ je_troubles_in_northern_ireland = {
 	is_shown_when_inactive = {
 		NOT = { has_variable = good_friday_agreement }
         c:GBR ?= this
-		country_or_subject_owns_entire_state_region = s:STATE_ULSTER
+		country_or_subject_owns_entire_state_region = s:STATE_LEINSTER
     }
 	
 	possible = {
 		c:GBR ?= this
 		NOT = { has_variable = good_friday_agreement }
-		country_or_subject_owns_entire_state_region = s:STATE_ULSTER
+		country_or_subject_owns_entire_state_region = s:STATE_LEINSTER
 	}
 	
 	complete = {
@@ -22,7 +22,7 @@ je_troubles_in_northern_ireland = {
 		}
 	}
 
-	fail = { NOT = { c:GBR = { country_or_subject_owns_entire_state_region = s:STATE_ULSTER } } }
+	fail = { NOT = { c:GBR = { country_or_subject_owns_entire_state_region = s:STATE_LEINSTER } } }
 	
 	on_monthly_pulse = {
 		random_events = {
@@ -49,12 +49,12 @@ je_northern_ireland_peace_process = {
 			c:GBR ?= this
 			c:IRE ?= this
 		}
-		c:GBR = { country_or_subject_owns_entire_state_region = s:STATE_ULSTER }
+		c:GBR = { country_or_subject_owns_entire_state_region = s:STATE_LEINSTER }
 		has_variable = ni_peace_downing_decl
 	}
 
 	possible = {
-		c:GBR = { country_or_subject_owns_entire_state_region = s:STATE_ULSTER }
+		c:GBR = { country_or_subject_owns_entire_state_region = s:STATE_LEINSTER }
 		OR = {
 			c:GBR ?= this
 			c:IRE ?= this
