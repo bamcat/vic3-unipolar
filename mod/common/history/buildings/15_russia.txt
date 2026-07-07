@@ -1,12 +1,14 @@
-﻿BUILDINGS={
+BUILDINGS={
 	s:STATE_TALINN={
 		region_state:EST={
 			create_building={
 				building="building_trade_center"
 				add_ownership={
-					country={
+					building={
+						type="building_financial_district"
 						country="c:EST"
 						levels=2
+						region="STATE_TALINN"
 					}
 				}
 				reserves=1
@@ -48,9 +50,11 @@
 			create_building={
 				building="building_telecommunications"
 				add_ownership={
-					country={
+					building={
+						type="building_financial_district"
 						country="c:EST"
 						levels=1
+						region="STATE_TALINN"
 					}
 				}
 				reserves=1
@@ -59,9 +63,11 @@
 			create_building={
 				building="building_food_industry"
 				add_ownership={
-					country={
+					building={
+						type="building_financial_district"
 						country="c:EST"
 						levels=2
+						region="STATE_TALINN"
 					}
 				}
 				reserves=1
@@ -70,9 +76,11 @@
 			create_building={
 				building="building_chemical_plant"
 				add_ownership={
-					country={
+					building={
+						type="building_financial_district"
 						country="c:EST"
 						levels=1
+						region="STATE_TALINN"
 					}
 				}
 				reserves=1
@@ -81,9 +89,11 @@
 			create_building={
 				building="building_food_service"
 				add_ownership={
-					country={
+					building={
+						type="building_financial_district"
 						country="c:EST"
 						levels=1
+						region="STATE_TALINN"
 					}
 				}
 				reserves=1
@@ -92,9 +102,11 @@
 			create_building={
 				building="building_retail_services"
 				add_ownership={
-					country={
+					building={
+						type="building_financial_district"
 						country="c:EST"
 						levels=1
+						region="STATE_TALINN"
 					}
 				}
 				reserves=1
@@ -114,9 +126,11 @@
 			create_building={
 				building="building_arms_industry"
 				add_ownership={
-					country={
+					building={
+						type="building_financial_district"
 						country="c:EST"
 						levels=1
+						region="STATE_TALINN"
 					}
 				}
 				reserves=1
@@ -162,21 +176,24 @@
 			create_building={
 				building="building_power_plant"
 				add_ownership={
-					country={
+					building={
+						type="building_financial_district"
 						country="c:EST"
 						levels=1
+						region="STATE_TARTU"
 					}
 				}
-				subsidized=yes
 				reserves=1
 				activate_production_methods={ "pm_hydroelectric_plant" }
 			}
 			create_building={
 				building="building_logging_camp"
 				add_ownership={
-					country={
+					building={
+						type="building_financial_district"
 						country="c:EST"
 						levels=1
+						region="STATE_TARTU"
 					}
 				}
 				reserves=1
@@ -185,9 +202,11 @@
 			create_building={
 				building="building_food_industry"
 				add_ownership={
-					country={
+					building={
+						type="building_financial_district"
 						country="c:EST"
 						levels=1
+						region="STATE_TARTU"
 					}
 				}
 				reserves=1
@@ -196,9 +215,11 @@
 			create_building={
 				building="building_telecommunications"
 				add_ownership={
-					country={
+					building={
+						type="building_financial_district"
 						country="c:EST"
 						levels=1
+						region="STATE_TARTU"
 					}
 				}
 				reserves=1
@@ -207,9 +228,11 @@
 			create_building={
 				building="building_textile_mill"
 				add_ownership={
-					country={
+					building={
+						type="building_financial_district"
 						country="c:EST"
 						levels=1
+						region="STATE_TARTU"
 					}
 				}
 				reserves=1
@@ -218,9 +241,11 @@
 			create_building={
 				building="building_paper_mill"
 				add_ownership={
-					country={
+					building={
+						type="building_financial_district"
 						country="c:EST"
 						levels=1
+						region="STATE_TARTU"
 					}
 				}
 				reserves=1
@@ -229,9 +254,11 @@
 			create_building={
 				building="building_steel_mill"
 				add_ownership={
-					country={
+					building={
+						type="building_financial_district"
 						country="c:EST"
 						levels=1
+						region="STATE_TARTU"
 					}
 				}
 				reserves=1
@@ -240,9 +267,11 @@
 			create_building={
 				building="building_tooling_workshop"
 				add_ownership={
-					country={
+					building={
+						type="building_financial_district"
 						country="c:EST"
 						levels=1
+						region="STATE_TARTU"
 					}
 				}
 				reserves=1
@@ -251,9 +280,11 @@
 			create_building={
 				building="building_chemical_plant"
 				add_ownership={
-					country={
+					building={
+						type="building_financial_district"
 						country="c:EST"
 						levels=1
+						region="STATE_TARTU"
 					}
 				}
 				reserves=1
@@ -403,9 +434,11 @@
 			create_building={
 				building="building_steel_mill"
 				add_ownership={
-					country={
+					building={
+						type="building_financial_district"
 						country="c:LAT"
 						levels=3
+						region="STATE_RIGA"
 					}
 				}
 				reserves=1
@@ -414,9 +447,11 @@
 			create_building={
 				building="building_tooling_workshop"
 				add_ownership={
-					country={
+					building={
+						type="building_financial_district"
 						country="c:LAT"
 						levels=2
+						region="STATE_RIGA"
 					}
 				}
 				reserves=1
@@ -425,9 +460,11 @@
 			create_building={
 				building="building_chemical_plant"
 				add_ownership={
-					country={
+					building={
+						type="building_financial_district"
 						country="c:LAT"
 						levels=2
+						region="STATE_RIGA"
 					}
 				}
 				reserves=1
@@ -590,9 +627,11 @@
 			create_building={
 				building="building_tooling_workshop"
 				add_ownership={
-					country={
+					building={
+						type="building_financial_district"
 						country="c:LAT"
 						levels=1
+						region="STATE_COURLAND"
 					}
 				}
 				reserves=1
@@ -601,9 +640,11 @@
 			create_building={
 				building="building_chemical_plant"
 				add_ownership={
-					country={
+					building={
+						type="building_financial_district"
 						country="c:LAT"
 						levels=2
+						region="STATE_COURLAND"
 					}
 				}
 				reserves=1
@@ -613,7 +654,7 @@
 				building="building_livestock_ranch"
 				add_ownership={
 					building={
-						type="building_manor_house"
+						type="building_financial_district"
 						country="c:LAT"
 						levels=1
 						region="STATE_COURLAND"
@@ -625,6 +666,12 @@
 			create_building={
 				building="building_furniture_manufactory"
 				add_ownership={
+					building={
+						type="building_financial_district"
+						country="c:LAT"
+						levels=1
+						region="STATE_COURLAND"
+					}
 				}
 				reserves=1
 				activate_production_methods={ "pm_handcrafted_furniture" "pm_no_luxuries" "pm_automation_disabled" }
@@ -723,15 +770,9 @@
 				building="building_rye_farm"
 				add_ownership={
 					building={
-						type="building_manor_house"
+						type="building_financial_district"
 						country="c:LIT"
-						levels=1
-						region="STATE_VILNIUS"
-					}
-					building={
-						type="building_manor_house"
-						country="c:LIT"
-						levels=1
+						levels=2
 						region="STATE_KAUNAS"
 					}
 				}
@@ -741,9 +782,11 @@
 			create_building={
 				building="building_livestock_ranch"
 				add_ownership={
-					country={
+					building={
+						type="building_financial_district"
 						country="c:LIT"
 						levels=1
+						region="STATE_KAUNAS"
 					}
 				}
 				reserves=1
@@ -778,9 +821,11 @@
 			create_building={
 				building="building_textile_mill"
 				add_ownership={
-					country={
+					building={
+						type="building_financial_district"
 						country="c:LIT"
 						levels=1
+						region="STATE_KAUNAS"
 					}
 				}
 				reserves=1
@@ -789,9 +834,11 @@
 			create_building={
 				building="building_arms_industry"
 				add_ownership={
-					country={
+					building={
+						type="building_financial_district"
 						country="c:LIT"
 						levels=1
+						region="STATE_KAUNAS"
 					}
 				}
 				reserves=1
@@ -826,9 +873,11 @@
 			create_building={
 				building="building_paper_mill"
 				add_ownership={
-					country={
+					building={
+						type="building_financial_district"
 						country="c:LIT"
 						levels=1
+						region="STATE_KAUNAS"
 					}
 				}
 				reserves=1
@@ -867,9 +916,11 @@
 			create_building={
 				building="building_chemical_plant"
 				add_ownership={
-					country={
+					building={
+						type="building_financial_district"
 						country="c:LIT"
 						levels=4
+						region="STATE_KAUNAS"
 					}
 				}
 				reserves=1
@@ -878,9 +929,11 @@
 			create_building={
 				building="building_motor_industry"
 				add_ownership={
-					country={
+					building={
+						type="building_financial_district"
 						country="c:LIT"
 						levels=3
+						region="STATE_KAUNAS"
 					}
 				}
 				reserves=1
@@ -902,14 +955,10 @@
 			create_building={
 				building="building_food_service"
 				add_ownership={
-					country={
-						country="c:LIT"
-						levels=4
-					}
 					building={
-						type="building_food_service"
+						type="building_financial_district"
 						country="c:LIT"
-						levels=1
+						levels=5
 						region="STATE_KAUNAS"
 					}
 				}
@@ -919,9 +968,11 @@
 			create_building={
 				building="building_retail_services"
 				add_ownership={
-					country={
+					building={
+						type="building_financial_district"
 						country="c:LIT"
 						levels=4
+						region="STATE_KAUNAS"
 					}
 				}
 				reserves=1
@@ -930,9 +981,11 @@
 			create_building={
 				building="building_bank"
 				add_ownership={
-					country={
+					building={
+						type="building_financial_district"
 						country="c:LIT"
 						levels=2
+						region="STATE_KAUNAS"
 					}
 				}
 				reserves=1
@@ -942,7 +995,7 @@
 				building="building_warehouse"
 				add_ownership={
 					building={
-						type="building_warehouse"
+						type="building_financial_district"
 						country="c:LIT"
 						levels=2
 						region="STATE_KAUNAS"
@@ -1080,9 +1133,11 @@
 			create_building={
 				building="building_textile_mill"
 				add_ownership={
-					country={
+					building={
+						type="building_financial_district"
 						country="c:LIT"
 						levels=3
+						region="STATE_VILNIUS"
 					}
 				}
 				reserves=1
@@ -1091,9 +1146,11 @@
 			create_building={
 				building="building_paper_mill"
 				add_ownership={
-					country={
+					building={
+						type="building_financial_district"
 						country="c:LIT"
 						levels=3
+						region="STATE_VILNIUS"
 					}
 				}
 				reserves=1
@@ -1140,9 +1197,11 @@
 			create_building={
 				building="building_chemical_plant"
 				add_ownership={
-					country={
+					building={
+						type="building_financial_district"
 						country="c:LIT"
 						levels=2
+						region="STATE_VILNIUS"
 					}
 				}
 				reserves=1
@@ -1152,7 +1211,7 @@
 				building="building_advertising_agency"
 				add_ownership={
 					building={
-						type="building_advertising_agency"
+						type="building_financial_district"
 						country="c:LIT"
 						levels=1
 						region="STATE_VILNIUS"
@@ -1165,7 +1224,7 @@
 				building="building_food_service"
 				add_ownership={
 					building={
-						type="building_food_service"
+						type="building_financial_district"
 						country="c:LIT"
 						levels=1
 						region="STATE_VILNIUS"
@@ -1190,6 +1249,12 @@
 			create_building={
 				building="building_professional_service"
 				add_ownership={
+					building={
+						type="building_financial_district"
+						country="c:LIT"
+						levels=1
+						region="STATE_VILNIUS"
+					}
 				}
 				reserves=1
 				activate_production_methods={ "pm_general_mills_office" "pm_accountants" "pm_no_casino" }
@@ -1201,9 +1266,11 @@
 			create_building={
 				building="building_trade_center"
 				add_ownership={
-					country={
+					building={
+						type="building_financial_district"
 						country="c:FNL"
 						levels=1
+						region="STATE_KUOPIO"
 					}
 				}
 				reserves=1
@@ -1234,9 +1301,11 @@
 			create_building={
 				building="building_livestock_ranch"
 				add_ownership={
-					country={
+					building={
+						type="building_financial_district"
 						country="c:FNL"
 						levels=1
+						region="STATE_KUOPIO"
 					}
 				}
 				reserves=1
@@ -1245,9 +1314,11 @@
 			create_building={
 				building="building_telecommunications"
 				add_ownership={
-					country={
+					building={
+						type="building_financial_district"
 						country="c:FNL"
 						levels=1
+						region="STATE_KUOPIO"
 					}
 				}
 				reserves=1
@@ -1256,9 +1327,11 @@
 			create_building={
 				building="building_warehouse"
 				add_ownership={
-					country={
+					building={
+						type="building_financial_district"
 						country="c:FNL"
 						levels=1
+						region="STATE_KUOPIO"
 					}
 				}
 				reserves=1
@@ -1267,9 +1340,11 @@
 			create_building={
 				building="building_food_industry"
 				add_ownership={
-					country={
+					building={
+						type="building_financial_district"
 						country="c:FNL"
 						levels=6
+						region="STATE_KUOPIO"
 					}
 				}
 				reserves=1
@@ -1282,9 +1357,11 @@
 			create_building={
 				building="building_trade_center"
 				add_ownership={
-					country={
+					building={
+						type="building_financial_district"
 						country="c:FNL"
 						levels=41
+						region="STATE_UUSIMAA"
 					}
 				}
 				reserves=1
@@ -1326,9 +1403,11 @@
 			create_building={
 				building="building_livestock_ranch"
 				add_ownership={
-					country={
+					building={
+						type="building_financial_district"
 						country="c:FNL"
 						levels=1
+						region="STATE_UUSIMAA"
 					}
 				}
 				reserves=1
@@ -1337,9 +1416,11 @@
 			create_building={
 				building="building_logging_camp"
 				add_ownership={
-					country={
+					building={
+						type="building_financial_district"
 						country="c:FNL"
 						levels=1
+						region="STATE_UUSIMAA"
 					}
 				}
 				reserves=1
@@ -1348,9 +1429,11 @@
 			create_building={
 				building="building_iron_mine"
 				add_ownership={
-					country={
+					building={
+						type="building_financial_district"
 						country="c:FNL"
 						levels=1
+						region="STATE_UUSIMAA"
 					}
 				}
 				reserves=1
@@ -1359,9 +1442,11 @@
 			create_building={
 				building="building_food_industry"
 				add_ownership={
-					country={
+					building={
+						type="building_financial_district"
 						country="c:FNL"
 						levels=19
+						region="STATE_UUSIMAA"
 					}
 				}
 				reserves=1
@@ -1370,9 +1455,11 @@
 			create_building={
 				building="building_telecommunications"
 				add_ownership={
-					country={
+					building={
+						type="building_financial_district"
 						country="c:FNL"
 						levels=1
+						region="STATE_UUSIMAA"
 					}
 				}
 				reserves=1
@@ -1381,9 +1468,11 @@
 			create_building={
 				building="building_professional_service"
 				add_ownership={
-					country={
+					building={
+						type="building_financial_district"
 						country="c:FNL"
 						levels=1
+						region="STATE_UUSIMAA"
 					}
 				}
 				reserves=1
@@ -1392,9 +1481,11 @@
 			create_building={
 				building="building_bank"
 				add_ownership={
-					country={
+					building={
+						type="building_financial_district"
 						country="c:FNL"
 						levels=1
+						region="STATE_UUSIMAA"
 					}
 				}
 				reserves=1
@@ -1403,9 +1494,11 @@
 			create_building={
 				building="building_food_service"
 				add_ownership={
-					country={
+					building={
+						type="building_financial_district"
 						country="c:FNL"
 						levels=1
+						region="STATE_UUSIMAA"
 					}
 				}
 				reserves=1
@@ -1414,9 +1507,11 @@
 			create_building={
 				building="building_retail_services"
 				add_ownership={
-					country={
+					building={
+						type="building_financial_district"
 						country="c:FNL"
 						levels=17
+						region="STATE_UUSIMAA"
 					}
 				}
 				reserves=1
@@ -1425,9 +1520,11 @@
 			create_building={
 				building="building_automotive_industry"
 				add_ownership={
-					country={
+					building={
+						type="building_financial_district"
 						country="c:FNL"
 						levels=5
+						region="STATE_UUSIMAA"
 					}
 				}
 				reserves=1
@@ -1436,9 +1533,11 @@
 			create_building={
 				building="building_warehouse"
 				add_ownership={
-					country={
+					building={
+						type="building_financial_district"
 						country="c:FNL"
 						levels=6
+						region="STATE_UUSIMAA"
 					}
 				}
 				reserves=1
@@ -1447,9 +1546,11 @@
 			create_building={
 				building="building_paper_mill"
 				add_ownership={
-					country={
+					building={
+						type="building_financial_district"
 						country="c:FNL"
 						levels=1
+						region="STATE_UUSIMAA"
 					}
 				}
 				reserves=1
@@ -1458,9 +1559,11 @@
 			create_building={
 				building="building_fishing_wharf"
 				add_ownership={
-					country={
+					building={
+						type="building_financial_district"
 						country="c:FNL"
 						levels=8
+						region="STATE_UUSIMAA"
 					}
 				}
 				reserves=1
@@ -1473,9 +1576,11 @@
 			create_building={
 				building="building_trade_center"
 				add_ownership={
-					country={
+					building={
+						type="building_financial_district"
 						country="c:FNL"
 						levels=3
+						region="STATE_WEST_KARELIA"
 					}
 				}
 				reserves=1
@@ -1517,9 +1622,11 @@
 			create_building={
 				building="building_livestock_ranch"
 				add_ownership={
-					country={
+					building={
+						type="building_financial_district"
 						country="c:FNL"
 						levels=2
+						region="STATE_WEST_KARELIA"
 					}
 				}
 				reserves=1
@@ -1528,12 +1635,13 @@
 			create_building={
 				building="building_telecommunications"
 				add_ownership={
-					country={
+					building={
+						type="building_financial_district"
 						country="c:FNL"
 						levels=1
+						region="STATE_WEST_KARELIA"
 					}
 				}
-				subsidized=no
 				reserves=1
 				activate_production_methods={ "pm_power_lines" "pm_1g" }
 			}
@@ -1542,9 +1650,11 @@
 			create_building={
 				building="building_trade_center"
 				add_ownership={
-					country={
+					building={
+						type="building_financial_district"
 						country="c:RUS"
 						levels=1
+						region="STATE_WEST_KARELIA"
 					}
 				}
 				reserves=1
@@ -1597,9 +1707,11 @@
 			create_building={
 				building="building_power_plant"
 				add_ownership={
-					country={
+					building={
+						type="building_financial_district"
 						country="c:RUS"
 						levels=1
+						region="STATE_WEST_KARELIA"
 					}
 				}
 				reserves=1
@@ -1608,9 +1720,11 @@
 			create_building={
 				building="building_food_industry"
 				add_ownership={
-					country={
+					building={
+						type="building_financial_district"
 						country="c:RUS"
 						levels=1
+						region="STATE_WEST_KARELIA"
 					}
 				}
 				reserves=1
@@ -1619,9 +1733,11 @@
 			create_building={
 				building="building_textile_mill"
 				add_ownership={
-					country={
+					building={
+						type="building_financial_district"
 						country="c:RUS"
 						levels=1
+						region="STATE_WEST_KARELIA"
 					}
 				}
 				reserves=1
@@ -1630,9 +1746,11 @@
 			create_building={
 				building="building_livestock_ranch"
 				add_ownership={
-					country={
+					building={
+						type="building_financial_district"
 						country="c:RUS"
 						levels=1
+						region="STATE_WEST_KARELIA"
 					}
 				}
 				reserves=1
@@ -1641,9 +1759,11 @@
 			create_building={
 				building="building_rye_farm"
 				add_ownership={
-					country={
+					building={
+						type="building_financial_district"
 						country="c:RUS"
 						levels=11
+						region="STATE_WEST_KARELIA"
 					}
 				}
 				reserves=1
@@ -1689,9 +1809,11 @@
 			create_building={
 				building="building_telecommunications"
 				add_ownership={
-					country={
+					building={
+						type="building_financial_district"
 						country="c:FNL"
 						levels=1
+						region="STATE_ALAND"
 					}
 				}
 				reserves=1
@@ -1704,9 +1826,11 @@
 			create_building={
 				building="building_trade_center"
 				add_ownership={
-					country={
+					building={
+						type="building_financial_district"
 						country="c:FNL"
 						levels=3
+						region="STATE_OSTROBOTHNIA"
 					}
 				}
 				reserves=1
@@ -1748,9 +1872,11 @@
 			create_building={
 				building="building_livestock_ranch"
 				add_ownership={
-					country={
+					building={
+						type="building_financial_district"
 						country="c:FNL"
 						levels=2
+						region="STATE_OSTROBOTHNIA"
 					}
 				}
 				reserves=1
@@ -1759,9 +1885,11 @@
 			create_building={
 				building="building_telecommunications"
 				add_ownership={
-					country={
+					building={
+						type="building_financial_district"
 						country="c:FNL"
 						levels=1
+						region="STATE_OSTROBOTHNIA"
 					}
 				}
 				reserves=1
@@ -1794,9 +1922,11 @@
 			create_building={
 				building="building_food_industry"
 				add_ownership={
-					country={
+					building={
+						type="building_financial_district"
 						country="c:RUS"
 						levels=1
+						region="STATE_OSTROBOTHNIA"
 					}
 				}
 				reserves=1
@@ -1805,9 +1935,11 @@
 			create_building={
 				building="building_textile_mill"
 				add_ownership={
-					country={
+					building={
+						type="building_financial_district"
 						country="c:RUS"
 						levels=1
+						region="STATE_OSTROBOTHNIA"
 					}
 				}
 				reserves=1
@@ -1816,9 +1948,11 @@
 			create_building={
 				building="building_livestock_ranch"
 				add_ownership={
-					country={
+					building={
+						type="building_financial_district"
 						country="c:RUS"
 						levels=1
+						region="STATE_OSTROBOTHNIA"
 					}
 				}
 				reserves=1
@@ -1864,9 +1998,11 @@
 			create_building={
 				building="building_telecommunications"
 				add_ownership={
-					country={
+					building={
+						type="building_financial_district"
 						country="c:FNL"
 						levels=1
+						region="STATE_OULU"
 					}
 				}
 				reserves=1
@@ -1935,9 +2071,11 @@
 			create_building={
 				building="building_telecommunications"
 				add_ownership={
-					country={
+					building={
+						type="building_financial_district"
 						country="c:RUS"
 						levels=1
+						region="STATE_EAST_KARELIA"
 					}
 				}
 				reserves=1
@@ -1946,9 +2084,11 @@
 			create_building={
 				building="building_food_industry"
 				add_ownership={
-					country={
+					building={
+						type="building_financial_district"
 						country="c:RUS"
 						levels=2
+						region="STATE_EAST_KARELIA"
 					}
 				}
 				reserves=1
@@ -1957,9 +2097,11 @@
 			create_building={
 				building="building_tooling_workshop"
 				add_ownership={
-					country={
+					building={
+						type="building_financial_district"
 						country="c:RUS"
 						levels=1
+						region="STATE_EAST_KARELIA"
 					}
 				}
 				reserves=1
@@ -1968,9 +2110,11 @@
 			create_building={
 				building="building_chemical_plant"
 				add_ownership={
-					country={
+					building={
+						type="building_financial_district"
 						country="c:RUS"
 						levels=1
+						region="STATE_EAST_KARELIA"
 					}
 				}
 				reserves=1
@@ -1979,9 +2123,11 @@
 			create_building={
 				building="building_livestock_ranch"
 				add_ownership={
-					country={
+					building={
+						type="building_financial_district"
 						country="c:RUS"
 						levels=2
+						region="STATE_EAST_KARELIA"
 					}
 				}
 				reserves=1
@@ -1990,9 +2136,11 @@
 			create_building={
 				building="building_food_service"
 				add_ownership={
-					country={
+					building={
+						type="building_financial_district"
 						country="c:RUS"
 						levels=1
+						region="STATE_EAST_KARELIA"
 					}
 				}
 				reserves=1
@@ -2001,9 +2149,11 @@
 			create_building={
 				building="building_retail_services"
 				add_ownership={
-					country={
+					building={
+						type="building_financial_district"
 						country="c:RUS"
 						levels=1
+						region="STATE_EAST_KARELIA"
 					}
 				}
 				reserves=1
@@ -2023,9 +2173,11 @@
 			create_building={
 				building="building_arms_industry"
 				add_ownership={
-					country={
+					building={
+						type="building_financial_district"
 						country="c:RUS"
 						levels=1
+						region="STATE_EAST_KARELIA"
 					}
 				}
 				reserves=1
@@ -2051,9 +2203,11 @@
 			create_building={
 				building="building_bank"
 				add_ownership={
-					country={
+					building={
+						type="building_financial_district"
 						country="c:RUS"
 						levels=1
+						region="STATE_EAST_KARELIA"
 					}
 				}
 				reserves=1
@@ -2062,9 +2216,11 @@
 			create_building={
 				building="building_munition_plant"
 				add_ownership={
-					country={
+					building={
+						type="building_financial_district"
 						country="c:RUS"
 						levels=1
+						region="STATE_EAST_KARELIA"
 					}
 				}
 				reserves=1
@@ -2086,9 +2242,11 @@
 			create_building={
 				building="building_artillery_foundry"
 				add_ownership={
-					country={
+					building={
+						type="building_financial_district"
 						country="c:RUS"
 						levels=1
+						region="STATE_EAST_KARELIA"
 					}
 				}
 				reserves=1
@@ -2097,9 +2255,11 @@
 			create_building={
 				building="building_rye_farm"
 				add_ownership={
-					country={
+					building={
+						type="building_financial_district"
 						country="c:RUS"
 						levels=8
+						region="STATE_EAST_KARELIA"
 					}
 				}
 				reserves=1
@@ -2149,9 +2309,11 @@
 			create_building={
 				building="building_trade_center"
 				add_ownership={
-					country={
+					building={
+						type="building_financial_district"
 						country="c:RUS"
 						levels=1
+						region="STATE_INGRIA"
 					}
 				}
 				reserves=1
@@ -2210,9 +2372,11 @@
 			create_building={
 				building="building_telecommunications"
 				add_ownership={
-					country={
+					building={
+						type="building_financial_district"
 						country="c:RUS"
 						levels=1
+						region="STATE_INGRIA"
 					}
 				}
 				reserves=1
@@ -2244,9 +2408,11 @@
 			create_building={
 				building="building_textile_mill"
 				add_ownership={
-					country={
+					building={
+						type="building_financial_district"
 						country="c:RUS"
 						levels=1
+						region="STATE_INGRIA"
 					}
 				}
 				reserves=1
@@ -2255,9 +2421,11 @@
 			create_building={
 				building="building_glassworks"
 				add_ownership={
-					country={
+					building={
+						type="building_financial_district"
 						country="c:RUS"
 						levels=1
+						region="STATE_INGRIA"
 					}
 				}
 				reserves=1
@@ -2266,9 +2434,11 @@
 			create_building={
 				building="building_motor_industry"
 				add_ownership={
-					country={
+					building={
+						type="building_financial_district"
 						country="c:RUS"
 						levels=1
+						region="STATE_INGRIA"
 					}
 				}
 				reserves=1
@@ -2277,9 +2447,11 @@
 			create_building={
 				building="building_electrics_industry"
 				add_ownership={
-					country={
+					building={
+						type="building_financial_district"
 						country="c:RUS"
 						levels=1
+						region="STATE_INGRIA"
 					}
 				}
 				reserves=1
@@ -2288,9 +2460,11 @@
 			create_building={
 				building="building_livestock_ranch"
 				add_ownership={
-					country={
+					building={
+						type="building_financial_district"
 						country="c:RUS"
 						levels=1
+						region="STATE_INGRIA"
 					}
 				}
 				reserves=1
@@ -2299,9 +2473,11 @@
 			create_building={
 				building="building_food_service"
 				add_ownership={
-					country={
+					building={
+						type="building_financial_district"
 						country="c:RUS"
 						levels=1
+						region="STATE_INGRIA"
 					}
 				}
 				reserves=1
@@ -2310,9 +2486,11 @@
 			create_building={
 				building="building_warehouse"
 				add_ownership={
-					country={
+					building={
+						type="building_financial_district"
 						country="c:RUS"
 						levels=5
+						region="STATE_INGRIA"
 					}
 				}
 				reserves=1
@@ -2332,9 +2510,11 @@
 			create_building={
 				building="building_war_machine_industry"
 				add_ownership={
-					country={
+					building={
+						type="building_financial_district"
 						country="c:RUS"
 						levels=2
+						region="STATE_INGRIA"
 					}
 				}
 				reserves=1
@@ -2354,9 +2534,11 @@
 			create_building={
 				building="building_logging_camp"
 				add_ownership={
-					country={
+					building={
+						type="building_financial_district"
 						country="c:RUS"
 						levels=5
+						region="STATE_INGRIA"
 					}
 				}
 				reserves=1
@@ -2365,9 +2547,11 @@
 			create_building={
 				building="building_rye_farm"
 				add_ownership={
-					country={
+					building={
+						type="building_financial_district"
 						country="c:RUS"
 						levels=20
+						region="STATE_INGRIA"
 					}
 				}
 				reserves=1
@@ -2376,9 +2560,11 @@
 			create_building={
 				building="building_steel_mill"
 				add_ownership={
-					country={
+					building={
+						type="building_financial_district"
 						country="c:RUS"
 						levels=10
+						region="STATE_INGRIA"
 					}
 				}
 				reserves=1
@@ -2418,7 +2604,14 @@
 			}
 			create_building={
 				building="building_saint_basils_cathedral"
-				level=1
+				add_ownership={
+					building={
+						type="building_financial_district"
+						country="c:RUS"
+						levels=1
+						region="STATE_MOSCOW"
+					}
+				}
 			}
 			create_building={
 				building="building_government_administration"
@@ -2452,9 +2645,11 @@
 			create_building={
 				building="building_power_plant"
 				add_ownership={
-					country={
+					building={
+						type="building_financial_district"
 						country="c:RUS"
 						levels=1
+						region="STATE_MOSCOW"
 					}
 				}
 				reserves=1
@@ -2474,9 +2669,11 @@
 			create_building={
 				building="building_telecommunications"
 				add_ownership={
-					country={
+					building={
+						type="building_financial_district"
 						country="c:RUS"
 						levels=1
+						region="STATE_MOSCOW"
 					}
 				}
 				reserves=1
@@ -2485,9 +2682,11 @@
 			create_building={
 				building="building_food_industry"
 				add_ownership={
-					country={
+					building={
+						type="building_financial_district"
 						country="c:RUS"
 						levels=7
+						region="STATE_MOSCOW"
 					}
 				}
 				reserves=1
@@ -2530,9 +2729,11 @@
 			create_building={
 				building="building_paper_mill"
 				add_ownership={
-					country={
+					building={
+						type="building_financial_district"
 						country="c:RUS"
 						levels=1
+						region="STATE_MOSCOW"
 					}
 				}
 				reserves=1
@@ -2541,9 +2742,11 @@
 			create_building={
 				building="building_glassworks"
 				add_ownership={
-					country={
+					building={
+						type="building_financial_district"
 						country="c:RUS"
 						levels=8
+						region="STATE_MOSCOW"
 					}
 				}
 				reserves=1
@@ -2552,9 +2755,11 @@
 			create_building={
 				building="building_steel_mill"
 				add_ownership={
-					country={
+					building={
+						type="building_financial_district"
 						country="c:RUS"
 						levels=2
+						region="STATE_MOSCOW"
 					}
 				}
 				reserves=1
@@ -2580,9 +2785,11 @@
 			create_building={
 				building="building_chemical_plant"
 				add_ownership={
-					country={
+					building={
+						type="building_financial_district"
 						country="c:RUS"
 						levels=1
+						region="STATE_MOSCOW"
 					}
 				}
 				reserves=1
@@ -2591,9 +2798,11 @@
 			create_building={
 				building="building_motor_industry"
 				add_ownership={
-					country={
+					building={
+						type="building_financial_district"
 						country="c:RUS"
 						levels=1
+						region="STATE_MOSCOW"
 					}
 				}
 				reserves=1
@@ -2602,9 +2811,11 @@
 			create_building={
 				building="building_electrics_industry"
 				add_ownership={
-					country={
+					building={
+						type="building_financial_district"
 						country="c:RUS"
 						levels=1
+						region="STATE_MOSCOW"
 					}
 				}
 				reserves=1
@@ -2613,9 +2824,11 @@
 			create_building={
 				building="building_explosives_factory"
 				add_ownership={
-					country={
+					building={
+						type="building_financial_district"
 						country="c:RUS"
 						levels=10
+						region="STATE_MOSCOW"
 					}
 				}
 				reserves=1
@@ -2624,9 +2837,11 @@
 			create_building={
 				building="building_rye_farm"
 				add_ownership={
-					country={
+					building={
+						type="building_financial_district"
 						country="c:RUS"
 						levels=48
+						region="STATE_MOSCOW"
 					}
 				}
 				reserves=1
@@ -2635,9 +2850,11 @@
 			create_building={
 				building="building_livestock_ranch"
 				add_ownership={
-					country={
+					building={
+						type="building_financial_district"
 						country="c:RUS"
 						levels=12
+						region="STATE_MOSCOW"
 					}
 				}
 				reserves=1
@@ -2646,9 +2863,11 @@
 			create_building={
 				building="building_coal_mine"
 				add_ownership={
-					country={
+					building={
+						type="building_financial_district"
 						country="c:RUS"
 						levels=11
+						region="STATE_MOSCOW"
 					}
 				}
 				reserves=1
@@ -2674,14 +2893,10 @@
 			create_building={
 				building="building_food_service"
 				add_ownership={
-					country={
-						country="c:RUS"
-						levels=1
-					}
 					building={
-						type="building_food_service"
+						type="building_financial_district"
 						country="c:RUS"
-						levels=1
+						levels=2
 						region="STATE_MOSCOW"
 					}
 				}
@@ -2691,9 +2906,11 @@
 			create_building={
 				building="building_retail_services"
 				add_ownership={
-					country={
+					building={
+						type="building_financial_district"
 						country="c:RUS"
 						levels=1
+						region="STATE_MOSCOW"
 					}
 				}
 				reserves=1
@@ -2702,9 +2919,11 @@
 			create_building={
 				building="building_bank"
 				add_ownership={
-					country={
+					building={
+						type="building_financial_district"
 						country="c:RUS"
 						levels=1
+						region="STATE_MOSCOW"
 					}
 				}
 				reserves=1
@@ -2713,9 +2932,11 @@
 			create_building={
 				building="building_warehouse"
 				add_ownership={
-					country={
+					building={
+						type="building_financial_district"
 						country="c:RUS"
 						levels=10
+						region="STATE_MOSCOW"
 					}
 				}
 				reserves=1
@@ -2724,9 +2945,11 @@
 			create_building={
 				building="building_professional_service"
 				add_ownership={
-					country={
+					building={
+						type="building_financial_district"
 						country="c:RUS"
 						levels=8
+						region="STATE_MOSCOW"
 					}
 				}
 				reserves=1
@@ -2757,9 +2980,11 @@
 			create_building={
 				building="building_arms_industry"
 				add_ownership={
-					country={
+					building={
+						type="building_financial_district"
 						country="c:RUS"
 						levels=1
+						region="STATE_MOSCOW"
 					}
 				}
 				reserves=1
@@ -2768,9 +2993,11 @@
 			create_building={
 				building="building_artillery_foundry"
 				add_ownership={
-					country={
+					building={
+						type="building_financial_district"
 						country="c:RUS"
 						levels=1
+						region="STATE_MOSCOW"
 					}
 				}
 				reserves=1
@@ -2813,9 +3040,11 @@
 			create_building={
 				building="building_aeronautics_industry"
 				add_ownership={
-					country={
+					building={
+						type="building_financial_district"
 						country="c:RUS"
 						levels=3
+						region="STATE_MOSCOW"
 					}
 				}
 				reserves=1
@@ -2852,9 +3081,11 @@
 			create_building={
 				building="building_trade_center"
 				add_ownership={
-					country={
+					building={
+						type="building_financial_district"
 						country="c:BYL"
 						levels=1
+						region="STATE_BREST"
 					}
 				}
 				reserves=1
@@ -2896,21 +3127,24 @@
 			create_building={
 				building="building_power_plant"
 				add_ownership={
-					country={
+					building={
+						type="building_financial_district"
 						country="c:BYL"
 						levels=1
+						region="STATE_BREST"
 					}
 				}
-				subsidized=yes
 				reserves=1
 				activate_production_methods={ "pm_hydroelectric_plant" }
 			}
 			create_building={
 				building="building_rye_farm"
 				add_ownership={
-					country={
+					building={
+						type="building_financial_district"
 						country="c:BYL"
 						levels=1
+						region="STATE_BREST"
 					}
 				}
 				reserves=1
@@ -2919,9 +3153,11 @@
 			create_building={
 				building="building_livestock_ranch"
 				add_ownership={
-					country={
+					building={
+						type="building_financial_district"
 						country="c:BYL"
 						levels=1
+						region="STATE_BREST"
 					}
 				}
 				reserves=1
@@ -2930,9 +3166,11 @@
 			create_building={
 				building="building_logging_camp"
 				add_ownership={
-					country={
+					building={
+						type="building_financial_district"
 						country="c:BYL"
 						levels=1
+						region="STATE_BREST"
 					}
 				}
 				reserves=1
@@ -2941,9 +3179,11 @@
 			create_building={
 				building="building_food_industry"
 				add_ownership={
-					country={
+					building={
+						type="building_financial_district"
 						country="c:BYL"
 						levels=5
+						region="STATE_BREST"
 					}
 				}
 				reserves=1
@@ -2952,9 +3192,11 @@
 			create_building={
 				building="building_textile_mill"
 				add_ownership={
-					country={
+					building={
+						type="building_financial_district"
 						country="c:BYL"
 						levels=7
+						region="STATE_BREST"
 					}
 				}
 				reserves=1
@@ -2963,9 +3205,11 @@
 			create_building={
 				building="building_arms_industry"
 				add_ownership={
-					country={
+					building={
+						type="building_financial_district"
 						country="c:BYL"
 						levels=2
+						region="STATE_BREST"
 					}
 				}
 				reserves=1
@@ -2974,9 +3218,11 @@
 			create_building={
 				building="building_telecommunications"
 				add_ownership={
-					country={
+					building={
+						type="building_financial_district"
 						country="c:BYL"
 						levels=1
+						region="STATE_BREST"
 					}
 				}
 				reserves=1
@@ -2985,9 +3231,11 @@
 			create_building={
 				building="building_furniture_manufactory"
 				add_ownership={
-					country={
+					building={
+						type="building_financial_district"
 						country="c:BYL"
 						levels=4
+						region="STATE_BREST"
 					}
 				}
 				reserves=1
@@ -2996,9 +3244,11 @@
 			create_building={
 				building="building_paper_mill"
 				add_ownership={
-					country={
+					building={
+						type="building_financial_district"
 						country="c:BYL"
 						levels=5
+						region="STATE_BREST"
 					}
 				}
 				reserves=1
@@ -3007,9 +3257,11 @@
 			create_building={
 				building="building_steel_mill"
 				add_ownership={
-					country={
+					building={
+						type="building_financial_district"
 						country="c:BYL"
 						levels=7
+						region="STATE_BREST"
 					}
 				}
 				reserves=1
@@ -3018,9 +3270,11 @@
 			create_building={
 				building="building_tooling_workshop"
 				add_ownership={
-					country={
+					building={
+						type="building_financial_district"
 						country="c:BYL"
 						levels=4
+						region="STATE_BREST"
 					}
 				}
 				reserves=1
@@ -3029,9 +3283,11 @@
 			create_building={
 				building="building_chemical_plant"
 				add_ownership={
-					country={
+					building={
+						type="building_financial_district"
 						country="c:BYL"
 						levels=4
+						region="STATE_BREST"
 					}
 				}
 				reserves=1
@@ -3040,9 +3296,11 @@
 			create_building={
 				building="building_motor_industry"
 				add_ownership={
-					country={
+					building={
+						type="building_financial_district"
 						country="c:BYL"
 						levels=3
+						region="STATE_BREST"
 					}
 				}
 				reserves=1
@@ -3051,9 +3309,11 @@
 			create_building={
 				building="building_electrics_industry"
 				add_ownership={
-					country={
+					building={
+						type="building_financial_district"
 						country="c:BYL"
 						levels=3
+						region="STATE_BREST"
 					}
 				}
 				reserves=1
@@ -3062,9 +3322,11 @@
 			create_building={
 				building="building_food_service"
 				add_ownership={
-					country={
+					building={
+						type="building_financial_district"
 						country="c:BYL"
 						levels=4
+						region="STATE_BREST"
 					}
 				}
 				reserves=1
@@ -3073,9 +3335,11 @@
 			create_building={
 				building="building_retail_services"
 				add_ownership={
-					country={
+					building={
+						type="building_financial_district"
 						country="c:BYL"
 						levels=4
+						region="STATE_BREST"
 					}
 				}
 				reserves=1
@@ -3084,9 +3348,11 @@
 			create_building={
 				building="building_bank"
 				add_ownership={
-					country={
+					building={
+						type="building_financial_district"
 						country="c:BYL"
 						levels=2
+						region="STATE_BREST"
 					}
 				}
 				reserves=1
@@ -3095,9 +3361,11 @@
 			create_building={
 				building="building_warehouse"
 				add_ownership={
-					country={
+					building={
+						type="building_financial_district"
 						country="c:BYL"
 						levels=2
+						region="STATE_BREST"
 					}
 				}
 				reserves=1
@@ -3110,9 +3378,11 @@
 			create_building={
 				building="building_trade_center"
 				add_ownership={
-					country={
+					building={
+						type="building_financial_district"
 						country="c:UKR"
 						levels=1
+						region="STATE_VOLHYNIA"
 					}
 				}
 				reserves=1
@@ -3160,9 +3430,11 @@
 			create_building={
 				building="building_power_plant"
 				add_ownership={
-					country={
+					building={
+						type="building_financial_district"
 						country="c:UKR"
 						levels=1
+						region="STATE_VOLHYNIA"
 					}
 				}
 				reserves=1
@@ -3171,9 +3443,11 @@
 			create_building={
 				building="building_wheat_farm"
 				add_ownership={
-					country={
+					building={
+						type="building_financial_district"
 						country="c:UKR"
 						levels=1
+						region="STATE_VOLHYNIA"
 					}
 				}
 				reserves=1
@@ -3182,9 +3456,11 @@
 			create_building={
 				building="building_livestock_ranch"
 				add_ownership={
-					country={
+					building={
+						type="building_financial_district"
 						country="c:UKR"
 						levels=1
+						region="STATE_VOLHYNIA"
 					}
 				}
 				reserves=1
@@ -3193,9 +3469,11 @@
 			create_building={
 				building="building_logging_camp"
 				add_ownership={
-					country={
+					building={
+						type="building_financial_district"
 						country="c:UKR"
 						levels=1
+						region="STATE_VOLHYNIA"
 					}
 				}
 				reserves=1
@@ -3204,9 +3482,11 @@
 			create_building={
 				building="building_coal_mine"
 				add_ownership={
-					country={
+					building={
+						type="building_financial_district"
 						country="c:UKR"
 						levels=1
+						region="STATE_VOLHYNIA"
 					}
 				}
 				reserves=1
@@ -3215,9 +3495,11 @@
 			create_building={
 				building="building_food_industry"
 				add_ownership={
-					country={
+					building={
+						type="building_financial_district"
 						country="c:UKR"
 						levels=1
+						region="STATE_VOLHYNIA"
 					}
 				}
 				reserves=1
@@ -3226,9 +3508,11 @@
 			create_building={
 				building="building_textile_mill"
 				add_ownership={
-					country={
+					building={
+						type="building_financial_district"
 						country="c:UKR"
 						levels=1
+						region="STATE_VOLHYNIA"
 					}
 				}
 				reserves=1
@@ -3237,9 +3521,11 @@
 			create_building={
 				building="building_arms_industry"
 				add_ownership={
-					country={
+					building={
+						type="building_financial_district"
 						country="c:UKR"
 						levels=2
+						region="STATE_VOLHYNIA"
 					}
 				}
 				reserves=1
@@ -3248,9 +3534,11 @@
 			create_building={
 				building="building_telecommunications"
 				add_ownership={
-					country={
+					building={
+						type="building_financial_district"
 						country="c:UKR"
 						levels=1
+						region="STATE_VOLHYNIA"
 					}
 				}
 				reserves=1
@@ -3259,9 +3547,11 @@
 			create_building={
 				building="building_furniture_manufactory"
 				add_ownership={
-					country={
+					building={
+						type="building_financial_district"
 						country="c:UKR"
 						levels=4
+						region="STATE_VOLHYNIA"
 					}
 				}
 				reserves=1
@@ -3270,9 +3560,11 @@
 			create_building={
 				building="building_paper_mill"
 				add_ownership={
-					country={
+					building={
+						type="building_financial_district"
 						country="c:UKR"
 						levels=5
+						region="STATE_VOLHYNIA"
 					}
 				}
 				reserves=1
@@ -3281,9 +3573,11 @@
 			create_building={
 				building="building_steel_mill"
 				add_ownership={
-					country={
+					building={
+						type="building_financial_district"
 						country="c:UKR"
 						levels=7
+						region="STATE_VOLHYNIA"
 					}
 				}
 				reserves=1
@@ -3292,9 +3586,11 @@
 			create_building={
 				building="building_tooling_workshop"
 				add_ownership={
-					country={
+					building={
+						type="building_financial_district"
 						country="c:UKR"
 						levels=4
+						region="STATE_VOLHYNIA"
 					}
 				}
 				reserves=1
@@ -3303,9 +3599,11 @@
 			create_building={
 				building="building_chemical_plant"
 				add_ownership={
-					country={
+					building={
+						type="building_financial_district"
 						country="c:UKR"
 						levels=4
+						region="STATE_VOLHYNIA"
 					}
 				}
 				reserves=1
@@ -3314,9 +3612,11 @@
 			create_building={
 				building="building_motor_industry"
 				add_ownership={
-					country={
+					building={
+						type="building_financial_district"
 						country="c:UKR"
 						levels=3
+						region="STATE_VOLHYNIA"
 					}
 				}
 				reserves=1
@@ -3325,9 +3625,11 @@
 			create_building={
 				building="building_electrics_industry"
 				add_ownership={
-					country={
+					building={
+						type="building_financial_district"
 						country="c:UKR"
 						levels=3
+						region="STATE_VOLHYNIA"
 					}
 				}
 				reserves=1
@@ -3336,9 +3638,11 @@
 			create_building={
 				building="building_food_service"
 				add_ownership={
-					country={
+					building={
+						type="building_financial_district"
 						country="c:UKR"
 						levels=4
+						region="STATE_VOLHYNIA"
 					}
 				}
 				reserves=1
@@ -3347,9 +3651,11 @@
 			create_building={
 				building="building_retail_services"
 				add_ownership={
-					country={
+					building={
+						type="building_financial_district"
 						country="c:UKR"
 						levels=4
+						region="STATE_VOLHYNIA"
 					}
 				}
 				reserves=1
@@ -3358,9 +3664,11 @@
 			create_building={
 				building="building_bank"
 				add_ownership={
-					country={
+					building={
+						type="building_financial_district"
 						country="c:UKR"
 						levels=2
+						region="STATE_VOLHYNIA"
 					}
 				}
 				reserves=1
@@ -3369,9 +3677,11 @@
 			create_building={
 				building="building_warehouse"
 				add_ownership={
-					country={
+					building={
+						type="building_financial_district"
 						country="c:UKR"
 						levels=2
+						region="STATE_VOLHYNIA"
 					}
 				}
 				reserves=1
@@ -3384,9 +3694,11 @@
 			create_building={
 				building="building_trade_center"
 				add_ownership={
-					country={
+					building={
+						type="building_financial_district"
 						country="c:UKR"
 						levels=32
+						region="STATE_KIEV"
 					}
 				}
 				reserves=1
@@ -3428,9 +3740,11 @@
 			create_building={
 				building="building_power_plant"
 				add_ownership={
-					country={
+					building={
+						type="building_financial_district"
 						country="c:UKR"
 						levels=4
+						region="STATE_KIEV"
 					}
 				}
 				reserves=1
@@ -3439,9 +3753,11 @@
 			create_building={
 				building="building_wheat_farm"
 				add_ownership={
-					country={
+					building={
+						type="building_financial_district"
 						country="c:UKR"
 						levels=3
+						region="STATE_KIEV"
 					}
 				}
 				reserves=1
@@ -3450,9 +3766,11 @@
 			create_building={
 				building="building_livestock_ranch"
 				add_ownership={
-					country={
+					building={
+						type="building_financial_district"
 						country="c:UKR"
 						levels=2
+						region="STATE_KIEV"
 					}
 				}
 				reserves=1
@@ -3478,9 +3796,11 @@
 			create_building={
 				building="building_coal_mine"
 				add_ownership={
-					country={
+					building={
+						type="building_financial_district"
 						country="c:UKR"
 						levels=3
+						region="STATE_KIEV"
 					}
 				}
 				reserves=1
@@ -3506,9 +3826,11 @@
 			create_building={
 				building="building_food_industry"
 				add_ownership={
-					country={
+					building={
+						type="building_financial_district"
 						country="c:UKR"
 						levels=9
+						region="STATE_KIEV"
 					}
 				}
 				reserves=1
@@ -3517,9 +3839,11 @@
 			create_building={
 				building="building_textile_mill"
 				add_ownership={
-					country={
+					building={
+						type="building_financial_district"
 						country="c:UKR"
 						levels=7
+						region="STATE_KIEV"
 					}
 				}
 				reserves=1
@@ -3539,9 +3863,11 @@
 			create_building={
 				building="building_arms_industry"
 				add_ownership={
-					country={
+					building={
+						type="building_financial_district"
 						country="c:UKR"
 						levels=2
+						region="STATE_KIEV"
 					}
 				}
 				reserves=1
@@ -3550,9 +3876,11 @@
 			create_building={
 				building="building_telecommunications"
 				add_ownership={
-					country={
+					building={
+						type="building_financial_district"
 						country="c:UKR"
 						levels=1
+						region="STATE_KIEV"
 					}
 				}
 				reserves=1
@@ -3561,9 +3889,11 @@
 			create_building={
 				building="building_furniture_manufactory"
 				add_ownership={
-					country={
+					building={
+						type="building_financial_district"
 						country="c:UKR"
 						levels=4
+						region="STATE_KIEV"
 					}
 				}
 				reserves=1
@@ -3572,9 +3902,11 @@
 			create_building={
 				building="building_paper_mill"
 				add_ownership={
-					country={
+					building={
+						type="building_financial_district"
 						country="c:UKR"
 						levels=5
+						region="STATE_KIEV"
 					}
 				}
 				reserves=1
@@ -3583,9 +3915,11 @@
 			create_building={
 				building="building_glassworks"
 				add_ownership={
-					country={
+					building={
+						type="building_financial_district"
 						country="c:UKR"
 						levels=1
+						region="STATE_KIEV"
 					}
 				}
 				reserves=1
@@ -3594,9 +3928,11 @@
 			create_building={
 				building="building_steel_mill"
 				add_ownership={
-					country={
+					building={
+						type="building_financial_district"
 						country="c:UKR"
 						levels=7
+						region="STATE_KIEV"
 					}
 				}
 				reserves=1
@@ -3605,9 +3941,11 @@
 			create_building={
 				building="building_tooling_workshop"
 				add_ownership={
-					country={
+					building={
+						type="building_financial_district"
 						country="c:UKR"
 						levels=4
+						region="STATE_KIEV"
 					}
 				}
 				reserves=1
@@ -3616,9 +3954,11 @@
 			create_building={
 				building="building_chemical_plant"
 				add_ownership={
-					country={
+					building={
+						type="building_financial_district"
 						country="c:UKR"
 						levels=4
+						region="STATE_KIEV"
 					}
 				}
 				reserves=1
@@ -3627,9 +3967,11 @@
 			create_building={
 				building="building_motor_industry"
 				add_ownership={
-					country={
+					building={
+						type="building_financial_district"
 						country="c:UKR"
 						levels=3
+						region="STATE_KIEV"
 					}
 				}
 				reserves=1
@@ -3638,9 +3980,11 @@
 			create_building={
 				building="building_electrics_industry"
 				add_ownership={
-					country={
+					building={
+						type="building_financial_district"
 						country="c:UKR"
 						levels=3
+						region="STATE_KIEV"
 					}
 				}
 				reserves=1
@@ -3649,9 +3993,11 @@
 			create_building={
 				building="building_food_service"
 				add_ownership={
-					country={
+					building={
+						type="building_financial_district"
 						country="c:UKR"
 						levels=4
+						region="STATE_KIEV"
 					}
 				}
 				reserves=1
@@ -3660,9 +4006,11 @@
 			create_building={
 				building="building_retail_services"
 				add_ownership={
-					country={
+					building={
+						type="building_financial_district"
 						country="c:UKR"
 						levels=4
+						region="STATE_KIEV"
 					}
 				}
 				reserves=1
@@ -3671,9 +4019,11 @@
 			create_building={
 				building="building_bank"
 				add_ownership={
-					country={
+					building={
+						type="building_financial_district"
 						country="c:UKR"
 						levels=2
+						region="STATE_KIEV"
 					}
 				}
 				reserves=1
@@ -3693,9 +4043,11 @@
 			create_building={
 				building="building_artillery_foundry"
 				add_ownership={
-					country={
+					building={
+						type="building_financial_district"
 						country="c:UKR"
 						levels=1
+						region="STATE_KIEV"
 					}
 				}
 				reserves=1
@@ -3704,9 +4056,11 @@
 			create_building={
 				building="building_munition_plant"
 				add_ownership={
-					country={
+					building={
+						type="building_financial_district"
 						country="c:UKR"
 						levels=1
+						region="STATE_KIEV"
 					}
 				}
 				reserves=1
@@ -3726,9 +4080,11 @@
 			create_building={
 				building="building_warehouse"
 				add_ownership={
-					country={
+					building={
+						type="building_financial_district"
 						country="c:UKR"
 						levels=2
+						region="STATE_KIEV"
 					}
 				}
 				reserves=1
@@ -3737,9 +4093,11 @@
 			create_building={
 				building="building_war_machine_industry"
 				add_ownership={
-					country={
+					building={
+						type="building_financial_district"
 						country="c:UKR"
 						levels=1
+						region="STATE_KIEV"
 					}
 				}
 				reserves=1
@@ -3810,9 +4168,11 @@
 			create_building={
 				building="building_food_industry"
 				add_ownership={
-					country={
+					building={
+						type="building_financial_district"
 						country="c:RUS"
 						levels=1
+						region="STATE_ORYOL"
 					}
 				}
 				reserves=1
@@ -3821,9 +4181,11 @@
 			create_building={
 				building="building_textile_mill"
 				add_ownership={
-					country={
+					building={
+						type="building_financial_district"
 						country="c:RUS"
 						levels=1
+						region="STATE_ORYOL"
 					}
 				}
 				reserves=1
@@ -3832,9 +4194,11 @@
 			create_building={
 				building="building_glassworks"
 				add_ownership={
-					country={
+					building={
+						type="building_financial_district"
 						country="c:RUS"
 						levels=1
+						region="STATE_ORYOL"
 					}
 				}
 				reserves=1
@@ -3872,9 +4236,11 @@
 			create_building={
 				building="building_motor_industry"
 				add_ownership={
-					country={
+					building={
+						type="building_financial_district"
 						country="c:RUS"
 						levels=1
+						region="STATE_ORYOL"
 					}
 				}
 				reserves=1
@@ -3883,9 +4249,11 @@
 			create_building={
 				building="building_electrics_industry"
 				add_ownership={
-					country={
+					building={
+						type="building_financial_district"
 						country="c:RUS"
 						levels=1
+						region="STATE_ORYOL"
 					}
 				}
 				reserves=1
@@ -3894,9 +4262,11 @@
 			create_building={
 				building="building_livestock_ranch"
 				add_ownership={
-					country={
+					building={
+						type="building_financial_district"
 						country="c:RUS"
 						levels=1
+						region="STATE_ORYOL"
 					}
 				}
 				reserves=1
@@ -3905,9 +4275,11 @@
 			create_building={
 				building="building_warehouse"
 				add_ownership={
-					country={
+					building={
+						type="building_financial_district"
 						country="c:RUS"
 						levels=1
+						region="STATE_ORYOL"
 					}
 				}
 				reserves=1
@@ -3927,9 +4299,11 @@
 			create_building={
 				building="building_artillery_foundry"
 				add_ownership={
-					country={
+					building={
+						type="building_financial_district"
 						country="c:RUS"
 						levels=1
+						region="STATE_ORYOL"
 					}
 				}
 				reserves=1
@@ -3938,9 +4312,11 @@
 			create_building={
 				building="building_war_machine_industry"
 				add_ownership={
-					country={
+					building={
+						type="building_financial_district"
 						country="c:RUS"
 						levels=1
+						region="STATE_ORYOL"
 					}
 				}
 				reserves=1
@@ -3950,14 +4326,10 @@
 				building="building_rye_farm"
 				add_ownership={
 					building={
-						type="building_manor_house"
+						type="building_financial_district"
 						country="c:RUS"
-						levels=1
+						levels=71
 						region="STATE_ORYOL"
-					}
-					country={
-						country="c:RUS"
-						levels=70
 					}
 				}
 				reserves=1
@@ -3966,15 +4338,11 @@
 			create_building={
 				building="building_logging_camp"
 				add_ownership={
-					country={
-						country="c:RUS"
-						levels=5
-					}
 					building={
-						type="building_manor_house"
+						type="building_financial_district"
 						country="c:RUS"
-						levels=1
-						region="STATE_MOSCOW"
+						levels=6
+						region="STATE_ORYOL"
 					}
 				}
 				reserves=1
@@ -3983,9 +4351,11 @@
 			create_building={
 				building="building_explosives_factory"
 				add_ownership={
-					country={
+					building={
+						type="building_financial_district"
 						country="c:RUS"
 						levels=5
+						region="STATE_ORYOL"
 					}
 				}
 				reserves=1
@@ -3994,9 +4364,11 @@
 			create_building={
 				building="building_coal_mine"
 				add_ownership={
-					country={
+					building={
+						type="building_financial_district"
 						country="c:RUS"
 						levels=5
+						region="STATE_ORYOL"
 					}
 				}
 				reserves=1
@@ -4009,9 +4381,11 @@
 			create_building={
 				building="building_trade_center"
 				add_ownership={
-					country={
+					building={
+						type="building_financial_district"
 						country="c:RUS"
 						levels=1
+						region="STATE_SMOLENSK"
 					}
 				}
 				reserves=1
@@ -4042,9 +4416,11 @@
 			create_building={
 				building="building_telecommunications"
 				add_ownership={
-					country={
+					building={
+						type="building_financial_district"
 						country="c:RUS"
 						levels=1
+						region="STATE_SMOLENSK"
 					}
 				}
 				reserves=1
@@ -4053,9 +4429,11 @@
 			create_building={
 				building="building_food_industry"
 				add_ownership={
-					country={
+					building={
+						type="building_financial_district"
 						country="c:RUS"
 						levels=1
+						region="STATE_SMOLENSK"
 					}
 				}
 				reserves=1
@@ -4064,9 +4442,11 @@
 			create_building={
 				building="building_glassworks"
 				add_ownership={
-					country={
+					building={
+						type="building_financial_district"
 						country="c:RUS"
 						levels=1
+						region="STATE_SMOLENSK"
 					}
 				}
 				reserves=1
@@ -4075,9 +4455,11 @@
 			create_building={
 				building="building_tooling_workshop"
 				add_ownership={
-					country={
+					building={
+						type="building_financial_district"
 						country="c:RUS"
 						levels=1
+						region="STATE_SMOLENSK"
 					}
 				}
 				reserves=1
@@ -4086,9 +4468,11 @@
 			create_building={
 				building="building_motor_industry"
 				add_ownership={
-					country={
+					building={
+						type="building_financial_district"
 						country="c:RUS"
 						levels=2
+						region="STATE_SMOLENSK"
 					}
 				}
 				reserves=1
@@ -4097,9 +4481,11 @@
 			create_building={
 				building="building_electrics_industry"
 				add_ownership={
-					country={
+					building={
+						type="building_financial_district"
 						country="c:RUS"
 						levels=3
+						region="STATE_SMOLENSK"
 					}
 				}
 				reserves=1
@@ -4108,9 +4494,11 @@
 			create_building={
 				building="building_livestock_ranch"
 				add_ownership={
-					country={
+					building={
+						type="building_financial_district"
 						country="c:RUS"
 						levels=3
+						region="STATE_SMOLENSK"
 					}
 				}
 				reserves=1
@@ -4142,9 +4530,11 @@
 			create_building={
 				building="building_rye_farm"
 				add_ownership={
-					country={
+					building={
+						type="building_financial_district"
 						country="c:RUS"
 						levels=40
+						region="STATE_SMOLENSK"
 					}
 				}
 				reserves=1
@@ -4170,9 +4560,11 @@
 			create_building={
 				building="building_trade_center"
 				add_ownership={
-					country={
+					building={
+						type="building_financial_district"
 						country="c:BYL"
 						levels=1
+						region="STATE_MOGILEV"
 					}
 				}
 				reserves=1
@@ -4203,9 +4595,11 @@
 			create_building={
 				building="building_power_plant"
 				add_ownership={
-					country={
+					building={
+						type="building_financial_district"
 						country="c:BYL"
 						levels=1
+						region="STATE_MOGILEV"
 					}
 				}
 				reserves=1
@@ -4214,21 +4608,11 @@
 			create_building={
 				building="building_livestock_ranch"
 				add_ownership={
-					country={
-						country="c:BYL"
-						levels=1
-					}
 					building={
-						type="building_manor_house"
+						type="building_financial_district"
 						country="c:BYL"
-						levels=5
+						levels=8
 						region="STATE_MOGILEV"
-					}
-					building={
-						type="building_manor_house"
-						country="c:BYL"
-						levels=2
-						region="STATE_VITEBSK"
 					}
 				}
 				reserves=1
@@ -4237,9 +4621,11 @@
 			create_building={
 				building="building_logging_camp"
 				add_ownership={
-					country={
+					building={
+						type="building_financial_district"
 						country="c:BYL"
 						levels=1
+						region="STATE_MOGILEV"
 					}
 				}
 				reserves=1
@@ -4248,9 +4634,11 @@
 			create_building={
 				building="building_food_industry"
 				add_ownership={
-					country={
+					building={
+						type="building_financial_district"
 						country="c:BYL"
 						levels=2
+						region="STATE_MOGILEV"
 					}
 				}
 				reserves=1
@@ -4259,9 +4647,11 @@
 			create_building={
 				building="building_telecommunications"
 				add_ownership={
-					country={
+					building={
+						type="building_financial_district"
 						country="c:BYL"
 						levels=1
+						region="STATE_MOGILEV"
 					}
 				}
 				reserves=1
@@ -4270,9 +4660,11 @@
 			create_building={
 				building="building_textile_mill"
 				add_ownership={
-					country={
+					building={
+						type="building_financial_district"
 						country="c:BYL"
 						levels=3
+						region="STATE_MOGILEV"
 					}
 				}
 				reserves=1
@@ -4281,9 +4673,11 @@
 			create_building={
 				building="building_paper_mill"
 				add_ownership={
-					country={
+					building={
+						type="building_financial_district"
 						country="c:BYL"
 						levels=3
+						region="STATE_MOGILEV"
 					}
 				}
 				reserves=1
@@ -4292,9 +4686,11 @@
 			create_building={
 				building="building_steel_mill"
 				add_ownership={
-					country={
+					building={
+						type="building_financial_district"
 						country="c:BYL"
 						levels=3
+						region="STATE_MOGILEV"
 					}
 				}
 				reserves=1
@@ -4303,9 +4699,11 @@
 			create_building={
 				building="building_tooling_workshop"
 				add_ownership={
-					country={
+					building={
+						type="building_financial_district"
 						country="c:BYL"
 						levels=2
+						region="STATE_MOGILEV"
 					}
 				}
 				reserves=1
@@ -4314,9 +4712,11 @@
 			create_building={
 				building="building_chemical_plant"
 				add_ownership={
-					country={
+					building={
+						type="building_financial_district"
 						country="c:BYL"
 						levels=2
+						region="STATE_MOGILEV"
 					}
 				}
 				reserves=1
@@ -4418,9 +4818,11 @@
 			create_building={
 				building="building_telecommunications"
 				add_ownership={
-					country={
+					building={
+						type="building_financial_district"
 						country="c:RUS"
 						levels=1
+						region="STATE_ARKHANGELSK"
 					}
 				}
 				reserves=1
@@ -4429,9 +4831,11 @@
 			create_building={
 				building="building_food_industry"
 				add_ownership={
-					country={
+					building={
+						type="building_financial_district"
 						country="c:RUS"
 						levels=2
+						region="STATE_ARKHANGELSK"
 					}
 				}
 				reserves=1
@@ -4440,9 +4844,11 @@
 			create_building={
 				building="building_livestock_ranch"
 				add_ownership={
-					country={
+					building={
+						type="building_financial_district"
 						country="c:RUS"
 						levels=2
+						region="STATE_ARKHANGELSK"
 					}
 				}
 				reserves=1
@@ -4451,9 +4857,11 @@
 			create_building={
 				building="building_food_service"
 				add_ownership={
-					country={
+					building={
+						type="building_financial_district"
 						country="c:RUS"
 						levels=1
+						region="STATE_ARKHANGELSK"
 					}
 				}
 				reserves=1
@@ -4462,9 +4870,11 @@
 			create_building={
 				building="building_retail_services"
 				add_ownership={
-					country={
+					building={
+						type="building_financial_district"
 						country="c:RUS"
 						levels=1
+						region="STATE_ARKHANGELSK"
 					}
 				}
 				reserves=1
@@ -4484,9 +4894,11 @@
 			create_building={
 				building="building_arms_industry"
 				add_ownership={
-					country={
+					building={
+						type="building_financial_district"
 						country="c:RUS"
 						levels=1
+						region="STATE_ARKHANGELSK"
 					}
 				}
 				reserves=1
@@ -4495,9 +4907,11 @@
 			create_building={
 				building="building_bank"
 				add_ownership={
-					country={
+					building={
+						type="building_financial_district"
 						country="c:RUS"
 						levels=1
+						region="STATE_ARKHANGELSK"
 					}
 				}
 				reserves=1
@@ -4506,9 +4920,11 @@
 			create_building={
 				building="building_munition_plant"
 				add_ownership={
-					country={
+					building={
+						type="building_financial_district"
 						country="c:RUS"
 						levels=1
+						region="STATE_ARKHANGELSK"
 					}
 				}
 				reserves=1
@@ -4518,7 +4934,7 @@
 				building="building_fishing_wharf"
 				add_ownership={
 					building={
-						type="building_fishing_wharf"
+						type="building_financial_district"
 						country="c:RUS"
 						levels=1
 						region="STATE_ARKHANGELSK"
@@ -4557,9 +4973,11 @@
 			create_building={
 				building="building_trade_center"
 				add_ownership={
-					country={
+					building={
+						type="building_financial_district"
 						country="c:RUS"
 						levels=1
+						region="STATE_NOVGOROD"
 					}
 				}
 				reserves=1
@@ -4590,9 +5008,11 @@
 			create_building={
 				building="building_telecommunications"
 				add_ownership={
-					country={
+					building={
+						type="building_financial_district"
 						country="c:RUS"
 						levels=1
+						region="STATE_NOVGOROD"
 					}
 				}
 				reserves=1
@@ -4601,9 +5021,11 @@
 			create_building={
 				building="building_food_industry"
 				add_ownership={
-					country={
+					building={
+						type="building_financial_district"
 						country="c:RUS"
 						levels=1
+						region="STATE_NOVGOROD"
 					}
 				}
 				reserves=1
@@ -4612,9 +5034,11 @@
 			create_building={
 				building="building_paper_mill"
 				add_ownership={
-					country={
+					building={
+						type="building_financial_district"
 						country="c:RUS"
 						levels=1
+						region="STATE_NOVGOROD"
 					}
 				}
 				reserves=1
@@ -4623,9 +5047,11 @@
 			create_building={
 				building="building_glassworks"
 				add_ownership={
-					country={
+					building={
+						type="building_financial_district"
 						country="c:RUS"
 						levels=1
+						region="STATE_NOVGOROD"
 					}
 				}
 				reserves=1
@@ -4634,9 +5060,11 @@
 			create_building={
 				building="building_motor_industry"
 				add_ownership={
-					country={
+					building={
+						type="building_financial_district"
 						country="c:RUS"
 						levels=1
+						region="STATE_NOVGOROD"
 					}
 				}
 				reserves=1
@@ -4645,9 +5073,11 @@
 			create_building={
 				building="building_electrics_industry"
 				add_ownership={
-					country={
+					building={
+						type="building_financial_district"
 						country="c:RUS"
 						levels=1
+						region="STATE_NOVGOROD"
 					}
 				}
 				reserves=1
@@ -4656,9 +5086,11 @@
 			create_building={
 				building="building_livestock_ranch"
 				add_ownership={
-					country={
+					building={
+						type="building_financial_district"
 						country="c:RUS"
 						levels=1
+						region="STATE_NOVGOROD"
 					}
 				}
 				reserves=1
@@ -4690,9 +5122,11 @@
 			create_building={
 				building="building_coal_mine"
 				add_ownership={
-					country={
+					building={
+						type="building_financial_district"
 						country="c:RUS"
 						levels=5
+						region="STATE_NOVGOROD"
 					}
 				}
 				reserves=1
@@ -4701,9 +5135,11 @@
 			create_building={
 				building="building_rye_farm"
 				add_ownership={
-					country={
+					building={
+						type="building_financial_district"
 						country="c:RUS"
 						levels=30
+						region="STATE_NOVGOROD"
 					}
 				}
 				reserves=1
@@ -4716,9 +5152,11 @@
 			create_building={
 				building="building_trade_center"
 				add_ownership={
-					country={
+					building={
+						type="building_financial_district"
 						country="c:UKR"
 						levels=5
+						region="STATE_CRIMEA"
 					}
 				}
 				reserves=1
@@ -4760,9 +5198,11 @@
 			create_building={
 				building="building_power_plant"
 				add_ownership={
-					country={
+					building={
+						type="building_financial_district"
 						country="c:UKR"
 						levels=2
+						region="STATE_CRIMEA"
 					}
 				}
 				reserves=1
@@ -4771,9 +5211,11 @@
 			create_building={
 				building="building_logging_camp"
 				add_ownership={
-					country={
+					building={
+						type="building_financial_district"
 						country="c:UKR"
 						levels=4
+						region="STATE_CRIMEA"
 					}
 				}
 				reserves=1
@@ -4782,9 +5224,11 @@
 			create_building={
 				building="building_food_industry"
 				add_ownership={
-					country={
+					building={
+						type="building_financial_district"
 						country="c:UKR"
 						levels=4
+						region="STATE_CRIMEA"
 					}
 				}
 				reserves=1
@@ -4793,21 +5237,24 @@
 			create_building={
 				building="building_telecommunications"
 				add_ownership={
-					country={
+					building={
+						type="building_financial_district"
 						country="c:UKR"
 						levels=1
+						region="STATE_CRIMEA"
 					}
 				}
-				subsidized=no
 				reserves=1
 				activate_production_methods={ "pm_power_lines" "pm_1g" }
 			}
 			create_building={
 				building="building_textile_mill"
 				add_ownership={
-					country={
+					building={
+						type="building_financial_district"
 						country="c:UKR"
 						levels=3
+						region="STATE_CRIMEA"
 					}
 				}
 				reserves=1
@@ -4816,9 +5263,11 @@
 			create_building={
 				building="building_paper_mill"
 				add_ownership={
-					country={
+					building={
+						type="building_financial_district"
 						country="c:UKR"
 						levels=3
+						region="STATE_CRIMEA"
 					}
 				}
 				reserves=1
@@ -4827,9 +5276,11 @@
 			create_building={
 				building="building_steel_mill"
 				add_ownership={
-					country={
+					building={
+						type="building_financial_district"
 						country="c:UKR"
 						levels=3
+						region="STATE_CRIMEA"
 					}
 				}
 				reserves=1
@@ -4838,9 +5289,11 @@
 			create_building={
 				building="building_tooling_workshop"
 				add_ownership={
-					country={
+					building={
+						type="building_financial_district"
 						country="c:UKR"
 						levels=2
+						region="STATE_CRIMEA"
 					}
 				}
 				reserves=1
@@ -4849,9 +5302,11 @@
 			create_building={
 				building="building_chemical_plant"
 				add_ownership={
-					country={
+					building={
+						type="building_financial_district"
 						country="c:UKR"
 						levels=2
+						region="STATE_CRIMEA"
 					}
 				}
 				reserves=1
@@ -4860,9 +5315,11 @@
 			create_building={
 				building="building_shipyard"
 				add_ownership={
-					country={
+					building={
+						type="building_financial_district"
 						country="c:UKR"
 						levels=1
+						region="STATE_CRIMEA"
 					}
 				}
 				reserves=1
@@ -4872,10 +5329,10 @@
 				building="building_tobacco_plantation"
 				add_ownership={
 					building={
-						type="building_manor_house"
+						type="building_financial_district"
 						country="c:UKR"
 						levels=1
-						region="STATE_KIEV"
+						region="STATE_CRIMEA"
 					}
 				}
 				reserves=1
@@ -4885,7 +5342,7 @@
 				building="building_warehouse"
 				add_ownership={
 					building={
-						type="building_warehouse"
+						type="building_financial_district"
 						country="c:UKR"
 						levels=1
 						region="STATE_CRIMEA"
@@ -4939,9 +5396,11 @@
 			create_building={
 				building="building_trade_center"
 				add_ownership={
-					country={
+					building={
+						type="building_financial_district"
 						country="c:UKR"
 						levels=5
+						region="STATE_KHARKOV"
 					}
 				}
 				reserves=1
@@ -4983,9 +5442,11 @@
 			create_building={
 				building="building_power_plant"
 				add_ownership={
-					country={
+					building={
+						type="building_financial_district"
 						country="c:UKR"
 						levels=2
+						region="STATE_KHARKOV"
 					}
 				}
 				reserves=1
@@ -4994,9 +5455,11 @@
 			create_building={
 				building="building_wheat_farm"
 				add_ownership={
-					country={
+					building={
+						type="building_financial_district"
 						country="c:UKR"
 						levels=1
+						region="STATE_KHARKOV"
 					}
 				}
 				reserves=1
@@ -5005,9 +5468,11 @@
 			create_building={
 				building="building_livestock_ranch"
 				add_ownership={
-					country={
+					building={
+						type="building_financial_district"
 						country="c:UKR"
 						levels=1
+						region="STATE_KHARKOV"
 					}
 				}
 				reserves=1
@@ -5016,9 +5481,11 @@
 			create_building={
 				building="building_logging_camp"
 				add_ownership={
-					country={
+					building={
+						type="building_financial_district"
 						country="c:UKR"
 						levels=13
+						region="STATE_KHARKOV"
 					}
 				}
 				reserves=1
@@ -5027,9 +5494,11 @@
 			create_building={
 				building="building_coal_mine"
 				add_ownership={
-					country={
+					building={
+						type="building_financial_district"
 						country="c:UKR"
 						levels=1
+						region="STATE_KHARKOV"
 					}
 				}
 				reserves=1
@@ -5038,9 +5507,11 @@
 			create_building={
 				building="building_iron_mine"
 				add_ownership={
-					country={
+					building={
+						type="building_financial_district"
 						country="c:UKR"
 						levels=1
+						region="STATE_KHARKOV"
 					}
 				}
 				reserves=1
@@ -5049,9 +5520,11 @@
 			create_building={
 				building="building_food_industry"
 				add_ownership={
-					country={
+					building={
+						type="building_financial_district"
 						country="c:UKR"
 						levels=4
+						region="STATE_KHARKOV"
 					}
 				}
 				reserves=1
@@ -5060,9 +5533,11 @@
 			create_building={
 				building="building_telecommunications"
 				add_ownership={
-					country={
+					building={
+						type="building_financial_district"
 						country="c:UKR"
 						levels=1
+						region="STATE_KHARKOV"
 					}
 				}
 				reserves=1
@@ -5071,9 +5546,11 @@
 			create_building={
 				building="building_textile_mill"
 				add_ownership={
-					country={
+					building={
+						type="building_financial_district"
 						country="c:UKR"
 						levels=3
+						region="STATE_KHARKOV"
 					}
 				}
 				reserves=1
@@ -5082,9 +5559,11 @@
 			create_building={
 				building="building_furniture_manufactory"
 				add_ownership={
-					country={
+					building={
+						type="building_financial_district"
 						country="c:UKR"
 						levels=1
+						region="STATE_KHARKOV"
 					}
 				}
 				reserves=1
@@ -5093,9 +5572,11 @@
 			create_building={
 				building="building_paper_mill"
 				add_ownership={
-					country={
+					building={
+						type="building_financial_district"
 						country="c:UKR"
 						levels=3
+						region="STATE_KHARKOV"
 					}
 				}
 				reserves=1
@@ -5104,9 +5585,11 @@
 			create_building={
 				building="building_steel_mill"
 				add_ownership={
-					country={
+					building={
+						type="building_financial_district"
 						country="c:UKR"
 						levels=3
+						region="STATE_KHARKOV"
 					}
 				}
 				reserves=1
@@ -5115,9 +5598,11 @@
 			create_building={
 				building="building_tooling_workshop"
 				add_ownership={
-					country={
+					building={
+						type="building_financial_district"
 						country="c:UKR"
 						levels=2
+						region="STATE_KHARKOV"
 					}
 				}
 				reserves=1
@@ -5126,9 +5611,11 @@
 			create_building={
 				building="building_chemical_plant"
 				add_ownership={
-					country={
+					building={
+						type="building_financial_district"
 						country="c:UKR"
 						levels=2
+						region="STATE_KHARKOV"
 					}
 				}
 				reserves=1
@@ -5137,9 +5624,11 @@
 			create_building={
 				building="building_food_service"
 				add_ownership={
-					country={
+					building={
+						type="building_financial_district"
 						country="c:UKR"
 						levels=1
+						region="STATE_KHARKOV"
 					}
 				}
 				reserves=1
@@ -5148,9 +5637,11 @@
 			create_building={
 				building="building_retail_services"
 				add_ownership={
-					country={
+					building={
+						type="building_financial_district"
 						country="c:UKR"
 						levels=1
+						region="STATE_KHARKOV"
 					}
 				}
 				reserves=1
@@ -5170,9 +5661,11 @@
 			create_building={
 				building="building_arms_industry"
 				add_ownership={
-					country={
+					building={
+						type="building_financial_district"
 						country="c:UKR"
 						levels=1
+						region="STATE_KHARKOV"
 					}
 				}
 				reserves=1
@@ -5181,9 +5674,11 @@
 			create_building={
 				building="building_glassworks"
 				add_ownership={
-					country={
+					building={
+						type="building_financial_district"
 						country="c:UKR"
 						levels=1
+						region="STATE_KHARKOV"
 					}
 				}
 				reserves=1
@@ -5192,9 +5687,11 @@
 			create_building={
 				building="building_motor_industry"
 				add_ownership={
-					country={
+					building={
+						type="building_financial_district"
 						country="c:UKR"
 						levels=1
+						region="STATE_KHARKOV"
 					}
 				}
 				reserves=1
@@ -5203,9 +5700,11 @@
 			create_building={
 				building="building_electrics_industry"
 				add_ownership={
-					country={
+					building={
+						type="building_financial_district"
 						country="c:UKR"
 						levels=1
+						region="STATE_KHARKOV"
 					}
 				}
 				reserves=1
@@ -5214,9 +5713,11 @@
 			create_building={
 				building="building_bank"
 				add_ownership={
-					country={
+					building={
+						type="building_financial_district"
 						country="c:UKR"
 						levels=1
+						region="STATE_KHARKOV"
 					}
 				}
 				reserves=1
@@ -5236,9 +5737,11 @@
 			create_building={
 				building="building_artillery_foundry"
 				add_ownership={
-					country={
+					building={
+						type="building_financial_district"
 						country="c:UKR"
 						levels=1
+						region="STATE_KHARKOV"
 					}
 				}
 				reserves=1
@@ -5247,9 +5750,11 @@
 			create_building={
 				building="building_munition_plant"
 				add_ownership={
-					country={
+					building={
+						type="building_financial_district"
 						country="c:UKR"
 						levels=1
+						region="STATE_KHARKOV"
 					}
 				}
 				reserves=1
@@ -5272,7 +5777,7 @@
 				building="building_warehouse"
 				add_ownership={
 					building={
-						type="building_warehouse"
+						type="building_financial_district"
 						country="c:UKR"
 						levels=1
 						region="STATE_KHARKOV"
@@ -5288,9 +5793,11 @@
 			create_building={
 				building="building_trade_center"
 				add_ownership={
-					country={
+					building={
+						type="building_financial_district"
 						country="c:RUS"
 						levels=4
+						region="STATE_KURSK"
 					}
 				}
 				reserves=1
@@ -5332,9 +5839,11 @@
 			create_building={
 				building="building_power_plant"
 				add_ownership={
-					country={
+					building={
+						type="building_financial_district"
 						country="c:RUS"
 						levels=1
+						region="STATE_KURSK"
 					}
 				}
 				reserves=1
@@ -5354,9 +5863,11 @@
 			create_building={
 				building="building_telecommunications"
 				add_ownership={
-					country={
+					building={
+						type="building_financial_district"
 						country="c:RUS"
 						levels=1
+						region="STATE_KURSK"
 					}
 				}
 				reserves=1
@@ -5365,9 +5876,11 @@
 			create_building={
 				building="building_food_industry"
 				add_ownership={
-					country={
+					building={
+						type="building_financial_district"
 						country="c:RUS"
 						levels=2
+						region="STATE_KURSK"
 					}
 				}
 				reserves=1
@@ -5376,9 +5889,11 @@
 			create_building={
 				building="building_textile_mill"
 				add_ownership={
-					country={
+					building={
+						type="building_financial_district"
 						country="c:RUS"
 						levels=2
+						region="STATE_KURSK"
 					}
 				}
 				reserves=1
@@ -5387,9 +5902,11 @@
 			create_building={
 				building="building_furniture_manufactory"
 				add_ownership={
-					country={
+					building={
+						type="building_financial_district"
 						country="c:RUS"
 						levels=1
+						region="STATE_KURSK"
 					}
 				}
 				reserves=1
@@ -5398,9 +5915,11 @@
 			create_building={
 				building="building_paper_mill"
 				add_ownership={
-					country={
+					building={
+						type="building_financial_district"
 						country="c:RUS"
 						levels=1
+						region="STATE_KURSK"
 					}
 				}
 				reserves=1
@@ -5409,9 +5928,11 @@
 			create_building={
 				building="building_glassworks"
 				add_ownership={
-					country={
+					building={
+						type="building_financial_district"
 						country="c:RUS"
 						levels=4
+						region="STATE_KURSK"
 					}
 				}
 				reserves=1
@@ -5420,9 +5941,11 @@
 			create_building={
 				building="building_steel_mill"
 				add_ownership={
-					country={
+					building={
+						type="building_financial_district"
 						country="c:RUS"
 						levels=2
+						region="STATE_KURSK"
 					}
 				}
 				reserves=1
@@ -5431,9 +5954,11 @@
 			create_building={
 				building="building_tooling_workshop"
 				add_ownership={
-					country={
+					building={
+						type="building_financial_district"
 						country="c:RUS"
 						levels=1
+						region="STATE_KURSK"
 					}
 				}
 				reserves=1
@@ -5442,9 +5967,11 @@
 			create_building={
 				building="building_chemical_plant"
 				add_ownership={
-					country={
+					building={
+						type="building_financial_district"
 						country="c:RUS"
 						levels=1
+						region="STATE_KURSK"
 					}
 				}
 				reserves=1
@@ -5453,9 +5980,11 @@
 			create_building={
 				building="building_motor_industry"
 				add_ownership={
-					country={
+					building={
+						type="building_financial_district"
 						country="c:RUS"
 						levels=1
+						region="STATE_KURSK"
 					}
 				}
 				reserves=1
@@ -5464,9 +5993,11 @@
 			create_building={
 				building="building_electrics_industry"
 				add_ownership={
-					country={
+					building={
+						type="building_financial_district"
 						country="c:RUS"
 						levels=1
+						region="STATE_KURSK"
 					}
 				}
 				reserves=1
@@ -5475,9 +6006,11 @@
 			create_building={
 				building="building_livestock_ranch"
 				add_ownership={
-					country={
+					building={
+						type="building_financial_district"
 						country="c:RUS"
 						levels=6
+						region="STATE_KURSK"
 					}
 				}
 				reserves=1
@@ -5486,9 +6019,11 @@
 			create_building={
 				building="building_iron_mine"
 				add_ownership={
-					country={
+					building={
+						type="building_financial_district"
 						country="c:RUS"
 						levels=1
+						region="STATE_KURSK"
 					}
 				}
 				reserves=1
@@ -5497,9 +6032,11 @@
 			create_building={
 				building="building_food_service"
 				add_ownership={
-					country={
+					building={
+						type="building_financial_district"
 						country="c:RUS"
 						levels=1
+						region="STATE_KURSK"
 					}
 				}
 				reserves=1
@@ -5508,9 +6045,11 @@
 			create_building={
 				building="building_retail_services"
 				add_ownership={
-					country={
+					building={
+						type="building_financial_district"
 						country="c:RUS"
 						levels=1
+						region="STATE_KURSK"
 					}
 				}
 				reserves=1
@@ -5519,9 +6058,11 @@
 			create_building={
 				building="building_bank"
 				add_ownership={
-					country={
+					building={
+						type="building_financial_district"
 						country="c:RUS"
 						levels=1
+						region="STATE_KURSK"
 					}
 				}
 				reserves=1
@@ -5530,9 +6071,11 @@
 			create_building={
 				building="building_warehouse"
 				add_ownership={
-					country={
+					building={
+						type="building_financial_district"
 						country="c:RUS"
 						levels=5
+						region="STATE_KURSK"
 					}
 				}
 				reserves=1
@@ -5563,9 +6106,11 @@
 			create_building={
 				building="building_arms_industry"
 				add_ownership={
-					country={
+					building={
+						type="building_financial_district"
 						country="c:RUS"
 						levels=1
+						region="STATE_KURSK"
 					}
 				}
 				reserves=1
@@ -5574,9 +6119,11 @@
 			create_building={
 				building="building_artillery_foundry"
 				add_ownership={
-					country={
+					building={
+						type="building_financial_district"
 						country="c:RUS"
 						levels=1
+						region="STATE_KURSK"
 					}
 				}
 				reserves=1
@@ -5585,9 +6132,11 @@
 			create_building={
 				building="building_munition_plant"
 				add_ownership={
-					country={
+					building={
+						type="building_financial_district"
 						country="c:RUS"
 						levels=1
+						region="STATE_KURSK"
 					}
 				}
 				reserves=1
@@ -5596,9 +6145,11 @@
 			create_building={
 				building="building_war_machine_industry"
 				add_ownership={
-					country={
+					building={
+						type="building_financial_district"
 						country="c:RUS"
 						levels=2
+						region="STATE_KURSK"
 					}
 				}
 				reserves=1
@@ -5608,14 +6159,10 @@
 				building="building_rye_farm"
 				add_ownership={
 					building={
-						type="building_manor_house"
+						type="building_financial_district"
 						country="c:RUS"
-						levels=3
+						levels=23
 						region="STATE_KURSK"
-					}
-					country={
-						country="c:RUS"
-						levels=20
 					}
 				}
 				reserves=1
@@ -5645,9 +6192,11 @@
 			create_building={
 				building="building_trade_center"
 				add_ownership={
-					country={
+					building={
+						type="building_financial_district"
 						country="c:RUS"
 						levels=1
+						region="STATE_TVER"
 					}
 				}
 				reserves=1
@@ -5689,9 +6238,11 @@
 			create_building={
 				building="building_telecommunications"
 				add_ownership={
-					country={
+					building={
+						type="building_financial_district"
 						country="c:RUS"
 						levels=1
+						region="STATE_TVER"
 					}
 				}
 				reserves=1
@@ -5700,9 +6251,11 @@
 			create_building={
 				building="building_food_industry"
 				add_ownership={
-					country={
+					building={
+						type="building_financial_district"
 						country="c:RUS"
 						levels=1
+						region="STATE_TVER"
 					}
 				}
 				reserves=1
@@ -5711,9 +6264,11 @@
 			create_building={
 				building="building_glassworks"
 				add_ownership={
-					country={
+					building={
+						type="building_financial_district"
 						country="c:RUS"
 						levels=1
+						region="STATE_TVER"
 					}
 				}
 				reserves=1
@@ -5722,9 +6277,11 @@
 			create_building={
 				building="building_motor_industry"
 				add_ownership={
-					country={
+					building={
+						type="building_financial_district"
 						country="c:RUS"
 						levels=1
+						region="STATE_TVER"
 					}
 				}
 				reserves=1
@@ -5733,9 +6290,11 @@
 			create_building={
 				building="building_electrics_industry"
 				add_ownership={
-					country={
+					building={
+						type="building_financial_district"
 						country="c:RUS"
 						levels=5
+						region="STATE_TVER"
 					}
 				}
 				reserves=1
@@ -5744,9 +6303,11 @@
 			create_building={
 				building="building_livestock_ranch"
 				add_ownership={
-					country={
+					building={
+						type="building_financial_district"
 						country="c:RUS"
 						levels=6
+						region="STATE_TVER"
 					}
 				}
 				reserves=1
@@ -5755,9 +6316,11 @@
 			create_building={
 				building="building_warehouse"
 				add_ownership={
-					country={
+					building={
+						type="building_financial_district"
 						country="c:RUS"
 						levels=5
+						region="STATE_TVER"
 					}
 				}
 				reserves=1
@@ -5777,9 +6340,11 @@
 			create_building={
 				building="building_artillery_foundry"
 				add_ownership={
-					country={
+					building={
+						type="building_financial_district"
 						country="c:RUS"
 						levels=3
+						region="STATE_TVER"
 					}
 				}
 				reserves=1
@@ -5788,9 +6353,11 @@
 			create_building={
 				building="building_war_machine_industry"
 				add_ownership={
-					country={
+					building={
+						type="building_financial_district"
 						country="c:RUS"
 						levels=2
+						region="STATE_TVER"
 					}
 				}
 				reserves=1
@@ -5818,9 +6385,11 @@
 			create_building={
 				building="building_explosives_factory"
 				add_ownership={
-					country={
+					building={
+						type="building_financial_district"
 						country="c:RUS"
 						levels=5
+						region="STATE_TVER"
 					}
 				}
 				reserves=1
@@ -5829,9 +6398,11 @@
 			create_building={
 				building="building_coal_mine"
 				add_ownership={
-					country={
+					building={
+						type="building_financial_district"
 						country="c:RUS"
 						levels=8
+						region="STATE_TVER"
 					}
 				}
 				reserves=1
@@ -5840,9 +6411,11 @@
 			create_building={
 				building="building_rye_farm"
 				add_ownership={
-					country={
+					building={
+						type="building_financial_district"
 						country="c:RUS"
 						levels=62
+						region="STATE_TVER"
 					}
 				}
 				reserves=1
@@ -5855,9 +6428,11 @@
 			create_building={
 				building="building_trade_center"
 				add_ownership={
-					country={
+					building={
+						type="building_financial_district"
 						country="c:UKR"
 						levels=4
+						region="STATE_CHERSON"
 					}
 				}
 				reserves=1
@@ -5910,9 +6485,11 @@
 			create_building={
 				building="building_power_plant"
 				add_ownership={
-					country={
+					building={
+						type="building_financial_district"
 						country="c:UKR"
 						levels=4
+						region="STATE_CHERSON"
 					}
 				}
 				reserves=1
@@ -5921,9 +6498,11 @@
 			create_building={
 				building="building_fishing_wharf"
 				add_ownership={
-					country={
+					building={
+						type="building_financial_district"
 						country="c:UKR"
 						levels=3
+						region="STATE_CHERSON"
 					}
 				}
 				reserves=1
@@ -5932,9 +6511,11 @@
 			create_building={
 				building="building_wheat_farm"
 				add_ownership={
-					country={
+					building={
+						type="building_financial_district"
 						country="c:UKR"
 						levels=3
+						region="STATE_CHERSON"
 					}
 				}
 				reserves=1
@@ -5943,9 +6524,11 @@
 			create_building={
 				building="building_livestock_ranch"
 				add_ownership={
-					country={
+					building={
+						type="building_financial_district"
 						country="c:UKR"
 						levels=2
+						region="STATE_CHERSON"
 					}
 				}
 				reserves=1
@@ -5954,9 +6537,11 @@
 			create_building={
 				building="building_logging_camp"
 				add_ownership={
-					country={
+					building={
+						type="building_financial_district"
 						country="c:UKR"
 						levels=5
+						region="STATE_CHERSON"
 					}
 				}
 				reserves=1
@@ -5965,9 +6550,11 @@
 			create_building={
 				building="building_coal_mine"
 				add_ownership={
-					country={
+					building={
+						type="building_financial_district"
 						country="c:UKR"
 						levels=3
+						region="STATE_CHERSON"
 					}
 				}
 				reserves=1
@@ -5993,9 +6580,11 @@
 			create_building={
 				building="building_food_industry"
 				add_ownership={
-					country={
+					building={
+						type="building_financial_district"
 						country="c:UKR"
 						levels=9
+						region="STATE_CHERSON"
 					}
 				}
 				reserves=1
@@ -6004,9 +6593,11 @@
 			create_building={
 				building="building_textile_mill"
 				add_ownership={
-					country={
+					building={
+						type="building_financial_district"
 						country="c:UKR"
 						levels=7
+						region="STATE_CHERSON"
 					}
 				}
 				reserves=1
@@ -6015,9 +6606,11 @@
 			create_building={
 				building="building_arms_industry"
 				add_ownership={
-					country={
+					building={
+						type="building_financial_district"
 						country="c:UKR"
 						levels=2
+						region="STATE_CHERSON"
 					}
 				}
 				reserves=1
@@ -6026,9 +6619,11 @@
 			create_building={
 				building="building_telecommunications"
 				add_ownership={
-					country={
+					building={
+						type="building_financial_district"
 						country="c:UKR"
 						levels=1
+						region="STATE_CHERSON"
 					}
 				}
 				reserves=1
@@ -6037,9 +6632,11 @@
 			create_building={
 				building="building_furniture_manufactory"
 				add_ownership={
-					country={
+					building={
+						type="building_financial_district"
 						country="c:UKR"
 						levels=4
+						region="STATE_CHERSON"
 					}
 				}
 				reserves=1
@@ -6048,9 +6645,11 @@
 			create_building={
 				building="building_paper_mill"
 				add_ownership={
-					country={
+					building={
+						type="building_financial_district"
 						country="c:UKR"
 						levels=5
+						region="STATE_CHERSON"
 					}
 				}
 				reserves=1
@@ -6059,9 +6658,11 @@
 			create_building={
 				building="building_steel_mill"
 				add_ownership={
-					country={
+					building={
+						type="building_financial_district"
 						country="c:UKR"
 						levels=7
+						region="STATE_CHERSON"
 					}
 				}
 				reserves=1
@@ -6070,9 +6671,11 @@
 			create_building={
 				building="building_tooling_workshop"
 				add_ownership={
-					country={
+					building={
+						type="building_financial_district"
 						country="c:UKR"
 						levels=4
+						region="STATE_CHERSON"
 					}
 				}
 				reserves=1
@@ -6081,9 +6684,11 @@
 			create_building={
 				building="building_chemical_plant"
 				add_ownership={
-					country={
+					building={
+						type="building_financial_district"
 						country="c:UKR"
 						levels=4
+						region="STATE_CHERSON"
 					}
 				}
 				reserves=1
@@ -6092,9 +6697,11 @@
 			create_building={
 				building="building_motor_industry"
 				add_ownership={
-					country={
+					building={
+						type="building_financial_district"
 						country="c:UKR"
 						levels=3
+						region="STATE_CHERSON"
 					}
 				}
 				reserves=1
@@ -6103,9 +6710,11 @@
 			create_building={
 				building="building_electrics_industry"
 				add_ownership={
-					country={
+					building={
+						type="building_financial_district"
 						country="c:UKR"
 						levels=3
+						region="STATE_CHERSON"
 					}
 				}
 				reserves=1
@@ -6114,9 +6723,11 @@
 			create_building={
 				building="building_food_service"
 				add_ownership={
-					country={
+					building={
+						type="building_financial_district"
 						country="c:UKR"
 						levels=4
+						region="STATE_CHERSON"
 					}
 				}
 				reserves=1
@@ -6125,9 +6736,11 @@
 			create_building={
 				building="building_retail_services"
 				add_ownership={
-					country={
+					building={
+						type="building_financial_district"
 						country="c:UKR"
 						levels=4
+						region="STATE_CHERSON"
 					}
 				}
 				reserves=1
@@ -6136,9 +6749,11 @@
 			create_building={
 				building="building_bank"
 				add_ownership={
-					country={
+					building={
+						type="building_financial_district"
 						country="c:UKR"
 						levels=2
+						region="STATE_CHERSON"
 					}
 				}
 				reserves=1
@@ -6147,9 +6762,11 @@
 			create_building={
 				building="building_warehouse"
 				add_ownership={
-					country={
+					building={
+						type="building_financial_district"
 						country="c:UKR"
 						levels=2
+						region="STATE_CHERSON"
 					}
 				}
 				reserves=1
@@ -6212,9 +6829,11 @@
 			create_building={
 				building="building_power_plant"
 				add_ownership={
-					country={
+					building={
+						type="building_financial_district"
 						country="c:RUS"
 						levels=1
+						region="STATE_GALICH"
 					}
 				}
 				reserves=1
@@ -6223,9 +6842,11 @@
 			create_building={
 				building="building_telecommunications"
 				add_ownership={
-					country={
+					building={
+						type="building_financial_district"
 						country="c:RUS"
 						levels=1
+						region="STATE_GALICH"
 					}
 				}
 				reserves=1
@@ -6234,9 +6855,11 @@
 			create_building={
 				building="building_food_industry"
 				add_ownership={
-					country={
+					building={
+						type="building_financial_district"
 						country="c:RUS"
 						levels=2
+						region="STATE_GALICH"
 					}
 				}
 				reserves=1
@@ -6245,9 +6868,11 @@
 			create_building={
 				building="building_textile_mill"
 				add_ownership={
-					country={
+					building={
+						type="building_financial_district"
 						country="c:RUS"
 						levels=1
+						region="STATE_GALICH"
 					}
 				}
 				reserves=1
@@ -6256,9 +6881,11 @@
 			create_building={
 				building="building_furniture_manufactory"
 				add_ownership={
-					country={
+					building={
+						type="building_financial_district"
 						country="c:RUS"
 						levels=1
+						region="STATE_GALICH"
 					}
 				}
 				reserves=1
@@ -6267,9 +6894,11 @@
 			create_building={
 				building="building_paper_mill"
 				add_ownership={
-					country={
+					building={
+						type="building_financial_district"
 						country="c:RUS"
 						levels=1
+						region="STATE_GALICH"
 					}
 				}
 				reserves=1
@@ -6278,9 +6907,11 @@
 			create_building={
 				building="building_glassworks"
 				add_ownership={
-					country={
+					building={
+						type="building_financial_district"
 						country="c:RUS"
 						levels=2
+						region="STATE_GALICH"
 					}
 				}
 				reserves=1
@@ -6289,9 +6920,11 @@
 			create_building={
 				building="building_steel_mill"
 				add_ownership={
-					country={
+					building={
+						type="building_financial_district"
 						country="c:RUS"
 						levels=1
+						region="STATE_GALICH"
 					}
 				}
 				reserves=1
@@ -6300,9 +6933,11 @@
 			create_building={
 				building="building_tooling_workshop"
 				add_ownership={
-					country={
+					building={
+						type="building_financial_district"
 						country="c:RUS"
 						levels=1
+						region="STATE_GALICH"
 					}
 				}
 				reserves=1
@@ -6311,9 +6946,11 @@
 			create_building={
 				building="building_chemical_plant"
 				add_ownership={
-					country={
+					building={
+						type="building_financial_district"
 						country="c:RUS"
 						levels=1
+						region="STATE_GALICH"
 					}
 				}
 				reserves=1
@@ -6322,9 +6959,11 @@
 			create_building={
 				building="building_motor_industry"
 				add_ownership={
-					country={
+					building={
+						type="building_financial_district"
 						country="c:RUS"
 						levels=3
+						region="STATE_GALICH"
 					}
 				}
 				reserves=1
@@ -6333,9 +6972,11 @@
 			create_building={
 				building="building_electrics_industry"
 				add_ownership={
-					country={
+					building={
+						type="building_financial_district"
 						country="c:RUS"
 						levels=3
+						region="STATE_GALICH"
 					}
 				}
 				reserves=1
@@ -6344,9 +6985,11 @@
 			create_building={
 				building="building_livestock_ranch"
 				add_ownership={
-					country={
+					building={
+						type="building_financial_district"
 						country="c:RUS"
 						levels=3
+						region="STATE_GALICH"
 					}
 				}
 				reserves=1
@@ -6355,9 +6998,11 @@
 			create_building={
 				building="building_coal_mine"
 				add_ownership={
-					country={
+					building={
+						type="building_financial_district"
 						country="c:RUS"
 						levels=6
+						region="STATE_GALICH"
 					}
 				}
 				reserves=1
@@ -6366,9 +7011,11 @@
 			create_building={
 				building="building_iron_mine"
 				add_ownership={
-					country={
+					building={
+						type="building_financial_district"
 						country="c:RUS"
 						levels=11
+						region="STATE_GALICH"
 					}
 				}
 				reserves=1
@@ -6377,14 +7024,10 @@
 			create_building={
 				building="building_food_service"
 				add_ownership={
-					country={
-						country="c:RUS"
-						levels=1
-					}
 					building={
-						type="building_food_service"
+						type="building_financial_district"
 						country="c:RUS"
-						levels=1
+						levels=2
 						region="STATE_GALICH"
 					}
 				}
@@ -6394,9 +7037,11 @@
 			create_building={
 				building="building_retail_services"
 				add_ownership={
-					country={
+					building={
+						type="building_financial_district"
 						country="c:RUS"
 						levels=1
+						region="STATE_GALICH"
 					}
 				}
 				reserves=1
@@ -6405,9 +7050,11 @@
 			create_building={
 				building="building_bank"
 				add_ownership={
-					country={
+					building={
+						type="building_financial_district"
 						country="c:RUS"
 						levels=1
+						region="STATE_GALICH"
 					}
 				}
 				reserves=1
@@ -6438,9 +7085,11 @@
 			create_building={
 				building="building_arms_industry"
 				add_ownership={
-					country={
+					building={
+						type="building_financial_district"
 						country="c:RUS"
 						levels=1
+						region="STATE_GALICH"
 					}
 				}
 				reserves=1
@@ -6449,9 +7098,11 @@
 			create_building={
 				building="building_artillery_foundry"
 				add_ownership={
-					country={
+					building={
+						type="building_financial_district"
 						country="c:RUS"
 						levels=1
+						region="STATE_GALICH"
 					}
 				}
 				reserves=1
@@ -6460,9 +7111,11 @@
 			create_building={
 				building="building_munition_plant"
 				add_ownership={
-					country={
+					building={
+						type="building_financial_district"
 						country="c:RUS"
 						levels=1
+						region="STATE_GALICH"
 					}
 				}
 				reserves=1
@@ -6472,14 +7125,10 @@
 				building="building_rye_farm"
 				add_ownership={
 					building={
-						type="building_manor_house"
+						type="building_financial_district"
 						country="c:RUS"
-						levels=1
+						levels=21
 						region="STATE_GALICH"
-					}
-					country={
-						country="c:RUS"
-						levels=20
 					}
 				}
 				reserves=1
@@ -6489,10 +7138,10 @@
 				building="building_logging_camp"
 				add_ownership={
 					building={
-						type="building_manor_house"
+						type="building_financial_district"
 						country="c:RUS"
 						levels=1
-						region="STATE_KAZAN"
+						region="STATE_GALICH"
 					}
 				}
 				reserves=1
@@ -6515,9 +7164,11 @@
 			create_building={
 				building="building_trade_center"
 				add_ownership={
-					country={
+					building={
+						type="building_financial_district"
 						country="c:BYL"
 						levels=1
+						region="STATE_MINSK"
 					}
 				}
 				reserves=1
@@ -6559,9 +7210,11 @@
 			create_building={
 				building="building_power_plant"
 				add_ownership={
-					country={
+					building={
+						type="building_financial_district"
 						country="c:BYL"
 						levels=1
+						region="STATE_MINSK"
 					}
 				}
 				reserves=1
@@ -6570,9 +7223,11 @@
 			create_building={
 				building="building_rye_farm"
 				add_ownership={
-					country={
+					building={
+						type="building_financial_district"
 						country="c:BYL"
 						levels=1
+						region="STATE_MINSK"
 					}
 				}
 				reserves=1
@@ -6581,9 +7236,11 @@
 			create_building={
 				building="building_livestock_ranch"
 				add_ownership={
-					country={
+					building={
+						type="building_financial_district"
 						country="c:BYL"
 						levels=1
+						region="STATE_MINSK"
 					}
 				}
 				reserves=1
@@ -6592,9 +7249,11 @@
 			create_building={
 				building="building_logging_camp"
 				add_ownership={
-					country={
+					building={
+						type="building_financial_district"
 						country="c:BYL"
 						levels=1
+						region="STATE_MINSK"
 					}
 				}
 				reserves=1
@@ -6603,9 +7262,11 @@
 			create_building={
 				building="building_coal_mine"
 				add_ownership={
-					country={
+					building={
+						type="building_financial_district"
 						country="c:BYL"
 						levels=1
+						region="STATE_MINSK"
 					}
 				}
 				reserves=1
@@ -6631,9 +7292,11 @@
 			create_building={
 				building="building_food_industry"
 				add_ownership={
-					country={
+					building={
+						type="building_financial_district"
 						country="c:BYL"
 						levels=1
+						region="STATE_MINSK"
 					}
 				}
 				reserves=1
@@ -6642,9 +7305,11 @@
 			create_building={
 				building="building_textile_mill"
 				add_ownership={
-					country={
+					building={
+						type="building_financial_district"
 						country="c:BYL"
 						levels=1
+						region="STATE_MINSK"
 					}
 				}
 				reserves=1
@@ -6653,9 +7318,11 @@
 			create_building={
 				building="building_arms_industry"
 				add_ownership={
-					country={
+					building={
+						type="building_financial_district"
 						country="c:BYL"
 						levels=2
+						region="STATE_MINSK"
 					}
 				}
 				reserves=1
@@ -6681,9 +7348,11 @@
 			create_building={
 				building="building_furniture_manufactory"
 				add_ownership={
-					country={
+					building={
+						type="building_financial_district"
 						country="c:BYL"
 						levels=4
+						region="STATE_MINSK"
 					}
 				}
 				reserves=1
@@ -6692,9 +7361,11 @@
 			create_building={
 				building="building_paper_mill"
 				add_ownership={
-					country={
+					building={
+						type="building_financial_district"
 						country="c:BYL"
 						levels=5
+						region="STATE_MINSK"
 					}
 				}
 				reserves=1
@@ -6703,9 +7374,11 @@
 			create_building={
 				building="building_steel_mill"
 				add_ownership={
-					country={
+					building={
+						type="building_financial_district"
 						country="c:BYL"
 						levels=7
+						region="STATE_MINSK"
 					}
 				}
 				reserves=1
@@ -6714,9 +7387,11 @@
 			create_building={
 				building="building_tooling_workshop"
 				add_ownership={
-					country={
+					building={
+						type="building_financial_district"
 						country="c:BYL"
 						levels=4
+						region="STATE_MINSK"
 					}
 				}
 				reserves=1
@@ -6725,9 +7400,11 @@
 			create_building={
 				building="building_chemical_plant"
 				add_ownership={
-					country={
+					building={
+						type="building_financial_district"
 						country="c:BYL"
 						levels=4
+						region="STATE_MINSK"
 					}
 				}
 				reserves=1
@@ -6736,9 +7413,11 @@
 			create_building={
 				building="building_motor_industry"
 				add_ownership={
-					country={
+					building={
+						type="building_financial_district"
 						country="c:BYL"
 						levels=3
+						region="STATE_MINSK"
 					}
 				}
 				reserves=1
@@ -6747,9 +7426,11 @@
 			create_building={
 				building="building_electrics_industry"
 				add_ownership={
-					country={
+					building={
+						type="building_financial_district"
 						country="c:BYL"
 						levels=3
+						region="STATE_MINSK"
 					}
 				}
 				reserves=1
@@ -6758,14 +7439,10 @@
 			create_building={
 				building="building_food_service"
 				add_ownership={
-					country={
-						country="c:BYL"
-						levels=4
-					}
 					building={
-						type="building_food_service"
+						type="building_financial_district"
 						country="c:BYL"
-						levels=1
+						levels=5
 						region="STATE_MINSK"
 					}
 				}
@@ -6775,9 +7452,11 @@
 			create_building={
 				building="building_retail_services"
 				add_ownership={
-					country={
+					building={
+						type="building_financial_district"
 						country="c:BYL"
 						levels=4
+						region="STATE_MINSK"
 					}
 				}
 				reserves=1
@@ -6786,9 +7465,11 @@
 			create_building={
 				building="building_bank"
 				add_ownership={
-					country={
+					building={
+						type="building_financial_district"
 						country="c:BYL"
 						levels=2
+						region="STATE_MINSK"
 					}
 				}
 				reserves=1
@@ -6797,9 +7478,11 @@
 			create_building={
 				building="building_warehouse"
 				add_ownership={
-					country={
+					building={
+						type="building_financial_district"
 						country="c:BYL"
 						levels=2
+						region="STATE_MINSK"
 					}
 				}
 				reserves=1
@@ -6825,9 +7508,11 @@
 			create_building={
 				building="building_trade_center"
 				add_ownership={
-					country={
+					building={
+						type="building_financial_district"
 						country="c:RUS"
 						levels=1
+						region="STATE_ROSTOV"
 					}
 				}
 				reserves=1
@@ -6869,9 +7554,11 @@
 			create_building={
 				building="building_telecommunications"
 				add_ownership={
-					country={
+					building={
+						type="building_financial_district"
 						country="c:RUS"
 						levels=1
+						region="STATE_ROSTOV"
 					}
 				}
 				reserves=1
@@ -6880,9 +7567,11 @@
 			create_building={
 				building="building_food_industry"
 				add_ownership={
-					country={
+					building={
+						type="building_financial_district"
 						country="c:RUS"
 						levels=1
+						region="STATE_ROSTOV"
 					}
 				}
 				reserves=1
@@ -6891,9 +7580,11 @@
 			create_building={
 				building="building_glassworks"
 				add_ownership={
-					country={
+					building={
+						type="building_financial_district"
 						country="c:RUS"
 						levels=1
+						region="STATE_ROSTOV"
 					}
 				}
 				reserves=1
@@ -6902,9 +7593,11 @@
 			create_building={
 				building="building_motor_industry"
 				add_ownership={
-					country={
+					building={
+						type="building_financial_district"
 						country="c:RUS"
 						levels=1
+						region="STATE_ROSTOV"
 					}
 				}
 				reserves=1
@@ -6913,9 +7606,11 @@
 			create_building={
 				building="building_electrics_industry"
 				add_ownership={
-					country={
+					building={
+						type="building_financial_district"
 						country="c:RUS"
 						levels=1
+						region="STATE_ROSTOV"
 					}
 				}
 				reserves=1
@@ -6924,9 +7619,11 @@
 			create_building={
 				building="building_wheat_farm"
 				add_ownership={
-					country={
+					building={
+						type="building_financial_district"
 						country="c:RUS"
 						levels=41
+						region="STATE_ROSTOV"
 					}
 				}
 				reserves=1
@@ -6935,9 +7632,11 @@
 			create_building={
 				building="building_livestock_ranch"
 				add_ownership={
-					country={
+					building={
+						type="building_financial_district"
 						country="c:RUS"
 						levels=1
+						region="STATE_ROSTOV"
 					}
 				}
 				reserves=1
@@ -6963,9 +7662,11 @@
 			create_building={
 				building="building_coal_mine"
 				add_ownership={
-					country={
+					building={
+						type="building_financial_district"
 						country="c:RUS"
 						levels=5
+						region="STATE_ROSTOV"
 					}
 				}
 				reserves=1
@@ -6974,9 +7675,11 @@
 			create_building={
 				building="building_logging_camp"
 				add_ownership={
-					country={
+					building={
+						type="building_financial_district"
 						country="c:RUS"
 						levels=5
+						region="STATE_ROSTOV"
 					}
 				}
 				reserves=1
@@ -7000,9 +7703,11 @@
 			create_building={
 				building="building_trade_center"
 				add_ownership={
-					country={
+					building={
+						type="building_financial_district"
 						country="c:UKR"
 						levels=12
+						region="STATE_ROSTOV"
 					}
 				}
 				reserves=1
@@ -7055,9 +7760,11 @@
 			create_building={
 				building="building_power_plant"
 				add_ownership={
-					country={
+					building={
+						type="building_financial_district"
 						country="c:UKR"
 						levels=4
+						region="STATE_ROSTOV"
 					}
 				}
 				reserves=1
@@ -7066,9 +7773,11 @@
 			create_building={
 				building="building_wheat_farm"
 				add_ownership={
-					country={
+					building={
+						type="building_financial_district"
 						country="c:UKR"
 						levels=3
+						region="STATE_ROSTOV"
 					}
 				}
 				reserves=1
@@ -7077,9 +7786,11 @@
 			create_building={
 				building="building_livestock_ranch"
 				add_ownership={
-					country={
+					building={
+						type="building_financial_district"
 						country="c:UKR"
 						levels=2
+						region="STATE_ROSTOV"
 					}
 				}
 				reserves=1
@@ -7088,9 +7799,11 @@
 			create_building={
 				building="building_coal_mine"
 				add_ownership={
-					country={
+					building={
+						type="building_financial_district"
 						country="c:UKR"
 						levels=3
+						region="STATE_ROSTOV"
 					}
 				}
 				reserves=1
@@ -7099,9 +7812,11 @@
 			create_building={
 				building="building_food_industry"
 				add_ownership={
-					country={
+					building={
+						type="building_financial_district"
 						country="c:UKR"
 						levels=9
+						region="STATE_ROSTOV"
 					}
 				}
 				reserves=1
@@ -7110,9 +7825,11 @@
 			create_building={
 				building="building_textile_mill"
 				add_ownership={
-					country={
+					building={
+						type="building_financial_district"
 						country="c:UKR"
 						levels=7
+						region="STATE_ROSTOV"
 					}
 				}
 				reserves=1
@@ -7121,9 +7838,11 @@
 			create_building={
 				building="building_arms_industry"
 				add_ownership={
-					country={
+					building={
+						type="building_financial_district"
 						country="c:UKR"
 						levels=2
+						region="STATE_ROSTOV"
 					}
 				}
 				reserves=1
@@ -7132,9 +7851,11 @@
 			create_building={
 				building="building_telecommunications"
 				add_ownership={
-					country={
+					building={
+						type="building_financial_district"
 						country="c:UKR"
 						levels=1
+						region="STATE_ROSTOV"
 					}
 				}
 				reserves=1
@@ -7143,9 +7864,11 @@
 			create_building={
 				building="building_furniture_manufactory"
 				add_ownership={
-					country={
+					building={
+						type="building_financial_district"
 						country="c:UKR"
 						levels=4
+						region="STATE_ROSTOV"
 					}
 				}
 				reserves=1
@@ -7154,9 +7877,11 @@
 			create_building={
 				building="building_paper_mill"
 				add_ownership={
-					country={
+					building={
+						type="building_financial_district"
 						country="c:UKR"
 						levels=5
+						region="STATE_ROSTOV"
 					}
 				}
 				reserves=1
@@ -7165,9 +7890,11 @@
 			create_building={
 				building="building_steel_mill"
 				add_ownership={
-					country={
+					building={
+						type="building_financial_district"
 						country="c:UKR"
 						levels=7
+						region="STATE_ROSTOV"
 					}
 				}
 				reserves=1
@@ -7176,9 +7903,11 @@
 			create_building={
 				building="building_tooling_workshop"
 				add_ownership={
-					country={
+					building={
+						type="building_financial_district"
 						country="c:UKR"
 						levels=4
+						region="STATE_ROSTOV"
 					}
 				}
 				reserves=1
@@ -7187,9 +7916,11 @@
 			create_building={
 				building="building_chemical_plant"
 				add_ownership={
-					country={
+					building={
+						type="building_financial_district"
 						country="c:UKR"
 						levels=4
+						region="STATE_ROSTOV"
 					}
 				}
 				reserves=1
@@ -7198,9 +7929,11 @@
 			create_building={
 				building="building_motor_industry"
 				add_ownership={
-					country={
+					building={
+						type="building_financial_district"
 						country="c:UKR"
 						levels=3
+						region="STATE_ROSTOV"
 					}
 				}
 				reserves=1
@@ -7209,9 +7942,11 @@
 			create_building={
 				building="building_electrics_industry"
 				add_ownership={
-					country={
+					building={
+						type="building_financial_district"
 						country="c:UKR"
 						levels=3
+						region="STATE_ROSTOV"
 					}
 				}
 				reserves=1
@@ -7220,9 +7955,11 @@
 			create_building={
 				building="building_food_service"
 				add_ownership={
-					country={
+					building={
+						type="building_financial_district"
 						country="c:UKR"
 						levels=4
+						region="STATE_ROSTOV"
 					}
 				}
 				reserves=1
@@ -7231,9 +7968,11 @@
 			create_building={
 				building="building_retail_services"
 				add_ownership={
-					country={
+					building={
+						type="building_financial_district"
 						country="c:UKR"
 						levels=4
+						region="STATE_ROSTOV"
 					}
 				}
 				reserves=1
@@ -7242,9 +7981,11 @@
 			create_building={
 				building="building_bank"
 				add_ownership={
-					country={
+					building={
+						type="building_financial_district"
 						country="c:UKR"
 						levels=2
+						region="STATE_ROSTOV"
 					}
 				}
 				reserves=1
@@ -7253,9 +7994,11 @@
 			create_building={
 				building="building_warehouse"
 				add_ownership={
-					country={
+					building={
+						type="building_financial_district"
 						country="c:UKR"
 						levels=2
+						region="STATE_ROSTOV"
 					}
 				}
 				reserves=1
@@ -7268,9 +8011,11 @@
 			create_building={
 				building="building_trade_center"
 				add_ownership={
-					country={
+					building={
+						type="building_financial_district"
 						country="c:RUS"
 						levels=2
+						region="STATE_PERM"
 					}
 				}
 				reserves=1
@@ -7318,9 +8063,11 @@
 			create_building={
 				building="building_power_plant"
 				add_ownership={
-					country={
+					building={
+						type="building_financial_district"
 						country="c:RUS"
 						levels=1
+						region="STATE_PERM"
 					}
 				}
 				reserves=1
@@ -7340,9 +8087,11 @@
 			create_building={
 				building="building_telecommunications"
 				add_ownership={
-					country={
+					building={
+						type="building_financial_district"
 						country="c:RUS"
 						levels=1
+						region="STATE_PERM"
 					}
 				}
 				reserves=1
@@ -7351,9 +8100,11 @@
 			create_building={
 				building="building_food_industry"
 				add_ownership={
-					country={
+					building={
+						type="building_financial_district"
 						country="c:RUS"
 						levels=2
+						region="STATE_PERM"
 					}
 				}
 				reserves=1
@@ -7362,9 +8113,11 @@
 			create_building={
 				building="building_textile_mill"
 				add_ownership={
-					country={
+					building={
+						type="building_financial_district"
 						country="c:RUS"
 						levels=1
+						region="STATE_PERM"
 					}
 				}
 				reserves=1
@@ -7373,9 +8126,11 @@
 			create_building={
 				building="building_furniture_manufactory"
 				add_ownership={
-					country={
+					building={
+						type="building_financial_district"
 						country="c:RUS"
 						levels=1
+						region="STATE_PERM"
 					}
 				}
 				reserves=1
@@ -7384,9 +8139,11 @@
 			create_building={
 				building="building_paper_mill"
 				add_ownership={
-					country={
+					building={
+						type="building_financial_district"
 						country="c:RUS"
 						levels=1
+						region="STATE_PERM"
 					}
 				}
 				reserves=1
@@ -7395,9 +8152,11 @@
 			create_building={
 				building="building_glassworks"
 				add_ownership={
-					country={
+					building={
+						type="building_financial_district"
 						country="c:RUS"
 						levels=4
+						region="STATE_PERM"
 					}
 				}
 				reserves=1
@@ -7406,9 +8165,11 @@
 			create_building={
 				building="building_steel_mill"
 				add_ownership={
-					country={
+					building={
+						type="building_financial_district"
 						country="c:RUS"
 						levels=1
+						region="STATE_PERM"
 					}
 				}
 				reserves=1
@@ -7417,9 +8178,11 @@
 			create_building={
 				building="building_tooling_workshop"
 				add_ownership={
-					country={
+					building={
+						type="building_financial_district"
 						country="c:RUS"
 						levels=1
+						region="STATE_PERM"
 					}
 				}
 				reserves=1
@@ -7428,9 +8191,11 @@
 			create_building={
 				building="building_chemical_plant"
 				add_ownership={
-					country={
+					building={
+						type="building_financial_district"
 						country="c:RUS"
 						levels=1
+						region="STATE_PERM"
 					}
 				}
 				reserves=1
@@ -7439,9 +8204,11 @@
 			create_building={
 				building="building_motor_industry"
 				add_ownership={
-					country={
+					building={
+						type="building_financial_district"
 						country="c:RUS"
 						levels=8
+						region="STATE_PERM"
 					}
 				}
 				reserves=1
@@ -7450,9 +8217,11 @@
 			create_building={
 				building="building_electrics_industry"
 				add_ownership={
-					country={
+					building={
+						type="building_financial_district"
 						country="c:RUS"
 						levels=8
+						region="STATE_PERM"
 					}
 				}
 				reserves=1
@@ -7461,9 +8230,11 @@
 			create_building={
 				building="building_livestock_ranch"
 				add_ownership={
-					country={
+					building={
+						type="building_financial_district"
 						country="c:RUS"
 						levels=6
+						region="STATE_PERM"
 					}
 				}
 				reserves=1
@@ -7472,9 +8243,11 @@
 			create_building={
 				building="building_coal_mine"
 				add_ownership={
-					country={
+					building={
+						type="building_financial_district"
 						country="c:RUS"
 						levels=31
+						region="STATE_PERM"
 					}
 				}
 				reserves=1
@@ -7483,14 +8256,10 @@
 			create_building={
 				building="building_iron_mine"
 				add_ownership={
-					country={
-						country="c:RUS"
-						levels=26
-					}
 					building={
-						type="building_iron_mine"
+						type="building_financial_district"
 						country="c:RUS"
-						levels=1
+						levels=27
 						region="STATE_PERM"
 					}
 				}
@@ -7500,9 +8269,11 @@
 			create_building={
 				building="building_food_service"
 				add_ownership={
-					country={
+					building={
+						type="building_financial_district"
 						country="c:RUS"
 						levels=1
+						region="STATE_PERM"
 					}
 				}
 				reserves=1
@@ -7511,9 +8282,11 @@
 			create_building={
 				building="building_retail_services"
 				add_ownership={
-					country={
+					building={
+						type="building_financial_district"
 						country="c:RUS"
 						levels=1
+						region="STATE_PERM"
 					}
 				}
 				reserves=1
@@ -7522,9 +8295,11 @@
 			create_building={
 				building="building_bank"
 				add_ownership={
-					country={
+					building={
+						type="building_financial_district"
 						country="c:RUS"
 						levels=1
+						region="STATE_PERM"
 					}
 				}
 				reserves=1
@@ -7533,9 +8308,11 @@
 			create_building={
 				building="building_warehouse"
 				add_ownership={
-					country={
+					building={
+						type="building_financial_district"
 						country="c:RUS"
 						levels=5
+						region="STATE_PERM"
 					}
 				}
 				reserves=1
@@ -7566,9 +8343,11 @@
 			create_building={
 				building="building_arms_industry"
 				add_ownership={
-					country={
+					building={
+						type="building_financial_district"
 						country="c:RUS"
 						levels=1
+						region="STATE_PERM"
 					}
 				}
 				reserves=1
@@ -7577,9 +8356,11 @@
 			create_building={
 				building="building_artillery_foundry"
 				add_ownership={
-					country={
+					building={
+						type="building_financial_district"
 						country="c:RUS"
 						levels=3
+						region="STATE_PERM"
 					}
 				}
 				reserves=1
@@ -7588,9 +8369,11 @@
 			create_building={
 				building="building_munition_plant"
 				add_ownership={
-					country={
+					building={
+						type="building_financial_district"
 						country="c:RUS"
 						levels=1
+						region="STATE_PERM"
 					}
 				}
 				reserves=1
@@ -7599,9 +8382,11 @@
 			create_building={
 				building="building_war_machine_industry"
 				add_ownership={
-					country={
+					building={
+						type="building_financial_district"
 						country="c:RUS"
 						levels=2
+						region="STATE_PERM"
 					}
 				}
 				reserves=1
@@ -7639,9 +8424,11 @@
 			create_building={
 				building="building_oil_rig"
 				add_ownership={
-					country={
+					building={
+						type="building_financial_district"
 						country="c:RUS"
 						levels=10
+						region="STATE_PERM"
 					}
 				}
 				reserves=1
@@ -7650,9 +8437,11 @@
 			create_building={
 				building="building_rye_farm"
 				add_ownership={
-					country={
+					building={
+						type="building_financial_district"
 						country="c:RUS"
 						levels=30
+						region="STATE_PERM"
 					}
 				}
 				reserves=1
@@ -7665,9 +8454,11 @@
 			create_building={
 				building="building_trade_center"
 				add_ownership={
-					country={
+					building={
+						type="building_financial_district"
 						country="c:RUS"
 						levels=4
+						region="STATE_KAZAN"
 					}
 				}
 				reserves=1
@@ -7709,9 +8500,11 @@
 			create_building={
 				building="building_power_plant"
 				add_ownership={
-					country={
+					building={
+						type="building_financial_district"
 						country="c:RUS"
 						levels=1
+						region="STATE_KAZAN"
 					}
 				}
 				reserves=1
@@ -7720,9 +8513,11 @@
 			create_building={
 				building="building_telecommunications"
 				add_ownership={
-					country={
+					building={
+						type="building_financial_district"
 						country="c:RUS"
 						levels=1
+						region="STATE_KAZAN"
 					}
 				}
 				reserves=1
@@ -7731,14 +8526,10 @@
 			create_building={
 				building="building_food_industry"
 				add_ownership={
-					country={
-						country="c:RUS"
-						levels=2
-					}
 					building={
-						type="building_food_industry"
+						type="building_financial_district"
 						country="c:RUS"
-						levels=1
+						levels=3
 						region="STATE_KAZAN"
 					}
 				}
@@ -7748,9 +8539,11 @@
 			create_building={
 				building="building_textile_mill"
 				add_ownership={
-					country={
+					building={
+						type="building_financial_district"
 						country="c:RUS"
 						levels=2
+						region="STATE_KAZAN"
 					}
 				}
 				reserves=1
@@ -7759,9 +8552,11 @@
 			create_building={
 				building="building_furniture_manufactory"
 				add_ownership={
-					country={
+					building={
+						type="building_financial_district"
 						country="c:RUS"
 						levels=1
+						region="STATE_KAZAN"
 					}
 				}
 				reserves=1
@@ -7787,9 +8582,11 @@
 			create_building={
 				building="building_glassworks"
 				add_ownership={
-					country={
+					building={
+						type="building_financial_district"
 						country="c:RUS"
 						levels=2
+						region="STATE_KAZAN"
 					}
 				}
 				reserves=1
@@ -7798,9 +8595,11 @@
 			create_building={
 				building="building_steel_mill"
 				add_ownership={
-					country={
+					building={
+						type="building_financial_district"
 						country="c:RUS"
 						levels=2
+						region="STATE_KAZAN"
 					}
 				}
 				reserves=1
@@ -7809,9 +8608,11 @@
 			create_building={
 				building="building_tooling_workshop"
 				add_ownership={
-					country={
+					building={
+						type="building_financial_district"
 						country="c:RUS"
 						levels=1
+						region="STATE_KAZAN"
 					}
 				}
 				reserves=1
@@ -7820,9 +8621,11 @@
 			create_building={
 				building="building_chemical_plant"
 				add_ownership={
-					country={
+					building={
+						type="building_financial_district"
 						country="c:RUS"
 						levels=1
+						region="STATE_KAZAN"
 					}
 				}
 				reserves=1
@@ -7831,9 +8634,11 @@
 			create_building={
 				building="building_motor_industry"
 				add_ownership={
-					country={
+					building={
+						type="building_financial_district"
 						country="c:RUS"
 						levels=1
+						region="STATE_KAZAN"
 					}
 				}
 				reserves=1
@@ -7842,9 +8647,11 @@
 			create_building={
 				building="building_electrics_industry"
 				add_ownership={
-					country={
+					building={
+						type="building_financial_district"
 						country="c:RUS"
 						levels=1
+						region="STATE_KAZAN"
 					}
 				}
 				reserves=1
@@ -7853,9 +8660,11 @@
 			create_building={
 				building="building_livestock_ranch"
 				add_ownership={
-					country={
+					building={
+						type="building_financial_district"
 						country="c:RUS"
 						levels=3
+						region="STATE_KAZAN"
 					}
 				}
 				reserves=1
@@ -7864,9 +8673,11 @@
 			create_building={
 				building="building_coal_mine"
 				add_ownership={
-					country={
+					building={
+						type="building_financial_district"
 						country="c:RUS"
 						levels=11
+						region="STATE_KAZAN"
 					}
 				}
 				reserves=1
@@ -7875,9 +8686,11 @@
 			create_building={
 				building="building_food_service"
 				add_ownership={
-					country={
+					building={
+						type="building_financial_district"
 						country="c:RUS"
 						levels=1
+						region="STATE_KAZAN"
 					}
 				}
 				reserves=1
@@ -7886,9 +8699,11 @@
 			create_building={
 				building="building_retail_services"
 				add_ownership={
-					country={
+					building={
+						type="building_financial_district"
 						country="c:RUS"
 						levels=1
+						region="STATE_KAZAN"
 					}
 				}
 				reserves=1
@@ -7897,9 +8712,11 @@
 			create_building={
 				building="building_bank"
 				add_ownership={
-					country={
+					building={
+						type="building_financial_district"
 						country="c:RUS"
 						levels=1
+						region="STATE_KAZAN"
 					}
 				}
 				reserves=1
@@ -7930,9 +8747,11 @@
 			create_building={
 				building="building_arms_industry"
 				add_ownership={
-					country={
+					building={
+						type="building_financial_district"
 						country="c:RUS"
 						levels=1
+						region="STATE_KAZAN"
 					}
 				}
 				reserves=1
@@ -7941,9 +8760,11 @@
 			create_building={
 				building="building_artillery_foundry"
 				add_ownership={
-					country={
+					building={
+						type="building_financial_district"
 						country="c:RUS"
 						levels=1
+						region="STATE_KAZAN"
 					}
 				}
 				reserves=1
@@ -7952,9 +8773,11 @@
 			create_building={
 				building="building_munition_plant"
 				add_ownership={
-					country={
+					building={
+						type="building_financial_district"
 						country="c:RUS"
 						levels=1
+						region="STATE_KAZAN"
 					}
 				}
 				reserves=1
@@ -8017,14 +8840,10 @@
 				building="building_rye_farm"
 				add_ownership={
 					building={
-						type="building_manor_house"
+						type="building_financial_district"
 						country="c:RUS"
-						levels=1
+						levels=21
 						region="STATE_KAZAN"
-					}
-					country={
-						country="c:RUS"
-						levels=20
 					}
 				}
 				reserves=1
@@ -8070,9 +8889,11 @@
 			create_building={
 				building="building_trade_center"
 				add_ownership={
-					country={
+					building={
+						type="building_financial_district"
 						country="c:KZK"
 						levels=4
+						region="STATE_URALSK"
 					}
 				}
 				reserves=1
@@ -8103,9 +8924,11 @@
 			create_building={
 				building="building_livestock_ranch"
 				add_ownership={
-					country={
+					building={
+						type="building_financial_district"
 						country="c:KZK"
 						levels=3
+						region="STATE_URALSK"
 					}
 				}
 				reserves=1
@@ -8114,9 +8937,11 @@
 			create_building={
 				building="building_logging_camp"
 				add_ownership={
-					country={
+					building={
+						type="building_financial_district"
 						country="c:KZK"
 						levels=2
+						region="STATE_URALSK"
 					}
 				}
 				reserves=1
@@ -8125,9 +8950,11 @@
 			create_building={
 				building="building_food_industry"
 				add_ownership={
-					country={
+					building={
+						type="building_financial_district"
 						country="c:KZK"
 						levels=2
+						region="STATE_URALSK"
 					}
 				}
 				reserves=1
@@ -8136,9 +8963,11 @@
 			create_building={
 				building="building_telecommunications"
 				add_ownership={
-					country={
+					building={
+						type="building_financial_district"
 						country="c:KZK"
 						levels=1
+						region="STATE_URALSK"
 					}
 				}
 				reserves=1
@@ -8164,9 +8993,11 @@
 			create_building={
 				building="building_paper_mill"
 				add_ownership={
-					country={
+					building={
+						type="building_financial_district"
 						country="c:KZK"
 						levels=2
+						region="STATE_URALSK"
 					}
 				}
 				reserves=1
@@ -8175,9 +9006,11 @@
 			create_building={
 				building="building_steel_mill"
 				add_ownership={
-					country={
+					building={
+						type="building_financial_district"
 						country="c:KZK"
 						levels=3
+						region="STATE_URALSK"
 					}
 				}
 				reserves=1
@@ -8186,9 +9019,11 @@
 			create_building={
 				building="building_tooling_workshop"
 				add_ownership={
-					country={
+					building={
+						type="building_financial_district"
 						country="c:KZK"
 						levels=2
+						region="STATE_URALSK"
 					}
 				}
 				reserves=1
@@ -8197,9 +9032,11 @@
 			create_building={
 				building="building_chemical_plant"
 				add_ownership={
-					country={
+					building={
+						type="building_financial_district"
 						country="c:KZK"
 						levels=2
+						region="STATE_URALSK"
 					}
 				}
 				reserves=1
@@ -8248,6 +9085,12 @@
 			create_building={
 				building="building_bank"
 				add_ownership={
+					building={
+						type="building_financial_district"
+						country="c:KZK"
+						levels=1
+						region="STATE_URALSK"
+					}
 				}
 				reserves=1
 				activate_production_methods={ "pm_basic_banking" "pm_no_securities_trading" "pm_manual_tellers" }
@@ -8259,9 +9102,11 @@
 			create_building={
 				building="building_trade_center"
 				add_ownership={
-					country={
+					building={
+						type="building_financial_district"
 						country="c:KZK"
 						levels=1
+						region="STATE_KHIVA"
 					}
 				}
 				reserves=1
@@ -8292,9 +9137,11 @@
 			create_building={
 				building="building_wheat_farm"
 				add_ownership={
-					country={
+					building={
+						type="building_financial_district"
 						country="c:KZK"
 						levels=1
+						region="STATE_KHIVA"
 					}
 				}
 				reserves=1
@@ -8303,9 +9150,11 @@
 			create_building={
 				building="building_opium_plantation"
 				add_ownership={
-					country={
+					building={
+						type="building_financial_district"
 						country="c:KZK"
 						levels=1
+						region="STATE_KHIVA"
 					}
 				}
 				reserves=1
@@ -8315,7 +9164,7 @@
 				building="building_professional_service"
 				add_ownership={
 					building={
-						type="building_professional_service"
+						type="building_financial_district"
 						country="c:KZK"
 						levels=1
 						region="STATE_KHIVA"
@@ -8336,9 +9185,11 @@
 			create_building={
 				building="building_trade_center"
 				add_ownership={
-					country={
+					building={
+						type="building_financial_district"
 						country="c:UZB"
 						levels=1
+						region="STATE_KHIVA"
 					}
 				}
 				reserves=1
@@ -8380,9 +9231,11 @@
 			create_building={
 				building="building_power_plant"
 				add_ownership={
-					country={
+					building={
+						type="building_financial_district"
 						country="c:UZB"
 						levels=2
+						region="STATE_KHIVA"
 					}
 				}
 				reserves=1
@@ -8391,9 +9244,11 @@
 			create_building={
 				building="building_wheat_farm"
 				add_ownership={
-					country={
+					building={
+						type="building_financial_district"
 						country="c:UZB"
 						levels=9
+						region="STATE_KHIVA"
 					}
 				}
 				reserves=1
@@ -8402,9 +9257,11 @@
 			create_building={
 				building="building_livestock_ranch"
 				add_ownership={
-					country={
+					building={
+						type="building_financial_district"
 						country="c:UZB"
 						levels=6
+						region="STATE_KHIVA"
 					}
 				}
 				reserves=1
@@ -8413,9 +9270,11 @@
 			create_building={
 				building="building_food_industry"
 				add_ownership={
-					country={
+					building={
+						type="building_financial_district"
 						country="c:UZB"
 						levels=4
+						region="STATE_KHIVA"
 					}
 				}
 				reserves=1
@@ -8424,9 +9283,11 @@
 			create_building={
 				building="building_textile_mill"
 				add_ownership={
-					country={
+					building={
+						type="building_financial_district"
 						country="c:UZB"
 						levels=3
+						region="STATE_KHIVA"
 					}
 				}
 				reserves=1
@@ -8452,14 +9313,10 @@
 			create_building={
 				building="building_food_service"
 				add_ownership={
-					country={
-						country="c:UZB"
-						levels=3
-					}
 					building={
-						type="building_food_service"
+						type="building_financial_district"
 						country="c:UZB"
-						levels=1
+						levels=4
 						region="STATE_KHIVA"
 					}
 				}
@@ -8469,9 +9326,11 @@
 			create_building={
 				building="building_retail_services"
 				add_ownership={
-					country={
+					building={
+						type="building_financial_district"
 						country="c:UZB"
 						levels=2
+						region="STATE_KHIVA"
 					}
 				}
 				reserves=1
@@ -8480,9 +9339,11 @@
 			create_building={
 				building="building_opium_plantation"
 				add_ownership={
-					country={
+					building={
+						type="building_financial_district"
 						country="c:UZB"
 						levels=9
+						region="STATE_KHIVA"
 					}
 				}
 				reserves=1
@@ -8505,7 +9366,7 @@
 				building="building_advertising_agency"
 				add_ownership={
 					building={
-						type="building_advertising_agency"
+						type="building_financial_district"
 						country="c:UZB"
 						levels=1
 						region="STATE_KHIVA"
@@ -8517,6 +9378,12 @@
 			create_building={
 				building="building_glassworks"
 				add_ownership={
+					building={
+						type="building_financial_district"
+						country="c:UZB"
+						levels=1
+						region="STATE_KHIVA"
+					}
 				}
 				reserves=1
 				activate_production_methods={ "pm_forest_glass" "pm_manual_glassblowing" }
@@ -8524,6 +9391,12 @@
 			create_building={
 				building="building_paper_mill"
 				add_ownership={
+					building={
+						type="building_financial_district"
+						country="c:UZB"
+						levels=1
+						region="STATE_KHIVA"
+					}
 				}
 				reserves=1
 				activate_production_methods={ "pm_pulp_pressing" "pm_automation_disabled" }
@@ -8535,9 +9408,11 @@
 			create_building={
 				building="building_trade_center"
 				add_ownership={
-					country={
+					building={
+						type="building_financial_district"
 						country="c:KZK"
 						levels=1
+						region="STATE_SEMIRECHE"
 					}
 				}
 				reserves=1
@@ -8579,9 +9454,11 @@
 			create_building={
 				building="building_power_plant"
 				add_ownership={
-					country={
+					building={
+						type="building_financial_district"
 						country="c:KZK"
 						levels=1
+						region="STATE_SEMIRECHE"
 					}
 				}
 				reserves=1
@@ -8590,9 +9467,11 @@
 			create_building={
 				building="building_livestock_ranch"
 				add_ownership={
-					country={
+					building={
+						type="building_financial_district"
 						country="c:KZK"
 						levels=1
+						region="STATE_SEMIRECHE"
 					}
 				}
 				reserves=1
@@ -8618,9 +9497,11 @@
 			create_building={
 				building="building_food_industry"
 				add_ownership={
-					country={
+					building={
+						type="building_financial_district"
 						country="c:KZK"
 						levels=1
+						region="STATE_SEMIRECHE"
 					}
 				}
 				reserves=1
@@ -8629,9 +9510,11 @@
 			create_building={
 				building="building_textile_mill"
 				add_ownership={
-					country={
+					building={
+						type="building_financial_district"
 						country="c:KZK"
 						levels=1
+						region="STATE_SEMIRECHE"
 					}
 				}
 				reserves=1
@@ -8640,9 +9523,11 @@
 			create_building={
 				building="building_telecommunications"
 				add_ownership={
-					country={
+					building={
+						type="building_financial_district"
 						country="c:KZK"
 						levels=1
+						region="STATE_SEMIRECHE"
 					}
 				}
 				reserves=1
@@ -8651,9 +9536,11 @@
 			create_building={
 				building="building_furniture_manufactory"
 				add_ownership={
-					country={
+					building={
+						type="building_financial_district"
 						country="c:KZK"
 						levels=4
+						region="STATE_SEMIRECHE"
 					}
 				}
 				reserves=1
@@ -8662,9 +9549,11 @@
 			create_building={
 				building="building_paper_mill"
 				add_ownership={
-					country={
+					building={
+						type="building_financial_district"
 						country="c:KZK"
 						levels=8
+						region="STATE_SEMIRECHE"
 					}
 				}
 				reserves=1
@@ -8673,9 +9562,11 @@
 			create_building={
 				building="building_glassworks"
 				add_ownership={
-					country={
+					building={
+						type="building_financial_district"
 						country="c:KZK"
 						levels=2
+						region="STATE_SEMIRECHE"
 					}
 				}
 				reserves=1
@@ -8701,9 +9592,11 @@
 			create_building={
 				building="building_motor_industry"
 				add_ownership={
-					country={
+					building={
+						type="building_financial_district"
 						country="c:KZK"
 						levels=3
+						region="STATE_SEMIRECHE"
 					}
 				}
 				reserves=1
@@ -8712,9 +9605,11 @@
 			create_building={
 				building="building_electrics_industry"
 				add_ownership={
-					country={
+					building={
+						type="building_financial_district"
 						country="c:KZK"
 						levels=3
+						region="STATE_SEMIRECHE"
 					}
 				}
 				reserves=1
@@ -8723,9 +9618,11 @@
 			create_building={
 				building="building_food_service"
 				add_ownership={
-					country={
+					building={
+						type="building_financial_district"
 						country="c:KZK"
 						levels=3
+						region="STATE_SEMIRECHE"
 					}
 				}
 				reserves=1
@@ -8734,9 +9631,11 @@
 			create_building={
 				building="building_retail_services"
 				add_ownership={
-					country={
+					building={
+						type="building_financial_district"
 						country="c:KZK"
 						levels=2
+						region="STATE_SEMIRECHE"
 					}
 				}
 				reserves=1
@@ -8765,7 +9664,7 @@
 				building="building_warehouse"
 				add_ownership={
 					building={
-						type="building_warehouse"
+						type="building_financial_district"
 						country="c:KZK"
 						levels=1
 						region="STATE_SEMIRECHE"
@@ -8800,9 +9699,11 @@
 			create_building={
 				building="building_trade_center"
 				add_ownership={
-					country={
+					building={
+						type="building_financial_district"
 						country="c:KZK"
 						levels=1
+						region="STATE_JETISY"
 					}
 				}
 				reserves=1
@@ -8844,9 +9745,11 @@
 			create_building={
 				building="building_power_plant"
 				add_ownership={
-					country={
+					building={
+						type="building_financial_district"
 						country="c:KZK"
 						levels=1
+						region="STATE_JETISY"
 					}
 				}
 				reserves=1
@@ -8855,9 +9758,11 @@
 			create_building={
 				building="building_wheat_farm"
 				add_ownership={
-					country={
+					building={
+						type="building_financial_district"
 						country="c:KZK"
 						levels=1
+						region="STATE_JETISY"
 					}
 				}
 				reserves=1
@@ -8866,9 +9771,11 @@
 			create_building={
 				building="building_livestock_ranch"
 				add_ownership={
-					country={
+					building={
+						type="building_financial_district"
 						country="c:KZK"
 						levels=1
+						region="STATE_JETISY"
 					}
 				}
 				reserves=1
@@ -8877,9 +9784,11 @@
 			create_building={
 				building="building_logging_camp"
 				add_ownership={
-					country={
+					building={
+						type="building_financial_district"
 						country="c:KZK"
 						levels=1
+						region="STATE_JETISY"
 					}
 				}
 				reserves=1
@@ -8888,9 +9797,11 @@
 			create_building={
 				building="building_coal_mine"
 				add_ownership={
-					country={
+					building={
+						type="building_financial_district"
 						country="c:KZK"
 						levels=1
+						region="STATE_JETISY"
 					}
 				}
 				reserves=1
@@ -8899,9 +9810,11 @@
 			create_building={
 				building="building_food_industry"
 				add_ownership={
-					country={
+					building={
+						type="building_financial_district"
 						country="c:KZK"
 						levels=3
+						region="STATE_JETISY"
 					}
 				}
 				reserves=1
@@ -8910,9 +9823,11 @@
 			create_building={
 				building="building_textile_mill"
 				add_ownership={
-					country={
+					building={
+						type="building_financial_district"
 						country="c:KZK"
 						levels=3
+						region="STATE_JETISY"
 					}
 				}
 				reserves=1
@@ -8921,9 +9836,11 @@
 			create_building={
 				building="building_telecommunications"
 				add_ownership={
-					country={
+					building={
+						type="building_financial_district"
 						country="c:KZK"
 						levels=1
+						region="STATE_JETISY"
 					}
 				}
 				reserves=1
@@ -8932,9 +9849,11 @@
 			create_building={
 				building="building_furniture_manufactory"
 				add_ownership={
-					country={
+					building={
+						type="building_financial_district"
 						country="c:KZK"
 						levels=4
+						region="STATE_JETISY"
 					}
 				}
 				reserves=1
@@ -8943,9 +9862,11 @@
 			create_building={
 				building="building_paper_mill"
 				add_ownership={
-					country={
+					building={
+						type="building_financial_district"
 						country="c:KZK"
 						levels=8
+						region="STATE_JETISY"
 					}
 				}
 				reserves=1
@@ -8954,9 +9875,11 @@
 			create_building={
 				building="building_glassworks"
 				add_ownership={
-					country={
+					building={
+						type="building_financial_district"
 						country="c:KZK"
 						levels=2
+						region="STATE_JETISY"
 					}
 				}
 				reserves=1
@@ -8965,9 +9888,11 @@
 			create_building={
 				building="building_tooling_workshop"
 				add_ownership={
-					country={
+					building={
+						type="building_financial_district"
 						country="c:KZK"
 						levels=5
+						region="STATE_JETISY"
 					}
 				}
 				reserves=1
@@ -8976,9 +9901,11 @@
 			create_building={
 				building="building_motor_industry"
 				add_ownership={
-					country={
+					building={
+						type="building_financial_district"
 						country="c:KZK"
 						levels=3
+						region="STATE_JETISY"
 					}
 				}
 				reserves=1
@@ -8987,9 +9914,11 @@
 			create_building={
 				building="building_electrics_industry"
 				add_ownership={
-					country={
+					building={
+						type="building_financial_district"
 						country="c:KZK"
 						levels=3
+						region="STATE_JETISY"
 					}
 				}
 				reserves=1
@@ -8998,9 +9927,11 @@
 			create_building={
 				building="building_food_service"
 				add_ownership={
-					country={
+					building={
+						type="building_financial_district"
 						country="c:KZK"
 						levels=3
+						region="STATE_JETISY"
 					}
 				}
 				reserves=1
@@ -9009,9 +9940,11 @@
 			create_building={
 				building="building_retail_services"
 				add_ownership={
-					country={
+					building={
+						type="building_financial_district"
 						country="c:KZK"
 						levels=2
+						region="STATE_JETISY"
 					}
 				}
 				reserves=1
@@ -9024,9 +9957,11 @@
 			create_building={
 				building="building_trade_center"
 				add_ownership={
-					country={
+					building={
+						type="building_financial_district"
 						country="c:KZK"
 						levels=1
+						region="STATE_AKMOLINSK"
 					}
 				}
 				reserves=1
@@ -9068,9 +10003,11 @@
 			create_building={
 				building="building_power_plant"
 				add_ownership={
-					country={
+					building={
+						type="building_financial_district"
 						country="c:KZK"
 						levels=1
+						region="STATE_AKMOLINSK"
 					}
 				}
 				reserves=1
@@ -9079,9 +10016,11 @@
 			create_building={
 				building="building_rye_farm"
 				add_ownership={
-					country={
+					building={
+						type="building_financial_district"
 						country="c:KZK"
 						levels=1
+						region="STATE_AKMOLINSK"
 					}
 				}
 				reserves=1
@@ -9090,9 +10029,11 @@
 			create_building={
 				building="building_livestock_ranch"
 				add_ownership={
-					country={
+					building={
+						type="building_financial_district"
 						country="c:KZK"
 						levels=1
+						region="STATE_AKMOLINSK"
 					}
 				}
 				reserves=1
@@ -9101,9 +10042,11 @@
 			create_building={
 				building="building_logging_camp"
 				add_ownership={
-					country={
+					building={
+						type="building_financial_district"
 						country="c:KZK"
 						levels=1
+						region="STATE_AKMOLINSK"
 					}
 				}
 				reserves=1
@@ -9112,9 +10055,11 @@
 			create_building={
 				building="building_coal_mine"
 				add_ownership={
-					country={
+					building={
+						type="building_financial_district"
 						country="c:KZK"
 						levels=1
+						region="STATE_AKMOLINSK"
 					}
 				}
 				reserves=1
@@ -9140,9 +10085,11 @@
 			create_building={
 				building="building_food_industry"
 				add_ownership={
-					country={
+					building={
+						type="building_financial_district"
 						country="c:KZK"
 						levels=1
+						region="STATE_AKMOLINSK"
 					}
 				}
 				reserves=1
@@ -9151,9 +10098,11 @@
 			create_building={
 				building="building_textile_mill"
 				add_ownership={
-					country={
+					building={
+						type="building_financial_district"
 						country="c:KZK"
 						levels=1
+						region="STATE_AKMOLINSK"
 					}
 				}
 				reserves=1
@@ -9162,21 +10111,24 @@
 			create_building={
 				building="building_telecommunications"
 				add_ownership={
-					country={
+					building={
+						type="building_financial_district"
 						country="c:KZK"
 						levels=1
+						region="STATE_AKMOLINSK"
 					}
 				}
-				subsidized=no
 				reserves=1
 				activate_production_methods={ "pm_power_lines" "pm_1g" }
 			}
 			create_building={
 				building="building_furniture_manufactory"
 				add_ownership={
-					country={
+					building={
+						type="building_financial_district"
 						country="c:KZK"
 						levels=4
+						region="STATE_AKMOLINSK"
 					}
 				}
 				reserves=1
@@ -9185,9 +10137,11 @@
 			create_building={
 				building="building_paper_mill"
 				add_ownership={
-					country={
+					building={
+						type="building_financial_district"
 						country="c:KZK"
 						levels=8
+						region="STATE_AKMOLINSK"
 					}
 				}
 				reserves=1
@@ -9196,9 +10150,11 @@
 			create_building={
 				building="building_glassworks"
 				add_ownership={
-					country={
+					building={
+						type="building_financial_district"
 						country="c:KZK"
 						levels=2
+						region="STATE_AKMOLINSK"
 					}
 				}
 				reserves=1
@@ -9241,9 +10197,11 @@
 			create_building={
 				building="building_electrics_industry"
 				add_ownership={
-					country={
+					building={
+						type="building_financial_district"
 						country="c:KZK"
 						levels=3
+						region="STATE_AKMOLINSK"
 					}
 				}
 				reserves=1
@@ -9252,9 +10210,11 @@
 			create_building={
 				building="building_food_service"
 				add_ownership={
-					country={
+					building={
+						type="building_financial_district"
 						country="c:KZK"
 						levels=3
+						region="STATE_AKMOLINSK"
 					}
 				}
 				reserves=1
@@ -9263,9 +10223,11 @@
 			create_building={
 				building="building_retail_services"
 				add_ownership={
-					country={
+					building={
+						type="building_financial_district"
 						country="c:KZK"
 						levels=2
+						region="STATE_AKMOLINSK"
 					}
 				}
 				reserves=1
@@ -9275,7 +10237,7 @@
 				building="building_warehouse"
 				add_ownership={
 					building={
-						type="building_warehouse"
+						type="building_financial_district"
 						country="c:KZK"
 						levels=1
 						region="STATE_AKMOLINSK"
@@ -9287,6 +10249,12 @@
 			create_building={
 				building="building_art_academy"
 				add_ownership={
+					building={
+						type="building_financial_district"
+						country="c:KZK"
+						levels=1
+						region="STATE_AKMOLINSK"
+					}
 				}
 				reserves=1
 				activate_production_methods={ "pm_traditional_art" "pm_traditional_patronage" "pm_freedom_of_movement_no_effect" }
@@ -9328,9 +10296,11 @@
 			create_building={
 				building="building_food_service"
 				add_ownership={
-					country={
+					building={
+						type="building_financial_district"
 						country="c:RUS"
 						levels=1
+						region="STATE_KALMYKIA"
 					}
 				}
 				reserves=1
@@ -9339,9 +10309,11 @@
 			create_building={
 				building="building_retail_services"
 				add_ownership={
-					country={
+					building={
+						type="building_financial_district"
 						country="c:RUS"
 						levels=1
+						region="STATE_KALMYKIA"
 					}
 				}
 				reserves=1
@@ -9350,9 +10322,11 @@
 			create_building={
 				building="building_arms_industry"
 				add_ownership={
-					country={
+					building={
+						type="building_financial_district"
 						country="c:RUS"
 						levels=1
+						region="STATE_KALMYKIA"
 					}
 				}
 				reserves=1
@@ -9361,9 +10335,11 @@
 			create_building={
 				building="building_wheat_farm"
 				add_ownership={
-					country={
+					building={
+						type="building_financial_district"
 						country="c:RUS"
 						levels=8
+						region="STATE_KALMYKIA"
 					}
 				}
 				reserves=1
@@ -9400,9 +10376,11 @@
 			create_building={
 				building="building_trade_center"
 				add_ownership={
-					country={
+					building={
+						type="building_financial_district"
 						country="c:CCH"
 						levels=1
+						region="STATE_NORTH_CAUCASUS"
 					}
 				}
 				reserves=1
@@ -9433,9 +10411,11 @@
 			create_building={
 				building="building_wheat_farm"
 				add_ownership={
-					country={
+					building={
+						type="building_financial_district"
 						country="c:CCH"
 						levels=2
+						region="STATE_NORTH_CAUCASUS"
 					}
 				}
 				reserves=1
@@ -9444,9 +10424,11 @@
 			create_building={
 				building="building_livestock_ranch"
 				add_ownership={
-					country={
+					building={
+						type="building_financial_district"
 						country="c:CCH"
 						levels=2
+						region="STATE_NORTH_CAUCASUS"
 					}
 				}
 				reserves=1
@@ -9459,9 +10441,11 @@
 			create_building={
 				building="building_trade_center"
 				add_ownership={
-					country={
+					building={
+						type="building_financial_district"
 						country="c:UKR"
 						levels=2
+						region="STATE_TAURIDA"
 					}
 				}
 				reserves=1
@@ -9514,9 +10498,11 @@
 			create_building={
 				building="building_power_plant"
 				add_ownership={
-					country={
+					building={
+						type="building_financial_district"
 						country="c:UKR"
 						levels=1
+						region="STATE_TAURIDA"
 					}
 				}
 				reserves=1
@@ -9525,9 +10511,11 @@
 			create_building={
 				building="building_wheat_farm"
 				add_ownership={
-					country={
+					building={
+						type="building_financial_district"
 						country="c:UKR"
 						levels=1
+						region="STATE_TAURIDA"
 					}
 				}
 				reserves=1
@@ -9577,9 +10565,11 @@
 			create_building={
 				building="building_food_industry"
 				add_ownership={
-					country={
+					building={
+						type="building_financial_district"
 						country="c:UKR"
 						levels=2
+						region="STATE_TAURIDA"
 					}
 				}
 				reserves=1
@@ -9588,9 +10578,11 @@
 			create_building={
 				building="building_textile_mill"
 				add_ownership={
-					country={
+					building={
+						type="building_financial_district"
 						country="c:UKR"
 						levels=1
+						region="STATE_TAURIDA"
 					}
 				}
 				reserves=1
@@ -9599,9 +10591,11 @@
 			create_building={
 				building="building_telecommunications"
 				add_ownership={
-					country={
+					building={
+						type="building_financial_district"
 						country="c:UKR"
 						levels=1
+						region="STATE_TAURIDA"
 					}
 				}
 				reserves=1
@@ -9610,9 +10604,11 @@
 			create_building={
 				building="building_furniture_manufactory"
 				add_ownership={
-					country={
+					building={
+						type="building_financial_district"
 						country="c:UKR"
 						levels=1
+						region="STATE_TAURIDA"
 					}
 				}
 				reserves=1
@@ -9621,9 +10617,11 @@
 			create_building={
 				building="building_paper_mill"
 				add_ownership={
-					country={
+					building={
+						type="building_financial_district"
 						country="c:UKR"
 						levels=1
+						region="STATE_TAURIDA"
 					}
 				}
 				reserves=1
@@ -9632,9 +10630,11 @@
 			create_building={
 				building="building_steel_mill"
 				add_ownership={
-					country={
+					building={
+						type="building_financial_district"
 						country="c:UKR"
 						levels=1
+						region="STATE_TAURIDA"
 					}
 				}
 				reserves=1
@@ -9643,9 +10643,11 @@
 			create_building={
 				building="building_tooling_workshop"
 				add_ownership={
-					country={
+					building={
+						type="building_financial_district"
 						country="c:UKR"
 						levels=1
+						region="STATE_TAURIDA"
 					}
 				}
 				reserves=1
@@ -9654,9 +10656,11 @@
 			create_building={
 				building="building_chemical_plant"
 				add_ownership={
-					country={
+					building={
+						type="building_financial_district"
 						country="c:UKR"
 						levels=1
+						region="STATE_TAURIDA"
 					}
 				}
 				reserves=1
@@ -9665,9 +10669,11 @@
 			create_building={
 				building="building_food_service"
 				add_ownership={
-					country={
+					building={
+						type="building_financial_district"
 						country="c:UKR"
 						levels=1
+						region="STATE_TAURIDA"
 					}
 				}
 				reserves=1
@@ -9676,9 +10682,11 @@
 			create_building={
 				building="building_retail_services"
 				add_ownership={
-					country={
+					building={
+						type="building_financial_district"
 						country="c:UKR"
 						levels=1
+						region="STATE_TAURIDA"
 					}
 				}
 				reserves=1
@@ -9698,9 +10706,11 @@
 			create_building={
 				building="building_arms_industry"
 				add_ownership={
-					country={
+					building={
+						type="building_financial_district"
 						country="c:UKR"
 						levels=1
+						region="STATE_TAURIDA"
 					}
 				}
 				reserves=1
@@ -9710,7 +10720,7 @@
 				building="building_warehouse"
 				add_ownership={
 					building={
-						type="building_warehouse"
+						type="building_financial_district"
 						country="c:UKR"
 						levels=1
 						region="STATE_TAURIDA"
@@ -9726,9 +10736,11 @@
 			create_building={
 				building="building_trade_center"
 				add_ownership={
-					country={
+					building={
+						type="building_financial_district"
 						country="c:RUS"
 						levels=4
+						region="STATE_TAMBOV"
 					}
 				}
 				reserves=1
@@ -9770,9 +10782,11 @@
 			create_building={
 				building="building_power_plant"
 				add_ownership={
-					country={
+					building={
+						type="building_financial_district"
 						country="c:RUS"
 						levels=1
+						region="STATE_TAMBOV"
 					}
 				}
 				reserves=1
@@ -9792,9 +10806,11 @@
 			create_building={
 				building="building_telecommunications"
 				add_ownership={
-					country={
+					building={
+						type="building_financial_district"
 						country="c:RUS"
 						levels=1
+						region="STATE_TAMBOV"
 					}
 				}
 				reserves=1
@@ -9803,9 +10819,11 @@
 			create_building={
 				building="building_food_industry"
 				add_ownership={
-					country={
+					building={
+						type="building_financial_district"
 						country="c:RUS"
 						levels=2
+						region="STATE_TAMBOV"
 					}
 				}
 				reserves=1
@@ -9814,9 +10832,11 @@
 			create_building={
 				building="building_textile_mill"
 				add_ownership={
-					country={
+					building={
+						type="building_financial_district"
 						country="c:RUS"
 						levels=2
+						region="STATE_TAMBOV"
 					}
 				}
 				reserves=1
@@ -9825,9 +10845,11 @@
 			create_building={
 				building="building_furniture_manufactory"
 				add_ownership={
-					country={
+					building={
+						type="building_financial_district"
 						country="c:RUS"
 						levels=1
+						region="STATE_TAMBOV"
 					}
 				}
 				reserves=1
@@ -9836,9 +10858,11 @@
 			create_building={
 				building="building_paper_mill"
 				add_ownership={
-					country={
+					building={
+						type="building_financial_district"
 						country="c:RUS"
 						levels=1
+						region="STATE_TAMBOV"
 					}
 				}
 				reserves=1
@@ -9847,9 +10871,11 @@
 			create_building={
 				building="building_glassworks"
 				add_ownership={
-					country={
+					building={
+						type="building_financial_district"
 						country="c:RUS"
 						levels=4
+						region="STATE_TAMBOV"
 					}
 				}
 				reserves=1
@@ -9858,9 +10884,11 @@
 			create_building={
 				building="building_steel_mill"
 				add_ownership={
-					country={
+					building={
+						type="building_financial_district"
 						country="c:RUS"
 						levels=2
+						region="STATE_TAMBOV"
 					}
 				}
 				reserves=1
@@ -9886,9 +10914,11 @@
 			create_building={
 				building="building_chemical_plant"
 				add_ownership={
-					country={
+					building={
+						type="building_financial_district"
 						country="c:RUS"
 						levels=1
+						region="STATE_TAMBOV"
 					}
 				}
 				reserves=1
@@ -9897,9 +10927,11 @@
 			create_building={
 				building="building_motor_industry"
 				add_ownership={
-					country={
+					building={
+						type="building_financial_district"
 						country="c:RUS"
 						levels=1
+						region="STATE_TAMBOV"
 					}
 				}
 				reserves=1
@@ -9908,9 +10940,11 @@
 			create_building={
 				building="building_electrics_industry"
 				add_ownership={
-					country={
+					building={
+						type="building_financial_district"
 						country="c:RUS"
 						levels=1
+						region="STATE_TAMBOV"
 					}
 				}
 				reserves=1
@@ -9919,9 +10953,11 @@
 			create_building={
 				building="building_livestock_ranch"
 				add_ownership={
-					country={
+					building={
+						type="building_financial_district"
 						country="c:RUS"
 						levels=6
+						region="STATE_TAMBOV"
 					}
 				}
 				reserves=1
@@ -9947,9 +10983,11 @@
 			create_building={
 				building="building_food_service"
 				add_ownership={
-					country={
+					building={
+						type="building_financial_district"
 						country="c:RUS"
 						levels=1
+						region="STATE_TAMBOV"
 					}
 				}
 				reserves=1
@@ -9958,9 +10996,11 @@
 			create_building={
 				building="building_retail_services"
 				add_ownership={
-					country={
+					building={
+						type="building_financial_district"
 						country="c:RUS"
 						levels=1
+						region="STATE_TAMBOV"
 					}
 				}
 				reserves=1
@@ -9969,9 +11009,11 @@
 			create_building={
 				building="building_bank"
 				add_ownership={
-					country={
+					building={
+						type="building_financial_district"
 						country="c:RUS"
 						levels=1
+						region="STATE_TAMBOV"
 					}
 				}
 				reserves=1
@@ -9980,9 +11022,11 @@
 			create_building={
 				building="building_warehouse"
 				add_ownership={
-					country={
+					building={
+						type="building_financial_district"
 						country="c:RUS"
 						levels=5
+						region="STATE_TAMBOV"
 					}
 				}
 				reserves=1
@@ -10013,9 +11057,11 @@
 			create_building={
 				building="building_arms_industry"
 				add_ownership={
-					country={
+					building={
+						type="building_financial_district"
 						country="c:RUS"
 						levels=1
+						region="STATE_TAMBOV"
 					}
 				}
 				reserves=1
@@ -10024,9 +11070,11 @@
 			create_building={
 				building="building_artillery_foundry"
 				add_ownership={
-					country={
+					building={
+						type="building_financial_district"
 						country="c:RUS"
 						levels=1
+						region="STATE_TAMBOV"
 					}
 				}
 				reserves=1
@@ -10035,9 +11083,11 @@
 			create_building={
 				building="building_munition_plant"
 				add_ownership={
-					country={
+					building={
+						type="building_financial_district"
 						country="c:RUS"
 						levels=1
+						region="STATE_TAMBOV"
 					}
 				}
 				reserves=1
@@ -10046,9 +11096,11 @@
 			create_building={
 				building="building_war_machine_industry"
 				add_ownership={
-					country={
+					building={
+						type="building_financial_district"
 						country="c:RUS"
 						levels=12
+						region="STATE_TAMBOV"
 					}
 				}
 				reserves=1
@@ -10058,14 +11110,10 @@
 				building="building_rye_farm"
 				add_ownership={
 					building={
-						type="building_manor_house"
+						type="building_financial_district"
 						country="c:RUS"
-						levels=1
+						levels=41
 						region="STATE_TAMBOV"
-					}
-					country={
-						country="c:RUS"
-						levels=40
 					}
 				}
 				reserves=1
@@ -10091,9 +11139,11 @@
 			create_building={
 				building="building_trade_center"
 				add_ownership={
-					country={
+					building={
+						type="building_financial_district"
 						country="c:RUS"
 						levels=2
+						region="STATE_RYAZAN"
 					}
 				}
 				reserves=1
@@ -10130,9 +11180,11 @@
 			create_building={
 				building="building_telecommunications"
 				add_ownership={
-					country={
+					building={
+						type="building_financial_district"
 						country="c:RUS"
 						levels=1
+						region="STATE_RYAZAN"
 					}
 				}
 				reserves=1
@@ -10141,9 +11193,11 @@
 			create_building={
 				building="building_food_industry"
 				add_ownership={
-					country={
+					building={
+						type="building_financial_district"
 						country="c:RUS"
 						levels=7
+						region="STATE_RYAZAN"
 					}
 				}
 				reserves=1
@@ -10186,9 +11240,11 @@
 			create_building={
 				building="building_glassworks"
 				add_ownership={
-					country={
+					building={
+						type="building_financial_district"
 						country="c:RUS"
 						levels=2
+						region="STATE_RYAZAN"
 					}
 				}
 				reserves=1
@@ -10197,9 +11253,11 @@
 			create_building={
 				building="building_tooling_workshop"
 				add_ownership={
-					country={
+					building={
+						type="building_financial_district"
 						country="c:RUS"
 						levels=1
+						region="STATE_RYAZAN"
 					}
 				}
 				reserves=1
@@ -10208,9 +11266,11 @@
 			create_building={
 				building="building_chemical_plant"
 				add_ownership={
-					country={
+					building={
+						type="building_financial_district"
 						country="c:RUS"
 						levels=1
+						region="STATE_RYAZAN"
 					}
 				}
 				reserves=1
@@ -10219,9 +11279,11 @@
 			create_building={
 				building="building_motor_industry"
 				add_ownership={
-					country={
+					building={
+						type="building_financial_district"
 						country="c:RUS"
 						levels=3
+						region="STATE_RYAZAN"
 					}
 				}
 				reserves=1
@@ -10230,9 +11292,11 @@
 			create_building={
 				building="building_electrics_industry"
 				add_ownership={
-					country={
+					building={
+						type="building_financial_district"
 						country="c:RUS"
 						levels=3
+						region="STATE_RYAZAN"
 					}
 				}
 				reserves=1
@@ -10241,9 +11305,11 @@
 			create_building={
 				building="building_livestock_ranch"
 				add_ownership={
-					country={
+					building={
+						type="building_financial_district"
 						country="c:RUS"
 						levels=3
+						region="STATE_RYAZAN"
 					}
 				}
 				reserves=1
@@ -10252,9 +11318,11 @@
 			create_building={
 				building="building_coal_mine"
 				add_ownership={
-					country={
+					building={
+						type="building_financial_district"
 						country="c:RUS"
 						levels=6
+						region="STATE_RYAZAN"
 					}
 				}
 				reserves=1
@@ -10263,9 +11331,11 @@
 			create_building={
 				building="building_food_service"
 				add_ownership={
-					country={
+					building={
+						type="building_financial_district"
 						country="c:RUS"
 						levels=1
+						region="STATE_RYAZAN"
 					}
 				}
 				reserves=1
@@ -10274,9 +11344,11 @@
 			create_building={
 				building="building_retail_services"
 				add_ownership={
-					country={
+					building={
+						type="building_financial_district"
 						country="c:RUS"
 						levels=1
+						region="STATE_RYAZAN"
 					}
 				}
 				reserves=1
@@ -10285,9 +11357,11 @@
 			create_building={
 				building="building_bank"
 				add_ownership={
-					country={
+					building={
+						type="building_financial_district"
 						country="c:RUS"
 						levels=1
+						region="STATE_RYAZAN"
 					}
 				}
 				reserves=1
@@ -10318,9 +11392,11 @@
 			create_building={
 				building="building_arms_industry"
 				add_ownership={
-					country={
+					building={
+						type="building_financial_district"
 						country="c:RUS"
 						levels=1
+						region="STATE_RYAZAN"
 					}
 				}
 				reserves=1
@@ -10329,9 +11405,11 @@
 			create_building={
 				building="building_artillery_foundry"
 				add_ownership={
-					country={
+					building={
+						type="building_financial_district"
 						country="c:RUS"
 						levels=1
+						region="STATE_RYAZAN"
 					}
 				}
 				reserves=1
@@ -10340,9 +11418,11 @@
 			create_building={
 				building="building_munition_plant"
 				add_ownership={
-					country={
+					building={
+						type="building_financial_district"
 						country="c:RUS"
 						levels=1
+						region="STATE_RYAZAN"
 					}
 				}
 				reserves=1
@@ -10364,9 +11444,11 @@
 			create_building={
 				building="building_war_machine_industry"
 				add_ownership={
-					country={
+					building={
+						type="building_financial_district"
 						country="c:RUS"
 						levels=5
+						region="STATE_RYAZAN"
 					}
 				}
 				reserves=1
@@ -10375,9 +11457,11 @@
 			create_building={
 				building="building_explosives_factory"
 				add_ownership={
-					country={
+					building={
+						type="building_financial_district"
 						country="c:RUS"
 						levels=5
+						region="STATE_RYAZAN"
 					}
 				}
 				reserves=1
@@ -10386,9 +11470,11 @@
 			create_building={
 				building="building_rye_farm"
 				add_ownership={
-					country={
+					building={
+						type="building_financial_district"
 						country="c:RUS"
 						levels=62
+						region="STATE_RYAZAN"
 					}
 				}
 				reserves=1
@@ -10446,9 +11532,11 @@
 			create_building={
 				building="building_power_plant"
 				add_ownership={
-					country={
+					building={
+						type="building_financial_district"
 						country="c:BYL"
 						levels=1
+						region="STATE_VITEBSK"
 					}
 				}
 				reserves=1
@@ -10457,9 +11545,11 @@
 			create_building={
 				building="building_logging_camp"
 				add_ownership={
-					country={
+					building={
+						type="building_financial_district"
 						country="c:BYL"
 						levels=1
+						region="STATE_VITEBSK"
 					}
 				}
 				reserves=1
@@ -10468,9 +11558,11 @@
 			create_building={
 				building="building_food_industry"
 				add_ownership={
-					country={
+					building={
+						type="building_financial_district"
 						country="c:BYL"
 						levels=1
+						region="STATE_VITEBSK"
 					}
 				}
 				reserves=1
@@ -10497,9 +11589,11 @@
 			create_building={
 				building="building_textile_mill"
 				add_ownership={
-					country={
+					building={
+						type="building_financial_district"
 						country="c:BYL"
 						levels=1
+						region="STATE_VITEBSK"
 					}
 				}
 				reserves=1
@@ -10508,9 +11602,11 @@
 			create_building={
 				building="building_paper_mill"
 				add_ownership={
-					country={
+					building={
+						type="building_financial_district"
 						country="c:BYL"
 						levels=1
+						region="STATE_VITEBSK"
 					}
 				}
 				reserves=1
@@ -10519,9 +11615,11 @@
 			create_building={
 				building="building_steel_mill"
 				add_ownership={
-					country={
+					building={
+						type="building_financial_district"
 						country="c:BYL"
 						levels=1
+						region="STATE_VITEBSK"
 					}
 				}
 				reserves=1
@@ -10530,9 +11628,11 @@
 			create_building={
 				building="building_tooling_workshop"
 				add_ownership={
-					country={
+					building={
+						type="building_financial_district"
 						country="c:BYL"
 						levels=2
+						region="STATE_VITEBSK"
 					}
 				}
 				reserves=1
@@ -10541,9 +11641,11 @@
 			create_building={
 				building="building_chemical_plant"
 				add_ownership={
-					country={
+					building={
+						type="building_financial_district"
 						country="c:BYL"
 						levels=2
+						region="STATE_VITEBSK"
 					}
 				}
 				reserves=1
@@ -10601,9 +11703,11 @@
 			create_building={
 				building="building_trade_center"
 				add_ownership={
-					country={
+					building={
+						type="building_financial_district"
 						country="c:RUS"
 						levels=2
+						region="STATE_PSKOV"
 					}
 				}
 				reserves=1
@@ -10645,9 +11749,11 @@
 			create_building={
 				building="building_power_plant"
 				add_ownership={
-					country={
+					building={
+						type="building_financial_district"
 						country="c:RUS"
 						levels=1
+						region="STATE_PSKOV"
 					}
 				}
 				reserves=1
@@ -10656,21 +11762,24 @@
 			create_building={
 				building="building_telecommunications"
 				add_ownership={
-					country={
+					building={
+						type="building_financial_district"
 						country="c:RUS"
 						levels=1
+						region="STATE_PSKOV"
 					}
 				}
-				subsidized=no
 				reserves=1
 				activate_production_methods={ "pm_power_lines" "pm_1g" }
 			}
 			create_building={
 				building="building_food_industry"
 				add_ownership={
-					country={
+					building={
+						type="building_financial_district"
 						country="c:RUS"
 						levels=2
+						region="STATE_PSKOV"
 					}
 				}
 				reserves=1
@@ -10679,9 +11788,11 @@
 			create_building={
 				building="building_textile_mill"
 				add_ownership={
-					country={
+					building={
+						type="building_financial_district"
 						country="c:RUS"
 						levels=1
+						region="STATE_PSKOV"
 					}
 				}
 				reserves=1
@@ -10690,9 +11801,11 @@
 			create_building={
 				building="building_furniture_manufactory"
 				add_ownership={
-					country={
+					building={
+						type="building_financial_district"
 						country="c:RUS"
 						levels=1
+						region="STATE_PSKOV"
 					}
 				}
 				reserves=1
@@ -10701,9 +11814,11 @@
 			create_building={
 				building="building_paper_mill"
 				add_ownership={
-					country={
+					building={
+						type="building_financial_district"
 						country="c:RUS"
 						levels=1
+						region="STATE_PSKOV"
 					}
 				}
 				reserves=1
@@ -10712,9 +11827,11 @@
 			create_building={
 				building="building_steel_mill"
 				add_ownership={
-					country={
+					building={
+						type="building_financial_district"
 						country="c:RUS"
 						levels=1
+						region="STATE_PSKOV"
 					}
 				}
 				reserves=1
@@ -10723,9 +11840,11 @@
 			create_building={
 				building="building_tooling_workshop"
 				add_ownership={
-					country={
+					building={
+						type="building_financial_district"
 						country="c:RUS"
 						levels=1
+						region="STATE_PSKOV"
 					}
 				}
 				reserves=1
@@ -10734,9 +11853,11 @@
 			create_building={
 				building="building_chemical_plant"
 				add_ownership={
-					country={
+					building={
+						type="building_financial_district"
 						country="c:RUS"
 						levels=1
+						region="STATE_PSKOV"
 					}
 				}
 				reserves=1
@@ -10745,9 +11866,11 @@
 			create_building={
 				building="building_livestock_ranch"
 				add_ownership={
-					country={
+					building={
+						type="building_financial_district"
 						country="c:RUS"
 						levels=2
+						region="STATE_PSKOV"
 					}
 				}
 				reserves=1
@@ -10756,9 +11879,11 @@
 			create_building={
 				building="building_food_service"
 				add_ownership={
-					country={
+					building={
+						type="building_financial_district"
 						country="c:RUS"
 						levels=1
+						region="STATE_PSKOV"
 					}
 				}
 				reserves=1
@@ -10767,9 +11892,11 @@
 			create_building={
 				building="building_retail_services"
 				add_ownership={
-					country={
+					building={
+						type="building_financial_district"
 						country="c:RUS"
 						levels=1
+						region="STATE_PSKOV"
 					}
 				}
 				reserves=1
@@ -10789,9 +11916,11 @@
 			create_building={
 				building="building_arms_industry"
 				add_ownership={
-					country={
+					building={
+						type="building_financial_district"
 						country="c:RUS"
 						levels=1
+						region="STATE_PSKOV"
 					}
 				}
 				reserves=1
@@ -10800,9 +11929,11 @@
 			create_building={
 				building="building_bank"
 				add_ownership={
-					country={
+					building={
+						type="building_financial_district"
 						country="c:RUS"
 						levels=1
+						region="STATE_PSKOV"
 					}
 				}
 				reserves=1
@@ -10811,9 +11942,11 @@
 			create_building={
 				building="building_munition_plant"
 				add_ownership={
-					country={
+					building={
+						type="building_financial_district"
 						country="c:RUS"
 						levels=1
+						region="STATE_PSKOV"
 					}
 				}
 				reserves=1
@@ -10840,14 +11973,10 @@
 				building="building_rye_farm"
 				add_ownership={
 					building={
-						type="building_manor_house"
+						type="building_financial_district"
 						country="c:RUS"
-						levels=2
+						levels=22
 						region="STATE_PSKOV"
-					}
-					country={
-						country="c:RUS"
-						levels=20
 					}
 				}
 				reserves=1
@@ -10860,9 +11989,11 @@
 			create_building={
 				building="building_trade_center"
 				add_ownership={
-					country={
+					building={
+						type="building_financial_district"
 						country="c:RUS"
 						levels=4
+						region="STATE_YAROSLAVL"
 					}
 				}
 				reserves=1
@@ -10904,9 +12035,11 @@
 			create_building={
 				building="building_power_plant"
 				add_ownership={
-					country={
+					building={
+						type="building_financial_district"
 						country="c:RUS"
 						levels=1
+						region="STATE_YAROSLAVL"
 					}
 				}
 				reserves=1
@@ -10926,9 +12059,11 @@
 			create_building={
 				building="building_telecommunications"
 				add_ownership={
-					country={
+					building={
+						type="building_financial_district"
 						country="c:RUS"
 						levels=1
+						region="STATE_YAROSLAVL"
 					}
 				}
 				reserves=1
@@ -10937,9 +12072,11 @@
 			create_building={
 				building="building_food_industry"
 				add_ownership={
-					country={
+					building={
+						type="building_financial_district"
 						country="c:RUS"
 						levels=2
+						region="STATE_YAROSLAVL"
 					}
 				}
 				reserves=1
@@ -10948,9 +12085,11 @@
 			create_building={
 				building="building_textile_mill"
 				add_ownership={
-					country={
+					building={
+						type="building_financial_district"
 						country="c:RUS"
 						levels=2
+						region="STATE_YAROSLAVL"
 					}
 				}
 				reserves=1
@@ -10959,9 +12098,11 @@
 			create_building={
 				building="building_furniture_manufactory"
 				add_ownership={
-					country={
+					building={
+						type="building_financial_district"
 						country="c:RUS"
 						levels=1
+						region="STATE_YAROSLAVL"
 					}
 				}
 				reserves=1
@@ -10970,9 +12111,11 @@
 			create_building={
 				building="building_paper_mill"
 				add_ownership={
-					country={
+					building={
+						type="building_financial_district"
 						country="c:RUS"
 						levels=1
+						region="STATE_YAROSLAVL"
 					}
 				}
 				reserves=1
@@ -10981,9 +12124,11 @@
 			create_building={
 				building="building_glassworks"
 				add_ownership={
-					country={
+					building={
+						type="building_financial_district"
 						country="c:RUS"
 						levels=4
+						region="STATE_YAROSLAVL"
 					}
 				}
 				reserves=1
@@ -10992,9 +12137,11 @@
 			create_building={
 				building="building_steel_mill"
 				add_ownership={
-					country={
+					building={
+						type="building_financial_district"
 						country="c:RUS"
 						levels=2
+						region="STATE_YAROSLAVL"
 					}
 				}
 				reserves=1
@@ -11003,9 +12150,11 @@
 			create_building={
 				building="building_tooling_workshop"
 				add_ownership={
-					country={
+					building={
+						type="building_financial_district"
 						country="c:RUS"
 						levels=1
+						region="STATE_YAROSLAVL"
 					}
 				}
 				reserves=1
@@ -11014,9 +12163,11 @@
 			create_building={
 				building="building_chemical_plant"
 				add_ownership={
-					country={
+					building={
+						type="building_financial_district"
 						country="c:RUS"
 						levels=1
+						region="STATE_YAROSLAVL"
 					}
 				}
 				reserves=1
@@ -11025,9 +12176,11 @@
 			create_building={
 				building="building_motor_industry"
 				add_ownership={
-					country={
+					building={
+						type="building_financial_district"
 						country="c:RUS"
 						levels=1
+						region="STATE_YAROSLAVL"
 					}
 				}
 				reserves=1
@@ -11036,9 +12189,11 @@
 			create_building={
 				building="building_electrics_industry"
 				add_ownership={
-					country={
+					building={
+						type="building_financial_district"
 						country="c:RUS"
 						levels=1
+						region="STATE_YAROSLAVL"
 					}
 				}
 				reserves=1
@@ -11047,9 +12202,11 @@
 			create_building={
 				building="building_livestock_ranch"
 				add_ownership={
-					country={
+					building={
+						type="building_financial_district"
 						country="c:RUS"
 						levels=6
+						region="STATE_YAROSLAVL"
 					}
 				}
 				reserves=1
@@ -11058,9 +12215,11 @@
 			create_building={
 				building="building_iron_mine"
 				add_ownership={
-					country={
+					building={
+						type="building_financial_district"
 						country="c:RUS"
 						levels=1
+						region="STATE_YAROSLAVL"
 					}
 				}
 				reserves=1
@@ -11069,9 +12228,11 @@
 			create_building={
 				building="building_food_service"
 				add_ownership={
-					country={
+					building={
+						type="building_financial_district"
 						country="c:RUS"
 						levels=1
+						region="STATE_YAROSLAVL"
 					}
 				}
 				reserves=1
@@ -11080,9 +12241,11 @@
 			create_building={
 				building="building_retail_services"
 				add_ownership={
-					country={
+					building={
+						type="building_financial_district"
 						country="c:RUS"
 						levels=1
+						region="STATE_YAROSLAVL"
 					}
 				}
 				reserves=1
@@ -11091,9 +12254,11 @@
 			create_building={
 				building="building_bank"
 				add_ownership={
-					country={
+					building={
+						type="building_financial_district"
 						country="c:RUS"
 						levels=1
+						region="STATE_YAROSLAVL"
 					}
 				}
 				reserves=1
@@ -11102,9 +12267,11 @@
 			create_building={
 				building="building_warehouse"
 				add_ownership={
-					country={
+					building={
+						type="building_financial_district"
 						country="c:RUS"
 						levels=5
+						region="STATE_YAROSLAVL"
 					}
 				}
 				reserves=1
@@ -11135,9 +12302,11 @@
 			create_building={
 				building="building_arms_industry"
 				add_ownership={
-					country={
+					building={
+						type="building_financial_district"
 						country="c:RUS"
 						levels=1
+						region="STATE_YAROSLAVL"
 					}
 				}
 				reserves=1
@@ -11146,9 +12315,11 @@
 			create_building={
 				building="building_artillery_foundry"
 				add_ownership={
-					country={
+					building={
+						type="building_financial_district"
 						country="c:RUS"
 						levels=1
+						region="STATE_YAROSLAVL"
 					}
 				}
 				reserves=1
@@ -11157,9 +12328,11 @@
 			create_building={
 				building="building_munition_plant"
 				add_ownership={
-					country={
+					building={
+						type="building_financial_district"
 						country="c:RUS"
 						levels=1
+						region="STATE_YAROSLAVL"
 					}
 				}
 				reserves=1
@@ -11168,9 +12341,11 @@
 			create_building={
 				building="building_war_machine_industry"
 				add_ownership={
-					country={
+					building={
+						type="building_financial_district"
 						country="c:RUS"
 						levels=2
+						region="STATE_YAROSLAVL"
 					}
 				}
 				reserves=1
@@ -11213,9 +12388,11 @@
 			create_building={
 				building="building_rye_farm"
 				add_ownership={
-					country={
+					building={
+						type="building_financial_district"
 						country="c:RUS"
 						levels=130
+						region="STATE_YAROSLAVL"
 					}
 				}
 				reserves=1
@@ -11278,21 +12455,24 @@
 			create_building={
 				building="building_power_plant"
 				add_ownership={
-					country={
+					building={
+						type="building_financial_district"
 						country="c:RUS"
 						levels=1
+						region="STATE_NIZHNY_NOVGOROD"
 					}
 				}
-				subsidized=yes
 				reserves=1
 				activate_production_methods={ "pm_hydroelectric_plant" }
 			}
 			create_building={
 				building="building_telecommunications"
 				add_ownership={
-					country={
+					building={
+						type="building_financial_district"
 						country="c:RUS"
 						levels=1
+						region="STATE_NIZHNY_NOVGOROD"
 					}
 				}
 				reserves=1
@@ -11301,9 +12481,11 @@
 			create_building={
 				building="building_food_industry"
 				add_ownership={
-					country={
+					building={
+						type="building_financial_district"
 						country="c:RUS"
 						levels=2
+						region="STATE_NIZHNY_NOVGOROD"
 					}
 				}
 				reserves=1
@@ -11312,9 +12494,11 @@
 			create_building={
 				building="building_textile_mill"
 				add_ownership={
-					country={
+					building={
+						type="building_financial_district"
 						country="c:RUS"
 						levels=1
+						region="STATE_NIZHNY_NOVGOROD"
 					}
 				}
 				reserves=1
@@ -11340,9 +12524,11 @@
 			create_building={
 				building="building_paper_mill"
 				add_ownership={
-					country={
+					building={
+						type="building_financial_district"
 						country="c:RUS"
 						levels=1
+						region="STATE_NIZHNY_NOVGOROD"
 					}
 				}
 				reserves=1
@@ -11351,9 +12537,11 @@
 			create_building={
 				building="building_glassworks"
 				add_ownership={
-					country={
+					building={
+						type="building_financial_district"
 						country="c:RUS"
 						levels=2
+						region="STATE_NIZHNY_NOVGOROD"
 					}
 				}
 				reserves=1
@@ -11362,9 +12550,11 @@
 			create_building={
 				building="building_steel_mill"
 				add_ownership={
-					country={
+					building={
+						type="building_financial_district"
 						country="c:RUS"
 						levels=1
+						region="STATE_NIZHNY_NOVGOROD"
 					}
 				}
 				reserves=1
@@ -11373,9 +12563,11 @@
 			create_building={
 				building="building_tooling_workshop"
 				add_ownership={
-					country={
+					building={
+						type="building_financial_district"
 						country="c:RUS"
 						levels=1
+						region="STATE_NIZHNY_NOVGOROD"
 					}
 				}
 				reserves=1
@@ -11384,9 +12576,11 @@
 			create_building={
 				building="building_chemical_plant"
 				add_ownership={
-					country={
+					building={
+						type="building_financial_district"
 						country="c:RUS"
 						levels=1
+						region="STATE_NIZHNY_NOVGOROD"
 					}
 				}
 				reserves=1
@@ -11395,9 +12589,11 @@
 			create_building={
 				building="building_motor_industry"
 				add_ownership={
-					country={
+					building={
+						type="building_financial_district"
 						country="c:RUS"
 						levels=3
+						region="STATE_NIZHNY_NOVGOROD"
 					}
 				}
 				reserves=1
@@ -11406,9 +12602,11 @@
 			create_building={
 				building="building_electrics_industry"
 				add_ownership={
-					country={
+					building={
+						type="building_financial_district"
 						country="c:RUS"
 						levels=3
+						region="STATE_NIZHNY_NOVGOROD"
 					}
 				}
 				reserves=1
@@ -11417,9 +12615,11 @@
 			create_building={
 				building="building_livestock_ranch"
 				add_ownership={
-					country={
+					building={
+						type="building_financial_district"
 						country="c:RUS"
 						levels=3
+						region="STATE_NIZHNY_NOVGOROD"
 					}
 				}
 				reserves=1
@@ -11428,9 +12628,11 @@
 			create_building={
 				building="building_iron_mine"
 				add_ownership={
-					country={
+					building={
+						type="building_financial_district"
 						country="c:RUS"
 						levels=1
+						region="STATE_NIZHNY_NOVGOROD"
 					}
 				}
 				reserves=1
@@ -11439,9 +12641,11 @@
 			create_building={
 				building="building_food_service"
 				add_ownership={
-					country={
+					building={
+						type="building_financial_district"
 						country="c:RUS"
 						levels=1
+						region="STATE_NIZHNY_NOVGOROD"
 					}
 				}
 				reserves=1
@@ -11450,9 +12654,11 @@
 			create_building={
 				building="building_retail_services"
 				add_ownership={
-					country={
+					building={
+						type="building_financial_district"
 						country="c:RUS"
 						levels=1
+						region="STATE_NIZHNY_NOVGOROD"
 					}
 				}
 				reserves=1
@@ -11461,9 +12667,11 @@
 			create_building={
 				building="building_bank"
 				add_ownership={
-					country={
+					building={
+						type="building_financial_district"
 						country="c:RUS"
 						levels=1
+						region="STATE_NIZHNY_NOVGOROD"
 					}
 				}
 				reserves=1
@@ -11494,9 +12702,11 @@
 			create_building={
 				building="building_arms_industry"
 				add_ownership={
-					country={
+					building={
+						type="building_financial_district"
 						country="c:RUS"
 						levels=1
+						region="STATE_NIZHNY_NOVGOROD"
 					}
 				}
 				reserves=1
@@ -11505,9 +12715,11 @@
 			create_building={
 				building="building_artillery_foundry"
 				add_ownership={
-					country={
+					building={
+						type="building_financial_district"
 						country="c:RUS"
 						levels=1
+						region="STATE_NIZHNY_NOVGOROD"
 					}
 				}
 				reserves=1
@@ -11516,9 +12728,11 @@
 			create_building={
 				building="building_munition_plant"
 				add_ownership={
-					country={
+					building={
+						type="building_financial_district"
 						country="c:RUS"
 						levels=1
+						region="STATE_NIZHNY_NOVGOROD"
 					}
 				}
 				reserves=1
@@ -11528,7 +12742,7 @@
 				building="building_logging_camp"
 				add_ownership={
 					building={
-						type="building_manor_house"
+						type="building_financial_district"
 						country="c:RUS"
 						levels=1
 						region="STATE_NIZHNY_NOVGOROD"
@@ -11550,9 +12764,11 @@
 			create_building={
 				building="building_rye_farm"
 				add_ownership={
-					country={
+					building={
+						type="building_financial_district"
 						country="c:RUS"
 						levels=70
+						region="STATE_NIZHNY_NOVGOROD"
 					}
 				}
 				reserves=1
@@ -11589,9 +12805,11 @@
 			create_building={
 				building="building_trade_center"
 				add_ownership={
-					country={
+					building={
+						type="building_financial_district"
 						country="c:UKR"
 						levels=2
+						region="STATE_CHERNIHIV"
 					}
 				}
 				reserves=1
@@ -11622,9 +12840,11 @@
 			create_building={
 				building="building_food_industry"
 				add_ownership={
-					country={
+					building={
+						type="building_financial_district"
 						country="c:UKR"
 						levels=2
+						region="STATE_CHERNIHIV"
 					}
 				}
 				reserves=1
@@ -11633,9 +12853,11 @@
 			create_building={
 				building="building_telecommunications"
 				add_ownership={
-					country={
+					building={
+						type="building_financial_district"
 						country="c:UKR"
 						levels=1
+						region="STATE_CHERNIHIV"
 					}
 				}
 				reserves=1
@@ -11644,9 +12866,11 @@
 			create_building={
 				building="building_paper_mill"
 				add_ownership={
-					country={
+					building={
+						type="building_financial_district"
 						country="c:UKR"
 						levels=1
+						region="STATE_CHERNIHIV"
 					}
 				}
 				reserves=1
@@ -11655,9 +12879,11 @@
 			create_building={
 				building="building_steel_mill"
 				add_ownership={
-					country={
+					building={
+						type="building_financial_district"
 						country="c:UKR"
 						levels=1
+						region="STATE_CHERNIHIV"
 					}
 				}
 				reserves=1
@@ -11666,9 +12892,11 @@
 			create_building={
 				building="building_tooling_workshop"
 				add_ownership={
-					country={
+					building={
+						type="building_financial_district"
 						country="c:UKR"
 						levels=1
+						region="STATE_CHERNIHIV"
 					}
 				}
 				reserves=1
@@ -11677,9 +12905,11 @@
 			create_building={
 				building="building_chemical_plant"
 				add_ownership={
-					country={
+					building={
+						type="building_financial_district"
 						country="c:UKR"
 						levels=1
+						region="STATE_CHERNIHIV"
 					}
 				}
 				reserves=1
@@ -11688,9 +12918,11 @@
 			create_building={
 				building="building_food_service"
 				add_ownership={
-					country={
+					building={
+						type="building_financial_district"
 						country="c:UKR"
 						levels=1
+						region="STATE_CHERNIHIV"
 					}
 				}
 				reserves=1
@@ -11699,9 +12931,11 @@
 			create_building={
 				building="building_retail_services"
 				add_ownership={
-					country={
+					building={
+						type="building_financial_district"
 						country="c:UKR"
 						levels=1
+						region="STATE_CHERNIHIV"
 					}
 				}
 				reserves=1
@@ -11721,9 +12955,11 @@
 			create_building={
 				building="building_arms_industry"
 				add_ownership={
-					country={
+					building={
+						type="building_financial_district"
 						country="c:UKR"
 						levels=1
+						region="STATE_CHERNIHIV"
 					}
 				}
 				reserves=1
@@ -11733,7 +12969,7 @@
 				building="building_warehouse"
 				add_ownership={
 					building={
-						type="building_warehouse"
+						type="building_financial_district"
 						country="c:UKR"
 						levels=1
 						region="STATE_CHERNIHIV"
@@ -11754,9 +12990,11 @@
 			create_building={
 				building="building_trade_center"
 				add_ownership={
-					country={
+					building={
+						type="building_financial_district"
 						country="c:RUS"
 						levels=2
+						region="STATE_CHERNIHIV"
 					}
 				}
 				reserves=1
@@ -11798,9 +13036,11 @@
 			create_building={
 				building="building_power_plant"
 				add_ownership={
-					country={
+					building={
+						type="building_financial_district"
 						country="c:RUS"
 						levels=1
+						region="STATE_CHERNIHIV"
 					}
 				}
 				reserves=1
@@ -11809,9 +13049,11 @@
 			create_building={
 				building="building_telecommunications"
 				add_ownership={
-					country={
+					building={
+						type="building_financial_district"
 						country="c:RUS"
 						levels=1
+						region="STATE_CHERNIHIV"
 					}
 				}
 				reserves=1
@@ -11820,9 +13062,11 @@
 			create_building={
 				building="building_food_industry"
 				add_ownership={
-					country={
+					building={
+						type="building_financial_district"
 						country="c:RUS"
 						levels=2
+						region="STATE_CHERNIHIV"
 					}
 				}
 				reserves=1
@@ -11831,9 +13075,11 @@
 			create_building={
 				building="building_textile_mill"
 				add_ownership={
-					country={
+					building={
+						type="building_financial_district"
 						country="c:RUS"
 						levels=1
+						region="STATE_CHERNIHIV"
 					}
 				}
 				reserves=1
@@ -11842,9 +13088,11 @@
 			create_building={
 				building="building_furniture_manufactory"
 				add_ownership={
-					country={
+					building={
+						type="building_financial_district"
 						country="c:RUS"
 						levels=1
+						region="STATE_CHERNIHIV"
 					}
 				}
 				reserves=1
@@ -11853,9 +13101,11 @@
 			create_building={
 				building="building_paper_mill"
 				add_ownership={
-					country={
+					building={
+						type="building_financial_district"
 						country="c:RUS"
 						levels=1
+						region="STATE_CHERNIHIV"
 					}
 				}
 				reserves=1
@@ -11864,9 +13114,11 @@
 			create_building={
 				building="building_glassworks"
 				add_ownership={
-					country={
+					building={
+						type="building_financial_district"
 						country="c:RUS"
 						levels=2
+						region="STATE_CHERNIHIV"
 					}
 				}
 				reserves=1
@@ -11875,9 +13127,11 @@
 			create_building={
 				building="building_steel_mill"
 				add_ownership={
-					country={
+					building={
+						type="building_financial_district"
 						country="c:RUS"
 						levels=1
+						region="STATE_CHERNIHIV"
 					}
 				}
 				reserves=1
@@ -11886,9 +13140,11 @@
 			create_building={
 				building="building_tooling_workshop"
 				add_ownership={
-					country={
+					building={
+						type="building_financial_district"
 						country="c:RUS"
 						levels=1
+						region="STATE_CHERNIHIV"
 					}
 				}
 				reserves=1
@@ -11897,9 +13153,11 @@
 			create_building={
 				building="building_chemical_plant"
 				add_ownership={
-					country={
+					building={
+						type="building_financial_district"
 						country="c:RUS"
 						levels=1
+						region="STATE_CHERNIHIV"
 					}
 				}
 				reserves=1
@@ -11908,9 +13166,11 @@
 			create_building={
 				building="building_motor_industry"
 				add_ownership={
-					country={
+					building={
+						type="building_financial_district"
 						country="c:RUS"
 						levels=3
+						region="STATE_CHERNIHIV"
 					}
 				}
 				reserves=1
@@ -11919,9 +13179,11 @@
 			create_building={
 				building="building_electrics_industry"
 				add_ownership={
-					country={
+					building={
+						type="building_financial_district"
 						country="c:RUS"
 						levels=3
+						region="STATE_CHERNIHIV"
 					}
 				}
 				reserves=1
@@ -11930,14 +13192,10 @@
 			create_building={
 				building="building_wheat_farm"
 				add_ownership={
-					country={
-						country="c:RUS"
-						levels=4
-					}
 					building={
-						type="building_manor_house"
+						type="building_financial_district"
 						country="c:RUS"
-						levels=5
+						levels=9
 						region="STATE_CHERNIHIV"
 					}
 				}
@@ -11947,14 +13205,10 @@
 			create_building={
 				building="building_livestock_ranch"
 				add_ownership={
-					country={
-						country="c:RUS"
-						levels=3
-					}
 					building={
-						type="building_manor_house"
+						type="building_financial_district"
 						country="c:RUS"
-						levels=2
+						levels=5
 						region="STATE_CHERNIHIV"
 					}
 				}
@@ -11964,9 +13218,11 @@
 			create_building={
 				building="building_food_service"
 				add_ownership={
-					country={
+					building={
+						type="building_financial_district"
 						country="c:RUS"
 						levels=1
+						region="STATE_CHERNIHIV"
 					}
 				}
 				reserves=1
@@ -11975,9 +13231,11 @@
 			create_building={
 				building="building_retail_services"
 				add_ownership={
-					country={
+					building={
+						type="building_financial_district"
 						country="c:RUS"
 						levels=1
+						region="STATE_CHERNIHIV"
 					}
 				}
 				reserves=1
@@ -11986,9 +13244,11 @@
 			create_building={
 				building="building_bank"
 				add_ownership={
-					country={
+					building={
+						type="building_financial_district"
 						country="c:RUS"
 						levels=1
+						region="STATE_CHERNIHIV"
 					}
 				}
 				reserves=1
@@ -12019,9 +13279,11 @@
 			create_building={
 				building="building_arms_industry"
 				add_ownership={
-					country={
+					building={
+						type="building_financial_district"
 						country="c:RUS"
 						levels=1
+						region="STATE_CHERNIHIV"
 					}
 				}
 				reserves=1
@@ -12030,9 +13292,11 @@
 			create_building={
 				building="building_artillery_foundry"
 				add_ownership={
-					country={
+					building={
+						type="building_financial_district"
 						country="c:RUS"
 						levels=1
+						region="STATE_CHERNIHIV"
 					}
 				}
 				reserves=1
@@ -12041,9 +13305,11 @@
 			create_building={
 				building="building_munition_plant"
 				add_ownership={
-					country={
+					building={
+						type="building_financial_district"
 						country="c:RUS"
 						levels=1
+						region="STATE_CHERNIHIV"
 					}
 				}
 				reserves=1
