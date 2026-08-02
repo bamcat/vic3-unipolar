@@ -16,13 +16,14 @@ GLOBAL = {
 		name = custom_button_list_flag
 		target = flag:io_sidebar_button
 	}
-
+	
+	smd_apply_public_service_expenses_start = yes
 	start_kurdistan_war_journal_entry_system = yes
 	start_afghan_civil_war_journal_entry_system = yes
 	start_israel_palestine_peacetime_journal_entry_system = yes
 	
 	every_country = {
-		
+		smd_apply_public_service_expenses = yes
 		if = { limit = { NOT = { country_rank >= rank_value:great_power } }
 			add_journal_entry = { type = je_foreign_investment }
 		}

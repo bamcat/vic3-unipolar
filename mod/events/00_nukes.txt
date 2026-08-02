@@ -130,11 +130,13 @@ nuclear_events.3 = {
  
 	trigger = {
 		# triggered by je_nuclear_production on_complete
+		NOT = { has_variable = first_warhead_produced }
 	}
  
 	option = {
 		name = nuclear_events.3.a
 		default_option = yes
+		set_variable = first_warhead_produced
 		add_modifier = {
 			name = nuclear_warhead_produced_modifier
 			months = 24

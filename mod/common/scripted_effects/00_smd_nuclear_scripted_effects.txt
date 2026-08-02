@@ -344,36 +344,49 @@ conventional_missile_strike = {
 
 		# Roll once per missile in the salvo against a random building
 		random = {
-			chance = 3
+			chance = 8
 			if = { limit = { has_building = building_airport } remove_building = building_airport }
 		}
 		random = {
-			chance = 3
+			chance = 8
 			if = { limit = { has_building = building_barracks } remove_building = building_barracks }
 		}
 		random = {
-			chance = 3
+			chance = 8
 			if = { limit = { has_building = building_naval_base } remove_building = building_naval_base }
 		}
 		random = {
-			chance = 3
+			chance = 8
 			if = { limit = { has_building = building_nuclear_plant } remove_building = building_nuclear_plant }
 		}
 		random = {
-			chance = 3
+			chance = 8
 			if = { limit = { has_building = building_nuclear_silo } remove_building = building_nuclear_silo }
 		}
 		random = {
-			chance = 3
+			chance = 8
 			if = { limit = { has_building = building_government_administration } remove_building = building_government_administration }
 		}
 		random = {
-			chance = 3
+			chance = 8
 			if = { limit = { has_building = building_railway } remove_building = building_railway }
 		}
+		# Additional industrial/infrastructure targets
+		random = {
+			chance = 6
+			if = { limit = { has_building = building_power_plant } remove_building = building_power_plant }
+		}
+		random = {
+			chance = 6
+			if = { limit = { has_building = building_port } remove_building = building_port }
+		}
+		random = {
+			chance = 6
+			if = { limit = { has_building = building_oil_rig } remove_building = building_oil_rig }
+		}
 
-		# Devastation scales with deployment percentage too
-		add_devastation = conventional_missiles_to_use_sv
+		# Devastation scales with deployment percentage — buffed x3
+		add_devastation = conventional_missile_devastation_sv
 	}
 }
  

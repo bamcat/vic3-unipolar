@@ -167,6 +167,64 @@ nuclear_begin_production = {
 	ai_is_valid = { always = no }
 }
 
+# ── PRODUCTION QUEUE ─────────────────────────
+# nuclear_production_queue holds the number of warheads
+# queued for production. The + button adds to the queue.
+# Clicking "Manufacture Nuclear Warhead" begins producing the
+# first warhead; each time one completes, if the queue is > 0
+# it decrements and the next one starts automatically.
+
+# Add one to the production queue (does NOT start production)
+nuclear_queue_add = {
+	scope = country
+	is_shown = {
+		has_variable = nuclear_capable
+	}
+	is_valid = {
+		any_scope_state = {
+			is_incorporated = yes
+			has_building = building_nuclear_silo
+		}
+		in_default = no
+	}
+	effect = {
+		if = {
+			limit = { NOT = { has_variable = nuclear_production_queue } }
+			set_variable = { name = nuclear_production_queue value = 1 }
+		}
+		else = {
+			change_variable = { name = nuclear_production_queue add = 1 }
+		}
+		# Clamp to a sane maximum
+		if = {
+			limit = { var:nuclear_production_queue > 99 }
+			set_variable = { name = nuclear_production_queue value = 99 }
+		}
+	}
+	ai_is_valid = { always = no }
+}
+
+# Remove one from the production queue
+nuclear_queue_subtract = {
+	scope = country
+	is_shown = {
+		has_variable = nuclear_capable
+	}
+	is_valid = {
+		has_variable = nuclear_production_queue
+		var:nuclear_production_queue > 0
+		in_default = no
+	}
+	effect = {
+		change_variable = { name = nuclear_production_queue add = -1 }
+		if = {
+			limit = { var:nuclear_production_queue < 0 }
+			set_variable = { name = nuclear_production_queue value = 0 }
+		}
+	}
+	ai_is_valid = { always = no }
+}
+
 # ── DEPLOYMENT AND SHIT ───────────
 # Five buttons set nuclear_deployment_percentage.
 # Disabled when already at that value.
@@ -1060,6 +1118,82 @@ produce_missiles = {
 		}
 	}
 	ai_is_valid = { always = no }
+}
+
+# ── MISSILE PRODUCTION QUEUE ─────────────────
+# missile_production_queue holds the number of salvos queued.
+# The + button adds to the queue. Each salvo produces when off
+# cooldown; the on_action (99_nuclear_on_actions) auto-produces
+# the next queued salvo when the cooldown expires.
+
+# Add one salvo to the missile production queue
+missile_queue_add = {
+	scope = country
+	is_shown = { always = yes }
+	is_valid = {
+		in_default = no
+		country_rank >= rank_value:recognized
+	}
+	effect = {
+		if = {
+			limit = { NOT = { has_variable = missile_production_queue } }
+			set_variable = { name = missile_production_queue value = 1 }
+		}
+		else = {
+			change_variable = { name = missile_production_queue add = 1 }
+		}
+		if = {
+			limit = { var:missile_production_queue > 99 }
+			set_variable = { name = missile_production_queue value = 99 }
+		}
+	}
+	ai_is_valid = { always = no }
+}
+
+# Remove one salvo from the missile production queue
+missile_queue_subtract = {
+	scope = country
+	is_shown = { always = yes }
+	is_valid = {
+		has_variable = missile_production_queue
+		var:missile_production_queue > 0
+		in_default = no
+	}
+	effect = {
+		change_variable = { name = missile_production_queue add = -1 }
+		if = {
+			limit = { var:missile_production_queue < 0 }
+			set_variable = { name = missile_production_queue value = 0 }
+		}
+	}
+	ai_is_valid = { always = no }
+}
+
+# Process the missile queue — produce a salvo if off cooldown and queue > 0
+missile_process_queue = {
+	scope = country
+	effect = {
+		if = {
+			limit = {
+				has_variable = missile_production_queue
+				var:missile_production_queue > 0
+				NOT = { has_modifier = missile_production_cost }
+				in_default = no
+			}
+			change_variable = { name = missile_production_queue add = -1 }
+			if = {
+				limit = { NOT = { has_variable = conventional_missiles } }
+				set_variable = { name = conventional_missiles value = 5 }
+			}
+			else = {
+				change_variable = { name = conventional_missiles add = 5 }
+			}
+			add_modifier = {
+				name = missile_production_cost
+				months = 3
+			}
+		}
+	}
 }
 
 conv_set_deploy_10 = {

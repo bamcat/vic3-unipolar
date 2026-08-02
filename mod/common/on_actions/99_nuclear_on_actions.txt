@@ -44,5 +44,14 @@ on_monthly_pulse_country = {
 on_monthly_pulse = {
 	effect = {
 		nuclear_recompute_top_5 = yes
+
+		# Process missile production queues for all countries
+		every_country = {
+			limit = {
+				has_variable = missile_production_queue
+				var:missile_production_queue > 0
+			}
+			missile_process_queue = yes
+		}
 	}
 }

@@ -40,7 +40,9 @@ on_monthly_pulse = {
 }
 
 on_monthly_pulse_country = {
+	smd_apply_public_service_expenses = yes
 	effect = {
+		smd_apply_public_service_expenses = yes
 		if = {
 			limit = {
 				is_target_in_global_variable_list = { name = io_nato_members target = this }

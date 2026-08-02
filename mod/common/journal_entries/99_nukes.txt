@@ -141,6 +141,23 @@ je_nuclear_production = {
 		}
 		set_variable = { name = nuclear_production_progress value = 0 }
 		trigger_event = { id = nuclear_events.3 popup = yes }
+
+		# If more warheads are queued, consume one and start the next
+		# production run automatically.
+		if = {
+			limit = {
+				has_variable = nuclear_production_queue
+				var:nuclear_production_queue > 0
+				any_scope_state = {
+					is_incorporated = yes
+					has_building = building_nuclear_silo
+				}
+			}
+			change_variable = { name = nuclear_production_queue add = -1 }
+			set_variable = nuclear_production_active
+			set_variable = { name = nuclear_production_progress value = 0 }
+			add_journal_entry = { type = je_nuclear_production }
+		}
 	}
  
 	invalid = {

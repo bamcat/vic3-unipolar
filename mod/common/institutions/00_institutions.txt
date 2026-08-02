@@ -26,6 +26,14 @@ REPLACE_OR_CREATE:institution_workplace_safety = {
 REPLACE_OR_CREATE:institution_schools = {
 	icon = "gfx/interface/icons/institution_icons/schools.dds"
 	background_texture = "gfx/interface/illustrations/institutions/schools.dds"
+	# Informational only: signals to the player that running the
+	# Schools institution incurs an education expense that scales
+	# with investment level, population and childcare/schooling
+	# laws. The real cost is applied via country_expenses_add in
+	# on_monthly_pulse_country (see smd_public_service_expenses).
+	modifier = {
+		smd_institution_education_expense_mult = 1.0
+	}
 }
 
 REPLACE_OR_CREATE:institution_police = {
@@ -33,12 +41,23 @@ REPLACE_OR_CREATE:institution_police = {
     background_texture = "gfx/interface/illustrations/institutions/police.dds"
 	modifier = {
 		state_turmoil_effects_mult = -0.1
+		# Informational only: policing incurs a running expense that
+		# scales with investment level, population and policing law.
+		# Real cost applied via country_expenses_add monthly.
+		smd_institution_police_expense_mult = 1.0
 	}
 }
 
 REPLACE_OR_CREATE:institution_health_system = {
 	icon = "gfx/interface/icons/institution_icons/health_service.dds"
 	background_texture = "gfx/interface/illustrations/institutions/health_service.dds"
+	# Informational only: a public health system incurs a running
+	# expense that scales with investment level, population and the
+	# health-system law. Real cost applied via country_expenses_add
+	# monthly (see smd_public_service_expenses).
+	modifier = {
+		smd_institution_healthcare_expense_mult = 1.0
+	}
 }
 
 REPLACE_OR_CREATE:institution_home_affairs = {

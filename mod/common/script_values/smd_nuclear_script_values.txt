@@ -176,3 +176,22 @@ country_nukes_count_sv = {
 		add = var:nukes
 	}
 }
+
+# Buffed conventional missile devastation — 3x the raw salvo size,
+# so each strike does substantially more damage to a state.
+conventional_missile_devastation_sv = {
+	value = 0
+	if = {
+		limit = {
+			has_variable = conventional_missiles
+			has_variable = conv_deployment_percentage
+			var:conventional_missiles >= 1
+		}
+		add = var:conventional_missiles
+		multiply = var:conv_deployment_percentage
+		divide = 100
+		multiply = 3
+		round = yes
+		min = 3
+	}
+}

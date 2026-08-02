@@ -12,6 +12,11 @@ on_game_started = {
 # No root scope set
 on_game_started_after_lobby = {
 	effect = {
+		every_country = {
+			limit = { exists = this }
+			smd_apply_public_service_expenses = yes
+		}
+
 		# Game Rule: No Dynamic Naming
 		if = {
 			limit = {
@@ -561,6 +566,9 @@ on_monthly_pulse_country = {
 	}
 
 	effect = {
+		# UNIPOLAR - recurring public service expenses (healthcare/education/police)
+		smd_apply_public_service_expenses = yes
+
 		# Ottoman Monarchy Events #
 		if = { # Coup of Abdulaziz, Murad becomes the ruler
 			limit = {

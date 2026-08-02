@@ -73,6 +73,9 @@ REPLACE_OR_CREATE:law_compulsory_primary_school = {
 
 	modifier = {
 		country_institution_schools_max_investment_add = 1
+		# Informational: adds to national education expenses.
+		# Actual cost applied monthly via country_expenses_add.
+		smd_institution_education_expense_mult = 0.4
 	}
 }
 
@@ -89,6 +92,9 @@ law_privatized_preschool_education = {
 		state_mortality_mult = -0.02
 		country_institution_schools_max_investment_add = 2
 		interest_group_ig_industrialists_pol_str_mult = 0.10
+		# Informational: adds to national education expenses (lighter
+		# public burden, subsidies only). Cost applied monthly.
+		smd_institution_education_expense_mult = 0.2
 	}
 	
 	possible_political_movements = {
@@ -124,6 +130,9 @@ law_universal_childcare = {
 		state_mortality_mult = -0.05
 		state_dependent_political_participation_add = 0.05
 		country_institution_schools_max_investment_add = 2
+		# Informational: adds to national education expenses (fully
+		# state-funded, the heaviest add). Cost applied monthly.
+		smd_institution_education_expense_mult = 0.8
 	}
 	
 	ai_will_do = {
