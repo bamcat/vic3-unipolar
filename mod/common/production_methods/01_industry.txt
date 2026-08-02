@@ -66,10 +66,10 @@ REPLACE_OR_CREATE:pm_baking_powder = {
 
 		level_scaled = {
 			# profit = 1100
-			building_employment_shopkeepers_add = 200
-			building_employment_laborers_add = 88
-			building_employment_machinists_add = 631
-			building_employment_engineers_add = 1131
+			building_employment_shopkeepers_add = 350
+			building_employment_laborers_add = 150
+			building_employment_machinists_add = 1050
+			building_employment_engineers_add = 1900
 		}
 	}
 }
@@ -147,7 +147,7 @@ REPLACE_OR_CREATE:pm_vacuum_canning = {
 			goods_input_plastic_add = 11
 			goods_input_oil_add = 4.5
 			# output goods
-			goods_output_groceries_add = 46	# x30 = 1800
+			goods_output_groceries_add = 77.6	# x30 = 1800
 		}
 
 		level_scaled = {
@@ -353,10 +353,10 @@ REPLACE_OR_CREATE:pm_sewing_machines = {
 
 		level_scaled = {
 			# profit = 1000
-			building_employment_shopkeepers_add = 1500
-			building_employment_laborers_add = 125
-			building_employment_machinists_add = 1688
-			building_employment_engineers_add = 788
+			building_employment_shopkeepers_add = 2050
+			building_employment_laborers_add = 150
+			building_employment_machinists_add = 2300
+			building_employment_engineers_add = 1050
 		}
 	}
 }
@@ -384,9 +384,9 @@ REPLACE_OR_CREATE:pm_electric_sewing_machines = {
 
 		level_scaled = {
 			# profit = 1300
-			building_employment_shopkeepers_add = 1250
-			building_employment_machinists_add = 1500
-			building_employment_engineers_add = 1500
+			building_employment_shopkeepers_add = 2100
+			building_employment_machinists_add = 2550
+			building_employment_engineers_add = 2550
 		}
 	}
 
@@ -867,10 +867,10 @@ REPLACE_OR_CREATE:pm_houseware_plastics = {
 		}
 
 		level_scaled = {
-			building_employment_shopkeepers_add = 1500
-			building_employment_laborers_add = 75
-			building_employment_machinists_add = 3612
-			building_employment_engineers_add = 2112
+			building_employment_shopkeepers_add = 2250
+			building_employment_laborers_add = 100
+			building_employment_machinists_add = 5350
+			building_employment_engineers_add = 3150
 		}
 	}
 }
@@ -893,7 +893,7 @@ REPLACE_OR_CREATE:pm_ceramics = {
 		}
 		
 		level_scaled = {
-			building_employment_shopkeepers_add = 500
+			building_employment_shopkeepers_add = 1900
 		}						
 	}
 }
@@ -917,7 +917,7 @@ REPLACE_OR_CREATE:pm_bone_china = {
 		}
 		
 		level_scaled = {
-			building_employment_shopkeepers_add = 750
+			building_employment_shopkeepers_add = 4000
 		}					
 	}														
 }
@@ -1355,12 +1355,12 @@ REPLACE_OR_CREATE:pm_artificial_fertilizers = {
 	building_modifiers = {
 		workforce_scaled = {
 			# input goods goods_input_electricity_add = 3
-			goods_input_sulfur_add = 30
+			goods_input_sulfur_add = 10
 			goods_input_iron_add = 10
 			goods_input_oil_add = 4.5
 
 			# output goods
-			goods_output_fertilizer_add = 140
+			goods_output_fertilizer_add = 25
 		}
 
 		level_scaled = {
@@ -1387,12 +1387,12 @@ REPLACE_OR_CREATE:pm_improved_fertilizer = {
 	
 	building_modifiers = {
 		workforce_scaled = {
-			goods_input_sulfur_add = 54
+			goods_input_sulfur_add = 30
 			goods_input_iron_add = 27
 			goods_input_oil_add = 5.5
 			
 			# output goods
-			goods_output_fertilizer_add = 271
+			goods_output_fertilizer_add = 65
 		}
 
 		level_scaled = {
@@ -1426,7 +1426,7 @@ REPLACE_OR_CREATE:pm_nitrogen_fixation = {
 			
 
 			# output goods
-			goods_output_fertilizer_add = 388
+			goods_output_fertilizer_add = 105
 		}
 
 		level_scaled = {
@@ -1565,10 +1565,10 @@ REPLACE_OR_CREATE:pm_brine_electrolysis = {
 
 		level_scaled = {
 			# employment
-			building_employment_shopkeepers_add = 500
-			building_employment_laborers_add = 250
-			building_employment_machinists_add = 1375
-			building_employment_engineers_add = 1875
+			building_employment_shopkeepers_add = 750
+			building_employment_laborers_add = 400
+			building_employment_machinists_add = 2100
+			building_employment_engineers_add = 2850
 		}
 	}
 
@@ -1684,10 +1684,10 @@ REPLACE_OR_CREATE:pm_bessemer_process = {
 
 		level_scaled = {
 			# employment
-			building_employment_shopkeepers_add = 500
-			building_employment_laborers_add = 750
-			building_employment_machinists_add = 2125
-			building_employment_engineers_add = 1625
+			building_employment_shopkeepers_add = 650
+			building_employment_laborers_add = 950
+			building_employment_machinists_add = 2650
+			building_employment_engineers_add = 2050
 		}
 	}
 }
@@ -1720,10 +1720,10 @@ REPLACE_OR_CREATE:pm_open_hearth_process = {
 
 		level_scaled = {
 			# employment
-			building_employment_shopkeepers_add = 500
-			building_employment_laborers_add = 625
-			building_employment_machinists_add = 2188
-			building_employment_engineers_add = 1688
+			building_employment_shopkeepers_add = 750
+			building_employment_laborers_add = 900
+			building_employment_machinists_add = 3200
+			building_employment_engineers_add = 2450
 		}
 	}
 }
@@ -1757,10 +1757,10 @@ REPLACE_OR_CREATE:pm_electric_arc_process = {
 
 		level_scaled = {
 			# employment
-			building_employment_shopkeepers_add = 500
-			building_employment_laborers_add = 500
-			building_employment_machinists_add = 2250
-			building_employment_engineers_add = 1750
+			building_employment_shopkeepers_add = 1050
+			building_employment_laborers_add = 1050
+			building_employment_machinists_add = 4750
+			building_employment_engineers_add = 3700
 		}
 	}
 
@@ -1916,10 +1916,10 @@ REPLACE_OR_CREATE:pm_diesel_engines = {
 		}
 
 		level_scaled = {
-			building_employment_shopkeepers_add = 500
-			building_employment_laborers_add = 375
-			building_employment_machinists_add = 2062
-			building_employment_engineers_add = 2062
+			building_employment_shopkeepers_add = 750
+			building_employment_laborers_add = 600
+			building_employment_machinists_add = 3200
+			building_employment_engineers_add = 3200
 		}
 	}
 }
@@ -1949,8 +1949,8 @@ REPLACE_OR_CREATE:pm_automobile_production = {
 
 		level_scaled = {
 			# employment
-			building_employment_machinists_add = 1000
-			building_employment_engineers_add = 500
+			building_employment_machinists_add = 1950
+			building_employment_engineers_add = 1000
 		}
 	}
 }
@@ -2179,10 +2179,10 @@ pm_metal_shipbuilding = {
 
 		level_scaled = {
 			# employment
-			building_employment_shopkeepers_add = 500
-			building_employment_laborers_add = 2000
-			building_employment_machinists_add = 1500
-			building_employment_engineers_add = 1000
+			building_employment_shopkeepers_add = 700
+			building_employment_laborers_add = 2850
+			building_employment_machinists_add = 2150
+			building_employment_engineers_add = 1450
 		}
 	}
 }
@@ -2219,10 +2219,10 @@ pm_arc_welding_shipbuilding = {
 
 		level_scaled = {
 			# employment
-			building_employment_shopkeepers_add = 500
-			building_employment_laborers_add = 1000
-			building_employment_machinists_add = 2000
-			building_employment_engineers_add = 1500
+			building_employment_shopkeepers_add = 900
+			building_employment_laborers_add = 1850
+			building_employment_machinists_add = 3650
+			building_employment_engineers_add = 2750
 		}
 	}
 
@@ -2245,7 +2245,7 @@ REPLACE_OR_CREATE:pm_military_shipbuilding_wooden = {
 			goods_input_iron_add = 9
 			goods_input_electricity_add = 11
 			# output goods
-			goods_output_ironclads_add = 23
+			goods_output_ironclads_add = 50.2
 		}
 	
 		level_scaled = {
@@ -2274,7 +2274,7 @@ REPLACE_OR_CREATE:pm_military_shipbuilding_wooden_2 = {
 			goods_input_iron_add = 9
 			goods_input_electricity_add = 18
 			# output goods
-			goods_output_ironclads_add = 46
+			goods_output_ironclads_add = 58.5
 		}
 		level_scaled = {
 			# employment
@@ -2388,7 +2388,7 @@ REPLACE_OR_CREATE:pm_tank_production = {
 		
 		level_scaled = {
 			# employment
-			building_employment_engineers_add = 500
+			building_employment_engineers_add = 20150
 		}
 	}
 }
@@ -2403,14 +2403,14 @@ REPLACE_OR_CREATE:pm_telephones = {
 			goods_input_tools_add = 9
 			goods_input_electricity_add = 7
 			
-			goods_output_telephones_add = 271
+			goods_output_telephones_add = 50
 		}
 
 		level_scaled = {
-			building_employment_shopkeepers_add = 500
-			building_employment_laborers_add = 375
-			building_employment_machinists_add = 2562
-			building_employment_engineers_add = 1562
+			building_employment_shopkeepers_add = 1000
+			building_employment_laborers_add = 750
+			building_employment_machinists_add = 5200
+			building_employment_engineers_add = 3150
 		}
 	}
 }
@@ -2431,14 +2431,14 @@ REPLACE_OR_CREATE:pm_smartphones = {
 			goods_input_microchips_add = 32
 			goods_input_electricity_add = 13.5
 			
-			goods_output_telephones_add = 426
+			goods_output_telephones_add = 125
 		}
 
 		level_scaled = {
-			building_employment_shopkeepers_add = 750
-			building_employment_laborers_add = 250
-			building_employment_machinists_add = 2375
-			building_employment_engineers_add = 1375
+			building_employment_shopkeepers_add = 2100
+			building_employment_laborers_add = 700
+			building_employment_machinists_add = 6650
+			building_employment_engineers_add = 3850
 		}
 	}
 }
@@ -2458,7 +2458,7 @@ REPLACE_OR_CREATE:pm_radios = {
 		}
 		
 		level_scaled = {
-			building_employment_engineers_add = 500
+			building_employment_engineers_add = 7100
 		}
 	}
 
@@ -2480,7 +2480,7 @@ REPLACE_OR_CREATE:pm_flatscreens = {
 		}
 		
 		level_scaled = {
-			building_employment_engineers_add = 500
+			building_employment_engineers_add = 3750
 		}
 	}
 
@@ -2504,7 +2504,7 @@ REPLACE_OR_CREATE:pm_smart_tv = {
 		}
 		
 		level_scaled = {
-			building_employment_engineers_add = 500
+			building_employment_engineers_add = 15300
 		}
 	}
 
@@ -2553,11 +2553,11 @@ REPLACE_OR_CREATE:pm_rifles = {
 		}
 
 		level_scaled = {
-			building_employment_engineers_add = 1312
+			building_employment_engineers_add = 1700
 			# employment
-			building_employment_shopkeepers_add = 500
-			building_employment_laborers_add = 875
-			building_employment_machinists_add = 2312
+			building_employment_shopkeepers_add = 650
+			building_employment_laborers_add = 1150
+			building_employment_machinists_add = 3000
 		}
 	}
 }
@@ -2582,10 +2582,10 @@ REPLACE_OR_CREATE:pm_repeaters = {
 
 		level_scaled = {
 			# employment
-			building_employment_shopkeepers_add = 500
-			building_employment_laborers_add = 750
-			building_employment_machinists_add = 2125
-			building_employment_engineers_add = 1625
+			building_employment_shopkeepers_add = 650
+			building_employment_laborers_add = 1000
+			building_employment_machinists_add = 2800
+			building_employment_engineers_add = 2150
 		}
 	}
 }
@@ -2612,10 +2612,10 @@ REPLACE_OR_CREATE:pm_bolt_action_rifles = {
 
 		level_scaled = {
 			# employment
-			building_employment_shopkeepers_add = 500
-			building_employment_laborers_add = 625
-			building_employment_machinists_add = 2188
-			building_employment_engineers_add = 1688
+			building_employment_shopkeepers_add = 750
+			building_employment_laborers_add = 950
+			building_employment_machinists_add = 3400
+			building_employment_engineers_add = 2600
 		}
 	}
 }
@@ -2668,10 +2668,10 @@ REPLACE_OR_CREATE:pm_smoothbores = {
 		}
 
 		level_scaled = {
-			building_employment_shopkeepers_add = 500
-			building_employment_laborers_add = 812
-			building_employment_machinists_add = 2219
-			building_employment_engineers_add = 1469
+			building_employment_shopkeepers_add = 900
+			building_employment_laborers_add = 1450
+			building_employment_machinists_add = 3950
+			building_employment_engineers_add = 2650
 		}
 	}
 }
@@ -2695,10 +2695,10 @@ REPLACE_OR_CREATE:pm_breech_loaders = {
 		}
 
 		level_scaled = {
-			building_employment_shopkeepers_add = 500
-			building_employment_laborers_add = 625
-			building_employment_machinists_add = 2438
-			building_employment_engineers_add = 1438
+			building_employment_shopkeepers_add = 1100
+			building_employment_laborers_add = 1350
+			building_employment_machinists_add = 5300
+			building_employment_engineers_add = 3150
 		}
 	}
 }
@@ -2721,10 +2721,10 @@ REPLACE_OR_CREATE:pm_recoiled_barrels = {
 		}
 
 		level_scaled = {
-			building_employment_shopkeepers_add = 500
-			building_employment_laborers_add = 500
-			building_employment_machinists_add = 2250
-			building_employment_engineers_add = 1750
+			building_employment_shopkeepers_add = 1500
+			building_employment_laborers_add = 1500
+			building_employment_machinists_add = 6800
+			building_employment_engineers_add = 5300
 		}
 	}
 }
@@ -2837,7 +2837,7 @@ REPLACE_OR_CREATE:pm_explosive_shells = {
 			goods_input_lead_add = 45
 			
 			# output goods
-			goods_output_ammunition_add = 170
+			goods_output_ammunition_add = 196.6
 		}
 
 		level_scaled = {
@@ -2922,7 +2922,7 @@ REPLACE_OR_CREATE:pm_synthetic_fabric = {
 			goods_input_oil_add = 25		# x20 =  800
 
 			# output goods
-			goods_output_fabric_add = 70	# x30 = 1350
+			goods_output_fabric_add = 88.2	# x30 = 1350
 		}
 
 		level_scaled = {
@@ -3034,10 +3034,10 @@ REPLACE_OR_CREATE:pm_nanocomposites = {
 		}
 
 		level_scaled = {
-			building_employment_shopkeepers_add = 500
-			building_employment_laborers_add = 750
-			building_employment_machinists_add = 2125
-			building_employment_engineers_add = 1625
+			building_employment_shopkeepers_add = 950
+			building_employment_laborers_add = 1450
+			building_employment_machinists_add = 4100
+			building_employment_engineers_add = 3150
 		}
 	}
 }
@@ -3066,10 +3066,10 @@ REPLACE_OR_CREATE:pm_bioplastics = {
 		}
 
 		level_scaled = {
-			building_employment_shopkeepers_add = 500
-			building_employment_laborers_add = 625
-			building_employment_machinists_add = 2188
-			building_employment_engineers_add = 1688
+			building_employment_shopkeepers_add = 1500
+			building_employment_laborers_add = 1850
+			building_employment_machinists_add = 6500
+			building_employment_engineers_add = 5050
 		}
 	}
 }
@@ -3169,8 +3169,8 @@ REPLACE_OR_CREATE:pm_e_veh_production = {
 
 		level_scaled = {
 			# employment
-			building_employment_machinists_add = 1000
-			building_employment_engineers_add = 500
+			building_employment_machinists_add = 20750
+			building_employment_engineers_add = 10400
 		}
 	}
 }
@@ -3197,10 +3197,10 @@ REPLACE_OR_CREATE:pm_microencap = {
 
 		level_scaled = {
 			# profit = 700
-			building_employment_shopkeepers_add = 800
-			building_employment_laborers_add = 125
-			building_employment_machinists_add = 638
-			building_employment_engineers_add = 688
+			building_employment_shopkeepers_add = 1300
+			building_employment_laborers_add = 200
+			building_employment_machinists_add = 1050
+			building_employment_engineers_add = 1100
 		}
 	}
 }
@@ -3223,7 +3223,7 @@ REPLACE_OR_CREATE:pm_outlet_malls = {
 			goods_input_groceries_add = 22
 			
 			# output goods
-			goods_output_groceries_add = 31
+			goods_output_groceries_add = 95.0
 			goods_output_services_add = 15.5
 		}
 
@@ -3255,7 +3255,7 @@ REPLACE_OR_CREATE:pm_big_box_mart = {
 			goods_input_groceries_add = 40
 			
 			# output goods
-			goods_output_groceries_add = 62
+			goods_output_groceries_add = 91.0
 			goods_output_services_add = 46
 		}
 
@@ -3426,7 +3426,7 @@ REPLACE_OR_CREATE:pm_general_mills_office = {
 			goods_input_furniture_add = 16
 			goods_input_electricity_add = 9
 			# output goods
-			goods_output_professional_services_add = 11.5
+			goods_output_professional_services_add = 27.7
 		}
 
 		level_scaled = {
@@ -3461,10 +3461,10 @@ REPLACE_OR_CREATE:pm_computer_office = {
 
 		level_scaled = {
 			# employment
-			building_employment_shopkeepers_add = 500
-			building_employment_clerks_add = 3500
-			building_employment_machinists_add = 450
-			building_employment_engineers_add = 250
+			building_employment_shopkeepers_add = 650
+			building_employment_clerks_add = 4700
+			building_employment_machinists_add = 600
+			building_employment_engineers_add = 350
 		}
 	}
 }
@@ -3495,10 +3495,10 @@ REPLACE_OR_CREATE:pm_remote_working = {
 
 		level_scaled = {
 			# employment
-			building_employment_shopkeepers_add = 500
-			building_employment_clerks_add = 4000
-			building_employment_machinists_add = 1000
-			building_employment_engineers_add = 500
+			building_employment_shopkeepers_add = 750
+			building_employment_clerks_add = 6050
+			building_employment_machinists_add = 1500
+			building_employment_engineers_add = 750
 		}
 	}
 }
@@ -3530,10 +3530,10 @@ REPLACE_OR_CREATE:pm_ai_professional_services = {
 
 		level_scaled = {
 			# employment
-			building_employment_shopkeepers_add = 500
-			building_employment_clerks_add = 2500
-			building_employment_machinists_add = 1250
-			building_employment_engineers_add = 750
+			building_employment_shopkeepers_add = 1200
+			building_employment_clerks_add = 5950
+			building_employment_machinists_add = 2950
+			building_employment_engineers_add = 1800
 		}
 	}
 }
@@ -3622,7 +3622,7 @@ REPLACE_OR_CREATE:pm_no_chip_production = {
 			goods_input_electricity_add = 13.5
 			
 			# output goods
-			goods_output_microchips_add = 15.5
+			goods_output_microchips_add = 55.1
 		}
 
 		level_scaled = {
@@ -3654,7 +3654,7 @@ REPLACE_OR_CREATE:pm_robotic_assembly = {
 			goods_input_electricity_add = 13.5
 			
 			# output goods
-			goods_output_microchips_add = 39
+			goods_output_microchips_add = 72.1
 			goods_output_computers_add = 2
 		}
 
@@ -3755,7 +3755,7 @@ REPLACE_OR_CREATE:pm_operating_systems = {
 			goods_input_electricity_add = 9
 			
 			# output goods
-			goods_output_computers_add = 31
+			goods_output_computers_add = 23.4
 		}
 
 		level_scaled = {
@@ -3788,7 +3788,7 @@ REPLACE_OR_CREATE:pm_solid_state_drive = {
 			goods_input_electricity_add = 18
 			goods_input_microchips_add = 4.5
 			# output goods
-			goods_output_computers_add = 62
+			goods_output_computers_add = 42.7
 		}
 
 		level_scaled = {
@@ -3823,7 +3823,7 @@ REPLACE_OR_CREATE:pm_multicore_processor = {
 			goods_input_microchips_add = 9
 			
 			# output goods
-			goods_output_computers_add = 93
+			goods_output_computers_add = 65
 		}
 
 		level_scaled = {
@@ -3858,7 +3858,7 @@ REPLACE_OR_CREATE:pm_gpt = {
 			goods_input_electricity_add = 27
 			goods_input_microchips_add = 13.5
 			# output goods
-			goods_output_computers_add = 124
+			goods_output_computers_add = 85
 		}
 
 		level_scaled = {
@@ -3892,7 +3892,7 @@ REPLACE_OR_CREATE:pm_quantum_computing = {
 			goods_input_electricity_add = 58
 			
 			# output goods
-			goods_output_computers_add = 194
+			goods_output_computers_add = 150
 		}
 
 		level_scaled = {
@@ -4002,7 +4002,7 @@ REPLACE_OR_CREATE:pm_helicopter_production = {
 		
 		level_scaled = {
 			# employment
-			building_employment_engineers_add = 500
+			building_employment_engineers_add = 1400
 		}
 	}
 }
@@ -4029,7 +4029,7 @@ REPLACE_OR_CREATE:pm_drone_production = {
 		
 		level_scaled = {
 			# employment
-			building_employment_engineers_add = 500
+			building_employment_engineers_add = 2000
 		}
 	}
 }
@@ -4062,7 +4062,7 @@ REPLACE_OR_CREATE:pm_spacecraft_production = {
 		
 		level_scaled = {
 			# employment
-			building_employment_engineers_add = 500
+			building_employment_engineers_add = 5650
 		}
 	}
 }
@@ -4080,7 +4080,7 @@ REPLACE_OR_CREATE:pm_base_plane_production = {
 			goods_input_steel_add = 32
 			goods_input_oil_add = 2.5
 			
-			goods_output_aeroplanes_add = 23
+			goods_output_aeroplanes_add = 5
 
 			# output goods
 		}
@@ -4105,7 +4105,7 @@ REPLACE_OR_CREATE:pm_base_airliner_production = {
 			goods_input_steel_add = 32
 			goods_input_oil_add = 22
 			
-			goods_output_aeroplanes_add = 46
+			goods_output_aeroplanes_add = 10
 		}
 		
 		level_scaled = {
@@ -4131,7 +4131,7 @@ REPLACE_OR_CREATE:pm_base_ultra_long_range_production = {
 			goods_input_steel_add = 32
 			goods_input_oil_add = 32
 			
-			goods_output_aeroplanes_add = 116
+			goods_output_aeroplanes_add = 15
 		}
 		
 		level_scaled = {
@@ -4159,7 +4159,7 @@ REPLACE_OR_CREATE:pm_base_space_travel = {
 			goods_input_spacecraft_add = 22
 
 			# output goods
-			goods_output_aeroplanes_add = 186
+			goods_output_aeroplanes_add = 20
 		}
 		
 		level_scaled = {

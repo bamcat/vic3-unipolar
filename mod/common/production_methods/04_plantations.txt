@@ -1,4 +1,4 @@
-default_building_coffee_plantation = {
+﻿default_building_coffee_plantation = {
 	texture = "gfx/interface/icons/production_method_icons/plantation_production.dds"
 
 	building_modifiers = {
@@ -209,7 +209,7 @@ default_building_tea_plantation = {
 	building_modifiers = {
 		workforce_scaled = {
 			# output goods
-			goods_output_tea_add = 20
+			goods_output_tea_add = 40
 		}
 
 		level_scaled = {
@@ -237,7 +237,7 @@ automatic_irrigation_building_tea_plantation = {
 		workforce_scaled = {
 			# output goods
 			goods_input_engines_add = 5
-			goods_output_tea_add = 40
+			goods_output_tea_add = 75
 		}
 
 		level_scaled = {

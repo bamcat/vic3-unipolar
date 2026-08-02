@@ -614,9 +614,9 @@ NEconomy = {
 	ESTABLISH_COLONY_PORT_COST = 100000				# How much money it costs to establish a coastal colony that builds a port
 	ESTABLISH_COLONY_PORT_LEVEL = 1					# What level port you get when establishing a coastal colony
 
-	SHIPPING_LANE_MERCHANT_MARINE_COST_SCALING = 0.1	# The cost for a shipping lane for each node beyond the first. So at 0.1 it goes 1.0, 1.1, 1.2 and so on.
+	SHIPPING_LANE_MERCHANT_MARINE_COST_SCALING = 0.15	# The cost for a shipping lane for each node beyond the first. So at 0.1 it goes 1.0, 1.1, 1.2 and so on.
 	GOODS_DEFAULT_MERCHANT_MARINE_COST_MULTIPLIER = 1	# The merchant marine cost of shipping a single unit of goods (can be overridden in defines)
-	OVERSEAS_INFRASTRUCTURE_MERCHANT_MARINE_COST_MULTIPLIER = 0.2	# Merchant marine cost for each infrastructure usage in overseas state for port connection shipping lanes
+	OVERSEAS_INFRASTRUCTURE_MERCHANT_MARINE_COST_MULTIPLIER = 0.1	# Merchant marine cost for each infrastructure usage in overseas state for port connection shipping lanes
 	MERCHANT_MARINE_GOODS_KEY = "merchant_marine"		# The goods key used for merchant marine demand
 
 	SUPPLY_NETWORK_SHORTAGE_THRESHOLD = 0.5				# If merchant marine sell/buy ratio is lower than this, start applying supply network strength penalties

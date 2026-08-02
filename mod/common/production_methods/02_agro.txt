@@ -1,4 +1,4 @@
-
+﻿
 REPLACE_OR_CREATE:pm_simple_farming = {
 	texture = "gfx/interface/icons/production_method_icons/simple_farming.dds"
 	building_modifiers = {
@@ -104,8 +104,8 @@ REPLACE_OR_CREATE:pm_chemical_fertilizer = {
 
 		level_scaled = {
 			# earnings														
-			building_employment_laborers_add = 2000
-			building_employment_farmers_add = 15000
+			building_employment_laborers_add = 2650
+			building_employment_farmers_add = 19800
 		}
 	}
 }			
@@ -340,8 +340,8 @@ REPLACE_OR_CREATE:pm_chemical_fertilizer_building_rice_farm = {
 
 		level_scaled = {
 			# earnings														
-			building_employment_laborers_add = 4000
-			building_employment_farmers_add = 17500
+			building_employment_laborers_add = 5600
+			building_employment_farmers_add = 24500
 		}
 	}
 }
@@ -459,7 +459,7 @@ REPLACE_OR_CREATE:pm_intensive_grazing_ranch = {
 		workforce_scaled = {
 			goods_input_grain_add = 24
 			goods_input_tools_add = 3
-			goods_output_fabric_add = 22
+			goods_output_fabric_add = 33
 			goods_output_fertilizer_add = 1.5
 		}
 	}
@@ -510,14 +510,14 @@ REPLACE_OR_CREATE:pm_slaughterhouses = {
 	}	
 	building_modifiers = {
 		workforce_scaled = {
-			goods_input_tools_add = 7.5
+			goods_input_tools_add = 6.5
 			goods_output_meat_add = 38
 		}
 
 		level_scaled = {
-			building_employment_laborers_add = 200
-			building_employment_farmers_add = 2250
-			building_employment_machinists_add = 400
+			building_employment_laborers_add = 300
+			building_employment_farmers_add = 3450
+			building_employment_machinists_add = 600
 		}
 	}
 }
@@ -536,15 +536,15 @@ REPLACE_OR_CREATE:pm_mechanized_slaughtering = {
 	}
 	building_modifiers = {
 		workforce_scaled = {
-			goods_input_tools_add = 7.5
-			goods_input_coal_add = 3
+			goods_input_tools_add = 6.5
+			goods_input_coal_add = 2.5
 			goods_output_meat_add = 46
 		}
 
 		level_scaled = {
-			building_employment_laborers_add = 100
-			building_employment_farmers_add = 2000
-			building_employment_machinists_add = 300
+			building_employment_laborers_add = 200
+			building_employment_farmers_add = 4350
+			building_employment_machinists_add = 650
 		}
 	}
 }
@@ -668,10 +668,10 @@ REPLACE_OR_CREATE:pm_yes_pesticides = {
 		}
 
 		level_scaled = {
-			building_employment_farmers_add = 9.5
+			building_employment_farmers_add = 650.5
 			# profit = 550
-			building_employment_shopkeepers_add = 5
-			building_employment_laborers_add = 3
+			building_employment_shopkeepers_add = 350
+			building_employment_laborers_add = 200
 		}
 	}
 }
@@ -691,10 +691,10 @@ REPLACE_OR_CREATE:pm_pesticides_fruit = {
 		}
 
 		level_scaled = {
-			building_employment_farmers_add = 15
+			building_employment_farmers_add = 1050
 			# profit = 550
-			building_employment_shopkeepers_add = 5
-			building_employment_laborers_add = 7.5
+			building_employment_shopkeepers_add = 350
+			building_employment_laborers_add = 500.5
 		}
 	}
 }
@@ -715,10 +715,10 @@ REPLACE_OR_CREATE:pm_pesticides_cocoa = {
 		}
 
 		level_scaled = {
-			building_employment_farmers_add = 9.5
+			building_employment_farmers_add = 950.5
 			# profit = 550
-			building_employment_shopkeepers_add = 12
-			building_employment_laborers_add = 3
+			building_employment_shopkeepers_add = 1250
+			building_employment_laborers_add = 300
 		}
 	}
 }
@@ -738,10 +738,10 @@ REPLACE_OR_CREATE:pm_pesticides_wine = {
 		}
 
 		level_scaled = {
-			building_employment_farmers_add = 9.5
+			building_employment_farmers_add = 950.5
 			# profit = 550
-			building_employment_shopkeepers_add = 12
-			building_employment_laborers_add = 3
+			building_employment_shopkeepers_add = 1250
+			building_employment_laborers_add = 300
 		}
 	}
 }
@@ -761,10 +761,10 @@ REPLACE_OR_CREATE:pm_pesticides_sugar = {
 		}
 
 		level_scaled = {
-			building_employment_farmers_add = 9.5
+			building_employment_farmers_add = 600.5
 			# profit = 550
-			building_employment_shopkeepers_add = 12
-			building_employment_laborers_add = 3
+			building_employment_shopkeepers_add = 800
+			building_employment_laborers_add = 200
 		}
 	}
 }

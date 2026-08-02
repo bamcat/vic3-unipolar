@@ -1,4 +1,4 @@
-
+﻿
 pm_anchorage = {
 	texture = "gfx/interface/icons/production_method_icons/anchorage.dds"
 
@@ -470,13 +470,13 @@ REPLACE_OR_CREATE:pm_financial_district_privately_owned = {
 
 	building_modifiers = {
 		level_scaled = {
-			building_employment_capitalists_add = 50
-			building_employment_shopkeepers_add = 100
-			building_employment_clerks_add = 100
-			goods_input_credit_add = 0.3
+			building_employment_capitalists_add = 100
+			building_employment_shopkeepers_add = 350
+			building_employment_clerks_add = 150
+			goods_input_credit_add = 1.2
 		}
 		unscaled = {
-			building_capitalists_shares_add = 10
+			building_capitalists_shares_add = 2
 			building_shopkeepers_shares_add = 1
 		}
 	}
@@ -487,14 +487,14 @@ REPLACE_OR_CREATE:pm_financial_district_publicly_traded = {
 
 	building_modifiers = {
 		level_scaled = {
-			building_employment_capitalists_add = 50
-			building_employment_bureaucrats_add = 50
-			building_employment_clerks_add = 150
-			goods_input_credit_add = 0.65
+			building_employment_capitalists_add = 150
+			building_employment_bureaucrats_add = 150
+			building_employment_clerks_add = 350
+			goods_input_credit_add = 2.6
 			goods_output_securities_add = 1.75
 		}
 		unscaled = {
-			building_capitalists_shares_add = 10
+			building_capitalists_shares_add = 2
 		}
 	}
 }
@@ -513,11 +513,11 @@ REPLACE_OR_CREATE:pm_financial_district_principle_divine_economics_2 = {
 			building_employment_capitalists_add = 50
 			building_employment_clergymen_add = 50
 			building_employment_clerks_add = 150
-			goods_input_credit_add = 0.65
+			goods_input_credit_add = 2.6
 			goods_output_securities_add = 1.75
 		}
 		unscaled = {
-			building_capitalists_shares_add = 10
+			building_capitalists_shares_add = 2
 			building_clergymen_shares_add = 2
 		}
 	}
@@ -534,7 +534,7 @@ REPLACE_OR_CREATE:pm_manor_house_privately_owned = {
 			goods_input_credit_add = 0.65
 		}
 		unscaled = {
-			building_aristocrats_shares_add = 10
+			building_aristocrats_shares_add = 2
 		}
 	}
 }
@@ -557,7 +557,7 @@ REPLACE_OR_CREATE:pm_manor_house_principle_divine_economics_2 = {
 		}
 
 		unscaled = {
-			building_aristocrats_shares_add = 10
+			building_aristocrats_shares_add = 2
 			building_clergymen_shares_add = 1
 		}
 	}
@@ -615,7 +615,7 @@ REPLACE_OR_CREATE:pm_company_headquarter_privately_owned = {
 			goods_input_advertising_add = 5
 		}
 		unscaled = {
-			building_capitalists_shares_add = 10
+			building_capitalists_shares_add = 2
 			building_shopkeepers_shares_add = 1
 		}
 	}
@@ -645,7 +645,7 @@ REPLACE_OR_CREATE:pm_company_headquarter_principle_divine_economics_2 = {
 			goods_input_advertising_add = 5
 		}
 		unscaled = {
-			building_capitalists_shares_add = 10
+			building_capitalists_shares_add = 2
 			building_clergymen_shares_add = 2
 		}
 	}
@@ -984,11 +984,11 @@ REPLACE_OR_CREATE:pm_financial_district_etfs = {
 			building_employment_capitalists_add = 50
 			building_employment_bureaucrats_add = 50
 			building_employment_clerks_add = 150
-			goods_input_credit_add = 0.7
+			goods_input_credit_add = 2.8
 			goods_output_securities_add = 2
 		}
 		unscaled = {
-			building_capitalists_shares_add = 10
+			building_capitalists_shares_add = 2
 		}
 	}
 }
@@ -1003,11 +1003,11 @@ REPLACE_OR_CREATE:pm_financial_district_crypto = {
 			building_employment_capitalists_add = 50
 			building_employment_bureaucrats_add = 50
 			building_employment_clerks_add = 150
-			goods_input_credit_add = 0.65
+			goods_input_credit_add = 2.6
 			goods_output_securities_add = 1.75
 		}
 		unscaled = {
-			building_capitalists_shares_add = 10
+			building_capitalists_shares_add = 2
 		}
 	}
 }
@@ -1022,12 +1022,12 @@ REPLACE_OR_CREATE:pm_financial_district_subprime_mortgages = {
 			building_employment_capitalists_add = 50
 			building_employment_bureaucrats_add = 50
 			building_employment_clerks_add = 150
-			goods_input_credit_add = 0.65
+			goods_input_credit_add = 2.6
 			goods_input_real_estate_add = 0.1
 			goods_output_securities_add = 9
 		}
 		unscaled = {
-			building_capitalists_shares_add = 10
+			building_capitalists_shares_add = 2
 		}
 	}
 }
@@ -1042,11 +1042,11 @@ REPLACE_OR_CREATE:pm_financial_district_tokenization = {
 			building_employment_capitalists_add = 50
 			building_employment_bureaucrats_add = 50
 			building_employment_clerks_add = 100
-			goods_input_credit_add = 0.65
+			goods_input_credit_add = 2.6
 			goods_output_securities_add = 1.75
 		}
 		unscaled = {
-			building_capitalists_shares_add = 10
+			building_capitalists_shares_add = 2
 		}
 	}
 }
