@@ -298,3 +298,18 @@
  nuclear_events.14.d: "Our nuclear strike has been answered. [ROOT.GetName] has launched a retaliatory strike — warheads are confirmed inbound.\n\nWe initiated the exchange. The consequences are ours to bear."
  nuclear_events.14.f: "Every strike invites the next one."
  nuclear_events.14.a: "Brace for impact"
+ 
+  # ── PRODUCTION QUEUE ───────────────────────
+
+ nuclear_queue_add: "Queue Warhead"
+ nuclear_queue_add_desc: "Add a warhead to the production queue. Queued warheads are produced automatically, one after another, as long as a nuclear silo is available.\n\n#bold Currently queued: [GetPlayer.MakeScope.Var('nuclear_production_queue').GetValue|0]#!"
+ nuclear_queue_subtract: "Remove from Queue"
+ nuclear_queue_subtract_desc: "Remove a warhead from the production queue.\n\n#bold Currently queued: [GetPlayer.MakeScope.Var('nuclear_production_queue').GetValue|0]#!"
+ nuclear_queue_count: "Queued: #bold [GetPlayer.MakeScope.Var('nuclear_production_queue').GetValue|0]#!"
+ nuclear_queue_label: "[GetPlayer.MakeScope.Var('nuclear_production_queue').GetValue|0]"
+ # ── MISSILE PRODUCTION QUEUE ───────────────
+
+ missile_queue_add: "Queue Missile Salvo"
+ missile_queue_add_desc: "Add a missile salvo (+5 missiles) to the production queue. Queued salvos are produced automatically, one after another, as each production cycle finishes.\n\n#bold Currently queued: [GetPlayer.MakeScope.Var('missile_production_queue').GetValue|0]#! salvo(s)"
+ missile_queue_subtract: "Remove from Queue"
+ missile_queue_subtract_desc: "Remove a missile salvo from the production queue.\n\n#bold Currently queued: [GetPlayer.MakeScope.Var('missile_production_queue').GetValue|0]#! salvo(s)"

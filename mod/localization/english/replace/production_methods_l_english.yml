@@ -387,7 +387,7 @@
  pm_steam_donkey_mine:0 "Mining Robots"
  pm_steam_donkey_building_logging_camp:0 "Mining Robots"
  pm_steam_donkey_building_coal_mine:0 "Mining Robots"
- pmg_explosives_building_chemical_plant:1 "$pm_base$"
+ pmg_explosives_building_chemical_plants:1 "$pm_base$"
 
  pmg_explosives_building_coal_mine:0 "Explosives"
  pmg_explosives_building_iron_mine:0 "Explosives"
@@ -717,6 +717,7 @@
  automatic_irrigation_building_vineyard: "$GMOs$"
  
   # Construction Camp
+ pm_basic_construction:0 "Manual Construction"
  pm_wooden_buildings:0 "Pre-Fabrication"
  pm_iron_frame_buildings:0 "Automated Machinery"
  pm_steel_frame_buildings:0 "Robotic Construction"
@@ -1180,3 +1181,8 @@ pmg_software_automation: "Development Infrastructure"
 
 luxury_services: "Luxury Services"
 popneed_luxury_services: "Luxury Services"
+
+# silo
+
+pmg_base_building_nuclear_silo: "$pm_base$"
+pm_base_building_nuclear_silo: "Nuclear Maintenance"
