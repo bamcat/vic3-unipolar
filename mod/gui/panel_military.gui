@@ -342,16 +342,39 @@ types panel_military {
 							raw_text = "Enrichment underway — see journal entry."
 						}
 
-						# Produce warhead (shown when capable)
-						button = {
+						# Produce warhead (shown when capable) — with + queue button beside it
+						hbox = {
 							visible = "[GetScriptedGui('nuclear_is_capable').IsShown( GuiScope.SetRoot(GetPlayer.MakeScope).End)]"
-							enabled = "[GetScriptedGui('nuclear_can_begin_production').IsValid( GuiScope.SetRoot(GetPlayer.MakeScope).End)]"
-							using = default_button_map_interaction
 							layoutpolicy_horizontal = expanding
-							size = { 0 36 }
-							onclick = "[GetScriptedGui('nuclear_begin_production').Execute( GuiScope.SetRoot(GetPlayer.MakeScope).End)]"
-							tooltip = "NUCLEAR_BEGIN_PRODUCTION_TOOLTIP"
-							textbox = { parentanchor = center autoresize = yes align = center|nobaseline raw_text = "Manufacture Nuclear Warhead" }
+							spacing = 4
+
+							button = {
+								enabled = "[GetScriptedGui('nuclear_can_begin_production').IsValid( GuiScope.SetRoot(GetPlayer.MakeScope).End)]"
+								using = default_button_map_interaction
+								layoutpolicy_horizontal = expanding
+								size = { 0 36 }
+								onclick = "[GetScriptedGui('nuclear_begin_production').Execute( GuiScope.SetRoot(GetPlayer.MakeScope).End)]"
+								tooltip = "NUCLEAR_BEGIN_PRODUCTION_TOOLTIP"
+								textbox = { parentanchor = center autoresize = yes align = center|nobaseline raw_text = "Manufacture Nuclear Warhead" }
+							}
+
+							# Plus button — queue a warhead (only ticks up the number)
+							button = {
+								size = { 36 36 }
+								using = default_button_map_interaction
+								onclick = "[GetScriptedGui('nuclear_queue_add').Execute( GuiScope.SetRoot( GetPlayer.MakeScope ).End )]"
+								enabled = "[GetScriptedGui('nuclear_queue_add').IsValid( GuiScope.SetRoot( GetPlayer.MakeScope ).End )]"
+								tooltip = "nuclear_queue_add_desc"
+								textbox = { parentanchor = center autoresize = yes align = center|nobaseline raw_text = "+" }
+							}
+						}
+
+						# Production queue count (always visible when capable)
+						textbox = {
+							visible = "[GetScriptedGui('nuclear_is_capable').IsShown( GuiScope.SetRoot(GetPlayer.MakeScope).End)]"
+							autoresize = yes
+							align = left|nobaseline
+							raw_text = "Production Queue: #bold [GetPlayer.MakeScope.Var('nuclear_production_queue').GetValue|0]#!"
 						}
 
 						textbox = {
@@ -361,6 +384,14 @@ types panel_military {
 							raw_text = "Warhead in production — see journal entry."
 						}
 
+						# Current queue during production (ticks down as warheads complete)
+						textbox = {
+							visible = "[GetScriptedGui('nuclear_is_producing').IsShown( GuiScope.SetRoot(GetPlayer.MakeScope).End)]"
+							autoresize = yes
+							align = left|nobaseline
+							raw_text = "Current Production Queue: #bold [GetPlayer.MakeScope.Var('nuclear_production_queue').GetValue|0]#!"
+						}
+						
 						# ICBM button (shown when capable, not yet complete)
 						button = {
 							visible = "[GetScriptedGui('nuclear_can_begin_icbm').IsShown( GuiScope.SetRoot(GetPlayer.MakeScope).End)]"
@@ -616,17 +647,40 @@ types panel_military {
 							}
 						}
 
-						# Produce button — always shown, uses scripted effect to add missiles
-						button = {
-							using = default_button_map_interaction
+						# Produce button — with + queue button beside it
+						hbox = {
 							layoutpolicy_horizontal = expanding
-							size = { 0 32 }
-							enabled = "[GetScriptedGui('can_produce_missiles').IsValid( GuiScope.SetRoot(GetPlayer.MakeScope).End)]"
-							onclick = "[GetScriptedGui('produce_missiles').Execute( GuiScope.SetRoot(GetPlayer.MakeScope).End)]"
-							tooltip = "CONV_PRODUCE_MISSILES_TOOLTIP"
-							textbox = { parentanchor = center autoresize = yes align = center|nobaseline raw_text = "Produce Missile Salvo (+5)" }
+							spacing = 4
+
+							button = {
+								using = default_button_map_interaction
+								layoutpolicy_horizontal = expanding
+								size = { 0 32 }
+								enabled = "[GetScriptedGui('can_produce_missiles').IsValid( GuiScope.SetRoot(GetPlayer.MakeScope).End)]"
+								onclick = "[GetScriptedGui('produce_missiles').Execute( GuiScope.SetRoot(GetPlayer.MakeScope).End)]"
+								tooltip = "CONV_PRODUCE_MISSILES_TOOLTIP"
+								textbox = { parentanchor = center autoresize = yes align = center|nobaseline raw_text = "Produce Missile Salvo (+5)" }
+							}
+
+							# Plus button — queue a salvo (only ticks up the number)
+							button = {
+								size = { 32 32 }
+								using = default_button_map_interaction
+								onclick = "[GetScriptedGui('missile_queue_add').Execute( GuiScope.SetRoot( GetPlayer.MakeScope ).End )]"
+								enabled = "[GetScriptedGui('missile_queue_add').IsValid( GuiScope.SetRoot( GetPlayer.MakeScope ).End )]"
+								tooltip = "missile_queue_add_desc"
+								textbox = { parentanchor = center autoresize = yes align = center|nobaseline raw_text = "+" }
+							}
 						}
-						
+
+						# Production queue count (shown when off cooldown)
+						textbox = {
+							visible = "[GetScriptedGui('can_produce_missiles').IsShown( GuiScope.SetRoot(GetPlayer.MakeScope).End)]"
+							autoresize = yes
+							align = left|nobaseline
+							raw_text = "Production Queue: #bold [GetPlayer.MakeScope.Var('missile_production_queue').GetValue|0]#!"
+						}
+
 						textbox = {
 							visible = "[GetScriptedGui('can_produce_missiles').IsShown( GuiScope.SetRoot(GetPlayer.MakeScope).End)]"
 							autoresize = yes
@@ -640,6 +694,15 @@ types panel_military {
 							default_format = "#low"
 							raw_text = "Missiles reloading — on cooldown."
 						}
+
+						# Current queue during cooldown (ticks down as salvos produce)
+						textbox = {
+							visible = "[GetScriptedGui('missile_on_cooldown').IsShown( GuiScope.SetRoot(GetPlayer.MakeScope).End)]"
+							autoresize = yes
+							align = left|nobaseline
+							raw_text = "Current Production Queue: #bold [GetPlayer.MakeScope.Var('missile_production_queue').GetValue|0]#!"
+						}
+
 
 						# Active controls
 						vbox = {
