@@ -46,7 +46,7 @@ BUILDINGS={
 					building={
 						type="building_financial_district"
 						country="c:XEC"
-						levels=3
+						levels=5
 						region="STATE_ECUADOR"
 					}
 				}
@@ -112,7 +112,7 @@ BUILDINGS={
 					building={
 						type="building_financial_district"
 						country="c:XEC"
-						levels=5
+						levels=7
 						region="STATE_ECUADOR"
 					}
 				}
@@ -125,7 +125,7 @@ BUILDINGS={
 					building={
 						type="building_financial_district"
 						country="c:XEC"
-						levels=1
+						levels=3
 						region="STATE_ECUADOR"
 					}
 				}
@@ -138,7 +138,7 @@ BUILDINGS={
 					building={
 						type="building_financial_district"
 						country="c:XEC"
-						levels=1
+						levels=3
 						region="STATE_ECUADOR"
 					}
 				}
@@ -151,7 +151,7 @@ BUILDINGS={
 					building={
 						type="building_financial_district"
 						country="c:XEC"
-						levels=1
+						levels=7
 						region="STATE_ECUADOR"
 					}
 				}
@@ -164,7 +164,7 @@ BUILDINGS={
 					building={
 						type="building_financial_district"
 						country="c:XEC"
-						levels=7
+						levels=15
 						region="STATE_ECUADOR"
 					}
 				}
@@ -177,7 +177,7 @@ BUILDINGS={
 					building={
 						type="building_financial_district"
 						country="c:XEC"
-						levels=8
+						levels=16
 						region="STATE_ECUADOR"
 					}
 				}
@@ -207,7 +207,7 @@ BUILDINGS={
 					building={
 						type="building_financial_district"
 						country="c:XEC"
-						levels=11
+						levels=20
 						region="STATE_ECUADOR"
 					}
 				}
@@ -220,7 +220,7 @@ BUILDINGS={
 					building={
 						type="building_financial_district"
 						country="c:XEC"
-						levels=8
+						levels=13
 						region="STATE_ECUADOR"
 					}
 				}
@@ -232,12 +232,12 @@ BUILDINGS={
 				add_ownership={
 					country={
 						country="c:XEC"
-						levels=4
+						levels=6
 					}
 					building={
 						type="building_financial_district"
 						country="c:XEC"
-						levels=1
+						levels=2
 						region="STATE_ECUADOR"
 					}
 				}
@@ -250,7 +250,7 @@ BUILDINGS={
 					building={
 						type="building_financial_district"
 						country="c:XEC"
-						levels=2
+						levels=5
 						region="STATE_ECUADOR"
 					}
 				}
@@ -338,12 +338,12 @@ BUILDINGS={
 				add_ownership={
 					country={
 						country="c:XEC"
-						levels=10
+						levels=12
 					}
 					building={
 						type="building_financial_district"
 						country="c:XEC"
-						levels=1
+						levels=3
 						region="STATE_ECUADOR"
 					}
 				}
@@ -355,12 +355,12 @@ BUILDINGS={
 				add_ownership={
 					country={
 						country="c:XEC"
-						levels=14
+						levels=24
 					}
 					building={
 						type="building_financial_district"
 						country="c:XEC"
-						levels=1
+						levels=10
 						region="STATE_ECUADOR"
 					}
 				}
@@ -372,12 +372,12 @@ BUILDINGS={
 				add_ownership={
 					country={
 						country="c:XEC"
-						levels=4
+						levels=9
 					}
 					building={
 						type="building_financial_district"
 						country="c:XEC"
-						levels=1
+						levels=5
 						region="STATE_ECUADOR"
 					}
 				}
@@ -389,12 +389,12 @@ BUILDINGS={
 				add_ownership={
 					country={
 						country="c:XEC"
-						levels=2
+						levels=4
 					}
 					building={
 						type="building_financial_district"
 						country="c:XEC"
-						levels=1
+						levels=2
 						region="STATE_ECUADOR"
 					}
 				}
@@ -406,12 +406,12 @@ BUILDINGS={
 				add_ownership={
 					country={
 						country="c:XEC"
-						levels=8
+						levels=15
 					}
 					building={
 						type="building_financial_district"
 						country="c:XEC"
-						levels=1
+						levels=8
 						region="STATE_ECUADOR"
 					}
 				}
@@ -423,12 +423,12 @@ BUILDINGS={
 				add_ownership={
 					country={
 						country="c:XEC"
-						levels=8
+						levels=12
 					}
 					building={
 						type="building_financial_district"
 						country="c:XEC"
-						levels=1
+						levels=4
 						region="STATE_ECUADOR"
 					}
 				}
@@ -480,7 +480,7 @@ BUILDINGS={
 					building={
 						type="building_financial_district"
 						country="c:XEC"
-						levels=1
+						levels=5
 						region="STATE_ECUADOR"
 					}
 				}
@@ -493,7 +493,7 @@ BUILDINGS={
 					building={
 						type="building_financial_district"
 						country="c:XEC"
-						levels=1
+						levels=3
 						region="STATE_ECUADOR"
 					}
 				}
@@ -519,7 +519,7 @@ BUILDINGS={
 					building={
 						type="building_financial_district"
 						country="c:XEC"
-						levels=1
+						levels=3
 						region="STATE_ECUADOR"
 					}
 				}
@@ -576,7 +576,11 @@ BUILDINGS={
 				reserves=1
 				activate_production_methods={ "pm_anchorage" }
 			}
-		}
+		
+			create_building={
+				building="building_food_industry"
+				level=1
+			}}
 		region_state:FRA={
 			create_building={
 				building="building_government_administration"
@@ -604,7 +608,7 @@ BUILDINGS={
 					}
 				}
 				reserves=1
-				activate_production_methods={ "pm_early_trains" "pm_no_passenger_trains" }
+				activate_production_methods={ "pm_early_trains" "pm_wooden_passenger_carriages" }
 			}
 			create_building={
 				building="building_port"
@@ -615,7 +619,7 @@ BUILDINGS={
 					}
 				}
 				reserves=1
-				activate_production_methods={ "pm_anchorage" }
+				activate_production_methods={ "pm_basic_port" }
 			}
 			create_building={
 				building="building_telecommunications"
@@ -628,7 +632,7 @@ BUILDINGS={
 					}
 				}
 				reserves=1
-				activate_production_methods={ "pm_power_lines" "pm_1g" }
+				activate_production_methods={ "pm_cellular_tower" "pm_1g" }
 			}
 			create_building={
 				building="building_power_plant"
@@ -641,7 +645,7 @@ BUILDINGS={
 					}
 				}
 				reserves=1
-				activate_production_methods={ "pm_hydroelectric_plant" }
+				activate_production_methods={ "pm_oil-fired_plant" }
 			}
 			create_building={
 				building="building_rubber_plantation"
@@ -666,7 +670,7 @@ BUILDINGS={
 					}
 				}
 				reserves=1
-				activate_production_methods={ "default_building_rubber_plantation" "pm_road_carts" }
+				activate_production_methods={ "default_building_rubber_plantation" "pm_steam_rail_transport" }
 			}
 			create_building={
 				building="building_oil_rig"
@@ -691,7 +695,7 @@ BUILDINGS={
 					}
 				}
 				reserves=1
-				activate_production_methods={ "pm_steam_derricks" "pm_road_carts" }
+				activate_production_methods={ "pm_steam_derricks" "pm_tanker_cars" }
 			}
 			create_building={
 				building="building_banana_plantation"
@@ -704,7 +708,7 @@ BUILDINGS={
 					}
 				}
 				reserves=1
-				activate_production_methods={ "default_building_banana_plantation" "pm_road_carts" "pm_no_pesticides" }
+				activate_production_methods={ "default_building_banana_plantation" "pm_steam_rail_transport" "pm_no_pesticides" }
 			}
 			create_building={
 				building="building_coffee_plantation"
@@ -717,7 +721,7 @@ BUILDINGS={
 					}
 				}
 				reserves=1
-				activate_production_methods={ "default_building_coffee_plantation" "pm_road_carts" "pm_no_pesticides" }
+				activate_production_methods={ "default_building_coffee_plantation" "pm_steam_rail_transport" "pm_no_pesticides" }
 			}
 		}
 		region_state:GUY={
@@ -773,7 +777,7 @@ BUILDINGS={
 					building={
 						type="building_financial_district"
 						country="c:GUY"
-						levels=1
+						levels=6
 						region="STATE_GUAYANA"
 					}
 				}
@@ -935,7 +939,7 @@ BUILDINGS={
 					building={
 						type="building_financial_district"
 						country="c:VNZ"
-						levels=1
+						levels=10
 						region="STATE_ZULIA"
 					}
 				}
@@ -948,7 +952,7 @@ BUILDINGS={
 					building={
 						type="building_financial_district"
 						country="c:VNZ"
-						levels=1
+						levels=5
 						region="STATE_ZULIA"
 					}
 				}
@@ -961,7 +965,7 @@ BUILDINGS={
 					building={
 						type="building_financial_district"
 						country="c:VNZ"
-						levels=1
+						levels=8
 						region="STATE_ZULIA"
 					}
 				}
@@ -974,7 +978,7 @@ BUILDINGS={
 					building={
 						type="building_financial_district"
 						country="c:VNZ"
-						levels=1
+						levels=2
 						region="STATE_ZULIA"
 					}
 				}
@@ -987,7 +991,7 @@ BUILDINGS={
 					building={
 						type="building_financial_district"
 						country="c:VNZ"
-						levels=1
+						levels=5
 						region="STATE_ZULIA"
 					}
 				}
@@ -1000,7 +1004,7 @@ BUILDINGS={
 					building={
 						type="building_financial_district"
 						country="c:VNZ"
-						levels=1
+						levels=6
 						region="STATE_ZULIA"
 					}
 				}
@@ -1036,7 +1040,7 @@ BUILDINGS={
 					building={
 						type="building_financial_district"
 						country="c:VNZ"
-						levels=1
+						levels=2
 						region="STATE_ZULIA"
 					}
 				}
@@ -1125,7 +1129,7 @@ BUILDINGS={
 					building={
 						type="building_financial_district"
 						country="c:VNZ"
-						levels=14
+						levels=16
 						region="STATE_ZULIA"
 					}
 				}
@@ -1138,7 +1142,7 @@ BUILDINGS={
 					building={
 						type="building_financial_district"
 						country="c:VNZ"
-						levels=4
+						levels=5
 						region="STATE_ZULIA"
 					}
 				}
@@ -1167,12 +1171,12 @@ BUILDINGS={
 				add_ownership={
 					country={
 						country="c:VNZ"
-						levels=8
+						levels=9
 					}
 					building={
 						type="building_financial_district"
 						country="c:VNZ"
-						levels=1
+						levels=2
 						region="STATE_ZULIA"
 					}
 					building={
@@ -1191,7 +1195,7 @@ BUILDINGS={
 					building={
 						type="building_financial_district"
 						country="c:VNZ"
-						levels=8
+						levels=9
 						region="STATE_ZULIA"
 					}
 				}
@@ -1366,7 +1370,7 @@ BUILDINGS={
 					building={
 						type="building_financial_district"
 						country="c:VNZ"
-						levels=1
+						levels=3
 						region="STATE_MIRANDA"
 					}
 				}
@@ -1379,7 +1383,7 @@ BUILDINGS={
 					building={
 						type="building_financial_district"
 						country="c:VNZ"
-						levels=1
+						levels=2
 						region="STATE_MIRANDA"
 					}
 				}
@@ -1392,7 +1396,7 @@ BUILDINGS={
 					building={
 						type="building_financial_district"
 						country="c:VNZ"
-						levels=16
+						levels=18
 						region="STATE_MIRANDA"
 					}
 				}
@@ -1405,7 +1409,7 @@ BUILDINGS={
 					building={
 						type="building_financial_district"
 						country="c:VNZ"
-						levels=2
+						levels=3
 						region="STATE_MIRANDA"
 					}
 				}
@@ -1430,12 +1434,12 @@ BUILDINGS={
 				add_ownership={
 					country={
 						country="c:VNZ"
-						levels=9
+						levels=14
 					}
 					building={
 						type="building_financial_district"
 						country="c:VNZ"
-						levels=2
+						levels=6
 						region="STATE_MIRANDA"
 					}
 				}
@@ -1447,12 +1451,12 @@ BUILDINGS={
 				add_ownership={
 					country={
 						country="c:VNZ"
-						levels=6
+						levels=9
 					}
 					building={
 						type="building_financial_district"
 						country="c:VNZ"
-						levels=3
+						levels=5
 						region="STATE_MIRANDA"
 					}
 				}
@@ -1464,12 +1468,12 @@ BUILDINGS={
 				add_ownership={
 					country={
 						country="c:VNZ"
-						levels=3
+						levels=5
 					}
 					building={
 						type="building_financial_district"
 						country="c:VNZ"
-						levels=2
+						levels=3
 						region="STATE_MIRANDA"
 					}
 				}
@@ -1481,12 +1485,12 @@ BUILDINGS={
 				add_ownership={
 					country={
 						country="c:VNZ"
-						levels=2
+						levels=4
 					}
 					building={
 						type="building_financial_district"
 						country="c:VNZ"
-						levels=1
+						levels=2
 						region="STATE_MIRANDA"
 					}
 				}
@@ -1582,12 +1586,12 @@ BUILDINGS={
 				add_ownership={
 					country={
 						country="c:VNZ"
-						levels=10
+						levels=12
 					}
 					building={
 						type="building_financial_district"
 						country="c:VNZ"
-						levels=5
+						levels=7
 						region="STATE_MIRANDA"
 					}
 				}
@@ -1599,12 +1603,12 @@ BUILDINGS={
 				add_ownership={
 					country={
 						country="c:VNZ"
-						levels=14
+						levels=24
 					}
 					building={
 						type="building_financial_district"
 						country="c:VNZ"
-						levels=1
+						levels=11
 						region="STATE_MIRANDA"
 					}
 				}
@@ -1616,12 +1620,12 @@ BUILDINGS={
 				add_ownership={
 					country={
 						country="c:VNZ"
-						levels=4
+						levels=9
 					}
 					building={
 						type="building_financial_district"
 						country="c:VNZ"
-						levels=1
+						levels=6
 						region="STATE_MIRANDA"
 					}
 				}
@@ -1633,12 +1637,12 @@ BUILDINGS={
 				add_ownership={
 					country={
 						country="c:VNZ"
-						levels=1
+						levels=3
 					}
 					building={
 						type="building_financial_district"
 						country="c:VNZ"
-						levels=1
+						levels=2
 						region="STATE_MIRANDA"
 					}
 				}
@@ -1650,12 +1654,12 @@ BUILDINGS={
 				add_ownership={
 					country={
 						country="c:VNZ"
-						levels=8
+						levels=16
 					}
 					building={
 						type="building_financial_district"
 						country="c:VNZ"
-						levels=1
+						levels=8
 						region="STATE_MIRANDA"
 					}
 				}
@@ -1668,7 +1672,7 @@ BUILDINGS={
 					building={
 						type="building_financial_district"
 						country="c:VNZ"
-						levels=8
+						levels=16
 						region="STATE_MIRANDA"
 					}
 				}
@@ -1724,7 +1728,7 @@ BUILDINGS={
 					building={
 						type="building_financial_district"
 						country="c:VNZ"
-						levels=2
+						levels=4
 						region="STATE_MIRANDA"
 					}
 				}
@@ -1843,7 +1847,7 @@ BUILDINGS={
 					building={
 						type="building_financial_district"
 						country="c:VNZ"
-						levels=1
+						levels=2
 						region="STATE_BOLIVAR"
 					}
 				}
@@ -1964,7 +1968,7 @@ BUILDINGS={
 					building={
 						type="building_financial_district"
 						country="c:VNZ"
-						levels=1
+						levels=2
 						region="STATE_BOLIVAR"
 					}
 				}
@@ -2177,7 +2181,7 @@ BUILDINGS={
 					building={
 						type="building_financial_district"
 						country="c:CLM"
-						levels=1
+						levels=19
 						region="STATE_ANTIOQUIA"
 					}
 				}
@@ -2190,7 +2194,7 @@ BUILDINGS={
 					building={
 						type="building_financial_district"
 						country="c:CLM"
-						levels=4
+						levels=19
 						region="STATE_ANTIOQUIA"
 					}
 				}
@@ -2249,7 +2253,7 @@ BUILDINGS={
 					building={
 						type="building_financial_district"
 						country="c:CLM"
-						levels=3
+						levels=8
 						region="STATE_ANTIOQUIA"
 					}
 				}
@@ -2262,7 +2266,7 @@ BUILDINGS={
 					building={
 						type="building_financial_district"
 						country="c:CLM"
-						levels=5
+						levels=9
 						region="STATE_ANTIOQUIA"
 					}
 				}
@@ -2274,12 +2278,12 @@ BUILDINGS={
 				add_ownership={
 					country={
 						country="c:CLM"
-						levels=9
+						levels=14
 					}
 					building={
 						type="building_financial_district"
 						country="c:CLM"
-						levels=2
+						levels=6
 						region="STATE_CUNDINAMARCA"
 					}
 				}
@@ -2291,12 +2295,12 @@ BUILDINGS={
 				add_ownership={
 					country={
 						country="c:CLM"
-						levels=8
+						levels=13
 					}
 					building={
 						type="building_financial_district"
 						country="c:CLM"
-						levels=4
+						levels=7
 						region="STATE_CUNDINAMARCA"
 					}
 				}
@@ -2338,12 +2342,12 @@ BUILDINGS={
 				add_ownership={
 					country={
 						country="c:CLM"
-						levels=11
+						levels=12
 					}
 					building={
 						type="building_financial_district"
 						country="c:CLM"
-						levels=1
+						levels=2
 						region="STATE_CUNDINAMARCA"
 					}
 				}
@@ -2355,7 +2359,7 @@ BUILDINGS={
 				add_ownership={
 					country={
 						country="c:CLM"
-						levels=8
+						levels=9
 					}
 					building={
 						type="building_financial_district"
@@ -2547,7 +2551,7 @@ BUILDINGS={
 					building={
 						type="building_financial_district"
 						country="c:CLM"
-						levels=24
+						levels=28
 						region="STATE_ANTIOQUIA"
 					}
 				}
@@ -2560,7 +2564,7 @@ BUILDINGS={
 					building={
 						type="building_financial_district"
 						country="c:CLM"
-						levels=8
+						levels=10
 						region="STATE_ANTIOQUIA"
 					}
 				}
@@ -2572,18 +2576,18 @@ BUILDINGS={
 				add_ownership={
 					country={
 						country="c:CLM"
-						levels=18
-					}
-					building={
-						type="building_financial_district"
-						country="c:CLM"
-						levels=1
-						region="STATE_CUNDINAMARCA"
+						levels=19
 					}
 					building={
 						type="building_financial_district"
 						country="c:CLM"
 						levels=2
+						region="STATE_CUNDINAMARCA"
+					}
+					building={
+						type="building_financial_district"
+						country="c:CLM"
+						levels=3
 						region="STATE_ANTIOQUIA"
 					}
 				}
@@ -2596,7 +2600,7 @@ BUILDINGS={
 					building={
 						type="building_financial_district"
 						country="c:CLM"
-						levels=18
+						levels=19
 						region="STATE_ANTIOQUIA"
 					}
 				}
@@ -2608,7 +2612,7 @@ BUILDINGS={
 				add_ownership={
 					country={
 						country="c:CLM"
-						levels=5
+						levels=6
 					}
 					building={
 						type="building_financial_district"
@@ -2682,7 +2686,7 @@ BUILDINGS={
 					building={
 						type="building_financial_district"
 						country="c:CLM"
-						levels=4
+						levels=15
 						region="STATE_ANTIOQUIA"
 					}
 				}
@@ -2695,7 +2699,7 @@ BUILDINGS={
 					building={
 						type="building_financial_district"
 						country="c:USA"
-						levels=2
+						levels=13
 						region="STATE_LOUISIANA"
 					}
 				}
@@ -2878,7 +2882,7 @@ BUILDINGS={
 					building={
 						type="building_financial_district"
 						country="c:CLM"
-						levels=4
+						levels=13
 						region="STATE_GUAVIARE"
 					}
 				}
@@ -2904,7 +2908,7 @@ BUILDINGS={
 					building={
 						type="building_financial_district"
 						country="c:CLM"
-						levels=11
+						levels=22
 						region="STATE_GUAVIARE"
 					}
 				}
@@ -2917,7 +2921,7 @@ BUILDINGS={
 					building={
 						type="building_financial_district"
 						country="c:CLM"
-						levels=8
+						levels=14
 						region="STATE_GUAVIARE"
 					}
 				}
@@ -2930,7 +2934,7 @@ BUILDINGS={
 					building={
 						type="building_financial_district"
 						country="c:CLM"
-						levels=4
+						levels=8
 						region="STATE_GUAVIARE"
 					}
 				}
@@ -2943,7 +2947,7 @@ BUILDINGS={
 					building={
 						type="building_financial_district"
 						country="c:CLM"
-						levels=2
+						levels=6
 						region="STATE_GUAVIARE"
 					}
 				}
@@ -3054,7 +3058,7 @@ BUILDINGS={
 					building={
 						type="building_financial_district"
 						country="c:CLM"
-						levels=10
+						levels=15
 						region="STATE_GUAVIARE"
 					}
 				}
@@ -3066,12 +3070,12 @@ BUILDINGS={
 				add_ownership={
 					country={
 						country="c:CLM"
-						levels=14
+						levels=27
 					}
 					building={
 						type="building_financial_district"
 						country="c:CLM"
-						levels=1
+						levels=13
 						region="STATE_GUAVIARE"
 					}
 				}
@@ -3084,7 +3088,7 @@ BUILDINGS={
 					building={
 						type="building_financial_district"
 						country="c:CLM"
-						levels=4
+						levels=16
 						region="STATE_GUAVIARE"
 					}
 				}
@@ -3097,7 +3101,7 @@ BUILDINGS={
 					building={
 						type="building_financial_district"
 						country="c:CLM"
-						levels=2
+						levels=6
 						region="STATE_GUAVIARE"
 					}
 				}
@@ -3109,12 +3113,12 @@ BUILDINGS={
 				add_ownership={
 					country={
 						country="c:CLM"
-						levels=8
+						levels=17
 					}
 					building={
 						type="building_financial_district"
 						country="c:CLM"
-						levels=1
+						levels=10
 						region="STATE_GUAVIARE"
 					}
 				}
@@ -3127,7 +3131,7 @@ BUILDINGS={
 					building={
 						type="building_financial_district"
 						country="c:CLM"
-						levels=8
+						levels=18
 						region="STATE_GUAVIARE"
 					}
 				}
@@ -3235,7 +3239,7 @@ BUILDINGS={
 					building={
 						type="building_financial_district"
 						country="c:CLM"
-						levels=1
+						levels=3
 						region="STATE_CUNDINAMARCA"
 					}
 				}
@@ -3278,7 +3282,7 @@ BUILDINGS={
 					building={
 						type="building_financial_district"
 						country="c:CLM"
-						levels=1
+						levels=3
 						region="STATE_CUNDINAMARCA"
 					}
 				}
@@ -3291,7 +3295,7 @@ BUILDINGS={
 					building={
 						type="building_financial_district"
 						country="c:CLM"
-						levels=1
+						levels=3
 						region="STATE_CUNDINAMARCA"
 					}
 				}
@@ -3303,7 +3307,7 @@ BUILDINGS={
 				add_ownership={
 					country={
 						country="c:CLM"
-						levels=1
+						levels=2
 					}
 					building={
 						type="building_financial_district"
@@ -3321,7 +3325,7 @@ BUILDINGS={
 					building={
 						type="building_financial_district"
 						country="c:CLM"
-						levels=1
+						levels=11
 						region="STATE_CUNDINAMARCA"
 					}
 				}
@@ -3363,7 +3367,7 @@ BUILDINGS={
 					building={
 						type="building_financial_district"
 						country="c:CLM"
-						levels=1
+						levels=5
 						region="STATE_CUNDINAMARCA"
 					}
 				}
@@ -3376,7 +3380,7 @@ BUILDINGS={
 					building={
 						type="building_financial_district"
 						country="c:CLM"
-						levels=1
+						levels=5
 						region="STATE_CUNDINAMARCA"
 					}
 				}
@@ -3388,12 +3392,12 @@ BUILDINGS={
 				add_ownership={
 					country={
 						country="c:CLM"
-						levels=2
+						levels=4
 					}
 					building={
 						type="building_financial_district"
 						country="c:CLM"
-						levels=1
+						levels=2
 						region="STATE_CUNDINAMARCA"
 					}
 				}
@@ -3406,7 +3410,7 @@ BUILDINGS={
 					building={
 						type="building_financial_district"
 						country="c:CLM"
-						levels=2
+						levels=5
 						region="STATE_CUNDINAMARCA"
 					}
 				}
@@ -3481,24 +3485,24 @@ BUILDINGS={
 				add_ownership={
 					country={
 						country="c:CLM"
-						levels=10
+						levels=11
 					}
 					building={
 						type="building_financial_district"
 						country="c:CLM"
-						levels=4
+						levels=5
 						region="STATE_CUNDINAMARCA"
 					}
 					building={
 						type="building_financial_district"
 						country="c:CLM"
-						levels=1
+						levels=2
 						region="STATE_ANTIOQUIA"
 					}
 					building={
 						type="building_financial_district"
 						country="c:CLM"
-						levels=1
+						levels=2
 						region="STATE_GUAVIARE"
 					}
 				}
@@ -3510,12 +3514,12 @@ BUILDINGS={
 				add_ownership={
 					country={
 						country="c:CLM"
-						levels=14
+						levels=24
 					}
 					building={
 						type="building_financial_district"
 						country="c:CLM"
-						levels=1
+						levels=11
 						region="STATE_CUNDINAMARCA"
 					}
 				}
@@ -3527,12 +3531,12 @@ BUILDINGS={
 				add_ownership={
 					country={
 						country="c:CLM"
-						levels=4
+						levels=9
 					}
 					building={
 						type="building_financial_district"
 						country="c:CLM"
-						levels=1
+						levels=5
 						region="STATE_CUNDINAMARCA"
 					}
 				}
@@ -3545,7 +3549,7 @@ BUILDINGS={
 					building={
 						type="building_financial_district"
 						country="c:CLM"
-						levels=8
+						levels=22
 						region="STATE_CUNDINAMARCA"
 					}
 				}
@@ -3558,7 +3562,7 @@ BUILDINGS={
 					building={
 						type="building_financial_district"
 						country="c:CLM"
-						levels=8
+						levels=16
 						region="STATE_CUNDINAMARCA"
 					}
 				}
@@ -3597,7 +3601,7 @@ BUILDINGS={
 					building={
 						type="building_financial_district"
 						country="c:CLM"
-						levels=9
+						levels=11
 						region="STATE_CUNDINAMARCA"
 					}
 				}
@@ -3689,7 +3693,7 @@ BUILDINGS={
 					building={
 						type="building_financial_district"
 						country="c:CLM"
-						levels=1
+						levels=5
 						region="STATE_CAUCA"
 					}
 				}
@@ -3702,7 +3706,7 @@ BUILDINGS={
 					building={
 						type="building_financial_district"
 						country="c:CLM"
-						levels=1
+						levels=4
 						region="STATE_CAUCA"
 					}
 				}
@@ -3715,7 +3719,7 @@ BUILDINGS={
 					building={
 						type="building_financial_district"
 						country="c:CLM"
-						levels=1
+						levels=4
 						region="STATE_CAUCA"
 					}
 				}
@@ -3728,7 +3732,7 @@ BUILDINGS={
 					building={
 						type="building_financial_district"
 						country="c:CLM"
-						levels=1
+						levels=2
 						region="STATE_CAUCA"
 					}
 				}
@@ -3741,7 +3745,7 @@ BUILDINGS={
 					building={
 						type="building_financial_district"
 						country="c:CLM"
-						levels=1
+						levels=7
 						region="STATE_CAUCA"
 					}
 				}
@@ -3754,7 +3758,7 @@ BUILDINGS={
 					building={
 						type="building_financial_district"
 						country="c:CLM"
-						levels=1
+						levels=4
 						region="STATE_CAUCA"
 					}
 				}
@@ -3943,7 +3947,7 @@ BUILDINGS={
 					building={
 						type="building_financial_district"
 						country="c:CLM"
-						levels=4
+						levels=7
 						region="STATE_CAUCA"
 					}
 				}
@@ -3956,7 +3960,7 @@ BUILDINGS={
 					building={
 						type="building_financial_district"
 						country="c:CLM"
-						levels=1
+						levels=4
 						region="STATE_CUNDINAMARCA"
 					}
 				}
@@ -4053,7 +4057,7 @@ BUILDINGS={
 					building={
 						type="building_financial_district"
 						country="c:PEU"
-						levels=1
+						levels=2
 						region="STATE_PASTAZA"
 					}
 				}
@@ -4079,7 +4083,7 @@ BUILDINGS={
 					building={
 						type="building_financial_district"
 						country="c:PEU"
-						levels=1
+						levels=9
 						region="STATE_PASTAZA"
 					}
 				}
@@ -4092,7 +4096,7 @@ BUILDINGS={
 					building={
 						type="building_financial_district"
 						country="c:PEU"
-						levels=1
+						levels=4
 						region="STATE_PASTAZA"
 					}
 				}
@@ -4343,7 +4347,11 @@ BUILDINGS={
 				reserves=1
 				activate_production_methods={ "pm_small_shops" "pm_no_retail_specialization" "pm_manual_retail_checkout" }
 			}
-		}
+		
+			create_building={
+				building="building_food_industry"
+				level=1
+			}}
 	}
 	s:STATE_SANTA_CRUZ={
 		region_state:BOL={
@@ -4422,7 +4430,7 @@ BUILDINGS={
 					building={
 						type="building_financial_district"
 						country="c:BOL"
-						levels=1
+						levels=4
 						region="STATE_SANTA_CRUZ"
 					}
 				}
@@ -4435,7 +4443,7 @@ BUILDINGS={
 					building={
 						type="building_financial_district"
 						country="c:BOL"
-						levels=1
+						levels=4
 						region="STATE_SANTA_CRUZ"
 					}
 				}
@@ -4448,7 +4456,7 @@ BUILDINGS={
 					building={
 						type="building_financial_district"
 						country="c:BOL"
-						levels=1
+						levels=3
 						region="STATE_SANTA_CRUZ"
 					}
 				}
@@ -4474,7 +4482,7 @@ BUILDINGS={
 					building={
 						type="building_financial_district"
 						country="c:BOL"
-						levels=1
+						levels=4
 						region="STATE_SANTA_CRUZ"
 					}
 				}
@@ -4543,7 +4551,7 @@ BUILDINGS={
 					building={
 						type="building_financial_district"
 						country="c:BOL"
-						levels=8
+						levels=9
 						region="STATE_SANTA_CRUZ"
 					}
 				}
@@ -4651,7 +4659,7 @@ BUILDINGS={
 					building={
 						type="building_financial_district"
 						country="c:BOL"
-						levels=3
+						levels=6
 						region="STATE_SANTA_CRUZ"
 					}
 				}
@@ -5353,7 +5361,7 @@ BUILDINGS={
 					building={
 						type="building_financial_district"
 						country="c:PEU"
-						levels=1
+						levels=7
 						region="STATE_CAJAMARCA"
 					}
 				}
@@ -5366,7 +5374,7 @@ BUILDINGS={
 					building={
 						type="building_financial_district"
 						country="c:PEU"
-						levels=6
+						levels=10
 						region="STATE_CAJAMARCA"
 					}
 				}
@@ -5379,7 +5387,7 @@ BUILDINGS={
 					building={
 						type="building_financial_district"
 						country="c:PEU"
-						levels=6
+						levels=8
 						region="STATE_CAJAMARCA"
 					}
 				}
@@ -5392,7 +5400,7 @@ BUILDINGS={
 					building={
 						type="building_financial_district"
 						country="c:PEU"
-						levels=2
+						levels=4
 						region="STATE_CAJAMARCA"
 					}
 				}
@@ -5404,12 +5412,12 @@ BUILDINGS={
 				add_ownership={
 					country={
 						country="c:PEU"
-						levels=4
+						levels=7
 					}
 					building={
 						type="building_financial_district"
 						country="c:PEU"
-						levels=3
+						levels=6
 						region="STATE_LIMA"
 					}
 				}
@@ -5439,7 +5447,7 @@ BUILDINGS={
 					building={
 						type="building_financial_district"
 						country="c:PEU"
-						levels=4
+						levels=6
 						region="STATE_CAJAMARCA"
 					}
 				}
@@ -5452,7 +5460,7 @@ BUILDINGS={
 					building={
 						type="building_financial_district"
 						country="c:PEU"
-						levels=4
+						levels=6
 						region="STATE_CAJAMARCA"
 					}
 				}
@@ -5465,7 +5473,7 @@ BUILDINGS={
 					building={
 						type="building_financial_district"
 						country="c:PEU"
-						levels=3
+						levels=4
 						region="STATE_CAJAMARCA"
 					}
 				}
@@ -5491,7 +5499,7 @@ BUILDINGS={
 					building={
 						type="building_financial_district"
 						country="c:PEU"
-						levels=2
+						levels=4
 						region="STATE_CAJAMARCA"
 					}
 				}
@@ -5503,12 +5511,12 @@ BUILDINGS={
 				add_ownership={
 					country={
 						country="c:PEU"
-						levels=1
+						levels=3
 					}
 					building={
 						type="building_financial_district"
 						country="c:PEU"
-						levels=1
+						levels=3
 						region="STATE_LIMA"
 					}
 				}
@@ -5521,7 +5529,7 @@ BUILDINGS={
 					building={
 						type="building_financial_district"
 						country="c:PEU"
-						levels=3
+						levels=5
 						region="STATE_CAJAMARCA"
 					}
 				}
@@ -5560,7 +5568,7 @@ BUILDINGS={
 					building={
 						type="building_financial_district"
 						country="c:PEU"
-						levels=4
+						levels=7
 						region="STATE_CAJAMARCA"
 					}
 				}
@@ -5573,7 +5581,7 @@ BUILDINGS={
 					building={
 						type="building_financial_district"
 						country="c:PEU"
-						levels=3
+						levels=4
 						region="STATE_CAJAMARCA"
 					}
 				}
@@ -5586,7 +5594,7 @@ BUILDINGS={
 					building={
 						type="building_financial_district"
 						country="c:PEU"
-						levels=2
+						levels=3
 						region="STATE_CAJAMARCA"
 					}
 				}
@@ -5722,7 +5730,7 @@ BUILDINGS={
 					building={
 						type="building_financial_district"
 						country="c:PEU"
-						levels=2
+						levels=3
 						region="STATE_LIMA"
 					}
 				}
@@ -5771,7 +5779,7 @@ BUILDINGS={
 					building={
 						type="building_financial_district"
 						country="c:PEU"
-						levels=7
+						levels=11
 						region="STATE_LIMA"
 					}
 				}
@@ -5783,12 +5791,12 @@ BUILDINGS={
 				add_ownership={
 					country={
 						country="c:PEU"
-						levels=4
+						levels=10
 					}
 					building={
 						type="building_financial_district"
 						country="c:PEU"
-						levels=1
+						levels=6
 						region="STATE_LIMA"
 					}
 				}
@@ -5800,12 +5808,12 @@ BUILDINGS={
 				add_ownership={
 					country={
 						country="c:PEU"
-						levels=3
+						levels=9
 					}
 					building={
 						type="building_financial_district"
 						country="c:PEU"
-						levels=1
+						levels=6
 						region="STATE_LIMA"
 					}
 				}
@@ -5818,7 +5826,7 @@ BUILDINGS={
 					building={
 						type="building_financial_district"
 						country="c:PEU"
-						levels=11
+						levels=20
 						region="STATE_LIMA"
 					}
 				}
@@ -5830,12 +5838,12 @@ BUILDINGS={
 				add_ownership={
 					country={
 						country="c:PEU"
-						levels=8
+						levels=11
 					}
 					building={
 						type="building_financial_district"
 						country="c:PEU"
-						levels=3
+						levels=5
 						region="STATE_LIMA"
 					}
 				}
@@ -5847,12 +5855,12 @@ BUILDINGS={
 				add_ownership={
 					country={
 						country="c:PEU"
-						levels=4
+						levels=6
 					}
 					building={
 						type="building_financial_district"
 						country="c:PEU"
-						levels=1
+						levels=2
 						region="STATE_LIMA"
 					}
 				}
@@ -5864,12 +5872,12 @@ BUILDINGS={
 				add_ownership={
 					country={
 						country="c:PEU"
-						levels=2
+						levels=4
 					}
 					building={
 						type="building_financial_district"
 						country="c:PEU"
-						levels=1
+						levels=2
 						region="STATE_LIMA"
 					}
 				}
@@ -5976,12 +5984,12 @@ BUILDINGS={
 				add_ownership={
 					country={
 						country="c:PEU"
-						levels=10
+						levels=12
 					}
 					building={
 						type="building_financial_district"
 						country="c:PEU"
-						levels=1
+						levels=3
 						region="STATE_LIMA"
 					}
 				}
@@ -5993,12 +6001,12 @@ BUILDINGS={
 				add_ownership={
 					country={
 						country="c:PEU"
-						levels=14
+						levels=25
 					}
 					building={
 						type="building_financial_district"
 						country="c:PEU"
-						levels=1
+						levels=11
 						region="STATE_LIMA"
 					}
 				}
@@ -6011,7 +6019,7 @@ BUILDINGS={
 					building={
 						type="building_financial_district"
 						country="c:PEU"
-						levels=4
+						levels=14
 						region="STATE_LIMA"
 					}
 				}
@@ -6023,12 +6031,12 @@ BUILDINGS={
 				add_ownership={
 					country={
 						country="c:PEU"
-						levels=2
+						levels=4
 					}
 					building={
 						type="building_financial_district"
 						country="c:PEU"
-						levels=1
+						levels=2
 						region="STATE_LIMA"
 					}
 				}
@@ -6040,12 +6048,12 @@ BUILDINGS={
 				add_ownership={
 					country={
 						country="c:PEU"
-						levels=1
+						levels=4
 					}
 					building={
 						type="building_financial_district"
 						country="c:PEU"
-						levels=1
+						levels=4
 						region="STATE_LIMA"
 					}
 				}
@@ -6058,7 +6066,7 @@ BUILDINGS={
 					building={
 						type="building_financial_district"
 						country="c:PEU"
-						levels=8
+						levels=16
 						region="STATE_LIMA"
 					}
 				}
@@ -6263,7 +6271,7 @@ BUILDINGS={
 					building={
 						type="building_financial_district"
 						country="c:PEU"
-						levels=1
+						levels=2
 						region="STATE_ICA"
 					}
 				}
@@ -6302,7 +6310,7 @@ BUILDINGS={
 					building={
 						type="building_financial_district"
 						country="c:PEU"
-						levels=1
+						levels=3
 						region="STATE_ICA"
 					}
 				}
@@ -6465,12 +6473,12 @@ BUILDINGS={
 				add_ownership={
 					country={
 						country="c:PEU"
-						levels=1
+						levels=3
 					}
 					building={
 						type="building_financial_district"
 						country="c:PEU"
-						levels=1
+						levels=2
 						region="STATE_LIMA"
 					}
 				}
@@ -6628,7 +6636,7 @@ BUILDINGS={
 					building={
 						type="building_financial_district"
 						country="c:PEU"
-						levels=1
+						levels=5
 						region="STATE_AREQUIPA"
 					}
 				}
@@ -6641,7 +6649,7 @@ BUILDINGS={
 					building={
 						type="building_financial_district"
 						country="c:PEU"
-						levels=1
+						levels=4
 						region="STATE_AREQUIPA"
 					}
 				}
@@ -6654,7 +6662,7 @@ BUILDINGS={
 					building={
 						type="building_financial_district"
 						country="c:PEU"
-						levels=1
+						levels=3
 						region="STATE_AREQUIPA"
 					}
 				}
@@ -6666,12 +6674,12 @@ BUILDINGS={
 				add_ownership={
 					country={
 						country="c:PEU"
-						levels=1
+						levels=7
 					}
 					building={
 						type="building_financial_district"
 						country="c:PEU"
-						levels=1
+						levels=5
 						region="STATE_LIMA"
 					}
 				}
@@ -6684,7 +6692,7 @@ BUILDINGS={
 					building={
 						type="building_financial_district"
 						country="c:PEU"
-						levels=1
+						levels=2
 						region="STATE_AREQUIPA"
 					}
 				}
@@ -6697,7 +6705,7 @@ BUILDINGS={
 					building={
 						type="building_financial_district"
 						country="c:PEU"
-						levels=1
+						levels=2
 						region="STATE_AREQUIPA"
 					}
 				}
@@ -6736,7 +6744,7 @@ BUILDINGS={
 					building={
 						type="building_financial_district"
 						country="c:PEU"
-						levels=2
+						levels=3
 						region="STATE_AREQUIPA"
 					}
 				}
@@ -6749,7 +6757,7 @@ BUILDINGS={
 					building={
 						type="building_financial_district"
 						country="c:PEU"
-						levels=3
+						levels=4
 						region="STATE_AREQUIPA"
 					}
 				}
@@ -6814,7 +6822,7 @@ BUILDINGS={
 					building={
 						type="building_financial_district"
 						country="c:PEU"
-						levels=1
+						levels=2
 						region="STATE_AREQUIPA"
 					}
 				}
@@ -6903,7 +6911,7 @@ BUILDINGS={
 					building={
 						type="building_financial_district"
 						country="c:XUR"
-						levels=1
+						levels=6
 						region="STATE_URUGUAY"
 					}
 				}
@@ -6916,7 +6924,7 @@ BUILDINGS={
 					building={
 						type="building_financial_district"
 						country="c:XUR"
-						levels=1
+						levels=16
 						region="STATE_URUGUAY"
 					}
 				}
@@ -6929,7 +6937,7 @@ BUILDINGS={
 					building={
 						type="building_financial_district"
 						country="c:XUR"
-						levels=1
+						levels=14
 						region="STATE_URUGUAY"
 					}
 				}
@@ -6942,7 +6950,7 @@ BUILDINGS={
 					building={
 						type="building_financial_district"
 						country="c:XUR"
-						levels=1
+						levels=2
 						region="STATE_URUGUAY"
 					}
 				}
@@ -7021,7 +7029,7 @@ BUILDINGS={
 					building={
 						type="building_financial_district"
 						country="c:XUR"
-						levels=1
+						levels=2
 						region="STATE_URUGUAY"
 					}
 				}
@@ -7209,7 +7217,7 @@ BUILDINGS={
 					building={
 						type="building_financial_district"
 						country="c:XAR"
-						levels=1
+						levels=3
 						region="STATE_JUJUY"
 					}
 				}
@@ -7235,7 +7243,7 @@ BUILDINGS={
 					building={
 						type="building_financial_district"
 						country="c:XAR"
-						levels=1
+						levels=2
 						region="STATE_BUENOS_AIRES"
 					}
 					building={
@@ -7293,7 +7301,7 @@ BUILDINGS={
 					building={
 						type="building_financial_district"
 						country="c:XAR"
-						levels=3
+						levels=4
 						region="STATE_JUJUY"
 					}
 				}
@@ -7525,7 +7533,7 @@ BUILDINGS={
 					building={
 						type="building_financial_district"
 						country="c:XAR"
-						levels=1
+						levels=5
 						region="STATE_LA_PAMPA"
 					}
 				}
@@ -7605,7 +7613,7 @@ BUILDINGS={
 					building={
 						type="building_financial_district"
 						country="c:XPR"
-						levels=8
+						levels=11
 						region="STATE_BAJO_PARAGUAY"
 					}
 				}
@@ -7618,7 +7626,7 @@ BUILDINGS={
 					building={
 						type="building_financial_district"
 						country="c:XPR"
-						levels=6
+						levels=9
 						region="STATE_BAJO_PARAGUAY"
 					}
 				}
@@ -7630,7 +7638,7 @@ BUILDINGS={
 				add_ownership={
 					country={
 						country="c:XPR"
-						levels=4
+						levels=5
 					}
 					building={
 						type="building_financial_district"
@@ -7647,7 +7655,7 @@ BUILDINGS={
 				add_ownership={
 					country={
 						country="c:XPR"
-						levels=3
+						levels=5
 					}
 					building={
 						type="building_financial_district"
@@ -7682,7 +7690,7 @@ BUILDINGS={
 					building={
 						type="building_financial_district"
 						country="c:XPR"
-						levels=4
+						levels=6
 						region="STATE_BAJO_PARAGUAY"
 					}
 				}
@@ -7751,7 +7759,7 @@ BUILDINGS={
 					building={
 						type="building_financial_district"
 						country="c:XPR"
-						levels=8
+						levels=9
 						region="STATE_BAJO_PARAGUAY"
 					}
 				}
@@ -7794,7 +7802,7 @@ BUILDINGS={
 					building={
 						type="building_financial_district"
 						country="c:XPR"
-						levels=3
+						levels=4
 						region="STATE_BAJO_PARAGUAY"
 					}
 				}
@@ -7885,7 +7893,7 @@ BUILDINGS={
 					building={
 						type="building_financial_district"
 						country="c:XPR"
-						levels=1
+						levels=3
 						region="STATE_BAJO_PARAGUAY"
 					}
 				}
@@ -8017,7 +8025,7 @@ BUILDINGS={
 					building={
 						type="building_financial_district"
 						country="c:XAR"
-						levels=1
+						levels=76
 						region="STATE_BUENOS_AIRES"
 					}
 				}
@@ -8030,7 +8038,7 @@ BUILDINGS={
 					building={
 						type="building_financial_district"
 						country="c:XAR"
-						levels=1
+						levels=12
 						region="STATE_BUENOS_AIRES"
 					}
 				}
@@ -8043,7 +8051,7 @@ BUILDINGS={
 					building={
 						type="building_financial_district"
 						country="c:XAR"
-						levels=6
+						levels=89
 						region="STATE_BUENOS_AIRES"
 					}
 				}
@@ -8073,7 +8081,7 @@ BUILDINGS={
 					building={
 						type="building_financial_district"
 						country="c:XAR"
-						levels=25
+						levels=27
 						region="STATE_BUENOS_AIRES"
 					}
 				}
@@ -8086,7 +8094,7 @@ BUILDINGS={
 					building={
 						type="building_financial_district"
 						country="c:XAR"
-						levels=20
+						levels=21
 						region="STATE_BUENOS_AIRES"
 					}
 				}
@@ -8229,7 +8237,7 @@ BUILDINGS={
 					building={
 						type="building_financial_district"
 						country="c:XAR"
-						levels=10
+						levels=11
 						region="STATE_BUENOS_AIRES"
 					}
 				}
@@ -8242,7 +8250,7 @@ BUILDINGS={
 					building={
 						type="building_financial_district"
 						country="c:XAR"
-						levels=7
+						levels=12
 						region="STATE_BUENOS_AIRES"
 					}
 				}
@@ -8255,7 +8263,7 @@ BUILDINGS={
 					building={
 						type="building_financial_district"
 						country="c:XAR"
-						levels=4
+						levels=6
 						region="STATE_BUENOS_AIRES"
 					}
 				}
@@ -8281,7 +8289,7 @@ BUILDINGS={
 					building={
 						type="building_financial_district"
 						country="c:XAR"
-						levels=8
+						levels=11
 						region="STATE_BUENOS_AIRES"
 					}
 				}
@@ -8294,7 +8302,7 @@ BUILDINGS={
 					building={
 						type="building_financial_district"
 						country="c:XAR"
-						levels=8
+						levels=10
 						region="STATE_BUENOS_AIRES"
 					}
 				}
@@ -8359,7 +8367,7 @@ BUILDINGS={
 					building={
 						type="building_financial_district"
 						country="c:XAR"
-						levels=2
+						levels=3
 						region="STATE_BUENOS_AIRES"
 					}
 				}
@@ -8515,7 +8523,7 @@ BUILDINGS={
 					building={
 						type="building_financial_district"
 						country="c:XAR"
-						levels=4
+						levels=6
 						region="STATE_BUENOS_AIRES"
 					}
 					building={
@@ -8588,7 +8596,7 @@ BUILDINGS={
 					building={
 						type="building_financial_district"
 						country="c:XAR"
-						levels=1
+						levels=4
 						region="STATE_RIO_NEGRO"
 					}
 				}
@@ -8601,7 +8609,7 @@ BUILDINGS={
 					building={
 						type="building_financial_district"
 						country="c:XAR"
-						levels=2
+						levels=7
 						region="STATE_BUENOS_AIRES"
 					}
 				}
@@ -8653,7 +8661,7 @@ BUILDINGS={
 					building={
 						type="building_financial_district"
 						country="c:XAR"
-						levels=3
+						levels=4
 						region="STATE_RIO_NEGRO"
 					}
 				}
@@ -8705,7 +8713,7 @@ BUILDINGS={
 					building={
 						type="building_financial_district"
 						country="c:XAR"
-						levels=4
+						levels=6
 						region="STATE_RIO_NEGRO"
 					}
 				}
@@ -8783,7 +8791,7 @@ BUILDINGS={
 					building={
 						type="building_financial_district"
 						country="c:XAR"
-						levels=1
+						levels=19
 						region="STATE_LA_PAMPA"
 					}
 				}
@@ -8796,7 +8804,7 @@ BUILDINGS={
 					building={
 						type="building_financial_district"
 						country="c:XAR"
-						levels=1
+						levels=17
 						region="STATE_LA_PAMPA"
 					}
 				}
@@ -8809,7 +8817,7 @@ BUILDINGS={
 					building={
 						type="building_financial_district"
 						country="c:XAR"
-						levels=1
+						levels=5
 						region="STATE_LA_PAMPA"
 					}
 				}
@@ -9097,7 +9105,7 @@ BUILDINGS={
 					building={
 						type="building_financial_district"
 						country="c:XAR"
-						levels=1
+						levels=2
 						region="STATE_SANTA_FE"
 					}
 				}
@@ -9110,7 +9118,7 @@ BUILDINGS={
 					building={
 						type="building_financial_district"
 						country="c:XAR"
-						levels=1
+						levels=7
 						region="STATE_SANTA_FE"
 					}
 				}
@@ -9123,7 +9131,7 @@ BUILDINGS={
 					building={
 						type="building_financial_district"
 						country="c:XAR"
-						levels=1
+						levels=3
 						region="STATE_BUENOS_AIRES"
 					}
 				}
@@ -9155,7 +9163,7 @@ BUILDINGS={
 					building={
 						type="building_financial_district"
 						country="c:XAR"
-						levels=1
+						levels=6
 						region="STATE_SANTA_FE"
 					}
 				}
@@ -9233,7 +9241,7 @@ BUILDINGS={
 					building={
 						type="building_financial_district"
 						country="c:XAR"
-						levels=1
+						levels=2
 						region="STATE_SANTA_FE"
 					}
 				}
@@ -9285,7 +9293,7 @@ BUILDINGS={
 					building={
 						type="building_financial_district"
 						country="c:XAR"
-						levels=3
+						levels=4
 						region="STATE_SANTA_FE"
 					}
 				}
@@ -9417,7 +9425,7 @@ BUILDINGS={
 					building={
 						type="building_financial_district"
 						country="c:XAR"
-						levels=1
+						levels=5
 						region="STATE_CORRIENTES"
 					}
 				}
@@ -9430,7 +9438,7 @@ BUILDINGS={
 					building={
 						type="building_financial_district"
 						country="c:XAR"
-						levels=1
+						levels=5
 						region="STATE_CORRIENTES"
 					}
 				}
@@ -9443,7 +9451,7 @@ BUILDINGS={
 					building={
 						type="building_financial_district"
 						country="c:XAR"
-						levels=2
+						levels=5
 						region="STATE_CORRIENTES"
 					}
 				}
@@ -9495,7 +9503,7 @@ BUILDINGS={
 					building={
 						type="building_financial_district"
 						country="c:XAR"
-						levels=3
+						levels=4
 						region="STATE_CORRIENTES"
 					}
 				}
@@ -9558,7 +9566,7 @@ BUILDINGS={
 					building={
 						type="building_financial_district"
 						country="c:XAR"
-						levels=4
+						levels=7
 						region="STATE_CORRIENTES"
 					}
 				}
@@ -9636,7 +9644,7 @@ BUILDINGS={
 					building={
 						type="building_financial_district"
 						country="c:XAR"
-						levels=1
+						levels=13
 						region="STATE_TUCUMAN"
 					}
 				}
@@ -9662,7 +9670,7 @@ BUILDINGS={
 					building={
 						type="building_financial_district"
 						country="c:XAR"
-						levels=1
+						levels=7
 						region="STATE_BUENOS_AIRES"
 					}
 				}
@@ -9727,7 +9735,7 @@ BUILDINGS={
 					building={
 						type="building_financial_district"
 						country="c:XAR"
-						levels=1
+						levels=2
 						region="STATE_TUCUMAN"
 					}
 				}
@@ -9852,7 +9860,7 @@ BUILDINGS={
 					building={
 						type="building_financial_district"
 						country="c:XAR"
-						levels=2
+						levels=3
 						region="STATE_BUENOS_AIRES"
 					}
 					building={
@@ -9957,7 +9965,7 @@ BUILDINGS={
 					building={
 						type="building_financial_district"
 						country="c:XAR"
-						levels=1
+						levels=5
 						region="STATE_CHACO"
 					}
 				}
@@ -9970,7 +9978,7 @@ BUILDINGS={
 					building={
 						type="building_financial_district"
 						country="c:XAR"
-						levels=1
+						levels=3
 						region="STATE_CHACO"
 					}
 				}
@@ -10022,7 +10030,7 @@ BUILDINGS={
 					building={
 						type="building_financial_district"
 						country="c:XAR"
-						levels=3
+						levels=4
 						region="STATE_CHACO"
 					}
 				}
@@ -10074,7 +10082,7 @@ BUILDINGS={
 					building={
 						type="building_financial_district"
 						country="c:XAR"
-						levels=4
+						levels=6
 						region="STATE_CHACO"
 					}
 				}
@@ -10189,7 +10197,7 @@ BUILDINGS={
 					building={
 						type="building_financial_district"
 						country="c:XCH"
-						levels=3
+						levels=4
 						region="STATE_SANTIAGO"
 					}
 				}
@@ -10228,7 +10236,7 @@ BUILDINGS={
 					building={
 						type="building_financial_district"
 						country="c:XCH"
-						levels=8
+						levels=18
 						region="STATE_SANTIAGO"
 					}
 				}
@@ -10241,7 +10249,7 @@ BUILDINGS={
 					building={
 						type="building_financial_district"
 						country="c:XCH"
-						levels=2
+						levels=19
 						region="STATE_SANTIAGO"
 					}
 				}
@@ -10254,7 +10262,7 @@ BUILDINGS={
 					building={
 						type="building_financial_district"
 						country="c:XCH"
-						levels=9
+						levels=16
 						region="STATE_SANTIAGO"
 					}
 				}
@@ -10267,7 +10275,7 @@ BUILDINGS={
 					building={
 						type="building_financial_district"
 						country="c:XCH"
-						levels=6
+						levels=10
 						region="STATE_SANTIAGO"
 					}
 				}
@@ -10280,7 +10288,7 @@ BUILDINGS={
 					building={
 						type="building_financial_district"
 						country="c:XCH"
-						levels=4
+						levels=6
 						region="STATE_SANTIAGO"
 					}
 				}
@@ -10293,7 +10301,7 @@ BUILDINGS={
 					building={
 						type="building_financial_district"
 						country="c:XCH"
-						levels=2
+						levels=4
 						region="STATE_SANTIAGO"
 					}
 				}
@@ -10370,12 +10378,12 @@ BUILDINGS={
 				add_ownership={
 					country={
 						country="c:XCH"
-						levels=7
+						levels=9
 					}
 					building={
 						type="building_financial_district"
 						country="c:XCH"
-						levels=3
+						levels=4
 						region="STATE_SANTIAGO"
 					}
 				}
@@ -10387,12 +10395,12 @@ BUILDINGS={
 				add_ownership={
 					country={
 						country="c:XCH"
-						levels=13
+						levels=21
 					}
 					building={
 						type="building_financial_district"
 						country="c:XCH"
-						levels=1
+						levels=9
 						region="STATE_SANTIAGO"
 					}
 				}
@@ -10405,7 +10413,7 @@ BUILDINGS={
 					building={
 						type="building_financial_district"
 						country="c:XCH"
-						levels=4
+						levels=12
 						region="STATE_SANTIAGO"
 					}
 				}
@@ -10418,7 +10426,7 @@ BUILDINGS={
 					building={
 						type="building_financial_district"
 						country="c:XCH"
-						levels=8
+						levels=20
 						region="STATE_SANTIAGO"
 					}
 				}
@@ -10431,7 +10439,7 @@ BUILDINGS={
 					building={
 						type="building_financial_district"
 						country="c:XCH"
-						levels=8
+						levels=14
 						region="STATE_SANTIAGO"
 					}
 				}
@@ -10559,7 +10567,7 @@ BUILDINGS={
 					building={
 						type="building_financial_district"
 						country="c:XCH"
-						levels=1
+						levels=8
 						region="STATE_LOS_RIOS"
 					}
 				}
@@ -10572,7 +10580,7 @@ BUILDINGS={
 					building={
 						type="building_financial_district"
 						country="c:XCH"
-						levels=1
+						levels=10
 						region="STATE_LOS_RIOS"
 					}
 				}
@@ -10585,7 +10593,7 @@ BUILDINGS={
 					building={
 						type="building_financial_district"
 						country="c:XCH"
-						levels=1
+						levels=8
 						region="STATE_LOS_RIOS"
 					}
 				}
@@ -10598,7 +10606,7 @@ BUILDINGS={
 					building={
 						type="building_financial_district"
 						country="c:XCH"
-						levels=1
+						levels=5
 						region="STATE_LOS_RIOS"
 					}
 				}
@@ -10611,7 +10619,7 @@ BUILDINGS={
 					building={
 						type="building_financial_district"
 						country="c:XCH"
-						levels=4
+						levels=15
 						region="STATE_LOS_RIOS"
 					}
 				}
@@ -10624,7 +10632,7 @@ BUILDINGS={
 					building={
 						type="building_financial_district"
 						country="c:XCH"
-						levels=2
+						levels=5
 						region="STATE_SANTIAGO"
 					}
 				}
@@ -10689,7 +10697,7 @@ BUILDINGS={
 					building={
 						type="building_financial_district"
 						country="c:XCH"
-						levels=8
+						levels=10
 						region="STATE_LOS_RIOS"
 					}
 				}
@@ -10701,7 +10709,7 @@ BUILDINGS={
 				add_ownership={
 					country={
 						country="c:XCH"
-						levels=1
+						levels=2
 					}
 					building={
 						type="building_financial_district"
@@ -10732,7 +10740,7 @@ BUILDINGS={
 					building={
 						type="building_financial_district"
 						country="c:XCH"
-						levels=3
+						levels=4
 						region="STATE_LOS_RIOS"
 					}
 				}
@@ -11045,7 +11053,7 @@ BUILDINGS={
 					}
 				}
 				reserves=1
-				activate_production_methods={ "pm_early_trains" "pm_no_passenger_trains" }
+				activate_production_methods={ "pm_early_trains" "pm_wooden_passenger_carriages" }
 			}
 			create_building={
 				building="building_port"
@@ -11056,7 +11064,7 @@ BUILDINGS={
 					}
 				}
 				reserves=1
-				activate_production_methods={ "pm_anchorage" }
+				activate_production_methods={ "pm_basic_port" }
 			}
 			create_building={
 				building="building_telecommunications"
@@ -11069,7 +11077,7 @@ BUILDINGS={
 					}
 				}
 				reserves=1
-				activate_production_methods={ "pm_power_lines" "pm_1g" }
+				activate_production_methods={ "pm_cellular_tower" "pm_1g" }
 			}
 			create_building={
 				building="building_food_service"
@@ -11082,7 +11090,7 @@ BUILDINGS={
 					}
 				}
 				reserves=1
-				activate_production_methods={ "pm_corner_grocery" "pm_no_restaurants" "pm_manual_food_checkout" }
+				activate_production_methods={ "pm_supermarket" "pm_fine_dining" "pm_food_delivery_services" }
 			}
 		}
 	}
@@ -11216,7 +11224,7 @@ BUILDINGS={
 					building={
 						type="building_financial_district"
 						country="c:BRZ"
-						levels=1
+						levels=2
 						region="STATE_PARA"
 					}
 				}
@@ -11255,7 +11263,7 @@ BUILDINGS={
 					building={
 						type="building_financial_district"
 						country="c:BRZ"
-						levels=1
+						levels=2
 						region="STATE_PARA"
 					}
 				}
@@ -11281,7 +11289,7 @@ BUILDINGS={
 					building={
 						type="building_financial_district"
 						country="c:BRZ"
-						levels=1
+						levels=4
 						region="STATE_PARA"
 					}
 				}
@@ -11294,7 +11302,7 @@ BUILDINGS={
 					building={
 						type="building_financial_district"
 						country="c:BRZ"
-						levels=1
+						levels=13
 						region="STATE_PARA"
 					}
 				}
@@ -11333,7 +11341,7 @@ BUILDINGS={
 					building={
 						type="building_financial_district"
 						country="c:BRZ"
-						levels=2
+						levels=3
 						region="STATE_PARA"
 					}
 				}
@@ -11346,7 +11354,7 @@ BUILDINGS={
 					building={
 						type="building_financial_district"
 						country="c:BRZ"
-						levels=5
+						levels=7
 						region="STATE_PARA"
 					}
 				}
@@ -11489,7 +11497,7 @@ BUILDINGS={
 					building={
 						type="building_financial_district"
 						country="c:BRZ"
-						levels=1
+						levels=2
 						region="STATE_MARANHAO"
 					}
 				}
@@ -11528,7 +11536,7 @@ BUILDINGS={
 					building={
 						type="building_financial_district"
 						country="c:BRZ"
-						levels=1
+						levels=3
 						region="STATE_MARANHAO"
 					}
 				}
@@ -11541,7 +11549,7 @@ BUILDINGS={
 					building={
 						type="building_financial_district"
 						country="c:BRZ"
-						levels=2
+						levels=3
 						region="STATE_MARANHAO"
 					}
 				}
@@ -11567,7 +11575,7 @@ BUILDINGS={
 					building={
 						type="building_financial_district"
 						country="c:BRZ"
-						levels=3
+						levels=4
 						region="STATE_MARANHAO"
 					}
 				}
@@ -11580,7 +11588,7 @@ BUILDINGS={
 					building={
 						type="building_financial_district"
 						country="c:BRZ"
-						levels=3
+						levels=4
 						region="STATE_MARANHAO"
 					}
 				}
@@ -11593,7 +11601,7 @@ BUILDINGS={
 					building={
 						type="building_financial_district"
 						country="c:BRZ"
-						levels=6
+						levels=11
 						region="STATE_MARANHAO"
 					}
 				}
@@ -11632,7 +11640,7 @@ BUILDINGS={
 					building={
 						type="building_financial_district"
 						country="c:BRZ"
-						levels=2
+						levels=7
 						region="STATE_MARANHAO"
 					}
 				}
@@ -11645,7 +11653,7 @@ BUILDINGS={
 					building={
 						type="building_financial_district"
 						country="c:BRZ"
-						levels=6
+						levels=9
 						region="STATE_MARANHAO"
 					}
 				}
@@ -11657,12 +11665,12 @@ BUILDINGS={
 				add_ownership={
 					country={
 						country="c:BRZ"
-						levels=5
+						levels=7
 					}
 					building={
 						type="building_financial_district"
 						country="c:BRZ"
-						levels=1
+						levels=2
 						region="STATE_RIO_DE_JANEIRO"
 					}
 				}
@@ -11766,7 +11774,7 @@ BUILDINGS={
 					building={
 						type="building_financial_district"
 						country="c:BRZ"
-						levels=1
+						levels=2
 						region="STATE_AMAZONAS"
 					}
 				}
@@ -11818,7 +11826,7 @@ BUILDINGS={
 					building={
 						type="building_financial_district"
 						country="c:BRZ"
-						levels=1
+						levels=4
 						region="STATE_AMAZONAS"
 					}
 				}
@@ -11831,7 +11839,7 @@ BUILDINGS={
 					building={
 						type="building_financial_district"
 						country="c:BRZ"
-						levels=3
+						levels=7
 						region="STATE_AMAZONAS"
 					}
 				}
@@ -11844,7 +11852,7 @@ BUILDINGS={
 					building={
 						type="building_financial_district"
 						country="c:BRZ"
-						levels=9
+						levels=14
 						region="STATE_AMAZONAS"
 					}
 				}
@@ -11896,7 +11904,7 @@ BUILDINGS={
 					building={
 						type="building_financial_district"
 						country="c:BRZ"
-						levels=2
+						levels=4
 						region="STATE_ACRE"
 					}
 				}
@@ -12024,7 +12032,7 @@ BUILDINGS={
 					building={
 						type="building_financial_district"
 						country="c:BRZ"
-						levels=1
+						levels=2
 						region="STATE_GOIAS"
 					}
 				}
@@ -12063,7 +12071,7 @@ BUILDINGS={
 					building={
 						type="building_financial_district"
 						country="c:BRZ"
-						levels=1
+						levels=2
 						region="STATE_GOIAS"
 					}
 				}
@@ -12089,7 +12097,7 @@ BUILDINGS={
 					building={
 						type="building_financial_district"
 						country="c:BRZ"
-						levels=6
+						levels=12
 						region="STATE_GOIAS"
 					}
 				}
@@ -12128,7 +12136,7 @@ BUILDINGS={
 					building={
 						type="building_financial_district"
 						country="c:BRZ"
-						levels=6
+						levels=10
 						region="STATE_GOIAS"
 					}
 				}
@@ -12140,12 +12148,12 @@ BUILDINGS={
 				add_ownership={
 					country={
 						country="c:BRZ"
-						levels=5
+						levels=7
 					}
 					building={
 						type="building_financial_district"
 						country="c:BRZ"
-						levels=1
+						levels=3
 						region="STATE_GOIAS"
 					}
 				}
@@ -12249,7 +12257,7 @@ BUILDINGS={
 					building={
 						type="building_financial_district"
 						country="c:BRZ"
-						levels=1
+						levels=2
 						region="STATE_MATO_GROSSO"
 					}
 				}
@@ -12301,7 +12309,7 @@ BUILDINGS={
 					building={
 						type="building_financial_district"
 						country="c:BRZ"
-						levels=1
+						levels=5
 						region="STATE_MATO_GROSSO"
 					}
 				}
@@ -12314,7 +12322,7 @@ BUILDINGS={
 					building={
 						type="building_financial_district"
 						country="c:BRZ"
-						levels=1
+						levels=6
 						region="STATE_MATO_GROSSO"
 					}
 				}
@@ -12327,7 +12335,7 @@ BUILDINGS={
 					building={
 						type="building_financial_district"
 						country="c:BRZ"
-						levels=11
+						levels=13
 						region="STATE_MATO_GROSSO"
 					}
 				}
@@ -12427,7 +12435,7 @@ BUILDINGS={
 					building={
 						type="building_financial_district"
 						country="c:BRZ"
-						levels=1
+						levels=2
 						region="STATE_RIO_GRANDE_DO_SUL"
 					}
 				}
@@ -12440,7 +12448,7 @@ BUILDINGS={
 					building={
 						type="building_financial_district"
 						country="c:BRZ"
-						levels=1
+						levels=2
 						region="STATE_RIO_GRANDE_DO_SUL"
 					}
 				}
@@ -12466,7 +12474,7 @@ BUILDINGS={
 					building={
 						type="building_financial_district"
 						country="c:BRZ"
-						levels=1
+						levels=4
 						region="STATE_RIO_GRANDE_DO_SUL"
 					}
 				}
@@ -12479,7 +12487,7 @@ BUILDINGS={
 					building={
 						type="building_financial_district"
 						country="c:BRZ"
-						levels=1
+						levels=2
 						region="STATE_RIO_GRANDE_DO_SUL"
 					}
 				}
@@ -12518,7 +12526,7 @@ BUILDINGS={
 					building={
 						type="building_financial_district"
 						country="c:BRZ"
-						levels=1
+						levels=3
 						region="STATE_RIO_GRANDE_DO_SUL"
 					}
 				}
@@ -12531,7 +12539,7 @@ BUILDINGS={
 					building={
 						type="building_financial_district"
 						country="c:BRZ"
-						levels=1
+						levels=2
 						region="STATE_RIO_GRANDE_DO_SUL"
 					}
 				}
@@ -12544,7 +12552,7 @@ BUILDINGS={
 					building={
 						type="building_financial_district"
 						country="c:BRZ"
-						levels=7
+						levels=12
 						region="STATE_RIO_GRANDE_DO_SUL"
 					}
 				}
@@ -12557,7 +12565,7 @@ BUILDINGS={
 					building={
 						type="building_financial_district"
 						country="c:BRZ"
-						levels=7
+						levels=18
 						region="STATE_RIO_GRANDE_DO_SUL"
 					}
 				}
@@ -12609,7 +12617,7 @@ BUILDINGS={
 					building={
 						type="building_financial_district"
 						country="c:BRZ"
-						levels=4
+						levels=7
 						region="STATE_RIO_GRANDE_DO_SUL"
 					}
 				}
@@ -12635,7 +12643,7 @@ BUILDINGS={
 					building={
 						type="building_financial_district"
 						country="c:BRZ"
-						levels=16
+						levels=23
 						region="STATE_RIO_GRANDE_DO_SUL"
 					}
 				}
@@ -12648,7 +12656,7 @@ BUILDINGS={
 					building={
 						type="building_financial_district"
 						country="c:BRZ"
-						levels=4
+						levels=6
 						region="STATE_RIO_GRANDE_DO_SUL"
 					}
 				}
@@ -12661,7 +12669,7 @@ BUILDINGS={
 					building={
 						type="building_financial_district"
 						country="c:BRZ"
-						levels=4
+						levels=8
 						region="STATE_RIO_GRANDE_DO_SUL"
 					}
 				}
@@ -12687,7 +12695,7 @@ BUILDINGS={
 					building={
 						type="building_financial_district"
 						country="c:BRZ"
-						levels=1
+						levels=3
 						region="STATE_RIO_GRANDE_DO_SUL"
 					}
 				}
@@ -12700,7 +12708,7 @@ BUILDINGS={
 					building={
 						type="building_financial_district"
 						country="c:BRZ"
-						levels=1
+						levels=17
 						region="STATE_RIO_GRANDE_DO_SUL"
 					}
 				}
@@ -12800,7 +12808,7 @@ BUILDINGS={
 					building={
 						type="building_financial_district"
 						country="c:BRZ"
-						levels=1
+						levels=5
 						region="STATE_PARANA"
 					}
 				}
@@ -12813,7 +12821,7 @@ BUILDINGS={
 					building={
 						type="building_financial_district"
 						country="c:BRZ"
-						levels=1
+						levels=4
 						region="STATE_PARANA"
 					}
 				}
@@ -12826,7 +12834,7 @@ BUILDINGS={
 					building={
 						type="building_financial_district"
 						country="c:BRZ"
-						levels=1
+						levels=3
 						region="STATE_PARANA"
 					}
 				}
@@ -12839,7 +12847,7 @@ BUILDINGS={
 					building={
 						type="building_financial_district"
 						country="c:BRZ"
-						levels=1
+						levels=5
 						region="STATE_PARANA"
 					}
 				}
@@ -12852,7 +12860,7 @@ BUILDINGS={
 					building={
 						type="building_financial_district"
 						country="c:BRZ"
-						levels=1
+						levels=5
 						region="STATE_PARANA"
 					}
 				}
@@ -12865,7 +12873,7 @@ BUILDINGS={
 					building={
 						type="building_financial_district"
 						country="c:BRZ"
-						levels=1
+						levels=3
 						region="STATE_PARANA"
 					}
 				}
@@ -12878,7 +12886,7 @@ BUILDINGS={
 					building={
 						type="building_financial_district"
 						country="c:BRZ"
-						levels=1
+						levels=3
 						region="STATE_PARANA"
 					}
 				}
@@ -12891,7 +12899,7 @@ BUILDINGS={
 					building={
 						type="building_financial_district"
 						country="c:BRZ"
-						levels=1
+						levels=5
 						region="STATE_PARANA"
 					}
 				}
@@ -12904,7 +12912,7 @@ BUILDINGS={
 					building={
 						type="building_financial_district"
 						country="c:BRZ"
-						levels=1
+						levels=5
 						region="STATE_PARANA"
 					}
 				}
@@ -12930,7 +12938,7 @@ BUILDINGS={
 					building={
 						type="building_financial_district"
 						country="c:BRZ"
-						levels=7
+						levels=11
 						region="STATE_PARANA"
 					}
 				}
@@ -13034,7 +13042,7 @@ BUILDINGS={
 					building={
 						type="building_financial_district"
 						country="c:BRZ"
-						levels=6
+						levels=16
 						region="STATE_PARANA"
 					}
 				}
@@ -13147,7 +13155,7 @@ BUILDINGS={
 					building={
 						type="building_financial_district"
 						country="c:BRZ"
-						levels=1
+						levels=2
 						region="STATE_SANTA_CATARINA"
 					}
 				}
@@ -13186,7 +13194,7 @@ BUILDINGS={
 					building={
 						type="building_financial_district"
 						country="c:BRZ"
-						levels=1
+						levels=3
 						region="STATE_SANTA_CATARINA"
 					}
 				}
@@ -13199,7 +13207,7 @@ BUILDINGS={
 					building={
 						type="building_financial_district"
 						country="c:BRZ"
-						levels=1
+						levels=2
 						region="STATE_SANTA_CATARINA"
 					}
 				}
@@ -13225,7 +13233,7 @@ BUILDINGS={
 					building={
 						type="building_financial_district"
 						country="c:BRZ"
-						levels=1
+						levels=2
 						region="STATE_SANTA_CATARINA"
 					}
 				}
@@ -13251,7 +13259,7 @@ BUILDINGS={
 					building={
 						type="building_financial_district"
 						country="c:BRZ"
-						levels=1
+						levels=4
 						region="STATE_SANTA_CATARINA"
 					}
 				}
@@ -13264,7 +13272,7 @@ BUILDINGS={
 					building={
 						type="building_financial_district"
 						country="c:BRZ"
-						levels=2
+						levels=13
 						region="STATE_SANTA_CATARINA"
 					}
 				}
@@ -13303,7 +13311,7 @@ BUILDINGS={
 					building={
 						type="building_financial_district"
 						country="c:BRZ"
-						levels=4
+						levels=6
 						region="STATE_SANTA_CATARINA"
 					}
 				}
@@ -13329,7 +13337,7 @@ BUILDINGS={
 					building={
 						type="building_financial_district"
 						country="c:BRZ"
-						levels=8
+						levels=12
 						region="STATE_SANTA_CATARINA"
 					}
 				}
@@ -13342,7 +13350,7 @@ BUILDINGS={
 					building={
 						type="building_financial_district"
 						country="c:BRZ"
-						levels=2
+						levels=4
 						region="STATE_SANTA_CATARINA"
 					}
 				}
@@ -13355,7 +13363,7 @@ BUILDINGS={
 					building={
 						type="building_financial_district"
 						country="c:BRZ"
-						levels=1
+						levels=2
 						region="STATE_SANTA_CATARINA"
 					}
 				}
@@ -13466,7 +13474,7 @@ BUILDINGS={
 					building={
 						type="building_financial_district"
 						country="c:BRZ"
-						levels=23
+						levels=37
 						region="STATE_SAO_PAULO"
 					}
 				}
@@ -13479,7 +13487,7 @@ BUILDINGS={
 					building={
 						type="building_financial_district"
 						country="c:BRZ"
-						levels=16
+						levels=24
 						region="STATE_SAO_PAULO"
 					}
 				}
@@ -13492,7 +13500,7 @@ BUILDINGS={
 					building={
 						type="building_financial_district"
 						country="c:BRZ"
-						levels=22
+						levels=28
 						region="STATE_SAO_PAULO"
 					}
 				}
@@ -13504,18 +13512,18 @@ BUILDINGS={
 				add_ownership={
 					country={
 						country="c:BRZ"
-						levels=1
+						levels=6
 					}
 					building={
 						type="building_financial_district"
 						country="c:BRZ"
-						levels=1
+						levels=6
 						region="STATE_RIO_DE_JANEIRO"
 					}
 					building={
 						type="building_financial_district"
 						country="c:BRZ"
-						levels=3
+						levels=8
 						region="STATE_SAO_PAULO"
 					}
 				}
@@ -13528,7 +13536,7 @@ BUILDINGS={
 					building={
 						type="building_financial_district"
 						country="c:BRZ"
-						levels=8
+						levels=23
 						region="STATE_SAO_PAULO"
 					}
 				}
@@ -13541,7 +13549,7 @@ BUILDINGS={
 					building={
 						type="building_financial_district"
 						country="c:BRZ"
-						levels=7
+						levels=12
 						region="STATE_SAO_PAULO"
 					}
 				}
@@ -13554,7 +13562,7 @@ BUILDINGS={
 					building={
 						type="building_financial_district"
 						country="c:BRZ"
-						levels=4
+						levels=9
 						region="STATE_SAO_PAULO"
 					}
 				}
@@ -13567,7 +13575,7 @@ BUILDINGS={
 					building={
 						type="building_financial_district"
 						country="c:BRZ"
-						levels=5
+						levels=10
 						region="STATE_SAO_PAULO"
 					}
 				}
@@ -13579,12 +13587,12 @@ BUILDINGS={
 				add_ownership={
 					country={
 						country="c:BRZ"
-						levels=18
+						levels=29
 					}
 					building={
 						type="building_financial_district"
 						country="c:BRZ"
-						levels=1
+						levels=12
 						region="STATE_SAO_PAULO"
 					}
 				}
@@ -13597,7 +13605,7 @@ BUILDINGS={
 					building={
 						type="building_financial_district"
 						country="c:BRZ"
-						levels=18
+						levels=30
 						region="STATE_SAO_PAULO"
 					}
 				}
@@ -13609,18 +13617,18 @@ BUILDINGS={
 				add_ownership={
 					country={
 						country="c:BRZ"
-						levels=5
+						levels=8
 					}
 					building={
 						type="building_financial_district"
 						country="c:BRZ"
-						levels=1
+						levels=3
 						region="STATE_SAO_PAULO"
 					}
 					building={
 						type="building_financial_district"
 						country="c:BRZ"
-						levels=1
+						levels=3
 						region="STATE_BAHIA"
 					}
 				}
@@ -13659,7 +13667,7 @@ BUILDINGS={
 					building={
 						type="building_financial_district"
 						country="c:BRZ"
-						levels=16
+						levels=64
 						region="STATE_SAO_PAULO"
 					}
 				}
@@ -13800,7 +13808,7 @@ BUILDINGS={
 					building={
 						type="building_financial_district"
 						country="c:BRZ"
-						levels=8
+						levels=12
 						region="STATE_SAO_PAULO"
 					}
 				}
@@ -13953,7 +13961,7 @@ BUILDINGS={
 					building={
 						type="building_financial_district"
 						country="c:BRZ"
-						levels=8
+						levels=9
 						region="STATE_MINAS_GERAIS"
 					}
 				}
@@ -13966,7 +13974,7 @@ BUILDINGS={
 					building={
 						type="building_financial_district"
 						country="c:BRZ"
-						levels=6
+						levels=7
 						region="STATE_MINAS_GERAIS"
 					}
 				}
@@ -13992,7 +14000,7 @@ BUILDINGS={
 					building={
 						type="building_financial_district"
 						country="c:BRZ"
-						levels=14
+						levels=17
 						region="STATE_MINAS_GERAIS"
 					}
 				}
@@ -14005,7 +14013,7 @@ BUILDINGS={
 					building={
 						type="building_financial_district"
 						country="c:BRZ"
-						levels=4
+						levels=5
 						region="STATE_MINAS_GERAIS"
 					}
 				}
@@ -14064,12 +14072,12 @@ BUILDINGS={
 				add_ownership={
 					country={
 						country="c:BRZ"
-						levels=8
+						levels=9
 					}
 					building={
 						type="building_financial_district"
 						country="c:BRZ"
-						levels=2
+						levels=3
 						region="STATE_MINAS_GERAIS"
 					}
 					building={
@@ -14094,7 +14102,7 @@ BUILDINGS={
 					building={
 						type="building_financial_district"
 						country="c:BRZ"
-						levels=8
+						levels=9
 						region="STATE_MINAS_GERAIS"
 					}
 				}
@@ -14107,7 +14115,7 @@ BUILDINGS={
 					building={
 						type="building_financial_district"
 						country="c:BRZ"
-						levels=15
+						levels=30
 						region="STATE_MINAS_GERAIS"
 					}
 				}
@@ -14120,7 +14128,7 @@ BUILDINGS={
 					building={
 						type="building_financial_district"
 						country="c:BRZ"
-						levels=18
+						levels=36
 						region="STATE_MINAS_GERAIS"
 					}
 				}
@@ -14132,18 +14140,18 @@ BUILDINGS={
 				add_ownership={
 					country={
 						country="c:BRZ"
-						levels=6
+						levels=13
 					}
 					building={
 						type="building_financial_district"
 						country="c:BRZ"
-						levels=1
+						levels=7
 						region="STATE_RIO_DE_JANEIRO"
 					}
 					building={
 						type="building_financial_district"
 						country="c:BRZ"
-						levels=1
+						levels=6
 						region="STATE_MINAS_GERAIS"
 					}
 				}
@@ -14155,24 +14163,24 @@ BUILDINGS={
 				add_ownership={
 					country={
 						country="c:BRZ"
-						levels=3
+						levels=7
 					}
 					building={
 						type="building_financial_district"
 						country="c:BRZ"
-						levels=2
+						levels=4
 						region="STATE_MINAS_GERAIS"
 					}
 					building={
 						type="building_financial_district"
 						country="c:BRZ"
-						levels=1
+						levels=3
 						region="STATE_RIO_DE_JANEIRO"
 					}
 					building={
 						type="building_financial_district"
 						country="c:BRZ"
-						levels=1
+						levels=3
 						region="STATE_PARA"
 					}
 				}
@@ -14262,18 +14270,18 @@ BUILDINGS={
 				add_ownership={
 					country={
 						country="c:BRZ"
-						levels=7
+						levels=9
 					}
 					building={
 						type="building_financial_district"
 						country="c:BRZ"
-						levels=1
+						levels=3
 						region="STATE_RIO_DE_JANEIRO"
 					}
 					building={
 						type="building_manor_house"
 						country="c:BRZ"
-						levels=1
+						levels=2
 						region="STATE_MINAS_GERAIS"
 					}
 					building={
@@ -14305,7 +14313,7 @@ BUILDINGS={
 					building={
 						type="building_financial_district"
 						country="c:BRZ"
-						levels=2
+						levels=13
 						region="STATE_MINAS_GERAIS"
 					}
 				}
@@ -14436,7 +14444,7 @@ BUILDINGS={
 					building={
 						type="building_financial_district"
 						country="c:BRZ"
-						levels=1
+						levels=4
 						region="STATE_RIO_DE_JANEIRO"
 					}
 				}
@@ -14449,7 +14457,7 @@ BUILDINGS={
 					building={
 						type="building_financial_district"
 						country="c:BRZ"
-						levels=1
+						levels=3
 						region="STATE_RIO_DE_JANEIRO"
 					}
 				}
@@ -14462,7 +14470,7 @@ BUILDINGS={
 					building={
 						type="building_financial_district"
 						country="c:BRZ"
-						levels=1
+						levels=2
 						region="STATE_RIO_DE_JANEIRO"
 					}
 				}
@@ -14475,7 +14483,7 @@ BUILDINGS={
 					building={
 						type="building_financial_district"
 						country="c:BRZ"
-						levels=1
+						levels=5
 						region="STATE_RIO_DE_JANEIRO"
 					}
 				}
@@ -14488,7 +14496,7 @@ BUILDINGS={
 					building={
 						type="building_financial_district"
 						country="c:BRZ"
-						levels=1
+						levels=5
 						region="STATE_RIO_DE_JANEIRO"
 					}
 				}
@@ -14501,7 +14509,7 @@ BUILDINGS={
 					building={
 						type="building_financial_district"
 						country="c:BRZ"
-						levels=1
+						levels=2
 						region="STATE_RIO_DE_JANEIRO"
 					}
 				}
@@ -14514,7 +14522,7 @@ BUILDINGS={
 					building={
 						type="building_financial_district"
 						country="c:BRZ"
-						levels=1
+						levels=2
 						region="STATE_RIO_DE_JANEIRO"
 					}
 				}
@@ -14527,7 +14535,7 @@ BUILDINGS={
 					building={
 						type="building_financial_district"
 						country="c:BRZ"
-						levels=7
+						levels=12
 						region="STATE_RIO_DE_JANEIRO"
 					}
 				}
@@ -14540,7 +14548,7 @@ BUILDINGS={
 					building={
 						type="building_financial_district"
 						country="c:BRZ"
-						levels=8
+						levels=11
 						region="STATE_RIO_DE_JANEIRO"
 					}
 				}
@@ -14553,7 +14561,7 @@ BUILDINGS={
 					building={
 						type="building_financial_district"
 						country="c:BRZ"
-						levels=14
+						levels=23
 						region="STATE_RIO_DE_JANEIRO"
 					}
 				}
@@ -14566,7 +14574,7 @@ BUILDINGS={
 					building={
 						type="building_financial_district"
 						country="c:BRZ"
-						levels=18
+						levels=34
 						region="STATE_RIO_DE_JANEIRO"
 					}
 				}
@@ -14670,7 +14678,7 @@ BUILDINGS={
 					building={
 						type="building_financial_district"
 						country="c:BRZ"
-						levels=4
+						levels=9
 						region="STATE_RIO_DE_JANEIRO"
 					}
 				}
@@ -14683,7 +14691,7 @@ BUILDINGS={
 					building={
 						type="building_financial_district"
 						country="c:BRZ"
-						levels=5
+						levels=9
 						region="STATE_RIO_DE_JANEIRO"
 					}
 				}
@@ -14696,7 +14704,7 @@ BUILDINGS={
 					building={
 						type="building_financial_district"
 						country="c:BRZ"
-						levels=3
+						levels=9
 						region="STATE_RIO_DE_JANEIRO"
 					}
 				}
@@ -14828,7 +14836,7 @@ BUILDINGS={
 					building={
 						type="building_financial_district"
 						country="c:BRZ"
-						levels=1
+						levels=3
 						region="STATE_BAHIA"
 					}
 				}
@@ -14841,7 +14849,7 @@ BUILDINGS={
 					building={
 						type="building_financial_district"
 						country="c:BRZ"
-						levels=1
+						levels=2
 						region="STATE_BAHIA"
 					}
 				}
@@ -14854,7 +14862,7 @@ BUILDINGS={
 					building={
 						type="building_financial_district"
 						country="c:BRZ"
-						levels=1
+						levels=2
 						region="STATE_BAHIA"
 					}
 				}
@@ -14867,7 +14875,7 @@ BUILDINGS={
 					building={
 						type="building_financial_district"
 						country="c:BRZ"
-						levels=7
+						levels=12
 						region="STATE_BAHIA"
 					}
 				}
@@ -14880,7 +14888,7 @@ BUILDINGS={
 					building={
 						type="building_financial_district"
 						country="c:BRZ"
-						levels=4
+						levels=6
 						region="STATE_BAHIA"
 					}
 				}
@@ -14940,7 +14948,7 @@ BUILDINGS={
 					building={
 						type="building_financial_district"
 						country="c:BRZ"
-						levels=8
+						levels=12
 						region="STATE_BAHIA"
 					}
 				}
@@ -14953,7 +14961,7 @@ BUILDINGS={
 					building={
 						type="building_financial_district"
 						country="c:BRZ"
-						levels=8
+						levels=10
 						region="STATE_BAHIA"
 					}
 				}
@@ -14966,7 +14974,7 @@ BUILDINGS={
 					building={
 						type="building_financial_district"
 						country="c:BRZ"
-						levels=14
+						levels=22
 						region="STATE_BAHIA"
 					}
 				}
@@ -14979,7 +14987,7 @@ BUILDINGS={
 					building={
 						type="building_financial_district"
 						country="c:BRZ"
-						levels=18
+						levels=31
 						region="STATE_BAHIA"
 					}
 				}
@@ -14991,12 +14999,12 @@ BUILDINGS={
 				add_ownership={
 					country={
 						country="c:BRZ"
-						levels=6
+						levels=9
 					}
 					building={
 						type="building_financial_district"
 						country="c:BRZ"
-						levels=1
+						levels=2
 						region="STATE_BAHIA"
 					}
 				}
@@ -15104,7 +15112,7 @@ BUILDINGS={
 					building={
 						type="building_financial_district"
 						country="c:BRZ"
-						levels=5
+						levels=8
 						region="STATE_BAHIA"
 					}
 				}
@@ -15117,7 +15125,7 @@ BUILDINGS={
 					building={
 						type="building_financial_district"
 						country="c:BRZ"
-						levels=6
+						levels=12
 						region="STATE_BAHIA"
 					}
 				}
@@ -15143,7 +15151,7 @@ BUILDINGS={
 					building={
 						type="building_financial_district"
 						country="c:BRZ"
-						levels=2
+						levels=4
 						region="STATE_BAHIA"
 					}
 				}
@@ -15245,7 +15253,7 @@ BUILDINGS={
 					building={
 						type="building_financial_district"
 						country="c:BRZ"
-						levels=1
+						levels=2
 						region="STATE_RIO_GRANDE_DO_NORTE"
 					}
 				}
@@ -15297,7 +15305,7 @@ BUILDINGS={
 					building={
 						type="building_financial_district"
 						country="c:BRZ"
-						levels=3
+						levels=7
 						region="STATE_RIO_GRANDE_DO_NORTE"
 					}
 				}
@@ -15310,7 +15318,7 @@ BUILDINGS={
 					building={
 						type="building_financial_district"
 						country="c:BRZ"
-						levels=2
+						levels=4
 						region="STATE_RIO_GRANDE_DO_NORTE"
 					}
 				}
@@ -15323,7 +15331,7 @@ BUILDINGS={
 					building={
 						type="building_financial_district"
 						country="c:BRZ"
-						levels=4
+						levels=9
 						region="STATE_RIO_GRANDE_DO_NORTE"
 					}
 				}
@@ -15335,7 +15343,7 @@ BUILDINGS={
 				add_ownership={
 					country={
 						country="c:BRZ"
-						levels=2
+						levels=3
 					}
 					building={
 						type="building_financial_district"
@@ -15440,7 +15448,7 @@ BUILDINGS={
 					building={
 						type="building_financial_district"
 						country="c:BRZ"
-						levels=4
+						levels=5
 						region="STATE_CEARA"
 					}
 				}
@@ -15479,7 +15487,7 @@ BUILDINGS={
 					building={
 						type="building_financial_district"
 						country="c:BRZ"
-						levels=8
+						levels=11
 						region="STATE_CEARA"
 					}
 				}
@@ -15492,7 +15500,7 @@ BUILDINGS={
 					building={
 						type="building_financial_district"
 						country="c:BRZ"
-						levels=2
+						levels=3
 						region="STATE_CEARA"
 					}
 				}
@@ -15518,7 +15526,7 @@ BUILDINGS={
 					building={
 						type="building_financial_district"
 						country="c:BRZ"
-						levels=3
+						levels=5
 						region="STATE_CEARA"
 					}
 				}
@@ -15531,7 +15539,7 @@ BUILDINGS={
 					building={
 						type="building_financial_district"
 						country="c:BRZ"
-						levels=3
+						levels=4
 						region="STATE_CEARA"
 					}
 				}
@@ -15544,7 +15552,7 @@ BUILDINGS={
 					building={
 						type="building_financial_district"
 						country="c:BRZ"
-						levels=6
+						levels=11
 						region="STATE_CEARA"
 					}
 				}
@@ -15556,12 +15564,12 @@ BUILDINGS={
 				add_ownership={
 					country={
 						country="c:BRZ"
-						levels=3
+						levels=4
 					}
 					building={
 						type="building_financial_district"
 						country="c:BRZ"
-						levels=3
+						levels=4
 						region="STATE_SAO_PAULO"
 					}
 					building={
@@ -15619,7 +15627,7 @@ BUILDINGS={
 					building={
 						type="building_financial_district"
 						country="c:BRZ"
-						levels=8
+						levels=17
 						region="STATE_CEARA"
 					}
 				}
@@ -15632,7 +15640,7 @@ BUILDINGS={
 					building={
 						type="building_financial_district"
 						country="c:BRZ"
-						levels=2
+						levels=5
 						region="STATE_CEARA"
 					}
 				}
@@ -15734,7 +15742,7 @@ BUILDINGS={
 					building={
 						type="building_financial_district"
 						country="c:BRZ"
-						levels=1
+						levels=2
 						region="STATE_PIAUI"
 					}
 				}
@@ -15786,7 +15794,7 @@ BUILDINGS={
 					building={
 						type="building_financial_district"
 						country="c:BRZ"
-						levels=3
+						levels=7
 						region="STATE_PIAUI"
 					}
 				}
@@ -15799,7 +15807,7 @@ BUILDINGS={
 					building={
 						type="building_financial_district"
 						country="c:BRZ"
-						levels=4
+						levels=9
 						region="STATE_PIAUI"
 					}
 				}
@@ -15811,7 +15819,7 @@ BUILDINGS={
 				add_ownership={
 					country={
 						country="c:BRZ"
-						levels=5
+						levels=7
 					}
 					building={
 						type="building_financial_district"
@@ -15931,7 +15939,7 @@ BUILDINGS={
 					building={
 						type="building_financial_district"
 						country="c:BRZ"
-						levels=1
+						levels=2
 						region="STATE_PARAIBA"
 					}
 				}
@@ -16050,7 +16058,7 @@ BUILDINGS={
 					building={
 						type="building_financial_district"
 						country="c:BRZ"
-						levels=3
+						levels=12
 						region="STATE_PARAIBA"
 					}
 				}
@@ -16089,7 +16097,7 @@ BUILDINGS={
 					building={
 						type="building_financial_district"
 						country="c:BRZ"
-						levels=4
+						levels=15
 						region="STATE_PARAIBA"
 					}
 				}
@@ -16213,7 +16221,7 @@ BUILDINGS={
 					building={
 						type="building_financial_district"
 						country="c:BRZ"
-						levels=1
+						levels=2
 						region="STATE_PERNAMBUCO"
 					}
 				}
@@ -16226,7 +16234,7 @@ BUILDINGS={
 					building={
 						type="building_financial_district"
 						country="c:BRZ"
-						levels=1
+						levels=2
 						region="STATE_PERNAMBUCO"
 					}
 				}
@@ -16252,7 +16260,7 @@ BUILDINGS={
 					building={
 						type="building_financial_district"
 						country="c:BRZ"
-						levels=1
+						levels=4
 						region="STATE_PERNAMBUCO"
 					}
 				}
@@ -16265,7 +16273,7 @@ BUILDINGS={
 					building={
 						type="building_financial_district"
 						country="c:BRZ"
-						levels=1
+						levels=2
 						region="STATE_PERNAMBUCO"
 					}
 				}
@@ -16291,7 +16299,7 @@ BUILDINGS={
 					building={
 						type="building_financial_district"
 						country="c:BRZ"
-						levels=8
+						levels=10
 						region="STATE_PERNAMBUCO"
 					}
 				}
@@ -16304,7 +16312,7 @@ BUILDINGS={
 					building={
 						type="building_financial_district"
 						country="c:BRZ"
-						levels=8
+						levels=9
 						region="STATE_PERNAMBUCO"
 					}
 				}
@@ -16317,7 +16325,7 @@ BUILDINGS={
 					building={
 						type="building_financial_district"
 						country="c:BRZ"
-						levels=6
+						levels=10
 						region="STATE_PERNAMBUCO"
 					}
 				}
@@ -16330,7 +16338,7 @@ BUILDINGS={
 					building={
 						type="building_financial_district"
 						country="c:BRZ"
-						levels=9
+						levels=15
 						region="STATE_PERNAMBUCO"
 					}
 				}
@@ -16421,7 +16429,7 @@ BUILDINGS={
 					building={
 						type="building_financial_district"
 						country="c:BRZ"
-						levels=2
+						levels=3
 						region="STATE_PERNAMBUCO"
 					}
 				}
@@ -16434,7 +16442,7 @@ BUILDINGS={
 					building={
 						type="building_financial_district"
 						country="c:BRZ"
-						levels=2
+						levels=5
 						region="STATE_PERNAMBUCO"
 					}
 				}
@@ -16447,7 +16455,7 @@ BUILDINGS={
 					building={
 						type="building_financial_district"
 						country="c:BRZ"
-						levels=2
+						levels=6
 						region="STATE_PERNAMBUCO"
 					}
 				}
@@ -16460,7 +16468,7 @@ BUILDINGS={
 					building={
 						type="building_financial_district"
 						country="c:BRZ"
-						levels=4
+						levels=6
 						region="STATE_PERNAMBUCO"
 					}
 				}

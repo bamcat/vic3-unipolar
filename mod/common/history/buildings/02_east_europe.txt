@@ -118,7 +118,7 @@ BUILDINGS={
 					building={
 						type="building_financial_district"
 						country="c:POL"
-						levels=5
+						levels=6
 						region="STATE_MAZOVIA"
 					}
 				}
@@ -196,7 +196,7 @@ BUILDINGS={
 					building={
 						type="building_financial_district"
 						country="c:POL"
-						levels=2
+						levels=10
 						region="STATE_MAZOVIA"
 					}
 				}
@@ -209,7 +209,7 @@ BUILDINGS={
 					building={
 						type="building_financial_district"
 						country="c:POL"
-						levels=3
+						levels=8
 						region="STATE_MAZOVIA"
 					}
 				}
@@ -298,7 +298,15 @@ BUILDINGS={
 				reserves=1
 				activate_production_methods={ "pm_fission_plant" }
 			}
-		}
+		
+			create_building={
+				building="building_textile_mill"
+				level=4
+			}
+			create_building={
+				building="building_food_industry"
+				level=4
+			}}
 	}
 	s:STATE_UPPER_SILESIA={
 		region_state:POL={
@@ -347,7 +355,7 @@ BUILDINGS={
 					building={
 						type="building_financial_district"
 						country="c:POL"
-						levels=12
+						levels=18
 						region="STATE_UPPER_SILESIA"
 					}
 				}
@@ -360,7 +368,7 @@ BUILDINGS={
 					building={
 						type="building_financial_district"
 						country="c:POL"
-						levels=6
+						levels=13
 						region="STATE_UPPER_SILESIA"
 					}
 				}
@@ -373,7 +381,7 @@ BUILDINGS={
 					building={
 						type="building_financial_district"
 						country="c:POL"
-						levels=20
+						levels=23
 						region="STATE_UPPER_SILESIA"
 					}
 				}
@@ -386,7 +394,7 @@ BUILDINGS={
 					building={
 						type="building_financial_district"
 						country="c:POL"
-						levels=10
+						levels=20
 						region="STATE_UPPER_SILESIA"
 					}
 				}
@@ -399,7 +407,7 @@ BUILDINGS={
 					building={
 						type="building_financial_district"
 						country="c:POL"
-						levels=10
+						levels=39
 						region="STATE_UPPER_SILESIA"
 					}
 				}
@@ -675,7 +683,7 @@ BUILDINGS={
 					building={
 						type="building_financial_district"
 						country="c:POL"
-						levels=2
+						levels=6
 						region="STATE_GREATER_POLAND"
 					}
 				}
@@ -688,7 +696,7 @@ BUILDINGS={
 					building={
 						type="building_financial_district"
 						country="c:POL"
-						levels=3
+						levels=4
 						region="STATE_GREATER_POLAND"
 					}
 				}
@@ -1083,7 +1091,7 @@ BUILDINGS={
 					building={
 						type="building_financial_district"
 						country="c:POL"
-						levels=2
+						levels=5
 						region="STATE_LESSER_POLAND"
 					}
 				}
@@ -1096,7 +1104,7 @@ BUILDINGS={
 					building={
 						type="building_financial_district"
 						country="c:POL"
-						levels=3
+						levels=4
 						region="STATE_LESSER_POLAND"
 					}
 				}
@@ -1263,7 +1271,7 @@ BUILDINGS={
 					building={
 						type="building_financial_district"
 						country="c:POL"
-						levels=4
+						levels=5
 						region="STATE_WEST_PRUSSIA"
 					}
 				}
@@ -1289,7 +1297,7 @@ BUILDINGS={
 					building={
 						type="building_financial_district"
 						country="c:POL"
-						levels=3
+						levels=5
 						region="STATE_WEST_PRUSSIA"
 					}
 				}
@@ -1716,7 +1724,7 @@ BUILDINGS={
 					building={
 						type="building_financial_district"
 						country="c:POL"
-						levels=3
+						levels=18
 						region="STATE_POSEN"
 					}
 				}
@@ -1728,12 +1736,12 @@ BUILDINGS={
 				add_ownership={
 					country={
 						country="c:POL"
-						levels=2
+						levels=3
 					}
 					building={
 						type="building_financial_district"
 						country="c:POL"
-						levels=5
+						levels=6
 						region="STATE_GREATER_POLAND"
 					}
 					building={
@@ -1938,7 +1946,7 @@ BUILDINGS={
 					building={
 						type="building_financial_district"
 						country="c:POL"
-						levels=5
+						levels=6
 						region="STATE_WEST_GALICIA"
 					}
 				}
@@ -2016,7 +2024,7 @@ BUILDINGS={
 					building={
 						type="building_financial_district"
 						country="c:POL"
-						levels=2
+						levels=4
 						region="STATE_WEST_GALICIA"
 					}
 				}
@@ -2029,7 +2037,7 @@ BUILDINGS={
 					building={
 						type="building_financial_district"
 						country="c:POL"
-						levels=3
+						levels=4
 						region="STATE_WEST_GALICIA"
 					}
 				}
@@ -2155,7 +2163,7 @@ BUILDINGS={
 					building={
 						type="building_financial_district"
 						country="c:POL"
-						levels=5
+						levels=8
 						region="STATE_WEST_GALICIA"
 					}
 				}
@@ -2606,7 +2614,7 @@ BUILDINGS={
 					building={
 						type="building_financial_district"
 						country="c:HUN"
-						levels=1
+						levels=20
 						region="STATE_CENTRAL_HUNGARY"
 					}
 				}
@@ -2619,7 +2627,7 @@ BUILDINGS={
 					building={
 						type="building_financial_district"
 						country="c:HUN"
-						levels=1
+						levels=23
 						region="STATE_CENTRAL_HUNGARY"
 					}
 				}
@@ -2632,7 +2640,7 @@ BUILDINGS={
 					building={
 						type="building_financial_district"
 						country="c:HUN"
-						levels=1
+						levels=3
 						region="STATE_CENTRAL_HUNGARY"
 					}
 				}
@@ -2645,7 +2653,7 @@ BUILDINGS={
 					building={
 						type="building_financial_district"
 						country="c:HUN"
-						levels=1
+						levels=9
 						region="STATE_CENTRAL_HUNGARY"
 					}
 				}
@@ -2657,12 +2665,12 @@ BUILDINGS={
 				add_ownership={
 					country={
 						country="c:HUN"
-						levels=1
+						levels=5
 					}
 					building={
 						type="building_financial_district"
 						country="c:HUN"
-						levels=5
+						levels=9
 						region="STATE_CENTRAL_HUNGARY"
 					}
 				}
@@ -2675,7 +2683,7 @@ BUILDINGS={
 					building={
 						type="building_financial_district"
 						country="c:HUN"
-						levels=1
+						levels=4
 						region="STATE_CENTRAL_HUNGARY"
 					}
 				}
@@ -2688,7 +2696,7 @@ BUILDINGS={
 					building={
 						type="building_financial_district"
 						country="c:HUN"
-						levels=1
+						levels=2
 						region="STATE_CENTRAL_HUNGARY"
 					}
 				}
@@ -2700,7 +2708,7 @@ BUILDINGS={
 				add_ownership={
 					country={
 						country="c:HUN"
-						levels=1
+						levels=2
 					}
 					building={
 						type="building_financial_district"
@@ -2718,7 +2726,7 @@ BUILDINGS={
 					building={
 						type="building_financial_district"
 						country="c:HUN"
-						levels=1
+						levels=2
 						region="STATE_CENTRAL_HUNGARY"
 					}
 				}
@@ -2787,7 +2795,7 @@ BUILDINGS={
 					building={
 						type="building_financial_district"
 						country="c:HUN"
-						levels=4
+						levels=5
 						region="STATE_CENTRAL_HUNGARY"
 					}
 				}
@@ -2800,7 +2808,7 @@ BUILDINGS={
 					building={
 						type="building_financial_district"
 						country="c:HUN"
-						levels=5
+						levels=12
 						region="STATE_CENTRAL_HUNGARY"
 					}
 				}
@@ -2813,7 +2821,7 @@ BUILDINGS={
 					building={
 						type="building_financial_district"
 						country="c:HUN"
-						levels=4
+						levels=5
 						region="STATE_CENTRAL_HUNGARY"
 					}
 				}
@@ -2826,7 +2834,7 @@ BUILDINGS={
 					building={
 						type="building_financial_district"
 						country="c:HUN"
-						levels=3
+						levels=8
 						region="STATE_CENTRAL_HUNGARY"
 					}
 				}
@@ -2839,7 +2847,7 @@ BUILDINGS={
 					building={
 						type="building_financial_district"
 						country="c:HUN"
-						levels=3
+						levels=5
 						region="STATE_CENTRAL_HUNGARY"
 					}
 				}
@@ -2935,12 +2943,12 @@ BUILDINGS={
 				add_ownership={
 					country={
 						country="c:ROM"
-						levels=1
+						levels=4
 					}
 					building={
 						type="building_financial_district"
 						country="c:ROM"
-						levels=1
+						levels=3
 						region="STATE_WALLACHIA"
 					}
 				}
@@ -2953,7 +2961,7 @@ BUILDINGS={
 					building={
 						type="building_financial_district"
 						country="c:ROM"
-						levels=1
+						levels=2
 						region="STATE_BEKES"
 					}
 				}
@@ -2992,7 +3000,7 @@ BUILDINGS={
 					building={
 						type="building_financial_district"
 						country="c:ROM"
-						levels=1
+						levels=3
 						region="STATE_BEKES"
 					}
 				}
@@ -3120,7 +3128,7 @@ BUILDINGS={
 					building={
 						type="building_financial_district"
 						country="c:HUN"
-						levels=1
+						levels=9
 						region="STATE_TRANSDANUBIA"
 					}
 				}
@@ -3133,7 +3141,7 @@ BUILDINGS={
 					building={
 						type="building_financial_district"
 						country="c:HUN"
-						levels=1
+						levels=10
 						region="STATE_TRANSDANUBIA"
 					}
 				}
@@ -3146,7 +3154,7 @@ BUILDINGS={
 					building={
 						type="building_financial_district"
 						country="c:HUN"
-						levels=1
+						levels=2
 						region="STATE_TRANSDANUBIA"
 					}
 				}
@@ -3158,12 +3166,12 @@ BUILDINGS={
 				add_ownership={
 					country={
 						country="c:HUN"
-						levels=1
+						levels=7
 					}
 					building={
 						type="building_financial_district"
 						country="c:HUN"
-						levels=1
+						levels=6
 						region="STATE_TRANSDANUBIA"
 					}
 				}
@@ -3176,7 +3184,7 @@ BUILDINGS={
 					building={
 						type="building_financial_district"
 						country="c:HUN"
-						levels=1
+						levels=2
 						region="STATE_TRANSDANUBIA"
 					}
 				}
@@ -3297,7 +3305,7 @@ BUILDINGS={
 					building={
 						type="building_financial_district"
 						country="c:HUN"
-						levels=3
+						levels=6
 						region="STATE_TRANSDANUBIA"
 					}
 				}
@@ -3323,7 +3331,7 @@ BUILDINGS={
 					building={
 						type="building_financial_district"
 						country="c:HUN"
-						levels=3
+						levels=5
 						region="STATE_TRANSDANUBIA"
 					}
 				}
@@ -3336,7 +3344,7 @@ BUILDINGS={
 					building={
 						type="building_financial_district"
 						country="c:HUN"
-						levels=3
+						levels=4
 						region="STATE_TRANSDANUBIA"
 					}
 				}
@@ -3395,7 +3403,7 @@ BUILDINGS={
 					}
 				}
 				reserves=1
-				activate_production_methods={ "pm_trade_center_trade_quantity_normal" "pm_trade_center" }
+				activate_production_methods={ "pm_trade_center_principle_external_trade_2" "pm_trade_center_trade_quantity_high" }
 			}
 			create_building={
 				building="building_government_administration"
@@ -3419,7 +3427,7 @@ BUILDINGS={
 					}
 				}
 				reserves=1
-				activate_production_methods={ "pm_early_trains" "pm_no_passenger_trains" }
+				activate_production_methods={ "pm_early_trains" "pm_wooden_passenger_carriages" }
 			}
 			create_building={
 				building="building_food_industry"
@@ -3427,12 +3435,12 @@ BUILDINGS={
 					building={
 						type="building_financial_district"
 						country="c:OST"
-						levels=2
+						levels=6
 						region="STATE_TRANSDANUBIA"
 					}
 				}
 				reserves=1
-				activate_production_methods={ "pm_bakery" "pm_disabled_canning" "pm_disabled_distillery" "pm_manual_dough_processing" }
+				activate_production_methods={ "pm_bakery" "pm_disabled_canning" "pm_pot_stills" "pm_manual_dough_processing" }
 			}
 			create_building={
 				building="building_telecommunications"
@@ -3445,14 +3453,14 @@ BUILDINGS={
 					}
 				}
 				reserves=1
-				activate_production_methods={ "pm_power_lines" "pm_1g" }
+				activate_production_methods={ "pm_cellular_tower" "pm_1g" }
 			}
 			create_building={
 				building="building_nuclear_plant"
 				add_ownership={
 				}
 				reserves=1
-				activate_production_methods={ "pm_fission_plant" }
+				activate_production_methods={ "pm_fusion_plant" }
 			}
 		}
 		region_state:SVN={
@@ -3745,7 +3753,7 @@ BUILDINGS={
 					building={
 						type="building_financial_district"
 						country="c:ROM"
-						levels=1
+						levels=5
 						region="STATE_BANAT"
 					}
 				}
@@ -3758,7 +3766,7 @@ BUILDINGS={
 					building={
 						type="building_financial_district"
 						country="c:ROM"
-						levels=1
+						levels=2
 						region="STATE_BANAT"
 					}
 				}
@@ -3797,7 +3805,7 @@ BUILDINGS={
 					building={
 						type="building_financial_district"
 						country="c:ROM"
-						levels=2
+						levels=5
 						region="STATE_BANAT"
 					}
 				}
@@ -3912,7 +3920,7 @@ BUILDINGS={
 					building={
 						type="building_financial_district"
 						country="c:CZH"
-						levels=1
+						levels=9
 						region="STATE_SLOVAKIA"
 					}
 				}
@@ -3925,7 +3933,7 @@ BUILDINGS={
 					building={
 						type="building_financial_district"
 						country="c:CZH"
-						levels=1
+						levels=7
 						region="STATE_SLOVAKIA"
 					}
 				}
@@ -3938,7 +3946,7 @@ BUILDINGS={
 					building={
 						type="building_financial_district"
 						country="c:CZH"
-						levels=1
+						levels=2
 						region="STATE_SLOVAKIA"
 					}
 				}
@@ -3950,12 +3958,12 @@ BUILDINGS={
 				add_ownership={
 					country={
 						country="c:CZH"
-						levels=1
+						levels=4
 					}
 					building={
 						type="building_financial_district"
 						country="c:CZH"
-						levels=3
+						levels=5
 						region="STATE_BOHEMIA"
 					}
 				}
@@ -3967,12 +3975,12 @@ BUILDINGS={
 				add_ownership={
 					country={
 						country="c:CZH"
-						levels=1
+						levels=4
 					}
 					building={
 						type="building_financial_district"
 						country="c:CZH"
-						levels=3
+						levels=6
 						region="STATE_BOHEMIA"
 					}
 				}
@@ -4061,7 +4069,7 @@ BUILDINGS={
 					building={
 						type="building_financial_district"
 						country="c:CZH"
-						levels=1
+						levels=2
 						region="STATE_SLOVAKIA"
 					}
 				}
@@ -4126,7 +4134,7 @@ BUILDINGS={
 					building={
 						type="building_financial_district"
 						country="c:CZH"
-						levels=1
+						levels=2
 						region="STATE_SLOVAKIA"
 					}
 				}
@@ -4605,7 +4613,7 @@ BUILDINGS={
 					building={
 						type="building_financial_district"
 						country="c:ROM"
-						levels=4
+						levels=6
 						region="STATE_SOUTHERN_TRANSYLVANIA"
 					}
 				}
@@ -4631,7 +4639,7 @@ BUILDINGS={
 					building={
 						type="building_financial_district"
 						country="c:ROM"
-						levels=3
+						levels=4
 						region="STATE_SOUTHERN_TRANSYLVANIA"
 					}
 				}
@@ -4644,7 +4652,7 @@ BUILDINGS={
 					building={
 						type="building_financial_district"
 						country="c:ROM"
-						levels=3
+						levels=7
 						region="STATE_SOUTHERN_TRANSYLVANIA"
 					}
 				}
@@ -4702,7 +4710,7 @@ BUILDINGS={
 					building={
 						type="building_financial_district"
 						country="c:ROM"
-						levels=2
+						levels=3
 						region="STATE_SOUTHERN_TRANSYLVANIA"
 					}
 				}
@@ -4715,7 +4723,7 @@ BUILDINGS={
 					building={
 						type="building_financial_district"
 						country="c:ROM"
-						levels=1
+						levels=2
 						region="STATE_BANAT"
 					}
 					building={
@@ -4798,7 +4806,7 @@ BUILDINGS={
 					building={
 						type="building_financial_district"
 						country="c:ROM"
-						levels=1
+						levels=7
 						region="STATE_NORTHERN_TRANSYLVANIA"
 					}
 				}
@@ -4811,7 +4819,7 @@ BUILDINGS={
 					building={
 						type="building_financial_district"
 						country="c:ROM"
-						levels=1
+						levels=2
 						region="STATE_NORTHERN_TRANSYLVANIA"
 					}
 				}
@@ -4850,7 +4858,7 @@ BUILDINGS={
 					building={
 						type="building_financial_district"
 						country="c:ROM"
-						levels=1
+						levels=3
 						region="STATE_NORTHERN_TRANSYLVANIA"
 					}
 				}
@@ -4971,7 +4979,7 @@ BUILDINGS={
 					building={
 						type="building_financial_district"
 						country="c:ROM"
-						levels=1
+						levels=6
 						region="STATE_MOLDAVIA"
 					}
 				}
@@ -4984,7 +4992,7 @@ BUILDINGS={
 					building={
 						type="building_financial_district"
 						country="c:ROM"
-						levels=1
+						levels=5
 						region="STATE_MOLDAVIA"
 					}
 				}
@@ -5009,7 +5017,7 @@ BUILDINGS={
 				add_ownership={
 					country={
 						country="c:ROM"
-						levels=1
+						levels=2
 					}
 					building={
 						type="building_financial_district"
@@ -5020,7 +5028,7 @@ BUILDINGS={
 					building={
 						type="building_financial_district"
 						country="c:ROM"
-						levels=4
+						levels=5
 						region="STATE_MOLDAVIA"
 					}
 				}
@@ -5050,7 +5058,7 @@ BUILDINGS={
 					building={
 						type="building_financial_district"
 						country="c:ROM"
-						levels=1
+						levels=2
 						region="STATE_MOLDAVIA"
 					}
 				}
@@ -5063,7 +5071,7 @@ BUILDINGS={
 					building={
 						type="building_financial_district"
 						country="c:ROM"
-						levels=1
+						levels=2
 						region="STATE_MOLDAVIA"
 					}
 				}
@@ -5115,7 +5123,7 @@ BUILDINGS={
 					building={
 						type="building_financial_district"
 						country="c:ROM"
-						levels=1
+						levels=5
 						region="STATE_MOLDAVIA"
 					}
 				}
@@ -5167,7 +5175,7 @@ BUILDINGS={
 					building={
 						type="building_financial_district"
 						country="c:ROM"
-						levels=3
+						levels=6
 						region="STATE_MOLDAVIA"
 					}
 				}
@@ -5180,7 +5188,7 @@ BUILDINGS={
 					building={
 						type="building_financial_district"
 						country="c:ROM"
-						levels=3
+						levels=4
 						region="STATE_MOLDAVIA"
 					}
 				}
@@ -5245,7 +5253,7 @@ BUILDINGS={
 					building={
 						type="building_financial_district"
 						country="c:ROM"
-						levels=2
+						levels=6
 						region="STATE_MOLDAVIA"
 					}
 				}
@@ -5295,7 +5303,7 @@ BUILDINGS={
 					building={
 						type="building_financial_district"
 						country="c:UKR"
-						levels=2
+						levels=4
 						region="STATE_MOLDAVIA"
 					}
 				}
@@ -5422,7 +5430,7 @@ BUILDINGS={
 					building={
 						type="building_financial_district"
 						country="c:ROM"
-						levels=1
+						levels=11
 						region="STATE_WALLACHIA"
 					}
 				}
@@ -5435,7 +5443,7 @@ BUILDINGS={
 					building={
 						type="building_financial_district"
 						country="c:ROM"
-						levels=1
+						levels=13
 						region="STATE_WALLACHIA"
 					}
 				}
@@ -5448,7 +5456,7 @@ BUILDINGS={
 					building={
 						type="building_financial_district"
 						country="c:ROM"
-						levels=1
+						levels=3
 						region="STATE_WALLACHIA"
 					}
 				}
@@ -5461,7 +5469,7 @@ BUILDINGS={
 					building={
 						type="building_financial_district"
 						country="c:ROM"
-						levels=1
+						levels=21
 						region="STATE_WALLACHIA"
 					}
 				}
@@ -5474,7 +5482,7 @@ BUILDINGS={
 					building={
 						type="building_financial_district"
 						country="c:ROM"
-						levels=1
+						levels=6
 						region="STATE_WALLACHIA"
 					}
 				}
@@ -5486,12 +5494,12 @@ BUILDINGS={
 				add_ownership={
 					country={
 						country="c:ROM"
-						levels=1
+						levels=4
 					}
 					building={
 						type="building_financial_district"
 						country="c:ROM"
-						levels=1
+						levels=2
 						region="STATE_WALLACHIA"
 					}
 				}
@@ -5521,7 +5529,7 @@ BUILDINGS={
 					building={
 						type="building_financial_district"
 						country="c:ROM"
-						levels=1
+						levels=3
 						region="STATE_WALLACHIA"
 					}
 				}
@@ -5534,7 +5542,7 @@ BUILDINGS={
 					building={
 						type="building_financial_district"
 						country="c:ROM"
-						levels=1
+						levels=2
 						region="STATE_WALLACHIA"
 					}
 				}
@@ -5547,7 +5555,7 @@ BUILDINGS={
 					building={
 						type="building_financial_district"
 						country="c:ROM"
-						levels=1
+						levels=2
 						region="STATE_WALLACHIA"
 					}
 				}
@@ -5560,7 +5568,7 @@ BUILDINGS={
 					building={
 						type="building_financial_district"
 						country="c:ROM"
-						levels=1
+						levels=2
 						region="STATE_WALLACHIA"
 					}
 				}
@@ -5573,7 +5581,7 @@ BUILDINGS={
 					building={
 						type="building_financial_district"
 						country="c:ROM"
-						levels=1
+						levels=5
 						region="STATE_WALLACHIA"
 					}
 				}
@@ -5678,7 +5686,7 @@ BUILDINGS={
 				add_ownership={
 					country={
 						country="c:ROM"
-						levels=8
+						levels=9
 					}
 					building={
 						type="building_financial_district"
@@ -5695,12 +5703,12 @@ BUILDINGS={
 				add_ownership={
 					country={
 						country="c:ROM"
-						levels=8
+						levels=11
 					}
 					building={
 						type="building_financial_district"
 						country="c:ROM"
-						levels=1
+						levels=4
 						region="STATE_WALLACHIA"
 					}
 				}
@@ -5712,12 +5720,12 @@ BUILDINGS={
 				add_ownership={
 					country={
 						country="c:ROM"
-						levels=3
+						levels=5
 					}
 					building={
 						type="building_financial_district"
 						country="c:ROM"
-						levels=1
+						levels=2
 						region="STATE_WALLACHIA"
 					}
 				}
@@ -5729,7 +5737,7 @@ BUILDINGS={
 				add_ownership={
 					country={
 						country="c:ROM"
-						levels=9
+						levels=10
 					}
 					building={
 						type="building_financial_district"
@@ -5746,12 +5754,12 @@ BUILDINGS={
 				add_ownership={
 					country={
 						country="c:ROM"
-						levels=6
+						levels=8
 					}
 					building={
 						type="building_financial_district"
 						country="c:ROM"
-						levels=2
+						levels=4
 						region="STATE_WALLACHIA"
 					}
 				}
@@ -5764,7 +5772,7 @@ BUILDINGS={
 					building={
 						type="building_financial_district"
 						country="c:ROM"
-						levels=6
+						levels=8
 						region="STATE_WALLACHIA"
 					}
 				}
@@ -5819,7 +5827,7 @@ BUILDINGS={
 				add_ownership={
 					country={
 						country="c:ROM"
-						levels=2
+						levels=3
 					}
 					building={
 						type="building_financial_district"
@@ -5850,7 +5858,7 @@ BUILDINGS={
 					building={
 						type="building_financial_district"
 						country="c:ROM"
-						levels=2
+						levels=12
 						region="STATE_WALLACHIA"
 					}
 				}
@@ -5926,7 +5934,7 @@ BUILDINGS={
 					building={
 						type="building_financial_district"
 						country="c:MLV"
-						levels=9
+						levels=15
 						region="STATE_BESSARABIA"
 					}
 				}
@@ -5939,7 +5947,7 @@ BUILDINGS={
 					building={
 						type="building_financial_district"
 						country="c:MLV"
-						levels=6
+						levels=10
 						region="STATE_BESSARABIA"
 					}
 				}
@@ -6004,7 +6012,7 @@ BUILDINGS={
 					building={
 						type="building_financial_district"
 						country="c:MLV"
-						levels=8
+						levels=9
 						region="STATE_BESSARABIA"
 					}
 				}
@@ -6043,7 +6051,7 @@ BUILDINGS={
 					building={
 						type="building_financial_district"
 						country="c:MLV"
-						levels=3
+						levels=4
 						region="STATE_BESSARABIA"
 					}
 				}

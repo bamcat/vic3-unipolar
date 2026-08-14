@@ -1,6 +1,73 @@
 ﻿######################################## USA ########################################
 
-# Amazon
+# Amazon.com
+company_amazon = {
+	icon = "gfx/interface/icons/company_icons/usa/american_amazon.dds"
+	background = "gfx/interface/icons/company_icons/company_backgrounds/comp_illu_manufactering_light.dds"
+
+	flavored_company = yes
+
+	preferred_headquarters = { STATE_WASHINGTON }
+
+	building_types = {
+		building_trade_center
+		building_port
+		building_warehouse
+	}
+
+	extension_building_types = {
+		building_railway
+		building_software_industry
+	}
+
+	possible_prestige_goods = {
+		prestige_good_prime_shipping
+	}
+
+	potential = {
+		has_interest_marker_in_region = geographic_region_the_midwest_old
+	}
+
+	attainable = {
+		hidden_trigger = { # Hide attainable if it's always fulfilled by possible
+			any_scope_state = {
+				state_region = s:STATE_WASHINGTON
+			}
+		}
+	}
+
+	possible = {
+		has_technology_researched = currency_standards
+		any_scope_state = {
+			state_region = s:STATE_WASHINGTON
+			is_incorporated = yes
+			any_scope_building = {
+				is_building_type = building_trade_center
+				level >= 5
+			}
+		}
+	}
+
+	prosperity_modifier = {
+		market_land_trade_capacity_add = 15
+		country_trade_route_cost_mult = -0.15
+		country_trade_route_competitiveness_mult = 0.15
+	}
+
+	ai_will_do = {
+		has_technology_researched = currency_standards
+		any_scope_state = {
+			state_region = s:STATE_WASHINGTON
+			is_incorporated = yes
+		}
+	}
+
+	ai_weight = {
+		value = 3 # Higher base value for flavored companies
+	}
+}
+
+# Apple Inc.
 company_amazon = {
 	icon = "gfx/interface/icons/company_icons/usa/american_amazon.dds"
 	background = "gfx/interface/icons/company_icons/company_backgrounds/comp_illu_manufactering_light.dds"
@@ -967,6 +1034,54 @@ company_spacex = {
 }
 
 # tesla
+company_nvidia = {
+	icon = "gfx/interface/icons/company_icons/usa/nvidia.dds"
+	background = "gfx/interface/icons/company_icons/company_backgrounds/comp_illu_manufacturing_heavy.dds"
+	
+	flavored_company = yes
+	
+	building_types = {
+		building_chip_industry
+		building_software_industry
+	}
+	
+	extension_building_types = {
+		building_electrics_industry
+	}
+	
+	potential = {
+		has_interest_marker_in_region = geographic_region_pacific_coast_old
+	}
+	
+	attainable = {
+		hidden_trigger = { # Hide attainable if it's always fulfilled by possible
+			any_scope_state = {
+				state_region = s:STATE_CALIFORNIA
+			}
+		}
+	}
+	
+	possible = {
+		has_technology_researched = currency_standards
+		any_scope_state = {
+			state_region = s:STATE_CALIFORNIA
+			is_incorporated = yes
+			any_scope_building = {
+				is_building_type = building_chip_industry
+				level >= 3
+			}
+		}
+	}
+	
+	prosperity_modifier = {
+		building_chip_industry_throughput_add = 0.15
+	}
+	
+	ai_weight = {
+		value = 3 # Higher base value for flavored companies
+	}
+}
+
 company_tesla = {
 	icon = "gfx/interface/icons/company_icons/usa/american_tesla.dds"
 	background = "gfx/interface/icons/company_icons/company_backgrounds/comp_illu_manufacturing_heavy.dds"

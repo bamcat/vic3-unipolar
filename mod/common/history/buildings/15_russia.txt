@@ -66,7 +66,7 @@ BUILDINGS={
 					building={
 						type="building_financial_district"
 						country="c:EST"
-						levels=2
+						levels=3
 						region="STATE_TALINN"
 					}
 				}
@@ -192,7 +192,7 @@ BUILDINGS={
 					building={
 						type="building_financial_district"
 						country="c:EST"
-						levels=1
+						levels=4
 						region="STATE_TARTU"
 					}
 				}
@@ -362,7 +362,7 @@ BUILDINGS={
 					building={
 						type="building_financial_district"
 						country="c:LAT"
-						levels=1
+						levels=2
 						region="STATE_RIGA"
 					}
 				}
@@ -552,7 +552,7 @@ BUILDINGS={
 					building={
 						type="building_financial_district"
 						country="c:LAT"
-						levels=1
+						levels=3
 						region="STATE_COURLAND"
 					}
 				}
@@ -656,7 +656,7 @@ BUILDINGS={
 					building={
 						type="building_financial_district"
 						country="c:LAT"
-						levels=1
+						levels=9
 						region="STATE_COURLAND"
 					}
 				}
@@ -759,7 +759,7 @@ BUILDINGS={
 					building={
 						type="building_financial_district"
 						country="c:LIT"
-						levels=1
+						levels=2
 						region="STATE_KAUNAS"
 					}
 				}
@@ -772,7 +772,7 @@ BUILDINGS={
 					building={
 						type="building_financial_district"
 						country="c:LIT"
-						levels=2
+						levels=5
 						region="STATE_KAUNAS"
 					}
 				}
@@ -785,7 +785,7 @@ BUILDINGS={
 					building={
 						type="building_financial_district"
 						country="c:LIT"
-						levels=1
+						levels=3
 						region="STATE_KAUNAS"
 					}
 				}
@@ -798,7 +798,7 @@ BUILDINGS={
 					building={
 						type="building_financial_district"
 						country="c:LIT"
-						levels=1
+						levels=2
 						region="STATE_KAUNAS"
 					}
 				}
@@ -1149,7 +1149,7 @@ BUILDINGS={
 					building={
 						type="building_financial_district"
 						country="c:LIT"
-						levels=3
+						levels=4
 						region="STATE_VILNIUS"
 					}
 				}
@@ -1274,7 +1274,7 @@ BUILDINGS={
 					}
 				}
 				reserves=1
-				activate_production_methods={ "pm_trade_center_trade_quantity_normal" "pm_trade_center" }
+				activate_production_methods={ "pm_trade_center_principle_external_trade_2" "pm_trade_center_trade_quantity_high" }
 			}
 			create_building={
 				building="building_government_administration"
@@ -1296,7 +1296,7 @@ BUILDINGS={
 					}
 				}
 				reserves=1
-				activate_production_methods={ "pm_early_trains" "pm_no_passenger_trains" }
+				activate_production_methods={ "pm_early_trains" "pm_wooden_passenger_carriages" }
 			}
 			create_building={
 				building="building_livestock_ranch"
@@ -1304,12 +1304,12 @@ BUILDINGS={
 					building={
 						type="building_financial_district"
 						country="c:FNL"
-						levels=1
+						levels=9
 						region="STATE_KUOPIO"
 					}
 				}
 				reserves=1
-				activate_production_methods={ "pm_open_air_stockyards" "pm_simple_ranch" "pm_standard_fences" "pm_unrefrigerated" }
+				activate_production_methods={ "pm_slaughterhouses" "pm_simple_ranch" "pm_electric_fencing" "pm_refrigerated_rail_cars_building_livestock_ranch" }
 			}
 			create_building={
 				building="building_telecommunications"
@@ -1322,7 +1322,7 @@ BUILDINGS={
 					}
 				}
 				reserves=1
-				activate_production_methods={ "pm_power_lines" "pm_1g" }
+				activate_production_methods={ "pm_cellular_tower" "pm_1g" }
 			}
 			create_building={
 				building="building_warehouse"
@@ -1335,7 +1335,7 @@ BUILDINGS={
 					}
 				}
 				reserves=1
-				activate_production_methods={ "pm_basic_warehousing" "pm_manual_inventory" }
+				activate_production_methods={ "pm_basic_warehousing" "pm_barcode_tracking" }
 			}
 			create_building={
 				building="building_food_industry"
@@ -1343,12 +1343,12 @@ BUILDINGS={
 					building={
 						type="building_financial_district"
 						country="c:FNL"
-						levels=6
+						levels=13
 						region="STATE_KUOPIO"
 					}
 				}
 				reserves=1
-				activate_production_methods={ "pm_bakery" "pm_disabled_canning" "pm_disabled_distillery" "pm_manual_dough_processing" }
+				activate_production_methods={ "pm_bakery" "pm_disabled_canning" "pm_pot_stills" "pm_manual_dough_processing" }
 			}
 		}
 	}
@@ -1365,7 +1365,7 @@ BUILDINGS={
 					}
 				}
 				reserves=1
-				activate_production_methods={ "pm_trade_center_trade_quantity_normal" "pm_trade_center" }
+				activate_production_methods={ "pm_trade_center_principle_external_trade_2" "pm_trade_center_trade_quantity_high" }
 			}
 			create_building={
 				building="building_government_administration"
@@ -1387,7 +1387,7 @@ BUILDINGS={
 					}
 				}
 				reserves=1
-				activate_production_methods={ "pm_early_trains" "pm_no_passenger_trains" }
+				activate_production_methods={ "pm_early_trains" "pm_wooden_passenger_carriages" }
 			}
 			create_building={
 				building="building_port"
@@ -1398,7 +1398,7 @@ BUILDINGS={
 					}
 				}
 				reserves=1
-				activate_production_methods={ "pm_anchorage" }
+				activate_production_methods={ "pm_basic_port" }
 			}
 			create_building={
 				building="building_livestock_ranch"
@@ -1411,7 +1411,7 @@ BUILDINGS={
 					}
 				}
 				reserves=1
-				activate_production_methods={ "pm_open_air_stockyards" "pm_simple_ranch" "pm_standard_fences" "pm_unrefrigerated" }
+				activate_production_methods={ "pm_slaughterhouses" "pm_simple_ranch" "pm_electric_fencing" "pm_refrigerated_rail_cars_building_livestock_ranch" }
 			}
 			create_building={
 				building="building_logging_camp"
@@ -1424,7 +1424,7 @@ BUILDINGS={
 					}
 				}
 				reserves=1
-				activate_production_methods={ "pm_simple_forestry" "pm_no_equipment" "pm_road_carts" }
+				activate_production_methods={ "pm_simple_forestry" "pm_no_equipment" "pm_log_carts" }
 			}
 			create_building={
 				building="building_iron_mine"
@@ -1437,7 +1437,7 @@ BUILDINGS={
 					}
 				}
 				reserves=1
-				activate_production_methods={ "pm_picks_and_shovels_building_iron_mine" "pm_no_explosives" "pm_no_steam_automation" "pm_road_carts" }
+				activate_production_methods={ "pm_atmospheric_engine_pump_building_iron_mine" "pm_no_explosives" "pm_no_steam_automation" "pm_container_truck_mine" }
 			}
 			create_building={
 				building="building_food_industry"
@@ -1450,7 +1450,7 @@ BUILDINGS={
 					}
 				}
 				reserves=1
-				activate_production_methods={ "pm_bakery" "pm_disabled_canning" "pm_disabled_distillery" "pm_manual_dough_processing" }
+				activate_production_methods={ "pm_bakery" "pm_disabled_canning" "pm_pot_stills" "pm_manual_dough_processing" }
 			}
 			create_building={
 				building="building_telecommunications"
@@ -1463,7 +1463,7 @@ BUILDINGS={
 					}
 				}
 				reserves=1
-				activate_production_methods={ "pm_power_lines" "pm_1g" }
+				activate_production_methods={ "pm_cellular_tower" "pm_1g" }
 			}
 			create_building={
 				building="building_professional_service"
@@ -1476,7 +1476,7 @@ BUILDINGS={
 					}
 				}
 				reserves=1
-				activate_production_methods={ "pm_general_mills_office" "pm_accountants" "pm_no_casino" }
+				activate_production_methods={ "pm_computer_office" "pm_law_offices" "pm_casino" }
 			}
 			create_building={
 				building="building_bank"
@@ -1489,7 +1489,7 @@ BUILDINGS={
 					}
 				}
 				reserves=1
-				activate_production_methods={ "pm_basic_banking" "pm_no_securities_trading" "pm_manual_tellers" }
+				activate_production_methods={ "pm_basic_banking" "pm_securities_brokerage" "pm_atm_network" }
 			}
 			create_building={
 				building="building_food_service"
@@ -1502,7 +1502,7 @@ BUILDINGS={
 					}
 				}
 				reserves=1
-				activate_production_methods={ "pm_corner_grocery" "pm_no_restaurants" "pm_manual_food_checkout" }
+				activate_production_methods={ "pm_supermarket" "pm_fine_dining" "pm_food_delivery_services" }
 			}
 			create_building={
 				building="building_retail_services"
@@ -1515,7 +1515,7 @@ BUILDINGS={
 					}
 				}
 				reserves=1
-				activate_production_methods={ "pm_small_shops" "pm_no_retail_specialization" "pm_manual_retail_checkout" }
+				activate_production_methods={ "pm_outlet_retail" "pm_luxury_retail" "pm_manual_retail_checkout" }
 			}
 			create_building={
 				building="building_automotive_industry"
@@ -1528,7 +1528,7 @@ BUILDINGS={
 					}
 				}
 				reserves=1
-				activate_production_methods={ "pm_automobile_production" "pm_automation_disabled" }
+				activate_production_methods={ "pm_mass_automobile_production" "pm_modern_assembly_lines_automotive_industry" }
 			}
 			create_building={
 				building="building_warehouse"
@@ -1541,7 +1541,7 @@ BUILDINGS={
 					}
 				}
 				reserves=1
-				activate_production_methods={ "pm_basic_warehousing" "pm_manual_inventory" }
+				activate_production_methods={ "pm_basic_warehousing" "pm_barcode_tracking" }
 			}
 			create_building={
 				building="building_paper_mill"
@@ -1554,7 +1554,7 @@ BUILDINGS={
 					}
 				}
 				reserves=1
-				activate_production_methods={ "pm_pulp_pressing" "pm_automation_disabled" }
+				activate_production_methods={ "pm_pulp_pressing" "pm_modern_assembly_lines_paper_mills" }
 			}
 			create_building={
 				building="building_fishing_wharf"
@@ -1567,7 +1567,7 @@ BUILDINGS={
 					}
 				}
 				reserves=1
-				activate_production_methods={ "pm_simple_fishing" "pm_unrefrigerated" }
+				activate_production_methods={ "pm_simple_fishing" "pm_refrigerated_rail_cars_building_fishing_wharf" }
 			}
 		}
 	}
@@ -1584,7 +1584,7 @@ BUILDINGS={
 					}
 				}
 				reserves=1
-				activate_production_methods={ "pm_trade_center_trade_quantity_normal" "pm_trade_center" }
+				activate_production_methods={ "pm_trade_center_principle_external_trade_2" "pm_trade_center_trade_quantity_high" }
 			}
 			create_building={
 				building="building_government_administration"
@@ -1606,7 +1606,7 @@ BUILDINGS={
 					}
 				}
 				reserves=1
-				activate_production_methods={ "pm_early_trains" "pm_no_passenger_trains" }
+				activate_production_methods={ "pm_early_trains" "pm_wooden_passenger_carriages" }
 			}
 			create_building={
 				building="building_port"
@@ -1617,7 +1617,7 @@ BUILDINGS={
 					}
 				}
 				reserves=1
-				activate_production_methods={ "pm_anchorage" }
+				activate_production_methods={ "pm_basic_port" }
 			}
 			create_building={
 				building="building_livestock_ranch"
@@ -1630,7 +1630,7 @@ BUILDINGS={
 					}
 				}
 				reserves=1
-				activate_production_methods={ "pm_open_air_stockyards" "pm_simple_ranch" "pm_standard_fences" "pm_unrefrigerated" }
+				activate_production_methods={ "pm_slaughterhouses" "pm_simple_ranch" "pm_electric_fencing" "pm_refrigerated_rail_cars_building_livestock_ranch" }
 			}
 			create_building={
 				building="building_telecommunications"
@@ -1643,9 +1643,19 @@ BUILDINGS={
 					}
 				}
 				reserves=1
-				activate_production_methods={ "pm_power_lines" "pm_1g" }
+				activate_production_methods={ "pm_cellular_tower" "pm_1g" }
 			}
-		}
+		
+			create_building={
+				building="building_textile_mill"
+				level=1
+				activate_production_methods={ "pm_dye_workshops" "pm_craftsman_sewing" "pm_traditional_looms" }
+			}
+			create_building={
+				building="building_food_industry"
+				level=1
+				activate_production_methods={ "pm_bakery" "pm_disabled_canning" "pm_pot_stills" "pm_manual_dough_processing" }
+			}}
 		region_state:RUS={
 			create_building={
 				building="building_trade_center"
@@ -1793,7 +1803,7 @@ BUILDINGS={
 					}
 				}
 				reserves=1
-				activate_production_methods={ "pm_early_trains" "pm_no_passenger_trains" }
+				activate_production_methods={ "pm_early_trains" "pm_wooden_passenger_carriages" }
 			}
 			create_building={
 				building="building_port"
@@ -1804,7 +1814,7 @@ BUILDINGS={
 					}
 				}
 				reserves=1
-				activate_production_methods={ "pm_anchorage" }
+				activate_production_methods={ "pm_basic_port" }
 			}
 			create_building={
 				building="building_telecommunications"
@@ -1817,7 +1827,7 @@ BUILDINGS={
 					}
 				}
 				reserves=1
-				activate_production_methods={ "pm_power_lines" "pm_1g" }
+				activate_production_methods={ "pm_cellular_tower" "pm_1g" }
 			}
 		}
 	}
@@ -1834,7 +1844,7 @@ BUILDINGS={
 					}
 				}
 				reserves=1
-				activate_production_methods={ "pm_trade_center_trade_quantity_normal" "pm_trade_center" }
+				activate_production_methods={ "pm_trade_center_principle_external_trade_2" "pm_trade_center_trade_quantity_high" }
 			}
 			create_building={
 				building="building_government_administration"
@@ -1856,7 +1866,7 @@ BUILDINGS={
 					}
 				}
 				reserves=1
-				activate_production_methods={ "pm_early_trains" "pm_no_passenger_trains" }
+				activate_production_methods={ "pm_early_trains" "pm_wooden_passenger_carriages" }
 			}
 			create_building={
 				building="building_port"
@@ -1867,7 +1877,7 @@ BUILDINGS={
 					}
 				}
 				reserves=1
-				activate_production_methods={ "pm_anchorage" }
+				activate_production_methods={ "pm_basic_port" }
 			}
 			create_building={
 				building="building_livestock_ranch"
@@ -1875,12 +1885,12 @@ BUILDINGS={
 					building={
 						type="building_financial_district"
 						country="c:FNL"
-						levels=2
+						levels=5
 						region="STATE_OSTROBOTHNIA"
 					}
 				}
 				reserves=1
-				activate_production_methods={ "pm_open_air_stockyards" "pm_simple_ranch" "pm_standard_fences" "pm_unrefrigerated" }
+				activate_production_methods={ "pm_slaughterhouses" "pm_simple_ranch" "pm_electric_fencing" "pm_refrigerated_rail_cars_building_livestock_ranch" }
 			}
 			create_building={
 				building="building_telecommunications"
@@ -1893,9 +1903,19 @@ BUILDINGS={
 					}
 				}
 				reserves=1
-				activate_production_methods={ "pm_power_lines" "pm_1g" }
+				activate_production_methods={ "pm_cellular_tower" "pm_1g" }
 			}
-		}
+		
+			create_building={
+				building="building_textile_mill"
+				level=1
+				activate_production_methods={ "pm_dye_workshops" "pm_craftsman_sewing" "pm_traditional_looms" }
+			}
+			create_building={
+				building="building_food_industry"
+				level=2
+				activate_production_methods={ "pm_bakery" "pm_disabled_canning" "pm_pot_stills" "pm_manual_dough_processing" }
+			}}
 		region_state:RUS={
 			create_building={
 				building="building_government_administration"
@@ -1982,7 +2002,7 @@ BUILDINGS={
 					}
 				}
 				reserves=1
-				activate_production_methods={ "pm_early_trains" "pm_no_passenger_trains" }
+				activate_production_methods={ "pm_early_trains" "pm_wooden_passenger_carriages" }
 			}
 			create_building={
 				building="building_port"
@@ -1993,7 +2013,7 @@ BUILDINGS={
 					}
 				}
 				reserves=1
-				activate_production_methods={ "pm_anchorage" }
+				activate_production_methods={ "pm_basic_port" }
 			}
 			create_building={
 				building="building_telecommunications"
@@ -2006,9 +2026,19 @@ BUILDINGS={
 					}
 				}
 				reserves=1
-				activate_production_methods={ "pm_power_lines" "pm_1g" }
+				activate_production_methods={ "pm_cellular_tower" "pm_1g" }
 			}
-		}
+		
+			create_building={
+				building="building_textile_mill"
+				level=2
+				activate_production_methods={ "pm_dye_workshops" "pm_craftsman_sewing" "pm_traditional_looms" }
+			}
+			create_building={
+				building="building_food_industry"
+				level=3
+				activate_production_methods={ "pm_bakery" "pm_disabled_canning" "pm_pot_stills" "pm_manual_dough_processing" }
+			}}
 	}
 	s:STATE_EAST_KARELIA={
 		region_state:RUS={
@@ -2387,12 +2417,12 @@ BUILDINGS={
 				add_ownership={
 					country={
 						country="c:RUS"
-						levels=1
+						levels=2
 					}
 					building={
 						type="building_financial_district"
 						country="c:RUS"
-						levels=1
+						levels=2
 						region="STATE_GALICH"
 					}
 					building={
@@ -2411,7 +2441,7 @@ BUILDINGS={
 					building={
 						type="building_financial_district"
 						country="c:RUS"
-						levels=1
+						levels=2
 						region="STATE_INGRIA"
 					}
 				}
@@ -2424,7 +2454,7 @@ BUILDINGS={
 					building={
 						type="building_financial_district"
 						country="c:RUS"
-						levels=1
+						levels=3
 						region="STATE_INGRIA"
 					}
 				}
@@ -2437,7 +2467,7 @@ BUILDINGS={
 					building={
 						type="building_financial_district"
 						country="c:RUS"
-						levels=1
+						levels=4
 						region="STATE_INGRIA"
 					}
 				}
@@ -2450,7 +2480,7 @@ BUILDINGS={
 					building={
 						type="building_financial_district"
 						country="c:RUS"
-						levels=1
+						levels=3
 						region="STATE_INGRIA"
 					}
 				}
@@ -2463,7 +2493,7 @@ BUILDINGS={
 					building={
 						type="building_financial_district"
 						country="c:RUS"
-						levels=1
+						levels=8
 						region="STATE_INGRIA"
 					}
 				}
@@ -2537,7 +2567,7 @@ BUILDINGS={
 					building={
 						type="building_financial_district"
 						country="c:RUS"
-						levels=5
+						levels=21
 						region="STATE_INGRIA"
 					}
 				}
@@ -2550,7 +2580,7 @@ BUILDINGS={
 					building={
 						type="building_financial_district"
 						country="c:RUS"
-						levels=20
+						levels=31
 						region="STATE_INGRIA"
 					}
 				}
@@ -2685,7 +2715,7 @@ BUILDINGS={
 					building={
 						type="building_financial_district"
 						country="c:RUS"
-						levels=7
+						levels=16
 						region="STATE_MOSCOW"
 					}
 				}
@@ -2697,12 +2727,12 @@ BUILDINGS={
 				add_ownership={
 					country={
 						country="c:RUS"
-						levels=2
+						levels=5
 					}
 					building={
 						type="building_financial_district"
 						country="c:RUS"
-						levels=5
+						levels=7
 						region="STATE_MOSCOW"
 					}
 				}
@@ -2714,12 +2744,12 @@ BUILDINGS={
 				add_ownership={
 					country={
 						country="c:RUS"
-						levels=1
+						levels=3
 					}
 					building={
 						type="building_financial_district"
 						country="c:RUS"
-						levels=3
+						levels=5
 						region="STATE_MOSCOW"
 					}
 				}
@@ -2732,7 +2762,7 @@ BUILDINGS={
 					building={
 						type="building_financial_district"
 						country="c:RUS"
-						levels=1
+						levels=5
 						region="STATE_MOSCOW"
 					}
 				}
@@ -2745,7 +2775,7 @@ BUILDINGS={
 					building={
 						type="building_financial_district"
 						country="c:RUS"
-						levels=8
+						levels=18
 						region="STATE_MOSCOW"
 					}
 				}
@@ -2758,7 +2788,7 @@ BUILDINGS={
 					building={
 						type="building_financial_district"
 						country="c:RUS"
-						levels=2
+						levels=5
 						region="STATE_MOSCOW"
 					}
 				}
@@ -2770,12 +2800,12 @@ BUILDINGS={
 				add_ownership={
 					country={
 						country="c:RUS"
-						levels=1
+						levels=3
 					}
 					building={
 						type="building_financial_district"
 						country="c:RUS"
-						levels=2
+						levels=3
 						region="STATE_MOSCOW"
 					}
 				}
@@ -2788,7 +2818,7 @@ BUILDINGS={
 					building={
 						type="building_financial_district"
 						country="c:RUS"
-						levels=1
+						levels=4
 						region="STATE_MOSCOW"
 					}
 				}
@@ -2801,7 +2831,7 @@ BUILDINGS={
 					building={
 						type="building_financial_district"
 						country="c:RUS"
-						levels=1
+						levels=5
 						region="STATE_MOSCOW"
 					}
 				}
@@ -2814,7 +2844,7 @@ BUILDINGS={
 					building={
 						type="building_financial_district"
 						country="c:RUS"
-						levels=1
+						levels=5
 						region="STATE_MOSCOW"
 					}
 				}
@@ -2827,7 +2857,7 @@ BUILDINGS={
 					building={
 						type="building_financial_district"
 						country="c:RUS"
-						levels=10
+						levels=15
 						region="STATE_MOSCOW"
 					}
 				}
@@ -2866,7 +2896,7 @@ BUILDINGS={
 					building={
 						type="building_financial_district"
 						country="c:RUS"
-						levels=11
+						levels=33
 						region="STATE_MOSCOW"
 					}
 				}
@@ -3067,7 +3097,7 @@ BUILDINGS={
 					building={
 						type="building_financial_district"
 						country="c:RUS"
-						levels=4
+						levels=18
 						region="STATE_MOSCOW"
 					}
 				}
@@ -3143,7 +3173,7 @@ BUILDINGS={
 					building={
 						type="building_financial_district"
 						country="c:BYL"
-						levels=1
+						levels=2
 						region="STATE_BREST"
 					}
 				}
@@ -3446,7 +3476,7 @@ BUILDINGS={
 					building={
 						type="building_financial_district"
 						country="c:UKR"
-						levels=1
+						levels=4
 						region="STATE_VOLHYNIA"
 					}
 				}
@@ -3459,7 +3489,7 @@ BUILDINGS={
 					building={
 						type="building_financial_district"
 						country="c:UKR"
-						levels=1
+						levels=2
 						region="STATE_VOLHYNIA"
 					}
 				}
@@ -3472,7 +3502,7 @@ BUILDINGS={
 					building={
 						type="building_financial_district"
 						country="c:UKR"
-						levels=1
+						levels=2
 						region="STATE_VOLHYNIA"
 					}
 				}
@@ -3485,7 +3515,7 @@ BUILDINGS={
 					building={
 						type="building_financial_district"
 						country="c:UKR"
-						levels=1
+						levels=3
 						region="STATE_VOLHYNIA"
 					}
 				}
@@ -3563,7 +3593,7 @@ BUILDINGS={
 					building={
 						type="building_financial_district"
 						country="c:UKR"
-						levels=5
+						levels=6
 						region="STATE_VOLHYNIA"
 					}
 				}
@@ -3756,7 +3786,7 @@ BUILDINGS={
 					building={
 						type="building_financial_district"
 						country="c:UKR"
-						levels=3
+						levels=12
 						region="STATE_KIEV"
 					}
 				}
@@ -3769,7 +3799,7 @@ BUILDINGS={
 					building={
 						type="building_financial_district"
 						country="c:UKR"
-						levels=2
+						levels=8
 						region="STATE_KIEV"
 					}
 				}
@@ -3781,7 +3811,7 @@ BUILDINGS={
 				add_ownership={
 					country={
 						country="c:UKR"
-						levels=5
+						levels=6
 					}
 					building={
 						type="building_financial_district"
@@ -3799,7 +3829,7 @@ BUILDINGS={
 					building={
 						type="building_financial_district"
 						country="c:UKR"
-						levels=3
+						levels=6
 						region="STATE_KIEV"
 					}
 				}
@@ -3811,7 +3841,7 @@ BUILDINGS={
 				add_ownership={
 					country={
 						country="c:UKR"
-						levels=2
+						levels=3
 					}
 					building={
 						type="building_financial_district"
@@ -3905,7 +3935,7 @@ BUILDINGS={
 					building={
 						type="building_financial_district"
 						country="c:UKR"
-						levels=5
+						levels=6
 						region="STATE_KIEV"
 					}
 				}
@@ -3970,7 +4000,7 @@ BUILDINGS={
 					building={
 						type="building_financial_district"
 						country="c:UKR"
-						levels=3
+						levels=4
 						region="STATE_KIEV"
 					}
 				}
@@ -4611,7 +4641,7 @@ BUILDINGS={
 					building={
 						type="building_financial_district"
 						country="c:BYL"
-						levels=8
+						levels=10
 						region="STATE_MOGILEV"
 					}
 				}
@@ -4624,7 +4654,7 @@ BUILDINGS={
 					building={
 						type="building_financial_district"
 						country="c:BYL"
-						levels=1
+						levels=2
 						region="STATE_MOGILEV"
 					}
 				}
@@ -4834,7 +4864,7 @@ BUILDINGS={
 					building={
 						type="building_financial_district"
 						country="c:RUS"
-						levels=2
+						levels=6
 						region="STATE_ARKHANGELSK"
 					}
 				}
@@ -4847,7 +4877,7 @@ BUILDINGS={
 					building={
 						type="building_financial_district"
 						country="c:RUS"
-						levels=2
+						levels=9
 						region="STATE_ARKHANGELSK"
 					}
 				}
@@ -4936,7 +4966,7 @@ BUILDINGS={
 					building={
 						type="building_financial_district"
 						country="c:RUS"
-						levels=1
+						levels=10
 						region="STATE_ARKHANGELSK"
 					}
 				}
@@ -5879,7 +5909,7 @@ BUILDINGS={
 					building={
 						type="building_financial_district"
 						country="c:RUS"
-						levels=2
+						levels=3
 						region="STATE_KURSK"
 					}
 				}
@@ -5918,7 +5948,7 @@ BUILDINGS={
 					building={
 						type="building_financial_district"
 						country="c:RUS"
-						levels=1
+						levels=3
 						region="STATE_KURSK"
 					}
 				}
@@ -5931,7 +5961,7 @@ BUILDINGS={
 					building={
 						type="building_financial_district"
 						country="c:RUS"
-						levels=4
+						levels=5
 						region="STATE_KURSK"
 					}
 				}
@@ -5983,7 +6013,7 @@ BUILDINGS={
 					building={
 						type="building_financial_district"
 						country="c:RUS"
-						levels=1
+						levels=3
 						region="STATE_KURSK"
 					}
 				}
@@ -5996,7 +6026,7 @@ BUILDINGS={
 					building={
 						type="building_financial_district"
 						country="c:RUS"
-						levels=1
+						levels=2
 						region="STATE_KURSK"
 					}
 				}
@@ -6009,7 +6039,7 @@ BUILDINGS={
 					building={
 						type="building_financial_district"
 						country="c:RUS"
-						levels=6
+						levels=18
 						region="STATE_KURSK"
 					}
 				}
@@ -6022,7 +6052,7 @@ BUILDINGS={
 					building={
 						type="building_financial_district"
 						country="c:RUS"
-						levels=1
+						levels=36
 						region="STATE_KURSK"
 					}
 				}
@@ -6161,7 +6191,7 @@ BUILDINGS={
 					building={
 						type="building_financial_district"
 						country="c:RUS"
-						levels=23
+						levels=39
 						region="STATE_KURSK"
 					}
 				}
@@ -6173,12 +6203,12 @@ BUILDINGS={
 				add_ownership={
 					country={
 						country="c:RUS"
-						levels=5
+						levels=10
 					}
 					building={
 						type="building_financial_district"
 						country="c:RUS"
-						levels=2
+						levels=6
 						region="STATE_TARTARIA"
 					}
 				}
@@ -6254,7 +6284,7 @@ BUILDINGS={
 					building={
 						type="building_financial_district"
 						country="c:RUS"
-						levels=1
+						levels=3
 						region="STATE_TVER"
 					}
 				}
@@ -6267,7 +6297,7 @@ BUILDINGS={
 					building={
 						type="building_financial_district"
 						country="c:RUS"
-						levels=1
+						levels=3
 						region="STATE_TVER"
 					}
 				}
@@ -6280,7 +6310,7 @@ BUILDINGS={
 					building={
 						type="building_financial_district"
 						country="c:RUS"
-						levels=1
+						levels=4
 						region="STATE_TVER"
 					}
 				}
@@ -6293,7 +6323,7 @@ BUILDINGS={
 					building={
 						type="building_financial_district"
 						country="c:RUS"
-						levels=5
+						levels=6
 						region="STATE_TVER"
 					}
 				}
@@ -6388,7 +6418,7 @@ BUILDINGS={
 					building={
 						type="building_financial_district"
 						country="c:RUS"
-						levels=5
+						levels=6
 						region="STATE_TVER"
 					}
 				}
@@ -6501,7 +6531,7 @@ BUILDINGS={
 					building={
 						type="building_financial_district"
 						country="c:UKR"
-						levels=3
+						levels=7
 						region="STATE_CHERSON"
 					}
 				}
@@ -6514,7 +6544,7 @@ BUILDINGS={
 					building={
 						type="building_financial_district"
 						country="c:UKR"
-						levels=3
+						levels=7
 						region="STATE_CHERSON"
 					}
 				}
@@ -6527,7 +6557,7 @@ BUILDINGS={
 					building={
 						type="building_financial_district"
 						country="c:UKR"
-						levels=2
+						levels=4
 						region="STATE_CHERSON"
 					}
 				}
@@ -6553,7 +6583,7 @@ BUILDINGS={
 					building={
 						type="building_financial_district"
 						country="c:UKR"
-						levels=3
+						levels=4
 						region="STATE_CHERSON"
 					}
 				}
@@ -6648,7 +6678,7 @@ BUILDINGS={
 					building={
 						type="building_financial_district"
 						country="c:UKR"
-						levels=5
+						levels=6
 						region="STATE_CHERSON"
 					}
 				}
@@ -6700,7 +6730,7 @@ BUILDINGS={
 					building={
 						type="building_financial_district"
 						country="c:UKR"
-						levels=3
+						levels=4
 						region="STATE_CHERSON"
 					}
 				}
@@ -6897,7 +6927,7 @@ BUILDINGS={
 					building={
 						type="building_financial_district"
 						country="c:RUS"
-						levels=1
+						levels=2
 						region="STATE_GALICH"
 					}
 				}
@@ -6962,7 +6992,7 @@ BUILDINGS={
 					building={
 						type="building_financial_district"
 						country="c:RUS"
-						levels=3
+						levels=4
 						region="STATE_GALICH"
 					}
 				}
@@ -6988,7 +7018,7 @@ BUILDINGS={
 					building={
 						type="building_financial_district"
 						country="c:RUS"
-						levels=3
+						levels=5
 						region="STATE_GALICH"
 					}
 				}
@@ -7001,7 +7031,7 @@ BUILDINGS={
 					building={
 						type="building_financial_district"
 						country="c:RUS"
-						levels=6
+						levels=7
 						region="STATE_GALICH"
 					}
 				}
@@ -7127,7 +7157,7 @@ BUILDINGS={
 					building={
 						type="building_financial_district"
 						country="c:RUS"
-						levels=21
+						levels=25
 						region="STATE_GALICH"
 					}
 				}
@@ -7140,7 +7170,7 @@ BUILDINGS={
 					building={
 						type="building_financial_district"
 						country="c:RUS"
-						levels=1
+						levels=2
 						region="STATE_GALICH"
 					}
 				}
@@ -7226,7 +7256,7 @@ BUILDINGS={
 					building={
 						type="building_financial_district"
 						country="c:BYL"
-						levels=1
+						levels=3
 						region="STATE_MINSK"
 					}
 				}
@@ -7239,7 +7269,7 @@ BUILDINGS={
 					building={
 						type="building_financial_district"
 						country="c:BYL"
-						levels=1
+						levels=2
 						region="STATE_MINSK"
 					}
 				}
@@ -7265,7 +7295,7 @@ BUILDINGS={
 					building={
 						type="building_financial_district"
 						country="c:BYL"
-						levels=1
+						levels=2
 						region="STATE_MINSK"
 					}
 				}
@@ -7570,7 +7600,7 @@ BUILDINGS={
 					building={
 						type="building_financial_district"
 						country="c:RUS"
-						levels=1
+						levels=3
 						region="STATE_ROSTOV"
 					}
 				}
@@ -7583,7 +7613,7 @@ BUILDINGS={
 					building={
 						type="building_financial_district"
 						country="c:RUS"
-						levels=1
+						levels=3
 						region="STATE_ROSTOV"
 					}
 				}
@@ -7596,7 +7626,7 @@ BUILDINGS={
 					building={
 						type="building_financial_district"
 						country="c:RUS"
-						levels=1
+						levels=4
 						region="STATE_ROSTOV"
 					}
 				}
@@ -7609,7 +7639,7 @@ BUILDINGS={
 					building={
 						type="building_financial_district"
 						country="c:RUS"
-						levels=1
+						levels=3
 						region="STATE_ROSTOV"
 					}
 				}
@@ -7622,7 +7652,7 @@ BUILDINGS={
 					building={
 						type="building_financial_district"
 						country="c:RUS"
-						levels=41
+						levels=50
 						region="STATE_ROSTOV"
 					}
 				}
@@ -7635,7 +7665,7 @@ BUILDINGS={
 					building={
 						type="building_financial_district"
 						country="c:RUS"
-						levels=1
+						levels=7
 						region="STATE_ROSTOV"
 					}
 				}
@@ -7665,7 +7695,7 @@ BUILDINGS={
 					building={
 						type="building_financial_district"
 						country="c:RUS"
-						levels=5
+						levels=38
 						region="STATE_ROSTOV"
 					}
 				}
@@ -7678,7 +7708,7 @@ BUILDINGS={
 					building={
 						type="building_financial_district"
 						country="c:RUS"
-						levels=5
+						levels=7
 						region="STATE_ROSTOV"
 					}
 				}
@@ -7776,7 +7806,7 @@ BUILDINGS={
 					building={
 						type="building_financial_district"
 						country="c:UKR"
-						levels=3
+						levels=6
 						region="STATE_ROSTOV"
 					}
 				}
@@ -7789,7 +7819,7 @@ BUILDINGS={
 					building={
 						type="building_financial_district"
 						country="c:UKR"
-						levels=2
+						levels=4
 						region="STATE_ROSTOV"
 					}
 				}
@@ -7802,7 +7832,7 @@ BUILDINGS={
 					building={
 						type="building_financial_district"
 						country="c:UKR"
-						levels=3
+						levels=8
 						region="STATE_ROSTOV"
 					}
 				}
@@ -7880,7 +7910,7 @@ BUILDINGS={
 					building={
 						type="building_financial_district"
 						country="c:UKR"
-						levels=5
+						levels=6
 						region="STATE_ROSTOV"
 					}
 				}
@@ -8529,7 +8559,7 @@ BUILDINGS={
 					building={
 						type="building_financial_district"
 						country="c:RUS"
-						levels=3
+						levels=4
 						region="STATE_KAZAN"
 					}
 				}
@@ -8567,12 +8597,12 @@ BUILDINGS={
 				add_ownership={
 					country={
 						country="c:RUS"
-						levels=1
+						levels=2
 					}
 					building={
 						type="building_financial_district"
 						country="c:RUS"
-						levels=1
+						levels=2
 						region="STATE_MOSCOW"
 					}
 				}
@@ -8585,7 +8615,7 @@ BUILDINGS={
 					building={
 						type="building_financial_district"
 						country="c:RUS"
-						levels=2
+						levels=3
 						region="STATE_KAZAN"
 					}
 				}
@@ -8637,7 +8667,7 @@ BUILDINGS={
 					building={
 						type="building_financial_district"
 						country="c:RUS"
-						levels=1
+						levels=2
 						region="STATE_KAZAN"
 					}
 				}
@@ -8650,7 +8680,7 @@ BUILDINGS={
 					building={
 						type="building_financial_district"
 						country="c:RUS"
-						levels=1
+						levels=2
 						region="STATE_KAZAN"
 					}
 				}
@@ -8663,7 +8693,7 @@ BUILDINGS={
 					building={
 						type="building_financial_district"
 						country="c:RUS"
-						levels=3
+						levels=13
 						region="STATE_KAZAN"
 					}
 				}
@@ -8676,7 +8706,7 @@ BUILDINGS={
 					building={
 						type="building_financial_district"
 						country="c:RUS"
-						levels=11
+						levels=18
 						region="STATE_KAZAN"
 					}
 				}
@@ -8842,7 +8872,7 @@ BUILDINGS={
 					building={
 						type="building_financial_district"
 						country="c:RUS"
-						levels=21
+						levels=34
 						region="STATE_KAZAN"
 					}
 				}
@@ -8927,7 +8957,7 @@ BUILDINGS={
 					building={
 						type="building_financial_district"
 						country="c:KZK"
-						levels=3
+						levels=4
 						region="STATE_URALSK"
 					}
 				}
@@ -9247,7 +9277,7 @@ BUILDINGS={
 					building={
 						type="building_financial_district"
 						country="c:UZB"
-						levels=9
+						levels=17
 						region="STATE_KHIVA"
 					}
 				}
@@ -9260,7 +9290,7 @@ BUILDINGS={
 					building={
 						type="building_financial_district"
 						country="c:UZB"
-						levels=6
+						levels=12
 						region="STATE_KHIVA"
 					}
 				}
@@ -9273,7 +9303,7 @@ BUILDINGS={
 					building={
 						type="building_financial_district"
 						country="c:UZB"
-						levels=4
+						levels=5
 						region="STATE_KHIVA"
 					}
 				}
@@ -9342,7 +9372,7 @@ BUILDINGS={
 					building={
 						type="building_financial_district"
 						country="c:UZB"
-						levels=9
+						levels=15
 						region="STATE_KHIVA"
 					}
 				}
@@ -9381,7 +9411,7 @@ BUILDINGS={
 					building={
 						type="building_financial_district"
 						country="c:UZB"
-						levels=1
+						levels=2
 						region="STATE_KHIVA"
 					}
 				}
@@ -9394,7 +9424,7 @@ BUILDINGS={
 					building={
 						type="building_financial_district"
 						country="c:UZB"
-						levels=1
+						levels=4
 						region="STATE_KHIVA"
 					}
 				}
@@ -9470,7 +9500,7 @@ BUILDINGS={
 					building={
 						type="building_financial_district"
 						country="c:KZK"
-						levels=1
+						levels=14
 						region="STATE_SEMIRECHE"
 					}
 				}
@@ -9482,12 +9512,12 @@ BUILDINGS={
 				add_ownership={
 					country={
 						country="c:KZK"
-						levels=1
+						levels=6
 					}
 					building={
 						type="building_financial_district"
 						country="c:KZK"
-						levels=1
+						levels=6
 						region="STATE_SEMIRECHE"
 					}
 				}
@@ -9552,7 +9582,7 @@ BUILDINGS={
 					building={
 						type="building_financial_district"
 						country="c:KZK"
-						levels=8
+						levels=9
 						region="STATE_SEMIRECHE"
 					}
 				}
@@ -9595,7 +9625,7 @@ BUILDINGS={
 					building={
 						type="building_financial_district"
 						country="c:KZK"
-						levels=3
+						levels=4
 						region="STATE_SEMIRECHE"
 					}
 				}
@@ -9679,13 +9709,13 @@ BUILDINGS={
 					building={
 						type="building_financial_district"
 						country="c:KZK"
-						levels=2
+						levels=5
 						region="STATE_UZBEKIA"
 					}
 					building={
 						type="building_financial_district"
 						country="c:KZK"
-						levels=1
+						levels=2
 						region="STATE_SEMIRECHE"
 					}
 				}
@@ -9761,7 +9791,7 @@ BUILDINGS={
 					building={
 						type="building_financial_district"
 						country="c:KZK"
-						levels=1
+						levels=15
 						region="STATE_JETISY"
 					}
 				}
@@ -9774,7 +9804,7 @@ BUILDINGS={
 					building={
 						type="building_financial_district"
 						country="c:KZK"
-						levels=1
+						levels=13
 						region="STATE_JETISY"
 					}
 				}
@@ -9787,7 +9817,7 @@ BUILDINGS={
 					building={
 						type="building_financial_district"
 						country="c:KZK"
-						levels=1
+						levels=3
 						region="STATE_JETISY"
 					}
 				}
@@ -9800,7 +9830,7 @@ BUILDINGS={
 					building={
 						type="building_financial_district"
 						country="c:KZK"
-						levels=1
+						levels=8
 						region="STATE_JETISY"
 					}
 				}
@@ -9865,7 +9895,7 @@ BUILDINGS={
 					building={
 						type="building_financial_district"
 						country="c:KZK"
-						levels=8
+						levels=9
 						region="STATE_JETISY"
 					}
 				}
@@ -9904,7 +9934,7 @@ BUILDINGS={
 					building={
 						type="building_financial_district"
 						country="c:KZK"
-						levels=3
+						levels=4
 						region="STATE_JETISY"
 					}
 				}
@@ -10019,7 +10049,7 @@ BUILDINGS={
 					building={
 						type="building_financial_district"
 						country="c:KZK"
-						levels=1
+						levels=7
 						region="STATE_AKMOLINSK"
 					}
 				}
@@ -10032,7 +10062,7 @@ BUILDINGS={
 					building={
 						type="building_financial_district"
 						country="c:KZK"
-						levels=1
+						levels=5
 						region="STATE_AKMOLINSK"
 					}
 				}
@@ -10045,7 +10075,7 @@ BUILDINGS={
 					building={
 						type="building_financial_district"
 						country="c:KZK"
-						levels=1
+						levels=2
 						region="STATE_AKMOLINSK"
 					}
 				}
@@ -10058,7 +10088,7 @@ BUILDINGS={
 					building={
 						type="building_financial_district"
 						country="c:KZK"
-						levels=1
+						levels=11
 						region="STATE_AKMOLINSK"
 					}
 				}
@@ -10070,7 +10100,7 @@ BUILDINGS={
 				add_ownership={
 					country={
 						country="c:KZK"
-						levels=1
+						levels=2
 					}
 					building={
 						type="building_financial_district"
@@ -10140,7 +10170,7 @@ BUILDINGS={
 					building={
 						type="building_financial_district"
 						country="c:KZK"
-						levels=8
+						levels=9
 						region="STATE_AKMOLINSK"
 					}
 				}
@@ -10182,7 +10212,7 @@ BUILDINGS={
 				add_ownership={
 					country={
 						country="c:KZK"
-						levels=3
+						levels=4
 					}
 					building={
 						type="building_financial_district"
@@ -10371,7 +10401,11 @@ BUILDINGS={
 				reserves=1
 				activate_production_methods={ "pm_early_trains" "pm_no_passenger_trains" }
 			}
-		}
+		
+			create_building={
+				building="building_food_industry"
+				level=1
+			}}
 		region_state:CCH={
 			create_building={
 				building="building_trade_center"
@@ -10414,7 +10448,7 @@ BUILDINGS={
 					building={
 						type="building_financial_district"
 						country="c:CCH"
-						levels=2
+						levels=3
 						region="STATE_NORTH_CAUCASUS"
 					}
 				}
@@ -10427,7 +10461,7 @@ BUILDINGS={
 					building={
 						type="building_financial_district"
 						country="c:CCH"
-						levels=2
+						levels=3
 						region="STATE_NORTH_CAUCASUS"
 					}
 				}
@@ -10956,7 +10990,7 @@ BUILDINGS={
 					building={
 						type="building_financial_district"
 						country="c:RUS"
-						levels=6
+						levels=17
 						region="STATE_TAMBOV"
 					}
 				}
@@ -11112,7 +11146,7 @@ BUILDINGS={
 					building={
 						type="building_financial_district"
 						country="c:RUS"
-						levels=41
+						levels=52
 						region="STATE_TAMBOV"
 					}
 				}
@@ -11125,7 +11159,7 @@ BUILDINGS={
 					building={
 						type="building_financial_district"
 						country="c:RUS"
-						levels=1
+						levels=19
 						region="STATE_MOSCOW"
 					}
 				}
@@ -11196,7 +11230,7 @@ BUILDINGS={
 					building={
 						type="building_financial_district"
 						country="c:RUS"
-						levels=7
+						levels=8
 						region="STATE_RYAZAN"
 					}
 				}
@@ -11225,12 +11259,12 @@ BUILDINGS={
 				add_ownership={
 					country={
 						country="c:RUS"
-						levels=1
+						levels=2
 					}
 					building={
 						type="building_financial_district"
 						country="c:RUS"
-						levels=1
+						levels=2
 						region="STATE_INGRIA"
 					}
 				}
@@ -11243,7 +11277,7 @@ BUILDINGS={
 					building={
 						type="building_financial_district"
 						country="c:RUS"
-						levels=2
+						levels=3
 						region="STATE_RYAZAN"
 					}
 				}
@@ -11282,7 +11316,7 @@ BUILDINGS={
 					building={
 						type="building_financial_district"
 						country="c:RUS"
-						levels=3
+						levels=4
 						region="STATE_RYAZAN"
 					}
 				}
@@ -11295,7 +11329,7 @@ BUILDINGS={
 					building={
 						type="building_financial_district"
 						country="c:RUS"
-						levels=3
+						levels=4
 						region="STATE_RYAZAN"
 					}
 				}
@@ -11683,7 +11717,7 @@ BUILDINGS={
 					building={
 						type="building_manor_house"
 						country="c:BYL"
-						levels=2
+						levels=4
 						region="STATE_VITEBSK"
 					}
 					building={
@@ -11869,7 +11903,7 @@ BUILDINGS={
 					building={
 						type="building_financial_district"
 						country="c:RUS"
-						levels=2
+						levels=3
 						region="STATE_PSKOV"
 					}
 				}
@@ -11958,12 +11992,12 @@ BUILDINGS={
 					building={
 						type="building_financial_district"
 						country="c:RUS"
-						levels=1
+						levels=2
 						region="STATE_KUBAN"
 					}
 					country={
 						country="c:RUS"
-						levels=5
+						levels=6
 					}
 				}
 				reserves=1
@@ -11975,7 +12009,7 @@ BUILDINGS={
 					building={
 						type="building_financial_district"
 						country="c:RUS"
-						levels=22
+						levels=24
 						region="STATE_PSKOV"
 					}
 				}
@@ -12075,7 +12109,7 @@ BUILDINGS={
 					building={
 						type="building_financial_district"
 						country="c:RUS"
-						levels=2
+						levels=3
 						region="STATE_YAROSLAVL"
 					}
 				}
@@ -12114,7 +12148,7 @@ BUILDINGS={
 					building={
 						type="building_financial_district"
 						country="c:RUS"
-						levels=1
+						levels=3
 						region="STATE_YAROSLAVL"
 					}
 				}
@@ -12127,7 +12161,7 @@ BUILDINGS={
 					building={
 						type="building_financial_district"
 						country="c:RUS"
-						levels=4
+						levels=5
 						region="STATE_YAROSLAVL"
 					}
 				}
@@ -12179,7 +12213,7 @@ BUILDINGS={
 					building={
 						type="building_financial_district"
 						country="c:RUS"
-						levels=1
+						levels=3
 						region="STATE_YAROSLAVL"
 					}
 				}
@@ -12192,7 +12226,7 @@ BUILDINGS={
 					building={
 						type="building_financial_district"
 						country="c:RUS"
-						levels=1
+						levels=2
 						region="STATE_YAROSLAVL"
 					}
 				}
@@ -12205,7 +12239,7 @@ BUILDINGS={
 					building={
 						type="building_financial_district"
 						country="c:RUS"
-						levels=6
+						levels=12
 						region="STATE_YAROSLAVL"
 					}
 				}
@@ -12218,7 +12252,7 @@ BUILDINGS={
 					building={
 						type="building_financial_district"
 						country="c:RUS"
-						levels=1
+						levels=5
 						region="STATE_YAROSLAVL"
 					}
 				}
@@ -12357,12 +12391,12 @@ BUILDINGS={
 					building={
 						type="building_financial_district"
 						country="c:RUS"
-						levels=1
+						levels=12
 						region="STATE_YAROSLAVL"
 					}
 					country={
 						country="c:RUS"
-						levels=10
+						levels=21
 					}
 				}
 				reserves=1
@@ -12391,7 +12425,7 @@ BUILDINGS={
 					building={
 						type="building_financial_district"
 						country="c:RUS"
-						levels=130
+						levels=140
 						region="STATE_YAROSLAVL"
 					}
 				}
@@ -12484,7 +12518,7 @@ BUILDINGS={
 					building={
 						type="building_financial_district"
 						country="c:RUS"
-						levels=2
+						levels=4
 						region="STATE_NIZHNY_NOVGOROD"
 					}
 				}
@@ -12497,7 +12531,7 @@ BUILDINGS={
 					building={
 						type="building_financial_district"
 						country="c:RUS"
-						levels=1
+						levels=2
 						region="STATE_NIZHNY_NOVGOROD"
 					}
 				}
@@ -12527,7 +12561,7 @@ BUILDINGS={
 					building={
 						type="building_financial_district"
 						country="c:RUS"
-						levels=1
+						levels=5
 						region="STATE_NIZHNY_NOVGOROD"
 					}
 				}
@@ -12540,7 +12574,7 @@ BUILDINGS={
 					building={
 						type="building_financial_district"
 						country="c:RUS"
-						levels=2
+						levels=4
 						region="STATE_NIZHNY_NOVGOROD"
 					}
 				}
@@ -12592,7 +12626,7 @@ BUILDINGS={
 					building={
 						type="building_financial_district"
 						country="c:RUS"
-						levels=3
+						levels=6
 						region="STATE_NIZHNY_NOVGOROD"
 					}
 				}
@@ -12605,7 +12639,7 @@ BUILDINGS={
 					building={
 						type="building_financial_district"
 						country="c:RUS"
-						levels=3
+						levels=4
 						region="STATE_NIZHNY_NOVGOROD"
 					}
 				}
@@ -12631,7 +12665,7 @@ BUILDINGS={
 					building={
 						type="building_financial_district"
 						country="c:RUS"
-						levels=1
+						levels=7
 						region="STATE_NIZHNY_NOVGOROD"
 					}
 				}
@@ -12744,7 +12778,7 @@ BUILDINGS={
 					building={
 						type="building_financial_district"
 						country="c:RUS"
-						levels=1
+						levels=7
 						region="STATE_NIZHNY_NOVGOROD"
 					}
 				}
@@ -13104,7 +13138,7 @@ BUILDINGS={
 					building={
 						type="building_financial_district"
 						country="c:RUS"
-						levels=1
+						levels=3
 						region="STATE_CHERNIHIV"
 					}
 				}
@@ -13117,7 +13151,7 @@ BUILDINGS={
 					building={
 						type="building_financial_district"
 						country="c:RUS"
-						levels=2
+						levels=3
 						region="STATE_CHERNIHIV"
 					}
 				}
@@ -13169,7 +13203,7 @@ BUILDINGS={
 					building={
 						type="building_financial_district"
 						country="c:RUS"
-						levels=3
+						levels=4
 						region="STATE_CHERNIHIV"
 					}
 				}
@@ -13195,7 +13229,7 @@ BUILDINGS={
 					building={
 						type="building_financial_district"
 						country="c:RUS"
-						levels=9
+						levels=25
 						region="STATE_CHERNIHIV"
 					}
 				}
@@ -13208,7 +13242,7 @@ BUILDINGS={
 					building={
 						type="building_financial_district"
 						country="c:RUS"
-						levels=5
+						levels=18
 						region="STATE_CHERNIHIV"
 					}
 				}
