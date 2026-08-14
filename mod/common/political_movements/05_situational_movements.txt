@@ -82,6 +82,7 @@ movement_anti_monarchy = {
 		movement_support_bureaucrats
 		movement_support_engineers
 		movement_support_clerks
+movement_support_professionals
 		movement_support_soldiers
 	}
 	
@@ -186,6 +187,15 @@ movement_anti_monarchy = {
 				add = {
 					value = 9
 					desc = "POP_CLERKS"
+				}
+			}
+			if = {
+				limit = {
+					is_pop_type = professionals
+				}
+				add = {
+					value = 9
+					desc = "POP_PROFESSIONALS"
 				}
 			}
 			else_if = {
@@ -448,6 +458,7 @@ movement_collaborationist = {
 		movement_support_academics
 		movement_support_officers
 		movement_support_clerks
+movement_support_professionals
 	}
 	
 	pop_support_weight = {
@@ -709,6 +720,7 @@ movement_corporatist = {
 		movement_support_officers
 		movement_support_farmers
 		movement_support_clerks
+movement_support_professionals
 		movement_support_soldiers
 	}
 	
@@ -815,6 +827,15 @@ movement_corporatist = {
 				add = {
 					value = 9
 					desc = "POP_CLERKS"
+				}
+			}
+			if = {
+				limit = {
+					is_pop_type = professionals
+				}
+				add = {
+					value = 9
+					desc = "POP_PROFESSIONALS"
 				}
 			}
 			else_if = {

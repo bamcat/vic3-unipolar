@@ -18,7 +18,7 @@ REPLACE_OR_CREATE:pm_simple_organization = {
 	building_modifiers = {	
 		level_scaled = {
 			building_employment_clerks_add = 4000
-			goods_input_paper_add = 11
+			goods_input_paper_add = 22
 			goods_input_professional_services_add = 1.5
 			goods_input_telecommunications_add = 0.8
 		}
@@ -46,8 +46,8 @@ REPLACE_OR_CREATE:pm_horizontal_drawer_cabinets = {
 
 	building_modifiers = {
 		workforce_scaled = {
-			goods_input_paper_add = 25
-			goods_input_telephones_add = 6.5
+			goods_input_paper_add = 50
+			goods_input_telephones_add = 5
 			goods_input_professional_services_add = 2.75
 			goods_input_telecommunications_add = 3.25
 		}			
@@ -78,8 +78,8 @@ REPLACE_OR_CREATE:pm_vertical_filing_cabinets = {
 
 	building_modifiers = {
 		workforce_scaled = {
-			goods_input_paper_add = 36
-			goods_input_telephones_add = 10
+			goods_input_paper_add = 73
+			goods_input_telephones_add = 7
 			goods_input_professional_services_add = 4
 			goods_input_telecommunications_add = 4.5
 		}	
@@ -110,8 +110,8 @@ REPLACE_OR_CREATE:pm_switch_boards = {
 	
 	building_modifiers = {
 		workforce_scaled = {
-			goods_input_paper_add = 44
-			goods_input_telephones_add = 13
+			goods_input_paper_add = 89
+			goods_input_telephones_add = 9
 			goods_input_professional_services_add = 5.5
 			goods_input_telecommunications_add = 6.5
 		}
@@ -193,7 +193,7 @@ REPLACE_OR_CREATE:pm_scholastic_education = {
 	
 	building_modifiers = {
 		workforce_scaled = {
-			goods_input_paper_add = 2.75
+			goods_input_paper_add = 6
 		}	
 	
 		level_scaled = {
@@ -224,7 +224,7 @@ REPLACE_OR_CREATE:pm_philosophy_department = {
 	
 	building_modifiers = {
 		workforce_scaled = {
-			goods_input_paper_add = 5.5
+			goods_input_paper_add = 11
 		}
 		
 		level_scaled = {
@@ -255,7 +255,7 @@ REPLACE_OR_CREATE:pm_analytical_philosophy_department = {
 	
 	building_modifiers = {
 		workforce_scaled = { 
-			goods_input_paper_add = 8
+			goods_input_paper_add = 16
 		}
 		
 		level_scaled = {
@@ -312,7 +312,7 @@ REPLACE_OR_CREATE:pm_skyscraper_bureaucratic_nexus = {
 	
 	building_modifiers = {
 		workforce_scaled = {
-			goods_input_paper_add = 14
+			goods_input_paper_add = 28
 		}
 
 		level_scaled = {
@@ -334,7 +334,7 @@ REPLACE_OR_CREATE:pm_skyscraper_trade_nexus = {
 	
 	building_modifiers = {
 		workforce_scaled = {
-			goods_input_paper_add = 14
+			goods_input_paper_add = 28
 		}
 
 		level_scaled = {

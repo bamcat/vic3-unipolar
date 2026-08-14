@@ -80,6 +80,7 @@
 		movement_support_academics
 		movement_support_bureaucrats
 		movement_support_clerks
+movement_support_professionals
 		movement_support_capitalists
 		movement_support_nationalism_tech
 		movement_support_pan_nationalism_tech
@@ -158,6 +159,15 @@
 				add = {
 					value = 15
 					desc = "POP_CLERKS"
+				}
+			}
+			else_if = {
+				limit = {
+					is_pop_type = professionals
+				}
+				add = {
+					value = 15
+					desc = "POP_PROFESSIONALS"
 				}
 			}
 			else_if = {
@@ -482,6 +492,7 @@ movement_german_national = {
 		movement_support_germanic_heritage
 		movement_support_academics
 		movement_support_clerks
+movement_support_professionals
 		movement_support_shopkeepers
 		movement_support_officers
 		movement_support_soldiers
@@ -596,6 +607,15 @@ movement_german_national = {
 				add = {
 					value = 20
 					desc = "POP_CLERKS"
+				}
+			}
+			if = {
+				limit = {
+					is_pop_type = professionals
+				}
+				add = {
+					value = 20
+					desc = "POP_PROFESSIONALS"
 				}
 			}
 			else_if = {
@@ -956,6 +976,7 @@ movement_italian_national = {
 		movement_support_italic_heritage
 		movement_support_academics
 		movement_support_clerks
+movement_support_professionals
 		movement_support_shopkeepers
 		movement_support_officers
 		movement_support_soldiers
@@ -1070,6 +1091,15 @@ movement_italian_national = {
 				add = {
 					value = 20
 					desc = "POP_CLERKS"
+				}
+			}
+			if = {
+				limit = {
+					is_pop_type = professionals
+				}
+				add = {
+					value = 20
+					desc = "POP_PROFESSIONALS"
 				}
 			}
 			else_if = {
@@ -1414,6 +1444,7 @@ movement_yugoslav_national = {
 		movement_support_south_slavic_heritage
 		movement_support_academics
 		movement_support_clerks
+movement_support_professionals
 		movement_support_shopkeepers
 		movement_support_officers
 		movement_support_soldiers
@@ -1528,6 +1559,15 @@ movement_yugoslav_national = {
 				add = {
 					value = 20
 					desc = "POP_CLERKS"
+				}
+			}
+			if = {
+				limit = {
+					is_pop_type = professionals
+				}
+				add = {
+					value = 20
+					desc = "POP_PROFESSIONALS"
 				}
 			}
 			else_if = {

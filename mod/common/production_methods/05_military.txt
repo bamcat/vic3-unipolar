@@ -1,4 +1,4 @@
-﻿REPLACE_OR_CREATE:pm_no_organization = {
+REPLACE_OR_CREATE:pm_no_organization = {
 	texture = "gfx/interface/icons/production_method_icons/no_specialists.dds"
 	is_default = yes
 	building_modifiers = {
@@ -333,8 +333,8 @@ pm_naval_fortification_basic = {
 
 	building_modifiers = {
 		workforce_scaled = {
-			goods_input_small_arms_add = 5
-			goods_input_iron_add = 5
+			goods_input_small_arms_add = 15
+			goods_input_iron_add = 3.25
 		}
 
 		level_scaled = {
@@ -365,8 +365,8 @@ pm_naval_fortification_reinforced = {
 
 	building_modifiers = {
 		workforce_scaled = {
-			goods_input_small_arms_add = 5
-			goods_input_artillery_add = 3
+			goods_input_small_arms_add = 15
+			goods_input_artillery_add = 9
 			goods_input_steel_add = 5
 		}
 		level_scaled = {
@@ -397,10 +397,10 @@ pm_naval_fortification_advanced = {
 
 	building_modifiers = {
 		workforce_scaled = {
-			goods_input_small_arms_add = 5
-			goods_input_artillery_add = 5
-			goods_input_ammunition_add = 5
-			goods_input_steel_add = 10
+			goods_input_small_arms_add = 15
+			goods_input_artillery_add = 15
+			goods_input_ammunition_add = 8
+			goods_input_steel_add = 9
 		}
 		level_scaled = {
 			building_employment_soldiers_add = 800

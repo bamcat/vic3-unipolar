@@ -44,13 +44,16 @@
 		if = {
 			limit = {
 				is_peasant_under_serfdom = no 
-				literacy_rate > 0.20
+				literacy_rate > 0.04
 			}
-			# baseline: ( literacy - 0.20 ) * 40 + ( wealth / 20 ), engineers require strong education
+			# baseline: ( literacy - 0.04 ) * 160 + ( wealth / 20 ).
+			# Rescaled to the mod's college-educated literacy: the old gate of
+			# 0.20 meant a developed nation at exactly 20% produced NO engineers,
+			# and manufacturing is 33% engineers.
 			add = {
 				value = literacy_rate
-				subtract = 0.20
-				multiply = 40
+				subtract = 0.04
+				multiply = 160
 				desc = "QUALIFICATIONS_LITERACY_FACTOR"
 			}
 			add = {

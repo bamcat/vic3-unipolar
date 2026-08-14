@@ -251,6 +251,8 @@ REPLACE_OR_CREATE:logistics = {
 	category = military
 	
 	modifier = {
+		building_group_bg_power_throughput_add = 0.15
+		building_group_bg_service_industry_throughput_add = 0.15
 		state_conscription_rate_mult = 0.2
 	}
 	
@@ -322,6 +324,10 @@ REPLACE_OR_CREATE:percussion_cap = {
 	ai_weight = {
 		value = 2 # Important tech in general
 	}
+	
+	modifier = {
+		building_group_bg_manufacturing_throughput_add = 0.0263
+	}
 }
 
 REPLACE_OR_CREATE:rifling = {
@@ -358,6 +364,10 @@ REPLACE_OR_CREATE:general_staff = {
 	
 	ai_weight = {
 		value = 2 # Important tech in general
+	}
+	
+	modifier = {
+		building_group_bg_manufacturing_throughput_add = 0.0263
 	}
 }
 
@@ -478,6 +488,7 @@ REPLACE_OR_CREATE:electric_telegraph = {
 	category = military
 	
 	modifier = {
+		building_group_bg_manufacturing_throughput_add = 0.0263
 		country_war_exhaustion_casualties_mult = -0.25
 	}
 	
@@ -531,6 +542,10 @@ REPLACE_OR_CREATE:repeaters = {
 	ai_weight = {
 		value = 1.5 # Important tech in general
 	}
+	
+	modifier = {
+		building_group_bg_manufacturing_throughput_add = 0.0263
+	}
 }
 
 REPLACE_OR_CREATE:breech_loading_artillery = {
@@ -564,6 +579,7 @@ REPLACE_OR_CREATE:handcranked_machine_gun = {
 	category = military
 	
 	modifier = {
+		building_group_bg_manufacturing_throughput_add = 0.0263
 		unit_army_defense_add = 5
 		unit_kill_rate_add = 0.05
 	}
@@ -694,6 +710,7 @@ REPLACE_OR_CREATE:gantry_cranes = {
 	category = military
 	
 	modifier = {
+		building_group_bg_manufacturing_throughput_add = 0.0263
 		state_building_port_max_level_add = 4
 	}
 	
@@ -780,6 +797,7 @@ REPLACE_OR_CREATE:defense_in_depth = {
 	category = military
 	
 	modifier = {
+		building_group_bg_manufacturing_throughput_add = 0.0263
 		# defensive bonus, either to the army or ideally to fortifications
 		unit_army_defense_mult = 0.1
 	}
@@ -1061,6 +1079,7 @@ REPLACE_OR_CREATE:military_aviation = {
 	category = military
 	
 	modifier = {
+		building_group_bg_manufacturing_throughput_add = 0.0263
 		# increased oil consumption
 		# increased recon/scouting/go fast
 	}

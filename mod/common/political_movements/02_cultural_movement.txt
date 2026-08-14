@@ -86,6 +86,7 @@ movement_cultural_majority = {
 		movement_support_officers
 		movement_support_farmers
 		movement_support_clerks
+movement_support_professionals
 		movement_support_soldiers
 		movement_support_peasants
 		movement_support_colonial_settlers
@@ -189,6 +190,15 @@ movement_cultural_majority = {
 				add = {
 					value = 25
 					desc = "POP_CLERKS"
+				}
+			}
+			if = {
+				limit = {
+					is_pop_type = professionals
+				}
+				add = {
+					value = 25
+					desc = "POP_PROFESSIONALS"
 				}
 			}
 			else_if = {
@@ -657,6 +667,7 @@ movement_cultural_minority = {
 		movement_support_academics
 		movement_support_clergymen
 		movement_support_clerks
+movement_support_professionals
 		movement_support_soldiers
 		movement_support_nationalism_tech
 		movement_support_pan_nationalism_tech
@@ -830,6 +841,15 @@ movement_cultural_minority = {
 				add = {
 					value = 20
 					desc = "POP_CLERKS"
+				}
+			}
+			if = {
+				limit = {
+					is_pop_type = professionals
+				}
+				add = {
+					value = 20
+					desc = "POP_PROFESSIONALS"
 				}
 			}
 			else_if = {
@@ -1311,6 +1331,7 @@ movement_minority_rights = {
 		movement_support_academics
 		movement_support_clergymen
 		movement_support_clerks
+movement_support_professionals
 		movement_support_soldiers
 		movement_support_nationalism_tech
 		movement_support_pan_nationalism_tech
@@ -1406,6 +1427,15 @@ movement_minority_rights = {
 				add = {
 					value = 10
 					desc = "POP_CLERKS"
+				}
+			}
+			if = {
+				limit = {
+					is_pop_type = professionals
+				}
+				add = {
+					value = 10
+					desc = "POP_PROFESSIONALS"
 				}
 			}
 			else_if = {

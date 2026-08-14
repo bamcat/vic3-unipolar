@@ -1,7 +1,7 @@
 ﻿clerks = {
 	texture = "gfx/interface/icons/pops_icons/clerks.dds"
 	start_quality_of_life = 7
-	color = hsv{ 0.28 0.0 0.91 }
+	color = hsv{ 0.72 0.55 0.86 }
 	wage_weight = 14
 	paid_private_wage = yes
 	literacy_target = 0.20
@@ -41,12 +41,13 @@
 	
 	qualifications_growth_desc = "CLERKS_QUALIFICATIONS_DESC"
 	qualifications = {
-		# baseline: ( literacy - 0.10 ) * 60, clerks need real schooling
+		# baseline: ( literacy - 0.025 ) * 240, rescaled to the mod's college-educated
+		# literacy: 42.0 at a developed nation's 0.20, matching vanilla at 0.80
 		add = {
 			value = literacy_rate
-			subtract = 0.10
+			subtract = 0.025
 			min = 0
-			multiply = 60
+			multiply = 240
 			desc = "QUALIFICATIONS_LITERACY_FACTOR"
 		}
 		if = {

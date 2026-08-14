@@ -124,6 +124,15 @@
 			}
 			else_if = {
 				limit = {
+					is_pop_type = professionals
+				}
+				add = {
+					value = 6
+					desc = "POP_PROFESSIONALS"
+				}
+			}
+			else_if = {
+				limit = {
 					is_pop_type = peasants 
 				}
 				add = {
@@ -581,6 +590,7 @@ movement_social_democratic = {
 		movement_support_laborers
 		movement_support_machinists
 		movement_support_clerks
+movement_support_professionals
 		movement_support_peasants	
 	}
 	
@@ -656,6 +666,15 @@ movement_social_democratic = {
 				add = {
 					value = 10
 					desc = "POP_CLERKS"
+				}
+			}
+			else_if = {
+				limit = {
+					is_pop_type = professionals
+				}
+				add = {
+					value = 10
+					desc = "POP_PROFESSIONALS"
 				}
 			}
 			else_if = {
@@ -834,6 +853,7 @@ movement_centrist = {
 		movement_support_clergymen
 		movement_support_shopkeepers
 		movement_support_clerks
+movement_support_professionals
 		movement_support_peasants
 	}
 	
@@ -903,6 +923,15 @@ movement_centrist = {
 				add = {
 					value = 6
 					desc = "POP_CLERKS"
+				}
+			}
+			if = {
+				limit = {
+					is_pop_type = professionals
+				}
+				add = {
+					value = 6
+					desc = "POP_PROFESSIONALS"
 				}
 			}
 			else_if = {
@@ -1055,6 +1084,7 @@ movement_liberal_conservative = {
 		movement_support_bureaucrats
 		movement_support_engineers
 		movement_support_clerks
+movement_support_professionals
 		movement_support_soldiers
 	}
 	
@@ -1148,6 +1178,15 @@ movement_liberal_conservative = {
 				add = {
 					value = 9
 					desc = "POP_CLERKS"
+				}
+			}
+			if = {
+				limit = {
+					is_pop_type = professionals
+				}
+				add = {
+					value = 9
+					desc = "POP_PROFESSIONALS"
 				}
 			}
 			else_if = {
@@ -1273,6 +1312,7 @@ movement_conservative = {
 		movement_support_officers
 		movement_support_shopkeepers
 		movement_support_clerks
+movement_support_professionals
 	}
 
 	pop_support_weight = {	
@@ -1349,6 +1389,15 @@ movement_conservative = {
 			add = {
 				value = 15
 				desc = "POP_CLERKS"
+			}
+		}
+		else_if = {
+			limit = {
+				is_pop_type = professionals
+			}
+			add = {
+				value = 15
+				desc = "POP_PROFESSIONALS"
 			}
 		}
 
@@ -1553,6 +1602,7 @@ movement_traditionalist = {
 		movement_support_shopkeepers
 		movement_support_farmers
 		movement_support_clerks
+movement_support_professionals
 		movement_support_laborers
 		movement_support_soldiers
 		movement_support_peasants
@@ -1633,6 +1683,15 @@ movement_traditionalist = {
 				add = {
 					value = 10
 					desc = "POP_CLERKS"
+				}
+			}
+			if = {
+				limit = {
+					is_pop_type = professionals
+				}
+				add = {
+					value = 10
+					desc = "POP_PROFESSIONALS"
 				}
 			}
 			else_if = {
@@ -1787,6 +1846,7 @@ movement_liberal = {
 		movement_support_academics
 		movement_support_bureaucrats
 		movement_support_clerks
+movement_support_professionals
 		movement_support_peasants
 	}
 	
@@ -1880,6 +1940,15 @@ movement_liberal = {
 				add = {
 					value = 6
 					desc = "POP_CLERKS"
+				}
+			}
+			if = {
+				limit = {
+					is_pop_type = professionals
+				}
+				add = {
+					value = 6
+					desc = "POP_PROFESSIONALS"
 				}
 			}
 			else_if = {
@@ -2024,6 +2093,7 @@ movement_progressive = {
 		movement_support_bureaucrats
 		movement_support_engineers
 		movement_support_clerks
+movement_support_professionals
 		movement_support_soldiers
 		movement_support_je_positivist_movement
 	}	
@@ -2132,6 +2202,15 @@ movement_progressive = {
 				add = {
 					value = 6
 					desc = "POP_CLERKS"
+				}
+			}
+			if = {
+				limit = {
+					is_pop_type = professionals
+				}
+				add = {
+					value = 6
+					desc = "POP_PROFESSIONALS"
 				}
 			}
 			else_if = {
@@ -2547,6 +2626,7 @@ movement_fascist = {
 		movement_support_officers
 		movement_support_farmers
 		movement_support_clerks
+movement_support_professionals
 		movement_support_soldiers
 		movement_support_number_of_claims
 	}
@@ -2654,6 +2734,15 @@ movement_fascist = {
 				add = {
 					value = 9
 					desc = "POP_CLERKS"
+				}
+			}
+			if = {
+				limit = {
+					is_pop_type = professionals
+				}
+				add = {
+					value = 9
+					desc = "POP_PROFESSIONALS"
 				}
 			}
 			else_if = {
@@ -2854,6 +2943,7 @@ movement_jihadist = {
 		movement_support_officers
 		movement_support_farmers
 		movement_support_clerks
+movement_support_professionals
 		movement_support_soldiers
 		movement_support_number_of_claims
 	}
@@ -2961,6 +3051,15 @@ movement_jihadist = {
 				add = {
 					value = 9
 					desc = "POP_CLERKS"
+				}
+			}
+			if = {
+				limit = {
+					is_pop_type = professionals
+				}
+				add = {
+					value = 9
+					desc = "POP_PROFESSIONALS"
 				}
 			}
 			else_if = {

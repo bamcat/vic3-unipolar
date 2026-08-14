@@ -97,6 +97,13 @@ REPLACE_OR_CREATE:lathe = {
 			add = 1
 		}		
 	}
+	
+	modifier = {
+		building_group_bg_agriculture_throughput_add = 0.15
+		building_group_bg_extraction_throughput_add = 0.15
+		building_group_bg_plantations_throughput_add = 0.15
+		building_group_bg_ranching_throughput_add = 0.15
+	}
 }
 
 REPLACE_OR_CREATE:distillation = {
@@ -113,6 +120,11 @@ REPLACE_OR_CREATE:distillation = {
 	
 	ai_weight = {
 		value = 1
+	}
+	
+	modifier = {
+		building_group_bg_manufacturing_throughput_add = 0.15
+		building_group_bg_power_throughput_add = 0.15
 	}
 }
 
@@ -154,6 +166,11 @@ REPLACE_OR_CREATE:prospecting = {
 	ai_weight = {
 		value = 1
 	}
+	
+	modifier = {
+		building_group_bg_extraction_throughput_add = 0.15
+		building_group_bg_service_industry_throughput_add = 0.15
+	}
 }
 
 ### ERA 2
@@ -170,6 +187,11 @@ REPLACE_OR_CREATE:crystal_glass = {
 	
 	ai_weight = {
 		value = 1
+	}
+	
+	modifier = {
+		building_group_bg_manufacturing_throughput_add = 0.3
+		building_group_bg_power_throughput_add = 0.15
 	}
 }
 
@@ -198,6 +220,11 @@ REPLACE_OR_CREATE:intensive_agriculture = {
 			add = 2
 		}
 	}
+	
+	modifier = {
+		building_group_bg_agriculture_throughput_add = 0.05
+		building_group_bg_plantations_throughput_add = 0.05
+	}
 }
 
 REPLACE_OR_CREATE:fractional_distillation = {
@@ -214,6 +241,12 @@ REPLACE_OR_CREATE:fractional_distillation = {
 	ai_weight = {
 		value = 1
 	}
+	
+	modifier = {
+		building_group_bg_agriculture_throughput_add = 0.05
+		building_group_bg_plantations_throughput_add = 0.05
+		building_group_bg_ranching_throughput_add = 0.05
+	}
 }
 
 REPLACE_OR_CREATE:canneries = {
@@ -228,6 +261,12 @@ REPLACE_OR_CREATE:canneries = {
 	
 	ai_weight = {
 		value = 1
+	}
+	
+	modifier = {
+		building_group_bg_agriculture_throughput_add = 0.15
+		building_group_bg_plantations_throughput_add = 0.15
+		building_group_bg_ranching_throughput_add = 0.15
 	}
 }
 
@@ -244,6 +283,11 @@ REPLACE_OR_CREATE:watertube_boiler = {
 	
 	ai_weight = {
 		value = 1
+	}
+	
+	modifier = {
+		building_group_bg_extraction_throughput_add = 0.05
+		building_group_bg_manufacturing_throughput_add = 0.0263
 	}
 }
 
@@ -319,6 +363,11 @@ REPLACE_OR_CREATE:chemical_bleaching = {
 	ai_weight = {
 		value = 1
 	}
+	
+	modifier = {
+		building_group_bg_extraction_throughput_add = 0.15
+		building_group_bg_manufacturing_throughput_add = 0.15
+	}
 }
 
 REPLACE_OR_CREATE:nitroglycerin = {
@@ -331,6 +380,7 @@ REPLACE_OR_CREATE:nitroglycerin = {
 	category = production
 	
 	modifier = {
+		building_group_bg_extraction_throughput_add = 0.05
 		country_resource_discovery_chance_mult = 0.25
 	}
 	
@@ -365,6 +415,10 @@ REPLACE_OR_CREATE:bessemer_process = {
 			add = 1
 		}		
 	}
+	
+	modifier = {
+		building_group_bg_manufacturing_throughput_add = 0.0263
+	}
 }
 
 REPLACE_OR_CREATE:baking_powder = {
@@ -380,6 +434,10 @@ REPLACE_OR_CREATE:baking_powder = {
 	ai_weight = {
 		value = 1
 	}
+	
+	modifier = {
+		building_group_bg_manufacturing_throughput_add = 0.0263
+	}
 }
 
 REPLACE_OR_CREATE:mechanized_workshops = {
@@ -390,6 +448,8 @@ REPLACE_OR_CREATE:mechanized_workshops = {
 	category = production
 	
 	modifier = {
+		building_group_bg_manufacturing_throughput_add = 0.0263
+		building_group_bg_service_industry_throughput_add = 0.0417
 		building_economy_of_scale_level_cap_add = 10
 	}
 	
@@ -424,6 +484,12 @@ REPLACE_OR_CREATE:mechanical_tools = {
 	ai_weight = {
 		value = 1		
 	}
+	
+	modifier = {
+		building_group_bg_agriculture_throughput_add = 0.3
+		building_group_bg_plantations_throughput_add = 0.3
+		building_group_bg_ranching_throughput_add = 0.3
+	}
 }
 
 ### ERA 3
@@ -441,6 +507,10 @@ REPLACE_OR_CREATE:improved_fertilizer = {
 	
 	ai_weight = {
 		value = 1
+	}
+	
+	modifier = {
+		building_group_bg_manufacturing_throughput_add = 0.0263
 	}
 }
 
@@ -467,7 +537,11 @@ REPLACE_OR_CREATE:steam_donkey = {
 			}
 			add = 2
 		}	
-	}	
+	}
+	
+	modifier = {
+		building_group_bg_extraction_throughput_add = 0.05
+	}
 }
 
 REPLACE_OR_CREATE:dynamite = {
@@ -480,6 +554,8 @@ REPLACE_OR_CREATE:dynamite = {
 	category = production
 	
 	modifier = {
+		building_group_bg_extraction_throughput_add = 0.05
+		building_group_bg_manufacturing_throughput_add = 0.0263
 		country_resource_discovery_chance_mult = 0.25
 	}
 	
@@ -516,6 +592,11 @@ REPLACE_OR_CREATE:rubber_mastication = {
 			add = 3
 		}	
 	}
+	
+	modifier = {
+		building_group_bg_agriculture_throughput_add = 0.05
+		building_group_bg_extraction_throughput_add = 0.05
+	}
 }	
 
 REPLACE_OR_CREATE:rotary_valve_engine = {
@@ -530,6 +611,11 @@ REPLACE_OR_CREATE:rotary_valve_engine = {
 	
 	ai_weight = {
 		value = 1
+	}
+	
+	modifier = {
+		building_group_bg_agriculture_throughput_add = 0.05
+		building_group_bg_manufacturing_throughput_add = 0.0263
 	}
 }
 
@@ -575,6 +661,10 @@ REPLACE_OR_CREATE:threshing_machine = {
 			add = 1
 		}	
 	}
+	
+	modifier = {
+		building_group_bg_manufacturing_throughput_add = 0.0263
+	}
 }
 
 REPLACE_OR_CREATE:pumpjacks = {
@@ -602,6 +692,11 @@ REPLACE_OR_CREATE:pumpjacks = {
 			add = 2
 		}	
 	}
+	
+	modifier = {
+		building_group_bg_extraction_throughput_add = 0.05
+		building_group_bg_manufacturing_throughput_add = 0.0263
+	}
 }
 
 REPLACE_OR_CREATE:aniline = {
@@ -616,6 +711,11 @@ REPLACE_OR_CREATE:aniline = {
 	
 	ai_weight = {
 		value = 1
+	}
+	
+	modifier = {
+		building_group_bg_manufacturing_throughput_add = 0.0263
+		building_group_bg_service_industry_throughput_add = 0.0417
 	}
 }
 
@@ -632,6 +732,10 @@ REPLACE_OR_CREATE:open_hearth_process = {
 	ai_weight = {
 		value = 1
 	}
+	
+	modifier = {
+		building_group_bg_manufacturing_throughput_add = 0.0263
+	}
 }
 
 REPLACE_OR_CREATE:vulcanization = {
@@ -646,6 +750,11 @@ REPLACE_OR_CREATE:vulcanization = {
 	
 	ai_weight = {
 		value = 1
+	}
+	
+	modifier = {
+		building_group_bg_extraction_throughput_add = 0.05
+		building_group_bg_service_industry_throughput_add = 0.0417
 	}
 }
 
@@ -662,6 +771,10 @@ REPLACE_OR_CREATE:vacuum_canning = {
 	ai_weight = {
 		value = 1
 	}
+	
+	modifier = {
+		building_group_bg_manufacturing_throughput_add = 0.0263
+	}
 }
 
 REPLACE_OR_CREATE:shift_work = {
@@ -670,6 +783,8 @@ REPLACE_OR_CREATE:shift_work = {
 	category = production
 	
 	modifier = {
+		building_group_bg_manufacturing_throughput_add = 0.0263
+		building_group_bg_service_industry_throughput_add = 0.0417
 		building_economy_of_scale_level_cap_add = 20
 	}
 	
@@ -696,6 +811,10 @@ REPLACE_OR_CREATE:steel_railway_cars = {
 	
 	ai_weight = {
 		value = 1
+	}
+	
+	modifier = {
+		building_group_bg_manufacturing_throughput_add = 0.0263
 	}
 }
 
@@ -727,6 +846,11 @@ REPLACE_OR_CREATE:electrical_generation = {
 			}
 			add = 2
 		}	
+	}
+	
+	modifier = {
+		building_group_bg_manufacturing_throughput_add = 0.0263
+		building_group_bg_service_industry_throughput_add = 0.0417
 	}
 }
 
@@ -771,6 +895,11 @@ REPLACE_OR_CREATE:art_silk = {
 	ai_weight = {
 		value = 1
 	}
+	
+	modifier = {
+		building_group_bg_agriculture_throughput_add = 0.05
+		building_group_bg_service_industry_throughput_add = 0.0417
+	}
 }
 
 REPLACE_OR_CREATE:automatic_bottle_blowers = {
@@ -785,6 +914,10 @@ REPLACE_OR_CREATE:automatic_bottle_blowers = {
 	
 	ai_weight = {
 		value = 1
+	}
+	
+	modifier = {
+		building_group_bg_manufacturing_throughput_add = 0.0263
 	}
 }
 
@@ -803,6 +936,11 @@ REPLACE_OR_CREATE:conveyors = {
 	ai_weight = {
 		value = 1
 	}
+	
+	modifier = {
+		building_group_bg_manufacturing_throughput_add = 0.0263
+		building_group_bg_service_industry_throughput_add = 0.0417
+	}
 }
 
 REPLACE_OR_CREATE:pasteurization = {
@@ -817,6 +955,11 @@ REPLACE_OR_CREATE:pasteurization = {
 	
 	ai_weight = {
 		value = 1
+	}
+	
+	modifier = {
+		building_group_bg_manufacturing_throughput_add = 0.0263
+		building_group_bg_ranching_throughput_add = 0.05
 	}
 }
 
@@ -876,6 +1019,10 @@ REPLACE_OR_CREATE:combustion_engine = {
 			add = 1
 		}	
 	}
+	
+	modifier = {
+		building_group_bg_manufacturing_throughput_add = 0.0263
+	}
 }
 
 REPLACE_OR_CREATE:pneumatic_tools = {
@@ -914,6 +1061,11 @@ REPLACE_OR_CREATE:nitrogen_fixation = {
 	
 	ai_weight = {
 		value = 1
+	}
+	
+	modifier = {
+		building_group_bg_extraction_throughput_add = 0.05
+		building_group_bg_manufacturing_throughput_add = 0.0263
 	}
 }
 
@@ -987,6 +1139,11 @@ REPLACE_OR_CREATE:electrical_capacitors = {
 			add = 1
 		}	
 	}
+	
+	modifier = {
+		building_group_bg_extraction_throughput_add = 0.05
+		building_group_bg_manufacturing_throughput_add = 0.0263
+	}
 }
 
 REPLACE_OR_CREATE:radio = {
@@ -1020,6 +1177,7 @@ REPLACE_OR_CREATE:telephone = {
 	}
 
 	modifier = {
+		building_group_bg_manufacturing_throughput_add = 0.0263
 		country_max_declared_interests_add = 1
 	}
 	
@@ -1043,6 +1201,11 @@ REPLACE_OR_CREATE:dough_rollers = {
 	ai_weight = {
 		value = 1
 	}
+	
+	modifier = {
+		building_group_bg_agriculture_throughput_add = 0.05
+		building_group_bg_manufacturing_throughput_add = 0.0263
+	}
 }
 
 REPLACE_OR_CREATE:flash_freezing = {
@@ -1059,6 +1222,10 @@ REPLACE_OR_CREATE:flash_freezing = {
 	ai_weight = {
 		value = 1
 	}
+	
+	modifier = {
+		building_group_bg_manufacturing_throughput_add = 0.0263
+	}
 }
 
 REPLACE_OR_CREATE:oil_turbine = {
@@ -1073,6 +1240,10 @@ REPLACE_OR_CREATE:oil_turbine = {
 	
 	ai_weight = {
 		value = 1
+	}
+	
+	modifier = {
+		building_group_bg_manufacturing_throughput_add = 0.0263
 	}
 }
 
@@ -1091,6 +1262,10 @@ REPLACE_OR_CREATE:arc_welding = {
 	ai_weight = {
 		value = 1
 	}
+	
+	modifier = {
+		building_group_bg_manufacturing_throughput_add = 0.0263
+	}
 }
 
 REPLACE_OR_CREATE:compression_ignition = {
@@ -1106,5 +1281,9 @@ REPLACE_OR_CREATE:compression_ignition = {
 	
 	ai_weight = {
 		value = 1
+	}
+	
+	modifier = {
+		building_group_bg_extraction_throughput_add = 0.05
 	}
 }

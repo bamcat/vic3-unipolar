@@ -92,6 +92,7 @@
 		movement_support_clergymen
 		movement_support_bureaucrats
 		movement_support_clerks
+movement_support_professionals
 		movement_support_corporatism_tech
 		movement_support_je_communal_divides
 	}
@@ -176,6 +177,15 @@
 				add = {
 					value = 12
 					desc = "POP_CLERKS"
+				}
+			}
+			if = {
+				limit = {
+					is_pop_type = professionals
+				}
+				add = {
+					value = 12
+					desc = "POP_PROFESSIONALS"
 				}
 			}
 			if = {
@@ -459,6 +469,7 @@ movement_muslim_nationalist = {
 		movement_support_clergymen
 		movement_support_bureaucrats
 		movement_support_clerks
+movement_support_professionals
 		movement_support_corporatism_tech
 		movement_support_je_communal_divides
 	}
@@ -547,6 +558,15 @@ movement_muslim_nationalist = {
 				add = {
 					value = 20
 					desc = "POP_CLERKS"
+				}
+			}
+			if = {
+				limit = {
+					is_pop_type = professionals
+				}
+				add = {
+					value = 20
+					desc = "POP_PROFESSIONALS"
 				}
 			}
 			if = {

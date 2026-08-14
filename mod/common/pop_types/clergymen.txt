@@ -38,13 +38,13 @@
 	qualifications = {
 		if = {
 			limit = {
-				literacy_rate > 0.2
+				literacy_rate > 0.05
 			}
 			# baseline: ( literacy - 0.2 ) * 20, norm 6 for Literacy 50% and Accepted Religion
 			add = {
 				value = literacy_rate
-				subtract = 0.2
-				multiply = 20
+				subtract = 0.05
+				multiply = 80
 				desc = "QUALIFICATIONS_LITERACY_FACTOR"
 			}
 			if = {
