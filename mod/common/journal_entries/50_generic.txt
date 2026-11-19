@@ -1,10 +1,10 @@
-﻿smd_je_devolution = {
+smd_je_devolution = {
 	icon = "gfx/interface/icons/event_icons/event_map.dds"
 
 	group = je_group_domestic_policy
 
 	possible = {
-		always = yes
+		NOT = { has_law = law_type:law_multicultural }
 	}
 
 	immediate = {

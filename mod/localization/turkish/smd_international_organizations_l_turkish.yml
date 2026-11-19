@@ -864,3 +864,9 @@
 
  ngo_iaea_inspectors: "IAEA Inspectors Present"
  ngo_iaea_inspectors_desc: "IAEA denetçileri Nükleer tesislerimizde çalışıyor, teknik uzmanlığı ve güvenlik bilgilerini paylaşıyor. Onların varlığı teknoloji transferini hızlandırıyor ve diplomatik itibarımızı geliştiriyor."
+ notification_smd_un_vote_in_progress_name:0 "BM'de Oylama Sürüyor"
+ notification_smd_un_vote_in_progress_desc:0 "Birleşmiş Milletler'de bir karar tasarısı tartışılıyor. [GetPlayer.GetName] adına oyunu Birleşmiş Milletler günlük kaydındaki Evet veya Hayır düğmeleriyle kullan."
+ notification_smd_un_vote_in_progress_tooltip:0 "#header $notification_smd_un_vote_in_progress_name$#!\n$TOOLTIP_DELIMITER$\n$notification_smd_un_vote_in_progress_desc$"
+ notification_smd_un_resolution_passed_name:0 "BM Kararı Kabul Edildi"
+ notification_smd_un_resolution_passed_desc:0 "Birleşmiş Milletler şu kararı kabul etti: [GetPlayer.GetCustom('smd_un_resolution_name')]. Etkileri önümüzdeki yıl boyunca tüm üye devletlere uygulanır."
+ notification_smd_un_resolution_passed_tooltip:0 "#header $notification_smd_un_resolution_passed_name$#!\n$TOOLTIP_DELIMITER$\n$notification_smd_un_resolution_passed_desc$"

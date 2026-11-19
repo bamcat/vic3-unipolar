@@ -173,13 +173,10 @@ un_events.100 = {
  
 un_events.101 = {
 	type = country_event
-	placement = ROOT
-	title = un_events.101.t
-	desc = un_events.101.d
-	event_image = { video = "africa_diplomats_negotiating" }
-	duration = 1
-	option = {
-		name = un_events.101.a
+	hidden = yes
+
+	immediate = {
+		post_notification = smd_un_vote_in_progress
 	}
 }
  
@@ -626,61 +623,46 @@ un_events.6 = {
  
 un_events.300 = {
 	type = country_event
-	placement = ROOT
-	title = un_events.300.t
-	desc = un_events.300.d
-	flavor = un_events.300.f
- 
-	icon = "gfx/interface/icons/event_icons/event_united_nations.dds"
-	event_image = { video = "africa_diplomats_negotiating" }
- 
-	duration = 3
- 
-	trigger = {}
- 
-	immediate = { set_variable = cannot_propose_un_motions }
-	
-	option = {
-		name = un_events.300.a
-		default_option = yes
-		remove_variable = cannot_propose_un_motions
-		ai_chance = { base = 100 }
-				if = {
-					limit = {
-						global_var:un_current_motion_type = flag:motion_environment
-					}
-					add_modifier = {
-						name = un_resolution_environment
-						months = 12
-					}
-				}
-				if = {
-					limit = {
-						global_var:un_current_motion_type = flag:motion_peace
-					}
-					add_modifier = {
-						name = un_resolution_peace
-						months = 12
-					}
-				}
-				if = {
-					limit = {
-						global_var:un_current_motion_type = flag:motion_economy
-					}
-					add_modifier = {
-						name = un_resolution_economy
-						months = 12
-					}
-				}
-				if = {
-					limit = {
-						global_var:un_current_motion_type = flag:motion_technology
-					}
-					add_modifier = {
-						name = un_resolution_technology
-						months = 12
-					}
-				}
+	hidden = yes
+
+	immediate = {
+		if = {
+			limit = {
+				global_var:un_current_motion_type = flag:motion_environment
+			}
+			add_modifier = {
+				name = un_resolution_environment
+				months = 12
+			}
+		}
+		if = {
+			limit = {
+				global_var:un_current_motion_type = flag:motion_peace
+			}
+			add_modifier = {
+				name = un_resolution_peace
+				months = 12
+			}
+		}
+		if = {
+			limit = {
+				global_var:un_current_motion_type = flag:motion_economy
+			}
+			add_modifier = {
+				name = un_resolution_economy
+				months = 12
+			}
+		}
+		if = {
+			limit = {
+				global_var:un_current_motion_type = flag:motion_technology
+			}
+			add_modifier = {
+				name = un_resolution_technology
+				months = 12
+			}
+		}
+		post_notification = smd_un_resolution_passed
 	}
 }
  

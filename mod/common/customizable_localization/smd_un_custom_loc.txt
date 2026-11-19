@@ -1,0 +1,20 @@
+﻿smd_un_resolution_name = {
+	type = country
+
+	text = {
+		localization_key = un_resolution_environment
+		trigger = { var:un_last_motion_type = flag:motion_environment }
+	}
+	text = {
+		localization_key = un_resolution_peace
+		trigger = { var:un_last_motion_type = flag:motion_peace }
+	}
+	text = {
+		localization_key = un_resolution_economy
+		trigger = { var:un_last_motion_type = flag:motion_economy }
+	}
+	text = {
+		localization_key = un_resolution_technology
+		trigger = { var:un_last_motion_type = flag:motion_technology }
+	}
+}

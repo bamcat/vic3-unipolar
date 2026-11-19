@@ -1,4 +1,4 @@
-﻿on_game_started_after_lobby = {
+on_game_started_after_lobby = {
 	on_actions = { smd_generic_game_start }
 }
 
@@ -254,6 +254,7 @@ smd_generic_yearly_country = {
 				has_variable = smd_generic_ready
 				NOT = { has_journal_entry = smd_je_devolution }
 				NOT = { has_variable = smd_devolution_cooldown }
+				NOT = { has_law = law_type:law_multicultural }
 				NOT = { is_country_type = decentralized }
 				smd_has_bespoke_separatism_content = no
 				any_scope_state = { smd_devolution_candidate_state = yes }

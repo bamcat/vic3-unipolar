@@ -864,3 +864,9 @@
 
  ngo_iaea_inspectors: "IAEAインスペクタープレゼント"
  ngo_iaea_inspectors_desc: "IAEAの検査官は、原子力施設内での運用、技術的専門知識と安全知識を共有しています。 彼らの存在は技術移転を加速し、私たちの外交的な評判を高めます。"
+ notification_smd_un_vote_in_progress_name:0 "国連で投票中"
+ notification_smd_un_vote_in_progress_desc:0 "国際連合で決議案が審議されている。国際連合のジャーナルエントリーにある賛成または反対ボタンで、[GetPlayer.GetName]の票を投じよう。"
+ notification_smd_un_vote_in_progress_tooltip:0 "#header $notification_smd_un_vote_in_progress_name$#!\n$TOOLTIP_DELIMITER$\n$notification_smd_un_vote_in_progress_desc$"
+ notification_smd_un_resolution_passed_name:0 "国連決議が採択された"
+ notification_smd_un_resolution_passed_desc:0 "国際連合は次の決議を採択した：[GetPlayer.GetCustom('smd_un_resolution_name')]。その効果は今後1年間、すべての加盟国に適用される。"
+ notification_smd_un_resolution_passed_tooltip:0 "#header $notification_smd_un_resolution_passed_name$#!\n$TOOLTIP_DELIMITER$\n$notification_smd_un_resolution_passed_desc$"

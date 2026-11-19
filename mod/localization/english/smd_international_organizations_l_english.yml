@@ -872,3 +872,9 @@
 
  ngo_iaea_inspectors: "IAEA Inspectors Present"
  ngo_iaea_inspectors_desc: "IAEA inspectors are operating within our nuclear facilities, sharing technical expertise and safety knowledge. Their presence accelerates technology transfer and enhances our diplomatic reputation."
+ notification_smd_un_vote_in_progress_name:0 "UN Vote in Progress"
+ notification_smd_un_vote_in_progress_desc:0 "A resolution is under debate in the United Nations. Cast [GetPlayer.GetName]'s vote with the Yay or Nay buttons in the United Nations journal entry."
+ notification_smd_un_vote_in_progress_tooltip:0 "#header $notification_smd_un_vote_in_progress_name$#!\n$TOOLTIP_DELIMITER$\n$notification_smd_un_vote_in_progress_desc$"
+ notification_smd_un_resolution_passed_name:0 "UN Resolution Passed"
+ notification_smd_un_resolution_passed_desc:0 "The United Nations has passed [GetPlayer.GetCustom('smd_un_resolution_name')]. Its effects apply to every member state for the next year."
+ notification_smd_un_resolution_passed_tooltip:0 "#header $notification_smd_un_resolution_passed_name$#!\n$TOOLTIP_DELIMITER$\n$notification_smd_un_resolution_passed_desc$"

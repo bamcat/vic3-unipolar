@@ -864,3 +864,9 @@
 
  ngo_iaea_inspectors: "原子能机构检查专员"
  ngo_iaea_inspectors_desc: "原子能机构视察员正在我们的核设施内运作,分享技术专长和安全知识。 它们的存在加快了技术转让,提高了我们的外交声誉。"
+ notification_smd_un_vote_in_progress_name:0 "联合国正在表决"
+ notification_smd_un_vote_in_progress_desc:0 "联合国正在辩论一项决议。请在联合国日志条目中使用赞成或反对按钮，为[GetPlayer.GetName]投票。"
+ notification_smd_un_vote_in_progress_tooltip:0 "#header $notification_smd_un_vote_in_progress_name$#!\n$TOOLTIP_DELIMITER$\n$notification_smd_un_vote_in_progress_desc$"
+ notification_smd_un_resolution_passed_name:0 "联合国决议获得通过"
+ notification_smd_un_resolution_passed_desc:0 "联合国通过了：[GetPlayer.GetCustom('smd_un_resolution_name')]。其效果将在未来一年内适用于所有成员国。"
+ notification_smd_un_resolution_passed_tooltip:0 "#header $notification_smd_un_resolution_passed_name$#!\n$TOOLTIP_DELIMITER$\n$notification_smd_un_resolution_passed_desc$"

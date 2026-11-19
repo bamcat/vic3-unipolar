@@ -864,3 +864,9 @@
 
  ngo_iaea_inspectors: "Inspetores presentes da AIEA"
  ngo_iaea_inspectors_desc: "Os inspetores da AIEA estão operando dentro de nossas instalações nucleares, compartilhando conhecimentos técnicos e de segurança. A sua presença acelera a transferência de tecnologia e aumenta a nossa reputação diplomática."
+ notification_smd_un_vote_in_progress_name:0 "Votação em andamento na ONU"
+ notification_smd_un_vote_in_progress_desc:0 "Uma resolução está em debate nas Nações Unidas. Registre o voto de [GetPlayer.GetName] com os botões Sim ou Não na entrada de diário das Nações Unidas."
+ notification_smd_un_vote_in_progress_tooltip:0 "#header $notification_smd_un_vote_in_progress_name$#!\n$TOOLTIP_DELIMITER$\n$notification_smd_un_vote_in_progress_desc$"
+ notification_smd_un_resolution_passed_name:0 "Resolução da ONU aprovada"
+ notification_smd_un_resolution_passed_desc:0 "As Nações Unidas aprovaram: [GetPlayer.GetCustom('smd_un_resolution_name')]. Seus efeitos se aplicam a todos os Estados-membros durante o próximo ano."
+ notification_smd_un_resolution_passed_tooltip:0 "#header $notification_smd_un_resolution_passed_name$#!\n$TOOLTIP_DELIMITER$\n$notification_smd_un_resolution_passed_desc$"

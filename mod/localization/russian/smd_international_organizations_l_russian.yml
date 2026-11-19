@@ -862,3 +862,9 @@
 
  ngo_iaea_inspectors: "Инспекторы МАГАТЭ представляют"
  ngo_iaea_inspectors_desc: "Инспекторы МАГАТЭ работают на наших ядерных объектах, обмениваясь техническими знаниями и знаниями в области безопасности. Их присутствие ускоряет передачу технологий и повышает нашу дипломатическую репутацию."
+ notification_smd_un_vote_in_progress_name:0 "Голосование в ООН"
+ notification_smd_un_vote_in_progress_desc:0 "В Организации Объединённых Наций обсуждается резолюция. Отдайте голос [GetPlayer.GetName] кнопками «За» или «Против» в записи журнала ООН."
+ notification_smd_un_vote_in_progress_tooltip:0 "#header $notification_smd_un_vote_in_progress_name$#!\n$TOOLTIP_DELIMITER$\n$notification_smd_un_vote_in_progress_desc$"
+ notification_smd_un_resolution_passed_name:0 "Резолюция ООН принята"
+ notification_smd_un_resolution_passed_desc:0 "Организация Объединённых Наций приняла резолюцию: [GetPlayer.GetCustom('smd_un_resolution_name')]. Её действие распространяется на все государства-члены в течение следующего года."
+ notification_smd_un_resolution_passed_tooltip:0 "#header $notification_smd_un_resolution_passed_name$#!\n$TOOLTIP_DELIMITER$\n$notification_smd_un_resolution_passed_desc$"
