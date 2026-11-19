@@ -30,7 +30,7 @@ REPLACE_OR_CREATE:building_railway = {
 	building_group = bg_private_infrastructure
 	icon = "gfx/interface/icons/building_icons/building_railway.dds"
 
-	ai_nationalization_desire = 0.5 # AI is reluctant to privatize railways since they are likely to need subsidies anyway
+	ai_nationalization_desire = 0.5
 
 	unlocking_technologies = {
 		urbanization
@@ -44,7 +44,7 @@ REPLACE_OR_CREATE:building_railway = {
 	required_construction = construction_cost_very_high
 
 	ai_value = {
-		value = 2000 # Railways are important
+		value = 2000
 	}
 
 	should_auto_expand = {
@@ -565,10 +565,11 @@ REPLACE_OR_CREATE:building_company_regional_headquarter = {
 ## SMD TELECOMMUNICATIONS
 
 REPLACE_OR_CREATE:building_telecommunications = {
+	has_max_level = yes
 	building_group = bg_private_infrastructure	
 	icon = "gfx/interface/icons/building_icons/telecommunications_infrastructure.dds"
 	
-	ai_nationalization_desire = 0.5 # AI is reluctant to privatize railways since they are likely to need subsidies anyway
+	ai_nationalization_desire = 0.5
 	
 	unlocking_technologies = {
 		manufacturies

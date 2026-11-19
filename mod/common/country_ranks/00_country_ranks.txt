@@ -6,12 +6,8 @@
 # min_commander_rank_random / max_commander_rank_random = min/max ranks when auto-generating commander rank
 # possible = {} must evaluate to true for rank to be able to be assigned
 # can_colonize = whether a country of this rank can colonize
-# diplo_pact_cost = Diplomatic pacts with country of this rank have their cost multiplied by this amount - 1
-# treaty_article_cost = Treaty articles with country of this rank have their cost multiplied by this amount - 1
 
-################
 ## RECOGNIZED ##
-################
 
 REPLACE_OR_CREATE:great_power = {
 	rank_value = 7
@@ -150,9 +146,7 @@ REPLACE_OR_CREATE:insignificant_power = {
 	}
 }
 
-##################
 ## UNRECOGNIZED ##
-##################
 
 REPLACE_OR_CREATE:unrecognized_major_power = {
 	rank_value = 5
@@ -241,9 +235,7 @@ REPLACE_OR_CREATE:unrecognized_power = {
 	}
 
 }
-###################
 ## DECENTRALIZED ##
-###################
 
 REPLACE_OR_CREATE:decentralized_power = {
 	rank_value = 0

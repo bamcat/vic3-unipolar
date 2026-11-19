@@ -1,0 +1,317 @@
+﻿rus_wn_presidential_vigor = {
+	icon = "gfx/interface/icons/timed_modifier_icons/modifier_documents_positive.dds"
+	country_authority_mult = 0.004
+}
+
+rus_wn_family_rule = {
+	icon = "gfx/interface/icons/timed_modifier_icons/modifier_statue_negative.dds"
+	country_authority_add = 1
+	country_legitimacy_base_add = -0.1
+}
+
+rus_wn_oligarch_power = {
+	icon = "gfx/interface/icons/timed_modifier_icons/modifier_coins_negative.dds"
+	interest_group_ig_industrialists_pol_str_mult = 0.005
+	state_tax_collection_mult = -0.002
+}
+
+rus_ukaz_voucher = {
+	icon = "gfx/interface/icons/timed_modifier_icons/modifier_documents_positive.dds"
+	country_authority_cost_add = 75
+	country_private_construction_allocation_mult = 0.1
+	interest_group_ig_industrialists_approval_add = 2
+}
+
+rus_ukaz_land = {
+	icon = "gfx/interface/icons/timed_modifier_icons/modifier_documents_positive.dds"
+	country_authority_cost_add = 50
+	interest_group_ig_landowners_pol_str_mult = -0.15
+	interest_group_ig_landowners_approval_add = -2
+	interest_group_ig_rural_folk_approval_add = 1
+}
+
+rus_ukaz_anti_banditry = {
+	icon = "gfx/interface/icons/timed_modifier_icons/modifier_rifle_positive.dds"
+	country_authority_cost_add = 100
+	state_turmoil_effects_mult = -0.2
+	interest_group_ig_intelligentsia_approval_add = -3
+	interest_group_ig_armed_forces_approval_add = 1
+}
+
+rus_ukaz_chechnya = {
+	icon = "gfx/interface/icons/timed_modifier_icons/modifier_rifle_negative.dds"
+	country_authority_cost_add = 100
+	interest_group_ig_armed_forces_approval_add = 2
+}
+
+rus_ukaz_tax_amnesty = {
+	icon = "gfx/interface/icons/timed_modifier_icons/modifier_coins_positive.dds"
+	country_authority_cost_add = 50
+	state_tax_collection_mult = 0.1
+	interest_group_ig_industrialists_approval_add = 1
+}
+
+rus_ukaz_wage_arrears = {
+	icon = "gfx/interface/icons/timed_modifier_icons/modifier_coins_positive.dds"
+	country_authority_cost_add = 25
+	interest_group_ig_trade_unions_approval_add = 2
+}
+
+rus_ukaz_signature = {
+	icon = "gfx/interface/icons/timed_modifier_icons/modifier_statue_negative.dds"
+	country_authority_add = 100
+	country_legitimacy_base_add = -5
+}
+
+rus_ukaz_decree_1400 = {
+	icon = "gfx/interface/icons/timed_modifier_icons/modifier_documents_negative.dds"
+	country_authority_cost_add = 150
+	country_legitimacy_base_add = -5
+}
+
+rus_wn_heart_surgery = {
+	icon = "gfx/interface/icons/timed_modifier_icons/modifier_documents_negative.dds"
+	country_authority_mult = -0.2
+}
+
+rus_pm_gaidar = {
+	icon = "gfx/interface/icons/timed_modifier_icons/modifier_lightbulb_positive.dds"
+	interest_group_ig_intelligentsia_approval_add = 2
+	interest_group_ig_industrialists_approval_add = -2
+}
+
+rus_pm_chernomyrdin = {
+	icon = "gfx/interface/icons/timed_modifier_icons/modifier_gear_positive.dds"
+	interest_group_ig_industrialists_approval_add = 3
+	country_legitimacy_base_add = 3
+}
+
+rus_pm_kiriyenko = {
+	icon = "gfx/interface/icons/timed_modifier_icons/modifier_lightbulb_positive.dds"
+	country_bureaucracy_mult = 0.05
+	state_tax_collection_mult = 0.05
+}
+
+rus_pm_primakov = {
+	icon = "gfx/interface/icons/timed_modifier_icons/modifier_flag_positive.dds"
+	country_legitimacy_base_add = 5
+	interest_group_ig_armed_forces_approval_add = 2
+}
+
+rus_pm_stepashin = {
+	icon = "gfx/interface/icons/timed_modifier_icons/modifier_rifle_positive.dds"
+	state_turmoil_effects_mult = -0.1
+}
+
+rus_pm_putin = {
+	icon = "gfx/interface/icons/timed_modifier_icons/modifier_rifle_positive.dds"
+	interest_group_ig_armed_forces_approval_add = 3
+	state_turmoil_effects_mult = -0.1
+}
+
+rus_pm_nemtsov = {
+	icon = "gfx/interface/icons/timed_modifier_icons/modifier_lightbulb_positive.dds"
+	interest_group_ig_petty_bourgeoisie_approval_add = 2
+	country_private_construction_allocation_mult = 0.05
+}
+
+rus_dvoevlastie = {
+	icon = "gfx/interface/icons/timed_modifier_icons/modifier_documents_negative.dds"
+	country_legitimacy_base_add = -10
+	country_bureaucracy_mult = -0.1
+}
+
+rus_1993_referendum_won = {
+	icon = "gfx/interface/icons/timed_modifier_icons/modifier_flag_positive.dds"
+	country_legitimacy_base_add = 5
+}
+
+rus_1993_referendum_lost = {
+	icon = "gfx/interface/icons/timed_modifier_icons/modifier_flag_negative.dds"
+	country_legitimacy_base_add = -10
+}
+
+rus_october_1993_storming = {
+	icon = "gfx/interface/icons/timed_modifier_icons/modifier_rifle_negative.dds"
+	interest_group_ig_armed_forces_approval_add = 3
+	interest_group_ig_intelligentsia_approval_add = -2
+}
+
+rus_parliament_victory = {
+	icon = "gfx/interface/icons/timed_modifier_icons/modifier_documents_positive.dds"
+	country_legitimacy_base_add = 10
+	country_authority_mult = -0.1
+}
+
+rus_long_october = {
+	icon = "gfx/interface/icons/timed_modifier_icons/modifier_fire_negative.dds"
+	state_turmoil_effects_mult = 0.2
+	country_legitimacy_base_add = -10
+}
+
+rus_zero_option = {
+	icon = "gfx/interface/icons/timed_modifier_icons/modifier_documents_positive.dds"
+	country_legitimacy_base_add = 8
+}
+
+rus_econ_shock = {
+	icon = "gfx/interface/icons/timed_modifier_icons/modifier_coins_negative.dds"
+	interest_group_ig_trade_unions_approval_add = -2
+	interest_group_ig_intelligentsia_approval_add = 1
+}
+
+rus_econ_gradual = {
+	icon = "gfx/interface/icons/timed_modifier_icons/modifier_gear_positive.dds"
+	country_legitimacy_base_add = 2
+}
+
+rus_econ_red_credit = {
+	icon = "gfx/interface/icons/timed_modifier_icons/modifier_gear_positive.dds"
+	interest_group_ig_industrialists_approval_add = 2
+}
+
+rus_econ_imf = {
+	icon = "gfx/interface/icons/timed_modifier_icons/modifier_coins_positive.dds"
+	country_loan_interest_rate_mult = -0.2
+	interest_group_ig_trade_unions_approval_add = -1
+}
+
+rus_1998_default = {
+	icon = "gfx/interface/icons/timed_modifier_icons/modifier_coins_negative.dds"
+	country_loan_interest_rate_mult = 1
+	country_private_construction_allocation_mult = -0.3
+	state_standard_of_living_add = -2
+	country_legitimacy_base_add = -10
+}
+
+rus_ruble_stabilized = {
+	icon = "gfx/interface/icons/timed_modifier_icons/modifier_coins_positive.dds"
+	country_loan_interest_rate_mult = -0.2
+	country_private_construction_allocation_mult = 0.15
+	country_legitimacy_base_add = 5
+}
+
+rus_semibankirshchina = {
+	icon = "gfx/interface/icons/timed_modifier_icons/modifier_coins_negative.dds"
+	interest_group_ig_industrialists_pol_str_mult = 0.25
+}
+
+rus_bankers_war = {
+	icon = "gfx/interface/icons/timed_modifier_icons/modifier_documents_negative.dds"
+	country_legitimacy_base_add = -5
+}
+
+rus_successor_chernomyrdin = {
+	icon = "gfx/interface/icons/timed_modifier_icons/modifier_gear_positive.dds"
+	interest_group_ig_industrialists_approval_add = 3
+	country_legitimacy_base_add = 3
+}
+
+rus_successor_nemtsov = {
+	icon = "gfx/interface/icons/timed_modifier_icons/modifier_lightbulb_positive.dds"
+	interest_group_ig_petty_bourgeoisie_approval_add = 3
+	country_private_construction_allocation_mult = 0.1
+	interest_group_ig_armed_forces_approval_add = -2
+}
+
+rus_successor_primakov = {
+	icon = "gfx/interface/icons/timed_modifier_icons/modifier_flag_positive.dds"
+	country_legitimacy_base_add = 8
+	interest_group_ig_armed_forces_approval_add = 2
+	interest_group_ig_industrialists_approval_add = -2
+}
+
+rus_successor_luzhkov = {
+	icon = "gfx/interface/icons/timed_modifier_icons/modifier_flag_positive.dds"
+	interest_group_ig_petty_bourgeoisie_approval_add = 2
+	country_legitimacy_base_add = 5
+}
+
+rus_successor_lebed = {
+	icon = "gfx/interface/icons/timed_modifier_icons/modifier_rifle_positive.dds"
+	interest_group_ig_armed_forces_approval_add = 4
+	state_turmoil_effects_mult = -0.15
+	interest_group_ig_intelligentsia_approval_add = -3
+}
+
+rus_successor_stepashin = {
+	icon = "gfx/interface/icons/timed_modifier_icons/modifier_documents_positive.dds"
+	country_legitimacy_base_add = 3
+	state_turmoil_effects_mult = -0.05
+}
+
+rus_successor_putin = {
+	icon = "gfx/interface/icons/timed_modifier_icons/modifier_rifle_positive.dds"
+	interest_group_ig_armed_forces_approval_add = 3
+	state_turmoil_effects_mult = -0.15
+	interest_group_ig_industrialists_approval_add = -2
+	interest_group_ig_intelligentsia_approval_add = -2
+	country_legitimacy_base_add = 5
+}
+
+
+rus_wn_reshuffle = {
+	icon = "gfx/interface/icons/timed_modifier_icons/modifier_documents_negative.dds"
+	country_legitimacy_base_add = -5
+}
+
+rus_lfs_spurned = {
+	icon = "gfx/interface/icons/timed_modifier_icons/modifier_coins_negative.dds"
+	interest_group_approval_add = -3
+}
+
+rus_dvoe_court_army = {
+	icon = "gfx/interface/icons/timed_modifier_icons/modifier_documents_positive.dds"
+	country_authority_cost_add = 100
+}
+
+rus_dvoe_court_mvd = {
+	icon = "gfx/interface/icons/timed_modifier_icons/modifier_documents_positive.dds"
+	country_authority_cost_add = 100
+}
+
+rus_dvoe_court_moscow = {
+	icon = "gfx/interface/icons/timed_modifier_icons/modifier_documents_positive.dds"
+	country_authority_cost_add = 100
+}
+
+rus_dvoe_court_court = {
+	icon = "gfx/interface/icons/timed_modifier_icons/modifier_documents_positive.dds"
+	country_authority_cost_add = 100
+}
+
+rus_dvoe_court_regions = {
+	icon = "gfx/interface/icons/timed_modifier_icons/modifier_documents_positive.dds"
+	country_authority_cost_add = 100
+}
+
+rus_dvoe_court_church = {
+	icon = "gfx/interface/icons/timed_modifier_icons/modifier_documents_positive.dds"
+	country_authority_cost_add = 100
+}
+
+rus_pm_luzhkov = {
+	icon = "gfx/interface/icons/timed_modifier_icons/modifier_flag_positive.dds"
+	interest_group_ig_petty_bourgeoisie_approval_add = 2
+}
+
+rus_pm_lebed = {
+	icon = "gfx/interface/icons/timed_modifier_icons/modifier_rifle_positive.dds"
+	interest_group_ig_armed_forces_approval_add = 2
+	state_turmoil_effects_mult = -0.05
+}
+
+rus_pm_appointment_authority = {
+	icon = "gfx/interface/icons/timed_modifier_icons/modifier_documents_negative.dds"
+	country_authority_add = -50
+}
+
+rus_pm_appointed_ig = {
+	icon = "gfx/interface/icons/timed_modifier_icons/modifier_documents_positive.dds"
+	interest_group_approval_add = 2
+}
+
+rus_pm_dismissed_ig = {
+	icon = "gfx/interface/icons/timed_modifier_icons/modifier_documents_negative.dds"
+	interest_group_approval_add = -2
+}

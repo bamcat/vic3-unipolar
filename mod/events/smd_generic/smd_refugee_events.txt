@@ -1,0 +1,206 @@
+﻿namespace = smd_refugee
+
+smd_refugee.1 = {
+	type = country_event
+	placement = ROOT
+	title = smd_refugee.1.t
+	desc = smd_refugee.1.d
+	flavor = smd_refugee.1.f
+	event_image = { video = "southamerica_war_civilians" }
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+	icon = "gfx/interface/icons/event_icons/event_map.dds"
+	duration = 3
+
+	trigger = {
+	}
+
+	immediate = {
+		var:smd_refugee_source ?= { save_scope_as = smd_refugee_source }
+	}
+
+	option = {
+		name = smd_refugee.1.a
+		default_option = yes
+		add_modifier = {
+			name = smd_border_opened
+			days = 1825
+		}
+		if = {
+			limit = { exists = scope:smd_refugee_source }
+			scope:smd_refugee_source = {
+				random_primary_culture = { save_scope_as = smd_refugee_culture }
+			}
+			capital = {
+				create_mass_migration = {
+					origin = scope:smd_refugee_source
+					culture = scope:smd_refugee_culture
+				}
+			}
+		}
+		je:smd_je_refugee_crisis ?= {
+			add_progress = { value = 10 name = smd_refugee_bar }
+		}
+		ai_chance = { base = 50 }
+	}
+
+	option = {
+		name = smd_refugee.1.b
+		add_modifier = {
+			name = smd_border_closed
+			days = 1825
+		}
+		je:smd_je_refugee_crisis ?= {
+			add_progress = { value = -10 name = smd_refugee_bar }
+		}
+		ai_chance = { base = 50 }
+	}
+}
+
+smd_refugee.2 = {
+	type = country_event
+	placement = ROOT
+	title = smd_refugee.2.t
+	desc = smd_refugee.2.d
+	flavor = smd_refugee.2.f
+	event_image = { video = "africa_soldiers_breaking_protest" }
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+	icon = "gfx/interface/icons/event_icons/event_protest.dds"
+	duration = 3
+	cooldown = { days = normal_modifier_time }
+
+	trigger = {
+		has_journal_entry = smd_je_refugee_crisis
+	}
+
+	immediate = {
+		var:smd_refugee_source ?= { save_scope_as = smd_refugee_source }
+	}
+
+	option = {
+		name = smd_refugee.2.a
+		default_option = yes
+		add_treasury = {
+			value = gdp
+			multiply = -0.001
+		}
+		je:smd_je_refugee_crisis ?= {
+			add_progress = { value = -5 name = smd_refugee_bar }
+		}
+		ai_chance = { base = 60 }
+	}
+
+	option = {
+		name = smd_refugee.2.b
+		add_modifier = {
+			name = smd_camp_unrest_policed
+			days = short_modifier_time
+		}
+		je:smd_je_refugee_crisis ?= {
+			add_progress = { value = 3 name = smd_refugee_bar }
+		}
+		ai_chance = { base = 40 }
+	}
+}
+
+smd_refugee.3 = {
+	type = country_event
+	placement = ROOT
+	title = smd_refugee.3.t
+	desc = smd_refugee.3.d
+	flavor = smd_refugee.3.f
+	event_image = { video = "ip3_angry_mob_raiding_minorities" }
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+	icon = "gfx/interface/icons/event_icons/event_protest.dds"
+	duration = 3
+	cooldown = { days = normal_modifier_time }
+
+	trigger = {
+		has_journal_entry = smd_je_refugee_crisis
+		je:smd_je_refugee_crisis ?= {
+			"scripted_bar_progress(smd_refugee_bar)" >= 50
+		}
+	}
+
+	immediate = {
+		var:smd_refugee_source ?= { save_scope_as = smd_refugee_source }
+	}
+
+	option = {
+		name = smd_refugee.3.a
+		default_option = yes
+		add_modifier = {
+			name = smd_xenophobia_condemned
+			days = short_modifier_time
+		}
+		je:smd_je_refugee_crisis ?= {
+			add_progress = { value = 3 name = smd_refugee_bar }
+		}
+		ai_chance = { base = 50 }
+	}
+
+	option = {
+		name = smd_refugee.3.b
+		add_modifier = {
+			name = smd_xenophobia_appeased
+			days = short_modifier_time
+		}
+		je:smd_je_refugee_crisis ?= {
+			add_progress = { value = -5 name = smd_refugee_bar }
+		}
+		ai_chance = { base = 50 }
+	}
+}
+
+smd_refugee.4 = {
+	type = country_event
+	placement = ROOT
+	title = smd_refugee.4.t
+	desc = smd_refugee.4.d
+	flavor = smd_refugee.4.f
+	event_image = { video = "crowd_celebrating" }
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+	icon = "gfx/interface/icons/event_icons/event_map.dds"
+	duration = 3
+
+	trigger = {
+	}
+
+	immediate = {
+		var:smd_refugee_source ?= { save_scope_as = smd_refugee_source }
+	}
+
+	option = {
+		name = smd_refugee.4.a
+		default_option = yes
+		add_modifier = {
+			name = smd_humanitarian_reputation
+			days = long_modifier_time
+		}
+		ai_chance = { base = 100 }
+	}
+}
+
+smd_refugee.5 = {
+	type = country_event
+	placement = ROOT
+	title = smd_refugee.5.t
+	desc = smd_refugee.5.d
+	flavor = smd_refugee.5.f
+	event_image = { video = "votp_barricade" }
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+	icon = "gfx/interface/icons/event_icons/event_protest.dds"
+	duration = 3
+
+	trigger = {
+	}
+
+	option = {
+		name = smd_refugee.5.a
+		default_option = yes
+		add_modifier = {
+			name = smd_refugee_backlash
+			days = normal_modifier_time
+		}
+		ai_chance = { base = 100 }
+	}
+}

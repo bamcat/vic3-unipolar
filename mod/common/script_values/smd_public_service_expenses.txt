@@ -1,5 +1,4 @@
-﻿
-smd_public_service_admin_base = {
+﻿smd_public_service_admin_base = {
 	value = 0
 	add = "country_has_building_type_levels(bt:building_government_administration)"
 	min = 1
@@ -9,8 +8,6 @@ smd_public_service_pop_factor = {
 	value = smd_population
 	divide = 1000000
 }
-
-
 
 # ================================================================
 # HEALTHCARE
@@ -28,12 +25,9 @@ smd_healthcare_expense_value = {
 			}
 		}
 
-		# PRIMARY: government administration levels
 		value = smd_public_service_admin_base
 		multiply = 12	# per-admin-level cost knob (healthcare)
 
-		# SECONDARY: health institution investment as a small uplift
-		# (each level of investment adds +10% to the admin-driven base)
 		multiply = {
 			value = institution:institution_health_system.investment
 			multiply = 0.10
@@ -75,11 +69,9 @@ smd_education_expense_value = {
 			}
 		}
 
-		# PRIMARY: government administration levels
 		value = smd_public_service_admin_base
 		multiply = 5	# per-admin-level cost knob (education)
 
-		# SECONDARY: schools institution investment as a small uplift
 		multiply = {
 			value = institution:institution_schools.investment
 			multiply = 0.05
@@ -96,9 +88,6 @@ smd_education_expense_value = {
 			multiply = 1.25
 		}
 
-		# --- childcare / primary schooling surcharges ---
-		# Expressed as multipliers on the admin-driven base so they
-		# scale with the size of the state apparatus.
 		if = {
 			limit = { has_law = law_type:law_compulsory_primary_school }
 			multiply = 1.4
@@ -135,11 +124,9 @@ smd_police_expense_value = {
 			}
 		}
 
-		# PRIMARY: government administration levels
 		value = smd_public_service_admin_base
 		multiply = 2	# per-admin-level cost knob (police)
 
-		# SECONDARY: police institution investment as a small uplift
 		multiply = {
 			value = institution:institution_police.investment
 			multiply = 0.10

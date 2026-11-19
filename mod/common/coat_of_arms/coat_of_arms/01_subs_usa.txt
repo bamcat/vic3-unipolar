@@ -1,4 +1,3 @@
-##### VARIABLES
 @third = @[1/3]
 @sixth = @[1/6]
 @pi = 3.1416
@@ -10,8 +9,6 @@ sub_USA_stripes = {
 		color2 = "red"
 	}
 }
-
-# USA Canton stars from 25 to 100 states
 
 sub_USA_canton_25 = {
 	pattern = "pattern_solid.tga"
@@ -25,7 +22,6 @@ sub_USA_canton_25 = {
 		color1 = color2
 		color2 = color2
 
-		# 25 stars
 		instance = { scale = { @usa_star_scale_25 @usa_star_scale_25 } position = { @[ 1 / 7 * 1 ] @[ 1 / 5 * 1 ] } }
 		instance = { scale = { @usa_star_scale_25 @usa_star_scale_25 } position = { @[ 1 / 7 * 2 ] @[ 1 / 5 * 1 ] } }
 		instance = { scale = { @usa_star_scale_25 @usa_star_scale_25 } position = { @[ 1 / 7 * 3 ] @[ 1 / 5 * 1 ] } }
@@ -69,7 +65,6 @@ sub_USA_canton_26 = {
 		color1 = color2
 		color2 = color2
 
-		# 26 stars
 		instance = { scale = { @usa_star_scale_26 @usa_star_scale_26 } position = { @[ 1 / 8 * 1 ] @[ 1 / 5 * 1 ] } }
 		instance = { scale = { @usa_star_scale_26 @usa_star_scale_26 } position = { @[ 1 / 8 * 2 ] @[ 1 / 5 * 1 ] } }
 		instance = { scale = { @usa_star_scale_26 @usa_star_scale_26 } position = { @[ 1 / 8 * 3 ] @[ 1 / 5 * 1 ] } }
@@ -114,7 +109,6 @@ sub_USA_canton_27 = {
 		color1 = color2
 		color2 = color2
 
-		# 27 stars
 		instance = { scale = { @usa_star_scale_27 @usa_star_scale_27 } position = { @[ 1 / 8 * 1 ] @[ 1 / 5 * 1 ] } }
 		instance = { scale = { @usa_star_scale_27 @usa_star_scale_27 } position = { @[ 1 / 8 * 2 ] @[ 1 / 5 * 1 ] } }
 		instance = { scale = { @usa_star_scale_27 @usa_star_scale_27 } position = { @[ 1 / 8 * 3 ] @[ 1 / 5 * 1 ] } }
@@ -160,7 +154,6 @@ sub_USA_canton_28 = {
 		color1 = color2
 		color2 = color2
 
-		# 28 stars
 		instance = { scale = { @usa_star_scale_28 @usa_star_scale_28 } position = { @[ 1 / 8 * 1 ] @[ 1 / 5 * 1 ] } }
 		instance = { scale = { @usa_star_scale_28 @usa_star_scale_28 } position = { @[ 1 / 8 * 2 ] @[ 1 / 5 * 1 ] } }
 		instance = { scale = { @usa_star_scale_28 @usa_star_scale_28 } position = { @[ 1 / 8 * 3 ] @[ 1 / 5 * 1 ] } }
@@ -207,7 +200,6 @@ sub_USA_canton_29 = {
 		color1 = color2
 		color2 = color2
 
-		# 29 stars
 		instance = { scale = { @usa_star_scale_29 @usa_star_scale_29 } position = { @[ 1 / 9 * 1 ] @[ 1 / 5 * 1 ] } }
 		instance = { scale = { @usa_star_scale_29 @usa_star_scale_29 } position = { @[ 1 / 9 * 2 ] @[ 1 / 5 * 1 ] } }
 		instance = { scale = { @usa_star_scale_29 @usa_star_scale_29 } position = { @[ 1 / 9 * 3 ] @[ 1 / 5 * 1 ] } }
@@ -255,7 +247,6 @@ sub_USA_canton_30 = {
 		color1 = color2
 		color2 = color2
 
-		# 30 stars
 		instance = { scale = { @usa_star_scale_30 @usa_star_scale_30 } position = { @[ 1 / 7 * 1 ] @[ 1 / 6 * 1 ] } }
 		instance = { scale = { @usa_star_scale_30 @usa_star_scale_30 } position = { @[ 1 / 7 * 2 ] @[ 1 / 6 * 1 ] } }
 		instance = { scale = { @usa_star_scale_30 @usa_star_scale_30 } position = { @[ 1 / 7 * 3 ] @[ 1 / 6 * 1 ] } }
@@ -307,7 +298,6 @@ sub_USA_canton_31 = {
 		color1 = color2
 		color2 = color2
 
-		# 31 stars
 		instance = { scale = { @usa_star_scale_31 @usa_star_scale_31 } position = { @[ 1 / 8 * 1 ] @[ 1 / 6 * 1 ] } }
 		instance = { scale = { @usa_star_scale_31 @usa_star_scale_31 } position = { @[ 1 / 8 * 2 ] @[ 1 / 6 * 1 ] } }
 		instance = { scale = { @usa_star_scale_31 @usa_star_scale_31 } position = { @[ 1 / 8 * 3 ] @[ 1 / 6 * 1 ] } }
@@ -359,7 +349,6 @@ sub_USA_canton_32 = {
 		color1 = color2
 		color2 = color2
 
-		# 32 stars
 		instance = { scale = { @usa_star_scale_32 @usa_star_scale_32 } position = { @[ 1 / 8 * 1 ] @[ 1 / 6 * 1 ] } }
 		instance = { scale = { @usa_star_scale_32 @usa_star_scale_32 } position = { @[ 1 / 8 * 2 ] @[ 1 / 6 * 1 ] } }
 		instance = { scale = { @usa_star_scale_32 @usa_star_scale_32 } position = { @[ 1 / 8 * 3 ] @[ 1 / 6 * 1 ] } }
@@ -412,7 +401,6 @@ sub_USA_canton_33 = {
 		color1 = color2
 		color2 = color2
 
-		# 33 stars
 		instance = { scale = { @usa_star_scale_33 @usa_star_scale_33 } position = { @[ 1 / 8 * 1 ] @[ 1 / 6 * 1 ] } }
 		instance = { scale = { @usa_star_scale_33 @usa_star_scale_33 } position = { @[ 1 / 8 * 2 ] @[ 1 / 6 * 1 ] } }
 		instance = { scale = { @usa_star_scale_33 @usa_star_scale_33 } position = { @[ 1 / 8 * 3 ] @[ 1 / 6 * 1 ] } }
@@ -466,7 +454,6 @@ sub_USA_canton_34 = {
 		color1 = color2
 		color2 = color2
 
-		# 34 stars
 		instance = { scale = { @usa_star_scale_34 @usa_star_scale_34 } position = { @[ 1 / 8 * 1 ] @[ 1 / 6 * 1 ] } }
 		instance = { scale = { @usa_star_scale_34 @usa_star_scale_34 } position = { @[ 1 / 8 * 2 ] @[ 1 / 6 * 1 ] } }
 		instance = { scale = { @usa_star_scale_34 @usa_star_scale_34 } position = { @[ 1 / 8 * 3 ] @[ 1 / 6 * 1 ] } }
@@ -521,7 +508,6 @@ sub_USA_canton_35 = {
 		color1 = color2
 		color2 = color2
 
-		# 35 stars
 		instance = { scale = { @usa_star_scale_35 @usa_star_scale_35 } position = { @[ 1 / 8 * 1 ] @[ 1 / 6 * 1 ] } }
 		instance = { scale = { @usa_star_scale_35 @usa_star_scale_35 } position = { @[ 1 / 8 * 2 ] @[ 1 / 6 * 1 ] } }
 		instance = { scale = { @usa_star_scale_35 @usa_star_scale_35 } position = { @[ 1 / 8 * 3 ] @[ 1 / 6 * 1 ] } }
@@ -577,7 +563,6 @@ sub_USA_canton_36 = {
 		color1 = color2
 		color2 = color2
 
-		# 36 stars
 		instance = { scale = { @usa_star_scale_36 @usa_star_scale_36 } position = { @[ 1 / 9 * 1 ] @[ 1 / 6 * 1 ] } }
 		instance = { scale = { @usa_star_scale_36 @usa_star_scale_36 } position = { @[ 1 / 9 * 2 ] @[ 1 / 6 * 1 ] } }
 		instance = { scale = { @usa_star_scale_36 @usa_star_scale_36 } position = { @[ 1 / 9 * 3 ] @[ 1 / 6 * 1 ] } }
@@ -634,7 +619,6 @@ sub_USA_canton_37 = {
 		color1 = color2
 		color2 = color2
 
-		# 37 stars
 		instance = { scale = { @usa_star_scale_37 @usa_star_scale_37 } position = { @[ 1 / 9 * 1 ] @[ 1 / 6 * 1 ] } }
 		instance = { scale = { @usa_star_scale_37 @usa_star_scale_37 } position = { @[ 1 / 9 * 2 ] @[ 1 / 6 * 1 ] } }
 		instance = { scale = { @usa_star_scale_37 @usa_star_scale_37 } position = { @[ 1 / 9 * 3 ] @[ 1 / 6 * 1 ] } }
@@ -692,7 +676,6 @@ sub_USA_canton_38 = {
 		color1 = color2
 		color2 = color2
 
-		# 38 stars
 		instance = { scale = { @usa_star_scale_38 @usa_star_scale_38 } position = { @[ 1 / 9 * 1 + 1 / 9 / 2 ] @[ 1 / 6 * 1 ] } }
 		instance = { scale = { @usa_star_scale_38 @usa_star_scale_38 } position = { @[ 1 / 9 * 2 + 1 / 9 / 2 ] @[ 1 / 6 * 1 ] } }
 		instance = { scale = { @usa_star_scale_38 @usa_star_scale_38 } position = { @[ 1 / 9 * 3 + 1 / 9 / 2 ] @[ 1 / 6 * 1 ] } }
@@ -751,7 +734,6 @@ sub_USA_canton_39 = {
 		color1 = color2
 		color2 = color2
 
-		# 39 stars
 		instance = { scale = { @usa_star_scale_39 @usa_star_scale_39 } position = { @[ 1 / 9 * 1 ] @[ 1 / 6 * 1 ] } }
 		instance = { scale = { @usa_star_scale_39 @usa_star_scale_39 } position = { @[ 1 / 9 * 2 ] @[ 1 / 6 * 1 ] } }
 		instance = { scale = { @usa_star_scale_39 @usa_star_scale_39 } position = { @[ 1 / 9 * 3 ] @[ 1 / 6 * 1 ] } }
@@ -811,7 +793,6 @@ sub_USA_canton_40 = {
 		color1 = color2
 		color2 = color2
 
-		# 40 stars
 		instance = { scale = { @usa_star_scale_40 @usa_star_scale_40 } position = { @[ 1 / 9 * 1 ] @[ 1 / 6 * 1 ] } }
 		instance = { scale = { @usa_star_scale_40 @usa_star_scale_40 } position = { @[ 1 / 9 * 2 ] @[ 1 / 6 * 1 ] } }
 		instance = { scale = { @usa_star_scale_40 @usa_star_scale_40 } position = { @[ 1 / 9 * 3 ] @[ 1 / 6 * 1 ] } }
@@ -872,7 +853,6 @@ sub_USA_canton_41 = {
 		color1 = color2
 		color2 = color2
 
-		# 41 stars
 		instance = { scale = { @usa_star_scale_41 @usa_star_scale_41 } position = { @[ 1 / 8 * 1 ] @[ 1 / 7 * 1 ] } }
 		instance = { scale = { @usa_star_scale_41 @usa_star_scale_41 } position = { @[ 1 / 8 * 2 ] @[ 1 / 7 * 1 ] } }
 		instance = { scale = { @usa_star_scale_41 @usa_star_scale_41 } position = { @[ 1 / 8 * 3 ] @[ 1 / 7 * 1 ] } }
@@ -935,7 +915,6 @@ sub_USA_canton_42 = {
 		color1 = color2
 		color2 = color2
 
-		# 42 stars
 		instance = { scale = { @usa_star_scale_42 @usa_star_scale_42 } position = { @[ 1 / 8 * 1 ] @[ 1 / 7 * 1 ] } }
 		instance = { scale = { @usa_star_scale_42 @usa_star_scale_42 } position = { @[ 1 / 8 * 2 ] @[ 1 / 7 * 1 ] } }
 		instance = { scale = { @usa_star_scale_42 @usa_star_scale_42 } position = { @[ 1 / 8 * 3 ] @[ 1 / 7 * 1 ] } }
@@ -999,7 +978,6 @@ sub_USA_canton_43 = {
 		color1 = color2
 		color2 = color2
 
-		# 43 stars
 		instance = { scale = { @usa_star_scale_43 @usa_star_scale_43 } position = { @[ 1 / 9 * 1 ] @[ 1 / 7 * 1 ] } }
 		instance = { scale = { @usa_star_scale_43 @usa_star_scale_43 } position = { @[ 1 / 9 * 2 ] @[ 1 / 7 * 1 ] } }
 		instance = { scale = { @usa_star_scale_43 @usa_star_scale_43 } position = { @[ 1 / 9 * 3 ] @[ 1 / 7 * 1 ] } }
@@ -1064,7 +1042,6 @@ sub_USA_canton_44 = {
 		color1 = color2
 		color2 = color2
 
-		# 44 stars
 		instance = { scale = { @usa_star_scale_44 @usa_star_scale_44 } position = { @[ 1 / 9 * 1 ] @[ 1 / 7 * 1 ] } }
 		instance = { scale = { @usa_star_scale_44 @usa_star_scale_44 } position = { @[ 1 / 9 * 2 ] @[ 1 / 7 * 1 ] } }
 		instance = { scale = { @usa_star_scale_44 @usa_star_scale_44 } position = { @[ 1 / 9 * 3 ] @[ 1 / 7 * 1 ] } }
@@ -1130,7 +1107,6 @@ sub_USA_canton_45 = {
 		color1 = color2
 		color2 = color2
 
-		# 45 stars
 		instance = { scale = { @usa_star_scale_45 @usa_star_scale_45 } position = { @[ 1 / 9 * 1 ] @[ 1 / 7 * 1 ] } }
 		instance = { scale = { @usa_star_scale_45 @usa_star_scale_45 } position = { @[ 1 / 9 * 2 ] @[ 1 / 7 * 1 ] } }
 		instance = { scale = { @usa_star_scale_45 @usa_star_scale_45 } position = { @[ 1 / 9 * 3 ] @[ 1 / 7 * 1 ] } }
@@ -1197,7 +1173,6 @@ sub_USA_canton_46 = {
 		color1 = color2
 		color2 = color2
 
-		# 46 stars
 		instance = { scale = { @usa_star_scale_46 @usa_star_scale_46 } position = { @[ 1 / 9 * 1 ] @[ 1 / 7 * 1 ] } }
 		instance = { scale = { @usa_star_scale_46 @usa_star_scale_46 } position = { @[ 1 / 9 * 2 ] @[ 1 / 7 * 1 ] } }
 		instance = { scale = { @usa_star_scale_46 @usa_star_scale_46 } position = { @[ 1 / 9 * 3 ] @[ 1 / 7 * 1 ] } }
@@ -1265,7 +1240,6 @@ sub_USA_canton_47 = {
 		color1 = color2
 		color2 = color2
 
-		# 47 stars
 		instance = { scale = { @usa_star_scale_47 @usa_star_scale_47 } position = { @[ 2 / 19 * 1 + 2 / 19 / 2 ] @[ 1 / 7 * 1 ] } }
 		instance = { scale = { @usa_star_scale_47 @usa_star_scale_47 } position = { @[ 2 / 19 * 2 + 2 / 19 / 2 ] @[ 1 / 7 * 1 ] } }
 		instance = { scale = { @usa_star_scale_47 @usa_star_scale_47 } position = { @[ 2 / 19 * 3 + 2 / 19 / 2 ] @[ 1 / 7 * 1 ] } }
@@ -1334,7 +1308,6 @@ sub_USA_canton_48 = {
 		color1 = color2
 		color2 = color2
 
-		# 48 stars
 		instance = { scale = { @usa_star_scale_48 @usa_star_scale_48 } position = { @[ 1 / 9 * 1 ] @[ 1 / 7 * 1 ] } }
 		instance = { scale = { @usa_star_scale_48 @usa_star_scale_48 } position = { @[ 1 / 9 * 2 ] @[ 1 / 7 * 1 ] } }
 		instance = { scale = { @usa_star_scale_48 @usa_star_scale_48 } position = { @[ 1 / 9 * 3 ] @[ 1 / 7 * 1 ] } }
@@ -1404,7 +1377,6 @@ sub_USA_canton_49 = {
 		color1 = color2
 		color2 = color2
 
-		# 49 stars
 		instance = { scale = { @usa_star_scale_49 @usa_star_scale_49 } position = { @[ 2 / 17 * 1 ] @[ 1 / 8 * 1 ] } }
 		instance = { scale = { @usa_star_scale_49 @usa_star_scale_49 } position = { @[ 2 / 17 * 2 ] @[ 1 / 8 * 1 ] } }
 		instance = { scale = { @usa_star_scale_49 @usa_star_scale_49 } position = { @[ 2 / 17 * 3 ] @[ 1 / 8 * 1 ] } }
@@ -1483,7 +1455,6 @@ sub_USA_canton_50 = {
 		color1 = color2
 		color2 = color2
 
-		# 50 stars
 		instance = { scale = { @usa_star_scale_50 @usa_star_scale_50 } position = { @[1 / 6 * 1 - 1 / 6 / 2 ] @[ 1 / 10 * 1 ] } }
 		instance = { scale = { @usa_star_scale_50 @usa_star_scale_50 } position = { @[1 / 6 * 2 - 1 / 6 / 2 ] @[ 1 / 10 * 1 ] } }
 		instance = { scale = { @usa_star_scale_50 @usa_star_scale_50 } position = { @[1 / 6 * 3 - 1 / 6 / 2 ] @[ 1 / 10 * 1 ] } }
@@ -1558,7 +1529,6 @@ sub_USA_canton_51 = {
 		color1 = color2
 		color2 = color2
 
-		# 51 stars
 		instance = { scale = { @usa_star_scale_51 @usa_star_scale_51 } position = { @[ 1 / 10 * 1 ] @[ 1 / 7 * 1 ] } }
 		instance = { scale = { @usa_star_scale_51 @usa_star_scale_51 } position = { @[ 1 / 10 * 2 ] @[ 1 / 7 * 1 ] } }
 		instance = { scale = { @usa_star_scale_51 @usa_star_scale_51 } position = { @[ 1 / 10 * 3 ] @[ 1 / 7 * 1 ] } }
@@ -1631,7 +1601,6 @@ sub_USA_canton_52 = {
 		color1 = color2
 		color2 = color2
 
-		# 52 stars
 		instance = { scale = { @usa_star_scale_52 @usa_star_scale_52 } position = { @[ 1 / 9 * 1 + 1 / 10 / 2 ] @[ 1 / 8 * 1 ] } }
 		instance = { scale = { @usa_star_scale_52 @usa_star_scale_52 } position = { @[ 1 / 9 * 2 + 1 / 10 / 2 ] @[ 1 / 8 * 1 ] } }
 		instance = { scale = { @usa_star_scale_52 @usa_star_scale_52 } position = { @[ 1 / 9 * 3 + 1 / 10 / 2 ] @[ 1 / 8 * 1 ] } }
@@ -1707,7 +1676,6 @@ sub_USA_canton_53 = {
 		color1 = color2
 		color2 = color2
 
-		# 53 stars
 		instance = { scale = { @usa_star_scale_53 @usa_star_scale_53 } position = { @[ 1 / 9 * 1 ] @[ 1 / 8 * 1 ] } }
 		instance = { scale = { @usa_star_scale_53 @usa_star_scale_53 } position = { @[ 1 / 9 * 2 ] @[ 1 / 8 * 1 ] } }
 		instance = { scale = { @usa_star_scale_53 @usa_star_scale_53 } position = { @[ 1 / 9 * 3 ] @[ 1 / 8 * 1 ] } }
@@ -1782,7 +1750,6 @@ sub_USA_canton_54 = {
 		color1 = color2
 		color2 = color2
 
-		# 54 stars
 		instance = { scale = { @usa_star_scale_54 @usa_star_scale_54 } position = { @[ 1 / 9 * 1 ] @[ 1 / 7 * 1 ] } }
 		instance = { scale = { @usa_star_scale_54 @usa_star_scale_54 } position = { @[ 1 / 9 * 2 ] @[ 1 / 7 * 1 ] } }
 		instance = { scale = { @usa_star_scale_54 @usa_star_scale_54 } position = { @[ 1 / 9 * 3 ] @[ 1 / 7 * 1 ] } }
@@ -1852,7 +1819,6 @@ sub_USA_canton_55 = {
 		color1 = color2
 		color2 = color2
 
-		# 55 stars
 		instance = { scale = { @usa_star_scale_55 @usa_star_scale_55 } position = { @[1 / 6 * 1 - 1 / 6 / 2 ] @[ 1 / 11 * 1 ] } }
 		instance = { scale = { @usa_star_scale_55 @usa_star_scale_55 } position = { @[1 / 6 * 2 - 1 / 6 / 2 ] @[ 1 / 11 * 1 ] } }
 		instance = { scale = { @usa_star_scale_55 @usa_star_scale_55 } position = { @[1 / 6 * 3 - 1 / 6 / 2 ] @[ 1 / 11 * 1 ] } }
@@ -1933,7 +1899,6 @@ sub_USA_canton_56 = {
 		color1 = color2
 		color2 = color2
 
-		# 56 stars
 		instance = { scale = { @usa_star_scale_56 @usa_star_scale_56 } position = { @[ 1 / 9 * 1 ] @[ 1 / 8 * 1 ] } }
 		instance = { scale = { @usa_star_scale_56 @usa_star_scale_56 } position = { @[ 1 / 9 * 2 ] @[ 1 / 8 * 1 ] } }
 		instance = { scale = { @usa_star_scale_56 @usa_star_scale_56 } position = { @[ 1 / 9 * 3 ] @[ 1 / 8 * 1 ] } }
@@ -2012,7 +1977,6 @@ sub_USA_canton_57 = {
 		color1 = color2
 		color2 = color2
 
-		# 57 stars
 		instance = { scale = { @usa_star_scale_57 @usa_star_scale_57 } position = { @[ 1 / 11 * 1 ] @[ 1 / 7 * 1 ] } }
 		instance = { scale = { @usa_star_scale_57 @usa_star_scale_57 } position = { @[ 1 / 11 * 2 ] @[ 1 / 7 * 1 ] } }
 		instance = { scale = { @usa_star_scale_57 @usa_star_scale_57 } position = { @[ 1 / 11 * 3 ] @[ 1 / 7 * 1 ] } }
@@ -2091,7 +2055,6 @@ sub_USA_canton_58 = {
 		color1 = color2
 		color2 = color2
 
-		# 58 stars
 		instance = { scale = { @usa_star_scale_58 @usa_star_scale_58 } position = { @[ 1 / 7 * 1 ] @[ 1 / 10 * 1 ] } }
 		instance = { scale = { @usa_star_scale_58 @usa_star_scale_58 } position = { @[ 1 / 7 * 2 ] @[ 1 / 10 * 1 ] } }
 		instance = { scale = { @usa_star_scale_58 @usa_star_scale_58 } position = { @[ 1 / 7 * 3 ] @[ 1 / 10 * 1 ] } }
@@ -2174,7 +2137,6 @@ sub_USA_canton_59 = {
 		color1 = color2
 		color2 = color2
 
-		# 59 stars
 		instance = { scale = { @usa_star_scale_59 @usa_star_scale_59 } position = { @[ 1 / 7 * 1 - 1 / 7 / 2 ] @[ 1 / 10 * 1 ] } }
 		instance = { scale = { @usa_star_scale_59 @usa_star_scale_59 } position = { @[ 1 / 7 * 2 - 1 / 7 / 2 ] @[ 1 / 10 * 1 ] } }
 		instance = { scale = { @usa_star_scale_59 @usa_star_scale_59 } position = { @[ 1 / 7 * 3 - 1 / 7 / 2 ] @[ 1 / 10 * 1 ] } }
@@ -2258,7 +2220,6 @@ sub_USA_canton_60 = {
 		color1 = color2
 		color2 = color2
 
-		# 60 stars
 		instance = { scale = { @usa_star_scale_60 @usa_star_scale_60 } position = { @[ 2 / 19 * 1 - 2 / 19 / 3 ] @[ 1 / 8 * 1 ] } }
 		instance = { scale = { @usa_star_scale_60 @usa_star_scale_60 } position = { @[ 2 / 19 * 2 - 2 / 19 / 3 ] @[ 1 / 8 * 1 ] } }
 		instance = { scale = { @usa_star_scale_60 @usa_star_scale_60 } position = { @[ 2 / 19 * 3 - 2 / 19 / 3 ] @[ 1 / 8 * 1 ] } }
@@ -2341,7 +2302,6 @@ sub_USA_canton_61 = {
 		color1 = color2
 		color2 = color2
 
-		# 61 stars
 		instance = { scale = { @usa_star_scale_61 @usa_star_scale_61 } position = { @[ 1 / 6 * 1 - 1 / 6 / 2 ] @[ 1 / 12 * 1 ] } }
 		instance = { scale = { @usa_star_scale_61 @usa_star_scale_61 } position = { @[ 1 / 6 * 2 - 1 / 6 / 2 ] @[ 1 / 12 * 1 ] } }
 		instance = { scale = { @usa_star_scale_61 @usa_star_scale_61 } position = { @[ 1 / 6 * 3 - 1 / 6 / 2 ] @[ 1 / 12 * 1 ] } }
@@ -2429,7 +2389,6 @@ sub_USA_canton_62 = {
 		color1 = color2
 		color2 = color2
 
-		# 62 stars
 		instance = { scale = { @usa_star_scale_62 @usa_star_scale_62 } position = { @[ 1 / 12 * 1 ] @[ 1 / 7 * 1 ] } }
 		instance = { scale = { @usa_star_scale_62 @usa_star_scale_62 } position = { @[ 1 / 12 * 2 ] @[ 1 / 7 * 1 ] } }
 		instance = { scale = { @usa_star_scale_62 @usa_star_scale_62 } position = { @[ 1 / 12 * 3 ] @[ 1 / 7 * 1 ] } }
@@ -2513,7 +2472,6 @@ sub_USA_canton_63 = {
 		color1 = color2
 		color2 = color2
 
-		# 63 stars
 		instance = { scale = { @usa_star_scale_63 @usa_star_scale_63 } position = { @[ 1 / 10 * 1 ] @[ 1 / 8 * 1 ] } }
 		instance = { scale = { @usa_star_scale_63 @usa_star_scale_63 } position = { @[ 1 / 10 * 2 ] @[ 1 / 8 * 1 ] } }
 		instance = { scale = { @usa_star_scale_63 @usa_star_scale_63 } position = { @[ 1 / 10 * 3 ] @[ 1 / 8 * 1 ] } }
@@ -2599,7 +2557,6 @@ sub_USA_canton_64 = {
 		color1 = color2
 		color2 = color2
 
-		# 64 stars
 		instance = { scale = { @usa_star_scale_64 @usa_star_scale_64 } position = { @[ 1 / 9 * 1 ] @[ 1 / 9 * 1 ] } }
 		instance = { scale = { @usa_star_scale_64 @usa_star_scale_64 } position = { @[ 1 / 9 * 2 ] @[ 1 / 9 * 1 ] } }
 		instance = { scale = { @usa_star_scale_64 @usa_star_scale_64 } position = { @[ 1 / 9 * 3 ] @[ 1 / 9 * 1 ] } }
@@ -2687,7 +2644,6 @@ sub_USA_canton_65 = {
 		color1 = color2
 		color2 = color2
 
-		# 65 stars
 		instance = { scale = { @usa_star_scale_65 @usa_star_scale_65 } position = { @[ 1 / 7 * 1 - 1 / 7 / 2 ] @[ 1 / 11 * 1 ] } }
 		instance = { scale = { @usa_star_scale_65 @usa_star_scale_65 } position = { @[ 1 / 7 * 2 - 1 / 7 / 2 ] @[ 1 / 11 * 1 ] } }
 		instance = { scale = { @usa_star_scale_65 @usa_star_scale_65 } position = { @[ 1 / 7 * 3 - 1 / 7 / 2 ] @[ 1 / 11 * 1 ] } }
@@ -2778,7 +2734,6 @@ sub_USA_canton_66 = {
 		color1 = color2
 		color2 = color2
 
-		# 66 stars
 		instance = { scale = { @usa_star_scale_66 @usa_star_scale_66 } position = { @[ 1 / 6 * 1 - 1 / 6 / 2 ] @[ 1 / 13 * 1 ] } }
 		instance = { scale = { @usa_star_scale_66 @usa_star_scale_66 } position = { @[ 1 / 6 * 2 - 1 / 6 / 2 ] @[ 1 / 13 * 1 ] } }
 		instance = { scale = { @usa_star_scale_66 @usa_star_scale_66 } position = { @[ 1 / 6 * 3 - 1 / 6 / 2 ] @[ 1 / 13 * 1 ] } }
@@ -2873,7 +2828,6 @@ sub_USA_canton_67 = {
 		color1 = color2
 		color2 = color2
 
-		# 67 stars
 		instance = { scale = { @usa_star_scale_67 @usa_star_scale_67 } position = { @[ 1 / 8 * 1 ] @[ 1 / 10 * 1 ] } }
 		instance = { scale = { @usa_star_scale_67 @usa_star_scale_67 } position = { @[ 1 / 8 * 2 ] @[ 1 / 10 * 1 ] } }
 		instance = { scale = { @usa_star_scale_67 @usa_star_scale_67 } position = { @[ 1 / 8 * 3 ] @[ 1 / 10 * 1 ] } }
@@ -2964,7 +2918,6 @@ sub_USA_canton_68 = {
 		color1 = color2
 		color2 = color2
 
-		# 68 stars
 		instance = { scale = { @usa_star_scale_68 @usa_star_scale_68 } position = { @[ 1 / 8 * 1 - 1 / 8 / 2 ] @[ 1 / 10 * 1 ] } }
 		instance = { scale = { @usa_star_scale_68 @usa_star_scale_68 } position = { @[ 1 / 8 * 2 - 1 / 8 / 2 ] @[ 1 / 10 * 1 ] } }
 		instance = { scale = { @usa_star_scale_68 @usa_star_scale_68 } position = { @[ 1 / 8 * 3 - 1 / 8 / 2 ] @[ 1 / 10 * 1 ] } }
@@ -3056,7 +3009,6 @@ sub_USA_canton_69 = {
 		color1 = color2
 		color2 = color2
 
-		# 69 stars
 		instance = { scale = { @usa_star_scale_69 @usa_star_scale_69 } position = { @[ 1 / 11 * 1 ] @[ 1 / 8 * 1 ] } }
 		instance = { scale = { @usa_star_scale_69 @usa_star_scale_69 } position = { @[ 1 / 11 * 2 ] @[ 1 / 8 * 1 ] } }
 		instance = { scale = { @usa_star_scale_69 @usa_star_scale_69 } position = { @[ 1 / 11 * 3 ] @[ 1 / 8 * 1 ] } }
@@ -3148,7 +3100,6 @@ sub_USA_canton_70 = {
 		color1 = color2
 		color2 = color2
 
-		# 70 stars
 		instance = { scale = { @usa_star_scale_70 @usa_star_scale_70 } position = { @[ 1 / 11 * 1 ] @[ 1 / 8 * 1 ] } }
 		instance = { scale = { @usa_star_scale_70 @usa_star_scale_70 } position = { @[ 1 / 11 * 2 ] @[ 1 / 8 * 1 ] } }
 		instance = { scale = { @usa_star_scale_70 @usa_star_scale_70 } position = { @[ 1 / 11 * 3 ] @[ 1 / 8 * 1 ] } }
@@ -3241,7 +3192,6 @@ sub_USA_canton_71 = {
 		color1 = color2
 		color2 = color2
 
-		# 71 stars
 		instance = { scale = { @usa_star_scale_71 @usa_star_scale_71 } position = { @[ 1 / 7 * 1 ] @[ 1 / 12 * 1 ] } }
 		instance = { scale = { @usa_star_scale_71 @usa_star_scale_71 } position = { @[ 1 / 7 * 2 ] @[ 1 / 12 * 1 ] } }
 		instance = { scale = { @usa_star_scale_71 @usa_star_scale_71 } position = { @[ 1 / 7 * 3 ] @[ 1 / 12 * 1 ] } }
@@ -3338,7 +3288,6 @@ sub_USA_canton_72 = {
 		color1 = color2
 		color2 = color2
 
-		# 72 stars
 		instance = { scale = { @usa_star_scale_72 @usa_star_scale_72 } position = { @[ 1 / 7 * 1 - 1 / 7 / 2 ] @[ 1 / 12 * 1 ] } }
 		instance = { scale = { @usa_star_scale_72 @usa_star_scale_72 } position = { @[ 1 / 7 * 2 - 1 / 7 / 2 ] @[ 1 / 12 * 1 ] } }
 		instance = { scale = { @usa_star_scale_72 @usa_star_scale_72 } position = { @[ 1 / 7 * 3 - 1 / 7 / 2 ] @[ 1 / 12 * 1 ] } }
@@ -3436,7 +3385,6 @@ sub_USA_canton_73 = {
 		color1 = color2
 		color2 = color2
 
-		# 73 stars
 		instance = { scale = { @usa_star_scale_73 @usa_star_scale_73 } position = { @[ 1 / 12 * 1 + 1 / 12 / 2 ] @[ 1 / 8 * 1 ] } }
 		instance = { scale = { @usa_star_scale_73 @usa_star_scale_73 } position = { @[ 1 / 12 * 2 + 1 / 12 / 2 ] @[ 1 / 8 * 1 ] } }
 		instance = { scale = { @usa_star_scale_73 @usa_star_scale_73 } position = { @[ 1 / 12 * 3 + 1 / 12 / 2 ] @[ 1 / 8 * 1 ] } }
@@ -3531,7 +3479,6 @@ sub_USA_canton_74 = {
 		color1 = color2
 		color2 = color2
 
-		# 74 stars
 		instance = { scale = { @usa_star_scale_74 @usa_star_scale_74 } position = { @[ 1 / 12 * 1 ] @[ 1 / 8 * 1 ] } }
 		instance = { scale = { @usa_star_scale_74 @usa_star_scale_74 } position = { @[ 1 / 12 * 2 ] @[ 1 / 8 * 1 ] } }
 		instance = { scale = { @usa_star_scale_74 @usa_star_scale_74 } position = { @[ 1 / 12 * 3 ] @[ 1 / 8 * 1 ] } }
@@ -3627,7 +3574,6 @@ sub_USA_canton_75 = {
 		color1 = color2
 		color2 = color2
 
-		# 75 stars
 		instance = { scale = { @usa_star_scale_75 @usa_star_scale_75 } position = { @[ 1 / 8 * 1 - 1 / 8 / 2 ] @[ 1 / 11 * 1 ] } }
 		instance = { scale = { @usa_star_scale_75 @usa_star_scale_75 } position = { @[ 1 / 8 * 2 - 1 / 8 / 2 ] @[ 1 / 11 * 1 ] } }
 		instance = { scale = { @usa_star_scale_75 @usa_star_scale_75 } position = { @[ 1 / 8 * 3 - 1 / 8 / 2 ] @[ 1 / 11 * 1 ] } }
@@ -3728,7 +3674,6 @@ sub_USA_canton_76 = {
 		color1 = color2
 		color2 = color2
 
-		# 76 stars
 		instance = { scale = { @usa_star_scale_76 @usa_star_scale_76 } position = { @[ 1 / 9 * 1 ] @[ 1 / 10 * 1 ] } }
 		instance = { scale = { @usa_star_scale_76 @usa_star_scale_76 } position = { @[ 1 / 9 * 2 ] @[ 1 / 10 * 1 ] } }
 		instance = { scale = { @usa_star_scale_76 @usa_star_scale_76 } position = { @[ 1 / 9 * 3 ] @[ 1 / 10 * 1 ] } }
@@ -3828,7 +3773,6 @@ sub_USA_canton_77 = {
 		color1 = color2
 		color2 = color2
 
-		# 77 stars
 		instance = { scale = { @usa_star_scale_77 @usa_star_scale_77 } position = { @[ 1 / 9 * 1 - 1 / 9 / 2 ] @[ 1 / 10 * 1 ] } }
 		instance = { scale = { @usa_star_scale_77 @usa_star_scale_77 } position = { @[ 1 / 9 * 2 - 1 / 9 / 2 ] @[ 1 / 10 * 1 ] } }
 		instance = { scale = { @usa_star_scale_77 @usa_star_scale_77 } position = { @[ 1 / 9 * 3 - 1 / 9 / 2 ] @[ 1 / 10 * 1 ] } }
@@ -3929,7 +3873,6 @@ sub_USA_canton_78 = {
 		color1 = color2
 		color2 = color2
 
-		# 78 stars
 		instance = { scale = { @usa_star_scale_78 @usa_star_scale_78 } position = { @[ 1 / 7 * 1 - 1 / 7 / 2 ] @[ 1 / 13 * 1 ] } }
 		instance = { scale = { @usa_star_scale_78 @usa_star_scale_78 } position = { @[ 1 / 7 * 2 - 1 / 7 / 2 ] @[ 1 / 13 * 1 ] } }
 		instance = { scale = { @usa_star_scale_78 @usa_star_scale_78 } position = { @[ 1 / 7 * 3 - 1 / 7 / 2 ] @[ 1 / 13 * 1 ] } }
@@ -4035,7 +3978,6 @@ sub_USA_canton_79 = {
 		color1 = color2
 		color2 = color2
 
-		# 79 stars
 		instance = { scale = { @usa_star_scale_79 @usa_star_scale_79 } position = { @[ 1 / 13 * 1 ] @[ 1 / 8 * 1 ] } }
 		instance = { scale = { @usa_star_scale_79 @usa_star_scale_79 } position = { @[ 1 / 13 * 2 ] @[ 1 / 8 * 1 ] } }
 		instance = { scale = { @usa_star_scale_79 @usa_star_scale_79 } position = { @[ 1 / 13 * 3 ] @[ 1 / 8 * 1 ] } }
@@ -4136,7 +4078,6 @@ sub_USA_canton_80 = {
 		color1 = color2
 		color2 = color2
 
-		# 80 stars
 		instance = { scale = { @usa_star_scale_80 @usa_star_scale_80 } position = { @[ 1 / 11 * 1 ] @[ 1 / 9 * 1 ] } }
 		instance = { scale = { @usa_star_scale_80 @usa_star_scale_80 } position = { @[ 1 / 11 * 2 ] @[ 1 / 9 * 1 ] } }
 		instance = { scale = { @usa_star_scale_80 @usa_star_scale_80 } position = { @[ 1 / 11 * 3 ] @[ 1 / 9 * 1 ] } }
@@ -4240,7 +4181,6 @@ sub_USA_canton_81 = {
 		color1 = color2
 		color2 = color2
 
-		# 81 stars
 		instance = { scale = { @usa_star_scale_81 @usa_star_scale_81 } position = { @[ 1 / 10 * 1 ] @[ 1 / 10 * 1 ] } }
 		instance = { scale = { @usa_star_scale_81 @usa_star_scale_81 } position = { @[ 1 / 10 * 2 ] @[ 1 / 10 * 1 ] } }
 		instance = { scale = { @usa_star_scale_81 @usa_star_scale_81 } position = { @[ 1 / 10 * 3 ] @[ 1 / 10 * 1 ] } }
@@ -4345,7 +4285,6 @@ sub_USA_canton_82 = {
 		color1 = color2
 		color2 = color2
 
-		# 82 stars
 		instance = { scale = { @usa_star_scale_82 @usa_star_scale_82 } position = { @[ 1 / 8 * 1 ] @[ 1 / 12 * 1 ] } }
 		instance = { scale = { @usa_star_scale_82 @usa_star_scale_82 } position = { @[ 1 / 8 * 2 ] @[ 1 / 12 * 1 ] } }
 		instance = { scale = { @usa_star_scale_82 @usa_star_scale_82 } position = { @[ 1 / 8 * 3 ] @[ 1 / 12 * 1 ] } }
@@ -4453,7 +4392,6 @@ sub_USA_canton_83 = {
 		color1 = color2
 		color2 = color2
 
-		# 83 stars
 		instance = { scale = { @usa_star_scale_83 @usa_star_scale_83 } position = { @[ 1 / 8 * 1 - 1 / 8 / 2 ] @[ 1 / 12 * 1 ] } }
 		instance = { scale = { @usa_star_scale_83 @usa_star_scale_83 } position = { @[ 1 / 8 * 2 - 1 / 8 / 2 ] @[ 1 / 12 * 1 ] } }
 		instance = { scale = { @usa_star_scale_83 @usa_star_scale_83 } position = { @[ 1 / 8 * 3 - 1 / 8 / 2 ] @[ 1 / 12 * 1 ] } }
@@ -4562,7 +4500,6 @@ sub_USA_canton_84 = {
 		color1 = color2
 		color2 = color2
 
-		# 84 stars
 		instance = { scale = { @usa_star_scale_84 @usa_star_scale_84 } position = { @[ 1 / 7 * 1 ] @[ 1 / 14 * 1 ] } }
 		instance = { scale = { @usa_star_scale_84 @usa_star_scale_84 } position = { @[ 1 / 7 * 2 ] @[ 1 / 14 * 1 ] } }
 		instance = { scale = { @usa_star_scale_84 @usa_star_scale_84 } position = { @[ 1 / 7 * 3 ] @[ 1 / 14 * 1 ] } }
@@ -4674,7 +4611,6 @@ sub_USA_canton_85 = {
 		color1 = color2
 		color2 = color2
 
-		# 85 stars
 		instance = { scale = { @usa_star_scale_85 @usa_star_scale_85 } position = { @[ 1 / 7 * 1 - 1 / 7 / 2 ] @[ 1 / 14 * 1 ] } }
 		instance = { scale = { @usa_star_scale_85 @usa_star_scale_85 } position = { @[ 1 / 7 * 2 - 1 / 7 / 2 ] @[ 1 / 14 * 1 ] } }
 		instance = { scale = { @usa_star_scale_85 @usa_star_scale_85 } position = { @[ 1 / 7 * 3 - 1 / 7 / 2 ] @[ 1 / 14 * 1 ] } }
@@ -4787,7 +4723,6 @@ sub_USA_canton_86 = {
 		color1 = color2
 		color2 = color2
 
-		# 86 stars
 		instance = { scale = { @usa_star_scale_86 @usa_star_scale_86 } position = { @[ 1 / 10 * 1 - 1 / 10 / 2 ] @[ 1 / 10 * 1 ] } }
 		instance = { scale = { @usa_star_scale_86 @usa_star_scale_86 } position = { @[ 1 / 10 * 2 - 1 / 10 / 2 ] @[ 1 / 10 * 1 ] } }
 		instance = { scale = { @usa_star_scale_86 @usa_star_scale_86 } position = { @[ 1 / 10 * 3 - 1 / 10 / 2 ] @[ 1 / 10 * 1 ] } }
@@ -4897,8 +4832,6 @@ sub_USA_canton_87 = {
 		color1 = color2
 		color2 = color2
 
-		# 87 stars
-
 		instance = { scale = { @usa_star_scale_87 @usa_star_scale_87 } position = { @[ 1 / 14 * 1 + 1 / 14 / 2 ] @[ 1 / 8 * 1 ] } }
 		instance = { scale = { @usa_star_scale_87 @usa_star_scale_87 } position = { @[ 1 / 14 * 2 + 1 / 14 / 2 ] @[ 1 / 8 * 1 ] } }
 		instance = { scale = { @usa_star_scale_87 @usa_star_scale_87 } position = { @[ 1 / 14 * 3 + 1 / 14 / 2 ] @[ 1 / 8 * 1 ] } }
@@ -5007,7 +4940,6 @@ sub_USA_canton_88 = {
 		color1 = color2
 		color2 = color2
 
-		# 88 stars
 		instance = { scale = { @usa_star_scale_88 @usa_star_scale_88 } position = { @[ 1 / 12 * 1 ] @[ 1 / 9 * 1 ] } }
 		instance = { scale = { @usa_star_scale_88 @usa_star_scale_88 } position = { @[ 1 / 12 * 2 ] @[ 1 / 9 * 1 ] } }
 		instance = { scale = { @usa_star_scale_88 @usa_star_scale_88 } position = { @[ 1 / 12 * 3 ] @[ 1 / 9 * 1 ] } }
@@ -5119,7 +5051,6 @@ sub_USA_canton_89 = {
 		color1 = color2
 		color2 = color2
 
-		# 89 stars
 		instance = { scale = { @usa_star_scale_89 @usa_star_scale_89 } position = { @[ 1 / 14 * 1 + 1 / 14 / 2 ] @[ 1 / 8 * 1 ] } }
 		instance = { scale = { @usa_star_scale_89 @usa_star_scale_89 } position = { @[ 1 / 14 * 2 + 1 / 14 / 2 ] @[ 1 / 8 * 1 ] } }
 		instance = { scale = { @usa_star_scale_89 @usa_star_scale_89 } position = { @[ 1 / 14 * 3 + 1 / 14 / 2 ] @[ 1 / 8 * 1 ] } }
@@ -5230,7 +5161,6 @@ sub_USA_canton_90 = {
 		color1 = color2
 		color2 = color2
 
-		# 90 stars
 		instance = { scale = { @usa_star_scale_90 @usa_star_scale_90 } position = { @[ 1 / 11 * 1 ] @[ 1 / 10 * 1 ] } }
 		instance = { scale = { @usa_star_scale_90 @usa_star_scale_90 } position = { @[ 1 / 11 * 2 ] @[ 1 / 10 * 1 ] } }
 		instance = { scale = { @usa_star_scale_90 @usa_star_scale_90 } position = { @[ 1 / 11 * 3 ] @[ 1 / 10 * 1 ] } }
@@ -5344,7 +5274,6 @@ sub_USA_canton_91 = {
 		color1 = color2
 		color2 = color2
 
-		# 91 stars
 		instance = { scale = { @usa_star_scale_91 @usa_star_scale_91 } position = { @[ 1 / 7 * 1 - 1 / 7 / 2 ] @[ 1 / 15 * 1 ] } }
 		instance = { scale = { @usa_star_scale_91 @usa_star_scale_91 } position = { @[ 1 / 7 * 2 - 1 / 7 / 2 ] @[ 1 / 15 * 1 ] } }
 		instance = { scale = { @usa_star_scale_91 @usa_star_scale_91 } position = { @[ 1 / 7 * 3 - 1 / 7 / 2 ] @[ 1 / 15 * 1 ] } }
@@ -5464,7 +5393,6 @@ sub_USA_canton_92 = {
 		color1 = color2
 		color2 = color2
 
-		# 92 stars
 		instance = { scale = { @usa_star_scale_92 @usa_star_scale_92 } position = { @[ 1 / 12 * 1 ] @[ 1 / 10 * 1 ] } }
 		instance = { scale = { @usa_star_scale_92 @usa_star_scale_92 } position = { @[ 1 / 12 * 2 ] @[ 1 / 10 * 1 ] } }
 		instance = { scale = { @usa_star_scale_92 @usa_star_scale_92 } position = { @[ 1 / 12 * 3 ] @[ 1 / 10 * 1 ] } }
@@ -5581,7 +5509,6 @@ sub_USA_canton_93 = {
 		color1 = color2
 		color2 = color2
 
-		# 93 stars
 		instance = { scale = { @usa_star_scale_93 @usa_star_scale_93 } position = { @[ 1 / 9 * 1 ] @[ 1 / 12 * 1 ] } }
 		instance = { scale = { @usa_star_scale_93 @usa_star_scale_93 } position = { @[ 1 / 9 * 2 ] @[ 1 / 12 * 1 ] } }
 		instance = { scale = { @usa_star_scale_93 @usa_star_scale_93 } position = { @[ 1 / 9 * 3 ] @[ 1 / 12 * 1 ] } }
@@ -5700,7 +5627,6 @@ sub_USA_canton_94 = {
 		color1 = color2
 		color2 = color2
 
-		# 94 stars
 		instance = { scale = { @usa_star_scale_94 @usa_star_scale_94 } position = { @[ 1 / 9 * 1 - 1 / 9 / 2 ] @[ 1 / 12 * 1 ] } }
 		instance = { scale = { @usa_star_scale_94 @usa_star_scale_94 } position = { @[ 1 / 9 * 2 - 1 / 9 / 2 ] @[ 1 / 12 * 1 ] } }
 		instance = { scale = { @usa_star_scale_94 @usa_star_scale_94 } position = { @[ 1 / 9 * 3 - 1 / 9 / 2 ] @[ 1 / 12 * 1 ] } }
@@ -5820,7 +5746,6 @@ sub_USA_canton_95 = {
 		color1 = color2
 		color2 = color2
 
-		# 95 stars
 		instance = { scale = { @usa_star_scale_95 @usa_star_scale_95 } position = { @[ 1 / 10 * 1 - 1 / 10 / 2 ] @[ 1 / 11 * 1 ] } }
 		instance = { scale = { @usa_star_scale_95 @usa_star_scale_95 } position = { @[ 1 / 10 * 2 - 1 / 10 / 2 ] @[ 1 / 11 * 1 ] } }
 		instance = { scale = { @usa_star_scale_95 @usa_star_scale_95 } position = { @[ 1 / 10 * 3 - 1 / 10 / 2 ] @[ 1 / 11 * 1 ] } }
@@ -5941,7 +5866,6 @@ sub_USA_canton_96 = {
 		color1 = color2
 		color2 = color2
 
-		# 96 stars
 		instance = { scale = { @usa_star_scale_96 @usa_star_scale_96 } position = { @[ 1 / 13 * 1 ] @[ 1 / 9 * 1 ] } }
 		instance = { scale = { @usa_star_scale_96 @usa_star_scale_96 } position = { @[ 1 / 13 * 2 ] @[ 1 / 9 * 1 ] } }
 		instance = { scale = { @usa_star_scale_96 @usa_star_scale_96 } position = { @[ 1 / 13 * 3 ] @[ 1 / 9 * 1 ] } }
@@ -6060,7 +5984,6 @@ sub_USA_canton_97 = {
 		color1 = color2
 		color2 = color2
 
-		# 97 stars
 		instance = { scale = { @usa_star_scale_97 @usa_star_scale_97 } position = { @[ 1 / 8 * 1 ] @[ 1 / 14 * 1 ] } }
 		instance = { scale = { @usa_star_scale_97 @usa_star_scale_97 } position = { @[ 1 / 8 * 2 ] @[ 1 / 14 * 1 ] } }
 		instance = { scale = { @usa_star_scale_97 @usa_star_scale_97 } position = { @[ 1 / 8 * 3 ] @[ 1 / 14 * 1 ] } }
@@ -6186,7 +6109,6 @@ sub_USA_canton_98 = {
 		color1 = color2
 		color2 = color2
 
-		# 98 stars
 		instance = { scale = { @usa_star_scale_98 @usa_star_scale_98 } position = { @[ 1 / 8 * 1 - 1 / 8 / 2 ] @[ 1 / 14 * 1 ] } }
 		instance = { scale = { @usa_star_scale_98 @usa_star_scale_98 } position = { @[ 1 / 8 * 2 - 1 / 8 / 2 ] @[ 1 / 14 * 1 ] } }
 		instance = { scale = { @usa_star_scale_98 @usa_star_scale_98 } position = { @[ 1 / 8 * 3 - 1 / 8 / 2 ] @[ 1 / 14 * 1 ] } }
@@ -6313,7 +6235,6 @@ sub_USA_canton_99 = {
 		color1 = color2
 		color2 = color2
 
-		# 99 stars
 		instance = { scale = { @usa_star_scale_99 @usa_star_scale_99 } position = { @[ 1 / 12 * 1 ] @[ 1 / 10 * 1 ] } }
 		instance = { scale = { @usa_star_scale_99 @usa_star_scale_99 } position = { @[ 1 / 12 * 2 ] @[ 1 / 10 * 1 ] } }
 		instance = { scale = { @usa_star_scale_99 @usa_star_scale_99 } position = { @[ 1 / 12 * 3 ] @[ 1 / 10 * 1 ] } }
@@ -6436,7 +6357,6 @@ sub_USA_canton_100 = {
 		color1 = color2
 		color2 = color2
 
-		# 100 stars
 		instance = { scale = { @usa_star_scale_100 @usa_star_scale_100 } position = { @[ 1 / 11 * 1 ] @[ 1 / 11 * 1 ] } }
 		instance = { scale = { @usa_star_scale_100 @usa_star_scale_100 } position = { @[ 1 / 11 * 2 ] @[ 1 / 11 * 1 ] } }
 		instance = { scale = { @usa_star_scale_100 @usa_star_scale_100 } position = { @[ 1 / 11 * 3 ] @[ 1 / 11 * 1 ] } }

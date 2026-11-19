@@ -99,28 +99,23 @@ un_events.100 = {
 	desc = un_events.100.d
 	event_image = { video = "africa_diplomats_negotiating" }
  
-	# Option A: Resolution on Environmental Protection
 	option = {
 		name = un_events.100.a
 		set_global_variable = { name = un_motion_active value = yes }
 		set_global_variable = { name = un_current_motion_type value = flag:motion_environment }
 		set_global_variable = { name = un_motion_yes_votes value = 0 }
 		set_global_variable = { name = un_motion_no_votes value = 0 }
-		# Clear any leftover vote flags from prior motion
 		every_country = {
 			limit = { has_variable = un_voted_on_motion }
 			remove_variable = un_voted_on_motion
 		}
-		# Notify all countries that a vote is open
 		every_country = {
 			trigger_event = { id = un_events.101 days = 7 }
 		}
-		# Schedule result processor
 		trigger_event = { id = un_events.201 days = 45 }
 		trigger_event = { id = un_events.400 days = 65 }
 	}
  
-	# Option B: Resolution on World Peace
 	option = {
 		name = un_events.100.b
 		set_global_variable = { name = un_motion_active value = yes }
@@ -138,7 +133,6 @@ un_events.100 = {
 		trigger_event = { id = un_events.400 days = 65 }
 	}
  
-	# Option C: Resolution on Economic Development
 	option = {
 		name = un_events.100.c
 		set_global_variable = { name = un_motion_active value = yes }
@@ -156,7 +150,6 @@ un_events.100 = {
 		trigger_event = { id = un_events.400 days = 65 }
 	}
  
-	# Option D: Resolution on UNESCO Technology
 	option = {
 		name = un_events.100.e
 		set_global_variable = { name = un_motion_active value = yes }
@@ -176,10 +169,6 @@ un_events.100 = {
 }
  
 # ==========================================
-# un_events.101 — Vote Notification
-# Fires for every country when a motion
-# opens. Informs them a vote is in progress.
-# Actual voting happens via JE buttons.
 # ==========================================
  
 un_events.101 = {
@@ -189,17 +178,12 @@ un_events.101 = {
 	desc = un_events.101.d
 	event_image = { video = "africa_diplomats_negotiating" }
 	duration = 1
-	# Acknowledged — will vote via journal entry buttons
 	option = {
 		name = un_events.101.a
 	}
 }
  
 # ==========================================
-# un_events.201 — Hidden Result Processor
-# Fires once, 120 days after proposal.
-# Checks votes, notifies, applies modifier,
-# cleans up all global and per-country vars.
 # ==========================================
  
 un_events.201 = {
@@ -210,33 +194,26 @@ un_events.201 = {
 	immediate = {
 		if = {
 			limit = {
-				scripted_bar_progress = {
-				 name = progress_bar_tag
-				 value > 0.50
+				je:je_united_nations ?= {
+					"scripted_bar_progress(un_motion_progress_bar)" > 0
 				}
 			}
-			# Save motion type locally on each country before cleanup destroys it
 			every_country = {
 				set_variable = { name = un_last_motion_type value = global_var:un_current_motion_type }
 			}
-			# Motion passed — notify and apply modifier to all countries
 			every_country = {
 				trigger_event = { id = un_events.300 days = 1 }
 			}
 		}
 		else = {
-			# Motion failed
 			every_country = {
 				trigger_event = { id = un_events.301 days = 1 }
 			}
 		}
  
-		# ── CLEANUP ──────────────────────────────
-		# Remove per-country vote flags
 		every_country = {
 			limit = { has_variable = un_voted_on_motion }
 			remove_variable = un_voted_on_motion
-			remove_variable = un_last_motion_type
 			je:je_united_nations = { 
 				set_bar_progress = {
 				 value = 0
@@ -244,7 +221,6 @@ un_events.201 = {
 				}
 			}
 		}
-		# Reset global motion state
 		remove_global_variable = un_motion_active
 		set_global_variable = { name = un_motion_yes_votes value = 0 }
 		set_global_variable = { name = un_motion_no_votes value = 0 }
@@ -272,14 +248,15 @@ un_events.202 = {
 	immediate = {
 		if = {
 			limit = {
-				global_var:un_motion_yes_votes >= global_var:un_motion_no_votes
+				je:je_united_nations ?= {
+					"scripted_bar_progress(un_motion_progress_bar)" > 0
+				}
 			}
 			if = {
 				limit = {
 					global_var:un_current_motion_type = flag:motion_sanctions
 					exists = global_var:un_sanction_target
 				}
-				# Save motion type locally before cleanup
 				every_country = {
 					set_variable = { name = un_last_motion_type value = global_var:un_current_motion_type }
 				}
@@ -297,7 +274,6 @@ un_events.202 = {
 					global_var:un_current_motion_type = flag:motion_condemnation
 					exists = global_var:un_sanction_target
 				}
-				# Save motion type locally before cleanup
 				every_country = {
 					set_variable = { name = un_last_motion_type value = global_var:un_current_motion_type }
 				}
@@ -315,11 +291,9 @@ un_events.202 = {
 			every_country = { trigger_event = { id = un_events.301 days = 1 } }
 		}
  
-		# Cleanup
 		every_country = {
 			limit = { has_variable = un_voted_on_motion }
 			remove_variable = un_voted_on_motion
-			remove_variable = un_last_motion_type
 			je:je_united_nations = { 
 				set_bar_progress = {
 				 value = 0
@@ -352,7 +326,6 @@ un_events.1 = {
 		if = { limit = { has_variable = already_got_peacekeep }
 			remove_variable = already_got_peacekeep
 		}
-		# Count actual P5 members before sending vote events
 		set_global_variable = { name = un_p5_count value = 0 }
 		every_country = {
 			limit = { has_modifier = permanent_unsc_member }
@@ -379,7 +352,7 @@ un_events.2 = {
 	cooldown = { days = normal_modifier_time }
 	option = {
 		name = un_events.2.a
-		is_default_option = yes
+		default_option = yes
 		custom_tooltip = you_vote_yes
 		change_global_variable = { name = un_peacekeeping_votes add = 1 }
 		change_global_variable = { name = un_peacekeeping_num_votes add = 1 }
@@ -430,7 +403,6 @@ un_events.2 = {
 	}
 }
 
-
 # Peacekeepers are on their way
 un_events.3 = {
 	type = country_event
@@ -444,9 +416,8 @@ un_events.3 = {
 		global_var:un_peacekeeping_num_votes >= global_var:un_p5_count
 		NOT = { has_variable = already_got_peacekeep }
 	}
-	
-	
-	immediate = { add_modifier = {
+
+immediate = { add_modifier = {
 			name = un_peacekeepers_deployed
 			days = 730
 		}
@@ -515,7 +486,6 @@ un_events.5 = {
  
 	immediate = {
 		set_variable = already_got_participation_trophy
-		# Pre-save generals for options
 		random_scope_character = {
 			limit = {
 				is_busy = no
@@ -534,13 +504,8 @@ un_events.5 = {
 			save_scope_as = peacekeeper_general_2
 		}
 	}
- 
-	# ── OPTION A: PARTICIPATE ─────────────
-	# Send a general. Larger relations boost.
-	# General is deployed for 60 days then
-	# returns via un_events.5b.
- 
-	option = {
+
+option = {
 		name = un_events.5.a
 		trigger = {
 			any_scope_character = {
@@ -550,7 +515,6 @@ un_events.5 = {
 			}
 		}
  
-		# Choose first available general
 		if = {
 			limit = { exists = scope:peacekeeper_general_1 }
 			scope:peacekeeper_general_1 = {
@@ -578,13 +542,11 @@ un_events.5 = {
 			}
 		}
  
-		# Larger relations boost for full participation
 		change_relations = {
 			country = global_var:peacekeeper_requestor
 			value = 25
 		}
  
-		# Also improve relations with other UNSC members
 		every_country = {
 			limit = {
 				has_modifier = permanent_unsc_member
@@ -597,7 +559,6 @@ un_events.5 = {
 			}
 		}
  
-		# Schedule return event in 60 days
 		trigger_event = { id = un_events.6 days = 60 }
  
 		ai_chance = {
@@ -617,9 +578,6 @@ un_events.5 = {
 		}
 	}
  
-	# ── OPTION B: DECLINE ─────────────────
-	# Do not participate. Relations hit.
- 
 	option = {
 		name = un_events.5.b
 		change_relations = {
@@ -632,10 +590,6 @@ un_events.5 = {
 }
  
 # ==========================================
-# un_events.6 — GENERAL RETURNS
-# Fires 60 days after option A in un_events.5.
-# Frees the general. Small prestige bonus
-# for the contribution.
 # ==========================================
  
 un_events.6 = {
@@ -647,11 +601,9 @@ un_events.6 = {
 	duration = 3
  
 	trigger = {
-		# triggered by un_events.5 option A
 	}
  
 	immediate = {
-		# Free the general
 		every_scope_character = {
 			limit = { has_variable = peacekeeper_general_var }
 			set_character_busy_and_immortal = no
@@ -663,7 +615,6 @@ un_events.6 = {
 	option = {
 		name = un_events.6.a
 		default_option = yes
-		# Prestige from a successful peacekeeping contribution
 		add_modifier = {
 			name = un_peacekeeping_contribution
 			months = 24
@@ -672,9 +623,6 @@ un_events.6 = {
 }
 
 # ── UN_EVENTS.300 — RESOLUTION PASSED ────────────
-# Fires for every country when a general resolution
-# passes (environment, peace, economy, technology).
-# Describes the resolution type and its modifier.
  
 un_events.300 = {
 	type = country_event
@@ -697,7 +645,6 @@ un_events.300 = {
 		default_option = yes
 		remove_variable = cannot_propose_un_motions
 		ai_chance = { base = 100 }
-		# Environmental Protection modifier
 				if = {
 					limit = {
 						global_var:un_current_motion_type = flag:motion_environment
@@ -707,7 +654,6 @@ un_events.300 = {
 						months = 12
 					}
 				}
-				# World Peace modifier
 				if = {
 					limit = {
 						global_var:un_current_motion_type = flag:motion_peace
@@ -717,7 +663,6 @@ un_events.300 = {
 						months = 12
 					}
 				}
-				# Economic Development modifier
 				if = {
 					limit = {
 						global_var:un_current_motion_type = flag:motion_economy
@@ -727,7 +672,6 @@ un_events.300 = {
 						months = 12
 					}
 				}
-				# UNESCO Technology modifier
 				if = {
 					limit = {
 						global_var:un_current_motion_type = flag:motion_technology
@@ -741,8 +685,6 @@ un_events.300 = {
 }
  
 # ── UN_EVENTS.301 — RESOLUTION FAILED ────────────
-# Fires for every country when a motion fails to
-# reach majority.
  
 un_events.301 = {
 	type = country_event
@@ -766,8 +708,6 @@ un_events.301 = {
 }
  
 # ── UN_EVENTS.302 — SANCTIONS PASSED (TARGET) ────
-# Fires specifically for the sanctioned country.
-# ROOT = the sanctioned country.
  
 un_events.302 = {
 	type = country_event
@@ -791,8 +731,6 @@ un_events.302 = {
 }
  
 # ── UN_EVENTS.303 — CONDEMNATION PASSED (TARGET) ─
-# Fires specifically for the condemned country.
-# ROOT = the condemned country.
  
 un_events.303 = {
 	type = country_event
@@ -816,11 +754,6 @@ un_events.303 = {
 }
  
 # ── UN_EVENTS.304 — SANCTIONS/CONDEMNATION (OTHERS)
-# Fires for all countries EXCEPT the target,
-# informing them that a punitive resolution passed.
-# Uses global_var:un_sanction_target to name the target.
-# Shared for both sanctions and condemnation —
-# the desc distinguishes them via motion type flag.
  
 un_events.304 = {
 	type = country_event

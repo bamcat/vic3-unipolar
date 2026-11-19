@@ -18,7 +18,7 @@
 	possible = {
 		NOT = { market.owner = scope:target_country }
 		OR = {
-			AND = { # the target controls the market and the requester is independent
+			AND = {
 				scope:target_country = {
 					is_subject = no
 				}

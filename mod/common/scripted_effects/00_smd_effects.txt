@@ -1,4 +1,3 @@
-
 start_israel_palestine_peacetime_journal_entry_system = {
 	if = {
 		limit = {
@@ -33,8 +32,6 @@ restart_israel_palestine_peacetime_after_escalation = {
 
 		add_contextless_journal_entry = je_israel_palestine_peacetime
 
-		# Start a restarted peace process at a tenser 55 instead of the default 35.
-		# Since the progress bar starts at 35, add +20.
 		ip_temperature_add_20 = yes
 	}
 }
@@ -237,7 +234,6 @@ oslo_i_acceptance_effect = {
 		change_global_variable = { name = ip_peacetime_international_pressure add = -10 }
 	}
 
-	# Oslo II proposal, 720 days later.
 	c:ISR ?= {
 		trigger_event = {
 			id = oslo_accords.2
@@ -248,7 +244,6 @@ oslo_i_acceptance_effect = {
 }
 
 intifada_2005_cleanup_effect = {
-	# Clean Israel and Palestine country modifiers from the Second Intifada system.
 	every_country = {
 		limit = {
 			OR = {
@@ -272,7 +267,6 @@ intifada_2005_cleanup_effect = {
 		}
 	}
 
-	# Clean Palestinian-state devastation modifier if it exists.
 	c:PAL ?= {
 		every_scope_state = {
 			limit = {
@@ -282,7 +276,6 @@ intifada_2005_cleanup_effect = {
 		}
 	}
 
-	# Clean global variables used by the Second Intifada package.
 	remove_global_variable = isr_intifada_score
 	remove_global_variable = pal_intifada_score
 	remove_global_variable = intifada_started
@@ -358,7 +351,6 @@ yugo_monthly_pressure_drift = {
 			change_variable = { name = yugo_secession_pressure add = 1 }
 		}
 
-		# Player-side stabilising factors
 		if = {
 			limit = { has_law = law_type:law_universal_suffrage }
 			change_variable = { name = yugo_secession_pressure add = -1 }
@@ -374,7 +366,6 @@ yugo_monthly_pressure_drift = {
 			change_variable = { name = yugo_secession_pressure add = -0.5 }
 		}
 
-		# Hard clamps so the bar can't go off scale
 		if = {
 			limit = { var:yugo_secession_pressure > 100 }
 			set_variable = { name = yugo_secession_pressure value = 100 }
@@ -415,7 +406,6 @@ yugo_increase_pressure_large = {
 }
 
 yugo_create_bosnian_entities = {
-	# Republika Srpska
 	if = {
 		limit = { NOT = { exists = c:SRP } }
 		create_country = {
@@ -423,7 +413,7 @@ yugo_create_bosnian_entities = {
 			origin = this
 			province = p:xD0A0A0
 			on_created = {
-				s:STATE_VLASENICA = {
+				s:STATE_BOSNIA = {
 					set_owner_of_provinces = {
 						country = c:SRP
 						provinces = { xD0A0A0 x3F67BA }
@@ -439,7 +429,6 @@ yugo_create_bosnian_entities = {
 		}
 	}
 
-	# Serbian Krajina
 	if = {
 		limit = { NOT = { exists = c:PCK } }
 		create_country = {
@@ -457,7 +446,6 @@ yugo_create_bosnian_entities = {
 		}
 	}
 
-	# Bosnia
 	if = {
 		limit = { NOT = { exists = c:BOS } }
 		create_country = {
@@ -698,12 +686,12 @@ yugo_create_srpska_army = {
 
 			combat_unit = {
 				type = unit_type:combat_unit_type_irregular_infantry
-				state_region = s:STATE_BANJA_LUKA
+				state_region = s:STATE_BOSNIA
 				count = 8
 			}
 			combat_unit = {
 				type = unit_type:combat_unit_type_irregular_infantry
-				state_region = s:STATE_VLASENICA
+				state_region = s:STATE_BOSNIA
 				count = 6
 			}
 		}
@@ -741,7 +729,7 @@ yugo_create_kosovo_army = {
 
 			combat_unit = {
 				type = unit_type:combat_unit_type_irregular_infantry
-				state_region = s:STATE_SOUTHERN_SERBIA
+				state_region = s:STATE_EASTERN_SERBIA
 				count = 8
 			}
 		}

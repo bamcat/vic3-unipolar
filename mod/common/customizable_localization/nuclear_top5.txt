@@ -1,8 +1,4 @@
 ﻿# ==========================================
-# Top 5 nuclear powers display.
-# Reads pre-computed global vars set by nuclear_recompute_top_5
-# (runs monthly in 99_nuclear_on_actions.txt and once at game start).
-# Falls back to a "no nuclear powers" message when none exist.
 # ==========================================
 
 GetNuclearTop5Display = {

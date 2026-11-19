@@ -15,15 +15,14 @@ ship_names_historical_brazilian_capital_ships = {
 
 	properties = {
 		{
-			type = custom_text # This country should not use ship prefixes
+			type = custom_text
 			key = "PREFIX"
 			custom_text = "ship_prefix_blank"
 		}
 		{
-			type = name_list # Starting location of ships is based on a mixture of good data and educated guesses.
+			type = name_list
 			key = "SHIP_NAMESAKE"
 			name_list = {
-				# Starting Ships of the Line in 1836
 				sn_pedro_ii
 			}
 		}
@@ -47,17 +46,15 @@ ship_names_historical_brazilian_cruisers = {
 
 	properties = {
 		{
-			type = custom_text # This country should not use ship prefixes
+			type = custom_text
 			key = "PREFIX"
 			custom_text = "ship_prefix_blank"
 		}
 		{
-			type = name_list # Starting location of ships is based on a mixture of good data and educated guesses.
+			type = name_list
 			key = "SHIP_NAMESAKE"
 			name_list = {
-				# Starting Frigates in 1836
 				sn_constituiC_A_o sn_principe_imperial sn_bahiana sn_paraguassU_ sn_campista sn_nictheroy sn_paulista sn_imperatriz
-				# Starting Frigates on the stocks in 1836
 				sn_dous_de_dezembro
 			}
 		}

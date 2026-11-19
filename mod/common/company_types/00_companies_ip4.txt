@@ -1,5 +1,4 @@
-﻿# Companhia Geral da Agricultura das Vinhas do Alto Douro / douro Wine Company
-company_douro_wine_company = {
+﻿REPLACE_OR_CREATE:company_douro_wine_company = {
 	icon = "gfx/interface/icons/company_icons/historical_company_icons/company_companhia_geral_da_agricultura_das_vinhas_do_alto_douro.dds"
 	background = "gfx/interface/icons/company_icons/company_backgrounds/comp_illu_plantation.dds"
 
@@ -21,12 +20,12 @@ company_douro_wine_company = {
 	}
 
 	potential = {
-		has_interest_marker_in_region = region_iberia
+		any_scope_state = { is_in_geographic_region = geographic_region_iberia_old }
 		has_dlc_feature = ip4_content
 	}
 
 	attainable = {
-		hidden_trigger = { # Hide attainable if it's always fulfilled by possible
+		hidden_trigger = {
 			any_scope_state = {
 				state_region = s:STATE_ENTRE_DOURO_E_MINHO
 			}
@@ -51,12 +50,12 @@ company_douro_wine_company = {
 	}
 
 	ai_weight = {
-		value = 3 # Higher base value for flavored companies
+		value = 3
 	}
 }
 
 # Sociedad Española de Construcción Naval (SECN)
-company_secn = {
+REPLACE_OR_CREATE:company_secn = {
 	icon = "gfx/interface/icons/company_icons/historical_company_icons/company_sociedad_espanola_de_construccion_naval.dds"
 	background = "gfx/interface/icons/company_icons/company_backgrounds/comp_illu_harbor_shipbuilding.dds"
 
@@ -74,11 +73,11 @@ company_secn = {
 	}
 
 	potential = {
-		has_interest_marker_in_region = region_iberia
+		any_scope_state = { is_in_geographic_region = geographic_region_iberia_old }
 	}
 
 	attainable = {
-		hidden_trigger = { # Hide attainable if it's always fulfilled by possible
+		hidden_trigger = {
 			any_scope_state = {
 				OR = {
 					state_region = s:STATE_GALICIA
@@ -115,12 +114,12 @@ company_secn = {
 	}
 
 	ai_weight = {
-		value = 3 # Higher base value for flavored companies
+		value = 3
 	}
 }
 
 # La Gran Azucarera
-company_gran_azucarera = {
+REPLACE_OR_CREATE:company_gran_azucarera = {
 	icon = "gfx/interface/icons/company_icons/historical_company_icons/company_la_gran_azucarera.dds"
 	background = "gfx/interface/icons/company_icons/company_backgrounds/comp_illu_plantation.dds"
 
@@ -143,12 +142,12 @@ company_gran_azucarera = {
 	}
 
 	potential = {
-		has_interest_marker_in_region = geographic_region_caribbean_old
+		any_scope_state = { is_in_geographic_region = geographic_region_caribbean_old }
 		has_dlc_feature = ip4_content
 	}
 
 	attainable = {
-		hidden_trigger = { # Hide attainable if it's always fulfilled by possible
+		hidden_trigger = {
 			any_scope_state = {
 				OR = {
 					state_region = s:STATE_WESTERN_CUBA
@@ -180,12 +179,11 @@ company_gran_azucarera = {
 	}
 
 	ai_weight = {
-		value = 3 # Higher base value for flavored companies
+		value = 3
 	}
 }
 
-# Rodriguez, Argüelles y Cia.
-company_rodriguez_arguelles_y_cia = {
+REPLACE_OR_CREATE:company_rodriguez_arguelles_y_cia = {
 	icon = "gfx/interface/icons/company_icons/historical_company_icons/company_romeo_y_julieta.dds"
 	background = "gfx/interface/icons/company_icons/company_backgrounds/comp_illu_plantation.dds"
 
@@ -207,12 +205,12 @@ company_rodriguez_arguelles_y_cia = {
 	}
 
 	potential = {
-		has_interest_marker_in_region = geographic_region_caribbean_old
+		any_scope_state = { is_in_geographic_region = geographic_region_caribbean_old }
 		has_dlc_feature = ip4_content
 	}
 
 	attainable = {
-		hidden_trigger = { # Hide attainable if it's always fulfilled by possible
+		hidden_trigger = {
 			any_scope_state = {
 				OR = {
 					state_region = s:STATE_WESTERN_CUBA
@@ -245,12 +243,12 @@ company_rodriguez_arguelles_y_cia = {
 	}
 
 	ai_weight = {
-		value = 3 # Higher base value for flavored companies
+		value = 3
 	}
 }
 
 # Ynchausti y Compañía
-company_ynchausti_y_compania = {
+REPLACE_OR_CREATE:company_ynchausti_y_compania = {
 	icon = "gfx/interface/icons/company_icons/historical_company_icons/company_ynchausti_y_compania.dds"
 	background = "gfx/interface/icons/company_icons/company_backgrounds/comp_illu_harbor_shipbuilding.dds"
 
@@ -279,12 +277,12 @@ company_ynchausti_y_compania = {
 	}
 
 	potential = {
-		has_interest_marker_in_region = region_indonesia
+		has_interest_marker_in_region = sr:region_indonesia
 		has_dlc_feature = ip4_content
 	}
 
 	attainable = {
-		hidden_trigger = { # Hide attainable if it's always fulfilled by possible
+		hidden_trigger = {
 			any_scope_state = {
 				OR = {
 					state_region = s:STATE_LUZON
@@ -318,12 +316,12 @@ company_ynchausti_y_compania = {
 	}
 
 	ai_weight = {
-		value = 3 # Higher base value for flavored companies
+		value = 3
 	}
 }
 
 # Office Chérifien des Phosphates
-company_office_cherifien_des_phosphates = {
+REPLACE_OR_CREATE:company_office_cherifien_des_phosphates = {
 	icon = "gfx/interface/icons/company_icons/historical_company_icons/company_office_cherifien_des_phosphates.dds"
 	background = "gfx/interface/icons/company_icons/company_backgrounds/comp_illu_mining.dds"
 
@@ -352,11 +350,11 @@ company_office_cherifien_des_phosphates = {
 	}
 
 	potential = {
-		has_interest_marker_in_region = region_north_africa
+		has_interest_marker_in_region = sr:region_north_africa
 	}
 
 	attainable = {
-		hidden_trigger = { # Hide attainable if it's always fulfilled by possible
+		hidden_trigger = {
 			any_scope_state = {
 				state_region = s:STATE_MARRAKECH
 			}
@@ -379,12 +377,12 @@ company_office_cherifien_des_phosphates = {
 	}
 
 	ai_weight = {
-		value = 3 # Higher base value for flavored companies
+		value = 3
 	}
 }
 
 # Companhia União Fabril
-company_uniao_fabril = {
+REPLACE_OR_CREATE:company_uniao_fabril = {
 	icon = "gfx/interface/icons/company_icons/historical_company_icons/company_companhia_uniao_fabril.dds"
 	background = "gfx/interface/icons/company_icons/company_backgrounds/comp_illu_manufacturing_heavy.dds"
 
@@ -415,12 +413,12 @@ company_uniao_fabril = {
 	}
 
 	potential = {
-		has_interest_marker_in_region = region_iberia
+		any_scope_state = { is_in_geographic_region = geographic_region_iberia_old }
 		has_dlc_feature = ip4_content
 	}
 
 	attainable = {
-		hidden_trigger = { # Hide attainable if it's always fulfilled by possible
+		hidden_trigger = {
 			any_scope_state = {
 				state_region = {
 					is_homeland = cu:portuguese
@@ -453,12 +451,12 @@ company_uniao_fabril = {
 	}
 
 	ai_weight = {
-		value = 3 # Higher base value for flavored companies
+		value = 3
 	}
 }
 
 # Pedro Domecq
-company_pedro_domecq = {
+REPLACE_OR_CREATE:company_pedro_domecq = {
 	icon = "gfx/interface/icons/company_icons/historical_company_icons/company_pedro_domecq.dds"
 	background = "gfx/interface/icons/company_icons/company_backgrounds/comp_illu_plantation.dds"
 
@@ -481,12 +479,12 @@ company_pedro_domecq = {
 	}
 
 	potential = {
-		has_interest_marker_in_region = region_iberia
+		any_scope_state = { is_in_geographic_region = geographic_region_iberia_old }
 		has_dlc_feature = ip4_content
 	}
 
 	attainable = {
-		hidden_trigger = { # Hide attainable if it's always fulfilled by possible
+		hidden_trigger = {
 			any_scope_state = {
 				state_region = s:STATE_LOWER_ANDALUSIA
 			}
@@ -509,12 +507,12 @@ company_pedro_domecq = {
 	}
 
 	ai_weight = {
-		value = 3 # Higher base value for flavored companies
+		value = 3
 	}
 }
 
 # Bacardí y Compañía
-company_bacardi = {
+REPLACE_OR_CREATE:company_bacardi = {
 	icon = "gfx/interface/icons/company_icons/historical_company_icons/company_bacardi.dds"
 	background = "gfx/interface/icons/company_icons/company_backgrounds/comp_illu_manufacturing_light.dds"
 
@@ -534,12 +532,12 @@ company_bacardi = {
 	}
 
 	potential = {
-		has_interest_marker_in_region = geographic_region_caribbean_old
+		any_scope_state = { is_in_geographic_region = geographic_region_caribbean_old }
 		has_dlc_feature = ip4_content
 	}
 
 	attainable = {
-		hidden_trigger = { # Hide attainable if it's always fulfilled by possible
+		hidden_trigger = {
 			any_scope_state = {
 				state_region = s:STATE_EASTERN_CUBA
 			}
@@ -562,12 +560,11 @@ company_bacardi = {
 	}
 
 	ai_weight = {
-		value = 3 # Higher base value for flavored companies
+		value = 3
 	}
 }
 
-# La Hispano-Suiza, Fábrica de Automóviles, S. A.
-company_hispano_suiza = {
+REPLACE_OR_CREATE:company_hispano_suiza = {
 	icon = "gfx/interface/icons/company_icons/company_la_hispano_suiza.dds"
 	background = "gfx/interface/icons/company_icons/company_backgrounds/comp_illu_manufacturing_heavy.dds"
 
@@ -583,12 +580,12 @@ company_hispano_suiza = {
 	}
 
 	potential = {
-		has_interest_marker_in_region = region_iberia
+		any_scope_state = { is_in_geographic_region = geographic_region_iberia_old }
 		has_dlc_feature = ip4_content
 	}
 
 	attainable = {
-		hidden_trigger = { # Hide attainable if it's always fulfilled by possible
+		hidden_trigger = {
 			any_scope_state = {
 				state_region = s:STATE_CATALONIA
 			}
@@ -612,6 +609,6 @@ company_hispano_suiza = {
 	}
 
 	ai_weight = {
-		value = 3 # Higher base value for flavored companies
+		value = 3
 	}
 }

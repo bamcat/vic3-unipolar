@@ -50,10 +50,6 @@
 				}
 			}
 		}
-		### Special Cases
-		# Special cases thus far:
-		# 1. Canada getting either Anglo-Canadian or Franco-Canadian cultures
-		# 2. South Africa getting Boer cultures
 		if = {
 			limit = {
 				scope:target_country = {
@@ -127,7 +123,7 @@
 				order_by = "root.culture_percent_country(this)"
 				save_scope_as = main_culture_scope
 			}
-			every_primary_culture = { # ROOT's primary cultures
+			every_primary_culture = {
 				save_temporary_scope_as = temp_primary_culture
 				scope:target_country = {
 					add_primary_culture = scope:temp_primary_culture

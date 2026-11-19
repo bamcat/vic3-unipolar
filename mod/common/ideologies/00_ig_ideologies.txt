@@ -1,7 +1,3 @@
-#######################
-##   IG Ideologies   ## taken from cwe with consent
-#######################
-
 ## [22] ##
 
 #### Economic Beliefs ####
@@ -748,6 +744,7 @@ REPLACE_OR_CREATE:ideology_totalitarian = {
 		law_national_guard = neutral
 		law_no_home_affairs = disapprove
 		law_guaranteed_liberties = strongly_disapprove
+		law_extraordinary_commission = approve
 	}
 
 	lawgroup_policing = {
@@ -803,6 +800,7 @@ REPLACE_OR_CREATE:ideology_authoritarian = {
 		law_national_guard = approve
 		law_no_home_affairs = disapprove
 		law_guaranteed_liberties = strongly_disapprove
+		law_extraordinary_commission = strongly_disapprove
 	}
 
 	lawgroup_policing = {
@@ -858,6 +856,7 @@ REPLACE_OR_CREATE:ideology_communitarian = {
 		law_national_guard = approve
 		law_no_home_affairs = disapprove
 		law_guaranteed_liberties = neutral
+		law_extraordinary_commission = disapprove
 	}
 
 	lawgroup_policing = {
@@ -913,6 +912,7 @@ REPLACE_OR_CREATE:ideology_individualist = {
 		law_national_guard = disapprove
 		law_no_home_affairs = neutral
 		law_guaranteed_liberties = strongly_approve
+		law_extraordinary_commission = strongly_disapprove
 	}
 
 	lawgroup_policing = {
@@ -1379,12 +1379,15 @@ REPLACE_OR_CREATE:ideology_monarchist = {
 		law_professional_army = approve
 		law_national_militia = strongly_disapprove
 		law_peasant_levies = strongly_approve
+		law_revolutionary_guard = strongly_disapprove
 	}
 
 	lawgroup_bureaucracy = {
 		law_hereditary_bureaucrats = approve
 		law_appointed_bureaucrats = neutral
 		law_elected_bureaucrats = disapprove
+		law_communal_administration = strongly_disapprove
+		law_military_bureaucrats = approve
 	}
 
 	lawgroup_firearms = {
@@ -1427,12 +1430,15 @@ REPLACE_OR_CREATE:ideology_republican = {
 		law_professional_army = approve
 		law_national_militia = disapprove
 		law_peasant_levies = disapprove
+		law_revolutionary_guard = disapprove
 	}
 
 	lawgroup_bureaucracy = {
 		law_hereditary_bureaucrats = strongly_disapprove
 		law_appointed_bureaucrats = strongly_disapprove
 		law_elected_bureaucrats = strongly_approve
+		law_communal_administration = disapprove
+		law_military_bureaucrats = strongly_disapprove
 	}
 
 	lawgroup_firearms = {
@@ -1475,12 +1481,15 @@ REPLACE_OR_CREATE:ideology_theocrat = {
 		law_professional_army = disapprove
 		law_national_militia = approve
 		law_peasant_levies = neutral
+		law_revolutionary_guard = approve
 	}
 
 	lawgroup_bureaucracy = {
 		law_hereditary_bureaucrats = approve
 		law_appointed_bureaucrats = approve
 		law_elected_bureaucrats = strongly_disapprove
+		law_communal_administration = strongly_disapprove
+		law_military_bureaucrats = neutral
 	}
 
 	lawgroup_firearms = {
@@ -1555,6 +1564,7 @@ REPLACE_OR_CREATE:ideology_militarist = {
 		law_professional_army = strongly_approve
 		law_national_militia = disapprove
 		law_peasant_levies = strongly_disapprove
+		law_revolutionary_guard = strongly_disapprove
 	}
 
 	lawgroup_firearms = {
@@ -1606,12 +1616,15 @@ REPLACE_OR_CREATE:ideology_communist = {
 		law_professional_army = approve
 		law_national_militia = strongly_disapprove
 		law_peasant_levies = strongly_disapprove
+		law_revolutionary_guard = approve
 	}
 
 	lawgroup_bureaucracy = {
 		law_hereditary_bureaucrats = disapprove
 		law_appointed_bureaucrats = approve
 		law_elected_bureaucrats = approve
+		law_communal_administration = approve
+		law_military_bureaucrats = disapprove
 	}
 
 	lawgroup_firearms = {

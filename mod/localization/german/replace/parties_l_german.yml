@@ -5,7 +5,7 @@
  party_liberal:0 "Liberale Partei"
  party_nazis:0 "FF"
  party_anc:0 "Afrikaischer Nationalkongress"
- party_german_social_party: "SPD
+ party_german_social_party: "SPD"
  party_british_union_of_fascists:0 "Britische Union der Faschisten"
  party_mouvement_franciste:1 "National Front"
  party_silver_legion:0 "Silber Legion"
@@ -174,7 +174,6 @@
  party_farroupilha: "Farroupilha"
  party_swaraj_party: "Swaraj Party"
 
-
 #religious_party
  party_portuguese_catholic_centre:0 "Portugiesisch Katholisches Zentrum"
  party_catholic_right:0 "Katholische Rechte"
@@ -188,7 +187,7 @@
  party_clerical_party:0 "Clerchaft Party"
  party_know_nothing_party:0 "Kennen Sie nichts"
  party_conservative_catholics:0 "Konservative Katholiken"
- party_traditionalist_communion:0 "Traditionalist Communion" # Carlists, might revise
+ party_traditionalist_communion:0 "Traditionalist Communion"
 
 #social_democrats_party
  party_psoe:0 "PSOE"
@@ -259,7 +258,6 @@
  party_italian_syndicalist_union:0 "Italienische Syndizistische Union"
  party_anarcho_communist_federation: "Anarcho-Communist Federation"
 
- # Party weight descriptions
  base_value:0 "Basiswert"
  from_liberal_leader:0 "Liberale Führungsidee"
  from_liberalism:0 "Liberale oder Laissez-Faire-Ideologie"
@@ -393,7 +391,23 @@
 
  tl_first_term:0 "Dieser Charakter dient seinem ersten Begriff."
  tl_second_term:0 "Dieser Charakter dient seinem zweiten Begriff und wird in den Ruhestand, wenn er endet."
- 
+
  notification_ruler_term_limit_exceeded_name:0 "[SCOPE.sCharacter('retiring_ig_leader').GetFullName] hat seine Begriffsgrenze erreicht."
  notification_ruler_term_limit_exceeded_desc:0 "<x id========================================== [SCOPE.gsInterestGroup('retiring_leader_ig').GetName] wird bei der bevorstehenden Wahl durch [SCOPE.sCharacter('candidate').GetFullName] geführt."
  notification_ruler_term_limit_exceeded_tooltip:0 "#header $notification_ruler_term_limit_exceeded_name$#!\n$TOOLTIP_DELIMITER$\n$notification_ruler_term_limit_exceeded_desc$"
+ leader_ideological_compatibility:0 "Leader's ideology fits the party"
+ leader_adjacent_ideology:0 "Leader's ideology is close to the party"
+ leader_ideology_unrelated:0 "Leader's ideology does not fit the party"
+ leader_ideological_incompatibility:0 "Leader's ideology is opposed to the party"
+ interest_group_ideological_compatibility:0 "Interest Group ideology fits the party"
+ interest_group_adjacent_ideology:0 "Interest Group ideology is close to the party"
+ interest_group_ideological_incompatibility:0 "Interest Group ideology is opposed to the party"
+ powerful_ig:0 "Is Powerful"
+ social_democratic_laws:0 "Social democratic laws in force"
+ democratic_government:0 "Democratic government"
+ republican_interest_group:0 "Republican Interest Group"
+ socialist_laws:0 "Socialist laws in force"
+ market_laws:0 "Market laws in force"
+ two_party_system:0 "Two party system"
+ military_laws:0 "Military laws in force"
+ anti_authoritarian_reaction:0 "Reaction against authoritarianism"

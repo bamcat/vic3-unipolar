@@ -1,0 +1,34 @@
+on_game_started_after_lobby = {
+	on_actions = { smd_game_start_setup }
+}
+
+smd_game_start_setup = {
+	effect = {
+		c:RUS ?= {
+			if = {
+				limit = { NOT = { has_journal_entry = je_russia_wild_nineties } }
+				add_journal_entry = { type = je_russia_wild_nineties }
+			}
+		}
+
+		c:GBR ?= { pm_start_appoint = { IG = ig_petty_bourgeoisie } }
+		c:SPA ?= { pm_start_appoint = { IG = ig_petty_bourgeoisie } }
+		c:NDL ?= { pm_start_appoint = { IG = ig_petty_bourgeoisie } }
+		c:XBE ?= { pm_start_appoint = { IG = ig_petty_bourgeoisie } }
+		c:XDE ?= { pm_start_appoint = { IG = ig_petty_bourgeoisie } }
+		c:SWD ?= { pm_start_appoint = { IG = ig_petty_bourgeoisie } }
+		c:NRW ?= { pm_start_appoint = { IG = ig_trade_unions } }
+		c:JPN ?= { pm_start_appoint = { IG = ig_professionals } }
+		c:MOR ?= { pm_start_appoint = { IG = ig_professionals } }
+
+		every_country = {
+			limit = {
+				exists = this
+				NOT = { c:RUS ?= this }
+				NOT = { has_variable = pm_appointed_by_script }
+				NOT = { has_variable = pm_start_hold }
+			}
+			trigger_event = { id = prime_minister.1 }
+		}
+	}
+}

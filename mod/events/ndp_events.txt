@@ -60,7 +60,6 @@ ndp_events.1 = {
 	immediate = { set_variable = ndpe1 }
 	duration = 3
 
-	# Option A: Heavy industry — iron, steel, coal
 	option = {
 		name = ndp_events.1.a
 		set_variable = ndp_industrial_sub_choice
@@ -84,7 +83,6 @@ ndp_events.1 = {
 		ai_chance = { base = 50 }
 	}
 
-	# Option B: Light manufacturing — textiles, consumer goods
 	option = {
 		name = ndp_events.1.b
 		default_option = yes
@@ -124,7 +122,6 @@ ndp_events.2 = {
 	immediate = { set_variable = ndpe2 }
 	duration = 3
 
-	# Option A: State-directed investment — government builds
 	option = {
 		name = ndp_events.2.a
 		add_modifier = {
@@ -149,7 +146,6 @@ ndp_events.2 = {
 		}
 	}
 
-	# Option B: Private enterprise — attract investors
 	option = {
 		name = ndp_events.2.b
 		default_option = yes
@@ -184,7 +180,6 @@ ndp_events.3 = {
 	immediate = { set_variable = ndpe3 }
 	duration = 3
 
-	# Option A: Push workers hard — productivity gains
 	option = {
 		name = ndp_events.3.a
 		add_modifier = {
@@ -195,7 +190,6 @@ ndp_events.3 = {
 		ai_chance = { base = 40 }
 	}
 
-	# Option B: Invest in worker welfare — stable growth
 	option = {
 		name = ndp_events.3.b
 		default_option = yes
@@ -221,8 +215,8 @@ ndp_events.4 = {
 	desc = ndp_events.4.d
 	flavor = ndp_events.4.f
 
-	trigger = { has_variable = ndp_industrial NOT = { has_variable = ndpe4 } }
-	immediate = { set_variable ndpe4 }
+	trigger = { NOT = { has_variable = ndpe4 } }
+	immediate = { set_variable = ndpe4 }
 	duration = 3
 
 	option = {
@@ -252,7 +246,6 @@ ndp_events.11 = {
 	immediate = { set_variable = ndpe5 }
 	duration = 3
 
-	# Option A: Land doctrine — mass army focus
 	option = {
 		name = ndp_events.11.a
 		set_variable = ndp_military_sub_choice
@@ -263,17 +256,16 @@ ndp_events.11 = {
 		ai_chance = {
 			base = 60
 			modifier = {
-				trigger = { NOT = { has_coastline = yes } }
+				trigger = { NOT = { any_scope_state = { is_coastal = yes } } }
 				add = 30
 			}
 		}
 	}
 
-	# Option B: Naval doctrine — power projection
 	option = {
 		name = ndp_events.11.b
 		default_option = yes
-		trigger = { has_coastline = yes }
+		trigger = { any_scope_state = { is_coastal = yes } }
 		set_variable = ndp_military_sub_choice
 		add_modifier = {
 			name = ndp_modifier_military_navy
@@ -282,7 +274,7 @@ ndp_events.11 = {
 		ai_chance = {
 			base = 40
 			modifier = {
-				trigger = { has_coastline = yes }
+				trigger = { any_scope_state = { is_coastal = yes } }
 				add = 20
 			}
 		}
@@ -306,7 +298,6 @@ ndp_events.12 = {
 	immediate = { set_variable = ndpe6 }
 	duration = 3
 
-	# Option A: Domestic arms industry
 	option = {
 		name = ndp_events.12.a
 		add_modifier = {
@@ -316,7 +307,6 @@ ndp_events.12 = {
 		ai_chance = { base = 50 }
 	}
 
-	# Option B: Foreign procurement — faster but costly
 	option = {
 		name = ndp_events.12.b
 		default_option = yes
@@ -349,7 +339,6 @@ ndp_events.13 = {
 	immediate = { set_variable = ndpe7 }
 	duration = 3
 
-	# Option A: Nationalist morale campaign
 	option = {
 		name = ndp_events.13.a
 		add_modifier = {
@@ -360,7 +349,6 @@ ndp_events.13 = {
 		ai_chance = { base = 50 }
 	}
 
-	# Option B: Professional officer corps
 	option = {
 		name = ndp_events.13.b
 		default_option = yes
@@ -385,7 +373,7 @@ ndp_events.14 = {
 	desc = ndp_events.14.d
 	flavor = ndp_events.14.f
 
-	trigger = { has_variable = ndp_military NOT = { has_variable = ndpe8 } }
+	trigger = { NOT = { has_variable = ndpe8 } }
 	immediate = { set_variable = ndpe8 }
 	duration = 3
 
@@ -416,7 +404,6 @@ ndp_events.21 = {
 	immediate = { set_variable = ndpe9 }
 	duration = 3
 
-	# Option A: Agriculture — feed the nation, grow export crops
 	option = {
 		name = ndp_events.21.a
 		set_variable = ndp_resource_sub_choice
@@ -446,7 +433,6 @@ ndp_events.21 = {
 		}
 	}
 
-	# Option B: Raw material extraction — mining, logging, drilling
 	option = {
 		name = ndp_events.21.b
 		default_option = yes
@@ -495,7 +481,6 @@ ndp_events.22 = {
 	immediate = { set_variable = ndpe10 }
 	duration = 3
 
-	# Option A: Expand into unclaimed land — homesteading
 	option = {
 		name = ndp_events.22.a
 		add_modifier = {
@@ -505,7 +490,6 @@ ndp_events.22 = {
 		ai_chance = { base = 50 }
 	}
 
-	# Option B: Intensify existing production
 	option = {
 		name = ndp_events.22.b
 		default_option = yes
@@ -534,7 +518,6 @@ ndp_events.23 = {
 	immediate = { set_variable = ndpe11 }
 	duration = 3
 
-	# Option A: Seek export agreements — free trade orientation
 	option = {
 		name = ndp_events.23.a
 		add_modifier = {
@@ -550,7 +533,6 @@ ndp_events.23 = {
 		}
 	}
 
-	# Option B: Protect domestic supply — food security first
 	option = {
 		name = ndp_events.23.b
 		default_option = yes
@@ -575,7 +557,7 @@ ndp_events.24 = {
 	desc = ndp_events.24.d
 	flavor = ndp_events.24.f
 
-	trigger = { has_variable = ndp_resource NOT = { has_variable = ndpe12 } }
+	trigger = { NOT = { has_variable = ndpe12 } }
 	immediate = { set_variable = ndpe12 }
 	duration = 3
 
@@ -606,7 +588,6 @@ ndp_events.31 = {
 	immediate = { set_variable = ndpe13 }
 	duration = 3
 
-	# Option A: Financial sector — banking, insurance, trade
 	option = {
 		name = ndp_events.31.a
 		set_variable = ndp_service_sub_choice
@@ -623,7 +604,6 @@ ndp_events.31 = {
 		}
 	}
 
-	# Option B: Education and bureaucracy — state capacity
 	option = {
 		name = ndp_events.31.b
 		default_option = yes
@@ -659,7 +639,6 @@ ndp_events.32 = {
 	immediate = { set_variable = ndpe14 }
 	duration = 3
 
-	# Option A: Attract foreign talent — open immigration
 	option = {
 		name = ndp_events.32.a
 		add_modifier = {
@@ -675,7 +654,6 @@ ndp_events.32 = {
 		}
 	}
 
-	# Option B: Invest in domestic education
 	option = {
 		name = ndp_events.32.b
 		default_option = yes
@@ -704,7 +682,6 @@ ndp_events.33 = {
 	immediate = { set_variable = ndpe15 }
 	duration = 3
 
-	# Option A: Liberalize markets — deregulation
 	option = {
 		name = ndp_events.33.a
 		add_modifier = {
@@ -714,7 +691,6 @@ ndp_events.33 = {
 		ai_chance = { base = 50 }
 	}
 
-	# Option B: Strengthen institutions — rule of law
 	option = {
 		name = ndp_events.33.b
 		default_option = yes
@@ -740,7 +716,7 @@ ndp_events.34 = {
 	desc = ndp_events.34.d
 	flavor = ndp_events.34.f
 
-	trigger = { has_variable = ndp_service NOT = { has_variable = ndpe16 } }
+	trigger = { NOT = { has_variable = ndpe16 } }
 	immediate = { set_variable = ndpe16 }
 	duration = 3
 

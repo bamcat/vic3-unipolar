@@ -18,12 +18,11 @@
 		}
 	}
 
-	# AI will never abolish institutions entirely
 	ai_will_do = {
 		always = no
 	}
 
-	ai_enact_weight_modifier = { #Petitions
+	ai_enact_weight_modifier = {
 		value = 0
 
 		if = {
@@ -70,7 +69,7 @@ law_religious_schools = {
 		}
 	}
 
-	ai_enact_weight_modifier = { #Petitions
+	ai_enact_weight_modifier = {
 		value = 0
 
 		if = {
@@ -88,7 +87,6 @@ law_religious_schools = {
 				limit = {
 					OR = {
 						has_journal_entry = je_sick_man_education
-						has_journal_entry = je_terakoya
 						has_journal_entry = je_portugal_regeneration_institutions
 					}
 				}
@@ -169,7 +167,7 @@ law_private_schools = {
 		}
 	}
 
-	ai_enact_weight_modifier = { #Petitions
+	ai_enact_weight_modifier = {
 		value = 0
 
 		if = {
@@ -187,7 +185,6 @@ law_private_schools = {
 				limit = {
 					OR = {
 						has_journal_entry = je_sick_man_education
-						has_journal_entry = je_terakoya
 						has_journal_entry = je_portugal_regeneration_institutions
 					}
 				}
@@ -266,7 +263,7 @@ law_public_schools = {
 		}
 	}
 
-	ai_enact_weight_modifier = { #Petitions
+	ai_enact_weight_modifier = {
 		value = 0
 
 		if = {
@@ -284,7 +281,6 @@ law_public_schools = {
 				limit = {
 					OR = {
 						has_journal_entry = je_sick_man_education
-						has_journal_entry = je_terakoya
 						has_journal_entry = je_portugal_regeneration_institutions
 					}
 				}
@@ -377,10 +373,10 @@ law_universal_college = {
 				exists = ruler
 				ruler = {
 					OR = {
-						has_ideology = ideology_liberal_leader
-						has_ideology = ideology_progressive_leader
-						has_ideology = ideology_socialist_leader
-						has_ideology = ideology_communist_leader
+						has_ideology = ideology:ideology_liberal_leader
+						has_ideology = ideology:ideology_progressive_leader
+						has_ideology = ideology:ideology_democratic_socialist_leader
+						has_ideology = ideology:ideology_marxist_leader
 					}
 				}
 			}
@@ -409,7 +405,7 @@ law_universal_college = {
 		}
 	}
 
-	ai_enact_weight_modifier = { #Petitions
+	ai_enact_weight_modifier = {
 		value = 0
 
 		if = {
@@ -427,7 +423,6 @@ law_universal_college = {
 				limit = {
 					OR = {
 						has_journal_entry = je_sick_man_education
-						has_journal_entry = je_terakoya
 						has_journal_entry = je_portugal_regeneration_institutions
 					}
 				}

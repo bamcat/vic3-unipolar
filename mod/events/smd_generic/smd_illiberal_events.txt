@@ -1,0 +1,186 @@
+﻿namespace = smd_illiberal
+
+smd_illiberal.1 = {
+	type = country_event
+	placement = ROOT
+	title = smd_illiberal.1.t
+	desc = smd_illiberal.1.d
+	flavor = smd_illiberal.1.f
+	event_image = { video = "votp_agitator_speaking" }
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+	icon = "gfx/interface/icons/event_icons/event_newspaper.dds"
+	duration = 3
+
+	trigger = {
+	}
+
+	option = {
+		name = smd_illiberal.1.a
+		default_option = yes
+		je:smd_je_illiberal_turn ?= {
+			add_progress = { value = 5 name = smd_illiberal_bar }
+		}
+		add_radicals = {
+			value = small_radicals
+			interest_group = ig:ig_intelligentsia
+		}
+		ai_chance = { base = 60 }
+	}
+
+	option = {
+		name = smd_illiberal.1.b
+		add_modifier = {
+			name = smd_softer_tone
+			days = short_modifier_time
+		}
+		je:smd_je_illiberal_turn ?= {
+			add_progress = { value = -5 name = smd_illiberal_bar }
+		}
+		ai_chance = { base = 40 }
+	}
+}
+
+smd_illiberal.2 = {
+	type = country_event
+	placement = ROOT
+	title = smd_illiberal.2.t
+	desc = smd_illiberal.2.d
+	flavor = smd_illiberal.2.f
+	event_image = { video = "africa_public_protest" }
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+	icon = "gfx/interface/icons/event_icons/event_protest.dds"
+	duration = 3
+	cooldown = { days = normal_modifier_time }
+
+	trigger = {
+		has_journal_entry = smd_je_illiberal_turn
+		je:smd_je_illiberal_turn ?= {
+			"scripted_bar_progress(smd_illiberal_bar)" >= 40
+		}
+	}
+
+	immediate = {
+		add_modifier = {
+			name = smd_mass_protests
+			days = 365
+		}
+	}
+
+	option = {
+		name = smd_illiberal.2.a
+		default_option = yes
+		add_modifier = {
+			name = smd_protest_crackdown
+			days = short_modifier_time
+		}
+		je:smd_je_illiberal_turn ?= {
+			add_progress = { value = 8 name = smd_illiberal_bar }
+		}
+		ai_chance = { base = 50 }
+	}
+
+	option = {
+		name = smd_illiberal.2.b
+		add_modifier = {
+			name = smd_protest_concessions
+			days = short_modifier_time
+		}
+		je:smd_je_illiberal_turn ?= {
+			add_progress = { value = -10 name = smd_illiberal_bar }
+		}
+		ai_chance = { base = 50 }
+	}
+}
+
+smd_illiberal.3 = {
+	type = country_event
+	placement = ROOT
+	title = smd_illiberal.3.t
+	desc = smd_illiberal.3.d
+	flavor = smd_illiberal.3.f
+	event_image = { video = "diplomatic_meeting" }
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+	icon = "gfx/interface/icons/event_icons/event_newspaper.dds"
+	duration = 3
+	cooldown = { days = normal_modifier_time }
+
+	trigger = {
+		has_journal_entry = smd_je_illiberal_turn
+		is_in_power_bloc = yes
+	}
+
+	option = {
+		name = smd_illiberal.3.a
+		default_option = yes
+		add_modifier = {
+			name = smd_foreign_criticism_defied
+			days = short_modifier_time
+		}
+		je:smd_je_illiberal_turn ?= {
+			add_progress = { value = 5 name = smd_illiberal_bar }
+		}
+		ai_chance = { base = 50 }
+	}
+
+	option = {
+		name = smd_illiberal.3.b
+		add_modifier = {
+			name = smd_reform_pledge
+			days = short_modifier_time
+		}
+		je:smd_je_illiberal_turn ?= {
+			add_progress = { value = -5 name = smd_illiberal_bar }
+		}
+		ai_chance = { base = 50 }
+	}
+}
+
+smd_illiberal.4 = {
+	type = country_event
+	placement = ROOT
+	title = smd_illiberal.4.t
+	desc = smd_illiberal.4.d
+	flavor = smd_illiberal.4.f
+	event_image = { video = "unspecific_ruler_speaking_to_people" }
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+	icon = "gfx/interface/icons/event_icons/event_portrait.dds"
+	duration = 3
+
+	trigger = {
+	}
+
+	option = {
+		name = smd_illiberal.4.a
+		default_option = yes
+		add_modifier = {
+			name = smd_entrenched_regime
+			days = long_modifier_time
+		}
+		ai_chance = { base = 100 }
+	}
+}
+
+smd_illiberal.5 = {
+	type = country_event
+	placement = ROOT
+	title = smd_illiberal.5.t
+	desc = smd_illiberal.5.d
+	flavor = smd_illiberal.5.f
+	event_image = { video = "crowd_celebrating" }
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+	icon = "gfx/interface/icons/event_icons/event_election.dds"
+	duration = 3
+
+	trigger = {
+	}
+
+	option = {
+		name = smd_illiberal.5.a
+		default_option = yes
+		add_modifier = {
+			name = smd_democratic_resilience
+			days = normal_modifier_time
+		}
+		ai_chance = { base = 100 }
+	}
+}

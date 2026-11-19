@@ -1,6 +1,4 @@
 ﻿l_turkish:
-
- # Fallback names if dynamic naming fails
  company_basic_agriculture_1: "Qualityjs Inc."
  company_basic_agriculture_2: "Tarımsal Kalkınma Derneği"
  company_basic_metal_mining: "Metal Madencilik Consortium"
@@ -26,8 +24,7 @@
  company_basic_gold_mining: "Değerli Metaller Syndicate"
  company_basic_electrics: "Home Electrics Inc."
  company_basic_weapons: "Armament Works"
- 
- # Dynamic company names
+
  company_basic_agriculture_1_dynamic_name_tag_singular: "Şükrü"
  company_basic_agriculture_1_dynamic_name_tag_plural: "Şükrütler"
  company_basic_agriculture_2_dynamic_name_tag_singular: "Tarım Tarım"
@@ -78,7 +75,7 @@
  company_basic_electrics_dynamic_name_tag_plural: "Elektrikliler"
  company_basic_weapons_dynamic_name_tag_singular: "Armament"
  company_basic_weapons_dynamic_name_tag_plural: "Armaments"
- 
+
  dynamic_company_type_company: "Şirket Şirketi"
  dynamic_company_type_consortium: "Instrid"
  dynamic_company_type_corporation: "Corporation Corporation"
@@ -88,20 +85,19 @@
  dynamic_company_type_guild: "Lojistik Lojistik Lojistik"
  dynamic_company_type_society: "Holdingler"
  dynamic_company_type_fellowship: "Corporation Corporation"
- 
+
  dynamic_company_name_country_1: "[COUNTRY.GetAdjectiveNoFormatting] $DYNAMIC_NAME_TAG$ $TYPE_NAME$"
  dynamic_company_name_country_2: "[COUNTRY.GetAdjectiveNoFormatting] $DYNAMIC_NAME_TAG$"
  dynamic_company_name_country_3: "$DYNAMIC_NAME_TAG$ $TYPE_NAME$ [COUNTRY.GetNameNoFormatting]"
  dynamic_company_name_country_4: "[COUNTRY.GetAdjectiveNoFormatting] $DYNAMIC_NAME_TAG$ Inc."
  dynamic_company_name_country_5: "[COUNTRY.GetAdjectiveNoFormatting] $DYNAMIC_NAME_TAG$ $TYPE_NAME$"
- 
+
  dynamic_company_name_state_1: "[STATE_REGION.GetNameNoFormatting] $DYNAMIC_NAME_TAG$ $TYPE_NAME$"
  dynamic_company_name_state_2: "[STATE_REGION.GetNameNoFormatting] $DYNAMIC_NAME_TAG$"
  dynamic_company_name_state_3: "$DYNAMIC_NAME_TAG$ $TYPE_NAME$ [STATE_REGION.GetNameNoFormatting]"
  dynamic_company_name_state_4: "[STATE_REGION.GetNameNoFormatting] Premium $DYNAMIC_NAME_TAG$"
  dynamic_company_name_state_5: "Bir [STATE_REGION.GetNameNoFormatting] $DYNAMIC_NAME_TAG$ Yapımcılar"
 
- # Flavored Companies
  company_krupp: "Friedrich Krupp"
  company_rheinmetall: "Rheinmetall"
  company_schichau: "F. Schichau"
@@ -149,8 +145,8 @@
 
  company_skoda: "Škoda Works"
  company_mav: "MÁVAG"
- company_manfred_weiss: "Manfréd Weiss Steel and Metal Works" # Weiss Manfréd Acél- és Fémművek
- company_galician_carpathian_oil: "Galician Carpathian Petroleum Company" # Galizisch-Karpathische Petroleum Aktien-Gesellschaft
+ company_manfred_weiss: "Manfréd Weiss Steel and Metal Works"
+ company_galician_carpathian_oil: "Galician Carpathian Petroleum Company"
  company_oevg: "Österreichische Waffenfabriks-Gesellschaft"
 
  company_ccci: "Compagnie du Kongo"
@@ -228,8 +224,8 @@
  company_eea: "Empresas Eléctricas Asociadas"
 
  company_construction_power_bloc: "United Construction Conglomerate"
- 
-  CANNOT_TOGGLE_COMPANY_GRANTED_CHARTER: "$DESC$"
+
+ CANNOT_TOGGLE_COMPANY_GRANTED_CHARTER: "$DESC$"
  COMPANY_CHARTER_INVESTMENT: "$NAME$"
  COMPANY_CHARTER_MONOPOLY: "$NAME$ için [BUILDING_TYPE.GetName]"
  COMPANY_CHARTER_INDUSTRY: "$NAME$ için [BUILDING_TYPE.GetName]"
@@ -238,7 +234,7 @@
  COMPANY_CHARTER_ON_COOLDOWN: "#b#! <x id = 0x id=4/>#!"
 
  BUILDING_OWNED_BY_COMPANY: "[Company.GetNameNoFormatting]"
- 
+
  PRODUCTIVITY_TREND: "[concept_productivity]"
  PROSPERITY_TREND: "[concept_prosperity]"
  PROFIT_TREND: "$COMPANY_PROFIT_TITLE$"
@@ -255,7 +251,6 @@
  COMMAND_CONFIRMATION_ENABLE_MONOPOLY_CHARTER: "[CompanyCharterType.GetName] [Company.GetName] için \n\n@aut! #v [CompanyCharterType.GetAuthorityCost(Company.Self)|-0]#! bakım maliyeti\nCurrently using [Company.GetCountry.GetUsedFreeCharters|v] ücretsiz [Concept('concept_company_charter','$concept_company_charters$')][Concept('concept_company_charter','$concept_company_charters$')]\n<x id=>\n<x id=>@warning! Bu, #v [GetDefine('NEconomy','COMPANY_MONOPOLY_COOLDOWN_MONTHS')] ay#! Verdikten sonra \n\n#title#!\n\n#!#!\n\n#title#!<x id=><x id="
  COMMAND_CONFIRMATION_DISABLE_CHARTER: "[CompanyCharterType.GetName] [Company.GetName]?\n\n @aut! #v [CompanyCharterType.GetAuthorityCost(Company.Self)|+0]#! bakım maliyeti\n\n#title#title Aşağıdaki etkileri ortadan kaldırır:#!#indent_newline:3 \n$EFFECTS$#!"
  COMMAND_CONFIRMATION_DISABLE_CHARTER_WITH_REVOKE_EFFECTS: "$COMMAND_CONFIRMATION_DISABLE_CHARTER$\n\n$REVOKE_EFFECTS$"
-
 
  investment_charter_desc: "[CompanyCharter.GetType.GetNameNoFormatting] [concept_company] [Concept('concept_regional_company_hq','$concept_regional_company_hqs$')], etkisini ve operasyonlarını genişletmek için izin verir."
  investment_charter_type_desc: "[CompanyCharterType.GetNameNoFormatting] [concept_company] [Concept('concept_regional_company_hq','$concept_regional_company_hqs$')], etkisini ve operasyonlarını genişletmek için izin verir."
@@ -292,12 +287,11 @@
  PROSPERITY_INCREASE_FROM_PRODUCTIVITY: "Yüksek [concept_productivity]"
  PROSPERITY_DECREASE_FROM_PRODUCTIVITY: "Düşük [concept_productivity]"
 
- # Charters of Commerce Companies
  company_ludwig_moser_and_sons: "Glasfabrik Ludwig Moser & Söhne"
  company_compania_sansinena_de_carnes_congeladas: "Compa Compa Sansinena de Carnes Congeladas"
  company_konigliche_porzellan_manufaktur_meissen: "Königliche Porzellan-Manufaktur Meissen"
  company_jiangnan_weaving_bureaus: "Jiangnan Weaving Bureaus"
- company_russian_american_company: "Russian-American Company" # Alt. Rossiysko-Amerikanskaya Kompaniya
+ company_russian_american_company: "Russian-American Company"
  company_lee_wilson: "Lee Wilson & Company"
  company_colt_firearms: "Colt's Patent Firearms Manufacturing Company"
  company_gebruder_thonet: "Gebrüder Thonet"
@@ -314,9 +308,9 @@
  company_imperial_ethiopian_railways: "Imperial Ethiopian Railway Company"
  company_lanfang_kongsi: "Lanfang Kongsi"
  company_paradox: "John Paradox & Company"
- 
+
  ## companies added by smd:
- 
+
  company_amazon: "Amazon.com Inc."
  company_apple: "Apple Inc."
  company_atandt: "AT&T Inc."
@@ -346,23 +340,22 @@
  company_blackrock: "BlackRock Investment Group"
  company_cargill: "Cargill"
  company_caterpillar: "Kill"
- 
+
  company_samsung: "Samsung Electronics Co., Ltd"
- 
+
  company_sberbank: "Sberbank"
- 
+
  company_honda: "Honda Honda Honda"
  company_toyota: "Toyota"
  company_sony: "Sony"
  company_nintendo: "Nintendo Nintendo Nintendo"
- 
+
  company_tesco: "Tesco"
  company_hsbc: "HSBC"
  company_shell: "Shell Shell"
- 
+
  company_saudi_aramco: "Suudi Aramco"
- 
- # USA
+
  company_visa: "Visa Inc."
  company_bear_stearns: "Ayı Stearn"
  company_mgm: "Metro-Goldwyn-Mayer"
@@ -373,14 +366,11 @@
  company_openai: "OpenAI"
  company_anthropic: "Anthropic"
  company_alphabet: "Alfa Alfa"
- 
- # Germany
+
  company_adidas: "Adidas Adidas Adidas"
- 
- # Great Britain
+
  company_astrazeneca: "AstraZeneca"
- 
- # China
+
  company_alibaba: "Alibaba Group"
  company_tencent: "Tencent"
  company_pingan: "Bir Sigorta"
@@ -390,22 +380,17 @@
  company_bytedance: "Yemin ederim"
  company_sinopec: "Sinopec"
  company_xiaomi: "Xiaomi"
- 
- # Ireland
+
  company_accenture: "Accenture"
- 
- # France
+
  company_totalenergies: "TotalEnergies"
- 
- # ── NEW BASIC COMPANIES ──────────────────────────────────────────
- 
+
  company_basic_pharmaceuticals: "Ulusal İlaç Grubu"
  company_basic_retail: "General Retail Consortium"
  company_basic_food_service: "Standart Gıda Hizmetleri Hizmetler"
  company_basic_banking: "Ulusal Bankacılık Grubu"
  company_basic_professional_services: "Profesyonel Hizmetler Grubu"
- 
- # Dynamic name tags
+
  company_basic_pharmaceuticals_dynamic_name_tag_singular: "İlaç ilacı"
  company_basic_pharmaceuticals_dynamic_name_tag_plural: "İlaçlar"
  company_basic_retail_dynamic_name_tag_singular: "Perakende"

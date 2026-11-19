@@ -13,7 +13,6 @@ law_inquisitive_judiciary = {
 		country_legitimacy_base_add                 = 5
 		country_law_enactment_success_add           = 0.05
 		country_law_enactment_imposition_success_add = 0.05
-		# Efficient prosecution suppresses turmoil
 		state_turmoil_effects_mult                  = -0.05
 		country_allow_enacting_decrees_in_subject_bool = yes
 	}
@@ -48,11 +47,6 @@ law_inquisitive_judiciary = {
 }
 
 # ── CUSTOMARY ─────────────────────────────
-# Disputes are resolved through traditional
-# community norms, tribal councils, and
-# local custom rather than formal courts.
-# No institution — customary law predates
-# and resists state structures.
 
 law_customary_judiciary = {
 	group = lawgroup_judiciary
@@ -61,12 +55,9 @@ law_customary_judiciary = {
 	progressiveness = 20
 
 	modifier = {
-		# Communities regulate themselves — less state authority
 		country_authority_mult                      = -0.05
-		# But deep social legitimacy from respected traditions
 		country_legitimacy_base_add                 = 10
 		country_loyalists_from_legitimacy_mult      = 0.10
-		# Lower strata benefit most from accessible local justice
 		state_lower_strata_standard_of_living_add   = 0.25
 		state_turmoil_effects_mult                  = -0.05
 	}
@@ -94,10 +85,6 @@ law_customary_judiciary = {
 }
 
 # ── RELIGIOUS LAW ─────────────────────────
-# Scripture and religious jurisprudence
-# govern legal proceedings. The devout
-# IG gains enormous political strength.
-# Strong for theocratic states.
 
 law_religious_judiciary = {
 	group = lawgroup_judiciary
@@ -107,13 +94,10 @@ law_religious_judiciary = {
 
 	modifier = {
 		country_clergymen_pol_str_mult              = 0.20
-		# Religious authority grants deep legitimacy
 		country_legitimacy_base_add                 = 5
 		country_loyalists_from_legitimacy_mult      = 0.10
-		# Scripture as law is stable but inflexible
 		country_authority_mult                      = 0.05
 		country_law_enactment_success_add           = -0.05
-		# Non-believers and minorities face discrimination
 		country_political_strength_second_rate_citizen_mult = -0.20
 		country_political_strength_open_prejudice_mult = -0.20
 		country_political_strength_violent_hostility_mult = -0.20
@@ -164,13 +148,10 @@ law_restorative_judiciary = {
 	progressiveness = 60
 
 	modifier = {
-		# Rehabilitation reduces turmoil and mortality
 		state_turmoil_effects_mult                  = -0.05
 		state_mortality_turmoil_mult                = -0.04
-		# Reconciliation processes build loyalty
 		country_loyalists_from_legitimacy_mult      = 0.10
 		country_radicals_from_legitimacy_mult       = -0.05
-		# Less punitive
 		country_authority_mult                      = -0.03
 		interest_group_ig_intelligentsia_pol_str_mult = 0.45
 	}

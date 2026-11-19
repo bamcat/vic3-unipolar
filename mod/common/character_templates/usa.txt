@@ -183,3 +183,36 @@ USA_noam_chomsky = {
 		basic_political_operator
 	}
 }
+
+USA_bill_gates = {
+	first_name = Bill
+	last_name = Gates
+	historical = yes
+	culture = cu:yankee
+	birth_date = 1955.10.28
+	dna = dna_bill_gates
+	role = character_role_executive
+	interest_group = ig_industrialists
+	ideology = ideology_moderate_leader
+	traits = {
+		expert_entrepreneur
+		innovative
+		ambitious
+	}
+}
+
+USA_david_glass = {
+	first_name = David
+	last_name = Glass
+	historical = yes
+	culture = cu:dixie
+	birth_date = 1935.9.2
+	dna = dna_david_glass
+	role = character_role_executive
+	interest_group = ig_industrialists
+	ideology = ideology_conservative_leader
+	traits = {
+		experienced_entrepreneur
+		meticulous
+	}
+}

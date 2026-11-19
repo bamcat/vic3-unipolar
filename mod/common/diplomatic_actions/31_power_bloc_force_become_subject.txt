@@ -26,6 +26,11 @@
 			is_diplomatic_play_committed_participant = no
 		}
 
+		custom_tooltip = {
+			text = DIPLOMATIC_PACT_REQUIREMENT_CAN_BE_SUBJUGATED
+			scope:target_country = { modifier:country_cannot_be_subjugated_bool ?= no }
+		}
+
 		power_bloc = {
 			current_cohesion_percentage >= 0.5
 		}
@@ -64,7 +69,7 @@
 			}
 		}
 		create_unidirectional_truce = { country = scope:target_country months = 60 }
-		hidden_effect = { scope:target_country = { add_liberty_desire = 30 } } # Starts at a higher LD level
+		hidden_effect = { scope:target_country = { add_liberty_desire = 30 } }
 
 		power_bloc = {
 			add_cohesion_percent = {
@@ -75,7 +80,7 @@
 
 	ai = {
 		evaluation_chance = {
-			value = 0.025 # AI shouldn't use this very often
+			value = 0.025
 		}
 
 		will_propose = {
@@ -86,6 +91,7 @@
 					attitude = domineering
 				}
 				power_bloc ?= { current_cohesion_percentage >= 0.8 }
+				ai_is_regional_objective_subjugate_target = { TARGET = scope:target_country }
 			}
 			OR = {
 				AND = {
@@ -98,11 +104,19 @@
 				scope:target_country = {
 					is_country_type = unrecognized
 				}
+				ai_is_regional_objective_subjugate_target = { TARGET = scope:target_country }
 			}
 		}
 
 		propose_score = {
 			value = 10
+
+			if = {
+				limit = {
+					ai_is_regional_objective_subjugate_target = { TARGET = scope:target_country }
+				}
+				add = 20
+			}
 		}
 	}
 }

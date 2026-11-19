@@ -1,0 +1,5 @@
+﻿pm_country_elects_prime_minister = {
+	has_law_or_variant = law_type:law_monarchy
+	country_has_voting_franchise = yes
+	NOT = { has_variable = pm_appointed_by_script }
+}

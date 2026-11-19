@@ -28,16 +28,13 @@
 		}
 	}
 
-	# Button to pay off great power obligations early
 	scripted_button = imf_button_pay_obligations
 
-	# Invalid (auto-closes) when loan variable is cleared
-	invalid = {
-		NOT = { has_variable = imf_loan_active }
-	}
-
-	on_invalid = {
-		trigger_event = { id = imf_events.3 popup = yes }
+	outcome = {
+		flags = { hidden invalid_outcome }
+		conclusion_desc = je_standard_failure_conclusion_desc
+		trigger = { NOT = { has_variable = imf_loan_active } }
+		effect = { trigger_event = { id = imf_events.3 popup = yes } }
 	}
 
 	transferable = no

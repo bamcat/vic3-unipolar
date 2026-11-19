@@ -1,5 +1,4 @@
-﻿# Fundidora de Fierro y Acero de Monterrey, S.A.
-company_fundidora_monterrey = {
+﻿REPLACE_OR_CREATE:company_fundidora_monterrey = {
 	icon = "gfx/interface/icons/company_icons/historical_company_icons/fundidora_monterrey.dds"
 	background = "gfx/interface/icons/company_icons/company_backgrounds/comp_illu_manufacturing_heavy.dds"
 
@@ -28,11 +27,11 @@ company_fundidora_monterrey = {
 	}
 
 	potential = {
-		has_interest_marker_in_region = geographic_region_mexico_old
+		any_scope_state = { is_in_geographic_region = geographic_region_mexico_old }
 	}
 
 	attainable = {
-		hidden_trigger = { # Hide attainable if it's always fulfilled by possible
+		hidden_trigger = {
 			any_scope_state = {
 				state_region = s:STATE_RIO_GRANDE
 			}
@@ -72,12 +71,12 @@ company_fundidora_monterrey = {
 	}
 
 	ai_weight = {
-		value = 3 # Higher base value for flavored companies
+		value = 3
 	}
 }
 
 # Compañía Mexicana de Petróleo El Águila SA
-company_el_aguila = {
+REPLACE_OR_CREATE:company_el_aguila = {
 	icon = "gfx/interface/icons/company_icons/historical_company_icons/el_aguila.dds"
 	background = "gfx/interface/icons/company_icons/company_backgrounds/comp_illu_oil_drills.dds"
 
@@ -92,20 +91,20 @@ company_el_aguila = {
 	}
 
 	potential = {
-		has_interest_marker_in_region = geographic_region_mexico_old
+		any_scope_state = { is_in_geographic_region = geographic_region_mexico_old }
 	}
 
 	attainable = {
-		hidden_trigger = { # Hide attainable if it's always fulfilled by possible
+		hidden_trigger = {
 			any_scope_state = {
-				region = sr:region_mexico
+				is_in_geographic_region = geographic_region_mexico_old
 			}
 		}
 	}
 
 	possible = {
 		any_scope_state = {
-			region = sr:region_mexico
+			is_in_geographic_region = geographic_region_mexico_old
 			is_incorporated = yes
 			any_scope_building = {
 				is_building_type = building_oil_rig
@@ -122,7 +121,7 @@ company_el_aguila = {
 
 	ai_will_do = {
 		any_scope_state = {
-			region = sr:region_mexico
+			is_in_geographic_region = geographic_region_mexico_old
 			is_incorporated = yes
 			is_coastal = yes
 			has_potential_resource = bg_oil_extraction
@@ -133,7 +132,7 @@ company_el_aguila = {
 		building_oil_rig = {
 			level = 5
 			state_trigger = {
-				region = sr:region_mexico
+				is_in_geographic_region = geographic_region_mexico_old
 				is_incorporated = yes
 				is_coastal = yes
 			}
@@ -141,12 +140,12 @@ company_el_aguila = {
 	}
 
 	ai_weight = {
-		value = 3 # Higher base value for flavored companies
+		value = 3
 	}
 }
 
 # Compañía de Salitres y Ferrocarril de Antofagasta
-company_csfa = {
+REPLACE_OR_CREATE:company_csfa = {
 	icon = "gfx/interface/icons/company_icons/historical_company_icons/bolivia_csfa.dds"
 	background = "gfx/interface/icons/company_icons/company_backgrounds/comp_illu_railways.dds"
 
@@ -164,11 +163,11 @@ company_csfa = {
 	}
 
 	potential = {
-		has_interest_marker_in_region = region_andes
+		has_interest_marker_in_region = sr:region_andes
 	}
 
 	attainable = {
-		hidden_trigger = { # Hide attainable if it's always fulfilled by possible
+		hidden_trigger = {
 			any_scope_state = {
 				state_region = s:STATE_ANTOFAGASTA
 			}
@@ -208,12 +207,12 @@ company_csfa = {
 	}
 
 	ai_weight = {
-		value = 3 # Higher base value for flavored companies
+		value = 3
 	}
 }
 
 # Caribbean Petroleum Company
-company_caribbean_petroleum = {
+REPLACE_OR_CREATE:company_caribbean_petroleum = {
 	icon = "gfx/interface/icons/company_icons/historical_company_icons/venezuela_caribbean_petroleum_company.dds"
 	background = "gfx/interface/icons/company_icons/company_backgrounds/comp_illu_oil_drills.dds"
 
@@ -230,11 +229,11 @@ company_caribbean_petroleum = {
 	}
 
 	potential = {
-		has_interest_marker_in_region = region_gran_colombia
+		has_interest_marker_in_region = sr:region_gran_colombia
 	}
 
 	attainable = {
-		hidden_trigger = { # Hide attainable if it's always fulfilled by possible
+		hidden_trigger = {
 			any_scope_state = {
 				OR = {
 					state_region = s:STATE_ZULIA
@@ -286,12 +285,12 @@ company_caribbean_petroleum = {
 	}
 
 	ai_weight = {
-		value = 3 # Higher base value for flavored companies
+		value = 3
 	}
 }
 
 # Bunge & Born
-company_bunge_born = {
+REPLACE_OR_CREATE:company_bunge_born = {
 	icon = "gfx/interface/icons/company_icons/historical_company_icons/argentina_bunge_y_born.dds"
 	background = "gfx/interface/icons/company_icons/company_backgrounds/comp_illu_farm_wheat.dds"
 
@@ -319,11 +318,11 @@ company_bunge_born = {
 	}
 
 	potential = {
-		has_interest_marker_in_region = region_la_plata
+		has_interest_marker_in_region = sr:region_la_plata
 	}
 
 	attainable = {
-		hidden_trigger = { # Hide attainable if it's always fulfilled by possible
+		hidden_trigger = {
 			any_scope_state = {
 				region = sr:region_la_plata
 			}
@@ -375,12 +374,12 @@ company_bunge_born = {
 	}
 
 	ai_weight = {
-		value = 3 # Higher base value for flavored companies
+		value = 3
 	}
 }
 
 # La Rosada
-company_la_rosada = {
+REPLACE_OR_CREATE:company_la_rosada = {
 	icon = "gfx/interface/icons/company_icons/historical_company_icons/paraguay_la_rosada.dds"
 	background = "gfx/interface/icons/company_icons/company_backgrounds/comp_illu_manufacturing_heavy.dds"
 
@@ -410,11 +409,11 @@ company_la_rosada = {
 	}
 
 	potential = {
-		has_interest_marker_in_region = region_la_plata
+		has_interest_marker_in_region = sr:region_la_plata
 	}
 
 	attainable = {
-		hidden_trigger = { # Hide attainable if it's always fulfilled by possible
+		hidden_trigger = {
 			any_scope_state = {
 				state_region = s:STATE_BAJO_PARAGUAY
 			}
@@ -454,12 +453,12 @@ company_la_rosada = {
 	}
 
 	ai_weight = {
-		value = 3 # Higher base value for flavored companies
+		value = 3
 	}
 }
 
 # Fábrica de Armas de la Nación
-company_famae = {
+REPLACE_OR_CREATE:company_famae = {
 	icon = "gfx/interface/icons/company_icons/historical_company_icons/chile_fabrica_de_armas_de_la_nacion.dds"
 	background = "gfx/interface/icons/company_icons/company_backgrounds/comp_illu_manufacturing_heavy.dds"
 
@@ -489,11 +488,11 @@ company_famae = {
 	}
 
 	potential = {
-		has_interest_marker_in_region = region_la_plata
+		has_interest_marker_in_region = sr:region_la_plata
 	}
 
 	attainable = {
-		hidden_trigger = { # Hide attainable if it's always fulfilled by possible
+		hidden_trigger = {
 			any_scope_state = {
 				state_region = s:STATE_SANTIAGO
 			}
@@ -533,12 +532,12 @@ company_famae = {
 	}
 
 	ai_weight = {
-		value = 3 # Higher base value for flavored companies
+		value = 3
 	}
 }
 
 # Peruvian Amazon Company
-company_peruvian_amazon = {
+REPLACE_OR_CREATE:company_peruvian_amazon = {
 	icon = "gfx/interface/icons/company_icons/historical_company_icons/peru_peruvian_amazon_company.dds"
 	background = "gfx/interface/icons/company_icons/company_backgrounds/comp_illu_plantation.dds"
 
@@ -555,11 +554,11 @@ company_peruvian_amazon = {
 	}
 
 	potential = {
-		has_interest_marker_in_region = region_andes
+		has_interest_marker_in_region = sr:region_andes
 	}
 
 	attainable = {
-		hidden_trigger = { # Hide attainable if it's always fulfilled by possible
+		hidden_trigger = {
 			any_scope_state = {
 				state_region = s:STATE_PASTAZA
 			}
@@ -598,12 +597,11 @@ company_peruvian_amazon = {
 	}
 
 	ai_weight = {
-		value = 3 # Higher base value for flavored companies
+		value = 3
 	}
 }
 
-# Kablin Irmãos & Cia.
-company_kablin = {
+REPLACE_OR_CREATE:company_kablin = {
 	icon = "gfx/interface/icons/company_icons/historical_company_icons/brazil_kablin_irmaos_and_cia.dds"
 	background = "gfx/interface/icons/company_icons/company_backgrounds/comp_illu_plantation.dds"
 
@@ -623,11 +621,11 @@ company_kablin = {
 	}
 
 	potential = {
-		has_interest_marker_in_region = region_brazil
+		has_interest_marker_in_region = sr:region_brazil
 	}
 
 	attainable = {
-		hidden_trigger = { # Hide attainable if it's always fulfilled by possible
+		hidden_trigger = {
 			any_scope_state = {
 				region = sr:region_brazil
 			}
@@ -668,12 +666,12 @@ company_kablin = {
 	}
 
 	ai_weight = {
-		value = 3 # Higher base value for flavored companies
+		value = 3
 	}
 }
 
 # Hudson Bay Company
-company_hbc = {
+REPLACE_OR_CREATE:company_hbc = {
 	icon = "gfx/interface/icons/company_icons/historical_company_icons/hbc.dds"
 	background = "gfx/interface/icons/company_icons/company_backgrounds/comp_illu_manufacturing_light.dds"
 
@@ -703,11 +701,11 @@ company_hbc = {
 	}
 
 	potential = {
-		has_interest_marker_in_region = region_canada
+		has_interest_marker_in_region = sr:region_canada
 	}
 
 	attainable = {
-		hidden_trigger = { # Hide attainable if it's always fulfilled by possible
+		hidden_trigger = {
 			any_scope_state = {
 				state_region = s:STATE_MANITOBA
 			}
@@ -747,12 +745,12 @@ company_hbc = {
 	}
 
 	ai_weight = {
-		value = 3 # Higher base value for flavored companies
+		value = 3
 	}
 }
 
 # Panama Canal Company
-company_panama_company = {
+REPLACE_OR_CREATE:company_panama_company = {
 	icon = "gfx/interface/icons/company_icons/historical_company_icons/panama_company.dds"
 	background = "gfx/interface/icons/company_icons/company_backgrounds/comp_illu_harbor_shipbuilding.dds"
 
@@ -781,11 +779,11 @@ company_panama_company = {
 	}
 
 	potential = {
-		has_interest_marker_in_region = region_central_america
+		has_interest_marker_in_region = sr:region_central_america
 	}
 
 	attainable = {
-		hidden_trigger = { # Hide attainable if it's always fulfilled by possible
+		hidden_trigger = {
 			any_scope_state = {
 				state_region = s:STATE_PANAMA
 			}
@@ -842,6 +840,6 @@ company_panama_company = {
 	}
 
 	ai_weight = {
-		value = 3 # Higher base value for flavored companies
+		value = 3
 	}
 }

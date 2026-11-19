@@ -1,8 +1,5 @@
-# Expanded Collapse of Yugoslavia
-
 namespace = yugoslav_collapse
 
-# Begins / crisis cabinet
 yugoslav_collapse.1 = {
 	type = country_event
 	title = yugoslav_collapse.1.t
@@ -53,7 +50,6 @@ yugoslav_collapse.1 = {
 	}
 }
 
-# Croatia breaks
 yugoslav_collapse.2 = {
 	type = country_event
 	title = yugoslav_collapse.2.t
@@ -74,9 +70,9 @@ yugoslav_collapse.2 = {
 		custom_tooltip = croatia_breaks_tt
 		s:STATE_BOSNIA = { add_claim = c:YUG }
 		s:STATE_SLAVONIA = { add_claim = c:YUG }
-		s:STATE_VLASENICA = { add_claim = c:YUG }
-		s:STATE_LIVNO = { add_claim = c:YUG }
-		s:STATE_BANJA_LUKA = { add_claim = c:YUG }
+		s:STATE_BOSNIA = { add_claim = c:YUG }
+		s:STATE_BOSNIA = { add_claim = c:YUG }
+		s:STATE_BOSNIA = { add_claim = c:YUG }
 		yugo_launch_croatian_war = yes
 		set_variable = yugoslavia_has_collapsed
 		set_variable = croatia_crisis_resolved
@@ -94,7 +90,6 @@ yugoslav_collapse.2 = {
 	}
 }
 
-# Bosnia and entities
 yugoslav_collapse.3 = {
 	type = country_event
 	title = yugoslav_collapse.3.t
@@ -133,7 +128,6 @@ yugoslav_collapse.3 = {
 	}
 }
 
-# International response
 yugoslav_collapse.4 = {
 	type = country_event
 	title = yugoslav_collapse.4.t
@@ -170,7 +164,6 @@ yugoslav_collapse.4 = {
 	}
 }
 
-# Serbia asks for reunification
 yugoslav_collapse.5 = {
 	type = country_event
 	title = yugoslav_collapse.5.t
@@ -204,7 +197,6 @@ yugoslav_collapse.5 = {
 	}
 }
 
-# Confederal negotiation check
 yugoslav_collapse.10 = {
 	type = country_event
 	title = yugoslav_collapse.10.t
@@ -238,7 +230,6 @@ yugoslav_collapse.10 = {
 	}
 }
 
-# Salvage success
 yugoslav_collapse.20 = {
 	type = country_event
 	title = yugoslav_collapse.20.t
@@ -265,7 +256,6 @@ yugoslav_collapse.20 = {
 	}
 }
 
-# Montenegro referendum / independence
 yugoslav_collapse.30 = {
 	type = country_event
 	title = yugoslav_collapse.30.t

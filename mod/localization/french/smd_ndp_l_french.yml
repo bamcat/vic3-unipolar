@@ -1,12 +1,11 @@
 ﻿l_french:
-
  je_national_development: "Voie nationale de développement"
  je_national_development_reason: "Chaque nation doit choisir où concentrer ses énergies. Un plan national de développement concentre les ressources, les politiques et la volonté politique sur une vision stratégique unique pendant dix ans. Choisir judicieusement — le choix ne peut être inversé avant la fin du programme."
 
  je_foreign_investment: "Investissement étranger"
  je_foreign_investment_reason: "Attirer le capital de grandes puissances peut accélérer le développement au-delà de ce que les ressources nationales permettent. Un traité sur l'investissement étranger ouvrirait le pays à des entreprises extérieures, avec toutes les possibilités et toutes les dépendances qui en découlent."
  has_foreign_investment_or_trade_agreement_with_west_tt:0 "Signature d'un accord d'investissement et de commerce avec les États-Unis, le Royaume-Uni ou la France"
- 
+
  ndp_status_industrial_tt: "L'expansion industrielle est en cours. Le pays oriente ses ressources vers la construction de son industrie manufacturière et lourde."
  ndp_status_military_tt: "L'expansion militaire est en cours. Le pays investit dans ses forces armées, sa doctrine et ses industries de défense."
  ndp_status_resource_tt: "Le développement de l'économie des ressources est en cours. Le pays se concentre sur l'agriculture et l'extraction des matières premières."
@@ -34,7 +33,6 @@
  fi_button_reject_name: "Rejet des investissements étrangers"
  fi_button_reject_desc: "Fermez la porte à la capitale étrangère. Cela mettra fin à l'entrée de la revue et imposera une pénalité pour investissement à long terme, mais préservera l'indépendance économique et renforcera l'autorité."
 
- # Tooltip keys
  ndp_no_path_active_tt: "Aucune voie de développement n'est actuellement active"
  ndp_abandon_cost_tt: "Abandonner la voie appliquera une peine de légitimité et de prestige pendant 2 ans"
 
@@ -52,10 +50,6 @@
  ndp_bar_turmoil_tt: "Une forte turbulence ralentit le développement"
  ndp_bar_at_war_tt: "La guerre perturbe le programme de développement"
 
- # ==========================================
- # OPENING EVENT — ndp_events.0
- # ==========================================
-
  ndp_events.0.t: "Un programme national de développement commence"
  ndp_events.0.d_industrial: "Le gouvernement de [ROOT.GetCountry.GetName] s'est engagé à une décennie d'expansion industrielle. L'investissement ira vers les usines, les mines et l'infrastructure qui les relie. Le plan est ambitieux — et les obstacles sont considérables — mais la vision est claire: construire la capacité productive qui définira la place de [ROOT.GetCountry.GetName] dans le monde."
  ndp_events.0.d_military: "Le gouvernement de [ROOT.GetCountry.GetName] s'est engagé à une décennie d'expansion militaire. Des casernes seront construites, des officiers formés et des doctrines réformées. Que la motivation soit la défense, la dissuasion ou l'ambition, le message au monde est indéniable : [ROOT.GetCountry.GetName] entend être pris au sérieux."
@@ -63,10 +57,6 @@
  ndp_events.0.d_service: "Le gouvernement de [ROOT.GetCountry.GetName] s'est engagé à mettre sur pied une décennie d'économie de services. Les écoles, les banques et les ministères verront tous des investissements. Le pari est qu'un pays plus intelligent et mieux gouverné est en fin de compte un pays plus fort."
  ndp_events.0.f: "Dix ans. Une direction."
  ndp_events.0.a: "Que le programme commence"
-
- # ==========================================
- # INDUSTRIAL PATH EVENTS
- # ==========================================
 
  ndp_events.1.t: "La question industrielle"
  ndp_events.1.d: "Deux ans avant le programme de développement, l'orientation des investissements industriels doit être clarifiée. Le pays ne peut tout construire à la fois. Les planificateurs et les industriels sont divisés: certains préconisent de concentrer les ressources sur l'industrie lourde — fer, acier, charbon — les sinews de la puissance moderne. D'autres soutiennent que la fabrication légère offre des rendements plus rapides et un emploi plus large."
@@ -91,9 +81,7 @@
  ndp_events.4.f: "La forge a fait son travail."
  ndp_events.4.a: "Graphique du cours suivant"
  ten_year_programme_concluded:0 "Le programme décennal s'est achevé."
- # ==========================================
- # MILITARY PATH EVENTS
- # ==========================================
+ smd_ndp_programme_restarts_tt:0 "La voie de développement national est réinitialisée et un nouveau programme peut être choisi."
 
  ndp_events.11.t: "La question de la doctrine"
  ndp_events.11.d: "Deux années d'expansion militaire ont produit plus de soldats, plus d'armes et plus d'options, mais la question fondamentale de la doctrine reste sans solution. L'état-major général est divisé. Une faction insiste sur le pouvoir terrestre : armées de masse, profondeur défensive et domination continentale. Un autre fait valoir que l'expansion navale offre une plus grande flexibilité stratégique et la capacité de projeter la puissance au-delà des frontières de [ROOT.GetCountry.GetName]."
@@ -118,10 +106,6 @@
  ndp_events.14.f: "L'épée a été forgée. Maintenant il doit trouver son but."
  ndp_events.14.a: "Graphique du cours suivant"
 
- # ==========================================
- # RESOURCE ECONOMY PATH EVENTS
- # ==========================================
-
  ndp_events.21.t: "Le Bounty du Land"
  ndp_events.21.d: "Deux ans avant le programme de ressources, le choix fondamental doit être fait: quel type d'économie des ressources va construire [ROOT.GetCountry.GetName]? L'agriculture — alimentant une population en croissance et produisant des cultures d'exportation — offre une stabilité et un large emploi. L'extraction des matières premières — exploitation minière, exploitation forestière, forage — offre des revenus plus rapides, mais elle est plus volatile et laisse l'économie exposée aux fluctuations des prix des matières premières."
  ndp_events.21.f: "La terre donne ce qu'elle donne. La question est ce que vous lui posez."
@@ -145,10 +129,6 @@
  ndp_events.24.f: "Ce que la terre donne, la terre se souvient."
  ndp_events.24.a: "Graphique du cours suivant"
 
- # ==========================================
- # SERVICE ECONOMY PATH EVENTS
- # ==========================================
-
  ndp_events.31.t: "La question du service"
  ndp_events.31.d: "Deux ans avant le programme de service, l'orientation doit être clarifiée. Deux visions d'une économie de services sont en concurrence pour la priorité: le secteur financier — banque, assurance et commerce — qui génère rapidement des richesses et attire les investissements, ou l'éducation et la bureaucratie — les écoles, les universités et les institutions publiques — qui renforce le capital humain et la capacité de gouvernance qui sous-tendent tout le reste."
  ndp_events.31.f: "Le grand livre ou la bibliothèque sont tous deux des fondements de la modernité."
@@ -171,10 +151,6 @@
  ndp_events.34.d: "Dix ans de développement de l'économie des services sont terminés. Les banques sont plus sophistiquées, les écoles mieux dotées en personnel, le gouvernement plus compétent qu'au début du programme. La question de savoir si cela se traduit par le genre de prospérité générale qui justifie l'investissement est une question à long terme, une question que la prochaine décennie commencera à répondre."
  ndp_events.34.f: "L'infrastructure de l'esprit dépasse tous les autres."
  ndp_events.34.a: "Graphique du cours suivant"
-
- # ==========================================
- # MODIFIERS
- # ==========================================
 
  ndp_modifier_industrial: "Voie du développement industriel"
  ndp_modifier_industrial_desc: "Les ressources nationales sont consacrées à l'expansion industrielle. Les taux de construction sont en hausse et le rendement manufacturier s'améliore partout."

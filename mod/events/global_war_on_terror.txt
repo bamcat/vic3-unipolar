@@ -1,6 +1,5 @@
 ﻿namespace = global_wot
 
-# World notification of the attacks (fires for every non-USA country when USA has the variable)
 global_wot.1 = {
     type = country_event
     placement = ROOT
@@ -11,7 +10,6 @@ global_wot.1 = {
     option = { name = global_wot.1.a }
 }
 
-# World notification of the US declaration of the War on Terror (fires for every non-USA country)
 global_wot.2 = {
     type = country_event
     placement = ROOT

@@ -1,5 +1,5 @@
 ﻿# Vinnaia Monopoliia
-company_vodka_monopoly = {
+REPLACE_OR_CREATE:company_vodka_monopoly = {
 	icon = "gfx/interface/icons/company_icons/historical_company_icons/russian_vodka_monopoly.dds"
 	background = "gfx/interface/icons/company_icons/company_backgrounds/comp_illu_farm_wheat.dds"
 
@@ -63,7 +63,7 @@ company_vodka_monopoly = {
 	}
 
 	ai_weight = {
-		value = 3 # Higher base value for flavored companies
+		value = 3
 	}
 }
 
@@ -98,11 +98,11 @@ REPLACE_OR_CREATE:company_putilov_company = {
 	}
 
 	potential = {
-		has_interest_marker_in_region = region_russia
+		has_interest_marker_in_region = sr:region_russia
 	}
 
 	attainable = {
-		hidden_trigger = { # Hide attainable if it's always fulfilled by possible
+		hidden_trigger = {
 			any_scope_state = {
 				state_region = s:STATE_INGRIA
 			}
@@ -158,12 +158,12 @@ REPLACE_OR_CREATE:company_putilov_company = {
 	}
 
 	ai_weight = {
-		value = 3 # Higher base value for flavored companies
+		value = 3
 	}
 }
 
 # gazprom
-company_branobel = {
+REPLACE_OR_CREATE:company_branobel = {
 	icon = "gfx/interface/icons/company_icons/russia/gazprom.dds"
 	background = "gfx/interface/icons/company_icons/company_backgrounds/comp_illu_oil_drills.dds"
 
@@ -184,11 +184,14 @@ company_branobel = {
 	}
 
 	potential = {
-		has_interest_marker_in_region = geographic_region_caucasus_old
+		OR = {
+			any_scope_state = { is_in_geographic_region = geographic_region_caucasus_old }
+			any_scope_state = { state_region = s:STATE_PERM }
+		}
 	}
 
 	attainable = {
-		hidden_trigger = { # Hide attainable if it's always fulfilled by possible
+		hidden_trigger = {
 			any_scope_state = {
 				state_region = s:STATE_PERM
 			}
@@ -226,12 +229,12 @@ company_branobel = {
 	}
 
 	ai_weight = {
-		value = 3 # Higher base value for flavored companies
+		value = 3
 	}
 }
 
 # Izhevsk Arms Plant
-company_izhevsk_arms_plant = {
+REPLACE_OR_CREATE:company_izhevsk_arms_plant = {
 	icon = "gfx/interface/icons/company_icons/historical_company_icons/russian_izhevsk_arms_plant.dds"
 	background = "gfx/interface/icons/company_icons/company_backgrounds/comp_illu_manufacturing_heavy.dds"
 
@@ -261,11 +264,14 @@ company_izhevsk_arms_plant = {
 	}
 
 	potential = {
-		has_interest_marker_in_region = geographic_region_west_siberia_old
+		OR = {
+			any_scope_state = { is_in_geographic_region = geographic_region_west_siberia_old }
+			any_scope_state = { state_region = s:STATE_PERM }
+		}
 	}
 
 	attainable = {
-		hidden_trigger = { # Hide attainable if it's always fulfilled by possible
+		hidden_trigger = {
 			any_scope_state = {
 				state_region = s:STATE_PERM
 			}
@@ -304,12 +310,11 @@ company_izhevsk_arms_plant = {
 	}
 
 	ai_weight = {
-		value = 3 # Higher base value for flavored companies
+		value = 3
 	}
 }
 
-# Savva Morozov & Sons Cotton Textile Mfg. Co.
-company_savva_morozov = {
+REPLACE_OR_CREATE:company_savva_morozov = {
 	icon = "gfx/interface/icons/company_icons/historical_company_icons/russian_savva_morozov_and_sons.dds"
 	background = "gfx/interface/icons/company_icons/company_backgrounds/comp_illu_manufacturing_light.dds"
 
@@ -337,11 +342,11 @@ company_savva_morozov = {
 	}
 
 	potential = {
-		has_interest_marker_in_region = region_russia
+		has_interest_marker_in_region = sr:region_russia
 	}
 
 	attainable = {
-		hidden_trigger = { # Hide attainable if it's always fulfilled by possible
+		hidden_trigger = {
 			any_scope_state = {
 				state_region = s:STATE_MOSCOW
 			}
@@ -381,12 +386,12 @@ company_savva_morozov = {
 	}
 
 	ai_weight = {
-		value = 3 # Higher base value for flavored companies
+		value = 3
 	}
 }
 
 # New Russia Company Limited
-company_john_hughes = {
+REPLACE_OR_CREATE:company_john_hughes = {
 	icon = "gfx/interface/icons/company_icons/historical_company_icons/russian_new_russia_company.dds"
 	background = "gfx/interface/icons/company_icons/company_backgrounds/comp_illu_mining.dds"
 
@@ -409,11 +414,11 @@ company_john_hughes = {
 	}
 
 	potential = {
-		has_interest_marker_in_region = region_dnieper
+		any_scope_state = { is_in_geographic_region = geographic_region_dnieper_old }
 	}
 
 	attainable = {
-		hidden_trigger = { # Hide attainable if it's always fulfilled by possible
+		hidden_trigger = {
 			any_scope_state = {
 				OR = {
 					state_region = s:STATE_KHARKOV
@@ -490,6 +495,6 @@ company_john_hughes = {
 	}
 
 	ai_weight = {
-		value = 3 # Higher base value for flavored companies
+		value = 3
 	}
 }

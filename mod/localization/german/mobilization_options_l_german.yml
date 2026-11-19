@@ -1,5 +1,4 @@
 ﻿l_german:
-
  MOBILIZATION_OPTION_UPKEEP_SHORT: "[ConcatIfNeitherEmpty(MobilizationOption.GetUpkeepModifier.GetDesc,'\n')][MobilizationOption.GetUpkeepUnscaledModifier.GetDesc]"
  MOBILIZATION_OPTION_GROUP_TOOLTIP: "[MobilizationOptionGroup.GetDesc]"
  MOBILIZATION_OPTION_TOOLTIP: "[AddLocalizationIf(Not(MobilizationOption.GetUnitModifier.IsEmpty),'MOBILIZATION_OPTION_EFFECTS_HEADER')][MobilizationOption.GetUnitModifier.GetDesc][AddLocalizationIf(Not(MobilizationOption.GetUnitModifier.IsEmpty),'\n\n')][AddLocalizationIf(Not(MobilizationOption.GetUpkeepModifier.IsEmpty),'MOBILIZATION_OPTION_UPKEEP_HEADER')]$MOBILIZATION_OPTION_UPKEEP_SHORT$[AddLocalizationIf(Not(MobilizationOption.GetUpkeepModifier.IsEmpty),'\n\n')][MobilizationOption.GetDesc]"
@@ -9,7 +8,7 @@
  ACTIVATE_MOBILIZATION_OPTION_BUTTON_TOOLTIP: "[MobilizationOption.GetName]x id=2/>x id=3/>x id=4/>x id=5/>x id=6/>x id=7/>x"
  ALREADY_ACTIVATED: "#i Schon aktiviert<x = 1/>"
  DEACTIVATE_MOBILIZATION_OPTION_BUTTON_TOOLTIP: "#header Deaktivieren [MobilizationOption.GetName]x id=2/>x id=3/>x id=4/>x id=5/>x id=6/>x"
- 
+
  MOBILIZATION_OPTION_TOOLTIP_WITH_TOGGLE_DESC: "[ConcatIfNeitherEmpty('$TOGGLE_DESC$','\n\n')]$TOOLTIP$[ConcatIfNeitherEmpty('\n\n','$EFFECT_HEADER$')]$EFFECT$"
  MOBILIZATION_OPTION_TOOLTIP_WITH_TOGGLE_DESC_WARNING_HEADER: "#title @warning! Daraus ergeben sich folgende Effekte:#!x id=3/>"
 
@@ -33,7 +32,7 @@
  mobilization_option_it_hurts_organization_when_you_adjust_equipment_tt: "Reduziert den Strom [concept_organization] des [concept_army] durch #v 50%#! beim Ein- oder Ausschalten"
  mobilization_option_it_hurts_organization_to_add_medic_support_tt: "Reduziert den Strom [concept_organization] des [concept_army] durch #v 25%#! beim Einschalten"
  mobilization_option_it_hurts_morale_and_organization_when_you_remove_medic_support_tt: "Reduziert jeden [Concept('concept_unit','$concept_unit_possessive$')] Strom [concept_morale] durch #v 50%#! und den Strom [concept_organization] der <x id=>5/ durch #v 25%x id=7/>, wenn von einem [Concept('concept_mobilize_army','$concept_mobilize_army_mobilized$')] [concept_army] entfernt"
- 
+
  mobilization_option_extra_supplies: "Meal-Ready-to-Eat"
  mobilization_option_extra_supplies_desc: "Standardisierte, moderne Rationen für unsere Soldaten"
  mobilization_option_luxurious_supplies: "Luxuriöses Meal-Ready-to-Eat"
@@ -71,7 +70,6 @@
  mobilization_option_field_hospitals: "Feldkliniken"
  mobilization_option_field_hospitals_desc: "Skilled Chirurgen mit Zugang zu potenten Kräutern können lebenserhaltende Wunder durchführen."
 
- #Mobilization option groups
  supplies: "Lieferungen"
  supplies_desc: "Die Lieferungen für Ihre Armee"
  supplements: "Beilagen"
@@ -85,8 +83,5 @@
  medic_support: "Medizinische Unterstützung"
  medic_support_desc: "Die Ausrüstung, die Ihre Armee zur Verfügung hat, um ihre verwundeten Soldaten zu behandeln."
 
- 
-# SMD
-
-mobilization_option_air_transport:0 "Luftverkehr"
-mobilization_option_air_transport_desc:0 "Laden Sie unsere Einheiten auf Flugzeuge für einfache und effiziente Bewegung."
+ mobilization_option_air_transport:0 "Luftverkehr"
+ mobilization_option_air_transport_desc:0 "Laden Sie unsere Einheiten auf Flugzeuge für einfache und effiziente Bewegung."

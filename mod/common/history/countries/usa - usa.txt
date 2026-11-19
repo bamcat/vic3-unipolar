@@ -1,6 +1,6 @@
 ﻿COUNTRIES = {
 	c:USA = {
-		set_next_election_date = 1993.01.20 #YYYY.MM.DD
+		set_next_election_date = 1993.01.20
 		
 		effect = create_alliances_effect
 		set_variable = nuclear_capable
@@ -9,8 +9,8 @@
 		
 		set_market_capital = STATE_NEW_YORK	
 		add_modifier = nuclear_capable_modifier
-		# Laws
 		activate_law = law_type:law_professional_army
+		activate_law = law_type:law_professional_navy
 		activate_law = law_type:law_elected_bureaucrats
 		activate_law = law_type:law_compulsory_primary_school
 		activate_law = law_type:law_total_separation
@@ -46,7 +46,7 @@
 		activate_law = law_type:law_workplace_accommodations
 		activate_law = law_type:law_alcohol_tobacco_legal
 
-		active_law:lawgroup_governance_principles ?= { # Presidential Republic
+		active_law:lawgroup_governance_principles ?= {
 			add_amendment = {
 				type = amendment_american_second_amendment
 				sponsor = PREV.ig:ig_rural_folk
@@ -61,7 +61,7 @@
 		}
 		
 		set_variable = free_elections_var
-		active_law:lawgroup_distribution_of_power ?= { # Census Voting - whilst individual parties carried out electoral fraud, the American central government did not typically have any role in rigging elections
+		active_law:lawgroup_distribution_of_power ?= {
 			add_amendment = {
 				type = amendment_tradition_of_free_elections
 				sponsor = PREV.ig:ig_petty_bourgeoisie
@@ -82,7 +82,7 @@
 			add_ruling_interest_group = yes
 		}
 		
-		ig:ig_petite_burgeoisie = {
+		ig:ig_petty_bourgeoisie = {
 			add_ruling_interest_group = yes
 		}
 		
@@ -92,6 +92,31 @@
 
 		ig:ig_trade_unions = {
 			set_ig_suppression = yes
+		}
+
+		add_company = company_type:company_microsoft
+		company:company_microsoft = {
+			set_company_establishment_date = 1975.4.4
+			set_company_state_region = s:STATE_WASHINGTON
+		}
+		create_character = {
+			template = USA_bill_gates
+			save_scope_as = usa_bill_gates_scope
+		}
+		scope:usa_bill_gates_scope = {
+			set_character_as_executive = c:USA.company:company_microsoft
+		}
+		add_company = company_type:company_walmart
+		company:company_walmart = {
+			set_company_establishment_date = 1962.7.2
+			set_company_state_region = s:STATE_ARKANSAS
+		}
+		create_character = {
+			template = USA_david_glass
+			save_scope_as = usa_david_glass_scope
+		}
+		scope:usa_david_glass_scope = {
+			set_character_as_executive = c:USA.company:company_walmart
 		}
 	}
 }

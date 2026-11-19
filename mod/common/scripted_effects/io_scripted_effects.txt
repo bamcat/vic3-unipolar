@@ -1,7 +1,6 @@
 ﻿# International Organizations 
 
 io_initialize_organizations = {
-	# Called per-country from on_game_started
 	set_variable = { name = io_ngo_iaea_opinion value = 50 }
 	set_variable = { name = io_ngo_redcross_opinion value = 50 }
 	set_variable = { name = io_ngo_amnesty_opinion value = 50 }
@@ -31,7 +30,6 @@ io_create_starting_nato_defensive_pacts = {
 				is_target_in_global_variable_list = { name = io_nato_members target = this }
 				NOT = { this = scope:nato_country_1 }
 
-				# Don't create duplicate defensive pacts
 				NOR = {
 					any_scope_treaty = {
 						binds = scope:nato_country_1
@@ -197,10 +195,10 @@ io_setup_cis_members = {
 	every_country = { limit = { c:KAZ ?= this } add_to_global_variable_list = { name = io_cis_members target = this } }
 	every_country = { limit = { c:UZB ?= this } add_to_global_variable_list = { name = io_cis_members target = this } }
 	every_country = { limit = { c:ARM ?= this } add_to_global_variable_list = { name = io_cis_members target = this } }
-	every_country = { limit = { c:AZR ?= this } add_to_global_variable_list = { name = io_cis_members target = this } }
+	every_country = { limit = { c:AZB ?= this } add_to_global_variable_list = { name = io_cis_members target = this } }
 	every_country = { limit = { c:KYR ?= this } add_to_global_variable_list = { name = io_cis_members target = this } }
 	every_country = { limit = { c:MOL ?= this } add_to_global_variable_list = { name = io_cis_members target = this } }
-	every_country = { limit = { c:TAJ ?= this } add_to_global_variable_list = { name = io_cis_members target = this } }
+	every_country = { limit = { c:TJK ?= this } add_to_global_variable_list = { name = io_cis_members target = this } }
 	every_country = { limit = { c:TKM ?= this } add_to_global_variable_list = { name = io_cis_members target = this } }
 }
  
@@ -213,31 +211,27 @@ io_setup_who_members = {
  
 ### ══════════════════════════════════════════
 ### DEFAULT TREATIES (1992)
-### Most recognized countries are signatories
 ### Notable non-signatories handled by exclusion
 ### ══════════════════════════════════════════
  
 io_setup_default_treaties = {
-	# Geneva Conventions — virtually universal by 1992
 	every_country = {
 		limit = { is_country_type = recognized }
 		set_variable = io_treaty_geneva_signed
 		add_modifier = { name = io_treaty_geneva_signatory }
 	}
  
-	# NPT — near-universal, notable non-signatories: Israel, India, Pakistan
 	every_country = {
 		limit = {
 			is_country_type = recognized
-			NOT = { this = c:ISR }
-			NOT = { this = c:BHT }
-			NOT = { this = c:PAK }
+			NOT = { c:ISR ?= this }
+			NOT = { c:BHT ?= this }
+			NOT = { c:PAK ?= this }
 		}
 		set_variable = io_treaty_npt_signed
 		add_modifier = { name = io_treaty_npt_signatory }
 	}
  
-	# BWC — widely signed by 1992, but not universal
 	every_country = {
 		limit = {
 			is_country_type = recognized
@@ -246,25 +240,17 @@ io_setup_default_treaties = {
 		add_modifier = { name = io_treaty_bwc_signatory }
 	}
  
-	# CWC — opened for signature in Jan 1993, so NOT signed at 1992 start
-	# Players can sign it during gameplay
- 
-	# Convention Against Torture — widespread but not universal by 1992
-	# Major signatories: Western nations, some others
 	every_country = {
 		limit = {
 			is_country_type = recognized
 			OR = {
-				# Europe
-				any_scope_state = { is_in_geographic_region = geographic_region:geographic_region_europe }
-				# Americas
-				any_scope_state = { is_in_geographic_region = geographic_region:geographic_region_north_america }
-				any_scope_state = { is_in_geographic_region = geographic_region:geographic_region_south_america }
-				# Major Asian democracies
-				this = c:JPN
-				this = c:KOR
-				this = c:AUL
-				this = c:NZL
+				any_scope_state = { is_in_geographic_region = geographic_region_europe }
+				any_scope_state = { is_in_geographic_region = geographic_region_north_america }
+				any_scope_state = { is_in_geographic_region = geographic_region_south_america }
+				c:JPN ?= this
+				c:STK ?= this
+				c:AUZ ?= this
+				c:NZL ?= this
 			}
 		}
 		set_variable = io_treaty_cat_signed
@@ -274,12 +260,8 @@ io_setup_default_treaties = {
 
 io_audit_organization_modifiers = {
  
-	### ══════════════════════════════════════════
-	### FINANCIAL AGREEMENT MEMBERS (G7, IMF)
 	### io_financial_agreement_member
-	### ══════════════════════════════════════════
  
-	# G7 members — must have io_financial_agreement_member
 	every_country = {
 		limit = {
 			is_target_in_global_variable_list = { name = io_g7_members target = this }
@@ -288,7 +270,6 @@ io_audit_organization_modifiers = {
 		add_modifier = { name = io_financial_agreement_member }
 	}
  
-	# Countries no longer in G7 — remove modifier if still present
 	every_country = {
 		limit = {
 			NOT = { is_target_in_global_variable_list = { name = io_g7_members target = this } }
@@ -298,7 +279,6 @@ io_audit_organization_modifiers = {
 		remove_modifier = io_financial_agreement_member
 	}
  
-	# IMF members — must have io_financial_agreement_member
 	every_country = {
 		limit = {
 			is_target_in_global_variable_list = { name = io_imf_members target = this }
@@ -307,10 +287,7 @@ io_audit_organization_modifiers = {
 		add_modifier = { name = io_financial_agreement_member }
 	}
  
-	### ══════════════════════════════════════════
-	### OPEC MEMBERS
 	### io_opec_member
-	### ══════════════════════════════════════════
  
 	every_country = {
 		limit = {
@@ -328,10 +305,7 @@ io_audit_organization_modifiers = {
 		remove_modifier = io_opec_member
 	}
  
-	### ══════════════════════════════════════════
-	### EEC MEMBERS
 	### io_free_trade_agreement_member
-	### ══════════════════════════════════════════
  
 	every_country = {
 		limit = {
@@ -349,10 +323,7 @@ io_audit_organization_modifiers = {
 		remove_modifier = io_free_trade_agreement_member
 	}
  
-	### ══════════════════════════════════════════
-	### NATO MEMBERS
 	### io_military_defense_agreement_member
-	### ══════════════════════════════════════════
  
 	every_country = {
 		limit = {
@@ -370,10 +341,7 @@ io_audit_organization_modifiers = {
 		remove_modifier = io_military_defense_agreement_member
 	}
  
-	### ══════════════════════════════════════════
-	### ARAB LEAGUE MEMBERS
 	### io_cultural_pact_member
-	### ══════════════════════════════════════════
  
 	every_country = {
 		limit = {
@@ -391,11 +359,6 @@ io_audit_organization_modifiers = {
 		remove_modifier = io_cultural_pact_member
 	}
  
-	### ══════════════════════════════════════════
-	### TREATY SIGNATORIES
-	### ══════════════════════════════════════════
- 
-	# Geneva Convention
 	every_country = {
 		limit = {
 			has_variable = io_treaty_geneva_signed
@@ -411,7 +374,6 @@ io_audit_organization_modifiers = {
 		remove_modifier = io_treaty_geneva_signatory
 	}
  
-	# Chemical Weapons Convention
 	every_country = {
 		limit = {
 			has_variable = io_treaty_cwc_signed
@@ -427,7 +389,6 @@ io_audit_organization_modifiers = {
 		remove_modifier = io_treaty_cwc_signatory
 	}
  
-	# Non-Proliferation Treaty
 	every_country = {
 		limit = {
 			has_variable = io_treaty_npt_signed
@@ -443,7 +404,6 @@ io_audit_organization_modifiers = {
 		remove_modifier = io_treaty_npt_signatory
 	}
  
-	# Biological Weapons Convention
 	every_country = {
 		limit = {
 			has_variable = io_treaty_bwc_signed
@@ -459,7 +419,6 @@ io_audit_organization_modifiers = {
 		remove_modifier = io_treaty_bwc_signatory
 	}
  
-	# Convention Against Torture
 	every_country = {
 		limit = {
 			has_variable = io_treaty_cat_signed
@@ -505,12 +464,10 @@ io_setup_eu_power_bloc = {
 
 ### ══════════════════════════════════════════
 ### NGO HIGH SUPPORT CHECK
-### Grants/removes bonus modifiers based on opinion threshold (75+)
 ### Called by the yearly audit
 ### ══════════════════════════════════════════
  
 io_ngo_check_high_support = {
-	# IAEA — 75+ opinion grants tech spread bonus
 	if = {
 		limit = {
 			has_variable = io_ngo_iaea_opinion
@@ -530,7 +487,6 @@ io_ngo_check_high_support = {
 		remove_modifier = io_ngo_iaea_high_support
 	}
  
-	# RED CROSS — 75+ opinion grants prestige bonus
 	if = {
 		limit = {
 			has_variable = io_ngo_redcross_opinion
@@ -550,7 +506,6 @@ io_ngo_check_high_support = {
 		remove_modifier = io_ngo_redcross_high_support
 	}
  
-	# AMNESTY — 75+ opinion grants legitimacy bonus
 	if = {
 		limit = {
 			has_variable = io_ngo_amnesty_opinion
@@ -573,17 +528,13 @@ io_ngo_check_high_support = {
  
 ### ══════════════════════════════════════════
 ### REJECTION CLEANUP
-### Called by the yearly audit — removes countries from
 ### member lists if they were rejected during the voting window
 ### ══════════════════════════════════════════
  
 io_rejection_cleanup = {
-	# If a country has io_application_rejected, remove them from
-	# whichever list they were optimistically added to
 	if = {
 		limit = { has_variable = io_application_rejected }
  
-		# Check each org list and remove if present
 		if = {
 			limit = { is_target_in_global_variable_list = { name = io_un_members target = this } }
 			remove_list_global_variable = { name = io_un_members target = this }
@@ -592,7 +543,6 @@ io_rejection_cleanup = {
 			limit = { is_target_in_global_variable_list = { name = io_nato_members target = this } }
 			remove_list_global_variable = { name = io_nato_members target = this }
 			remove_modifier = io_military_defense_agreement_member
-			# Also withdraw from any defensive pacts just created
 			every_scope_treaty = {
 				limit = { any_scope_article = { has_type = defensive_pact } }
 				withdraw = { country = PREV }

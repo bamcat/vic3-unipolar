@@ -1,0 +1,39 @@
+﻿GLOBAL = {
+	s:STATE_POSEN = {
+		remove_homeland = cu:north_german
+	}
+	s:STATE_WEST_PRUSSIA = {
+		remove_homeland = cu:north_german
+	}
+	s:STATE_EAST_PRUSSIA = {
+		remove_homeland = cu:north_german
+	}
+	s:STATE_LOWER_SILESIA = {
+		remove_homeland = cu:north_german
+	}
+	s:STATE_UPPER_SILESIA = {
+		remove_homeland = cu:north_german
+	}
+	s:STATE_POMERANIA = {
+		remove_homeland = cu:north_german
+	}
+	s:STATE_EAST_GALICIA = {
+		remove_homeland = cu:polish
+	}
+	s:STATE_RUTHENIA = {
+		remove_homeland = cu:slovak
+		add_homeland = cu:ukrainian
+	}
+	s:STATE_VILNIUS = {
+		remove_homeland = cu:polish
+	}
+	s:STATE_BOHEMIA = {
+		remove_homeland = cu:south_german
+	}
+	s:STATE_MORAVIA = {
+		remove_homeland = cu:south_german
+	}
+	s:STATE_ALSACE_LORRAINE = {
+		remove_homeland = cu:south_german
+	}
+}

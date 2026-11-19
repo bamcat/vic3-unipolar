@@ -1,6 +1,5 @@
 ﻿namespace = historical_events
 
-
 # ==========================================
 # HURRICANE ANDREW
 # August 24, 1992
@@ -87,7 +86,6 @@ terrorism_a.3 = {
 
 # ==========================================
 # OKLAHOMA CITY BOMBING
-# April 19, 1995. Domestic terrorism.
 # ==========================================
 
 terrorism_a.4 = {
@@ -130,10 +128,6 @@ terrorism_a.4 = {
 
 # ==========================================
 # EAST AFRICAN EMBASSY BOMBINGS
-# August 7, 1998.
-# Separate events for USA, Kenya, Tanzania.
-# Does not fire if AFG is a subject
-# or does not exist.
 # ==========================================
 
 # USA event
@@ -160,7 +154,6 @@ terrorism_a.5 = {
 
 	immediate = {
 		set_variable = embassy_bombing_fired
-		# Also fire for Kenya and Tanzania
 		if = { limit = { exists = c:KYA } c:KYA = { trigger_event = { id = terrorism_a.6 } } }
 		if = { limit = { exists = c:TNZ } c:TNZ = { trigger_event = { id = terrorism_a.7 } } }
 	}
@@ -170,7 +163,7 @@ terrorism_a.5 = {
 		default_option = yes
 		add_modifier = { name = he_terror_attack_foreign months = 24 }
 		add_modifier = { name = he_counterterrorism_push months = 48 }
-		add_infamy = 5
+		change_infamy = 5
 	}
 }
 
@@ -234,9 +227,6 @@ terrorism_a.7 = {
 
 # ==========================================
 # USS COLE BOMBING
-# October 12, 2000.
-# Does not fire if AFG is a subject
-# or does not exist.
 # ==========================================
 
 terrorism_a.8 = {
@@ -317,9 +307,6 @@ terrorism_a.9 = {
 
 # ==========================================
 # VIRGINIA TECH SHOOTING
-# April 16, 2007.
-# Does not fire if USA has
-# law_licensed_firearms or stricter.
 # ==========================================
 
 terrorism_a.10 = {
@@ -512,7 +499,6 @@ terrorism_a.12 = {
 		name = terrorism_a.12.a
 		default_option = yes
 		add_modifier = { name = he_mass_shooting months = 18 }
-		# Hate crime — additional radicalism from discrimination
 		add_modifier = { name = he_hate_crime_shock months = 24 }
 		scope:shooting_state = {
 			add_radicals_in_state = { value = small_radicals }
@@ -586,7 +572,6 @@ terrorism_a.13 = {
 	option = {
 		name = terrorism_a.13.a
 		default_option = yes
-		# The scale of national grief — heavier than other shootings
 		add_modifier = { name = he_mass_shooting_severe months = 36 }
 		scope:shooting_state = {
 			add_radicals_in_state = { value = medium_radicals }
@@ -634,7 +619,6 @@ terrorism_a.13 = {
 
 # ==========================================
 # DUNBLANE MASSACRE
-# March 13, 1996. United Kingdom.
 # ==========================================
 
 terrorism_a.14 = {
@@ -664,7 +648,6 @@ terrorism_a.14 = {
 		name = terrorism_a.14.a
 		default_option = yes
 		add_modifier = { name = he_mass_shooting_severe months = 36 }
-		# Dunblane directly led to the Firearms Acts — strong law reform push
 		add_modifier = { name = he_gun_reform_mandate months = 48 }
 		add_modifier = {
                 name = national_mourning_school_shooting
@@ -705,7 +688,6 @@ terrorism_a.14 = {
 
 # ==========================================
 # 1998 CHINA FLOODS
-# Summer 1998. Yangtze River floods.
 # ==========================================
 
 terrorism_a.15 = {
@@ -752,14 +734,12 @@ terrorism_a.15 = {
 			add_modifier = { name = he_disaster_zone months = 24 }
 			add_radicals_in_state = { value = medium_radicals strata = lower }
 		}
-		# Massive government mobilization — legitimacy hit or boost depending on response
-		country_add_legitimacy = -5
+		add_modifier = { name = smd_legitimacy_shift multiplier = -5 months = 24 }
 	}
 }
 
 # ==========================================
 # 1999 RUSSIAN APARTMENT BOMBINGS
-# September 1999. Russia.
 # ==========================================
 
 terrorism_a.16 = {
@@ -790,7 +770,6 @@ terrorism_a.16 = {
 		default_option = yes
 		add_modifier = { name = he_terror_attack_domestic months = 24 }
 		add_modifier = { name = he_counterterrorism_push months = 36 }
-		# Bombings were pretext for Second Chechen War — authority surge
 		add_modifier = { name = he_security_state_response months = 48 }
 		every_scope_state = {
 			limit = { is_incorporated = yes }

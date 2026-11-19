@@ -59,7 +59,7 @@ REPLACE_OR_CREATE:building_university = {
 	ai_value = {
 		value = 1000
 
-		if = { # British dictates
+		if = {
 			limit = {
 				owner = {
 					has_journal_entry = je_british_dictate_universities

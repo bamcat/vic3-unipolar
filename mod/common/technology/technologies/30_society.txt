@@ -1,7 +1,6 @@
 ﻿### ERA 1
 
 REPLACE_OR_CREATE:urbanization = {
-	# Unlocks Urban Centers building
 	era = era_1
 	texture = "gfx/interface/icons/invention_icons/urbanization.dds"
 	category = society
@@ -16,7 +15,7 @@ REPLACE_OR_CREATE:urbanization = {
 	}
 	
 	ai_weight = {
-		value = 3 # Very important in general
+		value = 3
 	}
 }
 
@@ -40,12 +39,11 @@ REPLACE_OR_CREATE:urban_planning = {
 	}
 	
 	ai_weight = {
-		value = 2 # Important in general
+		value = 2
 	}
 }
 
 REPLACE_OR_CREATE:rationalism = {
-	# Unlocks Freedom of Conscience - Church and State Law
 	era = era_1
 	texture = "gfx/interface/icons/invention_icons/rationalism.dds"
 	category = society
@@ -57,14 +55,11 @@ REPLACE_OR_CREATE:rationalism = {
 	}
 	
 	ai_weight = {
-		value = 3 # Very important in general
+		value = 3
 	}
 }
 
 REPLACE_OR_CREATE:tech_bureaucracy = {
-	# Unlocks Government Administration building
-	# Unlocks Isolationism - Economic System Law
-	# Unlocks Road Maintenance Decree
 	era = era_1
 	texture = "gfx/interface/icons/invention_icons/bureaucracy.dds"
 	category = society
@@ -82,12 +77,11 @@ REPLACE_OR_CREATE:tech_bureaucracy = {
 	}
 	
 	ai_weight = {
-		value = 3 # Very important in general
+		value = 3
 	}
 }
 
 REPLACE_OR_CREATE:currency_standards = {
-	# Unlocks Payroll Tax - Income Taxation Law
 	era = era_1
 	texture = "gfx/interface/icons/invention_icons/currency_standards.dds"
 	category = society
@@ -98,7 +92,7 @@ REPLACE_OR_CREATE:currency_standards = {
 	}
 	
 	ai_weight = {
-		value = 3 # Very important in general
+		value = 3
 		
 		if = {
 			limit = { has_journal_entry = je_sick_man_bureaucracy }
@@ -113,9 +107,6 @@ REPLACE_OR_CREATE:currency_standards = {
 }
 
 REPLACE_OR_CREATE:democracy = {
-	# Unlocks Right of Assembly - Freedom of Speech Law
-	# Unlocks Landed Voting, Wealth Voting, Census Voting - Distribution of Power Laws
-	# Unlocks Presidential Republic, Parliamentary Republic - Governance Principles Law
 	era = era_1
 	texture = "gfx/interface/icons/invention_icons/democracy.dds"
 	category = society
@@ -130,14 +121,11 @@ REPLACE_OR_CREATE:democracy = {
 	}
 	
 	ai_weight = {
-		value = 3 # Very important in general
+		value = 3
 	}
 }
 
 REPLACE_OR_CREATE:romanticism = {
-	# Unlocks Arts Academy building
-	# Unlocks Greener Grass Campaign Decree
-	# Unlocks Agrarianism - Economic System Law
 	era = era_1
 	texture = "gfx/interface/icons/invention_icons/romanticism.dds"
 	category = society
@@ -151,13 +139,11 @@ REPLACE_OR_CREATE:romanticism = {
 	}
 	
 	ai_weight = {
-		value = 3 # Very important in general
+		value = 3
 	}
 }
 
 REPLACE_OR_CREATE:international_trade = {
-	# Unlocks Trade Center building
-	# Unlocks Free Trade - Economic System Law
 	era = era_1
 	texture = "gfx/interface/icons/invention_icons/international_trade.dds"
 	category = society
@@ -172,7 +158,7 @@ REPLACE_OR_CREATE:international_trade = {
 	}
 	
 	ai_weight = {
-		value = 3 # Very important in general
+		value = 3
 	}
 }
 
@@ -190,7 +176,7 @@ REPLACE_OR_CREATE:centralization = {
 	}
 	
 	ai_weight = {
-		value = 1.5 # Important in general
+		value = 1.5
 		
 		if = {
 			limit = { has_journal_entry = je_age_of_princes }
@@ -235,12 +221,11 @@ REPLACE_OR_CREATE:banking = {
 	}
 	
 	ai_weight = {
-		value = 1.5 # Important in general
+		value = 1.5
 	}
 }
 
 REPLACE_OR_CREATE:academia = {
-	# Unlocks University building
 	era = era_1
 	texture = "gfx/interface/icons/invention_icons/academia.dds"
 	category = society
@@ -253,14 +238,11 @@ REPLACE_OR_CREATE:academia = {
 	}
 	
 	ai_weight = {
-		value = 1.5 # Important in general
+		value = 1.5
 	}
 }
 
 REPLACE_OR_CREATE:colonization = {
-	# Unlocks Colonial Resettlement, Colonial Exploitation - Colonial Affairs Laws
-	# Unlocks various expedition decisions
-	# Unlocks the Suez Canal
 	era = era_1
 	texture = "gfx/interface/icons/invention_icons/colonization.dds"
 	category = society
@@ -279,7 +261,6 @@ REPLACE_OR_CREATE:colonization = {
 }
 
 REPLACE_OR_CREATE:international_relations = {
-	# Unlocks Defensive Pact and Rivalry
 	era = era_1
 	texture = "gfx/interface/icons/invention_icons/international_diplomacy.dds"
 	category = society
@@ -288,7 +269,7 @@ REPLACE_OR_CREATE:international_relations = {
 	}
 	
 	ai_weight = {
-		value = 1.5 # Important in general
+		value = 1.5
 	}
 	
 	modifier = {
@@ -297,7 +278,6 @@ REPLACE_OR_CREATE:international_relations = {
 }
 
 REPLACE_OR_CREATE:law_enforcement = {
-	# Unlocks Local Police, Dedicated Police - Policing Laws
 	era = era_1
 	texture = "gfx/interface/icons/invention_icons/law_enforcement.dds"
 	category = society
@@ -312,7 +292,7 @@ REPLACE_OR_CREATE:law_enforcement = {
 	}
 	
 	ai_weight = {
-		value = 1.5 # Important in general
+		value = 1.5
 	}
 }
 
@@ -338,7 +318,6 @@ REPLACE_OR_CREATE:stock_exchange = {
 }
 
 REPLACE_OR_CREATE:medical_degrees = {
-	# Unlocks Private Health Insurance, Public Health Insurance - Health System Laws
 	era = era_1
 	texture = "gfx/interface/icons/invention_icons/medical_degrees.dds"
 	category = society
@@ -351,7 +330,7 @@ REPLACE_OR_CREATE:medical_degrees = {
 	}
 	
 	ai_weight = {
-		value = 1.5 # Important in general
+		value = 1.5
 	}
 }
 
@@ -372,12 +351,11 @@ REPLACE_OR_CREATE:mass_communication = {
 	}
 	
 	ai_weight = {
-		value = 1.5 # Important in general
+		value = 1.5
 	}
 }
 
 REPLACE_OR_CREATE:empiricism = {
-	# Unlocks Total Separation - Church and State Law
 	era = era_1
 	texture = "gfx/interface/icons/invention_icons/empiricism.dds"
 	category = society
@@ -393,17 +371,13 @@ REPLACE_OR_CREATE:empiricism = {
 	}
 	
 	ai_weight = {
-		value = 1.5 # Important in general
+		value = 1.5
 	}
 }
 
 ### ERA 2
 
 REPLACE_OR_CREATE:egalitarianism = {
-	# Unlocks Universal Suffrage - Distribution of Power Law
-	# Unlocks Egalitarian - Citizenship Law
-	# Unlocks Proportional Taxation - Income Taxation Law
-	# New leaders may spawn with the Radical Ideology
 	era = era_2
 	texture = "gfx/interface/icons/invention_icons/egalitarianism.dds"
 	category = society
@@ -438,7 +412,6 @@ REPLACE_OR_CREATE:egalitarianism = {
 }
 
 REPLACE_OR_CREATE:social_media = {
-	# Increases the ratio of pop casualties that survive a battle
 	era = era_2
 	texture = "gfx/interface/icons/invention_icons/pharmaceuticals.dds"
 	category = society
@@ -457,7 +430,6 @@ REPLACE_OR_CREATE:social_media = {
 }
 
 REPLACE_OR_CREATE:modern_sewerage = {
-	# Unlocks Maintained Sewers PM in Urban Centers
 	era = era_2
 	texture = "gfx/interface/icons/invention_icons/modern_sewerage.dds"
 	category = society
@@ -477,12 +449,11 @@ REPLACE_OR_CREATE:modern_sewerage = {
 	}
 	
 	ai_weight = {
-		value = 1.5 # Important in general
+		value = 1.5
 	}
 }
 
 REPLACE_OR_CREATE:quinine = {
-	# Permits colonization of state regions with the Malaria trait
 	era = era_2
 	texture = "gfx/interface/icons/invention_icons/quinine.dds"
 	category = society
@@ -500,7 +471,6 @@ REPLACE_OR_CREATE:quinine = {
 	ai_weight = {
 		value = 1
 		
-		# Important for colonizers
 		if = {
 			limit = { 
 				navy_size >= 25
@@ -536,8 +506,6 @@ REPLACE_OR_CREATE:organized_sports = {
 }
 
 REPLACE_OR_CREATE:central_archives = {
-	# Unlocks Secret Police - Internal Security Law
-	# Unlocks Horizontal Drawer Cabinets PM for Government Administration
 	era = era_2
 	texture = "gfx/interface/icons/invention_icons/central_archives.dds"
 	category = society
@@ -552,7 +520,7 @@ REPLACE_OR_CREATE:central_archives = {
 	}
 	
 	ai_weight = {
-		value = 1.5 # Important in general
+		value = 1.5
 	}
 }
 
@@ -596,7 +564,6 @@ REPLACE_OR_CREATE:joint_stock_companies = {
 }
 
 REPLACE_OR_CREATE:dialectics = {
-	# Unlocks Philosophy Department PM in Universities
 	
 	era = era_2
 	texture = "gfx/interface/icons/invention_icons/dialectics.dds"
@@ -637,7 +604,6 @@ REPLACE_OR_CREATE:psychiatry = {
 }
 
 REPLACE_OR_CREATE:realism = {
-	# Unlocks Realist Art PM in Art Academies
 	era = era_2
 	texture = "gfx/interface/icons/invention_icons/realism.dds"
 	category = society
@@ -656,8 +622,6 @@ REPLACE_OR_CREATE:realism = {
 }
 
 REPLACE_OR_CREATE:nationalism = {
-	# Unlocks the Immigration Controls Law in Migration
-	# New leaders may spawn with the Ethno-Nationalist Ideology
 	era = era_2
 	texture = "gfx/interface/icons/invention_icons/nationalism.dds"
 	category = society
@@ -683,9 +647,8 @@ REPLACE_OR_CREATE:nationalism = {
 		}
 	}
 	ai_weight = {
-		value = 2 # Important in general
+		value = 2
 		
-		# Extra-important for major unifications
 		if = {
 			limit = { 
 				OR = {
@@ -714,10 +677,6 @@ REPLACE_OR_CREATE:nationalism = {
 }
 
 REPLACE_OR_CREATE:labor_movement = {
-	# Unlocks Regulatory Bodies - Labor Rights Law
-	# Unlocks Restricted Child Labor - Children's Rights Laws
-	# Unlocks Wage Controls - Social Security Laws
-	# Increases attraction of Trade Unions IG
 	era = era_2
 	texture = "gfx/interface/icons/invention_icons/labor_movement.dds"
 	category = society
@@ -781,11 +740,6 @@ REPLACE_OR_CREATE:postal_savings = {
 ### ERA 3
 
 REPLACE_OR_CREATE:human_rights = {
-	# Unlocks Worker Protections - Labor Rights Law
-	# Unlocks Protected Speech - Freedom of Speech Law
-	# Unlocks Compulsory Schooling - Children's Rights Laws
-	# Unlocks Old Age Pensions - Social Security Laws
-	# Should presumably unlock a lot of Laws in the Human Rights category of Laws
 	era = era_3
 	texture = "gfx/interface/icons/invention_icons/human_rights.dds"
 	category = society
@@ -827,7 +781,6 @@ REPLACE_OR_CREATE:human_rights = {
 }
 
 REPLACE_OR_CREATE:feminism = {
-	# Unlocks Women in the Workplace - Rights of Women Law
 	era = era_3
 	texture = "gfx/interface/icons/invention_icons/feminism.dds"
 	category = society
@@ -885,7 +838,6 @@ REPLACE_OR_CREATE:feminism = {
 }
 
 REPLACE_OR_CREATE:steel_frame_buildings = {
-	# Unlocks Covered Markets PM in Urban Centers
 	era = era_3
 	texture = "gfx/interface/icons/invention_icons/steel_frame_buildings.dds"
 	category = society
@@ -902,13 +854,11 @@ REPLACE_OR_CREATE:steel_frame_buildings = {
 	}
 	
 	ai_weight = {
-		value = 2 # Important in general
+		value = 2
 	}
 }
 
 REPLACE_OR_CREATE:civilizing_mission = {
-	# Unlocks Panama Canal survey expedition decision
-	# Unlocks the Panama Canal
 
 	era = era_3
 	texture = "gfx/interface/icons/invention_icons/civilizing_mission.dds"
@@ -928,7 +878,6 @@ REPLACE_OR_CREATE:civilizing_mission = {
 	ai_weight = {
 		value = 1
 		
-		# Important for colonizers
 		if = {
 			limit = { 
 				navy_size >= 25
@@ -946,8 +895,6 @@ REPLACE_OR_CREATE:civilizing_mission = {
 }
 
 REPLACE_OR_CREATE:anarchism = {
-	# Unlocks Anarchy - Distribution of Power Law
-	# New leaders may spawn with the Anarchist Ideology
 	era = era_3
 	texture = "gfx/interface/icons/invention_icons/anarchy.dds"
 	category = society
@@ -979,9 +926,6 @@ REPLACE_OR_CREATE:anarchism = {
 }
 
 REPLACE_OR_CREATE:socialism = {
-	# Unlocks Council Republic - Governance Principles Law
-	# Unlocks Graduated Taxation - Income Taxation Law
-	# New leaders may spawn with the Social Democrat, Communist Ideologies
 	era = era_3
 	texture = "gfx/interface/icons/invention_icons/socialism.dds"
 	category = society
@@ -1076,8 +1020,6 @@ REPLACE_OR_CREATE:corporatism = {
 }
 
 REPLACE_OR_CREATE:pan-nationalism = {
-	# Permits for the formation of a number of pan-nationalist countries
-	# Permits the Unify Germany and Unify Italy Diplomatic Plays
 	era = era_3
 	texture = "gfx/interface/icons/invention_icons/pan_nationalism.dds"
 	category = society
@@ -1091,9 +1033,8 @@ REPLACE_OR_CREATE:pan-nationalism = {
 	}
 	
 	ai_weight = {
-		value = 2 # Important in general
+		value = 2
 		
-		# Extra-important for major unifications
 		if = {
 			limit = { 
 				OR = {
@@ -1151,7 +1092,6 @@ REPLACE_OR_CREATE:investment_banks = {
 }
 
 REPLACE_OR_CREATE:camera = {
-	# Unlocks Photographic Art, Improved Propaganda Centers PMs in Art Academy
 	era = era_3
 	texture = "gfx/interface/icons/invention_icons/camera.dds"
 	category = society
@@ -1190,8 +1130,6 @@ REPLACE_OR_CREATE:philosophical_pragmatism = {
 }
 
 REPLACE_OR_CREATE:identification_documents = {
-	# Unlocks Identification Documents PM in Government Administrations
-	# Unlocks Closed Borders Law in Migration
 	era = era_3
 	texture = "gfx/interface/icons/invention_icons/identification_documents.dds"
 	category = society
@@ -1212,7 +1150,6 @@ REPLACE_OR_CREATE:identification_documents = {
 
 ### ERA 4
 REPLACE_OR_CREATE:elevator = {
-	# Unlocks Arcades PM in Urban Center
 	era = era_4
 	texture = "gfx/interface/icons/invention_icons/elevator.dds"
 	category = society
@@ -1230,7 +1167,7 @@ REPLACE_OR_CREATE:elevator = {
 	}
 	
 	ai_weight = {
-		value = 1.5 # Important in general
+		value = 1.5
 	}
 }
 
@@ -1253,7 +1190,6 @@ REPLACE_OR_CREATE:zeppelins = {
 }
 
 REPLACE_OR_CREATE:malaria_prevention = {
-	# Should permit for colonization of state regions with severe malaria
 	era = era_4
 	texture = "gfx/interface/icons/invention_icons/malaria_prevention.dds"
 	category = society
@@ -1269,7 +1205,6 @@ REPLACE_OR_CREATE:malaria_prevention = {
 	ai_weight = {
 		value = 1
 		
-		# Important for colonizers
 		if = {
 			limit = { 
 				navy_size >= 25
@@ -1287,8 +1222,6 @@ REPLACE_OR_CREATE:malaria_prevention = {
 }
 
 REPLACE_OR_CREATE:central_planning = {
-	# Unlocks Command Economy - Economic System Law
-	# Unlocks Vertical Filing Cabinets PM in Government Administrations
 	era = era_4
 	texture = "gfx/interface/icons/invention_icons/central_planning.dds"
 	category = society
@@ -1303,14 +1236,11 @@ REPLACE_OR_CREATE:central_planning = {
 	}
 	
 	ai_weight = {
-		value = 1.5 # Important in general
+		value = 1.5
 	}
 }
 
 REPLACE_OR_CREATE:political_agitation = {
-	# Unlocks Women's Suffrage - Rights of Women Law
-	# Increases political participation from poor pop types
-	# New leaders may spawn with the Feminist, Vanguardist Ideology
 	era = era_4
 	texture = "gfx/interface/icons/invention_icons/political_agitation.dds"
 	category = society
@@ -1348,7 +1278,6 @@ REPLACE_OR_CREATE:political_agitation = {
 }
 
 REPLACE_OR_CREATE:international_exchange_standards = {
-	# Should increase trade power maybe
 	era = era_4
 	texture = "gfx/interface/icons/invention_icons/international_exchange_standards.dds"
 	category = society
@@ -1388,7 +1317,6 @@ REPLACE_OR_CREATE:corporate_management = {
 }
 
 REPLACE_OR_CREATE:psychoanalysis = {
-	# Should provide additional methods for dealing with negative psychological character traits
 	era = era_4
 	texture = "gfx/interface/icons/invention_icons/psychoanalysis.dds"
 	category = society
@@ -1409,7 +1337,6 @@ REPLACE_OR_CREATE:psychoanalysis = {
 }
 
 REPLACE_OR_CREATE:film = {
-	# Unlocks Film Propaganda Center PM in Arts Academies
 	era = era_4
 	texture = "gfx/interface/icons/invention_icons/film.dds"
 	category = society
@@ -1453,8 +1380,6 @@ REPLACE_OR_CREATE:multilateral_alliances = {
 ### ERA 5
 
 REPLACE_OR_CREATE:mass_surveillance = {
-	# Unlocks Personal Files PM in Government Administrations
-	# Unlocks Militarized Police - Policing Law
 	era = era_5
 	texture = "gfx/interface/icons/invention_icons/mass_surveillance.dds"
 	category = society
@@ -1493,8 +1418,6 @@ REPLACE_OR_CREATE:antibiotics = {
 }
 
 REPLACE_OR_CREATE:mass_propaganda = {
-	# Unlocks Better Radios PM in Electrics Industries
-	# New leaders may spawn with the Fascist Ideology
 	era = era_5
 	texture = "gfx/interface/icons/invention_icons/mass_propaganda.dds"
 	category = society
@@ -1602,6 +1525,6 @@ REPLACE_OR_CREATE:paved_roads = {
 	}
 	
 	ai_weight = {
-		value = 2 # Important for those nice-looking roads!
+		value = 2
 	}
 }

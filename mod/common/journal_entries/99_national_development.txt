@@ -1,12 +1,6 @@
 ﻿# ==========================================
 # NATIONAL DEVELOPMENT PATH
 # je_national_development
-#
-# A universal JE open to all countries
-# at game start. Player picks 1 of 4
-# development paths, locked for 10 years.
-# After completion, resets and player
-# can pick again.
 # ==========================================
 
 je_national_development = {
@@ -14,7 +8,6 @@ je_national_development = {
 
 	group = je_group_domestic_policy
 
-	# Visible and available to all countries always
 	is_shown_when_inactive = {
 		always = yes
 	}
@@ -23,10 +16,8 @@ je_national_development = {
 		always = yes
 	}
 
-	# Show progress bar once a path is chosen
 	scripted_progress_bar = national_development_progress_bar
 
-	# Status description — shows current path or prompts selection
 	status_desc = {
 		first_valid = {
 			triggered_desc = {
@@ -58,157 +49,146 @@ je_national_development = {
 	}
 
 	immediate = {
-		# Reset the development timer
 		set_variable = { name = ndp_progress value = 0 }
 	}
 
-	# ── SCRIPTED BUTTONS ─────────────────────────────
-
-	# INDUSTRIAL EXPANSION
 	scripted_button = ndp_button_industrial
 
-	# MILITARY EXPANSION
 	scripted_button = ndp_button_military
 
-	# RESOURCE ECONOMY
 	scripted_button = ndp_button_resource
 
-	# SERVICE ECONOMY
 	scripted_button = ndp_button_service
 
-	# ABANDON PATH (available once a path is chosen)
 	scripted_button = ndp_button_abandon
-
-	# ── PULSES ───────────────────────────────────────
 
 	on_monthly_pulse = {
 		effect = {
-			scope:journal_entry = {
-				every_scope_je_involved = {
-					# Increment timer if a path is active
-					if = {
-						limit = {
-							OR = {
-								has_variable = ndp_industrial
-								has_variable = ndp_military
-								has_variable = ndp_resource
-								has_variable = ndp_service
-							}
-						}
-						change_variable = { name = ndp_progress add = 1 }
+			if = {
+				limit = {
+					OR = {
+						has_variable = ndp_industrial
+						has_variable = ndp_military
+						has_variable = ndp_resource
+						has_variable = ndp_service
 					}
+				}
+				change_variable = { name = ndp_progress add = 1 }
+			}
+			if = {
+				limit = {
+					scope:journal_entry = {
+						"scripted_bar_progress(national_development_progress_bar)" >= 24
+					}
+				}
+				if = {
+					limit = { has_variable = ndp_industrial }
+					trigger_event = { id = ndp_events.1 popup = yes }
+				}
+				else_if = {
+					limit = { has_variable = ndp_military }
+					trigger_event = { id = ndp_events.11 popup = yes }
+				}
+				else_if = {
+					limit = { has_variable = ndp_resource }
+					trigger_event = { id = ndp_events.21 popup = yes }
+				}
+				else_if = {
+					limit = { has_variable = ndp_service }
+					trigger_event = { id = ndp_events.31 popup = yes }
+				}
+			}
+			if = {
+				limit = {
+					scope:journal_entry = {
+						"scripted_bar_progress(national_development_progress_bar)" >= 60
+					}
+				}
+				if = {
+					limit = { has_variable = ndp_industrial }
+					trigger_event = { id = ndp_events.2 popup = yes }
+				}
+				else_if = {
+					limit = { has_variable = ndp_military }
+					trigger_event = { id = ndp_events.12 popup = yes }
+				}
+				else_if = {
+					limit = { has_variable = ndp_resource }
+					trigger_event = { id = ndp_events.22 popup = yes }
+				}
+				else_if = {
+					limit = { has_variable = ndp_service }
+					trigger_event = { id = ndp_events.32 popup = yes }
+				}
+			}
+			if = {
+				limit = {
+					scope:journal_entry = {
+						"scripted_bar_progress(national_development_progress_bar)" >= 96
+					}
+				}
+				if = {
+					limit = { has_variable = ndp_industrial }
+					trigger_event = { id = ndp_events.3 popup = yes }
+				}
+				else_if = {
+					limit = { has_variable = ndp_military }
+					trigger_event = { id = ndp_events.13 popup = yes }
+				}
+				else_if = {
+					limit = { has_variable = ndp_resource }
+					trigger_event = { id = ndp_events.23 popup = yes }
+				}
+				else_if = {
+					limit = { has_variable = ndp_service }
+					trigger_event = { id = ndp_events.33 popup = yes }
+				}
+			}
+		}
+		}
 
-					# Fire path-specific events periodically
-					# at ~2 year, ~5 year, and ~8 year marks
-					if = {
-						limit = { je:je_national_development = {
-                "scripted_bar_progress(national_development_progress_bar)" >= 24
-				} }
-						if = {
-							limit = { has_variable = ndp_industrial }
-							trigger_event = { id = ndp_events.1 popup = yes }
-						}
-						else_if = {
-							limit = { has_variable = ndp_military }
-							trigger_event = { id = ndp_events.11 popup = yes }
-						}
-						else_if = {
-							limit = { has_variable = ndp_resource }
-							trigger_event = { id = ndp_events.21 popup = yes }
-						}
-						else_if = {
-							limit = { has_variable = ndp_service }
-							trigger_event = { id = ndp_events.31 popup = yes }
-						}
-					}
-					if = {
-						limit = { je:je_national_development = {
-                "scripted_bar_progress(national_development_progress_bar)" >= 60
-				} }
-						if = {
-							limit = { has_variable = ndp_industrial }
-							trigger_event = { id = ndp_events.2 popup = yes }
-						}
-						else_if = {
-							limit = { has_variable = ndp_military }
-							trigger_event = { id = ndp_events.12 popup = yes }
-						}
-						else_if = {
-							limit = { has_variable = ndp_resource }
-							trigger_event = { id = ndp_events.22 popup = yes }
-						}
-						else_if = {
-							limit = { has_variable = ndp_service }
-							trigger_event = { id = ndp_events.32 popup = yes }
-						}
-					}
-					if = {
-						limit = { je:je_national_development = {
-                "scripted_bar_progress(national_development_progress_bar)" >= 96
-				} }
-						if = {
-							limit = { has_variable = ndp_industrial }
-							trigger_event = { id = ndp_events.3 popup = yes }
-						}
-						else_if = {
-							limit = { has_variable = ndp_military }
-							trigger_event = { id = ndp_events.13 popup = yes }
-						}
-						else_if = {
-							limit = { has_variable = ndp_resource }
-							trigger_event = { id = ndp_events.23 popup = yes }
-						}
-						else_if = {
-							limit = { has_variable = ndp_service }
-							trigger_event = { id = ndp_events.33 popup = yes }
-						}
+	outcome = {
+		header = je_standard_completion_header
+		effect_header = je_standard_on_completion_header
+		color = "gold_positive"
+		conclusion_desc = je_standard_completion_conclusion_desc
+		trigger = {
+			custom_tooltip = {
+				text = ten_year_programme_concluded
+			AND = {
+			scope:journal_entry = { "scripted_bar_progress(national_development_progress_bar)" >= 120 }
+				OR = {
+					has_variable = ndp_industrial
+					has_variable = ndp_military
+					has_variable = ndp_resource
+					has_variable = ndp_service
 					}
 				}
 			}
 		}
-	}
-
-	# ── COMPLETION ───────────────────────────────────
-	# Completes when the 10-year timer (120 months) is reached
-
-	complete = {
-		custom_tooltip = {
-			text = ten_year_programme_concluded
-		AND = {
-		je:je_national_development = { "scripted_bar_progress(national_development_progress_bar)" >= 120 }
-			OR = {
-				has_variable = ndp_industrial
-				has_variable = ndp_military
-				has_variable = ndp_resource
-				has_variable = ndp_service
-				}
+		effect = {
+			if = {
+				limit = { has_variable = ndp_industrial }
+				trigger_event = { id = ndp_events.4 popup = yes }
+			}
+			else_if = {
+				limit = { has_variable = ndp_military }
+				trigger_event = { id = ndp_events.14 popup = yes }
+			}
+			else_if = {
+				limit = { has_variable = ndp_resource }
+				trigger_event = { id = ndp_events.24 popup = yes }
+			}
+			else_if = {
+				limit = { has_variable = ndp_service }
+				trigger_event = { id = ndp_events.34 popup = yes }
+			}
+			custom_tooltip = {
+				text = smd_ndp_programme_restarts_tt
+				trigger_event = { id = um_journal_events.1 days = 2 }
 			}
 		}
 	}
-
-	on_complete = {
-		# Fire the completion event for the active path
-		if = {
-			limit = { has_variable = ndp_industrial }
-			trigger_event = { id = ndp_events.4 popup = yes }
-		}
-		else_if = {
-			limit = { has_variable = ndp_military }
-			trigger_event = { id = ndp_events.14 popup = yes }
-		}
-		else_if = {
-			limit = { has_variable = ndp_resource }
-			trigger_event = { id = ndp_events.24 popup = yes }
-		}
-		else_if = {
-			limit = { has_variable = ndp_service }
-			trigger_event = { id = ndp_events.34 popup = yes }
-		}
-		# Clear the path and reset — player can now pick again
-		ndp_clear_path_effect = yes
-	}
-
-	# JE never truly fails or times out — it resets
 	transferable = no
 	can_revolution_inherit = yes
 	weight = 5000
@@ -218,12 +198,6 @@ je_national_development = {
 # ==========================================
 # FOREIGN INVESTMENT JE
 # je_foreign_investment
-#
-# Available to non-great powers.
-# Completed by signing a foreign investment
-# treaty with a great power.
-# Has a rejection button.
-# No events — purely UI/reminder.
 # ==========================================
 
 je_foreign_investment = {
@@ -242,80 +216,87 @@ je_foreign_investment = {
 
 	scripted_button = fi_button_reject
 
-	complete = {
-		custom_tooltip = {
-			text = has_foreign_investment_or_trade_agreement_with_west_tt
-		OR = {
-			AND = {
-					any_scope_treaty = {
-						binds = c:USA
-						any_scope_article = {
-							has_type = foreign_investment_rights
-							source_country = ROOT
+outcome = {
+		header = je_standard_completion_header
+		effect_header = je_standard_on_completion_header
+		color = "gold_positive"
+		conclusion_desc = je_standard_completion_conclusion_desc
+		trigger = {
+			custom_tooltip = {
+				text = has_foreign_investment_or_trade_agreement_with_west_tt
+			OR = {
+				AND = {
+						any_scope_treaty = {
+							binds = c:USA
+							any_scope_article = {
+								has_type = foreign_investment_rights
+								source_country = ROOT
+							}
 						}
-					}
-					any_scope_treaty = {
-						binds = c:USA
-						any_scope_article = {
-							has_type = trade_privilege
-							source_country = ROOT
+						any_scope_treaty = {
+							binds = c:USA
+							any_scope_article = {
+								has_type = trade_privilege
+								source_country = ROOT
+							}
 						}
-					}
+				}
+				AND = {
+						any_scope_treaty = {
+							binds = c:GBR
+							any_scope_article = {
+								has_type = foreign_investment_rights
+								source_country = ROOT
+							}
+						}
+						any_scope_treaty = {
+							binds = c:GBR
+							any_scope_article = {
+								has_type = trade_privilege
+								source_country = ROOT
+							}
+						}
+				}
+				AND = {
+						any_scope_treaty = {
+							binds = c:FRA
+							any_scope_article = {
+								has_type = foreign_investment_rights
+								source_country = ROOT
+							}
+						}
+						any_scope_treaty = {
+							binds = c:FRA
+							any_scope_article = {
+								has_type = trade_privilege
+								source_country = ROOT
+							}
+						}
+					}  
+				}
 			}
-			AND = {
-					any_scope_treaty = {
-						binds = c:GBR
-						any_scope_article = {
-							has_type = foreign_investment_rights
-							source_country = ROOT
-						}
-					}
-					any_scope_treaty = {
-						binds = c:GBR
-						any_scope_article = {
-							has_type = trade_privilege
-							source_country = ROOT
-						}
-					}
-			}
-			AND = {
-					any_scope_treaty = {
-						binds = c:FRA
-						any_scope_article = {
-							has_type = foreign_investment_rights
-							source_country = ROOT
-						}
-					}
-					any_scope_treaty = {
-						binds = c:FRA
-						any_scope_article = {
-							has_type = trade_privilege
-							source_country = ROOT
-						}
-					}
-				}  
+		}
+		effect = {
+			add_modifier = {
+				name = ndp_foreign_investment_secured
+				months = 60
 			}
 		}
 	}
 
-	on_complete = {
-		add_modifier = {
-			name = ndp_foreign_investment_secured
-			months = 60
+	outcome = {
+		header = je_standard_failure_header
+		effect_header = je_standard_on_failure_header
+		color = "blue_negative"
+		conclusion_desc = je_standard_failure_conclusion_desc
+		trigger = { has_variable = ndp_rejected_foreign_investment }
+		effect = {
+			add_modifier = {
+				name = ndp_foreign_investment_rejected
+				months = 120
+			}
 		}
 	}
-
-	fail = {
-		has_variable = ndp_rejected_foreign_investment
-	}
-
-	on_fail = {
-		add_modifier = {
-			name = ndp_foreign_investment_rejected
-			months = 120
-		}
-	}
-
 	transferable = no
 	can_revolution_inherit = yes
 	weight = 3000

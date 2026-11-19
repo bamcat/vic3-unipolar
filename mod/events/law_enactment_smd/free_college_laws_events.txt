@@ -1,13 +1,7 @@
 ﻿namespace = free_college
 
-
 # ==========================================
 # free_college.1
-# "Who Pays for the Degree?"
-# Fires when enacting universal college.
-# Fiscal conservatives question whether
-# the state should fund higher education
-# for everyone.
 # checkpoint_stall
 # ==========================================
 
@@ -43,13 +37,11 @@ free_college.1 = {
 		}
 	}
 
-	# Option A: Commit to full public funding — higher education is a public good
 	option = {
 		name = free_college.1.a
 		default_option = yes
 		add_enactment_modifier = {
 			name = education_college_fiscal_resistance
-			# = -1
 		}
 		add_enactment_modifier = {
 			name = education_college_public_funded
@@ -62,9 +54,9 @@ free_college.1 = {
 					exists = ruler
 					ruler = {
 						OR = {
-							has_ideology = ideology_progressive_leader
-							has_ideology = ideology_socialist_leader
-							has_ideology = ideology_communist_leader
+							has_ideology = ideology:ideology_progressive_leader
+							has_ideology = ideology:ideology_democratic_socialist_leader
+							has_ideology = ideology:ideology_marxist_leader
 						}
 					}
 				}
@@ -73,25 +65,17 @@ free_college.1 = {
 		}
 	}
 
-	# Option B: Introduce means-tested subsidies — fund the poor, not the wealthy
 	option = {
 		name = free_college.1.b
 		add_enactment_modifier = {
 			name = education_college_fiscal_resistance
-			# = -2
 		}
 		ai_chance = { base = 50 }
 	}
 }
 
-
 # ==========================================
 # free_college.2
-# "The Meritocracy Objection"
-# Fires when enacting universal college.
-# Private school advocates argue that
-# universal access will dilute standards
-# and undermine academic excellence.
 # checkpoint_debate
 # ==========================================
 
@@ -147,13 +131,11 @@ free_college.2 = {
 		}
 	}
 
-	# Option A: Defend universal access — excellence is not the preserve of the wealthy
 	option = {
 		name = free_college.2.a
 		default_option = yes
 		add_enactment_modifier = {
 			name = education_college_meritocracy_debate
-			# = 2
 		}
 		scope:elite_ig = {
 			add_modifier = {
@@ -168,8 +150,8 @@ free_college.2 = {
 					exists = ruler
 					ruler = {
 						OR = {
-							has_ideology = ideology_progressive_leader
-							has_ideology = ideology_liberal_leader
+							has_ideology = ideology:ideology_progressive_leader
+							has_ideology = ideology:ideology_liberal_leader
 						}
 					}
 				}
@@ -178,7 +160,6 @@ free_college.2 = {
 		}
 	}
 
-	# Option B: Preserve elite institutions alongside universal access
 	option = {
 		name = free_college.2.b
 		add_enactment_modifier = {
@@ -197,14 +178,8 @@ free_college.2 = {
 	}
 }
 
-
 # ==========================================
 # free_college.3
-# "The Intelligentsia Speaks"
-# Fires when enacting universal college.
-# Academics and reformers make the case
-# for universal higher education as the
-# foundation of a modern society.
 # checkpoint_advance
 # ==========================================
 
@@ -254,13 +229,11 @@ free_college.3 = {
 		}
 	}
 
-	# Option A: Invite them into the debate — let the academics lead the argument
 	option = {
 		name = free_college.3.a
 		default_option = yes
 		add_enactment_modifier = {
 			name = education_college_academic_endorsement
-			# = 2
 		}
 		scope:intelligentsia_ig = {
 			add_modifier = {
@@ -277,7 +250,6 @@ free_college.3 = {
 		}
 	}
 
-	# Option B: Keep it a political decision — academics advise, they do not govern
 	option = {
 		name = free_college.3.b
 		add_enactment_modifier = {

@@ -1,6 +1,4 @@
-﻿#################################################################
-#####				ROUTE GRAPHICS TRIGGERS					#####
-#################################################################
+﻿#####				ROUTE GRAPHICS TRIGGERS					#####
 
 gfx_car_condition_trigger = {
 
@@ -39,10 +37,7 @@ gfx_tracktor_condition_trigger = {
 
 }
 
-#################################################################
 #####				TRADE TRAIN TRIGGERS					#####
-#################################################################
-
 
 gfx_experimental_locomotive_trigger = {
 
@@ -99,7 +94,7 @@ gfx_diesel_locomotive_trigger = {
 
 	scope:state = {
 		any_scope_building = {
-			OR = 
+			OR = {
 				has_active_production_method = pm_steam_trains
 				has_active_production_method = pm_steam_trains_principle_transport_3
 				has_active_production_method = pm_electric_trains
@@ -146,10 +141,7 @@ gfx_forestry_train_trigger = {
 }
 
 
-#################################################################
 #####				TRAIN CULTURE TRIGGERS					#####
-#################################################################
-
 
 #####			BRITTISH TRAIN CULTURE TRIGGERS				#####
 
@@ -171,7 +163,6 @@ gfx_has_british_trains_trigger = {
 						}
 					}
 				}
-				# TODO PRCAL-38034
 				#any_trade_route = {
 				#	goods = g:engines
 				#	exporter.owner = {
@@ -267,7 +258,6 @@ gfx_has_british_trains_trigger = {
 					}
 				}
 			}
-			# TODO PRCAL-38034
 			#any_trade_route = {
 			#	goods = g:engines
 			#	exporter.owner = {
@@ -334,7 +324,6 @@ gfx_has_german_trains_trigger = {
 					}
 				}
 			}
-			# TODO PRCAL-38034
 			#any_trade_route = {
 			#	goods = g:engines
 			#	exporter.owner = {
@@ -393,7 +382,6 @@ gfx_has_french_trains_trigger = {
 					}
 				}
 			}
-			# TODO PRCAL-38034
 			#any_trade_route = {
 			#	goods = g:engines
 			#	exporter.owner = {
@@ -450,7 +438,6 @@ gfx_has_russian_trains_trigger = {
 					}
 				}
 			}
-			# TODO PRCAL-38034
 			#any_trade_route = {
 			#	goods = g:engines
 			#	exporter.owner = {
@@ -512,7 +499,6 @@ gfx_has_american_trains_trigger = {
 					}
 				}
 			}
-			# TODO PRCAL-38034
 			#any_trade_route = {
 			#	goods = g:engines
 			#	exporter.owner = {
@@ -596,7 +582,6 @@ gfx_has_no_culture_trains_trigger = {
 				}
 			}
 		}
-		# TODO PRCAL-38034
 		#any_trade_route = {
 		#	goods = g:engines
 		#	exporter.owner = {
@@ -644,9 +629,7 @@ gfx_has_no_culture_trains_trigger = {
 }
 
 
-#################################################################
 #####				SHIP CULTURE TRIGGERS					#####
-#################################################################
 
 gfx_junk_ship_trigger = {
 	OR = {
@@ -669,7 +652,6 @@ gfx_junk_ship_trigger = {
 				}
 			}
 		}
-		# TODO PRCAL-38034
 		#any_trade_route = {
 		#	goods = g:clippers
 		#	exporter.owner = {
@@ -713,7 +695,6 @@ gfx_marmara_ship_trigger = {
 				}
 			}
 		}
-		# TODO PRCAL-38034
 		#any_trade_route = {
 		#	goods = g:clippers
 		#	exporter.owner = {
@@ -722,7 +703,6 @@ gfx_marmara_ship_trigger = {
 		#			country_has_primary_culture = cu:misri
 		#			country_has_primary_culture = cu:greek
 		#		}
-		#
 		#	}
 		#}
 		power_bloc ?= {
@@ -762,7 +742,6 @@ gfx_dhow_ship_trigger = {
 				}
 			}
 		}
-		# TODO PRCAL-38034
 		#any_trade_route = {
 		#	goods = g:clippers
 		#	exporter.owner = {
@@ -789,13 +768,7 @@ gfx_dhow_ship_trigger = {
 	}
 }
 
-#################################################################
-#################################################################
-#################################################################
 #####			MILITARY MOBILIZATION  TRIGGERS				#####
-#################################################################
-#################################################################
-#################################################################
 
 gfx_military_mobilization_culture_is_european = {
 
@@ -827,8 +800,6 @@ gfx_military_mobilization_culture_is_south_asian = {
 
 }
 
-#################################################################
-
 gfx_military_mobilization_is_irregular = {
 
 	country_army_unit_type_fraction = {
@@ -840,53 +811,94 @@ gfx_military_mobilization_is_irregular = {
 
 gfx_military_mobilization_is_line = {
 
-	country_army_unit_type_fraction = {
-		target = unit_type:combat_unit_type_line_infantry
-		value >= 0.2
-	}
+	always = no
 
 }
 
 gfx_military_mobilization_is_skirmish = {
 
-	country_army_unit_type_fraction = {
-		target = unit_type:combat_unit_type_skirmish_infantry
-		value >= 0.2
-	}
+	always = no
 
 }
 
 gfx_military_mobilization_is_trench = {
 
-	country_army_unit_type_fraction = {
-		target = unit_type:combat_unit_type_trench_infantry
-		value >= 0.2
-	}
+	always = no
 
 }
 
 gfx_military_mobilization_is_squad = {
 
-	country_army_unit_type_fraction = {
-		target = unit_type:combat_unit_type_squad_infantry
-		value >= 0.2
+	OR = {
+		country_army_unit_type_fraction = {
+			target = unit_type:combat_unit_type_foot_infantry
+			value >= 0.2
+		}
+		country_army_unit_type_fraction = {
+			target = unit_type:combat_unit_type_light_infantry
+			value >= 0.2
+		}
+		country_army_unit_type_fraction = {
+			target = unit_type:combat_unit_type_marines
+			value >= 0.2
+		}
+		country_army_unit_type_fraction = {
+			target = unit_type:combat_unit_type_airborne_infantry
+			value >= 0.2
+		}
+		country_army_unit_type_fraction = {
+			target = unit_type:combat_unit_type_spec_ops
+			value >= 0.2
+		}
+		country_army_unit_type_fraction = {
+			target = unit_type:combat_unit_type_space_marines
+			value >= 0.2
+		}
+		country_army_unit_type_fraction = {
+			target = unit_type:combat_unit_type_networked_infantry
+			value >= 0.2
+		}
+		country_army_unit_type_fraction = {
+			target = unit_type:combat_unit_type_cybernetic_infantry
+			value >= 0.2
+		}
 	}
 
 }
 
 gfx_military_mobilization_is_mechanized = {
 
-	country_army_unit_type_fraction = {
-		target = unit_type:combat_unit_type_mechanized_infantry
-		value >= 0.2
+	OR = {
+		country_army_unit_type_fraction = {
+			target = unit_type:combat_unit_type_technicals
+			value >= 0.2
+		}
+		country_army_unit_type_fraction = {
+			target = unit_type:combat_unit_type_armored_personnel_carrier
+			value >= 0.2
+		}
+		country_army_unit_type_fraction = {
+			target = unit_type:combat_unit_type_mechanized_infantry
+			value >= 0.2
+		}
+		country_army_unit_type_fraction = {
+			target = unit_type:combat_unit_type_armored_infantry
+			value >= 0.2
+		}
+		country_army_unit_type_fraction = {
+			target = unit_type:combat_unit_type_robotic_combat_vehicle
+			value >= 0.2
+		}
+		country_army_unit_type_fraction = {
+			target = unit_type:combat_unit_type_mech_infantry
+			value >= 0.2
+		}
 	}
 
 }
 
 
-#################################################################
 #####				MILITARY CULTURE TRIGGERS				#####
-#################################################################
 
 gfx_military_deploy_culture_is_european = {
 
@@ -938,9 +950,7 @@ gfx_military_deploy_culture_is_south_asian = {
 
 }
 
-#################################################################
 #####				MILITARY UNIT TYPE TIGGER				#####
-#################################################################
 
 gfx_military_unit_is_irregular = {
 
@@ -990,6 +1000,11 @@ gfx_military_unit_is_squad = {
 			has_unit_type = unit_type:combat_unit_type_irregular_infantry
 			has_unit_type = unit_type:combat_unit_type_foot_infantry
 			has_unit_type = unit_type:combat_unit_type_light_infantry
+			has_unit_type = unit_type:combat_unit_type_marines
+			has_unit_type = unit_type:combat_unit_type_airborne_infantry
+			has_unit_type = unit_type:combat_unit_type_spec_ops
+			has_unit_type = unit_type:combat_unit_type_space_marines
+			has_unit_type = unit_type:combat_unit_type_networked_infantry
 			has_unit_type = unit_type:combat_unit_type_cybernetic_infantry
 			}
 		}
@@ -1002,9 +1017,12 @@ gfx_military_unit_is_mechanized = {
 	scope:military_formation = {
 		any_combat_unit = {
 			OR = {
-			has_unit_type = unit_type:combat_unit_type_mech_infantry
+			has_unit_type = unit_type:combat_unit_type_technicals
+			has_unit_type = unit_type:combat_unit_type_armored_personnel_carrier
+			has_unit_type = unit_type:combat_unit_type_mechanized_infantry
 			has_unit_type = unit_type:combat_unit_type_armored_infantry
-			
+			has_unit_type = unit_type:combat_unit_type_robotic_combat_vehicle
+			has_unit_type = unit_type:combat_unit_type_mech_infantry
 			}
 		}
 	}

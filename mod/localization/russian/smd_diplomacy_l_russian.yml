@@ -1,48 +1,43 @@
 ﻿l_russian:
-#################### JE ####################
-# The Internet
+ economic_union:0 "Экономический союз"
+ economic_union_pact_desc:0 "Дипломатический пакт, в котором существует единый рынок и валюта между двумя государствами."
+ subject_type_economic_union:0 "Экономический союз"
+ subject_type_economic_union_desc:0 "Дипломатический пакт, в котором существует единый рынок и валюта между двумя государствами."
+ concept_economic_union:0 "Экономический союз"
+ concept_subject_type_economic_union:0 "Экономический союз"
+ subject_type_economic_union_no_icon:0 "Экономический союз"
+ concept_economic_union_desc:0 "Дипломатический пакт, в котором существует единый рынок и валюта между двумя государствами."
 
-economic_union:0 "Экономический союз"
-economic_union_pact_desc:0 "Дипломатический пакт, в котором существует единый рынок и валюта между двумя государствами."
-subject_type_economic_union:0 "Экономический союз"
-subject_type_economic_union:0 "Экономический союз"
-subject_type_economic_union_desc:0 "Дипломатический пакт, в котором существует единый рынок и валюта между двумя государствами."
-concept_economic_union:0 "Экономический союз"
-concept_subject_type_economic_union:0 "Экономический союз"
-subject_type_economic_union_no_icon:0 "Экономический союз"
-concept_economic_union_desc:0 "Дипломатический пакт, в котором существует единый рынок и валюта между двумя государствами."
+ economic_union2:0 "Экономический союз"
+ economic_union2_pact_desc:0 "Дипломатический пакт, в котором существует единый рынок и валюта между двумя государствами."
 
-economic_union2:0 "Экономический союз"
-economic_union2_pact_desc:0 "Дипломатический пакт, в котором существует единый рынок и валюта между двумя государствами."
+ eu_events.400:0 "Европейский Союз"
 
-eu_events.400:0 "Европейский Союз"
+ support_revolution:0 "Поддержка революции"
+ support_revolution_action_propose_name:0 "Поддержка революции"
+ support_revolution_action_break_name:0 "Остановить поддержку"
 
-support_revolution:0 "Поддержка революции"
-support_revolution_action_propose_name:0 "Поддержка революции"
-support_revolution_action_break_name:0 "Остановить поддержку"
+ impose_sanctions:0 "Наложить санкции"
+ impose_sanctions_desc: "Захват финансовых активов этой страны. В игровом плане это создает обратный банк-ролл, в котором деньги напрямую перечисляются из казны цели на основе разницы в ВВП между двумя странами."
+ impose_sanctions_action_propose_name:0 "Финансовые санкции"
+ impose_sanctions_action_break_name:0 "Снятие санкций"
+ impose_sanctions_pact_desc: "[SCOPE.GetRootScope.GetDiplomaticPact.GetFirstCountry.GetName] ввел против нас санкции!"
+ impose_sanctions_notification_name: "[INITIATOR_COUNTRY.GetName] ввел против нас санкции!"
+ impose_sanctions_notification_desc: "Мы попали под финансовые санкции!"
 
-impose_sanctions:0 "Наложить санкции"
-impose_sanctions_desc: "Захват финансовых активов этой страны. В игровом плане это создает обратный банк-ролл, в котором деньги напрямую перечисляются из казны цели на основе разницы в ВВП между двумя странами."
-impose_sanctions_action_propose_name:0 "Финансовые санкции"
-impose_sanctions_action_break_name:0 "Снятие санкций"
-impose_sanctions_pact_desc: "[SCOPE.GetRootScope.GetDiplomaticPact.GetFirstCountry.GetName] ввел против нас санкции!"
-impose_sanctions_notification_name: "[INITIATOR_COUNTRY.GetName] ввел против нас санкции!"
-impose_sanctions_notification_desc: "Мы попали под финансовые санкции!"
+ humanitarian_aid:0 "Направить гуманитарную помощь"
+ humanitarian_aid_desc: "Оказание финансовой помощи папам, проживающим в этой стране. Переводит деньги из нашей казны прямо в карманы пап, живущих в этой стране."
+ humanitarian_aid_action_propose_name:0 "Гуманитарная помощь"
+ humanitarian_aid_action_break_name:0 "Прекратить гуманитарную помощь"
+ humanitarian_aid_pact_desc:0 "Оказание финансовой помощи папам, проживающим в этой стране. Переводит деньги из нашей казны прямо в карманы пап, живущих в этой стране."
+ humanitarian_aid_notification_name: "[INITIATOR_COUNTRY.GetName] - гуманитарная помощь!"
+ humanitarian_aid_notification_desc: "Мы получаем гуманитарную помощь."
+ humanitarian_aid_proposal_accepted_name: "Принята гуманитарная помощь"
+ humanitarian_aid_proposal_accepted_desc: "Сейчас мы оказываем гуманитарную помощь."
 
-humanitarian_aid:0 "Направить гуманитарную помощь"
-humanitarian_aid_desc: "Оказание финансовой помощи папам, проживающим в этой стране. Переводит деньги из нашей казны прямо в карманы пап, живущих в этой стране."
-humanitarian_aid_action_propose_name:0 "Гуманитарная помощь"
-humanitarian_aid_action_break_name:0 "Прекратить гуманитарную помощь"
-humanitarian_aid_pact_desc:0 "Оказание финансовой помощи папам, проживающим в этой стране. Переводит деньги из нашей казны прямо в карманы пап, живущих в этой стране."
-humanitarian_aid_notification_name: "[INITIATOR_COUNTRY.GetName] - гуманитарная помощь!"
-humanitarian_aid_notification_desc: "Мы получаем гуманитарную помощь."
-humanitarian_aid_proposal_accepted_name: "Принята гуманитарная помощь"
-humanitarian_aid_proposal_accepted_desc: "Сейчас мы оказываем гуманитарную помощь."
-
-
-host_military_bases_desc: ""
-host_military_bases_effects_desc: "• Устанавливает военное соглашение между двумя [Concept('concept_country', '$concept_countries$')], где один $concept_country$ допускается к запуску $concept_missile$ с использованием авиабаз другого $concept_country$"
-host_military_bases_article_short_desc: "[TARGET_COUNTRY.GetNameNoFormatting] может запускать ракеты через [SOURCE_COUNTRY.GetNameNoFormatting]"
+ host_military_bases_desc: ""
+ host_military_bases_effects_desc: "• Устанавливает военное соглашение между двумя [Concept('concept_country', '$concept_countries$')], где один $concept_country$ допускается к запуску $concept_missile$ с использованием авиабаз другого $concept_country$"
+ host_military_bases_article_short_desc: "[TARGET_COUNTRY.GetNameNoFormatting] может запускать ракеты через [SOURCE_COUNTRY.GetNameNoFormatting]"
 
  smd_create_economic_union:0 "Предложить экономический союз"
  smd_create_economic_union_action_name:0 "Предложить экономический союз"
@@ -73,7 +68,7 @@ host_military_bases_article_short_desc: "[TARGET_COUNTRY.GetNameNoFormatting] м
  smd_diplomatic_unification_proposal_declined_desc:0 "[TARGET_COUNTRY.GetName] отклонил предложение о дипломатическом объединении [INITIATOR_COUNTRY.GetName]."
  smd_economic_union_base_resistance_tt:0 "Страны имеют базовое нежелание вступать в экономические союзы."
  smd_unification_base_resistance_tt:0 "Страны имеют сильную базу нежелания принимать аннексию через дипломатическое объединение."
- 
+
  treaty_name_smd_economic_union:0 "Экономический союз"
  treaty_name_smd_diplomatic_unification:0 "Договор о дипломатическом объединении"
 
@@ -90,7 +85,7 @@ host_military_bases_article_short_desc: "[TARGET_COUNTRY.GetNameNoFormatting] м
  smd_unification_requires_culture_tt:0 "Страны должны иметь сходные основные культуры, разделяя основную культуру, группу наследия и языковую группу, или наследие и языковые черты."
  smd_unification_requires_good_relations_tt:0 "Отношения должны быть как минимум дружескими."
  smd_diplomatic_unification_effect_tt:0 "Принимающая страна становится доминантой инициатора."
- 
+
  threaten_nuclear_hostilities:0 "Угроза ядерной войны"
  threaten_nuclear_hostilities_action_name:0 "Угроза ядерной войны"
  threaten_nuclear_hostilities_action_propose_name:0 "Угроза ядерной войны"
@@ -106,3 +101,18 @@ host_military_bases_article_short_desc: "[TARGET_COUNTRY.GetNameNoFormatting] м
 
  threatened_nuclear_hostilities_diplomatic_reputation:0 "Угроза ядерной войны"
  threatened_nuclear_hostilities_diplomatic_reputation_desc:0 "Ядерное балансирование на грани войны временно увеличило дипломатическую репутацию этой страны, делая другие страны более склонными принимать от нее договоры."
+
+ treaty_name_timor_gap:0 "Тиморский договор о разрыве"
+ treaty_name_montevideo:0 "Договор Монтевидео"
+ treaty_name_elysee_treaty:0 "Елисейский договор"
+ treaty_name_indus_waters_treaty:0 "Договор по водам Инд"
+ treaty_name_us_israel_alliance:0 "Американо-израильский альянс"
+ treaty_name_us_australia_alliance:0 "Американо-Австралийский альянс"
+ treaty_name_us_new_zealand_alliance:0 "Альянс США и Новой Зеландии"
+ treaty_name_us_japan_alliance:0 "Американо-японский альянс"
+ treaty_name_us_south_korea_alliance:0 "Союз США и Южной Кореи"
+ treaty_name_us_philippines_alliance:0 "Союз США и Филиппин"
+ treaty_name_us_taiwan_act:0 "Тайваньский закон об отношениях"
+ treaty_name_china_north_korea_pact:0 "Китайско-северокорейский оборонный пакт"
+ DIPLOMATIC_ACCEPTANCE_STRAIT_DEPENDENCE:0 "от нашей #b зависимости#! от контролируемых ими [Concept('concept_strait', 'проливов')]"
+ DIPLOMATIC_ACCEPTANCE_NO_STRAIT_DEPENDENCE:0 "от нашей #b независимости#! от контролируемых ими [Concept('concept_strait', 'проливов')]"

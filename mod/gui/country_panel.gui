@@ -477,11 +477,36 @@ types country_panel_types
 					}
 
 					#RULER PORTRAIT
-					character_portrait_large_torso = {
+					widget = {
 						parentanchor = bottom
-						datacontext = "[Country.AccessRuler]"
-						blockoverride "show_hat" {}
-						blockoverride "highlight" {}
+						size = { 217 261 }
+
+						character_portrait_large_torso = {
+							datacontext = "[Country.AccessRuler]"
+							blockoverride "show_hat" {}
+							blockoverride "highlight" {}
+						}
+
+						widget = {
+							datacontext = "[Country.GetHighestProminenceCharacterOfRole('character_role_prime_minister')]"
+							visible = "[Character.IsValid]"
+							parentanchor = bottom|left
+							size = { 84 106 }
+							tooltip = "COUNTRY_PANEL_PRIME_MINISTER_TOOLTIP"
+
+							character_portrait_medium = {
+								parentanchor = top|hcenter
+								blockoverride "show_hat" {}
+							}
+
+							textbox = {
+								parentanchor = bottom|hcenter
+								size = { 84 20 }
+								align = center|nobaseline
+								using = fontsize_small
+								text = "COUNTRY_PANEL_PRIME_MINISTER"
+							}
+						}
 					}
 				}
 

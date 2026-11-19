@@ -1,12 +1,11 @@
 ﻿l_turkish:
-
  je_national_development: "Ulusal Kalkınma Yolu"
  je_national_development_reason: "Her ulusun enerjilerine nerede odaklanmasını seçmesi gerekir. Ulusal bir gelişme planı kaynakları, politikası ve siyasi on yıl boyunca tek bir stratejik vizyonun arkasında yoğunlaşır. Akıllı seçin - seçim program sona erinceye kadar terslanamaz."
 
  je_foreign_investment: "Dış Yatırım"
  je_foreign_investment_reason: "Büyük güçlerden sermaye çekmek, yerli kaynakların izin verdiğinin ötesine geçebilir. Yabancı bir yatırım anlaşması ülkeyi dış ticaret dışında açacaktı - tüm fırsatlarla ve entaillere bağlı bağımlılıklarla."
  has_foreign_investment_or_trade_agreement_with_west_tt:0 "Amerika Birleşik Devletleri, Birleşik Krallık veya Fransa ile yabancı bir yatırım ve ticaret anlaşması imzalayın"
- 
+
  ndp_status_industrial_tt: "Endüstriyel genişleme devam ediyor. Ülke, üretim ve ağır sanayi üssünü inşa etmeye yönelik kaynakları yönetiyor."
  ndp_status_military_tt: "Askeri genişleme devam ediyor. Ülke silahlı kuvvetlere, doktrinine ve savunma endüstrilerine yatırım yapıyor."
  ndp_status_resource_tt: "Kaynak ekonomisi gelişimi devam ediyor. Ülke tarıma ve ham materyal ekstraksiyona odaklanıyor."
@@ -34,7 +33,6 @@
  fi_button_reject_name: "Emekli Yabancı Yatırım"
  fi_button_reject_desc: "Kapıyı yabancı sermayeye kapatın. Bu, dergi girişi sona erecek ve uzun vadeli bir yatırım cezası uygulanacak, ancak ekonomik bağımsızlığı koruyacak ve otoriteyi güçlendirecektir."
 
- # Tooltip keys
  ndp_no_path_active_tt: "Hiçbir gelişim yolu şu anda aktif"
  ndp_abandon_cost_tt: "Yolun Terkedilmesi 2 yıl boyunca meşru ve prestijli bir ceza uygulanacak."
 
@@ -52,10 +50,6 @@
  ndp_bar_turmoil_tt: "Yüksek karışıklık yavaşladı"
  ndp_bar_at_war_tt: "Savaş gelişim programını bozar"
 
- # ==========================================
- # OPENING EVENT — ndp_events.0
- # ==========================================
-
  ndp_events.0.t: "Ulusal Gelişim Programı Başlıyor"
  ndp_events.0.d_industrial: "[ROOT.GetCountry.GetName] hükümeti on yıl endüstriyel genişlemeye karar verdi. Yatırım fabrikalara, madenlere ve onları bağlayan altyapıya doğru akacaktır. Plan hırslıdır - ve önemli engeller - ama vizyon açıktır: [ROOT.GetCountry.GetName]'nin dünyadaki yeri tanımlayacak verimli kapasite inşa etmek."
  ndp_events.0.d_military: "[ROOT.GetCountry.GetName] hükümeti on yıl askeri genişlemeye karar verdi. Barracks inşa edilecek, eğitilmiş memurlar ve doktrinler reforme edilecek. Motivasyonun savunma, deterrence ya da hırs olsun, dünyaya mesajı güvenilmez: [ROOT.GetCountry.GetName] ciddiye alınmak niyetindedir."
@@ -63,10 +57,6 @@
  ndp_events.0.d_service: "[ROOT.GetCountry.GetName] hükümeti on yıl hizmet ekonomisi gelişimine karar verdi. Okullar, bankalar ve hükümet bakanlıklar tüm yatırım görecek. Ücret daha akıllı, daha iyi bir ülke nihayetinde daha güçlü bir ülkedir."
  ndp_events.0.f: "On yıl. Bir yön."
  ndp_events.0.a: "Program başlayalım"
-
- # ==========================================
- # INDUSTRIAL PATH EVENTS
- # ==========================================
 
  ndp_events.1.t: "Endüstri Sorusu"
  ndp_events.1.d: "Geliştirme programına iki yıl, endüstriyel yatırımın yönü açıklanmalıdır. Ülke her şeyi bir kere inşa edemez. Planlayıcılar ve sanayiciler bölünmüştür: bazı savunma kaynakları ağır endüstriye odaklanır - demir, çelik, kömür - modern gücün günahlarını. Diğerleri, ışık üretiminin daha hızlı geri dönüşler ve daha geniş bir iş sunduğunu savunuyorlar."
@@ -91,9 +81,7 @@
  ndp_events.4.f: "Forge işini yaptı."
  ndp_events.4.a: "Bir sonraki kurs"
  ten_year_programme_concluded:0 "On yıl programı sonuçlandı."
- # ==========================================
- # MILITARY PATH EVENTS
- # ==========================================
+ smd_ndp_programme_restarts_tt:0 "Ulusal Kalkınma Yolu sıfırlanır ve yeni bir program seçilebilir."
 
  ndp_events.11.t: "The The Soru"
  ndp_events.11.d: "İki yıllık askeri genişleme daha fazla asker, daha fazla silah ve daha fazla seçenek üretti - ancak doktrinin temel sorusu çözülmemiştir. Genel Personel bölünmüştür. Arazi gücüne odaklanmak için bir gerçek basın: kitlesel ordular, savunma derinliği ve kıtasal egemenlik. Bir diğeri, deniz genişlemesinin daha büyük stratejik esneklik sunduğunu ve [ROOT.GetCountry.GetName]'nin sınırlarının ötesinde proje gücü kurma yeteneğine sahip olduğunu savunuyor."
@@ -118,10 +106,6 @@
  ndp_events.14.f: "Kılıcı kaldırılmıştır. Şimdi onun amacını bulmak gerekir."
  ndp_events.14.a: "Bir sonraki kurs"
 
- # ==========================================
- # RESOURCE ECONOMY PATH EVENTS
- # ==========================================
-
  ndp_events.21.t: "The Land's Bounty"
  ndp_events.21.d: "Kaynak programına iki yıl, temel seçim yapılmalıdır: Hangi tür kaynak ekonomisi [ROOT.GetCountry.GetName] inşa edecek? Tarım - büyüyen bir popülasyonu beslemek ve ihracat ürünlerini üretmek - istikrar ve geniş istihdam sağlar. Ham malzeme ekstraksiyonu - madencilik, giriş, sondaj - daha hızlı gelir sunuyor ancak daha uçucu ve mal fiyat salaklarına maruz kalan ekonomiyi terk ediyor."
  ndp_events.21.f: "Dünya, verdiği şeyi verir. Soru, sormak istediğiniz şeydir."
@@ -145,10 +129,6 @@
  ndp_events.24.f: "Arazi ne verir, arazi hatırlıyor."
  ndp_events.24.a: "Bir sonraki kurs"
 
- # ==========================================
- # SERVICE ECONOMY PATH EVENTS
- # ==========================================
-
  ndp_events.31.t: "Hizmet Sorusu"
  ndp_events.31.d: "Servis programına iki yıl, yön açıklanmalıdır. Bir hizmet ekonomisinin iki vizyonu öncelik için rekabet eder: finansal sektör - bankacılık, sigorta ve ticaret - zenginlik hızla üretir ve yatırım veya eğitim ve bürokrasi - okullar, üniversiteler ve devlet kurumları - insan sermayesi ve yönetişim kapasitesi her şeyi destekler."
  ndp_events.31.f: "Lider veya kütüphane - her ikisi de modernitenin temelleridir."
@@ -171,10 +151,6 @@
  ndp_events.34.d: "On yıllık hizmet ekonomisi gelişimi tamamlandı. Bankalar daha sofistike, okullar daha iyi personel, program başladığından daha yetenekli. Bu, yatırımın daha uzun vadeli bir soru olduğunu söyleyen geniş refah türüne çevirebilir – bir sonraki on yılın cevap vermeye başlayacağı."
  ndp_events.34.f: "Zihin altyapısı diğer tüm diğerlerini sonlandırır."
  ndp_events.34.a: "Bir sonraki kurs"
-
- # ==========================================
- # MODIFIERS
- # ==========================================
 
  ndp_modifier_industrial: "Industrial Development Path"
  ndp_modifier_industrial_desc: "Ulusal kaynaklar endüstriyel genişlemeye yöneliktir. İnşaat oranları yukarı ve üretim kurulunda gelişiyor."

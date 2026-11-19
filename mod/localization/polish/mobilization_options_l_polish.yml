@@ -1,5 +1,4 @@
 ﻿l_polish:
-
  MOBILIZATION_OPTION_UPKEEP_SHORT: "[ConcatIfNeitherEmpty(MobilizationOption.GetUpkeepModifier.GetDesc,'\n')][MobilizationOption.GetUpkeepUnscaledModifier.GetDesc]"
  MOBILIZATION_OPTION_GROUP_TOOLTIP: "[MobilizationOptionGroup.GetDesc]"
  MOBILIZATION_OPTION_TOOLTIP: "[AddLocalizationIf(Not(MobilizationOption.GetUnitModifier.IsEmpty),'MOBILIZATION_OPTION_EFFECTS_HEADER')][MobilizationOption.GetUnitModifier.GetDesc][AddLocalizationIf(Not(MobilizationOption.GetUnitModifier.IsEmpty),'\n\n')][AddLocalizationIf(Not(MobilizationOption.GetUpkeepModifier.IsEmpty),'MOBILIZATION_OPTION_UPKEEP_HEADER')]$MOBILIZATION_OPTION_UPKEEP_SHORT$[AddLocalizationIf(Not(MobilizationOption.GetUpkeepModifier.IsEmpty),'\n\n')][MobilizationOption.GetDesc]"
@@ -9,7 +8,7 @@
  ACTIVATE_MOBILIZATION_OPTION_BUTTON_TOOLTIP: "#header Aktywacja [MobilizationOption.GetName] #! [ConcatIfNeitherEmpty('\n', AddLocalizationIf(MobilizationOption.IsActivated(MilitaryFormation.AccessSelf), 'ALREADY_ACTIVATED'))] \n $TOOLTIP_DELIMITER$ \n [MobilizationOption.GetTooltipWithActivateDesc(MilitaryFormation.AccessSelf)]"
  ALREADY_ACTIVATED: "#i Już aktywowany #!"
  DEACTIVATE_MOBILIZATION_OPTION_BUTTON_TOOLTIP: "#header Dezaktywacja [MobilizationOption.GetName] #! \n $TOOLTIP_DELIMITER$ \n [MobilizationOption.GetTooltipWithDeactivateDesc(MilitaryFormation.AccessSelf)]"
- 
+
  MOBILIZATION_OPTION_TOOLTIP_WITH_TOGGLE_DESC: "[ConcatIfNeitherEmpty('$TOGGLE_DESC$','\n\n')]$TOOLTIP$[ConcatIfNeitherEmpty('\n\n','$EFFECT_HEADER$')]$EFFECT$"
  MOBILIZATION_OPTION_TOOLTIP_WITH_TOGGLE_DESC_WARNING_HEADER: "#title @warning! Doprowadziłoby to do następujących efektów: #! \n"
 
@@ -33,7 +32,7 @@
  mobilization_option_it_hurts_organization_when_you_adjust_equipment_tt: "Zmniejsza prąd [concept_organization] z [concept_army] przez #v 50% #! po włączeniu lub wyłączeniu"
  mobilization_option_it_hurts_organization_to_add_medic_support_tt: "Zmniejsza prąd [concept_organization] z [concept_army] przez #v 25% #! po włączeniu"
  mobilization_option_it_hurts_morale_and_organization_when_you_remove_medic_support_tt: "Zmniejsza każdy [Concept('concept_unit','$concept_unit_possessive$')] prąd [concept_morale] przez #v 50% #! i prąd [concept_organization] z [concept_army] przez #v 25% #! usunięty z [Concept('concept_mobilize_army','$concept_mobilize_army_mobilized$')] [concept_army]"
- 
+
  mobilization_option_extra_supplies: "Posiłek - Read- to- Eat"
  mobilization_option_extra_supplies_desc: "Standaryzowane, nowoczesne racje dla naszych żołnierzy"
  mobilization_option_luxurious_supplies: "Luksusowy posiłek - Read- to- jeść"
@@ -71,7 +70,6 @@
  mobilization_option_field_hospitals: "Szpitale terenowe"
  mobilization_option_field_hospitals_desc: "Wykwalifikowani chirurdzy z dostępem do silnych ziół mogą dokonywać cudów ratujących życie."
 
- #Mobilization option groups
  supplies: "Dostawy"
  supplies_desc: "Dostawy dla armii"
  supplements: "Dodatek"
@@ -85,8 +83,5 @@
  medic_support: "Wsparcie medyczne"
  medic_support_desc: "Sprzęt, który ma wasza armia, by leczyć rannych żołnierzy."
 
- 
-# SMD
-
-mobilization_option_air_transport:0 "Transport lotniczy"
-mobilization_option_air_transport_desc:0 "Załaduj nasze jednostki do samolotów dla łatwego i efektywnego ruchu."
+ mobilization_option_air_transport:0 "Transport lotniczy"
+ mobilization_option_air_transport_desc:0 "Załaduj nasze jednostki do samolotów dla łatwego i efektywnego ruchu."

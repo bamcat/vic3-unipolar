@@ -116,7 +116,6 @@
  building_panama_canal_lens_option:0 "Конструкция $building_panama_canal$"
  UNEMPLOYED:0 "[concept_unemployed]"
 
-# SMD new buildings
  building_computer_industry:0 "Компьютерная промышленность"
  building_aeronautics_industry:0 "Авиационная промышленность"
  building_retailer:0 "Розничные услуги"
@@ -127,8 +126,8 @@
  building_nuclear_plant:0 "Атомная станция"
  building_chip_industry:0 "Чип Индастриз"
  building_appliance_manufactory:0 "Производители приборов"
- 
-  building_computer_industry_lens_option:0 "Расширение компьютерной промышленности"
+
+ building_computer_industry_lens_option:0 "Расширение компьютерной промышленности"
  building_aeronautics_industry_lens_option:0 "Расширение авиационной промышленности"
  building_retailer_lens_option:0 "Расширение розничных услуг"
  building_professional_service_lens_option:0 "Расширение профессиональных услуг"
@@ -137,12 +136,11 @@
  building_green_plant_lens_option:0 "Расширение электростанции с нулевым уровнем выбросов"
  building_nuclear_plant_lens_option:0 "Расширить атомную станцию"
  building_chip_industry_lens_option:0 "Расширение Chip Industries"
- 
+
  building_telecommunications:0 "Телекоммуникационная инфраструктура"
  building_telecommunications_lens_option:0 "Расширение $building_telecommunications$"
  building_pharmaceutical_industry:0 "Фармацевтическая промышленность"
  building_pharmaceutical_industry_lens_option:0 "Расширение $building_pharmaceutical_industry$"
-# Building Groups
  bg_subsistence:0 "Прожиточные фермы"
  bg_service:0 "Обслуживание промышленности"
  bg_agriculture:0 "Сельское хозяйство"
@@ -208,11 +206,6 @@
  bg_financial_districts: "Финансовые районы"
  bg_extraction: "экстракция"
 
-#Factories
-
-
-
- # Infrastructure
  building_port:0 "Порт"
  building_railway:0 "Традиционная инфраструктура"
  building_trade_center:0 "Торговый центр"
@@ -226,14 +219,12 @@
  building_railway_lens_option:0 "железная дорога"
  building_trade_center_lens_option:0 "Создаем новый рынок"
  building_link_merge_markets_lens_option:0 "Слияние рынков"
-  
-  #Academies
+
  building_university:0 "Университет"
  building_university_lens_option:0 "Расширение $building_university$"
  building_art_academy:0 "Академия искусств"
  building_art_academy_lens_option:0 "Расширение $building_art_academy$"
- 
-  #Colonies
+
  building_colony_military:0 "Военная колония"
  building_colony_military_lens_option:0 "Установить $building_colony_military$"
  building_colony_military_hover:0 "Установить #variable Военная колония#! в #variable [STATE.GetName]"
@@ -244,23 +235,19 @@
  building_colony_trade_lens_option:0 "Установить $building_colony_trade$"
  building_colony_trade_hover:0 "Установить #variable Торговая колония#! в #variable [STATE.GetName]"
 
-  #Barracks
  building_barrack:0 "казармы"
  building_barrack_lens_option:0 "Расширение $building_barrack$"
  building_naval_base:0 "Военно-морская база"
  building_naval_base_lens_option:0 "Расширение $building_naval_base$"
  building_conscription_center:0 "Военный центр"
 
-  #National Buildings
  building_government_administration:0 "Административное управление"
  building_government_administration_lens_option:0 "Расширение $building_government_administration$"
 
-  # Unlock tooltips
  tooltip_unlock_railways:0 "Позволяет строительство здания традиционной инфраструктуры"
-  
-  # Monuments
+
  building_eiffel_tower:0 "Эйфелева башня"
- 
+
  building_dummy:1 "#This - это фиктивное здание, которое не служит механической цели геймплея, но на него все равно нужно реагировать графикой городского центра. Он (и этот текст) никогда не должен отображаться в UI #!"
  building_argebam:0 "$building_dummy$"
  building_chichen_itza:0 "$building_dummy$"
@@ -270,26 +257,19 @@
  building_khaju_bridge:0 "$building_dummy$"
  building_machu_picchu:0 "$building_dummy$"
  building_petra:0 "$building_dummy$"
-  # AP1
  building_martandsuntemple:0 "$building_dummy$"
  building_observatorygreenwich:0 "$building_dummy$"
  building_temple_of_poseidon:0 "$building_dummy$"
  building_wat_arun:0 "$building_dummy$"
  building_company_headquarter:0 "Штаб-квартира компании"
-  # BP1
  building_cristo_redentor:0 "Кристо Редентор"
 
-  # Skyscraper
  building_skyscraper:0 "небоскреб"
  building_power_bloc_statue:0 "Статуя Power Bloc"
- 
 
- # Halloween
- building_halloween_castledracula: "Castle Dracula" #IP2
+ building_halloween_castledracula: "Castle Dracula"
  building_victoria_terminus: "Терминал Виктория"
 
-pm_general_mills_office:0 "Бумажные офисы"
+ pm_general_mills_office:0 "Бумажные офисы"
 
-pmg_automation_building_furniture_manufacturies:0 "Труд"
-
-# 
+ pmg_automation_building_furniture_manufacturies:0 "Труд"

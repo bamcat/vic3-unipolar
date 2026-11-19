@@ -138,11 +138,8 @@ korea_reunification_bonus = {
 oil_titans_bonus = {
 	icon = gfx/interface/icons/timed_modifier_icons/modifier_coins_positive.dds
 	country_minting_mult                        = 0.15
-	# Extraction efficiency
 	building_group_bg_oil_extraction_throughput_add = 0.15
-	# Investment pool benefits from oil revenues
 	country_investment_pool_efficiency_mult     = 0.10
-	# Prestige and influence from being an energy titan
 	country_prestige_mult                       = 0.10
 	country_influence_mult                      = 0.10
 }
@@ -180,7 +177,6 @@ he_terror_attack_foreign = {
 he_counterterrorism_push = {
 	icon = gfx/interface/icons/timed_modifier_icons/modifier_fist_positive.dds
 	country_authority_mult                      = 0.08
-	country_legitimacy_base_add                 = 5
 	country_infamy_generation_mult              = 0.05
 	country_infamy_decay_mult                   = -0.05
 	state_radicals_from_political_movements_mult = -0.05
@@ -189,10 +185,10 @@ he_counterterrorism_push = {
 # Natural disaster — national emergency response
 he_natural_disaster_emergency = {
 	icon = gfx/interface/icons/timed_modifier_icons/modifier_coins_negative.dds
-	country_expenses_add                        = 30
 	country_construction_add                    = -1
 	country_authority_mult                      = -0.03
 	country_legitimacy_base_add                 = -3
+	country_government_wages_mult = 0.05
 }
  
 # State-level disaster zone modifier
@@ -248,14 +244,12 @@ he_hate_crime_shock = {
 he_gun_reform_mandate = {
 	icon = gfx/interface/icons/timed_modifier_icons/modifier_documents_positive.dds
 	country_law_enactment_success_add           = 0.10
-	# Strong public support for firearms restrictions
 }
  
 # Russia apartment bombings — security state surge
 he_security_state_response = {
 	icon = gfx/interface/icons/timed_modifier_icons/modifier_fist_positive.dds
 	country_authority_mult                      = 0.12
-	country_legitimacy_base_add                 = 8
 	state_turmoil_effects_mult                  = -0.05
 	country_infamy_generation_mult              = 0.08
 }

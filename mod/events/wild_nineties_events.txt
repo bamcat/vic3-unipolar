@@ -1,0 +1,736 @@
+﻿namespace = wild_nineties
+
+wild_nineties.1 = {
+	type = country_event
+	placement = root
+
+	event_image = { video = "unspecific_ruler_speaking_to_people" }
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+	icon = "gfx/interface/icons/event_icons/event_wild_nineties.dds"
+
+	title = wild_nineties.1.t
+	desc = wild_nineties.1.d
+	flavor = wild_nineties.1.f
+
+	duration = 3
+
+	option = {
+		name = wild_nineties.1.a
+		default_option = yes
+	}
+}
+
+wild_nineties.10 = {
+	type = country_event
+	placement = root
+
+	event_image = { video = "unspecific_politicians_arguing" }
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+	icon = "gfx/interface/icons/event_icons/event_portrait.dds"
+
+	title = wild_nineties.10.t
+	desc = wild_nineties.10.d
+
+	duration = 3
+
+	option = {
+		name = wild_nineties.10.a
+		trigger = {
+			rus_wn_can_be_pm = { T = RUS_viktor_chernomyrdin }
+		}
+		rus_wn_appoint_pm = { T = RUS_viktor_chernomyrdin M = rus_pm_chernomyrdin }
+	}
+
+	option = {
+		name = wild_nineties.10.b
+		trigger = {
+			rus_wn_can_be_pm = { T = RUS_yegor_gaidar }
+		}
+		rus_wn_appoint_pm = { T = RUS_yegor_gaidar M = rus_pm_gaidar }
+	}
+
+	option = {
+		name = wild_nineties.10.c
+		trigger = {
+			rus_wn_can_be_pm = { T = RUS_sergei_kiriyenko }
+			game_date >= 1997.1.1
+		}
+		rus_wn_appoint_pm = { T = RUS_sergei_kiriyenko M = rus_pm_kiriyenko }
+	}
+
+	option = {
+		name = wild_nineties.10.d
+		trigger = {
+			rus_wn_can_be_pm = { T = RUS_yevgeny_primakov }
+			game_date >= 1996.1.1
+		}
+		rus_wn_appoint_pm = { T = RUS_yevgeny_primakov M = rus_pm_primakov }
+	}
+
+	option = {
+		name = wild_nineties.10.e
+		trigger = {
+			rus_wn_can_be_pm = { T = RUS_sergei_stepashin }
+			game_date >= 1997.1.1
+		}
+		rus_wn_appoint_pm = { T = RUS_sergei_stepashin M = rus_pm_stepashin }
+	}
+
+	option = {
+		name = wild_nineties.10.f
+		trigger = {
+			rus_wn_can_be_pm = { T = RUS_vladimir_putin }
+			game_date >= 1998.1.1
+			rus_wn_family_above = { V = 30 }
+		}
+		rus_wn_appoint_pm = { T = RUS_vladimir_putin M = rus_pm_putin }
+	}
+
+	option = {
+		name = wild_nineties.10.g
+		trigger = {
+			rus_wn_can_be_pm = { T = RUS_boris_nemtsov }
+			game_date >= 1997.1.1
+		}
+		rus_wn_appoint_pm = { T = RUS_boris_nemtsov M = rus_pm_nemtsov }
+	}
+
+	option = {
+		name = wild_nineties.10.h
+		default_option = yes
+		rus_wn_family_change = { V = 5 }
+	}
+}
+
+wild_nineties.12 = {
+	type = country_event
+	placement = root
+
+	event_image = { video = "unspecific_vandalized_storefront" }
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+	icon = "gfx/interface/icons/event_icons/event_newspaper.dds"
+
+	title = wild_nineties.12.t
+	desc = wild_nineties.12.d
+	left_icon = scope:rus_wn_pm_scope
+
+	duration = 3
+
+	trigger = {
+		rus_wn_yeltsin_in_power = yes
+		any_scope_character = { has_role = character_role_prime_minister }
+	}
+
+	immediate = {
+		random_scope_character = {
+			limit = { has_role = character_role_prime_minister }
+			save_scope_as = rus_wn_pm_scope
+		}
+	}
+
+	option = {
+		name = wild_nineties.12.a
+		default_option = yes
+		rus_wn_add_blame = { V = 15 }
+	}
+
+	option = {
+		name = wild_nineties.12.b
+		rus_wn_add_blame = { V = 5 }
+		rus_wn_family_change = { V = 5 }
+	}
+}
+
+wild_nineties.13 = {
+	type = country_event
+	placement = root
+
+	event_image = { video = "unspecific_sick_in_hospital" }
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+	icon = "gfx/interface/icons/event_icons/event_portrait.dds"
+
+	title = wild_nineties.13.t
+	desc = wild_nineties.13.d
+
+	duration = 3
+
+	trigger = {
+		rus_wn_yeltsin_in_power = yes
+		rus_wn_health_below = { V = 60 }
+	}
+
+	option = {
+		name = wild_nineties.13.a
+		default_option = yes
+		rus_wn_family_change = { V = 8 }
+		rus_wn_health_change = { V = 3 }
+	}
+
+	option = {
+		name = wild_nineties.13.b
+		rus_wn_family_change = { V = -8 }
+		rus_wn_health_change = { V = -3 }
+	}
+}
+
+wild_nineties.14 = {
+	type = country_event
+	placement = root
+
+	event_image = { video = "unspecific_signed_contract" }
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+	icon = "gfx/interface/icons/event_icons/event_money.dds"
+
+	title = wild_nineties.14.t
+	desc = wild_nineties.14.d
+
+	duration = 3
+
+	trigger = {
+		has_variable = rus_wn_oligarchs_named
+	}
+
+	option = {
+		name = wild_nineties.14.a
+		default_option = yes
+		rus_wn_oligarchs_change = { V = 5 }
+		add_treasury = {
+			value = gdp
+			multiply = 0.001
+		}
+	}
+
+	option = {
+		name = wild_nineties.14.b
+		rus_wn_oligarchs_change = { V = -5 }
+		ig:ig_industrialists ?= {
+			add_modifier = { name = rus_lfs_spurned months = 12 }
+		}
+	}
+}
+
+wild_nineties.20 = {
+	type = country_event
+	placement = root
+
+	event_image = { video = "unspecific_sick_in_hospital" }
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+	icon = "gfx/interface/icons/event_icons/event_skull.dds"
+
+	title = wild_nineties.20.t
+	desc = wild_nineties.20.d
+	left_icon = scope:rus_wn_yeltsin_scope
+
+	duration = 3
+
+	trigger = {
+		rus_wn_yeltsin_in_power = yes
+		NOT = { has_variable = rus_wn_succession_done }
+	}
+
+	immediate = {
+		random_scope_character = {
+			limit = { has_variable = rus_wn_yeltsin }
+			save_scope_as = rus_wn_yeltsin_scope
+		}
+	}
+
+	option = {
+		name = wild_nineties.20.a
+		default_option = yes
+		random_scope_character = {
+			limit = { has_variable = rus_wn_yeltsin }
+			kill_character = yes
+		}
+		if = {
+			limit = { any_scope_character = { has_role = character_role_prime_minister } }
+			set_variable = { name = rus_wn_successor value = flag:pm }
+		}
+		else_if = {
+			limit = { rus_wn_has_character = { T = RUS_viktor_chernomyrdin } }
+			set_variable = { name = rus_wn_successor value = flag:chernomyrdin }
+		}
+		rus_wn_install_successor = yes
+		rus_wn_record_successor = yes
+	}
+}
+
+wild_nineties.21 = {
+	type = country_event
+	placement = root
+
+	event_image = { video = "unspecific_sick_in_hospital" }
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+	icon = "gfx/interface/icons/event_icons/event_portrait.dds"
+
+	title = wild_nineties.21.t
+	desc = wild_nineties.21.d
+
+	duration = 3
+
+	trigger = {
+		rus_wn_yeltsin_in_power = yes
+	}
+
+	option = {
+		name = wild_nineties.21.a
+		default_option = yes
+		rus_wn_health_change = { V = -10 }
+		rus_wn_family_change = { V = 5 }
+	}
+
+	option = {
+		name = wild_nineties.21.b
+		rus_wn_health_change = { V = -10 }
+		rus_wn_family_change = { V = -3 }
+	}
+}
+
+wild_nineties.22 = {
+	type = country_event
+	placement = root
+
+	event_image = { video = "unspecific_sick_in_hospital" }
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+	icon = "gfx/interface/icons/event_icons/event_portrait.dds"
+
+	title = wild_nineties.22.t
+	desc = wild_nineties.22.d
+
+	duration = 3
+
+	trigger = {
+		rus_wn_yeltsin_in_power = yes
+	}
+
+	option = {
+		name = wild_nineties.22.a
+		default_option = yes
+		add_modifier = { name = rus_wn_heart_surgery months = 6 }
+		rus_wn_family_change = { V = 10 }
+		every_scope_character = {
+			limit = { has_role = character_role_prime_minister }
+			change_variable = { name = rus_wn_standing add = 10 }
+		}
+	}
+
+	option = {
+		name = wild_nineties.22.b
+		rus_wn_health_change = { V = -10 }
+	}
+}
+
+wild_nineties.30 = {
+	type = country_event
+	placement = root
+
+	event_image = { video = "unspecific_politicians_arguing" }
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+	icon = "gfx/interface/icons/event_icons/event_portrait.dds"
+
+	title = wild_nineties.30.t
+	desc = wild_nineties.30.d
+
+	duration = 3
+
+	trigger = {
+		rus_wn_yeltsin_in_power = yes
+		NOT = { has_variable = rus_wn_succession_done }
+	}
+
+	option = {
+		name = wild_nineties.30.a
+		trigger = {
+			rus_wn_has_character = { T = RUS_vladimir_putin }
+			rus_wn_family_above = { V = 30 }
+		}
+		set_variable = { name = rus_wn_successor value = flag:putin }
+		set_variable = rus_wn_successor_chosen
+		if = {
+			limit = { rus_wn_can_be_pm = { T = RUS_vladimir_putin } }
+			rus_wn_appoint_pm = { T = RUS_vladimir_putin M = rus_pm_putin }
+		}
+	}
+
+	option = {
+		name = wild_nineties.30.b
+		trigger = {
+			rus_wn_has_character = { T = RUS_sergei_stepashin }
+			any_scope_character = {
+				has_template = RUS_sergei_stepashin
+				has_variable = rus_wn_standing
+				var:rus_wn_standing >= 20
+			}
+		}
+		set_variable = { name = rus_wn_successor value = flag:stepashin }
+		set_variable = rus_wn_successor_chosen
+		if = {
+			limit = { rus_wn_can_be_pm = { T = RUS_sergei_stepashin } }
+			rus_wn_appoint_pm = { T = RUS_sergei_stepashin M = rus_pm_stepashin }
+		}
+	}
+
+	option = {
+		name = wild_nineties.30.c
+		trigger = {
+			rus_wn_has_character = { T = RUS_yevgeny_primakov }
+			OR = {
+				has_variable = rus_wn_default_happened
+				any_scope_character = {
+					has_template = RUS_yevgeny_primakov
+					has_variable = rus_wn_standing
+				var:rus_wn_standing >= 20
+				}
+			}
+		}
+		set_variable = { name = rus_wn_successor value = flag:primakov }
+		set_variable = rus_wn_successor_chosen
+		if = {
+			limit = { rus_wn_can_be_pm = { T = RUS_yevgeny_primakov } }
+			rus_wn_appoint_pm = { T = RUS_yevgeny_primakov M = rus_pm_primakov }
+		}
+	}
+
+	option = {
+		name = wild_nineties.30.d
+		trigger = {
+			rus_wn_has_character = { T = RUS_yuri_luzhkov }
+			any_scope_character = {
+				has_template = RUS_yuri_luzhkov
+				has_variable = rus_wn_standing
+				var:rus_wn_standing >= 10
+			}
+		}
+		set_variable = { name = rus_wn_successor value = flag:luzhkov }
+		set_variable = rus_wn_successor_chosen
+		if = {
+			limit = { rus_wn_can_be_pm = { T = RUS_yuri_luzhkov } }
+			rus_wn_appoint_pm = { T = RUS_yuri_luzhkov M = rus_pm_luzhkov }
+		}
+	}
+
+	option = {
+		name = wild_nineties.30.e
+		trigger = {
+			rus_wn_has_character = { T = RUS_viktor_chernomyrdin }
+			any_scope_character = {
+				has_template = RUS_viktor_chernomyrdin
+				has_variable = rus_wn_standing
+				var:rus_wn_standing >= 30
+			}
+		}
+		set_variable = { name = rus_wn_successor value = flag:chernomyrdin }
+		set_variable = rus_wn_successor_chosen
+		if = {
+			limit = { rus_wn_can_be_pm = { T = RUS_viktor_chernomyrdin } }
+			rus_wn_appoint_pm = { T = RUS_viktor_chernomyrdin M = rus_pm_chernomyrdin }
+		}
+	}
+
+	option = {
+		name = wild_nineties.30.f
+		trigger = {
+			rus_wn_has_character = { T = RUS_boris_nemtsov }
+			NOT = { has_variable = rus_wn_default_happened }
+			any_scope_character = {
+				has_template = RUS_boris_nemtsov
+				has_variable = rus_wn_standing
+				var:rus_wn_standing >= 20
+			}
+		}
+		set_variable = { name = rus_wn_successor value = flag:nemtsov }
+		set_variable = rus_wn_successor_chosen
+		if = {
+			limit = { rus_wn_can_be_pm = { T = RUS_boris_nemtsov } }
+			rus_wn_appoint_pm = { T = RUS_boris_nemtsov M = rus_pm_nemtsov }
+		}
+	}
+
+	option = {
+		name = wild_nineties.30.g
+		trigger = {
+			rus_wn_has_character = { T = RUS_alexander_lebed }
+			any_scope_character = {
+				has_template = RUS_alexander_lebed
+				has_variable = rus_wn_standing
+				var:rus_wn_standing >= 20
+			}
+		}
+		set_variable = { name = rus_wn_successor value = flag:lebed }
+		set_variable = rus_wn_successor_chosen
+		if = {
+			limit = { rus_wn_can_be_pm = { T = RUS_alexander_lebed } }
+			rus_wn_appoint_pm = { T = RUS_alexander_lebed M = rus_pm_lebed }
+		}
+	}
+
+	option = {
+		name = wild_nineties.30.h
+		default_option = yes
+		trigger = {
+			any_scope_character = { has_role = character_role_prime_minister }
+		}
+		set_variable = { name = rus_wn_successor value = flag:pm }
+		set_variable = rus_wn_successor_chosen
+	}
+
+	option = {
+		name = wild_nineties.30.i
+		rus_wn_family_change = { V = -10 }
+	}
+}
+
+wild_nineties.31 = {
+	type = country_event
+	placement = root
+
+	event_image = { video = "unspecific_ruler_speaking_to_people" }
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+	icon = "gfx/interface/icons/event_icons/event_wild_nineties.dds"
+
+	title = wild_nineties.31.t
+	desc = wild_nineties.31.d
+
+	duration = 3
+
+	trigger = {
+		rus_wn_yeltsin_in_power = yes
+		has_variable = rus_wn_successor_chosen
+		NOT = { has_variable = rus_wn_succession_done }
+	}
+
+	option = {
+		name = wild_nineties.31.a
+		default_option = yes
+		rus_wn_install_successor = yes
+		rus_wn_record_successor = yes
+	}
+}
+
+wild_nineties.40 = {
+	type = country_event
+	placement = root
+
+	event_image = { video = "unspecific_factory_closed" }
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+	icon = "gfx/interface/icons/event_icons/event_money.dds"
+
+	title = wild_nineties.40.t
+	desc = wild_nineties.40.d
+
+	duration = 3
+
+	option = {
+		name = wild_nineties.40.a
+		default_option = yes
+		fin_default_on_bonds = yes
+		add_modifier = { name = rus_1998_default months = 36 }
+		rus_wn_oligarchs_change = { V = -15 }
+		rus_wn_add_blame = { V = 40 }
+	}
+
+	option = {
+		name = wild_nineties.40.b
+		fin_default_on_bonds = yes
+		add_modifier = { name = rus_1998_default months = 36 }
+		add_treasury = {
+			value = gdp
+			multiply = -0.05
+		}
+		fin_change_capital_flight = { V = 10 }
+		rus_wn_oligarchs_change = { V = -10 }
+		rus_wn_add_blame = { V = 40 }
+	}
+}
+
+wild_nineties.41 = {
+	type = country_event
+	placement = root
+
+	event_image = { video = "unspecific_factory_closed" }
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+	icon = "gfx/interface/icons/event_icons/event_industry.dds"
+
+	title = wild_nineties.41.t
+	desc = wild_nineties.41.d
+
+	duration = 3
+
+	trigger = {
+		fin_wage_arrears_at_least = { L = 2 }
+	}
+
+	option = {
+		name = wild_nineties.41.a
+		default_option = yes
+		add_radicals = {
+			value = 0.03
+			strata = lower
+		}
+	}
+
+	option = {
+		name = wild_nineties.41.b
+		fin_change_wage_arrears = { V = -1 }
+		add_treasury = {
+			value = gdp
+			multiply = -0.01
+		}
+		ig:ig_industrialists ?= {
+			add_modifier = { name = rus_lfs_spurned months = 12 }
+		}
+	}
+}
+
+wild_nineties.42 = {
+	type = country_event
+	placement = root
+
+	event_image = { video = "votp_barricade" }
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+	icon = "gfx/interface/icons/event_icons/event_protest.dds"
+
+	title = wild_nineties.42.t
+	desc = wild_nineties.42.d
+
+	duration = 3
+
+	trigger = {
+		fin_wage_arrears_at_least = { L = 2 }
+	}
+
+	option = {
+		name = wild_nineties.42.a
+		default_option = yes
+		add_treasury = {
+			value = gdp
+			multiply = -0.015
+		}
+		fin_change_wage_arrears = { V = -1 }
+	}
+
+	option = {
+		name = wild_nineties.42.b
+		add_radicals = {
+			value = 0.05
+			interest_group = ig:ig_trade_unions
+		}
+		rus_wn_add_blame = { V = 10 }
+	}
+}
+
+wild_nineties.50 = {
+	type = country_event
+	placement = root
+
+	event_image = { video = "europenorthamerica_capitalists_meeting" }
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+	icon = "gfx/interface/icons/event_icons/event_portrait.dds"
+
+	title = wild_nineties.50.t
+	desc = wild_nineties.50.d
+	left_icon = scope:rus_wn_dyachenko_scope
+
+	duration = 3
+
+	immediate = {
+		if = {
+			limit = { NOT = { rus_wn_has_character = { T = RUS_tatyana_dyachenko } } }
+			create_character = {
+				template = RUS_tatyana_dyachenko
+				on_created = {
+					add_character_role = character_role_rus_family
+				}
+			}
+			random_scope_character = {
+				limit = { has_template = RUS_tatyana_dyachenko }
+				save_scope_as = rus_wn_dyachenko_scope
+			}
+		}
+		else = {
+			random_scope_character = {
+				limit = { has_template = RUS_tatyana_dyachenko }
+				save_scope_as = rus_wn_dyachenko_scope
+			}
+		}
+	}
+
+	option = {
+		name = wild_nineties.50.a
+		default_option = yes
+		trigger = {
+			rus_wn_has_character = { T = RUS_anatoly_chubais }
+		}
+		rus_wn_add_standing = { T = RUS_anatoly_chubais V = 10 }
+		rus_wn_oligarchs_change = { V = 5 }
+	}
+
+	option = {
+		name = wild_nineties.50.b
+		rus_wn_add_standing = { T = RUS_alexander_korzhakov V = 10 }
+	}
+}
+
+wild_nineties.60 = {
+	type = country_event
+	placement = root
+
+	event_image = { video = "unspecific_signed_contract" }
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+	icon = "gfx/interface/icons/event_icons/event_trade.dds"
+
+	title = wild_nineties.60.t
+	desc = wild_nineties.60.d
+	left_icon = scope:rus_wn_potanin_scope
+
+	duration = 3
+
+	immediate = {
+		random_scope_character = {
+			limit = { has_template = RUS_vladimir_potanin }
+			save_scope_as = rus_wn_potanin_scope
+		}
+	}
+
+	option = {
+		name = wild_nineties.60.a
+		default_option = yes
+		rus_wn_add_standing = { T = RUS_anatoly_chubais V = 5 }
+	}
+}
+
+wild_nineties.61 = {
+	type = country_event
+	placement = root
+
+	event_image = { video = "unspecific_politicians_arguing" }
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+	icon = "gfx/interface/icons/event_icons/event_newspaper.dds"
+
+	title = wild_nineties.61.t
+	desc = wild_nineties.61.d
+	left_icon = scope:rus_wn_gusinsky_scope
+
+	duration = 3
+
+	immediate = {
+		random_scope_character = {
+			limit = { has_template = RUS_vladimir_gusinsky }
+			save_scope_as = rus_wn_gusinsky_scope
+		}
+	}
+
+	option = {
+		name = wild_nineties.61.a
+		default_option = yes
+		add_modifier = { name = rus_bankers_war months = 12 }
+		rus_wn_family_change = { V = -5 }
+	}
+
+	option = {
+		name = wild_nineties.61.b
+		rus_wn_add_standing = { T = RUS_anatoly_chubais V = -15 }
+		rus_wn_add_standing = { T = RUS_boris_nemtsov V = -10 }
+		rus_wn_oligarchs_change = { V = 5 }
+	}
+}

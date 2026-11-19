@@ -48,7 +48,7 @@ gov_colonial_administration = {
 				AND = { exists = c:DEI c:DEI = ROOT }
 				is_subject_type = subject_type_dominion
 			}
-			NOT = { #handled in gov_colonial_administration_spa
+			NOT = {
 				overlord ?= {
 					c:SPA ?= this
 				}
@@ -61,7 +61,7 @@ gov_colonial_administration = {
 				is_not_in_geographic_region = geographic_region_europe
 				is_not_in_geographic_region = geographic_region_africa
 			}
-			NOT = { #handled in gov_colonial_administration_spa
+			NOT = {
 				is_subject_type = subject_type_colony
 				is_country_type = colonial
 				top_overlord = { NOT = { is_country_type = colonial } }

@@ -1,0 +1,157 @@
+﻿namespace = smd_braindrain
+
+smd_braindrain.1 = {
+	type = country_event
+	placement = ROOT
+	title = smd_braindrain.1.t
+	desc = smd_braindrain.1.d
+	flavor = smd_braindrain.1.f
+	event_image = { video = "unspecific_sick_in_hospital" }
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+	icon = "gfx/interface/icons/event_icons/event_newspaper.dds"
+	duration = 3
+	cooldown = { days = normal_modifier_time }
+
+	trigger = {
+		has_journal_entry = smd_je_brain_drain
+	}
+
+	option = {
+		name = smd_braindrain.1.a
+		default_option = yes
+		add_treasury = {
+			value = gdp
+			multiply = -0.002
+		}
+		add_modifier = {
+			name = smd_doctors_pay_rise
+			days = 1825
+		}
+		je:smd_je_brain_drain ?= {
+			add_progress = { value = -6 name = smd_braindrain_bar }
+		}
+		ai_chance = { base = 50 }
+	}
+
+	option = {
+		name = smd_braindrain.1.b
+		add_modifier = {
+			name = smd_doctors_leave
+			days = short_modifier_time
+		}
+		je:smd_je_brain_drain ?= {
+			add_progress = { value = 4 name = smd_braindrain_bar }
+		}
+		ai_chance = { base = 50 }
+	}
+}
+
+smd_braindrain.2 = {
+	type = country_event
+	placement = ROOT
+	title = smd_braindrain.2.t
+	desc = smd_braindrain.2.d
+	flavor = smd_braindrain.2.f
+	event_image = { video = "asia_poor_people_moving" }
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+	icon = "gfx/interface/icons/event_icons/event_trade.dds"
+	duration = 3
+	cooldown = { days = normal_modifier_time }
+
+	trigger = {
+		has_journal_entry = smd_je_brain_drain
+	}
+
+	option = {
+		name = smd_braindrain.2.a
+		default_option = yes
+		add_modifier = {
+			name = smd_remittance_boom
+			days = 1095
+		}
+		ai_chance = { base = 100 }
+	}
+}
+
+smd_braindrain.3 = {
+	type = country_event
+	placement = ROOT
+	title = smd_braindrain.3.t
+	desc = smd_braindrain.3.d
+	flavor = smd_braindrain.3.f
+	event_image = { video = "europenorthamerica_capitalists_meeting" }
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+	icon = "gfx/interface/icons/event_icons/event_industry.dds"
+	duration = 3
+	cooldown = { days = normal_modifier_time }
+
+	trigger = {
+		has_journal_entry = smd_je_brain_drain
+		je:smd_je_brain_drain ?= {
+			"scripted_bar_progress(smd_braindrain_bar)" <= 40
+		}
+	}
+
+	option = {
+		name = smd_braindrain.3.a
+		default_option = yes
+		add_modifier = {
+			name = smd_returning_entrepreneurs
+			days = 1825
+		}
+		je:smd_je_brain_drain ?= {
+			add_progress = { value = -8 name = smd_braindrain_bar }
+		}
+		ai_chance = { base = 100 }
+	}
+}
+
+smd_braindrain.4 = {
+	type = country_event
+	placement = ROOT
+	title = smd_braindrain.4.t
+	desc = smd_braindrain.4.d
+	flavor = smd_braindrain.4.f
+	event_image = { video = "ip4_university_lecture" }
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+	icon = "gfx/interface/icons/event_icons/event_industry.dds"
+	duration = 3
+
+	trigger = {
+	}
+
+	option = {
+		name = smd_braindrain.4.a
+		default_option = yes
+		add_modifier = {
+			name = smd_brain_gain
+			days = long_modifier_time
+		}
+		ai_chance = { base = 100 }
+	}
+}
+
+smd_braindrain.5 = {
+	type = country_event
+	placement = ROOT
+	title = smd_braindrain.5.t
+	desc = smd_braindrain.5.d
+	flavor = smd_braindrain.5.f
+	event_image = { video = "unspecific_factory_closed" }
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+	icon = "gfx/interface/icons/event_icons/event_newspaper.dds"
+	duration = 3
+
+	trigger = {
+	}
+
+	option = {
+		name = smd_braindrain.5.a
+		default_option = yes
+		add_modifier = {
+			name = smd_hollowed_out
+			days = long_modifier_time
+		}
+		ai_chance = { base = 100 }
+	}
+}

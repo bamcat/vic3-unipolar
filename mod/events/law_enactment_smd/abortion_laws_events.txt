@@ -1,12 +1,7 @@
 ﻿namespace = abortion_laws
 
-
 # ==========================================
 # abortion_laws.1
-# "Life Begins at Conception"
-# Fires when enacting banned abortions.
-# The devout IG frames the ban in
-# absolute moral terms.
 # checkpoint_advance
 # ==========================================
 
@@ -56,13 +51,11 @@ abortion_laws.1 = {
 		}
 	}
 
-	# Option A: Embrace the moral framing — life is sacred and the state must protect it
 	option = {
 		name = abortion_laws.1.a
 		default_option = yes
 		add_enactment_modifier = {
 			name = abortion_law_moral_absolute
-			# = 2
 		}
 		scope:devout_ig = {
 			add_modifier = {
@@ -73,7 +66,6 @@ abortion_laws.1 = {
 		ai_chance = { base = 65 }
 	}
 
-	# Option B: Frame it as demographic policy — keep religion out of the justification
 	option = {
 		name = abortion_laws.1.b
 		add_enactment_modifier = {
@@ -92,13 +84,8 @@ abortion_laws.1 = {
 	}
 }
 
-
 # ==========================================
 # abortion_laws.2
-# "The Exceptions Question"
-# Fires when enacting banned or restricted
-# abortions. The debate turns to rape,
-# incest, and medical necessity.
 # checkpoint_debate
 # ==========================================
 
@@ -137,18 +124,15 @@ abortion_laws.2 = {
 		}
 	}
 
-	# Option A: No exceptions — the law must be absolute to mean anything
 	option = {
 		name = abortion_laws.2.a
 		default_option = yes
 		add_enactment_modifier = {
 			name = abortion_law_exceptions_debate
-			# = 2
 		}
 		ai_chance = { base = 50 }
 	}
 
-	# Option B: Allow narrow medical exceptions — the hardest cases must be addressed
 	option = {
 		name = abortion_laws.2.b
 		add_enactment_modifier = {
@@ -161,14 +145,8 @@ abortion_laws.2 = {
 	}
 }
 
-
 # ==========================================
 # abortion_laws.3
-# "The State Has No Place in This Decision"
-# Fires when enacting unrestricted abortions.
-# The intelligentsia argues bodily
-# autonomy is the foundation of
-# all other rights.
 # checkpoint_advance
 # ==========================================
 
@@ -218,13 +196,11 @@ abortion_laws.3 = {
 		}
 	}
 
-	# Option A: Make bodily autonomy the centrepiece — no state has the right to compel pregnancy
 	option = {
 		name = abortion_laws.3.a
 		default_option = yes
 		add_enactment_modifier = {
 			name = abortion_law_autonomy_argument
-			# = 2
 		}
 		scope:intelligentsia_ig = {
 			add_modifier = {
@@ -239,8 +215,8 @@ abortion_laws.3 = {
 					exists = ruler
 					ruler = {
 						OR = {
-							has_ideology = ideology_progressive_leader
-							has_ideology = ideology_liberal_leader
+							has_ideology = ideology:ideology_progressive_leader
+							has_ideology = ideology:ideology_liberal_leader
 						}
 					}
 				}
@@ -249,7 +225,6 @@ abortion_laws.3 = {
 		}
 	}
 
-	# Option B: Frame it as a healthcare matter — keep the philosophical argument out
 	option = {
 		name = abortion_laws.3.b
 		add_enactment_modifier = {
@@ -268,13 +243,8 @@ abortion_laws.3 = {
 	}
 }
 
-
 # ==========================================
 # abortion_laws.4
-# "The Devout Will Not Yield"
-# Fires when enacting unrestricted
-# or restricted abortions. Religious
-# opposition mounts against any
 # liberalization.
 # checkpoint_stall
 # ==========================================
@@ -328,13 +298,11 @@ abortion_laws.4 = {
 		}
 	}
 
-	# Option A: Confront the opposition directly — the state governs, not the church
 	option = {
 		name = abortion_laws.4.a
 		default_option = yes
 		add_enactment_modifier = {
 			name = abortion_law_religious_opposition
-			# = -1
 		}
 		scope:devout_ig = {
 			add_modifier = {
@@ -349,9 +317,9 @@ abortion_laws.4 = {
 					exists = ruler
 					ruler = {
 						OR = {
-							has_ideology = ideology_progressive_leader
-							has_ideology = ideology_socialist_leader
-							has_ideology = ideology_communist_leader
+							has_ideology = ideology:ideology_progressive_leader
+							has_ideology = ideology:ideology_democratic_socialist_leader
+							has_ideology = ideology:ideology_marxist_leader
 						}
 					}
 				}
@@ -360,12 +328,10 @@ abortion_laws.4 = {
 		}
 	}
 
-	# Option B: Offer conscience protections — medical staff may decline on moral grounds
 	option = {
 		name = abortion_laws.4.b
 		add_enactment_modifier = {
 			name = abortion_law_religious_opposition
-			# = -2
 		}
 		scope:devout_ig = {
 			add_modifier = {

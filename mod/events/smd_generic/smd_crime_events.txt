@@ -1,0 +1,274 @@
+﻿namespace = smd_crime
+
+smd_crime.1 = {
+	type = country_event
+	placement = ROOT
+	title = smd_crime.1.t
+	desc = smd_crime.1.d
+	flavor = smd_crime.1.f
+	event_image = { video = "unspecific_vandalized_storefront" }
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+	icon = "gfx/interface/icons/event_icons/event_skull.dds"
+	duration = 3
+	cooldown = { days = normal_modifier_time }
+
+	trigger = {
+		has_journal_entry = smd_je_crime_wave
+	}
+
+	option = {
+		name = smd_crime.1.a
+		default_option = yes
+		add_treasury = {
+			value = gdp
+			multiply = -0.001
+		}
+		add_modifier = {
+			name = smd_crime_protection_unit
+			days = short_modifier_time
+		}
+		je:smd_je_crime_wave ?= {
+			add_progress = { value = -5 name = smd_crime_wave_bar }
+		}
+		ai_chance = { base = 60 }
+	}
+
+	option = {
+		name = smd_crime.1.b
+		add_modifier = {
+			name = smd_crime_private_security
+			days = short_modifier_time
+		}
+		je:smd_je_crime_wave ?= {
+			add_progress = { value = 5 name = smd_crime_wave_bar }
+		}
+		ai_chance = { base = 40 }
+	}
+}
+
+smd_crime.2 = {
+	type = country_event
+	placement = ROOT
+	title = smd_crime.2.t
+	desc = smd_crime.2.d
+	flavor = smd_crime.2.f
+	event_image = { video = "southamerica_public_figure_assassination" }
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+	icon = "gfx/interface/icons/event_icons/event_newspaper.dds"
+	duration = 3
+	cooldown = { days = normal_modifier_time }
+
+	trigger = {
+		has_journal_entry = smd_je_crime_wave
+	}
+
+	option = {
+		name = smd_crime.2.a
+		default_option = yes
+		add_modifier = {
+			name = smd_crime_independent_inquiry
+			days = short_modifier_time
+		}
+		je:smd_je_crime_wave ?= {
+			add_progress = { value = -4 name = smd_crime_wave_bar }
+		}
+		ai_chance = { base = 60 }
+	}
+
+	option = {
+		name = smd_crime.2.b
+		add_radicals = {
+			value = small_radicals
+			interest_group = ig:ig_intelligentsia
+		}
+		je:smd_je_crime_wave ?= {
+			add_progress = { value = 3 name = smd_crime_wave_bar }
+		}
+		ai_chance = { base = 40 }
+	}
+}
+
+smd_crime.3 = {
+	type = country_event
+	placement = ROOT
+	title = smd_crime.3.t
+	desc = smd_crime.3.d
+	flavor = smd_crime.3.f
+	event_image = { video = "votp_cops_march" }
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+	icon = "gfx/interface/icons/event_icons/event_scales.dds"
+	duration = 3
+	cooldown = { days = normal_modifier_time }
+
+	trigger = {
+		has_journal_entry = smd_je_crime_wave
+		NOT = { has_law_or_variant = law_type:law_no_police }
+	}
+
+	option = {
+		name = smd_crime.3.a
+		default_option = yes
+		add_modifier = {
+			name = smd_crime_police_purge
+			days = short_modifier_time
+		}
+		je:smd_je_crime_wave ?= {
+			add_progress = { value = -6 name = smd_crime_wave_bar }
+		}
+		ai_chance = { base = 50 }
+	}
+
+	option = {
+		name = smd_crime.3.b
+		add_modifier = {
+			name = smd_crime_police_shielded
+			days = short_modifier_time
+		}
+		je:smd_je_crime_wave ?= {
+			add_progress = { value = 4 name = smd_crime_wave_bar }
+		}
+		ai_chance = { base = 50 }
+	}
+}
+
+smd_crime.4 = {
+	type = country_event
+	placement = ROOT
+	title = smd_crime.4.t
+	desc = smd_crime.4.d
+	flavor = smd_crime.4.f
+	event_image = { video = "votp_barricade" }
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+	icon = "gfx/interface/icons/event_icons/event_skull.dds"
+	duration = 3
+	cooldown = { days = normal_modifier_time }
+
+	trigger = {
+		has_journal_entry = smd_je_crime_wave
+		exists = var:smd_crime_state_1
+		je:smd_je_crime_wave ?= {
+			"scripted_bar_progress(smd_crime_wave_bar)" >= 50
+		}
+	}
+
+	immediate = {
+		var:smd_crime_state_1 ?= { save_scope_as = smd_crime_hotspot }
+	}
+
+	option = {
+		name = smd_crime.4.a
+		trigger = {
+			ig:ig_armed_forces ?= { ig_approval > angry }
+		}
+		scope:smd_crime_hotspot = {
+			add_modifier = {
+				name = smd_crime_troops_on_streets
+				days = short_modifier_time
+			}
+		}
+		je:smd_je_crime_wave ?= {
+			add_progress = { value = -8 name = smd_crime_wave_bar }
+		}
+		ai_chance = { base = 50 }
+	}
+
+	option = {
+		name = smd_crime.4.b
+		default_option = yes
+		add_modifier = {
+			name = smd_crime_gang_truce
+			days = short_modifier_time
+		}
+		je:smd_je_crime_wave ?= {
+			add_progress = { value = -3 name = smd_crime_wave_bar }
+		}
+		ai_chance = { base = 50 }
+	}
+}
+
+smd_crime.5 = {
+	type = country_event
+	placement = ROOT
+	title = smd_crime.5.t
+	desc = smd_crime.5.d
+	flavor = smd_crime.5.f
+	event_image = { video = "middleeast_police_breaking_door" }
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+	icon = "gfx/interface/icons/event_icons/event_scales.dds"
+	duration = 3
+	cooldown = { days = normal_modifier_time }
+
+	trigger = {
+		has_journal_entry = smd_je_crime_wave
+		je:smd_je_crime_wave ?= {
+			"scripted_bar_progress(smd_crime_wave_bar)" <= 40
+		}
+		institution_investment_level = {
+			institution = institution_police
+			value >= 2
+		}
+	}
+
+	option = {
+		name = smd_crime.5.a
+		default_option = yes
+		add_modifier = {
+			name = smd_crime_kingpin_trial
+			days = short_modifier_time
+		}
+		je:smd_je_crime_wave ?= {
+			add_progress = { value = -10 name = smd_crime_wave_bar }
+		}
+		ai_chance = { base = 100 }
+	}
+}
+
+smd_crime.6 = {
+	type = country_event
+	placement = ROOT
+	title = smd_crime.6.t
+	desc = smd_crime.6.d
+	flavor = smd_crime.6.f
+	event_image = { video = "crowd_celebrating" }
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+	icon = "gfx/interface/icons/event_icons/event_scales.dds"
+	duration = 3
+
+	trigger = {
+	}
+
+	option = {
+		name = smd_crime.6.a
+		default_option = yes
+		add_modifier = {
+			name = smd_rule_of_law_restored
+			days = long_modifier_time
+		}
+		ai_chance = { base = 100 }
+	}
+}
+
+smd_crime.7 = {
+	type = country_event
+	placement = ROOT
+	title = smd_crime.7.t
+	desc = smd_crime.7.d
+	flavor = smd_crime.7.f
+	event_image = { video = "votp_conspiring" }
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+	icon = "gfx/interface/icons/event_icons/event_skull.dds"
+	duration = 3
+
+	trigger = {
+	}
+
+	option = {
+		name = smd_crime.7.a
+		default_option = yes
+		add_modifier = {
+			name = smd_captured_state
+			days = long_modifier_time
+		}
+		ai_chance = { base = 100 }
+	}
+}

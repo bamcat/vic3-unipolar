@@ -1,5 +1,4 @@
 ﻿l_russian:
-
  MOBILIZATION_OPTION_UPKEEP_SHORT: "[ConcatIfNeitherEmpty(MobilizationOption.GetUpkeepModifier.GetDesc,'\n')][MobilizationOption.GetUpkeepUnscaledModifier.GetDesc]"
  MOBILIZATION_OPTION_GROUP_TOOLTIP: "[MobilizationOptionGroup.GetDesc]"
  MOBILIZATION_OPTION_TOOLTIP: "[AddLocalizationIf(Not(MobilizationOption.GetUnitModifier.IsEmpty),'MOBILIZATION_OPTION_EFFECTS_HEADER')][MobilizationOption.GetUnitModifier.GetDesc][AddLocalizationIf(Not(MobilizationOption.GetUnitModifier.IsEmpty),'\n\n')][AddLocalizationIf(Not(MobilizationOption.GetUpkeepModifier.IsEmpty),'MOBILIZATION_OPTION_UPKEEP_HEADER')]$MOBILIZATION_OPTION_UPKEEP_SHORT$[AddLocalizationIf(Not(MobilizationOption.GetUpkeepModifier.IsEmpty),'\n\n')][MobilizationOption.GetDesc]"
@@ -9,7 +8,7 @@
  ACTIVATE_MOBILIZATION_OPTION_BUTTON_TOOLTIP: "#header Активировать [MobilizationOption.GetName]#![ConcatIfNeitherEmpty('\n', AddLocalizationIf(MobilizationOption.IsActivated(MilitaryFormation.AccessSelf), 'ALREADY_ACTIVATED'))]\n$TOOLTIP_DELIMITER$\n[MobilizationOption.GetTooltipWithActivateDesc(MilitaryFormation.AccessSelf)]"
  ALREADY_ACTIVATED: "#i Уже активирован #!"
  DEACTIVATE_MOBILIZATION_OPTION_BUTTON_TOOLTIP: "#header Деактивировать [MobilizationOption.GetName]#!\n$TOOLTIP_DELIMITER$\n[MobilizationOption.GetTooltipWithDeactivateDesc(MilitaryFormation.AccessSelf)]"
- 
+
  MOBILIZATION_OPTION_TOOLTIP_WITH_TOGGLE_DESC: "[ConcatIfNeitherEmpty('$TOGGLE_DESC$','\n\n')]$TOOLTIP$[ConcatIfNeitherEmpty('\n\n','$EFFECT_HEADER$')]$EFFECT$"
  MOBILIZATION_OPTION_TOOLTIP_WITH_TOGGLE_DESC_WARNING_HEADER: "#title @warning! Результатом будут следующие эффекты: #!\n"
 
@@ -33,7 +32,7 @@
  mobilization_option_it_hurts_organization_when_you_adjust_equipment_tt: "Уменьшает ток [concept_organization] [concept_army] на #v 50% #! при включении или выключении"
  mobilization_option_it_hurts_organization_to_add_medic_support_tt: "Уменьшает ток [concept_organization] [concept_army] на #v 25% #! при включении"
  mobilization_option_it_hurts_morale_and_organization_when_you_remove_medic_support_tt: "Уменьшает каждый [Concept('concept_unit','$concept_unit_possessive$')] ток [concept_morale] на #v 50%#! и ток [concept_organization] [concept_army] на #v 25%#! при удалении из [Concept('concept_mobilize_army','$concept_mobilize_army_mobilized$')] [concept_army]"
- 
+
  mobilization_option_extra_supplies: "Питание готовое к употреблению"
  mobilization_option_extra_supplies_desc: "Стандартизированные, современные пайки для наших солдат"
  mobilization_option_luxurious_supplies: "Роскошная еда готова к употреблению"
@@ -71,7 +70,6 @@
  mobilization_option_field_hospitals: "Полевые больницы"
  mobilization_option_field_hospitals_desc: "Квалифицированные хирурги с доступом к мощным травам могут совершать спасительные чудеса."
 
- #Mobilization option groups
  supplies: "Поставки"
  supplies_desc: "Поставки для вашей армии"
  supplements: "Дополнения"
@@ -85,8 +83,5 @@
  medic_support: "Медицинская поддержка"
  medic_support_desc: "Оборудование, доступное вашей армии для лечения раненых солдат."
 
- 
-# SMD
-
-mobilization_option_air_transport:0 "Воздушный транспорт"
-mobilization_option_air_transport_desc:0 "Загрузите наши подразделения на самолеты для легкого и эффективного перемещения."
+ mobilization_option_air_transport:0 "Воздушный транспорт"
+ mobilization_option_air_transport_desc:0 "Загрузите наши подразделения на самолеты для легкого и эффективного перемещения."

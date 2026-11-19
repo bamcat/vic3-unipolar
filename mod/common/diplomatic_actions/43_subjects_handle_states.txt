@@ -59,7 +59,6 @@
 		if = {
 			limit = { exists = scope:first_state }
 
-			# Giving a state from one subject to another
 			if = {
 				limit = { scope:first_state = { NOT = { owner = root } } }
 				scope:first_state.owner = { save_temporary_scope_as = subject_taken_from }
@@ -122,7 +121,7 @@
 			trigger_if = {
 				limit = {
 					c:GBR ?= owner
-					owner = { # Whilst the crown colony system remains in place, the AI won't be inclined to change this
+					owner = {
 						country_has_monarchy_law = yes
 					}
 				}
@@ -134,7 +133,7 @@
 			trigger_if = {
 				limit = {
 					c:CHI ?= owner
-					owner = { # China won't decentralise for as long as the game-start state of affairs remains in place
+					owner = {
 						country_has_monarchy_law = yes
 					}
 				}
@@ -155,7 +154,6 @@
 				attitude = protective
 			}
 
-			# AI doesn't give away states adjacent to their incorporated states
 			scope:first_state = {
 				NOT = {
 					any_neighbouring_state = {
@@ -165,9 +163,6 @@
 				}
 			}
 
-			# AI doesn't give away states to subjects that are unrecognized when they are recognized
-			# They also don't want to give states to very autonomous subjects since they don't get much from it
-			# The exception to these rules is when the state is totally disconnected from the rest of their empire
 			OR = {
 				AND = {
 					scope:target_country = {
@@ -194,7 +189,6 @@
 				}
 			}
 
-			# China shouldn't give all of its West to Tibet
 			NOT = {
 				OR = {
 					country_has_primary_culture = cu:han
@@ -212,7 +206,7 @@
 		propose_score = {
 			value = 10
 
-			if = { # Consolidation of colonial tags
+			if = {
 				limit = {
 					scope:target_country = {
 						OR = {
@@ -242,7 +236,6 @@
 				add = 50
 			}
 
-			# Prefer ceding land to same culture subjects
 			if = {
 				limit = {
 					scope:target_country = {
@@ -252,7 +245,6 @@
 				multiply = 5.0
 			}
 
-			# Avoid ceding land to unrecognized if there's alternatives
 			if = {
 				limit = {
 					NOT = { is_country_type = unrecognized }
@@ -296,7 +288,6 @@ take_state = {
 		is_capital = no
 		is_under_colonization = no
 
-		# Not allowed to take incorporated states from dominions
 		trigger_if = {
 			limit = { scope:target_country = { is_subject_type = subject_type_dominion } }
 			is_incorporated = no
@@ -407,7 +398,6 @@ take_state = {
 		will_propose_with_states = {
 			exists = scope:second_state
 
-			# The AI only uses take state on disconnected colonial bits of subjects which are adjacent to their own lands
 			NOT = {
 				any_neighbouring_state = {
 					owner = root.owner
@@ -421,8 +411,6 @@ take_state = {
 				}
 			}
 
-			# This may seem odd, but is intentional
-			# If the overlord is domineering they should be focusing on reducing autonomy and annexing the subject instead of just taking disconnected colonial bits
 			has_attitude = {
 				who = scope:target_country
 				attitude = protective
@@ -459,7 +447,7 @@ demand_state = {
 	second_state_trigger = {
 		OR = {
 			scope:country = { is_adjacent_to_state = root } # must either be adjacent to the initiating country, or
-			AND = {											# be a Homeland of its culture, with a port available for market connection
+			AND = {
 				is_homeland_of_country_cultures = scope:country
 				has_port_state = yes
 				scope:country = { has_port_country = yes }
@@ -470,7 +458,7 @@ demand_state = {
 				owner = scope:target_country
 				is_incorporated = no
 			}
-			scope:target_country = { 						# if owned by one of the target's subjects, that subject must either be a Puppet or a Vassal
+			scope:target_country = {
 				any_subject_or_below = {
 					root.owner = this
 					NOT = { root.owner = scope:country }
@@ -491,7 +479,6 @@ demand_state = {
 		if = {
 			limit = { exists = scope:second_state }
 
-			# Giving a state from one subject to another
 			if = {
 				limit = { scope:second_state = { NOT = { owner = scope:target_country } } }
 				scope:second_state.owner = { save_temporary_scope_as = subject_taken_from }

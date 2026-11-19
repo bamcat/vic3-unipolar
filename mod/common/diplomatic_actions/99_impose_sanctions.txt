@@ -6,22 +6,17 @@
 
 	potential = {
 	
-		#THIS is not decentralized
 		NOT = { is_country_type = decentralized }
 		scope:target_country = { NOT = { is_country_type = decentralized } }
 		
-		#THIS and Target are not revolutionary
 		is_revolutionary = no is_secessionist = no
 		scope:target_country = { is_revolutionary = no is_secessionist = no } 
 		
-		#THIS and Target are not subjects
 		is_sufficiently_independent = yes
 		scope:target_country = { is_sufficiently_independent = yes }
 		
-		#THIS is not at war with TARGET
 		NOT = { has_war_with = scope:target_country }
 		
-		#Subjects cannot sanction Overlord and vice-versa
 		NOT = { has_subject_relation_with = scope:target_country }
 		NOT = { scope:target_country = { is_subject_of = scope:actor } }
 		
@@ -29,10 +24,8 @@
 	
 	possible = {
 	
-		#THIS is interested in Target
 		has_diplomatic_relevance = scope:target_country
 		
-		#THIS is not friendly with Target in anyway
 		NOR = { 
 			has_diplomatic_pact = { who = scope:target_country type = increase_relations }
 			any_scope_treaty = { binds = scope:target_country any_scope_article = { has_type = alliance } }
@@ -41,16 +34,13 @@
 			scope:target_country = { is_subject_of = scope:actor }
 		}
 		
-		#THIS has poor or less relations with Target
 		custom_tooltip = {
 			text = DIPLO_ACTION_RELATIONS_POOR_OR_LESS
 			scope:target_country.relations:root <= relations_threshold:poor
 		}
 		
-		#THIS is not broke
 		in_default = no
 		
-		#Autarkic countries cannot sanction or be sanctioned
 		NOR = {
 			has_law_or_variant = law_type:law_isolationism
 			scope:target_country = { has_law_or_variant = law_type:law_isolationism }
@@ -68,38 +58,29 @@
 		max_target_involvement = 1000
 		target_involvement_applies_to = mutual
 		
-		#Sanctions punish TARGET by diverting money to THIS
 		income_transfer = 0.05
 		max_paying_country_income_to_transfer = 0.10
 		second_country_gets_income_transfer = no
 		income_transfer_based_on_second_country = no
 		
-		### Validation requirements ###
-		
 		requirement_to_maintain = { 
 		
 			trigger = {
 				
-				#THIS is not decentralized
 				NOT = { is_country_type = decentralized }
 				scope:target_country = { NOT = { is_country_type = decentralized } }
 				
-				#THIS and Target are not revolutionary
 				is_revolutionary = no is_secessionist = no
 				scope:target_country = { is_revolutionary = no is_secessionist = no } 
 				
-				#THIS and Target are not subjects
 				is_sufficiently_independent = yes
 				scope:target_country = { is_sufficiently_independent = yes }
 				
-				#THIS is not at war with TARGET
 				NOT = { has_war_with = scope:target_country }
 				
-				#Subjects cannot sanction Overlord and vice-versa
 				NOT = { has_subject_relation_with = scope:target_country }
 				NOT = { scope:target_country = { is_subject_of = scope:actor } }
 				
-				#THIS is not friendly with Target in anyway
 				NOR = { 
 					has_diplomatic_pact = { who = scope:target_country type = increase_relations }
 					any_scope_treaty = { binds = scope:target_country any_scope_article = { has_type = alliance } }
@@ -108,16 +89,13 @@
 					scope:target_country = { is_subject_of = scope:actor }
 				}
 				
-				#THIS has poor or less relations with Target
 				custom_tooltip = {
 					text = DIPLO_ACTION_RELATIONS_POOR_OR_LESS
 					scope:target_country.relations:root <= relations_threshold:poor
 				}
 
-				#THIS is not broke
 				in_default = no
 				
-				#Autarkic countries cannot sanction or be sanctioned
 				NOR = {
 					has_law_or_variant = law_type:law_isolationism
 					scope:target_country = { has_law_or_variant = law_type:law_isolationism }
@@ -131,7 +109,6 @@
 	
 	accept_effect = {
 		
-		#Unprovoked sanctions hurt relations with the world
 		if = { 
 			limit = { 
 				scope:target_country.infamy < infamy_threshold:infamous
@@ -140,10 +117,8 @@
 			change_infamy = 15
 		}
 		
-		#THIS loses relations with TARGET
 		change_relations = { country = scope:target_country value = -50 } 
 		
-		#Lobby
 		add_lobby_appeasement_from_diplomacy_unidirectional = { 
 			FIRST = root
 			SECOND = scope:target_country 
@@ -166,10 +141,8 @@
 		
 		will_propose = {
 			
-			#AI will not sanction if notorious
 			scope:actor.infamy < infamy_threshold:notorious
 			
-			#AI only sanctions based on infamy and to protect allies
 			OR = {
 			
 				any_country = { 
@@ -184,8 +157,8 @@
 				AND = { 
 					ruler ?= {
 						OR = {
-							has_ideology = ideology:ideology_democratic
-							has_ideology = ideology:ideology_liberal
+							has_ideology = ideology:ideology_social_liberal_leader
+							has_ideology = ideology:ideology_liberal_leader
 						}
 					}
 					scope:target_country.infamy >= infamy_threshold:infamous
@@ -193,7 +166,7 @@
 				
 				AND = { 
 					ruler ?= {
-						has_ideology = ideology:ideology_liberal
+						has_ideology = ideology:ideology_liberal_leader
 					}
 					scope:target_country.infamy = infamy_threshold:notorious
 				}
@@ -204,7 +177,6 @@
 		
 		will_break = {
 		
-			#AI only sanctions based on infamy and to protect allies
 			NOR = {
 			
 				any_country = { 

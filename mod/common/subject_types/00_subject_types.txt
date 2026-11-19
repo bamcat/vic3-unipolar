@@ -1,4 +1,5 @@
-﻿subject_type_economic_union = {    
+﻿subject_type_economic_union = {
+	re_establish_war_goal = make_tributary    
 	subservient_to_overlord = no
 	allow_change_country_flag = no
 	use_overlord_map_color = no
@@ -58,6 +59,7 @@
 
 
 REPLACE_OR_CREATE:subject_type_protectorate = {
+	re_establish_war_goal = make_protectorate
 	allow_change_country_flag = no
 	use_overlord_map_color = no
 	use_overlord_ruler = no
@@ -110,15 +112,13 @@ REPLACE_OR_CREATE:subject_type_protectorate = {
 		unrecognized_power
 	}
 
-	# Multiplies both subject_value and become_subject_value in AI strategies
-	# Higher value means AI is more interested in having this type of subject but less interested in *being* this type of subject
-	# Cannot return a value lower than MIN_SUBJECT_TYPE_VALUE
 	ai_value = {
 		value = 1
 	}
 }
 
 REPLACE_OR_CREATE:subject_type_puppet = {
+	re_establish_war_goal = make_protectorate
 	allow_change_country_flag = yes
 	use_overlord_map_color = yes
 	use_overlord_ruler = no
@@ -169,15 +169,13 @@ REPLACE_OR_CREATE:subject_type_puppet = {
 		unrecognized_power
 	}
 
-	# Multiplies both subject_value and become_subject_value in AI strategies
-	# Higher value means AI is more interested in having this type of subject but less interested in *being* this type of subject
-	# Cannot return a value lower than MIN_SUBJECT_TYPE_VALUE
 	ai_value = {
 		value = 1.5
 	}
 }
 
 REPLACE_OR_CREATE:subject_type_tributary = {
+	re_establish_war_goal = make_tributary
 	allow_change_country_flag = no
 	use_overlord_map_color = no
 	use_overlord_ruler = no
@@ -228,15 +226,13 @@ REPLACE_OR_CREATE:subject_type_tributary = {
 		unrecognized_power
 	}
 
-	# Multiplies both subject_value and become_subject_value in AI strategies
-	# Higher value means AI is more interested in having this type of subject but less interested in *being* this type of subject
-	# Cannot return a value lower than MIN_SUBJECT_TYPE_VALUE
 	ai_value = {
 		value = 1
 	}
 }
 
 REPLACE_OR_CREATE:subject_type_vassal = {
+	re_establish_war_goal = make_tributary
 	allow_change_country_flag = yes
 	use_overlord_map_color = yes
 	use_overlord_ruler = no
@@ -286,15 +282,13 @@ REPLACE_OR_CREATE:subject_type_vassal = {
 		unrecognized_power
 	}
 
-	# Multiplies both subject_value and become_subject_value in AI strategies
-	# Higher value means AI is more interested in having this type of subject but less interested in *being* this type of subject
-	# Cannot return a value lower than MIN_SUBJECT_TYPE_VALUE
 	ai_value = {
 		value = 1.5
 	}
 }
 
 REPLACE_OR_CREATE:subject_type_dominion = {
+	re_establish_war_goal = make_dominion
 	allow_change_country_flag = yes
 	use_overlord_map_color = yes
 	use_overlord_ruler = no
@@ -344,15 +338,13 @@ REPLACE_OR_CREATE:subject_type_dominion = {
 		unrecognized_power
 	}
 
-	# Multiplies both subject_value and become_subject_value in AI strategies
-	# Higher value means AI is more interested in having this type of subject but less interested in *being* this type of subject
-	# Cannot return a value lower than MIN_SUBJECT_TYPE_VALUE
 	ai_value = {
 		value = 1.25
 	}
 }
 
 REPLACE_OR_CREATE:subject_type_colony = {
+	re_establish_war_goal = make_dominion
 	allow_change_country_flag = yes
 	use_overlord_map_color = yes
 	use_overlord_ruler = no
@@ -402,15 +394,13 @@ REPLACE_OR_CREATE:subject_type_colony = {
 		unrecognized_power
 	}
 
-	# Multiplies both subject_value and become_subject_value in AI strategies
-	# Higher value means AI is more interested in having this type of subject but less interested in *being* this type of subject
-	# Cannot return a value lower than MIN_SUBJECT_TYPE_VALUE
 	ai_value = {
 		value = 1.5
 	}
 }
 
 REPLACE_OR_CREATE:subject_type_personal_union = {
+	re_establish_war_goal = make_personal_union
 	allow_change_country_flag = yes
 	use_overlord_map_color = yes
 	use_overlord_ruler = yes
@@ -442,7 +432,7 @@ REPLACE_OR_CREATE:subject_type_personal_union = {
 
 	same_autonomy_subject_type_alternatives = {
 		subject_type_dominion
-		subject_type_tributary # Intentionally set both here and in higher_autonomy_subject_type_alternatives to handle unrecognized overlord changing out of monarchy
+		subject_type_tributary
 	}
 
 	valid_overlord_country_types = {
@@ -474,15 +464,13 @@ REPLACE_OR_CREATE:subject_type_personal_union = {
 		unrecognized_power
 	}
 
-	# Multiplies both subject_value and become_subject_value in AI strategies
-	# Higher value means AI is more interested in having this type of subject but less interested in *being* this type of subject
-	# Cannot return a value lower than MIN_SUBJECT_TYPE_VALUE
 	ai_value = {
 		value = 1.1
 	}
 }
 
 subject_type_crown_land = {
+	re_establish_war_goal = make_crown_land
 	allow_change_country_flag = yes
 	use_overlord_map_color = yes
 	use_overlord_ruler = no
@@ -532,15 +520,13 @@ subject_type_crown_land = {
 		unrecognized_power
 	}
 
-	# Multiplies both subject_value and become_subject_value in AI strategies
-	# Higher value means AI is more interested in having this type of subject but less interested in *being* this type of subject
-	# Cannot return a value lower than MIN_SUBJECT_TYPE_VALUE
 	ai_value = {
 		value = 1.5
 	}
 }
 
 REPLACE_OR_CREATE:subject_type_chartered_company = {
+	re_establish_war_goal = make_chartered_company
 	allow_change_country_flag = yes
 	use_overlord_map_color = yes
 	use_overlord_ruler = no
@@ -592,9 +578,6 @@ REPLACE_OR_CREATE:subject_type_chartered_company = {
 		unrecognized_power
 	}
 
-	# Multiplies both subject_value and become_subject_value in AI strategies
-	# Higher value means AI is more interested in having this type of subject but less interested in *being* this type of subject
-	# Cannot return a value lower than MIN_SUBJECT_TYPE_VALUE
 	ai_value = {
 		value = 1.25
 	}

@@ -6,8 +6,7 @@
 
 	monthly_progress = {
 
-		# Advances while a general is deployed
-		if = {
+		progress_condition = {
 			limit = {
 				any_scope_character = {
 					has_variable = cartel_general_var
@@ -19,8 +18,7 @@
 			}
 		}
 
-		# High turmoil slows progress
-		if = {
+		progress_condition = {
 			limit = {
 				any_scope_state = {
 					is_incorporated = yes
@@ -33,8 +31,7 @@
 			}
 		}
 
-		# At war stretches the military
-		if = {
+		progress_condition = {
 			limit = { is_at_war = yes }
 			add = {
 				desc = "cartel_bar_at_war_tt"
@@ -56,8 +53,7 @@ mdw_suppression_bar = {
 
 	monthly_progress = {
 
-		# Only advances after declaration + commander deployed
-		if = {
+		progress_condition = {
 			limit = {
 				has_variable = mdw_war_declared
 				any_scope_character = {
@@ -70,7 +66,6 @@ mdw_suppression_bar = {
 			}
 		}
 
-		# More states = slower progress
 		#if = {
 		#	limit = { var:mdw_state_count >= 3 }
 		#	add = {
@@ -93,8 +88,7 @@ mdw_suppression_bar = {
 		#	}
 		#}
 
-		# US military assistance pact
-		if = {
+		progress_condition = {
 			limit = {
 				any_scope_treaty = {
 				binds = c:USA
@@ -109,15 +103,14 @@ mdw_suppression_bar = {
 			}
 		}
 
-		# Excess authority — state capacity drives the campaign
-		if = {
+		progress_condition = {
 			limit = { authority >= 200 }
 			add = {
 				desc = "mdw_bar_excess_authority_tt"
 				value = 0.5
 			}
 		}
-		if = {
+		progress_condition = {
 			limit = { authority >= 400 }
 			add = {
 				desc = "mdw_bar_excess_authority_tt"
@@ -125,23 +118,21 @@ mdw_suppression_bar = {
 			}
 		}
 
-		# High legitimacy means public support for the war
-		if = {
-			limit = { country_legitimacy >= 70 }
+		progress_condition = {
+			limit = { legitimacy >= 70 }
 			add = {
 				desc = "mdw_bar_legitimacy_tt"
 				value = 0.5
 			}
 		}
 
-		# Experienced commander trait bonus
-		if = {
+		progress_condition = {
 			limit = {
 				any_scope_character = {
 					has_variable = mdw_commander_var
 					OR = {
-						has_trait = trait_tactician
-						has_trait = trait_aggressive_attacker
+						has_trait = expert_offensive_planner
+						has_trait = experienced_offensive_planner
 					}
 				}
 			}
@@ -151,8 +142,7 @@ mdw_suppression_bar = {
 			}
 		}
 
-		# At war elsewhere drains resources
-		if = {
+		progress_condition = {
 			limit = { is_at_war = yes }
 			add = {
 				desc = "mdw_bar_at_war_tt"
@@ -160,8 +150,7 @@ mdw_suppression_bar = {
 			}
 		}
 
-		# High national turmoil slows progress
-		if = {
+		progress_condition = {
 			limit = { country_turmoil >= 0.20 }
 			add = {
 				desc = "mdw_bar_turmoil_tt"
@@ -183,7 +172,7 @@ mdw_peril_bar = {
 
 	monthly_progress = {
 
-		if = {
+		progress_condition = {
 			limit = {
 				has_variable = mdw_war_declared
 				any_scope_character = {
@@ -196,7 +185,6 @@ mdw_peril_bar = {
 			}
 		}
 
-		# More cartel states = more exposure
 		#if = {
 		#	limit = { var:mdw_state_count >= 5 }
 		#	add = {
@@ -205,8 +193,7 @@ mdw_peril_bar = {
 		#	}
 		#}
 
-		# US aid reduces cartel capability
-		if = {
+		progress_condition = {
 			limit = {
 				any_scope_treaty = {
 				binds = c:USA
@@ -221,12 +208,11 @@ mdw_peril_bar = {
 			}
 		}
 
-		# Cautious commander reduces personal risk
-		if = {
+		progress_condition = {
 			limit = {
 				any_scope_character = {
 					has_variable = mdw_commander_var
-					has_trait = trait_cautious
+					has_trait = cautious
 				}
 			}
 			add = {

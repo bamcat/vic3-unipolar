@@ -1,4 +1,9 @@
 ﻿join_power_bloc = {
+	mirrored_wargoal = {
+		method = swap
+		type = leave_power_bloc
+	}
+
 	icon = "gfx/interface/icons/war_goals/join_power_bloc.dds"
 
 	kind = join_power_bloc
@@ -6,7 +11,6 @@
 	settings = {
 		require_target_be_part_of_war
 
-		# Validation
 		conflicts_with_make_subject
 		validate_join_power_bloc
 		validate_conflicts_make_subject

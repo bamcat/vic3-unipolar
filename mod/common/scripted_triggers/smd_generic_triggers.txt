@@ -1,0 +1,61 @@
+﻿smd_devolution_candidate_state = {
+	is_incorporated = yes
+	is_capital = no
+	turmoil >= 0.15
+	NOR = {
+		state_region = s:STATE_ULSTER
+		state_region = s:STATE_QUEBEC
+		state_region = s:STATE_KOSOVO
+		state_region = s:STATE_PALESTINE
+		state_region = s:STATE_NORTH_CAUCASUS
+		state_region = s:STATE_DAGESTAN
+		state_region = s:STATE_PERSIAN_KURDISTAN
+	}
+	any_scope_culture = {
+		NOT = { is_primary_culture_of = ROOT }
+		has_homeland = PREV
+		PREV = {
+			culture_percent_state = {
+				target = PREV
+				value >= 0.4
+			}
+		}
+	}
+}
+
+smd_has_bespoke_separatism_content = {
+	OR = {
+		has_journal_entry = je_quebec_happiness
+		has_journal_entry = je_first_chechen_war
+		has_journal_entry = je_kurdistan_war
+		has_journal_entry = je_troubles_in_northern_ireland
+		has_journal_entry = je_northern_ireland_peace_process
+		has_journal_entry = je_israel_palestine_peacetime
+		has_journal_entry = je_second_intifada
+		has_journal_entry = je_collapse_of_yugoslavia
+		has_journal_entry = je_yugoslav_wars_serbia
+	}
+}
+
+smd_crime_affected_state = {
+	is_incorporated = yes
+	has_variable = smd_unrest_months
+	var:smd_unrest_months >= 12
+}
+
+smd_crime_entrenched_state = {
+	is_incorporated = yes
+	has_variable = smd_unrest_months
+	var:smd_unrest_months >= 24
+}
+
+smd_language_other_minority = {
+	NOT = { is_primary_culture_of = ROOT }
+	NOT = { this = ROOT.var:smd_language_minority }
+	ROOT = {
+		culture_percent_country = {
+			target = PREV
+			value >= 0.05
+		}
+	}
+}

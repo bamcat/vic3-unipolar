@@ -87,7 +87,7 @@ intifada_events.5 = {
 	trigger = { c:PAL ?= this is_at_war = yes }
 
 	option = {
-		name = intifada_events.5.a # Escalate the resistance
+		name = intifada_events.5.a
 		default_option = yes
 		add_modifier = { name = intifada_stone_throwing months = 6 }
 		c:ISR ?= {
@@ -101,7 +101,7 @@ intifada_events.5 = {
 	}
 
 	option = {
-		name = intifada_events.5.b # Show restraint
+		name = intifada_events.5.b
 		ai_chance = { base = 2 }
 	}
 }
@@ -120,7 +120,7 @@ intifada_events.6 = {
 	trigger = { c:PAL ?= this is_at_war = yes }
 
 	option = {
-		name = intifada_events.6.a # Strike the checkpoints
+		name = intifada_events.6.a
 		default_option = yes
 		add_modifier = {
 			name = intifada_raid_expenses
@@ -137,13 +137,11 @@ intifada_events.6 = {
 	}
 
 	option = {
-		name = intifada_events.6.b # Too dangerous
+		name = intifada_events.6.b
 		ai_chance = { base = 4 }
 	}
 }
 
-# International Condemnation — unique intifada event
-# Media coverage shifts world opinion, damages Israel's reputation
 intifada_events.8 = {
 	type = country_event
 	placement = ROOT
@@ -160,14 +158,12 @@ intifada_events.8 = {
 	}
 
 	option = {
-		name = intifada_events.8.a # Appeal to the world
+		name = intifada_events.8.a
 		default_option = yes
-		# International sympathy shifts toward Palestine
 		c:ISR ?= {
 			change_infamy = 3
 			add_modifier = { name = intifada_international_pressure months = 12 }
 		}
-		# Arab League members improve relations with Palestine
 		every_country = {
 			limit = {
 				is_target_in_global_variable_list = { name = io_arab_league_members target = this }

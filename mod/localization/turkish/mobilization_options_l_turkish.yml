@@ -1,5 +1,4 @@
 ﻿l_turkish:
-
  MOBILIZATION_OPTION_UPKEEP_SHORT: "[ConcatIfNeitherEmpty(MobilizationOption.GetUpkeepModifier.GetDesc,'\n')][MobilizationOption.GetUpkeepUnscaledModifier.GetDesc]"
  MOBILIZATION_OPTION_GROUP_TOOLTIP: "[MobilizationOptionGroup.GetDesc]"
  MOBILIZATION_OPTION_TOOLTIP: "[AddLocalizationIf(Not(MobilizationOption.GetUnitModifier.IsEmpty),'MOBILIZATION_OPTION_EFFECTS_HEADER')][MobilizationOption.GetUnitModifier.GetDesc][AddLocalizationIf(Not(MobilizationOption.GetUnitModifier.IsEmpty),'\n\n')][AddLocalizationIf(Not(MobilizationOption.GetUpkeepModifier.IsEmpty),'MOBILIZATION_OPTION_UPKEEP_HEADER')]$MOBILIZATION_OPTION_UPKEEP_SHORT$[AddLocalizationIf(Not(MobilizationOption.GetUpkeepModifier.IsEmpty),'\n\n')][MobilizationOption.GetDesc]"
@@ -9,7 +8,7 @@
  ACTIVATE_MOBILIZATION_OPTION_BUTTON_TOOLTIP: "#header Activate [MobilizationOption.GetName]#![ConcatIfNeitherEmpty('\n', AddLocalizationIf(MobilizationOption.IsActivated(MilitaryFormation.AccessSelf), 'ALREADY_ACTIVATED'))]$TOOLTIP_DELIMITER$\n[MobilizationOption.GetTooltipWithActivateDesc(MilitaryFormation.AccessSelf)]"
  ALREADY_ACTIVATED: "#i Zaten aktif#!"
  DEACTIVATE_MOBILIZATION_OPTION_BUTTON_TOOLTIP: "#header Deactivate [MobilizationOption.GetName]#!\n\n[MobilizationOption.GetTooltipWithDeactivateDesc(MilitaryFormation.AccessSelf)]"
- 
+
  MOBILIZATION_OPTION_TOOLTIP_WITH_TOGGLE_DESC: "[ConcatIfNeitherEmpty('$TOGGLE_DESC$','\n\n')]$TOOLTIP$[ConcatIfNeitherEmpty('\n\n','$EFFECT_HEADER$')]$EFFECT$"
  MOBILIZATION_OPTION_TOOLTIP_WITH_TOGGLE_DESC_WARNING_HEADER: "#title @warning! Aşağıdaki etkilerde sonuçlanabilir:#!\n"
 
@@ -33,7 +32,7 @@
  mobilization_option_it_hurts_organization_when_you_adjust_equipment_tt: "Mevcut [concept_organization] [concept_army] #v% 50#! geri döndüklerinde veya kapatıldığında"
  mobilization_option_it_hurts_organization_to_add_medic_support_tt: "Mevcut [concept_organization] [concept_army] #v% 25#! geri döndüğü zaman #!"
  mobilization_option_it_hurts_morale_and_organization_when_you_remove_medic_support_tt: "[Concept('concept_unit','$concept_unit_possessive$')] mevcut [concept_morale] #v% 50#! ve mevcut [concept_organization] #v% 25#!%[Concept('concept_mobilize_army','$concept_mobilize_army_mobilized$')] [concept_army]"
- 
+
  mobilization_option_extra_supplies: "Meal-Ready-to-Eat"
  mobilization_option_extra_supplies_desc: "Askerler için standartlaştırılmış, modern rasyonlar"
  mobilization_option_luxurious_supplies: "Luxurious Meal-Ready-to-Eat"
@@ -71,7 +70,6 @@
  mobilization_option_field_hospitals: "Alan Hastaneleri"
  mobilization_option_field_hospitals_desc: "Güçlü otlara erişimi olan yetenekli cerrahlar hayat kurtaran mucizeleri gerçekleştirebilir."
 
- #Mobilization option groups
  supplies: "Malzemeler"
  supplies_desc: "Ordunuz için malzeme"
  supplements: "Tamamlar"
@@ -85,8 +83,5 @@
  medic_support: "Tıbbi Destek"
  medic_support_desc: "Ordunuzun ekipmanı yaralı askerlerini tedavi etmek için mevcuttur."
 
- 
-# SMD
-
-mobilization_option_air_transport:0 "Aerial Transport"
-mobilization_option_air_transport_desc:0 "Birimlerimizi kolay ve verimli hareket için uçaklara yükler."
+ mobilization_option_air_transport:0 "Aerial Transport"
+ mobilization_option_air_transport_desc:0 "Birimlerimizi kolay ve verimli hareket için uçaklara yükler."

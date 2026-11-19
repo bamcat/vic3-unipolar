@@ -3,10 +3,6 @@
 # SCRIPTED EFFECTS
 # ==========================================
 
-# Clears the active development path and
-# resets all associated variables.
-# Called on completion and on abandon.
-
 ndp_clear_path_effect = {
 	remove_variable = ndp_industrial
 	remove_variable = ndp_military
@@ -46,7 +42,7 @@ ndp_clear_path_effect = {
 	remove_variable = ndpe14
 	remove_variable = ndpe15
 	remove_variable = ndpe16
-	je:je_national_development = {
+	je:je_national_development ?= {
 			add_progress = {
 				value = -120
 				name = national_development_progress_bar

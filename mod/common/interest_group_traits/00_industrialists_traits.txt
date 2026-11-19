@@ -101,3 +101,57 @@ ig_trait_responsible_government = {
 	}
 }
 
+ig_trait_rus_protected_factories = {
+	icon = "gfx/interface/icons/ig_trait_icons/industrial_organizers.dds"
+	min_approval = loyal
+
+	modifier = {
+		building_group_bg_manufacturing_throughput_add = 0.1
+	}
+}
+
+ig_trait_rus_state_credit = {
+	icon = "gfx/interface/icons/ig_trait_icons/treasury_bonds.dds"
+	min_approval = happy
+
+	modifier = {
+		country_loan_interest_rate_mult = -0.1
+	}
+}
+
+ig_trait_rus_asset_stripping = {
+	icon = "gfx/interface/icons/ig_trait_icons/tax_avoidance.dds"
+	max_approval = unhappy
+
+	modifier = {
+		building_group_bg_manufacturing_tax_mult = -0.15
+	}
+}
+
+ig_trait_rus_media_empires = {
+	icon = "gfx/interface/icons/ig_trait_icons/propagandists.dds"
+	min_approval = loyal
+
+	modifier = {
+		country_legitimacy_base_add = 5
+	}
+}
+
+ig_trait_rus_loans_for_shares = {
+	icon = "gfx/interface/icons/ig_trait_icons/job_creators.dds"
+	min_approval = happy
+
+	modifier = {
+		state_capitalists_investment_pool_efficiency_mult = 0.15
+	}
+}
+
+ig_trait_rus_offshore_accounts = {
+	icon = "gfx/interface/icons/ig_trait_icons/tax_avoidance.dds"
+	max_approval = unhappy
+
+	modifier = {
+		state_tax_collection_mult = -0.1
+		country_private_construction_allocation_mult = -0.1
+	}
+}

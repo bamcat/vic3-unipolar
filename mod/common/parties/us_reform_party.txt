@@ -1,0 +1,72 @@
+us_reform_party = {
+	color = { 120 70 160 }
+	name = {
+		first_valid = {
+			triggered_desc = {
+				desc = party_us_reform
+				trigger = {
+					always = yes
+				}
+			}
+		}
+	}
+	icon = {
+		default = "/gfx/interface/icons/political_parties/radical_cause.dds"
+	}
+
+	valid_for_country = {
+		exists = c:USA
+		THIS = c:USA
+	}
+
+	available_for_interest_group = {
+		is_marginal = no
+		leader ?= { has_ideology = ideology:ideology_right_wing_populist_leader }
+		year < 2001
+	}
+
+	join_weight = {
+		value = {
+			value = -5
+			desc = "base_value"
+		}
+		if = {
+			limit = {
+				leader ?= { has_ideology = ideology:ideology_right_wing_populist_leader }
+			}
+			add = { value = 120 desc = "leader_ideological_compatibility" }
+		}
+		if = {
+			limit = {
+				leader ?= {
+					NOR = {
+						has_ideology = ideology:ideology_right_wing_populist_leader
+					}
+				}
+			}
+			add = { value = -40 desc = "leader_ideology_unrelated" }
+		}
+		if = {
+			limit = {
+				OR = {
+					has_ideology = ideology:ideology_isolationist
+					has_ideology = ideology:ideology_nationalist
+					has_ideology = ideology:ideology_traditionalist
+				}
+			}
+			add = { value = 8 desc = "interest_group_adjacent_ideology" }
+		}
+		if = {
+			limit = {
+				scope:number = 1
+				is_powerful = no
+				is_marginal = no
+			}
+			multiply = { value = 2 desc = "from_influential_supporting_member" }
+		}
+		else_if = {
+			limit = { scope:number = 2 }
+			multiply = { value = 0.75 desc = "from_two_prior_members" }
+		}
+	}
+}

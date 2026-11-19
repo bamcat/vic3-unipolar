@@ -1,4 +1,4 @@
-je_uranium_enrichment = {
+﻿je_uranium_enrichment = {
 	icon = "gfx/interface/icons/event_icons/nuclear_bomb.dds"
 	group = je_group_domestic_policy
  
@@ -15,74 +15,69 @@ je_uranium_enrichment = {
  
 	on_monthly_pulse = {
 		effect = {
-			# Base advancement
 			change_variable = { name = uranium_enrichment_progress add = 2 }
  
-			# Extra per nuclear plant above 3
 			if = {
 				limit = {
-					any_scope_state = {
-						is_incorporated = yes
-						has_building = building_nuclear_plant
-						count >= 4
+					country_has_building_type_levels = {
+						target = bt:building_nuclear_plant
+						value >= 4
 					}
 				}
 				change_variable = { name = uranium_enrichment_progress add = 1 }
 			}
 			if = {
 				limit = {
-					any_scope_state = {
-						is_incorporated = yes
-						has_building = building_nuclear_plant
-						count >= 6
+					country_has_building_type_levels = {
+						target = bt:building_nuclear_plant
+						value >= 6
 					}
 				}
 				change_variable = { name = uranium_enrichment_progress add = 1 }
 			}
  
-			# War slows enrichment
 			if = {
 				limit = { is_at_war = yes }
 				change_variable = { name = uranium_enrichment_progress add = -1 }
 			}
  
-			# Clamp to 100
 			if = {
 				limit = { var:uranium_enrichment_progress >= 100 }
 				set_variable = { name = uranium_enrichment_progress value = 100 }
 			}
 		}
  
-		# Random events fire during enrichment
 		random_events = {
 			10 = 0
 			2 = nuclear_events.2
 		}
 	}
- 
-	complete = {
-		var:uranium_enrichment_progress >= 100
+
+
+
+	outcome = {
+		header = je_standard_completion_header
+		effect_header = je_standard_on_completion_header
+		color = "gold_positive"
+		conclusion_desc = je_standard_completion_conclusion_desc
+		trigger = { var:uranium_enrichment_progress >= 100 }
+		effect = {
+			remove_variable = nuclear_enrichment_active
+			set_variable = nuclear_capable
+			trigger_event = { id = nuclear_events.1 popup = yes }
+		}
 	}
- 
-	on_complete = {
-		remove_variable = nuclear_enrichment_active
-		set_variable = nuclear_capable
-		trigger_event = { id = nuclear_events.1 popup = yes }
-	}
- 
-	invalid = {
-		NOT = { has_variable = nuclear_enrichment_active }
-	}
- 
-	weight = 8000
+
+	outcome = {
+		flags = { hidden invalid_outcome }
+		conclusion_desc = je_standard_failure_conclusion_desc
+		trigger = { NOT = { has_variable = nuclear_enrichment_active } }
+	}	weight = 8000
 	transferable = no
 	can_revolution_inherit = no
 }
  
 # ── NUCLEAR PRODUCTION JE ────────────────
-# Opens when player clicks Manufacture Warhead.
-# Faster than enrichment — base 5/month.
-# At 100: +1 to nukes variable.
  
 je_nuclear_production = {
 	icon = "gfx/interface/icons/event_icons/nuclear_bomb.dds"
@@ -102,10 +97,8 @@ je_nuclear_production = {
  
 	on_monthly_pulse = {
 		effect = {
-			# Faster than enrichment — production is straightforward
 			change_variable = { name = nuclear_production_progress add = 5 }
  
-			# Each silo above 1 adds speed
 			if = {
 				limit = {
 					any_scope_state = {
@@ -117,54 +110,64 @@ je_nuclear_production = {
 				change_variable = { name = nuclear_production_progress add = 2 }
 			}
  
-			# Clamp
 			if = {
 				limit = { var:nuclear_production_progress >= 100 }
 				set_variable = { name = nuclear_production_progress value = 100 }
 			}
 		}
 	}
- 
-	complete = {
-		var:nuclear_production_progress >= 100
-	}
- 
-	on_complete = {
-		remove_variable = nuclear_production_active
-		# Increment warhead count
-		if = {
-			limit = { NOT = { has_variable = nukes } }
-			set_variable = { name = nukes value = 1 }
-		}
-		else = {
-			change_variable = { name = nukes add = 1 }
-		}
-		set_variable = { name = nuclear_production_progress value = 0 }
-		trigger_event = { id = nuclear_events.3 popup = yes }
 
-		# If more warheads are queued, consume one and start the next
-		# production run automatically.
-		if = {
-			limit = {
-				has_variable = nuclear_production_queue
-				var:nuclear_production_queue > 0
-				any_scope_state = {
-					is_incorporated = yes
-					has_building = building_nuclear_silo
+
+
+	outcome = {
+		header = je_standard_completion_header
+		effect_header = je_standard_on_completion_header
+		color = "gold_positive"
+		conclusion_desc = je_standard_completion_conclusion_desc
+		trigger = { var:nuclear_production_progress >= 100 }
+		effect = {
+			remove_variable = nuclear_production_active
+			if = {
+				limit = { NOT = { has_variable = nukes } }
+				set_variable = { name = nukes value = 1 }
+			}
+			else = {
+				change_variable = { name = nukes add = 1 }
+			}
+			set_variable = { name = nuclear_production_progress value = 0 }
+			if = {
+				limit = { NOT = { has_variable = first_warhead_produced } }
+				set_variable = first_warhead_produced
+				add_modifier = {
+					name = nuclear_warhead_produced_modifier
+					months = 24
 				}
 			}
-			change_variable = { name = nuclear_production_queue add = -1 }
-			set_variable = nuclear_production_active
-			set_variable = { name = nuclear_production_progress value = 0 }
-			add_journal_entry = { type = je_nuclear_production }
+			post_notification = nuclear_warhead_produced
+
+			# production run automatically.
+			if = {
+				limit = {
+					has_variable = nuclear_production_queue
+					var:nuclear_production_queue > 0
+					any_scope_state = {
+						is_incorporated = yes
+						has_building = building_nuclear_silo
+					}
+				}
+				change_variable = { name = nuclear_production_queue add = -1 }
+				set_variable = nuclear_production_active
+				set_variable = { name = nuclear_production_progress value = 0 }
+				trigger_event = { id = um_journal_events.2 days = 1 }
+			}
 		}
 	}
- 
-	invalid = {
-		NOT = { has_variable = nuclear_production_active }
-	}
- 
-	weight = 8001
+
+	outcome = {
+		flags = { hidden invalid_outcome }
+		conclusion_desc = je_standard_failure_conclusion_desc
+		trigger = { NOT = { has_variable = nuclear_production_active } }
+	}	weight = 8001
 	transferable = no
 	can_revolution_inherit = no
 }
@@ -182,11 +185,8 @@ je_icbm_programme = {
 
 	on_monthly_pulse = {
 		effect = {
-			# Base 3/month — slower than warhead production
-			# Requires active research investment
 			change_variable = { name = icbm_progress add = 3 }
  
-			# Literacy and schools accelerate development
 			if = {
 				limit = {
 					literacy_rate >= 0.85
@@ -204,21 +204,26 @@ je_icbm_programme = {
 			}
 		}
 	}
- 
-	complete = {
-		var:icbm_progress >= 100
+
+
+
+	outcome = {
+		header = je_standard_completion_header
+		effect_header = je_standard_on_completion_header
+		color = "gold_positive"
+		conclusion_desc = je_standard_completion_conclusion_desc
+		trigger = { var:icbm_progress >= 100 }
+		effect = {
+			set_variable = icbm_programme_complete
+			trigger_event = { id = nuclear_events.11 popup = yes }
+		}
 	}
- 
-	on_complete = {
-		set_variable = icbm_programme_complete
-		trigger_event = { id = nuclear_events.11 popup = yes }
-	}
- 
-	invalid = {
-		NOT = { has_variable = nuclear_capable }
-	}
- 
-	weight = 7999
+
+	outcome = {
+		flags = { hidden invalid_outcome }
+		conclusion_desc = je_standard_failure_conclusion_desc
+		trigger = { NOT = { has_variable = nuclear_capable } }
+	}	weight = 7999
 	transferable = no
 	can_revolution_inherit = no
 }

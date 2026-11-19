@@ -1,5 +1,5 @@
 ﻿# Exxonmobil
-company_standard_oil = {
+REPLACE_OR_CREATE:company_standard_oil = {
 	icon = "gfx/interface/icons/company_icons/usa/american_standard_oil.dds"
 	background = "gfx/interface/icons/company_icons/company_backgrounds/comp_illu_oil_drills.dds"
 
@@ -15,20 +15,20 @@ company_standard_oil = {
 	}
 
 	potential = {
-		has_interest_marker_in_region = geographic_region_the_midwest_old
+		any_scope_state = { is_in_geographic_region = geographic_region_the_midwest_old }
 	}
 
 	attainable = {
-		hidden_trigger = { # Hide attainable if it's always fulfilled by possible
+		hidden_trigger = {
 			any_scope_state = {
-				region = sr:region_the_midwest
+				is_in_geographic_region = geographic_region_the_midwest_old
 			}
 		}
 	}
 
 	possible = {
 		any_scope_state = {
-			region = sr:region_the_midwest
+			is_in_geographic_region = geographic_region_the_midwest_old
 			is_incorporated = yes
 			any_scope_building = {
 				is_building_type = building_oil_rig
@@ -44,7 +44,7 @@ company_standard_oil = {
 	ai_will_do = {
 		has_technology_researched = pumpjacks
 		any_scope_state = {
-			region = sr:region_the_midwest
+			is_in_geographic_region = geographic_region_the_midwest_old
 			is_incorporated = yes
 			has_potential_resource = bg_oil_extraction
 		}
@@ -54,19 +54,19 @@ company_standard_oil = {
 		building_oil_rig = {
 			level = 5
 			state_trigger = {
-				region = sr:region_the_midwest
+				is_in_geographic_region = geographic_region_the_midwest_old
 				is_incorporated = yes
 			}
 		}
 	}
 
 	ai_weight = {
-		value = 3 # Higher base value for flavored companies
+		value = 3
 	}
 }
 
 # Chiquita
-company_united_fruit = {
+REPLACE_OR_CREATE:company_united_fruit = {
 	icon = "gfx/interface/icons/company_icons/usa/american_united_fruit_co.dds"
 	background = "gfx/interface/icons/company_icons/company_backgrounds/comp_illu_plantation.dds"
 
@@ -166,12 +166,12 @@ company_united_fruit = {
 	}
 
 	ai_weight = {
-		value = 3 # Higher base value for flavored companies
+		value = 3
 	}
 }
 
 # U.S.S
-company_us_steel = {
+REPLACE_OR_CREATE:company_us_steel = {
 	icon = "gfx/interface/icons/company_icons/usa/american_carnegie_steel.dds"
 	background = "gfx/interface/icons/company_icons/company_backgrounds/comp_illu_manufacturing_heavy.dds"
 
@@ -201,11 +201,11 @@ company_us_steel = {
 	}
 
 	potential = {
-		has_interest_marker_in_region = geographic_region_new_england_old
+		any_scope_state = { is_in_geographic_region = geographic_region_new_england_old }
 	}
 
 	attainable = {
-		hidden_trigger = { # Hide attainable if it's always fulfilled by possible
+		hidden_trigger = {
 			any_scope_state = {
 				state_region = s:STATE_PENNSYLVANIA
 			}
@@ -246,11 +246,11 @@ company_us_steel = {
 	}
 
 	ai_weight = {
-		value = 3 # Higher base value for flavored companies
+		value = 3
 	}
 }
 
-company_general_electric = {
+REPLACE_OR_CREATE:company_general_electric = {
 	icon = "gfx/interface/icons/company_icons/usa/american_general_electric.dds"
 	background = "gfx/interface/icons/company_icons/company_backgrounds/comp_illu_manufacturing_heavy.dds"
 
@@ -272,11 +272,11 @@ company_general_electric = {
 	}
 
 	potential = {
-		has_interest_marker_in_region = geographic_region_new_england_old
+		any_scope_state = { is_in_geographic_region = geographic_region_new_england_old }
 	}
 
 	attainable = {
-		hidden_trigger = { # Hide attainable if it's always fulfilled by possible
+		hidden_trigger = {
 			any_scope_state = {
 				OR = {
 					state_region = s:STATE_MASSACHUSETTS
@@ -330,12 +330,12 @@ company_general_electric = {
 	}
 
 	ai_weight = {
-		value = 3 # Higher base value for flavored companies
+		value = 3
 	}
 }
 
 # General Dynamics
-company_william_cramp = {
+REPLACE_OR_CREATE:company_william_cramp = {
 	icon = "gfx/interface/icons/company_icons/usa/american_william_and_sons.dds"
 	background = "gfx/interface/icons/company_icons/company_backgrounds/comp_illu_harbor_shipbuilding.dds"
 
@@ -354,14 +354,14 @@ company_william_cramp = {
 	}
 
 	potential = {
-		has_interest_marker_in_region = geographic_region_new_england_old
+		any_scope_state = { is_in_geographic_region = geographic_region_new_england_old }
 	}
 
 	attainable = {
-		hidden_trigger = { # Hide attainable if it's always fulfilled by possible
+		hidden_trigger = {
 			any_scope_state = {
 				OR = {
-					state_region = s:STATE_NEW_JERSEY # This Should be Philly, but due to map issues that won't work
+					state_region = s:STATE_NEW_JERSEY
 					state_region = s:STATE_DELAWARE
 					state_region = s:STATE_MARYLAND
 				}
@@ -372,7 +372,7 @@ company_william_cramp = {
 	possible = {
 		any_scope_state = {
 			OR = {
-				state_region = s:STATE_NEW_JERSEY # This Should be Philly, but due to map issues that won't work
+				state_region = s:STATE_NEW_JERSEY
 				state_region = s:STATE_DELAWARE
 				state_region = s:STATE_MARYLAND
 			}
@@ -395,7 +395,7 @@ company_william_cramp = {
 	ai_will_do = {
 		any_scope_state = {
 			OR = {
-				state_region = s:STATE_NEW_JERSEY # This Should be Philly, but due to map issues that won't work
+				state_region = s:STATE_NEW_JERSEY
 				state_region = s:STATE_DELAWARE
 				state_region = s:STATE_MARYLAND
 			}
@@ -408,7 +408,7 @@ company_william_cramp = {
 			level = 5
 			state_trigger = {
 				OR = {
-					state_region = s:STATE_NEW_JERSEY # This Should be Philly, but due to map issues that won't work
+					state_region = s:STATE_NEW_JERSEY
 					state_region = s:STATE_DELAWARE
 					state_region = s:STATE_MARYLAND
 				}
@@ -419,7 +419,7 @@ company_william_cramp = {
 			level = 5
 			state_trigger = {
 				OR = {
-					state_region = s:STATE_NEW_JERSEY # This Should be Philly, but due to map issues that won't work
+					state_region = s:STATE_NEW_JERSEY
 					state_region = s:STATE_DELAWARE
 					state_region = s:STATE_MARYLAND
 				}
@@ -429,7 +429,7 @@ company_william_cramp = {
 	}
 
 	ai_weight = {
-		value = 3 # Higher base value for flavored companies
+		value = 3
 	}
 }
 
@@ -458,11 +458,11 @@ REPLACE_OR_CREATE:company_ford_motor = {
 	}
 
 	potential = {
-		has_interest_marker_in_region = geographic_region_the_midwest_old
+		any_scope_state = { is_in_geographic_region = geographic_region_the_midwest_old }
 	}
 
 	attainable = {
-		hidden_trigger = { # Hide attainable if it's always fulfilled by possible
+		hidden_trigger = {
 			any_scope_state = {
 				state_region = s:STATE_MICHIGAN
 			}
@@ -503,6 +503,6 @@ REPLACE_OR_CREATE:company_ford_motor = {
 	}
 
 	ai_weight = {
-		value = 3 # Higher base value for flavored companies
+		value = 3
 	}
 }

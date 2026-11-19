@@ -19,7 +19,7 @@ rubber_events.1 = {
 
 	duration = 3
 
-	cooldown = { days = never_fire_again_modifier_time } #cooldown for state. Rubber can only be transplanted "for the first time" once.
+	cooldown = { days = never_fire_again_modifier_time }
 	trigger = {
 		has_potential_resource = bg_rubber
 		NOT = { region = sr:region_brazil }
@@ -43,7 +43,7 @@ rubber_events.1 = {
 	immediate = {
 		save_scope_as = rubber_state
 		owner = {
-			set_variable = { name = rubber_rush_event_var days = very_long_modifier_time } #national cooldown. Rubber rushes are no longer so frequent.
+			set_variable = { name = rubber_rush_event_var days = very_long_modifier_time }
 		}
 		owner = {
 			ordered_scope_state = {
@@ -96,7 +96,7 @@ rubber_events.1 = {
 
 	option = { #always spread rubber
 		name = rubber_events.1.c
-		trigger = { #Only available if both options are visible or else player may not realise what choice they're making.
+		trigger = {
 			owner = {
 				exists = scope:rubber_centre
 				scope:rubber_centre = {
@@ -119,7 +119,7 @@ rubber_events.1 = {
 		}
 	}
 
-	option = { #Always focus on the existing rubber nexus
+	option = {
 		name = rubber_events.1.e
 		trigger = {
 			owner = {
@@ -177,9 +177,8 @@ rubber_events.2 = { #hidden event that does the effects if the player chooses op
 
 	immediate = {
 		save_scope_as = rubber_state
-		#Notification on on-action or in code.
 		owner = {
-			set_variable = { name = rubber_rush_event_var days = very_long_modifier_time } #national cooldown. Rubber rushes are no longer so frequent.
+			set_variable = { name = rubber_rush_event_var days = very_long_modifier_time }
 		}
 		if = {
 			limit = {

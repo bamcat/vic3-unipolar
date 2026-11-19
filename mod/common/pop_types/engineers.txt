@@ -1,7 +1,7 @@
 ﻿engineers = {
 	texture = "gfx/interface/icons/pops_icons/engineers.dds"
 	color = hsv{ 0.07 0.57 0.77 }
-	start_quality_of_life = 10
+	start_quality_of_life = 20
 	wage_weight = 16
 	paid_private_wage = yes
 	literacy_target = 0.35
@@ -46,10 +46,6 @@
 				is_peasant_under_serfdom = no 
 				literacy_rate > 0.04
 			}
-			# baseline: ( literacy - 0.04 ) * 160 + ( wealth / 20 ).
-			# Rescaled to the mod's college-educated literacy: the old gate of
-			# 0.20 meant a developed nation at exactly 20% produced NO engineers,
-			# and manufacturing is 33% engineers.
 			add = {
 				value = literacy_rate
 				subtract = 0.04

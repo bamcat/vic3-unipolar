@@ -1,0 +1,265 @@
+﻿rus_l90_fund_maskhadov_button = {
+	name = "rus_l90_fund_maskhadov_button"
+	desc = "rus_l90_fund_maskhadov_button_desc"
+
+	visible = {
+		rus_l90_ichkeria_independent = yes
+	}
+
+	possible = {
+		rus_l90_ichkeria_moderate_rule = yes
+		rus_l90_at_peace_with_ichkeria = yes
+		NOT = { has_modifier = rus_l90_maskhadov_aid }
+	}
+
+	ai_chance = {
+		value = 5
+	}
+
+	effect = {
+		add_treasury = {
+			value = gdp
+			multiply = -0.01
+		}
+		add_modifier = { name = rus_l90_maskhadov_aid months = 12 }
+		c:CCH ?= {
+			change_relations = { country = ROOT value = 15 }
+		}
+		rus_l90_rad_change = { V = -5 }
+		custom_tooltip = rus_l90_fund_maskhadov_tt
+	}
+}
+
+rus_l90_border_cordon_button = {
+	name = "rus_l90_border_cordon_button"
+	desc = "rus_l90_border_cordon_button_desc"
+
+	visible = {
+		rus_l90_ichkeria_independent = yes
+	}
+
+	possible = {
+		authority >= 75
+		NOT = { has_modifier = rus_l90_border_cordon }
+	}
+
+	ai_chance = {
+		value = 3
+	}
+
+	effect = {
+		add_modifier = { name = rus_l90_border_cordon months = 12 }
+		custom_tooltip = rus_l90_border_cordon_tt
+	}
+}
+
+rus_l90_recognise_ichkeria_button = {
+	name = "rus_l90_recognise_ichkeria_button"
+	desc = "rus_l90_recognise_ichkeria_button_desc"
+
+	visible = {
+		rus_l90_ichkeria_independent = yes
+		NOT = { has_global_variable = ichkeria_recognised }
+	}
+
+	possible = {
+		rus_l90_at_peace_with_ichkeria = yes
+		rus_l90_rad_below = { V = 30 }
+		rus_l90_ichkeria_moderate_rule = yes
+		NOT = { has_variable = rus_l90_casus_belli }
+	}
+
+	ai_chance = {
+		value = 0
+	}
+
+	effect = {
+		rus_l90_recognise_ichkeria = yes
+	}
+}
+
+rus_l90_counter_terror_button = {
+	name = "rus_l90_counter_terror_button"
+	desc = "rus_l90_counter_terror_button_desc"
+
+	visible = {
+		rus_l90_second_war_possible = yes
+	}
+
+	possible = {
+		OR = {
+			rus_l90_has_casus_belli = yes
+			rus_l90_rad_above = { V = 80 }
+		}
+		is_at_war = no
+	}
+
+	ai_chance = {
+		value = 20
+	}
+
+	effect = {
+		rus_l90_start_second_war = yes
+	}
+}
+
+cch_l90_rein_warlords_button = {
+	name = "cch_l90_rein_warlords_button"
+	desc = "cch_l90_rein_warlords_button_desc"
+
+	visible = {
+		c:CCH ?= this
+	}
+
+	possible = {
+		authority >= 50
+		NOT = { has_modifier = cch_l90_warlords_reined }
+	}
+
+	ai_chance = {
+		value = 5
+		if = {
+			limit = { rus_l90_ichkeria_moderate_rule = no }
+			multiply = 0
+		}
+	}
+
+	effect = {
+		add_modifier = { name = cch_l90_warlords_reined months = 12 }
+		remove_modifier = cch_l90_foreign_volunteers
+		custom_tooltip = cch_l90_rein_warlords_tt
+		rus_l90_rad_change = { V = -5 }
+	}
+}
+
+cch_l90_welcome_volunteers_button = {
+	name = "cch_l90_welcome_volunteers_button"
+	desc = "cch_l90_welcome_volunteers_button_desc"
+
+	visible = {
+		c:CCH ?= this
+	}
+
+	possible = {
+		NOT = { has_modifier = cch_l90_foreign_volunteers }
+		NOT = { has_modifier = cch_l90_warlords_reined }
+	}
+
+	ai_chance = {
+		value = 2
+		if = {
+			limit = { rus_l90_ichkeria_moderate_rule = no }
+			add = 10
+		}
+	}
+
+	effect = {
+		add_modifier = { name = cch_l90_foreign_volunteers months = 24 }
+		custom_tooltip = cch_l90_welcome_volunteers_tt
+		rus_l90_rad_change = { V = 10 }
+	}
+}
+
+rus_l90_chechenization_button = {
+	name = "rus_l90_chechenization_button"
+	desc = "rus_l90_chechenization_button_desc"
+
+	visible = {
+		rus_l90_insurgency_phase = yes
+		rus_l90_kadyrov_path = yes
+	}
+
+	possible = {
+		NOT = { has_modifier = rus_l90_chechenization }
+	}
+
+	ai_chance = {
+		value = 20
+	}
+
+	effect = {
+		add_modifier = { name = rus_l90_chechenization }
+		custom_tooltip = rus_l90_chechenization_tt
+		rus_wn_inst_change = { I = army V = -5 }
+	}
+}
+
+rus_l90_sweeps_button = {
+	name = "rus_l90_sweeps_button"
+	desc = "rus_l90_sweeps_button_desc"
+
+	visible = {
+		rus_l90_insurgency_phase = yes
+	}
+
+	possible = {
+		NOT = { has_modifier = rus_l90_sweeps }
+	}
+
+	cooldown = { days = 180 }
+
+	ai_chance = {
+		value = 10
+	}
+
+	effect = {
+		rus_l90_insurgency_change = { V = -10 }
+		add_modifier = { name = rus_l90_sweeps months = 12 }
+		change_infamy = 3
+		rus_wn_inst_change = { I = mvd V = 5 }
+	}
+}
+
+rus_l90_rebuild_grozny_button = {
+	name = "rus_l90_rebuild_grozny_button"
+	desc = "rus_l90_rebuild_grozny_button_desc"
+
+	visible = {
+		rus_l90_insurgency_phase = yes
+	}
+
+	possible = {
+		NOT = { has_modifier = rus_l90_grozny_rebuilding }
+	}
+
+	ai_chance = {
+		value = 5
+	}
+
+	effect = {
+		add_treasury = {
+			value = gdp
+			multiply = -0.02
+		}
+		add_modifier = { name = rus_l90_grozny_rebuilding months = 24 }
+		custom_tooltip = rus_l90_rebuild_grozny_tt
+	}
+}
+
+rus_l90_garrison_button = {
+	name = "rus_l90_garrison_button"
+	desc = "rus_l90_garrison_button_desc"
+
+	visible = {
+		rus_l90_insurgency_phase = yes
+		NOT = { has_variable = rus_l90_garrison }
+	}
+
+	possible = {
+		authority >= 100
+	}
+
+	ai_chance = {
+		value = 5
+	}
+
+	effect = {
+		add_treasury = {
+			value = gdp
+			multiply = -0.01
+		}
+		set_variable = rus_l90_garrison
+		custom_tooltip = rus_l90_garrison_tt
+		rus_wn_inst_change = { I = army V = 5 }
+	}
+}

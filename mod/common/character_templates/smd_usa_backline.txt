@@ -1,0 +1,563 @@
+﻿usa_sanders_character_template = {
+	first_name = smd_cn_bernie
+	last_name = smd_cn_sanders
+	historical = yes
+	culture = cu:yankee
+	female = no
+	religion = rel:jewish
+	ideology = ideology_democratic_socialist_leader
+	interest_group = ig_trade_unions
+	birth_date = 1941.9.8
+	dna = dna_bernie_sanders
+	traits = {
+		experienced_political_operator
+		inspirational_orator
+		direct
+	}
+	interest_group_leader_usage = {
+		country_trigger = {
+			exists = c:USA
+			c:USA ?= THIS
+		}
+		interest_group_trigger = {
+			is_interest_group_type = ig_trade_unions
+		}
+		earliest_usage_date = 1992.1.1
+		latest_usage_date = 2030.1.1
+	}
+}
+
+usa_trumka_character_template = {
+	first_name = smd_cn_richard
+	last_name = smd_cn_trumka
+	historical = yes
+	culture = cu:yankee
+	female = no
+	religion = rel:catholic
+	ideology = ideology_progressive_leader
+	interest_group = ig_trade_unions
+	birth_date = 1949.7.24
+	traits = {
+		experienced_political_operator
+		charismatic
+	}
+	interest_group_leader_usage = {
+		country_trigger = {
+			exists = c:USA
+			c:USA ?= THIS
+		}
+		interest_group_trigger = {
+			ig_counts_as_marginal = no
+			is_interest_group_type = ig_trade_unions
+		}
+		earliest_usage_date = 2009.9.16
+		latest_usage_date = 2021.8.5
+	}
+}
+
+usa_schwarzkopf_character_template = {
+	first_name = smd_cn_norman
+	last_name = smd_cn_schwarzkopf
+	historical = yes
+	culture = cu:yankee
+	female = no
+	religion = rel:protestant
+	ideology = ideology_conservative_leader
+	interest_group = ig_armed_forces
+	birth_date = 1934.8.22
+	traits = {
+		basic_political_operator
+		direct
+	}
+	interest_group_leader_usage = {
+		country_trigger = {
+			exists = c:USA
+			c:USA ?= THIS
+		}
+		interest_group_trigger = {
+			ig_counts_as_marginal = no
+			is_interest_group_type = ig_armed_forces
+		}
+		earliest_usage_date = 1992.1.1
+		latest_usage_date = 2004.1.1
+	}
+}
+
+usa_wesley_clark_character_template = {
+	first_name = smd_cn_wesley
+	last_name = smd_cn_clark
+	historical = yes
+	culture = cu:dixie
+	female = no
+	religion = rel:catholic
+	ideology = ideology_moderate_leader
+	interest_group = ig_armed_forces
+	birth_date = 1944.12.23
+	traits = {
+		experienced_political_operator
+		meticulous
+	}
+	interest_group_leader_usage = {
+		country_trigger = {
+			exists = c:USA
+			c:USA ?= THIS
+		}
+		interest_group_trigger = {
+			ig_counts_as_marginal = no
+			is_interest_group_type = ig_armed_forces
+		}
+		earliest_usage_date = 2000.1.1
+		latest_usage_date = 2016.1.1
+	}
+}
+
+usa_petraeus_character_template = {
+	first_name = smd_cn_david
+	last_name = smd_cn_petraeus
+	historical = yes
+	culture = cu:yankee
+	female = no
+	religion = rel:catholic
+	ideology = ideology_conservative_leader
+	interest_group = ig_armed_forces
+	birth_date = 1952.11.7
+	traits = {
+		experienced_political_operator
+		meticulous
+	}
+	interest_group_leader_usage = {
+		country_trigger = {
+			exists = c:USA
+			c:USA ?= THIS
+		}
+		interest_group_trigger = {
+			ig_counts_as_marginal = no
+			is_interest_group_type = ig_armed_forces
+		}
+		earliest_usage_date = 2008.1.1
+		latest_usage_date = 2025.1.1
+	}
+}
+
+usa_bill_gates_character_template = {
+	first_name = smd_cn_bill
+	last_name = smd_cn_gates
+	historical = yes
+	culture = cu:yankee
+	female = no
+	religion = rel:protestant
+	ideology = ideology_neoliberal_leader
+	interest_group = ig_industrialists
+	birth_date = 1955.10.28
+	dna = dna_bill_gates
+	traits = {
+		meticulous
+		basic_political_operator
+	}
+	interest_group_leader_usage = {
+		country_trigger = {
+			exists = c:USA
+			c:USA ?= THIS
+		}
+		interest_group_trigger = {
+			ig_counts_as_marginal = no
+			is_interest_group_type = ig_industrialists
+		}
+		earliest_usage_date = 1994.1.1
+		latest_usage_date = 2020.1.1
+	}
+}
+
+usa_jack_welch_character_template = {
+	first_name = smd_cn_jack
+	last_name = smd_cn_welch
+	historical = yes
+	culture = cu:yankee
+	female = no
+	religion = rel:catholic
+	ideology = ideology_neoliberal_leader
+	interest_group = ig_industrialists
+	birth_date = 1935.11.19
+	traits = {
+		arrogant
+		experienced_political_operator
+	}
+	interest_group_leader_usage = {
+		country_trigger = {
+			exists = c:USA
+			c:USA ?= THIS
+		}
+		interest_group_trigger = {
+			ig_counts_as_marginal = no
+			is_interest_group_type = ig_industrialists
+		}
+		earliest_usage_date = 1992.1.1
+		latest_usage_date = 2002.1.1
+	}
+}
+
+usa_warren_buffett_character_template = {
+	first_name = smd_cn_warren
+	last_name = smd_cn_buffett
+	historical = yes
+	culture = cu:yankee
+	female = no
+	religion = rel:protestant
+	ideology = ideology_moderate_leader
+	interest_group = ig_industrialists
+	birth_date = 1930.8.30
+	traits = {
+		cautious
+		experienced_political_operator
+	}
+	interest_group_leader_usage = {
+		country_trigger = {
+			exists = c:USA
+			c:USA ?= THIS
+		}
+		interest_group_trigger = {
+			ig_counts_as_marginal = no
+			is_interest_group_type = ig_industrialists
+		}
+		earliest_usage_date = 1992.1.1
+		latest_usage_date = 2015.1.1
+	}
+}
+
+usa_gingrich_character_template = {
+	first_name = smd_cn_newt
+	last_name = smd_cn_gingrich
+	historical = yes
+	culture = cu:dixie
+	female = no
+	religion = rel:protestant
+	ideology = ideology_conservative_leader
+	interest_group = ig_landowners
+	birth_date = 1943.6.17
+	traits = {
+		arrogant
+		experienced_political_operator
+	}
+	interest_group_leader_usage = {
+		country_trigger = {
+			exists = c:USA
+			c:USA ?= THIS
+		}
+		interest_group_trigger = {
+			ig_counts_as_marginal = no
+			is_interest_group_type = ig_landowners
+		}
+		earliest_usage_date = 1994.1.1
+		latest_usage_date = 2000.1.1
+	}
+}
+
+usa_bob_dole_character_template = {
+	first_name = smd_cn_bob
+	last_name = smd_cn_dole
+	historical = yes
+	culture = cu:yankee
+	female = no
+	religion = rel:protestant
+	ideology = ideology_conservative_leader
+	interest_group = ig_landowners
+	birth_date = 1923.7.22
+	traits = {
+		experienced_political_operator
+		direct
+	}
+	interest_group_leader_usage = {
+		country_trigger = {
+			exists = c:USA
+			c:USA ?= THIS
+		}
+		interest_group_trigger = {
+			ig_counts_as_marginal = no
+			is_interest_group_type = ig_landowners
+		}
+		earliest_usage_date = 1992.1.1
+		latest_usage_date = 1997.1.1
+	}
+}
+
+usa_cheney_character_template = {
+	first_name = smd_cn_dick
+	last_name = smd_cn_cheney
+	historical = yes
+	culture = cu:yankee
+	female = no
+	religion = rel:protestant
+	ideology = ideology_neocon_leader
+	interest_group = ig_rural_folk
+	birth_date = 1941.1.30
+	dna = dna_dick_cheney
+	traits = {
+		experienced_political_operator
+		cautious
+	}
+	interest_group_leader_usage = {
+		country_trigger = {
+			exists = c:USA
+			c:USA ?= THIS
+		}
+		interest_group_trigger = {
+			ig_counts_as_marginal = no
+			is_interest_group_type = ig_rural_folk
+		}
+		earliest_usage_date = 1995.1.1
+		latest_usage_date = 2009.1.20
+	}
+}
+
+usa_mccain_character_template = {
+	first_name = john
+	last_name = smd_cn_mccain
+	historical = yes
+	culture = cu:dixie
+	female = no
+	religion = rel:protestant
+	ideology = ideology_conservative_leader
+	interest_group = ig_rural_folk
+	birth_date = 1936.8.29
+	traits = {
+		experienced_political_operator
+		direct
+	}
+	interest_group_leader_usage = {
+		country_trigger = {
+			exists = c:USA
+			c:USA ?= THIS
+		}
+		interest_group_trigger = {
+			ig_counts_as_marginal = no
+			is_interest_group_type = ig_rural_folk
+		}
+		earliest_usage_date = 2000.1.1
+		latest_usage_date = 2018.8.25
+	}
+}
+
+usa_hillary_clinton_character_template = {
+	first_name = smd_cn_hillary
+	last_name = clinton
+	historical = yes
+	culture = cu:yankee
+	female = yes
+	religion = rel:protestant
+	ideology = ideology_moderate_leader
+	interest_group = ig_professionals
+	birth_date = 1947.10.26
+	dna = dna_hillary_clinton
+	traits = {
+		experienced_political_operator
+		meticulous
+	}
+	interest_group_leader_usage = {
+		country_trigger = {
+			exists = c:USA
+			c:USA ?= THIS
+		}
+		interest_group_trigger = {
+			ig_counts_as_marginal = no
+			is_interest_group_type = ig_professionals
+		}
+		earliest_usage_date = 2000.1.1
+		latest_usage_date = 2017.1.1
+	}
+}
+
+usa_kerry_character_template = {
+	first_name = john
+	last_name = smd_cn_kerry
+	historical = yes
+	culture = cu:yankee
+	female = no
+	religion = rel:catholic
+	ideology = ideology_liberal_leader
+	interest_group = ig_professionals
+	birth_date = 1943.12.11
+	traits = {
+		experienced_political_operator
+		cautious
+	}
+	interest_group_leader_usage = {
+		country_trigger = {
+			exists = c:USA
+			c:USA ?= THIS
+		}
+		interest_group_trigger = {
+			ig_counts_as_marginal = no
+			is_interest_group_type = ig_professionals
+		}
+		earliest_usage_date = 2003.1.1
+		latest_usage_date = 2014.1.1
+	}
+}
+
+usa_gephardt_character_template = {
+	first_name = smd_cn_dick
+	last_name = smd_cn_gephardt
+	historical = yes
+	culture = cu:yankee
+	female = no
+	religion = rel:protestant
+	ideology = ideology_moderate_leader
+	interest_group = ig_petty_bourgeoisie
+	birth_date = 1941.1.31
+	traits = {
+		experienced_political_operator
+		cautious
+	}
+	interest_group_leader_usage = {
+		country_trigger = {
+			exists = c:USA
+			c:USA ?= THIS
+		}
+		interest_group_trigger = {
+			ig_counts_as_marginal = no
+			is_interest_group_type = ig_petty_bourgeoisie
+		}
+		earliest_usage_date = 1992.1.1
+		latest_usage_date = 2005.1.1
+	}
+}
+
+usa_lieberman_character_template = {
+	first_name = smd_cn_joe
+	last_name = smd_cn_lieberman
+	historical = yes
+	culture = cu:yankee
+	female = no
+	religion = rel:jewish
+	ideology = ideology_moderate_leader
+	interest_group = ig_petty_bourgeoisie
+	birth_date = 1942.2.24
+	traits = {
+		experienced_political_operator
+		meticulous
+	}
+	interest_group_leader_usage = {
+		country_trigger = {
+			exists = c:USA
+			c:USA ?= THIS
+		}
+		interest_group_trigger = {
+			ig_counts_as_marginal = no
+			is_interest_group_type = ig_petty_bourgeoisie
+		}
+		earliest_usage_date = 2000.1.1
+		latest_usage_date = 2007.1.1
+	}
+}
+
+usa_nader_character_template = {
+	first_name = smd_cn_ralph
+	last_name = smd_cn_nader
+	historical = yes
+	culture = cu:yankee
+	female = no
+	religion = rel:catholic
+	ideology = ideology_green_leader
+	interest_group = ig_intelligentsia
+	birth_date = 1934.2.27
+	traits = {
+		direct
+		meticulous
+	}
+	interest_group_leader_usage = {
+		country_trigger = {
+			exists = c:USA
+			c:USA ?= THIS
+		}
+		interest_group_trigger = {
+			ig_counts_as_marginal = no
+			is_interest_group_type = ig_intelligentsia
+		}
+		earliest_usage_date = 1996.1.1
+		latest_usage_date = 2009.1.1
+	}
+}
+
+usa_jesse_jackson_character_template = {
+	first_name = smd_cn_jesse
+	last_name = smd_cn_jackson
+	historical = yes
+	culture = cu:afro_american
+	female = no
+	religion = rel:protestant
+	ideology = ideology_progressive_leader
+	interest_group = ig_intelligentsia
+	birth_date = 1941.10.8
+	traits = {
+		inspirational_orator
+		charismatic
+	}
+	interest_group_leader_usage = {
+		country_trigger = {
+			exists = c:USA
+			c:USA ?= THIS
+		}
+		interest_group_trigger = {
+			ig_counts_as_marginal = no
+			is_interest_group_type = ig_intelligentsia
+		}
+		earliest_usage_date = 1992.1.1
+		latest_usage_date = 2005.1.1
+	}
+}
+
+usa_pat_robertson_character_template = {
+	first_name = smd_cn_pat
+	last_name = smd_cn_robertson
+	historical = yes
+	culture = cu:dixie
+	female = no
+	religion = rel:protestant
+	ideology = ideology_conservative_leader
+	interest_group = ig_devout
+	birth_date = 1930.3.22
+	traits = {
+		charismatic
+		experienced_political_operator
+	}
+	interest_group_leader_usage = {
+		country_trigger = {
+			exists = c:USA
+			c:USA ?= THIS
+		}
+		interest_group_trigger = {
+			ig_counts_as_marginal = no
+			is_interest_group_type = ig_devout
+		}
+		earliest_usage_date = 1992.1.1
+		latest_usage_date = 2010.1.1
+	}
+}
+
+usa_falwell_character_template = {
+	first_name = smd_cn_jerry
+	last_name = smd_cn_falwell
+	historical = yes
+	culture = cu:dixie
+	female = no
+	religion = rel:protestant
+	ideology = ideology_conservative_leader
+	interest_group = ig_devout
+	birth_date = 1933.8.11
+	traits = {
+		inspirational_orator
+		direct
+	}
+	interest_group_leader_usage = {
+		country_trigger = {
+			exists = c:USA
+			c:USA ?= THIS
+		}
+		interest_group_trigger = {
+			ig_counts_as_marginal = no
+			is_interest_group_type = ig_devout
+		}
+		earliest_usage_date = 1992.1.1
+		latest_usage_date = 2007.5.15
+	}
+}

@@ -1,76 +1,52 @@
 ﻿l_polish:
-# ==========================================
- # OBJECTIVE
- # ==========================================
- 
  objective_the_west: "Zachód"
  objective_the_west_desc: "Należy utrzymać i rozszerzyć liberalny porządek międzynarodowy - demokrację, wolny handel, bezpieczeństwo zbiorowe i prawa człowieka. [ROOT.GetCountry.GetName] znajduje się w centrum systemu, który go zbudował. Zadaniem nie jest jedynie utrzymanie tego, co istnieje, ale zapewnienie, że kiedy stulecie się skończy, wielkie moce świata są wewnątrz porządku lub nie są w stanie go zakwestionować."
- 
- # ==========================================
- # SUBGOAL NAMES AND DESCRIPTIONS
- # ==========================================
- 
+
  sg_west_open_trade: "Rezerwa Stan waluty"
  sg_west_open_trade_desc: "Zachodni system finansowy działa na [ROOT.GetCountry.GetAdjective] kredyt. Ustalić [ROOT.GetCountry.GetName] jako dominującego eksportera kredytu - ponad 1000 jednostek - cementując [ROOT.GetCountry.GetAdjective] system finansowy jako podstawę gospodarki światowej."
- 
+
  sg_west_alliances: "Sieć sojuszy"
  sg_west_alliances_desc: "Zachodni porządek to zbiorowy projekt bezpieczeństwa. Ustanowienie umów o pomocy wojskowej z co najmniej czterema krajami, budowanie sieci sojuszy, która powstrzymuje agresję i projekty [ROOT.GetCountry.GetAdjective] poprzez partnerstwo, a nie okupację."
- 
+
  sg_west_human_rights: "Liberalne ramy demokratyczne"
  sg_west_human_rights_desc: "Zachód jest zdefiniowany nie tylko przez swoje bogactwo, ale przez swoje wartości. Wdrożenie powszechnych wyborów, ochrona pracowników, zniesienie niewolnictwa i chroniona mowa - instytucjonalne fundamenty liberalnego społeczeństwa demokratycznego. Zamówienie [ROOT.GetCountry.GetName] musi być warte obrony."
- 
+
  sg_west_education: "Wykształcony obywatel"
  sg_west_education_desc: "Zarówno demokratyczny udział, jak i dynamika gospodarcza zależą od wykształconej ludności. Zainwestować w system szkolnictwa do poziomu 5 i osiągnąć wskaźnik umiejętności czytania i pisania na poziomie co najmniej 75%. Informowane obywateli jest najbardziej trwałym fundamentem liberalnego porządku."
- 
+
  sg_west_gdp: "Przywództwo gospodarcze"
  sg_west_gdp_desc: "Porządek zachodni opiera się na wadze ekonomicznej. [ROOT.GetCountry.GetName] musi stanowić co najmniej 25% światowego PKB, co oznacza, że [ROOT.GetCountry.GetAdjective] gospodarka zbyt duża i zbyt centralna dla systemu światowego, aby każdy rywal mógł stawić czoła wiarygodnym wyzwaniom."
- 
+
  sg_west_endgame: "Moment Unipolarny"
  sg_west_endgame_desc: "Ostatnie wyzwanie. Zarówno [SCOPE.sCountry('c:RUS').GetName], jak i [SCOPE.sCountry('c:CHI').GetName] muszą zostać wprowadzone do zamówienia lub uczynić niezdolnymi do zagrożenia. Dla każdego: albo demokratyzują, przyjmują uniwersalne wybory i podpisują pakt obronny z [ROOT.GetCountry.GetName] - albo ich moc spada poniżej rangi głównej władzy. Nie ma trzeciej opcji, która zachowałaby zamówienie."
- 
- # ==========================================
- # JOURNAL ENTRY NAMES AND DESCRIPTIONS
- # ==========================================
- 
+
  je_west_open_trade: "Dominacja finansowa"
  je_west_open_trade_reason: "[ROOT.GetCountry.GetAdjective] dolar - lub cokolwiek innego [ROOT.GetCountry.GetName] nazywa swoją walutą - jest walutą rezerwową świata. Inne narody go trzymają, osiedlają handel i budują wokół niego swoje systemy finansowe. Eksport ponad 1000 jednostek kredytu na rynki międzynarodowe potwierdza tę pozycję i daje [ROOT.GetCountry.GetName] strukturalną dźwignię nad światowym systemem finansowym, której żadna siła militarna nie może powielić."
- 
+
  je_west_alliances: "Bezpieczeństwo zbiorowe"
  je_west_alliances_reason: "NATO. ANZUS. Partnerstwa na rzecz bezpieczeństwa, które określają blok zachodni, to nie tylko porozumienia wojskowe - to zobowiązania polityczne. Zbuduj umowy o pomocy wojskowej z co najmniej czterema krajami. Każde partnerstwo rozszerza [ROOT.GetCountry.GetAdjective] zasięg i zmniejsza koszty utrzymania porządku."
- 
+
  je_west_human_rights: "Fundacja Instytucjonalna"
  je_west_human_rights_reason: "Uniwersalne wybory. Ochrona pracowników. Zniesienie niewolnictwa. Chroniona mowa. Nie są to opcjonalne dodatki do modelu zachodniego - są one modelem. Bez nich, to, co [ROOT.GetCountry.GetName] jest bronieniem tylko władzy, nie zasady. Zorganizuj wszystkie cztery, aby ustanowić fundamenty instytucjonalne, których wymaga liberalny porządek."
- 
+
  je_west_education: "Edukacja dla wszystkich"
  je_west_education_reason: "Model zachodni zależy od obywateli, którzy mogą czytać, rozumować i uczestniczyć. Zainwestować w szkołach do poziomu 5 i osiągnąć wskaźnik umiejętności czytania i pisania w kraju 75%. Nie wystarczy mieć odpowiednie prawo - ludność musi być wystarczająco wykształcona, aby je wykorzystać."
- 
+
  je_west_gdp: "5% światowego PKB"
  je_west_gdp_reason: "Rozmiar się liczy. [ROOT.GetCountry.GetName] musi stanowić co najmniej jedną czwartą światowej produkcji gospodarczej. W tej skali [ROOT.GetCountry.GetAdjective] Gospodarka nie jest tylko duża - jest niezbędna. Świat handluje z [ROOT.GetCountry.GetName], pożyczkami od [ROOT.GetCountry.GetName], i nie może sobie pozwolić, aby [ROOT.GetCountry.GetName] wróg."
- 
+
  je_west_endgame: "Koniec historii"
  je_west_endgame_reason: "Pytanie o wiek: czy można zneutralizować zarówno [SCOPE.sCountry('c:RUS').GetName], jak i [SCOPE.sCountry('c:CHI').GetName] jako systemowych rywali z Zachodem? \n \n Dla każdego kraju musi być prawdą: \n • Przyjęli demokratyczną republikę, powszechny wybór i podpisali pakt obronny z [ROOT.GetCountry.GetName] \n • Ich stopień mocy spadł poniżej poziomu mocy głównej \n \n Gdy oba warunki są spełnione, moment jednobiegunowy jest kompletny."
- 
- # ==========================================
- # PROGRESS TOOLTIPS
- # ==========================================
- 
+
  je_west_open_trade_progressing_tt: "Eksport kredytów rośnie - system finansowy [ROOT.GetCountry.GetAdjective] rozwija się na arenie międzynarodowej"
  je_west_alliances_progressing_tt: "Sieć sojuszu nabiera kształtu - potrzeba więcej partnerów"
  je_west_human_rights_progressing_tt: "Istnieją pewne ramy prawne - cały zestaw nie został jeszcze przyjęty"
  je_west_education_progressing_tt: "Rozwój systemu szkolnictwa - inwestycje poziomu 5 i 75% umiejętności czytania i pisania są celami"
  je_west_gdp_progressing_tt: "[ROOT.GetCountry.GetName] stanowi ponad 15% światowego PKB - cel wynosi 25%"
  je_west_endgame_progressing_tt: "Jeden rywal został osłabiony lub demokratyzowany - drugi pozostaje wyzwaniem systemowym"
- 
- # ==========================================
- # OBJECTIVE
- # ==========================================
 
  objective_the_east: "Wschód"
  objective_the_east_desc: "Zachodni liberalny porządek nie jest jedynym możliwym światem. [ROOT.GetCountry.GetName] ma inny model - jeden z kierunku państwa, siły zbiorowej i rozwoju suwerennego. Zadaniem jest wykazanie, że ten model może być dopasowany do Zachodu pod względem siły gospodarczej i zasięgu globalnego, oraz stworzenie świata, w którym [ROOT.GetCountry.GetName], nie Stany Zjednoczone, określa warunki porządku międzynarodowego."
-
- # ==========================================
- # SUBGOAL NAMES AND DESCRIPTIONS
- # ==========================================
 
  sg_east_state_industry: "Directed Industrial Base"
  sg_east_state_industry_desc: "Model wschodni opiera się na zdolności państwa do bezpośredniego inwestowania w przemysł ciężki. Utrzymanie gospodarki interwencyjnej lub dowodzenia, budowanie zdolności budowlanych na poziomie co najmniej 10 i rozwój górnictwa żelaza na poziomie co najmniej 5 przy silnym obsadzie. To podstawa ekonomiczna, od której wszystko inne zależy."
@@ -107,17 +83,9 @@
  je_east_sphere_progressing_tt: "Sieć sojuszu rośnie - potrzebne są cztery umowy o pomocy wojskowej"
  je_east_currency_progressing_tt: "Eksport kredytów rośnie - do ustalenia statusu waluty rezerwowej potrzebne jest 1000 jednostek"
  je_east_endgame_progressing_tt: "Co najmniej jedna zachodnia moc została zneutralizowana - pozostałe pozostają"
- 
- # ==========================================
- # OBJECTIVE
- # ==========================================
 
  objective_rising_powers: "Powstające moce"
  objective_rising_powers_desc: "Świat nie musi być podzielony na dwa bloki. [ROOT.GetCountry.GetName] odmawia wyboru - pomiędzy Waszyngtonem a Moskwą, pomiędzy dolarem a tym, co nastąpi później, pomiędzy jednym imperium a innym. Trzeci sposób jest trudniejszy niż każda z alternatyw. Wymaga to prawdziwej wagi ekonomicznej, wiarygodnej siły wojskowej i umiejętności dyplomatycznych, aby zjednoczyć koalicję państw, które mają tylko jedną wspólną rzecz: odmawiają również wyboru."
-
- # ==========================================
- # SUBGOAL NAMES AND DESCRIPTIONS
- # ==========================================
 
  sg_rising_economy: "Fundacje gospodarcze"
  sg_rising_economy_desc: "Zbuduj gospodarkę, która odpowiada za co najmniej 10% światowego PKB - na tyle znaczące, aby zakotwiczyć trzeci blok - przy jednoczesnym utrzymaniu ekspozycji handlowej wobec każdego pojedynczego partnera poniżej 40%. Władza zaczyna się od niezależności gospodarczej."
@@ -149,12 +117,48 @@
  je_rising_endgame: "Prowadź trzeci blok"
  je_rising_endgame_reason: "Prowadź blok mocy ośmiu lub więcej członków jako wielką moc. Osiem krajów, które zdecydują się zorganizować wokół [ROOT.GetCountry.GetName] zamiast [SCOPE.sCountry('c:USA').GetName] lub [SCOPE.sCountry('c:RUS').GetName], nie jest tylko osiągnięciem dyplomatycznym - jest to strukturalny fakt polityki międzynarodowej. Trzeci sposób istnieje. Ma członków. Ma przywódcę. Supermoce będą musiały się za to rozliczać."
 
- # ==========================================
- # PROGRESS TOOLTIPS
- # ==========================================
-
  je_rising_economy_progressing_tt: "[ROOT.GetCountry.GetName] stanowi ponad 2% światowego PKB - 5% jest celem"
  je_rising_sovereignty_progressing_tt: "[ROOT.GetCountry.GetName] jest rozpoznawany i niezależny - potrzebna jest główna ranga mocy i prestiż 50"
  je_rising_military_progressing_tt: "Zdolność wojskowa rośnie - duży stopień władzy i rozmiar armii 100 są celami"
  je_rising_prestige_progressing_tt: "[ROOT.GetCountry.GetName] zbliża się do pierwszej 5 - prestiż 150 i globalny ranking 5 są potrzebne"
  je_rising_endgame_progressing_tt: "Blok formuje się - do realizacji celu potrzebne jest 8 członków"
+
+ objective_the_west_desc:0 "Utrzymanie i szerzenie demokracji światowej, promowanie praw człowieka, kapitalizmu i rozwoju gospodarczego."
+ objective_the_west_idle_header:0 "Utrzymanie i szerzenie globalnej demokracji, praw człowieka, kapitalizmu i rozwoju gospodarczego."
+ objective_the_west_idle_hint:0 "W końcu pojawi się więcej wyzwań"
+
+ objective_the_east_desc:0 "Zmierz się z dominacją Stanów Zjednoczonych i ich sojuszników"
+ objective_the_east_idle_header:0 "Upewnij się, że Stany Zjednoczone nie są już najważniejszą potęgą świata."
+ objective_the_east_idle_hint:0 "W końcu pojawi się więcej wyzwań"
+
+ objective_rising_powers_desc:0 "Wyzwanie tak zwany pierwszy i drugi świat w ich ofercie dominacji na świecie."
+ objective_rising_powers_idle_header:0 "Powstańcie w szeregach zniekształconego świata"
+ objective_rising_powers_idle_hint:0 "W końcu pojawi się więcej wyzwań"
+
+ OBJECTIVE_TYPE_RECOMMENDED_GAME_RULE_DESC:0 "Zaleca się następujące zasady gry:"
+ OBJECTIVE_TYPE_RECOMMENDED_GAME_RULE_ITEM_TEXT:0 "- [GameRuleSetting.GetGameRule.GetName]: #variable [GameRuleSetting.GetName] #!"
+ SELECTED_OBJECTIVE_RECOMMENDED_GAME_RULE_DESC:0 "Cel "$NAME$" sugeruje następujące ustawienie: #variable $RULE$ #!."
+
+ objective_the_west_name_USA:0 "The Sole Superpower"
+ objective_the_west_name_GBR:0 "Kłopoty"
+ objective_the_west_name_FRA:0 "Mitterrand 's France"
+
+ objective_the_west_desc_USA:0 "Stany Zjednoczone Ameryki znajdują się w wyjątkowej pozycji na przełomie XXI wieku. Jako pierwsza światowa supermoc i najsilniejsza narodowa ludzkość kiedykolwiek widziała, Republika stoi w obliczu szeregu trudnych problemów zewnętrznych i wewnętrznych. Pomimo upadku głównego rywala Ameryki, Związku Radzieckiego, zagrożenia terroryzmem, Chin i różnych innych zagrożeń dla wolnego świata, Ameryka jest w to wplątana. Czy Stany Zjednoczone pozostaną światową supermocarstwem? Czas pokaże."
+ objective_the_west_desc_GBR:0 "W 1992 roku Wielka Brytania borykała się z niepewnością gospodarczą i zawirowaniami politycznymi. Kraj ten niedawno wyszedł z głębokiej recesji, charakteryzującej się wysokim bezrobociem i spadkiem zaufania konsumentów. Aby dodać do brytyjskich nieszczęść, niestabilność w Irlandii Północnej, obecnie znany jako "Kłopoty" pozostaje gorącym tematem debaty. Jak Britannia przetrwa te burzliwe czasy?"
+ objective_the_west_desc_FRA:0 "Krajobraz polityczny Francji charakteryzował się rosnącym napięciem związanym z integracją europejską i krajowymi wyzwaniami gospodarczymi. Prezydent François Mitterrand, socjalista w drugiej kadencji, stanął w obliczu spadku popularności, ponieważ kraj borykał się z wysokim bezrobociem i spowolnionym wzrostem gospodarczym. Jego rząd, pod przewodnictwem premiera Pierre 'a Bérégovoya, zmagał się z niezadowoleniem społeczeństwa ze środków oszczędnościowych mających na celu stabilizację gospodarki. Z politycznego punktu widzenia Francja była głęboko podzielona na traktat z Maastricht, który miał na celu wzmocnienie integracji europejskiej i utorowanie drogi dla euro. Czy UE ma to, co trzeba, by przetrwać XXI wiek?"
+
+ objective_the_east_name_RUS:0 "Upadek Związku Radzieckiego"
+ objective_the_east_name_PRC:0 "Wielka Republika Ludowa"
+ objective_the_east_name_IRQ:0 "Irak Saddama Husseina"
+
+ objective_the_east_desc_RUS:0 "Rosja przechodzi dramatyczną transformację polityczną po rozwiązaniu Związku Radzieckiego w grudniu 1991 roku. Borys Yeltsin, pierwszy prezydent Federacji Rosyjskiej, stanął w obliczu ogromnego wyzwania, jakim jest przewodzenie rozwijającej się demokracji, a jednocześnie przechodzenie od scentralizowanego systemu komunistycznego do gospodarki rynkowej. Domestycznie, rząd Yeltsin zmagał się z niestabilnością polityczną, rosnącą inflacją i powszechnymi niepokojami społecznymi jako reformami gospodarczymi, zwanymi "terapią szokową", doprowadziły do trudności dla milionów. Dyplomatycznie Rosja starała się ponownie zdefiniować swoją rolę na arenie światowej, tworząc nowe relacje z zachodnimi mocarstwami, próbując jednocześnie utrzymać wpływ na byłych republik radzieckich."
+ objective_the_east_desc_PRC:0 "Chiny ostrożnie wychodzą z międzynarodowej izolacji i sankcji ze strony krajów zachodnich. Z politycznego punktu widzenia kraj ten pozostawał pod kontrolą Chińskiej Partii Komunistycznej (CCP), a Deng Xiaoping utrzymywał znaczący wpływ, mimo że oficjalnie wycofał się ze stanowiska kierowniczego. Jego słynna "Southern Tour" na początku 1992 r. ożywiła zaangażowanie Chin w reformę gospodarczą i otwarcie się, sygnalizując ponowny nacisk na politykę zorientowaną na rynek i większą integrację z globalną gospodarką"
+ objective_the_east_desc_IRQ:0 "Reeling from a devastating loss in the Gulf War last year, and facing intense international isolation. Saddam Hussein remained firmly in power, maintaining an iron grip on the country through brutal repression of internal dissent, particularly against the Shi'a in the south and the Kurds in the north. Iraq truly has several paths going into the 2000s."
+
+ objective_rising_powers_name_IDA:0 "Indian Century"
+ objective_rising_powers_name_BRZ:0 "Brazylia 's Rise to Dominance"
+ objective_rising_powers_name_VNM:0 "Powstanie Wietnamu"
+
+ objective_rising_powers_desc_IDA:0 "Indie prowadzą okres znaczących zmian politycznych i gospodarczych. Krajowi przewodził premier P.V. Narasimha Rao, który doszedł do władzy w 1991 roku i zainicjował serię transformacyjnych reform gospodarczych mających na celu liberalizację gospodarki i jej ściślejszą integrację z rynkiem światowym."
+ objective_rising_powers_desc_BRZ:0 "W 1992 roku Brazylia była w trakcie politycznej transformacji po zakończeniu rządów wojskowych w 1985 roku. Rządził nim prezydent Fernando Collor de Mello, który objął urząd w 1990 roku jako pierwszy prezydent Brazylii od ponad 20 lat. Rząd Collora zaczął od fali reform gospodarczych mających na celu stabilizację gospodarki, ale jego administracja wkrótce stanęła w obliczu rosnącego rozczarowania ze względu na rosnącą inflację i zarzuty korupcji. W 1992 Collor został wplątany w wielki skandal korupcyjny, który doprowadził do masowych protestów i wzywa do jego impeachmentu. Dyplomatycznie Brazylia skupiała się na poprawie swojego wizerunku międzynarodowego i zwiększaniu wpływów w Ameryce Łacińskiej. Poszukiwała również bliższych powiązań z krajami Zachodu, podkreślając jednocześnie swoją rolę w kwestiach globalnych, szczególnie w kwestiach środowiskowych związanych z lasami tropikalnymi Amazonii. Jednakże niestabilność polityczna i trudności gospodarcze nadal dominowały w agendzie krajowej."
+ objective_rising_powers_desc_VNM:0 "Po latach izolacji po zakończeniu wojny wietnamskiej i ostrych skutkach sankcji gospodarczych Wietnam stopniowo reintegracji ze społecznością międzynarodową. W 1992 r. Wietnam znormalizował stosunki ze Stanami Zjednoczonymi i przyłączył się do Stowarzyszenia Narodów Azji Południowo-Wschodniej (ASEAN), sygnalizując przejście na ściślejszą współpracę regionalną i zainteresowanie poprawą stosunków z Zachodem. Jaką drogę wybierze Wietnam? To zależy od ciebie."

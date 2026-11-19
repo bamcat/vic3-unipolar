@@ -35,7 +35,6 @@ olympics.1 = {
 		set_variable = olympics_declined_host
 	}
 
-	# Option A: Accept — we will host the games
 	option = {
 		name = olympics.1.a
 		remove_variable = olympics_declined_host
@@ -47,32 +46,23 @@ olympics.1 = {
 			name = olympics_hosting_prestige
 			months = 48
 		}
-		# Notify all countries that games are coming
 		every_country = {
 			trigger_event = { id = olympics.3 days = 30 }
 		}
-		# Queue closing ceremony at end of hosting modifier
 		hidden_effect = {
 			trigger_event = { id = olympics.9 days = 1400 }
 		}
 		ai_chance = { base = 75 }
 	}
 
-	# Option B: Decline — pass to another country
 	option = {
 		name = olympics.1.b
-		# Variable stays set — blocks re-selection for a while
-		# Another country will be randomly selected next month
 		ai_chance = { base = 25 }
 	}
 }
 
 # ==========================================
 # olympics.3
-# "The Olympic Games Are Coming"
-#
-# Participation offer. Fires for every
-# country when a host is confirmed.
 # ==========================================
 
 olympics.3 = {
@@ -92,26 +82,22 @@ olympics.3 = {
 	trigger = { }
 
 	immediate = {
-		# Find and save the host country for desc
 		random_country = {
 			limit = { has_modifier = olympics_hosting }
 			save_scope_as = olympics_host_scope
 		}
 	}
 
-	# Option A: Participate — send our athletes
 	option = {
 		name = olympics.3.a
 		default_option = yes
 		set_variable = olympics_participating
-		# Queue results event — fires when games actually happen (~18 months)
 		hidden_effect = {
 			trigger_event = { id = olympics.11 days = 1260 }
 		}
 		ai_chance = { base = 90 }
 	}
 
-	# Option B: Boycott — political statement
 	option = {
 		name = olympics.3.b
 		add_modifier = {
@@ -124,9 +110,6 @@ olympics.3 = {
 
 # ==========================================
 # olympics.11
-# "Your Athletes Are Preparing"
-# Hidden bridge event — fires just before
-# the games. Gives player a doping choice.
 # ==========================================
 
 olympics.11 = {
@@ -148,23 +131,19 @@ olympics.11 = {
 		any_country = { has_modifier = olympics_hosting }
 	}
 
-	# Option A: Train clean — honest effort
 	option = {
 		name = olympics.11.a
 		custom_tooltip = {
 			text = you_do_not_dope_athletes
 			}
 		default_option = yes
-		# Remove participation flag — results will fire shortly
 		remove_variable = olympics_participating
-		# Queue results based on country stats
 		hidden_effect = {
 			trigger_event = { id = olympics.12 days = 7 }
 		}
 		ai_chance = { base = 75 }
 	}
 
-	# Option B: Dope — risk it for the medal
 	option = {
 		name = olympics.11.b
 		custom_tooltip = {
@@ -181,9 +160,6 @@ olympics.11 = {
 
 # ==========================================
 # olympics.12
-# Hidden results calculator
-# Determines outcome via weighted random
-# based on country stats + doping bonus.
 # ==========================================
 
 olympics.12 = {
@@ -213,9 +189,6 @@ olympics.12 = {
 
 # ==========================================
 # olympics.4
-# "Doping Scandal"
-# Fires if caught doping. Replaces the
-# result event with shame and penalties.
 # ==========================================
 
 olympics.4 = {
@@ -276,7 +249,6 @@ olympics.5 = {
 	trigger = { }
 
 	immediate = {
-		# Doping check — chance of getting caught
 		if = {
 			limit = { has_variable = olympics_doping }
 			random_list = {
@@ -436,13 +408,6 @@ olympics.8 = {
 
 # ==========================================
 # olympics.9
-# "The Olympic Games Draw to a Close"
-#
-# Closing ceremony event for the host.
-# Fires when hosting modifier is about
-# to expire. Sets recently_hosted cooldown
-# and clears declined_host variables
-# so the next selection can happen.
 # ==========================================
 
 olympics.9 = {
@@ -461,7 +426,6 @@ olympics.9 = {
 	trigger = { }
 
 	immediate = {
-		# Clear all declined_host variables so next selection is fresh
 		every_country = {
 			limit = { has_variable = olympics_declined_host }
 			remove_variable = olympics_declined_host
@@ -471,8 +435,6 @@ olympics.9 = {
 	option = {
 		name = olympics.9.a
 		default_option = yes
-		# Apply post-hosting cooldown so same country isn't
-		# immediately selected again
 		add_modifier = {
 			name = olympics_recently_hosted
 			months = 96

@@ -20,11 +20,11 @@ REPLACE_OR_CREATE:law_no_womens_rights = {
 		literacy_rate < 0.4
 		exists = ruler
 		ruler = { 
-			has_ideology = ideology:ideology_traditionalist_leader
+			has_ideology = ideology:ideology_conservative_leader
 		}
 	}
 
-	ai_enact_weight_modifier = { #Petitions
+	ai_enact_weight_modifier = {
 		value = 0
 		
 		if = {
@@ -45,7 +45,7 @@ REPLACE_OR_CREATE:law_women_own_property = {
 	}
 
 	modifier = {
-		state_working_adult_ratio_add = 0.05
+		state_working_adult_ratio_add = 0.02
 	}
 	
 	ai_will_do = {
@@ -54,13 +54,13 @@ REPLACE_OR_CREATE:law_women_own_property = {
 			AND = {
 				exists = ruler
 				ruler = { 
-					has_ideology = ideology:ideology_traditionalist_leader
+					has_ideology = ideology:ideology_conservative_leader
 				}		
 			}
 		}
 	}	
 
-	ai_enact_weight_modifier = { #Petitions
+	ai_enact_weight_modifier = {
 		value = 0
 		
 		if = {
@@ -81,7 +81,7 @@ REPLACE_OR_CREATE:law_women_in_the_workplace = {
 	}
 
 	modifier = {
-		state_working_adult_ratio_add = 0.1
+		state_working_adult_ratio_add = 0.03
 		state_birth_rate_mult = -0.05
 	}
 
@@ -98,7 +98,7 @@ REPLACE_OR_CREATE:law_women_in_the_workplace = {
 		}
 	}	
 
-	ai_enact_weight_modifier = { #Petitions
+	ai_enact_weight_modifier = {
 		value = 0
 		
 		if = {
@@ -129,12 +129,12 @@ REPLACE_OR_CREATE:law_womens_suffrage = {
 	}
 
 	modifier = {
-		state_working_adult_ratio_add = 0.15
+		state_working_adult_ratio_add = 0.10
 		state_birth_rate_mult = -0.05
 		state_dependent_political_participation_add = 0.33
 	}
 
-	ai_enact_weight_modifier = { #Petitions
+	ai_enact_weight_modifier = {
 		value = 0
 		
 		if = {
@@ -155,7 +155,7 @@ law_legal_protections = {
 	}
 
 	modifier = {
-		state_working_adult_ratio_add = 0.05
+		state_working_adult_ratio_add = 0.10
 		state_birth_rate_mult = -0.05
 		country_authority_mult = 0.05
 	}
@@ -171,8 +171,8 @@ law_legal_protections = {
 				exists = ruler
 				ruler = {
 					OR = {
-						has_ideology = ideology_liberal_leader
-						has_ideology = ideology_progressive_leader
+						has_ideology = ideology:ideology_liberal_leader
+						has_ideology = ideology:ideology_progressive_leader
 					}
 				}
 			}
@@ -200,7 +200,7 @@ law_structural_egalitarianism = {
 	}
 
 	modifier = {
-		state_working_adult_ratio_add = 0.10
+		state_working_adult_ratio_add = 0.15
 		state_birth_rate_mult = -0.05
 		state_dependent_political_participation_add = 0.15
 		country_prestige_mult = 0.05
@@ -217,9 +217,9 @@ law_structural_egalitarianism = {
 				exists = ruler
 				ruler = {
 					OR = {
-						has_ideology = ideology_progressive_leader
-						has_ideology = ideology_socialist_leader
-						has_ideology = ideology_communist_leader
+						has_ideology = ideology:ideology_progressive_leader
+						has_ideology = ideology:ideology_democratic_socialist_leader
+						has_ideology = ideology:ideology_marxist_leader
 					}
 				}
 			}
@@ -261,9 +261,9 @@ law_matriarchy = {
 				exists = ruler
 				ruler = {
 					OR = {
-						has_ideology = ideology_progressive_leader
-						has_ideology = ideology_socialist_leader
-						has_ideology = ideology_communist_leader
+						has_ideology = ideology:ideology_progressive_leader
+						has_ideology = ideology:ideology_democratic_socialist_leader
+						has_ideology = ideology:ideology_marxist_leader
 					}
 				}
 			}

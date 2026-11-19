@@ -1,6 +1,6 @@
 ﻿COUNTRIES = {
 	c:SCO = {
-		set_next_election_date = 1994.5.7 #YYYY.MM.DD
+		set_next_election_date = 1994.5.7
 		
 		 
 
@@ -9,7 +9,6 @@
 		add_taxed_goods = g:liquor
 		
 		
-		# Laws
 		activate_law = law_type:law_professional_army
 		activate_law = law_type:law_elected_bureaucrats
 		activate_law = law_type:law_compulsory_primary_school
@@ -65,7 +64,7 @@
 			set_interest_group_name = ig_anglican_church
 		}
 
-		ig:ig_petite_burgeoisie = {
+		ig:ig_petty_bourgeoisie = {
 			set_ig_suppression = yes
 		}
 	}

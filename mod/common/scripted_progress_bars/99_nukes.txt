@@ -1,5 +1,4 @@
-﻿ 
-nuclear_enrichment_progress_bar = {
+﻿nuclear_enrichment_progress_bar = {
 	name = "nuclear_enrichment_progress_bar"
 	desc = "nuclear_enrichment_progress_bar_desc"
  
@@ -10,7 +9,7 @@ nuclear_enrichment_progress_bar = {
 	default = yes
  
 	monthly_progress = {
-		if = {
+		progress_condition = {
 			limit = { exists = var:uranium_enrichment_progress }
 			add = {
 				desc = "nuclear_enrichment_progress_bar_tt"
@@ -31,7 +30,7 @@ nuclear_production_progress_bar = {
 	default = yes
  
 	monthly_progress = {
-		if = {
+		progress_condition = {
 			limit = { exists = var:nuclear_production_progress }
 			add = {
 				desc = "nuclear_production_progress_bar_tt"
@@ -52,7 +51,7 @@ icbm_progress_bar = {
 	default = yes
  
 	monthly_progress = {
-		if = {
+		progress_condition = {
 			limit = { exists = var:icbm_progress }
 			add = {
 				desc = "icbm_progress_bar_tt"

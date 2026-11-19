@@ -174,7 +174,7 @@ REPLACE_OR_CREATE:PRU = {
 		STATE_POMERANIA
 		STATE_WEST_PRUSSIA
 		STATE_EAST_PRUSSIA
-		STATE_SILESIA
+		STATE_LOWER_SILESIA
 		STATE_POSEN
 	}
 
@@ -338,7 +338,7 @@ REPLACE_OR_CREATE:POL = {
 REPLACE_OR_CREATE:ROM = {
 	use_culture_states = yes
 
-	required_states_fraction = 0.375 # Romania has 8 possible homeland states total, 3 are required.
+	required_states_fraction = 0.375
 
 	ai_will_do = { always = yes }
 }
@@ -448,7 +448,7 @@ REPLACE_OR_CREATE:MAL = {
 		STATE_EASTERN_MALI
 		STATE_SENEGAL
 		STATE_GUINEA
-		STATE_GAMBIA
+
 		STATE_VOLTA
 	}
 
@@ -588,7 +588,7 @@ REPLACE_OR_CREATE:CAU = {
 REPLACE_OR_CREATE:PNS = {
 	use_culture_states = yes
 
-	required_states_fraction = 0.7 # Basically as long as you've colonized
+	required_states_fraction = 0.7
 
 	possible = {
 	#	has_technology_researched = pan-nationalism

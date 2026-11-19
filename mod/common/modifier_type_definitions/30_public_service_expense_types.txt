@@ -1,21 +1,4 @@
-﻿##################################################################
-# UNIPOLAR - Public Service Expense Modifier Types
-#
-# Display-only informational modifier types. These let the
-# institution panels and law tooltips show the player that an
-# institution / law contributes to a running public-service
-# expense. They carry no gameplay effect themselves (the real
-# cost is delivered by country_expenses_add via the recurring
-# add_modifier) - they exist purely so the contribution is
-# visible and color-coded as an expense on the relevant panels.
-#
-# These are percentage-based: the value shown represents the
-# relative contribution to the country's public-service expense,
-# displayed as a percent. Applied values are fractions
-# (e.g. 0.10 -> "10%").
-##################################################################
-
-# Informational: healthcare expense contribution (percent).
+﻿
 smd_institution_healthcare_expense_mult = {
 	decimals = 0
 	color = bad
@@ -25,7 +8,6 @@ smd_institution_healthcare_expense_mult = {
 	}
 }
 
-# Informational: education expense contribution (percent).
 smd_institution_education_expense_mult = {
 	decimals = 0
 	color = bad
@@ -35,7 +17,6 @@ smd_institution_education_expense_mult = {
 	}
 }
 
-# Informational: police expense contribution (percent).
 smd_institution_police_expense_mult = {
 	decimals = 0
 	color = bad

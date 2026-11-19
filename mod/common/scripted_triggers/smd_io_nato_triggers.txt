@@ -1,0 +1,21 @@
+io_meets_nato_accession_criteria = {
+	custom_description = {
+		text = io_nato_democratic
+		io_has_democratic_government_laws = yes
+		NOT = { io_has_authoritarian_government_laws = yes }
+		OR = {
+			has_law = law_type:law_universal_suffrage
+			has_law = law_type:law_census_voting
+		}
+	}
+	custom_description = {
+		text = io_nato_allied_member
+		any_scope_treaty = {
+			any_scope_article = { has_type = alliance }
+			OR = {
+				first_country = { is_target_in_global_variable_list = { name = io_nato_members target = this } }
+				second_country = { is_target_in_global_variable_list = { name = io_nato_members target = this } }
+			}
+		}
+	}
+}

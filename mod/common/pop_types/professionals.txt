@@ -1,6 +1,6 @@
-professionals = {
+﻿professionals = {
 	texture = "gfx/interface/icons/pops_icons/professionals.dds"
-	start_quality_of_life = 12
+	start_quality_of_life = 22
 	color = hsv{ 0.00 0.00 1.00 }
 	wage_weight = 22
 	paid_private_wage = yes
@@ -9,8 +9,6 @@ professionals = {
 	dependent_wage = 0.5	# per year
 	unemployment = yes
 
-	# 40% - 90% politically engaged -- better educated and better paid than
-	# Associates, so more likely to organise
 	political_engagement_base = 0.40
 	political_engagement_literacy_factor = 0.5
 
@@ -42,11 +40,6 @@ professionals = {
 
 	qualifications_growth_desc = "PROFESSIONALS_QUALIFICATIONS_DESC"
 	qualifications = {
-		# baseline: ( literacy - 0.06 ) * 130 + ( wealth / 15 )
-		# Literacy here means COLLEGE EDUCATED, so a developed nation sits near
-		# 0.20 and China near 0.08. Threshold 0.06 sits above the Associate's
-		# 0.025, giving 18.2 at a developed nation against their 42.0 -- scarce
-		# but obtainable -- and 2.6 in China, a 7x spread.
 		add = {
 			value = literacy_rate
 			subtract = 0.06

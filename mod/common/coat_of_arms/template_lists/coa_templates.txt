@@ -129,8 +129,6 @@ coat_of_arms_template_lists = {
 			10 = template_cross_charges_in_quadrants_metal
 		}
 
-		# European States
-
 		special_selection = {
 			trigger = {
 				exists = scope:target
@@ -304,8 +302,6 @@ coat_of_arms_template_lists = {
 			500 = template_revolution_3
 		}
 
-		### Fascist templates
-
 		special_selection = {
 			trigger = {
 				exists = scope:target
@@ -461,5 +457,16 @@ coat_of_arms_template_lists = {
 	chartered_company = {
 		3000 = template_chartered_company_1
 		500 = template_chartered_company_2
+	}
+
+	russian_warlord = {
+		3000 = template_russian_1
+		3000 = template_russian_2
+		3000 = template_russian_3
+		3000 = template_russian_4
+		3000 = template_russian_5
+		3000 = template_russian_6
+		3000 = template_russian_7
+		3000 = template_russian_8
 	}
 }

@@ -1,11 +1,5 @@
 MILITARY_FORMATIONS = {
  
-	### CHINA (PRC) ###
-	# ~3,030,000 active in 1992. World's largest standing army.
-	# post-Gulf War modernization shock. Still largely Soviet-era doctrine.
-	# Seven Military Regions. PLA Navy: two fleets covered here (South, East Sea).
-	# PLAAF: J-7/J-8, Su-27 (first delivery 1992), Q-5.
- 
 	c:PRC ?= {
  
 		create_military_formation = {
@@ -13,21 +7,30 @@ MILITARY_FORMATIONS = {
 			hq_region = sr:region_north_china
 			name = "Beijing_Junqu"
  
-			# Beijing Military Region — capital defence and strategic reserve
 			combat_unit = {
 				type = unit_type:combat_unit_type_armored_infantry
 				state_region = s:STATE_BEIJING
-				count = 40
+				count = 20
 			}
 			combat_unit = {
 				type = unit_type:combat_unit_type_mechanized_infantry
 				state_region = s:STATE_ZHILI
-				count = 30
+				count = 8
+			}
+			combat_unit = {
+				type = unit_type:combat_unit_type_light_infantry
+				state_region = s:STATE_ZHILI
+				count = 7
 			}
 			combat_unit = {
 				type = unit_type:combat_unit_type_mechanized_infantry
 				state_region = s:STATE_SHANXI
-				count = 20
+				count = 5
+			}
+			combat_unit = {
+				type = unit_type:combat_unit_type_light_infantry
+				state_region = s:STATE_SHANXI
+				count = 5
 			}
 			save_scope_as = prc_beijing_junqu_formation
 		}
@@ -46,36 +49,55 @@ MILITARY_FORMATIONS = {
 			hq_region = sr:region_north_china
 			name = "Shenyang_Nanjing_Jinan_Junqu"
  
-			# Shenyang MR (Manchuria), Jinan MR (Shandong), Nanjing MR (coast)
 			combat_unit = {
 				type = unit_type:combat_unit_type_armored_infantry
 				state_region = s:STATE_SHENGJING
-				count = 30
+				count = 15
 			}
 			combat_unit = {
 				type = unit_type:combat_unit_type_mechanized_infantry
 				state_region = s:STATE_NORTHERN_MANCHURIA
-				count = 20
+				count = 5
+			}
+			combat_unit = {
+				type = unit_type:combat_unit_type_light_infantry
+				state_region = s:STATE_NORTHERN_MANCHURIA
+				count = 5
 			}
 			combat_unit = {
 				type = unit_type:combat_unit_type_mechanized_infantry
 				state_region = s:STATE_SHANDONG
-				count = 25
+				count = 7
+			}
+			combat_unit = {
+				type = unit_type:combat_unit_type_light_infantry
+				state_region = s:STATE_SHANDONG
+				count = 6
 			}
 			combat_unit = {
 				type = unit_type:combat_unit_type_mechanized_infantry
 				state_region = s:STATE_NANJING
-				count = 20
+				count = 5
+			}
+			combat_unit = {
+				type = unit_type:combat_unit_type_light_infantry
+				state_region = s:STATE_NANJING
+				count = 5
 			}
 			combat_unit = {
 				type = unit_type:combat_unit_type_mechanized_infantry
 				state_region = s:STATE_JIANGSU
-				count = 15
+				count = 4
+			}
+			combat_unit = {
+				type = unit_type:combat_unit_type_light_infantry
+				state_region = s:STATE_JIANGSU
+				count = 4
 			}
 			combat_unit = {
 				type = unit_type:combat_unit_type_howitzer_artillery
 				state_region = s:STATE_SHANDONG
-				count = 8
+				count = 4
 			}
 
 			save_scope_as = prc_shenyang_nanjing_jinan_junqu_formation
@@ -95,36 +117,45 @@ MILITARY_FORMATIONS = {
 			hq_region = sr:region_south_china
 			name = "Guangzhou_Chengdu_Kunming_Junqu"
  
-			# Guangzhou MR (south coast), Chengdu MR (Sichuan/Tibet), Kunming MR (Yunnan)
 			combat_unit = {
 				type = unit_type:combat_unit_type_mechanized_infantry
 				state_region = s:STATE_GUANGDONG
-				count = 25
+				count = 7
+			}
+			combat_unit = {
+				type = unit_type:combat_unit_type_light_infantry
+				state_region = s:STATE_GUANGDONG
+				count = 6
 			}
 			combat_unit = {
 				type = unit_type:combat_unit_type_light_infantry
 				state_region = s:STATE_GUANGXI
-				count = 20
+				count = 10
 			}
 			combat_unit = {
 				type = unit_type:combat_unit_type_mechanized_infantry
 				state_region = s:STATE_SICHUAN
-				count = 20
+				count = 5
+			}
+			combat_unit = {
+				type = unit_type:combat_unit_type_light_infantry
+				state_region = s:STATE_SICHUAN
+				count = 5
 			}
 			combat_unit = {
 				type = unit_type:combat_unit_type_light_infantry
 				state_region = s:STATE_YUNNAN
-				count = 20
+				count = 10
 			}
 			combat_unit = {
 				type = unit_type:combat_unit_type_light_infantry
 				state_region = s:STATE_LHASA
-				count = 15
+				count = 8
 			}
 			combat_unit = {
 				type = unit_type:combat_unit_type_field_artillery
 				state_region = s:STATE_GUANGDONG
-				count = 8
+				count = 4
 			}
 
 			save_scope_as = prc_guangzhou_chengdu_kunming_junqu_formation
@@ -144,31 +175,40 @@ MILITARY_FORMATIONS = {
 			hq_region = sr:region_north_china
 			name = "Lanzhou_Xinjiang_Junqu"
  
-			# Lanzhou MR (northwest), Xinjiang MR (Uyghur region)
 			combat_unit = {
 				type = unit_type:combat_unit_type_mechanized_infantry
 				state_region = s:STATE_GANSU
-				count = 20
+				count = 5
+			}
+			combat_unit = {
+				type = unit_type:combat_unit_type_light_infantry
+				state_region = s:STATE_GANSU
+				count = 5
 			}
 			combat_unit = {
 				type = unit_type:combat_unit_type_mechanized_infantry
 				state_region = s:STATE_TIANSHAN
-				count = 18
+				count = 5
+			}
+			combat_unit = {
+				type = unit_type:combat_unit_type_light_infantry
+				state_region = s:STATE_TIANSHAN
+				count = 4
 			}
 			combat_unit = {
 				type = unit_type:combat_unit_type_light_infantry
 				state_region = s:STATE_DZUNGARIA
-				count = 15
+				count = 8
 			}
 			combat_unit = {
 				type = unit_type:combat_unit_type_light_infantry
 				state_region = s:STATE_NINGXIA
-				count = 10
+				count = 5
 			}
 			combat_unit = {
 				type = unit_type:combat_unit_type_field_artillery
 				state_region = s:STATE_GANSU
-				count = 5
+				count = 3
 			}
 
 			save_scope_as = prc_lanzhou_xinjiang_junqu_formation
@@ -188,26 +228,25 @@ MILITARY_FORMATIONS = {
 			hq_region = sr:region_north_china
 			name = "PLAAF"
  
-			# J-7, J-8II, Q-5, first Su-27SK deliveries (1992)
 			combat_unit = {
 				type = unit_type:combat_unit_type_multirole_aircraft
 				state_region = s:STATE_BEIJING
-				count = 10
+				count = 5
 			}
 			combat_unit = {
 				type = unit_type:combat_unit_type_fixed_wing_aircraft
 				state_region = s:STATE_SHANDONG
-				count = 8
+				count = 4
 			}
 			combat_unit = {
 				type = unit_type:combat_unit_type_fixed_wing_aircraft
 				state_region = s:STATE_GUANGDONG
-				count = 8
+				count = 4
 			}
 			combat_unit = {
 				type = unit_type:combat_unit_type_fixed_wing_aircraft
 				state_region = s:STATE_SHENGJING
-				count = 6
+				count = 3
 			}
 
 			save_scope_as = prc_plaaf_formation
@@ -222,28 +261,26 @@ MILITARY_FORMATIONS = {
 			transfer_to_formation = scope:prc_plaaf_formation
 		}
  
-		# PLAN East Sea Fleet
 		create_military_formation = {
 			type = fleet
 			hq_region = sr:region_south_china
 			name = "PLAN_East_Sea_Fleet"
  
-			# Luda-class destroyers, Jianghu-class frigates
 			ship = {
 				type = ship_type:ship_type_destroyer
-				count = 6
+				count = 3
 			}
 			ship = {
 				type = ship_type:ship_type_frigate
-				count = 8
+				count = 4
 			}
 			ship = {
 				type = ship_type:ship_type_submarine
-				count = 8
+				count = 4
 			}
 			ship = {
 				type = ship_type:ship_type_destroyer
-				count = 5
+				count = 3
 			}
 
 			save_scope_as = prc_plan_east_sea_fleet_formation
@@ -258,7 +295,6 @@ MILITARY_FORMATIONS = {
 			transfer_to_formation = scope:prc_plan_east_sea_fleet_formation
 		}
  
-		# PLAN South Sea Fleet
 		create_military_formation = {
 			type = fleet
 			hq_region = sr:region_south_china
@@ -266,17 +302,16 @@ MILITARY_FORMATIONS = {
  
 			ship = {
 				type = ship_type:ship_type_destroyer
-				count = 5
+				count = 3
 			}
 			ship = {
 				type = ship_type:ship_type_frigate
-				count = 8
+				count = 4
 			}
 			ship = {
 				type = ship_type:ship_type_submarine
-				count = 6
+				count = 3
 			}
-			# Xia-class SSBN (single operational boat)
 			ship = {
 				type = ship_type:ship_type_troop_ship
 				count = 1
@@ -295,11 +330,6 @@ MILITARY_FORMATIONS = {
 		}
 	}
  
-	### SOUTH KOREA ###
-	# ~633,000 active in 1992. Still on war footing vs North Korea.
-	# US Forces Korea (USFK) supplement covered in US file.
-	# K1 tanks, F-16C/D and F-4E, ROKN destroyers.
- 
 	c:STK ?= {
  
 		create_military_formation = {
@@ -307,7 +337,6 @@ MILITARY_FORMATIONS = {
 			hq_region = sr:region_northeast_asia
 			name = "Republic_of_Korea_Army"
  
-			# I ROK Corps (frontline, DMZ)
 			combat_unit = {
 				type = unit_type:combat_unit_type_armored_infantry
 				state_region = s:STATE_SEOUL
@@ -316,13 +345,22 @@ MILITARY_FORMATIONS = {
 			combat_unit = {
 				type = unit_type:combat_unit_type_mechanized_infantry
 				state_region = s:STATE_SEOUL
-				count = 35
+				count = 18
 			}
-			# II ROK Corps (reserve/depth)
+			combat_unit = {
+				type = unit_type:combat_unit_type_light_infantry
+				state_region = s:STATE_SEOUL
+				count = 17
+			}
 			combat_unit = {
 				type = unit_type:combat_unit_type_mechanized_infantry
 				state_region = s:STATE_YANGHO
-				count = 25
+				count = 13
+			}
+			combat_unit = {
+				type = unit_type:combat_unit_type_light_infantry
+				state_region = s:STATE_YANGHO
+				count = 12
 			}
 			combat_unit = {
 				type = unit_type:combat_unit_type_light_infantry
@@ -346,17 +384,14 @@ MILITARY_FORMATIONS = {
 			hq_region = sr:region_northeast_asia
 			name = "Republic_of_Korea_Navy"
  
-			# KDX destroyers (Gwanggaeto the Great-class, 1998 — Gearing/Adams class in 1992)
 			ship = {
 				type = ship_type:ship_type_destroyer
 				count = 5
 			}
-			# Ulsan-class frigates
 			ship = {
 				type = ship_type:ship_type_frigate
 				count = 8
 			}
-			# Type 209 submarines (Chang Bogo-class, first delivered 1993)
 			ship = {
 				type = ship_type:ship_type_submarine
 				count = 3
@@ -375,11 +410,6 @@ MILITARY_FORMATIONS = {
 		}
 	}
  
-	### NORTH KOREA ###
-	# ~1,000,000+ active in 1992. One of world's largest armies per capita.
-	# Heavily forward-deployed near DMZ. T-62/T-54 tanks; MiG-29, MiG-23.
-	# Severe economic crisis but military maintained at all costs.
- 
 	c:NRK ?= {
  
 		create_military_formation = {
@@ -387,7 +417,6 @@ MILITARY_FORMATIONS = {
 			hq_region = sr:region_northeast_asia
 			name = "Korean_Peoples_Army"
  
-			# Forward corps — dug in near DMZ
 			combat_unit = {
 				type = unit_type:combat_unit_type_armored_infantry
 				state_region = s:STATE_PYONGYANG
@@ -396,7 +425,12 @@ MILITARY_FORMATIONS = {
 			combat_unit = {
 				type = unit_type:combat_unit_type_mechanized_infantry
 				state_region = s:STATE_PYONGYANG
-				count = 50
+				count = 25
+			}
+			combat_unit = {
+				type = unit_type:combat_unit_type_light_infantry
+				state_region = s:STATE_PYONGYANG
+				count = 25
 			}
 			combat_unit = {
 				type = unit_type:combat_unit_type_light_infantry
@@ -425,7 +459,6 @@ MILITARY_FORMATIONS = {
 			hq_region = sr:region_northeast_asia
 			name = "Korean_Peoples_Navy"
  
-			# Romeo-class submarines, Najin-class frigates
 			ship = {
 				type = ship_type:ship_type_submarine
 				count = 6
@@ -452,11 +485,6 @@ MILITARY_FORMATIONS = {
 		}
 	}
  
-	### JAPAN ###
-	# ~250,000 active in 1992. Article 9 constitution limits offensive capability.
-	# JGSDF: Type 74/Type 90 MBT; JASDF: F-15J Eagle, F-4EJ Kai; JMSDF: world-class ASW force.
-	# Four ground armies; three naval districts.
- 
 	c:JPN ?= {
  
 		create_military_formation = {
@@ -464,7 +492,6 @@ MILITARY_FORMATIONS = {
 			hq_region = sr:region_northeast_asia
 			name = "Northern_Army_JGSDF"
  
-			# Northern Army — Hokkaido, facing Russia
 			combat_unit = {
 				type = unit_type:combat_unit_type_armored_infantry
 				state_region = s:STATE_HOKKAIDO
@@ -473,7 +500,12 @@ MILITARY_FORMATIONS = {
 			combat_unit = {
 				type = unit_type:combat_unit_type_mechanized_infantry
 				state_region = s:STATE_HOKKAIDO
-				count = 20
+				count = 10
+			}
+			combat_unit = {
+				type = unit_type:combat_unit_type_light_infantry
+				state_region = s:STATE_HOKKAIDO
+				count = 10
 			}
 			combat_unit = {
 				type = unit_type:combat_unit_type_howitzer_artillery
@@ -498,11 +530,15 @@ MILITARY_FORMATIONS = {
 			hq_region = sr:region_northeast_asia
 			name = "Eastern_Western_Central_Army_JGSDF"
  
-			# Eastern Army (Tohoku/Kanto), Central Army (Kansai), Western Army (Kyushu)
 			combat_unit = {
 				type = unit_type:combat_unit_type_mechanized_infantry
 				state_region = s:STATE_KANTO
-				count = 20
+				count = 10
+			}
+			combat_unit = {
+				type = unit_type:combat_unit_type_light_infantry
+				state_region = s:STATE_KANTO
+				count = 10
 			}
 			combat_unit = {
 				type = unit_type:combat_unit_type_light_infantry
@@ -512,12 +548,22 @@ MILITARY_FORMATIONS = {
 			combat_unit = {
 				type = unit_type:combat_unit_type_mechanized_infantry
 				state_region = s:STATE_KANSAI
-				count = 15
+				count = 8
+			}
+			combat_unit = {
+				type = unit_type:combat_unit_type_light_infantry
+				state_region = s:STATE_KANSAI
+				count = 7
 			}
 			combat_unit = {
 				type = unit_type:combat_unit_type_mechanized_infantry
 				state_region = s:STATE_KYUSHU
-				count = 15
+				count = 8
+			}
+			combat_unit = {
+				type = unit_type:combat_unit_type_light_infantry
+				state_region = s:STATE_KYUSHU
+				count = 7
 			}
 			combat_unit = {
 				type = unit_type:combat_unit_type_field_artillery
@@ -542,7 +588,6 @@ MILITARY_FORMATIONS = {
 			hq_region = sr:region_northeast_asia
 			name = "JASDF"
  
-			# F-15J/DJ Eagle, F-4EJ Kai, F-1 support fighter
 			combat_unit = {
 				type = unit_type:combat_unit_type_multirole_aircraft
 				state_region = s:STATE_KANTO
@@ -576,17 +621,14 @@ MILITARY_FORMATIONS = {
 			hq_region = sr:region_northeast_asia
 			name = "JMSDF"
  
-			# Kongo-class destroyers (Aegis, first 1993 — Hatakaze in 1992), Murasame class
 			ship = {
 				type = ship_type:ship_type_destroyer
 				count = 10
 			}
-			# Yūbari-class, Abukuma-class frigates
 			ship = {
 				type = ship_type:ship_type_frigate
 				count = 8
 			}
-			# Harushio-class submarines (first operational 1990)
 			ship = {
 				type = ship_type:ship_type_submarine
 				count = 10
@@ -608,10 +650,6 @@ MILITARY_FORMATIONS = {
 			transfer_to_formation = scope:jpn_jmsdf_formation
 		}
 	}
- 
-	### PHILIPPINES ###
-	# ~107,000 active in 1992. US bases (Clark/Subic Bay) closed 1992.
-	# AFP: light infantry counterinsurgency vs NPA and MNLF; small air force and navy.
  
 	c:PHP ?= {
  
@@ -658,7 +696,6 @@ MILITARY_FORMATIONS = {
 			hq_region = sr:region_indonesia
 			name = "Philippine_Navy"
  
-			# Ex-US Cannon/Tacoma-class frigates
 			ship = {
 				type = ship_type:ship_type_frigate
 				count = 4
@@ -681,11 +718,6 @@ MILITARY_FORMATIONS = {
 		}
 	}
  
-	### TAIWAN ###
-	# ~425,000 active in 1992. Existential threat from PRC.
-	# F-16A/B (ordered 1992), F-5E, Mirage 2000-5 (ordered); Cheng Kung-class frigates.
-	# Conscript army; strong anti-invasion posture.
- 
 	c:ROC ?= {
  
 		create_military_formation = {
@@ -701,7 +733,12 @@ MILITARY_FORMATIONS = {
 			combat_unit = {
 				type = unit_type:combat_unit_type_mechanized_infantry
 				state_region = s:STATE_FORMOSA
-				count = 50
+				count = 25
+			}
+			combat_unit = {
+				type = unit_type:combat_unit_type_light_infantry
+				state_region = s:STATE_FORMOSA
+				count = 25
 			}			combat_unit = {
 				type = unit_type:combat_unit_type_multirole_aircraft
 				state_region = s:STATE_FORMOSA
@@ -725,7 +762,6 @@ MILITARY_FORMATIONS = {
 			hq_region = sr:region_south_china
 			name = "Republic_of_China_Navy"
  
-			# Cheng Kung-class (Oliver Hazard Perry) frigates, Gearing FRAM destroyers
 			ship = {
 				type = ship_type:ship_type_destroyer
 				count = 6
@@ -734,7 +770,6 @@ MILITARY_FORMATIONS = {
 				type = ship_type:ship_type_frigate
 				count = 8
 			}
-			# Hai Lung-class (Zwaardvis) submarines
 			ship = {
 				type = ship_type:ship_type_submarine
 				count = 4
@@ -753,10 +788,6 @@ MILITARY_FORMATIONS = {
 		}
 	}
  
-	### KAZAKHSTAN ###
-	# ~40,000 active in 1992. Newly independent; inheriting Soviet Central Asian forces.
-	# Large territory, thin coverage. Russian-officered; T-72s, MiG-29s, Su-24s.
- 
 	c:KZK ?= {
  
 		create_military_formation = {
@@ -772,7 +803,12 @@ MILITARY_FORMATIONS = {
 			combat_unit = {
 				type = unit_type:combat_unit_type_mechanized_infantry
 				state_region = s:STATE_AKMOLINSK
-				count = 12
+				count = 6
+			}
+			combat_unit = {
+				type = unit_type:combat_unit_type_light_infantry
+				state_region = s:STATE_AKMOLINSK
+				count = 6
 			}
 			combat_unit = {
 				type = unit_type:combat_unit_type_light_infantry
@@ -803,12 +839,6 @@ MILITARY_FORMATIONS = {
 		}
 	}
  
-	### INDIA ###
-	# ~1,265,000 active in 1992. Second largest army in the world.
-	# T-72M Ajeya, Arjun MBT (development), MiG-29, Mirage 2000.
-	# Three commands: Western (Pakistan), Northern (Kashmir/China), Eastern (China/Bangladesh).
-	# IN: carrier Viraat (ex-HMS Hermes), Godavari frigates, Type 209 subs.
- 
 	c:BHT ?= {
  
 		create_military_formation = {
@@ -816,7 +846,6 @@ MILITARY_FORMATIONS = {
 			hq_region = sr:region_north_india
 			name = "Western_Command_India"
  
-			# Western Command — Pakistan border, Punjab/Rajasthan
 			combat_unit = {
 				type = unit_type:combat_unit_type_armored_infantry
 				state_region = s:STATE_PUNJAB
@@ -825,12 +854,22 @@ MILITARY_FORMATIONS = {
 			combat_unit = {
 				type = unit_type:combat_unit_type_mechanized_infantry
 				state_region = s:STATE_PUNJAB
-				count = 35
+				count = 18
+			}
+			combat_unit = {
+				type = unit_type:combat_unit_type_light_infantry
+				state_region = s:STATE_PUNJAB
+				count = 17
 			}
 			combat_unit = {
 				type = unit_type:combat_unit_type_mechanized_infantry
 				state_region = s:STATE_RAJPUTANA
-				count = 25
+				count = 13
+			}
+			combat_unit = {
+				type = unit_type:combat_unit_type_light_infantry
+				state_region = s:STATE_RAJPUTANA
+				count = 12
 			}
 			combat_unit = {
 				type = unit_type:combat_unit_type_armored_infantry
@@ -854,16 +893,25 @@ MILITARY_FORMATIONS = {
 			hq_region = sr:region_north_india
 			name = "Central_Southern_Command_India"
  
-			# Central Command (UP/MP), Southern Command (Deccan/Tamil Nadu)
 			combat_unit = {
 				type = unit_type:combat_unit_type_mechanized_infantry
 				state_region = s:STATE_AGRA
-				count = 25
+				count = 13
+			}
+			combat_unit = {
+				type = unit_type:combat_unit_type_light_infantry
+				state_region = s:STATE_AGRA
+				count = 12
 			}
 			combat_unit = {
 				type = unit_type:combat_unit_type_mechanized_infantry
 				state_region = s:STATE_DELHI
-				count = 20
+				count = 10
+			}
+			combat_unit = {
+				type = unit_type:combat_unit_type_light_infantry
+				state_region = s:STATE_DELHI
+				count = 10
 			}
 			combat_unit = {
 				type = unit_type:combat_unit_type_light_infantry
@@ -903,7 +951,6 @@ MILITARY_FORMATIONS = {
 			hq_region = sr:region_north_india
 			name = "Eastern_Northern_Command_India"
  
-			# Eastern Command (China border, northeast), Northern Command (Kashmir)
 			combat_unit = {
 				type = unit_type:combat_unit_type_light_infantry
 				state_region = s:STATE_ASSAM
@@ -947,7 +994,6 @@ MILITARY_FORMATIONS = {
 			hq_region = sr:region_north_india
 			name = "Indian_Air_Force"
  
-			# MiG-29, Mirage 2000H, MiG-21 (large fleet), Jaguar IS
 			combat_unit = {
 				type = unit_type:combat_unit_type_multirole_aircraft
 				state_region = s:STATE_DELHI
@@ -986,22 +1032,18 @@ MILITARY_FORMATIONS = {
 			hq_region = sr:region_south_india
 			name = "Indian_Navy"
  
-			# INS Viraat (ex-HMS Hermes, STOVL carrier)
 			ship = {
 				type = ship_type:ship_type_aircraft_carrier
 				count = 1
 			}
-			# Delhi-class destroyers (first 1997 — Rajput/Kashin-class in 1992)
 			ship = {
 				type = ship_type:ship_type_destroyer
 				count = 6
 			}
-			# Godavari-class, Nilgiri-class frigates
 			ship = {
 				type = ship_type:ship_type_frigate
 				count = 10
 			}
-			# Sindhughosh-class (Kilo), Shishumar-class (Type 209)
 			ship = {
 				type = ship_type:ship_type_submarine
 				count = 8
@@ -1024,10 +1066,6 @@ MILITARY_FORMATIONS = {
 		}
 	}
  
-	### BANGLADESH ###
-	# ~115,000 active in 1992. Light infantry, UN peacekeeping focus.
-	# Small air force (A-5C, F-7M); tiny frigate navy.
- 
 	c:BNG ?= {
  
 		create_military_formation = {
@@ -1043,7 +1081,12 @@ MILITARY_FORMATIONS = {
 			combat_unit = {
 				type = unit_type:combat_unit_type_mechanized_infantry
 				state_region = s:STATE_EAST_BENGAL
-				count = 20
+				count = 10
+			}
+			combat_unit = {
+				type = unit_type:combat_unit_type_light_infantry
+				state_region = s:STATE_EAST_BENGAL
+				count = 10
 			}
 			combat_unit = {
 				type = unit_type:combat_unit_type_fixed_wing_aircraft
@@ -1086,11 +1129,6 @@ MILITARY_FORMATIONS = {
 		}
 	}
  
-	### PAKISTAN ###
-	# ~580,000 active in 1992. Nuclear-capable; existential rivalry with India.
-	# T-59/T-69/M48 tanks; F-16A/B (limited after Pressler Amendment sanctions 1990); A-5 Fantan.
-	# ISI-backed Afghan mujahideen operations ongoing.
- 
 	c:PAK ?= {
  
 		create_military_formation = {
@@ -1098,7 +1136,6 @@ MILITARY_FORMATIONS = {
 			hq_region = sr:region_north_india
 			name = "Pakistan_Army"
  
-			# I Corps (Mangla) — eastern front vs India
 			combat_unit = {
 				type = unit_type:combat_unit_type_armored_infantry
 				state_region = s:STATE_PUNJAB
@@ -1107,9 +1144,13 @@ MILITARY_FORMATIONS = {
 			combat_unit = {
 				type = unit_type:combat_unit_type_mechanized_infantry
 				state_region = s:STATE_PUNJAB
-				count = 40
+				count = 20
 			}
-			# Balochistan/NWFP — Afghan border, tribal areas
+			combat_unit = {
+				type = unit_type:combat_unit_type_light_infantry
+				state_region = s:STATE_PUNJAB
+				count = 20
+			}
 			combat_unit = {
 				type = unit_type:combat_unit_type_light_infantry
 				state_region = s:STATE_BALUCHISTAN
@@ -1143,17 +1184,14 @@ MILITARY_FORMATIONS = {
 			hq_region = sr:region_south_india
 			name = "Pakistan_Navy_Air"
  
-			# Leander-class frigates, Type 21 (Amazon-class) frigates
 			ship = {
 				type = ship_type:ship_type_frigate
 				count = 6
 			}
-			# Daphné-class submarines
 			ship = {
 				type = ship_type:ship_type_submarine
 				count = 4
 			}
-			# PAF: F-16A/B (Pressler embargo limiting spare parts), Mirage III/5, A-5
 			ship = {
 				type = unit_type:combat_unit_type_multirole_aircraft
 				count = 6
@@ -1176,12 +1214,6 @@ MILITARY_FORMATIONS = {
 		}
 	}
  
-	### IRAN ###
-	# ~473,000 active in 1992. Post-Iran-Iraq War; rebuilding after massive casualties.
-	# T-55/T-62/T-72 (captured/purchased); F-14 Tomcat (no spare parts), MiG-29, Su-24.
-	# IRGC parallel military structure; Kilo-class submarines recently purchased.
-	# Separate IRGCN and IRIN fleets.
- 
 	c:IRA ?= {
  
 		create_military_formation = {
@@ -1189,7 +1221,6 @@ MILITARY_FORMATIONS = {
 			hq_region = sr:region_greater_persia
 			name = "Artesh_Iran"
  
-			# Regular army ground forces
 			combat_unit = {
 				type = unit_type:combat_unit_type_armored_infantry
 				state_region = s:STATE_KHUZESTAN
@@ -1198,17 +1229,32 @@ MILITARY_FORMATIONS = {
 			combat_unit = {
 				type = unit_type:combat_unit_type_mechanized_infantry
 				state_region = s:STATE_ISFAHAN
-				count = 25
+				count = 13
+			}
+			combat_unit = {
+				type = unit_type:combat_unit_type_light_infantry
+				state_region = s:STATE_ISFAHAN
+				count = 12
 			}
 			combat_unit = {
 				type = unit_type:combat_unit_type_mechanized_infantry
 				state_region = s:STATE_KHORASAN
-				count = 20
+				count = 10
+			}
+			combat_unit = {
+				type = unit_type:combat_unit_type_light_infantry
+				state_region = s:STATE_KHORASAN
+				count = 10
 			}
 			combat_unit = {
 				type = unit_type:combat_unit_type_mechanized_infantry
 				state_region = s:STATE_TABRIZ
-				count = 18
+				count = 9
+			}
+			combat_unit = {
+				type = unit_type:combat_unit_type_light_infantry
+				state_region = s:STATE_TABRIZ
+				count = 9
 			}
 			combat_unit = {
 				type = unit_type:combat_unit_type_light_infantry
@@ -1238,7 +1284,6 @@ MILITARY_FORMATIONS = {
 			hq_region = sr:region_greater_persia
 			name = "IRGC_Ground_Air"
  
-			# Islamic Revolutionary Guard Corps — parallel force
 			combat_unit = {
 				type = unit_type:combat_unit_type_light_infantry
 				state_region = s:STATE_ISFAHAN
@@ -1247,8 +1292,13 @@ MILITARY_FORMATIONS = {
 			combat_unit = {
 				type = unit_type:combat_unit_type_mechanized_infantry
 				state_region = s:STATE_KHUZESTAN
-				count = 20
-			}			# IRIAF: F-14A (grounded mostly), MiG-29, Su-24MK, F-4E
+				count = 10
+			}
+			combat_unit = {
+				type = unit_type:combat_unit_type_light_infantry
+				state_region = s:STATE_KHUZESTAN
+				count = 10
+			}
 			combat_unit = {
 				type = unit_type:combat_unit_type_multirole_aircraft
 				state_region = s:STATE_ISFAHAN
@@ -1277,7 +1327,6 @@ MILITARY_FORMATIONS = {
 			hq_region = sr:region_greater_persia
 			name = "Iranian_Naval_Forces"
  
-			# IRIN: Alvand-class frigates, Kilo-class submarines (Tareg, 1992)
 			ship = {
 				type = ship_type:ship_type_frigate
 				count = 4
@@ -1286,7 +1335,6 @@ MILITARY_FORMATIONS = {
 				type = ship_type:ship_type_submarine
 				count = 3
 			}
-			# IRGCN: fast attack craft, Silkworm anti-ship missiles
 			ship = {
 				type = ship_type:ship_type_destroyer
 				count = 6
@@ -1305,11 +1353,6 @@ MILITARY_FORMATIONS = {
 		}
 	}
  
-	### AFGHANISTAN ###
-	# ~45,000 active in 1992. Najibullah government collapsed April 1992; mujahideen taking over.
-	# Soviet-supplied equipment largely captured, destroyed, or inoperable.
-	# Fragmented between multiple factions — Dostum, Massoud, Hekmatyar, Rabbani.
- 
 	c:AFG ?= {
  
 		create_military_formation = {
@@ -1320,17 +1363,22 @@ MILITARY_FORMATIONS = {
 			combat_unit = {
 				type = unit_type:combat_unit_type_irregular_infantry
 				state_region = s:STATE_KABUL
-				count = 20
+				count = 16
+			}
+			combat_unit = {
+				type = unit_type:combat_unit_type_technicals
+				state_region = s:STATE_KABUL
+				count = 4
 			}
 			combat_unit = {
 				type = unit_type:combat_unit_type_irregular_infantry
 				state_region = s:STATE_KANDAHAR
-				count = 12
+				count = 10
 			}
 			combat_unit = {
-				type = unit_type:combat_unit_type_irregular_infantry
-				state_region = s:STATE_HERAT
-				count = 8
+				type = unit_type:combat_unit_type_technicals
+				state_region = s:STATE_KANDAHAR
+				count = 2
 			}
 			combat_unit = {
 				type = unit_type:combat_unit_type_irregular_infantry
@@ -1338,9 +1386,29 @@ MILITARY_FORMATIONS = {
 				count = 6
 			}
 			combat_unit = {
+				type = unit_type:combat_unit_type_technicals
+				state_region = s:STATE_HERAT
+				count = 2
+			}
+			combat_unit = {
+				type = unit_type:combat_unit_type_irregular_infantry
+				state_region = s:STATE_HERAT
+				count = 5
+			}
+			combat_unit = {
+				type = unit_type:combat_unit_type_technicals
+				state_region = s:STATE_HERAT
+				count = 1
+			}
+			combat_unit = {
 				type = unit_type:combat_unit_type_irregular_infantry
 				state_region = s:STATE_NORTHERN_BALUCHISTAN
-				count = 5
+				count = 4
+			}
+			combat_unit = {
+				type = unit_type:combat_unit_type_technicals
+				state_region = s:STATE_NORTHERN_BALUCHISTAN
+				count = 1
 			}
 
 			save_scope_as = afg_afghan_mujahideen_forces_formation
@@ -1356,10 +1424,6 @@ MILITARY_FORMATIONS = {
 		}
 	}
  
-	### VIETNAM ###
-	# ~857,000 active in 1992 (rapidly demobilizing from 1.2M post-Cambodia withdrawal).
-	# T-54/T-55, MiG-21, Su-22, Su-27 (first delivery). Large but under-equipped.
- 
 	c:VNM ?= {
  
 		create_military_formation = {
@@ -1370,7 +1434,12 @@ MILITARY_FORMATIONS = {
 			combat_unit = {
 				type = unit_type:combat_unit_type_mechanized_infantry
 				state_region = s:STATE_TONKIN
-				count = 80
+				count = 40
+			}
+			combat_unit = {
+				type = unit_type:combat_unit_type_light_infantry
+				state_region = s:STATE_TONKIN
+				count = 40
 			}
 			combat_unit = {
 				type = unit_type:combat_unit_type_armored_infantry
@@ -1380,7 +1449,12 @@ MILITARY_FORMATIONS = {
 			combat_unit = {
 				type = unit_type:combat_unit_type_mechanized_infantry
 				state_region = s:STATE_ANNAM
-				count = 40
+				count = 20
+			}
+			combat_unit = {
+				type = unit_type:combat_unit_type_light_infantry
+				state_region = s:STATE_ANNAM
+				count = 20
 			}
 			combat_unit = {
 				type = unit_type:combat_unit_type_light_infantry
@@ -1415,7 +1489,6 @@ MILITARY_FORMATIONS = {
 			hq_region = sr:region_indochina
 			name = "Vietnam_Peoples_Navy"
  
-			# Petya-class frigates, Turya-class torpedo boats, Yugo-class subs
 			ship = {
 				type = ship_type:ship_type_frigate
 				count = 4
@@ -1438,10 +1511,6 @@ MILITARY_FORMATIONS = {
 		}
 	}
  
-	### THAILAND ###
-	# ~283,000 active in 1992. US-aligned; ongoing insurgency on borders.
-	# F-16A/B, F-5E; HTMS Chakri Naruebet carrier (under construction, delivered 1997).
- 
 	c:THA ?= {
  
 		create_military_formation = {
@@ -1452,7 +1521,12 @@ MILITARY_FORMATIONS = {
 			combat_unit = {
 				type = unit_type:combat_unit_type_mechanized_infantry
 				state_region = s:STATE_BANGKOK
-				count = 60
+				count = 30
+			}
+			combat_unit = {
+				type = unit_type:combat_unit_type_light_infantry
+				state_region = s:STATE_BANGKOK
+				count = 30
 			}
 			combat_unit = {
 				type = unit_type:combat_unit_type_armored_infantry
@@ -1497,7 +1571,6 @@ MILITARY_FORMATIONS = {
 			hq_region = sr:region_indochina
 			name = "Royal_Thai_Navy"
  
-			# Knox-class frigates, Tachin-class
 			ship = {
 				type = ship_type:ship_type_frigate
 				count = 6
@@ -1520,10 +1593,6 @@ MILITARY_FORMATIONS = {
 		}
 	}
  
-	### INDONESIA ###
-	# ~274,000 active in 1992. ABRI (integrated military). East Timor occupation ongoing.
-	# Archipelago defence focus; OV-10 Bronco, F-16A/B (small fleet), Van Speijk frigates.
- 
 	c:IDS ?= {
  
 		create_military_formation = {
@@ -1539,7 +1608,12 @@ MILITARY_FORMATIONS = {
 			combat_unit = {
 				type = unit_type:combat_unit_type_mechanized_infantry
 				state_region = s:STATE_WEST_JAVA
-				count = 20
+				count = 10
+			}
+			combat_unit = {
+				type = unit_type:combat_unit_type_light_infantry
+				state_region = s:STATE_WEST_JAVA
+				count = 10
 			}
 			combat_unit = {
 				type = unit_type:combat_unit_type_light_infantry
@@ -1589,12 +1663,10 @@ MILITARY_FORMATIONS = {
 			hq_region = sr:region_indonesia
 			name = "Tentara_Nasional_Indonesia_Angkatan_Laut"
  
-			# Van Speijk-class frigates, Ahmad Yani-class
 			ship = {
 				type = ship_type:ship_type_frigate
 				count = 8
 			}
-			# Type 209 submarines
 			ship = {
 				type = ship_type:ship_type_submarine
 				count = 2
@@ -1617,10 +1689,6 @@ MILITARY_FORMATIONS = {
 		}
 	}
  
-	### MALAYSIA ###
-	# ~114,000 active in 1992. Well-equipped for region; F/A-18D Hornet (ordered 1993), MiG-29.
-	# Confronting communist insurgency remnants; South China Sea territorial disputes.
- 
 	c:MYY ?= {
  
 		create_military_formation = {
@@ -1636,7 +1704,12 @@ MILITARY_FORMATIONS = {
 			combat_unit = {
 				type = unit_type:combat_unit_type_mechanized_infantry
 				state_region = s:STATE_MALAYA
-				count = 25
+				count = 13
+			}
+			combat_unit = {
+				type = unit_type:combat_unit_type_light_infantry
+				state_region = s:STATE_MALAYA
+				count = 12
 			}
 			combat_unit = {
 				type = unit_type:combat_unit_type_light_infantry
@@ -1666,7 +1739,6 @@ MILITARY_FORMATIONS = {
 			hq_region = sr:region_indonesia
 			name = "Royal_Malaysian_Navy"
  
-			# Kasturi-class frigates, Laksamana-class corvettes
 			ship = {
 				type = ship_type:ship_type_frigate
 				count = 5
@@ -1689,10 +1761,6 @@ MILITARY_FORMATIONS = {
 		}
 	}
  
-	### SINGAPORE ###
-	# ~55,000 active (200,000+ reservists). Small but highly professional force.
-	# F-16C/D, A-4SU Super Skyhawk; Formidable-class frigates (not yet — Victory-class in 1992).
- 
 	c:SGP ?= {
  
 		create_military_formation = {
@@ -1703,7 +1771,12 @@ MILITARY_FORMATIONS = {
 			combat_unit = {
 				type = unit_type:combat_unit_type_mechanized_infantry
 				state_region = s:STATE_MALAYA
-				count = 30
+				count = 15
+			}
+			combat_unit = {
+				type = unit_type:combat_unit_type_light_infantry
+				state_region = s:STATE_MALAYA
+				count = 15
 			}
 			combat_unit = {
 				type = unit_type:combat_unit_type_armored_infantry
@@ -1733,7 +1806,6 @@ MILITARY_FORMATIONS = {
 			hq_region = sr:region_indonesia
 			name = "Republic_of_Singapore_Navy"
  
-			# Victory-class (La Fayette-type) missile corvettes
 			ship = {
 				type = ship_type:ship_type_frigate
 				count = 5
@@ -1755,10 +1827,6 @@ MILITARY_FORMATIONS = {
 			transfer_to_formation = scope:sgp_republic_of_singapore_navy_formation
 		}
 	}
- 
-	### BURMA (MYANMAR) ###
-	# ~286,000 active in 1992. SLORC military junta (seized power 1988).
-	# Ongoing ethnic conflicts on all borders. Poorly equipped Chinese-supplied force.
  
 	c:MYM ?= {
  
@@ -1842,11 +1910,6 @@ MILITARY_FORMATIONS = {
 		}
 	}
  
-	### IRAQ ###
-	# ~382,000 active in 1992. Post-Gulf War; devastated by Coalition, under sanctions and no-fly zones.
-	# Massive equipment losses; T-72/T-55 survivors; MiG-25/29 and Su-24 grounded or fled to Iran.
-	# Republican Guard still intact as regime protection force.
- 
 	c:IRQ ?= {
  
 		create_military_formation = {
@@ -1854,7 +1917,6 @@ MILITARY_FORMATIONS = {
 			hq_region = sr:region_near_east
 			name = "Iraqi_Armed_Forces"
  
-			# Republican Guard — Baghdad security
 			combat_unit = {
 				type = unit_type:combat_unit_type_armored_infantry
 				state_region = s:STATE_BAGHDAD
@@ -1863,9 +1925,13 @@ MILITARY_FORMATIONS = {
 			combat_unit = {
 				type = unit_type:combat_unit_type_mechanized_infantry
 				state_region = s:STATE_BAGHDAD
-				count = 30
+				count = 15
 			}
-			# Regular Army remnants
+			combat_unit = {
+				type = unit_type:combat_unit_type_light_infantry
+				state_region = s:STATE_BAGHDAD
+				count = 15
+			}
 			combat_unit = {
 				type = unit_type:combat_unit_type_light_infantry
 				state_region = s:STATE_MOSUL
@@ -1878,7 +1944,7 @@ MILITARY_FORMATIONS = {
 			}
 			combat_unit = {
 				type = unit_type:combat_unit_type_light_infantry
-				state_region = s:STATE_AR_RUTBA
+				state_region = s:STATE_BAGHDAD
 				count = 10
 			}
 			combat_unit = {
@@ -1886,7 +1952,6 @@ MILITARY_FORMATIONS = {
 				state_region = s:STATE_BAGHDAD
 				count = 6
 			}
-			# Surviving air force (much fled to Iran or destroyed)
 			combat_unit = {
 				type = unit_type:combat_unit_type_fixed_wing_aircraft
 				state_region = s:STATE_BAGHDAD
@@ -1910,7 +1975,6 @@ MILITARY_FORMATIONS = {
 			hq_region = sr:region_arabia
 			name = "Iraqi_Navy"
  
-			# Almost entirely destroyed in Gulf War; token remnants
 			ship = {
 				type = ship_type:ship_type_destroyer
 				count = 2
@@ -1929,10 +1993,6 @@ MILITARY_FORMATIONS = {
 		}
 	}
  
-	### SYRIA ###
-	# ~408,000 active in 1992. Soviet-equipped; T-72, MiG-29, Su-24.
-	# Hafez al-Assad's regime; Bekaa Valley Lebanon garrison.
- 
 	c:SYR ?= {
  
 		create_military_formation = {
@@ -1948,12 +2008,22 @@ MILITARY_FORMATIONS = {
 			combat_unit = {
 				type = unit_type:combat_unit_type_mechanized_infantry
 				state_region = s:STATE_ALEPPO
-				count = 40
+				count = 20
+			}
+			combat_unit = {
+				type = unit_type:combat_unit_type_light_infantry
+				state_region = s:STATE_ALEPPO
+				count = 20
 			}
 			combat_unit = {
 				type = unit_type:combat_unit_type_mechanized_infantry
 				state_region = s:STATE_DEIR_EZ_ZOR
-				count = 25
+				count = 13
+			}
+			combat_unit = {
+				type = unit_type:combat_unit_type_light_infantry
+				state_region = s:STATE_DEIR_EZ_ZOR
+				count = 12
 			}			combat_unit = {
 				type = unit_type:combat_unit_type_multirole_aircraft
 				state_region = s:STATE_SYRIA
@@ -1982,7 +2052,6 @@ MILITARY_FORMATIONS = {
 			hq_region = sr:region_arabia
 			name = "Syrian_Arab_Navy"
  
-			# Petya-class frigates, Romeo-class submarines
 			ship = {
 				type = ship_type:ship_type_frigate
 				count = 3
@@ -2005,10 +2074,6 @@ MILITARY_FORMATIONS = {
 		}
 	}
  
-	### ISRAEL ###
-	# ~172,000 active (640,000 mobilized). IDF; most capable military in Middle East.
-	# Merkava III, F-15I (ordered), F-16C/D; Dolphin submarines (ordered, delivered 1999 — Gal-class in 1992).
- 
 	c:ISR ?= {
  
 		create_military_formation = {
@@ -2024,7 +2089,12 @@ MILITARY_FORMATIONS = {
 			combat_unit = {
 				type = unit_type:combat_unit_type_mechanized_infantry
 				state_region = s:STATE_PALESTINE
-				count = 35
+				count = 18
+			}
+			combat_unit = {
+				type = unit_type:combat_unit_type_light_infantry
+				state_region = s:STATE_PALESTINE
+				count = 17
 			}			combat_unit = {
 				type = unit_type:combat_unit_type_multirole_aircraft
 				state_region = s:STATE_PALESTINE
@@ -2048,7 +2118,6 @@ MILITARY_FORMATIONS = {
 			hq_region = sr:region_arabia
 			name = "Israeli_Navy"
  
-			# Sa'ar 5-class corvettes, Gal-class submarines (Type 206)
 			ship = {
 				type = ship_type:ship_type_frigate
 				count = 4
@@ -2075,10 +2144,6 @@ MILITARY_FORMATIONS = {
 		}
 	}
  
-	### PALESTINE ###
-	# PLO returning to Gaza/West Bank following Oslo process (Accords signed Sept 1993).
-	# In 1992: no formal military, only light armed factions.
- 
 	c:PSE ?= {
  
 		create_military_formation = {
@@ -2089,7 +2154,12 @@ MILITARY_FORMATIONS = {
 			combat_unit = {
 				type = unit_type:combat_unit_type_irregular_infantry
 				state_region = s:STATE_PALESTINE
-				count = 10
+				count = 8
+			}
+			combat_unit = {
+				type = unit_type:combat_unit_type_technicals
+				state_region = s:STATE_PALESTINE
+				count = 2
 			}
 
 			save_scope_as = pse_palestinian_security_forces_formation
@@ -2104,10 +2174,6 @@ MILITARY_FORMATIONS = {
 			transfer_to_formation = scope:pse_palestinian_security_forces_formation
 		}
 	}
- 
-	### SAUDI ARABIA ###
-	# ~105,000 active in 1992. Post-Gulf War expansion; US-equipped.
-	# M1A2 Abrams, F-15C/D/S Eagle; Al-Riyadh frigates (on order).
  
 	c:SAU ?= {
  
@@ -2124,7 +2190,12 @@ MILITARY_FORMATIONS = {
 			combat_unit = {
 				type = unit_type:combat_unit_type_mechanized_infantry
 				state_region = s:STATE_HEDJAZ
-				count = 25
+				count = 13
+			}
+			combat_unit = {
+				type = unit_type:combat_unit_type_light_infantry
+				state_region = s:STATE_HEDJAZ
+				count = 12
 			}
 			combat_unit = {
 				type = unit_type:combat_unit_type_light_infantry
@@ -2153,7 +2224,6 @@ MILITARY_FORMATIONS = {
 			hq_region = sr:region_arabia
 			name = "Royal_Saudi_Naval_Forces"
  
-			# Madina-class (La Fayette) frigates, Badr-class corvettes
 			ship = {
 				type = ship_type:ship_type_frigate
 				count = 5
@@ -2176,10 +2246,6 @@ MILITARY_FORMATIONS = {
 		}
 	}
  
-	### UAE ###
-	# ~43,000 active in 1992. Post-Gulf War; rapidly modernizing with oil wealth.
-	# Leclerc tanks (order placed 1993); Mirage 2000-9.
- 
 	c:UAE ?= {
  
 		create_military_formation = {
@@ -2190,7 +2256,12 @@ MILITARY_FORMATIONS = {
 			combat_unit = {
 				type = unit_type:combat_unit_type_mechanized_infantry
 				state_region = s:STATE_ABU_DHABI
-				count = 20
+				count = 10
+			}
+			combat_unit = {
+				type = unit_type:combat_unit_type_light_infantry
+				state_region = s:STATE_ABU_DHABI
+				count = 10
 			}
 			combat_unit = {
 				type = unit_type:combat_unit_type_armored_infantry
@@ -2238,10 +2309,6 @@ MILITARY_FORMATIONS = {
 		}
 	}
  
-	### YEMEN ###
-	# ~60,000 active in 1992. Recently unified (North+South Yemen merged 1990).
-	# Civil tensions; Soviet-supplied southern forces, US-supplied northern forces — uneasy mix.
- 
 	c:YMN ?= {
  
 		create_military_formation = {
@@ -2257,7 +2324,12 @@ MILITARY_FORMATIONS = {
 			combat_unit = {
 				type = unit_type:combat_unit_type_mechanized_infantry
 				state_region = s:STATE_YEMEN
-				count = 15
+				count = 8
+			}
+			combat_unit = {
+				type = unit_type:combat_unit_type_light_infantry
+				state_region = s:STATE_YEMEN
+				count = 7
 			}
 			combat_unit = {
 				type = unit_type:combat_unit_type_field_artillery
@@ -2305,10 +2377,6 @@ MILITARY_FORMATIONS = {
 		}
 	}
  
-	### OMAN ###
-	# ~43,000 active in 1992. Sultan's Armed Forces; British-advised, high quality.
-	# M60A3 tanks; F-16 Falcons; Brook/Vosper-class frigates.
- 
 	c:XOM ?= {
  
 		create_military_formation = {
@@ -2319,7 +2387,12 @@ MILITARY_FORMATIONS = {
 			combat_unit = {
 				type = unit_type:combat_unit_type_mechanized_infantry
 				state_region = s:STATE_OMAN
-				count = 25
+				count = 13
+			}
+			combat_unit = {
+				type = unit_type:combat_unit_type_light_infantry
+				state_region = s:STATE_OMAN
+				count = 12
 			}
 			combat_unit = {
 				type = unit_type:combat_unit_type_armored_infantry
@@ -2349,7 +2422,6 @@ MILITARY_FORMATIONS = {
 			hq_region = sr:region_arabia
 			name = "Royal_Navy_of_Oman"
  
-			# Qahir-class (Vosper Mk 7) corvettes, Al Bushra patrol craft
 			ship = {
 				type = ship_type:ship_type_frigate
 				count = 4
@@ -2372,12 +2444,6 @@ MILITARY_FORMATIONS = {
 		}
 	}
 	
-	### AUSTRALIA ###
-	# ~57,000 active in 1992. ADF: small but professional, US-aligned.
-	# Army: Leopard AS1 tanks (replacing with M1A1 from 1998 — still Leopard in 1992), M113 APCs.
-	# RAAF: F/A-18A Hornet, F-111C strike.
-	# RAN: Adelaide-class (Oliver Hazard Perry) frigates, Collins-class subs on order (delivered 1996).
- 
 	c:AUZ ?= {
  
 		create_military_formation = {
@@ -2385,11 +2451,15 @@ MILITARY_FORMATIONS = {
 			hq_region = sr:region_oceania
 			name = "Australian_Army"
  
-			# 1st Division (Brisbane) and Land Command
 			combat_unit = {
 				type = unit_type:combat_unit_type_mechanized_infantry
 				state_region = s:STATE_NEW_SOUTH_WALES
-				count = 15
+				count = 8
+			}
+			combat_unit = {
+				type = unit_type:combat_unit_type_light_infantry
+				state_region = s:STATE_NEW_SOUTH_WALES
+				count = 7
 			}
 			combat_unit = {
 				type = unit_type:combat_unit_type_armored_infantry
@@ -2429,7 +2499,6 @@ MILITARY_FORMATIONS = {
 			hq_region = sr:region_oceania
 			name = "Royal_Australian_Air_Force"
  
-			# F/A-18A Hornet (Williamtown, Tindal), F-111C (Amberley)
 			combat_unit = {
 				type = unit_type:combat_unit_type_multirole_aircraft
 				state_region = s:STATE_NEW_SOUTH_WALES
@@ -2463,12 +2532,10 @@ MILITARY_FORMATIONS = {
 			hq_region = sr:region_oceania
 			name = "Royal_Australian_Navy"
  
-			# Adelaide-class (Oliver Hazard Perry) frigates
 			ship = {
 				type = ship_type:ship_type_frigate
 				count = 6
 			}
-			# Oberon-class submarines (Collins on order)
 			ship = {
 				type = ship_type:ship_type_submarine
 				count = 4
@@ -2490,12 +2557,6 @@ MILITARY_FORMATIONS = {
 			transfer_to_formation = scope:auz_royal_australian_navy_formation
 		}
 	}
- 
-	### NEW ZEALAND ###
-	# ~10,000 active in 1992. NZDF: small, peacekeeping-focused, ANZUS partner.
-	# Army: light infantry only; no tanks.
-	# RNZAF: A-4K Skyhawk (retired 2001), Strikemaster.
-	# RNZN: Leander-class frigates.
  
 	c:NZL ?= {
  
@@ -2537,7 +2598,6 @@ MILITARY_FORMATIONS = {
 			hq_region = sr:region_oceania
 			name = "Royal_New_Zealand_Navy"
  
-			# Leander-class frigates (HMNZS Waikato, Canterbury)
 			ship = {
 				type = ship_type:ship_type_frigate
 				count = 3

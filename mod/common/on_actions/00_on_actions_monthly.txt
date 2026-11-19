@@ -11,7 +11,6 @@ regency_monthly_events = {
 # Coup
 coup_monthly_events = {
 	random_events = {
-		# If someone can do a coup, they will
 		chance_to_happen = 50
 		1 = ip4_coup.1
 	}
@@ -98,7 +97,7 @@ exile_pool_culling_on_action = {
 		}
 		ordered_character_in_exile_pool = {
 			limit = {
-				is_historical = no # Only consider culling historical characters if there arent generic ones we can remove
+				is_historical = no
 			}
 			alternative_limit = {
 				NOT = { has_variable = exile_pool_culling_immunity }

@@ -1,0 +1,17 @@
+smd_io_no_alliance_conflict = {
+	custom_description = {
+		text = smd_io_no_alliance_conflict
+		NOT = {
+			AND = {
+				is_target_in_global_variable_list = { name = io_nato_members target = this }
+				scope:target_country ?= { is_target_in_global_variable_list = { name = io_nato_members target = this } }
+			}
+		}
+		NOT = {
+			AND = {
+				is_target_in_global_variable_list = { name = io_csto_members target = this }
+				scope:target_country ?= { is_target_in_global_variable_list = { name = io_csto_members target = this } }
+			}
+		}
+	}
+}

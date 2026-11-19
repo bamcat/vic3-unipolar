@@ -1,12 +1,7 @@
-﻿### Try to keep tags in alphabetical order if it's not too far gone, please.
-
-################################################################
-## DEFAULT COUNTRY NAMES EXAMPLE CAN BE USED WITH ANY COUNTRY ##
-################################################################
+﻿## DEFAULT COUNTRY NAMES EXAMPLE CAN BE USED WITH ANY COUNTRY ##
 
 # Uncomment when need a dynamic_country_name for any country
 DEFAULT = {
-	# ACW revolters
 	dynamic_country_name = {
 		name = csa_revolt_name
 		adjective = csa_revolt_name_adj
@@ -41,7 +36,6 @@ DEFAULT = {
 			}
 		}
 	}
-	# Important ideologies
 	dynamic_country_name = {
 		name = generic_revolt_communist
 		adjective = generic_revolt_communist_adj
@@ -58,9 +52,9 @@ DEFAULT = {
 					is_powerful = yes
 					leader = {
 						OR = {
-							has_ideology = ideology_communist
-							has_ideology = ideology_anarchist
-							has_ideology = ideology_vanguardist
+							has_ideology = ideology:ideology_marxist_leader
+							has_ideology = ideology:ideology_anarchist_leader
+							has_ideology = ideology:ideology_state_socialist_leader
 						}
 					}
 				}
@@ -82,8 +76,7 @@ DEFAULT = {
 					is_in_government = yes
 					leader = {
 						OR = {
-							has_ideology = ideology_fascist
-							has_ideology = ideology_ethno_nationalist
+							has_ideology = ideology:ideology_fascist_leader
 						}
 					}
 				}
@@ -104,13 +97,12 @@ DEFAULT = {
 				any_interest_group = {
 					is_in_government = yes
 					leader = {
-						has_ideology = ideology_radical
+						has_ideology = ideology:ideology_progressive_leader
 					}
 				}
 			}
 		}
 	}
-	# Powerful interest groups
 	dynamic_country_name = {
 		name = generic_revolt_peasant
 		adjective = generic_revolt_peasant_adj
@@ -268,7 +260,6 @@ DEFAULT = {
 			}
 		}
 	}
-	# Generic fallbacks
 	dynamic_country_name = {
 		name = generic_revolt_1
 		adjective = generic_revolt_1_adj

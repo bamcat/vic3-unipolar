@@ -89,7 +89,6 @@ un_resolution_peace = {
 	icon = gfx/interface/icons/timed_modifier_icons/modifier_flag_positive.dds
 	country_infamy_generation_mult              = -0.10
 	country_diplomatic_reputation_add           = 1
-	country_legitimacy_base_add                 = 5
 }
  
 # Economic Development Resolution
@@ -142,7 +141,7 @@ un_sanctions_target = {
 un_condemnation_target = {
 	icon = gfx/interface/icons/timed_modifier_icons/modifier_fire_negative.dds
 	country_prestige_mult                       = -0.25
-	country_legitimacy_base_add                 = -15
+	country_legitimacy_base_add                 = -10
 	country_infamy_decay_mult                   = -0.10
 	country_investment_pool_efficiency_mult     = -0.10
 }
@@ -167,20 +166,15 @@ io_financial_agreement_member = {
  
 ### ══════════════════════════════════════════
 ### FREE TRADE AGREEMENT MEMBERS
-### A customs union has been formed between all members.
-### Members share market access and trade privileges.
 ### ══════════════════════════════════════════
  
 io_free_trade_agreement_member = {
 	icon = gfx/interface/icons/timed_modifier_icons/modifier_flag_positive.dds
-	# Customs union-like benefits — market integration
 	state_market_access_price_impact = 0.05
 }
  
 ### ══════════════════════════════════════════
 ### OPEC MEMBER
-### Petroleum cartel coordination bonuses.
-### Trade advantage for oil exports.
 ### ══════════════════════════════════════════
  
 io_opec_member = {
@@ -191,8 +185,6 @@ io_opec_member = {
  
 ### ══════════════════════════════════════════
 ### MILITARY DEFENSE AGREEMENT MEMBERS
-### Collective security — defensive pacts with all members.
-### Applied as treaties, not as a static modifier.
 ### ══════════════════════════════════════════
  
 io_military_defense_agreement_member = {
@@ -202,7 +194,6 @@ io_military_defense_agreement_member = {
  
 ### ══════════════════════════════════════════
 ### CULTURAL PACT MEMBERS (Arab League)
-### Shared heritage promotes technology spread
 ### and reduces revolutionary sentiment.
 ### ══════════════════════════════════════════
  
@@ -282,9 +273,6 @@ io_treaty_paris_signatory = {
  	
 }
 
-# NGO Event Modifiers
-# Place in: common/modifiers/ (append to existing or new file)
-
 ### ══════════════════════════════════════════
 ### AMNESTY INTERNATIONAL
 ### ══════════════════════════════════════════
@@ -347,4 +335,22 @@ opec_decreased_production = {
 	icon = "gfx/interface/icons/timed_modifier_icons/modifier_flag_negative.dds"
 	building_group_bg_oil_extraction_throughput_add = -0.15
 	country_prestige_add = 3
+}
+
+opec_oil_embargo_target = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_coins_negative.dds
+	state_import_advantage_mult = -0.25
+	country_prestige_mult = -0.05
+}
+
+io_eu_prestige_anchor = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_flag_positive.dds
+	country_prestige_add = 1
+}
+
+io_treaty_breaker = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_flag_negative.dds
+	country_prestige_mult = -0.05
+	country_influence_mult = -0.05
+	country_improve_relations_speed_mult = -0.25
 }

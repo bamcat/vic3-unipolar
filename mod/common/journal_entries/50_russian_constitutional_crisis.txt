@@ -1,34 +1,223 @@
-je_russian_constitutional_crisis = {
-    icon = "gfx/interface/icons/event_icons/event_protest.dds"
-    group = je_group_dilemmas
+﻿je_russian_constitutional_crisis = {
+	icon = "gfx/interface/icons/event_icons/event_scales.dds"
+	group = je_group_wild_nineties
 
-    is_shown_when_inactive = {
-        c:RUS ?= this
-    }
-
-    possible = {
-        OR = {
-            has_modifier = russia_parliament_resisting
-            has_variable = russia_constitution_crisis_active
-        }
-    }
-
-    complete = {
-		custom_tooltip = {
-			text = 1993_russian_crisis_tt
-			has_variable = russia_constitution_crisis_resolved
-		}
-    }
-
-    on_complete = {
-	c:RUS = {
-        add_modifier = {
-            name = russia_constitution_crisis_resolved_mod
-            months = 12
-        }
+	possible = {
+		c:RUS ?= this
 	}
-    }
 
-    weight = 200
-    should_be_pinned_by_default_uninvolved_or_context = yes
+	scripted_progress_bar = rus_dvoevlastie_bar
+
+	scripted_button = rus_dvoe_army_button
+	scripted_button = rus_dvoe_mvd_button
+	scripted_button = rus_dvoe_moscow_button
+	scripted_button = rus_dvoe_court_button
+	scripted_button = rus_dvoe_regions_button
+	scripted_button = rus_dvoe_church_button
+	scripted_button = rus_dvoe_zero_option_button
+	scripted_button = rus_dvoe_decree_1400_button
+
+	modifiers_while_active = {
+		rus_dvoevlastie
+	}
+
+	immediate = {
+		set_variable = { name = rus_inst_army value = 10 }
+		set_variable = { name = rus_inst_mvd value = 15 }
+		set_variable = { name = rus_inst_moscow value = 30 }
+		set_variable = { name = rus_inst_court value = -10 }
+		set_variable = { name = rus_inst_regions value = -5 }
+		set_variable = { name = rus_inst_church value = 0 }
+		trigger_event = { id = rus_events.1 days = 3 popup = yes }
+	}
+
+	status_desc = {
+		first_valid = {
+			triggered_desc = {
+				desc = rus_inst_army_president_status
+				trigger = { var:rus_inst_army >= 20 }
+			}
+			triggered_desc = {
+				desc = rus_inst_army_parliament_status
+				trigger = { var:rus_inst_army <= -20 }
+			}
+			triggered_desc = {
+				desc = rus_inst_army_split_status
+			}
+		}
+		first_valid = {
+			triggered_desc = {
+				desc = rus_inst_mvd_president_status
+				trigger = { var:rus_inst_mvd >= 20 }
+			}
+			triggered_desc = {
+				desc = rus_inst_mvd_parliament_status
+				trigger = { var:rus_inst_mvd <= -20 }
+			}
+			triggered_desc = {
+				desc = rus_inst_mvd_split_status
+			}
+		}
+		first_valid = {
+			triggered_desc = {
+				desc = rus_inst_moscow_president_status
+				trigger = { var:rus_inst_moscow >= 20 }
+			}
+			triggered_desc = {
+				desc = rus_inst_moscow_parliament_status
+				trigger = { var:rus_inst_moscow <= -20 }
+			}
+			triggered_desc = {
+				desc = rus_inst_moscow_split_status
+			}
+		}
+		first_valid = {
+			triggered_desc = {
+				desc = rus_inst_court_president_status
+				trigger = { var:rus_inst_court >= 20 }
+			}
+			triggered_desc = {
+				desc = rus_inst_court_parliament_status
+				trigger = { var:rus_inst_court <= -20 }
+			}
+			triggered_desc = {
+				desc = rus_inst_court_split_status
+			}
+		}
+		first_valid = {
+			triggered_desc = {
+				desc = rus_inst_regions_president_status
+				trigger = { var:rus_inst_regions >= 20 }
+			}
+			triggered_desc = {
+				desc = rus_inst_regions_parliament_status
+				trigger = { var:rus_inst_regions <= -20 }
+			}
+			triggered_desc = {
+				desc = rus_inst_regions_split_status
+			}
+		}
+		first_valid = {
+			triggered_desc = {
+				desc = rus_inst_church_president_status
+				trigger = { var:rus_inst_church >= 20 }
+			}
+			triggered_desc = {
+				desc = rus_inst_church_parliament_status
+				trigger = { var:rus_inst_church <= -20 }
+			}
+			triggered_desc = {
+				desc = rus_inst_church_split_status
+			}
+		}
+	}
+
+	on_monthly_pulse = {
+		effect = {
+			if = {
+				limit = { NOT = { has_variable = rus_decree_1400 } }
+				random_list = {
+					70 = { }
+					5 = { rus_wn_inst_change = { I = army V = -10 } }
+					5 = { rus_wn_inst_change = { I = mvd V = -10 } }
+					5 = { rus_wn_inst_change = { I = moscow V = -10 } }
+					5 = { rus_wn_inst_change = { I = court V = -10 } }
+					5 = { rus_wn_inst_change = { I = regions V = -10 } }
+					5 = { rus_wn_inst_change = { I = church V = -10 } }
+				}
+			}
+			if = {
+				limit = {
+					game_date >= 1992.12.9
+					NOT = { has_variable = rus_dvoe_congress_1992 }
+				}
+				set_variable = rus_dvoe_congress_1992
+				trigger_event = { id = rus_events.2 popup = yes }
+			}
+			if = {
+				limit = {
+					game_date >= 1993.3.20
+					NOT = { has_variable = rus_dvoe_impeachment_vote }
+					NOT = { has_variable = rus_1993_result }
+				}
+				set_variable = rus_dvoe_impeachment_vote
+				trigger_event = { id = rus_events.3 popup = yes }
+			}
+			if = {
+				limit = {
+					game_date >= 1993.4.25
+					NOT = { has_variable = rus_1993_referendum_held }
+					NOT = { has_variable = rus_1993_result }
+				}
+				set_variable = rus_1993_referendum_held
+				trigger_event = { id = rus_events.4 popup = yes }
+			}
+			if = {
+				limit = {
+					game_date >= 1993.6.5
+					NOT = { has_variable = rus_dvoe_conference }
+					NOT = { has_variable = rus_1993_result }
+				}
+				set_variable = rus_dvoe_conference
+				trigger_event = { id = rus_events.5 popup = yes }
+			}
+			if = {
+				limit = {
+					game_date >= 1993.12.1
+					NOT = { has_variable = rus_1993_result }
+					NOT = { has_variable = rus_decree_1400 }
+					NOT = { has_variable = rus_dvoe_year_end }
+				}
+				set_variable = rus_dvoe_year_end
+				trigger_event = { id = rus_events.10 popup = yes }
+			}
+		}
+	}
+
+	outcome = {
+		header = je_standard_completion_header
+		effect_header = je_standard_on_completion_header
+		color = "gold_positive"
+		conclusion_desc = je_rus_dvoe_president_conclusion_desc
+		flags = { historical }
+		trigger = {
+			custom_description = { text = rus_1993_result_president var:rus_1993_result ?= flag:president }
+			custom_description = { text = rus_1993_constitution_adopted has_variable = rus_1993_constitution }
+		}
+	}
+
+	outcome = {
+		header = je_standard_completion_header
+		effect_header = je_standard_on_completion_header
+		color = "gold_positive"
+		conclusion_desc = je_rus_dvoe_compromise_conclusion_desc
+		trigger = {
+			custom_description = { text = rus_1993_result_compromise var:rus_1993_result ?= flag:compromise }
+			custom_description = { text = rus_1993_constitution_adopted has_variable = rus_1993_constitution }
+		}
+	}
+
+	outcome = {
+		header = je_standard_failure_header
+		effect_header = je_standard_on_failure_header
+		color = "blue_negative"
+		conclusion_desc = je_rus_dvoe_parliament_conclusion_desc
+		trigger = {
+			custom_description = { text = rus_1993_result_parliament var:rus_1993_result ?= flag:parliament }
+		}
+	}
+
+	outcome = {
+		header = je_standard_failure_header
+		effect_header = je_standard_on_failure_header
+		color = "blue_negative"
+		conclusion_desc = je_rus_dvoe_stalemate_conclusion_desc
+		trigger = {
+			custom_description = { text = rus_1993_result_stalemate var:rus_1993_result ?= flag:stalemate }
+			custom_description = { text = rus_1993_constitution_adopted has_variable = rus_1993_constitution }
+		}
+	}
+
+	weight = 1000
+	should_be_pinned_by_default_uninvolved_or_context = yes
 }

@@ -22,7 +22,7 @@ imf_events.1 = {
 
 	cooldown = { days = normal_modifier_time }
 
-	option = {	# Accept the loan
+	option = {
 		name = imf_events.1.a
 		
 		add_treasury = root.principal
@@ -49,7 +49,6 @@ imf_events.1 = {
 				limit = { country_rank = rank_value:great_power }
 				trigger_event = { id = imf_events.2 days = 1 }
 			}
-			# Clear the loan variable after 60 months
 			trigger_event = { id = imf_events.99 days = 1800 }
 		}
 		ai_chance = {
@@ -61,7 +60,7 @@ imf_events.1 = {
 		}
 	}
 
-	option = {	# Refuse — manage alone
+	option = {
 		name = imf_events.1.b
 		default_option = yes
 		add_modifier = {
@@ -80,8 +79,6 @@ imf_events.1 = {
 
 # ==========================================
 # imf_events.2 — Notification to great powers
-# Fires for each great power when a country
-# accepts an IMF loan.
 # ==========================================
 
 imf_events.2 = {
@@ -108,7 +105,7 @@ imf_events.2 = {
 		}
 	}
 
-	option = {	# Welcome the arrangement
+	option = {
 		name = imf_events.2.a
 		default_option = yes
 		change_relations = { country = root value = -5 }
@@ -121,7 +118,7 @@ imf_events.2 = {
 		ai_chance = { base = 70 }
 	}
 
-	option = {	# Express concern — terms too harsh
+	option = {
 		name = imf_events.2.b
 		scope:imf_debtor_scope = {
 			change_relations = { country = root value = 10 }
@@ -132,7 +129,6 @@ imf_events.2 = {
 
 # ==========================================
 # imf_events.3 — Loan Obligations Fulfilled
-# Fires when the JE closes after 60 months.
 # ==========================================
 
 imf_events.3 = {
@@ -161,7 +157,6 @@ imf_events.3 = {
 
 # ==========================================
 # imf_events.4 — Leaving the IMF
-# Fires when the leave decision is taken.
 # ==========================================
 
 imf_events.4 = {
@@ -197,7 +192,6 @@ imf_events.4 = {
 
 # ==========================================
 # imf_events.5 — Great Power Notification
-# A country has left the IMF.
 # ==========================================
 
 imf_events.5 = {
@@ -232,7 +226,6 @@ imf_events.5 = {
 
 # ==========================================
 # imf_events.99 — Hidden cleanup
-# Clears imf_loan_active after 60 months.
 # ==========================================
 
 imf_events.99 = {
@@ -251,8 +244,6 @@ imf_events.99 = {
 
 # ==========================================
 # WAR BONDS — imf_events.10
-# Separate from IMF. Fires for countries in
-# high debt while at war. One event, one
 # modifier, completely standalone.
 # ==========================================
 
@@ -277,14 +268,17 @@ imf_events.10 = {
 
 	cooldown = { days = very_long_modifier_time }
 
-	option = {	# Issue war bonds
+	option = {
 		name = imf_events.10.a
 		default_option = yes
 		add_modifier = {
 			name = war_bonds_modifier
 			months = 18
 		}
-		add_treasury = 2000
+		add_treasury = {
+			value = gdp
+			multiply = 0.01
+		}
 		ai_chance = {
 			base = 70
 			modifier = {
@@ -294,7 +288,7 @@ imf_events.10 = {
 		}
 	}
 
-	option = {	# Decline — maintain fiscal discipline
+	option = {
 		name = imf_events.10.b
 		add_modifier = {
 			name = war_bonds_refused_modifier

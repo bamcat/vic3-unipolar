@@ -6,14 +6,12 @@ REPLACE_OR_CREATE:ig_rural_folk = {
 	
 	ideologies = {
 	
-		#Economic Ideologies
-		ideology_left_economy 				#General Economic Beliefs 
-		ideology_regionalist 				#Foreign Economic Policy
+		ideology_left_economy
+		ideology_regionalist
 		
-		#Political Ideologies
-		ideology_communitarian				#General Political Beliefs
-		ideology_conservative				#Specific Political Beliefs
-		ideology_militarist					#Government Types 
+		ideology_communitarian
+		ideology_conservative
+		ideology_militarist
 		
 	}
 	
@@ -34,7 +32,6 @@ REPLACE_OR_CREATE:ig_rural_folk = {
 		always = yes
 	}
 	
-	# Deprecated; use on_enable effect to assign traits instead
 	traits = {
 		ig_trait_farmers_markets
 		ig_trait_honest_work
@@ -53,10 +50,8 @@ REPLACE_OR_CREATE:ig_rural_folk = {
 	
 	pop_potential = {
 	
-		#Only Accepted Pops can organise into IGs
 		#pop_acceptance >= acceptance_status_3
 		
-		#Correct pop type
 		OR = { 
 			is_pop_type = farmers
 			is_pop_type = peasants
@@ -163,7 +158,7 @@ REPLACE_OR_CREATE:ig_rural_folk = {
 					is_in_government = yes
 				}
 			}
-			multiply = { # Multiplied by 1.25x max
+			multiply = {
 				desc = "POP_LOYALISTS"
 				value = pop_loyalist_fraction
 				divide = 4
@@ -176,7 +171,7 @@ REPLACE_OR_CREATE:ig_rural_folk = {
 					is_in_government = no
 				}
 			}
-			multiply = { # Multiplied by 1.25x max
+			multiply = {
 				desc = "POP_RADICALS"
 				value = pop_radical_fraction
 				divide = 4
@@ -190,9 +185,7 @@ REPLACE_OR_CREATE:ig_rural_folk = {
 	}	
 	
 	agitator_weight = {
-		# Agitators more likely to come from populist IG's rather than elitist
 		value = 1.0
-		# Agitators will never be part of a marginalized IG
 		if = {
 			limit = {
 				owner.ig:ig_rural_folk = {
@@ -411,15 +404,11 @@ REPLACE_OR_CREATE:ig_rural_folk = {
 		
 	}
 	
-	# The chance that a commander belonging to this IG takes over leadership when it changes
-	# scope:character is the most popular commander in the IG
 	commander_leader_chance = {
 		value = 0.25
 		multiply = ig_commander_leader_chance_mult
 	}
 	
-	# The chance that a executive belonging to this IG takes over leadership when it changes
-	# scope:character is the most popular executive in the IG
 	executive_leader_chance = {
 		value = 0.2
 	}

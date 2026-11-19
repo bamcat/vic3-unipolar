@@ -1,6 +1,3 @@
-# Great Polarization modifiers
-# Uses your custom ideological movement keys.
-
 great_polarization_baseline = {
 	icon = gfx/interface/icons/timed_modifier_icons/modifier_fist_negative.dds
 
@@ -20,14 +17,12 @@ great_polarization_right_wing_president = {
 	political_movement_radicalism_add = 0.25
 	political_movement_activism_growth_mult = 3.0
 
-	# Liberal / left / minority opposition.
 	state_pop_support_movement_liberal_add = 0.35
 	state_pop_support_movement_social_democratic_add = 0.35
 	state_pop_support_movement_socialist_add = 0.35
 	state_pop_support_movement_communist_add = 0.35
 	state_pop_support_movement_cultural_minority_add = 0.35
 
-	# Weaker counter-mobilization on the right.
 	state_pop_support_movement_conservative_add = 0.1
 	state_pop_support_movement_traditionalist_add = 0.1
 	state_pop_support_movement_fascist_add = 0.1
@@ -39,7 +34,6 @@ great_polarization_left_wing_president = {
 	political_movement_radicalism_add = 0.25
 	political_movement_activism_growth_mult = 3.0
 
-	# Conservative / traditionalist / nationalist backlash.
 	state_pop_support_movement_conservative_add = 0.35
 	state_pop_support_movement_liberal_conservative_add = 0.35
 	state_pop_support_movement_traditionalist_add = 0.35
@@ -47,7 +41,6 @@ great_polarization_left_wing_president = {
 	state_pop_support_movement_religious_majority_add = 0.35
 	state_pop_support_movement_libertarian_add = 0.35
 
-	# Weaker counter-mobilization on the left/liberal side.
 	state_pop_support_movement_liberal_add = 0.1
 	state_pop_support_movement_social_democratic_add = 0.1
 	state_pop_support_movement_cultural_minority_add = 0.1

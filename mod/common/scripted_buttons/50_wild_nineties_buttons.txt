@@ -1,0 +1,929 @@
+﻿rus_ukaz_voucher_button = {
+	name = "rus_ukaz_voucher_button"
+	desc = "rus_ukaz_voucher_button_desc"
+
+	visible = {
+		rus_wn_yeltsin_in_power = yes
+		game_date >= 1992.6.1
+		NOT = { has_variable = rus_wn_vouchers_issued }
+	}
+
+	selected = {
+		has_modifier = rus_ukaz_voucher
+	}
+
+	possible = {
+		authority >= 75
+		NOT = { has_modifier = rus_ukaz_voucher }
+	}
+
+	ai_chance = {
+		value = 5
+	}
+
+	effect = {
+		add_modifier = { name = rus_ukaz_voucher months = 24 }
+		set_variable = rus_wn_vouchers_issued
+		rus_wn_oligarchs_change = { V = 5 }
+		fin_change_capital_flight = { V = 5 }
+	}
+}
+
+rus_ukaz_land_button = {
+	name = "rus_ukaz_land_button"
+	desc = "rus_ukaz_land_button_desc"
+
+	visible = {
+		rus_wn_yeltsin_in_power = yes
+		game_date >= 1993.1.1
+		NOT = { has_variable = rus_wn_land_decree }
+	}
+
+	selected = {
+		has_modifier = rus_ukaz_land
+	}
+
+	possible = {
+		authority >= 50
+		NOT = { has_modifier = rus_ukaz_land }
+	}
+
+	ai_chance = {
+		value = 5
+	}
+
+	effect = {
+		add_modifier = { name = rus_ukaz_land months = 24 }
+		set_variable = rus_wn_land_decree
+		add_radicals = {
+			value = 0.05
+			interest_group = ig:ig_landowners
+		}
+	}
+}
+
+rus_ukaz_anti_banditry_button = {
+	name = "rus_ukaz_anti_banditry_button"
+	desc = "rus_ukaz_anti_banditry_button_desc"
+
+	visible = {
+		rus_wn_yeltsin_in_power = yes
+		game_date >= 1994.1.1
+	}
+
+	selected = {
+		has_modifier = rus_ukaz_anti_banditry
+	}
+
+	possible = {
+		authority >= 100
+		NOT = { has_modifier = rus_ukaz_anti_banditry }
+	}
+
+	ai_chance = {
+		value = 5
+	}
+
+	effect = {
+		add_modifier = { name = rus_ukaz_anti_banditry months = 12 }
+		rus_wn_add_standing = { T = RUS_alexander_korzhakov V = 5 }
+		add_radicals = {
+			value = 0.03
+			interest_group = ig:ig_intelligentsia
+		}
+	}
+}
+
+rus_ukaz_chechnya_button = {
+	name = "rus_ukaz_chechnya_button"
+	desc = "rus_ukaz_chechnya_button_desc"
+
+	visible = {
+		rus_wn_yeltsin_in_power = yes
+		game_date >= 1994.6.1
+		rus_wn_chechen_war_possible = yes
+	}
+
+	selected = {
+		has_modifier = rus_ukaz_chechnya
+	}
+
+	possible = {
+		authority >= 100
+		NOT = { has_modifier = rus_ukaz_chechnya }
+	}
+
+	ai_chance = {
+		value = 2
+	}
+
+	effect = {
+		add_modifier = { name = rus_ukaz_chechnya months = 24 }
+		rus_wn_start_chechen_war = yes
+		rus_wn_add_blame = { V = 10 }
+	}
+}
+
+rus_ukaz_tax_amnesty_button = {
+	name = "rus_ukaz_tax_amnesty_button"
+	desc = "rus_ukaz_tax_amnesty_button_desc"
+
+	visible = {
+		rus_wn_yeltsin_in_power = yes
+	}
+
+	selected = {
+		has_modifier = rus_ukaz_tax_amnesty
+	}
+
+	possible = {
+		authority >= 50
+		NOT = { has_modifier = rus_ukaz_tax_amnesty }
+	}
+
+	ai_chance = {
+		value = 5
+	}
+
+	effect = {
+		add_modifier = { name = rus_ukaz_tax_amnesty months = 12 }
+		fin_change_capital_flight = { V = -10 }
+		rus_wn_oligarchs_change = { V = 3 }
+	}
+}
+
+rus_ukaz_wage_arrears_button = {
+	name = "rus_ukaz_wage_arrears_button"
+	desc = "rus_ukaz_wage_arrears_button_desc"
+
+	visible = {
+		rus_wn_yeltsin_in_power = yes
+		fin_wage_arrears_at_least = { L = 1 }
+	}
+
+	selected = {
+		has_modifier = rus_ukaz_wage_arrears
+	}
+
+	possible = {
+		authority >= 25
+		NOT = { has_modifier = rus_ukaz_wage_arrears }
+	}
+
+	ai_chance = {
+		value = 5
+	}
+
+	effect = {
+		add_modifier = { name = rus_ukaz_wage_arrears months = 6 }
+		add_treasury = {
+			value = gdp
+			multiply = -0.025
+		}
+		fin_change_wage_arrears = { V = -1 }
+	}
+}
+
+rus_ukaz_signature_button = {
+	name = "rus_ukaz_signature_button"
+	desc = "rus_ukaz_signature_button_desc"
+
+	visible = {
+		rus_wn_yeltsin_in_power = yes
+		rus_wn_health_below = { V = 60 }
+	}
+
+	selected = {
+		has_modifier = rus_ukaz_signature
+	}
+
+	possible = {
+		NOT = { has_modifier = rus_ukaz_signature }
+		any_scope_character = { has_role = character_role_rus_family }
+	}
+
+	ai_chance = {
+		value = 5
+	}
+
+	effect = {
+		add_modifier = { name = rus_ukaz_signature months = 6 }
+		rus_wn_family_change = { V = 8 }
+	}
+}
+
+rus_dismiss_pm_button = {
+	name = "rus_dismiss_pm_button"
+	desc = "rus_dismiss_pm_button_desc"
+
+	visible = {
+		rus_wn_yeltsin_in_power = yes
+		any_scope_character = { has_role = character_role_prime_minister }
+	}
+
+	cooldown = { days = 365 }
+
+	possible = {
+		authority >= 50
+		custom_tooltip = {
+			text = rus_dismiss_pm_blame_tt
+			var:rus_wn_pm_blame >= 20
+		}
+	}
+
+	ai_chance = {
+		value = 3
+	}
+
+	effect = {
+		if = {
+			limit = { var:rus_wn_pm_blame >= 50 }
+			add_loyalists = { value = 0.04 }
+		}
+		else = {
+			add_loyalists = { value = 0.02 }
+		}
+		add_modifier = { name = rus_wn_reshuffle months = 12 }
+		rus_wn_clear_pm = yes
+		set_variable = { name = rus_wn_pm_blame value = 0 }
+		trigger_event = { id = wild_nineties.10 popup = yes }
+	}
+}
+
+rus_lfs_yukos_button = {
+	name = "rus_lfs_yukos_button"
+	desc = "rus_lfs_yukos_button_desc"
+
+	visible = {
+		NOT = { custom_description = { text = rus_lfs_yukos has_variable = rus_lfs_yukos } }
+		NOT = { custom_description = { text = rus_lfs_cancelled has_variable = rus_lfs_cancelled } }
+	}
+
+	possible = {
+		rus_wn_has_character = { T = RUS_mikhail_khodorkovsky }
+	}
+
+	ai_chance = {
+		value = 10
+	}
+
+	effect = {
+		set_variable = rus_lfs_yukos
+		if = {
+			limit = { has_company = company_type:company_yukos }
+			random_scope_character = {
+				limit = {
+					has_template = RUS_mikhail_khodorkovsky
+					is_character_alive = yes
+				}
+				set_character_as_executive = root.company:company_yukos
+			}
+		}
+		change_variable = { name = rus_lfs_count add = 1 }
+		add_treasury = {
+			value = gdp
+			multiply = 0.06
+		}
+		rus_wn_oligarchs_change = { V = 10 }
+		rus_wn_add_standing = { T = RUS_mikhail_khodorkovsky V = 15 }
+		if = {
+			limit = { var:rus_lfs_count >= 2 }
+			rus_wn_rename_oligarchs = yes
+		}
+	}
+}
+
+rus_lfs_norilsk_button = {
+	name = "rus_lfs_norilsk_button"
+	desc = "rus_lfs_norilsk_button_desc"
+
+	visible = {
+		NOT = { custom_description = { text = rus_lfs_norilsk has_variable = rus_lfs_norilsk } }
+		NOT = { custom_description = { text = rus_lfs_cancelled has_variable = rus_lfs_cancelled } }
+	}
+
+	possible = {
+		rus_wn_has_character = { T = RUS_vladimir_potanin }
+	}
+
+	ai_chance = {
+		value = 10
+	}
+
+	effect = {
+		set_variable = rus_lfs_norilsk
+		if = {
+			limit = { has_company = company_type:company_norilsk_nickel }
+			random_scope_character = {
+				limit = {
+					has_template = RUS_vladimir_potanin
+					is_character_alive = yes
+				}
+				set_character_as_executive = root.company:company_norilsk_nickel
+			}
+		}
+		change_variable = { name = rus_lfs_count add = 1 }
+		add_treasury = {
+			value = gdp
+			multiply = 0.06
+		}
+		rus_wn_oligarchs_change = { V = 10 }
+		rus_wn_add_standing = { T = RUS_vladimir_potanin V = 15 }
+		if = {
+			limit = { var:rus_lfs_count >= 2 }
+			rus_wn_rename_oligarchs = yes
+		}
+	}
+}
+
+rus_lfs_sibneft_button = {
+	name = "rus_lfs_sibneft_button"
+	desc = "rus_lfs_sibneft_button_desc"
+
+	visible = {
+		NOT = { custom_description = { text = rus_lfs_sibneft has_variable = rus_lfs_sibneft } }
+		NOT = { custom_description = { text = rus_lfs_cancelled has_variable = rus_lfs_cancelled } }
+	}
+
+	possible = {
+		rus_wn_has_character = { T = RUS_boris_berezovsky }
+	}
+
+	ai_chance = {
+		value = 10
+	}
+
+	effect = {
+		set_variable = rus_lfs_sibneft
+		if = {
+			limit = { has_company = company_type:company_sibneft }
+			random_scope_character = {
+				limit = {
+					has_template = RUS_boris_berezovsky
+					is_character_alive = yes
+				}
+				set_character_as_executive = root.company:company_sibneft
+			}
+		}
+		change_variable = { name = rus_lfs_count add = 1 }
+		add_treasury = {
+			value = gdp
+			multiply = 0.06
+		}
+		rus_wn_oligarchs_change = { V = 10 }
+		rus_wn_add_standing = { T = RUS_boris_berezovsky V = 15 }
+		if = {
+			limit = { var:rus_lfs_count >= 2 }
+			rus_wn_rename_oligarchs = yes
+		}
+		rus_wn_add_family_member = { T = RUS_boris_berezovsky }
+		rus_wn_family_change = { V = 5 }
+	}
+}
+
+rus_lfs_svyazinvest_button = {
+	name = "rus_lfs_svyazinvest_button"
+	desc = "rus_lfs_svyazinvest_button_desc"
+
+	visible = {
+		NOT = { custom_description = { text = rus_lfs_svyazinvest has_variable = rus_lfs_svyazinvest } }
+		NOT = { custom_description = { text = rus_lfs_cancelled has_variable = rus_lfs_cancelled } }
+		game_date >= 1997.1.1
+	}
+
+	possible = {
+		rus_wn_has_character = { T = RUS_vladimir_potanin }
+	}
+
+	ai_chance = {
+		value = 5
+	}
+
+	effect = {
+		set_variable = rus_lfs_svyazinvest
+		change_variable = { name = rus_lfs_count add = 1 }
+		add_treasury = {
+			value = gdp
+			multiply = 0.06
+		}
+		rus_wn_oligarchs_change = { V = 10 }
+		rus_wn_add_standing = { T = RUS_vladimir_potanin V = 15 }
+		if = {
+			limit = { var:rus_lfs_count >= 2 }
+			rus_wn_rename_oligarchs = yes
+		}
+		trigger_event = { id = wild_nineties.61 days = 30 popup = yes }
+	}
+}
+
+rus_lfs_cancel_button = {
+	name = "rus_lfs_cancel_button"
+	desc = "rus_lfs_cancel_button_desc"
+
+	visible = {
+		NOT = { custom_description = { text = rus_lfs_cancelled has_variable = rus_lfs_cancelled } }
+		NOT = { custom_description = { text = rus_lfs_sibneft has_variable = rus_lfs_sibneft } }
+	}
+
+	possible = {
+		authority >= 100
+	}
+
+	ai_chance = {
+		value = 1
+	}
+
+	effect = {
+		set_variable = rus_lfs_cancelled
+		ig:ig_industrialists ?= {
+			add_modifier = { name = rus_lfs_spurned months = 24 }
+		}
+		add_treasury = {
+			value = gdp
+			multiply = -0.02
+		}
+	}
+}
+
+rus_dvoe_army_button = {
+	name = "rus_dvoe_army_button"
+	desc = "rus_dvoe_army_button_desc"
+
+	visible = {
+		NOT = { has_variable = rus_1993_result }
+	}
+
+	selected = {
+		has_modifier = rus_dvoe_court_army
+	}
+
+	cooldown = { days = 180 }
+
+	possible = {
+		authority >= 100
+		NOT = { has_modifier = rus_dvoe_court_army }
+	}
+
+	ai_chance = {
+		value = 8
+	}
+
+	effect = {
+		add_modifier = { name = rus_dvoe_court_army months = 6 }
+		rus_wn_inst_change = { I = army V = 15 }
+		rus_wn_inst_change = { I = mvd V = -10 }
+		custom_tooltip = rus_dvoe_army_rivalry_tt
+	}
+}
+
+rus_dvoe_mvd_button = {
+	name = "rus_dvoe_mvd_button"
+	desc = "rus_dvoe_mvd_button_desc"
+
+	visible = {
+		NOT = { has_variable = rus_1993_result }
+	}
+
+	selected = {
+		has_modifier = rus_dvoe_court_mvd
+	}
+
+	cooldown = { days = 180 }
+
+	possible = {
+		authority >= 100
+		NOT = { has_modifier = rus_dvoe_court_mvd }
+	}
+
+	ai_chance = {
+		value = 8
+	}
+
+	effect = {
+		add_modifier = { name = rus_dvoe_court_mvd months = 6 }
+		rus_wn_inst_change = { I = mvd V = 15 }
+		rus_wn_inst_change = { I = army V = -10 }
+		custom_tooltip = rus_dvoe_mvd_rivalry_tt
+	}
+}
+
+rus_dvoe_moscow_button = {
+	name = "rus_dvoe_moscow_button"
+	desc = "rus_dvoe_moscow_button_desc"
+
+	visible = {
+		NOT = { has_variable = rus_1993_result }
+	}
+
+	selected = {
+		has_modifier = rus_dvoe_court_moscow
+	}
+
+	cooldown = { days = 180 }
+
+	possible = {
+		authority >= 100
+		NOT = { has_modifier = rus_dvoe_court_moscow }
+	}
+
+	ai_chance = {
+		value = 8
+	}
+
+	effect = {
+		add_modifier = { name = rus_dvoe_court_moscow months = 6 }
+		rus_wn_inst_change = { I = moscow V = 15 }
+		rus_wn_inst_change = { I = regions V = -10 }
+		custom_tooltip = rus_dvoe_moscow_rivalry_tt
+		rus_wn_add_standing = { T = RUS_yuri_luzhkov V = 10 }
+	}
+}
+
+rus_dvoe_court_button = {
+	name = "rus_dvoe_court_button"
+	desc = "rus_dvoe_court_button_desc"
+
+	visible = {
+		NOT = { has_variable = rus_1993_result }
+	}
+
+	selected = {
+		has_modifier = rus_dvoe_court_court
+	}
+
+	cooldown = { days = 180 }
+
+	possible = {
+		authority >= 100
+		NOT = { has_modifier = rus_dvoe_court_court }
+	}
+
+	ai_chance = {
+		value = 8
+	}
+
+	effect = {
+		add_modifier = { name = rus_dvoe_court_court months = 6 }
+		rus_wn_inst_change = { I = court V = 10 }
+		rus_wn_inst_change = { I = mvd V = -10 }
+		custom_tooltip = rus_dvoe_court_rivalry_tt
+	}
+}
+
+rus_dvoe_regions_button = {
+	name = "rus_dvoe_regions_button"
+	desc = "rus_dvoe_regions_button_desc"
+
+	visible = {
+		NOT = { has_variable = rus_1993_result }
+	}
+
+	selected = {
+		has_modifier = rus_dvoe_court_regions
+	}
+
+	cooldown = { days = 180 }
+
+	possible = {
+		authority >= 100
+		NOT = { has_modifier = rus_dvoe_court_regions }
+	}
+
+	ai_chance = {
+		value = 8
+	}
+
+	effect = {
+		add_modifier = { name = rus_dvoe_court_regions months = 6 }
+		rus_wn_inst_change = { I = regions V = 15 }
+		rus_wn_inst_change = { I = moscow V = -10 }
+		custom_tooltip = rus_dvoe_regions_rivalry_tt
+	}
+}
+
+rus_dvoe_church_button = {
+	name = "rus_dvoe_church_button"
+	desc = "rus_dvoe_church_button_desc"
+
+	visible = {
+		NOT = { has_variable = rus_1993_result }
+	}
+
+	selected = {
+		has_modifier = rus_dvoe_court_church
+	}
+
+	cooldown = { days = 180 }
+
+	possible = {
+		authority >= 100
+		NOT = { has_modifier = rus_dvoe_court_church }
+	}
+
+	ai_chance = {
+		value = 8
+	}
+
+	effect = {
+		add_modifier = { name = rus_dvoe_court_church months = 6 }
+		rus_wn_inst_change = { I = church V = 15 }
+		rus_wn_inst_change = { I = regions V = -10 }
+		custom_tooltip = rus_dvoe_church_rivalry_tt
+	}
+}
+
+rus_dvoe_zero_option_button = {
+	name = "rus_dvoe_zero_option_button"
+	desc = "rus_dvoe_zero_option_button_desc"
+
+	visible = {
+		rus_wn_yeltsin_in_power = yes
+		has_variable = rus_1993_referendum_held
+		NOT = { has_variable = rus_1993_result }
+		NOT = { has_variable = rus_decree_1400 }
+	}
+
+	possible = {
+		rus_wn_dvoevlastie_president_ahead = { V = 40 }
+		NOT = { rus_wn_dvoevlastie_president_ahead = { V = 60 } }
+		authority >= 50
+	}
+
+	ai_chance = {
+		value = 5
+	}
+
+	effect = {
+		trigger_event = { id = rus_events.8 popup = yes }
+	}
+}
+
+rus_dvoe_decree_1400_button = {
+	name = "rus_dvoe_decree_1400_button"
+	desc = "rus_dvoe_decree_1400_button_desc"
+
+	visible = {
+		rus_wn_yeltsin_in_power = yes
+		has_variable = rus_1993_referendum_held
+		NOT = { has_variable = rus_1993_result }
+		NOT = { has_variable = rus_decree_1400 }
+	}
+
+	possible = {
+		authority >= 150
+		game_date >= 1993.9.1
+	}
+
+	ai_chance = {
+		value = 10
+	}
+
+	effect = {
+		set_variable = rus_decree_1400
+		add_modifier = { name = rus_ukaz_decree_1400 months = 6 }
+		trigger_event = { id = rus_events.6 popup = yes }
+	}
+}
+
+rus_appoint_pm_button = {
+	name = "rus_appoint_pm_button"
+	desc = "rus_appoint_pm_button_desc"
+
+	visible = {
+		rus_wn_yeltsin_in_power = yes
+		NOT = { any_scope_character = { has_role = character_role_prime_minister } }
+	}
+
+	cooldown = { days = 90 }
+
+	possible = {
+		always = yes
+	}
+
+	ai_chance = {
+		value = 10
+	}
+
+	effect = {
+		trigger_event = { id = wild_nineties.10 popup = yes }
+	}
+}
+
+rus_econ_shock_button = {
+	name = "rus_econ_shock_button"
+	desc = "rus_econ_shock_button_desc"
+
+	visible = {
+		always = yes
+	}
+
+	selected = {
+		has_modifier = rus_econ_shock
+	}
+
+	cooldown = { days = 365 }
+
+	possible = {
+		NOT = { has_modifier = rus_econ_shock }
+		authority >= 50
+	}
+
+	ai_chance = {
+		value = 3
+	}
+
+	effect = {
+		if = { limit = { has_modifier = rus_econ_gradual } remove_modifier = rus_econ_gradual }
+		if = { limit = { has_modifier = rus_econ_red_credit } remove_modifier = rus_econ_red_credit }
+		if = { limit = { has_modifier = rus_econ_imf } remove_modifier = rus_econ_imf }
+		add_modifier = { name = rus_econ_shock }
+		fin_set_price_controls = { L = 0 }
+		fin_set_monetary_stance = { S = 2 }
+		fin_change_wage_arrears = { V = 1 }
+		rus_wn_add_blame = { V = 5 }
+	}
+}
+
+rus_econ_gradual_button = {
+	name = "rus_econ_gradual_button"
+	desc = "rus_econ_gradual_button_desc"
+
+	visible = {
+		always = yes
+	}
+
+	selected = {
+		has_modifier = rus_econ_gradual
+	}
+
+	cooldown = { days = 365 }
+
+	possible = {
+		NOT = { has_modifier = rus_econ_gradual }
+		authority >= 50
+	}
+
+	ai_chance = {
+		value = 3
+	}
+
+	effect = {
+		if = { limit = { has_modifier = rus_econ_shock } remove_modifier = rus_econ_shock }
+		if = { limit = { has_modifier = rus_econ_red_credit } remove_modifier = rus_econ_red_credit }
+		if = { limit = { has_modifier = rus_econ_imf } remove_modifier = rus_econ_imf }
+		add_modifier = { name = rus_econ_gradual }
+		fin_set_price_controls = { L = 1 }
+		fin_set_monetary_stance = { S = 3 }
+		rus_wn_add_blame = { V = 5 }
+	}
+}
+
+rus_econ_red_credit_button = {
+	name = "rus_econ_red_credit_button"
+	desc = "rus_econ_red_credit_button_desc"
+
+	visible = {
+		always = yes
+	}
+
+	selected = {
+		has_modifier = rus_econ_red_credit
+	}
+
+	cooldown = { days = 365 }
+
+	possible = {
+		NOT = { has_modifier = rus_econ_red_credit }
+		authority >= 50
+	}
+
+	ai_chance = {
+		value = 3
+	}
+
+	effect = {
+		if = { limit = { has_modifier = rus_econ_shock } remove_modifier = rus_econ_shock }
+		if = { limit = { has_modifier = rus_econ_gradual } remove_modifier = rus_econ_gradual }
+		if = { limit = { has_modifier = rus_econ_imf } remove_modifier = rus_econ_imf }
+		add_modifier = { name = rus_econ_red_credit }
+		fin_set_price_controls = { L = 1 }
+		fin_set_monetary_stance = { S = 5 }
+		fin_change_wage_arrears = { V = -1 }
+		rus_wn_add_blame = { V = 5 }
+	}
+}
+
+rus_econ_imf_button = {
+	name = "rus_econ_imf_button"
+	desc = "rus_econ_imf_button_desc"
+
+	visible = {
+		game_date >= 1992.6.1
+	}
+
+	selected = {
+		has_modifier = rus_econ_imf
+	}
+
+	cooldown = { days = 365 }
+
+	possible = {
+		NOT = { has_modifier = rus_econ_imf }
+		authority >= 50
+	}
+
+	ai_chance = {
+		value = 3
+	}
+
+	effect = {
+		if = { limit = { has_modifier = rus_econ_shock } remove_modifier = rus_econ_shock }
+		if = { limit = { has_modifier = rus_econ_gradual } remove_modifier = rus_econ_gradual }
+		if = { limit = { has_modifier = rus_econ_red_credit } remove_modifier = rus_econ_red_credit }
+		add_modifier = { name = rus_econ_imf }
+		fin_set_price_controls = { L = 0 }
+		fin_set_monetary_stance = { S = 2 }
+		if = {
+			limit = { NOT = { has_variable = rus_wn_imf_loan } }
+			set_variable = rus_wn_imf_loan
+			add_treasury = {
+				value = gdp
+				multiply = 0.01
+			}
+		}
+		rus_wn_add_blame = { V = 5 }
+	}
+}
+
+rus_econ_delay_wages_button = {
+	name = "rus_econ_delay_wages_button"
+	desc = "rus_econ_delay_wages_button_desc"
+
+	visible = {
+		NOT = { fin_wage_arrears_at_least = { L = 3 } }
+	}
+
+	cooldown = { days = 180 }
+
+	possible = {
+		always = yes
+	}
+
+	ai_chance = {
+		value = 2
+	}
+
+	effect = {
+		fin_change_wage_arrears = { V = 1 }
+		rus_wn_add_blame = { V = 5 }
+	}
+}
+
+rus_econ_gko_start_button = {
+	name = "rus_econ_gko_start_button"
+	desc = "rus_econ_gko_start_button_desc"
+
+	visible = {
+		game_date >= 1995.1.1
+		NOT = { fin_bonds_issuing = yes }
+		NOT = { custom_description = { text = rus_wn_default_happened has_variable = rus_wn_default_happened } }
+	}
+
+	cooldown = { days = 180 }
+
+	possible = {
+		always = yes
+	}
+
+	ai_chance = {
+		value = 8
+	}
+
+	effect = {
+		fin_start_bonds = yes
+	}
+}
+
+rus_econ_gko_stop_button = {
+	name = "rus_econ_gko_stop_button"
+	desc = "rus_econ_gko_stop_button_desc"
+
+	visible = {
+		fin_bonds_issuing = yes
+	}
+
+	cooldown = { days = 180 }
+
+	possible = {
+		authority >= 50
+	}
+
+	ai_chance = {
+		value = 3
+	}
+
+	effect = {
+		fin_stop_bonds = yes
+		rus_wn_add_blame = { V = 10 }
+	}
+}

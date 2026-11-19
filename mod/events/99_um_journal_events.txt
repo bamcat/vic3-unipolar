@@ -1,0 +1,34 @@
+﻿namespace = um_journal_events
+
+um_journal_events.1 = {
+	type = country_event
+	hidden = yes
+
+	immediate = {
+		ndp_clear_path_effect = yes
+		if = {
+			limit = {
+				NOT = { has_journal_entry = je_national_development }
+			}
+			add_journal_entry = { type = je_national_development }
+		}
+	}
+}
+
+um_journal_events.2 = {
+	type = country_event
+	hidden = yes
+
+	trigger = {
+		has_variable = nuclear_production_active
+	}
+
+	immediate = {
+		if = {
+			limit = {
+				NOT = { has_journal_entry = je_nuclear_production }
+			}
+			add_journal_entry = { type = je_nuclear_production }
+		}
+	}
+}

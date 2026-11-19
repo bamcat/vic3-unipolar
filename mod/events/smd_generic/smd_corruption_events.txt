@@ -1,0 +1,168 @@
+﻿namespace = smd_corruption
+
+smd_corruption.1 = {
+	type = country_event
+	placement = ROOT
+	title = smd_corruption.1.t
+	desc = smd_corruption.1.d
+	flavor = smd_corruption.1.f
+	event_image = { video = "middleeast_courtroom_upheaval" }
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+	icon = "gfx/interface/icons/event_icons/event_newspaper.dds"
+	duration = 3
+
+	trigger = {
+	}
+
+	option = {
+		name = smd_corruption.1.a
+		default_option = yes
+		add_modifier = {
+			name = smd_scandal_resignations
+			days = 730
+		}
+		je:smd_je_anti_corruption ?= {
+			add_progress = { value = 10 name = smd_corruption_bar }
+		}
+		ai_chance = { base = 60 }
+	}
+
+	option = {
+		name = smd_corruption.1.b
+		add_modifier = {
+			name = smd_scandal_defiance
+			days = 730
+		}
+		je:smd_je_anti_corruption ?= {
+			add_progress = { value = -5 name = smd_corruption_bar }
+		}
+		ai_chance = { base = 40 }
+	}
+}
+
+smd_corruption.2 = {
+	type = country_event
+	placement = ROOT
+	title = smd_corruption.2.t
+	desc = smd_corruption.2.d
+	flavor = smd_corruption.2.f
+	event_image = { video = "middleeast_police_breaking_door" }
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+	icon = "gfx/interface/icons/event_icons/event_scales.dds"
+	duration = 3
+	cooldown = { days = normal_modifier_time }
+
+	trigger = {
+		has_journal_entry = smd_je_anti_corruption
+		NOT = { has_modifier = smd_investigation_obstructed }
+	}
+
+	option = {
+		name = smd_corruption.2.a
+		default_option = yes
+		add_modifier = {
+			name = smd_minister_arrested
+			days = 730
+		}
+		je:smd_je_anti_corruption ?= {
+			add_progress = { value = 10 name = smd_corruption_bar }
+		}
+		ai_chance = { base = 100 }
+	}
+}
+
+smd_corruption.3 = {
+	type = country_event
+	placement = ROOT
+	title = smd_corruption.3.t
+	desc = smd_corruption.3.d
+	flavor = smd_corruption.3.f
+	event_image = { video = "votp_conspiring" }
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+	icon = "gfx/interface/icons/event_icons/event_skull.dds"
+	duration = 3
+	cooldown = { days = normal_modifier_time }
+
+	trigger = {
+		has_journal_entry = smd_je_anti_corruption
+	}
+
+	option = {
+		name = smd_corruption.3.a
+		default_option = yes
+		add_treasury = {
+			value = gdp
+			multiply = -0.001
+		}
+		je:smd_je_anti_corruption ?= {
+			add_progress = { value = 3 name = smd_corruption_bar }
+		}
+		ai_chance = { base = 60 }
+	}
+
+	option = {
+		name = smd_corruption.3.b
+		add_modifier = {
+			name = smd_prosecutors_intimidated
+			days = short_modifier_time
+		}
+		je:smd_je_anti_corruption ?= {
+			add_progress = { value = -8 name = smd_corruption_bar }
+		}
+		ai_chance = { base = 40 }
+	}
+}
+
+smd_corruption.4 = {
+	type = country_event
+	placement = ROOT
+	title = smd_corruption.4.t
+	desc = smd_corruption.4.d
+	flavor = smd_corruption.4.f
+	event_image = { video = "law" }
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+	icon = "gfx/interface/icons/event_icons/event_scales.dds"
+	duration = 3
+
+	trigger = {
+	}
+
+	option = {
+		name = smd_corruption.4.a
+		default_option = yes
+		add_modifier = {
+			name = smd_clean_government
+			days = long_modifier_time
+		}
+		add_modifier = {
+			name = smd_party_system_shaken
+			days = 1095
+		}
+		ai_chance = { base = 100 }
+	}
+}
+
+smd_corruption.5 = {
+	type = country_event
+	placement = ROOT
+	title = smd_corruption.5.t
+	desc = smd_corruption.5.d
+	flavor = smd_corruption.5.f
+	event_image = { video = "votp_conspiring" }
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+	icon = "gfx/interface/icons/event_icons/event_newspaper.dds"
+	duration = 3
+
+	trigger = {
+	}
+
+	option = {
+		name = smd_corruption.5.a
+		default_option = yes
+		add_modifier = {
+			name = smd_cover_up_exposed
+			days = normal_modifier_time
+		}
+		ai_chance = { base = 100 }
+	}
+}

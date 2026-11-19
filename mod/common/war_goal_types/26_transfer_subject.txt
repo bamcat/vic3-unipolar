@@ -1,4 +1,8 @@
 ﻿transfer_subject = {
+	mirrored_wargoal = {
+		method = reverse_transfer
+	}
+
 	icon = "gfx/interface/icons/war_goals/transfer_subject.dds"
 
 	kind = transfer_subject
@@ -8,7 +12,6 @@
 		can_add_for_other_country
 		targets_enemy_subject
 
-		# Validation
 		has_other_stakeholder
 		validate_subject_relation
 		validate_conflicts_existing_subject
@@ -125,7 +128,7 @@
 		}
 
 		multiply = {
-			desc = "INFAMY_FROM_REBELLIOUS_SUBJECT" # Rebellious as in they are the aggressor in the play
+			desc = "INFAMY_FROM_REBELLIOUS_SUBJECT"
 			value = 1
 
 			if = {

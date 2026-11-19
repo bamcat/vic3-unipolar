@@ -112,8 +112,8 @@
 
 				custom_description = {
 					text = has_treaty_defensive_pact_with_trigger
-					subject = this # Country
-					object = scope:target_country # Country
+					subject = this
+					object = scope:target_country
 
 					any_scope_treaty = {
 						binds = scope:target_country
@@ -192,7 +192,6 @@
 					scope:source_country ?= this
 				}
 
-				# We are doing this to be able to reuse loc across treaties and diplomatic actions
 				scope:source_country = {
 					save_temporary_scope_as = target
 				}
@@ -317,7 +316,6 @@
 				}
 			}
 			
-			# Special anti-Opium Wars cheese - block any alliance/defensive pact/guarantee deals before the JE fires
 			if = {
 				limit = {
 					ai_opium_dealer_no_alliance_trigger = yes

@@ -1,0 +1,382 @@
+﻿on_game_started_after_lobby = {
+	on_actions = { smd_generic_game_start }
+}
+
+on_law_activated = {
+	on_actions = { smd_generic_on_law_activated }
+}
+
+on_monthly_pulse_country = {
+	on_actions = { smd_generic_monthly_country }
+}
+
+on_yearly_pulse_country = {
+	on_actions = { smd_generic_yearly_country }
+}
+
+on_civil_war_won = {
+	on_actions = { smd_generic_on_civil_war_won }
+}
+
+on_war_end = {
+	on_actions = { smd_generic_on_war_end }
+}
+
+smd_generic_game_start = {
+	effect = {
+		every_country = {
+			set_variable = smd_generic_init
+			random_list = {
+				25 = { set_variable = { name = smd_generic_grace days = 180 } }
+				25 = { set_variable = { name = smd_generic_grace days = 365 } }
+				25 = { set_variable = { name = smd_generic_grace days = 545 } }
+				25 = { set_variable = { name = smd_generic_grace days = 730 } }
+			}
+			if = {
+				limit = { exists = ruler }
+				set_variable = {
+					name = smd_last_ruler
+					value = ruler
+				}
+			}
+		}
+		every_country = {
+			limit = {
+				OR = {
+					c:UKR ?= this
+					c:BYL ?= this
+					c:MLV ?= this
+					c:EST ?= this
+					c:LAT ?= this
+					c:LIT ?= this
+					c:POL ?= this
+					c:CZH ?= this
+					c:HUN ?= this
+					c:ROM ?= this
+					c:BUL ?= this
+					c:ALB ?= this
+					c:YUG ?= this
+					c:HRV ?= this
+					c:SVN ?= this
+					c:NMC ?= this
+					c:GEO ?= this
+					c:ARM ?= this
+					c:AZB ?= this
+					c:KZK ?= this
+					c:UZB ?= this
+					c:TKM ?= this
+					c:KYR ?= this
+					c:TJK ?= this
+					c:MGI ?= this
+				}
+			}
+			set_variable = smd_post_socialist
+		}
+		every_country = {
+			limit = {
+				has_law_or_variant = law_type:law_command_economy
+				NOT = { has_variable = smd_post_socialist }
+				NOT = { c:PRC ?= this }
+				NOT = { c:RUS ?= this }
+			}
+			set_variable = smd_socialist_legacy
+		}
+		every_country = {
+			limit = {
+				OR = {
+					c:POL ?= this
+					c:CZH ?= this
+					c:HUN ?= this
+					c:ROM ?= this
+					c:BUL ?= this
+					c:ALB ?= this
+					c:EST ?= this
+					c:LAT ?= this
+					c:LIT ?= this
+					c:SVN ?= this
+					c:HRV ?= this
+					c:UKR ?= this
+					c:MLV ?= this
+					c:MGI ?= this
+					c:NMC ?= this
+					c:ARM ?= this
+					c:GEO ?= this
+					c:KYR ?= this
+					c:XCH ?= this
+					c:XPR ?= this
+					c:NIC ?= this
+					c:BRZ ?= this
+					c:XAR ?= this
+					c:XUR ?= this
+					c:STK ?= this
+					c:ROC ?= this
+					c:PHP ?= this
+					c:NPA ?= this
+					c:BNG ?= this
+					c:BNI ?= this
+					c:ZZM ?= this
+					c:CVD ?= this
+					c:MLI ?= this
+					c:MGS ?= this
+				}
+			}
+			set_variable = smd_new_democracy
+		}
+		every_country = {
+			limit = {
+				NOR = {
+					has_law_or_variant = law_type:law_universal_suffrage
+					has_law_or_variant = law_type:law_census_voting
+				}
+			}
+			set_variable = smd_was_undemocratic
+		}
+	}
+}
+
+smd_generic_on_law_activated = {
+	effect = {
+		owner = {
+			if = {
+				limit = {
+					has_variable = smd_socialist_legacy
+					NOT = { has_law_or_variant = law_type:law_command_economy }
+				}
+				remove_variable = smd_socialist_legacy
+				set_variable = smd_post_socialist
+			}
+			if = {
+				limit = {
+					has_variable = smd_was_undemocratic
+					OR = {
+						has_law_or_variant = law_type:law_universal_suffrage
+						has_law_or_variant = law_type:law_census_voting
+					}
+				}
+				remove_variable = smd_was_undemocratic
+				set_variable = smd_new_democracy
+			}
+		}
+	}
+}
+
+smd_generic_monthly_country = {
+	effect = {
+		if = {
+			limit = {
+				NOT = { has_variable = smd_generic_init }
+				game_date >= 1993.1.1
+			}
+			set_variable = smd_generic_init
+		}
+		if = {
+			limit = {
+				has_variable = smd_generic_init
+				NOT = { has_variable = smd_generic_grace }
+				NOT = { has_variable = smd_generic_ready }
+			}
+			set_variable = smd_generic_ready
+		}
+		if = {
+			limit = {
+				exists = ruler
+				has_variable = smd_last_ruler
+				ruler = {
+					NOT = { this = ROOT.var:smd_last_ruler }
+				}
+			}
+			set_variable = { name = smd_new_ruler days = 365 }
+		}
+		if = {
+			limit = { exists = ruler }
+			set_variable = {
+				name = smd_last_ruler
+				value = ruler
+			}
+		}
+		every_scope_state = {
+			if = {
+				limit = {
+					is_incorporated = yes
+					turmoil >= 0.2
+				}
+				if = {
+					limit = { has_variable = smd_unrest_months }
+					change_variable = { name = smd_unrest_months add = 1 }
+				}
+				else = {
+					set_variable = { name = smd_unrest_months value = 1 }
+				}
+			}
+			else_if = {
+				limit = {
+					has_variable = smd_unrest_months
+					OR = {
+						is_incorporated = no
+						turmoil < 0.1
+					}
+				}
+				remove_variable = smd_unrest_months
+			}
+		}
+		if = {
+			limit = { has_journal_entry = smd_je_crime_wave }
+			smd_update_crime_states = yes
+		}
+		if = {
+			limit = {
+				market_capital.market ?= {
+					OR = {
+						mg:grain ?= { market_goods_pricier > 0.4 }
+						mg:groceries ?= { market_goods_pricier > 0.4 }
+						mg:refined_fuel ?= { market_goods_pricier > 0.4 }
+					}
+				}
+			}
+			if = {
+				limit = { has_variable = smd_price_months }
+				change_variable = { name = smd_price_months add = 1 }
+			}
+			else = {
+				set_variable = { name = smd_price_months value = 1 }
+			}
+		}
+		else = {
+			set_variable = { name = smd_price_months value = 0 }
+		}
+	}
+}
+
+smd_generic_yearly_country = {
+	effect = {
+		if = {
+			limit = {
+				has_variable = smd_generic_ready
+				NOT = { has_journal_entry = smd_je_devolution }
+				NOT = { has_variable = smd_devolution_cooldown }
+				NOT = { is_country_type = decentralized }
+				smd_has_bespoke_separatism_content = no
+				any_scope_state = { smd_devolution_candidate_state = yes }
+			}
+			random_scope_state = {
+				limit = { smd_devolution_candidate_state = yes }
+				save_scope_as = smd_devolution_target
+			}
+			add_journal_entry = {
+				type = smd_je_devolution
+				target = scope:smd_devolution_target
+			}
+		}
+		if = {
+			limit = {
+				has_variable = smd_generic_ready
+				NOT = { has_variable = smd_refugee_source }
+				NOT = { has_variable = smd_refugee_cooldown }
+				NOT = { is_country_type = decentralized }
+				is_at_war = no
+				any_country = {
+					NOT = { this = ROOT }
+					is_at_war = yes
+					has_strategic_adjacency = ROOT
+				}
+			}
+			random_country = {
+				limit = {
+					NOT = { this = ROOT }
+					is_at_war = yes
+					has_strategic_adjacency = ROOT
+				}
+				save_scope_as = smd_refugee_origin
+			}
+			set_variable = {
+				name = smd_refugee_source
+				value = scope:smd_refugee_origin
+			}
+		}
+		if = {
+			limit = {
+				has_variable = smd_generic_ready
+				NOT = { has_variable = smd_corruption_scandal }
+				NOT = { has_variable = smd_corruption_cooldown }
+				NOT = { is_country_type = decentralized }
+				legitimacy < 40
+				institution_investment_level = {
+					institution = institution_courts
+					value >= 1
+				}
+			}
+			random_list = {
+				8 = { set_variable = smd_corruption_scandal }
+				92 = { }
+			}
+		}
+		if = {
+			limit = {
+				NOT = { has_variable = smd_post_socialist }
+				OR = {
+					c:CZC ?= this
+					c:SVK ?= this
+					c:SLV ?= this
+					c:SER ?= this
+					c:BOS ?= this
+					c:MON ?= this
+					c:CRO ?= this
+					c:SLO ?= this
+				}
+			}
+			set_variable = smd_post_socialist
+			if = {
+				limit = {
+					NOT = { has_variable = smd_new_democracy }
+					NOT = { has_variable = smd_democracy_consolidated }
+					OR = {
+						has_law_or_variant = law_type:law_universal_suffrage
+						has_law_or_variant = law_type:law_census_voting
+					}
+				}
+				set_variable = smd_new_democracy
+			}
+		}
+		if = {
+			limit = {
+				NOT = { has_variable = smd_was_undemocratic }
+				NOR = {
+					has_law_or_variant = law_type:law_universal_suffrage
+					has_law_or_variant = law_type:law_census_voting
+				}
+			}
+			set_variable = smd_was_undemocratic
+		}
+	}
+}
+
+smd_generic_on_civil_war_won = {
+	effect = {
+		set_variable = { name = smd_recent_upheaval days = 1825 }
+		save_scope_as = smd_upheaval_country
+		every_country = {
+			limit = {
+				NOT = { this = scope:smd_upheaval_country }
+				has_strategic_adjacency = scope:smd_upheaval_country
+			}
+			set_variable = { name = smd_contagion_alert days = 730 }
+		}
+	}
+}
+
+smd_generic_on_war_end = {
+	effect = {
+		scope:actor ?= {
+			if = {
+				limit = { army_size >= 20 }
+				set_variable = { name = smd_war_veterans days = 1095 }
+			}
+		}
+		scope:target ?= {
+			if = {
+				limit = { army_size >= 20 }
+				set_variable = { name = smd_war_veterans days = 1095 }
+			}
+		}
+	}
+}

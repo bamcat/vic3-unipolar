@@ -1,0 +1,185 @@
+﻿﻿rus_l90_rad_above = {
+	custom_description = {
+		text = rus_l90_rad_above_$V$
+		has_global_variable = ichkeria_radicalisation
+		global_var:ichkeria_radicalisation >= $V$
+	}
+}
+
+rus_l90_rad_below = {
+	custom_description = {
+		text = rus_l90_rad_below_$V$
+		OR = {
+			NOT = { has_global_variable = ichkeria_radicalisation }
+			global_var:ichkeria_radicalisation < $V$
+		}
+	}
+}
+
+rus_l90_ichkeria_independent = {
+	custom_description = {
+		text = rus_l90_ichkeria_independent
+		exists = c:CCH
+		c:CCH = {
+			is_subject = no
+			any_scope_state = { is_incorporated = yes }
+		}
+	}
+}
+
+rus_l90_at_peace_with_ichkeria = {
+	custom_description = {
+		text = rus_l90_at_peace_with_ichkeria
+		NOT = { c:CCH ?= { has_war_with = c:RUS } }
+	}
+}
+
+rus_l90_ichkeria_moderate_rule = {
+	custom_description = {
+		text = rus_l90_ichkeria_moderate_rule
+		c:CCH ?= {
+			ruler ?= {
+				NOR = {
+					has_ideology = ideology:ideology_jihadist_leader
+					has_ideology = ideology:ideology_theocrat_leader
+				}
+			}
+		}
+	}
+}
+
+rus_l90_has_casus_belli = {
+	custom_description = {
+		text = rus_l90_has_casus_belli
+		has_variable = rus_l90_casus_belli
+	}
+}
+
+rus_l90_second_war_possible = {
+	rus_l90_ichkeria_independent = yes
+	rus_l90_at_peace_with_ichkeria = yes
+	custom_description = {
+		text = rus_l90_no_second_war_yet
+		NOT = { has_variable = rus_l90_second_war }
+	}
+	custom_description = {
+		text = rus_l90_not_recognised
+		NOT = { has_global_variable = ichkeria_recognised }
+	}
+}
+
+rus_l90_owns_dagestan = {
+	custom_description = {
+		text = rus_l90_owns_dagestan
+		any_scope_state = { state_region = s:STATE_DAGESTAN }
+	}
+}
+
+rus_l90_kadyrov_path = {
+	custom_description = {
+		text = rus_l90_kadyrov_path
+		has_variable = rus_l90_kadyrov
+	}
+}
+
+rus_l90_insurgency_below = {
+	custom_description = {
+		text = rus_l90_insurgency_below_$V$
+		je:je_rus_second_chechen_war ?= {
+			scripted_bar_progress = {
+				name = rus_l90_insurgency_bar
+				value < $V$
+			}
+		}
+	}
+}
+
+rus_l90_insurgency_above = {
+	custom_description = {
+		text = rus_l90_insurgency_above_$V$
+		je:je_rus_second_chechen_war ?= {
+			scripted_bar_progress = {
+				name = rus_l90_insurgency_bar
+				value >= $V$
+			}
+		}
+	}
+}
+
+rus_l90_insurgency_phase = {
+	custom_description = {
+		text = rus_l90_insurgency_phase
+		has_variable = rus_l90_insurgency_phase
+	}
+}
+
+rus_l90_primakov_is_pm = {
+	custom_description = {
+		text = rus_l90_primakov_is_pm
+		any_scope_character = {
+			has_template = RUS_yevgeny_primakov
+			has_role = character_role_prime_minister
+		}
+	}
+}
+
+rus_l90_byl_open_to_union = {
+	custom_description = {
+		text = rus_l90_byl_open_to_union
+		c:BYL ?= {
+			ruler ?= {
+				NOR = {
+					has_ideology = ideology:ideology_liberal_leader
+					has_ideology = ideology:ideology_neoliberal_leader
+					has_ideology = ideology:ideology_social_liberal_leader
+					has_ideology = ideology:ideology_classical_liberal_leader
+					has_ideology = ideology:ideology_right_wing_populist_leader
+					has_ideology = ideology:ideology_right_wing_libertarian_leader
+				}
+			}
+		}
+	}
+}
+
+rus_l90_byl_relations_at_least = {
+	custom_description = {
+		text = rus_l90_byl_relations_$R$
+		c:BYL ?= { relations:root >= relations_threshold:$R$ }
+	}
+}
+
+rus_l90_byl_not_western = {
+	custom_description = {
+		text = rus_l90_byl_not_western
+		c:BYL ?= {
+			NOR = {
+				is_target_in_global_variable_list = { name = io_nato_members target = this }
+				is_target_in_global_variable_list = { name = io_eu_members target = this }
+				AND = {
+					is_subject = yes
+					NOT = { is_subject_of = c:RUS }
+				}
+			}
+		}
+	}
+}
+
+rus_l90_csto_candidate = {
+	exists = this
+	NOT = { this = c:RUS }
+	is_target_in_global_variable_list = { name = io_cis_members target = this }
+	NOT = { is_target_in_global_variable_list = { name = io_csto_members target = this } }
+	NOT = { is_target_in_global_variable_list = { name = io_nato_members target = this } }
+	NOT = { has_war_with = c:RUS }
+	relations:root >= relations_threshold:cordial
+}
+
+rus_l90_csto_willing_partners = {
+	custom_description = {
+		text = rus_l90_csto_willing_partners
+		any_country = {
+			count >= 2
+			rus_l90_csto_candidate = yes
+		}
+	}
+}

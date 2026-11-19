@@ -1,5 +1,5 @@
 ﻿# Kaiping Mining Company
-company_kaiping_mining = {
+REPLACE_OR_CREATE:company_kaiping_mining = {
 	icon = "gfx/interface/icons/company_icons/historical_company_icons/chinese_kaiping_mining_company.dds"
 	background = "gfx/interface/icons/company_icons/company_backgrounds/comp_illu_mining.dds"
 
@@ -18,11 +18,11 @@ company_kaiping_mining = {
 	}
 
 	potential = {
-		has_interest_marker_in_region = region_north_china
+		has_interest_marker_in_region = sr:region_north_china
 	}
 
 	attainable = {
-		hidden_trigger = { # Hide attainable if it's always fulfilled by possible
+		hidden_trigger = {
 			any_scope_state = {
 				OR = {
 					state_region = s:STATE_BEIJING
@@ -74,12 +74,12 @@ company_kaiping_mining = {
 	}
 
 	ai_weight = {
-		value = 3 # Higher base value for flavored companies
+		value = 3
 	}
 }
 
 # Hanyang Arsenal
-company_hanyang_arsenal = {
+REPLACE_OR_CREATE:company_hanyang_arsenal = {
 	icon = "gfx/interface/icons/company_icons/historical_company_icons/chinese_hanyang_arsenal.dds"
 	background = "gfx/interface/icons/company_icons/company_backgrounds/comp_illu_manufacturing_heavy.dds"
 
@@ -109,11 +109,11 @@ company_hanyang_arsenal = {
 	}
 
 	potential = {
-		has_interest_marker_in_region = region_south_china
+		has_interest_marker_in_region = sr:region_south_china
 	}
 
 	attainable = {
-		hidden_trigger = { # Hide attainable if it's always fulfilled by possible
+		hidden_trigger = {
 			any_scope_state = {
 				state_region = s:STATE_EASTERN_HUBEI
 			}
@@ -153,12 +153,12 @@ company_hanyang_arsenal = {
 	}
 
 	ai_weight = {
-		value = 3 # Higher base value for flavored companies
+		value = 3
 	}
 }
 
 # Foochow Arsenal
-company_foochow_arsenal = {
+REPLACE_OR_CREATE:company_foochow_arsenal = {
 	icon = "gfx/interface/icons/company_icons/historical_company_icons/chinese_foochow_arsenal.dds"
 	background = "gfx/interface/icons/company_icons/company_backgrounds/comp_illu_harbor_shipbuilding.dds"
 
@@ -177,11 +177,11 @@ company_foochow_arsenal = {
 	}
 
 	potential = {
-		has_interest_marker_in_region = region_south_china
+		has_interest_marker_in_region = sr:region_south_china
 	}
 
 	attainable = {
-		hidden_trigger = { # Hide attainable if it's always fulfilled by possible
+		hidden_trigger = {
 			any_scope_state = {
 				state_region = s:STATE_FUJIAN
 			}
@@ -221,12 +221,12 @@ company_foochow_arsenal = {
 	}
 
 	ai_weight = {
-		value = 3 # Higher base value for flavored companies
+		value = 3
 	}
 }
 
 # Jingdezhen Porcelain
-company_jingdezhen = {
+REPLACE_OR_CREATE:company_jingdezhen = {
 	icon = "gfx/interface/icons/company_icons/historical_company_icons/chinese_jingdezhen_kilns.dds"
 	background = "gfx/interface/icons/company_icons/company_backgrounds/comp_illu_manufacturing_light.dds"
 
@@ -243,7 +243,7 @@ company_jingdezhen = {
 	}
 
 	potential = {
-		has_interest_marker_in_region = region_south_china
+		has_interest_marker_in_region = sr:region_south_china
 	}
 
 	possible_prestige_goods = {
@@ -251,7 +251,7 @@ company_jingdezhen = {
 	}
 
 	attainable = {
-		hidden_trigger = { # Hide attainable if it's always fulfilled by possible
+		hidden_trigger = {
 			any_scope_state = {
 				state_region = s:STATE_JIANGXI
 			}
@@ -291,6 +291,6 @@ company_jingdezhen = {
 	}
 
 	ai_weight = {
-		value = 3 # Higher base value for flavored companies
+		value = 3
 	}
 }

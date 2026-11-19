@@ -1,0 +1,275 @@
+﻿rus_wn_health_bar = {
+	name = "rus_wn_health_bar_desc"
+	desc = "rus_wn_health_bar"
+	default_green = yes
+
+	monthly_progress = {
+		progress_condition = {
+			limit = { rus_wn_yeltsin_in_power = yes }
+			add = {
+				desc = "rus_wn_health_age_tt"
+				value = -0.12
+			}
+		}
+		progress_condition = {
+			limit = {
+				rus_wn_yeltsin_in_power = yes
+				ruler ?= { has_trait = alcoholic }
+			}
+			add = {
+				desc = "rus_wn_health_drink_tt"
+				value = -0.1
+			}
+		}
+		progress_condition = {
+			limit = {
+				rus_wn_yeltsin_in_power = yes
+				rus_wn_active_ukaz_count_at_least_3 = yes
+			}
+			add = {
+				desc = "rus_wn_health_strain_tt"
+				value = -0.1
+			}
+		}
+		progress_condition = {
+			limit = { has_modifier = rus_wn_heart_surgery }
+			add = {
+				desc = "rus_wn_health_recovery_tt"
+				value = 2
+			}
+		}
+	}
+
+	start_value = 75
+	min_value = 0
+	max_value = 100
+}
+
+rus_wn_family_bar = {
+	name = "rus_wn_family_bar_desc"
+	desc = "rus_wn_family_bar"
+	default = yes
+
+	monthly_progress = {
+		progress_condition = {
+			limit = { rus_wn_health_below = { V = 50 } }
+			add = {
+				desc = "rus_wn_family_health_tt"
+				value = 0.4
+			}
+		}
+		progress_condition = {
+			limit = { rus_wn_health_below = { V = 30 } }
+			add = {
+				desc = "rus_wn_family_frail_tt"
+				value = 0.4
+			}
+		}
+		progress_condition = {
+			limit = {
+				any_scope_character = {
+					has_template = RUS_tatyana_dyachenko
+					has_role = character_role_rus_family
+				}
+			}
+			add = {
+				desc = "rus_wn_family_dyachenko_tt"
+				value = 0.2
+			}
+		}
+		progress_condition = {
+			limit = {
+				any_scope_character = {
+					has_template = RUS_boris_berezovsky
+					has_role = character_role_rus_family
+				}
+			}
+			add = {
+				desc = "rus_wn_family_berezovsky_tt"
+				value = 0.2
+			}
+		}
+		progress_condition = {
+			limit = {
+				rus_wn_yeltsin_in_power = yes
+				NOT = { rus_wn_health_below = { V = 60 } }
+			}
+			add = {
+				desc = "rus_wn_family_strong_president_tt"
+				value = -0.3
+			}
+		}
+		progress_condition = {
+			limit = { rus_wn_yeltsin_in_power = no }
+			add = {
+				desc = "rus_wn_family_out_of_power_tt"
+				value = -1
+			}
+		}
+	}
+
+	start_value = 10
+	min_value = 0
+	max_value = 100
+}
+
+rus_wn_oligarch_bar = {
+	name = "rus_wn_oligarch_bar_desc"
+	desc = "rus_wn_oligarch_bar"
+	default_bad = yes
+
+	monthly_progress = {
+		progress_condition = {
+			limit = {
+				has_variable = rus_wn_oligarchs_named
+				ig:ig_industrialists ?= { is_in_government = yes }
+			}
+			add = {
+				desc = "rus_wn_oligarchs_government_tt"
+				value = 0.2
+			}
+		}
+		progress_condition = {
+			limit = {
+				has_variable = rus_wn_oligarchs_named
+				ig:ig_industrialists ?= { is_powerful = yes }
+			}
+			add = {
+				desc = "rus_wn_oligarchs_powerful_tt"
+				value = 0.1
+			}
+		}
+		progress_condition = {
+			limit = { has_modifier = rus_1998_default }
+			add = {
+				desc = "rus_wn_oligarchs_default_tt"
+				value = -0.3
+			}
+		}
+		progress_condition = {
+			limit = { has_modifier = rus_successor_putin }
+			add = {
+				desc = "rus_wn_oligarchs_reined_in_tt"
+				value = -1
+			}
+		}
+		progress_condition = {
+			limit = {
+				OR = {
+					has_modifier = rus_successor_primakov
+					has_modifier = rus_successor_lebed
+				}
+			}
+			add = {
+				desc = "rus_wn_oligarchs_reined_in_tt"
+				value = -0.5
+			}
+		}
+		progress_condition = {
+			limit = {
+				has_variable = rus_wn_oligarchs_named
+				ig:ig_industrialists ?= {
+					is_in_government = no
+					is_powerful = no
+				}
+			}
+			add = {
+				desc = "rus_wn_oligarchs_outside_tt"
+				value = -0.3
+			}
+		}
+	}
+
+	start_value = 5
+	min_value = 0
+	max_value = 100
+}
+
+rus_dvoevlastie_bar = {
+	name = "rus_dvoevlastie_bar_desc"
+	desc = "rus_dvoevlastie_bar"
+	progress_texture = "gfx/interface/progressbar/progressbar_gold.dds"
+	background_texture = "gfx/interface/progressbar/progressbar_default.dds"
+	glow_texture = "gfx/interface/progressbar/progressbar_gold_glow.dds"
+	glow_line_texture = "gfx/interface/progressbar/progressbar_gold_glow_line.dds"
+	marker = yes
+
+	monthly_progress = {
+		progress_condition = {
+			limit = { var:rus_inst_army >= 20 }
+			add = { desc = "rus_inst_army_president_tt" value = 0.25 }
+		}
+		progress_condition = {
+			limit = { var:rus_inst_army <= -20 }
+			add = { desc = "rus_inst_army_parliament_tt" value = -0.25 }
+		}
+		progress_condition = {
+			limit = { var:rus_inst_mvd >= 20 }
+			add = { desc = "rus_inst_mvd_president_tt" value = 0.25 }
+		}
+		progress_condition = {
+			limit = { var:rus_inst_mvd <= -20 }
+			add = { desc = "rus_inst_mvd_parliament_tt" value = -0.25 }
+		}
+		progress_condition = {
+			limit = { var:rus_inst_moscow >= 20 }
+			add = { desc = "rus_inst_moscow_president_tt" value = 0.25 }
+		}
+		progress_condition = {
+			limit = { var:rus_inst_moscow <= -20 }
+			add = { desc = "rus_inst_moscow_parliament_tt" value = -0.25 }
+		}
+		progress_condition = {
+			limit = { var:rus_inst_court >= 20 }
+			add = { desc = "rus_inst_court_president_tt" value = 0.25 }
+		}
+		progress_condition = {
+			limit = { var:rus_inst_court <= -20 }
+			add = { desc = "rus_inst_court_parliament_tt" value = -0.25 }
+		}
+		progress_condition = {
+			limit = { var:rus_inst_regions >= 20 }
+			add = { desc = "rus_inst_regions_president_tt" value = 0.25 }
+		}
+		progress_condition = {
+			limit = { var:rus_inst_regions <= -20 }
+			add = { desc = "rus_inst_regions_parliament_tt" value = -0.25 }
+		}
+		progress_condition = {
+			limit = { var:rus_inst_church >= 20 }
+			add = { desc = "rus_inst_church_president_tt" value = 0.25 }
+		}
+		progress_condition = {
+			limit = { var:rus_inst_church <= -20 }
+			add = { desc = "rus_inst_church_parliament_tt" value = -0.25 }
+		}
+		progress_condition = {
+			limit = { NOT = { has_variable = rus_decree_1400 } }
+			add = { desc = "rus_dvoe_khasbulatov_tt" value = -0.2 }
+		}
+		progress_condition = {
+			limit = { has_modifier = rus_1993_referendum_won }
+			add = { desc = "rus_dvoe_referendum_tt" value = 0.5 }
+		}
+		progress_condition = {
+			limit = { rus_wn_active_ukaz_count_at_least_3 = yes }
+			add = { desc = "rus_dvoe_rule_by_decree_tt" value = -0.3 }
+		}
+		progress_condition = {
+			limit = { has_modifier = rus_pm_chernomyrdin }
+			add = { desc = "rus_dvoe_chernomyrdin_tt" value = 0.2 }
+		}
+		progress_condition = {
+			limit = {
+				has_modifier = rus_pm_gaidar
+				fin_cpi_above = { V = 30 }
+			}
+			add = { desc = "rus_dvoe_gaidar_tt" value = -0.2 }
+		}
+	}
+
+	start_value = 45
+	min_value = 0
+	max_value = 100
+}
+

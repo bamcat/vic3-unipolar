@@ -1,41 +1,24 @@
 ﻿l_german:
-
- # ==========================================
- # JOURNAL ENTRY NAMES & HEADERS
- # ==========================================
-
  je_arab_spring: "Der arabische Frühling"
  je_arab_spring_reason: "In der arabischen Welt haben sich lang unterdrückte Frustrationen mit autoritärer Herrschaft, Korruption und wirtschaftlicher Stagnation zu Massenprotesten ausgeweitet. Beginnend in Tunesien breitet sich die Welle der Unruhen aus – und kein Regime in der Region kann sich völlig sicher fühlen."
 
  je_arab_winter: "Der arabische Winter"
  je_arab_winter_reason: "Der Optimismus des arabischen Frühlings hat einen bitteren Kampf für die Seele der Revolution gegeben. Islamistische Bewegungen, militärische Fraktionen und fremde Kräfte streben danach, das Vakuum zu füllen, das von gefallenen oder geschwächten Regimen hinterlassen wird. Das Schicksal der Region hängt im Gleichgewicht."
 
- # Completion headers
  je_arab_spring_complete_header: "Demokratischer Übergang"
  je_arab_spring_on_complete_header: "Ein neuer Morgen"
  je_arab_spring_fail_header: "Revolution unterdrückt"
  je_arab_spring_on_fail_header: "Der Crackdown"
 
- # ==========================================
- # MODIFIER
- # ==========================================
-
  modifier_arab_spring: "Arabischer Frühling"
  modifier_arab_spring_desc: "Beliebte Aufstände fegen die arabische Welt. Die Regierungen stehen vor einem starken Druck von Protestbewegungen, die demokratische Reform, wirtschaftliche Gerechtigkeit und ein Ende der autoritären Herrschaft fordern."
 
- # ==========================================
- # TOOLTIPS
- # ==========================================
-
- # Possible condition
  arab_spring_underway_tt: "Der Arabische Frühling ist im Gange"
 
- # Completion conditions
  had_arab_spring_revolution_tt_no_scope: "Hat während des arabischen Frühlings eine Revolution erlebt"
  has_liberal_or_progressive_in_government_tt: "Eine liberale oder progressive Interessengruppe ist in der Regierung"
  has_census_voting_or_universal_suffrage_tt: "Hat die Volksabstimmung oder das allgemeine Wahlrecht erlassen"
 
- # Failure conditions
  no_protest_leaders_tt: "Keine liberalen oder progressiven Politiker oder Agitatoren bleiben"
  arab_spring_timer_dummy_tt: "Die Protestbewegung wurde für [GetMonthsText(12)] unterdrückt"
  all_protest_movements_crushed_tt: "Alle Protestbewegungen wurden zerstört und unterdrückt"
@@ -56,17 +39,9 @@
  on_reformist_victory_tt: "Die reformistische Koalition hat sich durchgesetzt – der demokratische Übergang beginnt."
  on_islamist_victory_tt: "Islamische oder militärische Kräfte haben konsolidierte Macht – die Revolution ist vorbei."
 
- # ==========================================
- # EVENT OUTCOME DESCRIPTIONS
- # ==========================================
-
  event_effects_arab_spring.8_tt: "Der Aufstand wurde gestürzt. Sicherheitskräfte, die dem Regime treu sind, haben Demonstranten verteilt, Oppositionsführer festgenommen und autoritäre Kontrolle auferlegt. Das Fenster zur Reform ist jetzt geschlossen."
 
  event_effects_arab_spring.10_tt: "Gegen alle Chancen ist die Protestbewegung gelungen. Das alte Regime ist gefallen oder hat erhebliche Zugeständnisse gemacht. Ein zerbrechlicher demokratischer Übergang beginnt, obwohl der Weg vorwärts unsicher bleibt."
-
- # ==========================================
- # SCRIPTED PROGRESS BARS
- # ==========================================
 
  arab_spring_progress_bar: "Revolutionäres Momentum"
  arab_spring_progress_bar_desc: "Wie weit hat sich die Protestbewegung zu ihren Zielen entwickelt."
@@ -74,23 +49,11 @@
  arab_winter_crackdown_progress_bar: "Das ist das..."
  arab_winter_crackdown_progress_bar_desc: "Wie effektiv unterdrückt die Regierung den Aufstand. Wenn dies 100% erreicht, wird die Revolution zerkleinert."
 
- # ==========================================
- # SCRIPTED TRIGGER NAMES (for tooltips)
- # ==========================================
-
  arab_spring_liberal_victory_trigger: "Reformistische Siegbedingungen"
  arab_spring_islamist_victory_trigger: "Islamistische/nationalistische Siegbedingungen"
 
- # ==========================================
- # VARIABLES
- # ==========================================
-
  had_arab_spring_revolution: "Erfahrene Arabische Frühlingsrevolution"
  arab_winter_revolution_crushed: "Revolution gebürstet"
-
- # ==========================================
- # TUNISIA SPARK EVENT (arab_spring.1)
- # ==========================================
 
  arab_spring.1.t: "Die Straßen sind unterwegs"
  arab_spring.1.d: "In [ROOT.GetCountry.GetName] haben die Menschen auf die Straßen genommen. Was als gestreute Proteste gegen Korruption und Arbeitslosigkeit begann, ist in eine Massenbewegung gesunken, die ein Ende der Regel von [SCOPE.GetRootScope.GetCountry.GetRuler.GetLastName] fordert. Die Sicherheitskräfte kämpfen, um die Demonstrationen zu enthalten, und die Augen der arabischen Welt beobachten.\nx id=3/> Wie die Regierung in diesen frühen Tagen reagiert, wird nicht nur das Schicksal dieses Landes, sondern die Trajektorie der gesamten Region prägen."
@@ -98,16 +61,8 @@
  arab_spring.1.b: "Offener Dialog mit Oppositionsführern"
  arab_spring.1.c: "Nennen Sie begrenzte Reformen, um Zeit zu kaufen"
 
- # ==========================================
- # MONTHLY PULSE — SPREAD EVENT (arab_spring.2)
- # ==========================================
-
  arab_spring.2.t: "Die Welle verbreitet"
  arab_spring.2.d: "Nachrichten der Aufstände in Nachbarländern haben sich über Satellitenfernsehen und soziale Medien verbreitet. In <x id=========                                                                                                                                                                                                                                                   Protestorganisatoren teilen Taktiken über Grenzen hinweg in Echtzeit – etwas, das keine vorherige Generation von Dissidenten tun könnte."
-
- # ==========================================
- # RANDOM MONTHLY EVENTS (3–5)
- # ==========================================
 
  arab_spring.3.t: "Social Media Mobilisierung"
  arab_spring.3.d: "Organizer in [ROOT.GetCountry.GetName] haben soziale Medienplattformen verwendet, um eine große Demonstration in [ROOT.GetCapital.GetName] zu koordinieren. Tausende haben sich herausgestellt, und die Aufnahmen der Proteste verbreiten sich international. Die Regierung steht vor wachsendem Druck – sowohl von innen als auch ohne."
@@ -124,17 +79,9 @@
  arab_spring.5.a: "Ignorieren der internationalen Gemeinschaft"
  arab_spring.5.b: "diplomatisch betraut"
 
- # ==========================================
- # FAILURE EVENTS
- # ==========================================
-
  arab_spring.8.t: "Der Crackdown"
  arab_spring.8.d: "Der Aufstand in [ROOT.GetCountry.GetName] wurde gebrochen. Die Sicherheitskräfte – gegebenenfalls ergänzt durch treue Milizen – haben die letzten Protestlager verteilt, die prominentesten Oppositionsfiguren festgenommen und die Grenzen gegen die Außenrührer versiegelt. Die staatlichen Medien schreiben bereits die narrative.\n\nDer Arabische Frühling ist von [ROOT.GetCountry.GetName] gekommen und hinterließen nur neue Traurigkeiten zum Fester."
  arab_spring.8.a: "Bestellung wurde wiederhergestellt"
-
- # ==========================================
- # SUCCESS EVENTS
- # ==========================================
 
  arab_spring.9.t: "Das Regime setzt sich zusammen"
  arab_spring.9.d: "Angesichts der Proteste, die kein Zeichen der Abtreibung zeigen, hat [SCOPE.GetRootScope.GetCountry.GetRuler.GetLastName] kehrende Zugeständnisse angekündigt – einschließlich der Verheißung freier Wahlen und einer neuen Verfassung. Ob diese Versprechen gehalten werden, bleibt zu sehen, aber die Protestbewegung hat einen historischen Sieg behauptet."
@@ -144,10 +91,6 @@
  arab_spring.10.d: "Die alte Ordnung ist in [ROOT.GetCountry.GetName] gefallen. Nach Wochen der Massenproteste ist das Regime zusammengebrochen – sei es durch den Flug des Herrschers, die Defektion des Militärs oder den ausgehandelten Übergang. Zum ersten Mal in einer Generation werden gewöhnliche Menschen in [ROOT.GetCountry.GetName] auf etwas anderes hoffen.\nx id=3/> Die harte Arbeit des Aufbaus einer neuen politischen Ordnung beginnt jetzt."
  arab_spring.10.a: "Das Volk hat gesprochen"
 
- # ==========================================
- # ARAB WINTER EVENTS
- # ==========================================
-
  arab_spring.7.t: "Islamistische Kräfte stärken die Macht"
  arab_spring.7.d: "Die Revolution wurde gefangen genommen. In [ROOT.GetCountry.GetName] haben die islamistischen Bewegungen – besser organisiert, besser finanziert und tiefer verwurzelt in der Gesellschaft als die weltliche Protestbewegung – die Siege des Arabischen Frühlings zu ihrem eigenen Vorteil gedreht. Der Wahlkampf, nach der größten Hoffnung der Demonstranten, hat die liberale Opposition nie erwartet.\n>x id=2/>Der arabische Frühling ist zum arabischen Winter geworden."
  arab_spring.7.a: "Ein bitteres Ergebnis"
@@ -155,10 +98,6 @@
  arab_spring.71.t: "Ein demokratischer Übergang"
  arab_spring.71.d: "In [ROOT.GetCountry.GetName] hat der Arabische Frühling zumindest einige seiner Versprechen abgegeben. Eine wirkliche Machtübernahme hat stattgefunden, und die neue Regierung, die jedoch unvollkommen und zerbrechlich ist, stellt eine echte Pause mit der autoritären Vergangenheit dar. Es ist ein seltener heller Fleck in einem Bereich, in dem solche Übergänge so oft umgekehrt wurden.\nx id=2/> Die Arbeit der Konsolidierung der Demokratie in [ROOT.GetCountry.GetName] erfordert Wachsamkeit, Kompromisse und kein kleines Glück."
  arab_spring.71.a: "Geschichte beobachtet"
-
- # ==========================================
- # MODIFIER NAMES (referenced in events)
- # ==========================================
 
  arab_spring_popular_dissident: "Stimme des Aufstands"
  arab_spring_popular_dissident_desc: "Dieser Anführer ist zum Symbol der Protestbewegung geworden. Ihre Worte tragen Gewicht auf den Straßen — und mit ausländischen Regierungen beobachten genau."
@@ -175,7 +114,6 @@
  arab_spring_democratic_transition: "Demokratischer Übergang"
  arab_spring_democratic_transition_desc: "Das alte Regime ist gefallen und eine neue politische Ordnung entsteht. Optimismus ist hoch, aber so ist Instabilität – die harte Arbeit der Konsolidierung demokratischer Gewinne hat erst begonnen."
 
- arab_winter_revolution_crushed: "Revolution gebürstet"
  arab_winter_revolution_crushed_desc: "Der Aufstand wurde durch Gewalt niedergeschlagen. Das Regime hat überlebt, aber die Traurigkeiten, die Menschen in die Straßen fuhren, bleiben ungelöst. Unkontinente Feste unter der Oberfläche."
 
  arab_winter_islamist_consolidation: "Islamistische Konsolidierung"
@@ -184,10 +122,6 @@
  arab_spring_regional_contagion: "Regionale Unruhen"
  arab_spring_regional_contagion_desc: "Der Arabische Frühling verbreitet sich. Protestbewegungen in den Nachbarländern verkörpern inländische Opposition, und das Regime ist zunehmend nervös wegen Ansteckung."
 
- # ==========================================
- # arab_spring.1 — The Streets Are Rising
- # ==========================================
-
  arab_spring.1.t: "Aufkommen landesweit"
  arab_spring.1.d: "In [ROOT.GetCountry.GetName] haben die Menschen auf die Straßen genommen. Was als gestreute Proteste gegen Korruption und Arbeitslosigkeit begann, ist in eine Massenbewegung gesunken, die ein Ende der Regel von [ROOT.GetRuler.GetFirstName] fordert. Die Sicherheitskräfte kämpfen, um die Demonstrationen zu enthalten, und die Augen der arabischen Welt beobachten.\nx id=3/> Wie die Regierung in diesen frühen Tagen reagiert, wird nicht nur das Schicksal dieses Landes, sondern die Trajektorie der gesamten Region prägen."
  arab_spring.1.d_no_leader: "In [ROOT.GetCountry.GetName] füllen die Straßen mit Demonstranten aus. Die Demonstrationen haben keine einheitliche Figur, aber die Traurigkeiten, die sie treiben — Korruption, Arbeitslosigkeit, das Schleifgewicht der autoritären Regel — sind real und weit verbreitet. Das Regime muss entscheiden, wie man vor der Situation reagiert Spiralen über seine Kontrolle hinaus."
@@ -195,20 +129,12 @@
  arab_spring.1.a: "Verbreitung der Demonstrationen durch Gewalt"
  arab_spring.1.b: "Öffnen Sie einen Dialog mit der Opposition"
 
- # ==========================================
- # arab_spring.2 — The Security Apparatus Responds
- # ==========================================
-
  arab_spring.2.t: "Die Sicherheitseinrichtung reagiert"
  arab_spring.2.d: "Mit Protesten, die über [ROOT.GetCountry.GetName] weiter schimmern, drücken die Sicherheitsdienste die Regierung auf, entscheidend zu handeln. Generäle und Geheimdienstchefs warnen, dass Hesitation als Schwäche gelesen werden wird – und dass das Fenster für eine effektive Eindämmung schließt. Die Frage ist nicht, ob man die koerzitive Macht des Staates einsetzt, sondern wie."
  arab_spring.2.f: "Das Regime muss seine Werkzeuge sorgfältig wählen."
  arab_spring.2.a: "Ausweitung der geheimen Polizei — Überwachung und Inhaftierung"
  arab_spring.2.b: "Einsatz des Militärs - Halten Sie die Straßen mit Gewalt"
  arab_spring.2.c: "Warten und beobachten — nicht überreagieren"
-
- # ==========================================
- # ADDITIONAL MODIFIERS (referenced in events)
- # ==========================================
 
  modifier_arab_spring_momentum: "Revolutionäres Momentum"
  modifier_arab_spring_momentum_desc: "Die Protestbewegung gewinnt Energie und Unterstützung. Radikale Stimmung breitet sich durch die unteren und mittleren Schichten der Gesellschaft aus."
@@ -233,10 +159,6 @@
 
  modifier_arab_spring_regime_ig_defeated: "Besiegt von der Revolution"
  modifier_arab_spring_regime_ig_defeated_desc: "Die Vereinigung dieser Gruppe mit dem alten Regime hat es teuer gekostet. Sie ist in der neuen politischen Ordnung marginalisiert."
-
- # ==========================================
- # EVENTS 1–6 (additional keys)
- # ==========================================
 
  arab_spring.1.d_tunisia: "Was in [ROOT.GetCapital.GetName] mit der Selbstverbrennung eines Straßenanbieters begann, ist etwas geworden, das niemand vorhergesagt hat – ein bundesweites Aufstehen, das [ROOT.GetCountry.GetName] auf seine Grundlagen geschüttelt hat. Das Regime von [SCOPE.GetRootScope.GetCountry.GetRuler.GetLastName] wird abgerollt. Sicherheitskräfte kämpfen um Demonstrationen, die sich vom Kapital auf jede Großstadt ausgebreitet haben.\nx id=4/> Die Welt beobachtet. Und in der ganzen arabischen Welt beobachten auch andere Regierungen – mit Hoffnung oder mit Furcht."
  arab_spring.1.f: "Der erste Domino ist gefallen."
@@ -274,10 +196,6 @@
  arab_spring.6.a: "Ein Kapitel schließt"
  arab_spring.6.a.tt: "Der Arabische Frühling ist beendet. Alle beteiligten Länder werden benachrichtigt."
 
- # ==========================================
- # EVENTS 7–10 (additional keys)
- # ==========================================
-
  arab_spring.7.f: "Die Revolution wurde gestohlen."
  arab_spring.7.a: "Die neue Ordnung dient dem Glauben — sie umarmen"
  arab_spring.7.b: "Stabilität vor allem — nehmen Sie das Ergebnis an"
@@ -305,22 +223,13 @@
  arab_spring.10.a: "Blick auf den Konterrevolutionskopf"
  arab_spring.10.b: "Verteidigungspositionen vorbereiten — Stütze für den Gegenschlag"
 
- # Tooltip keys for arab_spring.10
  arab_winter_tt: "Der arabische Winter beginnt – ein neuer Journaleintrag, der den Kampf zwischen Reformisten und konterrevolutionären Kräften verfolgt."
  arab_winter_counter_revolution_bonus_tt: "Die neue Regierung hat defensive Vorbereitungen genommen. Konterrevolutionäre Kräfte werden einem organisierteren Widerstand entgegentreten."
-
- # ==========================================
- # SCRIPTED TRIGGERS (tooltip names)
- # ==========================================
 
  arab_spring_liberal_victory_trigger: "Reformistische Siegbedingungen Met"
  arab_spring_islamist_victory_trigger: "Islamistische/nationalistische Siegbedingungen Met"
  arab_spring_valid_country_trigger: "Gültige arabische Frühlingsziele"
  tunisia_arab_spring_spark_trigger: "Tunesien: Frühlingsbedingungen Met"
-
- # ==========================================
- # SCRIPTED PROGRESS BAR TOOLTIPS
- # ==========================================
 
  arab_spring_reformists_in_govt_tt: "Reformistische Interessengruppen sind in der Regierung"
  arab_spring_universal_suffrage_tt: "Das allgemeine Wahlrecht wurde erlassen"
@@ -342,10 +251,6 @@
  arab_winter_elected_bureaucrats_tt: "Gewählte Bürokratie widersteht Putschversuchen"
  arab_winter_prepared_defence_tt: "Die neue Regierung hat Verteidigungspositionen vorbereitet"
 
- # ==========================================
- # SPARK EVENTS
- # ==========================================
-
  2011_protests.1.t: "Ein Street Vendor setzt sich selbst leicht"
  2011_protests.1.d: "In der Provinzstadt Sidi Bouzid hat sich ein junger Straßenverkäufer namens Mohamed Bouazizi vor den örtlichen Regierungsbüros niedergelassen, nachdem die Polizei seinen Wagen beschlagnahmt und ihn öffentlich demütigt hat.\nx id=1/> Der Akt der Verzweiflung ist zu einer Blitzstange geworden. Innerhalb von Stunden hat sich sein Protest über soziale Medien verbreitet. Crowds haben sich nicht nur in Sidi Bouzid, sondern über [ROOT.GetCountry.GetName] versammelt. Die akkumulierte Wut einer Generation — über Korruption, Arbeitslosigkeit und das Schleifgewicht der autoritären Regel — hat ihr Symbol gefunden.\nx id=4/> Die Regelung von [SCOPE.GetRootScope.GetCountry.GetRuler.GetLastName] muss entscheiden, wie zu antworten ist. Was auch immer es tut, die Welt beobachtet."
  2011_protests.1.f: "Die Verzweiflung eines Mannes ist zu einer Nation geworden."
@@ -358,22 +263,12 @@
  2011_protests.2.a: "Tunesien ist anders — dies wird sich nicht auf [ROOT.GetCountry.GetName] verteilen"
  2011_protests.2.b: "Vorsichtsmaßnahmen — straffen Sie die Sicherheit, bevor dies aus der Hand kommt"
 
- # ==========================================
- # MISSING STRUCTURAL MODIFIERS
- # ==========================================
-
- modifier_arab_spring_transition_cabinet: "Übergangsregierung"
  modifier_arab_spring_transition_cabinet_desc: "Nach der Revolution entsteht eine neue Regierung. Die Legitimität ist in diesen frühen Tagen hoch — aber sie muss konsolidiert werden, bevor die Konterrevolution ihren Fuß findet."
 
  modifier_arab_spring_kick_out_of_insurrection: "Zurück von den Barrikaden"
  modifier_arab_spring_kick_out_of_insurrection_desc: "Die Revolution hat ihre unmittelbaren Ziele erreicht. Diese Gruppe verzichtet auf ihre Auferstehungshaltung und tritt in das formelle politische Leben ein – vom Wohlwollen des Augenblicks getragen."
 
- modifier_arab_spring_regime_ig_defeated: "Besiegt von der Revolution"
  modifier_arab_spring_regime_ig_defeated_desc: "Die Vereinigung dieser Gruppe mit dem alten Regime hat es teuer gekostet. Es wurde aus der Regierung geschoben und seine politische Stärke ist abgeschwächt. Ob es aus den Margen wieder aufgebaut werden kann, bleibt zu sehen."
-
-# ==========================================
- # ARAB SPRING INTERNATIONAL EVENTS
- # ==========================================
 
  # ── arab_spring_intl.1 ───────────────────
 
@@ -401,10 +296,6 @@
  arab_spring_intl.3.d_failure: "Der Arabische Frühling wurde gelöscht. Die Regime, die zu zittern schienen, haben sich stabilisiert, ihre Sicherheitsdienste rekonstituiert, ihre Gegner im Exil oder im Gefängnis. Für [ROOT.GetName] ist die Folge eine Erinnerung daran, dass moralische Klarheit einfacher ist als moralische Wirksamkeit. Die Traurigkeiten, die die Aufstände gezündet haben, wurden nicht gelöst. Sie wurden nur verschoben."
  arab_spring_intl.3.f: "Die Welt bewegt sich weiter. Die Region vergisst nicht."
  arab_spring_intl.3.a: "Nehmen Sie die Aktie von dem, was passiert ist"
-
- # ==========================================
- # INTERNATIONAL MODIFIER NAMES
- # ==========================================
 
  arab_spring_intl_pro_democracy_stance: "Pro-Democracy Stance"
  arab_spring_intl_pro_democracy_stance_desc: "Dieses Land hat sich öffentlich mit den Protestbewegungen des Arabischen Frühlings ausgerichtet. Sein Ansehen unter den demokratischen Nationen ist gestiegen — aber die Beziehungen zu den umliegenden arabischen Regimen haben sich gekühlt."

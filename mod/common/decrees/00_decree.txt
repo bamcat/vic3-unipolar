@@ -1,13 +1,4 @@
-﻿# texture = filename								The icon that will show up in the Lens and on the map when this Focus is deployed
-# modifier											The effects this Decree has on its state
-# cost												The cost in AUT to set this Decree on a state (scales with Power Rank)
-# unlocking_technologies							A list of technologies, at least one of which must be known to the country to use this Focus
-# unlocking_laws									A list of laws, at least one which must be active in the country to use this Focus. If the country switches away from all unlocking laws the Focus will be removed
-# country_trigger									A trigger in country context that determines if the Decree is permitted/shown in interface or not; should invalidate the Decree on a weekly basis if found invalid
-# state_trigger										A trigger in state context that determines if the Decree is permitted or not; should invalidate the Decree on a weekly basis if found invalid
-# ai_weight											Scripted value which determines the chance of getting the Decree by AI
-
-decree_road_maintenance = {
+﻿decree_road_maintenance = {
 	texture = "gfx/interface/icons/decree/decree_road_maintenance.dds"
 	modifier = {
 		state_infrastructure_from_population_add = 1
@@ -75,7 +66,6 @@ decree_road_maintenance = {
 			multiply = 0
 		}
 
-		# Place instances where content should ignore weights here
 		if = {
 			limit = {
 				scope:country = {
@@ -262,7 +252,6 @@ decree_promote_social_mobility = {
 			multiply = 1.5
 		}
 
-		# Content overrides
 		if = {
 			limit = {
 				scope:country = {
@@ -319,7 +308,7 @@ decree_promote_national_values = {
 				primary_cultures_percent_state <= 0.9
 			}
 
-			if = { # Colonies
+			if = {
 				limit = {
 					scope:country = {
 						is_not_in_geographic_region = geographic_region_europe
@@ -492,7 +481,7 @@ decree_promote_national_values = {
 			multiply = 0.1
 		}
 
-		if = { # Deliberately placed here since we want the AI to ignore laws for this
+		if = {
 			limit = {
 				scope:country = {
 					has_journal_entry = je_south_american_national_identity
@@ -785,7 +774,7 @@ decree_greener_grass_campaign = {
 				}
 				culture_percent_state = {
 					target = cu:french
-					value <= 0.25 # Bit of a buffer since we need 20%
+					value <= 0.25
 				}
 			}
 			add = 500
@@ -810,7 +799,7 @@ decree_greener_grass_campaign = {
 		if = {
 			limit = {
 				is_incorporated = no
-				scope:country = { NOT = { has_law_or_variant = law_type:law_colonial_resettlement } } # Already gives a hefty migration bonus
+				scope:country = { NOT = { has_law_or_variant = law_type:law_colonial_resettlement } }
 			}
 			multiply = 2.0
 		}

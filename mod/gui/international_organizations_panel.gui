@@ -1,4 +1,4 @@
-﻿﻿530 = 530
+﻿530 = 530
 @panel_width = 540
 @panel_width_half = 270
 @panel_width_plus_10 = 550
@@ -254,6 +254,14 @@ types io_panel_types {
 						blockoverride "io_entry_member" { visible = "[GetScriptedGui('io_leave_cis').IsValid(GuiScope.SetRoot(Country.MakeScope).End)]" }
 					}
 					io_org_list_item = {
+						visible = "[GetScriptedGui('io_join_csto').IsShown(GuiScope.SetRoot(Country.MakeScope).End)]"
+						blockoverride "io_entry_name" { text = "io_csto_name" }
+						blockoverride "io_entry_type" { text = "io_type_military_defense" }
+						blockoverride "io_entry_click" { onclick = "[GetVariableSystem.Set('io_viewing_org', 'csto')]" }
+						blockoverride "io_entry_icon" { texture = "gfx/interface/icons/organization_icons/csto.dds" }
+						blockoverride "io_entry_member" { visible = "[GetScriptedGui('io_leave_csto').IsShown(GuiScope.SetRoot(Country.MakeScope).End)]" }
+					}
+					io_org_list_item = {
 						blockoverride "io_entry_name" { text = "io_who_name" }
 						blockoverride "io_entry_type" { text = "io_type_cooperative" }
 						blockoverride "io_entry_click" { onclick = "[GetVariableSystem.Set('io_viewing_org', 'who')]" }
@@ -442,6 +450,21 @@ types io_panel_types {
 					blockoverride "detail_leave" { onclick = "[GetScriptedGui('io_leave_cis').Execute(GuiScope.SetRoot(Country.MakeScope).End)]" enabled = "[GetScriptedGui('io_leave_cis').IsValid(GuiScope.SetRoot(Country.MakeScope).End)]" tooltip = "[GetScriptedGui('io_leave_cis').BuildTooltip(GuiScope.SetRoot(GetPlayer.MakeScope).End)]" }
 				}
 				io_org_detail = {
+					visible = "[And(GetVariableSystem.HasValue('io_viewing_org', 'csto'), GetScriptedGui('io_join_csto').IsShown(GuiScope.SetRoot(Country.MakeScope).End))]"
+					blockoverride "detail_name" { text = "io_csto_name" }
+					blockoverride "detail_type_text" { text = "io_type_military_defense" }
+					blockoverride "detail_type_tooltip" { tooltip = "concept_csto" }
+					blockoverride "detail_desc" { text = "io_csto_desc" }
+					blockoverride "detail_icon" { texture = "gfx/interface/icons/organization_icons/cis.dds" }
+					blockoverride "detail_modifier_content" {
+									io_modifier_entry = { blockoverride "mod_text" { text = "io_mod_csto_pact" } }
+									io_modifier_entry = { blockoverride "mod_text" { text = "io_mod_prestige_2pct" } }
+								}
+					blockoverride "detail_member_list" { datamodel = "[GetGlobalList('io_csto_members')]" }
+					blockoverride "detail_join" { onclick = "[GetScriptedGui('io_join_csto').Execute(GuiScope.SetRoot(Country.MakeScope).End)]" enabled = "[GetScriptedGui('io_join_csto').IsValid(GuiScope.SetRoot(Country.MakeScope).End)]" tooltip = "[GetScriptedGui('io_join_csto').BuildTooltip(GuiScope.SetRoot(GetPlayer.MakeScope).End)]" }
+					blockoverride "detail_leave" { onclick = "[GetScriptedGui('io_leave_csto').Execute(GuiScope.SetRoot(Country.MakeScope).End)]" enabled = "[GetScriptedGui('io_leave_csto').IsValid(GuiScope.SetRoot(Country.MakeScope).End)]" tooltip = "[GetScriptedGui('io_leave_csto').BuildTooltip(GuiScope.SetRoot(GetPlayer.MakeScope).End)]" }
+				}
+				io_org_detail = {
 					visible = "[GetVariableSystem.HasValue('io_viewing_org', 'who')]"
 					blockoverride "detail_name" { text = "io_who_name" }
 					blockoverride "detail_type_text" { text = "io_type_cooperative" }
@@ -520,16 +543,16 @@ types io_panel_types {
 					blockoverride "treaty_detail_name" { text = "io_treaty_geneva_name" }
 					blockoverride "treaty_detail_desc" { text = "io_treaty_geneva_desc" }
 					blockoverride "treaty_mod_content" { io_modifier_entry = { blockoverride "mod_text" { text = "io_mod_infamy_minus5" } } }
-					blockoverride "treaty_sign" { onclick = "[GetScriptedGui('io_sign_geneva').Execute(GuiScope.SetRoot(Country.MakeScope).End)]" enabled = "[GetScriptedGui('io_sign_geneva').IsValid(GuiScope.SetRoot(Country.MakeScope).End)]" }
-					blockoverride "treaty_withdraw" { onclick = "[GetScriptedGui('io_withdraw_geneva').Execute(GuiScope.SetRoot(Country.MakeScope).End)]" enabled = "[GetScriptedGui('io_withdraw_geneva').IsValid(GuiScope.SetRoot(Country.MakeScope).End)]" }
+					blockoverride "treaty_sign" { onclick = "[GetScriptedGui('io_sign_geneva').Execute(GuiScope.SetRoot(Country.MakeScope).End)]" enabled = "[GetScriptedGui('io_sign_geneva').IsValid(GuiScope.SetRoot(Country.MakeScope).End)]" tooltip = "[GetScriptedGui('io_sign_geneva').BuildTooltip(GuiScope.SetRoot(GetPlayer.MakeScope).End)]" }
+					blockoverride "treaty_withdraw" { onclick = "[GetScriptedGui('io_withdraw_geneva').Execute(GuiScope.SetRoot(Country.MakeScope).End)]" enabled = "[GetScriptedGui('io_withdraw_geneva').IsValid(GuiScope.SetRoot(Country.MakeScope).End)]" tooltip = "[GetScriptedGui('io_withdraw_geneva').BuildTooltip(GuiScope.SetRoot(GetPlayer.MakeScope).End)]" }
 				}
 				io_treaty_detail = {
 					visible = "[GetVariableSystem.HasValue('io_viewing_org', 'treaty_cwc')]"
 					blockoverride "treaty_detail_name" { text = "io_treaty_cwc_name" }
 					blockoverride "treaty_detail_desc" { text = "io_treaty_cwc_desc" }
 					blockoverride "treaty_mod_content" { io_modifier_entry = { blockoverride "mod_text" { text = "io_mod_mobe_options_chem" } } }
-					blockoverride "treaty_sign" { onclick = "[GetScriptedGui('io_sign_cwc').Execute(GuiScope.SetRoot(Country.MakeScope).End)]" enabled = "[GetScriptedGui('io_sign_cwc').IsValid(GuiScope.SetRoot(Country.MakeScope).End)]" }
-					blockoverride "treaty_withdraw" { onclick = "[GetScriptedGui('io_withdraw_cwc').Execute(GuiScope.SetRoot(Country.MakeScope).End)]" enabled = "[GetScriptedGui('io_withdraw_cwc').IsValid(GuiScope.SetRoot(Country.MakeScope).End)]" }
+					blockoverride "treaty_sign" { onclick = "[GetScriptedGui('io_sign_cwc').Execute(GuiScope.SetRoot(Country.MakeScope).End)]" enabled = "[GetScriptedGui('io_sign_cwc').IsValid(GuiScope.SetRoot(Country.MakeScope).End)]" tooltip = "[GetScriptedGui('io_sign_cwc').BuildTooltip(GuiScope.SetRoot(GetPlayer.MakeScope).End)]" }
+					blockoverride "treaty_withdraw" { onclick = "[GetScriptedGui('io_withdraw_cwc').Execute(GuiScope.SetRoot(Country.MakeScope).End)]" enabled = "[GetScriptedGui('io_withdraw_cwc').IsValid(GuiScope.SetRoot(Country.MakeScope).End)]" tooltip = "[GetScriptedGui('io_withdraw_cwc').BuildTooltip(GuiScope.SetRoot(GetPlayer.MakeScope).End)]" }
 				}
 				io_treaty_detail = {
 					visible = "[GetVariableSystem.HasValue('io_viewing_org', 'treaty_npt')]"
@@ -539,24 +562,24 @@ types io_panel_types {
 						io_modifier_entry = { blockoverride "mod_text" { text = "io_mod_infamy_minus3" } }
 						io_modifier_entry = { blockoverride "mod_text" { text = "io_mod_prestige_2pct" } }
 					}
-					blockoverride "treaty_sign" { onclick = "[GetScriptedGui('io_sign_npt').Execute(GuiScope.SetRoot(Country.MakeScope).End)]" enabled = "[GetScriptedGui('io_sign_npt').IsValid(GuiScope.SetRoot(Country.MakeScope).End)]" }
-					blockoverride "treaty_withdraw" { onclick = "[GetScriptedGui('io_withdraw_npt').Execute(GuiScope.SetRoot(Country.MakeScope).End)]" enabled = "[GetScriptedGui('io_withdraw_npt').IsValid(GuiScope.SetRoot(Country.MakeScope).End)]" }
+					blockoverride "treaty_sign" { onclick = "[GetScriptedGui('io_sign_npt').Execute(GuiScope.SetRoot(Country.MakeScope).End)]" enabled = "[GetScriptedGui('io_sign_npt').IsValid(GuiScope.SetRoot(Country.MakeScope).End)]" tooltip = "[GetScriptedGui('io_sign_npt').BuildTooltip(GuiScope.SetRoot(GetPlayer.MakeScope).End)]" }
+					blockoverride "treaty_withdraw" { onclick = "[GetScriptedGui('io_withdraw_npt').Execute(GuiScope.SetRoot(Country.MakeScope).End)]" enabled = "[GetScriptedGui('io_withdraw_npt').IsValid(GuiScope.SetRoot(Country.MakeScope).End)]" tooltip = "[GetScriptedGui('io_withdraw_npt').BuildTooltip(GuiScope.SetRoot(GetPlayer.MakeScope).End)]" }
 				}
 				io_treaty_detail = {
 					visible = "[GetVariableSystem.HasValue('io_viewing_org', 'treaty_bwc')]"
 					blockoverride "treaty_detail_name" { text = "io_treaty_bwc_name" }
 					blockoverride "treaty_detail_desc" { text = "io_treaty_bwc_desc" }
 					blockoverride "treaty_mod_content" { io_modifier_entry = { blockoverride "mod_text" { text = "io_mod_diplo_rep_1" } } }
-					blockoverride "treaty_sign" { onclick = "[GetScriptedGui('io_sign_bwc').Execute(GuiScope.SetRoot(Country.MakeScope).End)]" enabled = "[GetScriptedGui('io_sign_bwc').IsValid(GuiScope.SetRoot(Country.MakeScope).End)]" }
-					blockoverride "treaty_withdraw" { onclick = "[GetScriptedGui('io_withdraw_bwc').Execute(GuiScope.SetRoot(Country.MakeScope).End)]" enabled = "[GetScriptedGui('io_withdraw_bwc').IsValid(GuiScope.SetRoot(Country.MakeScope).End)]" }
+					blockoverride "treaty_sign" { onclick = "[GetScriptedGui('io_sign_bwc').Execute(GuiScope.SetRoot(Country.MakeScope).End)]" enabled = "[GetScriptedGui('io_sign_bwc').IsValid(GuiScope.SetRoot(Country.MakeScope).End)]" tooltip = "[GetScriptedGui('io_sign_bwc').BuildTooltip(GuiScope.SetRoot(GetPlayer.MakeScope).End)]" }
+					blockoverride "treaty_withdraw" { onclick = "[GetScriptedGui('io_withdraw_bwc').Execute(GuiScope.SetRoot(Country.MakeScope).End)]" enabled = "[GetScriptedGui('io_withdraw_bwc').IsValid(GuiScope.SetRoot(Country.MakeScope).End)]" tooltip = "[GetScriptedGui('io_withdraw_bwc').BuildTooltip(GuiScope.SetRoot(GetPlayer.MakeScope).End)]" }
 				}
 				io_treaty_detail = {
 					visible = "[GetVariableSystem.HasValue('io_viewing_org', 'treaty_cat')]"
 					blockoverride "treaty_detail_name" { text = "io_treaty_cat_name" }
 					blockoverride "treaty_detail_desc" { text = "io_treaty_cat_desc" }
 					blockoverride "treaty_mod_content" { io_modifier_entry = { blockoverride "mod_text" { text = "io_mod_prestige_3pct" } } }
-					blockoverride "treaty_sign" { onclick = "[GetScriptedGui('io_sign_cat').Execute(GuiScope.SetRoot(Country.MakeScope).End)]" enabled = "[GetScriptedGui('io_sign_cat').IsValid(GuiScope.SetRoot(Country.MakeScope).End)]" }
-					blockoverride "treaty_withdraw" { onclick = "[GetScriptedGui('io_withdraw_cat').Execute(GuiScope.SetRoot(Country.MakeScope).End)]" enabled = "[GetScriptedGui('io_withdraw_cat').IsValid(GuiScope.SetRoot(Country.MakeScope).End)]" }
+					blockoverride "treaty_sign" { onclick = "[GetScriptedGui('io_sign_cat').Execute(GuiScope.SetRoot(Country.MakeScope).End)]" enabled = "[GetScriptedGui('io_sign_cat').IsValid(GuiScope.SetRoot(Country.MakeScope).End)]" tooltip = "[GetScriptedGui('io_sign_cat').BuildTooltip(GuiScope.SetRoot(GetPlayer.MakeScope).End)]" }
+					blockoverride "treaty_withdraw" { onclick = "[GetScriptedGui('io_withdraw_cat').Execute(GuiScope.SetRoot(Country.MakeScope).End)]" enabled = "[GetScriptedGui('io_withdraw_cat').IsValid(GuiScope.SetRoot(Country.MakeScope).End)]" tooltip = "[GetScriptedGui('io_withdraw_cat').BuildTooltip(GuiScope.SetRoot(GetPlayer.MakeScope).End)]" }
 				}
 			}
 

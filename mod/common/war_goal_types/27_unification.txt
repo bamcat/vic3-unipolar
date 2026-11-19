@@ -1,4 +1,8 @@
 ﻿unification = {
+	mirrored_wargoal = {
+		method = territorial
+	}
+
 	icon = "gfx/interface/icons/war_goals/unification.dds"
 
 	kind = unification
@@ -8,7 +12,6 @@
 		annexes_entire_country
 		skip_build_list
 
-		# Validation
 		validate_conflicts_war_goals_all
 		validate_sole_formation_candidate
 		validate_conflicts_conquer_state

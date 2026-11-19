@@ -1,0 +1,124 @@
+﻿smd_try_start_law = {
+	if = {
+		limit = {
+			enacting_any_law = no
+			NOT = { has_law_or_variant = law_type:$LAW$ }
+			any_law = {
+				type = law_type:$LAW$
+				can_be_enacted = yes
+			}
+		}
+		start_enactment = law_type:$LAW$
+	}
+}
+
+smd_raise_institution = {
+	if = {
+		limit = {
+			institution:$INST$ ?= {
+				investment < investment_max
+			}
+		}
+		change_institution_investment_level = {
+			institution = $INST$
+			investment = 1
+		}
+	}
+}
+
+smd_build_in_capital = {
+	capital ?= {
+		if = {
+			limit = {
+				can_construct_building = $BUILDING$
+			}
+			start_building_construction = $BUILDING$
+		}
+	}
+}
+
+smd_clear_crime_states = {
+	remove_variable = smd_crime_state_1
+	remove_variable = smd_crime_state_2
+	remove_variable = smd_crime_state_3
+}
+
+smd_update_crime_states = {
+	smd_clear_crime_states = yes
+	ordered_scope_state = {
+		limit = { smd_crime_affected_state = yes }
+		order_by = turmoil
+		position = 0
+		check_range_bounds = no
+		ROOT = {
+			set_variable = {
+				name = smd_crime_state_1
+				value = PREV
+			}
+		}
+	}
+	ordered_scope_state = {
+		limit = { smd_crime_affected_state = yes }
+		order_by = turmoil
+		position = 1
+		check_range_bounds = no
+		ROOT = {
+			set_variable = {
+				name = smd_crime_state_2
+				value = PREV
+			}
+		}
+	}
+	ordered_scope_state = {
+		limit = { smd_crime_affected_state = yes }
+		order_by = turmoil
+		position = 2
+		check_range_bounds = no
+		ROOT = {
+			set_variable = {
+				name = smd_crime_state_3
+				value = PREV
+			}
+		}
+	}
+}
+
+smd_clear_language_minorities = {
+	remove_variable = smd_language_minority
+	remove_variable = smd_language_other_1
+	remove_variable = smd_language_other_2
+}
+
+smd_set_other_minorities = {
+	remove_variable = smd_language_other_1
+	remove_variable = smd_language_other_2
+	every_scope_culture = {
+		limit = { smd_language_other_minority = yes }
+		if = {
+			limit = {
+				ROOT = {
+					NOT = { has_variable = smd_language_other_1 }
+				}
+			}
+			ROOT = {
+				set_variable = {
+					name = smd_language_other_1
+					value = PREV
+				}
+			}
+		}
+		else_if = {
+			limit = {
+				ROOT = {
+					NOT = { has_variable = smd_language_other_2 }
+				}
+			}
+			ROOT = {
+				set_variable = {
+					name = smd_language_other_2
+					value = PREV
+				}
+			}
+		}
+	}
+}

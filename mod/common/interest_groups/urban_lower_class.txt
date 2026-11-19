@@ -6,16 +6,13 @@ REPLACE_OR_CREATE:ig_trade_unions = {
 	
 	ideologies = {
 	
-		#Economic Ideologies
-		ideology_far_left_economy 			#General Economic Beliefs 
-		ideology_nationalist 				#Foreign Economic Policy
+		ideology_far_left_economy
+		ideology_nationalist
 		
-		#Political Ideologies
-		ideology_communitarian				#General Political Beliefs
-		ideology_progressive				#Specific Political Beliefs
-		ideology_communist					#Government Types 
+		ideology_communitarian
+		ideology_progressive
+		ideology_communist
 		
-		#Dynamic Ideologies
 		#ideology_neutral_spending
 		#ideology_neutral_population
 		
@@ -38,7 +35,6 @@ REPLACE_OR_CREATE:ig_trade_unions = {
 		always = yes
 	}
 	
-	# Deprecated; use on_enable effect to assign traits instead
 	traits = {
 		ig_trait_solidarity
 		ig_trait_industrial_organizers
@@ -57,13 +53,11 @@ REPLACE_OR_CREATE:ig_trade_unions = {
 	
 	pop_potential = {
 	
-		#Only Accepted Pops can organise into IGs
 		#pop_acceptance >= acceptance_status_3
 		
-		#Correct pop type
 		OR = { 
-			is_pop_type = machinists		#Skilled Labourers
-			AND = { 						#Unskilled Labourers
+			is_pop_type = machinists
+			AND = {
 				is_pop_type = laborers
 				NOR = { 
 					pop_employment_building_group = bg_subsistence_agriculture
@@ -75,7 +69,6 @@ REPLACE_OR_CREATE:ig_trade_unions = {
 		
 		NOT = { is_pop_type = capitalists }
 		
-		#Private Sector Only
 		NOT = { pop_employment_building_group = bg_government }
 		
 	}
@@ -156,7 +149,7 @@ REPLACE_OR_CREATE:ig_trade_unions = {
 					is_in_government = yes
 				}
 			}
-			multiply = { # Multiplied by 1.25x max
+			multiply = {
 				desc = "POP_LOYALISTS"
 				value = pop_loyalist_fraction
 				divide = 4
@@ -169,7 +162,7 @@ REPLACE_OR_CREATE:ig_trade_unions = {
 					is_in_government = no
 				}
 			}
-			multiply = { # Multiplied by 1.25x max
+			multiply = {
 				desc = "POP_RADICALS"
 				value = pop_radical_fraction
 				divide = 4
@@ -183,9 +176,7 @@ REPLACE_OR_CREATE:ig_trade_unions = {
 	}	
 	
 	agitator_weight = {
-		# Agitators more likely to come from populist IG's rather than elitist
 		value = 1.0
-		# Agitators will never be part of a marginalized IG
 		if = {
 			limit = {
 				owner.ig:ig_trade_unions = {
@@ -404,15 +395,11 @@ if = {
 		
 	}
 	
-	# The chance that a commander belonging to this IG takes over leadership when it changes
-	# scope:character is the most popular commander in the IG
 	commander_leader_chance = {
 		value = 0.25
 		multiply = ig_commander_leader_chance_mult
 	}
 	
-	# The chance that a executive belonging to this IG takes over leadership when it changes
-	# scope:character is the most popular executive in the IG
 	executive_leader_chance = {
 		value = 0.25
 	}

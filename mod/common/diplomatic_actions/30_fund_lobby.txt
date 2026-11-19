@@ -265,7 +265,6 @@
 					scope:target_country = { is_at_war = yes }
 				}
 			}
-			# We want to have at least five times their income, and at least 50k income in general
 			AND = {
 				income >= 50000
 				net_fixed_income >= {
@@ -320,8 +319,6 @@
 						scope:target_country = { is_at_war = yes }
 					}
 				}
-				# Threshold for breaking off a bankroll is higher than for starting it
-				# We also don't look at net_fixed_income here since starting a bankroll changes it
 				NOR = {
 					AND = {
 						income >= 40000

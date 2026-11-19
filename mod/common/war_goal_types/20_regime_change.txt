@@ -1,4 +1,8 @@
 ﻿regime_change = {
+	mirrored_wargoal = {
+		method = no_mirror
+	}
+
 	icon = "gfx/interface/icons/war_goals/regime_change.dds"
 
 	kind = regime_change
@@ -6,7 +10,6 @@
 	settings = {
 		require_target_be_part_of_war
 
-		# Validation
 		validate_conflicts_war_goals_all
 		validate_regime_change
 
@@ -109,7 +112,7 @@
 		}
 
 		multiply = {
-			desc = "INFAMY_FROM_REBELLIOUS_SUBJECT" # Rebellious as in they are the aggressor in the play
+			desc = "INFAMY_FROM_REBELLIOUS_SUBJECT"
 			value = 1
 
 			if = {

@@ -93,55 +93,60 @@ je_afghan_civil_war = {
 		}
 	}
 
-	complete = {
-		custom_tooltip = {
-			text = je_afghan_civil_war_complete
-			NAND = {
-				exists = c:ANA
-				exists = c:AFG
+
+	outcome = {
+		header = je_standard_completion_header
+		effect_header = je_standard_on_completion_header
+		color = "gold_positive"
+		conclusion_desc = je_standard_completion_conclusion_desc
+		trigger = {
+			custom_tooltip = {
+				text = je_afghan_civil_war_complete
+				NAND = {
+					exists = c:ANA
+					exists = c:AFG
+				}
+			}
+		}
+		effect_all_involved = {
+			if = {
+				limit = {
+					c:ANA ?= this
+				}
+				add_modifier = {
+					name = acw_ana_reward
+					years = 20
+					is_decaying = yes
+				}
+			}
+			else_if = {
+				limit = {
+					c:AFG ?= this
+				}
+				add_modifier = {
+					name = acw_afg_reward
+					years = 20
+					is_decaying = yes
+				}
+			}
+			trigger_event = afghan_civil_war.2
+			hidden_effect = {
+				remove_global_variable = afg_afghan_civil_war_score
+				remove_global_variable = ana_afghan_civil_war_score
+				remove_global_variable = afghan_civil_war_skirmish_phase
+				remove_global_variable = afghan_civil_war_final_phase
+				remove_global_variable = afghan_civil_war_started
+				remove_modifier = acw_taliban_security_push
+				remove_modifier = acw_northern_alliance_mountain_resistance
+				remove_modifier = acw_taliban_supply_strain
+				remove_modifier = acw_northern_alliance_supply_networks
+				set_immune_to_revolutions = no
+				remove_variable = coup_immunity
 			}
 		}
 	}
-
-	on_complete_all_involved = {
-		if = {
-			limit = {
-				c:ANA ?= this
-			}
-			add_modifier = {
-				name = acw_ana_reward
-				years = 20
-				is_decaying = yes
-			}
-		}
-		else_if = {
-			limit = {
-				c:AFG ?= this
-			}
-			add_modifier = {
-				name = acw_afg_reward
-				years = 20
-				is_decaying = yes
-			}
-		}
-		trigger_event = afghan_civil_war.2
-		hidden_effect = {
-			remove_global_variable = afg_afghan_civil_war_score
-			remove_global_variable = ana_afghan_civil_war_score
-			remove_global_variable = afghan_civil_war_skirmish_phase
-			remove_global_variable = afghan_civil_war_final_phase
-			remove_global_variable = afghan_civil_war_started
-			remove_modifier = acw_taliban_security_push
-			remove_modifier = acw_northern_alliance_mountain_resistance
-			remove_modifier = acw_taliban_supply_strain
-			remove_modifier = acw_northern_alliance_supply_networks
-			set_immune_to_revolutions = no
-			remove_variable = coup_immunity
-		}
-	}
-
 	weight = 10000
 
 	should_be_pinned_by_default_involved = yes
-	should_be_pinned_by_default_uninvolved_or_ineligible = no
+	should_be_pinned_by_default_uninvolved_or_context = no
 }

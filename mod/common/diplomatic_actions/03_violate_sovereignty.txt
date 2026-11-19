@@ -27,7 +27,14 @@
 	}
 
 	possible = {
-		# this localization only makes sense if you are already at war
+		scope:target_country.relations:root < relations_threshold:amicable
+
+		is_revolutionary = no
+
+		scope:target_country = {
+			is_revolutionary = no
+		}
+
 		trigger_if = {
 			limit = {
 				is_at_war = yes
@@ -39,14 +46,6 @@
 					violate_sovereignty_war_check = yes
 				}
 			}
-		}
-
-		scope:target_country.relations:root < relations_threshold:amicable
-
-		is_revolutionary = no
-
-		scope:target_country = {
-			is_revolutionary = no
 		}
 	}
 
@@ -81,12 +80,10 @@
 			}
 		}
 
-		# could potentially be several wars but only show one in situation for now
 		random_scope_violate_sovereignty_wars = {
 			save_scope_as = war
 		}
 
-		# send situation to all relevant countries asking them to help scope:target_country out
 		every_scope_violate_sovereignty_interested_parties = {
 			trigger_event = { id = diplomatic_events.1 days = 0 }
 		}

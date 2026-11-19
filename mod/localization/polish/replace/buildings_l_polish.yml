@@ -116,7 +116,6 @@
  building_panama_canal_lens_option:0 "Narysuj $building_panama_canal$"
  UNEMPLOYED:0 "[concept_unemployed]"
 
-# SMD new buildings
  building_computer_industry:0 "Computer Industries"
  building_aeronautics_industry:0 "Aeronautyka Industries"
  building_retailer:0 "Usługi detaliczne"
@@ -127,8 +126,8 @@
  building_nuclear_plant:0 "Elektrownia jądrowa"
  building_chip_industry:0 "Chip Industries"
  building_appliance_manufactory:0 "Produkty przylepne"
- 
-  building_computer_industry_lens_option:0 "Rozszerzenie przemysłu komputerowego"
+
+ building_computer_industry_lens_option:0 "Rozszerzenie przemysłu komputerowego"
  building_aeronautics_industry_lens_option:0 "Expand Aeronautics Industries"
  building_retailer_lens_option:0 "Expand Retail Services"
  building_professional_service_lens_option:0 "Rozwijanie usług zawodowych"
@@ -137,12 +136,11 @@
  building_green_plant_lens_option:0 "Poszerzanie mocy w zakresie emisji zerowych"
  building_nuclear_plant_lens_option:0 "Rozbudowa elektrowni jądrowej"
  building_chip_industry_lens_option:0 "Expand Chip Industries"
- 
+
  building_telecommunications:0 "Infrastruktura telekomunikacyjna"
  building_telecommunications_lens_option:0 "Rozwiń $building_telecommunications$"
  building_pharmaceutical_industry:0 "Przemysł farmaceutyczny"
  building_pharmaceutical_industry_lens_option:0 "Rozwiń $building_pharmaceutical_industry$"
-# Building Groups
  bg_subsistence:0 "Gospodarstwa rolne będące własnością państwa"
  bg_service:0 "Services Industries"
  bg_agriculture:0 "Rolnictwo"
@@ -208,11 +206,6 @@
  bg_financial_districts: "Dzielnice finansowe"
  bg_extraction: "Ekstrakcja"
 
-#Factories
-
-
-
- # Infrastructure
  building_port:0 "Port"
  building_railway:0 "Tradycyjna infrastruktura"
  building_trade_center:0 "Centrum Handlowe"
@@ -226,14 +219,12 @@
  building_railway_lens_option:0 "Kolej"
  building_trade_center_lens_option:0 "Tworzenie nowego rynku"
  building_link_merge_markets_lens_option:0 "Rynki połączeń"
-  
-  #Academies
+
  building_university:0 "Uniwersytet"
  building_university_lens_option:0 "Rozwiń $building_university$"
  building_art_academy:0 "Akademia Sztuki"
  building_art_academy_lens_option:0 "Rozwiń $building_art_academy$"
- 
-  #Colonies
+
  building_colony_military:0 "Kolonia wojskowa"
  building_colony_military_lens_option:0 "Ustalić $building_colony_military$"
  building_colony_military_hover:0 "Ustanowienie #variable Kolonia wojskowa #! w #variable [STATE.GetName]"
@@ -244,23 +235,19 @@
  building_colony_trade_lens_option:0 "Ustalić $building_colony_trade$"
  building_colony_trade_hover:0 "Ustanowienie #variable Kolonia handlowa #! w #variable [STATE.GetName]"
 
-  #Barracks
  building_barrack:0 "Koszar"
  building_barrack_lens_option:0 "Rozwiń $building_barrack$"
  building_naval_base:0 "Baza marynarki wojennej"
  building_naval_base_lens_option:0 "Rozwiń $building_naval_base$"
  building_conscription_center:0 "Centrum Konskrypcji"
 
-  #National Buildings
  building_government_administration:0 "Administracja rządowa"
  building_government_administration_lens_option:0 "Rozwiń $building_government_administration$"
 
-  # Unlock tooltips
  tooltip_unlock_railways:0 "Umożliwia budowę tradycyjnego budynku infrastruktury"
-  
-  # Monuments
+
  building_eiffel_tower:0 "Wieża Eiffla"
- 
+
  building_dummy:1 "#This jest budynkiem, który nie służy żadnemu mechanicznemu celowi rozgrywki, ale musi być reagowany przez grafikę centrum miasta. To (i ten tekst) nigdy nie powinno pojawić się w UI #!"
  building_argebam:0 "$building_dummy$"
  building_chichen_itza:0 "$building_dummy$"
@@ -270,26 +257,18 @@
  building_khaju_bridge:0 "$building_dummy$"
  building_machu_picchu:0 "$building_dummy$"
  building_petra:0 "$building_dummy$"
-  # AP1
  building_martandsuntemple:0 "$building_dummy$"
  building_observatorygreenwich:0 "$building_dummy$"
  building_temple_of_poseidon:0 "$building_dummy$"
  building_wat_arun:0 "$building_dummy$"
- building_company_headquarter:0 "Siedziba firmy"
-  # BP1
  building_cristo_redentor:0 "Cristo Redentor"
 
-  # Skyscraper
  building_skyscraper:0 "Drapacz chmur"
  building_power_bloc_statue:0 "Postać bloku zasilania"
- 
 
- # Halloween
- building_halloween_castledracula: "Castle Dracula" #IP2
+ building_halloween_castledracula: "Castle Dracula"
  building_victoria_terminus: "Victoria Terminus"
 
-pm_general_mills_office:0 "Biura papierowe"
+ pm_general_mills_office:0 "Biura papierowe"
 
-pmg_automation_building_furniture_manufacturies:0 "Pracy"
-
-# 
+ pmg_automation_building_furniture_manufacturies:0 "Pracy"

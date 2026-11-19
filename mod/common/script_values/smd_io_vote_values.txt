@@ -1,0 +1,533 @@
+﻿io_vote_un_members = {
+	value = 0
+	every_country = {
+		limit = {
+			is_target_in_global_variable_list = { name = io_un_members target = this }
+			NOT = { this = root }
+		}
+		add = 1
+	}
+}
+
+io_vote_un_against_projected = {
+	value = 0
+	every_country = {
+		limit = {
+			is_target_in_global_variable_list = { name = io_un_members target = this }
+			NOT = { this = root }
+			io_member_rule_open = yes
+		}
+		add = 1
+	}
+}
+
+io_vote_un_against_ai = {
+	value = 0
+	every_country = {
+		limit = {
+			is_target_in_global_variable_list = { name = io_un_members target = this }
+			NOT = { this = root }
+			is_ai = yes
+			io_member_rule_open = yes
+		}
+		add = 1
+	}
+}
+
+io_vote_un_for_projected = {
+	value = io_vote_un_members
+	subtract = io_vote_un_against_projected
+}
+
+io_vote_nato_members = {
+	value = 0
+	every_country = {
+		limit = {
+			is_target_in_global_variable_list = { name = io_nato_members target = this }
+			NOT = { this = root }
+		}
+		add = 1
+	}
+}
+
+io_vote_nato_against_projected = {
+	value = 0
+	every_country = {
+		limit = {
+			is_target_in_global_variable_list = { name = io_nato_members target = this }
+			NOT = { this = root }
+			io_member_rule_veto = yes
+		}
+		add = 1
+	}
+}
+
+io_vote_nato_against_ai = {
+	value = 0
+	every_country = {
+		limit = {
+			is_target_in_global_variable_list = { name = io_nato_members target = this }
+			NOT = { this = root }
+			is_ai = yes
+			io_member_rule_veto = yes
+		}
+		add = 1
+	}
+}
+
+io_vote_nato_for_projected = {
+	value = io_vote_nato_members
+	subtract = io_vote_nato_against_projected
+}
+
+io_vote_g7_members = {
+	value = 0
+	every_country = {
+		limit = {
+			is_target_in_global_variable_list = { name = io_g7_members target = this }
+			NOT = { this = root }
+		}
+		add = 1
+	}
+}
+
+io_vote_g7_against_projected = {
+	value = 0
+	every_country = {
+		limit = {
+			is_target_in_global_variable_list = { name = io_g7_members target = this }
+			NOT = { this = root }
+			io_member_rule_veto = yes
+		}
+		add = 1
+	}
+}
+
+io_vote_g7_against_ai = {
+	value = 0
+	every_country = {
+		limit = {
+			is_target_in_global_variable_list = { name = io_g7_members target = this }
+			NOT = { this = root }
+			is_ai = yes
+			io_member_rule_veto = yes
+		}
+		add = 1
+	}
+}
+
+io_vote_g7_for_projected = {
+	value = io_vote_g7_members
+	subtract = io_vote_g7_against_projected
+}
+
+io_vote_opec_members = {
+	value = 0
+	every_country = {
+		limit = {
+			is_target_in_global_variable_list = { name = io_opec_members target = this }
+			NOT = { this = root }
+		}
+		add = 1
+	}
+}
+
+io_vote_opec_against_projected = {
+	value = 0
+	every_country = {
+		limit = {
+			is_target_in_global_variable_list = { name = io_opec_members target = this }
+			NOT = { this = root }
+			io_member_rule_majority = yes
+		}
+		add = 1
+	}
+}
+
+io_vote_opec_against_ai = {
+	value = 0
+	every_country = {
+		limit = {
+			is_target_in_global_variable_list = { name = io_opec_members target = this }
+			NOT = { this = root }
+			is_ai = yes
+			io_member_rule_majority = yes
+		}
+		add = 1
+	}
+}
+
+io_vote_opec_for_projected = {
+	value = io_vote_opec_members
+	subtract = io_vote_opec_against_projected
+}
+
+io_vote_arab_league_members = {
+	value = 0
+	every_country = {
+		limit = {
+			is_target_in_global_variable_list = { name = io_arab_league_members target = this }
+			NOT = { this = root }
+		}
+		add = 1
+	}
+}
+
+io_vote_arab_league_against_projected = {
+	value = 0
+	every_country = {
+		limit = {
+			is_target_in_global_variable_list = { name = io_arab_league_members target = this }
+			NOT = { this = root }
+			io_member_rule_majority = yes
+		}
+		add = 1
+	}
+}
+
+io_vote_arab_league_against_ai = {
+	value = 0
+	every_country = {
+		limit = {
+			is_target_in_global_variable_list = { name = io_arab_league_members target = this }
+			NOT = { this = root }
+			is_ai = yes
+			io_member_rule_majority = yes
+		}
+		add = 1
+	}
+}
+
+io_vote_arab_league_for_projected = {
+	value = io_vote_arab_league_members
+	subtract = io_vote_arab_league_against_projected
+}
+
+io_vote_imf_members = {
+	value = 0
+	every_country = {
+		limit = {
+			is_target_in_global_variable_list = { name = io_imf_members target = this }
+			NOT = { this = root }
+		}
+		add = 1
+	}
+}
+
+io_vote_imf_against_projected = {
+	value = 0
+	every_country = {
+		limit = {
+			is_target_in_global_variable_list = { name = io_imf_members target = this }
+			NOT = { this = root }
+			io_member_rule_open = yes
+		}
+		add = 1
+	}
+}
+
+io_vote_imf_against_ai = {
+	value = 0
+	every_country = {
+		limit = {
+			is_target_in_global_variable_list = { name = io_imf_members target = this }
+			NOT = { this = root }
+			is_ai = yes
+			io_member_rule_open = yes
+		}
+		add = 1
+	}
+}
+
+io_vote_imf_for_projected = {
+	value = io_vote_imf_members
+	subtract = io_vote_imf_against_projected
+}
+
+io_vote_esa_members = {
+	value = 0
+	every_country = {
+		limit = {
+			is_target_in_global_variable_list = { name = io_esa_members target = this }
+			NOT = { this = root }
+		}
+		add = 1
+	}
+}
+
+io_vote_esa_against_projected = {
+	value = 0
+	every_country = {
+		limit = {
+			is_target_in_global_variable_list = { name = io_esa_members target = this }
+			NOT = { this = root }
+			io_member_rule_majority = yes
+		}
+		add = 1
+	}
+}
+
+io_vote_esa_against_ai = {
+	value = 0
+	every_country = {
+		limit = {
+			is_target_in_global_variable_list = { name = io_esa_members target = this }
+			NOT = { this = root }
+			is_ai = yes
+			io_member_rule_majority = yes
+		}
+		add = 1
+	}
+}
+
+io_vote_esa_for_projected = {
+	value = io_vote_esa_members
+	subtract = io_vote_esa_against_projected
+}
+
+io_vote_asean_members = {
+	value = 0
+	every_country = {
+		limit = {
+			is_target_in_global_variable_list = { name = io_asean_members target = this }
+			NOT = { this = root }
+		}
+		add = 1
+	}
+}
+
+io_vote_asean_against_projected = {
+	value = 0
+	every_country = {
+		limit = {
+			is_target_in_global_variable_list = { name = io_asean_members target = this }
+			NOT = { this = root }
+			io_member_rule_majority = yes
+		}
+		add = 1
+	}
+}
+
+io_vote_asean_against_ai = {
+	value = 0
+	every_country = {
+		limit = {
+			is_target_in_global_variable_list = { name = io_asean_members target = this }
+			NOT = { this = root }
+			is_ai = yes
+			io_member_rule_majority = yes
+		}
+		add = 1
+	}
+}
+
+io_vote_asean_for_projected = {
+	value = io_vote_asean_members
+	subtract = io_vote_asean_against_projected
+}
+
+io_vote_saarc_members = {
+	value = 0
+	every_country = {
+		limit = {
+			is_target_in_global_variable_list = { name = io_saarc_members target = this }
+			NOT = { this = root }
+		}
+		add = 1
+	}
+}
+
+io_vote_saarc_against_projected = {
+	value = 0
+	every_country = {
+		limit = {
+			is_target_in_global_variable_list = { name = io_saarc_members target = this }
+			NOT = { this = root }
+			io_member_rule_majority = yes
+		}
+		add = 1
+	}
+}
+
+io_vote_saarc_against_ai = {
+	value = 0
+	every_country = {
+		limit = {
+			is_target_in_global_variable_list = { name = io_saarc_members target = this }
+			NOT = { this = root }
+			is_ai = yes
+			io_member_rule_majority = yes
+		}
+		add = 1
+	}
+}
+
+io_vote_saarc_for_projected = {
+	value = io_vote_saarc_members
+	subtract = io_vote_saarc_against_projected
+}
+
+io_vote_cis_members = {
+	value = 0
+	every_country = {
+		limit = {
+			is_target_in_global_variable_list = { name = io_cis_members target = this }
+			NOT = { this = root }
+		}
+		add = 1
+	}
+}
+
+io_vote_cis_against_projected = {
+	value = 0
+	every_country = {
+		limit = {
+			is_target_in_global_variable_list = { name = io_cis_members target = this }
+			NOT = { this = root }
+			io_member_rule_majority = yes
+		}
+		add = 1
+	}
+}
+
+io_vote_cis_against_ai = {
+	value = 0
+	every_country = {
+		limit = {
+			is_target_in_global_variable_list = { name = io_cis_members target = this }
+			NOT = { this = root }
+			is_ai = yes
+			io_member_rule_majority = yes
+		}
+		add = 1
+	}
+}
+
+io_vote_cis_for_projected = {
+	value = io_vote_cis_members
+	subtract = io_vote_cis_against_projected
+}
+
+io_vote_who_members = {
+	value = 0
+	every_country = {
+		limit = {
+			is_target_in_global_variable_list = { name = io_who_members target = this }
+			NOT = { this = root }
+		}
+		add = 1
+	}
+}
+
+io_vote_who_against_projected = {
+	value = 0
+	every_country = {
+		limit = {
+			is_target_in_global_variable_list = { name = io_who_members target = this }
+			NOT = { this = root }
+			io_member_rule_open = yes
+		}
+		add = 1
+	}
+}
+
+io_vote_who_against_ai = {
+	value = 0
+	every_country = {
+		limit = {
+			is_target_in_global_variable_list = { name = io_who_members target = this }
+			NOT = { this = root }
+			is_ai = yes
+			io_member_rule_open = yes
+		}
+		add = 1
+	}
+}
+
+io_vote_who_for_projected = {
+	value = io_vote_who_members
+	subtract = io_vote_who_against_projected
+}
+
+io_vote_eec_members = {
+	value = 0
+	every_country = {
+		limit = {
+			is_target_in_global_variable_list = { name = io_eec_members target = this }
+			NOT = { this = root }
+		}
+		add = 1
+	}
+}
+
+io_vote_eec_against_projected = {
+	value = 0
+	every_country = {
+		limit = {
+			is_target_in_global_variable_list = { name = io_eec_members target = this }
+			NOT = { this = root }
+			io_member_rule_veto = yes
+		}
+		add = 1
+	}
+}
+
+io_vote_eec_against_ai = {
+	value = 0
+	every_country = {
+		limit = {
+			is_target_in_global_variable_list = { name = io_eec_members target = this }
+			NOT = { this = root }
+			is_ai = yes
+			io_member_rule_veto = yes
+		}
+		add = 1
+	}
+}
+
+io_vote_eec_for_projected = {
+	value = io_vote_eec_members
+	subtract = io_vote_eec_against_projected
+}
+
+io_vote_eu_members = {
+	value = 0
+	every_country = {
+		limit = {
+			is_target_in_global_variable_list = { name = io_eu_members target = this }
+			NOT = { this = root }
+		}
+		add = 1
+	}
+}
+
+io_vote_eu_against_projected = {
+	value = 0
+	every_country = {
+		limit = {
+			is_target_in_global_variable_list = { name = io_eu_members target = this }
+			NOT = { this = root }
+			io_member_rule_veto = yes
+		}
+		add = 1
+	}
+}
+
+io_vote_eu_against_ai = {
+	value = 0
+	every_country = {
+		limit = {
+			is_target_in_global_variable_list = { name = io_eu_members target = this }
+			NOT = { this = root }
+			is_ai = yes
+			io_member_rule_veto = yes
+		}
+		add = 1
+	}
+}
+
+io_vote_eu_for_projected = {
+	value = io_vote_eu_members
+	subtract = io_vote_eu_against_projected
+}
+

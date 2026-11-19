@@ -1,8 +1,5 @@
 ﻿# ==========================================
 # TANGENTOPOLI EXPOSURE BAR
-# Tracks how far the corruption network
-# has been penetrated. When it hits 100
-# the Mani Pulite JE opens.
 # ==========================================
 
 tangentopoli_exposure_bar = {
@@ -17,7 +14,7 @@ tangentopoli_exposure_bar = {
 	default = yes
 
 	monthly_progress = {
-		if = {
+		progress_condition = {
 			limit = { exists = var:tangentopoli_exposure }
 			add = {
 				desc = "tangentopoli_bar_from_exposure"
@@ -29,7 +26,6 @@ tangentopoli_exposure_bar = {
 
 # ==========================================
 # INVESTIGATION PROGRESS BAR
-# How far the magistrates have gotten.
 # ==========================================
 
 investigation_progress_bar = {
@@ -43,7 +39,7 @@ investigation_progress_bar = {
 	default = yes
 
 	monthly_progress = {
-		if = {
+		progress_condition = {
 			limit = { exists = var:investigation_progress }
 			add = {
 				desc = "investigation_bar_progress"
@@ -55,8 +51,6 @@ investigation_progress_bar = {
 
 # ==========================================
 # POLITICAL RESISTANCE BAR
-# How hard the political class is pushing
-# back. Inverted — red bar.
 # ==========================================
 
 political_resistance_bar = {
@@ -70,7 +64,7 @@ political_resistance_bar = {
 	default_bad = yes
 
 	monthly_progress = {
-		if = {
+		progress_condition = {
 			limit = { exists = var:political_resistance }
 			add = {
 				desc = "political_resistance_bar_progress"

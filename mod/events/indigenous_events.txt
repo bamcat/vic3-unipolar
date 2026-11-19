@@ -111,7 +111,6 @@ indigenous.2 = {
 
 	cooldown = { days = long_modifier_time }
 
-	# Option A: Honour the treaty obligations fully
 	option = {
 		name = indigenous.2.a
 		add_modifier = {
@@ -121,7 +120,6 @@ indigenous.2 = {
 		ai_chance = { base = 40 }
 	}
 
-	# Option B: Partial compliance — acknowledge but limit scope
 	option = {
 		name = indigenous.2.b
 		default_option = yes
@@ -155,7 +153,6 @@ indigenous.3 = {
 
 	cooldown = { days = very_long_modifier_time }
 
-	# Option A: Fund language and cultural programs
 	option = {
 		name = indigenous.3.a
 		add_modifier = {
@@ -165,7 +162,6 @@ indigenous.3 = {
 		ai_chance = { base = 60 }
 	}
 
-	# Option B: Leave it to communities — no state funding
 	option = {
 		name = indigenous.3.b
 		default_option = yes
@@ -195,7 +191,6 @@ indigenous.4 = {
 
 	cooldown = { days = very_long_modifier_time }
 
-	# Option A: Invest in indigenous healthcare programs
 	option = {
 		name = indigenous.4.a
 		add_modifier = {
@@ -209,7 +204,6 @@ indigenous.4 = {
 		ai_chance = { base = 55 }
 	}
 
-	# Option B: Refer to existing health system — no special programs
 	option = {
 		name = indigenous.4.b
 		default_option = yes
@@ -263,7 +257,6 @@ indigenous.5 = {
 
 	cooldown = { days = long_modifier_time }
 
-	# Option A: Increase federal funding for reservations
 	option = {
 		name = indigenous.5.a
 		add_modifier = {
@@ -277,7 +270,6 @@ indigenous.5 = {
 		ai_chance = { base = 45 }
 	}
 
-	# Option B: Maintain current funding levels
 	option = {
 		name = indigenous.5.b
 		default_option = yes
@@ -326,7 +318,6 @@ indigenous.6 = {
 
 	cooldown = { days = very_long_modifier_time }
 
-	# Option A: Support tribal economic development — casinos, resource rights
 	option = {
 		name = indigenous.6.a
 		add_modifier = {
@@ -336,7 +327,6 @@ indigenous.6 = {
 		ai_chance = { base = 55 }
 	}
 
-	# Option B: Oppose — resource extraction takes priority
 	option = {
 		name = indigenous.6.b
 		default_option = yes
@@ -382,7 +372,6 @@ indigenous.20 = {
 		set_variable = ipperwash_fired
 	}
 
-	# Option A: Order a forceful dispersal
 	option = {
 		name = indigenous.20.a
 		add_modifier = {
@@ -400,7 +389,6 @@ indigenous.20 = {
 		ai_chance = { base = 60 }
 	}
 
-	# Option B: Negotiate — pursue a peaceful resolution
 	option = {
 		name = indigenous.20.b
 		default_option = yes
@@ -442,7 +430,6 @@ indigenous.21 = {
 		set_variable = last_residential_school_fired
 	}
 
-	# Single option — acknowledgement event, no real choice
 	option = {
 		name = indigenous.21.a
 		default_option = yes
@@ -479,7 +466,6 @@ indigenous.22 = {
 		set_variable = trc_fired
 	}
 
-	# Option A: Formally accept the TRC calls to action
 	option = {
 		name = indigenous.22.a
 		add_modifier = {
@@ -494,7 +480,6 @@ indigenous.22 = {
 			value = small_radicals
 			strata = middle
 		}
-		# Meaningful law enactment bonus toward affirmative action
 		add_modifier = {
 			name = trc_enactment_bonus
 			months = 60
@@ -502,7 +487,6 @@ indigenous.22 = {
 		ai_chance = { base = 70 }
 	}
 
-	# Option B: Acknowledge the report but don't formally commit
 	option = {
 		name = indigenous.22.b
 		default_option = yes
@@ -515,8 +499,6 @@ indigenous.22 = {
 }
 
 # ==========================================
-# indigenous.10 — Completion
-# Fires when affirmative action is enacted.
 # ==========================================
 
 indigenous.10 = {

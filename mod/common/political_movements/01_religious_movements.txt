@@ -117,7 +117,7 @@
 		}
 
 		add = {
-			desc = "URBAN_STATE" # Increases support in rural states, decreases in urban
+			desc = "URBAN_STATE"
 			value = 0.5
 			subtract = state.state_urbanization_rate
 			multiply = 10
@@ -156,7 +156,7 @@
 			}
 		}
 
-		add = { # Weakened by increasing literacy rates
+		add = {
 			desc = "POP_LITERACY"
 			this = {
 				value = literacy_rate
@@ -164,7 +164,7 @@
 			}
 		}
 
-		if = { # Discriminated pops are less inclined to support the state church
+		if = {
 			limit = {
 				pop_acceptance < acceptance_status_5
 			}
@@ -528,7 +528,7 @@ movement_religious_minority = {
 			limit = {
 				standard_of_living < state.average_expected_sol
 			}
-			add = { # Increases likelihood of support if impoverished
+			add = {
 				desc = "POP_POVERTY"
 				value = state.average_expected_sol
 				subtract = standard_of_living
@@ -564,7 +564,7 @@ movement_religious_minority = {
 			}
 		}
 
-		add = { # Weakened by increasing literacy rates
+		add = {
 			desc = "POP_LITERACY"
 			this = {
 				value = literacy_rate
@@ -598,14 +598,14 @@ movement_religious_minority = {
 					}
 				}
 			}
-			add = { # From +2 at 80 to +10 at 0
+			add = {
 				desc = "POP_RELIGIOUS_DISCRIMINATION"
 				value = 100
 				subtract = pop_acceptance
 				divide = 10
 			}
 		}
-		else = { # Non-discriminated pops are less likely to form separatist movements
+		else = {
 			multiply = {
 				desc = "POP_ACCEPTANCE"
 				value = 0.25
@@ -624,7 +624,6 @@ movement_religious_minority = {
 			}
 		}
 
-		# Favor cultural movement if necessary
 		if = {
 			limit = {
 				owner = {
@@ -768,7 +767,7 @@ movement_religious_minority = {
 			limit = {
 				owner = {
 					any_political_movement = {
-						NOT = { this = root } # Insurrectionary movements should not make themselves more insurrectionary
+						NOT = { this = root }
 						is_insurrectionary = yes
 					}
 				}
@@ -778,14 +777,14 @@ movement_religious_minority = {
 				owner = {
 					every_political_movement = {
 						limit = {
-							NOT = { this = root } # Insurrectionary movements should not make themselves more insurrectionary
+							NOT = { this = root }
 							is_insurrectionary = yes
 						}
 						if = {
 							limit = {
 								exists = this.political_movement_identity_support
 							}
-							add = { # Identity support can get a bit high
+							add = {
 								value = this.political_movement_identity_support
 								multiply = 0.5
 							}

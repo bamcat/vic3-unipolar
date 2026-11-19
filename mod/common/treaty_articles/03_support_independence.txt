@@ -194,7 +194,6 @@
 				multiply = 0.05
 			}
 
-			# Rebellious subjects should very actively seek fellow subjects to rebel together with
 			if = {
 				limit = {
 					is_subject = yes
@@ -220,7 +219,6 @@
 					scope:source_country ?= this
 				}
 
-				# We are doing this to be able to reuse loc across treaties and diplomatic actions
 				scope:source_country = {
 					save_temporary_scope_as = target
 				}
@@ -375,7 +373,7 @@
 				if = {
 					limit = {
 						scope:target_country ?= {
-							is_subject = yes # For arcane reasons that I will not go into we are repeating this check here
+							is_subject = yes
 						}
 						scope:source_country ?= {
 							is_subject = no

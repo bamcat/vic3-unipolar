@@ -22,15 +22,6 @@
 }
 
 # ── FRACTIONAL RESERVE BANKING ────────────
-# Banks hold only a fraction of deposits as
-# reserves, lending the rest. Securities
-# production is multiplied as financial
-# districts operate with high leverage.
-# Credit production is debuffed — banks
-# are expanding the money supply rather
-# than simply storing it.
-# No institution — this is the default
-# modern banking arrangement.
 
 law_fractional_reserve_banking = {
 	group = lawgroup_central_banking
@@ -56,12 +47,6 @@ law_fractional_reserve_banking = {
 }
 
 # ── FULL RESERVE BANKING ──────────────────
-# Banks must hold 100% of deposits as
-# reserves. No fractional lending.
-# Unlocks institution_central_bank.
-# Each institution level raises the interest
-# rate by 1% but increases the maximum
-# credit limit by 5%.
 
 law_full_reserve_banking = {
 	group = lawgroup_central_banking

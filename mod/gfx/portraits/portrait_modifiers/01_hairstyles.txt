@@ -297,8 +297,10 @@
                     AND = {
                         exists = scope:pop
                         scope:pop = {
-                            religion = {
-                                has_discrimination_trait = buddhist
+                            OR = {
+                                religion = rel:mahayana
+                                religion = rel:theravada
+                                religion = rel:gelugpa
                             }
                         }
                         clergy_clothes_pop_trigger = yes
@@ -308,8 +310,10 @@
                         devout_clothes_trigger = yes
                         exists = scope:character
                         scope:character = {
-                            religion = {
-                                has_discrimination_trait = buddhist
+                            OR = {
+                                religion = rel:mahayana
+                                religion = rel:theravada
+                                religion = rel:gelugpa
                             }
                         }
                     }

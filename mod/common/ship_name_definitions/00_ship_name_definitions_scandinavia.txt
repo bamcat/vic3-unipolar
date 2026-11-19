@@ -11,7 +11,7 @@ ship_names_historical_norwegian_torpedo_craft = {
 
 	properties = {
 		{
-			type = custom_text # This country should not use ship prefixes
+			type = custom_text
 			key = "PREFIX"
 			custom_text = "ship_prefix_blank"
 		}
@@ -43,7 +43,7 @@ ship_names_historical_norwegian_capital_ships = {
 
 	properties = {
 		{
-			type = custom_text # This country should not use ship prefixes
+			type = custom_text
 			key = "PREFIX"
 			custom_text = "ship_prefix_blank"
 		}
@@ -73,7 +73,7 @@ ship_names_historical_norwegian_cruisers = {
 
 	properties = {
 		{
-			type = custom_text # This country should not use ship prefixes
+			type = custom_text
 			key = "PREFIX"
 			custom_text = "ship_prefix_blank"
 		}
@@ -81,9 +81,7 @@ ship_names_historical_norwegian_cruisers = {
 			type = name_list
 			key = "SHIP_NAMESAKE"
 			name_list = {
-				# Starting Frigates in 1836
 				sn_freia 
-				# Later Frigates and Cruisers
 				sn_desideira sn_st_olaf sn_kong_sverre
 			}
 		}
@@ -110,7 +108,7 @@ ship_names_historical_swedish_capital_ships = {
 
 	properties = {
 		{
-			type = custom_text # This country should not use ship prefixes
+			type = custom_text
 			key = "PREFIX"
 			custom_text = "ship_prefix_blank"
 		}
@@ -118,9 +116,7 @@ ship_names_historical_swedish_capital_ships = {
 			type = name_list
 			key = "SHIP_NAMESAKE"
 			name_list = {
-				# Starting Ships of the Line in 1836
 				sn_carl_xiii sn_carl_johan sn_fO_rsigtigheten sn_AE_ran sn_dristigheten sn_fA_derneslandet sn_gustaf_den_store sn_manligheten sn_prins_oscar sn_wasa
-				# Starting Ships of the Line on the stocks in 1836
 				sn_stockholm sn_skandinavien
 			}
 		}
@@ -145,7 +141,7 @@ ship_names_historical_swedish_cruisers = {
 
 	properties = {
 		{
-			type = custom_text # This country should not use ship prefixes
+			type = custom_text
 			key = "PREFIX"
 			custom_text = "ship_prefix_blank"
 		}
@@ -153,22 +149,13 @@ ship_names_historical_swedish_cruisers = {
 			type = name_list
 			key = "SHIP_NAMESAKE"
 			name_list = {
-				# Starting Frigates in 1836
 				sn_camilla sn_euridice sn_galathea sn_josephine sn_af_chapman
-				# Starting Frigates on the stocks in 1836
 				sn_desiree sn_freya
-				# Later frigates (+smaller)
 				sn_jarramas sn_josephine sn_najaden sn_gO_teborg sn_karlskrona sn_desireE_ sn_eugenie sn_norrkO_ping
-				# Cruisers
-				# Örnen Class
 				sn_O_rnen sn_jacob_bagge sn_claes_horn sn_claes_uggla sn_psilander
-				# Fylgia
 				sn_fylgia
-				# Clas Fleming
 				sn_clas_fleming
-				# Gotland
 				sn_gotland
-				# Earlier frigates
 				sn_hO_ken sn_hoken sn_hjorten sn_nikolaus sn_postiljon sn_fredrika_amalia sn_sundsvall sn_nordstjAE_rnan sn_uttern sn_abraham sn_delfin sn_fama sn_kastor sn_pollux sn_stenbocken sn_riga sn_jagaren sn_svan sn_neptunus sn_falken sn_stralsund sn_fridericus sn_marstrand sn_varberg sn_rosen sn_ruschenfelt sn_AE_lfsborg sn_frO_ken_eleonora sn_nya_delfin sn_snarsven sn_snaren_sven sn_charlotta sn_prins_fredrik_wilhelm sn_nya_falken sn_reval sn_wolgast sn_st_mathias sn_st_thomas sn_st_marcus sn_viborg sn_dromedarius sn_oxen sn_anclam sn_stora_fenix sn_phoenix sn_vita_O_rn sn_karlskrona_vapen sn_fenix_lilla sn_lilla_phoenix sn_kiskin sn_packan sn_svarta_O_rn sn_vAE_lkomst_frA_n_orienten sn_vAE_lkomsten sn_willkommen_aus_orient sn_jarramas sn_illerim sn_ebenetzer sn_vainqueur sn_O_rns_prins sn_louis_et_anna sn_ekholmsund sn_thure_bielke sn_grO_na_jagaren sn_gO_teborgs_vapen sn_mA_nen sn_kristina sn_karlberg sn_ulriksdal sn_karlshams_kastell sn_mercurius sn_neptun sn_fenix sn_solen sn_enigheten sn_af_trolle sn_prins_gustaf sn_bellona sn_diana sn_minerva sn_venus sn_froja sn_camilla sn_thetis sn_galatea sn_eurydice sn_zemire sn_hector sn_jarislawitz sn_kilduin sn_alexander sn_ulla_fersen sn_af_chapman
 			}
 		}
@@ -195,7 +182,7 @@ ship_names_historical_danish_capital_ships = {
 
 	properties = {
 		{
-			type = custom_text # This country should not use ship prefixes
+			type = custom_text
 			key = "PREFIX"
 			custom_text = "ship_prefix_blank"
 		}
@@ -203,7 +190,6 @@ ship_names_historical_danish_capital_ships = {
 			type = name_list
 			key = "SHIP_NAMESAKE"
 			name_list = {
-				# Starting Ships of the Line in 1836
 				sn_dronning_maria sn_waldemar sn_frederik_vi sn_skiold sn_danmark sn_phOE_nix
 			}
 		}
@@ -228,7 +214,7 @@ ship_names_historical_danish_cruisers = {
 
 	properties = {
 		{
-			type = custom_text # This country should not use ship prefixes
+			type = custom_text
 			key = "PREFIX"
 			custom_text = "ship_prefix_blank"
 		}
@@ -236,7 +222,6 @@ ship_names_historical_danish_cruisers = {
 			type = name_list
 			key = "SHIP_NAMESAKE"
 			name_list = {
-				# Starting Frigates in 1836
 				sn_freia sn_rota sn_havfruen sn_bellona sn_najaden sn_perlen sn_venus sn_minerva sn_nymphen sn_fylla
 			}
 		}

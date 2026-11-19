@@ -246,8 +246,7 @@ template = {
 
 	template_bicolor = {
 
-
-		pattern = "pattern_solid.tga"
+pattern = "pattern_solid.tga"
 		color1 = list "normal_colors"
 		color2 = list "metal_colors"
 
@@ -377,8 +376,7 @@ template = {
 		@chl_height = 0.5
 		@chl_star_scale = 0.8
 
-
-		pattern = "pattern_solid.tga"
+pattern = "pattern_solid.tga"
 		color1 = list "metal_colors"
 
 		colored_emblem = {
@@ -433,8 +431,7 @@ template = {
 		}
 	}
 
-
-	template_uruguay = {
+template_uruguay = {
 		@uru_canton_height = 0.555
 		pattern = "pattern_solid.tga"
 		color1 = list "normal_colors"
@@ -1129,8 +1126,6 @@ template = {
 		}
 	}
 	template_cross = {
-		# Plain cross, no charge but also includes specific uncommon designs (voided, fimbriated, cotised)
-		# Possibly add roundel & central charge (random rare, blank by default)
 
 		pattern = "pattern_solid.tga"
 		color1 = list "normal_colors"
@@ -1174,7 +1169,6 @@ template = {
 	}
 
 	template_centered_coa = {
-		# Centered TE CoA template
 
 		pattern = "pattern_solid.tga"
 		color1 = list "normal_colors"
@@ -1197,7 +1191,6 @@ template = {
 	}
 
 	template_border_of_three_charge_offset = {
-	# Borders of 3. Charge is slightly offset to be centered accordingly
 
 		pattern = list "pattern_borders_of_3"
 		color1 = list "normal_colors"
@@ -1232,7 +1225,6 @@ template = {
 	}
 
 	template_plain_flag = {
-	# Template for horizontal full size charges (mostly plain bg with random borders)
 
 		pattern = list "pattern_borders_random"
 		color1 = list "normal_colors"
@@ -1265,8 +1257,6 @@ template = {
 	}
 
 	template_tricolor_fimbriated = {
-	# For african designs (Kenya, Swaziland etc)
-	# the two thin stripes are always a metal colour
 
 		pattern = "pattern_solid.tga"
 		color1 = list "metal_colors"
@@ -1285,7 +1275,6 @@ template = {
 	}
 
 	template_african_border_of_3 = {
-	# West african designs inspired from Asafo flags
 
 		pattern = list "pattern_borders_of_3"
 		color1 = list "normal_colors"
@@ -1308,7 +1297,6 @@ template = {
 	}
 
 	template_african_border_of_3_inverted = {
-	# West african designs inspired from Asafo flags
 
 		pattern = list "pattern_borders_of_3"
 		color1 = list "metal_colors"

@@ -1,24 +1,469 @@
-je_russia_wild_nineties = {
-    icon = "gfx/interface/icons/event_icons/event_wild_nineties.dds"
-    group = je_group_domestic_policy
+﻿je_russia_wild_nineties = {
+	icon = "gfx/interface/icons/event_icons/event_wild_nineties.dds"
+	group = je_group_wild_nineties
+	highlight = yes
 
-    is_shown_when_inactive = {
-        c:RUS ?= this
-        game_date <= 2000.1.1
-    }
+	is_shown_when_inactive = {
+		c:RUS ?= this
+		game_date < 2000.1.1
+	}
 
-    possible = {
-        c:RUS ?= this
-		game_date <= 2000.1.1
-    }
+	possible = {
+		c:RUS ?= this
+		custom_description = { text = smd_date_before_2000_1_1 game_date < 2000.1.1 }
+	}
 
-    complete = {
-        game_date >= 2000.1.1
-    }
+	widget = {
+		gui = "gui/journal_entry_widgets/wild_nineties_widgets.gui"
+		name = "widget_je_wild_nineties_kremlin"
+		container = "custom_widget_container_je_icon"
+	}
 
-    on_monthly_pulse = {
-    }
+	scripted_progress_bar = rus_wn_health_bar
+	scripted_progress_bar = rus_wn_family_bar
+	scripted_progress_bar = rus_wn_oligarch_bar
 
-    weight = 100
-    should_be_pinned_by_default_uninvolved_or_context = yes
+	scripted_button = rus_ukaz_voucher_button
+	scripted_button = rus_ukaz_land_button
+	scripted_button = rus_ukaz_anti_banditry_button
+	scripted_button = rus_ukaz_chechnya_button
+	scripted_button = rus_ukaz_tax_amnesty_button
+	scripted_button = rus_ukaz_wage_arrears_button
+	scripted_button = rus_ukaz_signature_button
+	scripted_button = rus_dismiss_pm_button
+	scripted_button = rus_appoint_pm_button
+
+	immediate = {
+		ruler ?= { set_variable = rus_wn_yeltsin }
+		set_variable = pm_appointed_by_script
+		set_variable = { name = rus_wn_pm_blame value = 0 }
+		rus_wn_rename_red_directors = yes
+		rus_wn_appoint_pm = { T = RUS_yegor_gaidar M = rus_pm_gaidar }
+		rus_wn_add_family_member = { T = RUS_alexander_korzhakov }
+		add_journal_entry = { type = je_russian_constitutional_crisis }
+		add_journal_entry = { type = je_rus_shock_therapy }
+		trigger_event = { id = wild_nineties.1 popup = yes }
+	}
+
+	scaling_modifiers_while_active = {
+		modifier = rus_wn_presidential_vigor
+		value = {
+			value = "scope:journal_entry.scripted_bar_progress(rus_wn_health_bar)"
+			subtract = 50
+		}
+	}
+
+	scaling_modifiers_while_active = {
+		modifier = rus_wn_family_rule
+		value = {
+			value = "scope:journal_entry.scripted_bar_progress(rus_wn_family_bar)"
+		}
+	}
+
+	scaling_modifiers_while_active = {
+		modifier = rus_wn_oligarch_power
+		value = {
+			value = "scope:journal_entry.scripted_bar_progress(rus_wn_oligarch_bar)"
+		}
+	}
+
+	status_desc = {
+		first_valid = {
+			triggered_desc = {
+				desc = rus_wn_status_blame_high
+				trigger = { var:rus_wn_pm_blame >= 60 }
+			}
+			triggered_desc = {
+				desc = rus_wn_status_blame_medium
+				trigger = { var:rus_wn_pm_blame >= 30 }
+			}
+			triggered_desc = {
+				desc = rus_wn_status_blame_low
+			}
+		}
+	}
+
+	on_monthly_pulse = {
+		effect = {
+			if = {
+				limit = {
+					rus_wn_yeltsin_in_power = yes
+					any_scope_character = { has_role = character_role_prime_minister }
+				}
+				if = {
+					limit = { fin_cpi_above = { V = 30 } }
+					rus_wn_add_blame = { V = 1 }
+				}
+				if = {
+					limit = { fin_wage_arrears_at_least = { L = 2 } }
+					rus_wn_add_blame = { V = 1 }
+				}
+				if = {
+					limit = { has_modifier = rus_1998_default }
+					rus_wn_add_blame = { V = 2 }
+				}
+				every_scope_character = {
+					limit = { has_role = character_role_prime_minister }
+					change_variable = { name = rus_wn_standing add = 1 }
+				}
+			}
+			if = {
+				limit = {
+					rus_wn_yeltsin_in_power = yes
+					scope:journal_entry = {
+						scripted_bar_progress = {
+							name = rus_wn_health_bar
+							value <= 0
+						}
+					}
+					NOT = { custom_description = { text = rus_wn_succession_done has_variable = rus_wn_succession_done } }
+				}
+				trigger_event = { id = wild_nineties.20 popup = yes }
+			}
+			if = {
+				limit = {
+					game_date >= 1999.8.1
+					rus_wn_yeltsin_in_power = yes
+					NOT = { has_variable = rus_wn_successor_asked }
+				}
+				set_variable = rus_wn_successor_asked
+				trigger_event = { id = wild_nineties.30 popup = yes }
+			}
+			if = {
+				limit = {
+					game_date >= 1999.12.1
+					has_variable = rus_wn_successor_chosen
+					rus_wn_yeltsin_in_power = yes
+					NOT = { custom_description = { text = rus_wn_succession_done has_variable = rus_wn_succession_done } }
+				}
+				trigger_event = { id = wild_nineties.31 popup = yes }
+			}
+			if = {
+				limit = {
+					game_date >= 1995.1.1
+					game_date < 1998.1.1
+					NOT = { has_variable = rus_wn_loans_offered }
+					NOT = { custom_description = { text = rus_1993_result_parliament var:rus_1993_result ?= flag:parliament } }
+					NOT = { has_law_or_variant = law_type:law_command_economy }
+				}
+				set_variable = rus_wn_loans_offered
+				add_journal_entry = { type = je_rus_loans_for_shares }
+			}
+			if = {
+				limit = {
+					game_date >= 1996.1.15
+					NOT = { has_variable = rus_wn_dyachenko_1996 }
+					rus_wn_yeltsin_in_power = yes
+				}
+				set_variable = rus_wn_dyachenko_1996
+				trigger_event = { id = wild_nineties.50 popup = yes }
+			}
+			if = {
+				limit = {
+					game_date >= 1995.7.10
+					NOT = { has_variable = rus_wn_heart_1995 }
+					rus_wn_yeltsin_in_power = yes
+				}
+				set_variable = rus_wn_heart_1995
+				trigger_event = { id = wild_nineties.21 popup = yes }
+			}
+			if = {
+				limit = {
+					game_date >= 1996.11.1
+					NOT = { has_variable = rus_wn_bypass_1996 }
+					rus_wn_yeltsin_in_power = yes
+				}
+				set_variable = rus_wn_bypass_1996
+				trigger_event = { id = wild_nineties.22 popup = yes }
+			}
+		}
+		random_events = {
+			100 = 0
+			3 = wild_nineties.12
+			3 = wild_nineties.13
+			2 = wild_nineties.14
+		}
+	}
+
+	outcome = {
+		header = je_standard_completion_header
+		effect_header = je_standard_on_completion_header
+		color = "gold_positive"
+		conclusion_desc = je_rus_wn_putin_conclusion_desc
+		flags = { historical }
+		trigger = {
+			custom_description = { text = rus_wn_succession_done has_variable = rus_wn_succession_done }
+			custom_description = { text = rus_wn_successor_is_putin var:rus_wn_successor ?= flag:putin }
+		}
+	}
+
+	outcome = {
+		header = je_standard_completion_header
+		effect_header = je_standard_on_completion_header
+		color = "gold_positive"
+		conclusion_desc = je_rus_wn_successor_conclusion_desc
+		trigger = {
+			custom_description = { text = rus_wn_succession_done has_variable = rus_wn_succession_done }
+			NOT = { custom_description = { text = rus_wn_successor_is_putin var:rus_wn_successor ?= flag:putin } }
+		}
+	}
+
+	outcome = {
+		header = je_standard_completion_header
+		effect_header = je_standard_on_completion_header
+		color = "blue_negative"
+		conclusion_desc = je_rus_wn_other_path_conclusion_desc
+		trigger = {
+			custom_description = { text = smd_date_from_1999_12_31 game_date >= 1999.12.31 }
+			NOT = { custom_description = { text = rus_wn_succession_done has_variable = rus_wn_succession_done } }
+		}
+	}
+
+	outcome = {
+		header = je_standard_failure_header
+		effect_header = je_standard_on_failure_header
+		color = "blue_negative"
+		conclusion_desc = je_rus_wn_ousted_oligarchs_conclusion_desc
+		trigger = {
+			hidden_trigger = { has_variable = pm_appointed_by_script }
+			rus_wn_yeltsin_in_power = no
+			NOT = { custom_description = { text = rus_wn_succession_done has_variable = rus_wn_succession_done } }
+			rus_wn_oligarchs_above = { V = 50 }
+		}
+	}
+
+	outcome = {
+		header = je_standard_failure_header
+		effect_header = je_standard_on_failure_header
+		color = "blue_negative"
+		conclusion_desc = je_rus_wn_ousted_conclusion_desc
+		trigger = {
+			hidden_trigger = { has_variable = pm_appointed_by_script }
+			rus_wn_yeltsin_in_power = no
+			NOT = { custom_description = { text = rus_wn_succession_done has_variable = rus_wn_succession_done } }
+			NOT = { rus_wn_oligarchs_above = { V = 50 } }
+		}
+	}
+
+	weight = 10000
+	should_be_pinned_by_default_uninvolved_or_context = yes
 }
+
+je_rus_shock_therapy = {
+	icon = "gfx/interface/icons/event_icons/event_money.dds"
+	group = je_group_wild_nineties
+
+	is_shown_when_inactive = {
+		c:RUS ?= this
+		has_journal_entry = je_russia_wild_nineties
+	}
+
+	possible = {
+		c:RUS ?= this
+	}
+
+	widget = {
+		gui = "gui/journal_entry_widgets/wild_nineties_widgets.gui"
+		name = "widget_je_rus_shock_therapy_ruble"
+		container = "custom_widget_container_je_icon"
+	}
+
+	scripted_button = rus_econ_shock_button
+	scripted_button = rus_econ_gradual_button
+	scripted_button = rus_econ_red_credit_button
+	scripted_button = rus_econ_imf_button
+	scripted_button = rus_econ_delay_wages_button
+	scripted_button = rus_econ_gko_start_button
+	scripted_button = rus_econ_gko_stop_button
+
+	immediate = {
+		set_variable = fin_tracked
+		set_variable = { name = fin_capital_flight value = 40 }
+		set_variable = { name = fin_bond_stock value = 0 }
+		set_variable = { name = fin_bond_ratio_var value = 0 }
+		set_variable = { name = fin_debt_ratio_var value = fin_debt_ratio }
+		set_variable = { name = fin_wage_arrears value = 0 }
+		add_modifier = { name = rus_econ_shock }
+		fin_set_price_controls = { L = 0 }
+		fin_set_monetary_stance = { S = 2 }
+		fin_change_wage_arrears = { V = 1 }
+		fin_update_cpi = yes
+	}
+
+	status_desc = {
+		first_valid = {
+			triggered_desc = {
+				desc = rus_econ_status_arrears_3
+				trigger = { fin_wage_arrears_at_least = { L = 3 } }
+			}
+			triggered_desc = {
+				desc = rus_econ_status_arrears_2
+				trigger = { fin_wage_arrears_at_least = { L = 2 } }
+			}
+			triggered_desc = {
+				desc = rus_econ_status_arrears_1
+				trigger = { fin_wage_arrears_at_least = { L = 1 } }
+			}
+			triggered_desc = {
+				desc = rus_econ_status_arrears_0
+			}
+		}
+	}
+
+	on_monthly_pulse = {
+		effect = {
+			if = {
+				limit = { rus_wn_oligarchs_above = { V = 50 } }
+				fin_change_capital_flight = { V = 0.5 }
+			}
+			if = {
+				limit = { has_modifier = rus_ukaz_tax_amnesty }
+				fin_change_capital_flight = { V = -0.3 }
+			}
+			if = {
+				limit = { has_modifier = rus_econ_imf }
+				fin_change_capital_flight = { V = -0.3 }
+			}
+			if = {
+				limit = {
+					NOT = { custom_description = { text = rus_wn_default_happened has_variable = rus_wn_default_happened } }
+					in_default = yes
+				}
+				set_variable = rus_wn_default_happened
+				trigger_event = { id = wild_nineties.40 popup = yes }
+			}
+		}
+		random_events = {
+			100 = 0
+			3 = wild_nineties.41
+			3 = wild_nineties.42
+		}
+	}
+
+	outcome = {
+		header = je_standard_completion_header
+		effect_header = je_standard_on_completion_header
+		color = "gold_positive"
+		conclusion_desc = je_rus_shock_therapy_stabilized_conclusion_desc
+		trigger = {
+			custom_description = { text = smd_date_from_1994_1_1 game_date >= 1994.1.1 }
+			NOT = { fin_bonds_issuing = yes }
+			NOT = { fin_cpi_above = { V = 20 } }
+			NOT = { fin_wage_arrears_at_least = { L = 1 } }
+			NOT = { fin_capital_flight_above = { V = 30 } }
+			NOT = { fin_debt_ratio_above = { V = 50 } }
+		}
+		effect = {
+			add_modifier = { name = rus_ruble_stabilized months = 60 }
+			rus_wn_clear_econ_approach = yes
+		}
+	}
+
+	outcome = {
+		header = je_standard_failure_header
+		effect_header = je_standard_on_failure_header
+		color = "blue_negative"
+		conclusion_desc = je_rus_shock_therapy_default_conclusion_desc
+		flags = { historical }
+		trigger = {
+			custom_description = { text = rus_wn_default_happened has_variable = rus_wn_default_happened }
+		}
+		effect = {
+			rus_wn_clear_econ_approach = yes
+		}
+	}
+
+	outcome = {
+		header = je_standard_completion_header
+		effect_header = je_standard_on_completion_header
+		color = "gold_positive"
+		conclusion_desc = je_rus_shock_therapy_timeout_conclusion_desc
+		flags = { timeout }
+		trigger = {
+			OR = {
+				custom_description = { text = smd_date_from_2000_1_1 game_date >= 2000.1.1 }
+				custom_description = { text = rus_wn_nineties_over NOT = { has_journal_entry = je_russia_wild_nineties } }
+			}
+		}
+		effect = {
+			rus_wn_clear_econ_approach = yes
+		}
+	}
+
+	weight = 900
+	should_be_pinned_by_default_uninvolved_or_context = yes
+}
+
+je_rus_loans_for_shares = {
+	icon = "gfx/interface/icons/event_icons/event_trade.dds"
+	group = je_group_wild_nineties
+
+	possible = {
+		c:RUS ?= this
+	}
+
+	scripted_button = rus_lfs_yukos_button
+	scripted_button = rus_lfs_norilsk_button
+	scripted_button = rus_lfs_sibneft_button
+	scripted_button = rus_lfs_svyazinvest_button
+	scripted_button = rus_lfs_cancel_button
+
+	immediate = {
+		set_variable = { name = rus_lfs_count value = 0 }
+		rus_wn_found_sibneft = yes
+		trigger_event = { id = wild_nineties.60 popup = yes }
+	}
+
+	status_desc = {
+		first_valid = {
+			triggered_desc = {
+				desc = rus_lfs_status_named
+				trigger = { has_variable = rus_wn_oligarchs_named }
+			}
+			triggered_desc = {
+				desc = rus_lfs_status_unnamed
+			}
+		}
+	}
+
+	outcome = {
+		header = je_standard_completion_header
+		effect_header = je_standard_on_completion_header
+		color = "gold_positive"
+		conclusion_desc = je_rus_lfs_done_conclusion_desc
+		flags = { historical }
+		trigger = {
+			custom_description = { text = rus_lfs_yukos has_variable = rus_lfs_yukos }
+			custom_description = { text = rus_lfs_norilsk has_variable = rus_lfs_norilsk }
+			custom_description = { text = rus_lfs_sibneft has_variable = rus_lfs_sibneft }
+		}
+		effect = {
+			add_modifier = { name = rus_semibankirshchina months = 60 }
+		}
+	}
+
+	outcome = {
+		header = je_standard_completion_header
+		effect_header = je_standard_on_completion_header
+		color = "blue_negative"
+		conclusion_desc = je_rus_lfs_cancelled_conclusion_desc
+		trigger = {
+			custom_description = { text = rus_lfs_cancelled has_variable = rus_lfs_cancelled }
+		}
+	}
+
+	outcome = {
+		header = je_standard_completion_header
+		effect_header = je_standard_on_completion_header
+		color = "blue_negative"
+		conclusion_desc = je_rus_lfs_timeout_conclusion_desc
+		flags = { timeout }
+		trigger = {
+			custom_description = { text = smd_date_from_1998_1_1 game_date >= 1998.1.1 }
+		}
+	}
+
+	weight = 800
+	should_be_pinned_by_default_uninvolved_or_context = yes
+}
+

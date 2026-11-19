@@ -149,7 +149,6 @@
 					scope:source_country ?= this
 				}
 
-				# We are doing this to be able to reuse loc across treaties and diplomatic actions
 				scope:source_country = {
 					save_temporary_scope_as = target
 				}
@@ -212,9 +211,9 @@
 					desc = "DIPLOMATIC_ACCEPTANCE_MUTUAL_TRADE_VALUE"
 					value = "mutual_trade_value_with_country(scope:target_country)"
 					multiply = 50000
-					divide = { # We modulate this value by GDP, clamped to a range to ensure it remains relevant for very small/very large economies
+					divide = {
 						value = gdp
-						max = scope:target_country.gdp # We use whichever GDP is smaller
+						max = scope:target_country.gdp
 						min = 1000000
 					}
 					max = 10
@@ -321,9 +320,9 @@
 					desc = "DIPLOMATIC_ACCEPTANCE_MUTUAL_TRADE_VALUE"
 					value = "mutual_trade_value_with_country(scope:source_country)"
 					multiply = 50000
-					divide = { # We modulate this value by GDP, clamped to a range to ensure it remains relevant for very small/very large economies
+					divide = {
 						value = gdp
-						max = scope:source_country.gdp # We use whichever GDP is smaller
+						max = scope:source_country.gdp
 						min = 1000000
 					}
 					max = 25
@@ -332,7 +331,7 @@
 				add = {
 					desc = "DIPLOMATIC_ACCEPTANCE_GDP"
 					value = "scope:source_country.ai_gdp_comparison(scope:target_country)"
-					add = 10.0 # Bonus if they have at least 10% of the target's GDP
+					add = 10.0
 					multiply = 5
 					min = 0
 					max = 25
@@ -485,7 +484,6 @@
 				add = 1
 			}
 
-			# Not worth doing by or against very small countries
 			if = {
 				limit = {
 					OR = {

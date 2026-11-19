@@ -113,7 +113,6 @@
 					scope:target_country = { liberty_desire < 10 }
 				}
 			}
-			# Don't decrease autonomy of strong subjects that might end up getting very high LD
 			NOR = {
 				AND = {
 					scope:target_country = {

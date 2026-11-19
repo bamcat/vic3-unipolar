@@ -1,4 +1,5 @@
 ﻿objective_the_west = {
+	illustration = "gfx/interface/illustrations/journal/game_obj_illu_egalitarian_society.dds"
 	enabled_background = "gfx/interface/icons/objectives/the_west_illu.dds"
 	icon = "gfx/interface/icons/objectives/the_west.dds"
 	
@@ -14,12 +15,22 @@
 	}
 	
 	final_subgoal = sg_west_endgame
+
+	associated_journal_entries = {
+		je_west_open_trade
+		je_west_alliances
+		je_west_human_rights
+		je_west_education
+		je_west_gdp
+		je_west_endgame
+	}
 	available_for_all_countries = no
 	on_start = {
 		# start_tutorial_lesson = { tutorial_lesson = economic_dominance }
 	}
 }
 objective_the_east = {
+	illustration = "gfx/interface/illustrations/journal/game_obj_illu_hegemony.dds"
 	enabled_background = "gfx/interface/icons/objectives/the_east_illu.dds"
 	icon = "gfx/interface/icons/objectives/the_east.dds"
 	
@@ -34,6 +45,14 @@ objective_the_east = {
 	}
 
 	final_subgoal = sg_east_endgame
+
+	associated_journal_entries = {
+		je_east_state_industry
+		je_east_great_power
+		je_east_sphere
+		je_east_currency
+		je_east_endgame
+	}
 	
 	on_start = {
 		# start_tutorial_lesson = { tutorial_lesson = economic_dominance }
@@ -41,6 +60,7 @@ objective_the_east = {
 }
 
 objective_rising_powers = {
+	illustration = "gfx/interface/illustrations/journal/game_obj_illu_economic_dominance.dds"
 	enabled_background = "gfx/interface/icons/objectives/na_illu.dds"
 	icon = "gfx/interface/icons/objectives/na.dds"
 	
@@ -54,6 +74,14 @@ objective_rising_powers = {
 	}
 
 	final_subgoal = sg_rising_endgame
+
+	associated_journal_entries = {
+		je_rising_economy
+		je_rising_sovereignty
+		je_rising_military
+		je_rising_prestige
+		je_rising_endgame
+	}
 	
 	on_start = {
 		# start_tutorial_lesson = { tutorial_lesson = economic_dominance }

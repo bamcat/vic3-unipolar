@@ -27,7 +27,6 @@
 						}
 						add = -1
 					}
-					# nothing happens
 				}
 				3 = {
 					modifier = {
@@ -94,23 +93,28 @@
 			}
 		}
 	}
- 
-	complete = {
-		NOT = {
-			any_scope_state = {
-				has_modifier = plague_modifier
+
+
+
+	outcome = {
+		header = je_standard_completion_header
+		effect_header = je_standard_on_completion_header
+		color = "gold_positive"
+		conclusion_desc = je_standard_completion_conclusion_desc
+		trigger = {
+			NOT = {
+				any_scope_state = {
+					has_modifier = plague_modifier
+				}
 			}
 		}
-	}
- 
-	on_complete = {
-		every_scope_state = {
-			limit = { has_modifier = plague_modifier }
-			remove_modifier = plague_modifier
+		effect = {
+			every_scope_state = {
+				limit = { has_modifier = plague_modifier }
+				remove_modifier = plague_modifier
+			}
+			set_variable = covid_pandemic_over
 		}
-		set_variable = covid_pandemic_over
-	}
- 
-	weight = 100
+	}	weight = 100
 	should_be_pinned_by_default_uninvolved_or_context = yes
 }

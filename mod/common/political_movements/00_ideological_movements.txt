@@ -166,7 +166,7 @@
 				standard_of_living < state.average_expected_sol
 				strata = lower
 			}
-			add = { # Increases likelihood of support if impoverished
+			add = {
 				desc = "IS_BELOW_EXPECTED_SOL"
 				value = state.average_expected_sol
 				subtract = standard_of_living
@@ -178,20 +178,20 @@
 				standard_of_living > state.average_expected_sol
 				strata = lower
 			}
-			add = { # Decreases likelihood of support if well-off
+			add = {
 				desc = "IS_ABOVE_EXPECTED_SOL"
 				value = state.average_expected_sol
 				subtract = standard_of_living
 			}
 		}
 
-		multiply = { # Illiterate pops participate at 1/10 the rate of fully literate pops
+		multiply = {
 			desc = "POP_LITERACY"
 			value = literacy_rate
 			add = 0.10
 		}
 
-		multiply = { # Multiplied by 2x max
+		multiply = {
 			desc = "POP_RADICALS"
 			value = pop_radical_fraction
 			add = 1
@@ -390,7 +390,7 @@ movement_socialist = {
 				standard_of_living < state.average_expected_sol
 				strata = lower
 			}
-			add = { # Increases likelihood of support if impoverished
+			add = {
 				desc = "IS_BELOW_EXPECTED_SOL"
 				value = state.average_expected_sol
 				subtract = standard_of_living
@@ -402,20 +402,20 @@ movement_socialist = {
 				standard_of_living > state.average_expected_sol
 				strata = lower
 			}
-			add = { # Decreases likelihood of support if well-off
+			add = {
 				desc = "IS_ABOVE_EXPECTED_SOL"
 				value = state.average_expected_sol
 				subtract = standard_of_living
 			}
 		}
 
-		multiply = { # Illiterate pops participate at 1/10 the rate of fully literate pops
+		multiply = {
 			desc = "POP_LITERACY"
 			value = literacy_rate
 			add = 0.10
 		}
 
-		multiply = { # Multiplied by 1.5x max
+		multiply = {
 			desc = "POP_RADICALS"
 			value = pop_radical_fraction
 			divide = 2
@@ -696,9 +696,9 @@ movement_support_professionals
 
 		if = {
 			limit = {
-				standard_of_living < state.average_expected_sol # It is intentional that a labourer being well-off doesn't decrease support for this.
+				standard_of_living < state.average_expected_sol
 			}
-			add = { # Increases likelihood of support if impoverished.
+			add = {
 				desc = "IS_BELOW_EXPECTED_SOL"
 				value = state.average_expected_sol
 				subtract = standard_of_living
@@ -706,13 +706,13 @@ movement_support_professionals
 			}
 		}
 
-		multiply = { # Illiterate pops participate at 1/10 the rate of fully literate pops
+		multiply = {
 			desc = "POP_LITERACY"
 			value = literacy_rate
 			add = 0.10
 		}
 
-		if = { # If a more radical movement exists, it'll poach radicals from this one.
+		if = {
 			limit = {
 				owner ?= {
 					any_political_movement = {
@@ -951,13 +951,13 @@ movement_support_professionals
 			}
 		}
 
-		multiply = { # Illiterate pops participate at 1/10 the rate of fully literate pops
+		multiply = {
 			desc = "POP_LITERACY"
 			value = literacy_rate
 			add = 0.10
 		}
 
-		multiply = { # Intentional that this is different from fascism
+		multiply = {
 			value = 0.01
 			multiply = pop_acceptance
 			add = 0.20
@@ -1206,7 +1206,7 @@ movement_support_professionals
 			}
 		}
 
-		multiply = { # Illiterate pops participate at 1/10 the rate of fully literate pops
+		multiply = {
 			desc = "POP_LITERACY"
 			value = literacy_rate
 			add = 0.10
@@ -1317,7 +1317,7 @@ movement_support_professionals
 
 	pop_support_weight = {	
 		add = {
-			desc = "URBAN_STATE" # Increases support in rural states, decreases in urban
+			desc = "URBAN_STATE"
 			value = 0.5
 			subtract = state.state_urbanization_rate
 			multiply = 10
@@ -1410,7 +1410,7 @@ movement_support_professionals
 					NOT = { has_trait = trait_child }
 				}
 			}
-			multiply = { # Constitutionalists are less reliant on the monarchs popularity than absolutists
+			multiply = {
 				add = owner.ruler.popularity
 				multiply = 0.01
 				add = 1
@@ -1434,7 +1434,7 @@ movement_support_professionals
 			}			
 		}
 
-		multiply = { # Illiterate pops participate at 1/10 the rate of fully literate pops
+		multiply = {
 			desc = "POP_LITERACY"
 			value = literacy_rate
 			add = 0.10
@@ -1529,7 +1529,7 @@ movement_support_professionals
 					}					
 				}
 				else = {
-					add = { # Only care about legitimacy in the context of a monarchy that isn't under direct threat
+					add = {
 						value = 50
 						subtract = legitimacy
 						multiply = 0.005
@@ -1544,7 +1544,7 @@ movement_support_professionals
 movement_traditionalist = {
 	category = movement_category_ideological
 	
-	ideology = ideology_traditionalist_leader
+	ideology = ideology_traditionalist_movement
 	character_ideologies = {
 		ideology_monarchist_leader
 		ideology_theocrat_leader
@@ -1729,7 +1729,7 @@ movement_support_professionals
 			}
 		}
 
-		multiply = { # Illiterate pops participate at 1/10 the rate of fully literate pops
+		multiply = {
 			desc = "POP_LITERACY"
 			value = literacy_rate
 			add = 0.10
@@ -1968,7 +1968,7 @@ movement_support_professionals
 			}
 		}
 
-		multiply = { # Illiterate pops participate at 1/10 the rate of fully literate pops
+		multiply = {
 			desc = "POP_LITERACY"
 			value = literacy_rate
 			add = 0.10
@@ -2281,7 +2281,7 @@ movement_support_professionals
 			}
 		}
 
-		multiply = { # Illiterate pops participate at 1/10 the rate of fully literate pops
+		multiply = {
 			desc = "POP_LITERACY"
 			value = literacy_rate
 			add = 0.10
@@ -2382,7 +2382,7 @@ movement_libertarian = {
 	
 	pop_support_weight = {	
 		add = {
-			desc = "URBAN_STATE" # Increases support in rural states, decreases in urban
+			desc = "URBAN_STATE"
 			value = 0.5
 			subtract = state.state_urbanization_rate
 			multiply = 10
@@ -2478,9 +2478,9 @@ movement_libertarian = {
 		if = {
 			limit = {
 				standard_of_living < state.average_expected_sol
-				strata = lower # Impoverished middle class pops will support fascists instead
+				strata = lower
 			}
-			add = { # Increases likelihood of support if impoverished
+			add = {
 				desc = "IS_BELOW_EXPECTED_SOL"
 				value = state.average_expected_sol
 				subtract = standard_of_living
@@ -2492,20 +2492,20 @@ movement_libertarian = {
 				standard_of_living > state.average_expected_sol
 				strata = lower
 			}
-			add = { # Decreases likelihood of support if well-off
+			add = {
 				desc = "IS_ABOVE_EXPECTED_SOL"
 				value = state.average_expected_sol
 				subtract = standard_of_living
 			}
 		}
 
-		multiply = { # Illiterate pops participate at 1/10 the rate of fully literate pops
+		multiply = {
 			desc = "POP_LITERACY"
 			value = literacy_rate
 			add = 0.10
 		}
 
-		multiply = { # Multiplied by 2x max
+		multiply = {
 			desc = "POP_RADICALS"
 			value = pop_radical_fraction
 			add = 1
@@ -2560,12 +2560,12 @@ movement_fascist = {
 	
 	can_pressure_interest_group = {
 		law_stance = {
-			law = law_type:law_appointed_legislature
+			law = law_type:law_single_party_state
 			value > neutral
 		}
 		NOT = { 
 			law_stance = {
-				law = law_type:law_HOS_communist_leader
+				law = law_type:law_council_republic
 				value > neutral
 			}
 		}
@@ -2656,7 +2656,7 @@ movement_support_professionals
 				}
 				add = {
 					value = 3
-					desc = "POP_ARISTOCRATS" # Fascism is too populist
+					desc = "POP_ARISTOCRATS"
 				}
 			}
 			else = {
@@ -2769,7 +2769,7 @@ movement_support_professionals
 				}
 
 				add = {
-					value = 5 # Add a base value for having claims at all
+					value = 5
 					add = number_of_claims
 					multiply = 5
 					max = 50
@@ -2783,7 +2783,7 @@ movement_support_professionals
 				standard_of_living < state.average_expected_sol
 				strata = middle
 			}
-			add = { # Increases likelihood of support if impoverished
+			add = {
 				desc = "IS_BELOW_EXPECTED_SOL"
 				value = state.average_expected_sol
 				subtract = standard_of_living
@@ -2795,7 +2795,7 @@ movement_support_professionals
 				standard_of_living > state.average_expected_sol
 				strata = middle
 			}
-			add = { # Decreases likelihood of support if well-off
+			add = {
 				desc = "IS_ABOVE_EXPECTED_SOL"
 				value = state.average_expected_sol
 				subtract = standard_of_living
@@ -2813,7 +2813,7 @@ movement_support_professionals
 			}
 		}
 
-		multiply = { # Illiterate pops participate at 1/10 the rate of fully literate pops
+		multiply = {
 			desc = "POP_LITERACY"
 			value = literacy_rate
 			add = 0.10
@@ -2860,7 +2860,7 @@ movement_support_professionals
 				}
 				
 				add = {
-					value = 5 # Add a base value for having claims at all
+					value = 5
 					add = owner.number_of_claims
 					multiply = 0.025
 					max = 0.3
@@ -2882,19 +2882,23 @@ movement_jihadist = {
 	
 	can_pressure_interest_group = {
 		law_stance = {
-			law = law_type:law_appointed_legislature
+			law = law_type:law_single_party_state
 			value > neutral
 		}
 		NOT = { 
 			law_stance = {
-				law = law_type:law_HOS_communist_leader
+				law = law_type:law_council_republic
 				value > neutral
 			}
 		}
 	}
 	
 	creation_trigger = {
-		
+		has_law = law_type:law_state_religion
+		OR = {
+			country_has_state_religion = rel:sunni
+			country_has_state_religion = rel:shiite
+		}
 	}	
 	creation_weight = {
 		value = 100
@@ -2930,6 +2934,11 @@ movement_jihadist = {
 		NOT = {
 			is_pop_type = slaves
 		}
+		OR = {
+			religion = rel:sunni
+			religion = rel:shiite
+		}
+		pop_radical_fraction > 0
 	}
 
 	pop_support_factors = {
@@ -2973,7 +2982,7 @@ movement_support_professionals
 				}
 				add = {
 					value = 3
-					desc = "POP_ARISTOCRATS" # Fascism is too populist
+					desc = "POP_ARISTOCRATS"
 				}
 			}
 			else = {
@@ -3086,7 +3095,7 @@ movement_support_professionals
 				}
 
 				add = {
-					value = 5 # Add a base value for having claims at all
+					value = 5
 					add = number_of_claims
 					multiply = 5
 					max = 50
@@ -3100,7 +3109,7 @@ movement_support_professionals
 				standard_of_living < state.average_expected_sol
 				strata = middle
 			}
-			add = { # Increases likelihood of support if impoverished
+			add = {
 				desc = "IS_BELOW_EXPECTED_SOL"
 				value = state.average_expected_sol
 				subtract = standard_of_living
@@ -3112,7 +3121,7 @@ movement_support_professionals
 				standard_of_living > state.average_expected_sol
 				strata = middle
 			}
-			add = { # Decreases likelihood of support if well-off
+			add = {
 				desc = "IS_ABOVE_EXPECTED_SOL"
 				value = state.average_expected_sol
 				subtract = standard_of_living
@@ -3130,7 +3139,7 @@ movement_support_professionals
 			}
 		}
 
-		multiply = { # Illiterate pops participate at 1/10 the rate of fully literate pops
+		multiply = {
 			desc = "POP_LITERACY"
 			value = literacy_rate
 			add = 0.10
@@ -3177,7 +3186,7 @@ movement_support_professionals
 				}
 				
 				add = {
-					value = 5 # Add a base value for having claims at all
+					value = 5
 					add = owner.number_of_claims
 					multiply = 0.025
 					max = 0.3

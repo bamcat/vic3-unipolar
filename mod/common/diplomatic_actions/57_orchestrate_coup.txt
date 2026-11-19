@@ -15,7 +15,7 @@
 	potential = {
 		has_dlc_feature = ep2_content
 		scope:target_country ?= {
-			country_rank < ROOT.country_rank # One step or more below
+			country_rank < ROOT.country_rank
 		}
 	}
 
@@ -25,7 +25,7 @@
 				hidden_trigger = { has_variable = coup_event_active }
 				has_journal_entry = je_ip4_coup
 			}
-			country_rank < ROOT.country_rank # One step or more below
+			country_rank < ROOT.country_rank
 			any_political_lobby = {
 				OR = {
 					is_political_lobby_type = lobby_pro_country
@@ -54,6 +54,7 @@
 						}
 					}
 				}
+				is_busy = no
 				loyalty < define:NCharacters|LOYALTY_UNCERTAIN_THRESHOLD
 				trigger_if = {
 					limit = {
@@ -117,6 +118,7 @@
 							}
 						}
 					}
+					is_busy = no
 					loyalty < define:NCharacters|LOYALTY_UNCERTAIN_THRESHOLD
 					trigger_if = {
 						limit = {
@@ -201,6 +203,7 @@
 		cost = 100
 
 		is_two_sided_pact = no
+		show_in_outliner = yes
 
 		max_target_involvement = 1000
 		target_involvement_applies_to = source_country
@@ -448,18 +451,17 @@
 		will_propose = {
 			scope:target_country.relations:root < relations_threshold:cordial
 			infamy <= infamy_threshold:notorious
-			NOT = { # Is not conciliatory towards the target country
+			NOT = {
 				has_attitude = {
 					who = scope:target_country
 					attitude = conciliatory
 				}
 			}
-			NOT = { # The target country does not already owe us an obligation
+			NOT = {
 				scope:target_country = {
 					owes_obligation_to = root
 				}
 			}
-			# We want to have at least five times their income, and at least 50k income in general
 			AND = {
 				income >= 50000
 				net_fixed_income >= {
@@ -468,20 +470,20 @@
 				}
 			}
 			OR = {
-				"ai_ideological_opinion(scope:target_country)" <= -50 # Cannot get along politically
-				AND = { # Has a communist government
+				"ai_ideological_opinion(scope:target_country)" <= -50
+				AND = {
 					has_radical_leftist_government = no
 					scope:target_country = {
 						has_radical_leftist_government = yes
 					}
 				}
-				AND = { # Has a leftist economy law
+				AND = {
 					has_radical_leftist_economy = no
 					scope:target_country = {
 						has_radical_leftist_economy = yes
 					}
 				}
-				scope:target_country ?= { # If the target country has a poor attitude
+				scope:target_country ?= {
 					OR = {
 						has_attitude = {
 							who = ROOT

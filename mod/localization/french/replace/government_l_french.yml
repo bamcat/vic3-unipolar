@@ -1,6 +1,4 @@
 ﻿l_french:
-
-# Monarchies
  gov_absolute_kingdom:0 "Monarchie absolue"
  gov_absolute_kingdom_desc:2 "Il s'agit d'un [concept_government_type] où la puissance repose entièrement avec le [Concept('concept_ruler','$RULER_TITLE_KING$')] ou [Concept('concept_ruler','$RULER_TITLE_QUEEN$')].\n\n$TRANSFER_OF_POWER_NAME_DESC$"
  gov_kingdom:0 "Monarchie"
@@ -209,7 +207,6 @@
  gov_united_kingdom_braz_por_spa_kingdom: "$gov_united_kingdom_braz_por_spa$"
  gov_united_kingdom_braz_por_spa_kingdom_desc: "$gov_united_kingdom_braz_por_spa_desc$"
 
- # Regencies
  gov_regency_ethiopia_ras: "Régence"
  gov_regency_ethiopia_ras_desc: "C'est un [concept_government_type] où le pouvoir repose sur le [Concept('concept_ruler','$RULER_TITLE_REGENT$')], qui gouverne au nom d'un [Concept('concept_ruler','$RULER_TITLE_RAS$')] qui n'est pas encore capable de prendre le trône.\n\n$TRANSFER_OF_POWER_NAME_DESC$"
  gov_regency_princely_state_rawalate: "Régence"
@@ -339,7 +336,6 @@
  gov_provisional_government_spain: "Gouvernement provisoire"
  gov_provisional_government_spain_desc: "Il s'agit d'un [concept_government_type] où un [Concept('concept_ruler','$RULER_TITLE_REGENT$')] règle provisoirement le futur gouvernement du pays, alors que les Cortes décident.\n\n$TRANSFER_OF_POWER_NAME_DESC$"
 
-# Theocracies
  gov_theocracy:0 "Théocratie"
  gov_theocracy_desc:2 "C'est un [concept_government_type] où le [concept_country] est dirigé par le clergé.\n\n$TRANSFER_OF_POWER_NAME_DESC$"
  gov_theocratic_dictatorship:0 "La dictature théocratique"
@@ -381,7 +377,6 @@
  gov_american_theocracy_dictatorial: "Dictature de l'Église"
  gov_american_theocracy_dictatorial_desc: "Il s'agit d'un [concept_government_type] où le [concept_country] est dirigé par la tête d'un seul corps d'église.\n\n$TRANSFER_OF_POWER_NAME_DESC$"
 
-# Presidential Republics
  gov_brazil_oligarchic_republic_presidential: "République oligarchique"
  gov_brazil_oligarchic_republic_presidential_desc: "Il s'agit d'un [concept_government_type] où le [concept_country] est gouverné par un [Concept('concept_ruler','$RULER_TITLE_PRESIDENT$')] [Concept('concept_election','$concept_elected$')] principalement par des oligorques agraires.\n\n$TRANSFER_OF_POWER_NAME_DESC$"
  gov_peru_bolivia_confederal_state: "État confédéral"
@@ -446,7 +441,6 @@
  gov_fascist_state:0 "État fasciste"
  gov_fascist_state_desc:2 "Ceci est un [concept_government_type] défini par son adhésion au fasciste [concept_ideology]. C'est un régime cruel et dictatorial.\n\n$TRANSFER_OF_POWER_NAME_DESC$"
 
- ### Colonial Administrations
  gov_crown_colony_india: "Colonie de la Couronne"
  gov_crown_colony_india_desc: "C'est une colonie de la Couronne britannique, dirigée par des administrateurs coloniaux avec une autonomie limitée.\n\n$TRANSFER_OF_POWER_NAME_DESC$"
  gov_crown_colony:0 "Colonie de la Couronne"
@@ -468,7 +462,6 @@
  gov_dominion_elected: "Dominion"
  gov_dominion_elected_desc: "Il s'agit d'un [concept_government_type] dirigé démocratiquement par une assemblée coloniale [Concept('concept_election','$concept_elected$')].\n\n$TRANSFER_OF_POWER_NAME_DESC$"
 
- ### Corporate States
  gov_fascist_corporate_state: "État fasciste"
  gov_fascist_corporate_state_desc: "Ceci est un [concept_government_type] défini par son adhésion au fasciste [concept_ideology]. C'est un régime cruel et dictatorial.\n\n$TRANSFER_OF_POWER_NAME_DESC$"
  gov_corporate_state: "État des entreprises"
@@ -488,7 +481,6 @@
  gov_corporate_state_austrofascist: "Ständestaat"
  gov_corporate_state_austrofascist_desc: "C'est un [concept_government_type] organisé selon des lignes corporatistes, au sein desquelles le gouvernement sert officiellement de médiateur entre les différentes classes sociales. Il est dirigé par un [Concept('concept_ruler','$RULER_TITLE_CHANCELLOR$')], qui gouverne avec des pouvoirs dictatorials.\n\n$TRANSFER_OF_POWER_NAME_DESC$"
 
-# Parliamentary Republics
  gov_french_2nd_republic_parliamentary: "Deuxième République"
  gov_french_2nd_republic_parliamentary_desc: "Il s'agit d'un [concept_government_type] où le [concept_country] est gouverné par un parlement démocratiquement [Concept('concept_election','$concept_elected$')].\n\n$TRANSFER_OF_POWER_NAME_DESC$"
  gov_french_2nd_republic_parliamentary_dictator: "Deuxième République"
@@ -528,7 +520,6 @@
  gov_danubian_federation_parliamentary_republic_dictatorship: "Fédération danoise"
  gov_danubian_federation_parliamentary_republic_dictatorship_desc: "Il s'agit d'un [concept_government_type] à l'intérieur duquel l'État est organisé en une multitude d'unités fédérales établies selon des lignes ethniques. Le pouvoir central est détenu par un Bundesrat choisi par une classe politique riche et puissante.\n\n$TRANSFER_OF_POWER_NAME_DESC$"
 
-#Council Republics
  gov_council_dictatorship:1 "État Vanguard"
  gov_council_dictatorship_desc:2 "Il s'agit d'un [concept_government_type] où le [concept_country] est dirigé par un conseil non élu.\n\n$TRANSFER_OF_POWER_NAME_DESC$"
  gov_council_republic:0 "Conseil"
@@ -550,7 +541,6 @@
  gov_phalanstere: "Phalanstère"
  gov_phalanstere_desc: "C'est un [concept_government_type] où le [concept_country] est dirigé par un conseil de professionnels, nommé par des représentants des organes techniques de l'État socialiste.\n\n$TRANSFER_OF_POWER_NAME_DESC$"
 
-# Transfer of Power
  transfer_of_power_hereditary:0 "Hérédité"
  transfer_of_power_hereditary_desc:1 "Sous héréditaire [concept_transfer_of_power], [Concept('concept_ruler', '$concept_rulers$')] règnent pour la vie et ont un [concept_heir] qui devient le nouveau $concept_ruler$ quand le $concept_ruler$ meurt."
  transfer_of_power_presidential_elective:0 "Présidentiel élu"
@@ -567,7 +557,6 @@
  TRANSFER_OF_POWER_TOOLTIP_DESC:0 "[GovernmentType.GetTransferOfPowerDesc]"
  TRANSFER_OF_POWER_PLAYER_TOOLTIP_DESC:0 "[GetPlayer.GetGovernment.GetTransferOfPowerDesc]"
 
-# Titles
  RULER_TITLE_DEFAULT:0 "Règle"
  RULER_TITLE_KING:0 "Roi"
  RULER_TITLE_QUEEN:0 "Reine"

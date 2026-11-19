@@ -54,11 +54,12 @@ REPLACE_OR_CREATE:military_artillery_siege_generic_diorama_entity = {
 REPLACE_OR_CREATE:military_tank_heavy_generic_diorama_entity = {
 	entity = "military_tank_heavy_generic_entity"
 
-	group = "infantry"
-	
+	group = "cavalry"
+
 	trigger = {
 		OR = {
-		scope:combat_unit_type = unit_type:combat_unit_type_mech_infantry
+			scope:combat_unit_type = unit_type:combat_unit_type_robotic_combat_vehicle
+			scope:combat_unit_type = unit_type:combat_unit_type_mech_infantry
 		}
 	}
 }

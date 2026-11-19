@@ -13,26 +13,31 @@
 		c:NRK ?= this
 	}
 
-	complete = {
-		OR = {
-			AND = {
-				owns_entire_state_region = STATE_SEOUL
-				owns_entire_state_region = STATE_BUSAN
-				owns_entire_state_region = STATE_YANGHO
+
+	outcome = {
+		header = je_standard_completion_header
+		effect_header = je_standard_on_completion_header
+		color = "gold_positive"
+		conclusion_desc = je_standard_completion_conclusion_desc
+		trigger = {
+			OR = {
+				AND = {
+					owns_entire_state_region = STATE_SEOUL
+					owns_entire_state_region = STATE_BUSAN
+					owns_entire_state_region = STATE_YANGHO
+				}
+				any_subject_or_below = {
+					c:STK ?= this
+				}
 			}
-			any_subject_country = {
-				c:STK ?= this
+		}
+		effect = {
+			add_modifier = {
+				name = korea_reunification_bonus
+				months = -1
 			}
 		}
 	}
- 
-	on_complete = {
-		add_modifier = {
-			name = korea_reunification_bonus
-			months = -1
-		}
-	}
- 
 	transferable = no
 	can_revolution_inherit = no
 	weight = 9000
@@ -52,27 +57,32 @@ je_korea_reunification_stk = {
 	possible = {
 		c:STK ?= this
 	}
- 
-	complete = {
-		OR = {
-			AND = {
-				owns_entire_state_region = STATE_PYONGYANG
-				owns_entire_state_region = STATE_SARIWON
-			}
-			any_subject_country = {
-				c:NRK ?= this
+
+
+
+	outcome = {
+		header = je_standard_completion_header
+		effect_header = je_standard_on_completion_header
+		color = "gold_positive"
+		conclusion_desc = je_standard_completion_conclusion_desc
+		trigger = {
+			OR = {
+				AND = {
+					owns_entire_state_region = STATE_PYONGYANG
+					owns_entire_state_region = STATE_SARIWON
+				}
+				any_subject_or_below = {
+					c:NRK ?= this
+				}
 			}
 		}
-	}
- 
-	on_complete = {
-		add_modifier = {
-			name = korea_reunification_bonus
-			months = -1
+		effect = {
+			add_modifier = {
+				name = korea_reunification_bonus
+				months = -1
+			}
 		}
-	}
- 
-	transferable = no
+	}	transferable = no
 	can_revolution_inherit = no
 	weight = 9000
 }

@@ -1,76 +1,52 @@
 ﻿l_simp_chinese:
-# ==========================================
- # OBJECTIVE
- # ==========================================
- 
  objective_the_west: "西方"
  objective_the_west_desc: "必须维持和扩大自由的国际秩序——民主、自由贸易、集体安全和人权。 [ROOT.GetCountry.GetName] 处于构建它的系统的核心。 任务不仅在于维持已存在的东西,而且在于确保当世纪结束的时候,世界大国要么处于秩序之内,要么无法挑战."
- 
- # ==========================================
- # SUBGOAL NAMES AND DESCRIPTIONS
- # ==========================================
- 
+
  sg_west_open_trade: "储备货币状况"
  sg_west_open_trade_desc: "西方金融系统运行于[ROOT.GetCountry.GetAdjective]信用. 将 " x id=1/ " 作为信贷的主要出口国——1 000多单位——巩固作为全球经济支柱的 " x id=2/ " 金融体系。"
- 
+
  sg_west_alliances: "联盟网络"
  sg_west_alliances_desc: "西方秩序是一个集体安全项目. 与至少四个国家订立军事援助协定,建立遏制侵略的联盟网络,并通过伙伴关系而不是占领来规划 [ROOT.GetCountry.GetAdjective]权力。"
- 
+
  sg_west_human_rights: "自由民主框架"
  sg_west_human_rights_desc: "西方不仅有财富,而且有价值。 颁布普选制、工人保护、废除奴隶制和受保护的言论——自由民主社会的体制基础。 建设命令 [ROOT.GetCountry.GetName] 必须值得捍卫。"
- 
+
  sg_west_education: "受过教育的公民"
  sg_west_education_desc: "民主参与和经济活力都取决于受过教育的人口。 投资学校系统到5级,识字率至少达到75%。 知情的公民是自由秩序最持久的基础。"
- 
+
  sg_west_gdp: "经济领导"
  sg_west_gdp_desc: "西方秩序被经济重量所掩盖. [ROOT.GetCountry.GetName]必须至少占全球GDP的25%——使 [ROOT.GetCountry.GetAdjective] 经济规模太大,对全球体系太重要,任何竞争者都无法令人信服地挑战。"
- 
+
  sg_west_endgame: "单极运动"
  sg_west_endgame_desc: "最后的挑战。 必须将 [SCOPE.sCountry('c:RUS').GetName] 和 [SCOPE.sCountry('c:CHI').GetName] 都置于命令之内,或使其无法威胁命令。 他们要么实行民主化,实行普选制,并签订防御性条约(x id=2/),要么他们的权力低于大国的级别。 没有第三种选择可以维持秩序。"
- 
- # ==========================================
- # JOURNAL ENTRY NAMES AND DESCRIPTIONS
- # ==========================================
- 
+
  je_west_open_trade: "财务支配"
  je_west_open_trade_reason: "[ROOT.GetCountry.GetAdjective]美元-或任何 [ROOT.GetCountry.GetName]称其货币-是世界储备货币. 其他国家持有它,解决贸易,并围绕它建立金融系统。 向国际市场出口1 000多单位信贷巩固了这一地位,并给 " x id=2/ " 全球金融体系带来任何军事力量都无法复制的结构性影响力。"
- 
+
  je_west_alliances: "集体安全"
  je_west_alliances_reason: "北约 (原始内容存档于2018-10-21). ANZUS. 界定西方集团的安全伙伴关系不仅仅是军事安排,而是政治承诺。 与至少四个国家订立军事援助协定。 每个合伙企业的覆盖范围为[ROOT.GetCountry.GetAdjective]并减少维持秩序的费用。"
- 
+
  je_west_human_rights: "机构基金会"
  je_west_human_rights_reason: "普选。 工人保护. 废除奴隶制。 保护演说. 这些不是西方模型的可选添加——它们是模型. 没有他们,[ROOT.GetCountry.GetName]所捍卫的只是权力,而不是原则。 颁布所有四项法令,建立自由秩序所需的体制基础。"
- 
+
  je_west_education: "全民教育"
  je_west_education_reason: "西方模式依赖于能够阅读,理性,参与的公民. 投资于5级学校,全国识字率达到75%。 光有正确的法律是不够的——必须让人民受过足够的教育才能使用这些法律。"
- 
+
  je_west_gdp: "占全球国内生产总值的5%"
  je_west_gdp_reason: "尺寸很重要。 [ROOT.GetCountry.GetName]必须至少占全球经济产出的四分之一。 在这个尺度下, [ROOT.GetCountry.GetAdjective] 经济不仅规模大,而且是不可或缺的。 以"x id=2"进行世界贸易,从"x id=3"借出,不能使"x id=4"成为敌人."
- 
+
  je_west_endgame: "历史结束"
  je_west_endgame_reason: "年龄问题:能将"x id=0"和"x id=1/"都作为系统对抗西方秩序的对手吗?\n\n 对每个国家来说,下列情况之一必须是真实的:\n•> 他们通过了民主共和国,普选制,并与"x id=5/>\n•"签署防御条约. 其权力等级已低于主要权力等级\n\n 当这两个条件都满足时,单极瞬间就完成了."
- 
- # ==========================================
- # PROGRESS TOOLTIPS
- # ==========================================
- 
+
  je_west_open_trade_progressing_tt: "信贷出口正在增长—— " x id=0 " 金融系统正在扩大"
  je_west_alliances_progressing_tt: "联盟网络正在形成——需要更多的伙伴"
  je_west_human_rights_progressing_tt: "一些权利框架已经到位——整套权利框架尚未颁布"
  je_west_education_progressing_tt: "学校系统正在发展——5级投资和75%的识字率是目标"
  je_west_gdp_progressing_tt: "[ROOT.GetCountry.GetName]占全球国内生产总值的15%以上——目标是25%。"
  je_west_endgame_progressing_tt: "一个对手被削弱或民主化,另一个仍然是系统性挑战"
- 
- # ==========================================
- # OBJECTIVE
- # ==========================================
 
  objective_the_east: "东方"
  objective_the_east_desc: "西方的自由主义秩序并不是唯一的可能的世界. [ROOT.GetCountry.GetName]有不同的模式——国家方向,集体力量,主权发展的模式. 任务是证明这种模式在经济实力和全球影响上能够与西方相匹配,并建立一个由"x id=1/"而不是由美国来定义国际秩序术语的世界."
-
- # ==========================================
- # SUBGOAL NAMES AND DESCRIPTIONS
- # ==========================================
 
  sg_east_state_industry: "工业基地"
  sg_east_state_industry_desc: "东方模式依赖于国家将投资引向重工业的能力. 保持干预或指挥经济,建设至少10个的建设能力,并发展铁矿开采至少5个拥有强占的等级. 这是经济基础 其他一切取决于。"
@@ -107,17 +83,9 @@
  je_east_sphere_progressing_tt: "联盟网络正在扩大——需要四项军事援助协定"
  je_east_currency_progressing_tt: "信贷出口正在增长——需要1 000个单位来确定储备货币状况"
  je_east_endgame_progressing_tt: "至少有一个西方势力被中和了——其他势力仍然在."
- 
- # ==========================================
- # OBJECTIVE
- # ==========================================
 
  objective_rising_powers: "新兴大国"
  objective_rising_powers_desc: "世界不必分为两个集团。 [ROOT.GetCountry.GetName] 拒绝选择—— 在华盛顿和莫斯科之间, 在美元和接下来的任何事情之间, 在帝国和帝国之间。 第三种方式比两种选择都难。 它需要真正的经济分量,可信的军事实力,以及外交技巧,来团结一个只有一件事共同点的国家联盟:它们也拒绝选择."
-
- # ==========================================
- # SUBGOAL NAMES AND DESCRIPTIONS
- # ==========================================
 
  sg_rising_economy: "经济基金会"
  sg_rising_economy_desc: "建设一个至少占全球国内生产总值10%的经济,其规模足以支撑第三个集团,同时将任何单一伙伴的贸易风险保持在40%以下。 主权始于经济独立."
@@ -149,12 +117,48 @@
  je_rising_endgame: "领导第三集团"
  je_rising_endgame_reason: "领导由8个或8个以上成员组成的权力集团,成为大国. 8个国家选择围绕[ROOT.GetCountry.GetName]而不是"x id=1/"或"x id=2/"来组织,这不仅仅是外交成就——这是国际政治的结构性事实. 第三道道所现. 它有成员。 它有一个领导者。 超能者必须为此负责."
 
- # ==========================================
- # PROGRESS TOOLTIPS
- # ==========================================
-
  je_rising_economy_progressing_tt: "[ROOT.GetCountry.GetName] 占全球国内生产总值的2%以上——5%是目标"
  je_rising_sovereignty_progressing_tt: "[ROOT.GetCountry.GetName] 得到承认和独立——主要权力级别和声望需要50"
  je_rising_military_progressing_tt: "军事能力正在增强——大军衔和军队规模100是目标"
  je_rising_prestige_progressing_tt: "[ROOT.GetCountry.GetName] 正在接近前5名—— 声望150, 全球排名5"
  je_rising_endgame_progressing_tt: "这个集团正在组建——需要8个成员来完成目标"
+
+ objective_the_west_desc:0 "维护并传播全球民主,促进人权,资本主义,经济发展."
+ objective_the_west_idle_header:0 "维护和传播全球民主、人权、资本主义和经济发展。"
+ objective_the_west_idle_hint:0 "最终会出现更多的挑战"
+
+ objective_the_east_desc:0 "挑战美国及其盟国的支配地位"
+ objective_the_east_idle_header:0 "确保美国不再是世界第一强国."
+ objective_the_east_idle_hint:0 "最终会出现更多的挑战"
+
+ objective_rising_powers_desc:0 "挑战所谓的第一和第二世界争取世界支配地位。"
+ objective_rising_powers_idle_header:0 "走出扭曲的世界"
+ objective_rising_powers_idle_hint:0 "最终会出现更多的挑战"
+
+ OBJECTIVE_TYPE_RECOMMENDED_GAME_RULE_DESC:0 "建议采用以下游戏规则:"
+ OBJECTIVE_TYPE_RECOMMENDED_GAME_RULE_ITEM_TEXT:0 "- [GameRuleSetting.GetGameRule.GetName]: #variable [GameRuleSetting.GetName]#!"
+ SELECTED_OBJECTIVE_RECOMMENDED_GAME_RULE_DESC:0 "[GameRuleSetting.GetDescription]. "$NAME$"的目标建议如下设置: #variable $RULE$#!."
+
+ objective_the_west_name_USA:0 "独一超能力"
+ objective_the_west_name_GBR:0 "问题"
+ objective_the_west_name_FRA:0 "密特朗的法国"
+
+ objective_the_west_desc_USA:0 "美利坚合众国在21世纪之交处于独特的地位。 作为世界第一超级大国,也是人类所见过的最强大的民族国家,共和国面临着一系列困难的外在和内部问题。 尽管美国的主要对手苏联解体了,恐怖主义的威胁,中国,以及对自由世界的各种其他威胁,都称美国卷入了质疑. 美国会仍然是世界超级大国吗? 时间会告诉我们的。"
+ objective_the_west_desc_GBR:0 "1992年,联合王国正努力应对经济不稳定和政治动荡。 该国最近摆脱了以高失业率和消费者信心下降为特征的深度衰退。 加上英国的忧患, 北爱尔兰的不稳定, 大不列颠如何活过这些动荡的时代?"
+ objective_the_west_desc_FRA:0 "法国政治格局的特点是,由于欧洲一体化和国内经济挑战而日益紧张。 总统弗朗索瓦·密特朗(François Mitterrand)在第二个任期内是一名社会主义者,随着该国面临高失业率和经济增长缓慢而面临受欢迎程度下降. 他的政府由皮埃尔·贝雷戈沃伊总理领导,正努力解决公众对旨在稳定经济的紧缩措施的不满。 在政治上,法国对"马斯特里赫特条约"存在深刻分歧,该条约旨在加强欧洲一体化,为欧元铺平道路. 欧盟有在21世纪生存所需的条件吗?"
+
+ objective_the_east_name_RUS:0 "苏联解体"
+ objective_the_east_name_PRC:0 "大人民共和国"
+ objective_the_east_name_IRQ:0 "萨达姆·侯赛因的伊拉克"
+
+ objective_the_east_desc_RUS:0 "1991年12月苏联解体后,俄罗斯正经历一场戏剧性的政治变革. 俄罗斯联邦第一任总统鲍里斯·叶利钦面临巨大挑战,即领导新生的民主,同时引导从集中的共产主义制度向市场经济的混乱过渡。 在国内,叶利钦政府挣扎于政治不稳定,通货膨胀上升,以及广泛的社会动荡,如经济改革,被称作"冲击疗法",导致数百万人陷入困境. 在外交上,俄罗斯试图重新定义自己在世界舞台上的作用,同西方列强建立新的关系,同时试图保持对前苏联各共和国的影响力."
+ objective_the_east_desc_PRC:0 "中国正在从国际孤立和西方国家的制裁中谨慎地崛起. 从政治上讲,国家牢牢地处于中共控制之下,邓小平虽然正式从领导岗位上退休,但仍保持着显著的影响力. 他于1992年初出名的"南方之旅"重振了中国对经济改革和开放的承诺,标志着中国重新向面向市场的政策推进,并与全球经济进一步融合."
+ objective_the_east_desc_IRQ:0 "Reeling from a devastating loss in the Gulf War last year, and facing intense international isolation. Saddam Hussein remained firmly in power, maintaining an iron grip on the country through brutal repression of internal dissent, particularly against the Shi'a in the south and the Kurds in the north. Iraq truly has several paths going into the 2000s."
+
+ objective_rising_powers_name_IDA:0 "印度世纪"
+ objective_rising_powers_name_BRZ:0 "巴西的崛起"
+ objective_rising_powers_name_VNM:0 "越南的崛起"
+
+ objective_rising_powers_desc_IDA:0 "印度正在经历一个重大政治和经济变革的时期。 国家由总理P.V.Narasimha Rao领导,他于1991年上台,并发起了一系列改革经济改革,旨在使经济自由化并更紧密地融入全球市场。"
+ objective_rising_powers_desc_BRZ:0 "1992年,巴西正处在1985年军事统治结束后的政治过渡中. 国家由费尔南多·科洛尔·德梅洛总统执政,他于1990年就任巴西20多年来第一位直接当选总统. 科洛尔的政府开始于一波旨在稳定经济的经济改革,但很快他的政府由于通货膨胀上升和腐败指控而面临公众日益失望. 到1992年,科洛尔被卷入了一起重大的腐败丑闻,导致群众抗议并号召他弹劾. 在外交方面,巴西注重改善其国际形象并扩大其在拉丁美洲的影响力。 它还在寻求与西方国家建立更紧密的联系,同时在全球问题上,特别是在与亚马孙雨林有关的环境问题上维护其作用。 然而,政治不稳定和经济困难继续主导着国家议程。"
+ objective_rising_powers_desc_VNM:0 "越南在越南战争结束后,经过多年的孤立和经济制裁的严厉影响,越南逐渐重新融入了国际社会。 1992年,越南同美国实现关系正常化并加入东南亚国家联盟(东盟),这标志着向扩大区域合作的转变,以及改善同西方关系的兴趣. 越南会走什么路? 这取决于你。"

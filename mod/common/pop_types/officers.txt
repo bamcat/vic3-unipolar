@@ -2,7 +2,7 @@
 	texture = "gfx/interface/icons/pops_icons/officers.dds"
 	color = hsv{ 0.12 0.51 0.36 }
 	military = yes
-	start_quality_of_life = 10
+	start_quality_of_life = 20
 	wage_weight = 25
 	paid_private_wage = yes
 	literacy_target = 0.50
@@ -49,7 +49,6 @@
 					is_pop_type = soldiers
 				}
 			}
-			# baseline: ( literacy - 0.2 ) * 10, norm 2 for Soldiers with Literacy 30%
 			add = {
 				value = literacy_rate
 				subtract = 0.05

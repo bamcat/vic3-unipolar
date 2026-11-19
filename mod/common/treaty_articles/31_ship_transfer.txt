@@ -127,8 +127,6 @@
 
         combined_acceptance_cap_max = 50
 
-		# Proactively pick this article when the candidate ship has been obsolete for a while:
-		# 5x the normal proposal weight nudges the treaty composer toward proactively offering the sale.
 		proposal_weight = {
 			value = 1
 
@@ -142,19 +140,12 @@
 			}
 		}
 
-		# Ship valuation lives in contextual_accept_score because it depends on
-		# scope:treaty.binding_period, which is only bound in contextual (where
-		# scope:treaty holds either the live treaty or the proposed STreatyOptions).
 		contextual_accept_score = {
 			value = 0
 
 			if = {
 				limit = { scope:source_country ?= this }
 
-				# We're giving up the ship. Charge acceptance equal to the
-				# per-week money flow that would deliver ai_ship_value over the
-				# binding period, at money_transfer's source rate (1/25 per £/wk).
-				#   ai_ship_value * 7 / (25 * binding_days)
 				# = (ai_ship_value / binding_weeks) / 25
 				subtract = {
 					desc = "DIPLOMATIC_ACCEPTANCE_SHIP_VALUE"
@@ -167,10 +158,6 @@
 					}
 				}
 
-				# Ships that have been obsolete for a while are much less
-				# painful to part with: 5x lower penalty once the obsolescence
-				# tick task has had time to stamp them (100-day grace avoids
-				# AI fire-selling the moment the enabling tech is researched).
 				if = {
 					limit = {
 						scope:article.input_ship = {
@@ -184,8 +171,6 @@
 				}
 			}
 			else = {
-				# We're receiving the ship. Credit acceptance at money_transfer's
-				# target rate (1/100 per £/wk), capped at +75.
 				add = {
 					desc = "DIPLOMATIC_ACCEPTANCE_SHIP_VALUE"
 					value = "scope:article.input_ship.ai_ship_value"
@@ -199,10 +184,6 @@
 				}
 			}
 
-			# Binding-period amplifier mirroring money_transfer: treaties of
-			# 5+ years scale the above up to 2x during new-proposal evaluation,
-			# so longer commitments carry proportionally more weight. Only fires
-			# when the treaty is not yet active.
 			if = {
 				limit = {
 					NOT = { exists = scope:is_treaty_active }
@@ -223,12 +204,7 @@
 			# general multiplier to all ship trade values if necessary
 			# multiply = 0.33
 
-
-			# Veto one-sided ship grabs: if we're losing the ship and no other
-			# article in this treaty makes us the beneficiary (ship, money,
-			# goods, state, etc.), refuse outright. Applied after the binding-
-			# period amplifier so the flat -1000 is unaffected by it.
-			if = {
+if = {
 				limit = {
 					scope:source_country ?= this
 					scope:treaty = {

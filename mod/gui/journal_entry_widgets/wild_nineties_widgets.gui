@@ -1,0 +1,684 @@
+﻿flowcontainer = {
+	name = "widget_je_wild_nineties_kremlin"
+	ignoreinvisible = yes
+	margin_bottom = 1
+
+	widget = {
+		size = { 510 270 }
+
+		background = {
+			texture = "gfx/interface/illustrations/journal/game_obj_illu_economic_dominance.dds"
+			using = top_illu_properties
+			margin = { 25 0 }
+			alpha = 0.3
+		}
+
+		widget = {
+			position = { 30 40 }
+			size = { 145 174 }
+
+			character_portrait_medium_torso_tsarpoint = {
+				datacontext = "[AccessPlayer.GetHighestProminenceCharacterOfRole('character_role_rus_family')]"
+				visible = "[And( Character.IsValid, Not(Character.IsHistorical) )]"
+				parentanchor = center
+				scale = 0.9
+			}
+
+			character_portrait_medium_torso_tsarpoint_historical_info_link = {
+				datacontext = "[AccessPlayer.GetHighestProminenceCharacterOfRole('character_role_rus_family')]"
+				visible = "[And3( Character.IsValid, Character.IsHistorical, Not(StringIsEmpty(Character.GetHistoricalUrl)) )]"
+				parentanchor = center
+				scale = 0.9
+			}
+
+			character_portrait_medium_torso_tsarpoint_historical_no_info_link = {
+				datacontext = "[AccessPlayer.GetHighestProminenceCharacterOfRole('character_role_rus_family')]"
+				visible = "[And3( Character.IsValid, Character.IsHistorical, StringIsEmpty(Character.GetHistoricalUrl) )]"
+				parentanchor = center
+				scale = 0.9
+			}
+		}
+
+		textbox = {
+			position = { 30 218 }
+			size = { 145 40 }
+			align = center|nobaseline
+			default_format = "#title"
+			text = "RUS_WN_KREMLIN_FAMILY"
+		}
+
+		widget = {
+			position = { 182 40 }
+			size = { 145 174 }
+
+			character_portrait_medium_torso_tsarpoint = {
+				datacontext = "[AccessPlayer.AccessRuler]"
+				visible = "[And( Character.IsValid, Not(Character.IsHistorical) )]"
+				parentanchor = center
+				scale = 0.9
+			}
+
+			character_portrait_medium_torso_tsarpoint_historical_info_link = {
+				datacontext = "[AccessPlayer.AccessRuler]"
+				visible = "[And3( Character.IsValid, Character.IsHistorical, Not(StringIsEmpty(Character.GetHistoricalUrl)) )]"
+				parentanchor = center
+				scale = 0.9
+			}
+
+			character_portrait_medium_torso_tsarpoint_historical_no_info_link = {
+				datacontext = "[AccessPlayer.AccessRuler]"
+				visible = "[And3( Character.IsValid, Character.IsHistorical, StringIsEmpty(Character.GetHistoricalUrl) )]"
+				parentanchor = center
+				scale = 0.9
+			}
+		}
+
+		textbox = {
+			position = { 182 218 }
+			size = { 145 40 }
+			align = center|nobaseline
+			default_format = "#title"
+			text = "RUS_WN_KREMLIN_PRESIDENT"
+		}
+
+		widget = {
+			position = { 335 40 }
+			size = { 145 174 }
+
+			character_portrait_medium_torso_tsarpoint = {
+				datacontext = "[AccessPlayer.GetHighestProminenceCharacterOfRole('character_role_prime_minister')]"
+				visible = "[And( Character.IsValid, Not(Character.IsHistorical) )]"
+				parentanchor = center
+				scale = 0.9
+			}
+
+			character_portrait_medium_torso_tsarpoint_historical_info_link = {
+				datacontext = "[AccessPlayer.GetHighestProminenceCharacterOfRole('character_role_prime_minister')]"
+				visible = "[And3( Character.IsValid, Character.IsHistorical, Not(StringIsEmpty(Character.GetHistoricalUrl)) )]"
+				parentanchor = center
+				scale = 0.9
+			}
+
+			character_portrait_medium_torso_tsarpoint_historical_no_info_link = {
+				datacontext = "[AccessPlayer.GetHighestProminenceCharacterOfRole('character_role_prime_minister')]"
+				visible = "[And3( Character.IsValid, Character.IsHistorical, StringIsEmpty(Character.GetHistoricalUrl) )]"
+				parentanchor = center
+				scale = 0.9
+			}
+		}
+
+		textbox = {
+			position = { 335 218 }
+			size = { 145 40 }
+			align = center|nobaseline
+			default_format = "#title"
+			text = "RUS_WN_KREMLIN_PM"
+		}
+	}
+}
+
+flowcontainer = {
+	name = "widget_je_rus_shock_therapy_ruble"
+	ignoreinvisible = yes
+	margin_bottom = 1
+
+	widget = {
+		size = { 510 340 }
+
+		background = {
+			texture = "gfx/interface/illustrations/journal/game_obj_illu_economic_dominance.dds"
+			using = top_illu_properties
+			margin = { 25 0 }
+			alpha = 0.25
+		}
+
+		textbox = {
+			position = { 25 12 }
+			size = { 460 24 }
+			align = left|nobaseline
+			default_format = "#title"
+			tooltip = "RUS_ST_BASKET_TT"
+			text = "RUS_ST_BASKET"
+		}
+
+		widget = {
+			position = { 30 40 }
+			size = { 70 78 }
+			tooltip = "RUS_ST_GOOD_GROCERIES_TT"
+			icon = {
+				position = { 14 0 }
+				size = { 42 42 }
+				texture = "gfx/interface/icons/goods_icons/groceries.dds"
+			}
+			textbox = {
+				visible = "[GreaterThan_CFixedPoint(AccessPlayer.MakeScope.Var('fin_price_groceries').GetValue, '(CFixedPoint)0')]"
+				position = { 0 46 }
+				size = { 70 24 }
+				align = center|nobaseline
+				using = fontsize_large
+				raw_text = "#negative [AccessPlayer.MakeScope.Var('fin_price_groceries').GetValue|+0]%#!"
+			}
+			textbox = {
+				visible = "[LessThan_CFixedPoint(AccessPlayer.MakeScope.Var('fin_price_groceries').GetValue, '(CFixedPoint)0')]"
+				position = { 0 46 }
+				size = { 70 24 }
+				align = center|nobaseline
+				using = fontsize_large
+				raw_text = "#positive [AccessPlayer.MakeScope.Var('fin_price_groceries').GetValue|+0]%#!"
+			}
+			textbox = {
+				visible = "[EqualTo_CFixedPoint(AccessPlayer.MakeScope.Var('fin_price_groceries').GetValue, '(CFixedPoint)0')]"
+				position = { 0 46 }
+				size = { 70 24 }
+				align = center|nobaseline
+				using = fontsize_large
+				raw_text = "0%"
+			}
+		}
+
+		widget = {
+			position = { 106 40 }
+			size = { 70 78 }
+			tooltip = "RUS_ST_GOOD_GRAIN_TT"
+			icon = {
+				position = { 14 0 }
+				size = { 42 42 }
+				texture = "gfx/interface/icons/goods_icons/grain.dds"
+			}
+			textbox = {
+				visible = "[GreaterThan_CFixedPoint(AccessPlayer.MakeScope.Var('fin_price_grain').GetValue, '(CFixedPoint)0')]"
+				position = { 0 46 }
+				size = { 70 24 }
+				align = center|nobaseline
+				using = fontsize_large
+				raw_text = "#negative [AccessPlayer.MakeScope.Var('fin_price_grain').GetValue|+0]%#!"
+			}
+			textbox = {
+				visible = "[LessThan_CFixedPoint(AccessPlayer.MakeScope.Var('fin_price_grain').GetValue, '(CFixedPoint)0')]"
+				position = { 0 46 }
+				size = { 70 24 }
+				align = center|nobaseline
+				using = fontsize_large
+				raw_text = "#positive [AccessPlayer.MakeScope.Var('fin_price_grain').GetValue|+0]%#!"
+			}
+			textbox = {
+				visible = "[EqualTo_CFixedPoint(AccessPlayer.MakeScope.Var('fin_price_grain').GetValue, '(CFixedPoint)0')]"
+				position = { 0 46 }
+				size = { 70 24 }
+				align = center|nobaseline
+				using = fontsize_large
+				raw_text = "0%"
+			}
+		}
+
+		widget = {
+			position = { 182 40 }
+			size = { 70 78 }
+			tooltip = "RUS_ST_GOOD_CLOTHES_TT"
+			icon = {
+				position = { 14 0 }
+				size = { 42 42 }
+				texture = "gfx/interface/icons/goods_icons/clothes.dds"
+			}
+			textbox = {
+				visible = "[GreaterThan_CFixedPoint(AccessPlayer.MakeScope.Var('fin_price_clothes').GetValue, '(CFixedPoint)0')]"
+				position = { 0 46 }
+				size = { 70 24 }
+				align = center|nobaseline
+				using = fontsize_large
+				raw_text = "#negative [AccessPlayer.MakeScope.Var('fin_price_clothes').GetValue|+0]%#!"
+			}
+			textbox = {
+				visible = "[LessThan_CFixedPoint(AccessPlayer.MakeScope.Var('fin_price_clothes').GetValue, '(CFixedPoint)0')]"
+				position = { 0 46 }
+				size = { 70 24 }
+				align = center|nobaseline
+				using = fontsize_large
+				raw_text = "#positive [AccessPlayer.MakeScope.Var('fin_price_clothes').GetValue|+0]%#!"
+			}
+			textbox = {
+				visible = "[EqualTo_CFixedPoint(AccessPlayer.MakeScope.Var('fin_price_clothes').GetValue, '(CFixedPoint)0')]"
+				position = { 0 46 }
+				size = { 70 24 }
+				align = center|nobaseline
+				using = fontsize_large
+				raw_text = "0%"
+			}
+		}
+
+		widget = {
+			position = { 258 40 }
+			size = { 70 78 }
+			tooltip = "RUS_ST_GOOD_FURNITURE_TT"
+			icon = {
+				position = { 14 0 }
+				size = { 42 42 }
+				texture = "gfx/interface/icons/goods_icons/furniture.dds"
+			}
+			textbox = {
+				visible = "[GreaterThan_CFixedPoint(AccessPlayer.MakeScope.Var('fin_price_furniture').GetValue, '(CFixedPoint)0')]"
+				position = { 0 46 }
+				size = { 70 24 }
+				align = center|nobaseline
+				using = fontsize_large
+				raw_text = "#negative [AccessPlayer.MakeScope.Var('fin_price_furniture').GetValue|+0]%#!"
+			}
+			textbox = {
+				visible = "[LessThan_CFixedPoint(AccessPlayer.MakeScope.Var('fin_price_furniture').GetValue, '(CFixedPoint)0')]"
+				position = { 0 46 }
+				size = { 70 24 }
+				align = center|nobaseline
+				using = fontsize_large
+				raw_text = "#positive [AccessPlayer.MakeScope.Var('fin_price_furniture').GetValue|+0]%#!"
+			}
+			textbox = {
+				visible = "[EqualTo_CFixedPoint(AccessPlayer.MakeScope.Var('fin_price_furniture').GetValue, '(CFixedPoint)0')]"
+				position = { 0 46 }
+				size = { 70 24 }
+				align = center|nobaseline
+				using = fontsize_large
+				raw_text = "0%"
+			}
+		}
+
+		widget = {
+			position = { 334 40 }
+			size = { 70 78 }
+			tooltip = "RUS_ST_GOOD_LIQUOR_TT"
+			icon = {
+				position = { 14 0 }
+				size = { 42 42 }
+				texture = "gfx/interface/icons/goods_icons/liquor.dds"
+			}
+			textbox = {
+				visible = "[GreaterThan_CFixedPoint(AccessPlayer.MakeScope.Var('fin_price_liquor').GetValue, '(CFixedPoint)0')]"
+				position = { 0 46 }
+				size = { 70 24 }
+				align = center|nobaseline
+				using = fontsize_large
+				raw_text = "#negative [AccessPlayer.MakeScope.Var('fin_price_liquor').GetValue|+0]%#!"
+			}
+			textbox = {
+				visible = "[LessThan_CFixedPoint(AccessPlayer.MakeScope.Var('fin_price_liquor').GetValue, '(CFixedPoint)0')]"
+				position = { 0 46 }
+				size = { 70 24 }
+				align = center|nobaseline
+				using = fontsize_large
+				raw_text = "#positive [AccessPlayer.MakeScope.Var('fin_price_liquor').GetValue|+0]%#!"
+			}
+			textbox = {
+				visible = "[EqualTo_CFixedPoint(AccessPlayer.MakeScope.Var('fin_price_liquor').GetValue, '(CFixedPoint)0')]"
+				position = { 0 46 }
+				size = { 70 24 }
+				align = center|nobaseline
+				using = fontsize_large
+				raw_text = "0%"
+			}
+		}
+
+		widget = {
+			position = { 410 40 }
+			size = { 70 78 }
+			tooltip = "RUS_ST_GOOD_APPLIANCES_TT"
+			icon = {
+				position = { 14 0 }
+				size = { 42 42 }
+				texture = "gfx/interface/icons/goods_icons/appliances.dds"
+			}
+			textbox = {
+				visible = "[GreaterThan_CFixedPoint(AccessPlayer.MakeScope.Var('fin_price_appliances').GetValue, '(CFixedPoint)0')]"
+				position = { 0 46 }
+				size = { 70 24 }
+				align = center|nobaseline
+				using = fontsize_large
+				raw_text = "#negative [AccessPlayer.MakeScope.Var('fin_price_appliances').GetValue|+0]%#!"
+			}
+			textbox = {
+				visible = "[LessThan_CFixedPoint(AccessPlayer.MakeScope.Var('fin_price_appliances').GetValue, '(CFixedPoint)0')]"
+				position = { 0 46 }
+				size = { 70 24 }
+				align = center|nobaseline
+				using = fontsize_large
+				raw_text = "#positive [AccessPlayer.MakeScope.Var('fin_price_appliances').GetValue|+0]%#!"
+			}
+			textbox = {
+				visible = "[EqualTo_CFixedPoint(AccessPlayer.MakeScope.Var('fin_price_appliances').GetValue, '(CFixedPoint)0')]"
+				position = { 0 46 }
+				size = { 70 24 }
+				align = center|nobaseline
+				using = fontsize_large
+				raw_text = "0%"
+			}
+		}
+
+		textbox = {
+			position = { 25 128 }
+			size = { 220 24 }
+			align = left|nobaseline
+			default_format = "#title"
+			tooltip = "RUS_ST_CPI_TT"
+			text = "RUS_ST_CPI_TITLE"
+		}
+
+		textbox = {
+			visible = "[GreaterThanOrEqualTo_CFixedPoint(AccessPlayer.MakeScope.Var('fin_cpi').GetValue, '(CFixedPoint)15')]"
+			position = { 25 152 }
+			size = { 150 44 }
+			align = left|nobaseline
+			using = fontsize_xxl
+			tooltip = "RUS_ST_CPI_TT"
+			raw_text = "#negative [AccessPlayer.MakeScope.Var('fin_cpi').GetValue|+0]%#!"
+		}
+
+		textbox = {
+			visible = "[And(LessThan_CFixedPoint(AccessPlayer.MakeScope.Var('fin_cpi').GetValue, '(CFixedPoint)15'), GreaterThan_CFixedPoint(AccessPlayer.MakeScope.Var('fin_cpi').GetValue, '(CFixedPoint)-15'))]"
+			position = { 25 152 }
+			size = { 150 44 }
+			align = left|nobaseline
+			using = fontsize_xxl
+			tooltip = "RUS_ST_CPI_TT"
+			raw_text = "[AccessPlayer.MakeScope.Var('fin_cpi').GetValue|+0]%"
+		}
+
+		textbox = {
+			visible = "[LessThanOrEqualTo_CFixedPoint(AccessPlayer.MakeScope.Var('fin_cpi').GetValue, '(CFixedPoint)-15')]"
+			position = { 25 152 }
+			size = { 150 44 }
+			align = left|nobaseline
+			using = fontsize_xxl
+			tooltip = "RUS_ST_CPI_TT"
+			raw_text = "#negative [AccessPlayer.MakeScope.Var('fin_cpi').GetValue|+0]%#!"
+		}
+
+		icon = {
+			visible = "[GreaterThan_CFixedPoint(AccessPlayer.MakeScope.Var('fin_cpi').GetValue, AccessPlayer.MakeScope.Var('fin_cpi_last').GetValue)]"
+			position = { 175 160 }
+			size = { 30 30 }
+			texture = "gfx/interface/icons/generic_icons/trend_up.dds"
+			tooltip = "RUS_ST_TREND_UP_TT"
+		}
+
+		icon = {
+			visible = "[LessThan_CFixedPoint(AccessPlayer.MakeScope.Var('fin_cpi').GetValue, AccessPlayer.MakeScope.Var('fin_cpi_last').GetValue)]"
+			position = { 175 160 }
+			size = { 30 30 }
+			texture = "gfx/interface/icons/generic_icons/trend_down.dds"
+			tooltip = "RUS_ST_TREND_DOWN_TT"
+		}
+
+		icon = {
+			visible = "[EqualTo_CFixedPoint(AccessPlayer.MakeScope.Var('fin_cpi').GetValue, AccessPlayer.MakeScope.Var('fin_cpi_last').GetValue)]"
+			position = { 175 160 }
+			size = { 30 30 }
+			texture = "gfx/interface/icons/generic_icons/trend_nochange.dds"
+			tooltip = "RUS_ST_TREND_FLAT_TT"
+		}
+
+		textbox = {
+			visible = "[GreaterThanOrEqualTo_CFixedPoint(AccessPlayer.MakeScope.Var('fin_cpi').GetValue, '(CFixedPoint)50')]"
+			position = { 215 160 }
+			size = { 270 30 }
+			align = left|nobaseline
+			using = fontsize_large
+			text = "RUS_ST_CPI_HYPER"
+		}
+
+		textbox = {
+			visible = "[And(GreaterThanOrEqualTo_CFixedPoint(AccessPlayer.MakeScope.Var('fin_cpi').GetValue, '(CFixedPoint)30'), LessThan_CFixedPoint(AccessPlayer.MakeScope.Var('fin_cpi').GetValue, '(CFixedPoint)50'))]"
+			position = { 215 160 }
+			size = { 270 30 }
+			align = left|nobaseline
+			using = fontsize_large
+			text = "RUS_ST_CPI_HIGH"
+		}
+
+		textbox = {
+			visible = "[And(GreaterThanOrEqualTo_CFixedPoint(AccessPlayer.MakeScope.Var('fin_cpi').GetValue, '(CFixedPoint)15'), LessThan_CFixedPoint(AccessPlayer.MakeScope.Var('fin_cpi').GetValue, '(CFixedPoint)30'))]"
+			position = { 215 160 }
+			size = { 270 30 }
+			align = left|nobaseline
+			using = fontsize_large
+			text = "RUS_ST_CPI_INFL"
+		}
+
+		textbox = {
+			visible = "[And(GreaterThan_CFixedPoint(AccessPlayer.MakeScope.Var('fin_cpi').GetValue, '(CFixedPoint)-15'), LessThan_CFixedPoint(AccessPlayer.MakeScope.Var('fin_cpi').GetValue, '(CFixedPoint)15'))]"
+			position = { 215 160 }
+			size = { 270 30 }
+			align = left|nobaseline
+			using = fontsize_large
+			text = "RUS_ST_CPI_STABLE"
+		}
+
+		textbox = {
+			visible = "[LessThanOrEqualTo_CFixedPoint(AccessPlayer.MakeScope.Var('fin_cpi').GetValue, '(CFixedPoint)-15')]"
+			position = { 215 160 }
+			size = { 270 30 }
+			align = left|nobaseline
+			using = fontsize_large
+			text = "RUS_ST_CPI_DEFL"
+		}
+
+		widget = {
+			tooltip = "RUS_ST_FLIGHT_TT"
+			position = { 25 208 }
+			size = { 150 92 }
+			background = {
+				using = dark_area
+			}
+			icon = {
+				position = { 8 8 }
+				size = { 28 28 }
+				texture = "gfx/interface/icons/generic_icons/money.dds"
+			}
+			textbox = {
+				position = { 38 6 }
+				size = { 104 32 }
+				align = left|nobaseline
+				default_format = "#title"
+				text = "RUS_ST_FLIGHT_TITLE"
+			}
+			textbox = {
+				position = { 42 32 }
+				size = { 104 26 }
+				align = left|nobaseline
+				using = fontsize_large
+				raw_text = "[AccessPlayer.MakeScope.Var('fin_capital_flight').GetValue|0] / 100"
+			}
+			textbox = {
+				visible = "[LessThan_CFixedPoint(AccessPlayer.MakeScope.Var('fin_capital_flight').GetValue, '(CFixedPoint)20')]"
+				position = { 8 62 }
+				size = { 138 24 }
+				align = center|nobaseline
+				text = "RUS_ST_FLIGHT_0"
+			}
+			textbox = {
+				visible = "[And(GreaterThanOrEqualTo_CFixedPoint(AccessPlayer.MakeScope.Var('fin_capital_flight').GetValue, '(CFixedPoint)20'), LessThan_CFixedPoint(AccessPlayer.MakeScope.Var('fin_capital_flight').GetValue, '(CFixedPoint)45'))]"
+				position = { 8 62 }
+				size = { 138 24 }
+				align = center|nobaseline
+				text = "RUS_ST_FLIGHT_1"
+			}
+			textbox = {
+				visible = "[And(GreaterThanOrEqualTo_CFixedPoint(AccessPlayer.MakeScope.Var('fin_capital_flight').GetValue, '(CFixedPoint)45'), LessThan_CFixedPoint(AccessPlayer.MakeScope.Var('fin_capital_flight').GetValue, '(CFixedPoint)70'))]"
+				position = { 8 62 }
+				size = { 138 24 }
+				align = center|nobaseline
+				text = "RUS_ST_FLIGHT_2"
+			}
+			textbox = {
+				visible = "[GreaterThanOrEqualTo_CFixedPoint(AccessPlayer.MakeScope.Var('fin_capital_flight').GetValue, '(CFixedPoint)70')]"
+				position = { 8 62 }
+				size = { 138 24 }
+				align = center|nobaseline
+				text = "RUS_ST_FLIGHT_3"
+			}
+		}
+
+		widget = {
+			tooltip = "RUS_ST_BONDS_TT"
+			position = { 180 208 }
+			size = { 150 92 }
+			background = {
+				using = dark_area
+			}
+			icon = {
+				position = { 8 8 }
+				size = { 28 28 }
+				texture = "gfx/interface/icons/generic_icons/gdp.dds"
+			}
+			textbox = {
+				position = { 42 6 }
+				size = { 104 32 }
+				align = left|nobaseline
+				default_format = "#title"
+				text = "RUS_ST_BONDS_TITLE"
+			}
+			textbox = {
+				position = { 25 34 }
+				size = { 104 26 }
+				align = left|nobaseline
+				using = fontsize_large
+				text = "RUS_ST_BONDS_RATIO"
+			}
+			icon = {
+				visible = "[Or(GreaterThanOrEqualTo_CFixedPoint(AccessPlayer.MakeScope.Var('fin_bond_ratio_var').GetValue, '(CFixedPoint)20'), And(GreaterThanOrEqualTo_CFixedPoint(AccessPlayer.MakeScope.Var('fin_bond_ratio_var').GetValue, '(CFixedPoint)12'), GreaterThanOrEqualTo_CFixedPoint(AccessPlayer.MakeScope.Var('fin_capital_flight').GetValue, '(CFixedPoint)60')))]"
+				position = { 118 10 }
+				size = { 24 24 }
+				texture = "gfx/interface/icons/generic_icons/warning.dds"
+				tooltip = "RUS_ST_BONDS_RISK_TT"
+			}
+			textbox = {
+				visible = "[AccessPlayer.MakeScope.Var('fin_bonds_issuing').IsSet]"
+				position = { 8 62 }
+				size = { 138 24 }
+				align = center|nobaseline
+				text = "RUS_ST_BONDS_SELLING"
+			}
+			textbox = {
+				visible = "[Not(AccessPlayer.MakeScope.Var('fin_bonds_issuing').IsSet)]"
+				position = { 8 62 }
+				size = { 138 24 }
+				align = center|nobaseline
+				text = "RUS_ST_BONDS_IDLE"
+			}
+		}
+
+		widget = {
+			tooltip = "RUS_ST_WAGES_TT"
+			position = { 335 208 }
+			size = { 150 92 }
+			background = {
+				using = dark_area
+			}
+			icon = {
+				position = { 8 8 }
+				size = { 28 28 }
+				texture = "gfx/interface/icons/generic_icons/population.dds"
+			}
+			textbox = {
+				position = { 42 12 }
+				size = { 104 20 }
+				align = left|nobaseline
+				default_format = "#title"
+				text = "RUS_ST_WAGES_TITLE"
+			}
+			textbox = {
+				visible = "[EqualTo_CFixedPoint(AccessPlayer.MakeScope.Var('fin_wage_arrears').GetValue, '(CFixedPoint)0')]"
+				position = { 8 36 }
+				size = { 138 50 }
+				align = center|nobaseline
+				using = fontsize_large
+				text = "RUS_ST_WAGES_0"
+			}
+			textbox = {
+				visible = "[EqualTo_CFixedPoint(AccessPlayer.MakeScope.Var('fin_wage_arrears').GetValue, '(CFixedPoint)1')]"
+				position = { 8 36 }
+				size = { 138 50 }
+				align = center|nobaseline
+				using = fontsize_large
+				text = "RUS_ST_WAGES_1"
+			}
+			textbox = {
+				visible = "[EqualTo_CFixedPoint(AccessPlayer.MakeScope.Var('fin_wage_arrears').GetValue, '(CFixedPoint)2')]"
+				position = { 8 36 }
+				size = { 138 50 }
+				align = center|nobaseline
+				using = fontsize_large
+				text = "RUS_ST_WAGES_2"
+			}
+			textbox = {
+				visible = "[GreaterThanOrEqualTo_CFixedPoint(AccessPlayer.MakeScope.Var('fin_wage_arrears').GetValue, '(CFixedPoint)3')]"
+				position = { 8 36 }
+				size = { 138 50 }
+				align = center|nobaseline
+				using = fontsize_large
+				text = "RUS_ST_WAGES_3"
+			}
+		}
+
+		textbox = {
+			visible = "[EqualTo_CFixedPoint(AccessPlayer.MakeScope.Var('cb_fiscal_policy').GetValue, '(CFixedPoint)1')]"
+			position = { 25 308 }
+			size = { 230 24 }
+			align = left|nobaseline
+			text = "RUS_ST_STANCE_1"
+		}
+
+		textbox = {
+			visible = "[EqualTo_CFixedPoint(AccessPlayer.MakeScope.Var('cb_fiscal_policy').GetValue, '(CFixedPoint)2')]"
+			position = { 25 308 }
+			size = { 230 24 }
+			align = left|nobaseline
+			text = "RUS_ST_STANCE_2"
+		}
+
+		textbox = {
+			visible = "[Or(EqualTo_CFixedPoint(AccessPlayer.MakeScope.Var('cb_fiscal_policy').GetValue, '(CFixedPoint)3'), EqualTo_CFixedPoint(AccessPlayer.MakeScope.Var('cb_fiscal_policy').GetValue, '(CFixedPoint)0'))]"
+			position = { 25 308 }
+			size = { 230 24 }
+			align = left|nobaseline
+			text = "RUS_ST_STANCE_3"
+		}
+
+		textbox = {
+			visible = "[EqualTo_CFixedPoint(AccessPlayer.MakeScope.Var('cb_fiscal_policy').GetValue, '(CFixedPoint)4')]"
+			position = { 25 308 }
+			size = { 230 24 }
+			align = left|nobaseline
+			text = "RUS_ST_STANCE_4"
+		}
+
+		textbox = {
+			visible = "[EqualTo_CFixedPoint(AccessPlayer.MakeScope.Var('cb_fiscal_policy').GetValue, '(CFixedPoint)5')]"
+			position = { 25 308 }
+			size = { 230 24 }
+			align = left|nobaseline
+			text = "RUS_ST_STANCE_5"
+		}
+
+		textbox = {
+			visible = "[EqualTo_CFixedPoint(AccessPlayer.MakeScope.Var('fin_price_controls_level').GetValue, '(CFixedPoint)0')]"
+			position = { 260 308 }
+			size = { 225 24 }
+			align = right|nobaseline
+			text = "RUS_ST_CONTROLS_0"
+		}
+
+		textbox = {
+			visible = "[EqualTo_CFixedPoint(AccessPlayer.MakeScope.Var('fin_price_controls_level').GetValue, '(CFixedPoint)1')]"
+			position = { 260 308 }
+			size = { 225 24 }
+			align = right|nobaseline
+			text = "RUS_ST_CONTROLS_1"
+		}
+
+		textbox = {
+			visible = "[EqualTo_CFixedPoint(AccessPlayer.MakeScope.Var('fin_price_controls_level').GetValue, '(CFixedPoint)2')]"
+			position = { 260 308 }
+			size = { 225 24 }
+			align = right|nobaseline
+			text = "RUS_ST_CONTROLS_2"
+		}
+	}
+}

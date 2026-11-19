@@ -1,6 +1,4 @@
 ﻿ideology_traditionalist_favoured_laws = {
-	# Laws that ideology_traditionalist likes the most.
-	# Maximum value = 4
 	value = 0
 	if = {
 		limit = {
@@ -29,8 +27,6 @@
 }
 
 ideology_traditionalist_disfavoured_laws = {
-	# Laws that ideology_traditionalist likes the least.
-	# Maximum value = 4
 	value = 0
 	if = {
 		limit = {
@@ -62,8 +58,6 @@ ideology_traditionalist_disfavoured_laws = {
 }
 
 ideology_traditionalist_minoritarian_favoured_laws = {
-	# Laws that ideology_traditionalist_minoritarian likes the most.
-	# Maximum value = 4
 	value = 0
 	if = {
 		limit = {
@@ -92,8 +86,6 @@ ideology_traditionalist_minoritarian_favoured_laws = {
 }
 
 ideology_traditionalist_minoritarian_disfavoured_laws = {
-	# Laws that ideology_traditionalist_minoritarian likes the least.
-	# Maximum value = 4
 	value = 0
 	if = {
 		limit = {
@@ -125,8 +117,6 @@ ideology_traditionalist_minoritarian_disfavoured_laws = {
 }
 
 ideology_nihilist_favoured_laws = {
-	# Laws that ideology_nihilist likes the most.
-	# Maximum value = 3
 	value = 0
 	if = {
 		limit = {
@@ -152,8 +142,6 @@ ideology_nihilist_favoured_laws = {
 }
 
 ideology_nihilist_disfavoured_laws = {
-	# Laws that ideology_nihilist likes the least.
-	# Maximum value = 3
 	value = 0
 	if = {
 		limit = {
@@ -179,8 +167,6 @@ ideology_nihilist_disfavoured_laws = {
 }
 
 ideology_republican_leader_favoured_laws = {
-	# Laws that ideology_republican_leader likes the most.
-	# Maximum value = 2
 	value = 0
 	if = {
 		limit = {
@@ -200,8 +186,6 @@ ideology_republican_leader_favoured_laws = {
 }
 
 ideology_republican_leader_disfavoured_laws = {
-	# Laws that ideology_republican_leader likes the least.
-	# Maximum value = 2
 	value = 0
 	if = {
 		limit = {
@@ -215,15 +199,16 @@ ideology_republican_leader_disfavoured_laws = {
 	}
 	if = {
 		limit = {
-			has_law_or_variant = law_type:law_hereditary_bureaucrats
+			OR = {
+				has_law_or_variant = law_type:law_hereditary_bureaucrats
+				has_law_or_variant = law_type:law_communal_administration
+			}
 		}
 		add = 1
 	}
 }
 
 ideology_radical_favoured_laws = {
-	# Laws that ideology_radical likes the most.
-	# Maximum value = 6
 	value = 0
 	if = {
 		limit = {
@@ -270,8 +255,6 @@ ideology_radical_favoured_laws = {
 }
 
 ideology_radical_disfavoured_laws = {
-	# Laws that ideology_radical likes the least.
-	# Maximum value = 6
 	value = 0
 	if = {
 		limit = {
@@ -289,6 +272,7 @@ ideology_radical_disfavoured_laws = {
 				has_law_or_variant = law_type:law_anarchy
 				has_law_or_variant = law_type:law_autocracy
 				has_law_or_variant = law_type:law_oligarchy
+				has_law_or_variant = law_type:law_labour_suffrage
 			}
 		}
 		add = 1
@@ -323,8 +307,6 @@ ideology_radical_disfavoured_laws = {
 }
 
 ideology_reformer_favoured_laws = {
-	# Laws that ideology_reformer likes the most.
-	# Maximum value = 4
 	value = 0
 	if = {
 		limit = {
@@ -353,8 +335,6 @@ ideology_reformer_favoured_laws = {
 }
 
 ideology_reformer_disfavoured_laws = {
-	# Laws that ideology_reformer likes the least.
-	# Maximum value = 4
 	value = 0
 	if = {
 		limit = {
@@ -394,8 +374,6 @@ ideology_reformer_disfavoured_laws = {
 }
 
 ideology_social_democrat_disfavoured_laws = {
-	# Laws that ideology_social_democrat likes the least.
-	# Maximum value = 6
 	value = 0
 	if = {
 		limit = {
@@ -446,8 +424,6 @@ ideology_social_democrat_disfavoured_laws = {
 }
 
 ideology_social_democrat_favoured_laws = {
-	# Laws that ideology_social_democrat likes the most.
-	# Maximum value = 6
 	value = 0
 	if = {
 		limit = {
@@ -488,8 +464,6 @@ ideology_social_democrat_favoured_laws = {
 }
 
 ideology_communist_disfavoured_laws = {
-	# Laws that ideology_communist likes the least.
-	# Maximum value = 6
 	value = 0
 	if = {
 		limit = {
@@ -541,8 +515,6 @@ ideology_communist_disfavoured_laws = {
 }
 
 ideology_communist_favoured_laws = {
-	# Laws that ideology_communist likes the most.
-	# Maximum value = 6
 	value = 0
 	if = {
 		limit = {
@@ -589,8 +561,6 @@ ideology_communist_favoured_laws = {
 }
 
 ideology_vanguardist_disfavoured_laws = {
-	# Laws that ideology_vanguardist likes the least.
-	# Maximum value = 6
 	value = 0
 	if = {
 		limit = {
@@ -652,8 +622,6 @@ ideology_vanguardist_disfavoured_laws = {
 }
 
 ideology_vanguardist_favoured_laws = {
-	# Laws that ideology_vanguardist likes the most.
-	# Maximum value = 6
 	value = 0
 	if = {
 		limit = {
@@ -697,15 +665,22 @@ ideology_vanguardist_favoured_laws = {
 		}
 		add = 1
 	}
+	if = {
+		limit = {
+			has_law_or_variant = law_type:law_extraordinary_commission
+		}
+		add = 1
+	}
 }
 
 ideology_fascist_disfavoured_laws = {
-	# Laws that ideology_fascist likes the least.
-	# Maximum value = 6
 	value = 0
 	if = {
 		limit = {
-			has_law_or_variant = law_type:law_anarchy
+			OR = {
+				has_law_or_variant = law_type:law_anarchy
+				has_law_or_variant = law_type:law_labour_suffrage
+			}
 		}
 		add = 1
 	}
@@ -720,6 +695,7 @@ ideology_fascist_disfavoured_laws = {
 			OR = {
 				has_law_or_variant = law_type:law_national_militia
 				has_law_or_variant = law_type:law_peasant_levies
+				has_law_or_variant = law_type:law_revolutionary_guard
 			}
 		}
 		add = 1
@@ -742,11 +718,15 @@ ideology_fascist_disfavoured_laws = {
 		}
 		add = 1
 	}
+	if = {
+		limit = {
+			has_law_or_variant = law_type:law_extraordinary_commission
+		}
+		add = 1
+	}
 }
 
 ideology_fascist_favoured_laws = {
-	# Laws that ideology_fascist likes the most.
-	# Maximum value = 6
 	value = 0
 	if = {
 		limit = {
@@ -787,8 +767,6 @@ ideology_fascist_favoured_laws = {
 }
 
 ideology_anarchist_disfavoured_laws = {
-	# Laws that ideology_anarchist likes the least.
-	# Maximum value = 7
 	value = 0
 	if = {
 		limit = {
@@ -849,11 +827,15 @@ ideology_anarchist_disfavoured_laws = {
 		}
 		add = 1
 	}
+	if = {
+		limit = {
+			has_law_or_variant = law_type:law_military_bureaucrats
+		}
+		add = 1
+	}
 }
 
 ideology_anarchist_favoured_laws = {
-	# Laws that ideology_anarchist likes the most.
-	# Maximum value = 7
 	value = 0
 	if = {
 		limit = {
@@ -897,11 +879,15 @@ ideology_anarchist_favoured_laws = {
 		}
 		add = 1
 	}
+	if = {
+		limit = {
+			has_law_or_variant = law_type:law_communal_administration
+		}
+		add = 1
+	}
 }
 
 ideology_market_liberal_disfavoured_laws = {
-	# Laws that ideology_market_liberal likes the least.
-	# Maximum value = 6
 	value = 0
 	if = {
 		limit = {
@@ -950,8 +936,6 @@ ideology_market_liberal_disfavoured_laws = {
 }
 
 ideology_market_liberal_favoured_laws = {
-	# Laws that ideology_market_liberal likes the most.
-	# Maximum value = 6
 	value = 0
 	if = {
 		limit = {
@@ -992,8 +976,6 @@ ideology_market_liberal_favoured_laws = {
 }
 
 ideology_humanitarian_disfavoured_laws = {
-	# Laws that ideology_humanitarian likes the least.
-	# Maximum value = 6
 	value = 0
 	if = {
 		limit = {
@@ -1006,7 +988,10 @@ ideology_humanitarian_disfavoured_laws = {
 	}
 	if = {
 		limit = {
-			has_law_or_variant = law_type:law_secret_police
+			OR = {
+				has_law_or_variant = law_type:law_secret_police
+				has_law_or_variant = law_type:law_extraordinary_commission
+			}
 		}
 		add = 1
 	}
@@ -1037,8 +1022,6 @@ ideology_humanitarian_disfavoured_laws = {
 }
 
 ideology_humanitarian_favoured_laws = {
-	# Laws that ideology_humanitarian likes the most.
-	# Maximum value = 6
 	value = 0
 	if = {
 		limit = {
@@ -1079,8 +1062,6 @@ ideology_humanitarian_favoured_laws = {
 }
 
 ideology_humanitarian_royalist_disfavoured_laws = {
-	# Laws that ideology_humanitarian_royalist likes the least.
-	# Maximum value = 5
 	value = 0
 	if = {
 		limit = {
@@ -1118,8 +1099,6 @@ ideology_humanitarian_royalist_disfavoured_laws = {
 }
 
 ideology_humanitarian_royalist_favoured_laws = {
-	# Laws that ideology_humanitarian likes the most.
-	# Maximum value = 6
 	value = 0
 	if = {
 		limit = {
@@ -1154,8 +1133,6 @@ ideology_humanitarian_royalist_favoured_laws = {
 }
 
 ideology_positivist_disfavoured_laws = {
-	# Laws that ideology_positivist likes the least.
-	# Maximum value = 4
 	value = 0
 	if = {
 		limit = {
@@ -1178,21 +1155,23 @@ ideology_positivist_disfavoured_laws = {
 			OR = {
 				has_law_or_variant = law_type:law_anarchy
 				has_law_or_variant = law_type:law_universal_suffrage
+				has_law_or_variant = law_type:law_labour_suffrage
 			}
 		}
 		add = 1
 	}
 	if = {
 		limit = {
-			has_law_or_variant = law_type:law_hereditary_bureaucrats
+			OR = {
+				has_law_or_variant = law_type:law_hereditary_bureaucrats
+				has_law_or_variant = law_type:law_communal_administration
+			}
 		}
 		add = 1
 	}
 }
 
 ideology_positivist_favoured_laws = {
-	# Laws that ideology_positivist likes the most.
-	# Maximum value = 4
 	value = 0
 	if = {
 		limit = {
@@ -1221,8 +1200,6 @@ ideology_positivist_favoured_laws = {
 }
 
 ideology_integralist_disfavoured_laws = {
-	# Laws that ideology_integralist likes the least.
-	# Maximum value = 6
 	value = 0
 	if = {
 		limit = {
@@ -1256,6 +1233,7 @@ ideology_integralist_disfavoured_laws = {
 				has_law_or_variant = law_type:law_census_voting
 				has_law_or_variant = law_type:law_universal_suffrage
 				has_law_or_variant = law_type:law_anarchy
+				has_law_or_variant = law_type:law_labour_suffrage
 			}
 		}
 		add = 1
@@ -1272,11 +1250,15 @@ ideology_integralist_disfavoured_laws = {
 		}
 		add = 1
 	}
+	if = {
+		limit = {
+			has_law_or_variant = law_type:law_extraordinary_commission
+		}
+		add = 1
+	}
 }
 
 ideology_integralist_favoured_laws = {
-	# Laws that ideology_integralist likes the most.
-	# Maximum value = 6
 	if = {
 		limit = {
 			has_law_or_variant = law_type:law_militarized_police
@@ -1319,8 +1301,6 @@ ideology_integralist_favoured_laws = {
 }
 
 ideology_corporatist_leader_disfavoured_laws = {
-	# Laws that ideology_corporatist_leader likes the least.
-	# Maximum value = 5
 	value = 0
 	if = {
 		limit = {
@@ -1358,8 +1338,6 @@ ideology_corporatist_leader_disfavoured_laws = {
 }
 
 ideology_corporatist_leader_favoured_laws = {
-	# Laws that ideology_corporatist_leader likes the most.
-	# Maximum value = 5
 	if = {
 		limit = {
 			OR = {

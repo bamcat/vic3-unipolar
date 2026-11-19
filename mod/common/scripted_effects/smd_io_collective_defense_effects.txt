@@ -1,0 +1,75 @@
+io_collective_defense_join = {
+	if = {
+		limit = {
+			scope:io_cd_target = { is_target_in_global_variable_list = { name = io_$ORG$_members target = this } }
+			NOT = { scope:io_cd_initiator = { is_target_in_global_variable_list = { name = io_$ORG$_members target = this } } }
+		}
+		every_country = {
+			limit = {
+				is_target_in_global_variable_list = { name = io_$ORG$_members target = this }
+				NOT = { this = scope:io_cd_target }
+				NOT = { this = scope:io_cd_initiator }
+				NOT = { is_diplomatic_play_ally_of = scope:io_cd_target }
+				NOT = { is_diplomatic_play_enemy_of = scope:io_cd_target }
+				NOT = { is_subject_of = scope:io_cd_initiator }
+			}
+			save_scope_as = io_cd_member
+			root = { add_target_backers = { scope:io_cd_member } }
+		}
+	}
+}
+
+io_collective_defense_pull_members = {
+	if = {
+		limit = {
+			scope:io_cd_target = { is_target_in_global_variable_list = { name = io_$ORG$_members target = this } }
+		}
+		every_country = {
+			limit = {
+				is_target_in_global_variable_list = { name = io_$ORG$_members target = this }
+				NOT = { this = scope:io_cd_target }
+				NOT = { is_diplomatic_play_ally_of = scope:io_cd_target }
+				NOT = { is_diplomatic_play_enemy_of = scope:io_cd_target }
+			}
+			save_scope_as = io_cd_member
+			random_diplomatic_play = {
+				limit = {
+					is_war = no
+					target_is = scope:io_cd_target
+					initiator = {
+						NOT = { is_target_in_global_variable_list = { name = io_$ORG$_members target = this } }
+						NOT = { this = scope:io_cd_member }
+					}
+					NOT = { any_scope_play_involved = { THIS = scope:io_cd_member } }
+					NOR = {
+						is_diplomatic_play_type = dp_revolution
+						is_diplomatic_play_type = dp_secession
+						is_diplomatic_play_type = dp_independence
+						is_diplomatic_play_type = dp_native_uprising
+						is_diplomatic_play_type = dp_increase_autonomy
+						is_diplomatic_play_type = dp_hungarian_revolution
+						is_diplomatic_play_type = dp_taiping_rebellion
+						is_diplomatic_play_type = dp_sepoy_mutiny
+					}
+				}
+				add_target_backers = { scope:io_cd_member }
+			}
+			scope:io_cd_target = {
+				random_scope_war = {
+					limit = {
+						is_war_participant = scope:io_cd_target
+						NOT = { is_war_participant = scope:io_cd_member }
+						defender_warleader = { this = scope:io_cd_target }
+						attacker_warleader = {
+							NOT = { is_target_in_global_variable_list = { name = io_$ORG$_members target = this } }
+						}
+					}
+					join_war = {
+						target = scope:io_cd_member
+						side = scope:io_cd_target
+					}
+				}
+			}
+		}
+	}
+}

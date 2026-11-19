@@ -1,0 +1,334 @@
+﻿smd_je_rapid_urbanisation = {
+	icon = "gfx/interface/icons/event_icons/event_industry.dds"
+
+	group = je_group_domestic_policy
+
+	is_shown_when_inactive = {
+		has_variable = smd_generic_ready
+		NOT = { is_country_type = decentralized }
+		NOT = { has_variable = smd_urbanisation_cooldown }
+		pop_type_percent_country = {
+			target = pop_type:peasants
+			value >= 0.25
+		}
+	}
+
+	possible = {
+		any_scope_state = {
+			is_incorporated = yes
+			any_scope_building = {
+				is_building_type = building_urban_center
+				level >= 5
+			}
+		}
+		any_scope_state = {
+			is_incorporated = yes
+			population_below_expected_sol >= 0.4
+		}
+	}
+
+	scripted_progress_bar = smd_urban_bar
+
+	scripted_button = smd_btn_urban_upgrading
+	scripted_button = smd_btn_urban_clearances
+
+	on_monthly_pulse = {
+		random_events = {
+			100 = 0
+			3 = smd_urban.1
+			3 = smd_urban.2
+			2 = smd_urban.3
+		}
+	}
+
+	outcome = {
+		header = je_standard_completion_header
+		effect_header = je_standard_on_completion_header
+		color = "gold_positive"
+		conclusion_desc = smd_je_rapid_urbanisation_success_desc
+		trigger = {
+			custom_tooltip = {
+				text = smd_je_rapid_urbanisation_success_tt
+				scope:journal_entry ?= {
+					"scripted_bar_progress(smd_urban_bar)" <= 10
+				}
+			}
+			pop_type_percent_country = {
+				target = pop_type:peasants
+				value < 0.25
+			}
+		}
+		effect = {
+			trigger_event = { id = smd_urban.4 popup = yes }
+			set_variable = { name = smd_urbanisation_cooldown days = 7300 }
+		}
+	}
+
+	outcome = {
+		header = je_standard_failure_header
+		effect_header = je_standard_on_failure_header
+		color = "blue_negative"
+		conclusion_desc = smd_je_rapid_urbanisation_failure_desc
+		trigger = {
+			custom_tooltip = {
+				text = smd_je_rapid_urbanisation_failure_tt
+				scope:journal_entry ?= {
+					"scripted_bar_progress(smd_urban_bar)" >= 100
+				}
+			}
+		}
+		effect = {
+			trigger_event = { id = smd_urban.5 popup = yes }
+			set_variable = { name = smd_urbanisation_cooldown days = 7300 }
+		}
+	}
+
+	outcome = {
+		header = JOURNAL_ENTRY_TIMEOUT
+		effect_header = JOURNAL_ENTRY_ON_TIMEOUT
+		flags = { timeout }
+		conclusion_desc = smd_je_rapid_urbanisation_timeout_desc
+		effect = {
+			set_variable = { name = smd_urbanisation_cooldown days = 3650 }
+		}
+	}
+
+	timeout = 5475
+
+	weight = 100
+	should_be_pinned_by_default_uninvolved_or_context = yes
+}
+
+smd_je_cost_of_living = {
+	icon = "gfx/interface/icons/event_icons/event_protest.dds"
+
+	group = je_group_domestic_policy
+
+	is_shown_when_inactive = {
+		has_variable = smd_generic_ready
+		NOT = { is_country_type = decentralized }
+		game_date >= 2000.1.1
+		NOT = { has_variable = smd_cost_of_living_cooldown }
+		has_variable = smd_price_months
+		var:smd_price_months >= 3
+	}
+
+	possible = {
+		always = yes
+	}
+
+	immediate = {
+		trigger_event = { id = smd_costliving.1 popup = yes }
+	}
+
+	scripted_progress_bar = smd_costliving_bar
+
+	scripted_button = smd_btn_costliving_subsidies
+	scripted_button = smd_btn_costliving_rationing
+
+	on_monthly_pulse = {
+		random_events = {
+			100 = 0
+			4 = smd_costliving.2
+			2 = smd_costliving.3
+		}
+	}
+
+	outcome = {
+		header = je_standard_completion_header
+		effect_header = je_standard_on_completion_header
+		color = "gold_positive"
+		conclusion_desc = smd_je_cost_of_living_success_desc
+		trigger = {
+			custom_tooltip = {
+				text = smd_je_cost_of_living_prices_tt
+				NOT = {
+					market_capital.market ?= {
+						OR = {
+							mg:grain ?= { market_goods_pricier > 0.15 }
+							mg:groceries ?= { market_goods_pricier > 0.15 }
+							mg:refined_fuel ?= { market_goods_pricier > 0.15 }
+						}
+					}
+				}
+			}
+			scope:journal_entry ?= {
+				"scripted_bar_progress(smd_costliving_bar)" < 50
+			}
+		}
+		effect = {
+			set_variable = { name = smd_cost_of_living_cooldown days = 1825 }
+			remove_variable = smd_rationing
+			if = {
+				limit = { has_modifier = smd_rationing }
+				remove_modifier = smd_rationing
+			}
+		}
+	}
+
+	outcome = {
+		header = je_standard_failure_header
+		effect_header = je_standard_on_failure_header
+		color = "blue_negative"
+		conclusion_desc = smd_je_cost_of_living_failure_desc
+		trigger = {
+			custom_tooltip = {
+				text = smd_je_cost_of_living_failure_tt
+				scope:journal_entry ?= {
+					"scripted_bar_progress(smd_costliving_bar)" >= 100
+				}
+			}
+		}
+		effect = {
+			trigger_event = { id = smd_costliving.4 popup = yes }
+			set_variable = { name = smd_cost_of_living_cooldown days = 1825 }
+			remove_variable = smd_rationing
+			if = {
+				limit = { has_modifier = smd_rationing }
+				remove_modifier = smd_rationing
+			}
+		}
+	}
+
+	outcome = {
+		header = JOURNAL_ENTRY_TIMEOUT
+		effect_header = JOURNAL_ENTRY_ON_TIMEOUT
+		flags = { timeout }
+		conclusion_desc = smd_je_cost_of_living_timeout_desc
+		effect = {
+			set_variable = { name = smd_cost_of_living_cooldown days = 1825 }
+			remove_variable = smd_rationing
+			if = {
+				limit = { has_modifier = smd_rationing }
+				remove_modifier = smd_rationing
+			}
+		}
+	}
+
+	timeout = 1825
+
+	weight = 100
+	should_be_pinned_by_default_uninvolved_or_context = yes
+}
+
+smd_je_language_question = {
+	icon = "gfx/interface/icons/event_icons/event_newspaper.dds"
+
+	group = je_group_domestic_policy
+
+	is_shown_when_inactive = {
+		has_variable = smd_generic_ready
+		NOT = { is_country_type = decentralized }
+		NOT = { has_variable = smd_language_cooldown }
+		any_scope_culture = {
+			NOT = { is_primary_culture_of = ROOT }
+			ROOT = {
+				culture_percent_country = {
+					target = PREV
+					value >= 0.2
+				}
+				radical_fraction = {
+					culture = PREV
+					value >= 0.15
+				}
+			}
+		}
+	}
+
+	possible = {
+		always = yes
+	}
+
+	immediate = {
+		random_scope_culture = {
+			limit = {
+				NOT = { is_primary_culture_of = ROOT }
+				ROOT = {
+					culture_percent_country = {
+						target = PREV
+						value >= 0.2
+					}
+					radical_fraction = {
+						culture = PREV
+						value >= 0.15
+					}
+				}
+			}
+			save_scope_as = smd_language_minority
+		}
+		set_variable = {
+			name = smd_language_minority
+			value = scope:smd_language_minority
+		}
+		smd_set_other_minorities = yes
+		trigger_event = { id = smd_language.1 popup = yes }
+	}
+
+	scripted_progress_bar = smd_language_bar
+
+	on_monthly_pulse = {
+		random_events = {
+			100 = 0
+			3 = smd_language.2
+			2 = smd_language.3
+		}
+	}
+
+	outcome = {
+		header = je_standard_completion_header
+		effect_header = je_standard_on_completion_header
+		color = "gold_positive"
+		conclusion_desc = smd_je_language_question_success_desc
+		trigger = {
+			custom_tooltip = {
+				text = smd_je_language_question_success_tt
+				scope:journal_entry ?= {
+					"scripted_bar_progress(smd_language_bar)" >= 100
+				}
+			}
+		}
+		effect = {
+			var:smd_language_minority ?= { save_scope_as = smd_language_minority }
+			trigger_event = { id = smd_language.4 popup = yes }
+			smd_clear_language_minorities = yes
+			set_variable = { name = smd_language_cooldown days = 7300 }
+		}
+	}
+
+	outcome = {
+		header = je_standard_failure_header
+		effect_header = je_standard_on_failure_header
+		color = "blue_negative"
+		conclusion_desc = smd_je_language_question_failure_desc
+		trigger = {
+			custom_tooltip = {
+				text = smd_je_language_question_failure_tt
+				scope:journal_entry ?= {
+					"scripted_bar_progress(smd_language_bar)" <= 0
+				}
+			}
+		}
+		effect = {
+			var:smd_language_minority ?= { save_scope_as = smd_language_minority }
+			trigger_event = { id = smd_language.5 popup = yes }
+			smd_clear_language_minorities = yes
+			set_variable = { name = smd_language_cooldown days = 7300 }
+		}
+	}
+
+	outcome = {
+		header = JOURNAL_ENTRY_TIMEOUT
+		effect_header = JOURNAL_ENTRY_ON_TIMEOUT
+		flags = { timeout }
+		conclusion_desc = smd_je_language_question_timeout_desc
+		effect = {
+			smd_clear_language_minorities = yes
+			set_variable = { name = smd_language_cooldown days = 3650 }
+		}
+	}
+
+	timeout = 3650
+
+	weight = 50
+	should_be_pinned_by_default_uninvolved_or_context = yes
+}

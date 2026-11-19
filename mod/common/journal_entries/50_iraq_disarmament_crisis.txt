@@ -11,27 +11,37 @@ je_iraq_disarmament_crisis = {
 
     possible = {
         c:IRQ ?= this
-		game_date < 2003.3.20
+		custom_description = { text = smd_date_before_2003_3_20 game_date < 2003.3.20 }
 		exists = c:IRQ
 		NOT = { has_variable = je_1_c }
     }
 
-	fail = { game_date >= 2003.1.2 }
-	
-    complete = {
-		OR = {
-        custom_tooltip = {
-			text = iraq_disarmament_resolved_tt
-			has_variable = iraq_disarmament_resolved
-		}
-		NOT = { exists = c:USA }
-		has_subject_relation_with = c:USA
-		has_war_with = c:USA
-		}
-    }
 
-	on_complete = {
-		hidden_effect = { set_variable = je_1_c }
+	outcome = {
+		header = je_standard_completion_header
+		effect_header = je_standard_on_completion_header
+		color = "gold_positive"
+		conclusion_desc = je_standard_completion_conclusion_desc
+		trigger = {
+			OR = {
+			custom_tooltip = {
+				text = iraq_disarmament_resolved_tt
+				has_variable = iraq_disarmament_resolved
+			}
+			NOT = { exists = c:USA }
+			has_subject_relation_with = c:USA
+			has_war_with = c:USA
+			}
+		}
+		effect = { hidden_effect = { set_variable = je_1_c } }
+	}
+
+	outcome = {
+		header = je_standard_failure_header
+		effect_header = je_standard_on_failure_header
+		color = "blue_negative"
+		conclusion_desc = je_standard_failure_conclusion_desc
+		trigger = { custom_description = { text = smd_date_from_2003_1_2 game_date >= 2003.1.2 } }
 	}
     weight = 200
 }
@@ -48,26 +58,36 @@ je_us_iraq_disarmament = {
 
     possible = {
         c:USA ?= this
-		game_date < 2003.3.20
+		custom_description = { text = smd_date_before_2003_3_20 game_date < 2003.3.20 }
 		NOT = { has_variable = je_1_c }
     }
 
-	fail = { game_date >= 2003.1.2 }
-	
-    complete = {
-		OR = {
-        custom_tooltip = {
-			text = iraq_disarmament_resolved_tt
-			has_variable = iraq_disarmament_resolved
+
+	outcome = {
+		header = je_standard_completion_header
+		effect_header = je_standard_on_completion_header
+		color = "gold_positive"
+		conclusion_desc = je_standard_completion_conclusion_desc
+		trigger = {
+			OR = {
+			custom_tooltip = {
+				text = iraq_disarmament_resolved_tt
+				has_variable = iraq_disarmament_resolved
+			}
+			has_subject_relation_with = c:IRQ
+			NOT = { exists = c:IRQ }
+			has_war_with = c:IRQ
+			}
 		}
-		has_subject_relation_with = c:IRQ
-		NOT = { exists = c:IRQ }
-		has_war_with = c:IRQ
-		}
-    }
-	on_complete = {
-		hidden_effect = { set_variable = je_1_c }
+		effect = { hidden_effect = { set_variable = je_1_c } }
 	}
 
+	outcome = {
+		header = je_standard_failure_header
+		effect_header = je_standard_on_failure_header
+		color = "blue_negative"
+		conclusion_desc = je_standard_failure_conclusion_desc
+		trigger = { custom_description = { text = smd_date_from_2003_1_2 game_date >= 2003.1.2 } }
+	}
     weight = 200
 }

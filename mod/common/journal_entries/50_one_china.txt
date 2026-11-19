@@ -1,16 +1,7 @@
 ﻿# ==========================================
 # ONE CHINA POLICY
-#
 # je_one_china_prc
-#   For c:PRC (PRC). Completes when China
-#   owns STATE_FORMOSA entirely.
-#   On complete: massive reunification bonus.
-#
 # je_one_china_roc
-#   For c:ROC (Taiwan). Completes when
-#   ROC has c:PRC as a subject.
-#   On complete: integration speed bonus
-#   to absorb the mainland.
 # ==========================================
 
 je_one_china_prc = {
@@ -28,17 +19,19 @@ je_one_china_prc = {
 		c:PRC ?= this
 	}
 
-	complete = {
-		owns_entire_state_region = STATE_FORMOSA
-	}
-
-	on_complete = {
-		add_modifier = {
-			name = one_china_reunification_bonus
-			months = -1
+outcome = {
+		header = je_standard_completion_header
+		effect_header = je_standard_on_completion_header
+		color = "gold_positive"
+		conclusion_desc = je_standard_completion_conclusion_desc
+		trigger = { owns_entire_state_region = STATE_FORMOSA }
+		effect = {
+			add_modifier = {
+				name = one_china_reunification_bonus
+				months = -1
+			}
 		}
 	}
-
 	transferable = no
 	can_revolution_inherit = no
 	weight = 9000
@@ -60,25 +53,29 @@ je_one_china_roc = {
 		c:ROC ?= this
 	}
 
-	complete = {
-		OR = {
-		any_subject_country = {
-			c:PRC ?= this
+outcome = {
+		header = je_standard_completion_header
+		effect_header = je_standard_on_completion_header
+		color = "gold_positive"
+		conclusion_desc = je_standard_completion_conclusion_desc
+		trigger = {
+			OR = {
+			any_subject_or_below = {
+				c:PRC ?= this
+			}
+			AND = {
+				owns_entire_state_region = STATE_BEIJING
+				owns_entire_state_region = STATE_SHENGJING
+				}
+			}
 		}
-		AND = {
-			owns_entire_state_region = STATE_BEIJING
-			owns_entire_state_region = STATE_SHENGJING
+		effect = {
+			add_modifier = {
+				name = one_china_roc_integration_bonus
+				months = -1
 			}
 		}
 	}
-
-	on_complete = {
-		add_modifier = {
-			name = one_china_roc_integration_bonus
-			months = -1
-		}
-	}
-
 	transferable = no
 	can_revolution_inherit = no
 	weight = 9000

@@ -1,0 +1,487 @@
+﻿smd_je_democratic_consolidation = {
+	icon = "gfx/interface/icons/event_icons/event_election.dds"
+
+	group = je_group_domestic_policy
+
+	is_shown_when_inactive = {
+		has_variable = smd_generic_ready
+		NOT = { is_country_type = decentralized }
+		has_variable = smd_new_democracy
+		NOT = { has_variable = smd_democracy_consolidated }
+	}
+
+	possible = {
+		OR = {
+			has_law_or_variant = law_type:law_universal_suffrage
+			has_law_or_variant = law_type:law_census_voting
+		}
+	}
+
+	immediate = {
+		set_variable = { name = smd_dc_probation days = 2190 }
+		trigger_event = { id = smd_democracy.1 popup = yes }
+	}
+
+	scripted_progress_bar = smd_democracy_bar
+
+	scripted_button = smd_btn_dem_judicial_reform
+	scripted_button = smd_btn_dem_civic_education
+
+	on_monthly_pulse = {
+		random_events = {
+			100 = 0
+			3 = smd_democracy.2
+			3 = smd_democracy.3
+			3 = smd_democracy.4
+		}
+	}
+
+	outcome = {
+		header = je_standard_completion_header
+		effect_header = je_standard_on_completion_header
+		color = "gold_positive"
+		conclusion_desc = smd_je_democratic_consolidation_success_desc
+		trigger = {
+			custom_tooltip = {
+				text = smd_je_democratic_consolidation_bar_tt
+				scope:journal_entry ?= {
+					"scripted_bar_progress(smd_democracy_bar)" >= 100
+				}
+			}
+			custom_tooltip = {
+				text = smd_je_democratic_consolidation_time_tt
+				NOT = { has_variable = smd_dc_probation }
+			}
+		}
+		effect = {
+			trigger_event = { id = smd_democracy.5 popup = yes }
+			remove_variable = smd_new_democracy
+			set_variable = smd_democracy_consolidated
+		}
+	}
+
+	outcome = {
+		header = je_standard_failure_header
+		effect_header = je_standard_on_failure_header
+		color = "blue_negative"
+		conclusion_desc = smd_je_democratic_consolidation_failure_desc
+		trigger = {
+			custom_tooltip = {
+				text = smd_je_democratic_consolidation_failure_tt
+				scope:journal_entry ?= {
+					"scripted_bar_progress(smd_democracy_bar)" <= 0
+				}
+			}
+		}
+		effect = {
+			trigger_event = { id = smd_democracy.6 popup = yes }
+			remove_variable = smd_new_democracy
+			set_variable = { name = smd_backslid days = 3650 }
+		}
+	}
+
+	outcome = {
+		flags = { hidden invalid_outcome }
+		conclusion_desc = smd_je_democratic_consolidation_invalid_desc
+		trigger = {
+			NOR = {
+				has_law_or_variant = law_type:law_universal_suffrage
+				has_law_or_variant = law_type:law_census_voting
+			}
+		}
+		effect = {
+			remove_variable = smd_new_democracy
+			set_variable = smd_was_undemocratic
+		}
+	}
+
+	weight = 100
+	should_be_pinned_by_default_uninvolved_or_context = yes
+}
+
+smd_je_illiberal_turn = {
+	icon = "gfx/interface/icons/event_icons/event_portrait.dds"
+
+	group = je_group_domestic_policy
+
+	is_shown_when_inactive = {
+		has_variable = smd_generic_ready
+		NOT = { is_country_type = decentralized }
+		NOT = { has_variable = smd_illiberal_cooldown }
+		OR = {
+			has_law_or_variant = law_type:law_universal_suffrage
+			has_law_or_variant = law_type:law_census_voting
+		}
+		has_variable = smd_new_ruler
+		ruler ?= {
+			OR = {
+				has_ideology = ideology:ideology_right_wing_populist_leader
+				has_ideology = ideology:ideology_authoritarian_capitalist_leader
+				has_ideology = ideology:ideology_fascist_leader
+				has_ideology = ideology:ideology_left_wing_populist_leader
+			}
+		}
+	}
+
+	possible = {
+		NOT = { has_law_or_variant = law_type:law_single_party_state }
+	}
+
+	immediate = {
+		trigger_event = { id = smd_illiberal.1 popup = yes }
+	}
+
+	scripted_progress_bar = smd_illiberal_bar
+
+	scripted_button = smd_btn_ill_pack_courts
+	scripted_button = smd_btn_ill_media_takeover
+	scripted_button = smd_btn_ill_extend_term
+
+	on_monthly_pulse = {
+		random_events = {
+			100 = 0
+			3 = smd_illiberal.2
+			2 = smd_illiberal.3
+		}
+	}
+
+	outcome = {
+		header = smd_je_illiberal_turn_entrenched_header
+		effect_header = je_standard_on_completion_header
+		color = "gold_positive"
+		conclusion_desc = smd_je_illiberal_turn_entrenched_desc
+		trigger = {
+			custom_tooltip = {
+				text = smd_je_illiberal_turn_entrenched_tt
+				scope:journal_entry ?= {
+					"scripted_bar_progress(smd_illiberal_bar)" >= 100
+				}
+			}
+		}
+		effect = {
+			trigger_event = { id = smd_illiberal.4 popup = yes }
+			set_variable = { name = smd_illiberal_cooldown days = 7300 }
+		}
+	}
+
+	outcome = {
+		header = smd_je_illiberal_turn_resilience_header
+		effect_header = je_standard_on_failure_header
+		color = "blue_negative"
+		conclusion_desc = smd_je_illiberal_turn_resilience_desc
+		trigger = {
+			custom_tooltip = {
+				text = smd_je_illiberal_turn_resilience_tt
+				NOT = {
+					ruler ?= {
+						OR = {
+							has_ideology = ideology:ideology_right_wing_populist_leader
+							has_ideology = ideology:ideology_authoritarian_capitalist_leader
+							has_ideology = ideology:ideology_fascist_leader
+							has_ideology = ideology:ideology_left_wing_populist_leader
+						}
+					}
+				}
+			}
+			scope:journal_entry ?= {
+				"scripted_bar_progress(smd_illiberal_bar)" < 60
+			}
+		}
+		effect = {
+			trigger_event = { id = smd_illiberal.5 popup = yes }
+			set_variable = { name = smd_illiberal_cooldown days = 3650 }
+		}
+	}
+
+	outcome = {
+		flags = { hidden invalid_outcome }
+		conclusion_desc = smd_je_illiberal_turn_invalid_desc
+		trigger = {
+			has_law_or_variant = law_type:law_single_party_state
+		}
+		effect = {
+			set_variable = { name = smd_illiberal_cooldown days = 7300 }
+		}
+	}
+
+	weight = 100
+	should_be_pinned_by_default_uninvolved_or_context = yes
+}
+
+smd_je_market_transition = {
+	icon = "gfx/interface/icons/event_icons/event_industry.dds"
+
+	group = je_group_domestic_policy
+
+	is_shown_when_inactive = {
+		has_variable = smd_generic_ready
+		NOT = { is_country_type = decentralized }
+		has_variable = smd_post_socialist
+		NOT = { has_variable = smd_transition_done }
+		NOT = { c:RUS ?= this }
+	}
+
+	possible = {
+		NOT = { has_law_or_variant = law_type:law_command_economy }
+	}
+
+	immediate = {
+		trigger_event = { id = smd_transition.1 popup = yes }
+	}
+
+	scripted_progress_bar = smd_transition_bar
+
+	scripted_button = smd_btn_transition_vouchers
+	scripted_button = smd_btn_transition_asset_sales
+
+	on_monthly_pulse = {
+		random_events = {
+			100 = 0
+			3 = smd_transition.2
+			3 = smd_transition.3
+			3 = smd_transition.4
+		}
+	}
+
+	outcome = {
+		header = je_standard_completion_header
+		effect_header = je_standard_on_completion_header
+		color = "gold_positive"
+		conclusion_desc = smd_je_market_transition_success_desc
+		trigger = {
+			custom_tooltip = {
+				text = smd_je_market_transition_success_tt
+				scope:journal_entry ?= {
+					"scripted_bar_progress(smd_transition_bar)" >= 100
+				}
+			}
+		}
+		effect = {
+			trigger_event = { id = smd_transition.5 popup = yes }
+			set_variable = smd_transition_done
+		}
+	}
+
+	outcome = {
+		header = je_standard_failure_header
+		effect_header = je_standard_on_failure_header
+		color = "blue_negative"
+		conclusion_desc = smd_je_market_transition_failure_desc
+		trigger = {
+			has_law_or_variant = law_type:law_command_economy
+		}
+		effect = {
+			trigger_event = { id = smd_transition.6 popup = yes }
+			set_variable = smd_transition_done
+		}
+	}
+
+	outcome = {
+		header = JOURNAL_ENTRY_TIMEOUT
+		effect_header = JOURNAL_ENTRY_ON_TIMEOUT
+		flags = { timeout }
+		conclusion_desc = smd_je_market_transition_timeout_desc
+		effect = {
+			add_modifier = {
+				name = smd_stalled_transition
+				days = normal_modifier_time
+			}
+			set_variable = smd_transition_done
+		}
+	}
+
+	timeout = 5475
+
+	weight = 100
+	should_be_pinned_by_default_uninvolved_or_context = yes
+}
+
+smd_je_left_turn = {
+	icon = "gfx/interface/icons/event_icons/event_revolutionary_flag.dds"
+
+	group = je_group_domestic_policy
+
+	is_shown_when_inactive = {
+		has_variable = smd_generic_ready
+		NOT = { is_country_type = decentralized }
+		NOT = { has_variable = smd_left_turn_cooldown }
+		NOT = { has_law_or_variant = law_type:law_command_economy }
+		has_variable = smd_new_ruler
+		ruler ?= {
+			OR = {
+				has_ideology = ideology:ideology_democratic_socialist_leader
+				has_ideology = ideology:ideology_left_wing_populist_leader
+				has_ideology = ideology:ideology_marxist_leader
+				has_ideology = ideology:ideology_state_socialist_leader
+			}
+		}
+	}
+
+	possible = {
+		is_at_war = no
+	}
+
+	immediate = {
+		trigger_event = { id = smd_leftturn.1 popup = yes }
+	}
+
+	scripted_progress_bar = smd_leftturn_bar
+
+	scripted_button = smd_btn_left_nationalise
+	scripted_button = smd_btn_left_social_missions
+
+	on_monthly_pulse = {
+		random_events = {
+			100 = 0
+			2 = smd_leftturn.2
+			3 = smd_leftturn.3
+		}
+	}
+
+	outcome = {
+		header = je_standard_completion_header
+		effect_header = je_standard_on_completion_header
+		color = "gold_positive"
+		conclusion_desc = smd_je_left_turn_success_desc
+		trigger = {
+			custom_tooltip = {
+				text = smd_je_left_turn_success_tt
+				scope:journal_entry ?= {
+					"scripted_bar_progress(smd_leftturn_bar)" >= 100
+				}
+			}
+		}
+		effect = {
+			trigger_event = { id = smd_leftturn.4 popup = yes }
+			set_variable = { name = smd_left_turn_cooldown days = 7300 }
+		}
+	}
+
+	outcome = {
+		header = je_standard_failure_header
+		effect_header = je_standard_on_failure_header
+		color = "blue_negative"
+		conclusion_desc = smd_je_left_turn_failure_desc
+		trigger = {
+			custom_tooltip = {
+				text = smd_je_left_turn_failure_tt
+				NOT = {
+					ruler ?= {
+						OR = {
+							has_ideology = ideology:ideology_democratic_socialist_leader
+							has_ideology = ideology:ideology_left_wing_populist_leader
+							has_ideology = ideology:ideology_marxist_leader
+							has_ideology = ideology:ideology_state_socialist_leader
+						}
+					}
+				}
+			}
+		}
+		effect = {
+			trigger_event = { id = smd_leftturn.5 popup = yes }
+			set_variable = { name = smd_left_turn_cooldown days = 3650 }
+		}
+	}
+
+	outcome = {
+		header = JOURNAL_ENTRY_TIMEOUT
+		effect_header = JOURNAL_ENTRY_ON_TIMEOUT
+		flags = { timeout }
+		conclusion_desc = smd_je_left_turn_timeout_desc
+		effect = {
+			set_variable = { name = smd_left_turn_cooldown days = 3650 }
+		}
+	}
+
+	timeout = 3650
+
+	weight = 100
+	should_be_pinned_by_default_uninvolved_or_context = yes
+}
+
+smd_je_fear_of_contagion = {
+	icon = "gfx/interface/icons/event_icons/event_protest.dds"
+
+	group = je_group_domestic_policy
+
+	is_shown_when_inactive = {
+		has_variable = smd_generic_ready
+		NOT = { is_country_type = decentralized }
+		has_variable = smd_contagion_alert
+		NOT = { has_variable = smd_recent_upheaval }
+		NOT = { has_variable = smd_contagion_cooldown }
+	}
+
+	possible = {
+		is_at_war = no
+	}
+
+	immediate = {
+		trigger_event = { id = smd_contagion.1 popup = yes }
+	}
+
+	scripted_progress_bar = smd_contagion_bar
+
+	scripted_button = smd_btn_contagion_crackdown
+	scripted_button = smd_btn_contagion_reassure
+
+	on_monthly_pulse = {
+		random_events = {
+			100 = 0
+			4 = smd_contagion.2
+		}
+	}
+
+	outcome = {
+		header = je_standard_completion_header
+		effect_header = je_standard_on_completion_header
+		color = "gold_positive"
+		conclusion_desc = smd_je_fear_of_contagion_success_desc
+		trigger = {
+			custom_tooltip = {
+				text = smd_je_fear_of_contagion_success_tt
+				scope:journal_entry ?= {
+					"scripted_bar_progress(smd_contagion_bar)" <= 0
+				}
+			}
+		}
+		effect = {
+			trigger_event = { id = smd_contagion.4 popup = yes }
+			set_variable = { name = smd_contagion_cooldown days = 3650 }
+		}
+	}
+
+	outcome = {
+		header = je_standard_failure_header
+		effect_header = je_standard_on_failure_header
+		color = "blue_negative"
+		conclusion_desc = smd_je_fear_of_contagion_failure_desc
+		trigger = {
+			custom_tooltip = {
+				text = smd_je_fear_of_contagion_failure_tt
+				scope:journal_entry ?= {
+					"scripted_bar_progress(smd_contagion_bar)" >= 100
+				}
+			}
+		}
+		effect = {
+			trigger_event = { id = smd_contagion.3 popup = yes }
+			set_variable = { name = smd_contagion_cooldown days = 3650 }
+		}
+	}
+
+	outcome = {
+		header = JOURNAL_ENTRY_TIMEOUT
+		effect_header = JOURNAL_ENTRY_ON_TIMEOUT
+		flags = { timeout }
+		conclusion_desc = smd_je_fear_of_contagion_timeout_desc
+		effect = {
+			set_variable = { name = smd_contagion_cooldown days = 3650 }
+		}
+	}
+
+	timeout = 1095
+
+	weight = 100
+	should_be_pinned_by_default_uninvolved_or_context = yes
+}

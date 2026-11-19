@@ -1,12 +1,7 @@
-﻿### Try to keep tags in alphabetical order if it's not too far gone, please.
-
-################################################################
-## DEFAULT COUNTRY NAMES EXAMPLE CAN BE USED WITH ANY COUNTRY ##
-################################################################
+﻿## DEFAULT COUNTRY NAMES EXAMPLE CAN BE USED WITH ANY COUNTRY ##
 
 # Uncomment when need a dynamic_country_name for any country
 DEFAULT = {
-	# ACW revolters
 	dynamic_country_name = {
 		name = csa_revolt_name
 		adjective = csa_revolt_name_adj
@@ -44,7 +39,6 @@ DEFAULT = {
 			}
 		}
 	}
-	# San Marco
 	dynamic_country_name = {
 		name = rsm_revolt_name
 		adjective = rsm_revolt_name_adj
@@ -60,7 +54,6 @@ DEFAULT = {
 		}
 	}
 
-	# Important ideologies
 	dynamic_country_name = {
 		name = generic_revolt_anti_slavery
 		adjective = generic_revolt_anti_slavery_adj
@@ -332,7 +325,6 @@ DEFAULT = {
 		}
 	}
 
-	### French Monarchists
 	dynamic_country_name = {
 		name = generic_revolt_bonapartist
 		adjective = generic_revolt_bonapartist_adj
@@ -379,7 +371,6 @@ DEFAULT = {
 		}
 	}
 
-	### India
 	dynamic_country_name = {
 		name = generic_revolt_utilitarian
 		adjective = generic_revolt_utilitarian_adj
@@ -441,7 +432,6 @@ DEFAULT = {
 		}
 	}
 
-	### Spain/Portugal
 	dynamic_country_name = {
 		name = generic_revolt_carlist
 		adjective = generic_revolt_carlist_adj
@@ -473,7 +463,6 @@ DEFAULT = {
 		}
 	}
 
-	# Majority movements
 	dynamic_country_name = {
 		name = generic_revolt_nationalist
 		adjective = generic_revolt_nationalist_adj
@@ -575,7 +564,6 @@ DEFAULT = {
 			}
 		}
 	}
-	# Generic fallbacks
 	dynamic_country_name = {
 		name = generic_revolt_1
 		adjective = generic_revolt_1_adj
@@ -699,7 +687,7 @@ SWE = {
 	}
 }
 
-ACE = { # Sumatra
+ACE = {
 	dynamic_country_name = {
 		name = dyn_c_sumatra
 		adjective = dyn_c_sumatra_adj
@@ -718,7 +706,7 @@ ACE = { # Sumatra
 	}
 }
 
-AFS = { #African Free State
+AFS = {
 	dynamic_country_name = {
 		name = dyn_c_congo_free_state
 		adjective = dyn_c_congo_free_state_adj
@@ -800,7 +788,7 @@ AFS = { #African Free State
 
 }
 
-AZB = { # Azerbaijan
+AZB = {
 	dynamic_country_name = {
 		name = dyn_c_baku
 		adjective = dyn_c_baku_adj
@@ -848,7 +836,7 @@ AZB = { # Azerbaijan
 	}
 }
 
-BAV = { # Bavaria
+BAV = {
 	dynamic_country_name = {
 		name = dyn_c_bavarian_raterepublic
 		adjective = BAV_ADJ
@@ -862,7 +850,7 @@ BAV = { # Bavaria
 	}
 }
 
-BEL = { # Belgium
+BEL = {
 	dynamic_country_name = {
 		name = dyn_c_united_belgian_states
 		adjective = BEL_ADJ
@@ -877,7 +865,7 @@ BEL = { # Belgium
 	}
 }
 
-BIC = { # East India Company
+BIC = {
 	dynamic_country_name = {
 		name = dyn_c_british_raj
 		adjective = dyn_c_british_raj_adj
@@ -1043,7 +1031,7 @@ BIC = { # East India Company
 	}
 }
 
-BNT = { # Banat
+BNT = {
 	dynamic_country_name = {
 		name = dyn_c_serbian_voivodeship
 		adjective = dyn_c_serbian_voivodeship_adj
@@ -1063,7 +1051,7 @@ BNT = { # Banat
 	}
 }
 
-DEI = { # East Indies
+DEI = {
 	dynamic_country_name = {
 		name = dyn_c_east_indies
 		adjective = dyn_c_east_indies_adj
@@ -1080,8 +1068,8 @@ DEI = { # East Indies
 	}
 }
 
-BLG = { # Bulungan
-	dynamic_country_name = { # Kalimantan
+BLG = {
+	dynamic_country_name = {
 		name = dyn_c_kalimantan
 		adjective = dyn_c_kalimantan_adj
 
@@ -1099,8 +1087,8 @@ BLG = { # Bulungan
 	}
 }
 
-BNJ = { # Banjar
-	dynamic_country_name = { # Kalimantan
+BNJ = {
+	dynamic_country_name = {
 		name = dyn_c_kalimantan
 		adjective = dyn_c_kalimantan_adj
 
@@ -1118,7 +1106,7 @@ BNJ = { # Banjar
 	}
 }
 
-BRE = { # Bremen
+BRE = {
 	dynamic_country_name = {
 		name = dyn_c_bremener_raterepublic
 		adjective = BRE_ADJ
@@ -1132,7 +1120,7 @@ BRE = { # Bremen
 	}
 }
 
-CAM = { # Cambodia
+CAM = {
 	dynamic_country_name = {
 		name = dyn_c_khmer_empire
 		adjective = dyn_c_khmer_empire_adj
@@ -1170,7 +1158,7 @@ CAM = { # Cambodia
 	}
 }
 
-MAD = { # Madagascar
+MAD = {
 	dynamic_country_name = {
 		name = dyn_c_merina_kingdom
 		adjective = dyn_c_merina_kingdom_adj
@@ -1216,7 +1204,7 @@ CAL = {
 	}
 }
 
-CHC = { # Chechnya
+CHC = {
 	dynamic_country_name = {
 		name = dyn_c_chechnya_imamate
 		adjective = dyn_c_chechnya_imamate_adj
@@ -1230,7 +1218,7 @@ CHC = { # Chechnya
 	}
 }
 
-CHI = { # China
+CHI = {
 	dynamic_country_name = {
 		name = dyn_c_great_qing
 		adjective = dyn_c_great_qing_adj
@@ -1272,7 +1260,7 @@ CHI = { # China
 	}
 }
 
-CLM = { # Colombia
+CLM = {
 	dynamic_country_name = {
 		name = dyn_c_new_granada
 		adjective = dyn_c_new_granada_adj
@@ -1302,7 +1290,7 @@ CLM = { # Colombia
 	}
 }
 
-COM = { # Comanche
+COM = {
 	dynamic_country_name = {
 		name = dyn_c_comancheria
 		adjective = dyn_c_comancheria_adj
@@ -1313,13 +1301,13 @@ COM = { # Comanche
 		trigger = {
 			exists = scope:actor
 			scope:actor ?= {
-				NOT = { is_country_type = decentralized } # if Comanche is recognized, then they get a more formal name
+				NOT = { is_country_type = decentralized }
 			}
 		}
 	}
 }
 
-CSA = { # Confederate States of America
+CSA = {
 	dynamic_country_name = {
 		name = dyn_c_confederate_state_of_america
 		adjective = CSA_ADJ
@@ -1373,7 +1361,7 @@ CSA = { # Confederate States of America
 	}
 }
 
-RSM = { # Republic of San Marco
+RSM = {
 	dynamic_country_name = {
 		name = dyn_c_republic_of_san_marco
 		adjective = RSM_ADJ
@@ -1387,7 +1375,7 @@ RSM = { # Republic of San Marco
 	}
 }
 
-LOM = { # Lombardy-Venetia
+LOM = {
 	dynamic_country_name = {
 		name = dyn_c_lombardy_venetia
 		adjective = dyn_c_lombardy_venetia_adj
@@ -1403,7 +1391,7 @@ LOM = { # Lombardy-Venetia
 	}
 }
 
-VEN = { # Venetia-Lombardy
+VEN = {
 	dynamic_country_name = {
 		name = dyn_c_venetia_lombardy
 		adjective = dyn_c_venetia_lombardy_adj
@@ -1435,7 +1423,7 @@ VEN = { # Venetia-Lombardy
 	}
 }
 
-FIN = { # Finland
+FIN = {
 	dynamic_country_name = {
 		name = dyn_c_grand_duchy_of_finland
 		adjective = FIN_ADJ
@@ -1456,7 +1444,7 @@ FIN = { # Finland
 	}
 }
 
-POL = { # Poland
+POL = {
 	dynamic_country_name = {
 		name = dyn_c_congress_poland
 		adjective = dyn_c_congress_poland_adj
@@ -1477,7 +1465,7 @@ POL = { # Poland
 	}
 }
 
-UBD = { # Baltic
+UBD = {
 	dynamic_country_name = {
 		name = dyn_c_baltic_governorate
 		adjective = dyn_c_baltic_governorate_adj
@@ -1498,7 +1486,7 @@ UBD = { # Baltic
 	}
 }
 
-GBR = { # Great Britain of United Kingdom
+GBR = {
 	dynamic_country_name = {
 		name = dyn_c_british_republic
 		adjective = GBR_ADJ
@@ -1554,7 +1542,7 @@ GBR = { # Great Britain of United Kingdom
 	}
 }
 
-GER = { # Germany
+GER = {
 	dynamic_country_name = {
 		name = dyn_c_german_empire
 		adjective = GER_ADJ
@@ -1583,7 +1571,7 @@ GER = { # Germany
 	}
 }
 
-HAI = { # Haiti
+HAI = {
 	dynamic_country_name = {
 		name = dyn_c_saint-domingue
 		adjective = dyn_c_saint-domingue_adj
@@ -1610,7 +1598,7 @@ HAI = { # Haiti
 	}
 }
 
-HAN = { # Hannover
+HAN = {
 	dynamic_country_name = {
 		name = dyn_c_hanover
 		adjective = dyn_c_hanover_adj
@@ -1631,7 +1619,7 @@ HAN = { # Hannover
 	}
 }
 
-HBC = { # Hudson Bay Company
+HBC = {
 	dynamic_country_name = {
 		name = dyn_c_ruperts_land
 		adjective = dyn_c_ruperts_land_adj
@@ -1645,7 +1633,7 @@ HBC = { # Hudson Bay Company
 	}
 }
 
-HOL = { # Holstein
+HOL = {
 	dynamic_country_name = {
 		name = dyn_c_schleswig_holstein
 		adjective = dyn_c_schleswig_holstein_adj
@@ -1662,7 +1650,7 @@ HOL = { # Holstein
 	}
 }
 
-HRO = { # Herero
+HRO = {
 	dynamic_country_name = {
 		name = dyn_c_hereroland
 		adjective = dyn_c_hereroland_adj
@@ -1673,13 +1661,13 @@ HRO = { # Herero
 		trigger = {
 			exists = scope:actor
 			scope:actor ?= {
-				NOT = { is_country_type = decentralized } # if Herero is recognized, then they get a more formal name
+				NOT = { is_country_type = decentralized }
 			}
 		}
 	}
 }
 
-IDN = { # Majapahit
+IDN = {
 	dynamic_country_name = {
 		name = dyn_c_majapahit
 		adjective = dyn_c_majapahit_adj
@@ -1698,7 +1686,7 @@ IDN = { # Majapahit
 		}
 	}
 
-	dynamic_country_name = { # Srivijaya
+	dynamic_country_name = {
 		name = dyn_c_srivijaya
 		adjective = dyn_c_srivijaya_adj
 
@@ -1720,8 +1708,8 @@ IDN = { # Majapahit
 	}
 }
 
-ITA = { # Italy
-	dynamic_country_name = { # Papal Italy
+ITA = {
+	dynamic_country_name = {
 		name = dyn_c_papal_italy
 		adjective = dyn_c_papal_italy_adj
 
@@ -1738,8 +1726,8 @@ ITA = { # Italy
 	}
 }
 
-JAP = { # Japan
-	dynamic_country_name = { # Tokugawa Shogunate
+JAP = {
+	dynamic_country_name = {
 		name = dyn_c_tokugawa_shogunate
 		adjective = JAP_ADJ
 
@@ -1750,7 +1738,7 @@ JAP = { # Japan
 			scope:actor ?= {
 				country_has_monarchy_law = yes
 				OR = {
-					game_date < 1836.1.2 # Needed to get around initialization
+					game_date < 1836.1.2
 					ruler ?= {
 						has_variable = house_tokugawa
 					}
@@ -1765,7 +1753,7 @@ JAP = { # Japan
 			}
 		}
 	}
-	dynamic_country_name = { # Japanese Taikunate
+	dynamic_country_name = {
 		name = dyn_c_japanese_taikunate
 		adjective = JAP_ADJ
 
@@ -1795,7 +1783,7 @@ JAP = { # Japan
 			}
 		}
 	}
-	dynamic_country_name = { # Republic of Japan
+	dynamic_country_name = {
 		name = dyn_c_republic_of_japan
 		adjective = JAP_ADJ
 
@@ -1809,7 +1797,7 @@ JAP = { # Japan
 	}
 }
 
-JMB = { # Jambi
+JMB = {
 	dynamic_country_name = {
 		name = dyn_c_sumatra
 		adjective = dyn_c_sumatra_adj
@@ -1828,8 +1816,8 @@ JMB = { # Jambi
 	}
 }
 
-KTI = { # Kutai
-	dynamic_country_name = { # Kalimantan
+KTI = {
+	dynamic_country_name = {
 		name = dyn_c_kalimantan
 		adjective = dyn_c_kalimantan_adj
 
@@ -1847,8 +1835,8 @@ KTI = { # Kutai
 	}
 }
 
-KOR = { # Korea
-	dynamic_country_name = { # Joseon
+KOR = {
+	dynamic_country_name = {
 		name = dyn_c_korea_joseon
 		adjective = dyn_c_korea_joseon_adj
 
@@ -1860,7 +1848,7 @@ KOR = { # Korea
 			scope:actor ?= { country_has_monarchy_law = yes }
 		}
 	}
-	dynamic_country_name = { # Korean Empire
+	dynamic_country_name = {
 		name = dyn_c_empire_of_korea
 		adjective = dyn_c_empire_of_korea_adj
 
@@ -1877,8 +1865,8 @@ KOR = { # Korea
 	}
 }
 
-LAN = { # Lanfang
-	dynamic_country_name = { # Bo-Ni
+LAN = {
+	dynamic_country_name = {
 		name = dyn_c_boni
 		adjective = dyn_c_boni_adj
 
@@ -1896,7 +1884,7 @@ LAN = { # Lanfang
 	}
 }
 
-LAT = { # Latvia
+LAT = {
 	dynamic_country_name = {
 		name = dyn_c_courland
 		adjective = dyn_c_courland_adj
@@ -1911,7 +1899,7 @@ LAT = { # Latvia
 	}
 }
 
-MEX = { # Mexico
+MEX = {
 	dynamic_country_name = {
 		name = dyn_c_mexican_empire
 		adjective = MEX_ADJ
@@ -1937,7 +1925,7 @@ MEX = { # Mexico
 	}
 }
 
-MKT = { # Miskito
+MKT = {
 	dynamic_country_name = {
 		name = dyn_c_miskito_kingdom
 		adjective = MKT_ADJ
@@ -1990,7 +1978,7 @@ MGL = {
 }
 
 
-MOL = { # Moldavia
+MOL = {
 	dynamic_country_name = {
 		name = dyn_c_moldova
 		adjective = dyn_c_moldova_adj
@@ -2037,7 +2025,7 @@ MOL = { # Moldavia
 	}
 }
 
-NAL = { # Natalia
+NAL = {
 	dynamic_country_name = {
 		name = dyn_c_colony_of_natal
 		adjective = dyn_c_colony_of_natal_adj
@@ -2080,7 +2068,7 @@ NAL = { # Natalia
 	}
 }
 
-NEJ = { # Nejd
+NEJ = {
 	dynamic_country_name = {
 		name = dyn_c_saudi_arabia
 		adjective = dyn_c_saudi_arabia_adj
@@ -2097,7 +2085,7 @@ NEJ = { # Nejd
 	}
 }
 
-UNL = { # United Netherlands
+UNL = {
 	dynamic_country_name = {
 		name = dyn_c_burgundy
 		adjective = dyn_c_burgundy_adj
@@ -2111,7 +2099,7 @@ UNL = { # United Netherlands
 	}
 }
 
-ONT = { # Ontario
+ONT = {
 	dynamic_country_name = {
 		name = dyn_c_upper_canada
 		adjective = dyn_c_upper_canada_adj
@@ -2132,7 +2120,7 @@ ONT = { # Ontario
 	}
 }
 
-ORA = { # Oranje
+ORA = {
 	dynamic_country_name = {
 		name = dyn_c_orange_river_sovereignty
 		adjective = dyn_c_orange_river_sovereignty_adj
@@ -2145,7 +2133,6 @@ ORA = { # Oranje
 		}
 	}
 
-	# ORA is Winburg as long as it both is unrecognized and does not completely own Vrystaat; if it is unrecognized but takes eastern Griqualand, it becomes Oranje. Likewise, if Griqualand is not annexed but ORA becomes recognized it becomes Oranje
 	dynamic_country_name = {
 		name = dyn_c_winburg
 		adjective = dyn_c_winburg_adj
@@ -2191,7 +2178,7 @@ ORA = { # Oranje
 	}
 }
 
-ORG = { # Oregon
+ORG = {
 	dynamic_country_name = {
 		name = dyn_c_columbia
 		adjective = dyn_c_columbia_adj
@@ -2247,7 +2234,7 @@ ORG = { # Oregon
 	}
 }
 
-PAN = { # Punjab
+PAN = {
 	dynamic_country_name = {
 		name = dyn_c_sikh_empire
 		adjective = dyn_c_sikh_empire_adj
@@ -2268,7 +2255,7 @@ PAN = { # Punjab
 	}
 }
 
-PAP = { # Papal State, but the base name is technically Rome
+PAP = {
 	dynamic_country_name = {
 		name = dyn_c_papal_states
 		adjective = dyn_c_papal_states_adj
@@ -2294,8 +2281,8 @@ PAP = { # Papal State, but the base name is technically Rome
 	}
 }
 
-PON = { # Pontianak
-	dynamic_country_name = { # Kalimantan
+PON = {
+	dynamic_country_name = {
 		name = dyn_c_kalimantan
 		adjective = dyn_c_kalimantan_adj
 
@@ -2332,7 +2319,7 @@ POR = {
 	}
 }
 
-QUE = { # Quebec
+QUE = {
 	dynamic_country_name = {
 		name = dyn_c_lower_canada
 		adjective = dyn_c_lower_canada_adj
@@ -2353,7 +2340,7 @@ QUE = { # Quebec
 	}
 }
 
-RUS = { # Russia
+RUS = {
 	dynamic_country_name = {
 		name = dyn_c_russian_republic
 		adjective = dyn_c_russian_republic_adj
@@ -2419,7 +2406,6 @@ RUS = { # Russia
 # South Africa/Cape Colony
 SAF = {
 
-	# Cape of Good Hope
 	dynamic_country_name = {
 		name = dyn_c_cape_of_good_hope
 		adjective = dyn_c_cape_of_good_hope_adj
@@ -2434,7 +2420,6 @@ SAF = {
 		}
 	}
 
-	# Cape Colony. Don't let the loc key fool you!
 	dynamic_country_name = {
 		name = dyn_c_south_africa
 		adjective = dyn_c_south_africa_adj
@@ -2473,7 +2458,7 @@ SAF = {
 	}
 }
 
-SAK = { # Siak
+SAK = {
 	dynamic_country_name = {
 		name = dyn_c_sumatra
 		adjective = dyn_c_sumatra_adj
@@ -2492,7 +2477,7 @@ SAK = { # Siak
 	}
 }
 
-SCH = { # Schleswig
+SCH = {
 	dynamic_country_name = {
 		name = dyn_c_schleswig_holstein
 		adjective = dyn_c_schleswig_holstein_adj
@@ -2509,7 +2494,7 @@ SCH = { # Schleswig
 	}
 }
 
-SEQ = { # Indian Territory
+SEQ = {
 	dynamic_country_name = {
 		name = dyn_c_sequoyah
 		adjective = dyn_c_sequoyah_adj
@@ -2523,7 +2508,7 @@ SEQ = { # Indian Territory
 	}
 }
 
-SIC = { # Two Sicilies
+SIC = {
 	dynamic_country_name = {
 		name = dyn_c_sicily
 		adjective = dyn_c_sicily_adj
@@ -2556,8 +2541,8 @@ SIC = { # Two Sicilies
 	}
 }
 
-SMB = { # Sambas
-	dynamic_country_name = { # Kalimantan
+SMB = {
+	dynamic_country_name = {
 		name = dyn_c_kalimantan
 		adjective = dyn_c_kalimantan_adj
 
@@ -2575,7 +2560,7 @@ SMB = { # Sambas
 	}
 }
 
-SRK = { # Surakarta
+SRK = {
 	dynamic_country_name = {
 		name = dyn_c_mataram
 		adjective = dyn_c_mataram_adj
@@ -2592,8 +2577,8 @@ SRK = { # Surakarta
 	}
 }
 
-STG = { # Sintang
-	dynamic_country_name = { # Kalimantan
+STG = {
+	dynamic_country_name = {
 		name = dyn_c_kalimantan
 		adjective = dyn_c_kalimantan_adj
 
@@ -2611,7 +2596,7 @@ STG = { # Sintang
 	}
 }
 
-TAS = { # Tasmania
+TAS = {
 	dynamic_country_name = {
 		name = dyn_c_van_diemans_land
 		adjective = dyn_c_van_diemans_land_adj
@@ -2632,7 +2617,7 @@ TAS = { # Tasmania
 	}
 }
 
-TRN = { # Transvaal
+TRN = {
 	dynamic_country_name = {
 		name = dyn_c_transvaal_colony
 		adjective = TRN_ADJ
@@ -2645,7 +2630,6 @@ TRN = { # Transvaal
 		}
 	}
 
-	# Transvaal's name before it owns Pretoria
 	dynamic_country_name = {
 		name = dyn_c_potchefstroom
 		adjective = dyn_c_potchefstroom_adj
@@ -2690,7 +2674,7 @@ TRN = { # Transvaal
 	}
 }
 
-TPG = { # Taiping
+TPG = {
 	dynamic_country_name = {
 		name = dyn_c_taiping_republic
 		adjective = TPG_ADJ
@@ -2747,7 +2731,7 @@ TPG = { # Taiping
 	}
 }
 
-TSW = { # Tswana
+TSW = {
 	dynamic_country_name = {
 		name = dyn_c_botswana
 		adjective = dyn_c_botswana_adj
@@ -2758,7 +2742,7 @@ TSW = { # Tswana
 		trigger = {
 			exists = scope:actor
 			scope:actor ?= {
-				NOT = { is_country_type = decentralized } # if Tswana is recognized, then they get a more formal name
+				NOT = { is_country_type = decentralized }
 			}
 			coa_def_british_ensign_trigger = no
 		}
@@ -2776,7 +2760,7 @@ TSW = { # Tswana
 	}
 }
 
-TUN = { # Tunis
+TUN = {
 	dynamic_country_name = {
 		name = dyn_c_tunisia
 		adjective = TUN_ADJ
@@ -2790,7 +2774,7 @@ TUN = { # Tunis
 	}
 }
 
-TUR = { # Turkey
+TUR = {
 	dynamic_country_name = {
 		name = dyn_c_ottoman_empire
 		adjective = dyn_c_ottoman_empire_adj
@@ -2804,7 +2788,7 @@ TUR = { # Turkey
 	}
 }
 
-TUS = { # Tuscany
+TUS = {
 	dynamic_country_name = {
 		name = dyn_c_etruria
 		adjective = dyn_c_etruria_adj
@@ -2819,7 +2803,7 @@ TUS = { # Tuscany
 	}
 }
 
-UKR = { # Ukraine
+UKR = {
 	dynamic_country_name = {
 		name = dyn_c_free_territory
 		adjective = dyn_c_free_territory_adj
@@ -2837,7 +2821,7 @@ UKR = { # Ukraine
 	}
 }
 
-USA = { # United States of America
+USA = {
 	dynamic_country_name = {
 		name = dyn_c_united_states
 		adjective = USA_ADJ
@@ -2947,7 +2931,7 @@ USA = { # United States of America
 }
 
 SUD = {
-	dynamic_country_name = { # Mahist State
+	dynamic_country_name = {
 		name = dyn_c_mahdist_state
 		adjective = dyn_c_mahdist_state_adj
 
@@ -2961,7 +2945,7 @@ SUD = {
 		}
 	}
 
-	dynamic_country_name = { # Funj
+	dynamic_country_name = {
 		name = dyn_c_funj_state
 		adjective = dyn_c_funj_state_adj
 
@@ -2976,7 +2960,7 @@ SUD = {
 	}
 }
 
-LKT = { # Lakota
+LKT = {
 	dynamic_country_name = {
 		name = dyn_c_oceti_sakowin
 		adjective = dyn_c_oceti_sakowin_adj
@@ -2986,13 +2970,13 @@ LKT = { # Lakota
 
 		trigger = {
 			exists = scope:actor
-			NOT = { exists = c:DKT } # Lakota will be considered the united Seven Council Fires if Dakota are not independent
+			NOT = { exists = c:DKT }
 		}
 	}
 }
 
-SCA = { # Scandinavia
-	dynamic_country_name = { # Danish Scandinavia
+SCA = {
+	dynamic_country_name = {
 		name = dyn_c_scandinavia_kalmar_union
 		adjective = SCA_ADJ
 
@@ -3008,7 +2992,7 @@ SCA = { # Scandinavia
 		}
 	}
 
-	dynamic_country_name = { # Finnish Scandinavia, somehow
+	dynamic_country_name = {
 		name = dyn_c_scandinavia_fennoscandia
 		adjective = FIN_ADJ
 
@@ -3027,7 +3011,7 @@ SCA = { # Scandinavia
 	}
 }
 
-YOG = { # Yogyakarta
+YOG = {
 	dynamic_country_name = {
 		name = dyn_c_mataram
 		adjective = dyn_c_mataram_adj
@@ -3044,8 +3028,8 @@ YOG = { # Yogyakarta
 	}
 }
 
-ZAI = { # Azal (Zaidi State)
-	dynamic_country_name = { # Zaidi
+ZAI = {
+	dynamic_country_name = {
 		name = dyn_c_qasimid_state
 		adjective = dyn_c_qasimid_state_adj
 
@@ -3064,7 +3048,7 @@ ZAI = { # Azal (Zaidi State)
 	}
 }
 
-LOU = { # Louisiana
+LOU = {
 	dynamic_country_name = {
 		name = dyn_c_louisiana
 		adjective = LOU_ADJ
@@ -3147,7 +3131,7 @@ PNS = {
 }
 
 KAZ = {
-	dynamic_country_name = { # Republic
+	dynamic_country_name = {
 		name = dyn_c_kazakh_republic
 		adjective = dyn_c_kazakh_republic_adj
 
@@ -3164,7 +3148,7 @@ KAZ = {
 			coa_def_independent_trigger = yes
 		}
 	}
-	dynamic_country_name = { # Khanate
+	dynamic_country_name = {
 		name = dyn_c_kazakh_khanate
 		adjective = dyn_c_kazakh_khanate_adj
 
@@ -3179,7 +3163,7 @@ KAZ = {
 			coa_def_independent_trigger = yes
 		}
 	}
-	dynamic_country_name = { # Autonomy
+	dynamic_country_name = {
 		name = dyn_c_kazakh_steppe_governorate_general
 		adjective = dyn_c_kazakh_steppe_governorate_general_adj
 
@@ -3213,7 +3197,7 @@ KAZ = {
 			}
 		}
 	}
-	dynamic_country_name = { # Autonomy
+	dynamic_country_name = {
 		name = dyn_c_kazakh_alash_autonomy
 		adjective = dyn_c_kazakh_alash_autonomy_adj
 
@@ -3504,7 +3488,7 @@ HRE = {
 		}
 	}
 }
-CTR = { # Santa Catarina
+CTR = {
 	dynamic_country_name = {
 		name = dyn_c_catharinense_republic
 		adjective = CTR_ADJ
@@ -3518,7 +3502,7 @@ CTR = { # Santa Catarina
 	}
 }
 
-PNI = { # Piratini
+PNI = {
 	dynamic_country_name = {
 		name = dyn_c_riograndense_republic
 		adjective = dyn_c_riograndense_republic_adj
@@ -3532,7 +3516,7 @@ PNI = { # Piratini
 	}
 }
 
-FND = { # Federation
+FND = {
 	dynamic_country_name = {
 		name = dyn_c_american_federation
 		adjective = dyn_c_american_federation_adj
@@ -3594,7 +3578,7 @@ FND = { # Federation
 	}
 }
 
-WAL = { # Wallachia
+WAL = {
 	dynamic_country_name = {
 		name = dyn_c_united_principalities
 		adjective = dyn_c_united_principalities_adj
@@ -3643,7 +3627,7 @@ PLC = {
 	}
 }
 
-TIS = { # Turtle Island
+TIS = {
 	dynamic_country_name = {
 		name = dyn_c_great_turtle
 		adjective = dyn_c_great_turtle_adj
@@ -3659,7 +3643,7 @@ TIS = { # Turtle Island
 	}
 }
 
-ARG = { # Argentina
+ARG = {
 	dynamic_country_name = {
 		name = dyn_c_argentine_confederation
 		adjective = ARG_ADJ
@@ -3679,7 +3663,7 @@ ARG = { # Argentina
 		}
 	}
 
-	dynamic_country_name = { # Rio de la Plata also has this dynamic name
+	dynamic_country_name = {
 		name = dyn_c_river_plate
 		adjective = dyn_c_river_plate_adj
 
@@ -3857,7 +3841,7 @@ VNZ = {
 }
 
 PLT = {
-	dynamic_country_name = { # Argentina also has this dynamic name
+	dynamic_country_name = {
 		name = dyn_c_river_plate
 		adjective = dyn_c_river_plate_adj
 
@@ -4635,7 +4619,7 @@ SER = { # serbian_montenegro
 	}
 }
 
-YUG = { # Illyria
+YUG = {
 	dynamic_country_name = {
 		name = dyn_c_illyria
 		adjective = dyn_c_illyria_adj
@@ -4860,7 +4844,7 @@ PHL = {
 	}
 }
 
-IBE = { # Iberia
+IBE = {
 	dynamic_country_name = {
 		name = dyn_c_iberian_union
 		adjective = IBE_ADJ
@@ -4887,7 +4871,7 @@ IBE = { # Iberia
 
 		trigger = {
 			scope:actor ?= {
-				any_primary_culture = { # Only one primary culture
+				any_primary_culture = {
 					count = 1
 				}
 				country_has_primary_culture = cu:iberian
@@ -4955,7 +4939,7 @@ IBE = { # Iberia
 			scope:actor ?= {
 				has_law_or_variant = law_type:law_corporate_state
 				has_law_or_variant = law_type:law_single_party_state
-				any_primary_culture = { # Only one primary culture
+				any_primary_culture = {
 					count = 1
 				}
 				country_has_primary_culture = cu:iberian

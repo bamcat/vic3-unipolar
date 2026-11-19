@@ -1,54 +1,39 @@
 ﻿l_french:
-
- # ==========================================
- # ENACTMENT EVENT LOCALIZATION
- # ==========================================
-
- # drug_laws.1 — Cost of Prohibition
  drug_laws.1.t:0 "Le coût de l'interdiction"
  drug_laws.1.d:0 "La campagne visant à interdire toutes les substances enivrantes dans [ROOT.GetCountry.GetName] a commencé, mais l'application de la loi s'avère coûteuse. La police et les procureurs ont besoin de ressources. Les frontières doivent être surveillées. La solution de rechange, qui consiste à déclarer l'interdiction et à espérer la conformité, n'a fonctionné nulle part où elle a été essayée.\n\n[ROOT.GetCountry.GetRuler.GetPrimaryRoleTitle] [ROOT.GetCountry.GetRuler.GetLastName] Le gouvernement doit décider à quel point il est prêt à prendre cette mesure."
  drug_laws.1.f:0 "Une loi sans application est une suggestion."
  drug_laws.1.a:0 "Exécution intégrale — sans frais"
  drug_laws.1.b:0 "Mesures d'exécution — renforcer la conformité dans le temps"
 
- # drug_laws.2 — The Church Speaks
  drug_laws.2.t:0 "La valeur [SCOPE.sCharacter('devout_leader').GetPrimaryRoleTitle] Parle"
  drug_laws.2.d:0 "[SCOPE.sCharacter('devout_leader').GetFullName], chef du [SCOPE.gsInterestGroup('devout_ig').GetName], a publié une déclaration publique en faveur d'une réglementation plus stricte des substances. Le cadre est explicitement moral: l'intoxication comme corruption spirituelle, l'interdiction comme l'œuvre juste de l'État. La question est de savoir s'il faut adopter ce cadre ou maintenir une base laïque pour la législation."
  drug_laws.2.f:0 "L'autorité morale et l'autorité juridique ne sont pas les mêmes, mais elles peuvent travailler ensemble."
  drug_laws.2.a:0 "Accueillez leur soutien: un front uni renforce la loi"
  drug_laws.2.b:0 "Qu'il s'agisse d'une question laïque, qu'il ne s'agisse pas d'une question d'encadrement."
 
- # drug_laws.3 — The Intelligentsia Makes Its Case
  drug_laws.3.t:0 "[SCOPE.sCharacter('intelligentsia_leader').GetFullName] Fait la preuve"
  drug_laws.3.d:0 "[SCOPE.sCharacter('intelligentsia_leader').GetFullName], représentant le [SCOPE.gsInterestGroup('intelligentsia_ig').GetName], a publié une analyse détaillée de la politique de dépénalisation des drogues des pays qui l'ont déjà adoptée. Les résultats sont sans équivoque : les taux d'incarcération diminuent, les décès par surdose diminuent, les coûts d'exécution diminuent. Le rapport est largement lu - et largement attaqué par des intérêts conservateurs qui prétendent que les preuves sont à côté de ce point."
  drug_laws.3.f:0 "Les données ne tiennent pas compte du débat."
  drug_laws.3.a:0 "Faire reculer la recherche — la publier et laisser les preuves mener"
  drug_laws.3.b:0 "Tenir les universitaires hors de la politique"
 
- # drug_laws.4 — Medical Establishment
  drug_laws.4.t:0 "Les médecins soutiennent la réduction des méfaits"
  drug_laws.4.d:0 "L'établissement médical [ROOT.GetCountry.GetAdjective], dirigé par des responsables de la santé publique et des spécialistes de la toxicomanie, a officiellement appuyé le projet de loi sur les sites d'injection sûrs. Leur argument est simple : la consommation surveillée réduit les décès par surdose, relie les utilisateurs au traitement et n'augmente pas les taux de consommation de drogues. Les preuves d'autres pays sont convaincantes. L'opposition politique des groupes religieux et conservateurs est tout aussi prévisible."
  drug_laws.4.f:0 "La médecine n'est pas morale. Mais les vies sont des vies."
  drug_laws.4.a:0 "En arrière le consensus médical — les preuves sont claires"
  drug_laws.4.b:0 "Considérer cela comme une question morale — la médecine n'a pas toutes les réponses"
 
- # drug_laws.5 — International Condemnation
  drug_laws.5.t:0 "Le monde regarde"
  drug_laws.5.d:0 "La perspective de [ROOT.GetCountry.GetName] légaliser le commerce de la drogue a suscité une attention internationale immédiate. [SCOPE.sCountry('c:USA').GetName] a publié une note diplomatique officielle exprimant sa préoccupation. Plusieurs autres gouvernements ont fait connaître leur mécontentement. Le consensus international sur l'interdiction des drogues, aussi imparfait soit-il, est clair, et [ROOT.GetCountry.GetName] est sur le point d'en sortir."
  drug_laws.5.f:0 "La souveraineté est facile à déclarer. Ses conséquences prennent plus de temps à arriver."
  drug_laws.5.a:0 "L'opinion internationale en désaccord — [ROOT.GetCountry.GetName] établit ses propres lois"
  drug_laws.5.b:0 "Continuez tranquillement — ne faites pas de déclarations, n'invitez pas la confrontation"
 
- # drug_laws.6 — Criminal Networks Resist
  drug_laws.6.t:0 "Les cartes combattent la loi"
  drug_laws.6.d:0 "Le projet de loi sur la drogue menace l'économie criminelle actuelle. Des réseaux qui profitent de la zone grise actuelle entre tolérance et interdiction ont commencé à travailler activement contre l'adoption de la loi - corrompre les fonctionnaires locaux, répandre la désinformation, et dans certains cas, intimider les législateurs. Le retour en arrière est organisé, bien financé et efficace.\n\n[ROOT.GetCountry.GetRuler.GetPrimaryRoleTitle] [ROOT.GetCountry.GetRuler.GetLastName] doit décider comment répondre."
  drug_laws.6.f:0 "Les cartels préfèrent les lois qui leur permettent de fonctionner."
  drug_laws.6.a:0 "Accepter l'échec — agir plus soigneusement"
  drug_laws.6.b:0 "Accélérer l'application de la loi — éliminer les réseaux qui résistent à la loi"
-
- # ==========================================
- # ENACTMENT MODIFIER NAMES
- # ==========================================
 
  drug_law_prohibition_enforcement:0 "Campagne d ' interdiction"
  drug_law_prohibition_enforcement_desc:0 "Une campagne d'application de la loi bien dotée améliore les chances d'adoption et d'observation de l'interdiction."
@@ -86,179 +71,162 @@
  drug_law_criminal_pushback:0 "Résistance des réseaux criminels"
  drug_law_criminal_pushback_desc:0 "La criminalité organisée s'emploie activement à prévenir l'adoption de lois sur la drogue qui menaceraient ses activités."
 
- # disability_laws.1 — Employer Resistance
  disability_laws.1.t:0 "Les employeurs repoussent les mesures d'adaptation en milieu de travail"
  disability_laws.1.d:0 "Le projet de loi sur l'aménagement du lieu de travail a suscité une réponse organisée de la part des employeurs [ROOT.GetCountry.GetAdjective]. [SCOPE.sCharacter('employer_leader').GetFullName], parlant pour le [SCOPE.gsInterestGroup('employer_ig').GetName], a soutenu que les coûts de conformité sont inapplicables — que les petites entreprises en particulier ne peuvent pas absorber les dépenses de modification de l'équipement, d'adaptation des fonctions et de restructuration des lieux de travail pour accommoder les employés handicapés.\n\n Le gouvernement doit décider comment réagir."
  disability_laws.1.f:0 "Chaque politique inclusive a quelqu'un qui prétend que les coûts sont trop élevés."
  disability_laws.1.a:0 "Tenir ferme — le respect de la loi n'est pas facultatif"
  disability_laws.1.b:0 "Offrir une période de transition — conformité progressive sur plusieurs années"
- 
- # disability_laws.2 — Construction Lobby
+
  disability_laws.2.t:0 "Objets du secteur de la construction"
  disability_laws.2.d:0 "Le projet de loi sur l'infrastructure accessible a suscité une objection officielle de l'industrie de la construction [ROOT.GetCountry.GetAdjective]. Leur argument : l'exigence de rénover les bâtiments existants pour les rendre conformes aux normes d'accessibilité est techniquement complexe et prohibitivement coûteuse pour de nombreux propriétaires. Ils demandent soit une clause grand-père pour les structures existantes, soit un échéancier beaucoup plus long."
  disability_laws.2.f:0 "Chaque bâtiment construit sans rampe est maintenant un problème politique."
  disability_laws.2.a:0 "Application de normes strictes — respect intégral des délais, aucune exception"
  disability_laws.2.b:0 "Conformité par phase — structures existantes, nouvelles normes pour les nouveaux bâtiments"
- 
- # disability_laws.3 — Who Pays
+
  disability_laws.3.t:0 "Qui paie pour l'infrastructure accessible?"
  disability_laws.3.d:0 "La loi sur l'infrastructure accessible soulève une question que les rédacteurs du projet de loi ont jusqu'ici évitée : qui paie réellement la rénovation? Si l'obligation incombe entièrement aux propriétaires de biens privés, les propriétaires et les entreprises de moindre importance seront lourdement pénalisés. Si l'État subventionne le travail, le budget public en prend le coup. Le Parlement est dans l'impasse sur la question."
  disability_laws.3.f:0 "L'inclusion a un prix. L'argument est de savoir qui paie."
  disability_laws.3.a:0 "Aides d'État — le gouvernement absorbe les coûts de modernisation pour accélérer la conformité"
  disability_laws.3.b:0 "Obligation privée — les propriétaires assument le coût de la conformité"
- 
- # disability_laws.4 — Medical Endorsement
+
  disability_laws.4.t:0 "[SCOPE.sCharacter('medical_leader').GetFullName] Approuve les traitements publics"
  disability_laws.4.d:0 "[SCOPE.sCharacter('medical_leader').GetFullName] du [SCOPE.gsInterestGroup('medical_ig').GetName] a publié une approbation officielle de la loi sur les traitements publics, citant des preuves que le traitement d'invalidité financé par l'État produit des gains mesurables dans la participation de la main-d'oeuvre, réduit les coûts des soins de santé à long terme et améliore les résultats à l'échelle de la population. L'appui est utilisé par les partisans pour faire valoir qu'il ne s'agit pas d'un organisme de bienfaisance — c'est un investissement."
  disability_laws.4.f:0 "La médecine ne fait pas de distinction entre les malades méritants et les malades sans défense."
  disability_laws.4.a:0 "Un rapport de santé publique de la Commission — que les éléments de preuve plaisent"
  disability_laws.4.b:0 "Il s'agit d'une question de droits et non d'un problème médical."
- 
- # disability_laws.5 — Fiscal Resistance
+
  disability_laws.5.t:0 "[SCOPE.sCharacter('fiscal_leader').GetFullName] Dit l'État ne peut pas Afford"
  disability_laws.5.d:0 "[SCOPE.sCharacter('fiscal_leader').GetFullName], représentant le [SCOPE.gsInterestGroup('fiscal_ig').GetName], a effectué une évaluation rigoureuse : le coût continu d'un traitement public complet pour les personnes handicapées n'est pas viable. L'État est déjà étendu. Cette loi, si elle est adoptée intégralement, nécessitera des augmentations ou des réductions d'impôt ailleurs. La question n'est pas de savoir si [ROOT.GetCountry.GetName] veut s'occuper de ses citoyens handicapés, mais s'il le peut."
  disability_laws.5.f:0 "Un budget est un document moral."
  disability_laws.5.a:0 "Tenez la ligne — la dépense est une obligation morale, pas un choix"
  disability_laws.5.b:0 "Phase des dépenses — mise en œuvre échelonnée sur plusieurs années"
- 
- # disability_laws.6 — Advocates Rally
+
  disability_laws.6.t:0 "Avocats en matière de handicap"
  disability_laws.6.d:0 "Une coalition d'organisations de défense des droits des personnes handicapées a lancé une campagne publique en faveur de la législation proposée. Leur message est direct: [ROOT.GetCountry.GetAdjective] la société a exclu les personnes handicapées de la pleine participation depuis trop longtemps. La législation débattue n'est pas une faveur, c'est une correction d'une injustice de longue date. La campagne a suscité une couverture sympathique et change l'opinion publique."
  disability_laws.6.f:0 "Rien sur nous sans nous."
  disability_laws.6.a:0 "Reçoit officiellement leur délégation - donner un appui officiel à la campagne"
  disability_laws.6.b:0 "Reconnaître la campagne sans l'amplifier"
- 
- # disability_laws.7 — Conservative Opposition
+
  disability_laws.7.t:0 "[SCOPE.sCharacter('conservative_leader').GetFullName] Dirige l'opposition"
  disability_laws.7.d:0 "[SCOPE.sCharacter('conservative_leader').GetFullName] du [SCOPE.gsInterestGroup('conservative_ig').GetName] a organisé une campagne d'opposition publique contre la législation sur le handicap. L'argument est familier: cette dépendance de l'État sape le caractère individuel, on ne peut s'attendre à ce que la population productive porte un fardeau croissant de soutien, et que les organismes de bienfaisance privés existants sont suffisants. L'encadrement suscite des critiques de la part des groupes de défense des droits des personnes handicapées, mais il résonne avec certaines parties de l'électorat."
  disability_laws.7.f:0 "L'argument contre l'inclusion concerne toujours le fardeau d'une autre personne."
  disability_laws.7.a:0 "Répliquez publiquement — défendez directement la législation"
  disability_laws.7.b:0 "Ne le dignifiez pas avec une réponse — appuyez sur"
- 
- # ==========================================
- # ENACTMENT MODIFIER NAMES
- # ==========================================
- 
+
  disability_employer_pressure:0 "Campagne de conformité de l'employeur"
  disability_employer_pressure_desc:0 "Le gouvernement s'est fermement opposé à la résistance des employeurs. La loi sera appliquée selon le calendrier prévu."
- 
+
  disability_compliance_delay:0 "Période de transition de l'employeur accordée"
  disability_compliance_delay_desc:0 "Les employeurs se sont vu accorder davantage de temps pour se conformer aux exigences en matière d'accommodement en milieu de travail, ce qui a ralenti l'adoption de la loi."
- 
+
  disability_construction_lobby:0 "Secteur de la construction"
  disability_construction_lobby_desc:0 "Les objections de l'industrie de la construction ont été traitées, réduisant ainsi l'opposition active à la législation sur l'infrastructure accessible."
- 
+
  disability_strict_standards:0 "Normes de conformité strictes"
  disability_strict_standards_desc:0 "Les normes d'accessibilité des entreprises n'ont pas été établies avec des clauses grand-père. La conformité sera complète et prévue."
- 
+
  disability_phased_compliance:0 "Conformité progressive à l'infrastructure"
  disability_phased_compliance_desc:0 "Les structures existantes ont fait l'objet de droits acquis. De nouvelles normes ne s'appliquent qu'aux nouvelles constructions, ce qui ralentit l'impact plus large de la loi."
- 
+
  disability_funding_debate:0 "Cadre de financement établi"
  disability_funding_debate_desc:0 "La question de savoir qui paie les infrastructures accessibles a été résolue, éliminant un obstacle majeur à l'adoption de la loi."
- 
+
  disability_state_subsidy:0 "Subvention pour les infrastructures publiques"
  disability_state_subsidy_desc:0 "L'État absorbe directement les coûts de modernisation. La conformité sera plus rapide, mais le budget est soumis à des pressions supplémentaires."
- 
+
  disability_medical_endorsement:0 "L'établissement médical approuve les traitements"
  disability_medical_endorsement_desc:0 "L'approbation publique du traitement public des personnes handicapées par la profession médicale confère une crédibilité scientifique à la législation."
- 
+
  disability_fiscal_resistance:0 "Conservateurs fiscaux engagés"
  disability_fiscal_resistance_desc:0 "La résistance fiscale au traitement public des personnes handicapées a été abordée. La loi avance."
- 
+
  disability_phased_spending:0 "Dépenses de traitement par étape pour les personnes handicapées"
  disability_phased_spending_desc:0 "Le traitement public des personnes handicapées sera progressivement instauré, ce qui réduira la pression budgétaire immédiate au prix d'un déploiement plus lent."
- 
+
  disability_advocate_push:0 "Les défenseurs des personnes handicapées mobilisés"
  disability_advocate_push_desc:0 "Une campagne publique menée par des organisations de défense des droits des personnes handicapées renforce la dynamique politique de la législation."
- 
+
  disability_conservative_opposition:0 "Opposition conservatrice"
  disability_conservative_opposition_desc:0 "L'opposition conservatrice à la législation sur le handicap a été engagée et partiellement neutralisée."
- 
+
  disability_public_rebuttal:0 "Réplique publique de l'opposition conservatrice"
  disability_public_rebuttal_desc:0 "La réfutation directe de l'encadrement conservateur par le gouvernement a modifié les termes du débat en faveur de la législation."
- 
-  # environment_laws.1 — Industry Voluntary Compliance
+
  environment_laws.1.t:0 "[SCOPE.sCharacter('industry_leader').GetFullName] Offre la conformité volontaire"
  environment_laws.1.d:0 "[SCOPE.sCharacter('industry_leader').GetFullName], parlant pour le [SCOPE.gsInterestGroup('industry_ig').GetName], a fait une offre publique : si le gouvernement accepte d'intégrer des mécanismes de conformité volontaire dans le cadre environnemental plutôt que d'exiger l'application, l'industrie coopérera. L'offre est présentée comme un partenariat pragmatique. Les critiques affirment qu'il s'agit d'une tentative d'éviction de la législation avant son adoption."
  environment_laws.1.f:0 "La conformité volontaire est le genre préféré de l'industrie des combustibles fossiles."
  environment_laws.1.a:0 "Accepter — intégrer le respect volontaire dans le cadre"
  environment_laws.1.b:0 "Rejet — exécution obligatoire seulement, pas de retrait"
- 
- # environment_laws.2 — Scientific Backing
+
  environment_laws.2.t:0 "[SCOPE.sCharacter('science_leader').GetFullName] Publie le rapport environnemental"
  environment_laws.2.d:0 "[SCOPE.sCharacter('science_leader').GetFullName] de la [SCOPE.gsInterestGroup('science_ig').GetName] a publié une étude exhaustive qui documente les coûts environnementaux et de santé publique de la trajectoire actuelle de [ROOT.GetCountry.GetName]. Les résultats sont sans équivoque : les niveaux de pollution augmentent, la mortalité est affectée et les écosystèmes sont stressés. Le projet de loi, conclut le rapport, n'est pas seulement souhaitable — c'est nécessaire."
  environment_laws.2.f:0 "Les données n'attendent pas la commodité politique."
  environment_laws.2.a:0 "Réponse officielle de la Commission — publier les conclusions avec l'appui du gouvernement"
  environment_laws.2.b:0 "Reconnaissez le rapport sans l'amplifier"
- 
- # environment_laws.3 — International Praise
+
  environment_laws.3.t:0 "La communauté internationale loue le leadership environnemental de [ROOT.GetCountry.GetName]"
  environment_laws.3.d:0 "Le mot de [ROOT.GetCountry.GetName] proposé par la législation environnementale a atteint la communauté internationale, et la réponse a été inattenduement chaleureuse. Plusieurs nations ont publié des déclarations louant le gouvernement de [ROOT.GetCountry.GetRuler.GetPrimaryRoleTitle] [ROOT.GetCountry.GetRuler.GetLastName] pour son ambition. Les groupes de défense de l'environnement appellent [ROOT.GetCountry.GetName] un modèle à suivre pour les autres."
  environment_laws.3.f:0 "Le leadership est plus facile à revendiquer qu'à soutenir."
  environment_laws.3.a:0 "Tirer parti du moment — accueillir des discussions internationales sur l'environnement"
  environment_laws.3.b:0 "Garder cet engagement au niveau national — éviter les engagements excessifs à l'égard des obligations internationales"
- 
- # environment_laws.4 — Compliance Cost Debate
+
  environment_laws.4.t:0 "Qui supporte le coût de la conformité environnementale?"
  environment_laws.4.d:0 "La législation environnementale a suscité un vif débat sur la responsabilité. L'industrie soutient que les coûts de conformité - modernisation des usines, modification des chaînes d'approvisionnement, mise à jour de la gestion des déchets - chuteront de façon disproportionnée sur les producteurs et, en fin de compte, sur les consommateurs. Les groupes environnementaux s'opposent à ce que ces coûts représentent le véritable prix de la pollution qui est supporté silencieusement par le public depuis des décennies."
  environment_laws.4.f:0 "La pollution a toujours eu un coût. La question est de savoir qui paie."
  environment_laws.4.a:0 "Polluter pay — l'industrie supporte le coût de sa propre conformité"
  environment_laws.4.b:0 "Subvention de l'État — le gouvernement partage la charge de conformité pour accélérer l'adoption"
- 
- # environment_laws.5 — Constitutional Challenge
+
  environment_laws.5.t:0 "[SCOPE.sCharacter('industry_opposition_leader').GetFullName] La Licéité des droits de la nature"
  environment_laws.5.d:0 "[SCOPE.sCharacter('industry_opposition_leader').GetFullName] du [SCOPE.gsInterestGroup('industry_opposition_ig').GetName] a annoncé une contestation juridique formelle de la législation proposée sur les droits garantis de la nature. L'argument : accorder un statut juridique aux rivières, aux forêts et aux écosystèmes constitue une ingérence inconstitutionnelle dans les droits de propriété et la liberté économique. Le défi a suscité un soutien important de la part des intérêts fonciers et industriels."
  environment_laws.5.f:0 "La nature n'a pas d'avocats. Elle doit emprunter le nôtre."
  environment_laws.5.a:0 "Défendre le cadre — laisser les tribunaux se prononcer sur le fond"
  environment_laws.5.b:0 "Limiter la portée — négocier pour éviter une bataille juridique prolongée"
- 
- # environment_laws.6 — Environmental Disaster
+
  environment_laws.6.t:0 "Catastrophe environnementale dans [SCOPE.sState('disaster_state_scope').GetName]"
  environment_laws.6.d:0 "Alors que la législation environnementale fait l'objet de débats, [SCOPE.sState('disaster_state_scope').GetName] a été frappée par une crise environnementale — un déversement d'usine, une contamination fluviale ou un incident de pollution d'une ampleur suffisante pour qu'elle ait atteint les nouvelles nationales. Le moment est important. Les partisans affirment que cela prouve que la législation est nécessaire d'urgence. [ROOT.GetCountry.GetRuler.GetPrimaryRoleTitle] [ROOT.GetCountry.GetRuler.GetLastName] Le gouvernement doit décider de la façon de réagir."
  environment_laws.6.f:0 "Chaque catastrophe est aussi un argument."
  environment_laws.6.a:0 "Utiliser le moment — exiger l'adoption urgente du droit de l'environnement"
  environment_laws.6.b:0 "Contient l'histoire — gérer la réaction du public sans escalader"
- 
+
  env_voluntary_compliance:0 "Conformité volontaire de l'industrie"
  env_voluntary_compliance_desc:0 "L'industrie a accepté le respect volontaire du cadre environnemental, réduisant l'opposition active et améliorant les chances de passage de la loi."
- 
+
  env_mandatory_enforcement:0 "Cadre d'application obligatoire"
  env_mandatory_enforcement_desc:0 "Le gouvernement a rejeté la conformité volontaire en faveur de l'application obligatoire. La loi est plus forte et l'opposition de l'industrie plus déterminée."
- 
+
  env_scientific_backing:0 "Approbation par la Communauté scientifique"
  env_scientific_backing_desc:0 "Un rapport scientifique publié en faveur de la législation en matière d'environnement est en faveur de l'opinion publique et législative."
- 
+
  env_international_praise:0 "La louange internationale pour l'environnement"
  env_international_praise_desc:0 "La reconnaissance internationale du leadership environnemental de [ROOT.GetCountry.GetName] renforce la dynamique nationale de la législation."
- 
+
  env_diplomatic_push:0 "Initiative diplomatique environnementale"
  env_diplomatic_push_desc:0 "[ROOT.GetCountry.GetName] accueille des discussions internationales sur l'environnement, ajoutant le prestige diplomatique à la pression législative."
- 
+
  env_compliance_cost_debate:0 "Cadre des coûts de conformité résolu"
  env_compliance_cost_debate_desc:0 "Le débat sur la question de savoir qui supporte les coûts liés à la conformité environnementale a été résolu, éliminant ainsi un obstacle majeur sur la voie de la législation."
- 
+
  env_polluter_pays:0 "Principe du pollueur payeur"
  env_polluter_pays_desc:0 "L'industrie est responsable de ses propres coûts de conformité. La loi est plus forte; l'opposition est plus forte."
- 
+
  env_state_subsidy:0 "Subvention pour la conformité environnementale de l'État"
  env_state_subsidy_desc:0 "L'État subventionne la conformité environnementale pour réduire la résistance de l'industrie et accélérer l'adoption."
- 
+
  env_constitutional_challenge:0 "Défi constitutionnel"
  env_constitutional_challenge_desc:0 "Une contestation juridique de la législation relative aux droits garantis par la nature a ralenti son adoption par le législateur."
- 
+
  env_legal_defence:0 "Défense juridique des droits de la nature"
  env_legal_defence_desc:0 "La défense juridique du cadre des droits de la nature par le gouvernement a renforcé la confiance dans sa validité constitutionnelle."
- 
+
  env_disaster_response:0 "Catastrophe mise à profit pour la législation"
  env_disaster_response_desc:0 "Le gouvernement a utilisé une catastrophe environnementale pour obtenir un appui public et législatif urgent en faveur du droit de l'environnement."
- 
+
  env_disaster_suppressed:0 "L'histoire du désastre"
  env_disaster_suppressed_desc:0 "La catastrophe environnementale a été gérée tranquillement. La pression du public n'a pas gagné — et elle n'a pas non plus d'élan législatif."
- 
+
  env_disaster_state_modifier:0 "Catastrophe environnementale"
  env_disaster_state_modifier_desc:0 "Cet État a subi une catastrophe environnementale — un déversement, une contamination ou un effondrement écologique — qui engendre une pollution supplémentaire et augmente la mortalité."
- 
+
  childrens_childcare.1.t:0 "Le marché sait mieux"
  childrens_childcare.1.d:0 "Le débat sur le préscolaire privatisé étant en cours, les associations d'entreprises sont devenues des bailleurs de fonds enthousiastes. Selon eux, les fournisseurs privés se disputeront la qualité, stimulant l'innovation qu'un monopole d'État n'aurait jamais pu. Cependant, les critiques mettent en garde contre le fait que, sans réglementation significative, seules les familles qui peuvent se permettre les frais en bénéficieront."
  childrens_childcare.1.f:0 "Le marché a une réponse pour tout. Il reste à voir s'il a le bon ici."
@@ -288,7 +256,7 @@
  childrens_childcare.5.f:0 "La preuve gagne rarement des débats seuls. Mais ça aide."
  childrens_childcare.5.a:0 "Un rapport public de la Commission — laisse la preuve."
  childrens_childcare.5.b:0 "Tenir les universitaires en dehors du processus législatif."
- 
+
  childrens_rights_market_preschool_framing:0 "Soutien du secteur privé"
  childrens_rights_market_preschool_framing_desc:0 "Les intérêts commerciaux ont jeté leur poids derrière le modèle préscolaire privatisé, donnant un élan au processus de promulgation."
 
@@ -330,7 +298,7 @@
 
  childrens_rights_intelligentsia_sidelined:0 "Intelligentsia Sidelined"
  childrens_rights_intelligentsia_sidelined_desc:0 "La communauté universitaire a été exclue du débat législatif, laissant l'intelligentsia frustrée et désaffectée de l'ordre du jour du gouvernement."
- 
+
  womens_rights_laws.1.t:0 "La lettre de la loi"
  womens_rights_laws.1.d:0 "Au fur et à mesure que se dessine la législation sur les protections juridiques, un débat s'est ouvert. Les réformateurs au sein de l'intelligentsia soutiennent qu'une loi étroite sera contournée au sein d'une génération — les protections doivent être écrites dans chaque institution, ou elles ne signifieront rien. Leurs opposants mettent en garde contre le fait que l'atteinte à l'ordre public entraînera une crise constitutionnelle qui enterre tout l'effort."
  womens_rights_laws.1.f:0 "Chaque loi n'est que aussi forte que la volonté de l'appliquer — et le courage de l'écrire assez largement pour être importante."
@@ -420,7 +388,7 @@
 
  womens_rights_old_guard_negotiated:0 "Ancienne garde négociée"
  womens_rights_old_guard_negotiated_desc:0 "Les concessions à la vieille garde ont émoussé le pire de leur opposition, bien que leur désaccord fondamental avec la loi reste."
- 
+
  ubi.1.t:0 "Le coût de la"
  ubi.1.d:0 "Le prix du revenu de base universel est devenu impossible à ignorer. Les conservateurs fiscaux ont saisi les prévisions de dépenses, avertissant qu'un paiement inconditionnel à tout citoyen, employé ou non, riche ou pauvre, imposera une charge insoutenable aux finances publiques. Le gouvernement doit décider s'il doit s'engager à financer intégralement maintenant ou gagner du temps avec une approche progressive."
  ubi.1.f:0 "Chaque promesse de disposition universelle répond finalement à la même question: qui paie, et combien?"
@@ -472,45 +440,30 @@
  gun_laws.1.a:0 "Embrassez-vous de l'encadrement de la santé publique — les données sont de notre côté."
  gun_laws.1.b:0 "Considérez-le comme une loi et un ordre — gardez les défenseurs de la santé publique à l'écart."
 
- # ==========================================
- # gun_laws.2 — The Armed Forces Weigh In
- # ==========================================
  gun_laws.2.t:0 "Le poids des forces armées"
  gun_laws.2.d:0 "Le leadership militaire s'intéresse à l'interdiction des armes à feu qui va au-delà de la politique. Une population civile désarmée est plus difficile à organiser contre l'État, plus facile à recruter aux termes de l'État et moins susceptible de soutenir une insurrection. Leur soutien pourrait être décisif, mais faire entrer l'armée dans un débat législatif national entraîne ses propres complications."
  gun_laws.2.f:0 "L'armée a toujours su que l'arme la plus dangereuse est celle qui n'est pas sous son commandement."
  gun_laws.2.a:0 "Accueillez leur soutien: une population désarmée est ordonnée."
  gun_laws.2.b:0 "Il s'agit d'une affaire civile."
 
- # ==========================================
- # gun_laws.3 — Rural Resistance
- # ==========================================
  gun_laws.3.t:0 "Résistance rurale"
  gun_laws.3.d:0 "La campagne n'écoute pas l'argument avancé dans la capitale. Pour les communautés rurales, les armes à feu ne sont pas une déclaration politique - ce sont des outils, hérités à côté de la terre, utilisés pour la chasse, pour la protection du bétail et pour la sécurité fondamentale des établissements isolés. Les restreindre n'est pas une question de politique, mais un affront personnel. Le gouvernement doit décider avec fermeté de tenir la ligne."
  gun_laws.3.f:0 "Les gens qui ont rédigé la loi n'ont jamais dû attendre trois heures pour un agent de police."
  gun_laws.3.a:0 "Tenez ferme — les lois urbaines s'appliquent partout également."
  gun_laws.3.b:0 "Offrir des exemptions rurales — la chasse et la protection du bétail sont des utilisations légitimes."
 
- # ==========================================
- # gun_laws.4 — A Right, Not a Privilege
- # ==========================================
  gun_laws.4.t:0 "Un droit, pas un privilège"
  gun_laws.4.d:0 "Les défenseurs des armes à feu sans restriction ont trouvé leur argumentation et n'y renoncent pas : la propriété est un droit et non un privilège que l'État doit accorder. Tout système de licence, toute exigence d'enregistrement, toute restriction est la première étape sur la route de la tyrannie. Le gouvernement doit décider s'il doit adopter ce cadre et l'énergie politique qu'il génère, ou s'il doit le faire pour des raisons plus pratiques."
  gun_laws.4.f:0 "Il y a une liberté particulière qui ne peut être maintenue qu'à la pointe des armes."
  gun_laws.4.a:0 "Accepter l'argument de la liberté — un citoyen armé est libre."
  gun_laws.4.b:0 "Encadrez-le pratiquement — concentrez-vous sur la capacité de légitime défense et de conscription."
 
- # ==========================================
- # gun_laws.5 — The Safety Lobby Fights Back
- # ==========================================
  gun_laws.5.t:0 "Le lobby de la sécurité lutte contre le retour"
  gun_laws.5.d:0 "Les voix de l'intelligentsia et de la santé publique qui s'opposaient à l'interdiction des armes à feu ne sont pas restées silencieuses — elles ont réorienté leur énergie vers l'opposition à la propriété illimitée. Leurs arguments sont familiers : la preuve ne soutient pas l'affirmation selon laquelle plus d'armes produisent des sociétés plus sûres. Le gouvernement doit décider de les engager dans un débat public ou de leur refuser la plateforme."
  gun_laws.5.f:0 "Chaque argument en faveur d'armes à feu sans restriction doit finalement répondre pour les corps."
  gun_laws.5.a:0 "Les réfuter publiquement — la liberté comporte ses propres risques."
  gun_laws.5.b:0 "Ignorez-les — ne dignifiez pas l'opposition par une réponse."
 
- # ==========================================
- # gun_laws.6 — Licensing Is Not Freedom
- # ==========================================
  gun_laws.6.t:0 "La licence n'est pas la liberté"
  gun_laws.6.d:0 "Le projet de loi sur les armes à feu sous licence a réussi à unir les deux parties au débat dans l'opposition. Les défenseurs des droits des armes à feu considèrent toute exigence de licence comme une violation d'une liberté fondamentale. Les défenseurs de la sécurité le considèrent comme une demi-mesure qui n'a pas de sens pour réduire les dommages. Le gouvernement se trouve en défense d'un milieu que ni l'un ni l'autre flanc ne veut occuper."
  gun_laws.6.f:0 "Un compromis qui ne satisfait personne peut encore être la bonne réponse."
@@ -567,100 +520,67 @@
 
  gun_law_rural_folk_energized:0 "Folkisation rurale énergétique"
  gun_law_rural_folk_energized_desc:0 "La mise au point d'armes à feu sans restriction a fortement résonné avec les communautés rurales, ce qui a suscité un solide appui de la part de la population à la loi."
- 
-  # ==========================================
- # lgbtq_laws.1 — The Church Demands Action
- # ==========================================
+
  lgbtq_laws.1.t:0 "L'Église exige l'action"
  lgbtq_laws.1.d:0 "Les fervents ont clairement exprimé leur position : la répression active de l'homosexualité n'est pas seulement une préférence politique, mais une obligation morale. Les chefs religieux exigent que le gouvernement structure la législation en termes explicitement théologiques, accordant le poids de l'autorité divine à la loi. Le gouvernement doit décider s'il convient d'adopter ce cadre ou de conserver la justification pour des motifs laïques."
  lgbtq_laws.1.f:0 "Les lois les plus dangereuses sont celles qui croient répondre à une autorité supérieure."
  lgbtq_laws.1.a:0 "Embrassez le cadre moral — c'est une question de loi divine."
  lgbtq_laws.1.b:0 "Considérez - le comme un ordre social: gardez la religion hors de la justification."
 
- # ==========================================
- # lgbtq_laws.2 — The Cost of Enforcement
- # ==========================================
  lgbtq_laws.2.t:0 "Le coût de l'exécution"
  lgbtq_laws.2.d:0 "Une loi contre l'homosexualité est seulement aussi efficace que son application. La question qui se pose au gouvernement n'est pas de savoir s'il faut restreindre — ce débat est réglé — mais de savoir à quel point l'appareil d'État sera agressif pour poursuivre les violations. L'application intégrale est coûteuse et invasive. L'application passive repose sur la pression sociale et la dénonciation. Chaque approche comporte ses propres coûts."
  lgbtq_laws.2.f:0 "L'État qui légifère sur le comportement privé doit décider à quel point il est disposé à participer à la vie privée."
  lgbtq_laws.2.a:0 "L'application intégrale — ne ménagez aucune dépense."
  lgbtq_laws.2.b:0 "L'application passive — laissez la pression sociale faire le travail."
 
- # ==========================================
- # lgbtq_laws.3 — Decriminalization Is Not Endorsement
- # ==========================================
  lgbtq_laws.3.t:0 "La dépénalisation n'est pas une approbation"
  lgbtq_laws.3.d:0 "Des voix conservatrices ont salué le projet de loi de dépénalisation avec une alarme prévisible. L'argument préféré du gouvernement, à savoir que la suppression des sanctions pénales ne constitue pas une approbation morale, ne les satisfait pas. La question est de savoir s'il faut faire cette affaire en public et directement, ou bien procéder tranquillement et éviter l'attention qu'un débat public susciterait."
  lgbtq_laws.3.f:0 "La distance entre la tolérance et l ' homologation n ' a jamais été aussi contestée."
  lgbtq_laws.3.a:0 "Faites le cas clairement — la décriminalisation supprime la peine, et non l'approbation."
  lgbtq_laws.3.b:0 "Gardez-la tranquille — passez la réforme sans y attirer l'attention."
 
- # ==========================================
- # lgbtq_laws.4 — The Intelligentsia Makes Its Case
- # ==========================================
  lgbtq_laws.4.t:0 "L'Intelligentsia fait son cas"
  lgbtq_laws.4.d:0 "Les réformateurs et les juristes sont entrés dans le débat avec un argument simple: l'État n'a aucun intérêt légitime dans la conduite privée des adultes consentants, et la criminalisation de l'homosexualité est une violation des principes les plus fondamentaux de la liberté personnelle. Le gouvernement doit décider de s'aligner formellement sur cet argument ou de maintenir la réforme dans des termes purement législatifs."
  lgbtq_laws.4.f:0 "La liberté qui nécessite la permission de l'État n'est pas du tout la liberté."
  lgbtq_laws.4.a:0 "Qu'ils mènent l'argument: la liberté personnelle est inaliénable."
  lgbtq_laws.4.b:0 "Gardez-le législatif — évitez le débat philosophique."
 
- # ==========================================
- # lgbtq_laws.5 — Marriage Is a Social Institution
- # ==========================================
  lgbtq_laws.5.t:0 "Le mariage est une institution sociale"
  lgbtq_laws.5.d:0 "Les conservateurs ont trouvé leur argument le plus puissant contre l'égalité matrimoniale : le mariage n'est pas seulement un arrangement juridique, mais une institution sociale dont les racines sont plus anciennes que l'État lui-même. La redéfinir, c'est défaire quelque chose qui ne peut être remis en place. Le gouvernement doit choisir entre affronter cet argument de front ou tenter d'adoucir l'opposition par des exemptions religieuses."
  lgbtq_laws.5.f:0 "Chaque institution était nouvelle une fois."
  lgbtq_laws.5.a:0 "Recadrez - le: le mariage civil appartient à l'État, et non à l'Église."
  lgbtq_laws.5.b:0 "Offrez des exemptions religieuses — les églises peuvent refuser d'effectuer des cérémonies."
 
- # ==========================================
- # lgbtq_laws.6 — Equal Before the Law
- # ==========================================
  lgbtq_laws.6.t:0 "Égalité devant la loi"
  lgbtq_laws.6.d:0 "L'intelligentsia a considéré l'égalité matrimoniale comme la conclusion logique des droits civils — une société qui accorde à certains citoyens des droits qu'elle nie à d'autres sur la base de qui ils aiment est une société qui n'a pas encore tenu ses promesses. Le gouvernement doit décider de considérer ce moment comme un point de repère ou d'étendre les droits tranquillement sans le poids de la déclaration."
  lgbtq_laws.6.f:0 "L'égalité qu'il faut garder silencieuse n'a jamais été tout à fait égale."
  lgbtq_laws.6.a:0 "Faites d'elle un jalon: l'égalité devant la loi n'admet aucune exception."
  lgbtq_laws.6.b:0 "Garder l'administration — étendre les droits tranquillement sans déclaration."
 
- # ==========================================
- # abortion_laws.1 — Life Begins at Conception
- # ==========================================
  abortion_laws.1.t:0 "La vie commence à la Conception"
  abortion_laws.1.d:0 "Le fervent est arrivé au débat sur l'avortement avec une position qui n'admet aucun compromis: la vie commence à la conception, et l'État est moralement obligé de la protéger de ce moment. Leur demande n'est pas simplement l'interdiction de l'avortement, mais l'interdiction doit être encadrée en termes qui reflètent sa gravité morale. Le gouvernement doit décider s'il doit adopter ce cadre ou justifier la loi pour des raisons démographiques et politiques."
  abortion_laws.1.f:0 "Les positions morales les plus absolues sont celles qui ne laissent aucune place aux cas les plus difficiles."
  abortion_laws.1.a:0 "Embrassez le cadre moral: la vie est sacrée et l'État doit la protéger."
  abortion_laws.1.b:0 "Considérez - la comme une politique démographique: gardez la religion hors de la justification."
 
- # ==========================================
- # abortion_laws.2 — The Exceptions Question
- # ==========================================
  abortion_laws.2.t:0 "La question des exceptions"
  abortion_laws.2.d:0 "A peine le projet de loi est-il entré dans le processus de promulgation que ses opposants ont trouvé le terrain le plus difficile pour le contester : les cas de viol, d'inceste et de nécessité médicale. Ce sont les cas qui transforment des positions morales abstraites en réalités vécues. Le gouvernement doit décider s'il convient de maintenir la ligne avec une interdiction absolue ou de créer des exceptions médicales étroites qui reconnaissent les circonstances les plus difficiles."
  abortion_laws.2.f:0 "Les principes abstraits ont une façon de devenir très concret quand ils sont la vie de quelqu'un d'autre."
  abortion_laws.2.a:0 "Aucune exception — la loi doit être absolue pour signifier quoi que ce soit."
  abortion_laws.2.b:0 "Accorder des exceptions médicales étroites — les cas les plus difficiles doivent être traités."
 
- # ==========================================
- # abortion_laws.3 — The State Has No Place in This Decision
- # ==========================================
  abortion_laws.3.t:0 "L'État n'a pas sa place dans la présente décision"
  abortion_laws.3.d:0 "La cause de l'avortement sans restriction a trouvé sa formulation la plus puissante dans le langage de l'autonomie corporelle: aucun État n'a le droit d'obliger une personne à poursuivre une grossesse contre sa volonté. L'intelligentsia fait cet argument publiquement et avec une force considérable. Le gouvernement doit décider s'il doit l'adopter comme élément central de la réforme ou présenter le changement comme une question simple d'accès aux soins de santé."
  abortion_laws.3.f:0 "Le droit à son propre corps est universel ou il n'est pas du tout un droit."
  abortion_laws.3.a:0 "Faire de l'autonomie corporelle l'élément central — aucun État n'a le droit de forcer la grossesse."
  abortion_laws.3.b:0 "Encadrez - la comme des soins de santé, gardez l'argument philosophique."
 
- # ==========================================
- # abortion_laws.4 — The Devout Will Not Yield
- # ==========================================
  abortion_laws.4.t:0 "Le dévot ne produira pas de rendement"
  abortion_laws.4.d:0 "Tout mouvement en faveur de la libéralisation de la loi sur l'avortement a rencontré une opposition religieuse organisée qui ne montre aucun signe d'adoucissement. Le fervent considère cela comme une question sur laquelle aucun compromis n'est possible, et ils sont prêts à utiliser tous les outils politiques disponibles pour bloquer la législation. Le gouvernement doit décider s'il doit les affronter directement ou offrir des protections de conscience qui adoucissent leur résistance sans satisfaire leurs exigences."
  abortion_laws.4.f:0 "L'opposition qui croit qu'elle répond à Dieu est l'opposition la plus dure à négocier."
  abortion_laws.4.a:0 "Confrontez-les directement — l'État gouverne, pas l'église."
  abortion_laws.4.b:0 "Offrir des protections de conscience — le personnel médical peut décliner pour des raisons morales."
 
- # ==========================================
- # LGBTQ Enactment Modifier Localization
- # ==========================================
  lgbtq_law_religious_mandate:0 "Mandat religieux déclaré"
  lgbtq_law_religious_mandate_desc:0 "Le fervent a publiquement défini la loi d'oppression comme une obligation morale et religieuse, prêtant l'autorité théologique à l'effort de promulgation."
 

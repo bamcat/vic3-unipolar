@@ -1,48 +1,43 @@
 ﻿l_simp_chinese:
-#################### JE ####################
-# The Internet
+ economic_union:0 "经济联盟"
+ economic_union_pact_desc:0 "两国之间有统一的市场和货币的外交条约."
+ subject_type_economic_union:0 "经济联盟"
+ subject_type_economic_union_desc:0 "两国之间有统一的市场和货币的外交条约."
+ concept_economic_union:0 "经济联盟"
+ concept_subject_type_economic_union:0 "经济联盟"
+ subject_type_economic_union_no_icon:0 "经济联盟"
+ concept_economic_union_desc:0 "两国之间有统一的市场和货币的外交条约."
 
-economic_union:0 "经济联盟"
-economic_union_pact_desc:0 "两国之间有统一的市场和货币的外交条约."
-subject_type_economic_union:0 "经济联盟"
-subject_type_economic_union:0 "经济联盟"
-subject_type_economic_union_desc:0 "两国之间有统一的市场和货币的外交条约."
-concept_economic_union:0 "经济联盟"
-concept_subject_type_economic_union:0 "经济联盟"
-subject_type_economic_union_no_icon:0 "经济联盟"
-concept_economic_union_desc:0 "两国之间有统一的市场和货币的外交条约."
+ economic_union2:0 "经济联盟"
+ economic_union2_pact_desc:0 "两国之间有统一的市场和货币的外交条约."
 
-economic_union2:0 "经济联盟"
-economic_union2_pact_desc:0 "两国之间有统一的市场和货币的外交条约."
+ eu_events.400:0 "欧洲联盟"
 
-eu_events.400:0 "欧洲联盟"
+ support_revolution:0 "支持革命"
+ support_revolution_action_propose_name:0 "支持革命"
+ support_revolution_action_break_name:0 "停止支持"
 
-support_revolution:0 "支持革命"
-support_revolution_action_propose_name:0 "支持革命"
-support_revolution_action_break_name:0 "停止支持"
+ impose_sanctions:0 "施加制裁"
+ impose_sanctions_desc: "扣押我国金融资产. 在游戏方面,这创造了一个倒转的银行卷,根据两国GDP的差异,从目标国库直接转移资金."
+ impose_sanctions_action_propose_name:0 "金融制裁"
+ impose_sanctions_action_break_name:0 "解除制裁"
+ impose_sanctions_pact_desc: "[SCOPE.GetRootScope.GetDiplomaticPact.GetFirstCountry.GetName] 对我们实行制裁!"
+ impose_sanctions_notification_name: "[INITIATOR_COUNTRY.GetName] 对我们实行制裁!"
+ impose_sanctions_notification_desc: "我们受到财政制裁!"
 
-impose_sanctions:0 "施加制裁"
-impose_sanctions_desc: "扣押我国金融资产. 在游戏方面,这创造了一个倒转的银行卷,根据两国GDP的差异,从目标国库直接转移资金."
-impose_sanctions_action_propose_name:0 "金融制裁"
-impose_sanctions_action_break_name:0 "解除制裁"
-impose_sanctions_pact_desc: "[SCOPE.GetRootScope.GetDiplomaticPact.GetFirstCountry.GetName] 对我们实行制裁!"
-impose_sanctions_notification_name: "[INITIATOR_COUNTRY.GetName] 对我们实行制裁!"
-impose_sanctions_notification_desc: "我们受到财政制裁!"
+ humanitarian_aid:0 "提供人道主义援助"
+ humanitarian_aid_desc: "向生活在这个国家的市民提供财政援助。 从我国国库直接汇入 住在这个国家的老爹口袋"
+ humanitarian_aid_action_propose_name:0 "人道主义援助"
+ humanitarian_aid_action_break_name:0 "停止人道主义援助"
+ humanitarian_aid_pact_desc:0 "向生活在这个国家的市民提供财政援助。 从我国国库直接汇入 住在这个国家的老爹口袋"
+ humanitarian_aid_notification_name: "[INITIATOR_COUNTRY.GetName] 正在向我们提供人道主义援助!"
+ humanitarian_aid_notification_desc: "我们正在恢复人道主义援助。"
+ humanitarian_aid_proposal_accepted_name: "接受人道主义援助"
+ humanitarian_aid_proposal_accepted_desc: "我们现在提供人道主义援助。"
 
-humanitarian_aid:0 "提供人道主义援助"
-humanitarian_aid_desc: "向生活在这个国家的市民提供财政援助。 从我国国库直接汇入 住在这个国家的老爹口袋"
-humanitarian_aid_action_propose_name:0 "人道主义援助"
-humanitarian_aid_action_break_name:0 "停止人道主义援助"
-humanitarian_aid_pact_desc:0 "向生活在这个国家的市民提供财政援助。 从我国国库直接汇入 住在这个国家的老爹口袋"
-humanitarian_aid_notification_name: "[INITIATOR_COUNTRY.GetName] 正在向我们提供人道主义援助!"
-humanitarian_aid_notification_desc: "我们正在恢复人道主义援助。"
-humanitarian_aid_proposal_accepted_name: "接受人道主义援助"
-humanitarian_aid_proposal_accepted_desc: "我们现在提供人道主义援助。"
-
-
-host_military_bases_desc: ""
-host_military_bases_effects_desc: "• 在两个 " x id=0 " 之间订立军事协定,允许一个 " x id=1 " 使用另一个 " x id=3 " 的空军基地发射 " x id=2 " 。"
-host_military_bases_article_short_desc: "[TARGET_COUNTRY.GetNameNoFormatting]可以通过 [SOURCE_COUNTRY.GetNameNoFormatting]发射导弹。"
+ host_military_bases_desc: ""
+ host_military_bases_effects_desc: "• 在两个 " x id=0 " 之间订立军事协定,允许一个 " x id=1 " 使用另一个 " x id=3 " 的空军基地发射 " x id=2 " 。"
+ host_military_bases_article_short_desc: "[TARGET_COUNTRY.GetNameNoFormatting]可以通过 [SOURCE_COUNTRY.GetNameNoFormatting]发射导弹。"
 
  smd_create_economic_union:0 "建议经济联盟"
  smd_create_economic_union_action_name:0 "建议经济联盟"
@@ -73,7 +68,7 @@ host_military_bases_article_short_desc: "[TARGET_COUNTRY.GetNameNoFormatting]可
  smd_diplomatic_unification_proposal_declined_desc:0 "[TARGET_COUNTRY.GetName]拒绝了"x id=1/"的外交统一建议."
  smd_economic_union_base_resistance_tt:0 "各国对加入经济联盟有基本的意愿。"
  smd_unification_base_resistance_tt:0 "各国有很强的基础不愿意通过外交统一接受吞并。"
- 
+
  treaty_name_smd_economic_union:0 "经济联盟"
  treaty_name_smd_diplomatic_unification:0 "外交统一条约"
 
@@ -90,7 +85,7 @@ host_military_bases_article_short_desc: "[TARGET_COUNTRY.GetNameNoFormatting]可
  smd_unification_requires_culture_tt:0 "各国必须拥有类似的初级文化,共享初级文化、遗产群体和语言群体,或遗产和语言特征。"
  smd_unification_requires_good_relations_tt:0 "关系必须至少是友好的。"
  smd_diplomatic_unification_effect_tt:0 "接受国成为发起国的主权。"
- 
+
  threaten_nuclear_hostilities:0 "威胁核敌对行动"
  threaten_nuclear_hostilities_action_name:0 "威胁核敌对行动"
  threaten_nuclear_hostilities_action_propose_name:0 "威胁核敌对行动"
@@ -106,3 +101,18 @@ host_military_bases_article_short_desc: "[TARGET_COUNTRY.GetNameNoFormatting]可
 
  threatened_nuclear_hostilities_diplomatic_reputation:0 "受威胁的核敌对行动"
  threatened_nuclear_hostilities_diplomatic_reputation_desc:0 "核边缘政策暂时提高了这个国家的外交声誉,使其他国家更有可能接受它的条约."
+
+ treaty_name_timor_gap:0 "《帝汶差距条约》"
+ treaty_name_montevideo:0 "蒙得维的亚条约"
+ treaty_name_elysee_treaty:0 "《埃利塞条约》"
+ treaty_name_indus_waters_treaty:0 "印度河水条约"
+ treaty_name_us_israel_alliance:0 "美国-以色列联盟"
+ treaty_name_us_australia_alliance:0 "美国-澳大利亚联盟"
+ treaty_name_us_new_zealand_alliance:0 "美国-新西兰联盟"
+ treaty_name_us_japan_alliance:0 "美国-日本联盟"
+ treaty_name_us_south_korea_alliance:0 "美国-韩国联盟"
+ treaty_name_us_philippines_alliance:0 "美国-菲律宾联盟"
+ treaty_name_us_taiwan_act:0 "《台湾关系法》"
+ treaty_name_china_north_korea_pact:0 "中北朝鲜国防条约"
+ DIPLOMATIC_ACCEPTANCE_STRAIT_DEPENDENCE:0 "来自我们#b 依赖#!他们控制的[Concept('concept_strait', '$concept_straits$')]"
+ DIPLOMATIC_ACCEPTANCE_NO_STRAIT_DEPENDENCE:0 "来自我们#b 不依赖#!他们控制的[Concept('concept_strait', '$concept_straits$')]"

@@ -1,0 +1,68 @@
+﻿smd_demo_childcare = {
+	custom_description = {
+		text = smd_demo_childcare
+		OR = {
+			has_law = law_type:law_universal_childcare
+			has_law = law_type:law_privatized_preschool_education
+		}
+	}
+}
+
+smd_demo_health = {
+	custom_description = {
+		text = smd_demo_health
+		OR = {
+			has_law = law_type:law_public_health_insurance
+			has_law = law_type:law_private_health_insurance
+		}
+	}
+}
+
+smd_demo_welfare = {
+	custom_description = {
+		text = smd_demo_welfare
+		OR = {
+			has_law = law_type:law_old_age_pension
+			has_law = law_type:law_wage_subsidies
+			has_law = law_type:law_universal_basic_income
+			has_law = law_type:law_student_coverage
+		}
+	}
+}
+
+smd_demo_housing = {
+	custom_description = {
+		text = smd_demo_housing
+		OR = {
+			has_law = law_type:law_housing_projects
+			has_law = law_type:law_public_housing_program
+			has_law = law_type:law_universal_housing
+		}
+	}
+}
+
+smd_demo_sol = {
+	custom_description = {
+		text = smd_demo_sol
+		average_sol >= 12
+	}
+}
+
+smd_demographic_policies_met = {
+	smd_demo_childcare = yes
+	smd_demo_health = yes
+	smd_demo_welfare = yes
+	smd_demo_housing = yes
+	smd_demo_sol = yes
+}
+
+smd_demo_no_one_child = {
+	custom_description = {
+		text = smd_demo_no_one_child
+		NOT = {
+			active_law:lawgroup_health_system ?= {
+				has_amendment = amendment_type:amendment_one_child_policy
+			}
+		}
+	}
+}

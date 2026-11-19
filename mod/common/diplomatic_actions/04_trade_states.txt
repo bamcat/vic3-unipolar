@@ -7,9 +7,6 @@
 	should_notify_third_parties = yes
 	show_effect_in_tooltip = yes
 
-	# Either country should have an available state. Trade State is used as a
-	# catch all possibilities Diplomatic Action because Grant/Take State are currently
-	# limited to Overlords/Subjects.
 	state_selection = any_required
 
 	first_state_list = first_country
@@ -40,7 +37,6 @@
 		is_revolutionary = no
 		in_default = no
 
-		# Must have a connection to the state received even after the trade happens
 		trigger_if = {
 			limit = {
 				exists = scope:first_state
@@ -130,17 +126,25 @@
 
 		propose_score = {
 			value = 10
+
+			if = {
+				limit = {
+					ai_is_regional_objective_state = {
+						TYPE = aro:ai_regional_objective_acquire_states
+						STATE = scope:second_state
+					}
+				}
+				add = 20
+			}
 		}
 
-		# Selection triggers exist only to pre-filter which state combinations the AI looks at
-		# This is done for performance reasons - the more open ended these triggers are, the more it will impact performance
 		will_select_as_first_state = {
 			is_split_state = yes
 			is_under_colonization = no
 			is_incorporated = no
 			NOT = { is_homeland_of_country_cultures = owner }
 			is_in_geographic_region = geographic_region_africa
-			NOT = { state_region = s:STATE_INDIAN_OCEAN_TERRITORY } # Special exception to african state trading
+			NOT = { state_region = s:STATE_INDIAN_OCEAN_TERRITORY }
 		}
 
 		will_select_as_second_state = {
@@ -149,7 +153,7 @@
 			is_incorporated = no
 			NOT = { is_homeland_of_country_cultures = owner }
 			is_in_geographic_region = geographic_region_africa
-			NOT = { state_region = s:STATE_INDIAN_OCEAN_TERRITORY } # Special exception to african state trading
+			NOT = { state_region = s:STATE_INDIAN_OCEAN_TERRITORY }
 		}
 
 		will_propose_with_states = {
@@ -195,6 +199,20 @@
 						value = scope:second_state.ai_state_value:root
 						desc = "DIPLOMATIC_ACCEPTANCE_TRADE_STATE_SECOND_STATE"
 						min = 10
+					}
+
+					if = {
+						limit = {
+							ai_ceding_state_would_isolate_states = {
+								STATE = scope:second_state
+								CEDER = scope:target_country
+								RECEIVER = scope:actor
+							}
+						}
+						subtract = {
+							value = 1000
+							desc = "DIPLOMATIC_ACCEPTANCE_WOULD_ISOLATE_STATES"
+						}
 					}
 				}
 				else_if = {

@@ -1,9 +1,4 @@
-﻿# Modern Day Character Ideology Rework
-# Generated for leader/general character ideologies only.
-# Interest group ideologies are intentionally untouched.
-# Spawn logic: scripted government-type classification gates decide which ideologies can spawn; IG leader weights remain equalized.
-
-REPLACE_OR_CREATE:ideology_marxist_leader = {
+﻿REPLACE_OR_CREATE:ideology_marxist_leader = {
 	icon = "gfx/interface/icons/ideology_icons/ideology_leader/ideology_leader_communist.dds"
 	character_ideology = yes
 	lawgroup_governance_principles = {
@@ -26,6 +21,7 @@ REPLACE_OR_CREATE:ideology_marxist_leader = {
 		law_universal_suffrage = approve
 		law_anarchy = neutral
 		law_single_party_state = approve
+		law_labour_suffrage = approve
 	}
 	lawgroup_economic_system = {
 		law_traditionalism = strongly_disapprove
@@ -86,11 +82,9 @@ non_interest_group_leader_trigger = {
 	}
 	interest_group_leader_weight = {
 		value = 100
-		# Equalized within its government classification; leader_trigger does the ideological gating.
 	}
 	non_interest_group_leader_weight = {
 		value = 35
-		# Law-proximity weighting: core laws are strongest; adjacent laws keep nearby ideologies plausible.
 		if = {
 			limit = { owner = { has_law = law_type:law_council_republic } }
 			add = 28
@@ -143,13 +137,11 @@ non_interest_group_leader_trigger = {
 			limit = { owner = { has_law = law_type:law_ethnostate } }
 			add = -20
 		}
-		# More likely when society is destabilized by radicals.
 		add = {
 			value = owner.radical_fraction
 			multiply = 160
 		}
 	
-		# Drugs and firearms now have stronger law-proximity influence.
 		if = { limit = { owner = { has_law = law_type:law_licensed_firearms } } add = 18 }
 		if = { limit = { owner = { has_law = law_type:law_total_prohibition } } add = 10 }
 }
@@ -179,6 +171,7 @@ REPLACE_OR_CREATE:ideology_anarchist_leader = {
 		law_universal_suffrage = neutral
 		law_anarchy = strongly_approve
 		law_single_party_state = disapprove
+		law_labour_suffrage = approve
 	}
 	lawgroup_economic_system = {
 		law_traditionalism = strongly_disapprove
@@ -212,6 +205,7 @@ REPLACE_OR_CREATE:ideology_anarchist_leader = {
 		law_national_guard = disapprove
 		law_secret_police = strongly_disapprove
 		law_guaranteed_liberties = approve
+		law_extraordinary_commission = strongly_disapprove
 	}
 	lawgroup_policing = {
 		law_no_police = strongly_approve
@@ -223,6 +217,7 @@ REPLACE_OR_CREATE:ideology_anarchist_leader = {
 		law_professional_army = disapprove
 		law_national_militia = strongly_approve
 		law_mass_conscription = disapprove
+		law_revolutionary_guard = approve
 	}
 	lawgroup_citizenship = {
 		law_ethnostate = strongly_disapprove
@@ -276,7 +271,6 @@ non_interest_group_leader_trigger = {
 	}
 	interest_group_leader_weight = {
 		value = 100
-		# Equalized within its government classification; leader_trigger does the ideological gating.
 	}
 	non_interest_group_leader_weight = {
 		value = 35
@@ -333,7 +327,6 @@ non_interest_group_leader_trigger = {
 			add = 30
 		}
 	
-		# Drugs and firearms now have stronger law-proximity influence.
 		if = { limit = { owner = { has_law = law_type:law_licensed_firearms } } add = 18 }
 		if = { limit = { owner = { has_law = law_type:law_unrestricted_firearms } } add = 12 }
 		if = { limit = { owner = { has_law = law_type:law_marijuana_decriminalization } } add = 10 }
@@ -364,6 +357,7 @@ REPLACE_OR_CREATE:ideology_state_socialist_leader = {
 		law_universal_suffrage = disapprove
 		law_anarchy = approve
 		law_single_party_state = strongly_approve
+		law_labour_suffrage = approve
 	}
 	lawgroup_economic_system = {
 		law_traditionalism = strongly_disapprove
@@ -438,11 +432,9 @@ non_interest_group_leader_trigger = {
 	}
 	interest_group_leader_weight = {
 		value = 100
-		# Equalized within its government classification; leader_trigger does the ideological gating.
 	}
 	non_interest_group_leader_weight = {
 		value = 50
-		# Law-proximity weighting: core laws are strongest; adjacent laws keep nearby ideologies plausible.
 		if = {
 			limit = { owner = { has_law = law_type:law_command_economy } }
 			add = 28
@@ -492,7 +484,6 @@ non_interest_group_leader_trigger = {
 			add = -20
 		}
 	
-		# High-impact regime fit: single-party/autocratic states should produce state-aligned authoritarians.
 		if = { limit = { owner = { has_law = law_type:law_single_party_state } } add = 120 }
 		if = { limit = { owner = { has_law = law_type:law_autocracy } } add = 75 }
 		if = { limit = { owner = { has_law = law_type:law_appointed_bureaucrats } } add = 55 }
@@ -500,7 +491,6 @@ non_interest_group_leader_trigger = {
 		if = { limit = { owner = { has_law = law_type:law_elected_bureaucrats } } add = -40 }
 		if = { limit = { owner = { has_law = law_type:law_universal_suffrage } } add = -75 }
 
-		# Drugs and firearms now have stronger law-proximity influence.
 		if = { limit = { owner = { has_law = law_type:law_licensed_firearms } } add = 18 }
 		if = { limit = { owner = { has_law = law_type:law_banned_firearms } } add = 12 }
 		if = { limit = { owner = { has_law = law_type:law_total_prohibition } } add = 10 }
@@ -521,6 +511,7 @@ REPLACE_OR_CREATE:ideology_left_wing_populist_leader = {
 		law_universal_suffrage = strongly_approve
 		law_anarchy = neutral
 		law_single_party_state = disapprove
+		law_labour_suffrage = neutral
 	}
 	lawgroup_rights_of_women = {
 		law_no_womens_rights = strongly_disapprove
@@ -607,11 +598,9 @@ non_interest_group_leader_trigger = {
 	}
 	interest_group_leader_weight = {
 		value = 100
-		# Equalized within its government classification; leader_trigger does the ideological gating.
 	}
 	non_interest_group_leader_weight = {
 		value = 30
-		# Law-proximity weighting: core laws are strongest; adjacent laws keep nearby ideologies plausible.
 		if = {
 			limit = { owner = { has_law = law_type:law_universal_suffrage } }
 			add = 28
@@ -656,13 +645,11 @@ non_interest_group_leader_trigger = {
 			limit = { owner = { has_law = law_type:law_autocracy } }
 			add = -20
 		}
-		# More likely when society is destabilized by radicals.
 		add = {
 			value = owner.radical_fraction
 			multiply = 160
 		}
 	
-		# High-impact regime fit: democratic institutions should dominate leader ideology spawn.
 		if = { limit = { owner = { OR = { has_law = law_type:law_presidential_republic has_law = law_type:law_parliamentary_republic } } } add = 75 }
 		if = { limit = { owner = { OR = { has_law = law_type:law_universal_suffrage has_law = law_type:law_census_voting has_law = law_type:law_wealth_voting } } } add = 65 }
 		if = { limit = { owner = { has_law = law_type:law_elected_bureaucrats } } add = 55 }
@@ -670,7 +657,6 @@ non_interest_group_leader_trigger = {
 		if = { limit = { owner = { has_law = law_type:law_autocracy } } add = -85 }
 		if = { limit = { owner = { has_law = law_type:law_appointed_bureaucrats } } add = -35 }
 
-		# Drugs and firearms now have stronger law-proximity influence.
 		if = { limit = { owner = { has_law = law_type:law_licensed_firearms } } add = 18 }
 		if = { limit = { owner = { has_law = law_type:law_alcohol_tobacco_legal } } add = 10 }
 		if = { limit = { owner = { has_law = law_type:law_total_prohibition } } add = 10 }
@@ -700,6 +686,7 @@ REPLACE_OR_CREATE:ideology_democratic_socialist_leader = {
 		law_universal_suffrage = strongly_approve
 		law_anarchy = neutral
 		law_single_party_state = disapprove
+		law_labour_suffrage = neutral
 	}
 	lawgroup_economic_system = {
 		law_traditionalism = strongly_disapprove
@@ -773,11 +760,9 @@ non_interest_group_leader_trigger = {
 	}
 	interest_group_leader_weight = {
 		value = 100
-		# Equalized within its government classification; leader_trigger does the ideological gating.
 	}
 	non_interest_group_leader_weight = {
 		value = 50
-		# Law-proximity weighting: core laws are strongest; adjacent laws keep nearby ideologies plausible.
 		if = {
 			limit = { owner = { has_law = law_type:law_cooperative_ownership } }
 			add = 28
@@ -827,7 +812,6 @@ non_interest_group_leader_trigger = {
 			add = -20
 		}
 	
-		# High-impact regime fit: democratic institutions should dominate leader ideology spawn.
 		if = { limit = { owner = { OR = { has_law = law_type:law_presidential_republic has_law = law_type:law_parliamentary_republic } } } add = 75 }
 		if = { limit = { owner = { OR = { has_law = law_type:law_universal_suffrage has_law = law_type:law_census_voting has_law = law_type:law_wealth_voting } } } add = 65 }
 		if = { limit = { owner = { has_law = law_type:law_elected_bureaucrats } } add = 55 }
@@ -835,7 +819,6 @@ non_interest_group_leader_trigger = {
 		if = { limit = { owner = { has_law = law_type:law_autocracy } } add = -85 }
 		if = { limit = { owner = { has_law = law_type:law_appointed_bureaucrats } } add = -35 }
 
-		# Drugs and firearms now have stronger law-proximity influence.
 		if = { limit = { owner = { has_law = law_type:law_licensed_firearms } } add = 18 }
 		if = { limit = { owner = { has_law = law_type:law_alcohol_tobacco_legal } } add = 10 }
 		if = { limit = { owner = { has_law = law_type:law_marijuana_decriminalization } } add = 10 }
@@ -882,6 +865,7 @@ REPLACE_OR_CREATE:ideology_green_leader = {
 		law_universal_suffrage = approve
 		law_anarchy = neutral
 		law_single_party_state = disapprove
+		law_labour_suffrage = disapprove
 	}
 	lawgroup_welfare = {
 		law_no_social_security = strongly_disapprove
@@ -936,11 +920,9 @@ non_interest_group_leader_trigger = {
 	}
 	interest_group_leader_weight = {
 		value = 100
-		# Equalized within its government classification; leader_trigger does the ideological gating.
 	}
 	non_interest_group_leader_weight = {
 		value = 25
-		# Law-proximity weighting: core laws are strongest; adjacent laws keep nearby ideologies plausible.
 		if = {
 			limit = { owner = { has_law = law_type:law_guaranteed_rights_of_nature } }
 			add = 28
@@ -982,7 +964,6 @@ non_interest_group_leader_trigger = {
 			add = -20
 		}
 	
-		# High-impact regime fit: democratic institutions should dominate leader ideology spawn.
 		if = { limit = { owner = { OR = { has_law = law_type:law_presidential_republic has_law = law_type:law_parliamentary_republic } } } add = 75 }
 		if = { limit = { owner = { OR = { has_law = law_type:law_universal_suffrage has_law = law_type:law_census_voting has_law = law_type:law_wealth_voting } } } add = 65 }
 		if = { limit = { owner = { has_law = law_type:law_elected_bureaucrats } } add = 55 }
@@ -990,7 +971,6 @@ non_interest_group_leader_trigger = {
 		if = { limit = { owner = { has_law = law_type:law_autocracy } } add = -85 }
 		if = { limit = { owner = { has_law = law_type:law_appointed_bureaucrats } } add = -35 }
 
-		# Drugs and firearms now have stronger law-proximity influence.
 		if = { limit = { owner = { has_law = law_type:law_licensed_firearms } } add = 18 }
 		if = { limit = { owner = { has_law = law_type:law_banned_firearms } } add = 12 }
 		if = { limit = { owner = { has_law = law_type:law_alcohol_tobacco_legal } } add = 10 }
@@ -1034,6 +1014,7 @@ REPLACE_OR_CREATE:ideology_state_capitalist_leader = {
 		law_universal_suffrage = disapprove
 		law_anarchy = strongly_disapprove
 		law_single_party_state = strongly_approve
+		law_labour_suffrage = strongly_disapprove
 	}
 	lawgroup_labor_rights = {
 		law_serfdom_banned = neutral
@@ -1085,11 +1066,9 @@ non_interest_group_leader_trigger = {
 	}
 	interest_group_leader_weight = {
 		value = 100
-		# Equalized within its government classification; leader_trigger does the ideological gating.
 	}
 	non_interest_group_leader_weight = {
 		value = 50
-		# Law-proximity weighting: core laws are strongest; adjacent laws keep nearby ideologies plausible.
 		if = {
 			limit = { owner = { has_law = law_type:law_interventionism } }
 			add = 28
@@ -1135,7 +1114,6 @@ non_interest_group_leader_trigger = {
 			add = -20
 		}
 	
-		# High-impact regime fit: single-party/autocratic states should produce state-aligned authoritarians.
 		if = { limit = { owner = { has_law = law_type:law_single_party_state } } add = 120 }
 		if = { limit = { owner = { has_law = law_type:law_autocracy } } add = 75 }
 		if = { limit = { owner = { has_law = law_type:law_appointed_bureaucrats } } add = 55 }
@@ -1143,7 +1121,6 @@ non_interest_group_leader_trigger = {
 		if = { limit = { owner = { has_law = law_type:law_elected_bureaucrats } } add = -40 }
 		if = { limit = { owner = { has_law = law_type:law_universal_suffrage } } add = -75 }
 
-		# Drugs and firearms now have stronger law-proximity influence.
 		if = { limit = { owner = { has_law = law_type:law_licensed_firearms } } add = 18 }
 		if = { limit = { owner = { has_law = law_type:law_alcohol_tobacco_legal } } add = 10 }
 		if = { limit = { owner = { has_law = law_type:law_total_prohibition } } add = 10 }
@@ -1174,6 +1151,7 @@ REPLACE_OR_CREATE:ideology_market_socialist_leader = {
 		law_universal_suffrage = neutral
 		law_anarchy = approve
 		law_single_party_state = neutral
+		law_labour_suffrage = neutral
 	}
 	lawgroup_labour_associations = {
 		law_combination_acts = disapprove
@@ -1238,11 +1216,9 @@ non_interest_group_leader_trigger = {
 	}
 	interest_group_leader_weight = {
 		value = 100
-		# Equalized within its government classification; leader_trigger does the ideological gating.
 	}
 	non_interest_group_leader_weight = {
 		value = 50
-		# Law-proximity weighting: core laws are strongest; adjacent laws keep nearby ideologies plausible.
 		if = {
 			limit = { owner = { has_law = law_type:law_cooperative_ownership } }
 			add = 28
@@ -1288,7 +1264,6 @@ non_interest_group_leader_trigger = {
 			add = -20
 		}
 	
-		# Drugs and firearms now have stronger law-proximity influence.
 		if = { limit = { owner = { has_law = law_type:law_licensed_firearms } } add = 18 }
 		if = { limit = { owner = { has_law = law_type:law_alcohol_tobacco_legal } } add = 10 }
 		if = { limit = { owner = { has_law = law_type:law_marijuana_decriminalization } } add = 10 }
@@ -1318,6 +1293,7 @@ REPLACE_OR_CREATE:ideology_progressive_leader = {
 		law_universal_suffrage = strongly_approve
 		law_anarchy = neutral
 		law_single_party_state = disapprove
+		law_labour_suffrage = disapprove
 	}
 	lawgroup_rights_of_women = {
 		law_no_womens_rights = strongly_disapprove
@@ -1388,11 +1364,9 @@ non_interest_group_leader_trigger = {
 	}
 	interest_group_leader_weight = {
 		value = 100
-		# Equalized within its government classification; leader_trigger does the ideological gating.
 	}
 	non_interest_group_leader_weight = {
 		value = 50
-		# Law-proximity weighting: core laws are strongest; adjacent laws keep nearby ideologies plausible.
 		if = {
 			limit = { owner = { has_law = law_type:law_structural_egalitarianism } }
 			add = 28
@@ -1442,7 +1416,6 @@ non_interest_group_leader_trigger = {
 			add = -20
 		}
 	
-		# High-impact regime fit: democratic institutions should dominate leader ideology spawn.
 		if = { limit = { owner = { OR = { has_law = law_type:law_presidential_republic has_law = law_type:law_parliamentary_republic } } } add = 75 }
 		if = { limit = { owner = { OR = { has_law = law_type:law_universal_suffrage has_law = law_type:law_census_voting has_law = law_type:law_wealth_voting } } } add = 65 }
 		if = { limit = { owner = { has_law = law_type:law_elected_bureaucrats } } add = 55 }
@@ -1450,7 +1423,6 @@ non_interest_group_leader_trigger = {
 		if = { limit = { owner = { has_law = law_type:law_autocracy } } add = -85 }
 		if = { limit = { owner = { has_law = law_type:law_appointed_bureaucrats } } add = -35 }
 
-		# Drugs and firearms now have stronger law-proximity influence.
 		if = { limit = { owner = { has_law = law_type:law_licensed_firearms } } add = 18 }
 		if = { limit = { owner = { has_law = law_type:law_banned_firearms } } add = 12 }
 		if = { limit = { owner = { has_law = law_type:law_alcohol_tobacco_legal } } add = 10 }
@@ -1481,6 +1453,7 @@ REPLACE_OR_CREATE:ideology_social_liberal_leader = {
 		law_universal_suffrage = approve
 		law_anarchy = neutral
 		law_single_party_state = disapprove
+		law_labour_suffrage = strongly_disapprove
 	}
 	lawgroup_economic_system = {
 		law_traditionalism = approve
@@ -1564,11 +1537,9 @@ non_interest_group_leader_trigger = {
 	}
 	interest_group_leader_weight = {
 		value = 100
-		# Equalized within its government classification; leader_trigger does the ideological gating.
 	}
 	non_interest_group_leader_weight = {
 		value = 50
-		# Law-proximity weighting: core laws are strongest; adjacent laws keep nearby ideologies plausible.
 		if = {
 			limit = { owner = { has_law = law_type:law_interventionism } }
 			add = 28
@@ -1618,7 +1589,6 @@ non_interest_group_leader_trigger = {
 			add = -20
 		}
 	
-		# High-impact regime fit: democratic institutions should dominate leader ideology spawn.
 		if = { limit = { owner = { OR = { has_law = law_type:law_presidential_republic has_law = law_type:law_parliamentary_republic } } } add = 75 }
 		if = { limit = { owner = { OR = { has_law = law_type:law_universal_suffrage has_law = law_type:law_census_voting has_law = law_type:law_wealth_voting } } } add = 65 }
 		if = { limit = { owner = { has_law = law_type:law_elected_bureaucrats } } add = 55 }
@@ -1626,7 +1596,6 @@ non_interest_group_leader_trigger = {
 		if = { limit = { owner = { has_law = law_type:law_autocracy } } add = -85 }
 		if = { limit = { owner = { has_law = law_type:law_appointed_bureaucrats } } add = -35 }
 
-		# Drugs and firearms now have stronger law-proximity influence.
 		if = { limit = { owner = { has_law = law_type:law_licensed_firearms } } add = 18 }
 		if = { limit = { owner = { has_law = law_type:law_alcohol_tobacco_legal } } add = 10 }
 		if = { limit = { owner = { has_law = law_type:law_marijuana_decriminalization } } add = 10 }
@@ -1647,6 +1616,7 @@ REPLACE_OR_CREATE:ideology_technocrat_leader = {
 		law_universal_suffrage = strongly_disapprove
 		law_anarchy = strongly_disapprove
 		law_single_party_state = strongly_disapprove
+		law_labour_suffrage = strongly_disapprove
 	}
 	lawgroup_church_and_state = {
 		law_state_religion = strongly_disapprove
@@ -1668,6 +1638,8 @@ REPLACE_OR_CREATE:ideology_technocrat_leader = {
 		law_hereditary_bureaucrats = approve
 		law_appointed_bureaucrats = strongly_approve
 		law_elected_bureaucrats = neutral
+		law_communal_administration = strongly_disapprove
+		law_military_bureaucrats = neutral
 	}
 	lawgroup_education_system = {
 		law_no_schools = strongly_disapprove
@@ -1738,11 +1710,9 @@ non_interest_group_leader_trigger = {
 	}
 	interest_group_leader_weight = {
 		value = 100
-		# Equalized within its government classification; leader_trigger does the ideological gating.
 	}
 	non_interest_group_leader_weight = {
 		value = 50
-		# Law-proximity weighting: core laws are strongest; adjacent laws keep nearby ideologies plausible.
 		if = {
 			limit = { owner = { has_law = law_type:law_technocracy } }
 			add = 28
@@ -1788,14 +1758,12 @@ non_interest_group_leader_trigger = {
 			add = -20
 		}
 	
-		# High-impact regime fit for constitutional market liberals.
 		if = { limit = { owner = { OR = { has_law = law_type:law_presidential_republic has_law = law_type:law_parliamentary_republic } } } add = 65 }
 		if = { limit = { owner = { OR = { has_law = law_type:law_wealth_voting has_law = law_type:law_census_voting has_law = law_type:law_universal_suffrage } } } add = 45 }
 		if = { limit = { owner = { has_law = law_type:law_elected_bureaucrats } } add = 45 }
 		if = { limit = { owner = { has_law = law_type:law_single_party_state } } add = -95 }
 		if = { limit = { owner = { has_law = law_type:law_autocracy } } add = -80 }
 
-		# Drugs and firearms now have stronger law-proximity influence.
 		if = { limit = { owner = { has_law = law_type:law_licensed_firearms } } add = 18 }
 		if = { limit = { owner = { has_law = law_type:law_alcohol_tobacco_legal } } add = 10 }
 }
@@ -1824,6 +1792,7 @@ REPLACE_OR_CREATE:ideology_liberal_leader = {
 		law_universal_suffrage = approve
 		law_anarchy = neutral
 		law_single_party_state = disapprove
+		law_labour_suffrage = strongly_disapprove
 	}
 	lawgroup_economic_system = {
 		law_traditionalism = strongly_disapprove
@@ -1903,11 +1872,9 @@ non_interest_group_leader_trigger = {
 	}
 	interest_group_leader_weight = {
 		value = 100
-		# Equalized within its government classification; leader_trigger does the ideological gating.
 	}
 	non_interest_group_leader_weight = {
 		value = 50
-		# Law-proximity weighting: core laws are strongest; adjacent laws keep nearby ideologies plausible.
 		if = {
 			limit = { owner = { has_law = law_type:law_free_trade } }
 			add = 28
@@ -1965,7 +1932,6 @@ non_interest_group_leader_trigger = {
 			add = 20
 		}
 	
-		# High-impact regime fit: democratic institutions should dominate leader ideology spawn.
 		if = { limit = { owner = { OR = { has_law = law_type:law_presidential_republic has_law = law_type:law_parliamentary_republic } } } add = 75 }
 		if = { limit = { owner = { OR = { has_law = law_type:law_universal_suffrage has_law = law_type:law_census_voting has_law = law_type:law_wealth_voting } } } add = 65 }
 		if = { limit = { owner = { has_law = law_type:law_elected_bureaucrats } } add = 55 }
@@ -1973,7 +1939,6 @@ non_interest_group_leader_trigger = {
 		if = { limit = { owner = { has_law = law_type:law_autocracy } } add = -85 }
 		if = { limit = { owner = { has_law = law_type:law_appointed_bureaucrats } } add = -35 }
 
-		# Drugs and firearms now have stronger law-proximity influence.
 		if = { limit = { owner = { has_law = law_type:law_licensed_firearms } } add = 18 }
 		if = { limit = { owner = { has_law = law_type:law_alcohol_tobacco_legal } } add = 10 }
 		if = { limit = { owner = { has_law = law_type:law_marijuana_decriminalization } } add = 10 }
@@ -2015,11 +1980,9 @@ non_interest_group_leader_trigger = {
 	}
 	interest_group_leader_weight = {
 		value = 50
-		# Equalized within its government classification; leader_trigger does the ideological gating.
 	}
 	non_interest_group_leader_weight = {
 		value = 50
-		# Law-proximity weighting: core laws are strongest; adjacent laws keep nearby ideologies plausible.
 		if = {
 			limit = { owner = { has_law = law_type:law_interventionism } }
 			add = 28
@@ -2065,7 +2028,6 @@ non_interest_group_leader_trigger = {
 			add = -20
 		}
 	
-		# High-impact regime fit: democratic institutions should dominate leader ideology spawn.
 		if = { limit = { owner = { OR = { has_law = law_type:law_presidential_republic has_law = law_type:law_parliamentary_republic } } } add = 75 }
 		if = { limit = { owner = { OR = { has_law = law_type:law_universal_suffrage has_law = law_type:law_census_voting has_law = law_type:law_wealth_voting } } } add = 65 }
 		if = { limit = { owner = { has_law = law_type:law_elected_bureaucrats } } add = 55 }
@@ -2073,7 +2035,6 @@ non_interest_group_leader_trigger = {
 		if = { limit = { owner = { has_law = law_type:law_autocracy } } add = -85 }
 		if = { limit = { owner = { has_law = law_type:law_appointed_bureaucrats } } add = -35 }
 
-		# Drugs and firearms now have stronger law-proximity influence.
 		if = { limit = { owner = { has_law = law_type:law_licensed_firearms } } add = 18 }
 		if = { limit = { owner = { has_law = law_type:law_alcohol_tobacco_legal } } add = 10 }
 }
@@ -2169,11 +2130,9 @@ non_interest_group_leader_trigger = {
 	}
 	interest_group_leader_weight = {
 		value = 100
-		# Equalized within its government classification; leader_trigger does the ideological gating.
 	}
 	non_interest_group_leader_weight = {
 		value = 50
-		# Law-proximity weighting: core laws are strongest; adjacent laws keep nearby ideologies plausible.
 		if = {
 			limit = { owner = { has_law = law_type:law_laissez_faire } }
 			add = 28
@@ -2227,7 +2186,6 @@ non_interest_group_leader_trigger = {
 			add = 20
 		}
 	
-		# High-impact regime fit: democratic institutions should dominate leader ideology spawn.
 		if = { limit = { owner = { OR = { has_law = law_type:law_presidential_republic has_law = law_type:law_parliamentary_republic } } } add = 75 }
 		if = { limit = { owner = { OR = { has_law = law_type:law_universal_suffrage has_law = law_type:law_census_voting has_law = law_type:law_wealth_voting } } } add = 65 }
 		if = { limit = { owner = { has_law = law_type:law_elected_bureaucrats } } add = 55 }
@@ -2235,7 +2193,6 @@ non_interest_group_leader_trigger = {
 		if = { limit = { owner = { has_law = law_type:law_autocracy } } add = -85 }
 		if = { limit = { owner = { has_law = law_type:law_appointed_bureaucrats } } add = -35 }
 
-		# Drugs and firearms now have stronger law-proximity influence.
 		if = { limit = { owner = { has_law = law_type:law_licensed_firearms } } add = 18 }
 		if = { limit = { owner = { has_law = law_type:law_alcohol_tobacco_legal } } add = 10 }
 		if = { limit = { owner = { has_law = law_type:law_marijuana_decriminalization } } add = 10 }
@@ -2265,6 +2222,7 @@ REPLACE_OR_CREATE:ideology_conservative_leader = {
 		law_universal_suffrage = neutral
 		law_anarchy = disapprove
 		law_single_party_state = strongly_disapprove
+		law_labour_suffrage = strongly_disapprove
 	}
 	lawgroup_economic_system = {
 		law_traditionalism = strongly_disapprove
@@ -2345,11 +2303,9 @@ non_interest_group_leader_trigger = {
 	}
 	interest_group_leader_weight = {
 		value = 100
-		# Equalized within its government classification; leader_trigger does the ideological gating.
 	}
 	non_interest_group_leader_weight = {
 		value = 50
-		# Law-proximity weighting: core laws are strongest; adjacent laws keep nearby ideologies plausible.
 		if = {
 			limit = { owner = { has_law = law_type:law_laissez_faire } }
 			add = 28
@@ -2403,7 +2359,6 @@ non_interest_group_leader_trigger = {
 			add = -20
 		}
 	
-		# High-impact regime fit: democratic institutions should dominate leader ideology spawn.
 		if = { limit = { owner = { OR = { has_law = law_type:law_presidential_republic has_law = law_type:law_parliamentary_republic } } } add = 75 }
 		if = { limit = { owner = { OR = { has_law = law_type:law_universal_suffrage has_law = law_type:law_census_voting has_law = law_type:law_wealth_voting } } } add = 65 }
 		if = { limit = { owner = { has_law = law_type:law_elected_bureaucrats } } add = 55 }
@@ -2411,12 +2366,10 @@ non_interest_group_leader_trigger = {
 		if = { limit = { owner = { has_law = law_type:law_autocracy } } add = -85 }
 		if = { limit = { owner = { has_law = law_type:law_appointed_bureaucrats } } add = -35 }
 
-		# Conservatives are democratic-right in this rework, not PRC-style single-party state loyalists.
 		if = { limit = { owner = { has_law = law_type:law_single_party_state } } add = -120 }
 		if = { limit = { owner = { has_law = law_type:law_parliamentary_republic } } add = 60 }
 		if = { limit = { owner = { has_law = law_type:law_presidential_republic } } add = 60 }
 
-		# Drugs and firearms now have stronger law-proximity influence.
 		if = { limit = { owner = { has_law = law_type:law_licensed_firearms } } add = 18 }
 		if = { limit = { owner = { has_law = law_type:law_alcohol_tobacco_legal } } add = 10 }
 		if = { limit = { owner = { has_law = law_type:law_total_prohibition } } add = 10 }
@@ -2515,11 +2468,9 @@ non_interest_group_leader_trigger = {
 	}
 	interest_group_leader_weight = {
 		value = 100
-		# Equalized within its government classification; leader_trigger does the ideological gating.
 	}
 	non_interest_group_leader_weight = {
 		value = 50
-		# Law-proximity weighting: core laws are strongest; adjacent laws keep nearby ideologies plausible.
 		if = {
 			limit = { owner = { has_law = law_type:law_corporate_state } }
 			add = 28
@@ -2565,7 +2516,6 @@ non_interest_group_leader_trigger = {
 			add = -20
 		}
 	
-		# Drugs and firearms now have stronger law-proximity influence.
 		if = { limit = { owner = { has_law = law_type:law_licensed_firearms } } add = 18 }
 		if = { limit = { owner = { has_law = law_type:law_alcohol_tobacco_legal } } add = 10 }
 }
@@ -2653,11 +2603,9 @@ non_interest_group_leader_trigger = {
 	}
 	interest_group_leader_weight = {
 		value = 100
-		# Equalized within its government classification; leader_trigger does the ideological gating.
 	}
 	non_interest_group_leader_weight = {
 		value = 50
-		# Law-proximity weighting: core laws are strongest; adjacent laws keep nearby ideologies plausible.
 		if = {
 			limit = { owner = { has_law = law_type:law_theocracy } }
 			add = 28
@@ -2703,7 +2651,6 @@ non_interest_group_leader_trigger = {
 			add = 35
 		}
 	
-		# Drugs and firearms now have stronger law-proximity influence.
 		if = { limit = { owner = { has_law = law_type:law_licensed_firearms } } add = 18 }
 		if = { limit = { owner = { has_law = law_type:law_banned_firearms } } add = 12 }
 		if = { limit = { owner = { has_law = law_type:law_total_prohibition } } add = 10 }
@@ -2733,6 +2680,7 @@ REPLACE_OR_CREATE:ideology_right_wing_libertarian_leader = {
 		law_universal_suffrage = neutral
 		law_anarchy = approve
 		law_single_party_state = neutral
+		law_labour_suffrage = strongly_disapprove
 	}
 	lawgroup_economic_system = {
 		law_traditionalism = strongly_disapprove
@@ -2773,6 +2721,7 @@ REPLACE_OR_CREATE:ideology_right_wing_libertarian_leader = {
 		law_national_guard = disapprove
 		law_secret_police = approve
 		law_guaranteed_liberties = strongly_approve
+		law_extraordinary_commission = strongly_disapprove
 	}
 	lawgroup_drug_regulations = {
 		law_total_prohibition = strongly_disapprove
@@ -2808,11 +2757,9 @@ non_interest_group_leader_trigger = {
 	}
 	interest_group_leader_weight = {
 		value = 100
-		# Equalized within its government classification; leader_trigger does the ideological gating.
 	}
 	non_interest_group_leader_weight = {
 		value = 50
-		# Law-proximity weighting: core laws are strongest; adjacent laws keep nearby ideologies plausible.
 		if = {
 			limit = { owner = { has_law = law_type:law_laissez_faire } }
 			add = 28
@@ -2866,14 +2813,12 @@ non_interest_group_leader_trigger = {
 			add = -20
 		}
 	
-		# High-impact regime fit for constitutional market liberals.
 		if = { limit = { owner = { OR = { has_law = law_type:law_presidential_republic has_law = law_type:law_parliamentary_republic } } } add = 65 }
 		if = { limit = { owner = { OR = { has_law = law_type:law_wealth_voting has_law = law_type:law_census_voting has_law = law_type:law_universal_suffrage } } } add = 45 }
 		if = { limit = { owner = { has_law = law_type:law_elected_bureaucrats } } add = 45 }
 		if = { limit = { owner = { has_law = law_type:law_single_party_state } } add = -95 }
 		if = { limit = { owner = { has_law = law_type:law_autocracy } } add = -80 }
 
-		# Drugs and firearms now have stronger law-proximity influence.
 		if = { limit = { owner = { has_law = law_type:law_unrestricted_firearms } } add = 12 }
 		if = { limit = { owner = { has_law = law_type:law_alcohol_tobacco_legal } } add = 10 }
 		if = { limit = { owner = { has_law = law_type:law_marijuana_decriminalization } } add = 10 }
@@ -2903,6 +2848,7 @@ REPLACE_OR_CREATE:ideology_classical_liberal_leader = {
 		law_universal_suffrage = neutral
 		law_anarchy = disapprove
 		law_single_party_state = strongly_disapprove
+		law_labour_suffrage = strongly_disapprove
 	}
 	lawgroup_economic_system = {
 		law_traditionalism = strongly_disapprove
@@ -2975,11 +2921,9 @@ non_interest_group_leader_trigger = {
 	}
 	interest_group_leader_weight = {
 		value = 100
-		# Equalized within its government classification; leader_trigger does the ideological gating.
 	}
 	non_interest_group_leader_weight = {
 		value = 50
-		# Law-proximity weighting: core laws are strongest; adjacent laws keep nearby ideologies plausible.
 		if = {
 			limit = { owner = { has_law = law_type:law_laissez_faire } }
 			add = 28
@@ -3029,14 +2973,12 @@ non_interest_group_leader_trigger = {
 			add = -20
 		}
 	
-		# High-impact regime fit for constitutional market liberals.
 		if = { limit = { owner = { OR = { has_law = law_type:law_presidential_republic has_law = law_type:law_parliamentary_republic } } } add = 65 }
 		if = { limit = { owner = { OR = { has_law = law_type:law_wealth_voting has_law = law_type:law_census_voting has_law = law_type:law_universal_suffrage } } } add = 45 }
 		if = { limit = { owner = { has_law = law_type:law_elected_bureaucrats } } add = 45 }
 		if = { limit = { owner = { has_law = law_type:law_single_party_state } } add = -95 }
 		if = { limit = { owner = { has_law = law_type:law_autocracy } } add = -80 }
 
-		# Drugs and firearms now have stronger law-proximity influence.
 		if = { limit = { owner = { has_law = law_type:law_licensed_firearms } } add = 18 }
 		if = { limit = { owner = { has_law = law_type:law_unrestricted_firearms } } add = 12 }
 		if = { limit = { owner = { has_law = law_type:law_alcohol_tobacco_legal } } add = 10 }
@@ -3051,6 +2993,7 @@ REPLACE_OR_CREATE:ideology_neocon_leader = {
 		law_professional_army = strongly_approve
 		law_national_militia = neutral
 		law_mass_conscription = disapprove
+		law_revolutionary_guard = strongly_disapprove
 	}
 	lawgroup_navy_model = {
 		law_merchant_navy = disapprove
@@ -3089,6 +3032,7 @@ REPLACE_OR_CREATE:ideology_neocon_leader = {
 		law_national_guard = approve
 		law_secret_police = neutral
 		law_guaranteed_liberties = disapprove
+		law_extraordinary_commission = strongly_disapprove
 	}
 	lawgroup_free_speech = {
 		law_outlawed_dissent = strongly_disapprove
@@ -3136,11 +3080,9 @@ non_interest_group_leader_trigger = {
 	}
 	interest_group_leader_weight = {
 		value = 100
-		# Equalized within its government classification; leader_trigger does the ideological gating.
 	}
 	non_interest_group_leader_weight = {
 		value = 50
-		# Law-proximity weighting: core laws are strongest; adjacent laws keep nearby ideologies plausible.
 		if = {
 			limit = { owner = { has_law = law_type:law_professional_army } }
 			add = 28
@@ -3190,7 +3132,6 @@ non_interest_group_leader_trigger = {
 			add = 40
 		}
 	
-		# Drugs and firearms now have stronger law-proximity influence.
 		if = { limit = { owner = { has_law = law_type:law_licensed_firearms } } add = 18 }
 		if = { limit = { owner = { has_law = law_type:law_alcohol_tobacco_legal } } add = 10 }
 		if = { limit = { owner = { has_law = law_type:law_total_prohibition } } add = 10 }
@@ -3219,6 +3160,7 @@ REPLACE_OR_CREATE:ideology_jihadist_leader = {
 		law_professional_army = disapprove
 		law_national_militia = approve
 		law_mass_conscription = strongly_approve
+		law_revolutionary_guard = approve
 	}
 	lawgroup_free_speech = {
 		law_outlawed_dissent = neutral
@@ -3270,8 +3212,8 @@ interest_group_leader_trigger = {
 			smd_is_theocratic_government_trigger = yes
 			has_law = law_type:law_state_religion
 			OR = {
-			country_has_accepted_religion = sunni
-			country_has_accepted_religion = shiite
+			country_has_state_religion = rel:sunni
+			country_has_state_religion = rel:shiite
 			}
 		}
 	}
@@ -3280,18 +3222,16 @@ non_interest_group_leader_trigger = {
 			smd_is_theocratic_government_trigger = yes
 			has_law = law_type:law_state_religion
 			OR = {
-			country_has_accepted_religion = sunni
-			country_has_accepted_religion = shiite
+			country_has_state_religion = rel:sunni
+			country_has_state_religion = rel:shiite
 			}
 		}
 	}
 	interest_group_leader_weight = {
 		value = 100
-		# Equalized within its government classification; leader_trigger does the ideological gating.
 	}
 	non_interest_group_leader_weight = {
 		value = 10
-		# Law-proximity weighting: core laws are strongest; adjacent laws keep nearby ideologies plausible.
 		if = {
 			limit = { owner = { has_law = law_type:law_state_religion } }
 			add = 28
@@ -3336,7 +3276,6 @@ non_interest_group_leader_trigger = {
 			limit = { owner = { has_law = law_type:law_protected_speech } }
 			add = -20
 		}
-		# More likely when society is destabilized by radicals.
 		add = {
 			value = owner.radical_fraction
 			multiply = 160
@@ -3346,7 +3285,6 @@ non_interest_group_leader_trigger = {
 			add = 40
 		}
 	
-		# Drugs and firearms now have stronger law-proximity influence.
 		if = { limit = { owner = { has_law = law_type:law_banned_firearms } } add = 12 }
 		if = { limit = { owner = { has_law = law_type:law_total_prohibition } } add = 10 }
 }
@@ -3399,6 +3337,7 @@ REPLACE_OR_CREATE:ideology_minarchist_leader = {
 		law_national_guard = neutral
 		law_secret_police = disapprove
 		law_guaranteed_liberties = strongly_disapprove
+		law_extraordinary_commission = strongly_disapprove
 	}
 	lawgroup_central_banking = {
 		law_no_central_bank = strongly_approve
@@ -3439,11 +3378,9 @@ non_interest_group_leader_trigger = {
 	}
 	interest_group_leader_weight = {
 		value = 95
-		# Equalized within its government classification; leader_trigger does the ideological gating.
 	}
 	non_interest_group_leader_weight = {
 		value = 50
-		# Law-proximity weighting: core laws are strongest; adjacent laws keep nearby ideologies plausible.
 		if = {
 			limit = { owner = { has_law = law_type:law_laissez_faire } }
 			add = 28
@@ -3497,14 +3434,12 @@ non_interest_group_leader_trigger = {
 			add = -20
 		}
 	
-		# High-impact regime fit for constitutional market liberals.
 		if = { limit = { owner = { OR = { has_law = law_type:law_presidential_republic has_law = law_type:law_parliamentary_republic } } } add = 65 }
 		if = { limit = { owner = { OR = { has_law = law_type:law_wealth_voting has_law = law_type:law_census_voting has_law = law_type:law_universal_suffrage } } } add = 45 }
 		if = { limit = { owner = { has_law = law_type:law_elected_bureaucrats } } add = 45 }
 		if = { limit = { owner = { has_law = law_type:law_single_party_state } } add = -95 }
 		if = { limit = { owner = { has_law = law_type:law_autocracy } } add = -80 }
 
-		# Drugs and firearms now have stronger law-proximity influence.
 		if = { limit = { owner = { has_law = law_type:law_unrestricted_firearms } } add = 12 }
 		if = { limit = { owner = { has_law = law_type:law_alcohol_tobacco_legal } } add = 10 }
 		if = { limit = { owner = { has_law = law_type:law_marijuana_decriminalization } } add = 10 }
@@ -3525,6 +3460,7 @@ REPLACE_OR_CREATE:ideology_right_wing_populist_leader = {
 		law_universal_suffrage = approve
 		law_anarchy = neutral
 		law_single_party_state = disapprove
+		law_labour_suffrage = strongly_disapprove
 	}
 	lawgroup_citizenship = {
 		law_ethnostate = strongly_disapprove
@@ -3609,11 +3545,9 @@ non_interest_group_leader_trigger = {
 	}
 	interest_group_leader_weight = {
 		value = 100
-		# Equalized within its government classification; leader_trigger does the ideological gating.
 	}
 	non_interest_group_leader_weight = {
 		value = 30
-		# Law-proximity weighting: core laws are strongest; adjacent laws keep nearby ideologies plausible.
 		if = {
 			limit = { owner = { has_law = law_type:law_protectionism } }
 			add = 28
@@ -3662,13 +3596,11 @@ non_interest_group_leader_trigger = {
 			limit = { owner = { has_law = law_type:law_technocracy } }
 			add = -20
 		}
-		# More likely when society is destabilized by radicals.
 		add = {
 			value = owner.radical_fraction
 			multiply = 160
 		}
 	
-		# High-impact regime fit: democratic institutions should dominate leader ideology spawn.
 		if = { limit = { owner = { OR = { has_law = law_type:law_presidential_republic has_law = law_type:law_parliamentary_republic } } } add = 75 }
 		if = { limit = { owner = { OR = { has_law = law_type:law_universal_suffrage has_law = law_type:law_census_voting has_law = law_type:law_wealth_voting } } } add = 65 }
 		if = { limit = { owner = { has_law = law_type:law_elected_bureaucrats } } add = 55 }
@@ -3676,7 +3608,6 @@ non_interest_group_leader_trigger = {
 		if = { limit = { owner = { has_law = law_type:law_autocracy } } add = -85 }
 		if = { limit = { owner = { has_law = law_type:law_appointed_bureaucrats } } add = -35 }
 
-		# Drugs and firearms now have stronger law-proximity influence.
 		if = { limit = { owner = { has_law = law_type:law_licensed_firearms } } add = 18 }
 		if = { limit = { owner = { has_law = law_type:law_unrestricted_firearms } } add = 12 }
 		if = { limit = { owner = { has_law = law_type:law_alcohol_tobacco_legal } } add = 10 }
@@ -3707,6 +3638,7 @@ REPLACE_OR_CREATE:ideology_authoritarian_capitalist_leader = {
 		law_universal_suffrage = strongly_disapprove
 		law_anarchy = strongly_disapprove
 		law_single_party_state = strongly_disapprove
+		law_labour_suffrage = strongly_disapprove
 	}
 	lawgroup_economic_system = {
 		law_traditionalism = approve
@@ -3729,6 +3661,7 @@ REPLACE_OR_CREATE:ideology_authoritarian_capitalist_leader = {
 		law_national_guard = approve
 		law_secret_police = strongly_approve
 		law_guaranteed_liberties = neutral
+		law_extraordinary_commission = disapprove
 	}
 	lawgroup_policing = {
 		law_no_police = strongly_disapprove
@@ -3778,11 +3711,9 @@ non_interest_group_leader_trigger = {
 	}
 	interest_group_leader_weight = {
 		value = 100
-		# Equalized within its government classification; leader_trigger does the ideological gating.
 	}
 	non_interest_group_leader_weight = {
 		value = 50
-		# Law-proximity weighting: core laws are strongest; adjacent laws keep nearby ideologies plausible.
 		if = {
 			limit = { owner = { has_law = law_type:law_autocracy } }
 			add = 28
@@ -3840,7 +3771,6 @@ non_interest_group_leader_trigger = {
 			add = -20
 		}
 	
-		# High-impact regime fit: single-party/autocratic states should produce state-aligned authoritarians.
 		if = { limit = { owner = { has_law = law_type:law_single_party_state } } add = 120 }
 		if = { limit = { owner = { has_law = law_type:law_autocracy } } add = 75 }
 		if = { limit = { owner = { has_law = law_type:law_appointed_bureaucrats } } add = 55 }
@@ -3848,7 +3778,6 @@ non_interest_group_leader_trigger = {
 		if = { limit = { owner = { has_law = law_type:law_elected_bureaucrats } } add = -40 }
 		if = { limit = { owner = { has_law = law_type:law_universal_suffrage } } add = -75 }
 
-		# Drugs and firearms now have stronger law-proximity influence.
 		if = { limit = { owner = { has_law = law_type:law_licensed_firearms } } add = 18 }
 		if = { limit = { owner = { has_law = law_type:law_alcohol_tobacco_legal } } add = 10 }
 		if = { limit = { owner = { has_law = law_type:law_total_prohibition } } add = 10 }
@@ -3871,6 +3800,8 @@ REPLACE_OR_CREATE:ideology_monarchist_leader = {
 		law_hereditary_bureaucrats = strongly_approve
 		law_appointed_bureaucrats = neutral
 		law_elected_bureaucrats = disapprove
+		law_communal_administration = strongly_disapprove
+		law_military_bureaucrats = approve
 	}
 	lawgroup_distribution_of_power = {
 		law_autocracy = strongly_disapprove
@@ -3883,6 +3814,7 @@ REPLACE_OR_CREATE:ideology_monarchist_leader = {
 		law_universal_suffrage = disapprove
 		law_anarchy = strongly_disapprove
 		law_single_party_state = strongly_disapprove
+		law_labour_suffrage = strongly_disapprove
 	}
 	lawgroup_church_and_state = {
 		law_state_religion = approve
@@ -3944,11 +3876,9 @@ non_interest_group_leader_trigger = {
 	}
 	interest_group_leader_weight = {
 		value = 100
-		# Equalized within its government classification; leader_trigger does the ideological gating.
 	}
 	non_interest_group_leader_weight = {
 		value = 70
-		# Law-proximity weighting: core laws are strongest; adjacent laws keep nearby ideologies plausible.
 		if = {
 			limit = { owner = { has_law = law_type:law_monarchy } }
 			add = 28
@@ -3998,7 +3928,6 @@ non_interest_group_leader_trigger = {
 			add = -20
 		}
 	
-		# Drugs and firearms now have stronger law-proximity influence.
 		if = { limit = { owner = { has_law = law_type:law_licensed_firearms } } add = 18 }
 		if = { limit = { owner = { has_law = law_type:law_alcohol_tobacco_legal } } add = 10 }
 		if = { limit = { owner = { has_law = law_type:law_total_prohibition } } add = 10 }
@@ -4028,6 +3957,7 @@ REPLACE_OR_CREATE:ideology_fascist_leader = {
 		law_universal_suffrage = disapprove
 		law_anarchy = approve
 		law_single_party_state = strongly_approve
+		law_labour_suffrage = strongly_disapprove
 	}
 	lawgroup_citizenship = {
 		law_ethnostate = approve
@@ -4041,6 +3971,7 @@ REPLACE_OR_CREATE:ideology_fascist_leader = {
 		law_professional_army = disapprove
 		law_national_militia = approve
 		law_mass_conscription = strongly_approve
+		law_revolutionary_guard = disapprove
 	}
 	lawgroup_free_speech = {
 		law_outlawed_dissent = strongly_approve
@@ -4094,11 +4025,9 @@ non_interest_group_leader_trigger = {
 	}
 	interest_group_leader_weight = {
 		value = 100
-		# Equalized within its government classification; leader_trigger does the ideological gating.
 	}
 	non_interest_group_leader_weight = {
 		value = 20
-		# Law-proximity weighting: core laws are strongest; adjacent laws keep nearby ideologies plausible.
 		if = {
 			limit = { owner = { has_law = law_type:law_single_party_state } }
 			add = 28
@@ -4155,7 +4084,6 @@ non_interest_group_leader_trigger = {
 			limit = { owner = { has_law = law_type:law_protected_speech } }
 			add = -20
 		}
-		# More likely when society is destabilized by radicals.
 		add = {
 			value = owner.radical_fraction
 			multiply = 160
@@ -4165,7 +4093,6 @@ non_interest_group_leader_trigger = {
 			add = 40
 		}
 	
-		# High-impact regime fit: single-party/autocratic states should produce state-aligned authoritarians.
 		if = { limit = { owner = { has_law = law_type:law_single_party_state } } add = 120 }
 		if = { limit = { owner = { has_law = law_type:law_autocracy } } add = 75 }
 		if = { limit = { owner = { has_law = law_type:law_appointed_bureaucrats } } add = 55 }
@@ -4173,7 +4100,6 @@ non_interest_group_leader_trigger = {
 		if = { limit = { owner = { has_law = law_type:law_elected_bureaucrats } } add = -40 }
 		if = { limit = { owner = { has_law = law_type:law_universal_suffrage } } add = -75 }
 
-		# Drugs and firearms now have stronger law-proximity influence.
 		if = { limit = { owner = { has_law = law_type:law_licensed_firearms } } add = 18 }
 		if = { limit = { owner = { has_law = law_type:law_banned_firearms } } add = 12 }
 		if = { limit = { owner = { has_law = law_type:law_alcohol_tobacco_legal } } add = 10 }

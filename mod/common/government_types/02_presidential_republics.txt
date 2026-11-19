@@ -573,7 +573,7 @@ gov_warlord_state = {
 		has_law_or_variant = law_type:law_autocracy
 		has_law_or_variant = law_type:law_peasant_levies
 
-		OR = { #Maybe theres a better trigger?
+		OR = {
 			root.capital.region ?= sr:region_north_china
 			root.capital.region ?= sr:region_south_china
 			root.capital.region ?= sr:region_manchuria
@@ -632,7 +632,7 @@ gov_military_dictatorship = {
 		ig:ig_armed_forces ?= {
 			is_in_government = yes
 		}
-		NOT = { # Hispanic/Portuguese countries get juntas instead
+		NOT = {
 			any_primary_culture = {
 				OR = {
 					has_discrimination_trait = language_hispanophone

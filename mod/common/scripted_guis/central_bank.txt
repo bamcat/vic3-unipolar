@@ -1,7 +1,4 @@
 ﻿# ==========================================
-# CENTRAL BANK FISCAL POLICY — SCRIPTED GUIs
-# Variable: cb_fiscal_policy = 1..5
-#   1 = Most Contractionary
 #   2 = Contractionary
 #   3 = Neutral
 #   4 = Expansionary
@@ -62,9 +59,6 @@ cb_policy_is_5 = {
 }
 
 # ── SETTERS ────────────────────────────────
-# Each setter: clears all CB policy modifiers, sets the variable, then
-# applies the correct modifier for the new level + active law.
-# Logic is inlined — scripted GUIs cannot call other scripted GUIs via
 # "name = yes" syntax (that's for scripted_effects only).
 
 cb_set_policy_1 = {
@@ -86,6 +80,7 @@ cb_set_policy_1 = {
 		remove_modifier = cb_policy_full_4
 		remove_modifier = cb_policy_full_5
 		set_variable = { name = cb_fiscal_policy value = 1 }
+		fin_apply_monetary_stance = yes
 		if = {
 			limit = { has_law = law_type:law_fractional_reserve_banking }
 			add_modifier = { name = cb_policy_fractional_1 months = -1 }
@@ -117,6 +112,7 @@ cb_set_policy_2 = {
 		remove_modifier = cb_policy_full_4
 		remove_modifier = cb_policy_full_5
 		set_variable = { name = cb_fiscal_policy value = 2 }
+		fin_apply_monetary_stance = yes
 		if = {
 			limit = { has_law = law_type:law_fractional_reserve_banking }
 			add_modifier = { name = cb_policy_fractional_2 months = -1 }
@@ -148,7 +144,7 @@ cb_set_policy_3 = {
 		remove_modifier = cb_policy_full_4
 		remove_modifier = cb_policy_full_5
 		set_variable = { name = cb_fiscal_policy value = 3 }
-		# Neutral: no modifier applied
+		fin_apply_monetary_stance = yes
 	}
 	ai_is_valid = { always = no }
 }
@@ -172,6 +168,7 @@ cb_set_policy_4 = {
 		remove_modifier = cb_policy_full_4
 		remove_modifier = cb_policy_full_5
 		set_variable = { name = cb_fiscal_policy value = 4 }
+		fin_apply_monetary_stance = yes
 		if = {
 			limit = { has_law = law_type:law_fractional_reserve_banking }
 			add_modifier = { name = cb_policy_fractional_4 months = -1 }
@@ -203,6 +200,7 @@ cb_set_policy_5 = {
 		remove_modifier = cb_policy_full_4
 		remove_modifier = cb_policy_full_5
 		set_variable = { name = cb_fiscal_policy value = 5 }
+		fin_apply_monetary_stance = yes
 		if = {
 			limit = { has_law = law_type:law_fractional_reserve_banking }
 			add_modifier = { name = cb_policy_fractional_5 months = -1 }

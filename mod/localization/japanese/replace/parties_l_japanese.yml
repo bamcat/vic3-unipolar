@@ -5,7 +5,7 @@
  party_liberal:0 "リベラルパーティー"
  party_nazis:0 "アフッド"
  party_anc:0 "アフリカ国立議会"
- party_german_social_party: "SPD
+ party_german_social_party: "SPD"
  party_british_union_of_fascists:0 "英国のフェスクリストの連合"
  party_mouvement_franciste:1 "ナショナルフロント"
  party_silver_legion:0 "シルバーレギオン"
@@ -174,7 +174,6 @@
  party_farroupilha: "Farroupilha パーティー"
  party_swaraj_party: "Swaraj パーティー"
 
-
 #religious_party
  party_portuguese_catholic_centre:0 "ポルトガル語カトリックセンター"
  party_catholic_right:0 "カトリック右"
@@ -188,7 +187,7 @@
  party_clerical_party:0 "クラシカルパーティー"
  party_know_nothing_party:0 "何も知らないパーティー"
  party_conservative_catholics:0 "カトリックカトリック教徒"
- party_traditionalist_communion:0 "Traditionalist Communion" # Carlists, might revise
+ party_traditionalist_communion:0 "Traditionalist Communion"
 
 #social_democrats_party
  party_psoe:0 "プッシー"
@@ -259,7 +258,6 @@
  party_italian_syndicalist_union:0 "イタリアのシンジカルニストユニオン"
  party_anarcho_communist_federation: "アンアルチョ・コミュニスト連盟"
 
- # Party weight descriptions
  base_value:0 "基礎価値"
  from_liberal_leader:0 "リベラル・リーダー・イデオロジー"
  from_liberalism:0 "リベラルまたはLaissez-Faire Ideology"
@@ -393,7 +391,23 @@
 
  tl_first_term:0 "このキャラクターは、初めての用語です。"
  tl_second_term:0 "このキャラクターは、2次期に渡って退職します。"
- 
+
  notification_ruler_term_limit_exceeded_name:0 "[SCOPE.sCharacter('retiring_ig_leader').GetFullName] は、その限界に達しました。"
  notification_ruler_term_limit_exceeded_desc:0 "[SCOPE.sCharacter('retiring_ig_leader').GetFullName] は、用語制限に達し、その用語の最後に退職します。 [SCOPE.gsInterestGroup('retiring_leader_ig').GetName] は、次の選挙で [SCOPE.sCharacter('candidate').GetFullName] によって導かれます。"
  notification_ruler_term_limit_exceeded_tooltip:0 "#header $notification_ruler_term_limit_exceeded_name$#!\n$TOOLTIP_DELIMITER$\n$notification_ruler_term_limit_exceeded_desc$"
+ leader_ideological_compatibility:0 "Leader's ideology fits the party"
+ leader_adjacent_ideology:0 "Leader's ideology is close to the party"
+ leader_ideology_unrelated:0 "Leader's ideology does not fit the party"
+ leader_ideological_incompatibility:0 "Leader's ideology is opposed to the party"
+ interest_group_ideological_compatibility:0 "Interest Group ideology fits the party"
+ interest_group_adjacent_ideology:0 "Interest Group ideology is close to the party"
+ interest_group_ideological_incompatibility:0 "Interest Group ideology is opposed to the party"
+ powerful_ig:0 "Is Powerful"
+ social_democratic_laws:0 "Social democratic laws in force"
+ democratic_government:0 "Democratic government"
+ republican_interest_group:0 "Republican Interest Group"
+ socialist_laws:0 "Socialist laws in force"
+ market_laws:0 "Market laws in force"
+ two_party_system:0 "Two party system"
+ military_laws:0 "Military laws in force"
+ anti_authoritarian_reaction:0 "Reaction against authoritarianism"

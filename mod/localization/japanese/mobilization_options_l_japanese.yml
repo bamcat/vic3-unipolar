@@ -1,5 +1,4 @@
 ﻿l_japanese:
-
  MOBILIZATION_OPTION_UPKEEP_SHORT: "[ConcatIfNeitherEmpty(MobilizationOption.GetUpkeepModifier.GetDesc,'\n')][MobilizationOption.GetUpkeepUnscaledModifier.GetDesc]"
  MOBILIZATION_OPTION_GROUP_TOOLTIP: "[MobilizationOptionGroup.GetDesc]"
  MOBILIZATION_OPTION_TOOLTIP: "[AddLocalizationIf(Not(MobilizationOption.GetUnitModifier.IsEmpty),'MOBILIZATION_OPTION_EFFECTS_HEADER')][MobilizationOption.GetUnitModifier.GetDesc][AddLocalizationIf(Not(MobilizationOption.GetUnitModifier.IsEmpty),'\n\n')][AddLocalizationIf(Not(MobilizationOption.GetUpkeepModifier.IsEmpty),'MOBILIZATION_OPTION_UPKEEP_HEADER')]$MOBILIZATION_OPTION_UPKEEP_SHORT$[AddLocalizationIf(Not(MobilizationOption.GetUpkeepModifier.IsEmpty),'\n\n')][MobilizationOption.GetDesc]"
@@ -9,7 +8,7 @@
  ACTIVATE_MOBILIZATION_OPTION_BUTTON_TOOLTIP: "#header [MobilizationOption.GetName]#![ConcatIfNeitherEmpty('\n', AddLocalizationIf(MobilizationOption.IsActivated(MilitaryFormation.AccessSelf), 'ALREADY_ACTIVATED'))]\n$TOOLTIP_DELIMITER$\n[MobilizationOption.GetTooltipWithActivateDesc(MilitaryFormation.AccessSelf)]"
  ALREADY_ACTIVATED: "#i 既に稼働している#!"
  DEACTIVATE_MOBILIZATION_OPTION_BUTTON_TOOLTIP: "#header [MobilizationOption.GetName]#!\n$TOOLTIP_DELIMITER$\n[MobilizationOption.GetTooltipWithDeactivateDesc(MilitaryFormation.AccessSelf)]"
- 
+
  MOBILIZATION_OPTION_TOOLTIP_WITH_TOGGLE_DESC: "[ConcatIfNeitherEmpty('$TOGGLE_DESC$','\n\n')]$TOOLTIP$[ConcatIfNeitherEmpty('\n\n','$EFFECT_HEADER$')]$EFFECT$"
  MOBILIZATION_OPTION_TOOLTIP_WITH_TOGGLE_DESC_WARNING_HEADER: "#title @warning! 次の効果で結果が出ます:#!\n"
 
@@ -33,7 +32,7 @@
  mobilization_option_it_hurts_organization_when_you_adjust_equipment_tt: "[concept_army] の [concept_organization] を #v の #! の現在の #! の #! の #! の #! の #! の #! の #! の <x の #! を <x の <x の #! に減らします"
  mobilization_option_it_hurts_organization_to_add_medic_support_tt: "[concept_army] の [concept_organization] を #v 25%#! で減らします"
  mobilization_option_it_hurts_morale_and_organization_when_you_remove_medic_support_tt: "#v で [Concept('concept_unit','$concept_unit_possessive$')] 現在の [concept_morale] を #v と #! の [concept_organization] の [concept_army] を #v 25%#! から削除すると、[Concept('concept_mobilize_army','$concept_mobilize_army_mobilized$')] [concept_army]"
- 
+
  mobilization_option_extra_supplies: "食事-準備-食べる"
  mobilization_option_extra_supplies_desc: "私達の兵士のための標準化された、現代的なrations"
  mobilization_option_luxurious_supplies: "贅沢な食事-Ready-to-Eat"
@@ -71,7 +70,6 @@
  mobilization_option_field_hospitals: "フィールド病院"
  mobilization_option_field_hospitals_desc: "強力なハーブへのアクセスを持つ熟練した外科医は、命を救う奇跡を実行することができます。"
 
- #Mobilization option groups
  supplies: "アクセサリー"
  supplies_desc: "あなたの軍隊のための供給"
  supplements: "サプリメント"
@@ -85,8 +83,5 @@
  medic_support: "医療サポート"
  medic_support_desc: "あなたの軍隊が傷ついた兵士を扱うために利用できる装置。"
 
- 
-# SMD
-
-mobilization_option_air_transport:0 "航空輸送"
-mobilization_option_air_transport_desc:0 "ユニットを平面に積み込み、簡単かつ効率的な移動を実現します。"
+ mobilization_option_air_transport:0 "航空輸送"
+ mobilization_option_air_transport_desc:0 "ユニットを平面に積み込み、簡単かつ効率的な移動を実現します。"

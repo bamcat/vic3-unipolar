@@ -1,5 +1,5 @@
 ﻿# Misr Spinning and Weaving Company
-company_misr = {
+REPLACE_OR_CREATE:company_misr = {
 	icon = "gfx/interface/icons/company_icons/historical_company_icons/misr.dds"
 	background = "gfx/interface/icons/company_icons/company_backgrounds/comp_illu_manufacturing_light.dds"
 
@@ -21,11 +21,11 @@ company_misr = {
 	}
 
 	potential = {
-		has_interest_marker_in_region = region_nile_basin
+		has_interest_marker_in_region = sr:region_nile_basin
 	}
 
 	attainable = {
-		hidden_trigger = { # Hide attainable if it's always fulfilled by possible
+		hidden_trigger = {
 			any_scope_state = {
 				state_region = s:STATE_LOWER_EGYPT
 			}
@@ -65,7 +65,7 @@ company_misr = {
 	}
 
 	ai_weight = {
-		value = 3 # Higher base value for flavored companies
+		value = 3
 	}
 }
 
@@ -123,12 +123,12 @@ REPLACE_OR_CREATE:company_egyptian_rail = {
 	}
 
 	ai_weight = {
-		value = 3 # Higher base value for flavored companies
+		value = 3
 	}
 }
 
 # Suez Canal Company
-company_suez_company = {
+REPLACE_OR_CREATE:company_suez_company = {
 	icon = "gfx/interface/icons/company_icons/historical_company_icons/suez_company.dds"
 	background = "gfx/interface/icons/company_icons/company_backgrounds/comp_illu_harbor_shipbuilding.dds"
 
@@ -157,11 +157,11 @@ company_suez_company = {
 	}
 
 	potential = {
-		has_interest_marker_in_region = region_nile_basin
+		has_interest_marker_in_region = sr:region_nile_basin
 	}
 
 	attainable = {
-		hidden_trigger = { # Hide attainable if it's always fulfilled by possible
+		hidden_trigger = {
 			any_scope_state = {
 				state_region = s:STATE_SINAI
 			}
@@ -218,6 +218,6 @@ company_suez_company = {
 	}
 
 	ai_weight = {
-		value = 3 # Higher base value for flavored companies
+		value = 3
 	}
 }

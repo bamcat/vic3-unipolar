@@ -1,5 +1,5 @@
 ﻿# Société Mokta El Hadid
-company_societe_mokta_el_hadid = {
+REPLACE_OR_CREATE:company_societe_mokta_el_hadid = {
 	icon = "gfx/interface/icons/company_icons/historical_company_icons/france_société_mokta_el_hadid.dds"
 	background = "gfx/interface/icons/company_icons/company_backgrounds/comp_illu_mining.dds"
 
@@ -17,11 +17,11 @@ company_societe_mokta_el_hadid = {
 	}
 
 	potential = {
-		has_interest_marker_in_region = region_north_africa
+		has_interest_marker_in_region = sr:region_north_africa
 	}
 
 	attainable = {
-		hidden_trigger = { # Hide attainable if it's always fulfilled by possible
+		hidden_trigger = {
 			any_scope_state = {
 				state_region = s:STATE_CONSTANTINE
 			}
@@ -59,7 +59,7 @@ company_societe_mokta_el_hadid = {
 	}
 
 	ai_weight = {
-		value = 3 # Higher base value for flavored companies
+		value = 3
 	}
 }
 
@@ -88,11 +88,11 @@ REPLACE_OR_CREATE:company_schneider_creusot = {
 	}
 
 	potential = {
-		has_interest_marker_in_region = region_france
+		any_scope_state = { is_in_geographic_region = geographic_region_france_old }
 	}
 
 	attainable = {
-		hidden_trigger = { # Hide attainable if it's always fulfilled by possible
+		hidden_trigger = {
 			any_scope_state = {
 				state_region = s:STATE_BURGUNDY
 			}
@@ -132,12 +132,12 @@ REPLACE_OR_CREATE:company_schneider_creusot = {
 	}
 
 	ai_weight = {
-		value = 3 # Higher base value for flavored companies
+		value = 3
 	}
 }
 
 # Dollfus-Mieg et Compagnie
-company_dmc = {
+REPLACE_OR_CREATE:company_dmc = {
 	icon = "gfx/interface/icons/company_icons/historical_company_icons/france_dmc.dds"
 	background = "gfx/interface/icons/company_icons/company_backgrounds/comp_illu_manufacturing_light.dds"
 
@@ -167,11 +167,14 @@ company_dmc = {
 	}
 
 	potential = {
-		has_interest_marker_in_region = region_rhine
+		OR = {
+			any_scope_state = { is_in_geographic_region = geographic_region_rhine_old }
+			any_scope_state = { state_region = s:STATE_BURGUNDY }
+		}
 	}
 
 	attainable = {
-		hidden_trigger = { # Hide attainable if it's always fulfilled by possible
+		hidden_trigger = {
 			any_scope_state = {
 				state_region = s:STATE_BURGUNDY
 			}
@@ -210,12 +213,12 @@ company_dmc = {
 	}
 
 	ai_weight = {
-		value = 3 # Higher base value for flavored companies
+		value = 3
 	}
 }
 
 # Confédération générale des vignerons
-company_cgv = {
+REPLACE_OR_CREATE:company_cgv = {
 	icon = "gfx/interface/icons/company_icons/historical_company_icons/france_cgv.dds"
 	background = "gfx/interface/icons/company_icons/company_backgrounds/comp_illu_farm_rice.dds"
 
@@ -275,13 +278,13 @@ company_cgv = {
 	}
 
 	ai_weight = {
-		value = 3 # Higher base value for flavored companies
+		value = 3
 	}
 }
 
 
 # Manufacture d'armes de Saint-Étienne
-company_saint_etienne = {
+REPLACE_OR_CREATE:company_saint_etienne = {
 	icon = "gfx/interface/icons/company_icons/historical_company_icons/france_saint_etienne.dds"
 	background = "gfx/interface/icons/company_icons/company_backgrounds/comp_illu_manufacturing_heavy.dds"
 
@@ -304,11 +307,11 @@ company_saint_etienne = {
 	}
 
 	potential = {
-		has_interest_marker_in_region = geographic_region_occitania_old
+		any_scope_state = { is_in_geographic_region = geographic_region_occitania_old }
 	}
 
 	attainable = {
-		hidden_trigger = { # Hide attainable if it's always fulfilled by possible
+		hidden_trigger = {
 			any_scope_state = {
 				state_region = s:STATE_RHONE
 			}
@@ -348,12 +351,12 @@ company_saint_etienne = {
 	}
 
 	ai_weight = {
-		value = 3 # Higher base value for flavored companies
+		value = 3
 	}
 }
 
 # Société Nouvelle des Forges et Chantiers de la Méditerranée
-company_fcm = {
+REPLACE_OR_CREATE:company_fcm = {
 	icon = "gfx/interface/icons/company_icons/historical_company_icons/france_forges_et_chantiers_de_la_méditerranée.dds"
 	background = "gfx/interface/icons/company_icons/company_backgrounds/comp_illu_harbor_shipbuilding.dds"
 
@@ -372,11 +375,11 @@ company_fcm = {
 	}
 
 	potential = {
-		has_interest_marker_in_region = geographic_region_occitania_old
+		any_scope_state = { is_in_geographic_region = geographic_region_occitania_old }
 	}
 
 	attainable = {
-		hidden_trigger = { # Hide attainable if it's always fulfilled by possible
+		hidden_trigger = {
 			any_scope_state = {
 				state_region = s:STATE_PROVENCE
 			}
@@ -425,12 +428,12 @@ company_fcm = {
 	}
 
 	ai_weight = {
-		value = 3 # Higher base value for flavored companies
+		value = 3
 	}
 }
 
 # Compagnie des mines d'Anzin
-company_mines_anzin = {
+REPLACE_OR_CREATE:company_mines_anzin = {
 	icon = "gfx/interface/icons/company_icons/historical_company_icons/france_compagnie_des_mines_danzin.dds"
 	background = "gfx/interface/icons/company_icons/company_backgrounds/comp_illu_mining.dds"
 
@@ -447,11 +450,11 @@ company_mines_anzin = {
 	}
 
 	potential = {
-		has_interest_marker_in_region = region_france
+		any_scope_state = { is_in_geographic_region = geographic_region_france_old }
 	}
 
 	attainable = {
-		hidden_trigger = { # Hide attainable if it's always fulfilled by possible
+		hidden_trigger = {
 			any_scope_state = {
 				state_region = s:STATE_FRENCH_LOW_COUNTRIES
 			}
@@ -491,6 +494,6 @@ company_mines_anzin = {
 	}
 
 	ai_weight = {
-		value = 3 # Higher base value for flavored companies
+		value = 3
 	}
 }

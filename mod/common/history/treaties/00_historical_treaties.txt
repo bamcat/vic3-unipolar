@@ -1,5 +1,4 @@
 ﻿TREATIES = {
-	# Timor Gap Treaty
 	create_treaty = {
 		name = treaty_name_timor_gap
 		first_country = c:IDS
@@ -7,7 +6,7 @@
 
 		is_draft = no
 		entered_into_force_on = 1991.2.9
-		binding_period = { years = 8 } # Initially to last for 8 years, generally held to have ended in 1840
+		binding_period = { years = 8 }
 
 		articles_to_create = {
 			{ # australian occupation of the south gap
@@ -32,7 +31,7 @@
 
 		is_draft = no
 		entered_into_force_on = 1991.2.9
-		binding_period = { years = 8 } # Initially to last for 8 years, generally held to have ended in 1840
+		binding_period = { years = 8 }
 
 		articles_to_create = {
 			{ # australian occupation of the south gap
@@ -50,7 +49,6 @@
 		}
 	 }
 	}
-	# Elysee treaty
 	create_treaty = {
 		name = treaty_name_elysee_treaty
 		first_country = c:FRA
@@ -83,7 +81,6 @@
 				}
 	 }
 	}
-	# Indus Waters Treaty
 	create_treaty = {
 		name = treaty_name_indus_waters_treaty
 		first_country = c:BHT
@@ -106,7 +103,6 @@
 			}
 	 }
 	}
-	# US-Israel Alliance
 	create_treaty = {
 		name = treaty_name_us_israel_alliance
 		first_country = c:USA
@@ -120,22 +116,22 @@
 			{ # american-israeli alliance
 					article = defensive_pact
 				}
-				{ # U.S Military Assistance to Israel
+				{
 					article = military_assistance
 					source_country = c:USA
 					target_country = c:ISR
 				}
-				{ # US Economic interests in Israel
+				{
 					article = foreign_investment_rights
 					source_country = c:USA
 					target_country = c:ISR
 				}
-				{ # U.S Military Assistance to Israel
+				{
 					article = military_assistance
 					source_country = c:ISR
 					target_country = c:USA
 				}
-				{ # US Economic interests in Israel
+				{
 					article = foreign_investment_rights
 					source_country = c:IRS
 					target_country = c:USA
@@ -143,7 +139,6 @@
 			}
 	 }
 	 
-	 # US-Australia Alliance
 	create_treaty = {
 		name = treaty_name_us_australia_alliance
 		first_country = c:USA
@@ -157,22 +152,22 @@
 			{
 					article = defensive_pact
 				}
-				{ # U.S Military Assistance to Australia
+				{
 					article = military_assistance
 					source_country = c:USA
 					target_country = c:AUZ
 				}
-				{ # US Economic interests in Australia
+				{
 					article = foreign_investment_rights
 					source_country = c:USA
 					target_country = c:AUZ
 				}
-				{ # U.S Military Assistance to Australia
+				{
 					article = military_assistance
 					source_country = c:USA
 					target_country = c:AUZ
 				}
-				{ # US Economic interests in Australia
+				{
 					article = foreign_investment_rights
 					source_country = c:USA
 					target_country = c:AUZ
@@ -180,7 +175,6 @@
 			}
 	 }
 	 
-	  # US-New Zealand Alliance
 	create_treaty = {
 		name = treaty_name_us_new_zealand_alliance
 		first_country = c:USA
@@ -197,7 +191,6 @@
 			}
 	 }
 	 
-	   # US-Japan Alliance
 	create_treaty = {
 		name = treaty_name_us_japan_alliance
 		first_country = c:USA
@@ -214,7 +207,6 @@
 			}
 	 }
 	 
-	    # US-South Korea Alliance
 	create_treaty = {
 		name = treaty_name_us_south_korea_alliance
 		first_country = c:USA
@@ -228,29 +220,28 @@
 			{
 					article = defensive_pact
 				}
-				{ # U.S Military Assistance to Korea
+				{
 					article = military_assistance
 					source_country = c:USA
 					target_country = c:STK
 				}
-				{ # US Economic interests in Korea
+				{
 					article = foreign_investment_rights
 					source_country = c:USA
 					target_country = c:STK
 				}
-				{ # U.S Military Assistance to Korea
+				{
 					article = military_assistance
 					source_country = c:USA
 					target_country = c:STK
 				}
-				{ # US Economic interests in Korea
+				{
 					article = foreign_investment_rights
 					source_country = c:USA
 					target_country = c:STK
 				}
 			}
 	 }
-	   # US-Philippines Alliance
 	create_treaty = {
 		name = treaty_name_us_philippines_alliance
 		first_country = c:USA
@@ -266,7 +257,6 @@
 				}
 			}
 	 }
-	    # US-Taiwan Relations
 	create_treaty = {
 		name = treaty_name_us_taiwan_act
 		first_country = c:USA
@@ -277,17 +267,17 @@
 		binding_period = { years = 50 }
 
 		articles_to_create = {
-			{ # United States is legally obligated to defend taiwan, however, theres no telling whether it would.
+			{
 				article = guarantee_independence
 				source_country = c:USA
 				target_country = c:ROC
 			}
-			{ # U.S Military Assistance to Taiwan
+			{
 					article = military_assistance
 					source_country = c:USA
 					target_country = c:ROC
 				}
-				{ # U.S Military Assistance to Taiwan
+				{
 					article = military_assistance
 					source_country = c:USA
 					target_country = c:ROC
@@ -295,7 +285,6 @@
 			}
 	 }
 	 
-	    # China-North Korea Alliance
 	create_treaty = {
 		name = treaty_name_china_north_korea_pact
 		first_country = c:PRC

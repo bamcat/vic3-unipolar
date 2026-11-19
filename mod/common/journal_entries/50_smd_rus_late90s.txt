@@ -1,0 +1,399 @@
+﻿je_rus_ichkeria = {
+	icon = "gfx/interface/icons/event_icons/event_military.dds"
+	group = je_group_wild_nineties
+
+	is_shown_when_inactive = {
+		c:RUS ?= this
+		has_variable = rus_l90_ichkeria_started
+	}
+
+	possible = {
+		c:RUS ?= this
+	}
+
+	immediate = {
+		je:je_rus_ichkeria ?= {
+			set_bar_progress = { name = rus_l90_radicalisation_bar value = global_var:ichkeria_radicalisation }
+		}
+	}
+
+	scripted_progress_bar = rus_l90_radicalisation_bar
+
+	scripted_button = rus_l90_fund_maskhadov_button
+	scripted_button = rus_l90_border_cordon_button
+	scripted_button = rus_l90_recognise_ichkeria_button
+	scripted_button = rus_l90_counter_terror_button
+
+	status_desc = {
+		first_valid = {
+			triggered_desc = {
+				desc = rus_l90_ichkeria_status_high
+				trigger = { rus_l90_rad_above = { V = 60 } }
+			}
+			triggered_desc = {
+				desc = rus_l90_ichkeria_status_medium
+				trigger = { rus_l90_rad_above = { V = 30 } }
+			}
+			triggered_desc = {
+				desc = rus_l90_ichkeria_status_low
+			}
+		}
+	}
+
+	on_monthly_pulse = {
+		effect = {
+			if = {
+				limit = { rus_l90_ichkeria_independent = yes }
+				hidden_effect = {
+					rus_l90_rad_change = { V = 1 }
+					if = {
+						limit = { rus_l90_ichkeria_moderate_rule = no }
+						rus_l90_rad_change = { V = 1 }
+					}
+					if = {
+						limit = { has_modifier = rus_l90_maskhadov_aid }
+						rus_l90_rad_change = { V = -2 }
+					}
+					if = {
+						limit = { has_modifier = rus_l90_border_cordon }
+						rus_l90_rad_change = { V = -1 }
+					}
+					if = {
+						limit = { c:CCH ?= { has_modifier = cch_l90_warlords_reined } }
+						rus_l90_rad_change = { V = -2 }
+					}
+					if = {
+						limit = { c:CCH ?= { has_modifier = cch_l90_foreign_volunteers } }
+						rus_l90_rad_change = { V = 1 }
+					}
+				}
+			}
+			scope:journal_entry = {
+				set_bar_progress = { name = rus_l90_radicalisation_bar value = global_var:ichkeria_radicalisation }
+			}
+		}
+		random_events = {
+			100 = 0
+			6 = rus_l90.5
+			4 = rus_l90.6
+		}
+	}
+
+	outcome = {
+		header = je_standard_completion_header
+		effect_header = je_standard_on_completion_header
+		color = "gold_positive"
+		conclusion_desc = je_rus_ichkeria_recognised_conclusion_desc
+		trigger = {
+			custom_description = {
+				text = rus_l90_ichkeria_recognised
+				has_global_variable = ichkeria_recognised
+			}
+		}
+	}
+
+	outcome = {
+		header = je_standard_completion_header
+		effect_header = je_standard_on_completion_header
+		color = "blue_negative"
+		conclusion_desc = je_rus_ichkeria_war_conclusion_desc
+		flags = { historical }
+		trigger = {
+			custom_description = {
+				text = rus_l90_second_war_begun
+				has_variable = rus_l90_second_war
+			}
+		}
+	}
+
+	outcome = {
+		flags = { hidden invalid_outcome }
+		conclusion_desc = je_standard_failure_conclusion_desc
+		trigger = {
+			NOT = { exists = c:CCH }
+			NOT = { has_variable = rus_l90_second_war }
+		}
+	}
+
+	weight = 900
+	transferable = no
+	can_revolution_inherit = yes
+	should_be_pinned_by_default_uninvolved_or_context = yes
+}
+
+je_cch_ichkeria = {
+	icon = "gfx/interface/icons/event_icons/event_military.dds"
+	group = je_group_foreign_policy
+
+	is_shown_when_inactive = {
+		c:CCH ?= this
+		has_global_variable = ichkeria_radicalisation
+	}
+
+	possible = {
+		c:CCH ?= this
+	}
+
+	immediate = {
+		je:je_cch_ichkeria ?= {
+			set_bar_progress = { name = cch_l90_radicalisation_bar value = global_var:ichkeria_radicalisation }
+		}
+	}
+
+	scripted_progress_bar = cch_l90_radicalisation_bar
+
+	scripted_button = cch_l90_rein_warlords_button
+	scripted_button = cch_l90_welcome_volunteers_button
+
+	on_monthly_pulse = {
+		effect = {
+			scope:journal_entry = {
+				set_bar_progress = { name = cch_l90_radicalisation_bar value = global_var:ichkeria_radicalisation }
+			}
+		}
+	}
+
+	status_desc = {
+		first_valid = {
+			triggered_desc = {
+				desc = cch_l90_ichkeria_status_high
+				trigger = { rus_l90_rad_above = { V = 60 } }
+			}
+			triggered_desc = {
+				desc = cch_l90_ichkeria_status_low
+			}
+		}
+	}
+
+	outcome = {
+		header = je_standard_completion_header
+		effect_header = je_standard_on_completion_header
+		color = "gold_positive"
+		conclusion_desc = je_cch_ichkeria_recognised_conclusion_desc
+		trigger = {
+			custom_description = {
+				text = rus_l90_ichkeria_recognised
+				has_global_variable = ichkeria_recognised
+			}
+		}
+	}
+
+	outcome = {
+		header = je_standard_failure_header
+		effect_header = je_standard_on_failure_header
+		color = "blue_negative"
+		conclusion_desc = je_cch_ichkeria_war_conclusion_desc
+		trigger = {
+			custom_description = {
+				text = rus_l90_second_war_begun
+				has_global_variable = second_chechen_war_started
+			}
+		}
+	}
+
+	weight = 900
+	transferable = no
+	can_revolution_inherit = yes
+	should_be_pinned_by_default_involved = yes
+}
+
+je_rus_second_chechen_war = {
+	icon = "gfx/interface/icons/event_icons/event_military.dds"
+	group = je_group_wild_nineties
+
+	is_shown_when_inactive = {
+		c:RUS ?= this
+		has_variable = rus_l90_second_war
+	}
+
+	possible = {
+		c:RUS ?= this
+	}
+
+	scripted_progress_bar = rus_l90_insurgency_bar
+
+	scripted_button = rus_l90_chechenization_button
+	scripted_button = rus_l90_sweeps_button
+	scripted_button = rus_l90_rebuild_grozny_button
+	scripted_button = rus_l90_garrison_button
+
+	status_desc = {
+		first_valid = {
+			triggered_desc = {
+				desc = rus_l90_second_war_status_insurgency
+				trigger = { has_variable = rus_l90_insurgency_phase }
+			}
+			triggered_desc = {
+				desc = rus_l90_second_war_status_war
+			}
+		}
+	}
+
+	on_monthly_pulse = {
+		effect = {
+			if = {
+				limit = {
+					NOT = { has_variable = rus_l90_insurgency_phase }
+					NOT = { exists = c:CCH }
+				}
+				set_variable = rus_l90_insurgency_phase
+				trigger_event = { id = rus_l90.15 popup = yes }
+			}
+			if = {
+				limit = {
+					NOT = { has_variable = rus_l90_kadyrov_asked }
+					NOT = { has_variable = rus_l90_war_recent }
+					exists = c:CCH
+					c:CCH ?= { has_war_with = c:RUS }
+				}
+				set_variable = rus_l90_kadyrov_asked
+				trigger_event = { id = rus_l90.13 popup = yes }
+			}
+			if = {
+				limit = { has_modifier = rus_l90_chechenization }
+				add_treasury = {
+					value = gdp
+					multiply = -0.001
+				}
+			}
+		}
+		random_events = {
+			100 = 0
+			8 = rus_l90.14
+		}
+	}
+
+	outcome = {
+		header = je_standard_completion_header
+		effect_header = je_standard_on_completion_header
+		color = "gold_positive"
+		conclusion_desc = je_rus_second_war_pacified_conclusion_desc
+		flags = { historical }
+		trigger = {
+			rus_l90_insurgency_phase = yes
+			rus_l90_insurgency_below = { V = 1 }
+		}
+		effect = {
+			add_modifier = { name = rus_l90_chechnya_pacified years = 10 }
+			if = {
+				limit = { has_variable = rus_l90_kadyrov }
+				s:STATE_DAGESTAN.region_state:RUS ?= {
+					add_modifier = { name = rus_l90_kadyrov_chechnya }
+				}
+			}
+		}
+	}
+
+	outcome = {
+		header = je_standard_failure_header
+		effect_header = je_standard_on_failure_header
+		color = "blue_negative"
+		conclusion_desc = je_rus_second_war_defeat_conclusion_desc
+		trigger = {
+			custom_description = {
+				text = rus_l90_war_over_ichkeria_stands
+				NOT = { has_variable = rus_l90_war_recent }
+				exists = c:CCH
+				NOT = { c:CCH ?= { has_war_with = c:RUS } }
+				NOT = { has_variable = rus_l90_insurgency_phase }
+			}
+		}
+		effect = {
+			add_modifier = { name = rus_l90_second_defeat years = 5 }
+			set_global_variable = ichkeria_recognised
+		}
+	}
+
+	weight = 950
+	transferable = no
+	can_revolution_inherit = yes
+	should_be_pinned_by_default_uninvolved_or_context = yes
+}
+
+je_rus_union_state = {
+	icon = "gfx/interface/icons/event_icons/event_diplomacy.dds"
+	group = je_group_wild_nineties
+
+	is_shown_when_inactive = {
+		c:RUS ?= this
+		has_variable = rus_l90_union_stage
+	}
+
+	possible = {
+		c:RUS ?= this
+		exists = c:BYL
+	}
+
+	scripted_progress_bar = rus_l90_union_bar
+
+	status_desc = {
+		first_valid = {
+			triggered_desc = {
+				desc = rus_l90_union_status_2
+				trigger = { var:rus_l90_union_stage >= 2 }
+			}
+			triggered_desc = {
+				desc = rus_l90_union_status_1
+				trigger = { var:rus_l90_union_stage >= 1 }
+			}
+			triggered_desc = {
+				desc = rus_l90_union_status_0
+			}
+		}
+	}
+
+	on_monthly_pulse = {
+		effect = {
+			if = {
+				limit = {
+					je:je_rus_union_state ?= {
+						scripted_bar_progress = {
+							name = rus_l90_union_bar
+							value >= 12
+						}
+					}
+					NOT = { has_variable = rus_l90_union_waiting }
+				}
+				set_variable = { name = rus_l90_union_waiting days = 60 }
+				c:BYL ?= { trigger_event = { id = rus_l90.41 popup = yes } }
+			}
+		}
+	}
+
+	outcome = {
+		header = je_standard_completion_header
+		effect_header = je_standard_on_completion_header
+		color = "gold_positive"
+		conclusion_desc = je_rus_union_state_formed_conclusion_desc
+		trigger = {
+			custom_description = {
+				text = rus_l90_union_state_formed
+				has_global_variable = union_state_formed
+			}
+		}
+	}
+
+	outcome = {
+		header = je_standard_failure_header
+		effect_header = je_standard_on_failure_header
+		color = "blue_negative"
+		conclusion_desc = je_rus_union_state_failed_conclusion_desc
+		trigger = {
+			OR = {
+				NOT = { rus_l90_byl_not_western = yes }
+				custom_description = {
+					text = rus_l90_union_rejected
+					has_variable = rus_l90_union_rejected
+				}
+			}
+		}
+		effect = {
+			rus_l90_union_dissolve = yes
+		}
+	}
+
+	weight = 800
+	transferable = no
+	can_revolution_inherit = yes
+	should_be_pinned_by_default_uninvolved_or_context = yes
+}

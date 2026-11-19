@@ -1,0 +1,179 @@
+﻿namespace = smd_veterans
+
+smd_veterans.1 = {
+	type = country_event
+	placement = ROOT
+	title = smd_veterans.1.t
+	desc = smd_veterans.1.d
+	flavor = smd_veterans.1.f
+	event_image = { video = "unspecific_military_parade" }
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+	icon = "gfx/interface/icons/event_icons/event_military.dds"
+	duration = 3
+
+	trigger = {
+	}
+
+	option = {
+		name = smd_veterans.1.a
+		default_option = yes
+		add_treasury = {
+			value = gdp
+			multiply = -0.001
+		}
+		add_modifier = {
+			name = smd_victory_parade
+			days = 730
+		}
+		je:smd_je_veterans ?= {
+			add_progress = { value = -5 name = smd_veterans_bar }
+		}
+		ai_chance = { base = 60 }
+	}
+
+	option = {
+		name = smd_veterans.1.b
+		je:smd_je_veterans ?= {
+			add_progress = { value = 5 name = smd_veterans_bar }
+		}
+		ai_chance = { base = 40 }
+	}
+}
+
+smd_veterans.2 = {
+	type = country_event
+	placement = ROOT
+	title = smd_veterans.2.t
+	desc = smd_veterans.2.d
+	flavor = smd_veterans.2.f
+	event_image = { video = "africa_public_protest" }
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+	icon = "gfx/interface/icons/event_icons/event_protest.dds"
+	duration = 3
+	cooldown = { days = normal_modifier_time }
+
+	trigger = {
+		has_journal_entry = smd_je_veterans
+	}
+
+	option = {
+		name = smd_veterans.2.a
+		default_option = yes
+		add_treasury = {
+			value = gdp
+			multiply = -0.002
+		}
+		je:smd_je_veterans ?= {
+			add_progress = { value = -8 name = smd_veterans_bar }
+		}
+		ai_chance = { base = 60 }
+	}
+
+	option = {
+		name = smd_veterans.2.b
+		add_modifier = {
+			name = smd_veterans_ignored
+			days = short_modifier_time
+		}
+		je:smd_je_veterans ?= {
+			add_progress = { value = 8 name = smd_veterans_bar }
+		}
+		ai_chance = { base = 40 }
+	}
+}
+
+smd_veterans.3 = {
+	type = country_event
+	placement = ROOT
+	title = smd_veterans.3.t
+	desc = smd_veterans.3.d
+	flavor = smd_veterans.3.f
+	event_image = { video = "unspecific_sick_in_hospital" }
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+	icon = "gfx/interface/icons/event_icons/event_military.dds"
+	duration = 3
+	cooldown = { days = normal_modifier_time }
+
+	trigger = {
+		has_journal_entry = smd_je_veterans
+	}
+
+	option = {
+		name = smd_veterans.3.a
+		default_option = yes
+		add_treasury = {
+			value = gdp
+			multiply = -0.002
+		}
+		add_modifier = {
+			name = smd_war_syndrome_research
+			days = 1825
+		}
+		je:smd_je_veterans ?= {
+			add_progress = { value = -6 name = smd_veterans_bar }
+		}
+		ai_chance = { base = 60 }
+	}
+
+	option = {
+		name = smd_veterans.3.b
+		add_modifier = {
+			name = smd_war_syndrome_denied
+			days = short_modifier_time
+		}
+		je:smd_je_veterans ?= {
+			add_progress = { value = 6 name = smd_veterans_bar }
+		}
+		ai_chance = { base = 40 }
+	}
+}
+
+smd_veterans.4 = {
+	type = country_event
+	placement = ROOT
+	title = smd_veterans.4.t
+	desc = smd_veterans.4.d
+	flavor = smd_veterans.4.f
+	event_image = { video = "unspecific_military_parade" }
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+	icon = "gfx/interface/icons/event_icons/event_military.dds"
+	duration = 3
+
+	trigger = {
+	}
+
+	option = {
+		name = smd_veterans.4.a
+		default_option = yes
+		add_modifier = {
+			name = smd_veterans_reintegrated
+			days = normal_modifier_time
+		}
+		ai_chance = { base = 100 }
+	}
+}
+
+smd_veterans.5 = {
+	type = country_event
+	placement = ROOT
+	title = smd_veterans.5.t
+	desc = smd_veterans.5.d
+	flavor = smd_veterans.5.f
+	event_image = { video = "votp_agitator_speaking" }
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+	icon = "gfx/interface/icons/event_icons/event_protest.dds"
+	duration = 3
+
+	trigger = {
+	}
+
+	option = {
+		name = smd_veterans.5.a
+		default_option = yes
+		add_modifier = {
+			name = smd_veterans_movement
+			days = normal_modifier_time
+		}
+		ai_chance = { base = 100 }
+	}
+}

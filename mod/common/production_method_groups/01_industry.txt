@@ -88,8 +88,8 @@ pmg_automation_building_furniture_manufacturies = {
 		pm_automation_disabled
 		pm_modern_assembly_lines_furniture_manufacturies
 		pm_watertube_boiler_building_furniture_manufactory
-		pm_rotary_valve_engine_building_furniture_manufactory
 		pm_assembly_lines_building_furniture_manufactory
+		pm_rotary_valve_engine_building_furniture_manufactory
 	}
 }
 
@@ -109,8 +109,8 @@ pmg_automation_building_tooling_workshops = {
 		pm_automation_disabled
 		pm_modern_assembly_lines_tooling_workshops
 		pm_watertube_boiler_building_tooling_workshop
-		pm_rotary_valve_engine_building_tooling_workshop
 		pm_assembly_lines_building_tooling_workshop
+		pm_rotary_valve_engine_building_tooling_workshop
 	}
 }
 
@@ -189,6 +189,7 @@ pmg_synthetic_dyes = {
 pmg_base_synthetic_fabric = {
 	texture = "gfx/interface/icons/generic_icons/mixed_icon_refining.dds"
 	production_methods = {
+		pm_rayon
 		pm_synthetic_fabric
 	}
 }
@@ -197,8 +198,6 @@ pmg_synthetic_rubber_option = {
 	texture = "gfx/interface/icons/generic_icons/mixed_icon_refining.dds"
 	production_methods = {
 		pm_no_synthetic_rubber
-#		pm_no_artificial_fibers
-#		pm_rayon
 		pm_synthetic_rubber
 	}
 }
@@ -239,8 +238,8 @@ pmg_automation_building_appliance_manufactory = {
 		pm_automation_disabled
 		pm_modern_assembly_lines_appliance_manufactory
 		pm_watertube_boiler_building_appliances
-		pm_rotary_valve_engine_building_appliances
 		pm_assembly_lines_building_appliances
+		pm_rotary_valve_engine_building_appliances
 	}
 }
 
@@ -279,8 +278,8 @@ REPLACE_OR_CREATE:pmg_automation_building_motor_industry = {
 		pm_automation_disabled
 		pm_modern_assembly_lines_motor_industry
 		pm_watertube_boiler_building_motor_industry
-		pm_rotary_valve_engine_building_motor_industry
 		pm_assembly_lines_building_motor_industry
+		pm_rotary_valve_engine_building_motor_industry
 	}
 }
 
@@ -358,8 +357,8 @@ pmg_automation_building_arms_industry = {
 	production_methods = {
 		pm_automation_disabled
 		pm_modern_assembly_lines_arms_industry
-		pm_rotary_valve_engine_building_arms_industry
 		pm_assembly_lines_building_arms_industry
+		pm_rotary_valve_engine_building_arms_industry
 	}
 }
 
@@ -392,18 +391,17 @@ pmg_automation_building_munition_plants = {
 	production_methods = {
 		pm_automation_disabled
 		pm_modern_assembly_lines_munition_plants
-		pm_rotary_valve_engine_building_munition_plant
 		pm_assembly_lines_building_munition_plant
+		pm_rotary_valve_engine_building_munition_plant
 	}
 }
-
-#smd 
 
 pmg_chemical_plastics = {
 	texture = "gfx/interface/icons/generic_icons/mixed_icon_base.dds"
 	ai_selection = most_productive
 
 	production_methods = {
+		pm_no_plastics
 		pm_bakelite
 		pm_thermoforming
 		pm_nanocomposites
@@ -451,8 +449,6 @@ pmg_pesticide_use_wine = {
 	}
 }
 
-### retail
-
 pmg_base_retailer = {
 	texture = "gfx/interface/icons/generic_icons/mixed_icon_base.dds"
 	production_methods = {
@@ -471,8 +467,6 @@ pmg_base_delivery = {
 		pm_delivery_drone
 	}
 }
-
-### professional work
 
 pmg_base_profser = {
 	texture = "gfx/interface/icons/generic_icons/mixed_icon_base.dds"
@@ -493,8 +487,6 @@ pmg_base_profser_type = {
 	}
 }
 
-#### microchips
-
 pmg_base_microchip_type = {
 	texture = "gfx/interface/icons/generic_icons/mixed_icon_base.dds"
 	production_methods = {
@@ -504,8 +496,6 @@ pmg_base_microchip_type = {
 		pm_3d_printed_chips
 	}
 }
-
-### computer industry
 
 pmg_base_computer_industry = {
 	texture = "gfx/interface/icons/generic_icons/mixed_icon_base.dds"
@@ -525,8 +515,6 @@ pmg_base_gaming_console = {
 	}
 }
 
-## missile & helicopter and drone
-
 pmg_base_missile_production = {
 	texture = "gfx/interface/icons/generic_icons/mixed_icon_base.dds"
 	production_methods = {
@@ -535,8 +523,6 @@ pmg_base_missile_production = {
 	}
 }
 
-
-### aeronautics
 
 pmg_base_rotor_production = {
 	texture = "gfx/interface/icons/generic_icons/mixed_icon_base.dds"
@@ -567,8 +553,6 @@ pmg_base_aircraft_production = {
 	}
 }
 
-# telecommunications
-
 pmg_base_telecommunications = {
 	texture = "gfx/interface/icons/generic_icons/mixed_icon_base.dds"
 	production_methods = {
@@ -582,8 +566,6 @@ pmg_base_telecommunications = {
 		pm_8g
 	}
 }
-
-# pharma
 
 pmg_base_pharmaceuticals = {
 	texture = "gfx/interface/icons/generic_icons/mixed_icon_base.dds"
@@ -603,5 +585,160 @@ pmg_base_vaccines = {
 		pm_mrna
 		pm_viral_vector
 		pm_gene_editing
+	}
+}
+
+REPLACE_OR_CREATE:pmg_automation_building_aeronautics_industry = {
+	texture = "gfx/interface/icons/generic_icons/mixed_icon_automation.dds"
+	production_methods = {
+		pm_automation_disabled
+		pm_modern_assembly_lines_arms_industry_aeronautics_industry
+		pm_automation_building_aeronautics_industry_watertube_boiler
+		pm_assembly_lines_building_arms_industry_aeronautics_industry
+		pm_rotary_valve_engine_building_arms_industry_aeronautics_industry
+	}
+}
+
+REPLACE_OR_CREATE:pmg_automation_building_artillery_foundry = {
+	texture = "gfx/interface/icons/generic_icons/mixed_icon_automation.dds"
+	production_methods = {
+		pm_automation_disabled
+		pm_modern_assembly_lines_arms_industry_artillery_foundry
+		pm_automation_building_artillery_foundry_watertube_boiler
+		pm_assembly_lines_building_arms_industry_artillery_foundry
+		pm_rotary_valve_engine_building_arms_industry_artillery_foundry
+	}
+}
+
+REPLACE_OR_CREATE:pmg_automation_building_chip_industry = {
+	texture = "gfx/interface/icons/generic_icons/mixed_icon_automation.dds"
+	production_methods = {
+		pm_automation_disabled
+		pm_modern_assembly_lines_arms_industry_chip_industry
+		pm_automation_building_chip_industry_watertube_boiler
+		pm_assembly_lines_building_arms_industry_chip_industry
+		pm_rotary_valve_engine_building_arms_industry_chip_industry
+	}
+}
+
+REPLACE_OR_CREATE:pmg_automation_building_computer_industry = {
+	texture = "gfx/interface/icons/generic_icons/mixed_icon_automation.dds"
+	production_methods = {
+		pm_automation_disabled
+		pm_modern_assembly_lines_arms_industry_computer_industry
+		pm_automation_building_computer_industry_watertube_boiler
+		pm_assembly_lines_building_arms_industry_computer_industry
+		pm_rotary_valve_engine_building_arms_industry_computer_industry
+	}
+}
+
+REPLACE_OR_CREATE:pmg_automation_building_chemical_plant = {
+	texture = "gfx/interface/icons/generic_icons/mixed_icon_automation.dds"
+	production_methods = {
+		pm_automation_disabled
+		pm_modern_assembly_lines_furniture_manufacturies_chemical_plant
+		pm_watertube_boiler_building_furniture_manufactory_chemical_plant
+		pm_assembly_lines_building_furniture_manufactory_chemical_plant
+		pm_rotary_valve_engine_building_furniture_manufactory_chemical_plant
+	}
+}
+
+REPLACE_OR_CREATE:pmg_automation_building_synthetics_plant = {
+	texture = "gfx/interface/icons/generic_icons/mixed_icon_automation.dds"
+	production_methods = {
+		pm_automation_disabled
+		pm_automation_building_synthetics_plant_crystal_glass
+		pm_automation_building_synthetics_plant_watertube_boiler
+		pm_automation_building_synthetics_plant_conveyors
+		pm_automation_building_synthetics_plant_rotary_valve_engine
+	}
+}
+
+REPLACE_OR_CREATE:pmg_base_building_aluminium_smelter = {
+	texture = "gfx/interface/icons/generic_icons/mixed_icon_refining.dds"
+	production_methods = {
+		pm_aluminium_hall_heroult
+		pm_aluminium_prebaked_anode
+	}
+}
+
+REPLACE_OR_CREATE:pmg_base_building_oil_refinery = {
+	texture = "gfx/interface/icons/generic_icons/mixed_icon_refining.dds"
+	production_methods = {
+		pm_thermal_cracking
+		pm_catalytic_cracking
+	}
+}
+
+REPLACE_OR_CREATE:pmg_base_building_cosmetics_industry = {
+	texture = "gfx/interface/icons/generic_icons/mixed_icon_base.dds"
+	ai_selection = most_productive
+	production_methods = {
+		pm_apothecary_cosmetics
+		pm_branded_cosmetics
+	}
+}
+
+REPLACE_OR_CREATE:pmg_automation_building_aluminium_smelter = {
+	texture = "gfx/interface/icons/generic_icons/mixed_icon_automation.dds"
+	production_methods = {
+		pm_automation_disabled
+		pm_aluminium_smelter_mechanisation
+		pm_aluminium_smelter_computerisation
+	}
+}
+
+REPLACE_OR_CREATE:pmg_automation_building_oil_refinery = {
+	texture = "gfx/interface/icons/generic_icons/mixed_icon_automation.dds"
+	production_methods = {
+		pm_automation_disabled
+		pm_oil_refinery_mechanisation
+		pm_oil_refinery_computerisation
+	}
+}
+
+REPLACE_OR_CREATE:pmg_automation_building_cosmetics_industry = {
+	texture = "gfx/interface/icons/generic_icons/mixed_icon_automation.dds"
+	production_methods = {
+		pm_automation_disabled
+		pm_cosmetics_industry_mechanisation
+		pm_cosmetics_industry_computerisation
+	}
+}
+
+REPLACE_OR_CREATE:pmg_petrochemicals_building_oil_refinery = {
+	texture = "gfx/interface/icons/generic_icons/mixed_icon_refining.dds"
+	production_methods = {
+		pm_no_petrochemicals
+		pm_petrochemical_feedstock
+	}
+}
+
+REPLACE_OR_CREATE:pmg_recycling_building_aluminium_smelter = {
+	texture = "gfx/interface/icons/generic_icons/mixed_icon_base.dds"
+	production_methods = {
+		pm_primary_smelting_only
+		pm_secondary_remelt
+	}
+}
+
+REPLACE_OR_CREATE:pmg_base_building_machine_parts_factory = {
+	texture = "gfx/interface/icons/generic_icons/mixed_icon_base.dds"
+	production_methods = {
+		pm_cast_and_forged_parts
+		pm_precision_machining
+		pm_numerical_control_machining
+		pm_robotic_machining_cells
+	}
+}
+
+REPLACE_OR_CREATE:pmg_automation_building_machine_parts_factory = {
+	texture = "gfx/interface/icons/generic_icons/mixed_icon_automation.dds"
+	production_methods = {
+		pm_automation_disabled
+		pm_automation_building_machine_parts_factory_crystal_glass
+		pm_machine_parts_mechanisation
+		pm_machine_parts_computerisation
+		pm_automation_building_machine_parts_factory_rotary_valve_engine
 	}
 }

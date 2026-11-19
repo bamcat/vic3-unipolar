@@ -1,0 +1,484 @@
+﻿rus_wn_clear_pm = {
+	every_scope_character = {
+		limit = { has_role = character_role_prime_minister }
+		remove_character_role = character_role_prime_minister
+	}
+	if = { limit = { has_modifier = rus_pm_gaidar } remove_modifier = rus_pm_gaidar }
+	if = { limit = { has_modifier = rus_pm_chernomyrdin } remove_modifier = rus_pm_chernomyrdin }
+	if = { limit = { has_modifier = rus_pm_kiriyenko } remove_modifier = rus_pm_kiriyenko }
+	if = { limit = { has_modifier = rus_pm_primakov } remove_modifier = rus_pm_primakov }
+	if = { limit = { has_modifier = rus_pm_stepashin } remove_modifier = rus_pm_stepashin }
+	if = { limit = { has_modifier = rus_pm_putin } remove_modifier = rus_pm_putin }
+	if = { limit = { has_modifier = rus_pm_nemtsov } remove_modifier = rus_pm_nemtsov }
+	if = { limit = { has_modifier = rus_pm_luzhkov } remove_modifier = rus_pm_luzhkov }
+	if = { limit = { has_modifier = rus_pm_lebed } remove_modifier = rus_pm_lebed }
+}
+
+rus_wn_appoint_pm = {
+	rus_wn_clear_pm = yes
+	random_scope_character = {
+		limit = {
+			has_template = $T$
+			is_character_alive = yes
+		}
+		add_character_role = character_role_prime_minister
+		if = {
+			limit = { NOT = { has_variable = rus_wn_standing } }
+			set_variable = { name = rus_wn_standing value = 0 }
+		}
+		change_variable = { name = rus_wn_standing add = 20 }
+		save_scope_as = rus_wn_new_pm
+		owner = { pm_announce = { PM = scope:rus_wn_new_pm } }
+	}
+	add_modifier = { name = $M$ }
+	set_variable = { name = rus_wn_pm_blame value = 0 }
+}
+
+rus_wn_add_standing = {
+	custom_description = {
+		text = rus_wn_standing_$T$
+		value = $V$
+		random_scope_character = {
+			limit = {
+				has_template = $T$
+				is_character_alive = yes
+			}
+			if = {
+				limit = { NOT = { has_variable = rus_wn_standing } }
+				set_variable = { name = rus_wn_standing value = 0 }
+			}
+			change_variable = { name = rus_wn_standing add = $V$ }
+		}
+	}
+}
+
+rus_wn_add_blame = {
+	custom_description = {
+		text = rus_wn_blame_change
+		value = $V$
+		if = {
+			limit = { NOT = { has_variable = rus_wn_pm_blame } }
+			set_variable = { name = rus_wn_pm_blame value = 0 }
+		}
+		change_variable = { name = rus_wn_pm_blame add = $V$ }
+		clamp_variable = { name = rus_wn_pm_blame min = 0 max = 100 }
+	}
+}
+
+rus_wn_health_change = {
+	je:je_russia_wild_nineties ?= {
+		add_progress = { name = rus_wn_health_bar value = $V$ }
+	}
+}
+
+rus_wn_family_change = {
+	je:je_russia_wild_nineties ?= {
+		add_progress = { name = rus_wn_family_bar value = $V$ }
+	}
+}
+
+rus_wn_oligarchs_change = {
+	je:je_russia_wild_nineties ?= {
+		add_progress = { name = rus_wn_oligarch_bar value = $V$ }
+	}
+}
+
+rus_wn_dvoe_change = {
+	je:je_russian_constitutional_crisis ?= {
+		add_progress = { name = rus_dvoevlastie_bar value = $V$ }
+	}
+}
+
+rus_wn_inst_change = {
+	custom_description = {
+		text = rus_wn_inst_change_$I$
+		value = $V$
+		change_variable = { name = rus_inst_$I$ add = $V$ }
+		clamp_variable = { name = rus_inst_$I$ min = -100 max = 100 }
+	}
+}
+
+rus_wn_add_family_member = {
+	random_scope_character = {
+		limit = {
+			has_template = $T$
+			is_character_alive = yes
+			NOT = { has_role = character_role_rus_family }
+		}
+		add_character_role = character_role_rus_family
+	}
+}
+
+rus_wn_remove_family_member = {
+	every_scope_character = {
+		limit = {
+			has_template = $T$
+			has_role = character_role_rus_family
+		}
+		remove_character_role = character_role_rus_family
+	}
+}
+
+rus_wn_make_ruler = {
+	random_scope_character = {
+		limit = {
+			has_template = $T$
+			is_character_alive = yes
+		}
+		if = {
+			limit = { has_role = character_role_prime_minister }
+			remove_character_role = character_role_prime_minister
+		}
+		set_character_as_ruler = yes
+	}
+}
+
+rus_wn_start_chechen_war = {
+	if = {
+		limit = { rus_wn_chechen_war_possible = yes }
+		set_variable = chechen_war_started
+		set_global_variable = chechen_war_started
+		add_contextless_journal_entry = je_first_chechen_war
+		c:CCH = {
+			create_diplomatic_play = {
+				name = first_chechen_war
+				type = dp_independence
+				target_country = c:RUS
+				war = yes
+				add_war_goal = {
+					holder = c:RUS
+					type = annex_country
+					target_country = c:CCH
+				}
+			}
+		}
+	}
+}
+
+rus_wn_rename_red_directors = {
+	custom_tooltip = rus_wn_rename_red_directors_tt
+	ig:ig_industrialists ?= {
+		set_interest_group_name = ig_rus_red_directors
+		set_ig_trait = ig_trait:ig_trait_rus_protected_factories
+		set_ig_trait = ig_trait:ig_trait_rus_state_credit
+		set_ig_trait = ig_trait:ig_trait_rus_asset_stripping
+	}
+	ig:ig_landowners ?= {
+		set_interest_group_name = ig_rus_agrarian_lobby
+	}
+	ig:ig_devout ?= {
+		set_interest_group_name = ig_orthodox_church
+	}
+	random_scope_character = {
+		limit = {
+			has_template = RUS_arkady_volsky
+			is_character_alive = yes
+		}
+		set_as_interest_group_leader = yes
+	}
+}
+
+rus_wn_rename_oligarchs = {
+	if = {
+		limit = { NOT = { has_variable = rus_wn_oligarchs_named } }
+		custom_tooltip = rus_wn_rename_oligarchs_tt
+	}
+	if = {
+		limit = { NOT = { has_variable = rus_wn_oligarchs_named } }
+		set_variable = rus_wn_oligarchs_named
+		ig:ig_industrialists ?= {
+			set_interest_group_name = ig_rus_oligarchs
+			set_ig_trait = ig_trait:ig_trait_rus_media_empires
+			set_ig_trait = ig_trait:ig_trait_rus_loans_for_shares
+			set_ig_trait = ig_trait:ig_trait_rus_offshore_accounts
+		}
+		random_scope_character = {
+			limit = {
+				has_template = RUS_boris_berezovsky
+				is_character_alive = yes
+			}
+			set_as_interest_group_leader = yes
+		}
+	}
+}
+
+rus_wn_rename_siloviki = {
+	ig:ig_armed_forces ?= {
+		set_interest_group_name = ig_rus_siloviki
+	}
+}
+
+rus_wn_clear_econ_approach = {
+	if = { limit = { has_modifier = rus_econ_shock } remove_modifier = rus_econ_shock }
+	if = { limit = { has_modifier = rus_econ_gradual } remove_modifier = rus_econ_gradual }
+	if = { limit = { has_modifier = rus_econ_red_credit } remove_modifier = rus_econ_red_credit }
+	if = { limit = { has_modifier = rus_econ_imf } remove_modifier = rus_econ_imf }
+	fin_stop_bonds = yes
+	fin_end_tracking = yes
+}
+
+rus_wn_parliament_victory = {
+	set_variable = { name = rus_1993_result value = flag:parliament }
+	if = {
+		limit = { rus_wn_has_character = { T = RUS_alexander_rutskoy } }
+		rus_wn_make_ruler = { T = RUS_alexander_rutskoy }
+	}
+	else_if = {
+		limit = { rus_wn_has_character = { T = RUS_ruslan_khasbulatov } }
+		rus_wn_make_ruler = { T = RUS_ruslan_khasbulatov }
+	}
+	else = {
+		rus_wn_opposition_takes_power = yes
+	}
+	activate_law = law_type:law_parliamentary_republic
+	active_law:lawgroup_governance_principles ?= {
+		add_amendment = {
+			type = amendment_rus_parliamentary_oversight
+			sponsor = root.ig:ig_rural_folk
+		}
+	}
+	add_modifier = { name = rus_parliament_victory months = 36 }
+	rus_wn_add_standing = { T = RUS_ruslan_khasbulatov V = 30 }
+}
+
+rus_wn_compromise_constitution = {
+	set_variable = { name = rus_1993_result value = flag:compromise }
+	set_variable = rus_1993_constitution
+	if = {
+		limit = {
+			OR = {
+				has_law_or_variant = law_type:law_presidential_republic
+				has_law_or_variant = law_type:law_parliamentary_republic
+			}
+		}
+		active_law:lawgroup_governance_principles ?= {
+			add_amendment = {
+				type = amendment_rus_balanced_constitution
+				sponsor = root.ig:ig_intelligentsia
+			}
+		}
+	}
+	add_modifier = { name = rus_zero_option months = 24 }
+}
+
+rus_wn_adopt_1993_constitution = {
+	set_variable = rus_1993_constitution
+	if = {
+		limit = {
+			var:rus_1993_result ?= flag:president
+			has_law_or_variant = law_type:law_presidential_republic
+		}
+		active_law:lawgroup_governance_principles ?= {
+			add_amendment = {
+				type = amendment_rus_presidential_decree_powers
+				sponsor = root.ig:ig_petty_bourgeoisie
+			}
+		}
+	}
+	else_if = {
+		limit = {
+			OR = {
+				has_law_or_variant = law_type:law_presidential_republic
+				has_law_or_variant = law_type:law_parliamentary_republic
+			}
+		}
+		active_law:lawgroup_governance_principles ?= {
+			add_amendment = {
+				type = amendment_rus_balanced_constitution
+				sponsor = root.ig:ig_intelligentsia
+			}
+		}
+	}
+}
+
+rus_wn_record_successor = {
+	custom_tooltip = rus_wn_record_successor_tt
+	hidden_effect = {
+		ruler ?= {
+			if = {
+				limit = { has_template = RUS_vladimir_putin }
+				root = { set_variable = { name = rus_wn_successor value = flag:putin } }
+			}
+			else_if = {
+				limit = { has_template = RUS_sergei_stepashin }
+				root = { set_variable = { name = rus_wn_successor value = flag:stepashin } }
+			}
+			else_if = {
+				limit = { has_template = RUS_yevgeny_primakov }
+				root = { set_variable = { name = rus_wn_successor value = flag:primakov } }
+			}
+			else_if = {
+				limit = { has_template = RUS_yuri_luzhkov }
+				root = { set_variable = { name = rus_wn_successor value = flag:luzhkov } }
+			}
+			else_if = {
+				limit = { has_template = RUS_viktor_chernomyrdin }
+				root = { set_variable = { name = rus_wn_successor value = flag:chernomyrdin } }
+			}
+			else_if = {
+				limit = { has_template = RUS_boris_nemtsov }
+				root = { set_variable = { name = rus_wn_successor value = flag:nemtsov } }
+			}
+			else_if = {
+				limit = { has_template = RUS_alexander_lebed }
+				root = { set_variable = { name = rus_wn_successor value = flag:lebed } }
+			}
+			else = {
+				root = { set_variable = { name = rus_wn_successor value = flag:pm } }
+			}
+		}
+	}
+}
+
+rus_wn_successor_modifier = {
+	if = {
+		limit = { var:rus_wn_successor ?= flag:putin }
+		add_modifier = { name = rus_successor_putin months = 60 }
+		rus_wn_rename_siloviki = yes
+	}
+	else_if = {
+		limit = { var:rus_wn_successor ?= flag:stepashin }
+		add_modifier = { name = rus_successor_stepashin months = 60 }
+		rus_wn_rename_siloviki = yes
+	}
+	else_if = {
+		limit = { var:rus_wn_successor ?= flag:primakov }
+		add_modifier = { name = rus_successor_primakov months = 60 }
+	}
+	else_if = {
+		limit = { var:rus_wn_successor ?= flag:luzhkov }
+		add_modifier = { name = rus_successor_luzhkov months = 60 }
+	}
+	else_if = {
+		limit = { var:rus_wn_successor ?= flag:chernomyrdin }
+		add_modifier = { name = rus_successor_chernomyrdin months = 60 }
+	}
+	else_if = {
+		limit = { var:rus_wn_successor ?= flag:nemtsov }
+		add_modifier = { name = rus_successor_nemtsov months = 60 }
+	}
+	else_if = {
+		limit = { var:rus_wn_successor ?= flag:lebed }
+		add_modifier = { name = rus_successor_lebed months = 60 }
+	}
+}
+
+rus_wn_install_successor = {
+	custom_tooltip = rus_wn_install_successor_tt
+	hidden_effect = {
+		if = {
+			limit = { var:rus_wn_successor ?= flag:putin }
+			rus_wn_make_ruler = { T = RUS_vladimir_putin }
+		}
+		else_if = {
+			limit = { var:rus_wn_successor ?= flag:stepashin }
+			rus_wn_make_ruler = { T = RUS_sergei_stepashin }
+		}
+		else_if = {
+			limit = { var:rus_wn_successor ?= flag:primakov }
+			rus_wn_make_ruler = { T = RUS_yevgeny_primakov }
+		}
+		else_if = {
+			limit = { var:rus_wn_successor ?= flag:luzhkov }
+			rus_wn_make_ruler = { T = RUS_yuri_luzhkov }
+		}
+		else_if = {
+			limit = { var:rus_wn_successor ?= flag:chernomyrdin }
+			rus_wn_make_ruler = { T = RUS_viktor_chernomyrdin }
+		}
+		else_if = {
+			limit = { var:rus_wn_successor ?= flag:nemtsov }
+			rus_wn_make_ruler = { T = RUS_boris_nemtsov }
+		}
+		else_if = {
+			limit = { var:rus_wn_successor ?= flag:lebed }
+			rus_wn_make_ruler = { T = RUS_alexander_lebed }
+		}
+		if = {
+			limit = {
+				OR = {
+					rus_wn_yeltsin_in_power = yes
+					var:rus_wn_successor ?= flag:pm
+				}
+				any_scope_character = {
+					has_role = character_role_prime_minister
+					is_character_alive = yes
+				}
+			}
+			random_scope_character = {
+				limit = { has_role = character_role_prime_minister }
+				remove_character_role = character_role_prime_minister
+				set_character_as_ruler = yes
+			}
+			set_variable = { name = rus_wn_successor value = flag:pm }
+		}
+		if = {
+			limit = { rus_wn_yeltsin_in_power = no }
+			rus_wn_successor_modifier = yes
+			set_variable = rus_wn_succession_done
+		}
+	}
+}
+
+rus_wn_opposition_takes_power = {
+	if = {
+		limit = {
+			ig:ig_rural_folk ?= {
+				leader ?= {
+					is_character_alive = yes
+					NOT = { has_variable = rus_wn_yeltsin }
+				}
+			}
+		}
+		ig:ig_rural_folk.leader = {
+			if = {
+				limit = { has_role = character_role_prime_minister }
+				remove_character_role = character_role_prime_minister
+			}
+			set_character_as_ruler = yes
+		}
+	}
+	else_if = {
+		limit = {
+			ig:ig_trade_unions ?= {
+				leader ?= {
+					is_character_alive = yes
+					NOT = { has_variable = rus_wn_yeltsin }
+				}
+			}
+		}
+		ig:ig_trade_unions.leader = {
+			if = {
+				limit = { has_role = character_role_prime_minister }
+				remove_character_role = character_role_prime_minister
+			}
+			set_character_as_ruler = yes
+		}
+	}
+}
+
+rus_wn_found_sibneft = {
+	if = {
+		limit = {
+			NOT = { has_company = company_type:company_sibneft }
+			can_establish_company = yes
+		}
+		add_company = company_type:company_sibneft
+		company:company_sibneft ?= {
+			set_company_establishment_date = 1995.8.24
+		}
+		if = {
+			limit = {
+				any_scope_state = { state_region = s:STATE_OB }
+			}
+			company:company_sibneft ?= {
+				set_company_state_region = s:STATE_OB
+			}
+		}
+		else = {
+			company:company_sibneft ?= {
+				set_company_state_region = root.capital.state_region
+			}
+		}
+	}
+}

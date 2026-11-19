@@ -29,7 +29,6 @@
 #		country_is_in_europe = yes
 #		game_date >= 1995.1.1
 #	}
-#
 #	possible = {
 #		NOT = { has_variable = eu_membership_process_started }
 #		NOT = { has_modifier = modifier_eu_member_state }
@@ -49,14 +48,12 @@
 #		}
 #		has_law = law_type:law_elected_bureaucrats
 #	}
-#
 #	when_taken = {
 #		custom_tooltip = {
 #		set_variable = eu_membership_process_started
 #		text = eu_membership_process
 #		}
 #	}
-#
 #	ai_chance = {
 #		value = 1.5
 #		if = {
@@ -77,7 +74,6 @@ dissolve_european_union = {
 	}
  
 	possible = {
-		# No EEC members remain
 		custom_tooltip = {
 			text = io_dissolve_eu_no_members_tt
 			NOT = {
@@ -92,7 +88,6 @@ dissolve_european_union = {
 	}
  
 	when_taken = {
-		# Annex EUR if it still exists
 		if = {
 			limit = {
 				c:EUR ?= { exists = yes }
@@ -103,7 +98,6 @@ dissolve_european_union = {
 				}
 			}
 		}
-		# Clear any remaining stale entries from both lists
 		every_country = {
 			limit = { is_target_in_global_variable_list = { name = io_eec_members target = this } }
 			remove_list_global_variable = { name = io_eec_members target = this }

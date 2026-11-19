@@ -7,8 +7,8 @@
 		set_variable = nuclear_capable
 		set_variable = { name = nukes value = 3 }
 		add_modifier = nuclear_capable_modifier
+		add_journal_entry = { type = je_kzk_denuclearization }
 		
-		# Laws
 		activate_law = law_type:law_professional_army
 		activate_law = law_type:law_elected_bureaucrats
 		activate_law = law_type:law_compulsory_primary_school

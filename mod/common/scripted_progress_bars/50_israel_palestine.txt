@@ -1,5 +1,3 @@
-# Place in: common/scripted_progress_bars/
-
 je_israel_palestine_tension_bar = {
 	name = "je_israel_palestine_tension_bar"
 	desc = "je_israel_palestine_tension_bar_desc"
@@ -16,7 +14,11 @@ je_intifada_score_bar = {
 	desc = "je_intifada_score_bar_desc"
 	second_desc = "je_intifada_score_bar_second_desc"
 
-	double_sided_two_spains = yes
+	progress_texture = "gfx/interface/progressbar/progressbar_gold.dds"
+	background_texture = "gfx/interface/progressbar/progressbar_default.dds"
+	glow_texture = "gfx/interface/progressbar/progressbar_gold_glow.dds"
+	glow_line_texture = "gfx/interface/progressbar/progressbar_gold_glow_line.dds"
+	marker = yes
 
 	start_value = 0
 	min_value = -10

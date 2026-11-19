@@ -11,31 +11,39 @@ je_china_southern_tour = {
 
     possible = {
         c:PRC ?= this
-		game_date <= 1993.01.01
+		custom_description = { text = smd_date_until_1993_1_1 game_date <= 1993.1.1 }
         NOT = { has_variable = southern_tour_completed }
     }
 
-    on_monthly_pulse = {
-        if = {
-            limit = {
-               game_date >= 1993.01.01
-            }
-            set_variable = southern_tour_completed
-        }
-    }
+	on_monthly_pulse = {
+		effect = {
+			if = {
+				limit = {
+					game_date >= 1993.1.1
+				}
+				set_variable = southern_tour_completed
+			}
+		}
+	}
 
-    complete = {
-		custom_tooltip = { text = je_china_southern_tour_complete
-        has_variable = southern_tour_completed }
-    }
 
-    on_complete = {
-		custom_tooltip = je_china_southern_tour_progress_tt
-        add_modifier = {
-            name = southern_tour_reforms
-            months = 25
-        }
-        add_loyalists = { value = 0.05 }
-    }
-
+	outcome = {
+		header = je_standard_completion_header
+		effect_header = je_standard_on_completion_header
+		color = "gold_positive"
+		flags = { historical }
+		conclusion_desc = je_standard_completion_conclusion_desc
+		trigger = {
+			custom_tooltip = { text = je_china_southern_tour_complete
+			has_variable = southern_tour_completed }
+		}
+		effect = {
+			custom_tooltip = je_china_southern_tour_progress_tt
+			add_modifier = {
+			name = southern_tour_reforms
+			months = 25
+			}
+			add_loyalists = { value = 0.05 }
+		}
+	}
 }

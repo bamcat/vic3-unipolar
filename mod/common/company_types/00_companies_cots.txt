@@ -1,5 +1,4 @@
-﻿# São Paulo Railway Co. Ltd.
-REPLACE_OR_CREATE:company_sao_paulo_railway = {
+﻿REPLACE_OR_CREATE:company_sao_paulo_railway = {
 	icon = "gfx/interface/icons/company_icons/historical_company_icons/brazil_sao_paulo_railway.dds"
 	background = "gfx/interface/icons/company_icons/company_backgrounds/comp_illu_railways.dds"
 
@@ -18,11 +17,11 @@ REPLACE_OR_CREATE:company_sao_paulo_railway = {
 
 	potential = {
 		has_dlc_feature = rp1_content
-		has_interest_marker_in_region = region_brazil
+		has_interest_marker_in_region = sr:region_brazil
 	}
 
 	attainable = {
-		hidden_trigger = { # Hide attainable if it's always fulfilled by possible
+		hidden_trigger = {
 			any_scope_state = {
 				state_region = s:STATE_SAO_PAULO
 			}
@@ -79,12 +78,12 @@ REPLACE_OR_CREATE:company_sao_paulo_railway = {
 	}
 
 	ai_weight = {
-		value = 3 # Higher base value for flavored companies
+		value = 3
 	}
 }
 
 # Estaleiro Mauá
-company_estaleiro_maua = {
+REPLACE_OR_CREATE:company_estaleiro_maua = {
 	icon = "gfx/interface/icons/company_icons/historical_company_icons/brazil_estaleiro_maua.dds"
 	background = "gfx/interface/icons/company_icons/company_backgrounds/comp_illu_harbor_shipbuilding.dds"
 
@@ -103,11 +102,11 @@ company_estaleiro_maua = {
 
 	potential = {
 		has_dlc_feature = rp1_content
-		has_interest_marker_in_region = region_brazil
+		has_interest_marker_in_region = sr:region_brazil
 	}
 
 	attainable = {
-		hidden_trigger = { # Hide attainable if it's always fulfilled by possible
+		hidden_trigger = {
 			any_scope_state = {
 				state_region = s:STATE_RIO_DE_JANEIRO
 			}
@@ -156,12 +155,12 @@ company_estaleiro_maua = {
 	}
 
 	ai_weight = {
-		value = 3 # Higher base value for flavored companies
+		value = 3
 	}
 }
 
 # Companhia Fiação e Tecidos de Pernambuco
-company_pernambuco_textiles = {
+REPLACE_OR_CREATE:company_pernambuco_textiles = {
 	icon = "gfx/interface/icons/company_icons/historical_company_icons/brazil_companhia_fiacai_e_tecidos_de_pernambuco.dds"
 	background = "gfx/interface/icons/company_icons/company_backgrounds/comp_illu_manufacturing_light.dds"
 
@@ -191,11 +190,11 @@ company_pernambuco_textiles = {
 
 	potential = {
 		has_dlc_feature = rp1_content
-		has_interest_marker_in_region = region_brazil
+		has_interest_marker_in_region = sr:region_brazil
 	}
 
 	attainable = {
-		hidden_trigger = { # Hide attainable if it's always fulfilled by possible
+		hidden_trigger = {
 			any_scope_state = {
 				state_region = s:STATE_PERNAMBUCO
 			}
@@ -235,12 +234,12 @@ company_pernambuco_textiles = {
 	}
 
 	ai_weight = {
-		value = 3 # Higher base value for flavored companies
+		value = 3
 	}
 }
 
 # Real Fábrica de Ferro São João de Ipanema
-company_fundicao_ipanema = {
+REPLACE_OR_CREATE:company_fundicao_ipanema = {
 	icon = "gfx/interface/icons/company_icons/historical_company_icons/brazil_fundicao_ipanema.dds"
 	background = "gfx/interface/icons/company_icons/company_backgrounds/comp_illu_mining.dds"
 
@@ -270,11 +269,11 @@ company_fundicao_ipanema = {
 
 	potential = {
 		has_dlc_feature = rp1_content
-		has_interest_marker_in_region = region_brazil
+		has_interest_marker_in_region = sr:region_brazil
 	}
 
 	attainable = {
-		hidden_trigger = { # Hide attainable if it's always fulfilled by possible
+		hidden_trigger = {
 			any_scope_state = {
 				state_region = s:STATE_SAO_PAULO
 			}
@@ -324,12 +323,12 @@ company_fundicao_ipanema = {
 	}
 
 	ai_weight = {
-		value = 3 # Higher base value for flavored companies
+		value = 3
 	}
 }
 
 # Amadeo Rossi SA
-company_rossi = {
+REPLACE_OR_CREATE:company_rossi = {
 	icon = "gfx/interface/icons/company_icons/historical_company_icons/brazil_amadeo_rossi.dds"
 	background = "gfx/interface/icons/company_icons/company_backgrounds/comp_illu_manufacturing_heavy.dds"
 
@@ -359,11 +358,11 @@ company_rossi = {
 
 	potential = {
 		has_dlc_feature = rp1_content
-		has_interest_marker_in_region = region_brazil
+		has_interest_marker_in_region = sr:region_brazil
 	}
 
 	attainable = {
-		hidden_trigger = { # Hide attainable if it's always fulfilled by possible
+		hidden_trigger = {
 			any_scope_state = {
 				state_region = s:STATE_RIO_GRANDE_DO_SUL
 			}
@@ -403,12 +402,12 @@ company_rossi = {
 	}
 
 	ai_weight = {
-		value = 3 # Higher base value for flavored companies
+		value = 3
 	}
 }
 
 # Compañía Estañífera de Llallagua
-company_estanifera_llallagua = {
+REPLACE_OR_CREATE:company_estanifera_llallagua = {
 	icon = "gfx/interface/icons/company_icons/historical_company_icons/bolivia_compania_estanifera_de_llallagua.dds"
 	background = "gfx/interface/icons/company_icons/company_backgrounds/comp_illu_mining.dds"
 
@@ -427,11 +426,11 @@ company_estanifera_llallagua = {
 
 	potential = {
 		has_dlc_feature = rp1_content
-		has_interest_marker_in_region = region_andes
+		has_interest_marker_in_region = sr:region_andes
 	}
 
 	attainable = {
-		hidden_trigger = { # Hide attainable if it's always fulfilled by possible
+		hidden_trigger = {
 			any_scope_state = {
 				state_region = s:STATE_POTOSI
 			}
@@ -471,12 +470,12 @@ company_estanifera_llallagua = {
 	}
 
 	ai_weight = {
-		value = 3 # Higher base value for flavored companies
+		value = 3
 	}
 }
 
 # Centro Vitivinícola Nacional
-company_argentinian_wine = {
+REPLACE_OR_CREATE:company_argentinian_wine = {
 	icon = "gfx/interface/icons/company_icons/historical_company_icons/argentina_centro_vitivinicola_nacional.dds"
 	background = "gfx/interface/icons/company_icons/company_backgrounds/comp_illu_farm_rice.dds"
 
@@ -527,12 +526,12 @@ company_argentinian_wine = {
 	}
 
 	ai_weight = {
-		value = 3 # Higher base value for flavored companies
+		value = 3
 	}
 }
 
 # Compañía Sudamericana de Vapores
-company_sudamericana_de_vapores = {
+REPLACE_OR_CREATE:company_sudamericana_de_vapores = {
 	icon = "gfx/interface/icons/company_icons/historical_company_icons/chile_csav.dds"
 	background = "gfx/interface/icons/company_icons/company_backgrounds/comp_illu_harbor_shipbuilding.dds"
 
@@ -551,11 +550,11 @@ company_sudamericana_de_vapores = {
 
 	potential = {
 		has_dlc_feature = rp1_content
-		has_interest_marker_in_region = region_la_plata
+		has_interest_marker_in_region = sr:region_la_plata
 	}
 
 	attainable = {
-		hidden_trigger = { # Hide attainable if it's always fulfilled by possible
+		hidden_trigger = {
 			any_scope_state = {
 				state_region = s:STATE_SANTIAGO
 			}
@@ -595,7 +594,7 @@ company_sudamericana_de_vapores = {
 	}
 
 	ai_weight = {
-		value = 3 # Higher base value for flavored companies
+		value = 3
 	}
 }
 
@@ -619,11 +618,11 @@ REPLACE_OR_CREATE:company_electricidad_de_caracas = {
 
 	potential = {
 		has_dlc_feature = rp1_content
-		has_interest_marker_in_region = region_gran_colombia
+		has_interest_marker_in_region = sr:region_gran_colombia
 	}
 
 	attainable = {
-		hidden_trigger = { # Hide attainable if it's always fulfilled by possible
+		hidden_trigger = {
 			any_scope_state = {
 				state_region = s:STATE_MIRANDA
 			}
@@ -663,7 +662,7 @@ REPLACE_OR_CREATE:company_electricidad_de_caracas = {
 	}
 
 	ai_weight = {
-		value = 3 # Higher base value for flavored companies
+		value = 3
 	}
 }
 
@@ -687,11 +686,11 @@ REPLACE_OR_CREATE:company_cordoba_railway = {
 
 	potential = {
 		has_dlc_feature = rp1_content
-		has_interest_marker_in_region = region_la_plata
+		has_interest_marker_in_region = sr:region_la_plata
 	}
 
 	attainable = {
-		hidden_trigger = { # Hide attainable if it's always fulfilled by possible
+		hidden_trigger = {
 			any_scope_state = {
 				state_region = s:STATE_LA_PAMPA
 			}
@@ -738,12 +737,12 @@ REPLACE_OR_CREATE:company_cordoba_railway = {
 	}
 
 	ai_weight = {
-		value = 3 # Higher base value for flavored companies
+		value = 3
 	}
 }
 
 # Empresas Eléctricas Asociadas
-company_eea = {
+REPLACE_OR_CREATE:company_eea = {
 	icon = "gfx/interface/icons/company_icons/historical_company_icons/peru_empresas_electricas_asociadas.dds"
 	background = "gfx/interface/icons/company_icons/company_backgrounds/comp_illu_manufacturing_light.dds"
 
@@ -761,11 +760,11 @@ company_eea = {
 
 	potential = {
 		has_dlc_feature = rp1_content
-		has_interest_marker_in_region = region_andes
+		has_interest_marker_in_region = sr:region_andes
 	}
 
 	attainable = {
-		hidden_trigger = { # Hide attainable if it's always fulfilled by possible
+		hidden_trigger = {
 			any_scope_state = {
 				state_region = s:STATE_LIMA
 			}
@@ -805,6 +804,6 @@ company_eea = {
 	}
 
 	ai_weight = {
-		value = 3 # Higher base value for flavored companies
+		value = 3
 	}
 }

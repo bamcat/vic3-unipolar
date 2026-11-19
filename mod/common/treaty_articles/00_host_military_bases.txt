@@ -1,15 +1,5 @@
 ﻿# ==========================================
 # HOST MILITARY BASES — TREATY ARTICLE
-# Place in common/diplomatic_actions/ or
-# common/treaty_articles/ depending on
-# your mod structure.
-#
-# Allows the source country (the host) to
-# station military forces in the target
-# country's territory. Used by the missile
-# system to extend targeting range:
-# states bordering countries with this
-# pact active become valid missile targets.
 # ==========================================
 
 REPLACE_OR_CREATE:host_military_bases = {
@@ -71,11 +61,10 @@ REPLACE_OR_CREATE:host_military_bases = {
 	}
 
 	on_entry_into_force = {
-		# Modifier applied to the host country while agreement is active
 		scope:target_country = {
 			add_modifier = {
 				name = military_base_host_modifier
-				months = -1  # Indefinite — removed on withdrawal/break
+				months = -1
 			}
 		}
 		scope:source_country = {

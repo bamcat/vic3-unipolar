@@ -1,9 +1,5 @@
-# Fallback party for Rural Folk
-# Occasionally used for an anti-serfdom alliance
-# More popular in Nordic countries
-
-REPLACE_OR_CREATE:russian_agrarian_party = {
-	color = { 80 150 70 }
+﻿REPLACE_OR_CREATE:russian_agrarian_party = {
+	color = { 60 140 40 }
 	name = {
 		first_valid = {
 			triggered_desc = {
@@ -18,33 +14,28 @@ REPLACE_OR_CREATE:russian_agrarian_party = {
 		default = "/gfx/interface/icons/political_parties/rus_agri.dds"
 	}
 
-	
-	# THIS IS RUN ONLY ONCE AT GAME START
 	valid_for_country = {
-	THIS = c:RUS
+		THIS = c:RUS
 	}
 
-		available_for_interest_group = {
+	available_for_interest_group = {
 		is_marginal = no
 		OR = {
-			leader = { has_ideology = ideology:ideology_green_leader }
-			leader = { has_ideology = ideology:ideology_left_wing_populist_leader }
-			leader = { has_ideology = ideology:ideology_right_wing_populist_leader }
-			leader = { has_ideology = ideology:ideology_conservative_leader }
-			leader = { has_ideology = ideology:ideology_moderate_leader }
-			leader = { has_ideology = ideology:ideology_democratic_socialist_leader }
+			leader ?= { has_ideology = ideology:ideology_left_wing_populist_leader }
+			leader ?= { has_ideology = ideology:ideology_green_leader }
+			leader ?= { has_ideology = ideology:ideology_state_socialist_leader }
+			leader ?= { has_ideology = ideology:ideology_conservative_leader }
+			leader ?= { has_ideology = ideology:ideology_democratic_socialist_leader }
 			has_ideology = ideology:ideology_communitarian
 			has_ideology = ideology:ideology_regionalist
 			has_ideology = ideology:ideology_left_economy
-			has_ideology = ideology:ideology_conservative
 			has_ideology = ideology:ideology_traditionalist
 			has_ideology = ideology:ideology_isolationist
 			is_interest_group_type = ig_rural_folk
+			is_interest_group_type = ig_landowners
 		}
 	}
 
-	# Root - IG considering joining
-	# scope:number - the number of IGs that would join this party before the root IG
 	join_weight = {
 		value = {
 			value = -5
@@ -53,80 +44,89 @@ REPLACE_OR_CREATE:russian_agrarian_party = {
 		if = {
 			limit = {
 				OR = {
-				leader = { has_ideology = ideology:ideology_green_leader }
-				leader = { has_ideology = ideology:ideology_left_wing_populist_leader }
-				leader = { has_ideology = ideology:ideology_right_wing_populist_leader }
+					leader ?= { has_ideology = ideology:ideology_left_wing_populist_leader }
+					leader ?= { has_ideology = ideology:ideology_green_leader }
+				}
 			}
-			}
-			add = { value = 45 desc = "leader_ideological_compatibility" }
+			add = { value = 120 desc = "leader_ideological_compatibility" }
 		}
 		if = {
 			limit = {
 				OR = {
-				leader = { has_ideology = ideology:ideology_conservative_leader }
-				leader = { has_ideology = ideology:ideology_moderate_leader }
-				leader = { has_ideology = ideology:ideology_democratic_socialist_leader }
+					leader ?= { has_ideology = ideology:ideology_state_socialist_leader }
+					leader ?= { has_ideology = ideology:ideology_conservative_leader }
+					leader ?= { has_ideology = ideology:ideology_democratic_socialist_leader }
+				}
 			}
+			add = { value = 40 desc = "leader_adjacent_ideology" }
+		}
+		if = {
+			limit = {
+				leader ?= {
+					NOR = {
+						has_ideology = ideology:ideology_left_wing_populist_leader
+						has_ideology = ideology:ideology_green_leader
+						has_ideology = ideology:ideology_state_socialist_leader
+						has_ideology = ideology:ideology_conservative_leader
+						has_ideology = ideology:ideology_democratic_socialist_leader
+					}
+				}
 			}
-			add = { value = 20 desc = "leader_adjacent_ideology" }
+			add = { value = -40 desc = "leader_ideology_unrelated" }
 		}
 		if = {
 			limit = {
 				OR = {
-				leader = { has_ideology = ideology:ideology_neoliberal_leader }
-				leader = { has_ideology = ideology:ideology_authoritarian_capitalist_leader }
-				leader = { has_ideology = ideology:ideology_fascist_leader }
-				leader = { has_ideology = ideology:ideology_technocrat_leader }
+					leader ?= { has_ideology = ideology:ideology_neoliberal_leader }
+					leader ?= { has_ideology = ideology:ideology_classical_liberal_leader }
+					leader ?= { has_ideology = ideology:ideology_right_wing_libertarian_leader }
+				}
 			}
-			}
-			add = { value = -50 desc = "leader_ideological_incompatibility" }
+			add = { value = -150 desc = "leader_ideological_incompatibility" }
 		}
 		if = {
 			limit = {
 				OR = {
-				has_ideology = ideology:ideology_communitarian
-				has_ideology = ideology:ideology_regionalist
+					has_ideology = ideology:ideology_communitarian
+					has_ideology = ideology:ideology_regionalist
+				}
 			}
-			}
-			add = { value = 35 desc = "interest_group_ideological_compatibility" }
+			add = { value = 20 desc = "interest_group_ideological_compatibility" }
 		}
 		if = {
 			limit = {
 				OR = {
-				has_ideology = ideology:ideology_left_economy
-				has_ideology = ideology:ideology_conservative
-				has_ideology = ideology:ideology_traditionalist
-				has_ideology = ideology:ideology_isolationist
+					has_ideology = ideology:ideology_left_economy
+					has_ideology = ideology:ideology_traditionalist
+					has_ideology = ideology:ideology_isolationist
+				}
 			}
-			}
-			add = { value = 15 desc = "interest_group_adjacent_ideology" }
+			add = { value = 8 desc = "interest_group_adjacent_ideology" }
 		}
 		if = {
 			limit = {
 				OR = {
-				has_ideology = ideology:ideology_far_right_economy
-				has_ideology = ideology:ideology_globalist
-				has_ideology = ideology:ideology_totalitarian
-				has_ideology = ideology:ideology_militarist
+					has_ideology = ideology:ideology_globalist
+					has_ideology = ideology:ideology_individualist
+				}
 			}
-			}
-			add = { value = -35 desc = "interest_group_ideological_incompatibility" }
+			add = { value = -20 desc = "interest_group_ideological_incompatibility" }
 		}
 		if = {
 			limit = {
-				is_interest_group_type = ig_rural_folk
+				OR = {
+					is_interest_group_type = ig_rural_folk
+					is_interest_group_type = ig_landowners
+				}
 			}
-			add = { value = 20 desc = "from_archetype_party" }
+			add = { value = 15 desc = "from_archetype_party" }
 		}
 		if = {
 			limit = {
 				is_powerful = yes
 				OR = {
-					leader = { has_ideology = ideology:ideology_green_leader }
-					leader = { has_ideology = ideology:ideology_left_wing_populist_leader }
-					leader = { has_ideology = ideology:ideology_right_wing_populist_leader }
-					has_ideology = ideology:ideology_communitarian
-					has_ideology = ideology:ideology_regionalist
+					leader ?= { has_ideology = ideology:ideology_left_wing_populist_leader }
+					leader ?= { has_ideology = ideology:ideology_green_leader }
 				}
 			}
 			add = { value = 20 desc = "powerful_ig" }
@@ -144,5 +144,4 @@ REPLACE_OR_CREATE:russian_agrarian_party = {
 			multiply = { value = 0.75 desc = "from_two_prior_members" }
 		}
 	}
-
 }

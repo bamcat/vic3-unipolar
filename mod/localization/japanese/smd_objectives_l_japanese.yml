@@ -1,76 +1,52 @@
 ﻿l_japanese:
-# ==========================================
- # OBJECTIVE
- # ==========================================
- 
  objective_the_west: "ザ・ウエスト"
  objective_the_west_desc: "審美的な国際秩序 — 民主主義、無料取引、集団的セキュリティ、人権 — 持続的かつ拡大する必要があります。 [ROOT.GetCountry.GetName] はシステムの中心に置かれます。 タスクは、単に存在しているものを維持することではなく、世紀が終わると、世界の偉大な力は、注文中にあるか、それを挑戦することはできません。"
- 
- # ==========================================
- # SUBGOAL NAMES AND DESCRIPTIONS
- # ==========================================
- 
+
  sg_west_open_trade: "受取通貨ステータス"
  sg_west_open_trade_desc: "ウェスタン・ファイナンシャル・システムは[ROOT.GetCountry.GetAdjective]クレジットで動作します。 [ROOT.GetCountry.GetName] は、クレジットのドミナント輸出業者として、1,000 台を超える単位で、グローバル経済のバックボーンとして [ROOT.GetCountry.GetAdjective] の金融システムをセメント化しました。"
- 
+
  sg_west_alliances: "アライアンスのネットワーク"
  sg_west_alliances_desc: "西洋の注文は、集団的なセキュリティプロジェクトです。 少なくとも4つの国と軍事援助協定を確立し、攻撃とプロジェクトを悪化させるアライアンスネットワークを構築します [ROOT.GetCountry.GetAdjective] 職業ではなくパートナーシップを介して電力."
- 
+
  sg_west_human_rights: "リベラル民主主義フレームワーク"
  sg_west_human_rights_desc: "ウェストは、その富ではなく、その価値によって定義されます。 普遍的なふるい、労働者の保護、スレーブの廃止、および保護されたスピーチ - 自由民主社会の機関的な基盤。 注文 [ROOT.GetCountry.GetName] は、守るべき価値である必要があります。"
- 
+
  sg_west_education: "教育された市民"
  sg_west_education_desc: "民主的な参加と経済力主義は、教育された人口に依存しています。 レベル5に学校システムに投資し、少なくとも75%のリテラシー率を達成します。 知名度の高い市民権は、最も耐久性のある基礎の自由秩序を持っています。"
- 
+
  sg_west_gdp: "経済リーダーシップ"
  sg_west_gdp_desc: "西洋の秩序は経済の重みによって下書きされます。 [ROOT.GetCountry.GetName] は、グローバル GDP の少なくとも 25% を占める必要があります。[ROOT.GetCountry.GetAdjective] 経済が大きすぎて、世界規模のシステムに集中して、あらゆるライバルが確実にチャレンジできます。"
- 
+
  sg_west_endgame: "ユニポーラ・モーメント"
  sg_west_endgame_desc: "最後の挑戦。 [SCOPE.sCountry('c:RUS').GetName] と [SCOPE.sCountry('c:CHI').GetName] の両方を、その順序内で持って来るか、またはそれを脅迫することができないものをレンダリングする必要があります。 それぞれ: それらは民主化し、普遍的なsuffrageを採用し、 [ROOT.GetCountry.GetName] で防御的なpact に署名するか、またはその力は主要な力のランクの下に落ちます。 注文を保存するための3番目のオプションはありません。"
- 
- # ==========================================
- # JOURNAL ENTRY NAMES AND DESCRIPTIONS
- # ==========================================
- 
+
  je_west_open_trade: "金融優位性"
  je_west_open_trade_reason: "[ROOT.GetCountry.GetAdjective] ドル — または [ROOT.GetCountry.GetName] が通貨を呼ぶのは、世界標準の通貨です。 その他の国は、その中に取引を決済し、その周りの金融システムを構築します。 国際市場への1,000単位以上のクレジットをエクスポートすると、このポジションをセメント化し、軍事力が再現できないグローバル金融システム上に[ROOT.GetCountry.GetName]構造的レバレッジを与えます。"
- 
+
  je_west_alliances: "集団セキュリティ"
  je_west_alliances_reason: "佐藤 仁 ANZUS.(アメリカ) 西洋の空白を定義するセキュリティパートナーシップは単なる軍事的アレンジではなく、政治的な約束です。 少なくとも4つの国と軍事援助協定を築きます。 各パートナーシップは、[ROOT.GetCountry.GetAdjective] リーチを拡張し、注文を維持するコストを削減します。"
- 
+
  je_west_human_rights: "財団について"
  je_west_human_rights_reason: "普遍的なsuffrage。 労働者の保護。 スレーブの廃止。 保護されたスピーチ。 これらは、Westernモデルのオプションの追加ではありません。それらはモデルです。 [ROOT.GetCountry.GetName] が守られているのは、単なる力ではなく、原則です。 機関的な基礎基礎基礎を確立するためにすべての4を有効にします 自由順が必要です."
- 
+
  je_west_education: "すべての教育"
  je_west_education_reason: "欧米モデルは、読みやすく、理由、参加できる市民によって異なります。 全国のリテラシー率が75%に達するために学校に投資します。 適切な法律を持つことは十分ではありません。人口は十分に教育されなければなりません。"
- 
+
  je_west_gdp: "グローバルGDPの5%"
  je_west_gdp_reason: "サイズの問題。 [ROOT.GetCountry.GetName] は、少なくとも 1 四半期のグローバル経済出力を占める必要があります。 そのスケールでは、[ROOT.GetCountry.GetAdjective] 経済は単なる大事ではありません。それは不可欠です。 [ROOT.GetCountry.GetName] で世界貿易をし、[ROOT.GetCountry.GetName] から借りて、敵を [ROOT.GetCountry.GetName] にする余裕がない。"
- 
+
  je_west_endgame: "歴史の終わり"
  je_west_endgame_reason: "年齢の質問: [SCOPE.sCountry('c:RUS').GetName] と [SCOPE.sCountry('c:CHI').GetName] は、西部の注文に系統的なライバルとして中和することができますか?\n\n それぞれの国では、以下のいずれかが真でなければなりません。\n• 彼らは民主共和国、普遍的なsuffrageを採用し、[ROOT.GetCountry.GetName]\nで防御的なpactを署名しました• 彼らのパワーランクは、主要なパワー\n\nのその下で落ちています 両方の条件が満たされるとき、unipolar 瞬間は完了します。"
- 
- # ==========================================
- # PROGRESS TOOLTIPS
- # ==========================================
- 
+
  je_west_open_trade_progressing_tt: "[ROOT.GetCountry.GetAdjective] 金融システムが国際的に展開"
  je_west_alliances_progressing_tt: "アライアンスネットワークは形状をとっています。パートナーが増えています。"
  je_west_human_rights_progressing_tt: "いくつかの権利フレームワークが配置されている - フルセットはまだ制定されていない"
  je_west_education_progressing_tt: "学校システムが開発中 — レベル5の投資と75%のリテラシーは目標です"
  je_west_gdp_progressing_tt: "[ROOT.GetCountry.GetName] グローバルGDPの15%以上を占める - 対象は25%"
  je_west_endgame_progressing_tt: "一方のライバルが弱まっているか、または民主化されている - 他の人は系統的な課題を残している"
- 
- # ==========================================
- # OBJECTIVE
- # ==========================================
 
  objective_the_east: "ザ・イースト"
  objective_the_east_desc: "西洋の自由秩序は、唯一の可能な世界ではありません。 [ROOT.GetCountry.GetName] は、状態の方向、集合的な強さ、および sovereign 開発の 1 つの異なるモデルを持っています。 タスクは、このモデルは、経済力とグローバルリーチの西にマッチし、米国ではなく、[ROOT.GetCountry.GetName]が国際秩序の用語を定義する世界を築くことができることを実証することです。"
-
- # ==========================================
- # SUBGOAL NAMES AND DESCRIPTIONS
- # ==========================================
 
  sg_east_state_industry: "直接産業基盤"
  sg_east_state_industry_desc: "東モデルは、重工業への投資を直接するために、州の能力に残ります。 介入者またはコマンド経済を維持し、少なくとも10までの建設能力を構築し、強力な占有率で少なくとも5レベルの鉄鉱業を開発する。 これは、経済基盤の他に依存しています。"
@@ -107,17 +83,9 @@
  je_east_sphere_progressing_tt: "アライアンスネットワークは成長しています。4つの軍事支援協定が必要です。"
  je_east_currency_progressing_tt: "クレジット輸出が増加しています。予約通貨のステータスを確立するために1,000単位が必要です。"
  je_east_endgame_progressing_tt: "少なくとも1つの西洋力は中和されています - 他の人は残ります"
- 
- # ==========================================
- # OBJECTIVE
- # ==========================================
 
  objective_rising_powers: "ライジングパワー"
  objective_rising_powers_desc: "世界では2つの空白の間に分ける必要はありません。 [ROOT.GetCountry.GetName] は、WashingtonとMoscowの間で、ドルと次のいずれかの間の選択を拒否します。 3番目の方法は、代替品のどちらかよりも難しくなっています。 これは、純正の経済的重量、信頼できる軍事力、および外交的なスキルを必要とし、共通点が1つだけある状態の連合を一緒に保持します。"
-
- # ==========================================
- # SUBGOAL NAMES AND DESCRIPTIONS
- # ==========================================
 
  sg_rising_economy: "経済基盤"
  sg_rising_economy_desc: "グローバルGDPの少なくとも10%を占める経済を築く — 第三のブロックを固定するのに十分な実質的 — 40%未満の単一のパートナーへの取引の暴露を維持しながら。 経済の独立性から始まります。"
@@ -149,12 +117,48 @@
  je_rising_endgame: "第三ブロックをリード"
  je_rising_endgame_reason: "パワーは、8名以上の会員のパワーを大きなパワーとして導きます。 [SCOPE.sCountry('c:USA').GetName] または [SCOPE.sCountry('c:RUS').GetName] ではなく [ROOT.GetCountry.GetName] の周りを整理することを選択する8つの国は単なる外交的達成ではありません。国際政治の構造的事実です。 3番目の方法は存在します。 メンバーがいます。 それはリーダーを持っています。 スーパーパワーは、それを考慮する必要があります。"
 
- # ==========================================
- # PROGRESS TOOLTIPS
- # ==========================================
-
  je_rising_economy_progressing_tt: "[ROOT.GetCountry.GetName] グローバル GDP の 2% を超えるアカウント — 5% は、ターゲットです。"
  je_rising_sovereignty_progressing_tt: "[ROOT.GetCountry.GetName] は認識され、独立した — 主要なパワーランクとプレステージ 50 が必要です"
  je_rising_military_progressing_tt: "軍事能力は成長しています — 偉大なパワーランクと軍隊のサイズ 100 ターゲットです"
  je_rising_prestige_progressing_tt: "[ROOT.GetCountry.GetName] は、トップ 5 に近づいています — プレステージ 150 とグローバル ランキング 5 が必要です"
  je_rising_endgame_progressing_tt: "空白が形成される - 目的を達成するために8人のメンバーが必要です"
+
+ objective_the_west_desc:0 "グローバルな民主主義を維持し、普及し、人権、資本主義、経済発展を推進します。"
+ objective_the_west_idle_header:0 "グローバルな民主主義、人権、資本主義、経済発展を維持・普及"
+ objective_the_west_idle_hint:0 "より多くの課題が最終的に現れます"
+
+ objective_the_east_desc:0 "米国と同盟国が保持する優位性に挑戦"
+ objective_the_east_idle_header:0 "米国は、もはやプレミア世界力ではありません。"
+ objective_the_east_idle_hint:0 "より多くの課題が最終的に現れます"
+
+ objective_rising_powers_desc:0 "世界優位性の入札で、いわゆる第2世界に挑戦する。"
+ objective_rising_powers_idle_header:0 "歪んだ世界ランクを貫く"
+ objective_rising_powers_idle_hint:0 "より多くの課題が最終的に現れます"
+
+ OBJECTIVE_TYPE_RECOMMENDED_GAME_RULE_DESC:0 "以下のゲームルールを推奨します。"
+ OBJECTIVE_TYPE_RECOMMENDED_GAME_RULE_ITEM_TEXT:0 "- [GameRuleSetting.GetGameRule.GetName]: #variable [GameRuleSetting.GetName]#!"
+ SELECTED_OBJECTIVE_RECOMMENDED_GAME_RULE_DESC:0 "[GameRuleSetting.GetDescription]。 "$NAME$" は、#variable $RULE$#! の次の設定を提案します。"
+
+ objective_the_west_name_USA:0 "ソールスーパーパワー"
+ objective_the_west_name_GBR:0 "トラブル"
+ objective_the_west_name_FRA:0 "Mitterrand's フランス"
+
+ objective_the_west_desc_USA:0 "米国は、21世紀の回転でユニークな位置で自分自身を見つける。 世界有数のスーパーパワーであり、最も強い国家国家の人類はかつて見たことがあると、共和国は、困難な外部と内部の問題のセットに直面しています。 アメリカの主なライバルの崩壊にもかかわらず、ソビエト連邦、テロリズムの脅威、中国、そしてアメリカの無料の世界へのさまざまな脅威は、アメリカの質問に関与しています。 米国のスーパーパワーは世界中に残っていますか? 時刻がわかります。"
+ objective_the_west_desc_GBR:0 "1992年、イギリスは経済不確実性と政治の乱流に苦しんでいる。 最近は、高失業と消費者の信頼のスラムプによってマークされ、深い引退から出現しました。 英国の雑草に加えるために, 北アイルランドの不安定性, 今「トラブル」として知られている議論の熱い話題のまま. ブリタニアは、これらの乱暴な時間をどのように生きますか?"
+ objective_the_west_desc_FRA:0 "フランスの政治的な風景は、ヨーロッパの統合と国内経済の課題に対する緊張を増大させることによってマークされました。 フランソワ・ミッテルラン大統領は、第2期社会主義者で、高失業と悲しみの経済成長に苦しむ国として、絶え間ない人気に直面した。 彼の政府は、ピエール・ベレゴヴォイ首相によって導かれ、経済の安定化を目的とする官能的な措置に対する公共の不満に悲嘆しました。 ポリティカルに、フランスはマストリッヒ・トリーティに深く分けられ、欧州の統合を強化し、ユーロの道を舗装することを目的としていました。 EUは21世紀に生き残るために何が必要?"
+
+ objective_the_east_name_RUS:0 "ソ連の秋"
+ objective_the_east_name_PRC:0 "グランド ピープルズ共和国"
+ objective_the_east_name_IRQ:0 "Saddam Husseinのイラク"
+
+ objective_the_east_desc_RUS:0 "ロシアは、1991年12月にソ連の解散に続く劇的な政治的変換を受けています。 ロシア連邦の最初の大統領であるボリス・イェルツシンは、中央化されたコミュニスト・システムから市場経済への飛躍的な移行をナビゲートしながら、逃げる民主主義を主導するという巨大な挑戦に直面しました。 国内では、Yeltsinの政府は政治的不安定性、上昇のインフレ、および「ショック療法」として知られる経済改革として広範囲にわたる社会的不規則と闘争しました。 外交的に、ロシアは、元ソ連の共和国に対する影響を維持しようとすると、西洋の電力との新しい関係を鍛造し、世界ステージ上の役割を赤化しようとしました。"
+ objective_the_east_desc_PRC:0 "中国は、西洋諸国からの国際分離と制裁から慎重に新興しています。 ポリティカルな国は、中国のコミュニティパーティー(CCP)の制御の下でしっかりと行われ、Deng Xiaopingはリーダーシップポジションから正式に退職したにもかかわらず、重要な影響を維持しました。 1992年初頭に有名な「サウス・ツアー」は、中国の経済改革と開口部へのコミットメントを再考し、市場指向の政策とグローバルな経済とのより大きな統合に向けて新たなプッシュを促しました。"
+ objective_the_east_desc_IRQ:0 "Reeling from a devastating loss in the Gulf War last year, and facing intense international isolation. Saddam Hussein remained firmly in power, maintaining an iron grip on the country through brutal repression of internal dissent, particularly against the Shi'a in the south and the Kurds in the north. Iraq truly has several paths going into the 2000s."
+
+ objective_rising_powers_name_IDA:0 "インドの世紀"
+ objective_rising_powers_name_BRZ:0 "ブラジルの優位性"
+ objective_rising_powers_name_VNM:0 "ベトナムのライズ"
+
+ objective_rising_powers_desc_IDA:0 "インドは重要な政治と経済変化の時代を航海しています。 1991年に電力に来た奈良シマ・ラオ首相が主導し、経済を解放し、グローバル市場とより密接に統合することを目的とする変革経済改革のシリーズを開始しました。"
+ objective_rising_powers_desc_BRZ:0 "1992年、ブラジルは1985年の軍事規則の終端に続く政治的移行の真っ只中にあった。 1990年にブラジルで初めて20年以上大統領に就任したフェルナンド・コラー・ド・メッロ大統領に就任。 コラーの政府は、経済の安定化を目指した経済改革の波を開始しました, しかし、彼の管理は、上昇インフレーションと腐敗の課題のために、すぐに公共の普及に直面しました. 1992年までに、コラーは大きな腐敗スキャンダルで刺繍され、大量に抗議し、彼の含浸のための呼び出しにつながりました。 ブラジルは、国際的イメージの改善とラテンアメリカにおける影響の拡大に重点を置いています。 特にアマゾン熱帯雨林に関連した環境問題において、グローバルな課題に反する一方で、欧米諸国との緊密な関係を求めていました。 しかし、政治の不安定性と経済的困難は、国家の議題を支配し続けた。"
+ objective_rising_powers_desc_VNM:0 "ベトナムは、ベトナム戦争の終端と経済の制裁の過酷な効果に続く隔離の年後、国際社会に徐々に統合されました。 1992年、ベトナムは米国と関係を正常化し、東南アジア諸国連合(ASEAN)に加盟し、地域連携の拡大と西西との関係の改善への関心の関心へのシフトを表明しました。 ベトナムはどのような経路をとりますか? あなた次第です。"

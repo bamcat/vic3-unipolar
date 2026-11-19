@@ -34,7 +34,7 @@
 		can_be_used_in_sway_offers = yes
 		sway_maneuvers_cost = 10
 		
-		relations_progress_per_day = 3 # At 100, +1 relations
+		relations_progress_per_day = 3
 		relations_improvement_max = 100
 		
 		max_target_involvement = 1000
@@ -135,7 +135,6 @@
 		requirement_to_maintain = {
 		
 			trigger = {
-				#TARGET HAS LOW SOL OR FAMINE
 				scope:target_country = { 
 					OR = { 
 						average_sol < 20
@@ -152,7 +151,7 @@
 		
 			trigger = {
 			
-				NOT = { has_modifier = imf_loan_debtor }
+				NOT = { has_modifier = imf_loan_modifier }
 				
 			}
 			
@@ -162,7 +161,6 @@
 	
 	accept_effect = {
 	
-		#Lobby
 		add_lobby_appeasement_from_diplomacy_bidirectional = { 
 			FIRST = root
 			SECOND = scope:target_country 
@@ -188,8 +186,6 @@
 			}
 		}
 		
-		# This is only used for determining the value of a humanitarian_aid in sways, so it follows different logic from normal action acceptance
-		# The format here is as if scope:actor was asking if root wants a humanitarian_aid
 		accept_score = {
 			value = 0
 
@@ -242,7 +238,6 @@
 				}
 			}
 			
-			#TARGET has similar ideology as THIS
 			if = {
 				limit = {
 					scope:actor = {
@@ -320,8 +315,6 @@
 			
 		}		
 	
-		# This is only used for determining the value of a humanitarian_aid in sways, so it follows different logic from normal action acceptance
-		# The format here is as if scope:actor was asking for a humanitarian_aid from root
 		junior_accept_score = {
 			value = 0
 
@@ -383,7 +376,6 @@
 				}						
 			}
 			
-			#TARGET has similar ideology as THIS
 			if = {
 				limit = {
 					scope:actor = {
@@ -499,7 +491,6 @@
 					scope:target_country = { is_at_war = yes }
 				}			
 			}		
-			# We want to have at least five times their income, and at least 50k income in general
 			OR = {
 				AND = {
 					income >= 50000
@@ -600,8 +591,6 @@
 						scope:target_country = { is_at_war = yes }
 					}			
 				}							
-				# Threshold for breaking off a humanitarian_aid is higher than for starting it
-				# We also don't look at net_fixed_income here since starting a humanitarian_aid changes it
 				NOR = {
 					AND = {
 						income >= 40000
@@ -680,7 +669,6 @@ request_humanitarian_aid = {
 			
 			scope:target_country.gdp > scope:actor.gdp
 			
-			#Country is independent
 			OR = { 
 				is_sufficiently_independent = yes
 				is_direct_subject_of = scope:actor

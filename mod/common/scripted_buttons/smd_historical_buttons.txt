@@ -19,14 +19,14 @@
 				NOT = { is_subject = yes }
 				NOT = { this = root }
 				relations:root >= 0
-				country_rank >= rank_value:major 
+				country_rank >= rank_value:major_power
 					NOT = {
 						OR = {
-							tag = IDS # Indonesia
-							tag = SRI # Sri Lanka
-							tag = THA # Thailand
-							tag = IDA # India
-							tag = MLD # Maldives
+							this = c:IDS
+							this = c:SRI
+							this = c:THA
+							this = c:BHT
+							this = c:MLD
 							}
 					}
 					NOT = { has_variable = has_sent_iosa }
@@ -45,11 +45,11 @@
 				country_rank >= rank_value:major_power
 				NOT = {
 						OR = {
-							tag = IDS # Indonesia
-							tag = SRI # Sri Lanka
-							tag = THA # Thailand
-							tag = IDA # India
-							tag = MLD # Maldives
+							this = c:IDS
+							this = c:SRI
+							this = c:THA
+							this = c:BHT
+							this = c:MLD
 							}
 					}
 					NOT = { has_variable = has_sent_iosa }
@@ -128,16 +128,24 @@ je_troubles_increase_troop_button = {
 	}
 	
 	ai_chance = { value = 25 }
-
-	possible = { always = yes }
 	
 	effect = {
 		custom_tooltip = increases_troop_strength_5
 		custom_tooltip = this_will_piss_off_ira
 		je:je_troubles_in_northern_ireland = {
 			add_progress = {
-				value = 8
+				value = 20
 				name = troubles_troop_strength_bar
+			}
+		}
+		add_treasury = {
+			value = gdp
+			multiply = -0.001
+		}
+		s:STATE_ULSTER.region_state:GBR = {
+			add_radicals_in_state = {
+				value = 0.03
+				culture = cu:irish
 			}
 		}
 	}
@@ -244,9 +252,7 @@ cartel_button_cooperate = {
 			name = cartel_cooperation_modifier
 			months = -1
 		}
-		# Infamy hit — working with cartels is noticed internationally
-		add_infamy = 15
-		# US relationship penalty — placeholder until US system is built
+		change_infamy = 15
 		if = {
 			limit = { exists = c:USA }
 			change_relations = {
@@ -287,12 +293,14 @@ cartel_button_crackdown = {
 
 	effect = {
 		set_variable = cartel_crackdown
-		add_authority = -200
+		add_modifier = {
+			name = cartel_crackdown_authority_cost
+			months = 12
+		}
 		add_modifier = {
 			name = cartel_crackdown_modifier
 			months = -1
 		}
-		# Opium trade penalty — crackdown suppresses the market
 		add_banned_goods = g:opium
 	}
 
@@ -306,8 +314,6 @@ cartel_button_crackdown = {
 		}
 	}
 }
-
-#
 
 cartel_button_stop_crackdown = {
 	name = cartel_button_stop_crackdown_name
@@ -324,7 +330,6 @@ cartel_button_stop_crackdown = {
 	effect = {
 		remove_variable = cartel_crackdown
 		remove_modifier = cartel_crackdown_modifier
-		# Unban opium trade
 		remove_banned_goods = g:opium
 		add_modifier = {
 			name = cartel_crackdown_abandoned
@@ -358,7 +363,7 @@ cartel_button_deploy_general = {
 			text = cartel_need_general_tt
 			any_scope_character = {
 				is_busy = no
-				is_ruler = no
+				is_ruler_of_own_country = no
 				has_role = general
 			}
 		}
@@ -397,8 +402,6 @@ mdw_button_declare_war = {
 	}
 }
 
-# Deploy Commander
-# Only visible after declaration, when no commander active
 mdw_button_deploy_commander = {
 	name = mdw_button_deploy_commander_name
 	desc = mdw_button_deploy_commander_desc
@@ -417,7 +420,7 @@ mdw_button_deploy_commander = {
 			text = mdw_need_general_tt
 			any_scope_character = {
 				is_busy = no
-				is_ruler = no
+				is_ruler_of_own_country = no
 				has_role = general
 			}
 		}
@@ -451,14 +454,12 @@ opec_propose_increase_button = {
 
 	ai_chance = {
 		value = 10
-		# AI more likely to propose increase when oil is expensive
 		modifier = {
 			trigger = {
 				market = { mg:oil = { market_goods_pricier > 0.25 } }
 			}
 			add = 40
 		}
-		# Less likely when oil is cheap
 		modifier = {
 			trigger = {
 				market = { mg:oil = { market_goods_cheaper > 0.10 } }
@@ -478,17 +479,14 @@ opec_propose_increase_button = {
 				name = opec_vote_progress_bar
 			}
 		}
-		# Clear prior vote flags
 		every_country = {
 			limit = { has_variable = opec_voted }
 			remove_variable = opec_voted
 		}
-		# Notify all OPEC members
 		every_country = {
 			limit = { is_target_in_global_variable_list = { name = io_opec_members target = this } }
 			trigger_event = { id = opec_events.1 days = 0 popup = yes }
 		}
-		# Schedule result after 30 days
 		trigger_event = { id = opec_events.10 days = 30 }
 	}
 }
@@ -517,14 +515,12 @@ opec_propose_decrease_button = {
 
 	ai_chance = {
 		value = 10
-		# AI more likely to propose decrease when oil is cheap
 		modifier = {
 			trigger = {
 				market = { mg:oil = { market_goods_cheaper > 0.10 } }
 			}
 			add = 40
 		}
-		# Less likely when oil is expensive
 		modifier = {
 			trigger = {
 				market = { mg:oil = { market_goods_pricier > 0.25 } }
@@ -557,7 +553,6 @@ opec_propose_decrease_button = {
 }
 
 ### ══════════════════════════════════════════
-### VOTE YAY — visible when vote is active and not yet voted
 ### ══════════════════════════════════════════
 
 opec_vote_yay_button = {
@@ -576,7 +571,6 @@ opec_vote_yay_button = {
 
 	ai_chance = {
 		value = 50
-		# For increase votes: AI favors if oil is expensive (they can sell more)
 		modifier = {
 			trigger = {
 				global_var:opec_vote_type = flag:opec_increase
@@ -584,7 +578,6 @@ opec_vote_yay_button = {
 			}
 			add = 30
 		}
-		# For decrease votes: AI favors if oil is cheap (restrict supply)
 		modifier = {
 			trigger = {
 				global_var:opec_vote_type = flag:opec_decrease
@@ -592,7 +585,6 @@ opec_vote_yay_button = {
 			}
 			add = 30
 		}
-		# For embargo votes: AI favors if target has high infamy
 		modifier = {
 			trigger = {
 				global_var:opec_vote_type = flag:opec_embargo
@@ -603,7 +595,6 @@ opec_vote_yay_button = {
 			}
 			add = 30
 		}
-		# AI less likely to embargo if target is friendly
 		modifier = {
 			trigger = {
 				global_var:opec_vote_type = flag:opec_embargo
@@ -645,7 +636,6 @@ opec_vote_nay_button = {
 
 	ai_chance = {
 		value = 50
-		# Oppose increase when oil is cheap
 		modifier = {
 			trigger = {
 				global_var:opec_vote_type = flag:opec_increase
@@ -653,7 +643,6 @@ opec_vote_nay_button = {
 			}
 			add = 20
 		}
-		# Oppose decrease when oil is expensive
 		modifier = {
 			trigger = {
 				global_var:opec_vote_type = flag:opec_decrease
@@ -661,7 +650,6 @@ opec_vote_nay_button = {
 			}
 			add = 20
 		}
-		# Oppose embargo if target is in same power bloc
 		modifier = {
 			trigger = {
 				global_var:opec_vote_type = flag:opec_embargo

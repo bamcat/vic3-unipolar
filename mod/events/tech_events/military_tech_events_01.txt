@@ -67,7 +67,7 @@ military_tech_events.401 = {
 		}
 	}
 
-	option = { #
+	option = {
 		name = military_tech_events.401.a
 		default_option = yes
 		scope:rifle_state = {
@@ -77,7 +77,7 @@ military_tech_events.401 = {
 			}
 		}
 	}
-	option = { #
+	option = {
 		name = military_tech_events.401.b
 		add_technology_progress = {
 			progress = 4150 technology = repeaters
@@ -170,7 +170,7 @@ military_tech_events.402 = {
 	option = { # the enemy does have machine guns
 		name = military_tech_events.402.a
 		default_option = yes
-		trigger = {	# This event is available if the enemy has machine guns researched
+		trigger = {
 			scope:machine_gun_enemy = {
 				has_technology_researched = automatic_machine_guns
 			}
@@ -184,7 +184,7 @@ military_tech_events.402 = {
 	}
 	option = { # the enemy does not have machine guns
 		name = military_tech_events.402.b
-		trigger = {	# This event is available if the enemy does not have machine guns researched
+		trigger = {
 			scope:machine_gun_enemy = {
 				NOT = {
 					has_technology_researched = automatic_machine_guns
@@ -283,21 +283,21 @@ military_tech_events.403 = {
 		}
 	}
 
-	option = { #
+	option = {
 		name = military_tech_events.403.a
 		add_modifier = {
 			name = armoured_doctrine
 			days = long_modifier_time
 		}
 	}
-	option = { #
+	option = {
 		name = military_tech_events.403.b
 		add_modifier = {
 			name = ramming_doctrine
 			days = long_modifier_time
 		}
 	}
-	option = { #
+	option = {
 		name = military_tech_events.403.c
 		default_option = yes
 		add_modifier = {
@@ -363,7 +363,7 @@ military_tech_events.404 = {
 			save_scope_as = monitor_admiral
 		}
 	}
-	option = { #
+	option = {
 		name = military_tech_events.404.a
 		default_option = yes
 		add_modifier = {
@@ -371,14 +371,14 @@ military_tech_events.404 = {
 			days = long_modifier_time
 		}
 	}
-	option = { #
+	option = {
 		name = military_tech_events.404.b
 		add_modifier = {
 			name = defensive_doctrine
 			days = long_modifier_time
 		}
 	}
-	option = { #
+	option = {
 		name = military_tech_events.404.c
 		add_modifier = {
 			name = quantity_over_quality

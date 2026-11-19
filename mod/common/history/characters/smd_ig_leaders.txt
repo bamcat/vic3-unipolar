@@ -1,0 +1,7443 @@
+﻿CHARACTERS = {
+	c:UKR ?= {
+		create_character = {
+			first_name = smd_cn_viacheslav
+			last_name = smd_cn_chornovil
+			historical = yes
+			ruler = no
+			culture = cu:ukrainian
+			birth_date = 1937.12.24
+			ig_leader = yes
+			interest_group = ig_intelligentsia
+			ideology = ideology_liberal_leader
+			traits = {
+				inspirational_orator
+			}
+		}
+		create_character = {
+			first_name = smd_cn_filaret
+			last_name = smd_cn_denysenko
+			historical = yes
+			ruler = no
+			culture = cu:ukrainian
+			birth_date = 1929.1.23
+			ig_leader = yes
+			interest_group = ig_devout
+			ideology = ideology_conservative_leader
+			traits = {
+				pious
+			}
+		}
+		create_character = {
+			first_name = smd_cn_oleksandr
+			last_name = smd_cn_moroz
+			historical = yes
+			ruler = no
+			culture = cu:ukrainian
+			birth_date = 1944.2.29
+			ig_leader = yes
+			interest_group = ig_trade_unions
+			ideology = ideology_democratic_socialist_leader
+			traits = {
+				experienced_political_operator
+			}
+		}
+		create_character = {
+			first_name = leonid
+			last_name = smd_cn_kuchma
+			historical = yes
+			ruler = no
+			culture = cu:ukrainian
+			birth_date = 1938.8.9
+			ig_leader = yes
+			interest_group = ig_industrialists
+			ideology = ideology_state_capitalist_leader
+			traits = {
+				experienced_entrepreneur
+			}
+		}
+		create_character = {
+			first_name = smd_cn_viktor
+			last_name = smd_cn_pynzenyk
+			historical = yes
+			ruler = no
+			culture = cu:ukrainian
+			birth_date = 1954.4.15
+			ig_leader = yes
+			interest_group = ig_professionals
+			ideology = ideology_neoliberal_leader
+			traits = {
+				erudite
+			}
+		}
+		create_character = {
+			first_name = smd_cn_yevhen
+			last_name = smd_cn_marchuk
+			historical = yes
+			ruler = no
+			culture = cu:ukrainian
+			birth_date = 1941.1.28
+			ig_leader = yes
+			interest_group = ig_armed_forces
+			ideology = ideology_moderate_leader
+			traits = {
+				cautious
+			}
+		}
+		create_character = {
+			first_name = smd_cn_oleksandr
+			last_name = smd_cn_tkachenko
+			historical = yes
+			ruler = no
+			culture = cu:ukrainian
+			birth_date = 1939.1.7
+			ig_leader = yes
+			interest_group = ig_rural_folk
+			ideology = ideology_state_socialist_leader
+			traits = {
+				experienced_political_operator
+			}
+		}
+		create_character = {
+			first_name = smd_cn_ivan
+			last_name = smd_cn_plyushch
+			historical = yes
+			ruler = no
+			culture = cu:ukrainian
+			birth_date = 1941.9.11
+			ig_leader = yes
+			interest_group = ig_landowners
+			ideology = ideology_moderate_leader
+			traits = {
+				experienced_political_operator
+			}
+		}
+	}
+	c:BYL ?= {
+		create_character = {
+			first_name = smd_cn_filaret
+			last_name = smd_cn_vakhromeyev
+			historical = yes
+			ruler = no
+			culture = cu:russian
+			birth_date = 1935.3.21
+			ig_leader = yes
+			interest_group = ig_devout
+			ideology = ideology_conservative_leader
+			traits = {
+				pious
+			}
+		}
+		create_character = {
+			first_name = smd_cn_uladzimir
+			last_name = smd_cn_hantsharyk
+			historical = yes
+			ruler = no
+			culture = cu:byelorussian
+			birth_date = 1940.6.1
+			ig_leader = yes
+			interest_group = ig_trade_unions
+			ideology = ideology_democratic_socialist_leader
+			traits = {
+				experienced_political_operator
+			}
+		}
+		create_character = {
+			first_name = smd_cn_vyacheslav
+			last_name = smd_cn_kebich
+			historical = yes
+			ruler = no
+			culture = cu:byelorussian
+			birth_date = 1936.6.10
+			ig_leader = yes
+			interest_group = ig_industrialists
+			ideology = ideology_state_capitalist_leader
+			traits = {
+				experienced_entrepreneur
+			}
+		}
+		create_character = {
+			first_name = smd_cn_stanislav
+			last_name = smd_cn_bogdankevich
+			historical = yes
+			ruler = no
+			culture = cu:byelorussian
+			birth_date = 1937.2.15
+			ig_leader = yes
+			interest_group = ig_professionals
+			ideology = ideology_liberal_leader
+			traits = {
+				erudite
+			}
+		}
+		create_character = {
+			first_name = smd_cn_eduard
+			last_name = smd_cn_shirkovsky
+			historical = yes
+			ruler = no
+			culture = cu:byelorussian
+			birth_date = 1941.1.1
+			ig_leader = yes
+			interest_group = ig_armed_forces
+			ideology = ideology_authoritarian_capitalist_leader
+			traits = {
+				cautious
+			}
+		}
+		create_character = {
+			first_name = smd_cn_alexander
+			last_name = smd_cn_lukashenko
+			historical = yes
+			ruler = no
+			culture = cu:byelorussian
+			birth_date = 1954.8.30
+			ig_leader = yes
+			interest_group = ig_rural_folk
+			ideology = ideology_left_wing_populist_leader
+			traits = {
+				demagogue
+			}
+		}
+		create_character = {
+			first_name = smd_cn_vasil
+			last_name = smd_cn_leonov
+			historical = yes
+			ruler = no
+			culture = cu:byelorussian
+			birth_date = 1938.2.1
+			ig_leader = yes
+			interest_group = ig_landowners
+			ideology = ideology_conservative_leader
+			traits = {
+				experienced_political_operator
+			}
+		}
+		create_character = {
+			first_name = smd_cn_zianon
+			last_name = smd_cn_pazniak
+			historical = yes
+			ruler = no
+			culture = cu:byelorussian
+			birth_date = 1944.4.24
+			ig_leader = yes
+			interest_group = ig_petty_bourgeoisie
+			ideology = ideology_right_wing_populist_leader
+			traits = {
+				firebrand
+			}
+		}
+	}
+	c:POL ?= {
+		create_character = {
+			first_name = smd_cn_tadeusz
+			last_name = smd_cn_mazowiecki
+			historical = yes
+			ruler = no
+			culture = cu:polish
+			birth_date = 1927.4.18
+			ig_leader = yes
+			interest_group = ig_intelligentsia
+			ideology = ideology_liberal_leader
+			traits = {
+				honorable
+			}
+		}
+		create_character = {
+			first_name = smd_cn_jozef
+			last_name = smd_cn_glemp
+			historical = yes
+			ruler = no
+			culture = cu:polish
+			birth_date = 1929.12.18
+			ig_leader = yes
+			interest_group = ig_devout
+			ideology = ideology_conservative_leader
+			traits = {
+				pious
+			}
+		}
+		create_character = {
+			first_name = smd_cn_marian
+			last_name = smd_cn_krzaklewski
+			historical = yes
+			ruler = no
+			culture = cu:polish
+			birth_date = 1950.8.23
+			ig_leader = yes
+			interest_group = ig_trade_unions
+			ideology = ideology_conservative_leader
+			traits = {
+				experienced_political_operator
+			}
+		}
+		create_character = {
+			first_name = jan
+			last_name = smd_cn_kulczyk
+			historical = yes
+			ruler = no
+			culture = cu:polish
+			birth_date = 1950.6.24
+			ig_leader = yes
+			interest_group = ig_industrialists
+			ideology = ideology_neoliberal_leader
+			traits = {
+				expert_entrepreneur
+			}
+		}
+		create_character = {
+			first_name = smd_cn_waldemar
+			last_name = smd_cn_pawlak
+			historical = yes
+			ruler = no
+			culture = cu:polish
+			birth_date = 1959.9.5
+			ig_leader = yes
+			interest_group = ig_rural_folk
+			ideology = ideology_moderate_leader
+			traits = {
+				experienced_political_operator
+			}
+		}
+		create_character = {
+			first_name = smd_cn_andrzej
+			last_name = smd_cn_lepper
+			historical = yes
+			ruler = no
+			culture = cu:polish
+			birth_date = 1954.6.13
+			ig_leader = yes
+			interest_group = ig_landowners
+			ideology = ideology_left_wing_populist_leader
+			traits = {
+				demagogue
+			}
+		}
+	}
+	c:EST ?= {
+		create_character = {
+			first_name = smd_cn_lennart
+			last_name = smd_cn_meri
+			historical = yes
+			ruler = no
+			culture = cu:estonian
+			birth_date = 1929.3.29
+			ig_leader = yes
+			interest_group = ig_intelligentsia
+			ideology = ideology_moderate_leader
+			traits = {
+				erudite
+			}
+		}
+		create_character = {
+			first_name = smd_cn_mart
+			last_name = smd_cn_laar
+			historical = yes
+			ruler = no
+			culture = cu:estonian
+			birth_date = 1960.4.22
+			ig_leader = yes
+			interest_group = ig_petty_bourgeoisie
+			ideology = ideology_neoliberal_leader
+			traits = {
+				ambitious
+			}
+		}
+		create_character = {
+			first_name = smd_cn_kuno
+			last_name = smd_cn_pajula
+			historical = yes
+			ruler = no
+			culture = cu:estonian
+			birth_date = 1924.1.9
+			ig_leader = yes
+			interest_group = ig_devout
+			ideology = ideology_moderate_leader
+			traits = {
+				pious
+			}
+		}
+		create_character = {
+			first_name = smd_cn_edgar
+			last_name = smd_cn_savisaar
+			historical = yes
+			ruler = no
+			culture = cu:estonian
+			birth_date = 1950.5.31
+			ig_leader = yes
+			interest_group = ig_trade_unions
+			ideology = ideology_left_wing_populist_leader
+			traits = {
+				experienced_political_operator
+			}
+		}
+		create_character = {
+			first_name = smd_cn_tiit
+			last_name = smd_cn_vahi
+			historical = yes
+			ruler = no
+			culture = cu:estonian
+			birth_date = 1947.1.10
+			ig_leader = yes
+			interest_group = ig_industrialists
+			ideology = ideology_technocrat_leader
+			traits = {
+				experienced_entrepreneur
+			}
+		}
+		create_character = {
+			first_name = smd_cn_siim
+			last_name = smd_cn_kallas
+			historical = yes
+			ruler = no
+			culture = cu:estonian
+			birth_date = 1948.10.2
+			ig_leader = yes
+			interest_group = ig_professionals
+			ideology = ideology_liberal_leader
+			traits = {
+				erudite
+			}
+		}
+		create_character = {
+			first_name = smd_cn_ants
+			last_name = smd_cn_laaneots
+			historical = yes
+			ruler = no
+			culture = cu:estonian
+			birth_date = 1948.2.16
+			ig_leader = yes
+			interest_group = ig_armed_forces
+			ideology = ideology_conservative_leader
+			traits = {
+				meticulous
+			}
+		}
+		create_character = {
+			first_name = smd_cn_tunne
+			last_name = smd_cn_kelam
+			historical = yes
+			ruler = no
+			culture = cu:estonian
+			birth_date = 1936.7.10
+			ig_leader = yes
+			interest_group = ig_landowners
+			ideology = ideology_conservative_leader
+			traits = {
+				persistent
+			}
+		}
+	}
+	c:LAT ?= {
+		create_character = {
+			first_name = smd_cn_dainis
+			last_name = smd_cn_ivans
+			historical = yes
+			ruler = no
+			culture = cu:latvian
+			birth_date = 1955.12.25
+			ig_leader = yes
+			interest_group = ig_intelligentsia
+			ideology = ideology_liberal_leader
+			traits = {
+				inspirational_orator
+			}
+		}
+		create_character = {
+			first_name = smd_cn_ivars
+			last_name = smd_cn_godmanis
+			historical = yes
+			ruler = no
+			culture = cu:latvian
+			birth_date = 1951.11.27
+			ig_leader = yes
+			interest_group = ig_petty_bourgeoisie
+			ideology = ideology_neoliberal_leader
+			traits = {
+				experienced_political_operator
+			}
+		}
+		create_character = {
+			first_name = smd_cn_karlis
+			last_name = smd_cn_gailitis
+			historical = yes
+			ruler = no
+			culture = cu:latvian
+			birth_date = 1936.5.15
+			ig_leader = yes
+			interest_group = ig_devout
+			ideology = ideology_moderate_leader
+			traits = {
+				pious
+			}
+		}
+		create_character = {
+			first_name = smd_cn_juris
+			last_name = smd_cn_bojars
+			historical = yes
+			ruler = no
+			culture = cu:latvian
+			birth_date = 1938.11.12
+			ig_leader = yes
+			interest_group = ig_trade_unions
+			ideology = ideology_democratic_socialist_leader
+			traits = {
+				experienced_political_operator
+			}
+		}
+		create_character = {
+			first_name = smd_cn_andris
+			last_name = smd_cn_skele
+			historical = yes
+			ruler = no
+			culture = cu:latvian
+			birth_date = 1958.1.16
+			ig_leader = yes
+			interest_group = ig_industrialists
+			ideology = ideology_neoliberal_leader
+			traits = {
+				experienced_entrepreneur
+			}
+		}
+		create_character = {
+			first_name = smd_cn_talavs
+			last_name = smd_cn_jundzis
+			historical = yes
+			ruler = no
+			culture = cu:latvian
+			birth_date = 1951.11.1
+			ig_leader = yes
+			interest_group = ig_armed_forces
+			ideology = ideology_moderate_leader
+			traits = {
+				cautious
+			}
+		}
+		create_character = {
+			first_name = smd_cn_guntis
+			last_name = smd_cn_ulmanis
+			historical = yes
+			ruler = no
+			culture = cu:latvian
+			birth_date = 1939.9.13
+			ig_leader = yes
+			interest_group = ig_rural_folk
+			ideology = ideology_conservative_leader
+			traits = {
+				experienced_political_operator
+			}
+		}
+		create_character = {
+			first_name = smd_cn_alberts
+			last_name = smd_cn_kauls
+			historical = yes
+			ruler = no
+			culture = cu:latvian
+			birth_date = 1938.5.1
+			ig_leader = yes
+			interest_group = ig_landowners
+			ideology = ideology_conservative_leader
+			traits = {
+				experienced_entrepreneur
+			}
+		}
+	}
+	c:LIT ?= {
+		create_character = {
+			first_name = smd_cn_algirdas
+			last_name = smd_cn_brazauskas
+			historical = yes
+			ruler = no
+			culture = cu:lithuanian
+			birth_date = 1932.9.22
+			ig_leader = yes
+			interest_group = ig_petty_bourgeoisie
+			ideology = ideology_progressive_leader
+			traits = {
+				experienced_political_operator
+			}
+		}
+		create_character = {
+			first_name = smd_cn_vincentas
+			last_name = smd_cn_sladkevicius
+			historical = yes
+			ruler = no
+			culture = cu:lithuanian
+			birth_date = 1920.8.20
+			ig_leader = yes
+			interest_group = ig_devout
+			ideology = ideology_conservative_leader
+			traits = {
+				pious
+			}
+		}
+		create_character = {
+			first_name = smd_cn_aloyzas
+			last_name = smd_cn_sakalas
+			historical = yes
+			ruler = no
+			culture = cu:lithuanian
+			birth_date = 1931.9.12
+			ig_leader = yes
+			interest_group = ig_trade_unions
+			ideology = ideology_democratic_socialist_leader
+			traits = {
+				experienced_political_operator
+			}
+		}
+		create_character = {
+			first_name = smd_cn_bronislovas
+			last_name = smd_cn_lubys
+			historical = yes
+			ruler = no
+			culture = cu:lithuanian
+			birth_date = 1938.10.8
+			ig_leader = yes
+			interest_group = ig_industrialists
+			ideology = ideology_moderate_leader
+			traits = {
+				experienced_entrepreneur
+			}
+		}
+		create_character = {
+			first_name = smd_cn_romualdas
+			last_name = smd_cn_ozolas
+			historical = yes
+			ruler = no
+			culture = cu:lithuanian
+			birth_date = 1939.5.6
+			ig_leader = yes
+			interest_group = ig_professionals
+			ideology = ideology_liberal_leader
+			traits = {
+				erudite
+			}
+		}
+		create_character = {
+			first_name = smd_cn_audrius
+			last_name = smd_cn_butkevicius
+			historical = yes
+			ruler = no
+			culture = cu:lithuanian
+			birth_date = 1960.11.12
+			ig_leader = yes
+			interest_group = ig_armed_forces
+			ideology = ideology_conservative_leader
+			traits = {
+				brave
+			}
+		}
+		create_character = {
+			first_name = smd_cn_kazimira
+			last_name = smd_cn_prunskiene
+			historical = yes
+			ruler = no
+			female = yes
+			culture = cu:lithuanian
+			birth_date = 1943.2.26
+			ig_leader = yes
+			interest_group = ig_rural_folk
+			ideology = ideology_social_liberal_leader
+			traits = {
+				experienced_political_operator
+			}
+		}
+		create_character = {
+			first_name = smd_cn_gediminas
+			last_name = smd_cn_vagnorius
+			historical = yes
+			ruler = no
+			culture = cu:lithuanian
+			birth_date = 1957.6.10
+			ig_leader = yes
+			interest_group = ig_landowners
+			ideology = ideology_conservative_leader
+			traits = {
+				ambitious
+			}
+		}
+	}
+	c:HUN ?= {
+		create_character = {
+			first_name = smd_cn_arpad
+			last_name = smd_cn_goncz
+			historical = yes
+			ruler = no
+			culture = cu:hungarian
+			birth_date = 1922.2.10
+			ig_leader = yes
+			interest_group = ig_intelligentsia
+			ideology = ideology_liberal_leader
+			traits = {
+				honorable
+			}
+		}
+		create_character = {
+			first_name = smd_cn_viktor
+			last_name = smd_cn_orban
+			historical = yes
+			ruler = no
+			culture = cu:hungarian
+			birth_date = 1963.5.31
+			ig_leader = yes
+			interest_group = ig_petty_bourgeoisie
+			ideology = ideology_liberal_leader
+			traits = {
+				ambitious
+			}
+		}
+		create_character = {
+			first_name = smd_cn_laszlo
+			last_name = smd_cn_paskai
+			historical = yes
+			ruler = no
+			culture = cu:hungarian
+			birth_date = 1927.5.8
+			ig_leader = yes
+			interest_group = ig_devout
+			ideology = ideology_conservative_leader
+			traits = {
+				pious
+			}
+		}
+		create_character = {
+			first_name = smd_cn_gyula
+			last_name = smd_cn_horn
+			historical = yes
+			ruler = no
+			culture = cu:hungarian
+			birth_date = 1932.7.5
+			ig_leader = yes
+			interest_group = ig_trade_unions
+			ideology = ideology_democratic_socialist_leader
+			traits = {
+				experienced_political_operator
+			}
+		}
+		create_character = {
+			first_name = smd_cn_sandor
+			last_name = smd_cn_demjan
+			historical = yes
+			ruler = no
+			culture = cu:hungarian
+			birth_date = 1943.6.14
+			ig_leader = yes
+			interest_group = ig_industrialists
+			ideology = ideology_neoliberal_leader
+			traits = {
+				expert_entrepreneur
+			}
+		}
+		create_character = {
+			first_name = smd_cn_lajos
+			last_name = smd_cn_bokros
+			historical = yes
+			ruler = no
+			culture = cu:hungarian
+			birth_date = 1954.6.26
+			ig_leader = yes
+			interest_group = ig_professionals
+			ideology = ideology_neoliberal_leader
+			traits = {
+				erudite
+			}
+		}
+		create_character = {
+			first_name = smd_cn_lajos
+			last_name = smd_cn_fur
+			historical = yes
+			ruler = no
+			culture = cu:hungarian
+			birth_date = 1930.12.21
+			ig_leader = yes
+			interest_group = ig_armed_forces
+			ideology = ideology_conservative_leader
+			traits = {
+				cautious
+			}
+		}
+		create_character = {
+			first_name = smd_cn_jozsef
+			last_name = smd_cn_torgyan
+			historical = yes
+			ruler = no
+			culture = cu:hungarian
+			birth_date = 1932.4.16
+			ig_leader = yes
+			interest_group = ig_landowners
+			ideology = ideology_right_wing_populist_leader
+			traits = {
+				demagogue
+			}
+		}
+	}
+	c:BUL ?= {
+		create_character = {
+			first_name = smd_cn_filip
+			last_name = smd_cn_dimitrov
+			historical = yes
+			ruler = no
+			culture = cu:bulgarian
+			birth_date = 1955.3.31
+			ig_leader = yes
+			interest_group = ig_petty_bourgeoisie
+			ideology = ideology_neoliberal_leader
+			traits = {
+				experienced_political_operator
+			}
+		}
+		create_character = {
+			first_name = smd_cn_maxim
+			last_name = smd_cn_minkov
+			historical = yes
+			ruler = no
+			culture = cu:bulgarian
+			birth_date = 1914.10.29
+			ig_leader = yes
+			interest_group = ig_devout
+			ideology = ideology_conservative_leader
+			traits = {
+				pious
+			}
+		}
+		create_character = {
+			first_name = smd_cn_zhan
+			last_name = smd_cn_videnov
+			historical = yes
+			ruler = no
+			culture = cu:bulgarian
+			birth_date = 1959.3.22
+			ig_leader = yes
+			interest_group = ig_trade_unions
+			ideology = ideology_state_socialist_leader
+			traits = {
+				experienced_political_operator
+			}
+		}
+		create_character = {
+			first_name = smd_cn_ilia
+			last_name = smd_cn_pavlov
+			historical = yes
+			ruler = no
+			culture = cu:bulgarian
+			birth_date = 1960.6.6
+			ig_leader = yes
+			interest_group = ig_industrialists
+			ideology = ideology_authoritarian_capitalist_leader
+			traits = {
+				ruthless
+			}
+		}
+		create_character = {
+			first_name = smd_cn_lyuben
+			last_name = smd_cn_berov
+			historical = yes
+			ruler = no
+			culture = cu:bulgarian
+			birth_date = 1925.10.6
+			ig_leader = yes
+			interest_group = ig_professionals
+			ideology = ideology_technocrat_leader
+			traits = {
+				erudite
+			}
+		}
+		create_character = {
+			first_name = smd_cn_dimitar
+			last_name = smd_cn_ludzhev
+			historical = yes
+			ruler = no
+			culture = cu:bulgarian
+			birth_date = 1950.3.1
+			ig_leader = yes
+			interest_group = ig_armed_forces
+			ideology = ideology_moderate_leader
+			traits = {
+				cautious
+			}
+		}
+		create_character = {
+			first_name = smd_cn_ahmed
+			last_name = smd_cn_dogan
+			historical = yes
+			ruler = no
+			culture = cu:turkish
+			birth_date = 1954.3.29
+			ig_leader = yes
+			interest_group = ig_rural_folk
+			ideology = ideology_moderate_leader
+			traits = {
+				experienced_political_operator
+			}
+		}
+		create_character = {
+			first_name = smd_cn_anastasia
+			last_name = smd_cn_mozer
+			historical = yes
+			ruler = no
+			female = yes
+			culture = cu:bulgarian
+			birth_date = 1937.1.1
+			ig_leader = yes
+			interest_group = ig_landowners
+			ideology = ideology_conservative_leader
+			traits = {
+				experienced_political_operator
+			}
+		}
+	}
+	c:ROM ?= {
+		create_character = {
+			first_name = smd_cn_emil
+			last_name = smd_cn_constantinescu
+			historical = yes
+			ruler = no
+			culture = cu:romanian
+			birth_date = 1939.11.19
+			ig_leader = yes
+			interest_group = ig_intelligentsia
+			ideology = ideology_liberal_leader
+			traits = {
+				erudite
+			}
+		}
+		create_character = {
+			first_name = smd_cn_teoctist
+			last_name = smd_cn_arapasu
+			historical = yes
+			ruler = no
+			culture = cu:romanian
+			birth_date = 1915.2.7
+			ig_leader = yes
+			interest_group = ig_devout
+			ideology = ideology_conservative_leader
+			traits = {
+				pious
+			}
+		}
+		create_character = {
+			first_name = smd_cn_miron
+			last_name = smd_cn_cozma
+			historical = yes
+			ruler = no
+			culture = cu:romanian
+			birth_date = 1954.9.10
+			ig_leader = yes
+			interest_group = ig_trade_unions
+			ideology = ideology_left_wing_populist_leader
+			traits = {
+				demagogue
+			}
+		}
+		create_character = {
+			first_name = ion
+			last_name = smd_cn_tiriac
+			historical = yes
+			ruler = no
+			culture = cu:romanian
+			birth_date = 1939.5.9
+			ig_leader = yes
+			interest_group = ig_industrialists
+			ideology = ideology_neoliberal_leader
+			traits = {
+				expert_entrepreneur
+			}
+		}
+		create_character = {
+			first_name = smd_cn_petre
+			last_name = smd_cn_roman
+			historical = yes
+			ruler = no
+			culture = cu:romanian
+			birth_date = 1946.7.22
+			ig_leader = yes
+			interest_group = ig_professionals
+			ideology = ideology_social_liberal_leader
+			traits = {
+				experienced_political_operator
+			}
+		}
+		create_character = {
+			first_name = smd_cn_victor
+			last_name = smd_cn_stanculescu
+			historical = yes
+			ruler = no
+			culture = cu:romanian
+			birth_date = 1928.5.10
+			ig_leader = yes
+			interest_group = ig_armed_forces
+			ideology = ideology_authoritarian_capitalist_leader
+			traits = {
+				ruthless
+			}
+		}
+		create_character = {
+			first_name = smd_cn_corneliu
+			last_name = smd_cn_coposu
+			historical = yes
+			ruler = no
+			culture = cu:romanian
+			birth_date = 1914.5.20
+			ig_leader = yes
+			interest_group = ig_rural_folk
+			ideology = ideology_conservative_leader
+			traits = {
+				honorable
+			}
+		}
+		create_character = {
+			first_name = smd_cn_radu
+			last_name = smd_cn_campeanu
+			historical = yes
+			ruler = no
+			culture = cu:romanian
+			birth_date = 1922.2.28
+			ig_leader = yes
+			interest_group = ig_landowners
+			ideology = ideology_classical_liberal_leader
+			traits = {
+				experienced_political_operator
+			}
+		}
+	}
+	c:MLV ?= {
+		create_character = {
+			first_name = smd_cn_mircea
+			last_name = smd_cn_druc
+			historical = yes
+			ruler = no
+			culture = cu:romanian
+			birth_date = 1941.7.25
+			ig_leader = yes
+			interest_group = ig_petty_bourgeoisie
+			ideology = ideology_right_wing_populist_leader
+			traits = {
+				firebrand
+			}
+		}
+		create_character = {
+			first_name = smd_cn_nicolae
+			last_name = smd_cn_dabija
+			historical = yes
+			ruler = no
+			culture = cu:romanian
+			birth_date = 1948.7.15
+			ig_leader = yes
+			interest_group = ig_intelligentsia
+			ideology = ideology_conservative_leader
+			traits = {
+				inspirational_orator
+			}
+		}
+		create_character = {
+			first_name = vladimir
+			last_name = smd_cn_cantarean
+			historical = yes
+			ruler = no
+			culture = cu:romanian
+			birth_date = 1952.7.25
+			ig_leader = yes
+			interest_group = ig_devout
+			ideology = ideology_conservative_leader
+			traits = {
+				pious
+			}
+		}
+		create_character = {
+			first_name = vladimir
+			last_name = smd_cn_voronin
+			historical = yes
+			ruler = no
+			culture = cu:romanian
+			birth_date = 1941.5.25
+			ig_leader = yes
+			interest_group = ig_trade_unions
+			ideology = ideology_state_socialist_leader
+			traits = {
+				experienced_political_operator
+			}
+		}
+		create_character = {
+			first_name = smd_cn_valeriu
+			last_name = smd_cn_muravschi
+			historical = yes
+			ruler = no
+			culture = cu:romanian
+			birth_date = 1949.4.4
+			ig_leader = yes
+			interest_group = ig_industrialists
+			ideology = ideology_technocrat_leader
+			traits = {
+				experienced_entrepreneur
+			}
+		}
+		create_character = {
+			first_name = smd_cn_petru
+			last_name = smd_cn_lucinschi
+			historical = yes
+			ruler = no
+			culture = cu:romanian
+			birth_date = 1940.1.27
+			ig_leader = yes
+			interest_group = ig_professionals
+			ideology = ideology_moderate_leader
+			traits = {
+				experienced_diplomat
+			}
+		}
+		create_character = {
+			first_name = ion
+			last_name = smd_cn_costas
+			historical = yes
+			ruler = no
+			culture = cu:romanian
+			birth_date = 1944.10.26
+			ig_leader = yes
+			interest_group = ig_armed_forces
+			ideology = ideology_moderate_leader
+			traits = {
+				cautious
+			}
+		}
+		create_character = {
+			first_name = smd_cn_andrei
+			last_name = smd_cn_sangheli
+			historical = yes
+			ruler = no
+			culture = cu:romanian
+			birth_date = 1944.7.20
+			ig_leader = yes
+			interest_group = ig_landowners
+			ideology = ideology_moderate_leader
+			traits = {
+				experienced_political_operator
+			}
+		}
+	}
+	c:FNL ?= {
+		create_character = {
+			first_name = smd_cn_ilkka
+			last_name = smd_cn_suominen
+			historical = yes
+			ruler = no
+			culture = cu:finnish
+			birth_date = 1939.4.8
+			ig_leader = yes
+			interest_group = ig_petty_bourgeoisie
+			ideology = ideology_neoliberal_leader
+			traits = {
+				experienced_political_operator
+			}
+		}
+		create_character = {
+			first_name = smd_cn_esko
+			last_name = smd_cn_aho
+			historical = yes
+			ruler = no
+			culture = cu:finnish
+			birth_date = 1954.5.20
+			ig_leader = yes
+			interest_group = ig_rural_folk
+			ideology = ideology_moderate_leader
+			traits = {
+				experienced_political_operator
+			}
+		}
+		create_character = {
+			first_name = smd_cn_martti
+			last_name = smd_cn_ahtisaari
+			historical = yes
+			ruler = no
+			culture = cu:finnish
+			birth_date = 1937.6.23
+			ig_leader = yes
+			interest_group = ig_intelligentsia
+			ideology = ideology_progressive_leader
+			traits = {
+				masterful_diplomat
+			}
+		}
+		create_character = {
+			first_name = john
+			last_name = smd_cn_vikstrom
+			historical = yes
+			ruler = no
+			culture = cu:finnish
+			birth_date = 1931.8.1
+			ig_leader = yes
+			interest_group = ig_devout
+			ideology = ideology_moderate_leader
+			traits = {
+				pious
+			}
+		}
+		create_character = {
+			first_name = smd_cn_paavo
+			last_name = smd_cn_lipponen
+			historical = yes
+			ruler = no
+			culture = cu:finnish
+			birth_date = 1941.4.23
+			ig_leader = yes
+			interest_group = ig_trade_unions
+			ideology = ideology_democratic_socialist_leader
+			traits = {
+				experienced_political_operator
+			}
+		}
+		create_character = {
+			first_name = smd_cn_jorma
+			last_name = smd_cn_ollila
+			historical = yes
+			ruler = no
+			culture = cu:finnish
+			birth_date = 1950.8.15
+			ig_leader = yes
+			interest_group = ig_industrialists
+			ideology = ideology_neoliberal_leader
+			traits = {
+				expert_entrepreneur
+			}
+		}
+		create_character = {
+			first_name = smd_cn_elisabeth
+			last_name = smd_cn_rehn
+			historical = yes
+			ruler = no
+			female = yes
+			culture = cu:swedish
+			birth_date = 1935.4.6
+			ig_leader = yes
+			interest_group = ig_armed_forces
+			ideology = ideology_liberal_leader
+			traits = {
+				experienced_political_operator
+			}
+		}
+		create_character = {
+			first_name = smd_cn_ole
+			last_name = smd_cn_norrback
+			historical = yes
+			ruler = no
+			culture = cu:swedish
+			birth_date = 1941.3.18
+			ig_leader = yes
+			interest_group = ig_landowners
+			ideology = ideology_moderate_leader
+			traits = {
+				experienced_political_operator
+			}
+		}
+	}
+	c:SWD ?= {
+		create_character = {
+			first_name = smd_cn_bengt
+			last_name = smd_cn_westerberg
+			historical = yes
+			ruler = no
+			culture = cu:swedish
+			birth_date = 1943.8.23
+			ig_leader = yes
+			interest_group = ig_intelligentsia
+			ideology = ideology_social_liberal_leader
+			traits = {
+				experienced_political_operator
+			}
+		}
+		create_character = {
+			first_name = smd_cn_gunnar
+			last_name = smd_cn_weman
+			historical = yes
+			ruler = no
+			culture = cu:swedish
+			birth_date = 1932.12.16
+			ig_leader = yes
+			interest_group = ig_devout
+			ideology = ideology_moderate_leader
+			traits = {
+				pious
+			}
+		}
+		create_character = {
+			first_name = smd_cn_percy
+			last_name = smd_cn_barnevik
+			historical = yes
+			ruler = no
+			culture = cu:swedish
+			birth_date = 1941.2.13
+			ig_leader = yes
+			interest_group = ig_industrialists
+			ideology = ideology_neoliberal_leader
+			traits = {
+				expert_entrepreneur
+			}
+		}
+		create_character = {
+			first_name = smd_cn_anne
+			last_name = smd_cn_wibble
+			historical = yes
+			ruler = no
+			female = yes
+			culture = cu:swedish
+			birth_date = 1943.8.13
+			ig_leader = yes
+			interest_group = ig_professionals
+			ideology = ideology_liberal_leader
+			traits = {
+				erudite
+			}
+		}
+		create_character = {
+			first_name = smd_cn_anders
+			last_name = smd_cn_bjorck
+			historical = yes
+			ruler = no
+			culture = cu:swedish
+			birth_date = 1944.7.19
+			ig_leader = yes
+			interest_group = ig_armed_forces
+			ideology = ideology_conservative_leader
+			traits = {
+				experienced_political_operator
+			}
+		}
+		create_character = {
+			first_name = smd_cn_olof
+			last_name = smd_cn_johansson
+			historical = yes
+			ruler = no
+			culture = cu:swedish
+			birth_date = 1937.8.10
+			ig_leader = yes
+			interest_group = ig_rural_folk
+			ideology = ideology_moderate_leader
+			traits = {
+				experienced_political_operator
+			}
+		}
+	}
+	c:NRW ?= {
+		create_character = {
+			first_name = smd_cn_kaci
+			last_name = smd_cn_kullmann_five
+			historical = yes
+			ruler = no
+			female = yes
+			culture = cu:norwegian
+			birth_date = 1951.4.13
+			ig_leader = yes
+			interest_group = ig_petty_bourgeoisie
+			ideology = ideology_conservative_leader
+			traits = {
+				experienced_political_operator
+			}
+		}
+		create_character = {
+			first_name = smd_cn_thorvald
+			last_name = smd_cn_stoltenberg
+			historical = yes
+			ruler = no
+			culture = cu:norwegian
+			birth_date = 1931.7.8
+			ig_leader = yes
+			interest_group = ig_intelligentsia
+			ideology = ideology_progressive_leader
+			traits = {
+				masterful_diplomat
+			}
+		}
+		create_character = {
+			first_name = smd_cn_andreas
+			last_name = smd_cn_aarflot
+			historical = yes
+			ruler = no
+			culture = cu:norwegian
+			birth_date = 1928.6.10
+			ig_leader = yes
+			interest_group = ig_devout
+			ideology = ideology_moderate_leader
+			traits = {
+				pious
+			}
+		}
+		create_character = {
+			first_name = smd_cn_kjell_inge
+			last_name = smd_cn_rokke
+			historical = yes
+			ruler = no
+			culture = cu:norwegian
+			birth_date = 1958.7.21
+			ig_leader = yes
+			interest_group = ig_industrialists
+			ideology = ideology_neoliberal_leader
+			traits = {
+				expert_entrepreneur
+			}
+		}
+		create_character = {
+			first_name = smd_cn_carl_i
+			last_name = smd_cn_hagen
+			historical = yes
+			ruler = no
+			culture = cu:norwegian
+			birth_date = 1944.5.6
+			ig_leader = yes
+			interest_group = ig_professionals
+			ideology = ideology_right_wing_populist_leader
+			traits = {
+				demagogue
+			}
+		}
+		create_character = {
+			first_name = smd_cn_johan_jorgen
+			last_name = smd_cn_holst
+			historical = yes
+			ruler = no
+			culture = cu:norwegian
+			birth_date = 1937.11.29
+			ig_leader = yes
+			interest_group = ig_armed_forces
+			ideology = ideology_moderate_leader
+			traits = {
+				erudite
+			}
+		}
+		create_character = {
+			first_name = smd_cn_anne
+			last_name = smd_cn_enger_lahnstein
+			historical = yes
+			ruler = no
+			female = yes
+			culture = cu:norwegian
+			birth_date = 1949.12.9
+			ig_leader = yes
+			interest_group = ig_rural_folk
+			ideology = ideology_moderate_leader
+			traits = {
+				experienced_political_operator
+			}
+		}
+	}
+	c:ARM ?= {
+		create_character = {
+			first_name = smd_cn_vazgen
+			last_name = smd_cn_manukyan
+			historical = yes
+			ruler = no
+			culture = cu:armenian
+			birth_date = 1946.2.13
+			ig_leader = yes
+			interest_group = ig_petty_bourgeoisie
+			ideology = ideology_conservative_leader
+			traits = {
+				experienced_political_operator
+			}
+		}
+		create_character = {
+			first_name = smd_cn_vazgen
+			last_name = smd_cn_baljian
+			historical = yes
+			ruler = no
+			culture = cu:armenian
+			birth_date = 1908.9.20
+			ig_leader = yes
+			interest_group = ig_devout
+			ideology = ideology_conservative_leader
+			traits = {
+				pious
+			}
+		}
+		create_character = {
+			first_name = smd_cn_sergey
+			last_name = smd_cn_badalyan
+			historical = yes
+			ruler = no
+			culture = cu:armenian
+			birth_date = 1947.6.1
+			ig_leader = yes
+			interest_group = ig_trade_unions
+			ideology = ideology_state_socialist_leader
+			traits = {
+				experienced_political_operator
+			}
+		}
+		create_character = {
+			first_name = smd_cn_khosrov
+			last_name = smd_cn_harutyunyan
+			historical = yes
+			ruler = no
+			culture = cu:armenian
+			birth_date = 1948.5.1
+			ig_leader = yes
+			interest_group = ig_industrialists
+			ideology = ideology_state_capitalist_leader
+			traits = {
+				experienced_entrepreneur
+			}
+		}
+		create_character = {
+			first_name = smd_cn_hrant
+			last_name = smd_cn_bagratyan
+			historical = yes
+			ruler = no
+			culture = cu:armenian
+			birth_date = 1958.10.18
+			ig_leader = yes
+			interest_group = ig_professionals
+			ideology = ideology_neoliberal_leader
+			traits = {
+				erudite
+			}
+		}
+		create_character = {
+			first_name = smd_cn_vazgen
+			last_name = smd_cn_sargsyan
+			historical = yes
+			ruler = no
+			culture = cu:armenian
+			birth_date = 1959.3.5
+			ig_leader = yes
+			interest_group = ig_armed_forces
+			ideology = ideology_right_wing_populist_leader
+			traits = {
+				brave
+			}
+		}
+		create_character = {
+			first_name = smd_cn_paruyr
+			last_name = smd_cn_hayrikyan
+			historical = yes
+			ruler = no
+			culture = cu:armenian
+			birth_date = 1949.9.5
+			ig_leader = yes
+			interest_group = ig_rural_folk
+			ideology = ideology_right_wing_populist_leader
+			traits = {
+				firebrand
+			}
+		}
+		create_character = {
+			first_name = smd_cn_robert
+			last_name = smd_cn_kocharyan
+			historical = yes
+			ruler = no
+			culture = cu:armenian
+			birth_date = 1954.8.31
+			ig_leader = yes
+			interest_group = ig_landowners
+			ideology = ideology_authoritarian_capitalist_leader
+			traits = {
+				ambitious
+			}
+		}
+	}
+	c:AZB ?= {
+		create_character = {
+			first_name = smd_cn_abulfaz
+			last_name = smd_cn_elchibey
+			historical = yes
+			ruler = no
+			culture = cu:azerbaijani
+			birth_date = 1938.6.24
+			ig_leader = yes
+			interest_group = ig_petty_bourgeoisie
+			ideology = ideology_right_wing_populist_leader
+			traits = {
+				firebrand
+			}
+		}
+		create_character = {
+			first_name = smd_cn_allahshukur
+			last_name = smd_cn_pashazadeh
+			historical = yes
+			ruler = no
+			culture = cu:azerbaijani
+			birth_date = 1949.8.26
+			ig_leader = yes
+			interest_group = ig_devout
+			ideology = ideology_conservative_leader
+			traits = {
+				pious
+			}
+		}
+		create_character = {
+			first_name = smd_cn_hasan
+			last_name = smd_cn_hasanov
+			historical = yes
+			ruler = no
+			culture = cu:azerbaijani
+			birth_date = 1940.10.20
+			ig_leader = yes
+			interest_group = ig_trade_unions
+			ideology = ideology_state_socialist_leader
+			traits = {
+				experienced_political_operator
+			}
+		}
+		create_character = {
+			first_name = smd_cn_natig
+			last_name = smd_cn_aliyev
+			historical = yes
+			ruler = no
+			culture = cu:azerbaijani
+			birth_date = 1947.12.23
+			ig_leader = yes
+			interest_group = ig_industrialists
+			ideology = ideology_state_capitalist_leader
+			traits = {
+				experienced_entrepreneur
+			}
+		}
+		create_character = {
+			first_name = smd_cn_isa
+			last_name = smd_cn_gambar
+			historical = yes
+			ruler = no
+			culture = cu:azerbaijani
+			birth_date = 1957.2.24
+			ig_leader = yes
+			interest_group = ig_professionals
+			ideology = ideology_liberal_leader
+			traits = {
+				experienced_political_operator
+			}
+		}
+		create_character = {
+			first_name = smd_cn_surat
+			last_name = smd_cn_huseynov
+			historical = yes
+			ruler = no
+			culture = cu:azerbaijani
+			birth_date = 1959.2.12
+			ig_leader = yes
+			interest_group = ig_armed_forces
+			ideology = ideology_authoritarian_capitalist_leader
+			traits = {
+				ambitious
+			}
+		}
+		create_character = {
+			first_name = smd_cn_heydar
+			last_name = smd_cn_aliyev
+			historical = yes
+			ruler = no
+			culture = cu:azerbaijani
+			birth_date = 1923.5.10
+			ig_leader = yes
+			interest_group = ig_rural_folk
+			ideology = ideology_authoritarian_capitalist_leader
+			traits = {
+				expert_political_operator
+			}
+		}
+		create_character = {
+			first_name = smd_cn_etibar
+			last_name = smd_cn_mammadov
+			historical = yes
+			ruler = no
+			culture = cu:azerbaijani
+			birth_date = 1955.6.1
+			ig_leader = yes
+			interest_group = ig_landowners
+			ideology = ideology_right_wing_populist_leader
+			traits = {
+				experienced_political_operator
+			}
+		}
+	}
+	c:TRK ?= {
+		create_character = {
+			first_name = smd_cn_suleyman
+			last_name = smd_cn_demirel
+			historical = yes
+			ruler = no
+			culture = cu:turkish
+			birth_date = 1924.11.1
+			ig_leader = yes
+			interest_group = ig_petty_bourgeoisie
+			ideology = ideology_conservative_leader
+			traits = {
+				expert_political_operator
+			}
+		}
+		create_character = {
+			first_name = smd_cn_erdal
+			last_name = smd_cn_inonu
+			historical = yes
+			ruler = no
+			culture = cu:turkish
+			birth_date = 1926.6.6
+			ig_leader = yes
+			interest_group = ig_intelligentsia
+			ideology = ideology_progressive_leader
+			traits = {
+				erudite
+			}
+		}
+		create_character = {
+			first_name = smd_cn_necmettin
+			last_name = smd_cn_erbakan
+			historical = yes
+			ruler = no
+			culture = cu:turkish
+			birth_date = 1926.10.29
+			ig_leader = yes
+			interest_group = ig_devout
+			ideology = ideology_conservative_leader
+			traits = {
+				pious
+			}
+		}
+		create_character = {
+			first_name = smd_cn_bulent
+			last_name = smd_cn_ecevit
+			historical = yes
+			ruler = no
+			culture = cu:turkish
+			birth_date = 1925.5.28
+			ig_leader = yes
+			interest_group = ig_trade_unions
+			ideology = ideology_democratic_socialist_leader
+			traits = {
+				experienced_political_operator
+			}
+		}
+		create_character = {
+			first_name = smd_cn_sakip
+			last_name = smd_cn_sabanci
+			historical = yes
+			ruler = no
+			culture = cu:turkish
+			birth_date = 1933.4.7
+			ig_leader = yes
+			interest_group = ig_industrialists
+			ideology = ideology_neoliberal_leader
+			traits = {
+				expert_entrepreneur
+			}
+		}
+		create_character = {
+			first_name = smd_cn_tansu
+			last_name = smd_cn_ciller
+			historical = yes
+			ruler = no
+			female = yes
+			culture = cu:turkish
+			birth_date = 1946.5.24
+			ig_leader = yes
+			interest_group = ig_professionals
+			ideology = ideology_neoliberal_leader
+			traits = {
+				ambitious
+			}
+		}
+		create_character = {
+			first_name = smd_cn_alparslan
+			last_name = smd_cn_turkes
+			historical = yes
+			ruler = no
+			culture = cu:turkish
+			birth_date = 1917.11.25
+			ig_leader = yes
+			interest_group = ig_rural_folk
+			ideology = ideology_right_wing_populist_leader
+			traits = {
+				firebrand
+			}
+		}
+		create_character = {
+			first_name = smd_cn_mesut
+			last_name = smd_cn_yilmaz
+			historical = yes
+			ruler = no
+			culture = cu:turkish
+			birth_date = 1947.11.6
+			ig_leader = yes
+			interest_group = ig_landowners
+			ideology = ideology_conservative_leader
+			traits = {
+				experienced_political_operator
+			}
+		}
+	}
+	c:KZK ?= {
+		create_character = {
+			first_name = smd_cn_olzhas
+			last_name = smd_cn_suleimenov
+			historical = yes
+			ruler = no
+			culture = cu:kazak
+			birth_date = 1936.5.18
+			ig_leader = yes
+			interest_group = ig_petty_bourgeoisie
+			ideology = ideology_social_liberal_leader
+			traits = {
+				inspirational_orator
+			}
+		}
+		create_character = {
+			first_name = smd_cn_ratbek
+			last_name = smd_cn_nysanbayev
+			historical = yes
+			ruler = no
+			culture = cu:kazak
+			birth_date = 1940.1.1
+			ig_leader = yes
+			interest_group = ig_devout
+			ideology = ideology_conservative_leader
+			traits = {
+				pious
+			}
+		}
+		create_character = {
+			first_name = smd_cn_serikbolsyn
+			last_name = smd_cn_abdildin
+			historical = yes
+			ruler = no
+			culture = cu:kazak
+			birth_date = 1937.11.25
+			ig_leader = yes
+			interest_group = ig_trade_unions
+			ideology = ideology_state_socialist_leader
+			traits = {
+				experienced_political_operator
+			}
+		}
+		create_character = {
+			first_name = smd_cn_akezhan
+			last_name = smd_cn_kazhegeldin
+			historical = yes
+			ruler = no
+			culture = cu:kazak
+			birth_date = 1952.3.27
+			ig_leader = yes
+			interest_group = ig_industrialists
+			ideology = ideology_neoliberal_leader
+			traits = {
+				experienced_entrepreneur
+			}
+		}
+		create_character = {
+			first_name = smd_cn_sergey
+			last_name = smd_cn_tereshchenko
+			historical = yes
+			ruler = no
+			culture = cu:russian
+			birth_date = 1951.3.30
+			ig_leader = yes
+			interest_group = ig_professionals
+			ideology = ideology_technocrat_leader
+			traits = {
+				experienced_political_operator
+			}
+		}
+		create_character = {
+			first_name = smd_cn_sagadat
+			last_name = smd_cn_nurmagambetov
+			historical = yes
+			ruler = no
+			culture = cu:kazak
+			birth_date = 1924.5.25
+			ig_leader = yes
+			interest_group = ig_armed_forces
+			ideology = ideology_conservative_leader
+			traits = {
+				brave
+			}
+		}
+		create_character = {
+			first_name = smd_cn_mukhtar
+			last_name = smd_cn_shakhanov
+			historical = yes
+			ruler = no
+			culture = cu:kazak
+			birth_date = 1942.7.2
+			ig_leader = yes
+			interest_group = ig_rural_folk
+			ideology = ideology_right_wing_populist_leader
+			traits = {
+				firebrand
+			}
+		}
+		create_character = {
+			first_name = smd_cn_erik
+			last_name = smd_cn_asanbayev
+			historical = yes
+			ruler = no
+			culture = cu:kazak
+			birth_date = 1936.3.10
+			ig_leader = yes
+			interest_group = ig_landowners
+			ideology = ideology_moderate_leader
+			traits = {
+				experienced_political_operator
+			}
+		}
+	}
+	c:GEO ?= {
+		create_character = {
+			first_name = smd_cn_eduard
+			last_name = smd_cn_shevardnadze
+			historical = yes
+			ruler = no
+			culture = cu:georgian
+			birth_date = 1928.1.25
+			ig_leader = yes
+			interest_group = ig_petty_bourgeoisie
+			ideology = ideology_moderate_leader
+			traits = {
+				masterful_diplomat
+			}
+		}
+		create_character = {
+			first_name = smd_cn_ilia
+			last_name = smd_cn_shiolashvili
+			historical = yes
+			ruler = no
+			culture = cu:georgian
+			birth_date = 1933.1.4
+			ig_leader = yes
+			interest_group = ig_devout
+			ideology = ideology_conservative_leader
+			traits = {
+				pious
+			}
+		}
+		create_character = {
+			first_name = smd_cn_jumber
+			last_name = smd_cn_patiashvili
+			historical = yes
+			ruler = no
+			culture = cu:georgian
+			birth_date = 1940.1.27
+			ig_leader = yes
+			interest_group = ig_trade_unions
+			ideology = ideology_state_socialist_leader
+			traits = {
+				experienced_political_operator
+			}
+		}
+		create_character = {
+			first_name = smd_cn_tengiz
+			last_name = smd_cn_sigua
+			historical = yes
+			ruler = no
+			culture = cu:georgian
+			birth_date = 1934.11.9
+			ig_leader = yes
+			interest_group = ig_industrialists
+			ideology = ideology_technocrat_leader
+			traits = {
+				experienced_entrepreneur
+			}
+		}
+		create_character = {
+			first_name = smd_cn_zurab
+			last_name = smd_cn_zhvania
+			historical = yes
+			ruler = no
+			culture = cu:georgian
+			birth_date = 1963.12.9
+			ig_leader = yes
+			interest_group = ig_professionals
+			ideology = ideology_green_leader
+			traits = {
+				ambitious
+			}
+		}
+		create_character = {
+			first_name = smd_cn_tengiz
+			last_name = smd_cn_kitovani
+			historical = yes
+			ruler = no
+			culture = cu:georgian
+			birth_date = 1938.6.9
+			ig_leader = yes
+			interest_group = ig_armed_forces
+			ideology = ideology_authoritarian_capitalist_leader
+			traits = {
+				reckless
+			}
+		}
+		create_character = {
+			first_name = smd_cn_aslan
+			last_name = smd_cn_abashidze
+			historical = yes
+			ruler = no
+			culture = cu:georgian
+			birth_date = 1938.7.20
+			ig_leader = yes
+			interest_group = ig_rural_folk
+			ideology = ideology_authoritarian_capitalist_leader
+			traits = {
+				ruthless
+			}
+		}
+		create_character = {
+			first_name = smd_cn_jaba
+			last_name = smd_cn_ioseliani
+			historical = yes
+			ruler = no
+			culture = cu:georgian
+			birth_date = 1926.7.10
+			ig_leader = yes
+			interest_group = ig_landowners
+			ideology = ideology_right_wing_populist_leader
+			traits = {
+				ruthless
+			}
+		}
+	}
+	c:SPA ?= {
+		create_character = {
+			first_name = smd_cn_angel
+			last_name = smd_cn_suquia
+			historical = yes
+			ruler = no
+			culture = cu:spanish
+			birth_date = 1916.10.2
+			ig_leader = yes
+			interest_group = ig_devout
+			ideology = ideology_conservative_leader
+			traits = {
+				pious
+			}
+		}
+		create_character = {
+			first_name = smd_cn_nicolas
+			last_name = smd_cn_redondo
+			historical = yes
+			ruler = no
+			culture = cu:spanish
+			birth_date = 1927.4.16
+			ig_leader = yes
+			interest_group = ig_trade_unions
+			ideology = ideology_democratic_socialist_leader
+			traits = {
+				experienced_political_operator
+			}
+		}
+		create_character = {
+			first_name = smd_cn_emilio
+			last_name = smd_cn_botin
+			historical = yes
+			ruler = no
+			culture = cu:spanish
+			birth_date = 1934.10.1
+			ig_leader = yes
+			interest_group = ig_industrialists
+			ideology = ideology_neoliberal_leader
+			traits = {
+				expert_entrepreneur
+			}
+		}
+		create_character = {
+			first_name = smd_cn_carlos
+			last_name = smd_cn_solchaga
+			historical = yes
+			ruler = no
+			culture = cu:spanish
+			birth_date = 1944.5.28
+			ig_leader = yes
+			interest_group = ig_professionals
+			ideology = ideology_neoliberal_leader
+			traits = {
+				erudite
+			}
+		}
+		create_character = {
+			first_name = smd_cn_narcis
+			last_name = smd_cn_serra
+			historical = yes
+			ruler = no
+			culture = cu:catalan
+			birth_date = 1943.5.30
+			ig_leader = yes
+			interest_group = ig_armed_forces
+			ideology = ideology_moderate_leader
+			traits = {
+				experienced_political_operator
+			}
+		}
+		create_character = {
+			first_name = smd_cn_manuel
+			last_name = smd_cn_fraga
+			historical = yes
+			ruler = no
+			culture = cu:galician
+			birth_date = 1922.11.23
+			ig_leader = yes
+			interest_group = ig_rural_folk
+			ideology = ideology_conservative_leader
+			traits = {
+				imposing
+			}
+		}
+	}
+	c:XBE ?= {
+		create_character = {
+			first_name = smd_cn_guy
+			last_name = smd_cn_verhofstadt
+			historical = yes
+			ruler = no
+			culture = cu:flemish
+			birth_date = 1953.4.11
+			ig_leader = yes
+			interest_group = ig_intelligentsia
+			ideology = ideology_liberal_leader
+			traits = {
+				ambitious
+			}
+		}
+		create_character = {
+			first_name = smd_cn_guy
+			last_name = smd_cn_spitaels
+			historical = yes
+			ruler = no
+			culture = cu:wallonian
+			birth_date = 1931.9.3
+			ig_leader = yes
+			interest_group = ig_trade_unions
+			ideology = ideology_democratic_socialist_leader
+			traits = {
+				experienced_political_operator
+			}
+		}
+		create_character = {
+			first_name = albert
+			last_name = smd_cn_frere
+			historical = yes
+			ruler = no
+			culture = cu:wallonian
+			birth_date = 1926.2.4
+			ig_leader = yes
+			interest_group = ig_industrialists
+			ideology = ideology_neoliberal_leader
+			traits = {
+				expert_entrepreneur
+			}
+		}
+		create_character = {
+			first_name = smd_cn_philippe
+			last_name = smd_cn_maystadt
+			historical = yes
+			ruler = no
+			culture = cu:wallonian
+			birth_date = 1948.3.14
+			ig_leader = yes
+			interest_group = ig_professionals
+			ideology = ideology_technocrat_leader
+			traits = {
+				erudite
+			}
+		}
+		create_character = {
+			first_name = smd_cn_leo
+			last_name = smd_cn_delcroix
+			historical = yes
+			ruler = no
+			culture = cu:flemish
+			birth_date = 1949.11.1
+			ig_leader = yes
+			interest_group = ig_armed_forces
+			ideology = ideology_moderate_leader
+			traits = {
+				cautious
+			}
+		}
+		create_character = {
+			first_name = smd_cn_gerard
+			last_name = smd_cn_deprez
+			historical = yes
+			ruler = no
+			culture = cu:wallonian
+			birth_date = 1943.8.13
+			ig_leader = yes
+			interest_group = ig_rural_folk
+			ideology = ideology_moderate_leader
+			traits = {
+				experienced_political_operator
+			}
+		}
+		create_character = {
+			first_name = albert
+			last_name = smd_cn_de_liege
+			historical = yes
+			ruler = no
+			culture = cu:flemish
+			birth_date = 1934.6.6
+			ig_leader = yes
+			interest_group = ig_landowners
+			ideology = ideology_monarchist_leader
+			traits = {
+				reserved
+			}
+		}
+		create_character = {
+			first_name = smd_cn_jean_luc
+			last_name = smd_cn_dehaene
+			historical = yes
+			ruler = no
+			culture = cu:flemish
+			birth_date = 1940.8.7
+			ig_leader = yes
+			interest_group = ig_petty_bourgeoisie
+			ideology = ideology_moderate_leader
+			traits = {
+				experienced_political_operator
+			}
+		}
+	}
+	c:NDL ?= {
+		create_character = {
+			first_name = smd_cn_ruud
+			last_name = smd_cn_lubbers
+			historical = yes
+			ruler = no
+			culture = cu:dutch
+			birth_date = 1939.5.7
+			ig_leader = yes
+			interest_group = ig_petty_bourgeoisie
+			ideology = ideology_moderate_leader
+			traits = {
+				experienced_political_operator
+			}
+		}
+		create_character = {
+			first_name = smd_cn_frits
+			last_name = smd_cn_bolkestein
+			historical = yes
+			ruler = no
+			culture = cu:dutch
+			birth_date = 1933.4.4
+			ig_leader = yes
+			interest_group = ig_intelligentsia
+			ideology = ideology_liberal_leader
+			traits = {
+				erudite
+			}
+		}
+		create_character = {
+			first_name = smd_cn_adrianus
+			last_name = smd_cn_simonis
+			historical = yes
+			ruler = no
+			culture = cu:dutch
+			birth_date = 1931.11.26
+			ig_leader = yes
+			interest_group = ig_devout
+			ideology = ideology_conservative_leader
+			traits = {
+				pious
+			}
+		}
+		create_character = {
+			first_name = smd_cn_wim
+			last_name = smd_cn_kok
+			historical = yes
+			ruler = no
+			culture = cu:dutch
+			birth_date = 1938.9.29
+			ig_leader = yes
+			interest_group = ig_trade_unions
+			ideology = ideology_democratic_socialist_leader
+			traits = {
+				experienced_political_operator
+			}
+		}
+		create_character = {
+			first_name = smd_cn_cor
+			last_name = smd_cn_herkstroter
+			historical = yes
+			ruler = no
+			culture = cu:dutch
+			birth_date = 1937.5.1
+			ig_leader = yes
+			interest_group = ig_industrialists
+			ideology = ideology_neoliberal_leader
+			traits = {
+				expert_entrepreneur
+			}
+		}
+		create_character = {
+			first_name = smd_cn_relus
+			last_name = smd_cn_ter_beek
+			historical = yes
+			ruler = no
+			culture = cu:dutch
+			birth_date = 1944.1.30
+			ig_leader = yes
+			interest_group = ig_armed_forces
+			ideology = ideology_moderate_leader
+			traits = {
+				cautious
+			}
+		}
+		create_character = {
+			first_name = smd_cn_piet
+			last_name = smd_cn_bukman
+			historical = yes
+			ruler = no
+			culture = cu:dutch
+			birth_date = 1934.2.1
+			ig_leader = yes
+			interest_group = ig_rural_folk
+			ideology = ideology_conservative_leader
+			traits = {
+				experienced_political_operator
+			}
+		}
+		create_character = {
+			first_name = smd_cn_bernhard
+			last_name = smd_cn_van_lippe_biesterfeld
+			historical = yes
+			ruler = no
+			culture = cu:dutch
+			birth_date = 1911.6.29
+			ig_leader = yes
+			interest_group = ig_landowners
+			ideology = ideology_monarchist_leader
+			traits = {
+				aesthete
+			}
+		}
+	}
+	c:IRE ?= {
+		create_character = {
+			first_name = albert
+			last_name = reynolds
+			historical = yes
+			ruler = no
+			culture = cu:irish
+			birth_date = 1932.11.3
+			ig_leader = yes
+			interest_group = ig_rural_folk
+			ideology = ideology_conservative_leader
+			traits = {
+				experienced_political_operator
+			}
+		}
+		create_character = {
+			first_name = john
+			last_name = smd_cn_bruton
+			historical = yes
+			ruler = no
+			culture = cu:irish
+			birth_date = 1947.5.18
+			ig_leader = yes
+			interest_group = ig_petty_bourgeoisie
+			ideology = ideology_conservative_leader
+			traits = {
+				experienced_political_operator
+			}
+		}
+		create_character = {
+			first_name = smd_cn_cahal
+			last_name = smd_cn_daly
+			historical = yes
+			ruler = no
+			culture = cu:irish
+			birth_date = 1917.10.1
+			ig_leader = yes
+			interest_group = ig_devout
+			ideology = ideology_conservative_leader
+			traits = {
+				pious
+			}
+		}
+		create_character = {
+			first_name = smd_cn_dick
+			last_name = smd_cn_spring
+			historical = yes
+			ruler = no
+			culture = cu:irish
+			birth_date = 1950.8.29
+			ig_leader = yes
+			interest_group = ig_trade_unions
+			ideology = ideology_democratic_socialist_leader
+			traits = {
+				experienced_political_operator
+			}
+		}
+		create_character = {
+			first_name = smd_cn_tony
+			last_name = smd_cn_oreilly
+			historical = yes
+			ruler = no
+			culture = cu:irish
+			birth_date = 1936.5.7
+			ig_leader = yes
+			interest_group = ig_industrialists
+			ideology = ideology_neoliberal_leader
+			traits = {
+				expert_entrepreneur
+			}
+		}
+		create_character = {
+			first_name = smd_cn_des
+			last_name = smd_cn_omalley
+			historical = yes
+			ruler = no
+			culture = cu:irish
+			birth_date = 1939.2.2
+			ig_leader = yes
+			interest_group = ig_professionals
+			ideology = ideology_neoliberal_leader
+			traits = {
+				experienced_political_operator
+			}
+		}
+		create_character = {
+			first_name = john
+			last_name = smd_cn_wilson
+			historical = yes
+			ruler = no
+			culture = cu:irish
+			birth_date = 1923.7.8
+			ig_leader = yes
+			interest_group = ig_armed_forces
+			ideology = ideology_conservative_leader
+			traits = {
+				cautious
+			}
+		}
+		create_character = {
+			first_name = smd_cn_charles
+			last_name = smd_cn_haughey
+			historical = yes
+			ruler = no
+			culture = cu:irish
+			birth_date = 1925.9.16
+			ig_leader = yes
+			interest_group = ig_landowners
+			ideology = ideology_conservative_leader
+			traits = {
+				expensive_tastes
+			}
+		}
+	}
+	c:XDE ?= {
+		create_character = {
+			first_name = smd_cn_poul
+			last_name = smd_cn_schluter
+			historical = yes
+			ruler = no
+			culture = cu:danish
+			birth_date = 1929.4.3
+			ig_leader = yes
+			interest_group = ig_petty_bourgeoisie
+			ideology = ideology_conservative_leader
+			traits = {
+				experienced_political_operator
+			}
+		}
+		create_character = {
+			first_name = smd_cn_niels
+			last_name = smd_cn_helveg_petersen
+			historical = yes
+			ruler = no
+			culture = cu:danish
+			birth_date = 1939.1.17
+			ig_leader = yes
+			interest_group = ig_intelligentsia
+			ideology = ideology_social_liberal_leader
+			traits = {
+				experienced_diplomat
+			}
+		}
+		create_character = {
+			first_name = smd_cn_ole
+			last_name = smd_cn_bertelsen
+			historical = yes
+			ruler = no
+			culture = cu:danish
+			birth_date = 1928.1.1
+			ig_leader = yes
+			interest_group = ig_devout
+			ideology = ideology_moderate_leader
+			traits = {
+				pious
+			}
+		}
+		create_character = {
+			first_name = smd_cn_poul
+			last_name = smd_cn_nyrup_rasmussen
+			historical = yes
+			ruler = no
+			culture = cu:danish
+			birth_date = 1943.6.15
+			ig_leader = yes
+			interest_group = ig_trade_unions
+			ideology = ideology_democratic_socialist_leader
+			traits = {
+				experienced_political_operator
+			}
+		}
+		create_character = {
+			first_name = smd_cn_maersk
+			last_name = smd_cn_mc_kinney_moller
+			historical = yes
+			ruler = no
+			culture = cu:danish
+			birth_date = 1913.7.13
+			ig_leader = yes
+			interest_group = ig_industrialists
+			ideology = ideology_conservative_leader
+			traits = {
+				expert_entrepreneur
+			}
+		}
+		create_character = {
+			first_name = smd_cn_knud
+			last_name = smd_cn_enggaard
+			historical = yes
+			ruler = no
+			culture = cu:danish
+			birth_date = 1929.10.1
+			ig_leader = yes
+			interest_group = ig_armed_forces
+			ideology = ideology_moderate_leader
+			traits = {
+				cautious
+			}
+		}
+		create_character = {
+			first_name = smd_cn_uffe
+			last_name = smd_cn_ellemann_jensen
+			historical = yes
+			ruler = no
+			culture = cu:danish
+			birth_date = 1941.11.1
+			ig_leader = yes
+			interest_group = ig_rural_folk
+			ideology = ideology_neoliberal_leader
+			traits = {
+				experienced_diplomat
+			}
+		}
+		create_character = {
+			first_name = smd_cn_henrik
+			last_name = smd_cn_de_monpezat
+			historical = yes
+			ruler = no
+			culture = cu:danish
+			birth_date = 1934.6.11
+			ig_leader = yes
+			interest_group = ig_landowners
+			ideology = ideology_monarchist_leader
+			traits = {
+				aesthete
+			}
+		}
+	}
+	c:ITA ?= {
+		create_character = {
+			first_name = smd_cn_camillo
+			last_name = smd_cn_ruini
+			historical = yes
+			ruler = no
+			culture = cu:north_italian
+			birth_date = 1931.2.19
+			ig_leader = yes
+			interest_group = ig_devout
+			ideology = ideology_conservative_leader
+			traits = {
+				pious
+			}
+		}
+		create_character = {
+			first_name = smd_cn_achille
+			last_name = smd_cn_occhetto
+			historical = yes
+			ruler = no
+			culture = cu:north_italian
+			birth_date = 1936.3.3
+			ig_leader = yes
+			interest_group = ig_trade_unions
+			ideology = ideology_democratic_socialist_leader
+			traits = {
+				experienced_political_operator
+			}
+		}
+		create_character = {
+			first_name = smd_cn_silvio
+			last_name = smd_cn_berlusconi
+			historical = yes
+			ruler = no
+			culture = cu:north_italian
+			birth_date = 1936.9.29
+			ig_leader = yes
+			interest_group = ig_industrialists
+			ideology = ideology_neoliberal_leader
+			traits = {
+				charismatic
+			}
+		}
+		create_character = {
+			first_name = smd_cn_carlo_azeglio
+			last_name = smd_cn_ciampi
+			historical = yes
+			ruler = no
+			culture = cu:north_italian
+			birth_date = 1920.12.9
+			ig_leader = yes
+			interest_group = ig_professionals
+			ideology = ideology_technocrat_leader
+			traits = {
+				erudite
+			}
+		}
+		create_character = {
+			first_name = smd_cn_virginio
+			last_name = smd_cn_rognoni
+			historical = yes
+			ruler = no
+			culture = cu:north_italian
+			birth_date = 1924.8.5
+			ig_leader = yes
+			interest_group = ig_armed_forces
+			ideology = ideology_moderate_leader
+			traits = {
+				cautious
+			}
+		}
+		create_character = {
+			first_name = smd_cn_arnaldo
+			last_name = smd_cn_forlani
+			historical = yes
+			ruler = no
+			culture = cu:north_italian
+			birth_date = 1925.12.8
+			ig_leader = yes
+			interest_group = ig_rural_folk
+			ideology = ideology_conservative_leader
+			traits = {
+				experienced_political_operator
+			}
+		}
+		create_character = {
+			first_name = smd_cn_gianni
+			last_name = smd_cn_agnelli
+			historical = yes
+			ruler = no
+			culture = cu:north_italian
+			birth_date = 1921.3.12
+			ig_leader = yes
+			interest_group = ig_landowners
+			ideology = ideology_moderate_leader
+			traits = {
+				aesthete
+			}
+		}
+	}
+	c:OST ?= {
+		create_character = {
+			first_name = smd_cn_jorg
+			last_name = smd_cn_haider
+			historical = yes
+			ruler = no
+			culture = cu:south_german
+			birth_date = 1950.1.26
+			ig_leader = yes
+			interest_group = ig_petty_bourgeoisie
+			ideology = ideology_right_wing_populist_leader
+			traits = {
+				demagogue
+			}
+		}
+		create_character = {
+			first_name = smd_cn_franz
+			last_name = smd_cn_vranitzky
+			historical = yes
+			ruler = no
+			culture = cu:south_german
+			birth_date = 1937.10.4
+			ig_leader = yes
+			interest_group = ig_trade_unions
+			ideology = ideology_progressive_leader
+			traits = {
+				experienced_political_operator
+			}
+		}
+		create_character = {
+			first_name = smd_cn_thomas
+			last_name = smd_cn_klestil
+			historical = yes
+			ruler = no
+			culture = cu:south_german
+			birth_date = 1932.11.4
+			ig_leader = yes
+			interest_group = ig_intelligentsia
+			ideology = ideology_moderate_leader
+			traits = {
+				experienced_diplomat
+			}
+		}
+		create_character = {
+			first_name = smd_cn_hans_hermann
+			last_name = smd_cn_groer
+			historical = yes
+			ruler = no
+			culture = cu:south_german
+			birth_date = 1919.10.13
+			ig_leader = yes
+			interest_group = ig_devout
+			ideology = ideology_conservative_leader
+			traits = {
+				pious
+			}
+		}
+		create_character = {
+			first_name = smd_cn_frank
+			last_name = smd_cn_stronach
+			historical = yes
+			ruler = no
+			culture = cu:south_german
+			birth_date = 1932.9.6
+			ig_leader = yes
+			interest_group = ig_industrialists
+			ideology = ideology_neoliberal_leader
+			traits = {
+				expert_entrepreneur
+			}
+		}
+		create_character = {
+			first_name = smd_cn_werner
+			last_name = smd_cn_fasslabend
+			historical = yes
+			ruler = no
+			culture = cu:south_german
+			birth_date = 1944.10.5
+			ig_leader = yes
+			interest_group = ig_armed_forces
+			ideology = ideology_conservative_leader
+			traits = {
+				cautious
+			}
+		}
+		create_character = {
+			first_name = smd_cn_franz
+			last_name = smd_cn_fischler
+			historical = yes
+			ruler = no
+			culture = cu:south_german
+			birth_date = 1946.9.23
+			ig_leader = yes
+			interest_group = ig_rural_folk
+			ideology = ideology_conservative_leader
+			traits = {
+				experienced_political_operator
+			}
+		}
+		create_character = {
+			first_name = smd_cn_karl
+			last_name = smd_cn_von_habsburg
+			historical = yes
+			ruler = no
+			culture = cu:south_german
+			birth_date = 1961.1.11
+			ig_leader = yes
+			interest_group = ig_landowners
+			ideology = ideology_monarchist_leader
+			traits = {
+				aesthete
+			}
+		}
+	}
+	c:IRA ?= {
+		create_character = {
+			first_name = smd_cn_habibollah
+			last_name = smd_cn_asgaroladi
+			historical = yes
+			ruler = no
+			culture = cu:persian
+			birth_date = 1932.1.1
+			ig_leader = yes
+			interest_group = ig_petty_bourgeoisie
+			ideology = ideology_conservative_leader
+			traits = {
+				experienced_entrepreneur
+			}
+		}
+		create_character = {
+			first_name = smd_cn_akbar
+			last_name = smd_cn_hashemi_rafsanjani
+			historical = yes
+			ruler = no
+			culture = cu:persian
+			birth_date = 1934.8.25
+			ig_leader = yes
+			interest_group = ig_industrialists
+			ideology = ideology_authoritarian_capitalist_leader
+			traits = {
+				expert_political_operator
+			}
+		}
+		create_character = {
+			first_name = smd_cn_ahmad
+			last_name = smd_cn_jannati
+			historical = yes
+			ruler = no
+			culture = cu:persian
+			birth_date = 1927.3.23
+			ig_leader = yes
+			interest_group = ig_devout
+			ideology = ideology_theocrat_leader
+			traits = {
+				pious
+			}
+		}
+		create_character = {
+			first_name = smd_cn_mohammad
+			last_name = smd_cn_khatami
+			historical = yes
+			ruler = no
+			culture = cu:persian
+			birth_date = 1943.9.29
+			ig_leader = yes
+			interest_group = ig_intelligentsia
+			ideology = ideology_social_liberal_leader
+			traits = {
+				erudite
+			}
+		}
+		create_character = {
+			first_name = smd_cn_alireza
+			last_name = smd_cn_mahjoub
+			historical = yes
+			ruler = no
+			culture = cu:persian
+			birth_date = 1950.1.1
+			ig_leader = yes
+			interest_group = ig_trade_unions
+			ideology = ideology_state_socialist_leader
+			traits = {
+				experienced_political_operator
+			}
+		}
+		create_character = {
+			first_name = smd_cn_hassan
+			last_name = smd_cn_rouhani
+			historical = yes
+			ruler = no
+			culture = cu:persian
+			birth_date = 1948.11.12
+			ig_leader = yes
+			interest_group = ig_professionals
+			ideology = ideology_moderate_leader
+			traits = {
+				experienced_diplomat
+			}
+		}
+		create_character = {
+			first_name = smd_cn_mehdi
+			last_name = smd_cn_karroubi
+			historical = yes
+			ruler = no
+			culture = cu:luri
+			birth_date = 1937.9.26
+			ig_leader = yes
+			interest_group = ig_rural_folk
+			ideology = ideology_left_wing_populist_leader
+			traits = {
+				experienced_political_operator
+			}
+		}
+		create_character = {
+			first_name = smd_cn_ali_akbar
+			last_name = smd_cn_nateq_nouri
+			historical = yes
+			ruler = no
+			culture = cu:persian
+			birth_date = 1943.10.1
+			ig_leader = yes
+			interest_group = ig_landowners
+			ideology = ideology_conservative_leader
+			traits = {
+				experienced_political_operator
+			}
+		}
+	}
+	c:IRQ ?= {
+		create_character = {
+			first_name = smd_cn_uday
+			last_name = hussein
+			historical = yes
+			ruler = no
+			culture = cu:mashriqi
+			birth_date = 1964.6.18
+			ig_leader = yes
+			interest_group = ig_petty_bourgeoisie
+			ideology = ideology_authoritarian_capitalist_leader
+			traits = {
+				cruel
+			}
+		}
+		create_character = {
+			first_name = smd_cn_tariq
+			last_name = smd_cn_aziz
+			historical = yes
+			ruler = no
+			culture = cu:assyrian
+			birth_date = 1936.4.28
+			ig_leader = yes
+			interest_group = ig_professionals
+			ideology = ideology_state_socialist_leader
+			traits = {
+				experienced_diplomat
+			}
+		}
+		create_character = {
+			first_name = smd_cn_mohammad_sadiq
+			last_name = smd_cn_al_sadr
+			historical = yes
+			ruler = no
+			culture = cu:mashriqi
+			birth_date = 1943.3.23
+			ig_leader = yes
+			interest_group = ig_devout
+			ideology = ideology_conservative_leader
+			traits = {
+				pious
+			}
+		}
+		create_character = {
+			first_name = smd_cn_saadoun
+			last_name = smd_cn_hammadi
+			historical = yes
+			ruler = no
+			culture = cu:mashriqi
+			birth_date = 1930.6.22
+			ig_leader = yes
+			interest_group = ig_intelligentsia
+			ideology = ideology_technocrat_leader
+			traits = {
+				erudite
+			}
+		}
+		create_character = {
+			first_name = smd_cn_taha_yassin
+			last_name = smd_cn_ramadan
+			historical = yes
+			ruler = no
+			culture = cu:mashriqi
+			birth_date = 1938.2.22
+			ig_leader = yes
+			interest_group = ig_trade_unions
+			ideology = ideology_state_socialist_leader
+			traits = {
+				ruthless
+			}
+		}
+		create_character = {
+			first_name = smd_cn_hussein_kamel
+			last_name = smd_cn_al_majid
+			historical = yes
+			ruler = no
+			culture = cu:mashriqi
+			birth_date = 1954.1.1
+			ig_leader = yes
+			interest_group = ig_industrialists
+			ideology = ideology_authoritarian_capitalist_leader
+			traits = {
+				ambitious
+			}
+		}
+		create_character = {
+			first_name = smd_cn_massoud
+			last_name = smd_cn_barzani
+			historical = yes
+			ruler = no
+			culture = cu:kurdish
+			birth_date = 1946.8.16
+			ig_leader = yes
+			interest_group = ig_rural_folk
+			ideology = ideology_moderate_leader
+			traits = {
+				brave
+			}
+		}
+		create_character = {
+			first_name = smd_cn_ali_hassan
+			last_name = smd_cn_al_majid
+			historical = yes
+			ruler = no
+			culture = cu:mashriqi
+			birth_date = 1941.11.30
+			ig_leader = yes
+			interest_group = ig_landowners
+			ideology = ideology_authoritarian_capitalist_leader
+			traits = {
+				cruel
+			}
+		}
+	}
+	c:SYR ?= {
+		create_character = {
+			first_name = smd_cn_abdul_halim
+			last_name = smd_cn_khaddam
+			historical = yes
+			ruler = no
+			culture = cu:mashriqi
+			birth_date = 1932.9.15
+			ig_leader = yes
+			interest_group = ig_petty_bourgeoisie
+			ideology = ideology_state_socialist_leader
+			traits = {
+				experienced_political_operator
+			}
+		}
+		create_character = {
+			first_name = smd_cn_ahmad
+			last_name = smd_cn_kuftaro
+			historical = yes
+			ruler = no
+			culture = cu:kurdish
+			birth_date = 1915.1.1
+			ig_leader = yes
+			interest_group = ig_devout
+			ideology = ideology_conservative_leader
+			traits = {
+				pious
+			}
+		}
+		create_character = {
+			first_name = smd_cn_farouk
+			last_name = smd_cn_al_sharaa
+			historical = yes
+			ruler = no
+			culture = cu:mashriqi
+			birth_date = 1938.12.10
+			ig_leader = yes
+			interest_group = ig_intelligentsia
+			ideology = ideology_moderate_leader
+			traits = {
+				experienced_diplomat
+			}
+		}
+		create_character = {
+			first_name = smd_cn_mahmoud
+			last_name = smd_cn_zuabi
+			historical = yes
+			ruler = no
+			culture = cu:mashriqi
+			birth_date = 1935.1.1
+			ig_leader = yes
+			interest_group = ig_trade_unions
+			ideology = ideology_state_socialist_leader
+			traits = {
+				experienced_political_operator
+			}
+		}
+		create_character = {
+			first_name = smd_cn_mohammed
+			last_name = smd_cn_makhlouf
+			historical = yes
+			ruler = no
+			culture = cu:mashriqi
+			birth_date = 1932.1.1
+			ig_leader = yes
+			interest_group = ig_industrialists
+			ideology = ideology_authoritarian_capitalist_leader
+			traits = {
+				experienced_entrepreneur
+			}
+		}
+		create_character = {
+			first_name = smd_cn_muhammad
+			last_name = smd_cn_al_imadi
+			historical = yes
+			ruler = no
+			culture = cu:mashriqi
+			birth_date = 1930.1.1
+			ig_leader = yes
+			interest_group = ig_professionals
+			ideology = ideology_technocrat_leader
+			traits = {
+				erudite
+			}
+		}
+		create_character = {
+			first_name = smd_cn_abdullah
+			last_name = smd_cn_al_ahmar
+			historical = yes
+			ruler = no
+			culture = cu:mashriqi
+			birth_date = 1936.1.1
+			ig_leader = yes
+			interest_group = ig_rural_folk
+			ideology = ideology_state_socialist_leader
+			traits = {
+				experienced_political_operator
+			}
+		}
+		create_character = {
+			first_name = smd_cn_mustafa
+			last_name = smd_cn_tlass
+			historical = yes
+			ruler = no
+			culture = cu:mashriqi
+			birth_date = 1932.5.11
+			ig_leader = yes
+			interest_group = ig_landowners
+			ideology = ideology_authoritarian_capitalist_leader
+			traits = {
+				hedonist
+			}
+		}
+	}
+	c:ISR ?= {
+		create_character = {
+			first_name = smd_cn_shimon
+			last_name = smd_cn_peres
+			historical = yes
+			ruler = no
+			culture = cu:ashkenazi
+			birth_date = 1923.8.2
+			ig_leader = yes
+			interest_group = ig_intelligentsia
+			ideology = ideology_progressive_leader
+			traits = {
+				experienced_diplomat
+			}
+		}
+		create_character = {
+			first_name = smd_cn_ovadia
+			last_name = smd_cn_yosef
+			historical = yes
+			ruler = no
+			culture = cu:sephardic
+			birth_date = 1920.9.24
+			ig_leader = yes
+			interest_group = ig_devout
+			ideology = ideology_conservative_leader
+			traits = {
+				pious
+			}
+		}
+		create_character = {
+			first_name = smd_cn_yisrael
+			last_name = smd_cn_kessar
+			historical = yes
+			ruler = no
+			culture = cu:yemenite
+			birth_date = 1931.1.1
+			ig_leader = yes
+			interest_group = ig_trade_unions
+			ideology = ideology_democratic_socialist_leader
+			traits = {
+				experienced_political_operator
+			}
+		}
+		create_character = {
+			first_name = smd_cn_ted
+			last_name = smd_cn_arison
+			historical = yes
+			ruler = no
+			culture = cu:ashkenazi
+			birth_date = 1924.2.24
+			ig_leader = yes
+			interest_group = ig_industrialists
+			ideology = ideology_neoliberal_leader
+			traits = {
+				expert_entrepreneur
+			}
+		}
+		create_character = {
+			first_name = smd_cn_ariel
+			last_name = smd_cn_sharon
+			historical = yes
+			ruler = no
+			culture = cu:ashkenazi
+			birth_date = 1928.2.26
+			ig_leader = yes
+			interest_group = ig_armed_forces
+			ideology = ideology_right_wing_populist_leader
+			traits = {
+				reckless
+			}
+		}
+		create_character = {
+			first_name = smd_cn_rafael
+			last_name = smd_cn_eitan
+			historical = yes
+			ruler = no
+			culture = cu:ashkenazi
+			birth_date = 1929.1.11
+			ig_leader = yes
+			interest_group = ig_rural_folk
+			ideology = ideology_right_wing_populist_leader
+			traits = {
+				brave
+			}
+		}
+		create_character = {
+			first_name = smd_cn_yitzhak
+			last_name = smd_cn_shamir
+			historical = yes
+			ruler = no
+			culture = cu:ashkenazi
+			birth_date = 1915.10.22
+			ig_leader = yes
+			interest_group = ig_landowners
+			ideology = ideology_conservative_leader
+			traits = {
+				persistent
+			}
+		}
+	}
+	c:SAU ?= {
+		create_character = {
+			first_name = smd_cn_abd_al_aziz
+			last_name = smd_cn_ibn_baz
+			historical = yes
+			ruler = no
+			culture = cu:bedouin
+			birth_date = 1910.11.21
+			ig_leader = yes
+			interest_group = ig_devout
+			ideology = ideology_conservative_leader
+			traits = {
+				pious
+			}
+		}
+		create_character = {
+			first_name = smd_cn_ghazi
+			last_name = smd_cn_al_gosaibi
+			historical = yes
+			ruler = no
+			culture = cu:bedouin
+			birth_date = 1940.3.2
+			ig_leader = yes
+			interest_group = ig_intelligentsia
+			ideology = ideology_moderate_leader
+			traits = {
+				literary
+			}
+		}
+		create_character = {
+			first_name = smd_cn_talal
+			last_name = smd_cn_bin_abdulaziz
+			historical = yes
+			ruler = no
+			culture = cu:bedouin
+			birth_date = 1931.8.15
+			ig_leader = yes
+			interest_group = ig_trade_unions
+			ideology = ideology_social_liberal_leader
+			traits = {
+				tactful
+			}
+		}
+		create_character = {
+			first_name = smd_cn_al_waleed
+			last_name = smd_cn_bin_talal
+			historical = yes
+			ruler = no
+			culture = cu:bedouin
+			birth_date = 1955.3.7
+			ig_leader = yes
+			interest_group = ig_industrialists
+			ideology = ideology_neoliberal_leader
+			traits = {
+				expert_entrepreneur
+			}
+		}
+		create_character = {
+			first_name = ali
+			last_name = smd_cn_al_naimi
+			historical = yes
+			ruler = no
+			culture = cu:bedouin
+			birth_date = 1935.1.1
+			ig_leader = yes
+			interest_group = ig_professionals
+			ideology = ideology_technocrat_leader
+			traits = {
+				erudite
+			}
+		}
+		create_character = {
+			first_name = smd_cn_bandar
+			last_name = smd_cn_bin_sultan
+			historical = yes
+			ruler = no
+			culture = cu:bedouin
+			birth_date = 1949.3.2
+			ig_leader = yes
+			interest_group = ig_armed_forces
+			ideology = ideology_conservative_leader
+			traits = {
+				experienced_diplomat
+			}
+		}
+		create_character = {
+			first_name = smd_cn_abdullah
+			last_name = smd_cn_bin_abdulaziz
+			historical = yes
+			ruler = no
+			culture = cu:bedouin
+			birth_date = 1924.8.1
+			ig_leader = yes
+			interest_group = ig_rural_folk
+			ideology = ideology_conservative_leader
+			traits = {
+				honorable
+			}
+		}
+		create_character = {
+			first_name = smd_cn_salman
+			last_name = smd_cn_bin_abdulaziz
+			historical = yes
+			ruler = no
+			culture = cu:bedouin
+			birth_date = 1935.12.31
+			ig_leader = yes
+			interest_group = ig_landowners
+			ideology = ideology_conservative_leader
+			traits = {
+				imperious
+			}
+		}
+	}
+	c:XEG ?= {
+		create_character = {
+			first_name = smd_cn_atef
+			last_name = smd_cn_sedki
+			historical = yes
+			ruler = no
+			culture = cu:misri
+			birth_date = 1930.8.29
+			ig_leader = yes
+			interest_group = ig_petty_bourgeoisie
+			ideology = ideology_moderate_leader
+			traits = {
+				erudite
+			}
+		}
+		create_character = {
+			first_name = smd_cn_muhammad_sayyid
+			last_name = smd_cn_tantawy
+			historical = yes
+			ruler = no
+			culture = cu:misri
+			birth_date = 1928.10.28
+			ig_leader = yes
+			interest_group = ig_devout
+			ideology = ideology_conservative_leader
+			traits = {
+				pious
+			}
+		}
+		create_character = {
+			first_name = smd_cn_naguib
+			last_name = smd_cn_mahfouz
+			historical = yes
+			ruler = no
+			culture = cu:misri
+			birth_date = 1911.12.11
+			ig_leader = yes
+			interest_group = ig_intelligentsia
+			ideology = ideology_liberal_leader
+			traits = {
+				literary
+			}
+		}
+		create_character = {
+			first_name = smd_cn_khaled
+			last_name = smd_cn_mohieddin
+			historical = yes
+			ruler = no
+			culture = cu:misri
+			birth_date = 1922.8.17
+			ig_leader = yes
+			interest_group = ig_trade_unions
+			ideology = ideology_democratic_socialist_leader
+			traits = {
+				experienced_political_operator
+			}
+		}
+		create_character = {
+			first_name = smd_cn_osman_ahmed
+			last_name = smd_cn_osman
+			historical = yes
+			ruler = no
+			culture = cu:misri
+			birth_date = 1917.4.6
+			ig_leader = yes
+			interest_group = ig_industrialists
+			ideology = ideology_state_capitalist_leader
+			traits = {
+				expert_entrepreneur
+			}
+		}
+		create_character = {
+			first_name = smd_cn_kamal
+			last_name = smd_cn_ganzouri
+			historical = yes
+			ruler = no
+			culture = cu:misri
+			birth_date = 1933.1.12
+			ig_leader = yes
+			interest_group = ig_professionals
+			ideology = ideology_technocrat_leader
+			traits = {
+				erudite
+			}
+		}
+		create_character = {
+			first_name = smd_cn_yusuf
+			last_name = smd_cn_wali
+			historical = yes
+			ruler = no
+			culture = cu:misri
+			birth_date = 1930.1.1
+			ig_leader = yes
+			interest_group = ig_rural_folk
+			ideology = ideology_moderate_leader
+			traits = {
+				experienced_political_operator
+			}
+		}
+		create_character = {
+			first_name = smd_cn_fouad
+			last_name = smd_cn_serageddin
+			historical = yes
+			ruler = no
+			culture = cu:misri
+			birth_date = 1911.11.2
+			ig_leader = yes
+			interest_group = ig_landowners
+			ideology = ideology_classical_liberal_leader
+			traits = {
+				aesthete
+			}
+		}
+	}
+	c:UAE ?= {
+		create_character = {
+			first_name = smd_cn_zayed
+			last_name = smd_cn_bin_sultan_al_nahyan
+			historical = yes
+			ruler = yes
+			culture = cu:bedouin
+			birth_date = 1918.5.6
+			ig_leader = yes
+			interest_group = ig_landowners
+			ideology = ideology_conservative_leader
+			traits = {
+				honorable
+			}
+		}
+		create_character = {
+			first_name = smd_cn_maktoum
+			last_name = smd_cn_bin_rashid
+			historical = yes
+			ruler = no
+			culture = cu:bedouin
+			birth_date = 1943.8.15
+			ig_leader = yes
+			interest_group = ig_petty_bourgeoisie
+			ideology = ideology_moderate_leader
+			traits = {
+				experienced_political_operator
+			}
+		}
+		create_character = {
+			first_name = smd_cn_mohammed
+			last_name = smd_cn_bin_rashid
+			historical = yes
+			ruler = no
+			culture = cu:bedouin
+			birth_date = 1949.7.15
+			ig_leader = yes
+			interest_group = ig_industrialists
+			ideology = ideology_neoliberal_leader
+			traits = {
+				ambitious
+			}
+		}
+		create_character = {
+			first_name = smd_cn_mohammed
+			last_name = smd_cn_bin_zayed
+			historical = yes
+			ruler = no
+			culture = cu:bedouin
+			birth_date = 1961.3.11
+			ig_leader = yes
+			interest_group = ig_armed_forces
+			ideology = ideology_authoritarian_capitalist_leader
+			traits = {
+				meticulous
+			}
+		}
+		create_character = {
+			first_name = smd_cn_sultan
+			last_name = smd_cn_bin_muhammad_al_qasimi
+			historical = yes
+			ruler = no
+			culture = cu:bedouin
+			birth_date = 1939.7.2
+			ig_leader = yes
+			interest_group = ig_intelligentsia
+			ideology = ideology_moderate_leader
+			traits = {
+				erudite
+			}
+		}
+		create_character = {
+			first_name = smd_cn_humaid
+			last_name = smd_cn_bin_rashid_al_nuaimi
+			historical = yes
+			ruler = no
+			culture = cu:bedouin
+			birth_date = 1931.1.1
+			ig_leader = yes
+			interest_group = ig_rural_folk
+			ideology = ideology_conservative_leader
+			traits = {
+				reserved
+			}
+		}
+	}
+	c:PAK ?= {
+		create_character = {
+			first_name = smd_cn_altaf
+			last_name = smd_cn_hussain
+			historical = yes
+			ruler = no
+			culture = cu:hindustani
+			birth_date = 1953.9.17
+			ig_leader = yes
+			interest_group = ig_petty_bourgeoisie
+			ideology = ideology_right_wing_populist_leader
+			traits = {
+				demagogue
+			}
+		}
+		create_character = {
+			first_name = smd_cn_benazir
+			last_name = smd_cn_bhutto
+			historical = yes
+			ruler = no
+			female = yes
+			culture = cu:sindi
+			birth_date = 1953.6.21
+			ig_leader = yes
+			interest_group = ig_landowners
+			ideology = ideology_progressive_leader
+			traits = {
+				charismatic
+			}
+		}
+		create_character = {
+			first_name = smd_cn_abdul_qadeer
+			last_name = smd_cn_khan
+			historical = yes
+			ruler = no
+			culture = cu:pashtun
+			birth_date = 1936.4.1
+			ig_leader = yes
+			interest_group = ig_intelligentsia
+			ideology = ideology_conservative_leader
+			traits = {
+				engineer
+			}
+		}
+		create_character = {
+			first_name = smd_cn_qazi_hussain
+			last_name = smd_cn_ahmad
+			historical = yes
+			ruler = no
+			culture = cu:pashtun
+			birth_date = 1938.1.12
+			ig_leader = yes
+			interest_group = ig_devout
+			ideology = ideology_conservative_leader
+			traits = {
+				pious
+			}
+		}
+		create_character = {
+			first_name = smd_cn_mian_muhammad
+			last_name = smd_cn_mansha
+			historical = yes
+			ruler = no
+			culture = cu:panjabi
+			birth_date = 1947.1.1
+			ig_leader = yes
+			interest_group = ig_industrialists
+			ideology = ideology_neoliberal_leader
+			traits = {
+				expert_entrepreneur
+			}
+		}
+		create_character = {
+			first_name = smd_cn_ghulam_ishaq
+			last_name = smd_cn_khan
+			historical = yes
+			ruler = no
+			culture = cu:pashtun
+			birth_date = 1915.1.20
+			ig_leader = yes
+			interest_group = ig_professionals
+			ideology = ideology_technocrat_leader
+			traits = {
+				master_bureaucrat
+			}
+		}
+		create_character = {
+			first_name = smd_cn_hamid
+			last_name = smd_cn_gul
+			historical = yes
+			ruler = no
+			culture = cu:panjabi
+			birth_date = 1936.11.20
+			ig_leader = yes
+			interest_group = ig_armed_forces
+			ideology = ideology_right_wing_populist_leader
+			traits = {
+				ambitious
+			}
+		}
+	}
+	c:BHT ?= {
+		create_character = {
+			first_name = smd_cn_vishwanath_pratap
+			last_name = smd_cn_singh
+			historical = yes
+			ruler = no
+			culture = cu:hindustani
+			birth_date = 1931.6.25
+			ig_leader = yes
+			interest_group = ig_petty_bourgeoisie
+			ideology = ideology_social_liberal_leader
+			traits = {
+				honorable
+			}
+		}
+		create_character = {
+			first_name = smd_cn_sharad
+			last_name = smd_cn_pawar
+			historical = yes
+			ruler = no
+			culture = cu:marathi
+			birth_date = 1940.12.12
+			ig_leader = yes
+			interest_group = ig_armed_forces
+			ideology = ideology_moderate_leader
+			traits = {
+				experienced_political_operator
+			}
+		}
+	}
+	c:BNG ?= {
+		create_character = {
+			first_name = smd_cn_khaleda
+			last_name = smd_cn_zia
+			historical = yes
+			ruler = no
+			female = yes
+			culture = cu:bengali
+			birth_date = 1945.8.15
+			ig_leader = yes
+			interest_group = ig_petty_bourgeoisie
+			ideology = ideology_conservative_leader
+			traits = {
+				experienced_political_operator
+			}
+		}
+		create_character = {
+			first_name = smd_cn_kamal
+			last_name = smd_cn_hossain
+			historical = yes
+			ruler = no
+			culture = cu:bengali
+			birth_date = 1937.4.20
+			ig_leader = yes
+			interest_group = ig_intelligentsia
+			ideology = ideology_liberal_leader
+			traits = {
+				erudite
+			}
+		}
+		create_character = {
+			first_name = smd_cn_ghulam
+			last_name = smd_cn_azam
+			historical = yes
+			ruler = no
+			culture = cu:bengali
+			birth_date = 1922.11.7
+			ig_leader = yes
+			interest_group = ig_devout
+			ideology = ideology_conservative_leader
+			traits = {
+				pious
+			}
+		}
+		create_character = {
+			first_name = smd_cn_sheikh
+			last_name = smd_cn_hasina
+			historical = yes
+			ruler = no
+			female = yes
+			culture = cu:bengali
+			birth_date = 1947.9.28
+			ig_leader = yes
+			interest_group = ig_trade_unions
+			ideology = ideology_democratic_socialist_leader
+			traits = {
+				persistent
+			}
+		}
+		create_character = {
+			first_name = smd_cn_salman_f
+			last_name = smd_cn_rahman
+			historical = yes
+			ruler = no
+			culture = cu:bengali
+			birth_date = 1951.5.23
+			ig_leader = yes
+			interest_group = ig_industrialists
+			ideology = ideology_neoliberal_leader
+			traits = {
+				expert_entrepreneur
+			}
+		}
+		create_character = {
+			first_name = smd_cn_hussain_muhammad
+			last_name = smd_cn_ershad
+			historical = yes
+			ruler = no
+			culture = cu:bengali
+			birth_date = 1930.2.1
+			ig_leader = yes
+			interest_group = ig_armed_forces
+			ideology = ideology_authoritarian_capitalist_leader
+			traits = {
+				hedonist
+			}
+		}
+		create_character = {
+			first_name = smd_cn_muhammad
+			last_name = smd_cn_yunus
+			historical = yes
+			ruler = no
+			culture = cu:bengali
+			birth_date = 1940.6.28
+			ig_leader = yes
+			interest_group = ig_rural_folk
+			ideology = ideology_social_liberal_leader
+			traits = {
+				innovative
+			}
+		}
+		create_character = {
+			first_name = smd_cn_saifur
+			last_name = smd_cn_rahman
+			historical = yes
+			ruler = no
+			culture = cu:bengali
+			birth_date = 1932.10.6
+			ig_leader = yes
+			interest_group = ig_landowners
+			ideology = ideology_moderate_leader
+			traits = {
+				experienced_political_operator
+			}
+		}
+	}
+	c:NRK ?= {
+		create_character = {
+			first_name = smd_cn_kang
+			last_name = smd_cn_song_san
+			historical = yes
+			ruler = no
+			culture = cu:korean
+			birth_date = 1931.3.3
+			ig_leader = yes
+			interest_group = ig_petty_bourgeoisie
+			ideology = ideology_state_socialist_leader
+			traits = {
+				experienced_political_operator
+			}
+		}
+		create_character = {
+			first_name = smd_cn_kim
+			last_name = smd_cn_jong_il
+			historical = yes
+			ruler = no
+			culture = cu:korean
+			birth_date = 1941.2.16
+			ig_leader = yes
+			interest_group = ig_armed_forces
+			ideology = ideology_state_socialist_leader
+			traits = {
+				ambitious
+			}
+		}
+		create_character = {
+			first_name = smd_cn_hwang
+			last_name = smd_cn_jang_yop
+			historical = yes
+			ruler = no
+			culture = cu:korean
+			birth_date = 1923.2.17
+			ig_leader = yes
+			interest_group = ig_intelligentsia
+			ideology = ideology_marxist_leader
+			traits = {
+				erudite
+			}
+		}
+		create_character = {
+			first_name = smd_cn_kim
+			last_name = smd_cn_yong_nam
+			historical = yes
+			ruler = no
+			culture = cu:korean
+			birth_date = 1928.2.4
+			ig_leader = yes
+			interest_group = ig_trade_unions
+			ideology = ideology_state_socialist_leader
+			traits = {
+				experienced_diplomat
+			}
+		}
+		create_character = {
+			first_name = smd_cn_jang
+			last_name = smd_cn_song_thaek
+			historical = yes
+			ruler = no
+			culture = cu:korean
+			birth_date = 1946.2.6
+			ig_leader = yes
+			interest_group = ig_industrialists
+			ideology = ideology_state_capitalist_leader
+			traits = {
+				ambitious
+			}
+		}
+		create_character = {
+			first_name = smd_cn_yon
+			last_name = smd_cn_hyong_muk
+			historical = yes
+			ruler = no
+			culture = cu:korean
+			birth_date = 1931.11.3
+			ig_leader = yes
+			interest_group = ig_professionals
+			ideology = ideology_state_socialist_leader
+			traits = {
+				master_bureaucrat
+			}
+		}
+	}
+	c:STK ?= {
+		create_character = {
+			first_name = smd_cn_kim
+			last_name = smd_cn_young_sam
+			historical = yes
+			ruler = no
+			culture = cu:korean
+			birth_date = 1927.12.20
+			ig_leader = yes
+			interest_group = ig_petty_bourgeoisie
+			ideology = ideology_conservative_leader
+			traits = {
+				experienced_political_operator
+			}
+		}
+		create_character = {
+			first_name = smd_cn_kim
+			last_name = smd_cn_dae_jung
+			historical = yes
+			ruler = no
+			culture = cu:korean
+			birth_date = 1924.1.6
+			ig_leader = yes
+			interest_group = ig_intelligentsia
+			ideology = ideology_progressive_leader
+			traits = {
+				persistent
+			}
+		}
+		create_character = {
+			first_name = smd_cn_stephen
+			last_name = smd_cn_kim_sou_hwan
+			historical = yes
+			ruler = no
+			culture = cu:korean
+			birth_date = 1922.5.8
+			ig_leader = yes
+			interest_group = ig_devout
+			ideology = ideology_moderate_leader
+			traits = {
+				pious
+			}
+		}
+		create_character = {
+			first_name = smd_cn_kwon
+			last_name = smd_cn_young_ghil
+			historical = yes
+			ruler = no
+			culture = cu:korean
+			birth_date = 1941.11.1
+			ig_leader = yes
+			interest_group = ig_trade_unions
+			ideology = ideology_democratic_socialist_leader
+			traits = {
+				experienced_political_operator
+			}
+		}
+		create_character = {
+			first_name = smd_cn_chung
+			last_name = smd_cn_ju_yung
+			historical = yes
+			ruler = no
+			culture = cu:korean
+			birth_date = 1915.11.25
+			ig_leader = yes
+			interest_group = ig_industrialists
+			ideology = ideology_neoliberal_leader
+			traits = {
+				expert_entrepreneur
+			}
+		}
+		create_character = {
+			first_name = smd_cn_lee
+			last_name = smd_cn_hoi_chang
+			historical = yes
+			ruler = no
+			culture = cu:korean
+			birth_date = 1935.6.2
+			ig_leader = yes
+			interest_group = ig_professionals
+			ideology = ideology_conservative_leader
+			traits = {
+				honorable
+			}
+		}
+		create_character = {
+			first_name = smd_cn_kim
+			last_name = smd_cn_jong_pil
+			historical = yes
+			ruler = no
+			culture = cu:korean
+			birth_date = 1926.1.7
+			ig_leader = yes
+			interest_group = ig_rural_folk
+			ideology = ideology_conservative_leader
+			traits = {
+				experienced_political_operator
+			}
+		}
+		create_character = {
+			first_name = smd_cn_lee
+			last_name = smd_cn_kun_hee
+			historical = yes
+			ruler = no
+			culture = cu:korean
+			birth_date = 1942.1.9
+			ig_leader = yes
+			interest_group = ig_landowners
+			ideology = ideology_authoritarian_capitalist_leader
+			traits = {
+				expert_entrepreneur
+			}
+		}
+	}
+	c:ROC ?= {
+		create_character = {
+			first_name = smd_cn_hau
+			last_name = smd_cn_pei_tsun
+			historical = yes
+			ruler = no
+			culture = cu:han
+			birth_date = 1919.8.8
+			ig_leader = yes
+			interest_group = ig_petty_bourgeoisie
+			ideology = ideology_conservative_leader
+			traits = {
+				imposing
+			}
+		}
+		create_character = {
+			first_name = smd_cn_chen
+			last_name = smd_cn_li_an
+			historical = yes
+			ruler = no
+			culture = cu:han
+			birth_date = 1937.6.22
+			ig_leader = yes
+			interest_group = ig_armed_forces
+			ideology = ideology_moderate_leader
+			traits = {
+				pious
+			}
+		}
+		create_character = {
+			first_name = smd_cn_peng
+			last_name = smd_cn_ming_min
+			historical = yes
+			ruler = no
+			culture = cu:min
+			birth_date = 1923.8.15
+			ig_leader = yes
+			interest_group = ig_intelligentsia
+			ideology = ideology_liberal_leader
+			traits = {
+				erudite
+			}
+		}
+		create_character = {
+			first_name = smd_cn_cheng
+			last_name = smd_cn_yen
+			historical = yes
+			ruler = no
+			female = yes
+			culture = cu:min
+			birth_date = 1937.5.14
+			ig_leader = yes
+			interest_group = ig_devout
+			ideology = ideology_moderate_leader
+			traits = {
+				pious
+			}
+		}
+		create_character = {
+			first_name = smd_cn_hsu
+			last_name = smd_cn_hsin_liang
+			historical = yes
+			ruler = no
+			culture = cu:hakka
+			birth_date = 1941.5.27
+			ig_leader = yes
+			interest_group = ig_trade_unions
+			ideology = ideology_progressive_leader
+			traits = {
+				firebrand
+			}
+		}
+		create_character = {
+			first_name = smd_cn_wang
+			last_name = smd_cn_yung_ching
+			historical = yes
+			ruler = no
+			culture = cu:min
+			birth_date = 1917.1.18
+			ig_leader = yes
+			interest_group = ig_industrialists
+			ideology = ideology_neoliberal_leader
+			traits = {
+				expert_entrepreneur
+			}
+		}
+		create_character = {
+			first_name = smd_cn_lin
+			last_name = smd_cn_yang_kang
+			historical = yes
+			ruler = no
+			culture = cu:min
+			birth_date = 1927.6.10
+			ig_leader = yes
+			interest_group = ig_rural_folk
+			ideology = ideology_conservative_leader
+			traits = {
+				experienced_political_operator
+			}
+		}
+		create_character = {
+			first_name = smd_cn_koo
+			last_name = smd_cn_chen_fu
+			historical = yes
+			ruler = no
+			culture = cu:min
+			birth_date = 1917.1.6
+			ig_leader = yes
+			interest_group = ig_landowners
+			ideology = ideology_conservative_leader
+			traits = {
+				experienced_diplomat
+			}
+		}
+	}
+	c:BRZ ?= {
+		create_character = {
+			first_name = smd_cn_marcilio
+			last_name = smd_cn_marques_moreira
+			historical = yes
+			ruler = no
+			culture = cu:brazilian
+			birth_date = 1931.11.25
+			ig_leader = yes
+			interest_group = ig_professionals
+			ideology = ideology_neoliberal_leader
+			traits = {
+				erudite
+			}
+		}
+		create_character = {
+			first_name = smd_cn_joao_pedro
+			last_name = smd_cn_stedile
+			historical = yes
+			ruler = no
+			culture = cu:sulista
+			birth_date = 1953.12.25
+			ig_leader = yes
+			interest_group = ig_rural_folk
+			ideology = ideology_state_socialist_leader
+			traits = {
+				firebrand
+			}
+		}
+	}
+	c:CLM ?= {
+		create_character = {
+			first_name = smd_cn_antonio
+			last_name = smd_cn_navarro_wolff
+			historical = yes
+			ruler = no
+			culture = cu:colombian
+			birth_date = 1948.7.20
+			ig_leader = yes
+			interest_group = ig_intelligentsia
+			ideology = ideology_democratic_socialist_leader
+			traits = {
+				brave
+			}
+		}
+		create_character = {
+			first_name = smd_cn_mario
+			last_name = smd_cn_revollo_bravo
+			historical = yes
+			ruler = no
+			culture = cu:colombian
+			birth_date = 1919.6.15
+			ig_leader = yes
+			interest_group = ig_devout
+			ideology = ideology_conservative_leader
+			traits = {
+				pious
+			}
+		}
+		create_character = {
+			first_name = smd_cn_angelino
+			last_name = smd_cn_garzon
+			historical = yes
+			ruler = no
+			culture = cu:colombian
+			birth_date = 1946.10.29
+			ig_leader = yes
+			interest_group = ig_trade_unions
+			ideology = ideology_democratic_socialist_leader
+			traits = {
+				experienced_political_operator
+			}
+		}
+		create_character = {
+			first_name = smd_cn_julio_mario
+			last_name = smd_cn_santo_domingo
+			historical = yes
+			ruler = no
+			culture = cu:colombian
+			birth_date = 1923.10.16
+			ig_leader = yes
+			interest_group = ig_industrialists
+			ideology = ideology_neoliberal_leader
+			traits = {
+				expert_entrepreneur
+			}
+		}
+		create_character = {
+			first_name = smd_cn_rudolf
+			last_name = smd_cn_hommes
+			historical = yes
+			ruler = no
+			culture = cu:colombian
+			birth_date = 1943.1.1
+			ig_leader = yes
+			interest_group = ig_professionals
+			ideology = ideology_neoliberal_leader
+			traits = {
+				erudite
+			}
+		}
+		create_character = {
+			first_name = smd_cn_miguel
+			last_name = smd_cn_maza_marquez
+			historical = yes
+			ruler = no
+			culture = cu:colombian
+			birth_date = 1937.1.1
+			ig_leader = yes
+			interest_group = ig_armed_forces
+			ideology = ideology_conservative_leader
+			traits = {
+				brave
+			}
+		}
+		create_character = {
+			first_name = smd_cn_alvaro
+			last_name = smd_cn_gomez_hurtado
+			historical = yes
+			ruler = no
+			culture = cu:colombian
+			birth_date = 1919.5.8
+			ig_leader = yes
+			interest_group = ig_rural_folk
+			ideology = ideology_conservative_leader
+			traits = {
+				experienced_political_operator
+			}
+		}
+		create_character = {
+			first_name = smd_cn_alvaro
+			last_name = smd_cn_uribe
+			historical = yes
+			ruler = no
+			culture = cu:colombian
+			birth_date = 1952.7.4
+			ig_leader = yes
+			interest_group = ig_landowners
+			ideology = ideology_conservative_leader
+			traits = {
+				ambitious
+			}
+		}
+	}
+	c:XAR ?= {
+		create_character = {
+			first_name = smd_cn_raul
+			last_name = smd_cn_alfonsin
+			historical = yes
+			ruler = no
+			culture = cu:argentine
+			birth_date = 1927.3.12
+			ig_leader = yes
+			interest_group = ig_intelligentsia
+			ideology = ideology_social_liberal_leader
+			traits = {
+				honorable
+			}
+		}
+		create_character = {
+			first_name = smd_cn_antonio
+			last_name = smd_cn_quarracino
+			historical = yes
+			ruler = no
+			culture = cu:argentine
+			birth_date = 1923.8.8
+			ig_leader = yes
+			interest_group = ig_devout
+			ideology = ideology_conservative_leader
+			traits = {
+				pious
+			}
+		}
+		create_character = {
+			first_name = smd_cn_saul
+			last_name = smd_cn_ubaldini
+			historical = yes
+			ruler = no
+			culture = cu:argentine
+			birth_date = 1936.12.19
+			ig_leader = yes
+			interest_group = ig_trade_unions
+			ideology = ideology_left_wing_populist_leader
+			traits = {
+				demagogue
+			}
+		}
+		create_character = {
+			first_name = smd_cn_fernando
+			last_name = smd_cn_de_la_rua
+			historical = yes
+			ruler = no
+			culture = cu:argentine
+			birth_date = 1937.9.15
+			ig_leader = yes
+			interest_group = ig_professionals
+			ideology = ideology_moderate_leader
+			traits = {
+				cautious
+			}
+		}
+		create_character = {
+			first_name = smd_cn_mohamed_ali
+			last_name = smd_cn_seineldin
+			historical = yes
+			ruler = no
+			culture = cu:argentine
+			birth_date = 1933.11.12
+			ig_leader = yes
+			interest_group = ig_armed_forces
+			ideology = ideology_right_wing_populist_leader
+			traits = {
+				brave
+			}
+		}
+		create_character = {
+			first_name = smd_cn_eduardo
+			last_name = smd_cn_duhalde
+			historical = yes
+			ruler = no
+			culture = cu:argentine
+			birth_date = 1941.10.5
+			ig_leader = yes
+			interest_group = ig_rural_folk
+			ideology = ideology_moderate_leader
+			traits = {
+				experienced_political_operator
+			}
+		}
+		create_character = {
+			first_name = smd_cn_carlos_chacho
+			last_name = smd_cn_alvarez
+			historical = yes
+			ruler = no
+			culture = cu:argentine
+			birth_date = 1948.12.26
+			ig_leader = yes
+			interest_group = ig_petty_bourgeoisie
+			ideology = ideology_progressive_leader
+			traits = {
+				experienced_political_operator
+			}
+		}
+	}
+	c:XCH ?= {
+		create_character = {
+			first_name = smd_cn_joaquin
+			last_name = smd_cn_lavin
+			historical = yes
+			ruler = no
+			culture = cu:chilean
+			birth_date = 1953.10.23
+			ig_leader = yes
+			interest_group = ig_petty_bourgeoisie
+			ideology = ideology_conservative_leader
+			traits = {
+				ambitious
+			}
+		}
+		create_character = {
+			first_name = smd_cn_ricardo
+			last_name = smd_cn_lagos
+			historical = yes
+			ruler = no
+			culture = cu:chilean
+			birth_date = 1938.3.2
+			ig_leader = yes
+			interest_group = ig_intelligentsia
+			ideology = ideology_progressive_leader
+			traits = {
+				erudite
+			}
+		}
+		create_character = {
+			first_name = smd_cn_carlos
+			last_name = smd_cn_oviedo
+			historical = yes
+			ruler = no
+			culture = cu:chilean
+			birth_date = 1927.1.19
+			ig_leader = yes
+			interest_group = ig_devout
+			ideology = ideology_moderate_leader
+			traits = {
+				pious
+			}
+		}
+		create_character = {
+			first_name = smd_cn_manuel
+			last_name = smd_cn_bustos
+			historical = yes
+			ruler = no
+			culture = cu:chilean
+			birth_date = 1943.1.1
+			ig_leader = yes
+			interest_group = ig_trade_unions
+			ideology = ideology_democratic_socialist_leader
+			traits = {
+				experienced_political_operator
+			}
+		}
+		create_character = {
+			first_name = smd_cn_andronico
+			last_name = smd_cn_luksic
+			historical = yes
+			ruler = no
+			culture = cu:chilean
+			birth_date = 1926.11.24
+			ig_leader = yes
+			interest_group = ig_industrialists
+			ideology = ideology_neoliberal_leader
+			traits = {
+				expert_entrepreneur
+			}
+		}
+		create_character = {
+			first_name = smd_cn_augusto
+			last_name = smd_cn_pinochet
+			historical = yes
+			ruler = no
+			culture = cu:chilean
+			birth_date = 1915.11.25
+			ig_leader = yes
+			interest_group = ig_armed_forces
+			ideology = ideology_authoritarian_capitalist_leader
+			traits = {
+				ruthless
+			}
+		}
+		create_character = {
+			first_name = smd_cn_andres
+			last_name = smd_cn_allamand
+			historical = yes
+			ruler = no
+			culture = cu:chilean
+			birth_date = 1956.2.7
+			ig_leader = yes
+			interest_group = ig_rural_folk
+			ideology = ideology_conservative_leader
+			traits = {
+				ambitious
+			}
+		}
+		create_character = {
+			first_name = smd_cn_sergio_onofre
+			last_name = smd_cn_jarpa
+			historical = yes
+			ruler = no
+			culture = cu:chilean
+			birth_date = 1921.3.8
+			ig_leader = yes
+			interest_group = ig_landowners
+			ideology = ideology_conservative_leader
+			traits = {
+				experienced_political_operator
+			}
+		}
+	}
+	c:MEX ?= {
+		create_character = {
+			first_name = smd_cn_ernesto
+			last_name = smd_cn_corripio_ahumada
+			historical = yes
+			ruler = no
+			culture = cu:mexican
+			birth_date = 1919.6.29
+			ig_leader = yes
+			interest_group = ig_devout
+			ideology = ideology_conservative_leader
+			traits = {
+				pious
+			}
+		}
+		create_character = {
+			first_name = smd_cn_fidel
+			last_name = smd_cn_velazquez
+			historical = yes
+			ruler = no
+			culture = cu:mexican
+			birth_date = 1900.4.24
+			ig_leader = yes
+			interest_group = ig_trade_unions
+			ideology = ideology_corporatist_leader
+			traits = {
+				expert_political_operator
+			}
+		}
+		create_character = {
+			first_name = smd_cn_carlos
+			last_name = smd_cn_slim
+			historical = yes
+			ruler = no
+			culture = cu:mexican
+			birth_date = 1940.1.28
+			ig_leader = yes
+			interest_group = ig_industrialists
+			ideology = ideology_neoliberal_leader
+			traits = {
+				expert_entrepreneur
+			}
+		}
+		create_character = {
+			first_name = smd_cn_jorge
+			last_name = smd_cn_carrillo_olea
+			historical = yes
+			ruler = no
+			culture = cu:mexican
+			birth_date = 1937.11.1
+			ig_leader = yes
+			interest_group = ig_armed_forces
+			ideology = ideology_authoritarian_capitalist_leader
+			traits = {
+				cautious
+			}
+		}
+		create_character = {
+			first_name = smd_cn_carlos
+			last_name = smd_cn_hank_gonzalez
+			historical = yes
+			ruler = no
+			culture = cu:mexican
+			birth_date = 1927.8.28
+			ig_leader = yes
+			interest_group = ig_landowners
+			ideology = ideology_conservative_leader
+			traits = {
+				grifter
+			}
+		}
+		create_character = {
+			first_name = smd_cn_diego
+			last_name = smd_cn_fernandez_de_cevallos
+			historical = yes
+			ruler = no
+			culture = cu:mexican
+			birth_date = 1941.3.16
+			ig_leader = yes
+			interest_group = ig_petty_bourgeoisie
+			ideology = ideology_conservative_leader
+			traits = {
+				experienced_political_operator
+			}
+		}
+	}
+	c:DCR ?= {
+		create_character = {
+			first_name = smd_cn_juan
+			last_name = smd_cn_bosch
+			historical = yes
+			ruler = no
+			culture = cu:caribeno
+			birth_date = 1909.6.30
+			ig_leader = yes
+			interest_group = ig_intelligentsia
+			ideology = ideology_progressive_leader
+			traits = {
+				literary
+			}
+		}
+		create_character = {
+			first_name = smd_cn_nicolas
+			last_name = smd_cn_lopez_rodriguez
+			historical = yes
+			ruler = no
+			culture = cu:caribeno
+			birth_date = 1936.10.31
+			ig_leader = yes
+			interest_group = ig_devout
+			ideology = ideology_conservative_leader
+			traits = {
+				pious
+			}
+		}
+		create_character = {
+			first_name = smd_cn_jose_francisco
+			last_name = smd_cn_pena_gomez
+			historical = yes
+			ruler = no
+			culture = cu:afro_caribeno
+			birth_date = 1937.3.6
+			ig_leader = yes
+			interest_group = ig_trade_unions
+			ideology = ideology_democratic_socialist_leader
+			traits = {
+				inspirational_orator
+			}
+		}
+		create_character = {
+			first_name = smd_cn_leonel
+			last_name = smd_cn_fernandez
+			historical = yes
+			ruler = no
+			culture = cu:caribeno
+			birth_date = 1953.12.26
+			ig_leader = yes
+			interest_group = ig_professionals
+			ideology = ideology_liberal_leader
+			traits = {
+				erudite
+			}
+		}
+		create_character = {
+			first_name = smd_cn_jacobo
+			last_name = smd_cn_majluta
+			historical = yes
+			ruler = no
+			culture = cu:caribeno
+			birth_date = 1934.10.9
+			ig_leader = yes
+			interest_group = ig_rural_folk
+			ideology = ideology_moderate_leader
+			traits = {
+				experienced_political_operator
+			}
+		}
+	}
+	c:ALG ?= {
+		create_character = {
+			first_name = smd_cn_sid_ahmed
+			last_name = smd_cn_ghozali
+			historical = yes
+			ruler = no
+			culture = cu:maghrebi
+			birth_date = 1937.3.31
+			ig_leader = yes
+			interest_group = ig_petty_bourgeoisie
+			ideology = ideology_technocrat_leader
+			traits = {
+				erudite
+			}
+		}
+		create_character = {
+			first_name = smd_cn_abbassi
+			last_name = smd_cn_madani
+			historical = yes
+			ruler = no
+			culture = cu:maghrebi
+			birth_date = 1931.2.28
+			ig_leader = yes
+			interest_group = ig_devout
+			ideology = ideology_conservative_leader
+			traits = {
+				firebrand
+			}
+		}
+		create_character = {
+			first_name = smd_cn_hocine
+			last_name = smd_cn_ait_ahmed
+			historical = yes
+			ruler = no
+			culture = cu:berber
+			birth_date = 1926.8.20
+			ig_leader = yes
+			interest_group = ig_intelligentsia
+			ideology = ideology_social_liberal_leader
+			traits = {
+				honorable
+			}
+		}
+		create_character = {
+			first_name = smd_cn_abdelhak
+			last_name = smd_cn_benhamouda
+			historical = yes
+			ruler = no
+			culture = cu:maghrebi
+			birth_date = 1946.1.1
+			ig_leader = yes
+			interest_group = ig_trade_unions
+			ideology = ideology_state_socialist_leader
+			traits = {
+				experienced_political_operator
+			}
+		}
+		create_character = {
+			first_name = smd_cn_issad
+			last_name = smd_cn_rebrab
+			historical = yes
+			ruler = no
+			culture = cu:berber
+			birth_date = 1944.5.27
+			ig_leader = yes
+			interest_group = ig_industrialists
+			ideology = ideology_neoliberal_leader
+			traits = {
+				expert_entrepreneur
+			}
+		}
+		create_character = {
+			first_name = smd_cn_mouloud
+			last_name = smd_cn_hamrouche
+			historical = yes
+			ruler = no
+			culture = cu:maghrebi
+			birth_date = 1943.1.3
+			ig_leader = yes
+			interest_group = ig_professionals
+			ideology = ideology_social_liberal_leader
+			traits = {
+				experienced_political_operator
+			}
+		}
+		create_character = {
+			first_name = smd_cn_abdelhamid
+			last_name = smd_cn_mehri
+			historical = yes
+			ruler = no
+			culture = cu:maghrebi
+			birth_date = 1926.4.3
+			ig_leader = yes
+			interest_group = ig_rural_folk
+			ideology = ideology_state_socialist_leader
+			traits = {
+				experienced_political_operator
+			}
+		}
+	}
+	c:LBY ?= {
+		create_character = {
+			first_name = smd_cn_abdessalam
+			last_name = smd_cn_jalloud
+			historical = yes
+			ruler = no
+			culture = cu:maghrebi
+			birth_date = 1944.12.15
+			ig_leader = yes
+			interest_group = ig_intelligentsia
+			ideology = ideology_state_socialist_leader
+			traits = {
+				experienced_political_operator
+			}
+		}
+		create_character = {
+			first_name = smd_cn_abu_bakr_yunis
+			last_name = smd_cn_jabr
+			historical = yes
+			ruler = no
+			culture = cu:maghrebi
+			birth_date = 1940.1.1
+			ig_leader = yes
+			interest_group = ig_armed_forces
+			ideology = ideology_authoritarian_capitalist_leader
+			traits = {
+				cautious
+			}
+		}
+		create_character = {
+			first_name = smd_cn_mohammed
+			last_name = smd_cn_el_senussi
+			historical = yes
+			ruler = no
+			culture = cu:maghrebi
+			birth_date = 1962.10.20
+			ig_leader = yes
+			interest_group = ig_landowners
+			ideology = ideology_monarchist_leader
+			traits = {
+				reserved
+			}
+		}
+	}
+	c:NRI ?= {
+		create_character = {
+			first_name = smd_cn_olusegun
+			last_name = smd_cn_obasanjo
+			historical = yes
+			ruler = no
+			culture = cu:yoruba
+			birth_date = 1937.3.5
+			ig_leader = yes
+			interest_group = ig_petty_bourgeoisie
+			ideology = ideology_moderate_leader
+			traits = {
+				experienced_political_operator
+			}
+		}
+		create_character = {
+			first_name = smd_cn_wole
+			last_name = smd_cn_soyinka
+			historical = yes
+			ruler = no
+			culture = cu:yoruba
+			birth_date = 1934.7.13
+			ig_leader = yes
+			interest_group = ig_intelligentsia
+			ideology = ideology_liberal_leader
+			traits = {
+				literary
+			}
+		}
+		create_character = {
+			first_name = smd_cn_ibrahim
+			last_name = smd_cn_dasuki
+			historical = yes
+			ruler = no
+			culture = cu:hausa
+			birth_date = 1923.12.31
+			ig_leader = yes
+			interest_group = ig_devout
+			ideology = ideology_conservative_leader
+			traits = {
+				pious
+			}
+		}
+		create_character = {
+			first_name = smd_cn_pascal
+			last_name = smd_cn_bafyau
+			historical = yes
+			ruler = no
+			culture = cu:tiv
+			birth_date = 1945.1.1
+			ig_leader = yes
+			interest_group = ig_trade_unions
+			ideology = ideology_democratic_socialist_leader
+			traits = {
+				experienced_political_operator
+			}
+		}
+		create_character = {
+			first_name = smd_cn_ernest
+			last_name = smd_cn_shonekan
+			historical = yes
+			ruler = no
+			culture = cu:yoruba
+			birth_date = 1936.5.9
+			ig_leader = yes
+			interest_group = ig_professionals
+			ideology = ideology_technocrat_leader
+			traits = {
+				erudite
+			}
+		}
+		create_character = {
+			first_name = smd_cn_ken
+			last_name = smd_cn_saro_wiwa
+			historical = yes
+			ruler = no
+			culture = cu:ibibio
+			birth_date = 1941.10.10
+			ig_leader = yes
+			interest_group = ig_rural_folk
+			ideology = ideology_social_liberal_leader
+			traits = {
+				literary
+			}
+		}
+		create_character = {
+			first_name = smd_cn_shehu_musa
+			last_name = smd_cn_yaradua
+			historical = yes
+			ruler = no
+			culture = cu:hausa
+			birth_date = 1943.3.5
+			ig_leader = yes
+			interest_group = ig_landowners
+			ideology = ideology_conservative_leader
+			traits = {
+				experienced_political_operator
+			}
+		}
+	}
+	c:GHA ?= {
+		create_character = {
+			first_name = john
+			last_name = smd_cn_kufuor
+			historical = yes
+			ruler = no
+			culture = cu:akan
+			birth_date = 1938.12.8
+			ig_leader = yes
+			interest_group = ig_petty_bourgeoisie
+			ideology = ideology_conservative_leader
+			traits = {
+				experienced_political_operator
+			}
+		}
+		create_character = {
+			first_name = smd_cn_adu
+			last_name = smd_cn_boahen
+			historical = yes
+			ruler = no
+			culture = cu:akan
+			birth_date = 1932.5.24
+			ig_leader = yes
+			interest_group = ig_intelligentsia
+			ideology = ideology_liberal_leader
+			traits = {
+				erudite
+			}
+		}
+		create_character = {
+			first_name = smd_cn_peter
+			last_name = smd_cn_sarpong
+			historical = yes
+			ruler = no
+			culture = cu:akan
+			birth_date = 1933.2.26
+			ig_leader = yes
+			interest_group = ig_devout
+			ideology = ideology_moderate_leader
+			traits = {
+				pious
+			}
+		}
+		create_character = {
+			first_name = smd_cn_kwesi
+			last_name = smd_cn_botchwey
+			historical = yes
+			ruler = no
+			culture = cu:akan
+			birth_date = 1944.1.1
+			ig_leader = yes
+			interest_group = ig_professionals
+			ideology = ideology_technocrat_leader
+			traits = {
+				erudite
+			}
+		}
+		create_character = {
+			first_name = smd_cn_kow_nkensen
+			last_name = smd_cn_arkaah
+			historical = yes
+			ruler = no
+			culture = cu:akan
+			birth_date = 1927.1.1
+			ig_leader = yes
+			interest_group = ig_rural_folk
+			ideology = ideology_moderate_leader
+			traits = {
+				experienced_political_operator
+			}
+		}
+		create_character = {
+			first_name = smd_cn_opoku
+			last_name = smd_cn_ware_ii
+			historical = yes
+			ruler = no
+			culture = cu:akan
+			birth_date = 1919.11.30
+			ig_leader = yes
+			interest_group = ig_landowners
+			ideology = ideology_monarchist_leader
+			traits = {
+				imposing
+			}
+		}
+	}
+	c:KYA ?= {
+		create_character = {
+			first_name = smd_cn_wangari
+			last_name = smd_cn_maathai
+			historical = yes
+			ruler = no
+			female = yes
+			culture = cu:kikuyu
+			birth_date = 1940.4.1
+			ig_leader = yes
+			interest_group = ig_intelligentsia
+			ideology = ideology_green_leader
+			traits = {
+				persistent
+			}
+		}
+		create_character = {
+			first_name = smd_cn_maurice
+			last_name = smd_cn_otunga
+			historical = yes
+			ruler = no
+			culture = cu:nilotic
+			birth_date = 1923.1.31
+			ig_leader = yes
+			interest_group = ig_devout
+			ideology = ideology_conservative_leader
+			traits = {
+				pious
+			}
+		}
+		create_character = {
+			first_name = smd_cn_nicholas
+			last_name = smd_cn_biwott
+			historical = yes
+			ruler = no
+			culture = cu:nilotic
+			birth_date = 1940.11.8
+			ig_leader = yes
+			interest_group = ig_industrialists
+			ideology = ideology_authoritarian_capitalist_leader
+			traits = {
+				ruthless
+			}
+		}
+		create_character = {
+			first_name = george
+			last_name = smd_cn_saitoti
+			historical = yes
+			ruler = no
+			culture = cu:maasai
+			birth_date = 1945.8.3
+			ig_leader = yes
+			interest_group = ig_professionals
+			ideology = ideology_technocrat_leader
+			traits = {
+				erudite
+			}
+		}
+		create_character = {
+			first_name = smd_cn_kenneth
+			last_name = smd_cn_matiba
+			historical = yes
+			ruler = no
+			culture = cu:kikuyu
+			birth_date = 1932.12.31
+			ig_leader = yes
+			interest_group = ig_rural_folk
+			ideology = ideology_liberal_leader
+			traits = {
+				expert_entrepreneur
+			}
+		}
+		create_character = {
+			first_name = smd_cn_mwai
+			last_name = smd_cn_kibaki
+			historical = yes
+			ruler = no
+			culture = cu:kikuyu
+			birth_date = 1931.11.15
+			ig_leader = yes
+			interest_group = ig_petty_bourgeoisie
+			ideology = ideology_conservative_leader
+			traits = {
+				experienced_political_operator
+			}
+		}
+	}
+	c:SAF ?= {
+		create_character = {
+			first_name = smd_cn_helen
+			last_name = smd_cn_suzman
+			historical = yes
+			ruler = no
+			female = yes
+			culture = cu:british
+			birth_date = 1917.11.7
+			ig_leader = yes
+			interest_group = ig_intelligentsia
+			ideology = ideology_liberal_leader
+			traits = {
+				honorable
+			}
+		}
+		create_character = {
+			first_name = smd_cn_desmond
+			last_name = smd_cn_tutu
+			historical = yes
+			ruler = no
+			culture = cu:xhosa
+			birth_date = 1931.10.7
+			ig_leader = yes
+			interest_group = ig_devout
+			ideology = ideology_progressive_leader
+			traits = {
+				inspirational_orator
+			}
+		}
+		create_character = {
+			first_name = smd_cn_harry
+			last_name = smd_cn_oppenheimer
+			historical = yes
+			ruler = no
+			culture = cu:british
+			birth_date = 1908.10.28
+			ig_leader = yes
+			interest_group = ig_industrialists
+			ideology = ideology_liberal_leader
+			traits = {
+				expert_entrepreneur
+			}
+		}
+		create_character = {
+			first_name = smd_cn_pik
+			last_name = smd_cn_botha
+			historical = yes
+			ruler = no
+			culture = cu:boer
+			birth_date = 1932.4.27
+			ig_leader = yes
+			interest_group = ig_professionals
+			ideology = ideology_moderate_leader
+			traits = {
+				experienced_diplomat
+			}
+		}
+		create_character = {
+			first_name = smd_cn_constand
+			last_name = smd_cn_viljoen
+			historical = yes
+			ruler = no
+			culture = cu:boer
+			birth_date = 1933.10.28
+			ig_leader = yes
+			interest_group = ig_armed_forces
+			ideology = ideology_right_wing_populist_leader
+			traits = {
+				brave
+			}
+		}
+		create_character = {
+			first_name = smd_cn_mangosuthu
+			last_name = smd_cn_buthelezi
+			historical = yes
+			ruler = no
+			culture = cu:zulu
+			birth_date = 1928.8.27
+			ig_leader = yes
+			interest_group = ig_rural_folk
+			ideology = ideology_conservative_leader
+			traits = {
+				imposing
+			}
+		}
+		create_character = {
+			first_name = smd_cn_andries
+			last_name = smd_cn_treurnicht
+			historical = yes
+			ruler = no
+			culture = cu:boer
+			birth_date = 1921.2.19
+			ig_leader = yes
+			interest_group = ig_landowners
+			ideology = ideology_right_wing_populist_leader
+			traits = {
+				bigoted
+			}
+		}
+	}
+	c:DRK ?= {
+		create_character = {
+			first_name = smd_cn_etienne
+			last_name = smd_cn_tshisekedi
+			historical = yes
+			ruler = no
+			culture = cu:luba
+			birth_date = 1932.12.14
+			ig_leader = yes
+			interest_group = ig_petty_bourgeoisie
+			ideology = ideology_liberal_leader
+			traits = {
+				persistent
+			}
+		}
+		create_character = {
+			first_name = smd_cn_laurent
+			last_name = smd_cn_monsengwo
+			historical = yes
+			ruler = no
+			culture = cu:mongo
+			birth_date = 1939.10.7
+			ig_leader = yes
+			interest_group = ig_devout
+			ideology = ideology_moderate_leader
+			traits = {
+				pious
+			}
+		}
+		create_character = {
+			first_name = smd_cn_leon
+			last_name = smd_cn_kengo_wa_dondo
+			historical = yes
+			ruler = no
+			culture = cu:mongo
+			birth_date = 1935.5.22
+			ig_leader = yes
+			interest_group = ig_professionals
+			ideology = ideology_technocrat_leader
+			traits = {
+				erudite
+			}
+		}
+		create_character = {
+			first_name = smd_cn_bemba
+			last_name = smd_cn_saolona
+			historical = yes
+			ruler = no
+			culture = cu:mongo
+			birth_date = 1942.1.1
+			ig_leader = yes
+			interest_group = ig_industrialists
+			ideology = ideology_authoritarian_capitalist_leader
+			traits = {
+				experienced_entrepreneur
+			}
+		}
+		create_character = {
+			first_name = smd_cn_laurent_desire
+			last_name = smd_cn_kabila
+			historical = yes
+			ruler = no
+			culture = cu:luba
+			birth_date = 1939.11.27
+			ig_leader = yes
+			interest_group = ig_rural_folk
+			ideology = ideology_marxist_leader
+			traits = {
+				firebrand
+			}
+		}
+		create_character = {
+			first_name = smd_cn_nguza
+			last_name = smd_cn_karl_i_bond
+			historical = yes
+			ruler = no
+			culture = cu:lunda
+			birth_date = 1938.8.4
+			ig_leader = yes
+			interest_group = ig_landowners
+			ideology = ideology_right_wing_populist_leader
+			traits = {
+				ambitious
+			}
+		}
+	}
+	c:SDN ?= {
+		create_character = {
+			first_name = smd_cn_hassan
+			last_name = smd_cn_al_turabi
+			historical = yes
+			ruler = no
+			culture = cu:sudanese
+			birth_date = 1932.2.1
+			ig_leader = yes
+			interest_group = ig_devout
+			ideology = ideology_conservative_leader
+			traits = {
+				erudite
+			}
+		}
+		create_character = {
+			first_name = smd_cn_sadiq
+			last_name = smd_cn_al_mahdi
+			historical = yes
+			ruler = no
+			culture = cu:sudanese
+			birth_date = 1935.12.25
+			ig_leader = yes
+			interest_group = ig_landowners
+			ideology = ideology_moderate_leader
+			traits = {
+				experienced_political_operator
+			}
+		}
+		create_character = {
+			first_name = john
+			last_name = smd_cn_garang
+			historical = yes
+			ruler = no
+			culture = cu:dinka
+			birth_date = 1945.6.23
+			ig_leader = yes
+			interest_group = ig_rural_folk
+			ideology = ideology_left_wing_populist_leader
+			traits = {
+				brave
+			}
+		}
+		create_character = {
+			first_name = smd_cn_mohammed_ibrahim
+			last_name = smd_cn_nugud
+			historical = yes
+			ruler = no
+			culture = cu:sudanese
+			birth_date = 1930.1.1
+			ig_leader = yes
+			interest_group = ig_trade_unions
+			ideology = ideology_state_socialist_leader
+			traits = {
+				persistent
+			}
+		}
+		create_character = {
+			first_name = smd_cn_mohammed_osman
+			last_name = smd_cn_al_mirghani
+			historical = yes
+			ruler = no
+			culture = cu:sudanese
+			birth_date = 1936.1.1
+			ig_leader = yes
+			interest_group = ig_petty_bourgeoisie
+			ideology = ideology_moderate_leader
+			traits = {
+				pious
+			}
+		}
+	}
+	c:IDS ?= {
+		create_character = {
+			first_name = smd_cn_megawati
+			last_name = smd_cn_sukarnoputri
+			historical = yes
+			ruler = no
+			female = yes
+			culture = cu:javan
+			birth_date = 1947.1.23
+			ig_leader = yes
+			interest_group = ig_petty_bourgeoisie
+			ideology = ideology_progressive_leader
+			traits = {
+				persistent
+			}
+		}
+		create_character = {
+			first_name = smd_cn_emil
+			last_name = smd_cn_salim
+			historical = yes
+			ruler = no
+			culture = cu:sumatran
+			birth_date = 1930.6.8
+			ig_leader = yes
+			interest_group = ig_intelligentsia
+			ideology = ideology_liberal_leader
+			traits = {
+				erudite
+			}
+		}
+		create_character = {
+			first_name = smd_cn_abdurrahman
+			last_name = smd_cn_wahid
+			historical = yes
+			ruler = no
+			culture = cu:javan
+			birth_date = 1940.9.7
+			ig_leader = yes
+			interest_group = ig_devout
+			ideology = ideology_moderate_leader
+			traits = {
+				pious
+			}
+		}
+		create_character = {
+			first_name = smd_cn_liem
+			last_name = smd_cn_sioe_liong
+			historical = yes
+			ruler = no
+			culture = cu:han
+			birth_date = 1916.7.19
+			ig_leader = yes
+			interest_group = ig_industrialists
+			ideology = ideology_neoliberal_leader
+			traits = {
+				expert_entrepreneur
+			}
+		}
+		create_character = {
+			first_name = smd_cn_bacharuddin_jusuf
+			last_name = smd_cn_habibie
+			historical = yes
+			ruler = no
+			culture = cu:javan
+			birth_date = 1936.6.25
+			ig_leader = yes
+			interest_group = ig_professionals
+			ideology = ideology_technocrat_leader
+			traits = {
+				engineer
+			}
+		}
+		create_character = {
+			first_name = smd_cn_harmoko
+			last_name = smd_cn_harmoko
+			historical = yes
+			ruler = no
+			culture = cu:javan
+			birth_date = 1939.2.7
+			ig_leader = yes
+			interest_group = ig_rural_folk
+			ideology = ideology_moderate_leader
+			traits = {
+				experienced_political_operator
+			}
+		}
+		create_character = {
+			first_name = smd_cn_muchtar
+			last_name = smd_cn_pakpahan
+			historical = yes
+			ruler = no
+			culture = cu:batak
+			birth_date = 1953.12.21
+			ig_leader = yes
+			interest_group = ig_trade_unions
+			ideology = ideology_democratic_socialist_leader
+			traits = {
+				brave
+			}
+		}
+		create_character = {
+			first_name = smd_cn_hamengkubuwono
+			last_name = smd_cn_x
+			historical = yes
+			ruler = no
+			culture = cu:javan
+			birth_date = 1946.4.2
+			ig_leader = yes
+			interest_group = ig_landowners
+			ideology = ideology_monarchist_leader
+			traits = {
+				reserved
+			}
+		}
+	}
+	c:MYY ?= {
+		create_character = {
+			first_name = smd_cn_anwar
+			last_name = smd_cn_ibrahim
+			historical = yes
+			ruler = no
+			culture = cu:malay
+			birth_date = 1947.8.10
+			ig_leader = yes
+			interest_group = ig_professionals
+			ideology = ideology_neoliberal_leader
+			traits = {
+				charismatic
+			}
+		}
+		create_character = {
+			first_name = smd_cn_lim
+			last_name = smd_cn_kit_siang
+			historical = yes
+			ruler = no
+			culture = cu:han
+			birth_date = 1941.2.20
+			ig_leader = yes
+			interest_group = ig_trade_unions
+			ideology = ideology_democratic_socialist_leader
+			traits = {
+				persistent
+			}
+		}
+		create_character = {
+			first_name = smd_cn_syed_hussein
+			last_name = smd_cn_alatas
+			historical = yes
+			ruler = no
+			culture = cu:malay
+			birth_date = 1928.9.17
+			ig_leader = yes
+			interest_group = ig_intelligentsia
+			ideology = ideology_liberal_leader
+			traits = {
+				erudite
+			}
+		}
+		create_character = {
+			first_name = smd_cn_nik_abdul_aziz
+			last_name = smd_cn_nik_mat
+			historical = yes
+			ruler = no
+			culture = cu:malay
+			birth_date = 1931.1.10
+			ig_leader = yes
+			interest_group = ig_devout
+			ideology = ideology_conservative_leader
+			traits = {
+				pious
+			}
+		}
+		create_character = {
+			first_name = smd_cn_robert
+			last_name = smd_cn_kuok
+			historical = yes
+			ruler = no
+			culture = cu:han
+			birth_date = 1923.10.6
+			ig_leader = yes
+			interest_group = ig_industrialists
+			ideology = ideology_neoliberal_leader
+			traits = {
+				expert_entrepreneur
+			}
+		}
+		create_character = {
+			first_name = smd_cn_najib
+			last_name = smd_cn_razak
+			historical = yes
+			ruler = no
+			culture = cu:malay
+			birth_date = 1953.7.23
+			ig_leader = yes
+			interest_group = ig_armed_forces
+			ideology = ideology_conservative_leader
+			traits = {
+				ambitious
+			}
+		}
+		create_character = {
+			first_name = smd_cn_ghafar
+			last_name = smd_cn_baba
+			historical = yes
+			ruler = no
+			culture = cu:malay
+			birth_date = 1925.2.18
+			ig_leader = yes
+			interest_group = ig_rural_folk
+			ideology = ideology_moderate_leader
+			traits = {
+				experienced_political_operator
+			}
+		}
+		create_character = {
+			first_name = smd_cn_azlan
+			last_name = smd_cn_shah
+			historical = yes
+			ruler = no
+			culture = cu:malay
+			birth_date = 1928.4.19
+			ig_leader = yes
+			interest_group = ig_landowners
+			ideology = ideology_monarchist_leader
+			traits = {
+				erudite
+			}
+		}
+	}
+	c:THA ?= {
+		create_character = {
+			first_name = smd_cn_chuan
+			last_name = smd_cn_leekpai
+			historical = yes
+			ruler = no
+			culture = cu:thai
+			birth_date = 1938.7.28
+			ig_leader = yes
+			interest_group = ig_petty_bourgeoisie
+			ideology = ideology_moderate_leader
+			traits = {
+				honorable
+			}
+		}
+		create_character = {
+			first_name = smd_cn_anand
+			last_name = smd_cn_panyarachun
+			historical = yes
+			ruler = no
+			culture = cu:thai
+			birth_date = 1932.8.9
+			ig_leader = yes
+			interest_group = ig_professionals
+			ideology = ideology_technocrat_leader
+			traits = {
+				experienced_diplomat
+			}
+		}
+		create_character = {
+			first_name = smd_cn_suchinda
+			last_name = smd_cn_kraprayoon
+			historical = yes
+			ruler = no
+			culture = cu:thai
+			birth_date = 1933.8.6
+			ig_leader = yes
+			interest_group = ig_armed_forces
+			ideology = ideology_authoritarian_capitalist_leader
+			traits = {
+				ambitious
+			}
+		}
+		create_character = {
+			first_name = smd_cn_chamlong
+			last_name = smd_cn_srimuang
+			historical = yes
+			ruler = no
+			culture = cu:thai
+			birth_date = 1935.7.5
+			ig_leader = yes
+			interest_group = ig_devout
+			ideology = ideology_moderate_leader
+			traits = {
+				pious
+			}
+		}
+		create_character = {
+			first_name = smd_cn_sulak
+			last_name = smd_cn_sivaraksa
+			historical = yes
+			ruler = no
+			culture = cu:thai
+			birth_date = 1933.3.27
+			ig_leader = yes
+			interest_group = ig_intelligentsia
+			ideology = ideology_progressive_leader
+			traits = {
+				erudite
+			}
+		}
+		create_character = {
+			first_name = smd_cn_dhanin
+			last_name = smd_cn_chearavanont
+			historical = yes
+			ruler = no
+			culture = cu:han
+			birth_date = 1939.4.19
+			ig_leader = yes
+			interest_group = ig_industrialists
+			ideology = ideology_neoliberal_leader
+			traits = {
+				expert_entrepreneur
+			}
+		}
+		create_character = {
+			first_name = smd_cn_banharn
+			last_name = smd_cn_silpa_archa
+			historical = yes
+			ruler = no
+			culture = cu:thai
+			birth_date = 1932.8.19
+			ig_leader = yes
+			interest_group = ig_rural_folk
+			ideology = ideology_conservative_leader
+			traits = {
+				grifter
+			}
+		}
+	}
+	c:VNM ?= {
+		create_character = {
+			first_name = smd_cn_vo_van
+			last_name = smd_cn_kiet
+			historical = yes
+			ruler = no
+			culture = cu:vietnamese
+			birth_date = 1922.11.23
+			ig_leader = yes
+			interest_group = ig_professionals
+			ideology = ideology_technocrat_leader
+			traits = {
+				experienced_political_operator
+			}
+		}
+		create_character = {
+			first_name = smd_cn_phan_van
+			last_name = smd_cn_khai
+			historical = yes
+			ruler = no
+			culture = cu:vietnamese
+			birth_date = 1933.12.25
+			ig_leader = yes
+			interest_group = ig_industrialists
+			ideology = ideology_state_capitalist_leader
+			traits = {
+				erudite
+			}
+		}
+		create_character = {
+			first_name = smd_cn_nguyen_van
+			last_name = smd_cn_linh
+			historical = yes
+			ruler = no
+			culture = cu:vietnamese
+			birth_date = 1915.7.1
+			ig_leader = yes
+			interest_group = ig_intelligentsia
+			ideology = ideology_state_socialist_leader
+			traits = {
+				experienced_political_operator
+			}
+		}
+		create_character = {
+			first_name = smd_cn_thich_huyen
+			last_name = smd_cn_quang
+			historical = yes
+			ruler = no
+			culture = cu:vietnamese
+			birth_date = 1920.9.19
+			ig_leader = yes
+			interest_group = ig_devout
+			ideology = ideology_moderate_leader
+			traits = {
+				pious
+			}
+		}
+		create_character = {
+			first_name = smd_cn_nong_duc
+			last_name = smd_cn_manh
+			historical = yes
+			ruler = no
+			culture = cu:zhuang
+			birth_date = 1940.9.11
+			ig_leader = yes
+			interest_group = ig_rural_folk
+			ideology = ideology_state_socialist_leader
+			traits = {
+				experienced_political_operator
+			}
+		}
+	}
+	c:MYM ?= {
+		create_character = {
+			first_name = smd_cn_aung_san
+			last_name = smd_cn_suu_kyi
+			historical = yes
+			ruler = no
+			female = yes
+			culture = cu:burmese
+			birth_date = 1945.6.19
+			ig_leader = yes
+			interest_group = ig_petty_bourgeoisie
+			ideology = ideology_liberal_leader
+			traits = {
+				persistent
+			}
+		}
+		create_character = {
+			first_name = smd_cn_u
+			last_name = smd_cn_nu
+			historical = yes
+			ruler = no
+			culture = cu:burmese
+			birth_date = 1907.5.25
+			ig_leader = yes
+			interest_group = ig_devout
+			ideology = ideology_moderate_leader
+			traits = {
+				pious
+			}
+		}
+		create_character = {
+			first_name = smd_cn_tin
+			last_name = smd_cn_oo
+			historical = yes
+			ruler = no
+			culture = cu:burmese
+			birth_date = 1927.3.11
+			ig_leader = yes
+			interest_group = ig_intelligentsia
+			ideology = ideology_liberal_leader
+			traits = {
+				honorable
+			}
+		}
+		create_character = {
+			first_name = smd_cn_khin
+			last_name = smd_cn_nyunt
+			historical = yes
+			ruler = no
+			culture = cu:burmese
+			birth_date = 1939.10.11
+			ig_leader = yes
+			interest_group = ig_professionals
+			ideology = ideology_authoritarian_capitalist_leader
+			traits = {
+				meticulous
+			}
+		}
+		create_character = {
+			first_name = smd_cn_khun
+			last_name = smd_cn_sa
+			historical = yes
+			ruler = no
+			culture = cu:shan
+			birth_date = 1934.2.17
+			ig_leader = yes
+			interest_group = ig_landowners
+			ideology = ideology_authoritarian_capitalist_leader
+			traits = {
+				ruthless
+			}
+		}
+	}
+	c:AUZ ?= {
+		create_character = {
+			first_name = john
+			last_name = howard
+			historical = yes
+			ruler = no
+			culture = cu:australian
+			birth_date = 1939.7.26
+			ig_leader = yes
+			interest_group = ig_petty_bourgeoisie
+			ideology = ideology_conservative_leader
+			traits = {
+				persistent
+			}
+		}
+		create_character = {
+			first_name = smd_cn_bob
+			last_name = smd_cn_brown
+			historical = yes
+			ruler = no
+			culture = cu:australian
+			birth_date = 1944.12.27
+			ig_leader = yes
+			interest_group = ig_intelligentsia
+			ideology = ideology_green_leader
+			traits = {
+				persistent
+			}
+		}
+		create_character = {
+			first_name = smd_cn_edward
+			last_name = smd_cn_clancy
+			historical = yes
+			ruler = no
+			culture = cu:australian
+			birth_date = 1923.12.13
+			ig_leader = yes
+			interest_group = ig_devout
+			ideology = ideology_conservative_leader
+			traits = {
+				pious
+			}
+		}
+		create_character = {
+			first_name = smd_cn_kerry
+			last_name = smd_cn_packer
+			historical = yes
+			ruler = no
+			culture = cu:australian
+			birth_date = 1937.12.17
+			ig_leader = yes
+			interest_group = ig_industrialists
+			ideology = ideology_neoliberal_leader
+			traits = {
+				expert_entrepreneur
+			}
+		}
+		create_character = {
+			first_name = smd_cn_robert
+			last_name = smd_cn_ray
+			historical = yes
+			ruler = no
+			culture = cu:australian
+			birth_date = 1947.4.8
+			ig_leader = yes
+			interest_group = ig_armed_forces
+			ideology = ideology_moderate_leader
+			traits = {
+				experienced_political_operator
+			}
+		}
+		create_character = {
+			first_name = smd_cn_gina
+			last_name = smd_cn_rinehart
+			historical = yes
+			ruler = no
+			female = yes
+			culture = cu:australian
+			birth_date = 1954.2.9
+			ig_leader = yes
+			interest_group = ig_landowners
+			ideology = ideology_neoliberal_leader
+			traits = {
+				expert_entrepreneur
+			}
+		}
+	}
+	c:NZL ?= {
+		create_character = {
+			first_name = smd_cn_helen
+			last_name = smd_cn_clark
+			historical = yes
+			ruler = no
+			female = yes
+			culture = cu:kiwi
+			birth_date = 1950.2.26
+			ig_leader = yes
+			interest_group = ig_intelligentsia
+			ideology = ideology_progressive_leader
+			traits = {
+				meticulous
+			}
+		}
+		create_character = {
+			first_name = smd_cn_mike
+			last_name = smd_cn_moore
+			historical = yes
+			ruler = no
+			culture = cu:kiwi
+			birth_date = 1949.1.28
+			ig_leader = yes
+			interest_group = ig_trade_unions
+			ideology = ideology_democratic_socialist_leader
+			traits = {
+				experienced_political_operator
+			}
+		}
+		create_character = {
+			first_name = smd_cn_ruth
+			last_name = smd_cn_richardson
+			historical = yes
+			ruler = no
+			female = yes
+			culture = cu:kiwi
+			birth_date = 1950.12.13
+			ig_leader = yes
+			interest_group = ig_professionals
+			ideology = ideology_neoliberal_leader
+			traits = {
+				ruthless
+			}
+		}
+		create_character = {
+			first_name = smd_cn_roger
+			last_name = smd_cn_douglas
+			historical = yes
+			ruler = no
+			culture = cu:kiwi
+			birth_date = 1937.12.5
+			ig_leader = yes
+			interest_group = ig_industrialists
+			ideology = ideology_neoliberal_leader
+			traits = {
+				innovative
+			}
+		}
+		create_character = {
+			first_name = smd_cn_winston
+			last_name = smd_cn_peters
+			historical = yes
+			ruler = no
+			culture = cu:maori
+			birth_date = 1945.4.11
+			ig_leader = yes
+			interest_group = ig_rural_folk
+			ideology = ideology_right_wing_populist_leader
+			traits = {
+				demagogue
+			}
+		}
+		create_character = {
+			first_name = smd_cn_te_atairangikaahu
+			last_name = smd_cn_te_arikinui
+			historical = yes
+			ruler = no
+			female = yes
+			culture = cu:maori
+			birth_date = 1931.7.23
+			ig_leader = yes
+			interest_group = ig_landowners
+			ideology = ideology_monarchist_leader
+			traits = {
+				honorable
+			}
+		}
+	}
+	c:PHP ?= {
+		create_character = {
+			first_name = smd_cn_joseph
+			last_name = smd_cn_estrada
+			historical = yes
+			ruler = no
+			culture = cu:tagalog
+			birth_date = 1937.4.19
+			ig_leader = yes
+			interest_group = ig_petty_bourgeoisie
+			ideology = ideology_right_wing_populist_leader
+			traits = {
+				charismatic
+			}
+		}
+		create_character = {
+			first_name = smd_cn_fidel
+			last_name = smd_cn_ramos
+			historical = yes
+			ruler = no
+			culture = cu:filipino
+			birth_date = 1928.3.18
+			ig_leader = yes
+			interest_group = ig_armed_forces
+			ideology = ideology_moderate_leader
+			traits = {
+				experienced_political_operator
+			}
+		}
+		create_character = {
+			first_name = smd_cn_miriam
+			last_name = smd_cn_defensor_santiago
+			historical = yes
+			ruler = no
+			female = yes
+			culture = cu:visayan
+			birth_date = 1945.6.15
+			ig_leader = yes
+			interest_group = ig_intelligentsia
+			ideology = ideology_liberal_leader
+			traits = {
+				firebrand
+			}
+		}
+		create_character = {
+			first_name = smd_cn_crispin
+			last_name = smd_cn_beltran
+			historical = yes
+			ruler = no
+			culture = cu:tagalog
+			birth_date = 1933.1.7
+			ig_leader = yes
+			interest_group = ig_trade_unions
+			ideology = ideology_democratic_socialist_leader
+			traits = {
+				persistent
+			}
+		}
+		create_character = {
+			first_name = smd_cn_lucio
+			last_name = smd_cn_tan
+			historical = yes
+			ruler = no
+			culture = cu:han
+			birth_date = 1934.7.17
+			ig_leader = yes
+			interest_group = ig_industrialists
+			ideology = ideology_neoliberal_leader
+			traits = {
+				expert_entrepreneur
+			}
+		}
+		create_character = {
+			first_name = smd_cn_gloria
+			last_name = smd_cn_macapagal_arroyo
+			historical = yes
+			ruler = no
+			female = yes
+			culture = cu:tagalog
+			birth_date = 1947.4.5
+			ig_leader = yes
+			interest_group = ig_professionals
+			ideology = ideology_neoliberal_leader
+			traits = {
+				ambitious
+			}
+		}
+		create_character = {
+			first_name = smd_cn_jose_maria
+			last_name = smd_cn_sison
+			historical = yes
+			ruler = no
+			culture = cu:ilocano
+			birth_date = 1939.2.8
+			ig_leader = yes
+			interest_group = ig_rural_folk
+			ideology = ideology_marxist_leader
+			traits = {
+				firebrand
+			}
+		}
+		create_character = {
+			first_name = smd_cn_eduardo
+			last_name = smd_cn_cojuangco
+			historical = yes
+			ruler = no
+			culture = cu:filipino_mestizo
+			birth_date = 1935.6.10
+			ig_leader = yes
+			interest_group = ig_landowners
+			ideology = ideology_conservative_leader
+			traits = {
+				expert_entrepreneur
+			}
+		}
+	}
+	c:ZMB ?= {
+		create_character = {
+			first_name = smd_cn_edgar
+			last_name = smd_cn_tekere
+			historical = yes
+			ruler = no
+			culture = cu:shona
+			birth_date = 1937.4.1
+			ig_leader = yes
+			interest_group = ig_petty_bourgeoisie
+			ideology = ideology_left_wing_populist_leader
+			traits = {
+				firebrand
+			}
+		}
+		create_character = {
+			first_name = smd_cn_morgan
+			last_name = smd_cn_tsvangirai
+			historical = yes
+			ruler = no
+			culture = cu:shona
+			birth_date = 1952.3.10
+			ig_leader = yes
+			interest_group = ig_trade_unions
+			ideology = ideology_democratic_socialist_leader
+			traits = {
+				brave
+			}
+		}
+		create_character = {
+			first_name = smd_cn_joshua
+			last_name = smd_cn_nkomo
+			historical = yes
+			ruler = no
+			culture = cu:nguni
+			birth_date = 1917.6.19
+			ig_leader = yes
+			interest_group = ig_intelligentsia
+			ideology = ideology_moderate_leader
+			traits = {
+				imposing
+			}
+		}
+		create_character = {
+			first_name = smd_cn_emmerson
+			last_name = smd_cn_mnangagwa
+			historical = yes
+			ruler = no
+			culture = cu:shona
+			birth_date = 1942.9.15
+			ig_leader = yes
+			interest_group = ig_armed_forces
+			ideology = ideology_authoritarian_capitalist_leader
+			traits = {
+				ruthless
+			}
+		}
+		create_character = {
+			first_name = smd_cn_ian
+			last_name = smd_cn_smith
+			historical = yes
+			ruler = no
+			culture = cu:british
+			birth_date = 1919.4.8
+			ig_leader = yes
+			interest_group = ig_landowners
+			ideology = ideology_right_wing_populist_leader
+			traits = {
+				persistent
+			}
+		}
+		create_character = {
+			first_name = smd_cn_strive
+			last_name = smd_cn_masiyiwa
+			historical = yes
+			ruler = no
+			culture = cu:shona
+			birth_date = 1961.1.29
+			ig_leader = yes
+			interest_group = ig_industrialists
+			ideology = ideology_neoliberal_leader
+			traits = {
+				innovative
+			}
+		}
+		create_character = {
+			first_name = smd_cn_abel
+			last_name = smd_cn_muzorewa
+			historical = yes
+			ruler = no
+			culture = cu:shona
+			birth_date = 1925.4.14
+			ig_leader = yes
+			interest_group = ig_devout
+			ideology = ideology_conservative_leader
+			traits = {
+				pious
+			}
+		}
+		create_character = {
+			first_name = smd_cn_bernard
+			last_name = smd_cn_chidzero
+			historical = yes
+			ruler = no
+			culture = cu:shona
+			birth_date = 1927.7.2
+			ig_leader = yes
+			interest_group = ig_professionals
+			ideology = ideology_technocrat_leader
+			traits = {
+				erudite
+			}
+		}
+	}
+	c:TNZ ?= {
+		create_character = {
+			first_name = smd_cn_augustine
+			last_name = smd_cn_mrema
+			historical = yes
+			ruler = no
+			culture = cu:swahili
+			birth_date = 1944.12.31
+			ig_leader = yes
+			interest_group = ig_petty_bourgeoisie
+			ideology = ideology_left_wing_populist_leader
+			traits = {
+				demagogue
+			}
+		}
+		create_character = {
+			first_name = smd_cn_julius
+			last_name = smd_cn_nyerere
+			historical = yes
+			ruler = no
+			culture = cu:swahili
+			birth_date = 1922.4.13
+			ig_leader = yes
+			interest_group = ig_intelligentsia
+			ideology = ideology_democratic_socialist_leader
+			traits = {
+				honorable
+			}
+		}
+		create_character = {
+			first_name = smd_cn_laurean
+			last_name = smd_cn_rugambwa
+			historical = yes
+			ruler = no
+			culture = cu:swahili
+			birth_date = 1912.7.12
+			ig_leader = yes
+			interest_group = ig_devout
+			ideology = ideology_conservative_leader
+			traits = {
+				pious
+			}
+		}
+		create_character = {
+			first_name = smd_cn_kingunge
+			last_name = smd_cn_ngombale_mwiru
+			historical = yes
+			ruler = no
+			culture = cu:swahili
+			birth_date = 1930.5.30
+			ig_leader = yes
+			interest_group = ig_trade_unions
+			ideology = ideology_state_socialist_leader
+			traits = {
+				experienced_political_operator
+			}
+		}
+		create_character = {
+			first_name = smd_cn_abdulrahman
+			last_name = smd_cn_kinana
+			historical = yes
+			ruler = no
+			culture = cu:swahili
+			birth_date = 1952.1.1
+			ig_leader = yes
+			interest_group = ig_armed_forces
+			ideology = ideology_moderate_leader
+			traits = {
+				cautious
+			}
+		}
+		create_character = {
+			first_name = john
+			last_name = smd_cn_malecela
+			historical = yes
+			ruler = no
+			culture = cu:swahili
+			birth_date = 1934.4.20
+			ig_leader = yes
+			interest_group = ig_rural_folk
+			ideology = ideology_moderate_leader
+			traits = {
+				experienced_political_operator
+			}
+		}
+		create_character = {
+			first_name = smd_cn_reginald
+			last_name = smd_cn_mengi
+			historical = yes
+			ruler = no
+			culture = cu:swahili
+			birth_date = 1944.5.29
+			ig_leader = yes
+			interest_group = ig_industrialists
+			ideology = ideology_neoliberal_leader
+			traits = {
+				expert_entrepreneur
+			}
+		}
+	}
+	c:UGA ?= {
+		create_character = {
+			first_name = paul
+			last_name = smd_cn_ssemogerere
+			historical = yes
+			ruler = no
+			culture = cu:baganda
+			birth_date = 1932.2.1
+			ig_leader = yes
+			interest_group = ig_petty_bourgeoisie
+			ideology = ideology_moderate_leader
+			traits = {
+				experienced_political_operator
+			}
+		}
+		create_character = {
+			first_name = smd_cn_emmanuel
+			last_name = smd_cn_wamala
+			historical = yes
+			ruler = no
+			culture = cu:baganda
+			birth_date = 1926.12.15
+			ig_leader = yes
+			interest_group = ig_devout
+			ideology = ideology_conservative_leader
+			traits = {
+				pious
+			}
+		}
+		create_character = {
+			first_name = smd_cn_mahmood
+			last_name = smd_cn_mamdani
+			historical = yes
+			ruler = no
+			culture = cu:gujarati
+			birth_date = 1946.4.23
+			ig_leader = yes
+			interest_group = ig_intelligentsia
+			ideology = ideology_progressive_leader
+			traits = {
+				erudite
+			}
+		}
+		create_character = {
+			first_name = smd_cn_ronald
+			last_name = smd_cn_mutebi_ii
+			historical = yes
+			ruler = no
+			culture = cu:baganda
+			birth_date = 1955.4.13
+			ig_leader = yes
+			interest_group = ig_landowners
+			ideology = ideology_monarchist_leader
+			traits = {
+				reserved
+			}
+		}
+		create_character = {
+			first_name = smd_cn_milton
+			last_name = smd_cn_obote
+			historical = yes
+			ruler = no
+			culture = cu:nilotic
+			birth_date = 1925.12.28
+			ig_leader = yes
+			interest_group = ig_rural_folk
+			ideology = ideology_state_socialist_leader
+			traits = {
+				ruthless
+			}
+		}
+	}
+	c:SML ?= {
+		create_character = {
+			first_name = smd_cn_ali_mahdi
+			last_name = smd_cn_muhammad
+			historical = yes
+			ruler = yes
+			culture = cu:somali
+			birth_date = 1938.1.1
+			ig_leader = yes
+			interest_group = ig_petty_bourgeoisie
+			ideology = ideology_moderate_leader
+			traits = {
+				experienced_entrepreneur
+			}
+		}
+		create_character = {
+			first_name = smd_cn_mohamed_farrah
+			last_name = smd_cn_aidid
+			historical = yes
+			ruler = no
+			culture = cu:somali
+			birth_date = 1934.12.15
+			ig_leader = yes
+			interest_group = ig_armed_forces
+			ideology = ideology_authoritarian_capitalist_leader
+			traits = {
+				ruthless
+			}
+		}
+		create_character = {
+			first_name = smd_cn_abdullahi
+			last_name = smd_cn_yusuf_ahmed
+			historical = yes
+			ruler = no
+			culture = cu:somali
+			birth_date = 1934.12.15
+			ig_leader = yes
+			interest_group = ig_rural_folk
+			ideology = ideology_authoritarian_capitalist_leader
+			traits = {
+				brave
+			}
+		}
+		create_character = {
+			first_name = smd_cn_hassan_dahir
+			last_name = smd_cn_aweys
+			historical = yes
+			ruler = no
+			culture = cu:somali
+			birth_date = 1935.1.1
+			ig_leader = yes
+			interest_group = ig_devout
+			ideology = ideology_conservative_leader
+			traits = {
+				pious
+			}
+		}
+	}
+	c:PEU ?= {
+		create_character = {
+			first_name = smd_cn_mario
+			last_name = smd_cn_vargas_llosa
+			historical = yes
+			ruler = no
+			culture = cu:peruvian
+			birth_date = 1936.3.28
+			ig_leader = yes
+			interest_group = ig_intelligentsia
+			ideology = ideology_classical_liberal_leader
+			traits = {
+				literary
+			}
+		}
+		create_character = {
+			first_name = smd_cn_juan
+			last_name = smd_cn_landazuri_ricketts
+			historical = yes
+			ruler = no
+			culture = cu:peruvian
+			birth_date = 1913.12.19
+			ig_leader = yes
+			interest_group = ig_devout
+			ideology = ideology_moderate_leader
+			traits = {
+				pious
+			}
+		}
+		create_character = {
+			first_name = smd_cn_alfonso
+			last_name = smd_cn_barrantes
+			historical = yes
+			ruler = no
+			culture = cu:peruvian
+			birth_date = 1927.11.30
+			ig_leader = yes
+			interest_group = ig_trade_unions
+			ideology = ideology_democratic_socialist_leader
+			traits = {
+				experienced_political_operator
+			}
+		}
+		create_character = {
+			first_name = smd_cn_dionisio
+			last_name = smd_cn_romero
+			historical = yes
+			ruler = no
+			culture = cu:peruvian
+			birth_date = 1936.1.1
+			ig_leader = yes
+			interest_group = ig_industrialists
+			ideology = ideology_neoliberal_leader
+			traits = {
+				expert_entrepreneur
+			}
+		}
+		create_character = {
+			first_name = smd_cn_vladimiro
+			last_name = smd_cn_montesinos
+			historical = yes
+			ruler = no
+			culture = cu:peruvian
+			birth_date = 1945.5.20
+			ig_leader = yes
+			interest_group = ig_armed_forces
+			ideology = ideology_authoritarian_capitalist_leader
+			traits = {
+				grifter
+			}
+		}
+		create_character = {
+			first_name = smd_cn_alan
+			last_name = smd_cn_garcia
+			historical = yes
+			ruler = no
+			culture = cu:peruvian
+			birth_date = 1949.5.23
+			ig_leader = yes
+			interest_group = ig_rural_folk
+			ideology = ideology_left_wing_populist_leader
+			traits = {
+				charismatic
+			}
+		}
+		create_character = {
+			first_name = smd_cn_carlos
+			last_name = smd_cn_bolona
+			historical = yes
+			ruler = no
+			culture = cu:peruvian
+			birth_date = 1950.1.1
+			ig_leader = yes
+			interest_group = ig_professionals
+			ideology = ideology_neoliberal_leader
+			traits = {
+				erudite
+			}
+		}
+		create_character = {
+			first_name = smd_cn_luis
+			last_name = smd_cn_bedoya_reyes
+			historical = yes
+			ruler = no
+			culture = cu:peruvian
+			birth_date = 1919.2.20
+			ig_leader = yes
+			interest_group = ig_landowners
+			ideology = ideology_conservative_leader
+			traits = {
+				experienced_political_operator
+			}
+		}
+	}
+	c:XEC ?= {
+		create_character = {
+			first_name = smd_cn_sixto
+			last_name = smd_cn_duran_ballen
+			historical = yes
+			ruler = no
+			culture = cu:ecuadorian
+			birth_date = 1921.7.14
+			ig_leader = yes
+			interest_group = ig_petty_bourgeoisie
+			ideology = ideology_conservative_leader
+			traits = {
+				experienced_political_operator
+			}
+		}
+		create_character = {
+			first_name = smd_cn_abdala
+			last_name = smd_cn_bucaram
+			historical = yes
+			ruler = no
+			culture = cu:ecuadorian
+			birth_date = 1952.2.20
+			ig_leader = yes
+			interest_group = ig_rural_folk
+			ideology = ideology_left_wing_populist_leader
+			traits = {
+				demagogue
+			}
+		}
+		create_character = {
+			first_name = smd_cn_alvaro
+			last_name = smd_cn_noboa
+			historical = yes
+			ruler = no
+			culture = cu:ecuadorian
+			birth_date = 1950.11.21
+			ig_leader = yes
+			interest_group = ig_industrialists
+			ideology = ideology_neoliberal_leader
+			traits = {
+				expert_entrepreneur
+			}
+		}
+		create_character = {
+			first_name = smd_cn_jaime
+			last_name = smd_cn_nebot
+			historical = yes
+			ruler = no
+			culture = cu:ecuadorian
+			birth_date = 1946.10.21
+			ig_leader = yes
+			interest_group = ig_landowners
+			ideology = ideology_conservative_leader
+			traits = {
+				experienced_political_operator
+			}
+		}
+	}
+	c:MOR ?= {
+		create_character = {
+			template = MOR_hassan_ii
+		}
+		create_character = {
+			first_name = smd_cn_abderrahmane
+			last_name = smd_cn_youssoufi
+			historical = yes
+			ruler = no
+			culture = cu:maghrebi
+			birth_date = 1924.3.8
+			ig_leader = yes
+			interest_group = ig_trade_unions
+			ideology = ideology_democratic_socialist_leader
+			traits = {
+				honorable
+			}
+		}
+		create_character = {
+			first_name = smd_cn_abdessalam
+			last_name = smd_cn_yassine
+			historical = yes
+			ruler = no
+			culture = cu:maghrebi
+			birth_date = 1928.9.1
+			ig_leader = yes
+			interest_group = ig_devout
+			ideology = ideology_conservative_leader
+			traits = {
+				pious
+			}
+		}
+		create_character = {
+			first_name = smd_cn_driss
+			last_name = smd_cn_basri
+			historical = yes
+			ruler = no
+			culture = cu:maghrebi
+			birth_date = 1938.11.8
+			ig_leader = yes
+			interest_group = ig_armed_forces
+			ideology = ideology_authoritarian_capitalist_leader
+			traits = {
+				ruthless
+			}
+		}
+		create_character = {
+			first_name = smd_cn_mhamed
+			last_name = smd_cn_boucetta
+			historical = yes
+			ruler = no
+			culture = cu:maghrebi
+			birth_date = 1925.11.1
+			ig_leader = yes
+			interest_group = ig_petty_bourgeoisie
+			ideology = ideology_conservative_leader
+			traits = {
+				experienced_political_operator
+			}
+		}
+		create_character = {
+			first_name = smd_cn_othman
+			last_name = smd_cn_benjelloun
+			historical = yes
+			ruler = no
+			culture = cu:maghrebi
+			birth_date = 1932.11.1
+			ig_leader = yes
+			interest_group = ig_industrialists
+			ideology = ideology_neoliberal_leader
+			traits = {
+				expert_entrepreneur
+			}
+		}
+		create_character = {
+			first_name = smd_cn_mohand
+			last_name = smd_cn_laenser
+			historical = yes
+			ruler = no
+			culture = cu:berber
+			birth_date = 1942.1.1
+			ig_leader = yes
+			interest_group = ig_rural_folk
+			ideology = ideology_conservative_leader
+			traits = {
+				experienced_political_operator
+			}
+		}
+		create_character = {
+			first_name = smd_cn_abdallah
+			last_name = smd_cn_laroui
+			historical = yes
+			ruler = no
+			culture = cu:maghrebi
+			birth_date = 1933.11.7
+			ig_leader = yes
+			interest_group = ig_intelligentsia
+			ideology = ideology_liberal_leader
+			traits = {
+				erudite
+			}
+		}
+		create_character = {
+			first_name = smd_cn_karim
+			last_name = smd_cn_lamrani
+			historical = yes
+			ruler = no
+			culture = cu:maghrebi
+			birth_date = 1919.5.1
+			ig_leader = yes
+			interest_group = ig_professionals
+			ideology = ideology_technocrat_leader
+			traits = {
+				erudite
+			}
+		}
+	}
+	c:XPO ?= {
+		create_character = {
+			first_name = smd_cn_anibal
+			last_name = smd_cn_cavaco_silva
+			historical = yes
+			ruler = no
+			culture = cu:portuguese
+			birth_date = 1939.7.15
+			ig_leader = yes
+			interest_group = ig_petty_bourgeoisie
+			ideology = ideology_neoliberal_leader
+			traits = {
+				meticulous
+			}
+		}
+		create_character = {
+			first_name = smd_cn_antonio_pt
+			last_name = smd_cn_ribeiro
+			historical = yes
+			ruler = no
+			culture = cu:portuguese
+			birth_date = 1928.5.21
+			ig_leader = yes
+			interest_group = ig_devout
+			ideology = ideology_moderate_leader
+			traits = {
+				pious
+			}
+		}
+		create_character = {
+			first_name = smd_cn_alvaro
+			last_name = smd_cn_cunhal
+			historical = yes
+			ruler = no
+			culture = cu:portuguese
+			birth_date = 1913.11.10
+			ig_leader = yes
+			interest_group = ig_trade_unions
+			ideology = ideology_state_socialist_leader
+			traits = {
+				persistent
+			}
+		}
+		create_character = {
+			first_name = smd_cn_antonio_pt
+			last_name = smd_cn_guterres
+			historical = yes
+			ruler = no
+			culture = cu:portuguese
+			birth_date = 1949.4.30
+			ig_leader = yes
+			interest_group = ig_professionals
+			ideology = ideology_progressive_leader
+			traits = {
+				erudite
+			}
+		}
+		create_character = {
+			first_name = smd_cn_belmiro
+			last_name = smd_cn_de_azevedo
+			historical = yes
+			ruler = no
+			culture = cu:portuguese
+			birth_date = 1938.2.17
+			ig_leader = yes
+			interest_group = ig_industrialists
+			ideology = ideology_neoliberal_leader
+			traits = {
+				expert_entrepreneur
+			}
+		}
+		create_character = {
+			first_name = smd_cn_fernando
+			last_name = smd_cn_nogueira
+			historical = yes
+			ruler = no
+			culture = cu:portuguese
+			birth_date = 1950.1.1
+			ig_leader = yes
+			interest_group = ig_armed_forces
+			ideology = ideology_conservative_leader
+			traits = {
+				cautious
+			}
+		}
+		create_character = {
+			first_name = smd_cn_diogo
+			last_name = smd_cn_freitas_do_amaral
+			historical = yes
+			ruler = no
+			culture = cu:portuguese
+			birth_date = 1941.7.21
+			ig_leader = yes
+			interest_group = ig_rural_folk
+			ideology = ideology_conservative_leader
+			traits = {
+				erudite
+			}
+		}
+		create_character = {
+			first_name = smd_cn_duarte_pio
+			last_name = smd_cn_de_braganca
+			historical = yes
+			ruler = no
+			culture = cu:portuguese
+			birth_date = 1945.5.15
+			ig_leader = yes
+			interest_group = ig_landowners
+			ideology = ideology_monarchist_leader
+			traits = {
+				honorable
+			}
+		}
+	}
+	c:SWS ?= {
+		create_character = {
+			first_name = smd_cn_christoph
+			last_name = smd_cn_blocher
+			historical = yes
+			ruler = no
+			culture = cu:alemannic
+			birth_date = 1940.10.11
+			ig_leader = yes
+			interest_group = ig_petty_bourgeoisie
+			ideology = ideology_right_wing_populist_leader
+			traits = {
+				demagogue
+			}
+		}
+		create_character = {
+			first_name = smd_cn_ruth
+			last_name = smd_cn_dreifuss
+			historical = yes
+			ruler = no
+			female = yes
+			culture = cu:french
+			birth_date = 1940.1.9
+			ig_leader = yes
+			interest_group = ig_trade_unions
+			ideology = ideology_democratic_socialist_leader
+			traits = {
+				experienced_political_operator
+			}
+		}
+		create_character = {
+			first_name = smd_cn_jean
+			last_name = smd_cn_ziegler
+			historical = yes
+			ruler = no
+			culture = cu:alemannic
+			birth_date = 1934.4.19
+			ig_leader = yes
+			interest_group = ig_intelligentsia
+			ideology = ideology_democratic_socialist_leader
+			traits = {
+				firebrand
+			}
+		}
+		create_character = {
+			first_name = smd_cn_wolfgang
+			last_name = smd_cn_haas
+			historical = yes
+			ruler = no
+			culture = cu:alemannic
+			birth_date = 1948.8.7
+			ig_leader = yes
+			interest_group = ig_devout
+			ideology = ideology_conservative_leader
+			traits = {
+				pious
+			}
+		}
+		create_character = {
+			first_name = smd_cn_stephan
+			last_name = smd_cn_schmidheiny
+			historical = yes
+			ruler = no
+			culture = cu:alemannic
+			birth_date = 1947.10.29
+			ig_leader = yes
+			interest_group = ig_industrialists
+			ideology = ideology_neoliberal_leader
+			traits = {
+				expert_entrepreneur
+			}
+		}
+		create_character = {
+			first_name = smd_cn_kaspar
+			last_name = smd_cn_villiger
+			historical = yes
+			ruler = no
+			culture = cu:alemannic
+			birth_date = 1941.2.5
+			ig_leader = yes
+			interest_group = ig_armed_forces
+			ideology = ideology_moderate_leader
+			traits = {
+				meticulous
+			}
+		}
+		create_character = {
+			first_name = smd_cn_adolf
+			last_name = smd_cn_ogi
+			historical = yes
+			ruler = no
+			culture = cu:alemannic
+			birth_date = 1942.7.18
+			ig_leader = yes
+			interest_group = ig_rural_folk
+			ideology = ideology_moderate_leader
+			traits = {
+				charismatic
+			}
+		}
+		create_character = {
+			first_name = smd_cn_flavio
+			last_name = smd_cn_cotti
+			historical = yes
+			ruler = no
+			culture = cu:north_italian
+			birth_date = 1939.10.18
+			ig_leader = yes
+			interest_group = ig_landowners
+			ideology = ideology_conservative_leader
+			traits = {
+				experienced_political_operator
+			}
+		}
+	}
+	c:HRV ?= {
+		create_character = {
+			first_name = smd_cn_drazen
+			last_name = smd_cn_budisa
+			historical = yes
+			ruler = no
+			culture = cu:croat
+			birth_date = 1948.7.25
+			ig_leader = yes
+			interest_group = ig_intelligentsia
+			ideology = ideology_liberal_leader
+			traits = {
+				experienced_political_operator
+			}
+		}
+		create_character = {
+			first_name = franjo
+			last_name = smd_cn_kuharic
+			historical = yes
+			ruler = no
+			culture = cu:croat
+			birth_date = 1919.4.15
+			ig_leader = yes
+			interest_group = ig_devout
+			ideology = ideology_conservative_leader
+			traits = {
+				pious
+			}
+		}
+		create_character = {
+			first_name = smd_cn_ivica
+			last_name = smd_cn_racan
+			historical = yes
+			ruler = no
+			culture = cu:croat
+			birth_date = 1944.2.24
+			ig_leader = yes
+			interest_group = ig_trade_unions
+			ideology = ideology_democratic_socialist_leader
+			traits = {
+				experienced_political_operator
+			}
+		}
+		create_character = {
+			first_name = smd_cn_ivica
+			last_name = smd_cn_todoric
+			historical = yes
+			ruler = no
+			culture = cu:croat
+			birth_date = 1951.1.2
+			ig_leader = yes
+			interest_group = ig_industrialists
+			ideology = ideology_neoliberal_leader
+			traits = {
+				expert_entrepreneur
+			}
+		}
+		create_character = {
+			first_name = smd_cn_gojko
+			last_name = smd_cn_susak
+			historical = yes
+			ruler = no
+			culture = cu:croat
+			birth_date = 1945.3.16
+			ig_leader = yes
+			interest_group = ig_armed_forces
+			ideology = ideology_right_wing_populist_leader
+			traits = {
+				ruthless
+			}
+		}
+		create_character = {
+			first_name = smd_cn_hrvoje
+			last_name = smd_cn_sarinic
+			historical = yes
+			ruler = no
+			culture = cu:croat
+			birth_date = 1935.2.17
+			ig_leader = yes
+			interest_group = ig_professionals
+			ideology = ideology_technocrat_leader
+			traits = {
+				erudite
+			}
+		}
+		create_character = {
+			first_name = smd_cn_drago
+			last_name = smd_cn_stipac
+			historical = yes
+			ruler = no
+			culture = cu:croat
+			birth_date = 1950.1.1
+			ig_leader = yes
+			interest_group = ig_rural_folk
+			ideology = ideology_moderate_leader
+			traits = {
+				experienced_political_operator
+			}
+		}
+		create_character = {
+			first_name = smd_cn_dobroslav
+			last_name = smd_cn_paraga
+			historical = yes
+			ruler = no
+			culture = cu:croat
+			birth_date = 1960.12.9
+			ig_leader = yes
+			interest_group = ig_landowners
+			ideology = ideology_right_wing_populist_leader
+			traits = {
+				firebrand
+			}
+		}
+	}
+	c:YUG ?= {
+		create_character = {
+			first_name = smd_cn_milan
+			last_name = smd_cn_panic
+			historical = yes
+			ruler = no
+			culture = cu:serb
+			birth_date = 1929.12.20
+			ig_leader = yes
+			interest_group = ig_petty_bourgeoisie
+			ideology = ideology_neoliberal_leader
+			traits = {
+				expert_entrepreneur
+			}
+		}
+		create_character = {
+			first_name = smd_cn_dobrica
+			last_name = smd_cn_cosic
+			historical = yes
+			ruler = no
+			culture = cu:serb
+			birth_date = 1921.12.29
+			ig_leader = yes
+			interest_group = ig_intelligentsia
+			ideology = ideology_right_wing_populist_leader
+			traits = {
+				literary
+			}
+		}
+		create_character = {
+			first_name = smd_cn_pavle
+			last_name = smd_cn_stojcevic
+			historical = yes
+			ruler = no
+			culture = cu:serb
+			birth_date = 1914.9.11
+			ig_leader = yes
+			interest_group = ig_devout
+			ideology = ideology_conservative_leader
+			traits = {
+				pious
+			}
+		}
+		create_character = {
+			first_name = smd_cn_mirjana
+			last_name = smd_cn_markovic
+			historical = yes
+			ruler = no
+			female = yes
+			culture = cu:serb
+			birth_date = 1942.7.10
+			ig_leader = yes
+			interest_group = ig_trade_unions
+			ideology = ideology_state_socialist_leader
+			traits = {
+				ambitious
+			}
+		}
+		create_character = {
+			first_name = smd_cn_bogoljub
+			last_name = smd_cn_karic
+			historical = yes
+			ruler = no
+			culture = cu:serb
+			birth_date = 1954.1.17
+			ig_leader = yes
+			interest_group = ig_industrialists
+			ideology = ideology_neoliberal_leader
+			traits = {
+				expert_entrepreneur
+			}
+		}
+		create_character = {
+			first_name = smd_cn_momcilo
+			last_name = smd_cn_perisic
+			historical = yes
+			ruler = no
+			culture = cu:serb
+			birth_date = 1944.5.22
+			ig_leader = yes
+			interest_group = ig_armed_forces
+			ideology = ideology_authoritarian_capitalist_leader
+			traits = {
+				cautious
+			}
+		}
+		create_character = {
+			first_name = smd_cn_dragoslav
+			last_name = smd_cn_avramovic
+			historical = yes
+			ruler = no
+			culture = cu:serb
+			birth_date = 1919.10.14
+			ig_leader = yes
+			interest_group = ig_professionals
+			ideology = ideology_technocrat_leader
+			traits = {
+				erudite
+			}
+		}
+		create_character = {
+			first_name = smd_cn_vuk
+			last_name = smd_cn_draskovic
+			historical = yes
+			ruler = no
+			culture = cu:serb
+			birth_date = 1946.11.29
+			ig_leader = yes
+			interest_group = ig_landowners
+			ideology = ideology_monarchist_leader
+			traits = {
+				inspirational_orator
+			}
+		}
+	}
+	c:GRK ?= {
+		create_character = {
+			first_name = smd_cn_antonis
+			last_name = smd_cn_samaras
+			historical = yes
+			ruler = no
+			culture = cu:greek
+			birth_date = 1951.5.23
+			ig_leader = yes
+			interest_group = ig_petty_bourgeoisie
+			ideology = ideology_right_wing_populist_leader
+			traits = {
+				ambitious
+			}
+		}
+		create_character = {
+			first_name = smd_cn_andreas
+			last_name = smd_cn_papandreou
+			historical = yes
+			ruler = no
+			culture = cu:greek
+			birth_date = 1919.2.5
+			ig_leader = yes
+			interest_group = ig_trade_unions
+			ideology = ideology_democratic_socialist_leader
+			traits = {
+				charismatic
+			}
+		}
+		create_character = {
+			first_name = smd_cn_melina
+			last_name = smd_cn_mercouri
+			historical = yes
+			ruler = no
+			female = yes
+			culture = cu:greek
+			birth_date = 1920.10.18
+			ig_leader = yes
+			interest_group = ig_intelligentsia
+			ideology = ideology_progressive_leader
+			traits = {
+				charismatic
+			}
+		}
+		create_character = {
+			first_name = smd_cn_seraphim
+			last_name = smd_cn_tikas
+			historical = yes
+			ruler = no
+			culture = cu:greek
+			birth_date = 1913.1.1
+			ig_leader = yes
+			interest_group = ig_devout
+			ideology = ideology_conservative_leader
+			traits = {
+				pious
+			}
+		}
+		create_character = {
+			first_name = smd_cn_yiannis
+			last_name = smd_cn_latsis
+			historical = yes
+			ruler = no
+			culture = cu:greek
+			birth_date = 1910.9.1
+			ig_leader = yes
+			interest_group = ig_industrialists
+			ideology = ideology_neoliberal_leader
+			traits = {
+				expert_entrepreneur
+			}
+		}
+		create_character = {
+			first_name = smd_cn_ioannis
+			last_name = smd_cn_varvitsiotis
+			historical = yes
+			ruler = no
+			culture = cu:greek
+			birth_date = 1933.1.1
+			ig_leader = yes
+			interest_group = ig_armed_forces
+			ideology = ideology_conservative_leader
+			traits = {
+				cautious
+			}
+		}
+		create_character = {
+			first_name = smd_cn_kostas
+			last_name = smd_cn_simitis
+			historical = yes
+			ruler = no
+			culture = cu:greek
+			birth_date = 1936.6.23
+			ig_leader = yes
+			interest_group = ig_professionals
+			ideology = ideology_technocrat_leader
+			traits = {
+				meticulous
+			}
+		}
+		create_character = {
+			first_name = smd_cn_constantine
+			last_name = smd_cn_of_greece
+			historical = yes
+			ruler = no
+			culture = cu:greek
+			birth_date = 1940.6.2
+			ig_leader = yes
+			interest_group = ig_landowners
+			ideology = ideology_monarchist_leader
+			traits = {
+				reserved
+			}
+		}
+	}
+	c:ALB ?= {
+		create_character = {
+			first_name = smd_cn_sali
+			last_name = smd_cn_berisha
+			historical = yes
+			ruler = no
+			culture = cu:albanian
+			birth_date = 1944.10.15
+			ig_leader = yes
+			interest_group = ig_petty_bourgeoisie
+			ideology = ideology_conservative_leader
+			traits = {
+				ambitious
+			}
+		}
+		create_character = {
+			first_name = smd_cn_fatos
+			last_name = smd_cn_nano
+			historical = yes
+			ruler = no
+			culture = cu:albanian
+			birth_date = 1952.9.16
+			ig_leader = yes
+			interest_group = ig_trade_unions
+			ideology = ideology_democratic_socialist_leader
+			traits = {
+				experienced_political_operator
+			}
+		}
+		create_character = {
+			first_name = smd_cn_anastasios
+			last_name = smd_cn_yannoulatos
+			historical = yes
+			ruler = no
+			culture = cu:greek
+			birth_date = 1929.11.4
+			ig_leader = yes
+			interest_group = ig_devout
+			ideology = ideology_moderate_leader
+			traits = {
+				pious
+			}
+		}
+		create_character = {
+			first_name = smd_cn_safet
+			last_name = smd_cn_zhulali
+			historical = yes
+			ruler = no
+			culture = cu:albanian
+			birth_date = 1944.1.1
+			ig_leader = yes
+			interest_group = ig_armed_forces
+			ideology = ideology_conservative_leader
+			traits = {
+				cautious
+			}
+		}
+		create_character = {
+			first_name = smd_cn_leka
+			last_name = smd_cn_zogu
+			historical = yes
+			ruler = no
+			culture = cu:albanian
+			birth_date = 1939.4.5
+			ig_leader = yes
+			interest_group = ig_landowners
+			ideology = ideology_monarchist_leader
+			traits = {
+				imposing
+			}
+		}
+		create_character = {
+			first_name = smd_cn_gramoz
+			last_name = smd_cn_pashko
+			historical = yes
+			ruler = no
+			culture = cu:albanian
+			birth_date = 1955.1.1
+			ig_leader = yes
+			interest_group = ig_professionals
+			ideology = ideology_neoliberal_leader
+			traits = {
+				erudite
+			}
+		}
+	}
+	c:JPN ?= {
+		create_character = {
+			first_name = kiichi
+			last_name = miyazawa
+			historical = yes
+			ruler = no
+			culture = cu:japanese
+			birth_date = 1919.10.8
+			ig_leader = yes
+			interest_group = ig_professionals
+			ideology = ideology_moderate_leader
+			traits = {
+				experienced_political_operator
+			}
+		}
+	}
+	c:ETH ?= {
+		create_character = {
+			first_name = smd_cn_mesfin
+			last_name = smd_cn_woldemariam
+			historical = yes
+			ruler = no
+			culture = cu:amhara
+			birth_date = 1930.1.1
+			ig_leader = yes
+			interest_group = ig_intelligentsia
+			ideology = ideology_liberal_leader
+			traits = {
+				erudite
+			}
+		}
+		create_character = {
+			first_name = smd_cn_abune
+			last_name = smd_cn_paulos
+			historical = yes
+			ruler = no
+			culture = cu:tigray
+			birth_date = 1935.11.3
+			ig_leader = yes
+			interest_group = ig_devout
+			ideology = ideology_conservative_leader
+			traits = {
+				pious
+			}
+		}
+		create_character = {
+			first_name = smd_cn_mohammed
+			last_name = smd_cn_al_amoudi
+			historical = yes
+			ruler = no
+			culture = cu:amhara
+			birth_date = 1946.1.1
+			ig_leader = yes
+			interest_group = ig_industrialists
+			ideology = ideology_neoliberal_leader
+			traits = {
+				expert_entrepreneur
+			}
+		}
+		create_character = {
+			first_name = smd_cn_bulcha
+			last_name = smd_cn_demeksa
+			historical = yes
+			ruler = no
+			culture = cu:oromo
+			birth_date = 1931.1.1
+			ig_leader = yes
+			interest_group = ig_rural_folk
+			ideology = ideology_moderate_leader
+			traits = {
+				experienced_political_operator
+			}
+		}
+		create_character = {
+			first_name = smd_cn_seyoum
+			last_name = smd_cn_mesfin
+			historical = yes
+			ruler = no
+			culture = cu:tigray
+			birth_date = 1949.1.1
+			ig_leader = yes
+			interest_group = ig_professionals
+			ideology = ideology_technocrat_leader
+			traits = {
+				experienced_diplomat
+			}
+		}
+		create_character = {
+			first_name = smd_cn_amha
+			last_name = smd_cn_selassie
+			historical = yes
+			ruler = no
+			culture = cu:amhara
+			birth_date = 1916.7.27
+			ig_leader = yes
+			interest_group = ig_landowners
+			ideology = ideology_monarchist_leader
+			traits = {
+				reserved
+			}
+		}
+	}
+	c:CZH ?= {
+		create_character = {
+			template = CZC_klaus_ig_leader
+		}
+		create_character = {
+			template = CZC_vlk_ig_leader
+		}
+		create_character = {
+			template = CZC_zeman_ig_leader
+		}
+		create_character = {
+			template = CZC_kozeny_ig_leader
+		}
+		create_character = {
+			template = CZC_dlouhy_ig_leader
+		}
+		create_character = {
+			template = CZC_dobrovsky_ig_leader
+		}
+		create_character = {
+			template = CZC_lux_ig_leader
+		}
+		create_character = {
+			template = CZC_schwarzenberg_ig_leader
+		}
+	}
+}

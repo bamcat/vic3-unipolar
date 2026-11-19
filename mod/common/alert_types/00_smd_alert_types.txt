@@ -42,7 +42,6 @@ facing_un_condemnation = {
 #}
 
 #space_mission_ready = {
-#
 #}
 
 can_produce_nuclear_missile = {
@@ -51,10 +50,9 @@ can_produce_nuclear_missile = {
 
 	valid = {
 		has_variable = nuclear_capable
-		any_scope_state = {
-			is_incorporated = yes
-			has_building = building_nuclear_plant
-			count >= 3
+		country_has_building_type_levels = {
+			target = bt:building_nuclear_plant
+			value >= 3
 		}
 		any_scope_state = {
 			is_incorporated = yes

@@ -1,4 +1,8 @@
 ﻿contain_threat = {
+	mirrored_wargoal = {
+		method = no_mirror
+	}
+
 	icon = "gfx/interface/icons/war_goals/contain_threat.dds"
 
 	kind = contain_threat
@@ -7,7 +11,6 @@
 		require_target_be_part_of_war
 		skip_build_list
 
-		# Validation
 		validate_contain_threat
 	}
 

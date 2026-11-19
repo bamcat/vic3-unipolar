@@ -1,7 +1,7 @@
 ﻿######################################## USA ########################################
 
 # Amazon.com
-company_amazon = {
+REPLACE_OR_CREATE:company_amazon = {
 	icon = "gfx/interface/icons/company_icons/usa/american_amazon.dds"
 	background = "gfx/interface/icons/company_icons/company_backgrounds/comp_illu_manufactering_light.dds"
 
@@ -25,11 +25,14 @@ company_amazon = {
 	}
 
 	potential = {
-		has_interest_marker_in_region = geographic_region_the_midwest_old
+		OR = {
+			any_scope_state = { is_in_geographic_region = geographic_region_the_midwest_old }
+			any_scope_state = { state_region = s:STATE_WASHINGTON }
+		}
 	}
 
 	attainable = {
-		hidden_trigger = { # Hide attainable if it's always fulfilled by possible
+		hidden_trigger = {
 			any_scope_state = {
 				state_region = s:STATE_WASHINGTON
 			}
@@ -63,78 +66,12 @@ company_amazon = {
 	}
 
 	ai_weight = {
-		value = 3 # Higher base value for flavored companies
-	}
-}
-
-# Apple Inc.
-company_amazon = {
-	icon = "gfx/interface/icons/company_icons/usa/american_amazon.dds"
-	background = "gfx/interface/icons/company_icons/company_backgrounds/comp_illu_manufactering_light.dds"
-
-	flavored_company = yes
-
-	preferred_headquarters = { STATE_WASHINGTON }
-
-	building_types = {
-		building_trade_center
-		building_port
-	}
-
-	extension_building_types = {
-		building_railway
-		building_software_industry
-	}
-
-	possible_prestige_goods = {
-		prestige_good_prime_shipping
-	}
-
-	potential = {
-		has_interest_marker_in_region = geographic_region_the_midwest_old
-	}
-
-	attainable = {
-		hidden_trigger = { # Hide attainable if it's always fulfilled by possible
-			any_scope_state = {
-				state_region = s:STATE_WASHINGTON
-			}
-		}
-	}
-
-	possible = {
-		has_technology_researched = currency_standards
-		any_scope_state = {
-			state_region = s:STATE_WASHINGTON
-			is_incorporated = yes
-			any_scope_building = {
-				is_building_type = building_trade_center
-				level >= 5
-			}
-		}
-	}
-
-	prosperity_modifier = {
-		market_land_trade_capacity_add = 15
-		country_trade_route_cost_mult = -0.15
-		country_trade_route_competitiveness_mult = 0.15
-	}
-
-	ai_will_do = {
-		has_technology_researched = currency_standards
-		any_scope_state = {
-			state_region = s:STATE_WASHINGTON
-			is_incorporated = yes
-		}
-	}
-
-	ai_weight = {
-		value = 3 # Higher base value for flavored companies
+		value = 3
 	}
 }
 
 # apple
-company_apple = {
+REPLACE_OR_CREATE:company_apple = {
 	icon = "gfx/interface/icons/company_icons/usa/american_apple.dds"
 	background = "gfx/interface/icons/company_icons/company_backgrounds/comp_illu_manufactering_light.dds"
 	flavored_company = yes
@@ -177,12 +114,12 @@ company_apple = {
 	}
 
 	ai_weight = {
-		value = 3 # Higher base value for flavored companies
+		value = 3
 	}
 }
 
 # monsanto
-company_monsanto = {
+REPLACE_OR_CREATE:company_monsanto = {
 	icon = "gfx/interface/icons/company_icons/usa/american_monsanto.dds"
 	background = "gfx/interface/icons/company_icons/company_backgrounds/comp_illu_manufactering_light.dds"
 	flavored_company = yes
@@ -223,12 +160,12 @@ company_monsanto = {
 	}
 
 	ai_weight = {
-		value = 3 # Higher base value for flavored companies
+		value = 3
 	}
 }
 
 # at&t
-company_atandt = {
+REPLACE_OR_CREATE:company_atandt = {
 	icon = "gfx/interface/icons/company_icons/usa/american_atandt.dds"
 	background = "gfx/interface/icons/company_icons/company_backgrounds/comp_illu_manufactering_light.dds"
 	flavored_company = yes
@@ -266,11 +203,11 @@ company_atandt = {
 	}
 
 	ai_weight = {
-		value = 3 # Higher base value for flavored companies
+		value = 3
 	}
 }
 # bank of america
-company_bank_of_america = {
+REPLACE_OR_CREATE:company_bank_of_america = {
 	icon = "gfx/interface/icons/company_icons/usa/american_bank.dds"
 	background = "gfx/interface/icons/company_icons/company_backgrounds/comp_illu_manufactering_light.dds"
 	flavored_company = yes
@@ -303,12 +240,12 @@ company_bank_of_america = {
 	}
 
 	ai_weight = {
-		value = 3 # Higher base value for flavored companies
+		value = 3
 	}
 }
 
 # blackrock
-company_blackrock = {
+REPLACE_OR_CREATE:company_blackrock = {
 	icon = "gfx/interface/icons/company_icons/usa/american_blackrock.dds"
 	background = "gfx/interface/icons/company_icons/company_backgrounds/comp_illu_manufactering_light.dds"
 	flavored_company = yes
@@ -344,12 +281,12 @@ company_blackrock = {
 	}
 
 	ai_weight = {
-		value = 3 # Higher base value for flavored companies
+		value = 3
 	}
 }
 
 # jpm
-company_jp_morgan = {
+REPLACE_OR_CREATE:company_jp_morgan = {
 	icon = "gfx/interface/icons/company_icons/usa/american_jpm.dds"
 	background = "gfx/interface/icons/company_icons/company_backgrounds/comp_illu_manufactering_light.dds"
 	flavored_company = yes
@@ -384,11 +321,11 @@ company_jp_morgan = {
 	}
 
 	ai_weight = {
-		value = 3 # Higher base value for flavored companies
+		value = 3
 	}
 }
 # boeing
-company_boeing = {
+REPLACE_OR_CREATE:company_boeing = {
 	icon = "gfx/interface/icons/company_icons/usa/american_boeing.dds"
 	background = "gfx/interface/icons/company_icons/company_backgrounds/comp_illu_manufactering_light.dds"
 	flavored_company = yes
@@ -425,11 +362,11 @@ company_boeing = {
 	}
 
 	ai_weight = {
-		value = 3 # Higher base value for flavored companies
+		value = 3
 	}
 }
 # coca cola
-company_coke = {
+REPLACE_OR_CREATE:company_coke = {
 	icon = "gfx/interface/icons/company_icons/usa/american_cocacola.dds"
 	background = "gfx/interface/icons/company_icons/company_backgrounds/comp_illu_manufactering_light.dds"
 	flavored_company = yes
@@ -472,12 +409,12 @@ company_coke = {
 	}
 
 	ai_weight = {
-		value = 3 # Higher base value for flavored companies
+		value = 3
 	}
 }
 
 # nestle
-company_nestle = {
+REPLACE_OR_CREATE:company_nestle = {
 	icon = "gfx/interface/icons/company_icons/usa/nestle.dds"
 	background = "gfx/interface/icons/company_icons/company_backgrounds/comp_illu_manufactering_light.dds"
 	flavored_company = yes
@@ -519,12 +456,12 @@ company_nestle = {
 	}
 
 	ai_weight = {
-		value = 3 # Higher base value for flavored companies
+		value = 3
 	}
 }
 
 # caterpillar
-company_caterpillar = {
+REPLACE_OR_CREATE:company_caterpillar = {
 	icon = "gfx/interface/icons/company_icons/usa/caterpillar.dds"
 	background = "gfx/interface/icons/company_icons/company_backgrounds/comp_illu_manufactering_light.dds"
 
@@ -568,7 +505,7 @@ company_caterpillar = {
 
 
 # Cargill
-company_cargill = {
+REPLACE_OR_CREATE:company_cargill = {
 	icon = "gfx/interface/icons/company_icons/usa/cargill.dds"
 	background = "gfx/interface/icons/company_icons/company_backgrounds/comp_illu_manufactering_light.dds"
 
@@ -618,7 +555,7 @@ company_cargill = {
 }
 
 # comcast
-company_comcast = {
+REPLACE_OR_CREATE:company_comcast = {
 	icon = "gfx/interface/icons/company_icons/usa/american_comcast.dds"
 	background = "gfx/interface/icons/company_icons/company_backgrounds/comp_illu_manufactering_light.dds"
 	flavored_company = yes
@@ -656,12 +593,12 @@ company_comcast = {
 	}
 
 	ai_weight = {
-		value = 3 # Higher base value for flavored companies
+		value = 3
 	}
 }
 
 # disney
-company_disney = {
+REPLACE_OR_CREATE:company_disney = {
 	icon = "gfx/interface/icons/company_icons/usa/american_walt_disney.dds"
 	background = "gfx/interface/icons/company_icons/company_backgrounds/comp_illu_manufactering_light.dds"
 	flavored_company = yes
@@ -697,12 +634,12 @@ company_disney = {
 	}
 
 	ai_weight = {
-		value = 3 # Higher base value for flavored companies
+		value = 3
 	}
 }
 
 # general motor
-company_general_motor = {
+REPLACE_OR_CREATE:company_general_motor = {
 	icon = "gfx/interface/icons/company_icons/usa/american_general_motors.dds"
 	background = "gfx/interface/icons/company_icons/company_backgrounds/comp_illu_manufacturing_heavy.dds"
 	
@@ -718,11 +655,11 @@ company_general_motor = {
 	}
 	
 	potential = {
-		has_interest_marker_in_region = geographic_region_the_midwest_old
+		any_scope_state = { is_in_geographic_region = geographic_region_the_midwest_old }
 	}
 	
 	attainable = {
-		hidden_trigger = { # Hide attainable if it's always fulfilled by possible
+		hidden_trigger = {
 			any_scope_state = {
 				state_region = s:STATE_MICHIGAN
 			}
@@ -746,12 +683,12 @@ company_general_motor = {
 	}	
 	
 	ai_weight = {
-		value = 3 # Higher base value for flavored companies
+		value = 3
 	}
 }
 
 # northrup grumman
-company_northrop_grumman = {
+REPLACE_OR_CREATE:company_northrop_grumman = {
 	icon = "gfx/interface/icons/company_icons/usa/american_grumman.dds"
 	background = "gfx/interface/icons/company_icons/company_backgrounds/comp_illu_manufactering_light.dds"
 	flavored_company = yes
@@ -790,13 +727,13 @@ company_northrop_grumman = {
 	}
 
 	ai_weight = {
-		value = 3 # Higher base value for flavored companies
+		value = 3
 	}
 }
 
 # lockheed martin
 
-company_lockheed_martin = {
+REPLACE_OR_CREATE:company_lockheed_martin = {
 	icon = "gfx/interface/icons/company_icons/usa/american_lockheed_martin.dds"
 	background = "gfx/interface/icons/company_icons/company_backgrounds/comp_illu_manufactering_light.dds"
 	flavored_company = yes
@@ -838,12 +775,12 @@ company_lockheed_martin = {
 	}
 
 	ai_weight = {
-		value = 3 # Higher base value for flavored companies
+		value = 3
 	}
 }
 
 # mcdonalds
-company_mcdonalds = {
+REPLACE_OR_CREATE:company_mcdonalds = {
 	icon = "gfx/interface/icons/company_icons/usa/american_mcdonalds.dds"
 	background = "gfx/interface/icons/company_icons/company_backgrounds/comp_illu_manufactering_light.dds"
 	flavored_company = yes
@@ -884,12 +821,12 @@ company_mcdonalds = {
 	}
 
 	ai_weight = {
-		value = 3 # Higher base value for flavored companies
+		value = 3
 	}
 }
 
 # pepsico
-company_pepsi = {
+REPLACE_OR_CREATE:company_pepsi = {
 	icon = "gfx/interface/icons/company_icons/usa/american_pepsico.dds"
 	background = "gfx/interface/icons/company_icons/company_backgrounds/comp_illu_manufactering_light.dds"
 	flavored_company = yes
@@ -936,12 +873,12 @@ company_pepsi = {
 	}
 
 	ai_weight = {
-		value = 3 # Higher base value for flavored companies
+		value = 3
 	}
 }
 
 # microsoft
-company_microsoft = {
+REPLACE_OR_CREATE:company_microsoft = {
 	icon = "gfx/interface/icons/company_icons/usa/american_microsoft.dds"
 	background = "gfx/interface/icons/company_icons/company_backgrounds/comp_illu_manufactering_light.dds"
 	flavored_company = yes
@@ -980,12 +917,12 @@ company_microsoft = {
 	}
 
 	ai_weight = {
-		value = 3 # Higher base value for flavored companies
+		value = 3
 	}
 }
 
 # spacex
-company_spacex = {
+REPLACE_OR_CREATE:company_spacex = {
 	icon = "gfx/interface/icons/company_icons/usa/american_spacex.dds"
 	background = "gfx/interface/icons/company_icons/company_backgrounds/comp_illu_manufactering_light.dds"
 	flavored_company = yes
@@ -1001,7 +938,7 @@ company_spacex = {
 	}
 
 	attainable = {
-		hidden_trigger = { # Hide attainable if it's always fulfilled by possible
+		hidden_trigger = {
 			any_scope_state = {
 				state_region = s:STATE_WASHINGTON
 			}
@@ -1029,12 +966,12 @@ company_spacex = {
 	}
 
 	ai_weight = {
-		value = 3 # Higher base value for flavored companies
+		value = 3
 	}
 }
 
 # tesla
-company_nvidia = {
+REPLACE_OR_CREATE:company_nvidia = {
 	icon = "gfx/interface/icons/company_icons/usa/nvidia.dds"
 	background = "gfx/interface/icons/company_icons/company_backgrounds/comp_illu_manufacturing_heavy.dds"
 	
@@ -1050,11 +987,11 @@ company_nvidia = {
 	}
 	
 	potential = {
-		has_interest_marker_in_region = geographic_region_pacific_coast_old
+		any_scope_state = { is_in_geographic_region = geographic_region_pacific_coast_old }
 	}
 	
 	attainable = {
-		hidden_trigger = { # Hide attainable if it's always fulfilled by possible
+		hidden_trigger = {
 			any_scope_state = {
 				state_region = s:STATE_CALIFORNIA
 			}
@@ -1078,11 +1015,11 @@ company_nvidia = {
 	}
 	
 	ai_weight = {
-		value = 3 # Higher base value for flavored companies
+		value = 3
 	}
 }
 
-company_tesla = {
+REPLACE_OR_CREATE:company_tesla = {
 	icon = "gfx/interface/icons/company_icons/usa/american_tesla.dds"
 	background = "gfx/interface/icons/company_icons/company_backgrounds/comp_illu_manufacturing_heavy.dds"
 	
@@ -1111,11 +1048,11 @@ company_tesla = {
 	}
 	
 	potential = {
-		has_interest_marker_in_region = geographic_region_the_midwest_old
+		any_scope_state = { is_in_geographic_region = geographic_region_the_midwest_old }
 	}
 	
 	attainable = {
-		hidden_trigger = { # Hide attainable if it's always fulfilled by possible
+		hidden_trigger = {
 			any_scope_state = {
 				state_region = s:STATE_MICHIGAN
 			}
@@ -1139,12 +1076,12 @@ company_tesla = {
 	}	
 	
 	ai_weight = {
-		value = 3 # Higher base value for flavored companies
+		value = 3
 	}
 }
 
 # walmart
-company_walmart = {
+REPLACE_OR_CREATE:company_walmart = {
 	icon = "gfx/interface/icons/company_icons/usa/american_walmart.dds"
 	background = "gfx/interface/icons/company_icons/company_backgrounds/comp_illu_manufacturing_heavy.dds"
 	
@@ -1165,11 +1102,11 @@ company_walmart = {
 	}
 	
 	potential = {
-		has_interest_marker_in_region = geographic_region_the_midwest_old
+		any_scope_state = { is_in_geographic_region = geographic_region_the_midwest_old }
 	}
 	
 	attainable = {
-		hidden_trigger = { # Hide attainable if it's always fulfilled by possible
+		hidden_trigger = {
 			any_scope_state = {
 				state_region = s:STATE_TEXAS
 			}
@@ -1195,12 +1132,12 @@ company_walmart = {
 	}	
 	
 	ai_weight = {
-		value = 3 # Higher base value for flavored companies
+		value = 3
 	}
 }
 
 # starbucks
-company_starbucks = {
+REPLACE_OR_CREATE:company_starbucks = {
 	icon = "gfx/interface/icons/company_icons/usa/american_starbucks.dds"
 	background = "gfx/interface/icons/company_icons/company_backgrounds/comp_illu_manufactering_light.dds"
 	flavored_company = yes
@@ -1237,7 +1174,7 @@ company_starbucks = {
 	}
 
 	ai_weight = {
-		value = 3 # Higher base value for flavored companies
+		value = 3
 	}
 }
 
@@ -1245,7 +1182,7 @@ company_starbucks = {
 ######################################## CANADA ########################################
 
 # tim hortons
-company_timhortons = {
+REPLACE_OR_CREATE:company_timhortons = {
 	icon = "gfx/interface/icons/company_icons/canada/tim_hortons.dds"
 	background = "gfx/interface/icons/company_icons/company_backgrounds/comp_illu_manufactering_light.dds"
 	flavored_company = yes
@@ -1280,12 +1217,12 @@ company_timhortons = {
 	}
 
 	ai_weight = {
-		value = 3 # Higher base value for flavored companies
+		value = 3
 	}
 }
 
 # loblaws
-company_loblaws = {
+REPLACE_OR_CREATE:company_loblaws = {
 	icon = "gfx/interface/icons/company_icons/canada/loblaws.dds"
 	background = "gfx/interface/icons/company_icons/company_backgrounds/comp_illu_manufactering_light.dds"
 	flavored_company = yes
@@ -1327,12 +1264,12 @@ company_loblaws = {
 	}
 
 	ai_weight = {
-		value = 3 # Higher base value for flavored companies
+		value = 3
 	}
 }
 
 # toronto-dominion bank
-company_td = {
+REPLACE_OR_CREATE:company_td = {
 	icon = "gfx/interface/icons/company_icons/canada/td.dds"
 	background = "gfx/interface/icons/company_icons/company_backgrounds/comp_illu_manufactering_light.dds"
 	flavored_company = yes
@@ -1364,12 +1301,12 @@ company_td = {
 	}
 
 	ai_weight = {
-		value = 3 # Higher base value for flavored companies
+		value = 3
 	}
 }
 
 # brookfield
-company_brookfield = {
+REPLACE_OR_CREATE:company_brookfield = {
 	icon = "gfx/interface/icons/company_icons/canada/brookfield.dds"
 	background = "gfx/interface/icons/company_icons/company_backgrounds/comp_illu_manufactering_light.dds"
 	flavored_company = yes
@@ -1402,12 +1339,12 @@ company_brookfield = {
 	}
 
 	ai_weight = {
-		value = 3 # Higher base value for flavored companies
+		value = 3
 	}
 }
 
 # imperial oil
-company_imperial_oil = {
+REPLACE_OR_CREATE:company_imperial_oil = {
 	icon = "gfx/interface/icons/company_icons/canada/imperial_oil.dds"
 	background = "gfx/interface/icons/company_icons/company_backgrounds/comp_illu_oil_drills.dds"
 	
@@ -1438,14 +1375,14 @@ company_imperial_oil = {
 	}
 	
 	ai_weight = {
-		value = 3 # Higher base value for flavored companies
+		value = 3
 	}
 }
 
 ######################################## SOUTH KOREA ########################################
 
 # samsung
-company_samsung = {
+REPLACE_OR_CREATE:company_samsung = {
 	icon = "gfx/interface/icons/company_icons/south_korea/samsung.dds"
 	background = "gfx/interface/icons/company_icons/company_backgrounds/comp_illu_manufactering_light.dds"
 	flavored_company = yes
@@ -1484,14 +1421,14 @@ company_samsung = {
 	}
 
 	ai_weight = {
-		value = 3 # Higher base value for flavored companies
+		value = 3
 	}
 }
 
 ######################################## RUSSIA ########################################
 
 # sberbank
-company_sberbank = {
+REPLACE_OR_CREATE:company_sberbank = {
 	icon = "gfx/interface/icons/company_icons/russia/sberbank.dds"
 	background = "gfx/interface/icons/company_icons/company_backgrounds/comp_illu_manufactering_light.dds"
 	flavored_company = yes
@@ -1501,12 +1438,12 @@ company_sberbank = {
 
 	potential = {
 		OR = {
-			has_interest_marker_in_region = geographic_region_caucasus_old
+			any_scope_state = { is_in_geographic_region = geographic_region_caucasus_old }
 		}
 	}
 
 	attainable = {
-		hidden_trigger = { # Hide attainable if it's always fulfilled by possible
+		hidden_trigger = {
 			any_scope_state = {
 				state_region = s:STATE_MOSCOW
 			}
@@ -1529,14 +1466,14 @@ company_sberbank = {
 	}
 
 	ai_weight = {
-		value = 3 # Higher base value for flavored companies
+		value = 3
 	}
 }
 
 ######################################## JAPAN ########################################
 
 # honda
-company_honda = {
+REPLACE_OR_CREATE:company_honda = {
 	icon = "gfx/interface/icons/company_icons/japan/honda.dds"
 	background = "gfx/interface/icons/company_icons/company_backgrounds/comp_illu_manufacturing_heavy.dds"
 	
@@ -1569,12 +1506,12 @@ company_honda = {
 	}	
 	
 	ai_weight = {
-		value = 3 # Higher base value for flavored companies
+		value = 3
 	}
 }
 
 # toyota
-company_toyota = {
+REPLACE_OR_CREATE:company_toyota = {
 	icon = "gfx/interface/icons/company_icons/japan/toyota.dds"
 	background = "gfx/interface/icons/company_icons/company_backgrounds/comp_illu_manufacturing_heavy.dds"
 	
@@ -1607,12 +1544,12 @@ company_toyota = {
 	}	
 	
 	ai_weight = {
-		value = 3 # Higher base value for flavored companies
+		value = 3
 	}
 }
 
 # sony
-company_sony = {
+REPLACE_OR_CREATE:company_sony = {
 	icon = "gfx/interface/icons/company_icons/japan/sony.dds"
 	background = "gfx/interface/icons/company_icons/company_backgrounds/comp_illu_manufactering_light.dds"
 	flavored_company = yes
@@ -1633,7 +1570,7 @@ company_sony = {
 	}
 
 	attainable = {
-		hidden_trigger = { # Hide attainable if it's always fulfilled by possible
+		hidden_trigger = {
 			any_scope_state = {
 				state_region = s:STATE_KANTO
 			}
@@ -1657,12 +1594,12 @@ company_sony = {
 	}
 
 	ai_weight = {
-		value = 3 # Higher base value for flavored companies
+		value = 3
 	}
 }
 
 # nintendo
-company_nintendo = {
+REPLACE_OR_CREATE:company_nintendo = {
 	icon = "gfx/interface/icons/company_icons/japan/nintendo.dds"
 	background = "gfx/interface/icons/company_icons/company_backgrounds/comp_illu_manufactering_light.dds"
 	flavored_company = yes
@@ -1683,7 +1620,7 @@ company_nintendo = {
 	}
 
 	attainable = {
-		hidden_trigger = { # Hide attainable if it's always fulfilled by possible
+		hidden_trigger = {
 			any_scope_state = {
 				state_region = s:STATE_KANTO
 			}
@@ -1707,13 +1644,13 @@ company_nintendo = {
 	}
 
 	ai_weight = {
-		value = 3 # Higher base value for flavored companies
+		value = 3
 	}
 }
 
 ############################# UNITED KINGDOM #############################
 
-company_hsbc = {
+REPLACE_OR_CREATE:company_hsbc = {
 	icon = "gfx/interface/icons/company_icons/britain/hsbc.dds"
 	background = "gfx/interface/icons/company_icons/company_backgrounds/comp_illu_manufactering_light.dds"
 	flavored_company = yes
@@ -1722,7 +1659,7 @@ company_hsbc = {
 	}
 	
 	attainable = {
-		hidden_trigger = { # Hide attainable if it's always fulfilled by possible
+		hidden_trigger = {
 			any_scope_state = {
 				state_region = s:STATE_LOWLANDS
 			}
@@ -1743,12 +1680,12 @@ company_hsbc = {
 	}
 
 	ai_weight = {
-		value = 3 # Higher base value for flavored companies
+		value = 3
 	}
 }
 
 # tesco
-company_tesco = {
+REPLACE_OR_CREATE:company_tesco = {
 	icon = "gfx/interface/icons/company_icons/britain/tesco.dds"
 	background = "gfx/interface/icons/company_icons/company_backgrounds/comp_illu_manufactering_light.dds"
 	flavored_company = yes
@@ -1768,7 +1705,7 @@ company_tesco = {
 	}
 	
 	attainable = {
-		hidden_trigger = { # Hide attainable if it's always fulfilled by possible
+		hidden_trigger = {
 			any_scope_state = {
 				state_region = s:STATE_LOWLANDS
 			}
@@ -1791,12 +1728,12 @@ company_tesco = {
 	}
 
 	ai_weight = {
-		value = 3 # Higher base value for flavored companies
+		value = 3
 	}
 }
 
 # Shell
-company_shell = {
+REPLACE_OR_CREATE:company_shell = {
 	icon = "gfx/interface/icons/company_icons/britain/shell.dds"
 	background = "gfx/interface/icons/company_icons/company_backgrounds/comp_illu_oil_drills.dds"
 
@@ -1811,7 +1748,7 @@ company_shell = {
 	}
 
 	attainable = {
-		hidden_trigger = { # Hide attainable if it's always fulfilled by possible
+		hidden_trigger = {
 			any_scope_state = {
 				state_region = s:STATE_LOWLANDS
 			}
@@ -1835,7 +1772,7 @@ company_shell = {
 ################################### Saudi Arabia ############################
 
 # Saudi Aramco
-company_saudi_aramco = {
+REPLACE_OR_CREATE:company_saudi_aramco = {
 	icon = "gfx/interface/icons/company_icons/saudi_arabia/saudi_aramco.dds"
 	background = "gfx/interface/icons/company_icons/company_backgrounds/comp_illu_oil_drills.dds"
 
@@ -1851,7 +1788,7 @@ company_saudi_aramco = {
 	}
 
 	attainable = {
-		hidden_trigger = { # Hide attainable if it's always fulfilled by possible
+		hidden_trigger = {
 			any_scope_state = {
 				state_region = s:STATE_HEDJAZ
 			}

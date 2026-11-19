@@ -1,9 +1,5 @@
 MILITARY_FORMATIONS = {
 
-	### USA ###
-	# ~750k Army, ~540k Navy/Marines, ~470k Air Force active in 1992.
-	# 1 unit = 1,000 troops. Scaled for gameplay while reflecting real force ratios.
-
 	c:USA ?= {
 
 		create_military_formation = {
@@ -11,23 +7,25 @@ MILITARY_FORMATIONS = {
 			hq_region = sr:region_great_plains
 			name = "III_Corps"
 
-			# 1st Cavalry Division (Fort Hood TX)
 			combat_unit = {
 				type = unit_type:combat_unit_type_armored_infantry
 				state_region = s:STATE_TEXAS
 				count = 15
 			}
-			# 2nd Armored Division (Fort Hood TX)
 			combat_unit = {
 				type = unit_type:combat_unit_type_armored_infantry
 				state_region = s:STATE_TEXAS
 				count = 12
 			}
-			# 4th Infantry Division (Fort Carson CO)
 			combat_unit = {
 				type = unit_type:combat_unit_type_mechanized_infantry
 				state_region = s:STATE_COLORADO
-				count = 14
+				count = 7
+			}
+			combat_unit = {
+				type = unit_type:combat_unit_type_light_infantry
+				state_region = s:STATE_COLORADO
+				count = 7
 			}
 			save_scope_as = usa_iii_corps_formation
 		}
@@ -46,25 +44,26 @@ MILITARY_FORMATIONS = {
 			hq_region = sr:region_atlantic_coast
 			name = "XVIII_Airborne_Corps"
 
-			# 82nd Airborne Division (Fort Bragg NC)
 			combat_unit = {
 				type = unit_type:combat_unit_type_light_infantry
 				state_region = s:STATE_NORTH_CAROLINA
 				count = 14
 			}
-			# 101st Airborne Division (Fort Campbell KY)
 			combat_unit = {
 				type = unit_type:combat_unit_type_light_infantry
 				state_region = s:STATE_KENTUCKY
 				count = 14
 			}
-			# 24th Infantry Division - Mechanized (Fort Stewart GA)
 			combat_unit = {
 				type = unit_type:combat_unit_type_mechanized_infantry
 				state_region = s:STATE_GEORGIA
-				count = 14
+				count = 7
 			}
-			# 10th Mountain Division (Fort Drum NY)
+			combat_unit = {
+				type = unit_type:combat_unit_type_light_infantry
+				state_region = s:STATE_GEORGIA
+				count = 7
+			}
 			combat_unit = {
 				type = unit_type:combat_unit_type_light_infantry
 				state_region = s:STATE_NEW_YORK
@@ -93,28 +92,40 @@ MILITARY_FORMATIONS = {
 			hq_region = sr:region_great_plains
 			name = "FORSCOM_Reserve"
 
-			# 1st Infantry Division (Fort Riley KS)
 			combat_unit = {
 				type = unit_type:combat_unit_type_mechanized_infantry
 				state_region = s:STATE_KANSAS
-				count = 14
+				count = 7
 			}
-			# 3rd Armored Cavalry Regiment (Fort Bliss TX)
+			combat_unit = {
+				type = unit_type:combat_unit_type_light_infantry
+				state_region = s:STATE_KANSAS
+				count = 7
+			}
 			combat_unit = {
 				type = unit_type:combat_unit_type_armored_infantry
 				state_region = s:STATE_TEXAS
 				count = 5
 			}
-			# National Guard brigades
 			combat_unit = {
 				type = unit_type:combat_unit_type_mechanized_infantry
 				state_region = s:STATE_OHIO
-				count = 5
+				count = 3
+			}
+			combat_unit = {
+				type = unit_type:combat_unit_type_light_infantry
+				state_region = s:STATE_OHIO
+				count = 2
 			}
 			combat_unit = {
 				type = unit_type:combat_unit_type_mechanized_infantry
 				state_region = s:STATE_PENNSYLVANIA
-				count = 5
+				count = 3
+			}
+			combat_unit = {
+				type = unit_type:combat_unit_type_light_infantry
+				state_region = s:STATE_PENNSYLVANIA
+				count = 2
 			}
 			combat_unit = {
 				type = unit_type:combat_unit_type_light_infantry
@@ -144,23 +155,25 @@ MILITARY_FORMATIONS = {
 			hq_region = sr:region_pacific_coast
 			name = "I_Corps"
 
-			# 25th Infantry Division (Schofield Barracks HI)
 			combat_unit = {
 				type = unit_type:combat_unit_type_light_infantry
-				state_region = s:STATE_HAWAII
+				state_region = s:STATE_HAWAIIAN_ISLANDS
 				count = 14
 			}
-			# 7th Infantry Division (Fort Ord CA)
 			combat_unit = {
 				type = unit_type:combat_unit_type_light_infantry
 				state_region = s:STATE_CALIFORNIA
 				count = 12
 			}
-			# 9th Infantry Regiment (Fort Lewis WA)
 			combat_unit = {
 				type = unit_type:combat_unit_type_mechanized_infantry
 				state_region = s:STATE_WASHINGTON
-				count = 5
+				count = 3
+			}
+			combat_unit = {
+				type = unit_type:combat_unit_type_light_infantry
+				state_region = s:STATE_WASHINGTON
+				count = 2
 			}
 			combat_unit = {
 				type = unit_type:combat_unit_type_field_artillery
@@ -346,10 +359,7 @@ MILITARY_FORMATIONS = {
 		}
 	}
 
-	### CANADA ###
-	# ~75,000 active personnel in 1992.
-
-	c:CAN ?= {
+c:CAN ?= {
 
 		create_military_formation = {
 			type = army
@@ -359,17 +369,32 @@ MILITARY_FORMATIONS = {
 			combat_unit = {
 				type = unit_type:combat_unit_type_mechanized_infantry
 				state_region = s:STATE_ONTARIO
-				count = 10
+				count = 5
+			}
+			combat_unit = {
+				type = unit_type:combat_unit_type_light_infantry
+				state_region = s:STATE_ONTARIO
+				count = 5
 			}
 			combat_unit = {
 				type = unit_type:combat_unit_type_mechanized_infantry
 				state_region = s:STATE_QUEBEC
-				count = 10
+				count = 5
+			}
+			combat_unit = {
+				type = unit_type:combat_unit_type_light_infantry
+				state_region = s:STATE_QUEBEC
+				count = 5
 			}
 			combat_unit = {
 				type = unit_type:combat_unit_type_mechanized_infantry
 				state_region = s:STATE_ALBERTA
-				count = 8
+				count = 4
+			}
+			combat_unit = {
+				type = unit_type:combat_unit_type_light_infantry
+				state_region = s:STATE_ALBERTA
+				count = 4
 			}
 			combat_unit = {
 				type = unit_type:combat_unit_type_light_infantry
@@ -488,10 +513,7 @@ MILITARY_FORMATIONS = {
 		}
 	}
 
-	### MEXICO ###
-	# ~175,000 active in 1992.
-
-	c:MEX ?= {
+c:MEX ?= {
 
 		create_military_formation = {
 			type = army
@@ -501,7 +523,12 @@ MILITARY_FORMATIONS = {
 			combat_unit = {
 				type = unit_type:combat_unit_type_mechanized_infantry
 				state_region = s:STATE_MEXICO
-				count = 25
+				count = 13
+			}
+			combat_unit = {
+				type = unit_type:combat_unit_type_light_infantry
+				state_region = s:STATE_MEXICO
+				count = 12
 			}
 			combat_unit = {
 				type = unit_type:combat_unit_type_light_infantry
@@ -543,7 +570,7 @@ MILITARY_FORMATIONS = {
 			}
 			combat_unit = {
 				type = unit_type:combat_unit_type_light_infantry
-				state_region = s:STATE_TAMAULIPAS
+				state_region = s:STATE_RIO_GRANDE
 				count = 12
 			}
 			combat_unit = {
@@ -655,9 +682,6 @@ MILITARY_FORMATIONS = {
 		}
 	}
 
-	### CUBA ###
-	# ~235,000 active in 1992, rapidly demobilizing post-Soviet aid cutoff.
-
 	c:CUB ?= {
 
 		create_military_formation = {
@@ -673,7 +697,12 @@ MILITARY_FORMATIONS = {
 			combat_unit = {
 				type = unit_type:combat_unit_type_mechanized_infantry
 				state_region = s:STATE_WESTERN_CUBA
-				count = 25
+				count = 13
+			}
+			combat_unit = {
+				type = unit_type:combat_unit_type_light_infantry
+				state_region = s:STATE_WESTERN_CUBA
+				count = 12
 			}
 			combat_unit = {
 				type = unit_type:combat_unit_type_light_infantry
@@ -706,7 +735,12 @@ MILITARY_FORMATIONS = {
 			combat_unit = {
 				type = unit_type:combat_unit_type_mechanized_infantry
 				state_region = s:STATE_CENTRAL_CUBA
-				count = 20
+				count = 10
+			}
+			combat_unit = {
+				type = unit_type:combat_unit_type_light_infantry
+				state_region = s:STATE_CENTRAL_CUBA
+				count = 10
 			}
 			combat_unit = {
 				type = unit_type:combat_unit_type_light_infantry
@@ -716,7 +750,12 @@ MILITARY_FORMATIONS = {
 			combat_unit = {
 				type = unit_type:combat_unit_type_mechanized_infantry
 				state_region = s:STATE_EASTERN_CUBA
-				count = 20
+				count = 10
+			}
+			combat_unit = {
+				type = unit_type:combat_unit_type_light_infantry
+				state_region = s:STATE_EASTERN_CUBA
+				count = 10
 			}
 			combat_unit = {
 				type = unit_type:combat_unit_type_light_infantry
@@ -800,9 +839,6 @@ MILITARY_FORMATIONS = {
 		}
 	}
 
-	### HAITI ###
-	# ~7,500 personnel. Forces des Armées d'Haïti.
-
 	c:HAI ?= {
 
 		create_military_formation = {
@@ -813,7 +849,12 @@ MILITARY_FORMATIONS = {
 			combat_unit = {
 				type = unit_type:combat_unit_type_irregular_infantry
 				state_region = s:STATE_HAITI
-				count = 5
+				count = 4
+			}
+			combat_unit = {
+				type = unit_type:combat_unit_type_technicals
+				state_region = s:STATE_HAITI
+				count = 1
 			}
 			combat_unit = {
 				type = unit_type:combat_unit_type_light_infantry
@@ -834,10 +875,7 @@ MILITARY_FORMATIONS = {
 		}
 	}
 
-	### DOMINICAN REPUBLIC ###
-	# ~24,000 active.
-
-	c:DCR ?= {
+c:DCR ?= {
 
 		create_military_formation = {
 			type = army
@@ -852,7 +890,12 @@ MILITARY_FORMATIONS = {
 			combat_unit = {
 				type = unit_type:combat_unit_type_mechanized_infantry
 				state_region = s:STATE_SANTO_DOMINGO
-				count = 5
+				count = 3
+			}
+			combat_unit = {
+				type = unit_type:combat_unit_type_light_infantry
+				state_region = s:STATE_SANTO_DOMINGO
+				count = 2
 			}
 			combat_unit = {
 				type = unit_type:combat_unit_type_fixed_wing_aircraft
@@ -895,9 +938,6 @@ MILITARY_FORMATIONS = {
 		}
 	}
 
-	### PANAMA ###
-	# ~15,000. Rebuilt from scratch after 1989 US invasion.
-
 	c:PNM ?= {
 
 		create_military_formation = {
@@ -908,7 +948,12 @@ MILITARY_FORMATIONS = {
 			combat_unit = {
 				type = unit_type:combat_unit_type_irregular_infantry
 				state_region = s:STATE_PANAMA
-				count = 10
+				count = 8
+			}
+			combat_unit = {
+				type = unit_type:combat_unit_type_technicals
+				state_region = s:STATE_PANAMA
+				count = 2
 			}
 			combat_unit = {
 				type = unit_type:combat_unit_type_light_infantry
@@ -929,10 +974,7 @@ MILITARY_FORMATIONS = {
 		}
 	}
 
-	### HONDURAS ###
-	# ~16,000 active.
-
-	c:HON ?= {
+c:HON ?= {
 
 		create_military_formation = {
 			type = army
@@ -947,7 +989,12 @@ MILITARY_FORMATIONS = {
 			combat_unit = {
 				type = unit_type:combat_unit_type_mechanized_infantry
 				state_region = s:STATE_HONDURAS
-				count = 3
+				count = 2
+			}
+			combat_unit = {
+				type = unit_type:combat_unit_type_light_infantry
+				state_region = s:STATE_HONDURAS
+				count = 1
 			}
 			combat_unit = {
 				type = unit_type:combat_unit_type_fixed_wing_aircraft
@@ -968,9 +1015,6 @@ MILITARY_FORMATIONS = {
 		}
 	}
 
-	### GUATEMALA ###
-	# ~44,000 active. Ongoing civil war.
-
 	c:GUT ?= {
 
 		create_military_formation = {
@@ -986,7 +1030,12 @@ MILITARY_FORMATIONS = {
 			combat_unit = {
 				type = unit_type:combat_unit_type_mechanized_infantry
 				state_region = s:STATE_GUATEMALA
-				count = 10
+				count = 5
+			}
+			combat_unit = {
+				type = unit_type:combat_unit_type_light_infantry
+				state_region = s:STATE_GUATEMALA
+				count = 5
 			}
 			combat_unit = {
 				type = unit_type:combat_unit_type_field_artillery
@@ -1012,9 +1061,6 @@ MILITARY_FORMATIONS = {
 		}
 	}
 
-	### EL SALVADOR ###
-	# ~63,000 active. Peace Accords signed January 1992.
-
 	c:ELS ?= {
 
 		create_military_formation = {
@@ -1030,7 +1076,12 @@ MILITARY_FORMATIONS = {
 			combat_unit = {
 				type = unit_type:combat_unit_type_mechanized_infantry
 				state_region = s:STATE_SAN_SALVADOR
-				count = 14
+				count = 7
+			}
+			combat_unit = {
+				type = unit_type:combat_unit_type_light_infantry
+				state_region = s:STATE_SAN_SALVADOR
+				count = 7
 			}
 			combat_unit = {
 				type = unit_type:combat_unit_type_field_artillery
@@ -1056,9 +1107,6 @@ MILITARY_FORMATIONS = {
 		}
 	}
 
-	### NICARAGUA ###
-	# ~15,000 active. Massively reduced from Sandinista-era 100k+.
-
 	c:NIC ?= {
 
 		create_military_formation = {
@@ -1074,7 +1122,12 @@ MILITARY_FORMATIONS = {
 			combat_unit = {
 				type = unit_type:combat_unit_type_mechanized_infantry
 				state_region = s:STATE_NICARAGUA
-				count = 3
+				count = 2
+			}
+			combat_unit = {
+				type = unit_type:combat_unit_type_light_infantry
+				state_region = s:STATE_NICARAGUA
+				count = 1
 			}
 
 			save_scope_as = nic_ejercito_de_nicaragua_formation
@@ -1090,9 +1143,6 @@ MILITARY_FORMATIONS = {
 		}
 	}
 
-	### COSTA RICA ###
-	# No military. Border Police and Civil Guard only (~8,000).
-
 	c:COS ?= {
 
 		create_military_formation = {
@@ -1103,7 +1153,12 @@ MILITARY_FORMATIONS = {
 			combat_unit = {
 				type = unit_type:combat_unit_type_irregular_infantry
 				state_region = s:STATE_COSTA_RICA
-				count = 8
+				count = 6
+			}
+			combat_unit = {
+				type = unit_type:combat_unit_type_technicals
+				state_region = s:STATE_COSTA_RICA
+				count = 2
 			}
 
 			save_scope_as = cos_fuerza_publica_costa_rica_formation

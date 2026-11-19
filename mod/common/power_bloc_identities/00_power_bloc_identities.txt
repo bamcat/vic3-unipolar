@@ -190,7 +190,6 @@ identity_european_community = {
 		OR = {
 			is_power_bloc_leader = yes
 			AND = {
-				# Cannot leave if you are an EEC member (must leave EEC first)
 				NOT = { is_target_in_global_variable_list = { name = io_eec_members target = root } }
 				power_bloc = {
 					leverage_advantage = {
@@ -203,7 +202,7 @@ identity_european_community = {
 	}
  
 	possible = {
-		always = no # Only EUR can form this identity
+		always = no
 	}
  
 	icon = "gfx/interface/icons/central_identity_pillars_icons/trade_league.dds"
@@ -598,7 +597,7 @@ identity_ideological_union = {
 			add = 100
 		}
 
-		if = { # The forces of reaction
+		if = {
 			limit = {
 				has_law = law_type:law_monarchy
 				OR = {
@@ -609,7 +608,7 @@ identity_ideological_union = {
 			add = 100
 		}
 
-		if = { # The forces of revolution
+		if = {
 			limit = {
 				has_radical_leftist_government = yes
 			}
@@ -978,7 +977,7 @@ identity_religious = {
 		if = {
 			limit = {
 				religion = {
-					NOR = { # Non-abrahamic religions probably wouldn't go for this type of bloc
+					NOR = {
 						has_discrimination_trait = heritage_christian
 						has_discrimination_trait = heritage_islamic
 						has_discrimination_trait = heritage_jewish
@@ -1151,7 +1150,7 @@ identity_cultural = {
 		if = {
 			limit = {
 				any_primary_culture = {
-					OR = { # More likely for countries with large global diasporas and the like
+					OR = {
 						has_discrimination_trait = language_hispanophone
 						has_discrimination_trait = language_lusophone
 						has_discrimination_trait = language_east_slavic

@@ -24,9 +24,9 @@ yugoslav_war_crimes.1 = {
 		set_variable = sarajevo_happened
 		add_modifier = { name = international_condemnation months = 12 }
 		add_radicals = { value = 0.05 pop_type = laborers }
-		add_relations = { target = c:USA value = -25 }
-		add_relations = { target = c:GBR value = -25 }
-		add_relations = { target = c:FRA value = -25 }
+		change_relations = { country = c:USA value = -25 }
+		change_relations = { country = c:GBR value = -25 }
+		change_relations = { country = c:FRA value = -25 }
 		every_country = {
 			limit = { NOT = { OR = { c:YUG ?= this c:SRP ?= this } } }
 			trigger_event = { id = yugoslav_war_crimes.3 days = 3 }
@@ -40,9 +40,9 @@ yugoslav_war_crimes.1 = {
 		set_variable = sarajevo_happened
 		add_modifier = { name = war_crimes_investigation months = 24 }
 		add_radicals = { value = 0.02 pop_type = soldiers }
-		add_relations = { target = c:USA value = -5 }
-		add_relations = { target = c:GBR value = -5 }
-		add_relations = { target = c:FRA value = -5 }
+		change_relations = { country = c:USA value = -5 }
+		change_relations = { country = c:GBR value = -5 }
+		change_relations = { country = c:FRA value = -5 }
 		ai_chance = { base = 0 }
 	}
 }
@@ -69,9 +69,9 @@ yugoslav_war_crimes.2 = {
 		set_variable = srebrenica_happened
 		add_modifier = { name = international_condemnation months = 24 }
 		add_radicals = { value = 0.15 pop_type = soldiers }
-		add_relations = { target = c:USA value = -25 }
-		add_relations = { target = c:GBR value = -25 }
-		add_relations = { target = c:FRA value = -25 }
+		change_relations = { country = c:USA value = -25 }
+		change_relations = { country = c:GBR value = -25 }
+		change_relations = { country = c:FRA value = -25 }
 		every_country = {
 			limit = { NOT = { OR = { c:YUG ?= this c:SRP ?= this } } }
 			trigger_event = { id = yugoslav_war_crimes.4 days = 3 }
@@ -85,9 +85,9 @@ yugoslav_war_crimes.2 = {
 		set_variable = srebrenica_happened
 		add_modifier = { name = war_crimes_investigation months = 36 }
 		add_radicals = { value = 0.04 pop_type = soldiers }
-		add_relations = { target = c:USA value = -5 }
-		add_relations = { target = c:GBR value = -5 }
-		add_relations = { target = c:FRA value = -5 }
+		change_relations = { country = c:USA value = -5 }
+		change_relations = { country = c:GBR value = -5 }
+		change_relations = { country = c:FRA value = -5 }
 		c:BOS = { trigger_event = { id = yugoslav_war_crimes.5 days = 3 } }
 		ai_chance = { base = 0 }
 	}
@@ -103,14 +103,14 @@ yugoslav_war_crimes.3 = {
 	option = {
 		name = yugoslav_war_crimes.3.a
 		default_option = yes
-		add_relations = { target = c:YUG value = -50 }
-		set_owes_obligation = { country = c:BOS setting = yes }
+		change_relations = { country = c:YUG value = -50 }
+		set_owes_obligation_to = { country = c:BOS setting = yes }
 		ai_chance = { base = 100 }
 	}
 	option = {
 		name = yugoslav_war_crimes.3.b
-		add_relations = { target = c:YUG value = -20 }
-		set_owes_obligation = { country = c:BOS setting = yes }
+		change_relations = { country = c:YUG value = -20 }
+		set_owes_obligation_to = { country = c:BOS setting = yes }
 		ai_chance = { base = 0 }
 	}
 }
@@ -125,13 +125,13 @@ yugoslav_war_crimes.4 = {
 	option = {
 		name = yugoslav_war_crimes.4.a
 		default_option = yes
-		add_relations = { target = c:YUG value = -75 }
-		set_owes_obligation = { country = c:BOS setting = yes }
+		change_relations = { country = c:YUG value = -75 }
+		set_owes_obligation_to = { country = c:BOS setting = yes }
 		ai_chance = { base = 100 }
 	}
 	option = {
 		name = yugoslav_war_crimes.4.b
-		add_relations = { target = c:YUG value = -25 }
+		change_relations = { country = c:YUG value = -25 }
 		ai_chance = { base = 0 }
 	}
 }

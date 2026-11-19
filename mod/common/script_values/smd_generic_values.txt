@@ -1,0 +1,36 @@
+﻿smd_sol_ratio_to_bloc_leader = {
+	value = 1
+	if = {
+		limit = {
+			power_bloc ?= {
+				power_bloc_leader ?= {
+					average_sol > 0
+				}
+			}
+		}
+		value = average_sol
+		divide = power_bloc.power_bloc_leader.average_sol
+	}
+}
+
+smd_crime_state_count = {
+	value = 0
+	every_scope_state = {
+		limit = { smd_crime_affected_state = yes }
+		add = 1
+	}
+}
+
+smd_crime_state_others = {
+	value = smd_crime_state_count
+	subtract = 3
+	min = 0
+}
+
+smd_language_other_count = {
+	value = 0
+	every_scope_culture = {
+		limit = { smd_language_other_minority = yes }
+		add = 1
+	}
+}

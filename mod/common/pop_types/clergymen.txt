@@ -1,7 +1,7 @@
 ﻿clergymen = {
 	texture = "gfx/interface/icons/pops_icons/clergymen.dds"
 	color = hsv{ 0.13 0.52 0.91 }
-	start_quality_of_life = 10
+	start_quality_of_life = 20
 	wage_weight = 15
 	paid_private_wage = yes
 	literacy_target = 0.15
@@ -40,7 +40,6 @@
 			limit = {
 				literacy_rate > 0.05
 			}
-			# baseline: ( literacy - 0.2 ) * 20, norm 6 for Literacy 50% and Accepted Religion
 			add = {
 				value = literacy_rate
 				subtract = 0.05

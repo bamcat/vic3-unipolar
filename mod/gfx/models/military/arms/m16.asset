@@ -7,7 +7,7 @@ pdxmesh = {
 	}
 
 	meshsettings = {
-		name = "jorodox.001"
+		name = "m16Shape"
 		index = 0
 		texture_diffuse = "m16_diffuse.dds"
 		texture_normal = "military_arms_02_normal.dds"
@@ -15,4 +15,9 @@ pdxmesh = {
 		shader = "standard"
 		shader_file = "gfx/FX/pdxmesh.shader"
 	}
+}
+
+entity = {
+	name = "smd_military_arms_m16_entity"
+	pdxmesh = "m16_mesh"
 }

@@ -18,7 +18,6 @@
 	}
 
 	possible = {
-		# Must not be able to immediately start a power struggle
 		custom_tooltip = {
 			text = "NO_POWER_STRUGGLE_BLOC_JOIN"
 			OR = {
@@ -48,7 +47,6 @@
 	decline_effect = {
 		change_relations = { country = scope:target_country value = -20 }
 
-		# Remove the entire leverage advantage if they say no
 		scope:target_country.power_bloc ?= {
 			add_leverage = {
 				target = scope:actor
@@ -62,7 +60,7 @@
 
 	ai = {
 		evaluation_chance = {
-			value = 0.01 # AI shouldn't volunteer into power blocs all that often
+			value = 0.01
 		}
 
 		accept_score = {
@@ -81,7 +79,6 @@
 				max = 200
 			}
 
-			### Impact on Cohesion
 			add = {
 				desc = "DIPLOMATIC_ACCEPTANCE_DECREASED_COHESION"
 				value = "power_bloc.predicted_cohesion_percentage_with(scope:actor)"
@@ -100,11 +97,8 @@
 				max = 0
 			}
 
-			### How we fit their selected identity
 			add = ai_accept_join_request_score
 
-			# Ideological opinion is always a factor, but much weaker for non ideological unions
-			# Score for ideological unions is handled in ai_accept_join_request_score script value
 			if = {
 				limit = {
 					scope:target_country.power_bloc ?= {

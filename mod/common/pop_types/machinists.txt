@@ -1,8 +1,8 @@
 ﻿machinists = {
 	texture = "gfx/interface/icons/pops_icons/machinists.dds"
 	color = hsv{ 0.33 0.68 0.60 }
-	start_quality_of_life = 7
-	wage_weight = 10
+	start_quality_of_life = 17
+	wage_weight = 7.5
 	paid_private_wage = yes
 	literacy_target = 0.10
 	dependent_wage = 0.5	# per year
@@ -45,9 +45,6 @@
 	
 	qualifications_growth_desc = "MACHINISTS_QUALIFICATIONS_DESC"
 	qualifications = {
-		# baseline: ( literacy - 0.025 ) * 160, semi-skilled trade.
-		# Rescaled: literacy here means college-educated, so a developed
-		# nation sits near 0.20 rather than vanilla's 0.80.
 		add = {
 			value = literacy_rate
 			subtract = 0.025

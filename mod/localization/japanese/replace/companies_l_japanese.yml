@@ -1,6 +1,4 @@
 ﻿l_japanese:
-
- # Fallback names if dynamic naming fails
  company_basic_agriculture_1: "株式会社クオリティグレイン"
  company_basic_agriculture_2: "農業開発協会"
  company_basic_metal_mining: "金属鉱山コンソーシアム"
@@ -26,8 +24,7 @@
  company_basic_gold_mining: "貴金属シンジケート"
  company_basic_electrics: "ホームエレクトリックス株式会社"
  company_basic_weapons: "武装工事"
- 
- # Dynamic company names
+
  company_basic_agriculture_1_dynamic_name_tag_singular: "ログイン"
  company_basic_agriculture_1_dynamic_name_tag_plural: "サインイン"
  company_basic_agriculture_2_dynamic_name_tag_singular: "農業農業"
@@ -78,7 +75,7 @@
  company_basic_electrics_dynamic_name_tag_plural: "電気"
  company_basic_weapons_dynamic_name_tag_singular: "アームアメント"
  company_basic_weapons_dynamic_name_tag_plural: "アームチェア"
- 
+
  dynamic_company_type_company: "会社案内"
  dynamic_company_type_consortium: "会社案内"
  dynamic_company_type_corporation: "会社案内"
@@ -88,20 +85,19 @@
  dynamic_company_type_guild: "物流施設"
  dynamic_company_type_society: "ホールディングス"
  dynamic_company_type_fellowship: "会社案内"
- 
+
  dynamic_company_name_country_1: "[COUNTRY.GetAdjectiveNoFormatting] $DYNAMIC_NAME_TAG$ $TYPE_NAME$"
  dynamic_company_name_country_2: "[COUNTRY.GetAdjectiveNoFormatting] $DYNAMIC_NAME_TAG$"
  dynamic_company_name_country_3: "$DYNAMIC_NAME_TAG$ $TYPE_NAME$ の [COUNTRY.GetNameNoFormatting]"
  dynamic_company_name_country_4: "[COUNTRY.GetAdjectiveNoFormatting] $DYNAMIC_NAME_TAG$ 代表取締役"
  dynamic_company_name_country_5: "[COUNTRY.GetAdjectiveNoFormatting] $DYNAMIC_NAME_TAG$ $TYPE_NAME$ を結合しました"
- 
+
  dynamic_company_name_state_1: "[STATE_REGION.GetNameNoFormatting] $DYNAMIC_NAME_TAG$ $TYPE_NAME$"
  dynamic_company_name_state_2: "[STATE_REGION.GetNameNoFormatting] $DYNAMIC_NAME_TAG$"
  dynamic_company_name_state_3: "$DYNAMIC_NAME_TAG$ $TYPE_NAME$ の [STATE_REGION.GetNameNoFormatting]"
  dynamic_company_name_state_4: "[STATE_REGION.GetNameNoFormatting] プレミアム $DYNAMIC_NAME_TAG$"
  dynamic_company_name_state_5: "ユナイテッド [STATE_REGION.GetNameNoFormatting] $DYNAMIC_NAME_TAG$ プロデューサー"
 
- # Flavored Companies
  company_krupp: "フリドリッヒ・クルップ"
  company_rheinmetall: "ログイン"
  company_schichau: "F. シヒャウ"
@@ -149,8 +145,8 @@
 
  company_skoda: "シコダ作品"
  company_mav: "MÁVAGの特長"
- company_manfred_weiss: "Manfréd Weiss Steel and Metal Works" # Weiss Manfréd Acél- és Fémművek
- company_galician_carpathian_oil: "Galician Carpathian Petroleum Company" # Galizisch-Karpathische Petroleum Aktien-Gesellschaft
+ company_manfred_weiss: "Manfréd Weiss Steel and Metal Works"
+ company_galician_carpathian_oil: "Galician Carpathian Petroleum Company"
  company_oevg: "Österreichische Waffenfabriks - ゲーセルシャーフ"
 
  company_ccci: "Compagnie du コンゴ"
@@ -228,8 +224,8 @@
  company_eea: "Empresas Eléctricas アソシダス"
 
  company_construction_power_bloc: "ユナイテッド建設コングロマリット"
- 
-  CANNOT_TOGGLE_COMPANY_GRANTED_CHARTER: "$DESC$"
+
+ CANNOT_TOGGLE_COMPANY_GRANTED_CHARTER: "$DESC$"
  COMPANY_CHARTER_INVESTMENT: "$NAME$"
  COMPANY_CHARTER_MONOPOLY: "$NAME$ の [BUILDING_TYPE.GetName]"
  COMPANY_CHARTER_INDUSTRY: "$NAME$ の [BUILDING_TYPE.GetName]"
@@ -238,7 +234,7 @@
  COMPANY_CHARTER_ON_COOLDOWN: "#b #! は #b [DATE.GetString]#! まで削除されます。"
 
  BUILDING_OWNED_BY_COMPANY: "[Company.GetNameNoFormatting] で所有"
- 
+
  PRODUCTIVITY_TREND: "[concept_productivity]"
  PROSPERITY_TREND: "[concept_prosperity]"
  PROFIT_TREND: "$COMPANY_PROFIT_TITLE$"
@@ -255,7 +251,6 @@
  COMMAND_CONFIRMATION_ENABLE_MONOPOLY_CHARTER: "[CompanyCharterType.GetName] を [Company.GetName] に付与したいですか?\n\n@aut! #v [CompanyCharterType.GetAuthorityCost(Company.Self)|-0]#! メンテナンスコスト\n を [Company.GetCountry.GetUsedFreeCharters|v]/[Company.GetCountry.GetModifier.GetNonFormattedValueWithBreakdownAndNoDecimalsFor('country_free_charters_add')] 無料 [CompanyCharterType.GetAuthorityCost(Company.Self)|-0] [CompanyCharterType.GetAuthorityCost(Company.Self)|-0]#! メンテナンスコスト\n これは、付与後の#v [GetDefine('NEconomy','COMPANY_MONOPOLY_COOLDOWN_MONTHS')] 月#! で返済できません。\n\n#title 効果:#!#indent_newline:3 \n$EFFECTS$#!#!"
  COMMAND_CONFIRMATION_DISABLE_CHARTER: "[Company.GetName] から [CompanyCharterType.GetName] を \n\n @aut! #v [CompanyCharterType.GetAuthorityCost(Company.Self)|+0][CompanyCharterType.GetAuthorityCost(Company.Self)|+0]#! メンテナンスコスト\n\n#title#title 次の効果を削除します。#!#indent_newline:3 \n$EFFECTS$#!"
  COMMAND_CONFIRMATION_DISABLE_CHARTER_WITH_REVOKE_EFFECTS: "$COMMAND_CONFIRMATION_DISABLE_CHARTER$\n\n$REVOKE_EFFECTS$"
-
 
  investment_charter_desc: "[CompanyCharter.GetType.GetNameNoFormatting] では、[concept_company] を [Concept('concept_regional_company_hq','$concept_regional_company_hqs$')] に設定し、影響と操作を拡張できます。"
  investment_charter_type_desc: "[CompanyCharterType.GetNameNoFormatting] では、[concept_company] を [Concept('concept_regional_company_hq','$concept_regional_company_hqs$')] に設定し、影響と操作を拡張できます。"
@@ -292,12 +287,11 @@
  PROSPERITY_INCREASE_FROM_PRODUCTIVITY: "高い [concept_productivity] から"
  PROSPERITY_DECREASE_FROM_PRODUCTIVITY: "低い [concept_productivity] から"
 
- # Charters of Commerce Companies
  company_ludwig_moser_and_sons: "Glasfabrik Ludwigモザー&ゾーネ"
  company_compania_sansinena_de_carnes_congeladas: "Compañía sansinena デ カルヌ コンゲルダス"
  company_konigliche_porzellan_manufaktur_meissen: "Königliche Porzellan-Manufaktur メイセン"
  company_jiangnan_weaving_bureaus: "江南省織局"
- company_russian_american_company: "Russian-American Company" # Alt. Rossiysko-Amerikanskaya Kompaniya
+ company_russian_american_company: "Russian-American Company"
  company_lee_wilson: "リー・ウィルソン&カンパニー"
  company_colt_firearms: "Coltの特許消防士製造会社"
  company_gebruder_thonet: "ジェブリューダーThonet"
@@ -314,9 +308,9 @@
  company_imperial_ethiopian_railways: "帝国エチオピア鉄道会社"
  company_lanfang_kongsi: "ランファン・コングシ"
  company_paradox: "ジョン・パラドックス&カンパニー"
- 
+
  ## companies added by smd:
- 
+
  company_amazon: "株式会社アマゾンコム"
  company_apple: "アップル株式会社"
  company_atandt: "株式会社AT&T"
@@ -346,23 +340,22 @@
  company_blackrock: "ブラックロック投資グループ"
  company_cargill: "カルギル"
  company_caterpillar: "キャタピラーキャタピラー"
- 
+
  company_samsung: "サムスン電子株式会社"
- 
+
  company_sberbank: "スバーバンク"
- 
+
  company_honda: "ホンダ"
  company_toyota: "トヨタ"
  company_sony: "ソニー"
  company_nintendo: "ニンテンドー"
- 
+
  company_tesco: "テスコ"
  company_hsbc: "HSBCについて"
  company_shell: "シェル"
- 
+
  company_saudi_aramco: "サウジアラムコ"
- 
- # USA
+
  company_visa: "株式会社ビザ"
  company_bear_stearns: "クマの茎"
  company_mgm: "メトロ・ゴールドウィン・マイヤー"
@@ -373,14 +366,11 @@
  company_openai: "オープンAI"
  company_anthropic: "アンソロフィック"
  company_alphabet: "アルファベット"
- 
- # Germany
+
  company_adidas: "アディダス"
- 
- # Great Britain
+
  company_astrazeneca: "アストラゼネカ"
- 
- # China
+
  company_alibaba: "Alibabaグループ"
  company_tencent: "テンセント"
  company_pingan: "損害保険"
@@ -390,22 +380,17 @@
  company_bytedance: "バイテダンス"
  company_sinopec: "シノペック"
  company_xiaomi: "小米科技"
- 
- # Ireland
+
  company_accenture: "アクセンチュア"
- 
- # France
+
  company_totalenergies: "総合エネルギー"
- 
- # ── NEW BASIC COMPANIES ──────────────────────────────────────────
- 
+
  company_basic_pharmaceuticals: "国立製薬グループ"
  company_basic_retail: "総合小売コンソーシアム"
  company_basic_food_service: "スタンダードフードサービス"
  company_basic_banking: "全国銀行グループ"
  company_basic_professional_services: "プロフェッショナルサービスグループ"
- 
- # Dynamic name tags
+
  company_basic_pharmaceuticals_dynamic_name_tag_singular: "医薬品"
  company_basic_pharmaceuticals_dynamic_name_tag_plural: "医薬品"
  company_basic_retail_dynamic_name_tag_singular: "リテール"

@@ -1,9 +1,7 @@
-
 on_game_started_after_lobby = {
 	effect = {
 		start_kurdistan_war_journal_entry_system = yes
 		every_country = {
-	# ---------------- Healthcare ----------------
 	set_variable = {
 		name = smd_healthcare_expense_tmp
 		value = smd_healthcare_expense_value
@@ -26,7 +24,6 @@ on_game_started_after_lobby = {
 	}
 	remove_variable = smd_healthcare_expense_tmp
 
-	# ---------------- Education ----------------
 	set_variable = {
 		name = smd_education_expense_tmp
 		value = smd_education_expense_value
@@ -49,7 +46,6 @@ on_game_started_after_lobby = {
 	}
 	remove_variable = smd_education_expense_tmp
 
-	# ---------------- Police ----------------
 	set_variable = {
 		name = smd_police_expense_tmp
 		value = smd_police_expense_value

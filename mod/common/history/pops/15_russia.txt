@@ -1,5 +1,5 @@
 ﻿POPS = {
-	s:STATE_VILNIUS = { #DONE
+	s:STATE_VILNIUS = {
 		region_state:LIT = {
 			create_pop = {
 				culture = byelorussian
@@ -39,7 +39,7 @@
 			}
 		}
 	}
-	s:STATE_COURLAND = { #DONE
+	s:STATE_COURLAND = {
 		region_state:LAT = {
 			create_pop = {
 				culture = latvian
@@ -76,7 +76,7 @@
 			}
 		}
 	}
-	s:STATE_TARTU = { #DONE
+	s:STATE_TARTU = {
 		region_state:EST = {
 			create_pop = {
 				culture = estonian
@@ -96,7 +96,7 @@
 			}
 		}
 	}
-	s:STATE_TALINN = { #DONE
+	s:STATE_TALINN = {
 		region_state:EST = {
 			create_pop = {
 				culture = estonian
@@ -116,7 +116,7 @@
 			}
 		}
 	}
-	s:STATE_RIGA = { #DONE
+	s:STATE_RIGA = {
 		region_state:LAT = {
 			create_pop = {
 				culture = latvian
@@ -135,7 +135,7 @@
 				size = 10107
 			}
 			create_pop = {
-				culture = ugrian #Livs
+				culture = ugrian
 				religion = protestant
 				size = 702
 			}
@@ -155,35 +155,35 @@
 		region_state:RUS = {
 			create_pop = {
 				culture = latvian
-				size = 75057
+				size = 56134
 			}
 			create_pop = {
 				culture = north_german
-				size = 1264
+				size = 945
 			}
 			create_pop = {
 				culture = ashkenazi
-				size = 18883
+				size = 14122
 			}
 			create_pop = {
 				culture = polish
-				size = 9158
+				size = 6849
 			}
 			create_pop = {
 				culture = russian
-				size = 23064
+				size = 17249
 			}
 			create_pop = {
 				culture = polish
-				size = 9158
+				size = 6849
 			}
 			create_pop = {
 				culture = byelorussian
-				size = 19639
+				size = 14688
 			}
 		}
 	}
-	s:STATE_KAUNAS = { #DONE
+	s:STATE_KAUNAS = {
 		region_state:LIT = {
 			create_pop = {
 				culture = lithuanian
@@ -245,89 +245,89 @@
 			}
 		}
 	}
-	s:STATE_MAZOVIA = { #Mazovia - DONE
+	s:STATE_MAZOVIA = {
 		region_state:RUS = {
 			create_pop = {
 				culture = polish
-				size = 756854
+				size = 566038
 			}
 			create_pop = {
 				culture = ashkenazi
-				size = 140794
+				size = 105297
 			}
 			create_pop = {
 				culture = north_german
-				size = 30795
+				size = 23031
 			}
 			create_pop = {
 				culture = russian
-				size = 41385
+				size = 30951
 			}
 			create_pop = {
 				culture = byelorussian
-				size = 39324
+				size = 29410
 			}
 			create_pop = {
 				culture = ukrainian
-				size = 16455
+				size = 12306
 			}
 		}
 	}
-	s:STATE_GREATER_POLAND = { #Warszawa - DONE
+	s:STATE_GREATER_POLAND = {
 		region_state:RUS = {
 			create_pop = {
 				culture = polish
-				size = 1562734
+				size = 1168741
 			}
 			create_pop = {
 				culture = polish
 				religion = protestant
-				size = 23389
+				size = 17492
 			}
 			create_pop = {
 				culture = ashkenazi
-				size = 279868
+				size = 209308
 			}
 			create_pop = {
 				culture = north_german
-				size = 104661
+				size = 78274
 			}
 			create_pop = {
 				culture = russian
-				size = 47245
+				size = 35334
 			}
 		}
 	}
-	s:STATE_LESSER_POLAND = { #Lublin - DONE
+	s:STATE_LESSER_POLAND = {
 		region_state:RUS = {
 			create_pop = {
 				culture = polish
-				size = 493630
+				size = 369177
 			}
 			create_pop = {
 				culture = polish
 				religion = protestant
-				size = 20270
+				size = 15160
 			}
 			create_pop = {
 				culture = ashkenazi
-				size = 91343
+				size = 68314
 			}
 			create_pop = {
 				culture = north_german
-				size = 15330
+				size = 11465
 			}
 			create_pop = {
 				culture = ukrainian
-				size = 125344
+				size = 93743
 			}
 			create_pop = {
 				culture = russian
-				size = 27627
+				size = 20662
 			}
 		}
 	}
-	s:STATE_UUSIMAA = { #DONE
+	s:STATE_UUSIMAA = {
 		region_state:FNL = {
 			create_pop = {
 				culture = swedish
@@ -339,7 +339,7 @@
 			}
 		}
 	}
-	s:STATE_WEST_KARELIA = { #DONE
+	s:STATE_WEST_KARELIA = {
 		region_state:FIN = {
 			create_pop = {
 				culture = finnish
@@ -360,7 +360,7 @@
 			}
 		}
 	}
-	s:STATE_ALAND = { #DONE
+	s:STATE_ALAND = {
 		region_state:FIN = {
 			create_pop = {
 				culture = swedish
@@ -372,7 +372,7 @@
 			}
 		}
 	}
-	s:STATE_OSTROBOTHNIA = { #DONE
+	s:STATE_OSTROBOTHNIA = {
 		region_state:FIN = {
 			create_pop = {
 				culture = finnish
@@ -384,7 +384,7 @@
 			}
 		}
 	}
-	s:STATE_OULU = { #DONE
+	s:STATE_OULU = {
 		region_state:FNL = {
 			create_pop = {
 				culture = finnish
@@ -400,7 +400,7 @@
 			}
 		}
 	}
-	s:STATE_KUOPIO = { #DONE
+	s:STATE_KUOPIO = {
 		region_state:FNL = {
 			create_pop = {
 				culture = finnish
@@ -412,128 +412,128 @@
 			}
 		}
 	}
-	s:STATE_KOLA = { #DONE
+	s:STATE_KOLA = {
 		region_state:RUS = {
 			create_pop = {
 				culture = russian
-				size = 3100
+				size = 3163
 			}
 			create_pop = {
 				culture = sami
-				size = 919
+				size = 937
 			}
 			create_pop = {
 				culture = finnish
-				size = 575
+				size = 587
 			}
 			create_pop = {
 				culture = norwegian
-				size = 98
+				size = 100
 			}
 			create_pop = {
 				culture = karelian
-				size = 202
+				size = 206
 			}
 		}
 	}
-	s:STATE_EAST_KARELIA = { #DONE
+	s:STATE_EAST_KARELIA = {
 		region_state:RUS = {
 			create_pop = {
 				culture = russian
-				size = 89373
+				size = 91207
 			}
 			create_pop = {
 				culture = finnish
-				size = 590
+				size = 602
 			}
 			create_pop = {
 				culture = karelian
-				size = 41803
+				size = 42661
 			}
 		}
 	}
-	s:STATE_NENETSIA = { #DONE
+	s:STATE_NENETSIA = {
 		region_state:RUS = {
 			create_pop = {
 				culture = russian
-				size = 13386
+				size = 13661
 			}
 			create_pop = {
 				culture = ugrian
-				size = 10840
+				size = 11062
 			}
 		}
 	}
-	s:STATE_ARKHANGELSK = { #DONE
+	s:STATE_ARKHANGELSK = {
 		region_state:RUS = {
 			create_pop = {
 				culture = russian
-				size = 185956
+				size = 189772
 			}
 		}
 	}
-	s:STATE_GALICH = { #DONE
+	s:STATE_GALICH = {
 		region_state:RUS = {
 			create_pop = {
 				culture = russian
-				size = 531841
+				size = 542758
 			}
 			create_pop = {
 				culture = ugrian
 				religion = orthodox
-				size = 50152
+				size = 51182
 			}
 		}
 	}
-	s:STATE_BREST = { #DONE
+	s:STATE_BREST = {
 		region_state:RUS = {
 			create_pop = {
 				culture = byelorussian
-				size = 399428
+				size = 298725
 			}
 			create_pop = {
 				culture = lithuanian
-				size = 8205
+				size = 6136
 			}
 			create_pop = {
 				culture = ukrainian
-				size = 104204
+				size = 77932
 			}
 			create_pop = {
 				culture = polish
-				size = 17545
+				size = 13122
 			}
 			create_pop = {
 				culture = ashkenazi
-				size = 46300
+				size = 34627
 			}
 			create_pop = {
 				culture = russian
-				size = 25669
+				size = 19197
 			}
 		}
 	}
-	s:STATE_MINSK = { #DONE
+	s:STATE_MINSK = {
 		region_state:RUS = {
 			create_pop = {
 				culture = polish
-				size = 23319
+				size = 17440
 			}
 			create_pop = {
 				culture = byelorussian
-				size = 444164
+				size = 332182
 			}
 			create_pop = {
 				culture = ashkenazi
-				size = 116570
+				size = 87181
 			}
 			create_pop = {
 				culture = russian
-				size = 30315
+				size = 22672
 			}
 		}
 	}
-	s:STATE_MOGILEV = { #DONE
+	s:STATE_MOGILEV = {
 		region_state:BYL = {
 			create_pop = {
 				culture = russian
@@ -557,23 +557,23 @@
 		region_state:RUS = {
 			create_pop = {
 				culture = russian
-				size = 	117039
+				size = 	119441
 			}
 			create_pop = {
 				culture = russian
-				size = 	55616
+				size = 	56757
 			}
 			create_pop = {
 				culture = russian
-				size = 	89129
+				size = 	90958
 			}
 			create_pop = {
 				culture = russian
-				size = 	83412
+				size = 	85124
 			}
 		}
 	}
-	s:STATE_VITEBSK = { #DONE
+	s:STATE_VITEBSK = {
 		region_state:BYL = {
 			create_pop = {
 				culture = russian
@@ -597,207 +597,207 @@
 			}
 		}
 	}
-	s:STATE_VOLHYNIA = { #DONE
+	s:STATE_VOLHYNIA = {
 		region_state:RUS = {
 			create_pop = {
 				culture = ukrainian
-				size = 410360
+				size = 306901
 			}
 			create_pop = {
 				culture = ashkenazi
-				size = 73697
+				size = 55117
 			}
 			create_pop = {
 				culture = polish
-				size = 34615
+				size = 25888
 			}
 			create_pop = {
 				culture = south_german
-				size = 31824
+				size = 23801
 			}
 			create_pop = {
 				culture = czech
-				size = 7817
+				size = 5846
 			}
 			create_pop = {
 				culture = russian
-				size = 558
+				size = 417
 			}
 		}
 	}
-	s:STATE_KIEV = { #DONE
+	s:STATE_KIEV = {
 		region_state:RUS = {
 			create_pop = {
 				culture = ukrainian
-				size = 2035071
+				size = 1521994
 			}
 			create_pop = {
 				culture = south_german
-				size = 23486
+				size = 17565
 			}
 			create_pop = {
 				culture = ashkenazi
-				size = 379412
+				size = 283756
 			}
 			create_pop = {
 				culture = polish
-				size = 56710
+				size = 42412
 			}
 			create_pop = {
 				culture = russian
-				size = 68295
+				size = 51077
 			}
 			create_pop = {
 				culture = romanian
-				size = 20517
+				size = 15344
 			}
 		}
 	}
-	s:STATE_CRIMEA = { #DONE
+	s:STATE_CRIMEA = {
 		region_state:RUS = {
 			create_pop = {
 				culture = ukrainian
-				size = 18716
+				size = 13997
 			}
 			create_pop = {
 				culture = russian
-				size = 56694
+				size = 42400
 			}
 			create_pop = {
 				culture = tatar
-				size = 59021
+				size = 44141
 			}
 			create_pop = {
 				culture = south_german
-				size = 9364
+				size = 7003
 			}
 			create_pop = {
 				culture = ashkenazi
-				size = 7319
+				size = 5474
 			}
 			create_pop = {
 				culture = bulgarian
-				size = 2196
+				size = 1642
 			}
 			create_pop = {
 				culture = greek
-				size = 5132
+				size = 3838
 			}
 			create_pop = {
 				culture = armenian
-				size = 2047
+				size = 1531
 			}
 			create_pop = {
 				culture = polish
-				size = 1635
+				size = 1223
 			}
 			create_pop = {
 				culture = czech
-				size = 187
+				size = 140
 			}
 			create_pop = {
 				culture = estonian
-				size = 248
+				size = 185
 			}
 			create_pop = {
 				culture = turkish
-				size = 333
+				size = 249
 			}
 			create_pop = {
 				culture = south_italian
-				size = 254
+				size = 190
 			}
 		}
 	}
-	s:STATE_KHARKOV = { #DONE
+	s:STATE_KHARKOV = {
 		region_state:RUS = {
 			create_pop = {
 				culture = ukrainian
-				size = 2021540
+				size = 1511874
 			}
 			create_pop = {
 				culture = ashkenazi
-				size = 68356
+				size = 51122
 			}
 			create_pop = {
 				culture = russian
-				size = 215269
+				size = 160996
 			}
 		}
 	}
-	s:STATE_CHERSON = { #DONE
+	s:STATE_CHERSON = {
 		region_state:RUS = {
 			create_pop = {
 				culture = ukrainian
-				size = 462684
+				size = 346033
 			}
 			create_pop = {
 				culture = russian
-				size = 158498
+				size = 118538
 			}
 			create_pop = {
 				culture = ashkenazi
-				size = 67157
+				size = 50226
 			}
 			create_pop = {
 				culture = romanian
-				size = 30733
+				size = 22985
 			}
 			create_pop = {
 				culture = south_german
-				size = 25338
+				size = 18950
 			}
 			create_pop = {
 				culture = polish
-				size = 6260
+				size = 4682
 			}
 		}
 	}
-	s:STATE_CHERNIHIV = { #DONE
+	s:STATE_CHERNIHIV = {
 		region_state:RUS = {
 			create_pop = {
 				culture = ukrainian
-				size = 740270
+				size = 755464
 			}
 			create_pop = {
 				culture = ashkenazi
-				size = 55743
+				size = 56887
 			}
 			create_pop = {
 				culture = byelorussian
-				size = 73581
+				size = 75091
 			}
 			create_pop = {
 				culture = russian
-				size = 240810
+				size = 245753
 			}
 		}
 	}
-	s:STATE_TAURIDA = { #DONE
+	s:STATE_TAURIDA = {
 		region_state:RUS = {
 			create_pop = {
 				culture = ukrainian
-				size = 680148
+				size = 508671
 			}
 			create_pop = {
 				culture = russian
-				size = 211027
+				size = 157823
 			}
 			create_pop = {
 				culture = ashkenazi
-				size = 43605
+				size = 32611
 			}
 			create_pop = {
 				culture = south_german
-				size = 45162
+				size = 33776
 			}
 			create_pop = {
 				culture = greek
-				size = 15725
+				size = 11760
 			}
 			create_pop = {
 				culture = bulgarian
-				size = 14838
+				size = 11097
 			}
 		}
 	}
@@ -805,64 +805,64 @@
 		region_state:RUS = {
 			create_pop = {
 				culture = romanian
-				size = 236590
+				size = 176941
 			}
 			create_pop = {
 				culture = ukrainian
-				size = 63617
+				size = 47578
 			}
 			create_pop = {
 				culture = russian
-				size = 33929
+				size = 25375
 			}
 			create_pop = {
 				culture = ashkenazi
-				size = 42412
+				size = 31719
 			}
 			create_pop = {
 				culture = bulgarian
-				size = 22478
+				size = 16811
 			}
 			create_pop = {
 				culture = south_german
-				size = 13148
+				size = 9833
 			}
 			create_pop = {
 				culture = turkish
 				religion = orthodox
-				size = 12299
+				size = 9198
 			}
 		}
 	}
-	s:STATE_NORTH_CAUCASUS = { #DONE
+	s:STATE_NORTH_CAUCASUS = {
 		region_state:RUS = {
 			create_pop = {
 				culture = russian
-				size = 48907
+				size = 49911
 			}
 			create_pop = {
 				culture = ukrainian
-				size = 12820
+				size = 13083
 			}
 			create_pop = {
 				culture = chechen
-				size = 16526
+				size = 16866
 			}
 			create_pop = {
 				culture = north_caucasian
-				size = 61614
+				size = 62879
 			}
 			create_pop = {
 				culture = circassian
-				size = 3937
+				size = 4017
 			}
 			create_pop = {
 				culture = kazak
-				size = 12010
+				size = 12256
 			}
 			create_pop = {
 				culture = south_german
-				size = 1960
+				size = 2000
 			}
 		}
 		region_state:CCH = {
@@ -886,240 +886,240 @@
 			}
 		}
 	}
-	s:STATE_ELIZAVETPOL = { #DONE
+	s:STATE_ELIZAVETPOL = {
 		region_state:RUS = {
 			create_pop = {
 				culture = azerbaijani
-				size = 71461
+				size = 53444
 			}
 			create_pop = {
 				culture = azerbaijani
 				religion = sunni
-				size = 42880
+				size = 32069
 			}
 			create_pop = {
 				culture = kurdish
-				size = 10135
+				size = 7580
 			}
 			create_pop = {
 				culture = russian
-				size = 2268
+				size = 1696
 			}
 			create_pop = {
 				culture = armenian
-				size = 72393
+				size = 54141
 			}
 			create_pop = {
 				culture = south_german
-				size = 531
+				size = 397
 			}
 			create_pop = {
 				culture = north_caucasian
-				size = 3657
+				size = 2735
 			}
 		}
 	}
-	s:STATE_STAVROPOL = { #DONE
+	s:STATE_STAVROPOL = {
 		region_state:RUS = {
 			create_pop = {
 				culture = russian
-				size = 225505
+				size = 168651
 			}
 			create_pop = {
 				culture = ukrainian
-				size = 149520
+				size = 111823
 			}
 			create_pop = {
 				culture = kazak
-				size = 9398
+				size = 7029
 			}
 			create_pop = {
 				culture = turkmen
-				size = 6945
+				size = 5194
 			}
 			create_pop = {
 				culture = kalmyk
-				size = 4902
+				size = 3666
 			}
 		}
 	}
-	s:STATE_KALMYKIA = { #DONE
+	s:STATE_KALMYKIA = {
 		region_state:RUS = {
 			create_pop = {
 				culture = kalmyk
-				size = 96293
+				size = 98270
 			}
 			create_pop = {
 				culture = russian
-				size = 1755
-			}
-		}
-	}
-	s:STATE_PSKOV = { #DONE
-		region_state:RUS = {
-			create_pop = {
-				culture = russian
-				size = 530274
-			}
-			create_pop = {
-				culture = estonian
-				size = 5605
-			}
-			create_pop = {
-				culture = latvian
-				size = 5543
-			}
-			create_pop = {
-				culture = ashkenazi
-				size = 3695
-			}
-			create_pop = {
-				culture = polish
-				size = 2239
-			}
-			create_pop = {
-				culture = finnish
-				size = 1960
-			}
-			create_pop = {
-				culture = byelorussian
 				size = 1792
 			}
 		}
 	}
-	s:STATE_YAROSLAVL = { #DONE
+	s:STATE_PSKOV = {
 		region_state:RUS = {
 			create_pop = {
 				culture = russian
-				size = 2343007
+				size = 541158
+			}
+			create_pop = {
+				culture = estonian
+				size = 5720
+			}
+			create_pop = {
+				culture = latvian
+				size = 5657
+			}
+			create_pop = {
+				culture = ashkenazi
+				size = 3770
+			}
+			create_pop = {
+				culture = polish
+				size = 2286
+			}
+			create_pop = {
+				culture = finnish
+				size = 2000
+			}
+			create_pop = {
+				culture = byelorussian
+				size = 1829
+			}
+		}
+	}
+	s:STATE_YAROSLAVL = {
+		region_state:RUS = {
+			create_pop = {
+				culture = russian
+				size = 2391098
 			}
 			create_pop = {
 				culture = ugrian
-				size = 3739
+				size = 3815
 			}
 		}
 	}
-	s:STATE_RYAZAN = { #DONE
+	s:STATE_RYAZAN = {
 		region_state:RUS = {
 			create_pop = {
 				culture = russian
-				size = 963398
+				size = 983171
 			}
 			create_pop = {
 				culture = tatar
-				size = 5810
+				size = 5929
 			}
 		}
 	}
-	s:STATE_TAMBOV = { #DONE
+	s:STATE_TAMBOV = {
 		region_state:RUS = {
 			create_pop = {
 				culture = russian
-				size = 1858230
+				size = 1896369
 			}
 			create_pop = {
 				culture = mordvin
-				size = 170029
+				size = 173519
 			}
 			create_pop = {
 				culture = tatar
-				size = 33288
+				size = 33972
 			}
 		}
 	}
-	s:STATE_NIZHNY_NOVGOROD = { #DONE
+	s:STATE_NIZHNY_NOVGOROD = {
 		region_state:RUS = {
 			create_pop = {
 				culture = russian
-				size = 1116981
+				size = 1139906
 			}
 			create_pop = {
 				culture = chuvash
-				size = 26658
+				size = 27205
 			}
 			create_pop = {
 				culture = mordvin
-				size = 45365
+				size = 46297
 			}
 			create_pop = {
 				culture = tatar
-				size = 45092
+				size = 46018
 			}
 		}
 	}
-	s:STATE_CHUVASHIA = { #DONE
+	s:STATE_CHUVASHIA = {
 		region_state:RUS = {
 			create_pop = {
 				culture = russian
-				size = 135630
+				size = 101435
 			}
 			create_pop = {
 				culture = chuvash
-				size = 187314
+				size = 140089
 			}
 			create_pop = {
 				culture = mari
-				size = 68498
+				size = 51228
 			}
 			create_pop = {
 				culture = mordvin
-				size = 13374
+				size = 10002
 			}
 			create_pop = {
 				culture = tatar
-				size = 28222
+				size = 21107
 			}
 		}
 	}
-	s:STATE_VYATKA = { #DONE
+	s:STATE_VYATKA = {
 		region_state:RUS = {
 			create_pop = {
 				culture = russian
-				size = 947750
+				size = 708806
 			}
 			create_pop = {
 				culture = udmurt
-				size = 165031
+				size = 123424
 			}
 			create_pop = {
 				culture = mari
-				size = 18861
+				size = 14106
 			}
 			create_pop = {
 				culture = tatar
-				size = 47152
+				size = 35264
 			}
 		}
 	}
-	s:STATE_UFA = { #DONE
+	s:STATE_UFA = {
 		region_state:RUS = {
 			create_pop = {
 				culture = bashkir
-				size = 122204
+				size = 91394
 			}
 			create_pop = {
 				culture = russian
-				size = 107121
+				size = 80114
 			}
 			create_pop = {
 				culture = tatar
-				size = 35060
+				size = 26221
 			}
 			create_pop = {
 				culture = mari
-				size = 10516
+				size = 7865
 			}
 			create_pop = {
 				culture = chuvash
-				size = 7968
+				size = 5959
 			}
 			create_pop = {
 				culture = mordvin
-				size = 5233
+				size = 3914
 			}
 		}
 	}
-	s:STATE_CHELYABINSK = { #DONE
+	s:STATE_CHELYABINSK = {
 		region_state:KZH = {
 			create_pop = {
 				culture = russian
@@ -1175,15 +1175,15 @@
 		region_state:RUS = {
 			create_pop = {
 				culture = russian
-				size = 217013
+				size = 162300
 			}
 			create_pop = {
 				culture = bashkir
-				size = 35890
+				size = 26841
 			}
 			create_pop = {
 				culture = mordvin
-				size = 950
+				size = 710
 			}
 		}
 	}
@@ -1191,36 +1191,36 @@
 		region_state:RUS = {
 			create_pop = {
 				culture = russian
-				size = 250073
+				size = 255205
 			}
 			create_pop = {
 				culture = ugrian
-				size = 18524
+				size = 18905
 			}
 			create_pop = {
 				culture = bashkir
-				size = 10513
+				size = 10728
 			}
 			create_pop = {
 				culture = tatar
-				size = 15437
+				size = 15754
 			}
 		}
 	}
-	s:STATE_ALTAI = { #DONE
+	s:STATE_ALTAI = {
 		region_state:RUS = {
-			create_pop = { #Altaians
+			create_pop = {
 				culture = mongol
 				religion = animist
-				size = 17885
+				size = 13376
 			}
 			create_pop = {
 				culture = tatar
-				size = 2659
+				size = 1989
 			}
 			create_pop = {
 				culture = russian
-				size = 3626
+				size = 2712
 			}
 		}
 	}

@@ -22,6 +22,7 @@
 		law_anarchy = strongly_disapprove
 		law_single_party_state = disapprove
 		law_technocracy = strongly_disapprove
+		law_labour_suffrage = strongly_disapprove
 	}
 
 	lawgroup_economic_system = {	
@@ -81,7 +82,6 @@
 			}
 			add = -75
 		}
-		# less likely if IG is happy in a republic
 		if = {
 			limit = {
 				owner = {
@@ -92,7 +92,6 @@
 			add = -100
 		}
 
-		# more likely for intelligentsia, industrialists, and PB with traditional economic laws
 		if = {
 			limit = {
 				OR = {
@@ -111,7 +110,6 @@
 			}
 			add = 75
 		}
-		# more likely if the IG is unhappy with the monarchy, and that monarchy is not Orleanist
 		if = {
 			limit = {
 				owner = {
@@ -134,7 +132,6 @@
 			}
 			add = 25
 		}
-		# conservative and/or reactionary leaders have a higher spawn chance if the Anti-Dreyfusards won.
 		if = {
 			limit = {
 				has_variable = anti_dreyfusard_victory
@@ -202,6 +199,7 @@ REPLACE_OR_CREATE:ideology_legitimist = {
 		law_universal_suffrage = strongly_disapprove
 		law_anarchy = strongly_disapprove
 		law_technocracy = strongly_disapprove
+		law_labour_suffrage = strongly_disapprove
 	}
 
 	lawgroup_church_and_state = {
@@ -260,7 +258,6 @@ REPLACE_OR_CREATE:ideology_legitimist = {
 			}
 			add = -75
 		}
-		# less likely if IG is happy in a republic
 		if = {
 			limit = {
 				owner = {
@@ -271,7 +268,6 @@ REPLACE_OR_CREATE:ideology_legitimist = {
 			add = -100
 		}
 
-		# more likely for LO and Devout
 		if = {
 			limit = {
 				OR = {
@@ -281,7 +277,6 @@ REPLACE_OR_CREATE:ideology_legitimist = {
 			}
 			add = 50
 		}
-		# conservative and/or reactionary leaders have a higher spawn chance if the Anti-Dreyfusards won.
 		if = {
 			limit = {
 				has_variable = anti_dreyfusard_victory
@@ -328,11 +323,6 @@ REPLACE_OR_CREATE:ideology_legitimist = {
 REPLACE_OR_CREATE:ideology_bonapartist = {
 	icon = "gfx/interface/icons/ideology_icons/ideology_leader/ideology_leader_bonapartist.dds"
 
-	# J'AIME L'OIGNON FRIT À L'HUILE,
-	# J'AIME L'OIGNON QUAND IL EST BON.
-	# J'AIME L'OIGNON FRIT À L'HUILE,
-	# J'AIME L'OIGNON, J'AIME L'OIGNON
-
 	character_ideology = yes
 
 	lawgroup_governance_principles = {
@@ -354,6 +344,7 @@ REPLACE_OR_CREATE:ideology_bonapartist = {
 		law_universal_suffrage = disapprove
 		law_anarchy = strongly_disapprove
 		law_technocracy = strongly_disapprove
+		law_labour_suffrage = strongly_disapprove
 	}
 
 	lawgroup_army_model = {
@@ -361,6 +352,7 @@ REPLACE_OR_CREATE:ideology_bonapartist = {
 		law_professional_army = strongly_approve
 		law_national_militia = disapprove
 		law_peasant_levies = disapprove
+		law_revolutionary_guard = strongly_disapprove
 	}
 
 	lawgroup_economic_system = {	
@@ -413,7 +405,6 @@ REPLACE_OR_CREATE:ideology_bonapartist = {
 			}
 			add = -75
 		}
-		# less likely if IG is happy in a republic
 		if = {
 			limit = {
 				owner = {
@@ -424,7 +415,6 @@ REPLACE_OR_CREATE:ideology_bonapartist = {
 			add = -100
 		}
 
-		# more likely for PB and AF
 		if = {
 			limit = {
 				OR = {
@@ -434,7 +424,6 @@ REPLACE_OR_CREATE:ideology_bonapartist = {
 			}
 			add = 50
 		}
-		# conservative and/or reactionary leaders have a higher spawn chance if the Anti-Dreyfusards won.
 		if = {
 			limit = {
 				has_variable = anti_dreyfusard_victory

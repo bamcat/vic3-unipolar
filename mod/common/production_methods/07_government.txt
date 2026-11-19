@@ -1,5 +1,4 @@
-
-REPLACE_OR_CREATE:pm_simple_organization = {
+﻿REPLACE_OR_CREATE:pm_simple_organization = {
 	texture = "gfx/interface/icons/production_method_icons/simple_organization.dds"
 	
 	country_modifiers = {
@@ -17,10 +16,11 @@ REPLACE_OR_CREATE:pm_simple_organization = {
 
 	building_modifiers = {	
 		level_scaled = {
-			building_employment_clerks_add = 4000
-			goods_input_paper_add = 22
-			goods_input_professional_services_add = 1.5
-			goods_input_telecommunications_add = 0.8
+			building_employment_clerks_add = 375
+		}
+		workforce_scaled = {
+			goods_input_radios_add = 2.5
+			goods_input_paper_add = 1.5
 		}
 	}		
 }		
@@ -46,14 +46,13 @@ REPLACE_OR_CREATE:pm_horizontal_drawer_cabinets = {
 
 	building_modifiers = {
 		workforce_scaled = {
-			goods_input_paper_add = 50
-			goods_input_telephones_add = 5
-			goods_input_professional_services_add = 2.75
-			goods_input_telecommunications_add = 3.25
+			goods_input_paper_add = 10
+			goods_input_computers_add = 2.5
+			goods_input_radios_add = 0.5
 		}			
 	
 		level_scaled = {
-			building_employment_clerks_add = 4000
+			building_employment_clerks_add = 375
 		}
 	}		
 }
@@ -78,14 +77,14 @@ REPLACE_OR_CREATE:pm_vertical_filing_cabinets = {
 
 	building_modifiers = {
 		workforce_scaled = {
-			goods_input_paper_add = 73
-			goods_input_telephones_add = 7
-			goods_input_professional_services_add = 4
-			goods_input_telecommunications_add = 4.5
+			goods_input_paper_add = 20
+			goods_input_computers_add = 2.5
+			goods_input_microchips_add = 0.5
+			goods_input_radios_add = 0.5
 		}	
 	
 		level_scaled = {
-			building_employment_clerks_add = 4000
+			building_employment_clerks_add = 375
 		}
 	}	
 }
@@ -110,15 +109,16 @@ REPLACE_OR_CREATE:pm_switch_boards = {
 	
 	building_modifiers = {
 		workforce_scaled = {
-			goods_input_paper_add = 89
-			goods_input_telephones_add = 9
-			goods_input_professional_services_add = 5.5
-			goods_input_telecommunications_add = 6.5
+			goods_input_paper_add = 20
+			goods_input_telephones_add = 5
+			goods_input_ai_systems_add = 3.5
+			goods_input_computers_add = 1.5
+			goods_input_microchips_add = 0.5
+			goods_input_radios_add = 1
 		}
 
 		level_scaled = {
-			building_employment_clerks_add = 2500
-			building_employment_bureaucrats_add = 2500
+			building_employment_clerks_add = 375
 		}
 	}	
 }
@@ -132,8 +132,8 @@ REPLACE_OR_CREATE:pm_hereditary_bureaucrats = {
 	
 	building_modifiers = {
 		level_scaled = {
-			building_employment_aristocrats_add = 250
-			building_employment_bureaucrats_add = 250
+			building_employment_aristocrats_add = 188
+			building_employment_bureaucrats_add = 188
 		}
 	}			
 }
@@ -143,11 +143,13 @@ REPLACE_OR_CREATE:pm_professional_bureaucrats = {
 	
 	disallowing_laws = {
 		law_hereditary_bureaucrats
+		law_military_bureaucrats
+		law_communal_administration
 	}	
 	
 	building_modifiers = {
 		level_scaled = {
-			building_employment_bureaucrats_add = 500
+			building_employment_bureaucrats_add = 375
 		}
 	}			
 }	
@@ -157,11 +159,12 @@ REPLACE_OR_CREATE:pm_secular_bureaucrats = {
 	
 	disallowing_laws = {
 		law_state_religion
+		law_communal_administration
 	}
 	
 	building_modifiers = {
 		level_scaled = {
-			building_employment_bureaucrats_add = 500
+			building_employment_bureaucrats_add = 375
 		}
 	}			
 }
@@ -176,11 +179,55 @@ REPLACE_OR_CREATE:pm_religious_bureaucrats = {
 	
 	building_modifiers = {
 		level_scaled = {
-			building_employment_clergymen_add = 250
-			building_employment_bureaucrats_add = 250
+			building_employment_clergymen_add = 188
+			building_employment_bureaucrats_add = 188
 		}
 	}			
 }					
+
+REPLACE_OR_CREATE:pm_military_bureaucrats = {
+	texture = "gfx/interface/icons/production_method_icons/military_bureaucrats.dds"
+	
+	unlocking_laws = {
+		law_military_bureaucrats
+	}
+	
+	building_modifiers = {
+		level_scaled = {
+			building_employment_officers_add = 188
+			building_employment_bureaucrats_add = 188
+		}
+	}
+}
+
+REPLACE_OR_CREATE:pm_communal_representatives = {
+	texture = "gfx/interface/icons/production_method_icons/communal_representatives.dds"
+	
+	unlocking_laws = {
+		law_communal_administration
+	}
+	
+	building_modifiers = {
+		level_scaled = {
+			building_employment_bureaucrats_add = 188
+			building_employment_clerks_add = 375
+		}
+	}
+}
+
+REPLACE_OR_CREATE:pm_communal_administration = {
+	texture = "gfx/interface/icons/production_method_icons/communal_administration.dds"
+	
+	unlocking_laws = {
+		law_communal_administration
+	}
+	
+	building_modifiers = {
+		level_scaled = {
+			building_employment_clerks_add = 750
+		}
+	}
+}
 
 REPLACE_OR_CREATE:pm_scholastic_education = {
 	texture = "gfx/interface/icons/production_method_icons/scholastic_education.dds"
@@ -193,12 +240,15 @@ REPLACE_OR_CREATE:pm_scholastic_education = {
 	
 	building_modifiers = {
 		workforce_scaled = {
-			goods_input_paper_add = 6
+			goods_input_paper_add = 5
+			goods_input_fertilizer_add = 0.5
+			goods_input_intellectual_property_add = 1.5
 		}	
 	
 		level_scaled = {
-			building_employment_clerks_add = 1500
-			building_employment_laborers_add = 1500
+			building_employment_clerks_add = 188
+			building_employment_laborers_add = 188
+			building_employment_academics_add = 450
 		}
 	}
 	
@@ -224,12 +274,16 @@ REPLACE_OR_CREATE:pm_philosophy_department = {
 	
 	building_modifiers = {
 		workforce_scaled = {
-			goods_input_paper_add = 11
+			goods_input_paper_add = 10
+			goods_input_fertilizer_add = 0.5
+			goods_input_intellectual_property_add = 2
+			goods_input_computers_add = 2.5
 		}
 		
 		level_scaled = {
-			building_employment_clerks_add = 1750
-			building_employment_laborers_add = 1250
+			building_employment_clerks_add = 188
+			building_employment_laborers_add = 188
+			building_employment_academics_add = 750
 		}					
 	}
 	
@@ -255,12 +309,17 @@ REPLACE_OR_CREATE:pm_analytical_philosophy_department = {
 	
 	building_modifiers = {
 		workforce_scaled = { 
-			goods_input_paper_add = 16
+			goods_input_paper_add = 15
+			goods_input_fertilizer_add = 0.5
+			goods_input_intellectual_property_add = 1.5
+			goods_input_computers_add = 2.5
+			goods_input_ai_systems_add = 2.5
 		}
 		
 		level_scaled = {
-			building_employment_clerks_add = 2000
-			building_employment_laborers_add = 1000
+			building_employment_clerks_add = 150
+			building_employment_laborers_add = 150
+			building_employment_academics_add = 1000
 		}					
 	}
 	
@@ -280,7 +339,7 @@ REPLACE_OR_CREATE:pm_secular_academia = {
 	
 	building_modifiers = {
 		level_scaled = {
-			building_employment_academics_add = 2000
+			building_employment_academics_add = 375
 		}
 	}			
 }
@@ -295,8 +354,8 @@ REPLACE_OR_CREATE:pm_religious_academia = {
 	
 	building_modifiers = {
 		level_scaled = {
-			building_employment_clergymen_add = 1000
-			building_employment_academics_add = 1000
+			building_employment_clergymen_add = 188
+			building_employment_academics_add = 188
 		}
 	}			
 }			
@@ -312,13 +371,14 @@ REPLACE_OR_CREATE:pm_skyscraper_bureaucratic_nexus = {
 	
 	building_modifiers = {
 		workforce_scaled = {
-			goods_input_paper_add = 28
+			goods_input_paper_add = 25
+			goods_input_computers_add = 1.5
 		}
 
 		level_scaled = {
-			building_employment_laborers_add = 1000
-			building_employment_clerks_add = 2500
-			building_employment_bureaucrats_add = 1500
+			building_employment_laborers_add = 150
+			building_employment_clerks_add = 375
+			building_employment_bureaucrats_add = 225
 		}
 	}
 }
@@ -328,19 +388,21 @@ REPLACE_OR_CREATE:pm_skyscraper_trade_nexus = {
 	
 	country_modifiers = {
 		workforce_scaled = {
-			country_trade_route_quantity_mult = 0.25
+			state_trade_capacity_mult = 0.25
+			state_trade_advantage_mult = 0.25
 		}
 	}
-	
+
 	building_modifiers = {
 		workforce_scaled = {
-			goods_input_paper_add = 28
+			goods_input_paper_add = 25
+			goods_input_computers_add = 2
 		}
 
 		level_scaled = {
-			building_employment_laborers_add = 1000
-			building_employment_clerks_add = 2500
-			building_employment_bureaucrats_add = 1500
+			building_employment_laborers_add = 150
+			building_employment_clerks_add = 375
+			building_employment_bureaucrats_add = 225
 		}
 	}
 }

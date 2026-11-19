@@ -5,7 +5,10 @@ japan.1 = {
     type = country_event
     title = japan.1.t
     desc = japan.1.d
-    picture = "gfx/event_pictures/nuclear_plant.dds"
+    event_image = {
+    	video = "unspecific_politicians_arguing"
+    }
+    icon = "gfx/interface/icons/event_icons/event_industry.dds"
 
     trigger = {
         c:JPN ?= this

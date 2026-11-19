@@ -15,7 +15,7 @@
 	potential = {
 		NOT = { country_has_state_religion = rel:atheist }
 		scope:target_country = {
-			country_has_state_religion = root.religion # Only show if the subject is a coreligionist
+			country_has_state_religion = root.religion
 			NOT = { is_diplomatic_play_enemy_of = root }
 		}
 	}
@@ -91,7 +91,7 @@
 							}
 						}
 					}
-					add_liberty_desire = 10 # The Devout don't like evangelization being called off
+					add_liberty_desire = 10
 				}
 				else = {
 					add_liberty_desire = -10
@@ -109,23 +109,34 @@
 
 		propose_score = {
 			value = 10
+			if = {
+				limit = {
+					je_tsarpoints_ai_wants_to_evangelize = yes
+				}
+				add = 50
+			}
 		}
 
 		will_propose = {
-			has_attitude = {
-				who = scope:target_country
-				attitude = protective
-			}
 			OR = {
-				ig:ig_devout ?= {
-					is_in_government = yes
-				}
-				any_interest_group = {
-					is_in_government = yes
-					leader = {
-						OR = {
-							has_ideology = ideology:ideology_traditionalist
-							has_ideology = ideology:ideology_theocrat
+				je_tsarpoints_ai_wants_to_evangelize = yes
+				AND = {
+					has_attitude = {
+						who = scope:target_country
+						attitude = protective
+					}
+					OR = {
+						ig:ig_devout ?= {
+							is_in_government = yes
+						}
+						any_interest_group = {
+							is_in_government = yes
+							leader = {
+								OR = {
+									has_ideology = ideology:ideology_traditionalist
+									has_ideology = ideology:ideology_theocrat
+								}
+							}
 						}
 					}
 				}
@@ -133,6 +144,7 @@
 		}
 
 		will_break = {
+			je_tsarpoints_ai_wants_to_evangelize = no
 			OR = {
 				has_attitude = {
 					who = scope:target_country

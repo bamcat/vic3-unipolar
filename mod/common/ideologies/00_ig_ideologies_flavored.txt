@@ -20,12 +20,15 @@
 		law_universal_suffrage = strongly_disapprove
 		law_anarchy = strongly_disapprove
 		law_technocracy = strongly_disapprove
+		law_labour_suffrage = strongly_disapprove
 	}
 	
 	lawgroup_bureaucracy = {
 		law_hereditary_bureaucrats = approve
 		law_appointed_bureaucrats = neutral
 		law_elected_bureaucrats = neutral
+		law_communal_administration = strongly_disapprove
+		law_military_bureaucrats = neutral
 	}
 
 	lawgroup_policing = {
@@ -58,12 +61,15 @@ REPLACE_OR_CREATE:ideology_scholar_paternalistic = {
 		law_universal_suffrage = strongly_disapprove
 		law_anarchy = strongly_disapprove
 		law_technocracy = strongly_disapprove
+		law_labour_suffrage = strongly_disapprove
 	}
 	
 	lawgroup_bureaucracy = {
 		law_appointed_bureaucrats = approve
 		law_elected_bureaucrats = disapprove
 		law_hereditary_bureaucrats = disapprove
+		law_communal_administration = strongly_disapprove
+		law_military_bureaucrats = neutral
 	}
 
 	lawgroup_policing = {
@@ -96,12 +102,15 @@ REPLACE_OR_CREATE:ideology_junker_paternalistic = {
 		law_universal_suffrage = strongly_disapprove
 		law_anarchy = strongly_disapprove
 		law_technocracy = strongly_disapprove
+		law_labour_suffrage = strongly_disapprove
 	}
 	
 	lawgroup_bureaucracy = {
 		law_hereditary_bureaucrats = approve
 		law_appointed_bureaucrats = approve
 		law_elected_bureaucrats = disapprove
+		law_communal_administration = strongly_disapprove
+		law_military_bureaucrats = approve
 	}
 
 	lawgroup_policing = {
@@ -134,12 +143,15 @@ REPLACE_OR_CREATE:ideology_papal_paternalistic = {
 		law_universal_suffrage = strongly_disapprove
 		law_anarchy = strongly_disapprove
 		law_technocracy = strongly_disapprove
+		law_labour_suffrage = strongly_disapprove
 	}
 	
 	lawgroup_bureaucracy = {
 		law_hereditary_bureaucrats = approve
 		law_appointed_bureaucrats = neutral
 		law_elected_bureaucrats = disapprove
+		law_communal_administration = strongly_disapprove
+		law_military_bureaucrats = neutral
 	}
 
 	lawgroup_policing = {
@@ -227,6 +239,7 @@ REPLACE_OR_CREATE:ideology_bakufu = {
 		law_universal_suffrage = strongly_disapprove
 		law_anarchy = strongly_disapprove
 		law_technocracy = strongly_disapprove
+		law_labour_suffrage = strongly_disapprove
 	}
 }
 
@@ -259,6 +272,7 @@ REPLACE_OR_CREATE:ideology_shinto_moralist = {
 		law_universal_suffrage = disapprove
 		law_anarchy = strongly_disapprove
 		law_technocracy = strongly_disapprove
+		law_labour_suffrage = strongly_disapprove
 	}
 }
 
@@ -284,12 +298,15 @@ REPLACE_OR_CREATE:ideology_caudillismo = {
 		law_census_voting = disapprove
 		law_universal_suffrage = strongly_disapprove
 		law_anarchy = strongly_disapprove
+		law_labour_suffrage = strongly_disapprove
 	}
 	
 	lawgroup_bureaucracy = {
 		law_hereditary_bureaucrats = approve
 		law_appointed_bureaucrats = approve
 		law_elected_bureaucrats = disapprove
+		law_communal_administration = strongly_disapprove
+		law_military_bureaucrats = approve
 	}
 
 	lawgroup_policing = {
@@ -325,6 +342,7 @@ REPLACE_OR_CREATE:ideology_russian_patriarch = {
 		law_universal_suffrage = strongly_disapprove
 		law_anarchy = strongly_disapprove
 		law_technocracy = strongly_disapprove
+		law_labour_suffrage = strongly_disapprove
 	}
 
 	lawgroup_rights_of_women = {
@@ -363,6 +381,7 @@ REPLACE_OR_CREATE:ideology_orthodox_patriarch = {
 		law_universal_suffrage = strongly_disapprove
 		law_anarchy = strongly_disapprove
 		law_technocracy = strongly_disapprove
+		law_labour_suffrage = strongly_disapprove
 	}
 
 	lawgroup_rights_of_women = {
@@ -423,6 +442,8 @@ REPLACE_OR_CREATE:ideology_hindu_moralist = {
 		law_hereditary_bureaucrats = approve
 		law_appointed_bureaucrats = neutral
 		law_elected_bureaucrats = disapprove
+		law_communal_administration = strongly_disapprove
+		law_military_bureaucrats = neutral
 	}
 
 	lawgroup_caste_hegemony = {
@@ -456,6 +477,8 @@ REPLACE_OR_CREATE:ideology_hindu_moralist_british_india = {
 		law_hereditary_bureaucrats = approve
 		law_appointed_bureaucrats = neutral
 		law_elected_bureaucrats = disapprove
+		law_communal_administration = strongly_disapprove
+		law_military_bureaucrats = disapprove
 	}
 
 	lawgroup_caste_hegemony = {
@@ -480,6 +503,8 @@ REPLACE_OR_CREATE:ideology_sikh_moralist = {
 		law_appointed_bureaucrats = approve
 		law_elected_bureaucrats = neutral
 		law_hereditary_bureaucrats = approve
+		law_communal_administration = strongly_disapprove
+		law_military_bureaucrats = approve
 	}
 	
 	lawgroup_army_model = {
@@ -487,6 +512,7 @@ REPLACE_OR_CREATE:ideology_sikh_moralist = {
 		law_mass_conscription = approve
 		law_peasant_levies = neutral
 		law_professional_army = strongly_approve
+		law_revolutionary_guard = strongly_disapprove
 	}
 }
 
@@ -513,6 +539,7 @@ REPLACE_OR_CREATE:ideology_sikh_militancy = {
 		law_mass_conscription = approve
 		law_national_militia = disapprove
 		law_peasant_levies = disapprove
+		law_revolutionary_guard = strongly_disapprove
 	}
 	
 	lawgroup_colonization = {
@@ -536,6 +563,7 @@ REPLACE_OR_CREATE:ideology_oriental_orthodox_patriarch = {
 		law_universal_suffrage = strongly_disapprove
 		law_anarchy = strongly_disapprove
 		law_technocracy = strongly_disapprove
+		law_labour_suffrage = strongly_disapprove
 	}
 
 	lawgroup_rights_of_women = {
@@ -626,6 +654,7 @@ REPLACE_OR_CREATE:ideology_agrarian_jeffersonian = {
 		law_technocracy = strongly_disapprove
 		law_oligarchy = strongly_disapprove
 		law_autocracy = strongly_disapprove		
+		law_labour_suffrage = strongly_disapprove
 	}
 }
 
@@ -651,6 +680,7 @@ REPLACE_OR_CREATE:ideology_constitutionalist = {
 		law_oligarchy = disapprove
 		law_autocracy = disapprove
 		law_anarchy = strongly_disapprove
+		law_labour_suffrage = strongly_disapprove
 	}	
 }
 
@@ -696,7 +726,7 @@ REPLACE_OR_CREATE:ideology_colonialist = {
 	}
 }
 
-REPLACE_OR_CREATE:ideology_utilitarian_millian = { # Replaces Malthusian, for the Industrialists
+REPLACE_OR_CREATE:ideology_utilitarian_millian = {
 	icon = "gfx/interface/icons/ideology_icons/utilitarian.dds"
 	
 	lawgroup_childrens_rights = {
@@ -779,6 +809,7 @@ REPLACE_OR_CREATE:ideology_enclavist = {
 		law_autocracy = strongly_approve
 		law_universal_suffrage = strongly_disapprove
 		law_anarchy = strongly_disapprove
+		law_labour_suffrage = strongly_disapprove
 	}
 
 	lawgroup_governance_principles = {
@@ -809,6 +840,8 @@ REPLACE_OR_CREATE:ideology_enclavist = {
 		law_hereditary_bureaucrats = disapprove
 		law_appointed_bureaucrats = approve
 		law_elected_bureaucrats = disapprove
+		law_communal_administration = strongly_disapprove
+		law_military_bureaucrats = neutral
 	}
 }
 

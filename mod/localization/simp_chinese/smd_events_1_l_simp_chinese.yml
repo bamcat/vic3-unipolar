@@ -1,370 +1,335 @@
 ﻿l_simp_chinese:
-#################### JE ####################
-# The Internet
+ je_internet:0 "互联网"
+ je_internet_reason:0 "是时候把我们的国家和互联网连接起来了! 我们必须升级我们的电信网络, 超越支持简单的电话交通,"
 
-je_internet:0 "互联网"
-je_internet_reason:0 "是时候把我们的国家和互联网连接起来了! 我们必须升级我们的电信网络, 超越支持简单的电话交通,"
+ smd_tech.1.t:0 "[ROOT.GetCountry.GetName] 在线"
+ smd_tech.1.d:0 "几十年来,我们的通信一直依靠报纸、广播和电视。 但一场静悄悄的革命正在席卷世界——一个被称为"互联网"的互联互通的庞大计算机网络. 一旦成为学者和军事研究者,它现在承诺改变我们公民的工作、学习和联系方式。"
+ smd_tech.1.f:0 "拨号网络:因为没有任何东西说"高科技",比如叫喊叫叫声等了5分钟才装上猫的照片."
 
-smd_tech.1.t:0 "[ROOT.GetCountry.GetName] 在线"
-smd_tech.1.d:0 "几十年来,我们的通信一直依靠报纸、广播和电视。 但一场静悄悄的革命正在席卷世界——一个被称为"互联网"的互联互通的庞大计算机网络. 一旦成为学者和军事研究者,它现在承诺改变我们公民的工作、学习和联系方式。"
-smd_tech.1.f:0 "拨号网络:因为没有任何东西说"高科技",比如叫喊叫叫声等了5分钟才装上猫的照片."
+ smd_tech.1.a:0 "也许其他技术应该连接到网络上!"
+ smd_tech.1.b:0 "我们可以利用网络控制舆论"
 
-smd_tech.1.a:0 "也许其他技术应该连接到网络上!"
-smd_tech.1.b:0 "我们可以利用网络控制舆论"
+ government_run_wifi_modifier:0 "政府干预Wifi"
 
-government_run_wifi_modifier:0 "政府干预Wifi"
+ je_computer_science:0 "计算机科学"
+ je_computer_science_reason:0 "计算机科学是研究计算机如何工作,如何制造来解决问题,以及我们如何高效和安全地使用它们."
 
-# Computer Science
+ smd_tech.2.t:0 "计算机科学学位"
+ smd_tech.2.d:0 "把它想象成是逻辑思考和解决问题的科学——但用遵守每一个小指令的机器. 从智能手机到自驾车,"
 
-je_computer_science:0 "计算机科学"
-je_computer_science_reason:0 "计算机科学是研究计算机如何工作,如何制造来解决问题,以及我们如何高效和安全地使用它们."
+ je_pesticides:0 "除草剂"
+ je_pesticides_reason:0 "农药是用来控制害虫的物质. 其中包括除草剂、杀虫剂、肾上腺素、杀真菌剂等。 其中最常见的是除草剂,约占全球农药用途的50%。 有了这个新的发明,我们面临着我们农业部门现代化,包括杀虫剂的义务."
 
-smd_tech.2.t:0 "计算机科学学位"
-smd_tech.2.d:0 "把它想象成是逻辑思考和解决问题的科学——但用遵守每一个小指令的机器. 从智能手机到自驾车,"
+ smd_tech.3.t:0 "死虫之海 死虫之海 死虫之海"
+ smd_tech.3.d:0 "数千年来,昆虫和啮齿动物一直是对人类农业活动的无情威胁。 最近发明了各种食品安全化学品,驱除并杀死了有害的昆虫,我们可以产生更丰收的收成,同时一劳永逸地确保更大的粮食安全!"
 
-# Pesticides
+ smd_tech.3.a:0 "最好能减少环境破坏..."
 
-je_pesticides:0 "除草剂"
-je_pesticides_reason:0 "农药是用来控制害虫的物质. 其中包括除草剂、杀虫剂、肾上腺素、杀真菌剂等。 其中最常见的是除草剂,约占全球农药用途的50%。 有了这个新的发明,我们面临着我们农业部门现代化,包括杀虫剂的义务."
+ je_globalization:0 "全球化"
+ je_globalization_reason:0 "全球化是20世纪后期的一种现象,其定义是更大的相互联系、文化、货物、武器和人民的自由过境,每一种现象都由全球范围内更大的自由贸易倡议所激发。"
 
-smd_tech.3.t:0 "死虫之海 死虫之海 死虫之海"
-smd_tech.3.d:0 "数千年来,昆虫和啮齿动物一直是对人类农业活动的无情威胁。 最近发明了各种食品安全化学品,驱除并杀死了有害的昆虫,我们可以产生更丰收的收成,同时一劳永逸地确保更大的粮食安全!"
+ je_asian_economic_reform: "经济改革"
+ je_asian_economic_reform_reason: "中国和印度长期受到经济限制. 全球经济正在迅速走向一体化和自由贸易。 通过取消过时的限制,我们可能带来前所未有的增长。 在此之前,我们的市场仍然受到限制。"
 
-smd_tech.3.a:0 "最好能减少环境破坏..."
+ asian_economy_restrictions: "经济限制"
+ asian_economy_restrictions_desc: "国家控制的低效率和保护主义壁垒减缓了贸易,降低了竞争力和国际准入。"
 
-# Globalization
+ booming_trade_economy: "刺激贸易经济"
+ booming_trade_economy_desc: "随着限制的解除,国内外市场蓬勃发展,导致更大的繁荣."
 
-je_globalization:0 "全球化"
-je_globalization_reason:0 "全球化是20世纪后期的一种现象,其定义是更大的相互联系、文化、货物、武器和人民的自由过境,每一种现象都由全球范围内更大的自由贸易倡议所激发。"
+ asia_reform.1.t: "市场开放"
+ asia_reform.1.d: "改革已经颁布,限制性贸易政策已经取消。 中国和印度现在站在经济全球化的前列。"
+ asia_reform.1.f: "“我们必须开放市场,"
+ asia_reform.1.a: "新的贸易时代开始了。"
 
-je_asian_economic_reform: "经济改革"
-je_asian_economic_reform_reason: "中国和印度长期受到经济限制. 全球经济正在迅速走向一体化和自由贸易。 通过取消过时的限制,我们可能带来前所未有的增长。 在此之前,我们的市场仍然受到限制。"
-
-asian_economy_restrictions: "经济限制"
-asian_economy_restrictions_desc: "国家控制的低效率和保护主义壁垒减缓了贸易,降低了竞争力和国际准入。"
-
-booming_trade_economy: "刺激贸易经济"
-booming_trade_economy_desc: "随着限制的解除,国内外市场蓬勃发展,导致更大的繁荣."
-
-asia_reform.1.t: "市场开放"
-asia_reform.1.d: "改革已经颁布,限制性贸易政策已经取消。 中国和印度现在站在经济全球化的前列。"
-asia_reform.1.f: "“我们必须开放市场,"
-asia_reform.1.a: "新的贸易时代开始了。"
-
-# Starship
-
-je_starships:0 "星舰"
-je_starships_reason:0 "重用火箭的发明迅速刺激了另一种航天器即"星舰"的发明. 能够高效地突破行星际障碍 降落在火星上 回到地上 在保持宇航员身体稳定的同时 这是一种革命性的新设计 值得我们承认"
+ je_starships:0 "星舰"
+ je_starships_reason:0 "重用火箭的发明迅速刺激了另一种航天器即"星舰"的发明. 能够高效地突破行星际障碍 降落在火星上 回到地上 在保持宇航员身体稳定的同时 这是一种革命性的新设计 值得我们承认"
 
 # coming soon
 
 ################ others ###########
 
-# Cancer
+ cancer.1.t:0 "癌症的治疗"
+ cancer.1.d:0 "一个多世纪以来,癌症一直困扰着人类——一种无法预测的痛苦,夺走了数百万人的生命,并且未能治愈一切。 它不分国界,不尊重任何地位,在它所接触的每一个家庭都留下了灾难。 但今天,经过多年不懈的研究,临床试验,以及国际协作,科学家们已经做了不可能的事:开发出一种通用的,有针对性的治疗方法. 这种突破性疗法在不伤害健康组织的情况下检测并摧毁了恶性细胞,从而不仅可以缓解,而且可以保证."
+ cancer.1.a:0 "全人类的胜利"
+ cancer_eradication_prestige:0 "消除癌症"
 
-cancer.1.t:0 "癌症的治疗"
-cancer.1.d:0 "一个多世纪以来,癌症一直困扰着人类——一种无法预测的痛苦,夺走了数百万人的生命,并且未能治愈一切。 它不分国界,不尊重任何地位,在它所接触的每一个家庭都留下了灾难。 但今天,经过多年不懈的研究,临床试验,以及国际协作,科学家们已经做了不可能的事:开发出一种通用的,有针对性的治疗方法. 这种突破性疗法在不伤害健康组织的情况下检测并摧毁了恶性细胞,从而不仅可以缓解,而且可以保证."
-cancer.1.a:0 "全人类的胜利"
-cancer_eradication_prestige:0 "消除癌症"
+ indian_ocean_tsunami.1.t: "印度洋地震"
+ indian_ocean_tsunami.1.d: "一场大规模的海底地震已引发了灾难性的海啸,使南亚和东南亚的沿海地区遭受了毁灭性的破坏. 破坏是前所未有的,恢复需要几年时间。"
+ indian_ocean_tsunami.1.a: "我们必须立即开始重建。"
+ indian_ocean_tsunami.1.f: "一场毁灭性的地震和海啸摧毁了我们的沿海地区。"
 
-# 2004 Indian Ocean earthquake and tsunami
+ je_indian_ocean_tsunami: "海啸灾后复苏"
+ je_indian_ocean_tsunami_reason: "一场毁灭性的海啸破坏了你们的沿海基础设施并震撼了该国。 重建努力对恢复和稳定至关重要。"
 
-indian_ocean_tsunami.1.t: "印度洋地震"
-indian_ocean_tsunami.1.d: "一场大规模的海底地震已引发了灾难性的海啸,使南亚和东南亚的沿海地区遭受了毁灭性的破坏. 破坏是前所未有的,恢复需要几年时间。"
-indian_ocean_tsunami.1.a: "我们必须立即开始重建。"
-indian_ocean_tsunami.1.f: "一场毁灭性的地震和海啸摧毁了我们的沿海地区。"
+ tsunami_recovery_success_tt: "你成功地启动了国家恢复。"
 
-je_indian_ocean_tsunami: "海啸灾后复苏"
-je_indian_ocean_tsunami_reason: "一场毁灭性的海啸破坏了你们的沿海基础设施并震撼了该国。 重建努力对恢复和稳定至关重要。"
+ tsunami_disaster_struck: "全国海啸损害"
+ tsunami_local_destruction: "当地海啸灾害"
+ tsunami_reconstruction_complete: "重建完成"
 
-tsunami_recovery_success_tt: "你成功地启动了国家恢复。"
+ indian_ocean_tsunami_recovery_title: "海啸灾后复原工作"
+ indian_ocean_tsunami_recovery_desc: "你的国家遭受了印度洋海啸的袭击。 实施援助和恢复,以稳定人口和基础设施。"
 
-tsunami_disaster_struck: "全国海啸损害"
-tsunami_local_destruction: "当地海啸灾害"
-tsunami_reconstruction_complete: "重建完成"
-  
-indian_ocean_tsunami_recovery_title: "海啸灾后复原工作"
-indian_ocean_tsunami_recovery_desc: "你的国家遭受了印度洋海啸的袭击。 实施援助和恢复,以稳定人口和基础设施。"
+ tsunami_aid_title: "提供人道主义援助"
+ tsunami_aid_desc: "开展福利改革或分配财政援助来帮助重建受影响地区。"
 
-tsunami_aid_title: "提供人道主义援助"
-tsunami_aid_desc: "开展福利改革或分配财政援助来帮助重建受影响地区。"
+ tsunami_reconstruction_complete: "成功的重建努力"
+ tsunami_recovery_success_tt: "国家在2005年12月之前颁布了一项社会福利法。"
 
-tsunami_disaster_struck: "全国海啸损害"
-tsunami_local_destruction: "当地海啸灾害"
-tsunami_reconstruction_complete: "成功的重建努力"
-tsunami_recovery_success_tt: "国家在2005年12月之前颁布了一项社会福利法。"
- 
-indian_ocean_tsunami.2.t: "南亚海啸灾害"
-indian_ocean_tsunami.2.d: "印度洋遭遇了大地震和海啸。 人道主义灾难迫在眉睫。 全世界都看着我们行动起来吗?"
-indian_ocean_tsunami.2.f: "整个海岸线都消失了 迫切需要援助。"
-indian_ocean_tsunami.2.a: "发送紧急援助。"
-indian_ocean_tsunami.2.b: "我们有自己的优先事项。"
+ indian_ocean_tsunami.2.t: "南亚海啸灾害"
+ indian_ocean_tsunami.2.d: "印度洋遭遇了大地震和海啸。 人道主义灾难迫在眉睫。 全世界都看着我们行动起来吗?"
+ indian_ocean_tsunami.2.f: "整个海岸线都消失了 迫切需要援助。"
+ indian_ocean_tsunami.2.a: "发送紧急援助。"
+ indian_ocean_tsunami.2.b: "我们有自己的优先事项。"
 
-indian_ocean_tsunami.3.t: "收到的援助"
-indian_ocean_tsunami.3.d: "一个外国提供了人道主义救济。 你的人感激不尽"
-indian_ocean_tsunami.3.a: "感谢上帝的全球声援。"
+ indian_ocean_tsunami.3.t: "收到的援助"
+ indian_ocean_tsunami.3.d: "一个外国提供了人道主义救济。 你的人感激不尽"
+ indian_ocean_tsunami.3.a: "感谢上帝的全球声援。"
 
-tsunami_foreign_aid_sent: "向海啸受害者提供的外援"
-countries_available_to_request_aid_from:0 "各国可请求"
-has_sent_iosa:0 "已经发送援助"
+ tsunami_foreign_aid_sent: "向海啸受害者提供的外援"
+ countries_available_to_request_aid_from:0 "各国可请求"
+ has_sent_iosa:0 "已经发送援助"
 
-je_request_iosa_aid_button:0 "请求国际援助"
-je_request_iosa_aid_button_desc:0 "请国际社会提供援助,帮助从毁灭性地震和海啸中恢复。"
+ je_request_iosa_aid_button:0 "请求国际援助"
+ je_request_iosa_aid_button_desc:0 "请国际社会提供援助,帮助从毁灭性地震和海啸中恢复。"
 
-tsunami_disaster_struck: "受2004年印度洋地震和海啸影响"
+ tsunami_disaster_struck: "受2004年印度洋地震和海啸影响"
 
-# Iraq disarmament Crisis
+ je_iraq_disarmament_crisis: "伊拉克裁军危机"
+ je_iraq_disarmament_crisis_reason: "海湾战争后,伊拉克被联合国安全理事会第687号决议所约束,必须拆除其大规模毁灭性武器方案. 国际社会通过特委会和原子能机构努力核查遵守情况,但伊拉克的阻挠和视察争端造成了旷日持久的僵局。 由于伊拉克拒绝同裁军制度充分合作,紧张局势加剧,危机有可能重新引发冲突。"
+ iraq_disarmament_resolved_tt: "伊拉克裁军危机已经解决。"
 
-je_iraq_disarmament_crisis: "伊拉克裁军危机"
-je_iraq_disarmament_crisis_reason: "海湾战争后,伊拉克被联合国安全理事会第687号决议所约束,必须拆除其大规模毁灭性武器方案. 国际社会通过特委会和原子能机构努力核查遵守情况,但伊拉克的阻挠和视察争端造成了旷日持久的僵局。 由于伊拉克拒绝同裁军制度充分合作,紧张局势加剧,危机有可能重新引发冲突。"
-iraq_disarmament_resolved_tt: "伊拉克裁军危机已经解决。"
+ je_us_iraq_disarmament: "伊拉克裁军危机"
+ je_us_iraq_disarmament_reason: "美国已承诺迫使伊拉克遵守联合国安全理事会第687号决议。 伊拉克一再阻挠特委会和原子能机构的视察,破坏了全球安全并加剧了海湾地区的紧张局势。 外交努力仍在继续,但如果视察失败,军事选择仍然摆在桌面上。"
 
-je_us_iraq_disarmament: "伊拉克裁军危机"
-je_us_iraq_disarmament_reason: "美国已承诺迫使伊拉克遵守联合国安全理事会第687号决议。 伊拉克一再阻挠特委会和原子能机构的视察,破坏了全球安全并加剧了海湾地区的紧张局势。 外交努力仍在继续,但如果视察失败,军事选择仍然摆在桌面上。"
+ iraq_events.10.t: "伊拉克拒绝特委会的飞机"
+ iraq_events.10.d: "在对联合国特别委员会(特委会)的大胆挑战中,伊拉克拒绝了视察员使用自己的飞机进入伊拉克的提议。 巴格达坚持全面控制进出和运输,令人对其裁军承诺重新感到关切。"
+ iraq_events.10.a: "拒绝他们的条件——伊拉克的主权首先。"
+ iraq_events.10.b: "允许飞行——合作可以缓和紧张局势。"
 
-iraq_events.10.t: "伊拉克拒绝特委会的飞机"
-iraq_events.10.d: "在对联合国特别委员会(特委会)的大胆挑战中,伊拉克拒绝了视察员使用自己的飞机进入伊拉克的提议。 巴格达坚持全面控制进出和运输,令人对其裁军承诺重新感到关切。"
-iraq_events.10.a: "拒绝他们的条件——伊拉克的主权首先。"
-iraq_events.10.b: "允许飞行——合作可以缓和紧张局势。"
-
-us_events.10.t: "特委会飞机"
-us_events.10.d: "伊拉克拒绝允许特委会视察员驾驶自己的飞机进入该国,这进一步阻碍了视察工作。 这一举动被视为对联合国的直接蔑视和裁军努力的挫折。"
-us_events.10.a: "这一点是无法解答的。"
-us_events.10.b: "避免升级——目前。"
-
-################# COUNTRY-SPECIFIC ##############
+ us_events.10.t: "特委会飞机"
+ us_events.10.d: "伊拉克拒绝允许特委会视察员驾驶自己的飞机进入该国,这进一步阻碍了视察工作。 这一举动被视为对联合国的直接蔑视和裁军努力的挫折。"
+ us_events.10.a: "这一点是无法解答的。"
+ us_events.10.b: "避免升级——目前。"
 
 # united states
 
-rodney.1.t:0 "警察殴打Rodney King"
-rodney.1.d:0 "一名手无寸铁的非裔美国人罗德尼·金(Rodney King)在高速追逐后被洛杉矶警察局的警官暴力殴打. 一名旁观者拍摄了这次袭击,揭露了警察的暴行并引发了全国的愤怒."
-rodney.1.f:0 "他们包围他,继续用警棍打他。 他没有反击。 令人惊骇的是,他们想以他为榜样。"
+ rodney.1.t:0 "警察殴打Rodney King"
+ rodney.1.d:0 "一名手无寸铁的非裔美国人罗德尼·金(Rodney King)在高速追逐后被洛杉矶警察局的警官暴力殴打. 一名旁观者拍摄了这次袭击,揭露了警察的暴行并引发了全国的愤怒."
+ rodney.1.f:0 "他们包围他,继续用警棍打他。 他没有反击。 令人惊骇的是,他们想以他为榜样。"
 
-rodney.1.a:0 "这会是一个炎热的夏天.."
+ rodney.1.a:0 "这会是一个炎热的夏天.."
 
-rodney.2.t:0 "洛杉矶暴动"
-rodney.2.d:0 "警方被指控过度使用武力 殴打罗德尼·金后 大批民众走上街头"
-los_angeles_riots:0 "罗德尼·金暴动"
-rodney.2.a:0 "他们会自己安顿下来"
-rodney.2.b:0 "派出国民警卫队!"
+ rodney.2.t:0 "洛杉矶暴动"
+ rodney.2.d:0 "警方被指控过度使用武力 殴打罗德尼·金后 大批民众走上街头"
+ los_angeles_riots:0 "罗德尼·金暴动"
+ rodney.2.a:0 "他们会自己安顿下来"
+ rodney.2.b:0 "派出国民警卫队!"
 
-north_hollywood.1.t: "北好莱坞枪击案"
-north_hollywood.1.d: "两名被劫匪身穿盔甲并携带突击步枪。 被枪杀的军官不得不从当地一家枪械店借来武器,以作出有效反应。"
-north_hollywood.1.f: "两名全副武装的银行劫匪与洛杉矶警方进行了长时间的枪战,打伤了多名军官和平民. 该事件震撼了全国,并引发了警察备战问题."
-north_hollywood.1.a: "执法史上令人寒心的一天."
+ north_hollywood.1.t: "北好莱坞枪击案"
+ north_hollywood.1.d: "两名被劫匪身穿盔甲并携带突击步枪。 被枪杀的军官不得不从当地一家枪械店借来武器,以作出有效反应。"
+ north_hollywood.1.f: "两名全副武装的银行劫匪与洛杉矶警方进行了长时间的枪战,打伤了多名军官和平民. 该事件震撼了全国,并引发了警察备战问题."
+ north_hollywood.1.a: "执法史上令人寒心的一天."
 
-north_hollywood_police_response:0 "加强执法支助"
+ north_hollywood_police_response:0 "加强执法支助"
 
-wtc_bombing.1.t: "1993年 世界贸易中心轰炸"
-wtc_bombing.1.d: "纽约市世贸中心北塔下方有一枚威力强大的卡车炸弹爆炸,造成6人死亡,1000多人受伤. 这次袭击震惊了该国,暴露出该国境内易受恐怖主义伤害的脆弱性。"
-wtc_bombing.1.a: "增加国内安全措施。"
-wtc_bombing.1.b: "保持冷静,避免过度反应。"
-heightened_security_measures: "加强安全措施"
-heightened_security_measures_desc: "为应对恐怖袭击,政府实施了更强有力的国内安全政策和执法协调."
-oklahoma_city_aftermath: "俄克拉荷马城轰炸"
-oklahoma_city_aftermath_desc: "Alfred P. Murrah联邦大楼被毁灭性地轰炸,使全国动荡不安。 随着政府加强国内警惕,安全问题和政治影响依然存在。"
- 
-usa_events.1.t: "共和国主要成果"
-usa_events.1.d: "在充满了辩论和竞选的热门第一季之后,共和党选择了新的标准持有者. 乔治·W·布什取得了胜利,夺取了小资产阶级的统治权,并为该党承诺了一个大胆的新篇章。"
-usa_events.1.a: "提名是他的。"
+ wtc_bombing.1.t: "1993年 世界贸易中心轰炸"
+ wtc_bombing.1.d: "纽约市世贸中心北塔下方有一枚威力强大的卡车炸弹爆炸,造成6人死亡,1000多人受伤. 这次袭击震惊了该国,暴露出该国境内易受恐怖主义伤害的脆弱性。"
+ wtc_bombing.1.a: "增加国内安全措施。"
+ wtc_bombing.1.b: "保持冷静,避免过度反应。"
+ heightened_security_measures: "加强安全措施"
+ heightened_security_measures_desc: "为应对恐怖袭击,政府实施了更强有力的国内安全政策和执法协调."
+ oklahoma_city_aftermath: "俄克拉荷马城轰炸"
+ oklahoma_city_aftermath_desc: "Alfred P. Murrah联邦大楼被毁灭性地轰炸,使全国动荡不安。 随着政府加强国内警惕,安全问题和政治影响依然存在。"
 
-usa_events.2.t: "巴拉克·奥巴马的提名"
-usa_events.2.d: "在充满了辩论和竞选的激烈的第一季之后,民主党选择了新的标准制定者。 巴拉克·侯赛因·奥巴马获得了胜利,掌握了小资产阶级的统治权,并许诺该党将有一个大胆的新篇章。"
-usa_events.2.a: "提名是他的。"
+ usa_events.1.t: "共和国主要成果"
+ usa_events.1.d: "在充满了辩论和竞选的热门第一季之后,共和党选择了新的标准持有者. 乔治·W·布什取得了胜利,夺取了小资产阶级的统治权,并为该党承诺了一个大胆的新篇章。"
+ usa_events.1.a: "提名是他的。"
 
-usa_events.3.t: "唐纳德·特朗普的提名"
-usa_events.3.d: "在充满了辩论和竞选的热门第一季之后,共和党选择了新的标准持有者. 特别有争议人物唐纳德·约翰·特朗普(Donald John Trump)出现了胜利之地,掌握了专业人士的统治权,并给党带来了大胆的新篇章."
-usa_events.3.a: "提名是他的。"
+ usa_events.2.t: "巴拉克·奥巴马的提名"
+ usa_events.2.d: "在充满了辩论和竞选的激烈的第一季之后,民主党选择了新的标准制定者。 巴拉克·侯赛因·奥巴马获得了胜利,掌握了小资产阶级的统治权,并许诺该党将有一个大胆的新篇章。"
+ usa_events.2.a: "提名是他的。"
 
-# Storm of the Century
-american_disasters.1.t: "1993年世纪风暴"
-american_disasters.1.d: "一场大规模的环球风暴席卷了美国东部,带来了创纪录的降雪,飓风强度的风,并沿海岸出现严重洪灾. 数百万人没有电力,死亡人数每天都在上升。"
-american_disasters.1.a: "我们必须忍受冬天的愤怒。"
+ usa_events.3.t: "唐纳德·特朗普的提名"
+ usa_events.3.d: "在充满了辩论和竞选的热门第一季之后,共和党选择了新的标准持有者. 特别有争议人物唐纳德·约翰·特朗普(Donald John Trump)出现了胜利之地,掌握了专业人士的统治权,并给党带来了大胆的新篇章."
+ usa_events.3.a: "提名是他的。"
 
-# Great Flood of 1993
-american_disasters.2.t: "大洪灾!"
-american_disasters.2.d: "数周的暴雨和饱和土壤使密西西比河和密苏里河相继膨胀到其岸外,淹没了美国中西部的广大地区. 整个城镇都在水下,破坏是前所未有的."
-american_disasters.2.a: "心地之灾."
+ american_disasters.1.t: "1993年世纪风暴"
+ american_disasters.1.d: "一场大规模的环球风暴席卷了美国东部,带来了创纪录的降雪,飓风强度的风,并沿海岸出现严重洪灾. 数百万人没有电力,死亡人数每天都在上升。"
+ american_disasters.1.a: "我们必须忍受冬天的愤怒。"
 
-great_flood_of_1993: "1993年大水灾"
-storm_of_the_century: "1993年世纪风暴"
+ american_disasters.2.t: "大洪灾!"
+ american_disasters.2.d: "数周的暴雨和饱和土壤使密西西比河和密苏里河相继膨胀到其岸外,淹没了美国中西部的广大地区. 整个城镇都在水下,破坏是前所未有的."
+ american_disasters.2.a: "心地之灾."
 
-# Columbine
+ great_flood_of_1993: "1993年大水灾"
+ storm_of_the_century: "1993年世纪风暴"
 
-columbine.1.t: "科罗拉多高中大屠杀"
-columbine.1.d: "两名全副武装的学生在科罗拉多州Columbine中学进行了致命袭击,造成多人死亡和多人受伤。 这一事件引发了全国对枪支管制、学校安全和文化影响的悲痛和辩论。"
-columbine.1.a: "思想和祈祷"
-columbine.1.b: "我们必须加强全国学校的安全。"
+ columbine.1.t: "科罗拉多高中大屠杀"
+ columbine.1.d: "两名全副武装的学生在科罗拉多州Columbine中学进行了致命袭击,造成多人死亡和多人受伤。 这一事件引发了全国对枪支管制、学校安全和文化影响的悲痛和辩论。"
+ columbine.1.a: "思想和祈祷"
+ columbine.1.b: "我们必须加强全国学校的安全。"
 
-national_mourning_school_shooting: "感动学校射击"
-school_security_measures: "学校安全措施"
+ national_mourning_school_shooting: "感动学校射击"
+ school_security_measures: "学校安全措施"
 
-better_school_security: "改善学校安全"
-thoughts_and_prayers: "想法和祈祷"
-recent_mass_shooting: "最近的大规模射击"
+ better_school_security: "改善学校安全"
+ thoughts_and_prayers: "想法和祈祷"
+ recent_mass_shooting: "最近的大规模射击"
 
-# September 11 Attacks 
+ ground_zero: "地面零"
 
-ground_zero: "地面零"
-  
-je_war_on_terror: "反恐战争"
-je_war_on_terror_reason: "2001年9月11日对美国的恐怖袭击标志着全球持续打击恐怖主义运动的开始。 袭击发生后,美国发动了所谓的"反恐战争"——一项将军事行动,情报工作,国内安全措施相结合的广泛战略. 结果改变了外交政策、公民自由辩论和国际联盟。"
+ je_war_on_terror: "反恐战争"
+ je_war_on_terror_reason: "2001年9月11日对美国的恐怖袭击标志着全球持续打击恐怖主义运动的开始。 袭击发生后,美国发动了所谓的"反恐战争"——一项将军事行动,情报工作,国内安全措施相结合的广泛战略. 结果改变了外交政策、公民自由辩论和国际联盟。"
 
-usa_wot.1.t: "美国受到攻击"
-usa_wot.1.d: "协调一致的恐怖袭击袭击了纽约市和华盛顿特区,摧毁了世界贸易中心的塔楼并严重破坏了五角大楼. 数千人伤亡。 国家震惊了,要求作出响应."
-usa_wot.1.a: "一天将活在耻辱中。"
+ usa_wot.1.t: "美国受到攻击"
+ usa_wot.1.d: "协调一致的恐怖袭击袭击了纽约市和华盛顿特区,摧毁了世界贸易中心的塔楼并严重破坏了五角大楼. 数千人伤亡。 国家震惊了,要求作出响应."
+ usa_wot.1.a: "一天将活在耻辱中。"
 
-usa_wot.2.t: "反恐战争"
-usa_wot.2.d: "在袭击发生后,总统宣布对策划、支持或窝藏恐怖组织的人开展全球运动。 这项宣言将增加国内安全措施和国外的军事承诺。"
-usa_wot.2.a: "我们将将他们绳之以法。"
+ usa_wot.2.t: "反恐战争"
+ usa_wot.2.d: "在袭击发生后,总统宣布对策划、支持或窝藏恐怖组织的人开展全球运动。 这项宣言将增加国内安全措施和国外的军事承诺。"
+ usa_wot.2.a: "我们将将他们绳之以法。"
 
-global_wot.1.t: "美国被攻击;数千人死亡"
-global_wot.1.d: "美国遭受了毁灭性的恐怖主义袭击。 世界领导人表示哀悼,许多国家正在重新考虑其安全安排。"
-global_wot.1.a: "全人类的悲剧。"
+ global_wot.1.t: "美国被攻击;数千人死亡"
+ global_wot.1.d: "美国遭受了毁灭性的恐怖主义袭击。 世界领导人表示哀悼,许多国家正在重新考虑其安全安排。"
+ global_wot.1.a: "全人类的悲剧。"
 
-global_wot.2.t: "美国宣布反恐战争"
-global_wot.2.d: "9·11袭击事件后,美国宣布了全球"反恐战争"——呼吁国际社会加入反对恐怖集团及其支持者的运动."
-global_wot.2.a: "国际秩序发生了变化。"
+ global_wot.2.t: "美国宣布反恐战争"
+ global_wot.2.d: "9·11袭击事件后,美国宣布了全球"反恐战争"——呼吁国际社会加入反对恐怖集团及其支持者的运动."
+ global_wot.2.a: "国际秩序发生了变化。"
 
-global_wot.3.t: "第5条"
-global_wot.3.d: "在"九一一"袭击后以及随后美国在阿富汗的军事行动后,北约宪章第五条在历史上首次被援引. 作为一个成员国,我们被要求加入战争努力。"
-global_wot.3.a: "我们与我们的盟友站在一起。"
+ global_wot.3.t: "第5条"
+ global_wot.3.d: "在"九一一"袭击后以及随后美国在阿富汗的军事行动后,北约宪章第五条在历史上首次被援引. 作为一个成员国,我们被要求加入战争努力。"
+ global_wot.3.a: "我们与我们的盟友站在一起。"
 
-usa_wot.3.t: "炭疽袭击 恐怖美国"
-usa_wot.3.d: "在"9·11"袭击事件后几周,包含致命炭疽孢子的匿名信被邮寄给新闻组织和美国参议员. 袭击在全国各地造成了恐惧,引发了大规模的调查,并加剧了对生物武器的关切。"
-usa_wot.3.a: "正义将得到伸张。 它会很快的。"
-usa_wot.3.b: "又来了!"
-  
-je_hunt_for_bin_laden: "乌萨马·本·拉丹的狩猎"
-je_hunt_for_bin_laden_reason: "在2001年9月11日的袭击之后,美国对基地组织领导人乌萨马·本·拉丹进行了广泛的全球搜索。 该任务将跨越边界,涉及军事行动、情报收集以及外交压力。"
-intensified_intelligence_operations: "乌萨马·本·拉丹的狩猎"
+ usa_wot.3.t: "炭疽袭击 恐怖美国"
+ usa_wot.3.d: "在"9·11"袭击事件后几周,包含致命炭疽孢子的匿名信被邮寄给新闻组织和美国参议员. 袭击在全国各地造成了恐惧,引发了大规模的调查,并加剧了对生物武器的关切。"
+ usa_wot.3.a: "正义将得到伸张。 它会很快的。"
+ usa_wot.3.b: "又来了!"
 
-hunt_bin_laden_progress_bar: "亨特进步"
-hunt_bin_laden_progress_bar_desc: "搜索进度"
-osama_bar_completed: "发现乌萨马·本·拉丹"
+ je_hunt_for_bin_laden: "乌萨马·本·拉丹的狩猎"
+ je_hunt_for_bin_laden_reason: "在2001年9月11日的袭击之后,美国对基地组织领导人乌萨马·本·拉丹进行了广泛的全球搜索。 该任务将跨越边界,涉及军事行动、情报收集以及外交压力。"
+ intensified_intelligence_operations: "乌萨马·本·拉丹的狩猎"
 
-usa_wot.10.t: "乌萨马·本·拉丹的狩猎"
-usa_wot.10.d: "随着反恐战争的进行,美国情报机构和特种部队开始在全世界搜索乌萨马·本·拉丹。 现在的决定将决定行动的强度和范围。"
-usa_wot.10.a: "承诺提供所有必要资源。"
-usa_wot.10.b: "注重其他优先事项。"
+ hunt_bin_laden_progress_bar: "亨特进步"
+ hunt_bin_laden_progress_bar_desc: "搜索进度"
+ osama_bar_completed: "发现乌萨马·本·拉丹"
 
-usa_wot.12.t: "本·拉登被俘获"
-usa_wot.12.d: "经过多年的追捕,乌萨马·本·拉丹被找到并被消灭。 美国庆祝反恐战争取得重大胜利."
-usa_wot.12.a: "正义得到了伸张。"
+ usa_wot.10.t: "乌萨马·本·拉丹的狩猎"
+ usa_wot.10.d: "随着反恐战争的进行,美国情报机构和特种部队开始在全世界搜索乌萨马·本·拉丹。 现在的决定将决定行动的强度和范围。"
+ usa_wot.10.a: "承诺提供所有必要资源。"
+ usa_wot.10.b: "注重其他优先事项。"
 
-usa_wot.11.t: "美国杀死本·拉登"
-usa_wot.11.d: "经过数月的情报收集和准备,美国海军海豹突击队对巴基斯坦阿博塔巴德的一处大院发动了大胆的突袭. 目标:抓捕或杀害乌萨马·本·拉丹。 世界正在等待结果。"
+ usa_wot.12.t: "本·拉登被俘获"
+ usa_wot.12.d: "经过多年的追捕,乌萨马·本·拉丹被找到并被消灭。 美国庆祝反恐战争取得重大胜利."
+ usa_wot.12.a: "正义得到了伸张。"
 
-usa_wot.11.a: "胆小到最后。"
+ usa_wot.11.t: "美国杀死本·拉登"
+ usa_wot.11.d: "经过数月的情报收集和准备,美国海军海豹突击队对巴基斯坦阿博塔巴德的一处大院发动了大胆的突袭. 目标:抓捕或杀害乌萨马·本·拉丹。 世界正在等待结果。"
 
-usa_wot.11.success_tt: "乌萨马·本·拉丹在巴基斯坦被害. 反恐战争进入了一个新的阶段。"
+ usa_wot.11.a: "胆小到最后。"
 
-usa_wot.20.t: "情报突破"
-usa_wot.20.d: "中央情报局特工从俘虏的好战分子那里发现了有价值的情报,为本·拉登可能的下落提供了新的线索."
-usa_wot.20.a: "好极了,往前推"
-usa_wot.20.a.tt: "寻找本·拉登的进展有所增加。"
+ usa_wot.11.success_tt: "乌萨马·本·拉丹在巴基斯坦被害. 反恐战争进入了一个新的阶段。"
 
-usa_wot.21.t: "本·拉登发布视频"
-usa_wot.21.d: "几个月的追踪 疑似与本·拉登有关联的嫌疑人 证明是死路一条 资源被浪费了。 更糟糕的是,中东部恐怖分子已经发布了一个视频,供美国公众观看."
-usa_wot.21.a: "令人沮丧的挫折。"
-usa_wot.21.a.tt: "找到本·拉登的进展已经减少。"
+ usa_wot.20.t: "情报突破"
+ usa_wot.20.d: "中央情报局特工从俘虏的好战分子那里发现了有价值的情报,为本·拉登可能的下落提供了新的线索."
+ usa_wot.20.a: "好极了,往前推"
+ usa_wot.20.a.tt: "寻找本·拉登的进展有所增加。"
 
-usa_wot.22.t: "区域合作"
-usa_wot.22.d: "巴基斯坦和区域盟国在情报收集方面提供援助,加快了对本·拉登的追捕."
-usa_wot.22.a: "这将极大地帮助我们。"
-usa_wot.22.a.tt: "寻找本·拉登的进展已大大增加。"
- 
-accuse_iraq_wmds_button: "占领伊拉克的大规模毁灭性武器"
-accuse_iraq_wmds_button_desc: "利用伊拉克秘密开发或窝藏大规模毁灭性武器。 这将加剧紧张局势并可能为军事行动辩护。"
+ usa_wot.21.t: "本·拉登发布视频"
+ usa_wot.21.d: "几个月的追踪 疑似与本·拉登有关联的嫌疑人 证明是死路一条 资源被浪费了。 更糟糕的是,中东部恐怖分子已经发布了一个视频,供美国公众观看."
+ usa_wot.21.a: "令人沮丧的挫折。"
+ usa_wot.21.a.tt: "找到本·拉登的进展已经减少。"
 
-end_war_on_terror_button: "结束反恐战争"
-end_war_on_terror_button_desc: "宣布反恐战争正式结束,结束国际行动。 这将给国内外留下遗留的后果。"
+ usa_wot.22.t: "区域合作"
+ usa_wot.22.d: "巴基斯坦和区域盟国在情报收集方面提供援助,加快了对本·拉登的追捕."
+ usa_wot.22.a: "这将极大地帮助我们。"
+ usa_wot.22.a.tt: "寻找本·拉登的进展已大大增加。"
 
-usa_wot.30.t: "关于窝藏大规模毁灭性武器的指控"
-usa_wot.30.d: "美国公开指责我们秘密地发展和窝藏大规模毁灭性武器。 这标志着紧张局势严重升级并可能使冲突更加接近。"
-usa_wot.30.a: "吓人"
-  
-osama_extradited: "乌萨马·本·拉丹已被引渡"
-war_on_terror_stopped_tt: "反恐战争已经结束"
-# War on TERROR
+ accuse_iraq_wmds_button: "占领伊拉克的大规模毁灭性武器"
+ accuse_iraq_wmds_button_desc: "利用伊拉克秘密开发或窝藏大规模毁灭性武器。 这将加剧紧张局势并可能为军事行动辩护。"
 
-usa_wot.5.t: "本·拉登被羁押"
-usa_wot.5.d: "令人惊讶的外交突破是,阿富汗同意将乌萨马·本·拉丹引渡到美国。 这一让步标志着反恐战争初期的重大胜利。"
-usa_wot.5.a: "这是一个重大的外交胜利。"
+ end_war_on_terror_button: "结束反恐战争"
+ end_war_on_terror_button_desc: "宣布反恐战争正式结束,结束国际行动。 这将给国内外留下遗留的后果。"
 
-usa_wot.6.t: "阿富汗拒绝引渡本·拉丹"
-usa_wot.6.d: "阿富汗政府拒绝将乌萨马·本·拉丹交给美国当局. 随着华盛顿辩论其下一步行动,紧张局势上升。"
-usa_wot.6.a: "你要么和恐怖分子在一起,要么反对他们。"
-usa_wot.6.b: "让我们不要采取任何草率的行动,现在..."
+ usa_wot.30.t: "关于窝藏大规模毁灭性武器的指控"
+ usa_wot.30.d: "美国公开指责我们秘密地发展和窝藏大规模毁灭性武器。 这标志着紧张局势严重升级并可能使冲突更加接近。"
+ usa_wot.30.a: "吓人"
 
-je_request_bin_laden_extradition_button: "请求引渡本·拉丹"
-je_request_bin_laden_extradition_button_desc: "正式要求阿富汗将乌萨马·本·拉丹引渡到美国受审."
+ osama_extradited: "乌萨马·本·拉丹已被引渡"
+ war_on_terror_stopped_tt: "反恐战争已经结束"
 
-bin_laden_extradition_accepted_country: "本·拉丹 引渡 - 接受"
-bin_laden_extradition_accepted_country_desc: "阿富汗已同意引渡乌萨马·本·拉丹,提高国家士气并改进军事准备。"
-  
-bin_laden_extradition_accepted_ig_armed_forces: "本·拉丹 引渡 - 接受"
-bin_laden_extradition_accepted_ig_armed_forces_desc: "武装部队对政府在确保本·拉登被引渡方面的外交成功感到高兴."
+ usa_wot.5.t: "本·拉登被羁押"
+ usa_wot.5.d: "令人惊讶的外交突破是,阿富汗同意将乌萨马·本·拉丹引渡到美国。 这一让步标志着反恐战争初期的重大胜利。"
+ usa_wot.5.a: "这是一个重大的外交胜利。"
 
-bin_laden_extradition_rejected_country: "B. 本·拉丹引渡 - 被拒绝"
-bin_laden_extradition_rejected_country_desc: "阿富汗拒绝引渡乌萨马·本·拉丹,损害了我们的军事准备和紧张的资源。"
-  
-bin_laden_extradition_rejected_ig_armed_forces: "持久自由"
-bin_laden_extradition_rejected_ig_armed_forces_desc: "武装部队对政府未能确保本·拉登被引渡感到愤怒."
+ usa_wot.6.t: "阿富汗拒绝引渡本·拉丹"
+ usa_wot.6.d: "阿富汗政府拒绝将乌萨马·本·拉丹交给美国当局. 随着华盛顿辩论其下一步行动,紧张局势上升。"
+ usa_wot.6.a: "你要么和恐怖分子在一起,要么反对他们。"
+ usa_wot.6.b: "让我们不要采取任何草率的行动,现在..."
 
-bin_laden_extradition_rejected_ig_armed_forces_2: "没有入侵阿富汗"
-bin_laden_extradition_rejected_ig_armed_forces_2_desc: "武装部队对政府未能确保本·拉登被引渡感到愤怒."
+ je_request_bin_laden_extradition_button: "请求引渡本·拉丹"
+ je_request_bin_laden_extradition_button_desc: "正式要求阿富汗将乌萨马·本·拉丹引渡到美国受审."
 
-operation_enduring_freedom: "持久自由行动"
+ bin_laden_extradition_accepted_country: "本·拉丹 引渡 - 接受"
+ bin_laden_extradition_accepted_country_desc: "阿富汗已同意引渡乌萨马·本·拉丹,提高国家士气并改进军事准备。"
 
+ bin_laden_extradition_accepted_ig_armed_forces: "本·拉丹 引渡 - 接受"
+ bin_laden_extradition_accepted_ig_armed_forces_desc: "武装部队对政府在确保本·拉登被引渡方面的外交成功感到高兴."
 
-limited_response: "有限反应"
-heightened_security_measures: "高度安全措施"
+ bin_laden_extradition_rejected_country: "B. 本·拉丹引渡 - 被拒绝"
+ bin_laden_extradition_rejected_country_desc: "阿富汗拒绝引渡乌萨马·本·拉丹,损害了我们的军事准备和紧张的资源。"
 
-afghanistan.1.t: "美国要求引渡本·拉丹"
-afghanistan.1.d: "美国已正式要求阿富汗交出被指控为9月11日袭击的策划者乌萨马·本·拉丹。 接受这一要求可以缓和紧张局势——但拒绝可能会引起严重后果。"
-afghanistan.1.a: "遵从所请."
-afghanistan.1.b: "拒绝"
+ bin_laden_extradition_rejected_ig_armed_forces: "持久自由"
+ bin_laden_extradition_rejected_ig_armed_forces_desc: "武装部队对政府未能确保本·拉登被引渡感到愤怒."
 
-# 2003 Invasion of Iraq
+ bin_laden_extradition_rejected_ig_armed_forces_2: "没有入侵阿富汗"
+ bin_laden_extradition_rejected_ig_armed_forces_2_desc: "武装部队对政府未能确保本·拉登被引渡感到愤怒."
 
-iraq_war.1.t: "联合国伊拉克大规模毁灭性武器索赔问题会议"
-iraq_war.1.d: "美国指责伊拉克窝藏了大规模毁灭性武器。 联合国召开了一次紧急会议来讨论这一问题并收集国际反应。"
-iraq_war.1.a: "辩论开始。"
+ operation_enduring_freedom: "持久自由行动"
 
-iraq_war.2.t: "联合国关于伊拉克大规模毁灭性武器的辩论"
-iraq_war.2.d: "国际社会就如何回应美国对伊拉克的指控展开辩论."
-iraq_war.2.a: "支持美国。"
-iraq_war.2.b: "与伊拉克并肩作战。"
-iraq_war.2.c: "保持中立。"
+ limited_response: "有限反应"
+ heightened_security_measures: "高度安全措施"
 
-iraq_war.3.t: "北约对美国指控的回应"
-iraq_war.3.d: "作为北约盟国,我们必须决定是否支持美国对伊拉克所谓的大规模毁灭性武器计划的立场。"
-iraq_war.3.a: "我们将与美国站在一起。"
-iraq_war.3.b: "我们不能支持这一行动。"
+ afghanistan.1.t: "美国要求引渡本·拉丹"
+ afghanistan.1.d: "美国已正式要求阿富汗交出被指控为9月11日袭击的策划者乌萨马·本·拉丹。 接受这一要求可以缓和紧张局势——但拒绝可能会引起严重后果。"
+ afghanistan.1.a: "遵从所请."
+ afghanistan.1.b: "拒绝"
 
-iraq_war.4.t: "伊拉克对指控的反应"
-iraq_war.4.d: "伊拉克被指控窝藏大规模毁灭性武器。 政府必须应对来自国外越来越大的压力。"
-iraq_war.4.a: "否认一切 忍受孤立"
-iraq_war.4.b: "谴责西方并发动宣传."
-  
-iraq_war.5.t: "美国向联合国提出的诉状"
-iraq_war.5.d: "美国已向联合国提出其理由,敦促支持对伊拉克采取军事行动,反对其所谓的大规模毁灭性武器。 世界领导人现在必须决定是否支持华盛顿的恳求或抵制干预。"
-iraq_war.5.b: "联合国陷入僵局——我们必须单独行动。"
-iraq_war_us_lobby_tt: "美国游说支持的关键力量,调整外交关系."
-iraq_war_unfail_tt: "生来恰好活活活活活活活活活活活活活活活活活活活活活活活活活活活活活活活活活活活活活活活活活活活活活活活活活活活活活活活活活活活活活活活活活活活活活活活活活活活活活活活活活活活活活活活活活活活活活活活活活活活活活活活活活活活活活活活活活活活活活活活活活活活活活活活活活活活活活活活活活活活活活活活活活活活活活活活活活活活活活活活活活活活活活活活活活活活活活活活活活活活活活活活活活活活活活活活活活活活活活活活活活活活活活活活活活活活活活活活活活活活活活活活活活活活活活活活活活活活活活活活活活活活活活活活活活活活"
+ iraq_war.1.t: "联合国伊拉克大规模毁灭性武器索赔问题会议"
+ iraq_war.1.d: "美国指责伊拉克窝藏了大规模毁灭性武器。 联合国召开了一次紧急会议来讨论这一问题并收集国际反应。"
+ iraq_war.1.a: "辩论开始。"
 
-iraq_war.6.t: "美国决定战争"
-iraq_war.6.d: "在联合国因分裂而瘫痪的情况下,华盛顿面临一项重大决定:单独行动,与伊拉克进行军事对抗,或退缩并面临在世界面前显得软弱的风险。"
-iraq_war.6.a: "发动入侵伊拉克"
-iraq_war.6.b: "退后,避免战争"
-iraq_war_backdown_tt: "美国从干预中后退,丧失了国际声望."
-2003_invasion_of_iraq: "2003年伊拉克被入侵"
-iraq_condemned: "伊拉克受到谴责"
+ iraq_war.2.t: "联合国关于伊拉克大规模毁灭性武器的辩论"
+ iraq_war.2.d: "国际社会就如何回应美国对伊拉克的指控展开辩论."
+ iraq_war.2.a: "支持美国。"
+ iraq_war.2.b: "与伊拉克并肩作战。"
+ iraq_war.2.c: "保持中立。"
 
-############### WAR ON TERROR #####################
+ iraq_war.3.t: "北约对美国指控的回应"
+ iraq_war.3.d: "作为北约盟国,我们必须决定是否支持美国对伊拉克所谓的大规模毁灭性武器计划的立场。"
+ iraq_war.3.a: "我们将与美国站在一起。"
+ iraq_war.3.b: "我们不能支持这一行动。"
 
-############### WAR IN YUGOSLAVIA #################
+ iraq_war.4.t: "伊拉克对指控的反应"
+ iraq_war.4.d: "伊拉克被指控窝藏大规模毁灭性武器。 政府必须应对来自国外越来越大的压力。"
+ iraq_war.4.a: "否认一切 忍受孤立"
+ iraq_war.4.b: "谴责西方并发动宣传."
+
+ iraq_war.5.t: "美国向联合国提出的诉状"
+ iraq_war.5.d: "美国已向联合国提出其理由,敦促支持对伊拉克采取军事行动,反对其所谓的大规模毁灭性武器。 世界领导人现在必须决定是否支持华盛顿的恳求或抵制干预。"
+ iraq_war.5.b: "联合国陷入僵局——我们必须单独行动。"
+ iraq_war_us_lobby_tt: "美国游说支持的关键力量,调整外交关系."
+ iraq_war_unfail_tt: "生来恰好活活活活活活活活活活活活活活活活活活活活活活活活活活活活活活活活活活活活活活活活活活活活活活活活活活活活活活活活活活活活活活活活活活活活活活活活活活活活活活活活活活活活活活活活活活活活活活活活活活活活活活活活活活活活活活活活活活活活活活活活活活活活活活活活活活活活活活活活活活活活活活活活活活活活活活活活活活活活活活活活活活活活活活活活活活活活活活活活活活活活活活活活活活活活活活活活活活活活活活活活活活活活活活活活活活活活活活活活活活活活活活活活活活活活活活活活活活活活活活活活活活活活活活活活活活活"
+
+ iraq_war.6.t: "美国决定战争"
+ iraq_war.6.d: "在联合国因分裂而瘫痪的情况下,华盛顿面临一项重大决定:单独行动,与伊拉克进行军事对抗,或退缩并面临在世界面前显得软弱的风险。"
+ iraq_war.6.a: "发动入侵伊拉克"
+ iraq_war.6.b: "退后,避免战争"
+ iraq_war_backdown_tt: "美国从干预中后退,丧失了国际声望."
+ 2003_invasion_of_iraq: "2003年伊拉克被入侵"
+ iraq_condemned: "伊拉克受到谴责"
 
  je_collapse_of_yugoslavia:0 "不稳定的联邦"
  je_collapse_of_yugoslavia_reason:0 "联邦面临严重压力. \n 稳定性: #v [Country.MakeScope.Var('yugo_stability').GetValue]#!. \n 分裂压力: #v [Country.MakeScope.Var('yugo_secession_pressure').GetValue]#!. \n 国际压力: #v [Country.MakeScope.Var('yugo_international_pressure').GetValue]#!."
@@ -548,19 +513,18 @@ iraq_condemned: "伊拉克受到谴责"
  yugo_reunify_state_vlasenica_tt:0 "南斯拉夫必须拥有#boldVlasenica/波斯尼亚塞族领土#!。"
 
  yugo_wars_complete_date_tt:0 "#bold 日期已过 2006年1月1日 #!."
- 
+
 # canada
 
-canada.1.t:0 "泪水高速公路"
-canada.1.d:0 "不列颠哥伦比亚16号高速公路的一段被通称为"眼泪之道"(the Highway of Tears),已经成为加拿大悲剧和不公正的象征,自1970年代以来,加拿大有数十名土著妇女和女童失踪或被谋杀. 在乔治王子和鲁珀特王子之间,偏远地区长期缺乏公共交通,迫使许多人搭便车——往往造成致命的后果。"
-canada.1.f:0 "他们(当局)把她放进钢箱。 这一定是个封闭的棺材 因为他们找到她的方式... ... 他停下来止住眼泪,然后把话说出“她......恶化了”。"
+ canada.1.t:0 "泪水高速公路"
+ canada.1.d:0 "不列颠哥伦比亚16号高速公路的一段被通称为"眼泪之道"(the Highway of Tears),已经成为加拿大悲剧和不公正的象征,自1970年代以来,加拿大有数十名土著妇女和女童失踪或被谋杀. 在乔治王子和鲁珀特王子之间,偏远地区长期缺乏公共交通,迫使许多人搭便车——往往造成致命的后果。"
+ canada.1.f:0 "他们(当局)把她放进钢箱。 这一定是个封闭的棺材 因为他们找到她的方式... ... 他停下来止住眼泪,然后把话说出“她......恶化了”。"
 
-canada.1.a:0 "不幸的是,这个国家面临着更紧迫的问题."
-canada.1.b:0 "我们应该感到羞愧!"
+ canada.1.a:0 "不幸的是,这个国家面临着更紧迫的问题."
+ canada.1.b:0 "我们应该感到羞愧!"
 
-je_indigenous_rights: "土著权利"
-je_indigenous_rights_reason: "土著权利问题仍然是国内政治中最重要的未决问题之一。 代代相传的剥夺、强迫同化和违背条约义务,造成了土著和非土著人口之间的严重结构性不平等。 缩小这一差距需要持续的政治意愿——并面临那些从现状中受益的人的抵制。"
-
+ je_indigenous_rights: "土著权利"
+ je_indigenous_rights_reason: "土著权利问题仍然是国内政治中最重要的未决问题之一。 代代相传的剥夺、强迫同化和违背条约义务,造成了土著和非土著人口之间的严重结构性不平等。 缩小这一差距需要持续的政治意愿——并面临那些从现状中受益的人的抵制。"
 
  indigenous_je_status_usa_tt: "在整个美国,570多个联邦承认的部落占据了占其祖先领地一小部分的保留地. 预期寿命、受教育程度和保留地的收入远远落后于国家平均水平。 人们普遍承认,联邦信托责任——保护部落主权和福利的法律义务——没有得到充分履行。"
 
@@ -570,7 +534,6 @@ je_indigenous_rights_reason: "土著权利问题仍然是国内政治中最重�
 
  indigenous_je_status_ast_tt: "澳大利亚的土著居民和托雷斯海峡岛民是世界上最古老的连续文化,也是其处境最不利的文化之一。 ‘斯多伦一代'——土著儿童根据一直持续到1970年代的州同化政策被强行带离家庭——留下了尚未痊愈的伤口. 土著澳大利亚人的预期寿命仍然低于全国平均水平十几年。 1992年的马博决定首次承认了土著产权,但执行情况参差不齐。"
 
- # indigenous.1 — Land Rights
  indigenous.1.t: "土著土地权利要求"
  indigenous.1.d_usa: "部落民族联盟提出正式要求,主张对大片联邦土地拥有权利,认为非法夺取该领土违反了条约义务。 这一指控得到了媒体的大量报道和法律支持。 法院正在监视,更广泛的美洲原住民社区也在监视。"
  indigenous.1.d_can: "一个原住民乐队声称土著对大片王室土地拥有所有权,声称任何有效的条约都没有取消他们对该领土的权利。 申诉已经提交联邦法院。 法律专家指出,加拿大关于土著所有权的判例正在发生重大变化,政府的回应将开创一个重要的先例。"
@@ -580,7 +543,6 @@ je_indigenous_rights_reason: "土著权利问题仍然是国内政治中最重�
  indigenous.1.a: "谈判一项解决办法——满足索赔要求"
  indigenous.1.b: "在法庭上争权夺利——我们的立场是站得住脚的"
 
- # indigenous.2 — Treaty Obligations
  indigenous.2.t: "审议中的条约义务"
  indigenous.2.d_usa: "一份国会报告发现,联邦政府没有履行其对数十个部落国家的条约义务——每年为保留地提供的保健、教育和基础设施不足数十亿美元。 部落领导人呼吁对联邦信托责任进行正式审查,并承诺缩小资金缺口。"
  indigenous.2.d_can: "一个议会委员会提交了一份报告,详细介绍了原住民社区在历史条约下的义务方面长期资金不足的情况。 该报告指出了住房、水基础设施和教育方面的具体不足。 政府必须决定如何作出反应,以及是否投入必要的资源,使条约完整。"
@@ -590,21 +552,18 @@ je_indigenous_rights_reason: "土著权利问题仍然是国内政治中最重�
  indigenous.2.a: "充分履行我们的义务——承诺提供资源"
  indigenous.2.b: "确认不足之处——逐步改进工作"
 
- # indigenous.3 — Cultural Preservation
  indigenous.3.t: "对土著语言的威胁"
  indigenous.3.d: "语言学家发表了一份报告,警告说用 " x id=0 " 的几十种土著语言濒临灭绝。 在许多情况下,只有少数讲流利的话者——都是老年人。 一旦丢失,这些语言就无法恢复. 包括口述历史、生态知识、法律传统, 问题是政府是否准备投入必要的资源来扭转这一轨迹——或者它是否将默默地目睹历史的消失."
  indigenous.3.f: "语言是世界. 它的死亡是不可逆转的。"
  indigenous.3.a: "资助土著语言振兴方案"
  indigenous.3.b: "这是社区的问题,而不是政府的问题。"
 
- # indigenous.4 — Health Crisis
  indigenous.4.t: "土著健康危机"
  indigenous.4.d: "一份国家卫生报告强调,在[ROOT.GetCountry.GetName]中,土著和非土著卫生成果之间存在巨大差距。 预期寿命大大降低。 糖尿病、吸毒成瘾和精神疾病——其中许多是植根于世代相传的创伤——的比率要高得多。 保留地和偏远社区的婴儿死亡率是全国平均水平的多倍。 医疗机构要求提供文化上适当、资金充足的土著保健服务。 不作为的代价——以生命来衡量——是巨大的。"
  indigenous.4.f: "健康不平等是一种政治选择。"
  indigenous.4.a: "投资于专门的土著保健方案"
  indigenous.4.b: "所有公民均可平等享受现有的保健制度。"
 
- # indigenous.5 — Reservation Conditions (USA/CAN)
  indigenous.5.t: "准备金的条件"
  indigenous.5.d_usa: "一名联邦监察长的报告发现,许多美洲原住民保留地的生活条件大大低于国家标准. 住房过于拥挤和破旧不堪。 在几十个保留地上,获得清洁饮用水是不可靠的。 许多社区的失业率超过50%。 报告称情况为"联邦忽视危机",并建议大幅增加印第安事务局的资金."
  indigenous.5.d_can: "政府的一项审计发现,数百个原住民社区正在接受煮取水的咨询——其中一些社区已经十多年了。 许多保留地的住房严重拥挤。 精神保健服务基本上不存在。 审计结论是,联邦政府用于原住民社区的人均开支大约比其他加拿大人用于同等服务的开支低30%。"
@@ -612,7 +571,6 @@ je_indigenous_rights_reason: "土著权利问题仍然是国内政治中最重�
  indigenous.5.a: "增加联邦对保留社区的供资"
  indigenous.5.b: "维持目前的供资水平——预算不允许增加"
 
- # indigenous.6 — Reservation Economic Development (USA/CAN)
  indigenous.6.t: "土著土地的经济发展"
  indigenous.6.d_usa: "一些部落国家提出了经济发展倡议,包括游戏业务、资源开采伙伴关系和旅游企业,这将为保留地社区带来大量收入。 这些提案需要联邦批准,并面临相邻州政府和商业利益的反对,他们视部落企业为竞争. 部落领导人认为,经济自给自足是摆脱贫困的唯一可持续途径。"
  indigenous.6.d_can: "资源丰富的地区的原住民社区正在寻求就传统领土上或附近资源开采的收入分享协定进行谈判。 一些社区还提议与省级政府建立林业和能源开发合资企业。 这些建议为经济自给自足提供了一条道路——但要求政府分享它历来完全声称的控制和收入。"
@@ -620,20 +578,17 @@ je_indigenous_rights_reason: "土著权利问题仍然是国内政治中最重�
  indigenous.6.a: "支持土著经济发展——核准提案"
  indigenous.6.b: "优先考虑现有资源利益——这些建议造成复杂情况"
 
- # indigenous.20 — Ipperwash
  indigenous.20.t: "Ipperwash危机"
  indigenous.20.d: "Stoney Point Ojibwe抗议者占领了安大略的Ipperwash省公园,声称该地——包括一个神圣的墓地——在二战期间被从他们的社区被非法没收用作军事基地,并且从未按照承诺归还. 占领是和平的,但安大略省警察已经建立了警戒线,要求指导如何进行。 局势很紧张。 抗议者中有武器。 还有长者、家人和50年来一直得不到解决的合法冤情。"
  indigenous.20.f: "一座墓地被取走。 它从来没有被还回来。"
  indigenous.20.a: "命令人民党驱散占领——恢复秩序"
  indigenous.20.b: "指示人民党下台——谈判和平解决"
 
- # indigenous.21 — Last residential school
  indigenous.21.t: "最后一所寄宿学校关闭"
  indigenous.21.d: "萨斯喀彻温普尼希的戈登寄宿学校已经关闭了大门——这是加拿大最后一所联邦运营的印度寄宿学校. 自1874年以来,寄宿学校系统强迫大约150 000名土著儿童离开其家庭,将他们安置在积极压制土著语言、文化和身份的机构——身体和性虐待非常普遍。 关闭最后一所学校不是解决办法。 承认蓄意文化破坏的一章终于正式结束。 生还者还活在它的后果中."
  indigenous.21.f: "最后的学校已经关闭。 它造成的伤没有。"
  indigenous.21.a: "加拿大历史上的黑暗篇章已经结束"
 
- # indigenous.22 — TRC
  indigenous.22.t: "真相与和解委员会的报告"
  indigenous.22.d: "加拿大真相与和解委员会已经发表了最后报告,这是印度寄宿学校系统6 500多名幸存者六年来作证的高潮。 报告记录了系统虐待、文化种族灭绝和强迫同化政策造成的多代人创伤。 委员会发出了94个行动呼吁——关于儿童福利、教育、语言、卫生和司法等领域的具体建议。 报告使用"文化种族灭绝"一词来描述所做的. 政府现在必须决定如何认真对待委员会的工作。"
  indigenous.22.f: "真理是第一步。 和解是几代人的工作。"
@@ -708,358 +663,295 @@ je_indigenous_rights_reason: "土著权利问题仍然是国内政治中最重�
  indigenous_rights_progress: "土著权利立法"
  indigenous_rights_progress_desc: "平权行动立法的颁布是对解决土著人不利处境问题的一项有意义的承诺。 差距不会一夜之间缩小——但政策方向已经改变。"
 
-
 # japan
 
-japan.1.t: "福岛核灾难"
-japan.1.d: "在大规模地震和海啸后,福岛第一核电站遭受了灾难性故障,将放射性材料释放到环境中。 这场灾难震惊了世界,引发了全球关于核安全和应急准备的辩论。"
-japan.1.a: "一场民族悲剧——一场全球警钟."
+ japan.1.t: "福岛核灾难"
+ japan.1.d: "在大规模地震和海啸后,福岛第一核电站遭受了灾难性故障,将放射性材料释放到环境中。 这场灾难震惊了世界,引发了全球关于核安全和应急准备的辩论。"
+ japan.1.a: "一场民族悲剧——一场全球警钟."
 
-fukushima_nuclear_disaster: "福岛核灾难"
-fukushima_nuclear_disaster_desc: "福岛第一核电站受到的严重破坏已导致放射性污染、基础设施被破坏以及国家的长期恢复努力。"
+ fukushima_nuclear_disaster: "福岛核灾难"
+ fukushima_nuclear_disaster_desc: "福岛第一核电站受到的严重破坏已导致放射性污染、基础设施被破坏以及国家的长期恢复努力。"
 
 # south sudan
 
-southsudan.1.t: "南苏丹独立公投"
-southsudan.1.d: "经过几十年的冲突和决定性的公投后,苏丹南部各州分道扬镳,组成了南苏丹共和国. 喀土穆的中央政府面临命运的选择:接受新国家或去打仗以收复新国家."
-southsudan.1.a: "我们不允许苏丹分裂。"
-southsudan.1.b: "放了他们 为了和平"
+ southsudan.1.t: "南苏丹独立公投"
+ southsudan.1.d: "经过几十年的冲突和决定性的公投后,苏丹南部各州分道扬镳,组成了南苏丹共和国. 喀土穆的中央政府面临命运的选择:接受新国家或去打仗以收复新国家."
+ southsudan.1.a: "我们不允许苏丹分裂。"
+ southsudan.1.b: "放了他们 为了和平"
 
 # russia
 
-first_chechen_war: "第一次车臣战争"
+ first_chechen_war: "第一次车臣战争"
 
-russia_parliament_resisting: "议会抵制"
-russia_military_loyality: "军事共犯"
-russia_parliamentary_support: "议会支助"
-russia_constitution_crisis_resolved_mod: "危机已扭转"
+ russia_parliament_resisting: "议会抵制"
+ russia_military_loyality: "军事共犯"
+ russia_parliamentary_support: "议会支助"
+ russia_constitution_crisis_resolved_mod: "危机已扭转"
 
-je_russian_constitutional_crisis: "俄罗斯宪政危机"
-je_russian_constitutional_crisis_reason: "1993年使俄罗斯处于政治崩溃的边缘。 总统鲍里斯·叶利钦想巩固行政权力,下令解散俄罗斯议会,指责其成员阻挠改革并抵制民主化. 议会又宣布叶利钦的法令违宪,拒绝解散并动员支持者拥护其事业. \n\n 几个星期来,随着敌对派别获得不同军事、安全部队和公众的支持,紧张局势加剧。 政府机构骨折,对决定俄罗斯联邦命运的行政或立法部门忠诚。 这种对峙不仅仅是一场政治争端——这是一场关于后苏联时代俄罗斯治理本质的战斗. 如果危机升级失控,莫斯科心脏地区的国内暴力不仅是可能的,而且是不可避免的。"
 
-je_russia_wild_nineties: "狂野的90年代"
-je_russia_wild_nineties_reason: "`野生90年代'(俄語:Лихие Лихие, Likhiye devyanostyye)是一个带有负面评价含义的名词,取自1990年代苏联和俄罗斯联邦解体后过渡时期的特点. \n\n 俄罗斯从苏联统治向资本主义民主的动荡过渡引发了不稳定、腐败和暴力浪潮。 后苏维埃初期的特点是经济崩溃,寡头主义兴起,政治出众,有组织犯罪激增. \n\n 从对议会的炮击到私有化丑闻,每个月似乎都带来新的动荡. 国家在改革与混乱之间摇摆不定,人民耐心消瘦."
 
-rus_events.0.t: "1993年俄罗斯宪法危机开始"
-rus_events.0.d: "总统鲍里斯·叶利钦颁布法令解散了俄罗斯议会,指责它阻碍民主改革并威胁联邦的稳定. 议会宣布此举违宪,呼吁军方和公民抵制。 俄罗斯脆弱的民主的命运现在悬在平衡之中。"
-rus_events.0.a: "国家屏息."
 
-1993_russian_crisis_tt: "危机已经结束"
-rus_events.1.t: "宪政危机"
-rus_events.1.d: "叶利钦总统已经宣布解散议会,但立法者拒绝下台,把自己堵入白宫. 紧张局势正在迅速升级。"
-rus_events.1.a: "与总统并肩作战"
-rus_events.1.a.tt: "军方会支持行政部门的"
-rus_events.1.b: "支持议会"
-rus_events.1.b.tt: "我们将捍卫立法机构的权威。"
 
-rus_events.2.t: "军方支持总统"
-rus_events.2.d: "武装部队已经控制了街道,炮击了议会大楼并保障了叶利钦的权威."
-rus_events.2.a: "危机已经结束。"
 
-rus_events.3.t: "议会胜利"
-rus_events.3.d: "尽管政府施加了压力,但议会赢得了民众的支持并保留了权力。"
-rus_events.3.a: "危机已经结束。"
 
-rus_events.4.t: "袭击白宫"
-rus_events.4.d: "莫斯科陷入了混乱. 亲总统的军队已经包围了俄罗斯白宫,是议会领导层的所在地,并用坦克和小武器开火. 烟斗从上层,随着大楼被点燃。 最终的抵抗随着军队夺取控制权而倒闭,标志着对峙的结束——但牺牲了生命和国家的政治清白."
-rus_events.4.a: "现在恢复秩序。"
 
 # chechnya
 
-je_first_chechen_war_reason: "第一次车臣战争始于1994年末,当时俄罗斯联邦试图重新控制被分裂的车臣共和国伊克里亚. \n\n 冲突将造成生命和资源损失,格罗兹尼发生激烈的城市战斗,北高加索地区受到广泛破坏。 在没有明确胜利的情况下结束战争可能会损害政府的信誉,但继续战斗有可能长期不稳定。"
-je_first_chechen_war: "车臣战争"
-chechen_war_resolved: "车臣战争得到解决"
+ je_first_chechen_war_reason: "第一次车臣战争始于1994年末,当时俄罗斯联邦试图重新控制被分裂的车臣共和国伊克里亚. \n\n 冲突将造成生命和资源损失,格罗兹尼发生激烈的城市战斗,北高加索地区受到广泛破坏。 在没有明确胜利的情况下结束战争可能会损害政府的信誉,但继续战斗有可能长期不稳定。"
+ je_first_chechen_war: "车臣战争"
+ chechen_war_resolved: "车臣战争得到解决"
 
-chechen_events.1.t: "车臣战争"
-chechen_events.1.d: "俄罗斯部队已经进入车臣,以恢复联邦控制,开始预期的迅速行动。 然而,山区地势和坚决的当地抵抗可能使冲突演变为长期冲突。"
-chechen_events.1.a: "我们将恢复秩序。"
+ chechen_events.1.t: "车臣战争"
+ chechen_events.1.d: "俄罗斯部队已经进入车臣,以恢复联邦控制,开始预期的迅速行动。 然而,山区地势和坚决的当地抵抗可能使冲突演变为长期冲突。"
+ chechen_events.1.a: "我们将恢复秩序。"
 
-chechen_events.2.t: "袭击格罗兹尼"
-chechen_events.2.d: "格罗兹尼战役已经开始,俄军试图夺取车臣首都. 战斗激烈,双方伤亡惨重."
-chechen_events.2.a: "继续前进,不管付出多少代价。"
+ chechen_events.2.t: "袭击格罗兹尼"
+ chechen_events.2.d: "格罗兹尼战役已经开始,俄军试图夺取车臣首都. 战斗激烈,双方伤亡惨重."
+ chechen_events.2.a: "继续前进,不管付出多少代价。"
 
-chechen_events.3.t: "车臣和平谈判"
-chechen_events.3.d: "经过数月的战斗后,双方的战争疲惫程度已经增加. 停火建议已经摆在桌面上,从而结束了流血。"
-chechen_events.3.a: "接受和平并撤出部队。"
-chechen_events.3.b: "继续战争直到胜利."
+ chechen_events.3.t: "车臣和平谈判"
+ chechen_events.3.d: "经过数月的战斗后,双方的战争疲惫程度已经增加. 停火建议已经摆在桌面上,从而结束了流血。"
+ chechen_events.3.a: "接受和平并撤出部队。"
+ chechen_events.3.b: "继续战争直到胜利."
 
 # haiti
 
-uphold_democracy: "维护民主行动"
+ uphold_democracy: "维护民主行动"
 
-haiti_events.1.t: "维护民主行动"
-haiti_events.1.d: "1994年9月,美国对海地发动了军事干预,以恢复1991年政变中被推翻的民选总统让-贝特朗·阿里斯蒂德. 美军在国际同盟军的支持下,守卫了关键地区,为阿里斯蒂德的回归铺平了道路."
-haiti_events.1.a: "部署部队以恢复民主。"
-haiti_events.1.b: "我们将准备外国军队。"
+ haiti_events.1.t: "维护民主行动"
+ haiti_events.1.d: "1994年9月,美国对海地发动了军事干预,以恢复1991年政变中被推翻的民选总统让-贝特朗·阿里斯蒂德. 美军在国际同盟军的支持下,守卫了关键地区,为阿里斯蒂德的回归铺平了道路."
+ haiti_events.1.a: "部署部队以恢复民主。"
+ haiti_events.1.b: "我们将准备外国军队。"
 
-haiti_events.2.t: "外国部队抵达"
-haiti_events.2.d: "美国部队已登陆海地,控制了战略地点。 这种干预是恢复民主治理的手段,但会引起主权和外国影响的问题。"
-haiti_events.2.a: "我们必须合作避免流血。"
+ haiti_events.2.t: "外国部队抵达"
+ haiti_events.2.d: "美国部队已登陆海地,控制了战略地点。 这种干预是恢复民主治理的手段,但会引起主权和外国影响的问题。"
+ haiti_events.2.a: "我们必须合作避免流血。"
 
-je_haiti_political_crisis: "海地政治危机"
-je_haiti_political_crisis_reason: "1990年让-贝特朗·阿里斯蒂德总统民主当选后,海地经历了短暂的乐观。 然而,1991年9月,一场军事政变推翻了阿里斯蒂德,使该国陷入了政治混乱之中。 随着侵犯人权行为和政治镇压的蔓延,军事政权受到国际谴责。 联合国和美洲国家组织实施的经济制裁严重影响了海地本已艰难的经济。 在整个1992年和1993年,军政府同阿里斯蒂德支持者之间的谈判动摇了,而针对政治反对派和普通民众的暴力却在加剧。 联合国海地特派团(联海特派团)恢复民主治理的努力受到阻碍。 到1994年,国际社会特别是美国的压力越来越大,为直接干预奠定了基础。 由美军于1994年9月领导的"维持民主行动"(Uphold Democracy),旨在让阿里斯蒂德重新掌权并结束军政府统治."
+ je_haiti_political_crisis: "海地政治危机"
+ je_haiti_political_crisis_reason: "1990年让-贝特朗·阿里斯蒂德总统民主当选后,海地经历了短暂的乐观。 然而,1991年9月,一场军事政变推翻了阿里斯蒂德,使该国陷入了政治混乱之中。 随着侵犯人权行为和政治镇压的蔓延,军事政权受到国际谴责。 联合国和美洲国家组织实施的经济制裁严重影响了海地本已艰难的经济。 在整个1992年和1993年,军政府同阿里斯蒂德支持者之间的谈判动摇了,而针对政治反对派和普通民众的暴力却在加剧。 联合国海地特派团(联海特派团)恢复民主治理的努力受到阻碍。 到1994年,国际社会特别是美国的压力越来越大,为直接干预奠定了基础。 由美军于1994年9月领导的"维持民主行动"(Uphold Democracy),旨在让阿里斯蒂德重新掌权并结束军政府统治."
 
 # quebec
-# [GetPlayer.MakeScope.GetVariable('quebec_happiness_var').GetValue|0]
 
-je_quebec_happiness: "魁北克局势"
-je_quebec_happiness_reason: "魁北克在加拿大境内的地位几十年来一直是有争议的问题. 魁北克独特的文化、语言和历史经常激起关于自治和独立的辩论。 在1995年魁北克公投之前的几年里,魁北克与加拿大联邦政府的关系一直以紧张,谈判为特征,民族主义情绪偶尔会爆发. \n\n 魁北克省以其独特的法语多数、独特的文化特征以及倡导自治的悠久历史,定期寻求重新界定其在加拿大联邦中的地位。 一些魁北克人渴望完全独立,另一些人则希望增加省级权力,而许多人仍然支持留在统一的加拿大.\n\n 作为总理,你的任务是渡过这一微妙的局面. 你们必须在民族团结与尊重魁北克的文化和政治愿望之间取得平衡。 你所做的每一项决定——无论是关于语言法、经济政策还是文化投资的决定——都将影响魁北克人的幸福。 如果魁北克幸福得分仍然很高,公投可能会以投票决定留在加拿大而结束. 但是如果不满情绪过于强烈,魁北克人民可以投票支持独立,永远地改变北美的地图."
-quebec_happiness_bar_desc: "法裔加拿大人幸福"
-quebec_happiness_monthly_tt: "魁北克幸福的每月变化."
-quebec_happiness_bar:0 "支持魁北克独立"
-recently_pissed_quebec_off:0 "最近没有激怒魁北克"
+ je_quebec_happiness: "魁北克局势"
+ je_quebec_happiness_reason: "魁北克在加拿大境内的地位几十年来一直是有争议的问题. 魁北克独特的文化、语言和历史经常激起关于自治和独立的辩论。 在1995年魁北克公投之前的几年里,魁北克与加拿大联邦政府的关系一直以紧张,谈判为特征,民族主义情绪偶尔会爆发. \n\n 魁北克省以其独特的法语多数、独特的文化特征以及倡导自治的悠久历史,定期寻求重新界定其在加拿大联邦中的地位。 一些魁北克人渴望完全独立,另一些人则希望增加省级权力,而许多人仍然支持留在统一的加拿大.\n\n 作为总理,你的任务是渡过这一微妙的局面. 你们必须在民族团结与尊重魁北克的文化和政治愿望之间取得平衡。 你所做的每一项决定——无论是关于语言法、经济政策还是文化投资的决定——都将影响魁北克人的幸福。 如果魁北克幸福得分仍然很高,公投可能会以投票决定留在加拿大而结束. 但是如果不满情绪过于强烈,魁北克人民可以投票支持独立,永远地改变北美的地图."
+ quebec_happiness_bar_desc: "法裔加拿大人幸福"
+ quebec_happiness_monthly_tt: "魁北克幸福的每月变化."
+ quebec_happiness_bar:0 "支持魁北克独立"
+ recently_pissed_quebec_off:0 "最近没有激怒魁北克"
 
-too_many_quebec_concessions: "太多的特许权; 魁北克人独占"
-quebec_happiness_10: "#green 增加 #! 法裔加拿大人幸福由 #green 5 #!分."
-quebec_happiness_minus_10: "#r 减少 #! 法裔加拿大人幸福 减少 #r 5 #! 分数"
+ too_many_quebec_concessions: "太多的特许权; 魁北克人独占"
+ quebec_happiness_10: "#green 增加 #! 法裔加拿大人幸福由 #green 5 #!分."
+ quebec_happiness_minus_10: "#r 减少 #! 法裔加拿大人幸福 减少 #r 5 #! 分数"
 
-quebec.6.t: "魁北克的满足"
-quebec.6.d: "随着魁北克压倒性的满意,联邦政府逐渐自满. 渥太华认为统一问题已经解决了,但批评者警告说,这种过度的自信会导致对其他重要问题的忽视."
-quebec.6.a: "塔巴纳克!"
+ quebec.6.t: "魁北克的满足"
+ quebec.6.d: "随着魁北克压倒性的满意,联邦政府逐渐自满. 渥太华认为统一问题已经解决了,但批评者警告说,这种过度的自信会导致对其他重要问题的忽视."
+ quebec.6.a: "塔巴纳克!"
 
-complacent_on_quebec: "对魁北克的欢迎"
-complacent_on_quebec_desc: "在魁北克的大力支持下,政府在谈判和政策关注上变得自满自满,导致其他派别的批评日益高涨."
- 
-quebec_concessions_button: "向魁北克省提供特许权"
-quebec_concessions_button_desc: "向魁北克提供政治和文化让步,增加他们的幸福."
+ complacent_on_quebec: "对魁北克的欢迎"
+ complacent_on_quebec_desc: "在魁北克的大力支持下,政府在谈判和政策关注上变得自满自满,导致其他派别的批评日益高涨."
 
-quebec_ignore_button: "忽略魁北克的要求"
-quebec_ignore_button_desc: "拒绝与魁北克的政治要求接触,降低他们的幸福."
+ quebec_concessions_button: "向魁北克省提供特许权"
+ quebec_concessions_button_desc: "向魁北克提供政治和文化让步,增加他们的幸福."
 
-quebec.1.t: "魁北克的紧张局势"
-quebec.1.d: "随着关于自治和语言权的辩论的加剧,魁北克的政治紧张局势加剧."
-quebec.1.a: "向魁北克提供保证。"
-quebec.1.b: "坚持民族团结."
+ quebec_ignore_button: "忽略魁北克的要求"
+ quebec_ignore_button_desc: "拒绝与魁北克的政治要求接触,降低他们的幸福."
 
-quebec.2.t: "1995年魁北克公民投票"
-quebec.2.d: "经过多年的辩论,魁北克投票决定是留在加拿大的一部分还是成为一个独立国家."
-quebec.2.a: "人民选择了团结。"
-quebec.2.b: "魁北克支持独立!"
+ quebec.1.t: "魁北克的紧张局势"
+ quebec.1.d: "随着关于自治和语言权的辩论的加剧,魁北克的政治紧张局势加剧."
+ quebec.1.a: "向魁北克提供保证。"
+ quebec.1.b: "坚持民族团结."
 
-quebec.3.t: "法语争议"
-quebec.3.d: "一项联邦政策建议有可能降低法语在魁北克的地位,引起许多公民的愤怒."
-quebec.3.a: "不惜一切代价来保护法语."
-quebec.3.a.tt: "魁北克幸福会增加#G+8#!."
-quebec.3.b: "保持现行政策。"
-quebec.3.b.tt: "魁北克幸福会减少 #R -5 #!."
-quebec.3.b.tt2: "你们可以做出更多的让步"
+ quebec.2.t: "1995年魁北克公民投票"
+ quebec.2.d: "经过多年的辩论,魁北克投票决定是留在加拿大的一部分还是成为一个独立国家."
+ quebec.2.a: "人民选择了团结。"
+ quebec.2.b: "魁北克支持独立!"
 
-quebec.4.t: "对魁北克的联邦资金削减"
-quebec.4.d: "联邦政府面临预算压力,魁北克省为基础设施和服务提供的资金正在被切断。"
-quebec.4.a: "继续切口"
-quebec.4.a.tt: "魁北克幸福会减少 #R -7 #!."
-quebec.4.b: "少从魁北克割取."
-quebec.4.b.tt: "魁北克幸福会减少#R -2#!."
+ quebec.3.t: "法语争议"
+ quebec.3.d: "一项联邦政策建议有可能降低法语在魁北克的地位,引起许多公民的愤怒."
+ quebec.3.a: "不惜一切代价来保护法语."
+ quebec.3.a.tt: "魁北克幸福会增加#G+8#!."
+ quebec.3.b: "保持现行政策。"
+ quebec.3.b.tt: "魁北克幸福会减少 #R -5 #!."
+ quebec.3.b.tt2: "你们可以做出更多的让步"
 
-quebec.5.t: "魁北克文化节"
-quebec.5.d: "魁北克文化的大规模庆典引起了国家和国际的注意,促进了自豪和团结。"
-quebec.5.a: "庆祝并增加文化经费."
-quebec.5.a.tt: "魁北克幸福会增加#G+10#!."
-quebec.5.b: "祝贺组织者,但无额外经费."
-quebec.5.b.tt: "魁北克幸福会增加#G+3#!."
+ quebec.4.t: "对魁北克的联邦资金削减"
+ quebec.4.d: "联邦政府面临预算压力,魁北克省为基础设施和服务提供的资金正在被切断。"
+ quebec.4.a: "继续切口"
+ quebec.4.a.tt: "魁北克幸福会减少 #R -7 #!."
+ quebec.4.b: "少从魁北克割取."
+ quebec.4.b.tt: "魁北克幸福会减少#R -2#!."
 
-# China
+ quebec.5.t: "魁北克文化节"
+ quebec.5.d: "魁北克文化的大规模庆典引起了国家和国际的注意,促进了自豪和团结。"
+ quebec.5.a: "庆祝并增加文化经费."
+ quebec.5.a.tt: "魁北克幸福会增加#G+10#!."
+ quebec.5.b: "祝贺组织者,但无额外经费."
+ quebec.5.b.tt: "魁北克幸福会增加#G+3#!."
 
-je_china_southern_tour: "南方旅游"
-je_china_southern_tour_reason: "1992年初,邓小平开始出名"南方之旅",前往深圳,珠海,广州等地和上海. \n\n. 他的讲话推动了持续的经济改革,市场自由化,以及经济特区的扩张. 巡演重振了中共内部的改革主义势头,并再次向国内外投资者保证中国"改革开放"将继续下去. \n"
-je_china_southern_tour_progress_tt: "通过某些活动,每个月的进展都有所增加。"
+ je_china_southern_tour: "南方旅游"
+ je_china_southern_tour_reason: "1992年初,邓小平开始出名"南方之旅",前往深圳,珠海,广州等地和上海. \n\n. 他的讲话推动了持续的经济改革,市场自由化,以及经济特区的扩张. 巡演重振了中共内部的改革主义势头,并再次向国内外投资者保证中国"改革开放"将继续下去. \n"
+ je_china_southern_tour_progress_tt: "通过某些活动,每个月的进展都有所增加。"
 
-southern_tour_reforms: "南方旅游经济遗产"
-je_china_southern_tour_complete: "邓小平巡演结束"
-china_southern_tour.1.t: "邓小平南方之旅"
-china_southern_tour.1.d: "邓小平开始对华南地区进行高度公开的巡视,出访重要经济特区,敦促官员继续改革."
-china_southern_tour.1.a: "旅程开始了。"
+ southern_tour_reforms: "南方旅游经济遗产"
+ je_china_southern_tour_complete: "邓小平巡演结束"
+ china_southern_tour.1.t: "邓小平南方之旅"
+ china_southern_tour.1.d: "邓小平开始对华南地区进行高度公开的巡视,出访重要经济特区,敦促官员继续改革."
+ china_southern_tour.1.a: "旅程开始了。"
 
-china_southern_tour.2.t: "市场改革呼吁"
-china_southern_tour.2.d: "在"南方之旅"期间的演讲中,邓小平呼吁重新致力于面向市场的改革."
-china_southern_tour.2.a: "支持推动."
-china_southern_tour.2.b: "保持目前的速度。"
+ china_southern_tour.2.t: "市场改革呼吁"
+ china_southern_tour.2.d: "在"南方之旅"期间的演讲中,邓小平呼吁重新致力于面向市场的改革."
+ china_southern_tour.2.a: "支持推动."
+ china_southern_tour.2.b: "保持目前的速度。"
 
-china_southern_tour.3.t: "内部政党抵抗运动"
-china_southern_tour.3.d: "缔约方内的保守分子对经济自由化的速度和范围表示关切。"
-china_southern_tour.3.a: "继续前进"
-china_southern_tour.3.b: "就妥协进行谈判。"
+ china_southern_tour.3.t: "内部政党抵抗运动"
+ china_southern_tour.3.d: "缔约方内的保守分子对经济自由化的速度和范围表示关切。"
+ china_southern_tour.3.a: "继续前进"
+ china_southern_tour.3.b: "就妥协进行谈判。"
 
-# Rwanda
+ genocide_ended: "种族灭绝已经结束"
+ the_genocide_progresses_by_15: "种族灭绝激起15分"
+ the_genocide_progresses_by_10: "种族灭绝激化了十点"
+ the_genocide_progresses_by_20: "种族灭绝升级了20分"
 
-genocide_ended: "种族灭绝已经结束"
-the_genocide_progresses_by_15: "种族灭绝激起15分"
-the_genocide_progresses_by_10: "种族灭绝激化了十点"
-the_genocide_progresses_by_20: "种族灭绝升级了20分"
+ post_rwandan_genocide_reconstruction: "种族灭绝后的重建"
+ rwandan_genocide: "图西族种族灭绝"
 
-post_rwandan_genocide_reconstruction: "种族灭绝后的重建"
-rwandan_genocide: "图西族种族灭绝"
+ je_rwandan_genocide: "卢旺达种族灭绝"
+ je_rwandan_genocide_reason: "1994年4月,一架载有卢旺达和布隆迪总统的飞机被击落,引发了20世纪后期最恐怖的种族灭绝事件之一。 国际意识建设缓慢,但随着大屠杀的蔓延,要求进行干预。"
 
-je_rwandan_genocide: "卢旺达种族灭绝"
-je_rwandan_genocide_reason: "1994年4月,一架载有卢旺达和布隆迪总统的飞机被击落,引发了20世纪后期最恐怖的种族灭绝事件之一。 国际意识建设缓慢,但随着大屠杀的蔓延,要求进行干预。"
+ je_rwandan_genocide_progress_tt: "随着时间推移和暴力事件的增加,进展也有所增加。 干预可以减少进展。"
 
-je_rwandan_genocide_progress_tt: "随着时间推移和暴力事件的增加,进展也有所增加。 干预可以减少进展。"
+ rwandan_genocide.1.t: "种族灭绝的开始"
+ rwandan_genocide.1.d: "在哈比亚里马纳总统被暗杀后,极端主义势力开始广泛屠杀图西族。"
+ rwandan_genocide.1.a: "一个黑暗的章节开始。"
 
-rwandan_genocide.1.t: "种族灭绝的开始"
-rwandan_genocide.1.d: "在哈比亚里马纳总统被暗杀后,极端主义势力开始广泛屠杀图西族。"
-rwandan_genocide.1.a: "一个黑暗的章节开始。"
+ rwandan_genocide.2.t: "屠杀继续"
+ rwandan_genocide.2.d: "来自农村地区的报告描述了整个社区在协调袭击中被消灭。"
+ rwandan_genocide.2.a: "暴力升级。"
 
-rwandan_genocide.2.t: "屠杀继续"
-rwandan_genocide.2.d: "来自农村地区的报告描述了整个社区在协调袭击中被消灭。"
-rwandan_genocide.2.a: "暴力升级。"
+ rwandan_genocide.3.t: "国际抗议"
+ rwandan_genocide.3.d: "图像和幸存者的叙述传遍了全球媒体,促使人们紧急呼吁联合国采取行动。"
+ rwandan_genocide.3.a: "请求维和人员。"
+ rwandan_genocide.3.b: "无所事事."
 
-rwandan_genocide.3.t: "国际抗议"
-rwandan_genocide.3.d: "图像和幸存者的叙述传遍了全球媒体,促使人们紧急呼吁联合国采取行动。"
-rwandan_genocide.3.a: "请求维和人员。"
-rwandan_genocide.3.b: "无所事事."
+ rwandan_genocide_request_peacekeepers_tt: "这将引发联合国对向卢旺达部署维和人员的投票。"
+ rwandan_genocide_community_angry: "这会激怒国际社会"
 
-rwandan_genocide_request_peacekeepers_tt: "这将引发联合国对向卢旺达部署维和人员的投票。"
-rwandan_genocide_community_angry: "这会激怒国际社会"
+ rwandan_genocide.4.t: "联合国维持和平投票"
+ rwandan_genocide.4.d: "联合国安理会召开表决决定是否向卢旺达派遣维和部队."
 
-rwandan_genocide.4.t: "联合国维持和平投票"
-rwandan_genocide.4.d: "联合国安理会召开表决决定是否向卢旺达派遣维和部队."
+ good_friday_agreement_tt: "《耶稣受难日协议》已签署"
+ this_will_piss_off_ira: "#R 共和派准军事组织将对局势升级作出回应。#!"
+ increases_troop_strength_5: "驻军力量增加 #G 5%#!"
+ increases_troop_strength_10: "驻军力量增加 #G 10%#!"
+ decreases_troop_strength_5: "驻军力量减少 #R 5%#!"
+ decreases_troop_strength_10: "驻军力量减少 #R 10%#!"
+ smd_ni_troop_presence_plus_20: "驻军力量增加 #G 20%#!"
+ recent_ira_attack: "近期准军事组织袭击"
+ recent_ira_attack_desc: "近期的准军事组织袭击令当地民众惶恐不安，安全部队高度戒备。"
+ reunification_pride: "统一的自豪"
+ below_99_troop_strr: "驻军力量低于100%"
+ je_troubles_in_northern_ireland: "北爱尔兰问题"
+ je_troubles_in_northern_ireland_reason: "二十多年来，北爱尔兰一直是民族主义与联合主义两大社群之间政治暴力的焦点，共和派和效忠派准军事组织、皇家阿尔斯特警队以及英国陆军都卷入其中。\n\n如果英国的驻留崩溃，伦敦可能被迫考虑放弃该省。足够强大的驻军将从1993年12月起为与都柏林发表联合声明铺平道路。"
+ je_troubles_increase_troop_button: "增加驻军"
+ je_troubles_increase_troop_button_desc: "向北爱尔兰增派英国陆军部队，以加强控制并维持秩序。部署需要花费资金，并会激怒民族主义社群。"
+ troubles_troop_strength_bar: "北爱尔兰驻军力量"
+ troubles_troop_strength_bar_desc: "驻军力量"
+ troubles_troop_strength_bar_monthly_desc: "衡量英国陆军在北爱尔兰的部署规模。"
+ troubles_events.1.t: "贝尔法斯特爆炸案"
+ troubles_events.1.d: "一枚汽车炸弹在贝尔法斯特爆炸，造成平民死亡，全省局势更加紧张。"
+ troubles_events.1.a: "悲剧。"
+ troubles_events.2.t: "部队遭到袭击"
+ troubles_events.2.d: "英国士兵在德里遭到共和派枪手的射击。"
+ troubles_events.2.a: "我们必须回应。"
+ troubles_events.3.t: "德里骚乱"
+ troubles_events.3.d: "德里的一场抗议在与皇家阿尔斯特警队发生冲突后演变为骚乱。"
+ troubles_events.3.a: "令人担忧的事态。"
+ troubles_events.4.t: "援军抵达"
+ troubles_events.4.d: "新的部队已抵达北爱尔兰，加强了我们的存在。"
+ troubles_events.4.a: "很好。"
+ troubles_events.5.t: "枪手在酒吧杀害平民"
+ troubles_events.5.d: "一家酒吧发生致命枪击，震动了当地社区，再次提醒人们冲突仍在继续。"
+ troubles_events.5.a: "和平之路从不平坦。"
+ je_northern_ireland_peace_process: "北爱尔兰和平进程"
+ je_northern_ireland_peace_process_reason: "在被称为“北爱尔兰问题”的数十年冲突之后，英国和爱尔兰两国政府与北爱尔兰各政党一道进入了谈判阶段。\n\n从唐宁街宣言到多党会谈和停火，这些谈判有望结束多年的流血冲突。\n\n结果将取决于政治意愿、公众舆论以及妥协的能力。"
+ ni_peace_process_success_tt: "和平进程取得成功，北爱尔兰的稳定性得到提升。"
+ ni_peace_events.1.t: "唐宁街宣言"
+ ni_peace_events.1.d: "英国和爱尔兰两国政府发表联合宣言，确认北爱尔兰人民有权决定自己的未来。"
+ ni_peace_events.1.a: "重要的一步。"
+ ni_peace_events.2.t: "多党会谈开始"
+ ni_peace_events.2.d: "北爱尔兰大多数政党的代表首次坐到了谈判桌前。"
+ ni_peace_events.2.a: "对话是通往和平之路。"
+ ni_peace_events.3.t: "耶稣受难日协议"
+ ni_peace_events.3.d: "经过近两年的谈判，英国和爱尔兰两国政府以及北爱尔兰大多数政党在贝尔法斯特签署了一项协议。协议设立了分权议会和跨境机构，并确认北爱尔兰的地位只有在其人民同意的情况下才能改变。"
+ ni_peace_events.3.a: "枪声停息。"
+ ni_peace_events.5.t: "撤出北爱尔兰？"
+ ni_peace_events.5.d: "英国陆军几乎已撤离北爱尔兰，政府正在失去对该省的控制。一些大臣如今主张，唯一的出路是将北爱尔兰交给爱尔兰共和国。"
+ ni_peace_events.5.a: "将北爱尔兰交给都柏林。"
+ ni_peace_events.5.a.tt: "北爱尔兰将移交给爱尔兰。"
+ smd_ni_refuse_withdrawal: "我们不会放弃北爱尔兰。"
+ ni_peace_events.6.t: "爱尔兰统一"
+ ni_peace_events.6.d: "经过数十年的分裂，北爱尔兰正式并入爱尔兰共和国。街头一片欢庆，整个国家展望统一的未来。"
+ ni_peace_events.6.a: "开香槟吧！"
+ reunification_pride_desc: "民族统一的喜悦增强了民众团结，巩固了政府的地位。"
 
-# United Kingdom
+ je_oil_titans:0 "石油巨头"
+ je_oil_titans_reason:0 "海湾是地球上 最大的石油储量。 " x id=0 " 的继承将决定下一个世纪——对该区域、全球能源市场以及工业、运输和繁荣以石油为生的每个国家而言。 目标不仅仅是取出石油。 它必须成为不可或缺的——成为世界前三名生产国之一,这样,当石油价格变动时,它就会移动,因为[ROOT.GetCountry.GetName]选择让它移动。"
 
-good_friday_agreement_tt: "耶稣受难日协议已经签署"
+ oil_titans_top3_tt:0 "#bold [ROOT.GetCountry.GetName]是全球石油生产国中前3名. #! 日记条目是完整的——[ROOT.GetCountry.GetName]已经成为全球能源系统不可或缺的节点之一."
+ oil_titans_top10_tt:0 "[ROOT.GetCountry.GetName]是全球前10名并接近前3名的石油生产国. 继续投资于石油开采将缩小差距。"
+ oil_titans_outside_tt:0 "[ROOT.GetCountry.GetName]尚不是全球前十名石油生产国之一。 石油开采基础设施需要大量投资。"
 
-this_will_piss_off_ira: "#R爱尔兰共和军将增加其攻击的凶猛性. #!"
+ oil_titans_bonus:0 "石油巨头"
+ oil_titans_bonus_desc:0 "[ROOT.GetCountry.GetName]是世界前三名石油生产国之一. 由此产生的收入流入国库,为建设提供资金,并给予 " x id=1/ " 一定程度的地缘政治影响,而仅靠人口规模是无法证明的。 世界需要[ROOT.GetCountry.GetAdjective]石油。 需要的是权力。"
 
-increases_troop_strength_5: "将部队驻留人数增加 #G 5%#!"
-increases_troop_strength_10: "将部队驻留增加#G > 10%#!"
-decreases_troop_strength_5: "将部队驻留人数减少 #R 5%#!"
-decreases_troop_strength_10: "将部队驻留人数减少#R > 10%#!"
-
-recent_ira_attack: "最近的攻击"
-reunification_pride: "统一荣耀"
-below_99_troop_strr: "兵力低于100%"
-
- # The Troubles
-
-je_troubles_in_northern_ireland: "北爱尔兰的麻烦"
-je_troubles_in_northern_ireland_reason: "北爱尔兰已成为民族主义和联盟主义社区之间政治暴力的热点,升级为由准军事团体、平民和英国军队参与的武装冲突。 我们必须认真管理部队存在和政治反应,以稳定该地区。"
-
-je_troubles_increase_troop_button: "增加兵力"
-je_troubles_increase_troop_button_desc: "向北爱尔兰部署更多的英军部队,以加强控制和维持秩序."
-
-troubles_troop_strength_bar: "驻北爱尔兰部队"
-troubles_troop_strength_bar_desc: "兵力"
-troubles_troop_strength_bar_monthly_desc: "测量英国在北爱尔兰的兵力部署."
-
-troubles_events.1.t: "在贝尔法斯特的轰炸"
-troubles_events.1.d: "一枚汽车炸弹在贝尔法斯特爆炸,炸死平民并加剧了紧张局势。"
-troubles_events.1.a: "悲剧."
-
-troubles_events.2.t: "受攻击部队"
-troubles_events.2.d: "英国士兵在德利遭到起义军的射击."
-troubles_events.2.a: "我们必须作出反应。"
-
-troubles_events.3.t: "民权抗议"
-troubles_events.3.d: "伦敦德里的一次大规模抗议在与警方发生冲突后演变为暴力."
-troubles_events.3.a: "一个令人担忧的事态发展。"
-
-troubles_events.4.t: "抵达"
-troubles_events.4.d: "新的部队已抵达北爱尔兰,加强了我们的存在。"
-troubles_events.4.a: "不错。"
-
-troubles_events.5.t: "枪手在爱尔兰Pub杀害平民"
-troubles_events.5.d: "北爱尔兰的一起致命枪击事件震撼了当地社区,这可悲地反映了持续动乱期间的暴力。"
-troubles_events.5.a: "通向和平的道路永远不是正路。"
- 
-je_northern_ireland_peace_process: "北爱尔兰和平进程"
-je_northern_ireland_peace_process_reason: "几十年的冲突被称为"麻烦"后,英国和爱尔兰政府——同北爱尔兰的政党一道——进入了一个谈判时期. \n\n 从"唐宁街宣言"到多党会谈和可能的停火,这些讨论可能结束多年的流血. \n\n 结果将取决于政治意愿、公众舆论和妥协能力。"
-
-ni_peace_process_success_tt: "和平进程已取得成功,增加了北爱尔兰的稳定。"
-
-ni_peace_events.1.t: "唐宁街宣言"
-ni_peace_events.1.d: "英国和爱尔兰政府发表联合声明,申明北爱尔兰人民有权决定他们的未来。"
-ni_peace_events.1.a: "向前迈出了一大步。"
-
-ni_peace_events.2.t: "多方会谈开始"
-ni_peace_events.2.d: "爱尔兰北部大多数政治派别的代表第一次在谈判桌上开会。"
-ni_peace_events.2.a: "对话是通向和平的道路。"
-
-ni_peace_events.3.t: "耶稣受难日协议"
-ni_peace_events.3.d: "在联合王国政府同爱尔兰进行了一系列积极会谈之后,北爱尔兰的准军事团体宣布停火,为持久和平打开了大门。"
-ni_peace_events.3.a: "枪声不响"
-
-ni_peace_events.5.t: "英国部队从北爱尔兰被踢出"
-ni_peace_events.5.d: "随着在北爱尔兰的驻军减少到一无所有,英国政府发现自己无法维持控制. 在出人意料的举动中,政府正式将北爱尔兰割让给爱尔兰共和国."
-ni_peace_events.5.a: "我们别无选择。"
-ni_peace_events.5.a.tt: "北爱尔兰将划入爱尔兰."
-
-ni_peace_events.6.t: "爱尔兰统一"
-ni_peace_events.6.d: "经过几十年的分裂后,北爱尔兰正式加入爱尔兰共和国. 随着国家走向统一的未来,街道充满了庆祝活动。"
-ni_peace_events.6.a: "开香槟!"
-reunification_pride: "统一荣耀"
-reunification_pride_desc: "国家统一的喜悦增强了公众团结,加强了政府的地位."
-
-je_oil_titans:0 "石油巨头"
-je_oil_titans_reason:0 "海湾是地球上 最大的石油储量。 " x id=0 " 的继承将决定下一个世纪——对该区域、全球能源市场以及工业、运输和繁荣以石油为生的每个国家而言。 目标不仅仅是取出石油。 它必须成为不可或缺的——成为世界前三名生产国之一,这样,当石油价格变动时,它就会移动,因为[ROOT.GetCountry.GetName]选择让它移动。"
- 
-oil_titans_top3_tt:0 "#bold [ROOT.GetCountry.GetName]是全球石油生产国中前3名. #! 日记条目是完整的——[ROOT.GetCountry.GetName]已经成为全球能源系统不可或缺的节点之一."
-oil_titans_top10_tt:0 "[ROOT.GetCountry.GetName]是全球前10名并接近前3名的石油生产国. 继续投资于石油开采将缩小差距。"
-oil_titans_outside_tt:0 "[ROOT.GetCountry.GetName]尚不是全球前十名石油生产国之一。 石油开采基础设施需要大量投资。"
- 
-oil_titans_bonus:0 "石油巨头"
-oil_titans_bonus_desc:0 "[ROOT.GetCountry.GetName]是世界前三名石油生产国之一. 由此产生的收入流入国库,为建设提供资金,并给予 " x id=1/ " 一定程度的地缘政治影响,而仅靠人口规模是无法证明的。 世界需要[ROOT.GetCountry.GetAdjective]石油。 需要的是权力。"
-
-bid_for_olympics_decision:0 "宣布参加奥运"
-bid_for_olympics_decision_desc:0 "我们非常幸运地被国际奥林匹克委员会视为下届奥林匹克运动会的主办者。"
-we_can_host_the_next_olympics_tt:0 "我们可以主办下届奥运会比赛."
+ bid_for_olympics_decision:0 "宣布参加奥运"
+ bid_for_olympics_decision_desc:0 "我们非常幸运地被国际奥林匹克委员会视为下届奥林匹克运动会的主办者。"
+ we_can_host_the_next_olympics_tt:0 "我们可以主办下届奥运会比赛."
 
  je_korea_reunification_nrk:0 "韩国统一"
  je_korea_reunification_nrk_reason:0 "朝鲜民主主义人民共和国是朝鲜民族的唯一合法政府。 北纬38度分出半岛是外国势力造成的人为伤害——这种临时安排[ROOT.GetCountry.GetName]致力于纠正.\n\n 在[ROOT.GetCountry.GetAdjective]领导下实现统一,将使朝鲜民族恢复完整. 韩国的南方政府必须进入"x id=4/"状态——通过武力,条约,或"x id=5/"力量的重量,使得进一步抵抗无法进行."
- 
+
  korea_nrk_complete_tt:0 "#bold半岛统一为 [ROOT.GetCountry.GetAdjective]领导. #! 韩国是完整的。 1945年的划分已经改正."
  korea_nrk_subject_path_tt:0 "[SCOPE.sCountry('c:STK').GetName]是[ROOT.GetCountry.GetName]的一个学科. 南部行政已纳入 " x id=2/ " 州。 半岛的全面一体化正在进行。"
  korea_nrk_incomplete_tt:0 "[SCOPE.sCountry('c:STK').GetName]控制 [SCOPE.sState('STATE_SEOUL').GetName],[SCOPE.sState('STATE_BUSAN').GetName],[SCOPE.sState('STATE_YANGHO').GetName]. 统一要求[ROOT.GetCountry.GetName]拥有所有三个——或将[SCOPE.sCountry('c:STK').GetName]作为主体."
- 
- # ==========================================
- # SOUTH KOREA JE
- # ==========================================
- 
+
  je_korea_reunification_stk:0 "韩国统一"
  je_korea_reunification_stk_reason:0 "大韩民国是朝鲜民族的唯一合法政府。 半岛分裂是外国占领和冷战对抗的后遗症——"x id=0"从未接受它为永久. \n\n 在"x id=3/"的领导下实现统一,将使朝鲜人民在民主宪政秩序下团结起来. 朝鲜北方行政必须被吸收入"x id=4"状态. 平阳政权对北方的控制是最后的障碍."
- 
+
  korea_stk_complete_tt:0 "#bold半岛统一为 [ROOT.GetCountry.GetAdjective]领导. #! 韩国是完整的。 1945年的划分已经改正."
  korea_stk_subject_path_tt:0 "[SCOPE.sCountry('c:NRK').GetName]是[ROOT.GetCountry.GetName]的一个学科. 北部行政当局已被纳入宪法秩序。 北方的一体化正在进行——一项巨大的事业。"
  korea_stk_incomplete_tt:0 "[SCOPE.sCountry('c:NRK').GetName]控制 [SCOPE.sState('STATE_PYONGYANG').GetName]和 [SCOPE.sState('STATE_SARIWON').GetName]. 统一要求[ROOT.GetCountry.GetName]同时拥有-或有[SCOPE.sCountry('c:NRK').GetName]作为主体."
- 
- # ==========================================
- # MODIFIERS
- # ==========================================
- 
+
  korea_reunification_bonus:0 "韩国统一"
  korea_reunification_bonus_desc:0 "朝鲜半岛的分裂已经结束. 1945年以来,全国第一次实现全面. 权威、合法性和声望得到显著提高。 分裂主义和革命压力被压制. [ROOT.GetCountry.GetAdjective] 状态可以启动整合统一的韩国的工作."
- 
+
  korea_stk_integration_bonus:0 "北方一体化"
  korea_stk_integration_bonus_desc:0 "[ROOT.GetCountry.GetName]正在吸收前作"x id=1/"的领土. 南北之间的经济和行政差距很大——一体化需要持续投资和加速一体化。 成本是真实的,但目标是统一的韩国."
- 
+
  y2k_events.1.t: "千年臭虫"
  y2k_events.1.d: "随着2000年的到来,一种宁静的焦虑笼罩了[ROOT.GetCountry.GetAdjective] 工程师 官僚 信息技术部门 所谓的"Y2K"问题——发现大多数计算机系统存储年份为两位数,因此会将"00"解释为"1900"而不是"2000"——引发了全球性的拼接. \n\n 有人说后果可能是灾难性的:电网失效,银行系统腐败,空中交通管制变得暗淡. 也有人表示, [ROOT.GetCountry.GetName] 必须决定如何认真对待。"
  y2k_events.1.f: "午夜就要来了 灯光是否保持是另一个问题。"
- 
+
  y2k_events.1.a: "投资完全Y2K合规"
  y2k_events.1.a_tt: "昂贵、彻底和可能不必要的——但是,如果哪怕有一小部分的预测是正确的,则无所事事的代价要高得多。 [ROOT.GetCountry.GetName]将资助关键基础设施的合规方案。"
  y2k_events.1.b: "它显然过于夸张——忽略它"
  y2k_events.1.b_tt: "恐慌是一种咨询行业的金矿,仅此而已。 [ROOT.GetCountry.GetName] 不会将公共资金浪费在一个想象中的问题上。"
- 
- # ── NEW YEAR 2000 ─────────────────────────
- 
+
  y2k_events.2.t: "新年快乐-欢迎来到2000年"
  y2k_events.2.d: "1999年12月31日午夜时分过后,灯已经亮起。 飞机一直飞着 银行开了 电网响起 取出水来. 千年虫是计算历史中最预期到的灾难,它只是悄悄地赶来,而不是一阵大爆炸,也许它根本就没有到来,而花费在遵守方面的数十亿只是起作用了。 纵观[ROOT.GetCountry.GetName], 人群充斥街道, 烟花点燃了天空, 二十一世纪已经开始。 接下来是别人的猜测"
  y2k_events.2.f: "今年是2000年。 世界并没有结束。 这,所有的事情,都是好消息。"
- 
+
  y2k_events.2.a: "新世纪开始了"
- 
- # ── MODIFIERS ────────────────────────────
- 
+
  y2k_compliance_investment: "Y2K 合规方案"
  y2k_compliance_investment_desc: "[ROOT.GetCountry.GetName]已投资在关键基础设施中全面遵守Y2K。 成本是真实的,但系统已经准备好 任何午夜带来的。"
- 
+
  millennium_celebration: "千年庆祝活动"
  millennium_celebration_desc: "2000年没有发生灾难。 公众情绪平平平平平平平平平平平平平平平平平平平平平平平平平平平平平平平平平平平平平平平平平平平平平平平平平平平平平平平平平平平平平平平平平平平平平平平平平平平平平平平平平平平平平平平平平平平平平平平平平平平平平平平平平平平平平平平平平平平平平平平平平平平平平平平平平平平平平平平平平平平平平平平平平平平平平平平平平平平平平平平平平平平平平平平平平平平平平平平平平平平平平平平平平平平平平平平平平平平平平平平平平平平平平平平平平平平平平平平平平平平平平平平平平平平平平平平平平平平平平平平平平平平平平平平平平平平平平"
- 
+
  y2k_minor_disruption: "Y2K 中断"
  y2k_minor_disruption_desc: "[ROOT.GetCountry.GetName] 排除了 Y2K 的顾虑, 现在由于系统未准备好打嗝而面临轻微但实际的中断,进入了新的一年。 没有什么灾难性的——但批评者也没有完全错误。"
- 
-  # ── TAGENTOPOLI ──────────────────────
 
  je_tangentopoli: "坦根托波利语Name"
  je_tangentopoli_reason: "意大利实行回扣制. 公共合同——建筑、基础设施、国防采购、保健——由向政党支付一定比例的公司签订。 基督教民主党占了他们的份额. 社会党夺去他们的 较小的联盟伙伴拿走了他们的 每个人都知道。 每个人都参加。 战争以来就一直如此。 该系统叫作"x id=2/""Tangentopoli""x id=3/""-布里贝城". 它稳定、高效和完全腐败。 唯一的问题就是它是否能够活下来与拒绝另眼相看的法官接触."
@@ -1067,18 +959,15 @@ we_can_host_the_next_olympics_tt:0 "我们可以主办下届奥运会比赛."
  je_mani_pulite: "马尼·普利特"
  je_mani_pulite_reason: "调查正在进行中。 Antonio Di Pietro法官和米兰地方法官通过贿赂和回扣网络开展工作,这些网络自共和国成立以来资助了意大利的政治。 每次逮捕都会招供 每忏能通出名来. 每个名字都会导致另一个逮捕。\n\n 政治阶级正在反击. 紧急法令、地方法官的调动、对司法机构的公开攻击。 问题是调查能否在系统找到阻止的方法之前得出结论. \n\n@information! #bold 调查栏 #! 跟踪治安法官的进展情况。 id=7"抵抗"bar"x"id=8""跟踪政治阶层关闭的能力."
 
- # Status descs — tangentopoli
  je_tangentopoli_contained_tt: "调查处于初期阶段。 少数小人物被逮捕。 政治阶层将其解职为省事."
  je_tangentopoli_spreading_tt: "#bold (中文(简体) ). 调查范围正在扩大。#! 忏悔正在积累。 名字正在出现。 米兰的治安官们都在跟踪每条线索"
  je_tangentopoli_critical_tt: "@warning! #bold 系统处于断点. #! 坦根托波利的规模正变得不可否认. 政治危机迫在眉睫。"
 
- # Status descs — mani pulite
  je_mani_pulite_early_tt: "调查正在形成势头。 Di Pietro的团队正在调查证据 政治阶层还没有组织一致的反应。"
  je_mani_pulite_winning_tt: "#bold (中文(简体) ). 调查获胜。 #! 地方法官在抵抗运动中领先。 名字的下降速度快于系统能抑制它们的速度."
  je_mani_pulite_stalemate_tt: "@warning! (中文(简体) ). 调查与政治阻力均匀相配. 其结果取决于下一步的行动。"
  je_mani_pulite_suppressed_tt: "@warning! #bold 政治反抗势力占上风。 系统正在组织。 调查可在其结束前被埋葬。"
 
- # Progress bars
  tangentopoli_exposure_bar: "网络曝光"
  tangentopoli_exposure_bar_desc: "腐败网络被渗透了多远。"
  tangentopoli_exposure_bar_second_desc: "由于每次逮捕都会导致更多的口供,接触的有机增加。"
@@ -1091,8 +980,6 @@ we_can_host_the_next_olympics_tt:0 "我们可以主办下届奥运会比赛."
  political_resistance_bar: "政治抵抗组织"
  political_resistance_bar_desc: "抵制调查"
  political_resistance_bar_progress: "政治阶层组织反对地方法官"
-
- # ── EVENT TITLES AND TEXT ────────────────
 
  mani_pulite.1.t: "一个商人Tris to Flush 二千万里拉"
  mani_pulite.1.d: "Pio Albergo Trivulzio——一个米兰退休之家——的主席Mario Chiesa在试图将钞票冲入厕所时被法官Antonio Di Pietro逮捕。 Chiesa被抓到从一家清洁公司得到3 700万里拉回扣。 社会党立即与他断绝关系. 他们的党委书记贝蒂诺·克拉克西(Bettino Craxi)称奇萨为"小偷"——鉴于迪皮埃特罗接下来会找到什么,这不是一个非常明智的文字选择. 逮捕是轻微的。 它将导致的不是。"
@@ -1145,8 +1032,6 @@ we_can_host_the_next_olympics_tt:0 "我们可以主办下届奥运会比赛."
  mani_pulite.15.f: "推迟司法就是拒绝司法。 且诸人皆知."
  mani_pulite.15.a: "该系统得以生存——目前"
 
- # ── MODIFIERS ────────────────────────────
-
  tangentopoli_systemic_corruption: "坦根托波利语Name"
  tangentopoli_systemic_corruption_desc: "几十年来为[ROOT.GetCountry.GetAdjective]政治提供资金的回扣制度植入了每一个公共合同。 合法性在结构上受到削弱。 该系统花费了钱,邀请了丑闻。"
 
@@ -1191,299 +1076,281 @@ we_can_host_the_next_olympics_tt:0 "我们可以主办下届奥运会比赛."
  amendment_events.1.f: "药物不应该取决于你是否负担得起。"
  amendment_events.1.a: "颁布医疗补助——向需要的人提供联邦健康保险"
  amendment_events.1.b: "拒绝——保健是私事"
- 
+
  amendment_events.2.t: "《负担得起的照料法》"
  amendment_events.2.d: "政府已提出全面保健改革——《负担得起的护理法》。 该法案规定,所有公民必须持有健康保险,建立受管制的市场,扩大医疗补助的资格,并禁止保险商拒绝为先前存在的情况提供保险。 个别任务引起很大争议。 支持者说,这是使保险市场发挥作用的唯一途径。 反对派称其为"政府过度介入". 法案有票数——如果联盟维持."
  amendment_events.2.f: "4000万没有保险的美国人。 国会有机会改变这一点。"
  amendment_events.2.a: "签署《负担得起的照料法》成为法律"
  amendment_events.2.b: "Veto——任务走得太远"
- 
+
  amendment_events.3.t: "《爱国者法》"
  amendment_events.3.d: "在"9·11"袭击后几周,国会以超乎寻常的速度通过"美国爱国者法案"——大幅扩大国内监视当局,减少对情报行动的司法监督,并促成执法机构之间前所未有的信息共享. \n\n. 该法案得到了近乎一致的支持. 公民自由的倡导者警告说,通过的速度和条款的广度将难以走回头路. 国还悲. 投票是明天。"
  amendment_events.3.f: "恐惧是立法者。"
  amendment_events.3.a: "签署《爱国者法》——国家安全要求"
  amendment_events.3.b: "拒绝——公民自由不能在悲痛中妥协"
- 
+
  amendment_events.4.t: "联邦禁止攻击武器"
  amendment_events.4.d: "国会正在表决一项为期十年的联邦禁令,禁止制造特定的半自动武器和供平民销售的高容量杂志. 该法案得到执法协会和枪击受害者家属的支持。 枪械大堂对它投入了很大精力。 十年日落条款被加入,以保证最终票数. 除非延长禁令——延长禁令的政治联盟可能无法维持,否则禁令将于2004年到期。"
  amendment_events.4.f: "十年.. 然后,投票又发生了。"
  amendment_events.4.a: "通过禁令——十年是一个开始"
  amendment_events.4.b: "失败——守法公民不应为罪犯的行为付出代价"
- 
+
  amendment_events.5.t: "《暴力犯罪控制和执法法》"
  amendment_events.5.d: "国会正在审议在[ROOT.GetCountry.GetName]历史上最大的犯罪立法——为10万名新警官提供资金,联邦监狱系统大幅扩大,新的法定最低刑罚,以及作为骑手的《暴力侵害妇女行为法》。 政治逻辑是两党的. 20世纪80年代后期的犯罪浪潮使法律和秩序政治超越了党派界限而流行. 法案很容易通过 它是否会奏效是以后的一个问题。"
  amendment_events.5.f: "法案很容易通过。 后果需要更长的时间。"
  amendment_events.5.a: "签字——国家要求对犯罪采取行动"
  amendment_events.5.b: "拒绝——法定最低刑期和大规模监禁不是答案"
- 
+
  amendment_events.6.t: "税收分担制度改革"
  amendment_events.6.d: "财政部长刘继华提出自人民共和国成立以来最重要的财政改革——以国家增值税和正式收入公式来取代北京与地方政府谈判达成的企业分税安排. \n\n 改革将大幅度地集中财政力量,使北京获得可靠和不断增长的收入。 地方政府将失去自由裁量权,但变得明确。 与地方当局建立关系的工业和商业利益受到悄悄地反对。"
  amendment_events.6.f: "中心想要的是各省一直保存的东西。"
  amendment_events.6.a: "实行分税制——集中财政事权."
  amendment_events.6.b: "维持现有安排——不干扰哪些职能"
- 
+
  amendment_events.7.t: "35小时工作周"
  amendment_events.7.d: "劳工部长Martine Aubry提出立法,规定大多数雇员每周的法定工作时间为35小时——将标准工时从39小时缩短。 该政策是更广泛地分担工作的一种方式:每名工人的工作时间减少,就业工人增加。 工会很热情. 雇主联合会警告说,将出现竞争力危机。 经济学人分为两部分. 选举产生了这个政府的左翼联盟兑现了诺言. 问题在于是否交付."
  amendment_events.7.f: "35小时 少了两个小时 一场政治风暴。"
  amendment_events.7.a: "通过《奥布里法》——工人应缩短工作时间"
  amendment_events.7.b: "放弃吧,经济成本太高了"
- 
+
  patriot_act_rejected_modifier: "《爱国法》"
  patriot_act_rejected_modifier_desc: "不通过《爱国者法》的决定使安全机构受挫,攻击后的政治共识紧张。"
- 
+
  china_tax_reform_rejected_modifier: "税制改革"
  china_tax_reform_rejected_modifier_desc: "税收制度未能集中,使财政权力支离破碎。 地方政府继续谈判自己的安排,减少了中心的收入和权力."
- 
+
  terrorism_a.1.t: "世界贸易中心遭到轰炸"
  terrorism_a.1.d: "纽约世界贸易中心地下停车场发生炸弹爆炸. 爆炸造成6人死亡,1 000多人受伤。 该建筑并未倒塌——但意图是将一塔倒到另一塔上.\n\n这是对[ROOT.GetCountry.GetName]土壤的第一次重大国际恐怖袭击. 肇事者与在中东和中亚以外运作的网络有联系。 调查仍在进行中。"
  terrorism_a.1.f: "初一发相. 不是最后一个"
  terrorism_a.1.a: "我们会找到责任人"
- 
+
  terrorism_a.2.t: "飓风安德鲁"
  terrorism_a.2.d: "飓风安德鲁(英語:Hurricane Andrew)是当时有纪录以来最具破坏性的大西洋飓风,已登陆南佛罗里达州,阵风时速已超过165英里. 破坏是灾难性的。 迈阿密-达德县的全部社区被摧毁. 初步估计表明,这将是[ROOT.GetCountry.GetName]历史上最昂贵的自然灾害之一。"
  terrorism_a.2.f: "飓风对已经建成的东西毫不关心."
  terrorism_a.2.a: "宣布联邦灾难——动员救济"
- 
+
  terrorism_a.3.t: "北里奇地震"
  terrorism_a.3.d: "洛杉矶以北的圣费尔南多河谷于凌晨4:31发生6.7级地震. 57人死亡,数千人受伤,对基础设施——特别是高速公路系统和旧建筑——的破坏已经超过数百亿美元。 本次地震是"x id=0"历史最昂贵的地震."
  terrorism_a.3.f: "加州摇. 常有摇动."
  terrorism_a.3.a: "立即动员联邦救济"
- 
+
  terrorism_a.4.t: "俄克拉何马城的轰炸"
  terrorism_a.4.d: "一枚卡车炸弹摧毁了俄克拉荷马城阿尔弗雷德·P·穆拉赫联邦大楼的前身,造成168人死亡——包括该大楼的日托中心有19名儿童. 这是[ROOT.GetCountry.GetName]历史上最致命的国内恐怖袭击。\n\n 肇事者不是外国人。 Timothy McVeigh和Terry Nichols都是以反政府意识形态为动机的公民。 该国面临着威胁可能来自内部的现实。"
  terrorism_a.4.f: "敌人不在边境 他已经在这里了"
  terrorism_a.4.a: "这是国内恐怖主义,我们将全力作出反应。"
- 
+
  terrorism_a.5.t: "美国驻东非使馆被轰炸"
  terrorism_a.5.d: "同时发生的卡车炸弹爆炸发生在肯尼亚内罗毕和坦桑尼亚达累斯萨拉姆的大使馆外。 袭击造成200多人死亡,其中大多数是肯尼亚和坦桑尼亚平民,并造成数千人受伤。 由乌萨马·本·拉丹领导的网络声称对此负责。 这些攻击是一次声明,宣称全世界 " x id=3/ " 利益成为目标。 [ROOT.GetCountry.GetName]的答复将确定今后十年的反恐形式。"
  terrorism_a.5.f: "战争先到我们的大使馆"
  terrorism_a.5.a: "这是一个战争行为——我们将作出反应。"
- 
+
  terrorism_a.6.t: "[ROOT.GetCountry.GetAdjective] (韩语). 大使馆 是炸弹"
  terrorism_a.6.d: "一枚卡车炸弹在美国驻内罗毕大使馆外爆炸,造成200多人死亡,其中大多数人被炸死。 当时碰巧靠近大楼的平民. 攻击目标不是 " x id=1/ " 。 " x id=2/ " 承担了费用。"
  terrorism_a.6.f: "炸弹没有区分国家。"
  terrorism_a.6.a: "我们要求为死者伸张正义"
- 
+
  terrorism_a.7.t: "[ROOT.GetCountry.GetAdjective] (韩语). 首都是斯特拉克"
  terrorism_a.7.d: "一枚炸弹在美国驻达累斯萨拉姆大使馆附近爆炸,造成11人死亡,这似乎与肯尼亚内罗毕同时发生的一起爆炸同时发生。 受害者主要是 " x id=0 " 平民。 袭击震撼了国家."
  terrorism_a.7.f: "恐怖主义从一大洋进入我们的海岸。"
  terrorism_a.7.a: "我们和我们的人民站在一起"
- 
+
  terrorism_a.8.t: "美国军舰科尔被轰炸了"
  terrorism_a.8.d: "一艘载有炸药的小船在也门亚丁港加油时与"科尔号"号一起被引爆. 17名 [ROOT.GetCountry.GetAdjective]水手被击毙,39人受伤. 攻击归于基地组织。\n\n 海军在友好港口的例行加油站上被一名自杀炸弹手用橡皮丁香袭击. 军事领导人正在问如何允许这种情况发生。"
  terrorism_a.8.f: "海军应该是目标"
  terrorism_a.8.a: "这不会被解答的"
- 
+
  terrorism_a.9.t: "桥溪-摩尔龙卷风"
  terrorism_a.9.d: "一场EF5级龙卷风——富士塔规模上记录得最强的龙卷风——通过俄克拉荷马州布里克克克克和摩尔(Bridge Creek)切断了一条路径. 风速超过每小时300英里. 龙卷风在地上持续了85分钟,并刻出一条全长一英里的通向俄克拉何马城以南社区的全面毁灭道. 三十六相生灭."
  terrorism_a.9.f: "龙卷风原地一无所有"
  terrorism_a.9.a: "向受影响社区提供救济"
- 
+
  terrorism_a.10.t: "32死在弗吉尼亚理工"
  terrorism_a.10.d: "一名枪手杀死了弗吉尼亚州布莱克斯堡的弗吉尼亚理工学院的32名学生和教职员工后才自杀. 这是"x id=0"历史上最致命的学校枪击. 枪手合法地购买了枪械,尽管有精神健康问题的历史,但根据现行法律,枪手本应取消他的资格。 现在正在审查背景调查制度的失败。"
  terrorism_a.10.f: "他合法地买了枪"
  terrorism_a.10.a: "立即审查枪支背景调查程序"
- 
+
  terrorism_a.11.t: "82 在奥罗拉剧院被枪杀"
  terrorism_a.11.d: "一名枪手在科罗拉多州奥罗拉的"世纪16"大电影院午夜首映时开火,造成12人死亡,70人受伤. 攻击者配备了半自动步枪,猎枪和手枪——都在攻击前几周合法购买.\n\n Colorado和该国受到震惊."
  terrorism_a.11.f: "晚上看电影。 12人没有回家。"
  terrorism_a.11.a: "一个需要反思的悲剧"
- 
+
  terrorism_a.12.t: "枪手在威斯康辛锡克寺杀6人"
  terrorism_a.12.d: "一名白人至上主义者向奥克克溪的威斯康辛锡克神庙开火,杀死了6名礼拜者后被警察枪杀. 攻击者是一名美国陆军老兵,与新纳粹组织有联系。 受害者因其宗教和族裔而成为攻击目标。 这次袭击引发了国内极端主义,仇恨犯罪,以及未能监控白人民族主义网络等争论."
  terrorism_a.12.f: "他们来祈祷。 他来是为了杀他们"
  terrorism_a.12.a: "这是仇恨犯罪——我们不会忽视国内极端主义"
- 
+
  terrorism_a.13.t: "桑迪·胡克的悲剧"
  terrorism_a.13.d: "一名枪手在康涅狄格州Newtown的Sandy Hook小学杀害了20名6至7岁的儿童和6名成年工作人员。 这些儿童多次被用冲锋枪射击。 没有足够的话。 [ROOT.GetCountry.GetName]正在哀悼中。"
  terrorism_a.13.f: "二十个孩子 六岁."
  terrorism_a.13.a: "国家悲哀"
- 
+
  terrorism_a.14.t: "邓布兰大屠杀"
  terrorism_a.14.d: "一名枪手进入了苏格兰的邓布兰小学,并杀死了16名5至6岁的儿童和他们的老师后,才自杀. 这是[ROOT.GetCountry.GetName]历史中最致命的大规模射击.\n\n 国家的反应是压倒一切的。 幸存者、父母和公众发起了全面禁止私人拥有手枪的运动。 政府将面临巨大的行动压力."
  terrorism_a.14.f: "十六子孙. 五岁. 苏格兰不会忘记的。"
  terrorism_a.14.a: "事情必须改变——国家要求改变"
- 
+
  terrorism_a.15.t: "长江洪水"
  terrorism_a.15.d: "长江及其支流在连续数月的异常强降雨后被灾难性地淹没. 洪水已影响到中部和南部的2.4亿人 -- -- 14个省、5 600万英亩农田和数千个定居点。 3 000多人死亡,1 400万人流离失所。 国家动员规模大. 军方已出动数十万部队进行洪灾救援. 这是近代"x id=3/"历史上最大的自然灾害."
  terrorism_a.15.f: "河上决定取下堤克们承诺要保留的东西."
  terrorism_a.15.a: "全州部队将部署"
- 
+
  terrorism_a.16.t: "在莫斯科被炸的公寓大楼"
  terrorism_a.16.d: "莫斯科等俄罗斯城市的公寓楼被一连串炸弹袭击,近300人在入睡时被炸死. 爆炸是车臣分离主义分子干的——尽管一些观察者对证据提出质疑。 这些袭击给公众造成了巨大的压力,要求他们作出果断的军事反应。 目前正在认真考虑在车臣开展新的军事行动。 承诺粉碎恐怖分子的政治人物会找到公众,准备跟随他."
  terrorism_a.16.f: "恐惧是一个强大的政治工具。 悲伤也一样。"
  terrorism_a.16.a: "这需要军方全力响应"
- 
- # ── MODIFIERS ────────────────────────────
- 
+
  he_terror_attack_domestic: "国内恐怖袭击"
  he_terror_attack_domestic_desc: "对[ROOT.GetCountry.GetAdjective]土壤的恐怖袭击动摇了公众的信心并加剧了激进化和动荡。"
- 
+
  he_terror_attack_foreign: "海外恐怖袭击"
  he_terror_attack_foreign_desc: "在国外对[ROOT.GetCountry.GetAdjective]利益进行恐怖袭击,损害了声望和外交地位。"
- 
+
  he_counterterrorism_push: "反恐怖主义对策"
  he_counterterrorism_push_desc: "正在开展一项重大的反恐运动。 权威和合法性得到了加强——但国外侵略行动所产生的丑闻需要时间来消亡。"
- 
+
  he_natural_disaster_emergency: "自然灾害紧急情况"
  he_natural_disaster_emergency_desc: "一场重大自然灾害引发了联邦的应急响应. 成本很高,政府的能力也十分紧张。"
- 
+
  he_disaster_zone: "灾区"
  he_disaster_zone_desc: "这一状态被自然灾害严重破坏. 基础设施、死亡率和移徙率都受到不利影响。"
- 
+
  he_domestic_extremism_response: "国内极端主义对策"
  he_domestic_extremism_response_desc: "在国内恐怖袭击后, " x id=0 " 发起了针对极端主义网络的重大内部安全对策。"
- 
+
  he_military_shock: "军事震撼"
  he_military_shock_desc: "对 [ROOT.GetCountry.GetAdjective] 军事资产的一次成功袭击动摇了武装部队并破坏了国家声誉。"
- 
+
  he_mass_shooting: "大规模射击"
  he_mass_shooting_desc: "大规模枪击加剧了公众对火器政策的焦虑和政治分化。"
- 
+
  he_mass_shooting_severe: "大规模射击——全国悲剧"
  he_mass_shooting_severe_desc: "一场极其严重的大规模枪击事件造成了深刻的民族悲痛和强烈的政治压力。 现行政策的合法性受到质疑。"
- 
+
  he_hate_crime_shock: "仇恨犯罪——全国震撼"
  he_hate_crime_shock_desc: "有针对性的仇恨犯罪袭击震惊了国家,并突出了针对少数群体的国内极端主义的威胁。"
- 
+
  he_gun_reform_mandate: "枪支改革的公共授权"
  he_gun_reform_mandate_desc: "大规模枪击之后的公众愤慨为枪支改革创造了强大的政治势头. 颁布法律比通常容易。"
- 
+
  he_security_state_response: "安全州的回应"
  he_security_state_response_desc: "重大恐怖袭击已促使公众支持扩大国家安全权力。 权威和合法性得到加强。"
- 
+
  ## breakup of czechoslovakia
  je_velvet_divorce: "天鹅绒离婚案"
  je_velvet_divorce_reason: "联邦面临压力。 从共产主义的过渡暴露了捷克和斯洛伐克两半国家之间的经济和政治分界线. 由Vladimír Mečiar领导的斯洛伐克政治人物正在推动更大的自治,有些人则要求完全独立。 捷克方面由瓦茨拉夫·克勞斯(Václav Klaus)为首,越来越愿意放走他们. \n\n 现在有两支部队在动 [ROOT.GetCountry.GetName]必须建立 #bold 联邦凝聚力 #! ——通过谈判、经济妥协和政治技巧,在 #bold 分裂主义压力 #!之前,使解散变得不可逆转. \n\n 如果压力在凝聚之前达到100,联邦就会解散. 平静的 这就是"天鹅绒"的意思."
- 
+
  je_velvet_divorce_stable_tt: "联邦正在举行。 谈判仍在继续。 结果仍由政府掌握."
  je_velvet_divorce_tense_tt: "@warning! #bold 隔离压力正在上升。 #! 斯洛伐克政治家们越来越相信独立是可能和可取的. 谈判解决的窗口正在缩小。"
  je_velvet_divorce_critical_tt: "@warning! #bold 联邦正处于断点。#! 解散的政治条件已接近完成. 没有戏剧性的干预,捷克斯洛伐克将无法活过一年。"
- 
+
  federal_cohesion_bar: "联邦团结"
  federal_cohesion_bar_desc: "联邦团结"
  federal_cohesion_bar_progress_tt: "联邦凝聚力"
- 
+
  separatist_pressure_bar: "分离压力"
  separatist_pressure_bar_desc: "分离压力"
  separatist_pressure_bar_progress_tt: "分裂主义势头"
- 
- # ── EVENTS ───────────────────────────────
- 
+
  velvet_divorce.1.t: "宪政危机开始"
  velvet_divorce.1.d: "1992年6月的选举产生了不可能的结果。 在捷克地盘上,瓦茨拉夫·克劳斯的公民民主党在快速市场自由化的平台上获胜. 在斯洛伐克,Vladimír Mečiar's Movement for a Democracy Slovakia在较慢的改革和更大的斯洛伐克自治纲领上获胜. \n\n 两人在布尔诺相会并商定一件事:目前的安排不能继续下去. 他们几乎对其它一切意见不一。 总统瓦茨拉夫·哈维尔(Václav Havel)认为民众会投票, `x id=4'的命运现在是今后几个月带来什么的问题。"
  velvet_divorce.1.f: "两次选举。 两项任务。 一国."
  velvet_divorce.1.a: "政府将努力维持联邦"
- 
+
  velvet_divorce.2.t: "斯洛伐克经济冤情"
  velvet_divorce.2.d: "斯洛伐克的经济正遭受着比波希米亚和摩拉维亚更严厉的共产主义转型. 斯洛伐克工业基地——围绕《华沙条约》的重型制造和武器生产——几乎一夜之间崩溃了。 失业率急剧上升。 斯洛伐克政治人物指责联邦经济政策,要求重新分配或有权制定自己的路线。 国家两分之一的差距在政治上变得可以燃起。"
  velvet_divorce.2.f: "当半个国家表现良好,而另一半国家表现不佳时,为什么问题就变成了谁的问题."
  velvet_divorce.2.a: "将联邦基金转向斯洛伐克地区"
  velvet_divorce.2.b: "市场将找到其水平——没有特殊待遇"
- 
+
  velvet_divorce.3.t: "斯洛伐克主权宣言"
  velvet_divorce.3.d: "斯洛伐克全国委员会通过斯洛伐克主权宣言. 文件没有宣布独立,但声称斯洛伐克法律取代了斯洛伐克领土上的联邦法律。 这在宪法上模棱两可,在政治上具有爆炸性。 哈维尔总统对此予以谴责并不久后辞去捷克斯洛伐克总统职务. 宣言尚未破裂——但这是朝着宣言迈出的第一个正式步骤。"
  velvet_divorce.3.f: "尚未独立. 但方向是明确的。"
  velvet_divorce.3.a: "谴责这一宣言——联邦法律是最高法律。"
  velvet_divorce.3.b: "公开会谈——向斯洛伐克提供联邦内更正式的自治权"
- 
+
  velvet_divorce.4.t: "Mečiar和克勞斯: 二人两相相想"
  velvet_divorce.4.d: "弗拉迪米尔·梅契亚尔和瓦茨拉夫·克劳斯再次相遇. 他们的谈判立场更加强硬。 克勞斯想建立一个有统一经济政策的紧密联邦联盟. Mečiar想要的不是拥有几乎完全斯洛伐克国内自治权的松散的联盟,就是独立。 与会人员称其为"民间而不可调和". 两人不是敌人——但他们想要的是根本不同的东西,其中一人会得到他想要的东西."
  velvet_divorce.4.f: "二从行相. 相对结论。"
  velvet_divorce.4.a: "支持统一市场改革方案——支持克勞斯."
  velvet_divorce.4.b: "提供更松散的联盟——给Mečiar一些工作"
- 
+
  velvet_divorce.5.t: "要求举行全民投票"
  velvet_divorce.5.d: "斯洛伐克政治家和民间团体呼吁举行独立公投. 提案在斯洛伐克得到公众的大力支持, 民意测验显示, 哈维尔总统尽管辞职,但仍具有影响力,他反对全民投票。 他认为这一过程本身会激起激情,使理性的结果变得不可能. 他说,“关于合并的股东会议表决方式, '他们感觉到他们走向它,或者远离它。'\n\n 是否进行表决的问题本身就是对`x id=4/> 所认为的进行表决。"
  velvet_divorce.5.f: "公民投票是一个问题。 但问一些问题会改变答案。"
  velvet_divorce.5.a: "举行全民投票——让人民发言"
  velvet_divorce.5.b: "阻止公民投票——听从哈维尔的律师"
- 
+
  velvet_divorce.10.t: "捷克斯洛伐克幸存者"
  velvet_divorce.10.d: "危机已经过去。 通过经济妥协,政治谈判,以及联邦机构的坚持,[ROOT.GetCountry.GetName] 一直维持在一起.\n\n 出现的安排不是1990年的联邦。 斯洛伐克拥有更多的自治权。 两半经济关系再平衡. 但该州保存完好,旗帜不变. \n\n 历史将指出,这并不是不可避免的——它需要积极的选择,这些选择是作出的。"
  velvet_divorce.10.f: "丝绒离婚没有发生. 这是一个胜利。"
  velvet_divorce.10.a: "捷克斯洛伐克忍耐"
- 
+
  velvet_divorce.15.t: "天鹅绒离婚案"
  velvet_divorce.15.d: "结束了 1993年1月1日,捷克斯洛伐克将不复存在。 联邦议会同意解散,而不是全民投票。 公众从未被直接询问。 全国两地的民意调查始终表明多数人支持维持某种形式的共同国家,但政治阶层——克劳斯和梅契亚尔首先——确定该联盟不可行。 分裂是和平的。 没有开枪。 没有边界争议。 联邦的资产和负债按以人口为基础的公式划分。 军被分出. 货币被分割. 国旗被拆分. \n\n 捷克斯洛伐克存在了74年. 它生于革命中,被议会投票解散. 两个继承国已经申请加入欧盟和北约。"
  velvet_divorce.15.f: "七十四岁. 以文书作结."
  velvet_divorce.15.a: "解散过程"
- 
+
  velvet_divorce.16.t: "捷克共和国出生"
  velvet_divorce.16.d: "1993年1月1日,捷克成为一个独立国家. 以布拉格为首都的波希米亚,摩拉维亚和捷克西里西亚等地组成了捷克斯洛伐克联邦的两个继承国之一. \n\n 新国家继承了更发达的半个旧经济,一个正常运作的民主制度,并立即得到国际承认. 通往欧洲的道路是开放的。"
  velvet_divorce.16.f: "一个新州. 一个古老的国家。"
  velvet_divorce.16.a: "捷克共和国开始"
- 
+
  velvet_divorce.17.t: "斯洛伐克共和国诞生"
  velvet_divorce.17.d: "1993年1月1日,斯洛伐克共和国成为一个独立国家. 布拉迪斯拉发是一个以这种形式存在了整整一天的国家的首都. \n\n 斯洛伐克继承了更重的工业遗产,更高的失业率,以及更复杂的政治环境-梅契亚尔的治理风格很快会引起国际批评. 但国家是主权的,得到承认的,并且历史上第一次完全独立."
  velvet_divorce.17.f: "历史上第一次:独立的斯洛伐克."
  velvet_divorce.17.a: "斯洛伐克共和国开始"
- 
+
  velvet_divorce.18.t: "接下来是什么?"
  velvet_divorce.18.d: "捷克斯洛伐克正在解体。 其继承国——捷克共和国和斯洛伐克共和国——正在形成。 你是一个不再存在的国家的领袖。 现在的问题是,你将在接下来的工作中发挥什么作用。"
  velvet_divorce.18.f: "一国. 二未来相."
  velvet_divorce.18.a: "继续作为捷克共和国"
  velvet_divorce.18.b: "继续作为斯洛伐克共和国"
  velvet_divorce.18.c: "保留和观察解散情况"
- 
- # ── MODIFIERS ────────────────────────────
- 
+
  czh_federal_strain: "联邦区"
  czh_federal_strain_desc: "宪法危机正在削弱联邦机构。 合法性正在削弱,颁布法律更加困难,因为联邦的两半都质疑中心的权威。"
- 
+
  czh_slovak_subsidy: "斯洛伐克经济支助方案"
  czh_slovak_subsidy_desc: "联邦资金正被转用于支持斯洛伐克经济的过渡。 昂贵的——但它改善了政治温度."
- 
+
  czh_federal_authority_asserted: "联邦当局"
  czh_federal_authority_asserted_desc: "联邦政府已谴责斯洛伐克宣言并主张联邦法律至高无上. 权力得到了加强,但斯洛伐克的愤怒情绪已经加剧。"
- 
+
  czh_autonomy_negotiations: "自主谈判"
  czh_autonomy_negotiations_desc: "目前正在举行正式会谈,以使斯洛伐克在联邦内享有更大的自主权。 这一进程改善了政治气氛。"
- 
+
  czh_confederation_talks: "联邦提案"
  czh_confederation_talks_desc: "目前正在谈判一个比较松散的联邦模式。 双方都在说话。 其结果不确定,但解散的势头已减缓。"
- 
+
  czh_referendum_blocked: "全民投票"
  czh_referendum_blocked_desc: "要求举行独立公投的呼吁被否决. 斯洛伐克政治家和民间社会都愤怒地作出反应。 政治压力没有消失——它被剥夺了出口。"
- 
+
  czh_federal_union_preserved: "联邦保留"
  czh_federal_union_preserved_desc: "宪法危机已经过去。 [ROOT.GetCountry.GetName] 一起持有。 谈判解决加强了联邦机构和公众对工会的信任。"
- 
+
  czc_new_republic_founding: "捷克共和国"
  czc_new_republic_founding_desc: "捷克共和国已经成为一个主权国家。 立即获得国际承认。 新共和国的基础稳定."
- 
+
  svk_new_republic_founding: "斯洛伐克共和国"
  svk_new_republic_founding_desc: "斯洛伐克共和国已经成为一个主权国家。 历史上第一个完全独立的斯洛伐克正在找到其基础。"
- 
+
  attacked_on_home_soil:0 "对家庭土壤的攻击"
  war_on_terror_campaign:0 "反恐战争"
- 
-  ### ══════════════════════════════════════════
- ### JOURNAL ENTRY
- ### ══════════════════════════════════════════
 
  je_demographic_crisis: "人口危机"
- je_demographic_crisis_reason: "我国面临迫在眉睫的人口危机。 人口老化和出生率下降有可能使我们的劳动力减少并紧张我们的社会制度。 我们必须制定全面的产前政策,并在临时人口缓冲措施结束之前维持十年,以扭转这一趋势。"
+ je_demographic_crisis_reason:0 "Our population is aging and too few children are being born. The workforce is shrinking and every working adult supports more dependents each year. For now the generation in its prime holds the line, but that buffer is fading.\n\nTo end the crisis, keep all five pro-natalist conditions in place until the recovery reaches 120 months. Each month they hold adds 1 month of progress. Each month they lapse takes 2 away. The One Child Policy amendment takes away 1 more every month, whatever else you do."
 
- je_demographic_crisis_progressing_tt: "扶产政策已经生效,条件正在得到满足。 进展: #bold [Root.GetCountry.MakeScope.Var('demographic_months_sustained').GetValue|0]#!/120个月."
- je_demographic_crisis_stalling_tt: "#negative 亲子主义条件不再满足. #! 进步正在衰退。 目前: #bold [Root.GetCountry.MakeScope.Var('demographic_months_sustained').GetValue|0]#!/120个月. 颁布儿童保育、保健、福利和住房法,同时维持12岁以上的生活水平。"
- je_demographic_crisis_idle_tt: "在解决人口危机方面没有进展。 颁布有利于分娩的政策:儿童保育、保健、福利和住房法。 维持平均生活水平至少12个。"
+ je_demographic_crisis_progressing_tt:0 "#positive All five conditions are met.#! Recovery: #bold [Root.GetCountry.MakeScope.Var('demographic_months_sustained').GetValue|0]#! / 120 months, gaining 1 each month."
+ je_demographic_crisis_stalling_tt:0 "#negative At least one condition is no longer met.#! Recovery: #bold [Root.GetCountry.MakeScope.Var('demographic_months_sustained').GetValue|0]#! / 120 months, losing 2 each month until every condition is restored."
+ je_demographic_crisis_idle_tt:0 "Recovery has not started. Enact a childcare law, a health insurance law, a welfare law and a housing law, and keep the average [concept_sol] at 12 or higher."
 
- demographic_crisis_sustained_tt: "支持分娩的政策持续了10年(120个月)。"
+ demographic_crisis_sustained_tt:0 "Recovery reaches 120 months"
 
- ### ══════════════════════════════════════════
- ### PROGRESS BAR
- ### ══════════════════════════════════════════
+ demographic_crisis_progress_bar:0 "Months of sustained pro-natalist policy. Gains 1 each month all five conditions hold, loses 2 each month they don't, and loses 1 more every month under the One Child Policy."
+ demographic_crisis_progress_bar_desc:0 "Demographic Recovery"
 
- demographic_crisis_progress_bar: "人口恢复"
- demographic_crisis_progress_bar_desc: "人口恢复"
-
- demographic_bar_progressing_desc: "符合的亲产条件"
- demographic_bar_decaying_desc: "自然衰变"
-
- ### ══════════════════════════════════════════
- ### EVENTS
- ### ══════════════════════════════════════════
+ demographic_bar_progressing_desc:0 "All pro-natalist conditions met"
+ demographic_bar_decaying_desc:0 "Pro-natalist conditions not met"
 
  demographic_events.1.t: "人口危机"
  demographic_events.1.d: "专家们警告说,我国面临严重的人口危机。 几十年来出生率下降,导致人口老化,不久将使我们的劳动力不堪重负。 如果不在儿童保育、保健、住房和社会福利方面持续投资,我们的经济基础将随着工人与受抚养人的比例倒闭而削弱。\n\n目前暂时的人口缓冲掩盖了最坏的影响,但这一缓冲将在未来几十年内衰败。 为了扭转这一趋势,我们必须实行和维持至少十年的全面的产前改革。"
@@ -1492,10 +1359,6 @@ we_can_host_the_next_olympics_tt:0 "我们可以主办下届奥运会比赛."
  demographic_events.2.t: "人口恢复"
  demographic_events.2.d: "在对我国人民进行十年持续投资——普及儿童保育、普及保健、全面福利和负担得起的住房——之后,我国的出生率已经稳定。 有可能使我们的经济瘫痪的人口危机已经得到避免。 新一代的工人正在进入劳动力队伍,未来看起来很光明."
  demographic_events.2.a: "我们的耐心已经得到回报"
-
- ### ══════════════════════════════════════════
- ### MODIFIERS
- ### ══════════════════════════════════════════
 
  demographic_crisis_workforce_penalty: "人口危机"
  demographic_crisis_workforce_penalty_desc: "人口老化和出生率下降使工作成人与受扶养人的比率严重降低,使经济紧张。"
@@ -1507,9 +1370,7 @@ we_can_host_the_next_olympics_tt:0 "我们可以主办下届奥运会比赛."
  demographic_crisis_resolved_desc: "持续的支持生育的政策扭转了人口危机。 出生率已经稳定,劳动力再次增长。"
 
  one_child_policy_desc: "一个儿童政策"
- 
- # PKK insurgency
- 
+
  je_kurdistan_war:0 "库尔德斯坦战争"
  je_kurdistan_war_reason:0 "土耳其和库尔德斯坦之间的冲突已经进入了长期的游击阶段. 战斗的胜利,成功的突袭,以及决定性的安全行动,将决定哪一方可以强行解决问题."
  je_kurdistan_war_status:0 "战争仍然处于游击阶段. 双方正努力为一场决定性的运动建立足够的势头."
@@ -1556,105 +1417,83 @@ we_can_host_the_next_olympics_tt:0 "我们可以主办下届奥运会比赛."
  trk_counterinsurgency_expenses_desc:0 "扩大安全行动的费用由国家负担。"
  kur_guerrilla_networks:0 "游击队网络"
  kur_guerrilla_networks_desc:0 "分散的库尔德人网络正在加强叛乱。"
- 
- ### ══════════════════════════════════════════
- ### JOURNAL ENTRY
- ### ══════════════════════════════════════════
- 
+
  je_first_chechen_war: "第一次车臣战争"
  je_first_chechen_war_reason: "伊克里亚车臣共和国宣布从俄罗斯独立. 莫斯科以出兵反击. 北高加索多山地势偏好车臣游击队战士,但俄罗斯却带来了压倒性的常规力量. 这次战争的结果将决定车臣的命运——并考验俄罗斯联邦的决心。"
- 
+
  je_chechen_war_complete_tt: "一方被击败或被吞并."
- 
+
  je_chechen_war_status_guerilla: "战争处于"x id=0""游击阶段""x id=1". 车臣战士利用山地进行打跑攻击. 战役转移了战争的分数,解锁了重大攻势."
  je_chechen_war_status_offensive: "已经启动了#bold重大进攻#!。 战争已进入决定性阶段。"
- 
+
  je_chechen_war_score_bar: "战争分数"
  je_chechen_war_score_bar_desc: "俄罗斯优势"
  je_chechen_war_score_bar_second_desc: "车臣优势"
- 
+
  chechen_war_startup_tt: "第一次车臣战争已经开始. 俄罗斯和车臣部队之间的战斗会转移战争的分数. 只要有足够的势头,就可以发动决定性的进攻。"
- 
- ### ══════════════════════════════════════════
- ### SCRIPTED BUTTONS
- ### ══════════════════════════════════════════
- 
+
  je_chechen_war_storm_grozny: "格罗兹尼风暴"
  je_chechen_war_storm_grozny_desc: "全面出击车臣首都. 这结束了游击阶段,使俄军投入决定性的城市战斗."
- 
+
  je_chechen_war_mountain_offensive: "山地反攻"
  je_chechen_war_mountain_offensive_desc: "从山上发动了一场重大反攻,袭击了高加索一带的俄罗斯阵地. 这结束了游击阶段,并将一切置于决定性的接触之下。"
- 
+
  chechen_war_minimum_score_tt: "需要至少5分的战分优势"
- 
- ### ══════════════════════════════════════════
- ### EVENTS
- ### ══════════════════════════════════════════
- 
+
  chechen_war.1.t: "进攻性的开始"
  chechen_war.1.d: "战争的决定性阶段已经开始。 确定早期冲突的游击战让位于直接对抗。 高加索山脉将见证车臣的最后斗争。"
  chechen_war.1.a: "为了俄罗斯!"
  chechen_war.1.a.che: "为了伊克里亚!"
- 
+
  chechen_war.2.t_rus: "车臣的俄罗斯胜利"
  chechen_war.2.d_rus: "车臣抵抗运动已经被打破. 俄军已经重新控制了分离的共和国. 生命和基础设施的损失是巨大的,但俄罗斯联邦的领土完整得到了维护。"
  chechen_war.2.t_che: "车臣独立"
  chechen_war.2.d_che: "车臣战士无所不包地取得了胜利。 俄罗斯军队已经撤出,车臣共和国伊克里亚作为一个独立国家站立. 自由的代价是惊人的,但车臣人民的意愿已证明是不可打破的。"
  chechen_war.2.a: "历史将记住这一天"
- 
+
  chechen_war.5.t: "山地埋伏"
  chechen_war.5.d: "我们的战士已经确认了一个俄国车队 穿过一个狭窄的山口 地形适合埋伏——两侧有陡峭的悬崖,机动空间有限,森林茂密,为我们的人提供掩护."
  chechen_war.5.a: "从山上出击"
  chechen_war.5.b: "守住阵地"
- 
+
  chechen_war.6.t: "对供应线的突击检查"
  chechen_war.6.d: "俄罗斯补给车队在极少护卫的情况下穿过低地. 我们的战斗机可以拦截他们,抓取宝贵的物资并打乱敌人的后勤——但这次行动会耗去我们的资源并可能引起报复."
  chechen_war.6.a: "搜查了他们的补给线"
  chechen_war.6.b: "太危险了"
- 
+
  chechen_war.7.t: "高加索战争"
  chechen_war.7.d: "伊克里亚车臣共和国已宣布独立,而俄罗斯则以出兵反击. 北高加索被战争吞没. 崎岖的山地地形使车臣游击队拥有了天生的优势,但俄罗斯的军事实力是巨大的."
  chechen_war.7.a: "就这样开始了"
- 
- ### ══════════════════════════════════════════
- ### MODIFIERS
- ### ══════════════════════════════════════════
- 
+
  chechen_war_guerilla_warfare: "高加索游击队战争"
  chechen_war_guerilla_warfare_desc: "北高加索山区地形限制了常规军事行动。 肇事逃逸战术在战场上占据主导地位."
- 
+
  chechen_war_rus_morale: "俄罗斯军事时刻"
  chechen_war_rus_morale_desc: "战场的成功提高了俄罗斯武装部队的士气."
- 
+
  chechen_mountain_resistance: "山区抵抗运动"
  chechen_mountain_resistance_desc: "车臣战士已经挖入了山地,使得他们的防御阵地极其难以驱散."
- 
+
  chechen_ambush_tactics: "埋伏战术"
  chechen_ambush_tactics_desc: "最近发生的游击队伏击事件使车臣维权者在自己的国土上处于边缘."
- 
+
  chechen_storm_grozny: "格罗兹尼之战"
  chechen_storm_grozny_desc: "对格罗兹尼的袭击造成了毁灭性的平民伤亡和破坏."
- 
+
  chechen_war_devastation: "战争-高加索地区"
  chechen_war_devastation_desc: "战斗摧毁了该地区,摧毁了基础设施并杀害了平民。"
- 
+
  chechen_war_raid_expenses: "游击队袭击费用"
  chechen_war_raid_expenses_desc: "资助游击对俄补给线的行动."
- 
+
  chechen_war_rus_reward: "车臣的维克多"
  chechen_war_rus_reward_desc: "俄国在车臣战争中取胜,维护了领土完整并表现出了军事决心."
- 
+
  chechen_war_che_reward: "独立元"
  chechen_war_che_reward_desc: "车臣人民通过流血和牺牲赢得了独立。 新国家感到自豪。"
- 
- ### ══════════════════════════════════════════
- ### NOTIFICATIONS
- ### ══════════════════════════════════════════
- 
+
  chechen_war_guerilla_raid: "车臣游击队袭击"
- 
- # afghan civil WAR
- 
+
  je_afghan_civil_war:0 "阿富汗内战"
  je_afghan_civil_war_reason:0 "塔利班政府和阿富汗北方联盟陷入了极其缓慢的游击战争. 山区战争、基础设施薄弱、战线分散,这些决定性的进步是罕见的。"
  je_afghan_civil_war_status:0 "战争仍然处于打磨式游击阶段. 进展令人痛心地缓慢,双方正努力为决定性的运动积累足够的动力."
@@ -1701,10 +1540,6 @@ we_can_host_the_next_olympics_tt:0 "我们可以主办下届奥运会比赛."
  acw_afg_reward_desc:0 "塔利班政府摆脱了内战,重新得到控制。"
  acw_ana_reward:0 "联盟观察员"
  acw_ana_reward_desc:0 "北方联盟摆脱了内战,重新获得了合法性."
- 
- ### ══════════════════════════════════════════
- ### SECOND INTIFADA
- ### ══════════════════════════════════════════
 
  je_second_intifada: "第二次起义"
  je_second_intifada_reason: "巴勒斯坦领土爆发了反对以色列占领的大规模起义。 在狭窄的街道和人口稠密的难民营中,常规的军事优势几乎毫无意义。 在现代历史上最不对称的冲突中,世界视之为石头会遇到坦克。"
@@ -1720,10 +1555,6 @@ we_can_host_the_next_olympics_tt:0 "我们可以主办下届奥运会比赛."
 
  intifada_startup_tt: "第二次起义已经开始。 巴勒斯坦领土爆发于抵抗以色列占领的斗争中。"
 
- ### ══════════════════════════════════════════
- ### SCRIPTED BUTTONS
- ### ══════════════════════════════════════════
-
  je_intifada_military_operation: "防御盾牌行动"
  je_intifada_military_operation_desc: "向巴勒斯坦领土发动全面军事行动。 以色列国防军部队将重新占领主要的人口中心,拆除好战的基础设施并以武力镇压起义。"
 
@@ -1731,10 +1562,6 @@ we_can_host_the_next_olympics_tt:0 "我们可以主办下届奥运会比赛."
  je_intifada_mass_resistance_desc: "将起义升级为协调群众抵抗运动. 全面打击、群众示威和街头激烈战斗将挑战以色列在各个战线的控制。"
 
  intifada_minimum_score_tt: "要求冲突分数优势至少为5"
-
- ### ══════════════════════════════════════════
- ### EVENTS
- ### ══════════════════════════════════════════
 
  intifada_events.1.t: "冲突升级"
  intifada_events.1.d: "起义升级,超越了街头冲突. 开始的石头和抗议变成了一场全面对抗。 在巴勒斯坦狭窄的巷道和难民营中,每栋建筑都是要塞,每条街都是战场."
@@ -1765,10 +1592,6 @@ we_can_host_the_next_olympics_tt:0 "我们可以主办下届奥运会比赛."
  intifada_events.7.d: "巴勒斯坦领土已经爆发。 经过多年的和平谈判和持续的定居点扩张失败后,巴勒斯坦人民的沮丧情绪已经升级为公开起义。 在加沙和西岸山坡的拥挤的街道上,新一代人开始斗争。"
  intifada_events.7.a: "这将定义一代"
 
- ### ══════════════════════════════════════════
- ### MODIFIERS
- ### ══════════════════════════════════════════
-
  intifada_urban_uprising: "城市起义"
  intifada_urban_uprising_desc: "战斗发生在人口稠密的城市地区和难民营,在那里常规军事力量无法有效运作。 狭小的领土使得大规模的行动几乎不可能。"
 
@@ -1798,7 +1621,7 @@ we_can_host_the_next_olympics_tt:0 "我们可以主办下届奥运会比赛."
 
  intifada_pal_reward: "抵抗组织"
  intifada_pal_reward_desc: "巴勒斯坦人民通过民众抵抗、赢得承认和牺牲而取得让步而占上风。"
- 
+
  je_israel_palestine_peacetime:0 "不稳定状态Quo"
  je_israel_palestine_peacetime_reason:0 "没有公开的起义或重大升级,但冲突继续通过安全协调、关闭、外交、示威和定期事件来进行。"
  je_israel_palestine_tension_bar:0 "冲突紧张"
@@ -1913,7 +1736,7 @@ we_can_host_the_next_olympics_tt:0 "我们可以主办下届奥运会比赛."
  ip_peacetime.20.d:0 "安全协调、政治克制和外交接触的罕见组合稳定了局势。"
  ip_peacetime.20.f:0 "这不是最终的和平,但不仅仅是没有战争。"
  ip_peacetime.20.a:0 "一个脆弱的成功。"
- 
+
  oslo_accords.1.t:0 "《奥斯陆协议一》"
  oslo_accords.1.d:0 "以色列谈判者同巴勒斯坦领导人达成了一项拟议的原则宣言。 该提案将为巴勒斯坦自治建立相互承认和临时框架。"
  oslo_accords.1.f:0 "该协定不解决边界、耶路撒冷、定居点、难民或最终主权问题。 然而,它确实提供了一个分阶段的政治进程。"
@@ -2032,9 +1855,9 @@ we_can_host_the_next_olympics_tt:0 "我们可以主办下届奥运会比赛."
 
  oslo_us_failed_mediation:0 "奥斯陆调解失败"
  oslo_us_failed_mediation_desc:0 "奥斯陆进程的崩溃破坏了对美国和西方调解的信心。"
- 
+
  ## war on terror again
- 
+
  wot_coalition.2.t:0 "第5条"
  wot_coalition.2.d:0 "美国遭受袭击后,北约援引了第五条. 该联盟现在将这次攻击视为对所有成员的攻击."
  wot_coalition.2.f:0 "北大西洋联盟是为集体防御而建立的. 其第一次援引并非来自跨越边界的坦克,而是来自恐怖袭击。"
@@ -2079,7 +1902,7 @@ we_can_host_the_next_olympics_tt:0 "我们可以主办下届奥运会比赛."
 
  Northern_Alliance_Kabul_Forces:0 "喀布尔部队"
  Anti_Taliban_Field_Commanders:0 "反塔利班战地指挥官"
- 
+
  io_eec_membership_process_started_tt:0 "开始加入欧共体的进程。 完成加入《日刊》条目加入欧共体。"
  io_eu_membership_process_started_tt:0 "开始加入欧盟的进程。 完成加入《日刊》加入欧洲联盟。"
 
@@ -2123,7 +1946,7 @@ we_can_host_the_next_olympics_tt:0 "我们可以主办下届奥运会比赛."
  io_accession_events.4.a:0 "这一过程已经结束。"
 
  io_accession_events.10.t:0 "被北约开除"
- io_accession_events.10.d:0 "我们通过专制法律,使得北约不可能继续成为其成员。 该联盟驱逐了我们,我们与其成员的防御条约被撤回。"
+ io_accession_events.10.d:0 "我们通过的威权法律使我们无法继续留在北约。联盟已将我们开除，对我们的攻击不再被视为对其成员的攻击。"
  io_accession_events.10.a:0 "我们孤立无援。"
 
  io_accession_events.11.t:0 "被欧共体开除"
@@ -2159,7 +1982,7 @@ we_can_host_the_next_olympics_tt:0 "我们可以主办下届奥运会比赛."
 
  io_expelled_from_democratic_org:0 "被民主组织开除"
  io_expelled_from_democratic_org_desc:0 "该国在通过专制法律后被逐出了国际组织."
- 
+
  intifada_2005.1.t:0 "第二次起义风向下"
  intifada_2005.1.d:0 "经过多年的持续暴力,疲惫,安全措施,外交压力,政治变革,起义才告一段落."
  intifada_2005.1.f:0 "冲突没有解决,但公开起义的阶段已经结束. 停火使双方留下了伤疤、可疑和不确定的未来。"
@@ -2172,7 +1995,7 @@ we_can_host_the_next_olympics_tt:0 "我们可以主办下届奥运会比赛."
 
  intifada_2005_ceasefire:0 "第二次起义停火"
  intifada_2005_ceasefire_desc:0 "第二次起义的开放阶段以脆弱的停火而结束。"
- 
+
  arab_spring_jihadist_breakaways.1.t:0 "伊斯兰国兴起"
  arab_spring_jihadist_breakaways.1.d:0 "革命和国家崩溃的混乱使圣战势力得以巩固伊斯兰国旗下的领土."
  arab_spring_jihadist_breakaways.1.f:0 "老州抗革命. 革命打倒了旧州. 在他们之间的废墟中,第三支部队升起它的旗帜."

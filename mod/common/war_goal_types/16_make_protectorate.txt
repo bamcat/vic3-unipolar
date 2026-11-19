@@ -1,4 +1,8 @@
 ﻿make_protectorate = {
+	mirrored_wargoal = {
+		method = subjugate
+	}
+
 	icon = "gfx/interface/icons/war_goals/make_protectorate.dds"
 
 	kind = make_protectorate
@@ -9,7 +13,6 @@
 		can_add_for_other_country
 		requires_interest
 
-		# Validation
 		conflicts_with_make_subject
 		validate_subject_relation
 		validate_conflicts_make_subject
@@ -130,7 +133,7 @@
 		}
 
 		multiply = {
-			desc = "INFAMY_FROM_REBELLIOUS_SUBJECT" # Rebellious as in they are the aggressor in the play
+			desc = "INFAMY_FROM_REBELLIOUS_SUBJECT"
 			value = 1
 
 			if = {

@@ -1,0 +1,69 @@
+rus_appoint_prime_minister = {
+	icon = "gfx/interface/icons/character_role_icons/politician.dds"
+
+	potential = {
+		scope:actor = {
+			c:RUS ?= this
+			has_variable = pm_appointed_by_script
+		}
+		owner ?= scope:actor
+		is_character_alive = yes
+		OR = {
+			has_role = character_role_politician
+			is_interest_group_leader = yes
+		}
+		NOT = { has_role = character_role_prime_minister }
+		is_ruler_of_own_country = no
+		is_heir_of_own_country = no
+	}
+
+	possible = {
+		scope:actor = {
+			authority >= 50
+			NOT = { has_modifier = rus_pm_appointment_authority }
+		}
+	}
+
+	effect = {
+		save_scope_as = rus_pm_appointee
+		scope:actor = {
+			random_scope_character = {
+				limit = { has_role = character_role_prime_minister }
+				interest_group ?= {
+					if = {
+						limit = { NOT = { has_modifier = rus_pm_dismissed_ig } }
+						add_modifier = { name = rus_pm_dismissed_ig months = 24 }
+					}
+				}
+			}
+			rus_wn_clear_pm = yes
+			add_modifier = { name = rus_pm_appointment_authority months = 12 }
+			set_variable = { name = rus_wn_pm_blame value = 0 }
+		}
+		interest_group ?= {
+			if = { limit = { has_modifier = rus_pm_dismissed_ig } remove_modifier = rus_pm_dismissed_ig }
+			if = {
+				limit = { NOT = { has_modifier = rus_pm_appointed_ig } }
+				add_modifier = { name = rus_pm_appointed_ig months = 24 }
+			}
+		}
+		add_character_role = character_role_prime_minister
+		hidden_effect = {
+			if = {
+				limit = { NOT = { has_variable = rus_wn_standing } }
+				set_variable = { name = rus_wn_standing value = 0 }
+			}
+			change_variable = { name = rus_wn_standing add = 20 }
+			scope:actor = { pm_announce = { PM = scope:rus_pm_appointee } }
+		}
+	}
+
+	cooldown = { months = 12 }
+
+	show_requirements = yes
+	show_confirmation_box = yes
+
+	ai_chance = {
+		value = 0
+	}
+}

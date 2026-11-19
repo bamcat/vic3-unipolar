@@ -10,40 +10,58 @@
 
 je_group_global_test = {
 	context = none
-}
-
-#je_group_global_international_situations = {
-#	context = none
-#}
-
-je_group_foreign_policy = {
-	context = country
-}
-
-je_group_domestic_policy = {
-	context = country
-}
-
-je_group_space_exploration = {
-	context = country
-}
-
-je_group_dilemmas = {
-	context = country
-}
-
-je_group_advancements = {
-	context = country
-}
-
-je_group_objectives = {
-	context = country
-}
-
-je_group_tutorial = {
-	context = none
+	illustration = "gfx/interface/illustrations/journal/top_illu_journal_entries.dds"
 }
 
 je_group_international = {
 	context = none
+	updates_strategic_region_stances = yes
+	illustration = "gfx/interface/illustrations/journal/je_group_illu_international_situations.dds"
+	themed = yes
+}
+
+je_group_dilemmas = {
+	context = country
+	updates_strategic_region_stances = yes
+	illustration = "gfx/interface/illustrations/journal/je_group_illu_crises.dds"
+}
+
+je_group_domestic_policy = {
+	context = country
+	illustration = "gfx/interface/illustrations/journal/je_group_illu_internal_affairs.dds"
+}
+
+je_group_foreign_policy = {
+	context = country
+	updates_strategic_region_stances = yes
+	illustration = "gfx/interface/illustrations/journal/je_group_illu_foreign_affairs.dds"
+}
+
+je_group_space_exploration = {
+	context = country
+	updates_strategic_region_stances = yes
+	illustration = "gfx/interface/illustrations/journal/je_group_illu_expeditions.dds"
+}
+
+je_group_advancements = {
+	context = country
+	illustration = "gfx/interface/illustrations/journal/je_group_illu_technology.dds"
+}
+
+je_group_objectives = {
+	context = country
+	updates_strategic_region_stances = yes
+	illustration = "gfx/interface/illustrations/journal/je_group_illu_objectives.dds"
+}
+
+je_group_tutorial = {
+	context = none
+	illustration = "gfx/interface/illustrations/journal/je_group_illu_tutorial.dds"
+}
+
+je_group_wild_nineties = {
+	context = country
+	updates_strategic_region_stances = yes
+	illustration = "gfx/interface/illustrations/journal/je_group_illu_historical_content.dds"
+	themed = yes
 }

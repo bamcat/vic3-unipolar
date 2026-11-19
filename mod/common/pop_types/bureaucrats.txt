@@ -1,15 +1,14 @@
 ﻿bureaucrats = {
 	texture = "gfx/interface/icons/pops_icons/bureaucrats.dds"
 	color = hsv{ 0.25 0.4 0.5 }
-	start_quality_of_life = 10
+	start_quality_of_life = 20
 	wage_weight = 20
 	paid_private_wage = yes
 	literacy_target = 0.25
 	education_access = 0.50
-	dependent_wage = 0.5	# per year
+	dependent_wage = 0.5
 	unemployment = yes
 	
-	# 50% - 100% politically engaged
 	political_engagement_base = 0.5
 	political_engagement_literacy_factor = 0.5
 	
@@ -41,7 +40,6 @@
 				is_peasant_under_serfdom = no 
 				literacy_rate > 0.0625
 			}
-			# baseline: ( literacy - 0.25 ) * 80, education is essential for bureaucratic work
 			add = {
 				value = literacy_rate
 				subtract = 0.0625

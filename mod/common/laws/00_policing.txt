@@ -12,12 +12,11 @@
 		}
 	}
 
-	# AI shouldn't try to abolish institutions
 	ai_will_do = {
 		always = no
 	}
 
-	ai_enact_weight_modifier = { #Petitions
+	ai_enact_weight_modifier = {
 		value = 0
 		
 		if = {
@@ -54,7 +53,6 @@ REPLACE_OR_CREATE:law_local_police = {
 		}
 	}
 
-	# Don't return to local police if we have something more advanced
 	ai_will_do = {
 		NOR = {
 			has_law = law_type:law_dedicated_police
@@ -62,7 +60,7 @@ REPLACE_OR_CREATE:law_local_police = {
 		}
 	}
 
-	ai_enact_weight_modifier = { #Petitions
+	ai_enact_weight_modifier = {
 		value = 0
 
 		if = {
@@ -146,7 +144,7 @@ REPLACE_OR_CREATE:law_dedicated_police = {
 		}
 	}
 
-	ai_enact_weight_modifier = { #Petitions
+	ai_enact_weight_modifier = {
 		value = 0
 
 		if = {
@@ -235,7 +233,7 @@ REPLACE_OR_CREATE:law_militarized_police = {
 		}
 	}
 
-	ai_enact_weight_modifier = { #Petitions
+	ai_enact_weight_modifier = {
 		value = 0
 
 		if = {

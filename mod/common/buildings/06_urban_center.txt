@@ -45,7 +45,7 @@ REPLACE_OR_CREATE:building_art_academy = {
 	production_method_groups = {
 		pmg_base_building_arts_academy #visual arts 
 		pmg_ownership_building_arts_academy # digital arts #movies & tv shows
-		pmg_principle_freedom_of_movement_3 # video games # AI
+		pmg_principle_freedom_of_movement_3
 	}
 	
 	icon = "gfx/interface/icons/building_icons/building_arts_academy.dds"
@@ -72,12 +72,11 @@ REPLACE_OR_CREATE:building_power_plant = {
 		pmg_base_building_power_plant
 	}
 	
-	required_construction = construction_cost_very_high
+	required_construction = construction_cost_high
 
 	ai_value = {
 		value = 1000 
 
-		# Need 1 level of Power Plants everywhere as its a local good and a prerequisite to enabling electricity PMs to begin with
 		if = {
 			limit = {
 				NOR = {
@@ -120,12 +119,11 @@ REPLACE_OR_CREATE:building_nuclear_plant = {
 		pmg_base_building_nuclear_plant
 	}
 	
-	required_construction = construction_cost_very_high
+	required_construction = construction_cost_high
 
 	ai_value = {
 		value = 1000 
 
-		# Need 1 level of Power Plants everywhere as its a local good and a prerequisite to enabling electricity PMs to begin with
 		if = {
 			limit = {
 				NOR = {
@@ -173,7 +171,6 @@ REPLACE_OR_CREATE:building_green_plant = {
 	ai_value = {
 		value = 1000 
 
-		# Need 1 level of Power Plants everywhere as its a local good and a prerequisite to enabling electricity PMs to begin with
 		if = {
 			limit = {
 				NOR = {
@@ -228,7 +225,6 @@ REPLACE_OR_CREATE:building_airport = {
 	ai_value = {
 		value = 1000 
 
-		# Need 1 level of Power Plants everywhere as its a local good and a prerequisite to enabling electricity PMs to begin with
 		if = {
 			limit = {
 				NOR = {
@@ -275,7 +271,6 @@ REPLACE_OR_CREATE:building_spaceport = {
 	ai_value = {
 		value = 1000 
 
-		# Need 1 level of Power Plants everywhere as its a local good and a prerequisite to enabling electricity PMs to begin with
 		if = {
 			limit = {
 				NOR = {

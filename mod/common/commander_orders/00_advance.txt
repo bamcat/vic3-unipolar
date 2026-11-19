@@ -20,7 +20,7 @@
 
 	entity_animation = "advance"
 	clicksound = "event:/SFX/UI/Military/order_general_front_advance"
-	experience = 0.1 # This much extra experience per week while executing Order
+	experience = 0.1
 
 	ai_weight = {
 		value = 1
@@ -53,7 +53,7 @@ advance_reckless = {
 
 	entity_animation = "advance"
     clicksound = "event:/SFX/UI/Military/order_general_front_advance"
-    experience = 0.1 # This much extra experience per week while executing Order
+    experience = 0.1
 
     ai_weight = {
 		value = 2
@@ -90,7 +90,7 @@ advance_pillager = {
 
 	entity_animation = "advance"
     clicksound = "event:/SFX/UI/Military/order_general_front_advance"
-    experience = 0.1 # This much extra experience per week while executing Order
+    experience = 0.1
 
     ai_weight = {
 		value = 2
@@ -122,7 +122,7 @@ advance_cautious = {
 
 	entity_animation = "advance"
     clicksound = "event:/SFX/UI/Military/order_general_front_advance"
-    experience = 0.1 # This much extra experience per week while executing Order
+    experience = 0.1
 
     ai_weight = {
         value = 2
@@ -195,7 +195,7 @@ advance_heavy_barrage = {
 
     entity_animation = "advance"
     clicksound = "event:/SFX/UI/Military/order_general_front_advance"
-    experience = 0.1 # This much extra experience per week while executing Order
+    experience = 0.1
 
     ai_weight = {
         value = 2
@@ -221,13 +221,37 @@ advance_cavalry_assualt = {
             OR = {
                 commander_military_formation ?= {
                     formation_army_unit_type_fraction = {
-                        target = unit_type:combat_unit_type_mech_infantry
+                        target = unit_type:combat_unit_type_technicals
+                        value >= 0.3
+                    }
+                }
+                commander_military_formation ?= {
+                    formation_army_unit_type_fraction = {
+                        target = unit_type:combat_unit_type_armored_personnel_carrier
+                        value >= 0.3
+                    }
+                }
+                commander_military_formation ?= {
+                    formation_army_unit_type_fraction = {
+                        target = unit_type:combat_unit_type_mechanized_infantry
                         value >= 0.3
                     }
                 }
                 commander_military_formation ?= {
                     formation_army_unit_type_fraction = {
                         target = unit_type:combat_unit_type_armored_infantry
+                        value >= 0.3
+                    }
+                }
+                commander_military_formation ?= {
+                    formation_army_unit_type_fraction = {
+                        target = unit_type:combat_unit_type_robotic_combat_vehicle
+                        value >= 0.3
+                    }
+                }
+                commander_military_formation ?= {
+                    formation_army_unit_type_fraction = {
+                        target = unit_type:combat_unit_type_mech_infantry
                         value >= 0.3
                     }
                 }
@@ -245,7 +269,7 @@ advance_cavalry_assualt = {
 
     entity_animation = "advance"
     clicksound = "event:/SFX/UI/Military/order_general_front_advance"
-    experience = 0.1 # This much extra experience per week while executing Order
+    experience = 0.1
 
     ai_weight = {
 		value = 2
@@ -268,10 +292,24 @@ advance_tank_assualt = {
             limit = {
                 has_role_of_type = general
             }
-            commander_military_formation ?= {
-                formation_army_unit_type_fraction = {
-                    target = unit_type:combat_unit_type_armored_infantry
-                    value >= 0.3
+            OR = {
+                commander_military_formation ?= {
+                    formation_army_unit_type_fraction = {
+                        target = unit_type:combat_unit_type_armored_infantry
+                        value >= 0.3
+                    }
+                }
+                commander_military_formation ?= {
+                    formation_army_unit_type_fraction = {
+                        target = unit_type:combat_unit_type_robotic_combat_vehicle
+                        value >= 0.3
+                    }
+                }
+                commander_military_formation ?= {
+                    formation_army_unit_type_fraction = {
+                        target = unit_type:combat_unit_type_mech_infantry
+                        value >= 0.3
+                    }
                 }
             }
         }
@@ -286,7 +324,7 @@ advance_tank_assualt = {
 
     entity_animation = "advance"
     clicksound = "event:/SFX/UI/Military/order_general_front_advance"
-    experience = 0.1 # This much extra experience per week while executing Order
+    experience = 0.1
 
 	ai_weight = {
 		value = 2

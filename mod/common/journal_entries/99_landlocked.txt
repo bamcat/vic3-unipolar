@@ -1,12 +1,6 @@
 ﻿# ==========================================
 # LANDLOCKED — TRANSIT RIGHTS
 # je_transit_rights
-#
-# Appears for countries with no coastal
-# states. Completes when a transit rights
-# agreement is signed with any country.
-# No events, no modifiers — purely a
-# reminder and completion tracker.
 # ==========================================
 
 je_transit_rights = {
@@ -15,7 +9,6 @@ je_transit_rights = {
 	group = je_group_domestic_policy
 
 	is_shown_when_inactive = {
-		# Only shown to landlocked countries
 		NOT = {
 			any_scope_state = {
 				is_coastal = yes
@@ -24,7 +17,6 @@ je_transit_rights = {
 	}
 
 	possible = {
-		# Only active while landlocked
 		NOT = {
 			any_scope_state = {
 				is_coastal = yes
@@ -32,25 +24,33 @@ je_transit_rights = {
 		}
 	}
 
-	complete = {
-		custom_tooltip = {
-			text = secure_transit_rights_treaty
-		any_country = {
-			any_scope_treaty = {
-						binds = root
-						any_scope_article = {
-							has_type = transit_rights
+outcome = {
+		header = je_standard_completion_header
+		effect_header = je_standard_on_completion_header
+		color = "gold_positive"
+		conclusion_desc = je_standard_completion_conclusion_desc
+		trigger = {
+			custom_tooltip = {
+				text = secure_transit_rights_treaty
+			any_country = {
+				any_scope_treaty = {
+							binds = root
+							any_scope_article = {
+								has_type = transit_rights
+							}
 						}
 					}
 				}
-			}
+		}
 	}
 
-	# Becomes invalid if the country gains a coast
-	# (conquest, formation, etc.)
-	invalid = {
-		any_scope_state = {
-			is_coastal = yes
+	outcome = {
+		flags = { hidden invalid_outcome }
+		conclusion_desc = je_standard_failure_conclusion_desc
+		trigger = {
+			any_scope_state = {
+				is_coastal = yes
+			}
 		}
 	}
 

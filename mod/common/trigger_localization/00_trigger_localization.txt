@@ -1164,8 +1164,6 @@ country_migration_pull_not_equal = {
 	third = TRIGGER_COUNTRY_MIGRATION_PULL_NOT_EQUAL_THIRD
 }
 
-# Note that this key consists of <scope>_region_<operator>, aka. the link used here is `region`.
-
 state_region_equal = {
 	global = TRIGGER_STRATEGIC_REGION_EQUAL
 	global_not = TRIGGER_STRATEGIC_REGION_EQUAL_NOT
@@ -1865,7 +1863,6 @@ can_send_diplomatic_action = {
 	third_not = TRIGGER_CAN_SEND_DIPLOMATIC_ACTION_THIRD_NOT
 }
 
-# Intentionally uses the same loc as can_send_diplomatic_action as it works fine for them both
 can_create_diplomatic_pact = {
 	global = TRIGGER_CAN_SEND_DIPLOMATIC_ACTION
 	global_not = TRIGGER_CAN_SEND_DIPLOMATIC_ACTION_NOT

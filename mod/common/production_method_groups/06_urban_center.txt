@@ -86,8 +86,6 @@ pmg_base_building_power_plant = {
 	}
 }
 
-##### SMD
-
 pmg_base_building_nuclear_plant = {
 	texture = "gfx/interface/icons/generic_icons/mixed_icon_base.dds"
 	production_methods = {
@@ -136,5 +134,24 @@ pmg_base_building_mission_control = {
 		pm_mission_control
 		pm_satellite_assisted_control
 		pm_autonomous_mission_control
+	}
+}
+
+REPLACE_OR_CREATE:pmg_base_building_water_works = {
+	texture = "gfx/interface/icons/generic_icons/mixed_icon_base.dds"
+	ai_selection = most_productive
+	production_methods = {
+		pm_pumping_stations
+		pm_treatment_plants
+		pm_desalination
+	}
+}
+
+REPLACE_OR_CREATE:pmg_automation_building_water_works = {
+	texture = "gfx/interface/icons/generic_icons/mixed_icon_automation.dds"
+	production_methods = {
+		pm_automation_disabled
+		pm_water_works_mechanisation
+		pm_water_works_computerisation
 	}
 }

@@ -16,7 +16,7 @@ southsudan.1 = {
     immediate = {
 		create_country = {
                         tag = SSD
-                        origin = this # TODO, ADD LAWS
+                        origin = this
                         province = p:xE4BC4E
 						
                         on_created = {
@@ -45,7 +45,7 @@ southsudan.1 = {
 
     option = {
         name = southsudan.1.a
-        add_relations = {
+        change_relations = {
             country = c:SSD
             value = -100
         }
@@ -56,7 +56,7 @@ southsudan.1 = {
 
     option = {
         name = southsudan.1.b
-        add_relations = {
+        change_relations = {
             country = c:SSD
             value = -25
         }

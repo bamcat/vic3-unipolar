@@ -4,8 +4,6 @@ smd_effect_advance_enrichment = {
 			has_variable = smd_enrichment_active
 			NOT = { has_variable = smd_enriched }
 		}
-		# Add base 4, then +1 per plant level, minus the 3-plant floor
-		# This mirrors smd_enrichment_monthly_gain without self-reference
 		change_variable = {
 			name = smd_enrichment_progress
 			add = 4
@@ -25,7 +23,6 @@ smd_effect_advance_enrichment = {
 			name = smd_enrichment_progress
 			add = -3
 		}
-		# Floor at 4 total gain minimum
 		if = {
 			limit = { var:smd_enrichment_progress < 4 }
 			set_variable = {
@@ -33,7 +30,6 @@ smd_effect_advance_enrichment = {
 				value = 4
 			}
 		}
-		# Cap at 100
 		if = {
 			limit = { var:smd_enrichment_progress >= 100 }
 			set_variable = {
@@ -139,7 +135,6 @@ smd_effect_complete_production = {
 }
 
 nuclear_rebuild_enemy_list = {
-	# Clear all four lists each month
 	clear_variable_list = nuclear_enemy_list
 	clear_variable_list = nuclear_enemy_states_list
 	clear_variable_list = nuclear_ranged_states_list
@@ -158,15 +153,12 @@ nuclear_rebuild_enemy_list = {
 					target = PREV
 				}
 			}
-			# All enemy states — used by missile/bombing browser (no range gate)
 			every_scope_state = {
 				limit = { owner = PREV 
 					OR = {
-						# State borders a state owned by ROOT
 						any_neighbouring_state = {
 							owner = ROOT
 						}
-						# State borders a country that hosts ROOT's military bases
 						any_neighbouring_state = {
 							owner = {
 								any_scope_treaty = {
@@ -177,7 +169,6 @@ nuclear_rebuild_enemy_list = {
 								}
 							}
 						}
-						# State is blockaded by ROOT
 						is_blockaded_by = ROOT
 					}
 				}
@@ -188,17 +179,13 @@ nuclear_rebuild_enemy_list = {
 					}
 				}
 			}
-			# Nuclear-ranged states — only those in ICBM range OR
-			# neighbouring a player-owned state
 			every_scope_state = {
 				limit = {
 					owner = PREV
 					OR = {
-						# State borders a state owned by ROOT
 						any_neighbouring_state = {
 							owner = ROOT
 						}
-						# State borders a country that hosts ROOT's military bases
 						any_neighbouring_state = {
 							owner = {
 								any_scope_treaty = {
@@ -209,9 +196,7 @@ nuclear_rebuild_enemy_list = {
 								}
 							}
 						}
-						# State is blockaded by ROOT
 						is_blockaded_by = ROOT
-						# ROOT has ICBMs — global range
 						ROOT = { has_variable = icbm_programme_complete }
 					}
 				}
@@ -225,7 +210,6 @@ nuclear_rebuild_enemy_list = {
 		}
 	}
  
-	# Stale nuclear target cleanup — peace or out of range
 	every_in_list = {
 		variable = wmd_target_list
 		limit = {
@@ -266,7 +250,6 @@ nuclear_rebuild_enemy_list = {
 		}
 	}
  
-	# Stale conventional missile target cleanup
 	every_in_list = {
 		variable = conventional_target_list
 		limit = {
@@ -297,7 +280,6 @@ nuclear_rebuild_enemy_list = {
 		}
 	}
  
-	# Stale bombing target cleanup
 	every_in_list = {
 		variable = bombing_target_list
 		limit = {
@@ -322,7 +304,6 @@ nuclear_update_kill_rate_cache = {
 }
 
 conventional_missile_strike = {
-	# First update the consumption based on deployment %
 	change_variable = {
 		name = conventional_missiles
 		subtract = conventional_missiles_to_use_sv
@@ -335,14 +316,9 @@ conventional_missile_strike = {
 	every_in_list = {
 		variable = conventional_target_list
 
-		# Each targeted state gets one random building hit attempt
-		# per missile fired. More missiles = more rolls.
-		# Base chance per roll scales with deployment %:
 		#   10% deploy = fewer missiles = fewer rolls
 		#   100% deploy = full salvo = maximum rolls
-		# Each roll: random building from the list, 15% destroy chance.
 
-		# Roll once per missile in the salvo against a random building
 		random = {
 			chance = 8
 			if = { limit = { has_building = building_airport } remove_building = building_airport }
@@ -371,7 +347,6 @@ conventional_missile_strike = {
 			chance = 8
 			if = { limit = { has_building = building_railway } remove_building = building_railway }
 		}
-		# Additional industrial/infrastructure targets
 		random = {
 			chance = 6
 			if = { limit = { has_building = building_power_plant } remove_building = building_power_plant }
@@ -385,16 +360,13 @@ conventional_missile_strike = {
 			if = { limit = { has_building = building_oil_rig } remove_building = building_oil_rig }
 		}
 
-		# Devastation scales with deployment percentage — buffed x3
 		add_devastation = conventional_missile_devastation_sv
 	}
 }
  
 # ==========================================
 # STRATEGIC BOMBING RUN — SCRIPTED EFFECT
-# Adds devastation to each targeted state.
 # Amount = bombing_devastation_per_run_sv.
-# Lower building destroy chance (1%).
 # ==========================================
  
 strategic_bombing_run = {
@@ -403,7 +375,6 @@ strategic_bombing_run = {
  
 		add_devastation = bombing_devastation_per_run_sv
  
-		# Lower accuracy — 1% chance per building
 		if = {
 			limit = { has_variable = conventional_missiles }
 			random = {
@@ -478,13 +449,8 @@ strategic_bombing_run = {
 }
 
 # ==========================================
-# Recompute the top 5 nuclear powers.
-# Stores their tags in 5 separate global variables that the
-# customizable_localization reads. Uses ordered_country to
-# rank by the 'nukes' variable.
 # ==========================================
 nuclear_recompute_top_5 = {
-	# Wipe previous values
 	remove_global_variable = nuclear_top_1
 	remove_global_variable = nuclear_top_2
 	remove_global_variable = nuclear_top_3

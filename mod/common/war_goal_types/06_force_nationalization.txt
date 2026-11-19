@@ -1,4 +1,8 @@
 ﻿force_nationalization = {
+	mirrored_wargoal = {
+		method = reparations
+	}
+
 	icon = "gfx/interface/icons/war_goals/force_nationalization.dds"
 
 	kind = force_nationalization
@@ -7,7 +11,6 @@
 		require_target_be_part_of_war
 		can_add_for_other_country
 
-		#Validation
 		validate_conflicts_war_goals_all
 		validate_force_nationalization
 	}
@@ -77,7 +80,7 @@
 		}
 
 		multiply = {
-			desc = "INFAMY_FROM_REBELLIOUS_SUBJECT" # Rebellious as in they are the aggressor in the play
+			desc = "INFAMY_FROM_REBELLIOUS_SUBJECT"
 			value = 1
 
 			if = {

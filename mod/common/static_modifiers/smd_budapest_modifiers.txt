@@ -1,0 +1,27 @@
+﻿budapest_lisbon_goodwill = {
+	icon = "gfx/interface/icons/timed_modifier_icons/modifier_flag_positive.dds"
+	country_influence_mult = 0.1
+}
+
+budapest_fuel_deliveries = {
+	icon = "gfx/interface/icons/timed_modifier_icons/modifier_documents_positive.dds"
+	building_group_bg_power_throughput_add = 0.1
+}
+
+budapest_security_assurances = {
+	icon = "gfx/interface/icons/timed_modifier_icons/modifier_flag_positive.dds"
+	country_influence_mult = 0.1
+}
+
+budapest_non_nuclear_state = {
+	icon = "gfx/interface/icons/timed_modifier_icons/modifier_flag_positive.dds"
+	country_improve_relations_speed_mult = 0.25
+	country_infamy_decay_mult = 0.25
+}
+
+budapest_nuclear_holdout = {
+	icon = "gfx/interface/icons/timed_modifier_icons/modifier_flag_negative.dds"
+	country_influence_mult = -0.15
+	country_improve_relations_speed_mult = -0.33
+	country_prestige_mult = -0.1
+}

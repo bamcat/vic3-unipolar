@@ -1,4 +1,8 @@
 ﻿return_state = {
+	mirrored_wargoal = {
+		method = territorial
+	}
+
 	icon = "gfx/interface/icons/war_goals/return_state.dds"
 
 	kind = return_state
@@ -9,7 +13,6 @@
 		can_add_for_other_country
 		requires_interest
 
-		# Validation
 		validate_conflicts_conquer_state
 		validate_target_not_treaty_port
 
@@ -130,7 +133,7 @@
 		}
 
 		multiply = {
-			desc = "INFAMY_FROM_REBELLIOUS_SUBJECT" # Rebellious as in they are the aggressor in the play
+			desc = "INFAMY_FROM_REBELLIOUS_SUBJECT"
 			value = 1
 
 			if = {

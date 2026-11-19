@@ -55,7 +55,7 @@
 				is_diplomatic_play_ally_of = ROOT
 			}
 		}
-		trigger_if = { # The same requirements as decision_demand_hungary_revoke_laws, to prevent cheating the Hungarian Revolution
+		trigger_if = {
 			limit = {
 				c:AUS ?= ROOT
 				has_journal_entry = je_matter_of_hungary
@@ -90,7 +90,7 @@
 				}
 			}
 		}
-		trigger_if = { # The same requirements as decision_demand_hungary_revoke_laws, to prevent cheating the Hungarian Revolution
+		trigger_if = {
 			limit = {
 				c:AUS ?= this
 				scope:target_country ?= {
@@ -114,7 +114,7 @@
 					has_journal_entry = je_hungarian_revolution
 				}
 			}
-			scope:target_country ?= { # The same effects as decision_demand_hungary_revoke_laws, to prevent cheating the Hungarian Revolution
+			scope:target_country ?= {
 				save_temporary_scope_as = hungary_country_scope
 				trigger_event = { id = hungary_events.6 popup = yes }
 			}
@@ -157,7 +157,7 @@
 
 	ai = {
 		evaluation_chance = {
-			value = 0.025 # AI shouldn't use this very often
+			value = 0.025
 		}
 
 		will_propose = {

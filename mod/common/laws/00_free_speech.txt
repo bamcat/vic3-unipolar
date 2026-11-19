@@ -17,7 +17,7 @@ REPLACE_OR_CREATE:law_outlawed_dissent = {
 	}
 	
 
-	ai_enact_weight_modifier = { #Petitions
+	ai_enact_weight_modifier = {
 		value = 0
 		
 		if = {
@@ -42,7 +42,7 @@ law_censorship = {
 	}
 
 
-	ai_enact_weight_modifier = { #Petitions
+	ai_enact_weight_modifier = {
 		value = 0
 		
 		if = {
@@ -64,7 +64,7 @@ REPLACE_OR_CREATE:law_right_of_assembly = {
 		country_suppression_attraction_mult = -0.3
 	}
 
-	ai_enact_weight_modifier = { #Petitions
+	ai_enact_weight_modifier = {
 		value = 0
 		
 		if = {
@@ -90,7 +90,7 @@ REPLACE_OR_CREATE:law_protected_speech = {
 		custom_tooltip = protected_speech_tt
 	}
 
-	ai_enact_weight_modifier = { #Petitions
+	ai_enact_weight_modifier = {
 		value = 0
 		
 		if = {

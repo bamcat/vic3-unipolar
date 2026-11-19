@@ -1,0 +1,161 @@
+﻿rus_l90_rad_change = {
+	custom_description = {
+		text = rus_l90_rad_change
+		value = $V$
+		if = {
+			limit = { NOT = { has_global_variable = ichkeria_radicalisation } }
+			set_global_variable = { name = ichkeria_radicalisation value = 0 }
+		}
+		change_global_variable = { name = ichkeria_radicalisation add = $V$ }
+		clamp_global_variable = { name = ichkeria_radicalisation min = 0 max = 100 }
+		c:RUS ?= {
+			je:je_rus_ichkeria ?= {
+				set_bar_progress = { name = rus_l90_radicalisation_bar value = global_var:ichkeria_radicalisation }
+			}
+		}
+		c:CCH ?= {
+			je:je_cch_ichkeria ?= {
+				set_bar_progress = { name = cch_l90_radicalisation_bar value = global_var:ichkeria_radicalisation }
+			}
+		}
+	}
+}
+
+rus_l90_insurgency_change = {
+	custom_description = {
+		text = rus_l90_insurgency_change
+		value = $V$
+		c:RUS ?= {
+			je:je_rus_second_chechen_war ?= {
+				add_progress = { name = rus_l90_insurgency_bar value = $V$ }
+			}
+		}
+	}
+}
+
+rus_l90_pm_standing = {
+	custom_description = {
+		text = rus_l90_pm_standing
+		value = $V$
+		every_scope_character = {
+			limit = { has_role = character_role_prime_minister }
+			if = {
+				limit = { NOT = { has_variable = rus_wn_standing } }
+				set_variable = { name = rus_wn_standing value = 0 }
+			}
+			change_variable = { name = rus_wn_standing add = $V$ }
+		}
+	}
+}
+
+rus_l90_unlock_ichkeria = {
+	set_variable = rus_l90_ichkeria_started
+	set_global_variable = { name = ichkeria_radicalisation value = $R$ }
+	add_journal_entry = { type = je_rus_ichkeria }
+	c:CCH ?= {
+		add_journal_entry = { type = je_cch_ichkeria }
+	}
+}
+
+rus_l90_start_second_war = {
+	custom_tooltip = rus_l90_start_second_war_tt
+	hidden_effect = {
+		set_variable = rus_l90_second_war
+		set_variable = { name = rus_l90_war_recent days = 60 }
+		set_global_variable = second_chechen_war_started
+		add_journal_entry = { type = je_rus_second_chechen_war }
+		c:CCH ?= {
+			trigger_event = { id = rus_l90.12 popup = yes }
+			create_diplomatic_play = {
+				name = second_chechen_war
+				type = dp_independence
+				target_country = c:RUS
+				war = yes
+				add_war_goal = {
+					holder = c:RUS
+					type = annex_country
+					target_country = c:CCH
+				}
+			}
+		}
+	}
+}
+
+rus_l90_recognise_ichkeria = {
+	custom_tooltip = rus_l90_recognise_ichkeria_tt
+	hidden_effect = {
+		set_global_variable = ichkeria_recognised
+	}
+	c:CCH ?= {
+		change_relations = { country = ROOT value = 50 }
+		add_modifier = { name = cch_l90_recognised }
+	}
+	add_modifier = { name = rus_l90_ichkeria_let_go months = 60 }
+	rus_wn_inst_change = { I = army V = -15 }
+}
+
+rus_l90_csto_add_member = {
+	add_to_global_variable_list = { name = io_csto_members target = this }
+	add_modifier = { name = io_csto_member }
+}
+
+rus_l90_csto_remove_member = {
+	remove_list_global_variable = { name = io_csto_members target = this }
+	remove_modifier = io_csto_member
+	if = {
+		limit = { NOT = { this = c:RUS } }
+		save_scope_as = csto_leaver
+		every_scope_treaty = {
+			limit = {
+				binds = c:RUS
+				any_scope_article = { has_type = defensive_pact }
+			}
+			withdraw = {
+				country = scope:csto_leaver
+			}
+		}
+		c:RUS ?= {
+			change_relations = { country = scope:csto_leaver value = -30 }
+		}
+	}
+}
+
+rus_l90_union_stage_up = {
+	change_variable = { name = rus_l90_union_stage add = 1 }
+	set_variable = { name = rus_l90_union_timer value = 0 }
+	if = {
+		limit = { var:rus_l90_union_stage = 1 }
+		add_modifier = { name = rus_l90_union_community }
+		c:BYL ?= { add_modifier = { name = rus_l90_union_community } }
+	}
+	if = {
+		limit = { var:rus_l90_union_stage = 2 }
+		remove_modifier = rus_l90_union_community
+		add_modifier = { name = rus_l90_union_union }
+		c:BYL ?= {
+			remove_modifier = rus_l90_union_community
+			add_modifier = { name = rus_l90_union_union }
+		}
+	}
+	if = {
+		limit = { var:rus_l90_union_stage >= 3 }
+		remove_modifier = rus_l90_union_union
+		add_modifier = { name = rus_l90_union_state }
+		set_global_variable = union_state_formed
+		c:BYL ?= {
+			remove_modifier = rus_l90_union_union
+			add_modifier = { name = rus_l90_union_state }
+		}
+	}
+}
+
+rus_l90_union_dissolve = {
+	remove_variable = rus_l90_union_stage
+	remove_variable = rus_l90_union_timer
+	remove_modifier = rus_l90_union_community
+	remove_modifier = rus_l90_union_union
+	c:BYL ?= {
+		remove_modifier = rus_l90_union_community
+		remove_modifier = rus_l90_union_union
+	}
+}

@@ -155,7 +155,6 @@ da_overlord_grant_investment_rights = {
 		manual_break_effect = {
 			scope:target_country = {
 				add_liberty_desire = 50 
-				##This has to be high, because the gameplay works that this pact provides the overlord a benefit in the short-term, but in the long-term can be used by the subject reduce economic dependence, thus should be expensive to stop the overlord simply cancelling it once it gets inconvenient.
 			}
 
 			add_overlord_lobby_appeasement_from_diplomacy = {

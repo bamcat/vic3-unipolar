@@ -1,6 +1,4 @@
 ﻿l_japanese:
-
-# Monarchies
  gov_absolute_kingdom:0 "絶対モンキー"
  gov_absolute_kingdom_desc:2 "これは [Concept('concept_ruler','$RULER_TITLE_KING$')] または [Concept('concept_ruler','$RULER_TITLE_QUEEN$')] で完全に電力を休む \n です。\n\n$TRANSFER_OF_POWER_NAME_DESC$"
  gov_kingdom:0 "モナーキー"
@@ -209,7 +207,6 @@
  gov_united_kingdom_braz_por_spa_kingdom: "$gov_united_kingdom_braz_por_spa$"
  gov_united_kingdom_braz_por_spa_kingdom_desc: "$gov_united_kingdom_braz_por_spa_desc$"
 
- # Regencies
  gov_regency_ethiopia_ras: "スタッフ"
  gov_regency_ethiopia_ras_desc: "これは [Concept('concept_ruler','$RULER_TITLE_REGENT$')] で電力が休む [Concept('concept_ruler','$RULER_TITLE_RAS$')] に代わって規則する [concept_government_type] であり、まだ throne.\n\n$TRANSFER_OF_POWER_NAME_DESC$ を取ることができない。"
  gov_regency_princely_state_rawalate: "スタッフ"
@@ -339,7 +336,6 @@
  gov_provisional_government_spain: "暫定政府"
  gov_provisional_government_spain_desc: "これは、Cortes が国の将来の政府を決定するため、[Concept('concept_ruler','$RULER_TITLE_REGENT$')] ルールの [concept_government_type] の \n\n$TRANSFER_OF_POWER_NAME_DESC$"
 
-# Theocracies
  gov_theocracy:0 "ザクラシー"
  gov_theocracy_desc:2 "これは、[concept_country] がクレアギーによって除外される \n\n$TRANSFER_OF_POWER_NAME_DESC$ の $TRANSFER_OF_POWER_NAME_DESC$ である $TRANSFER_OF_POWER_NAME_DESC$ である $TRANSFER_OF_POWER_NAME_DESC$"
  gov_theocratic_dictatorship:0 "テオクラティック・ディクテーターシップ"
@@ -381,7 +377,6 @@
  gov_american_theocracy_dictatorial: "教会の辞書"
  gov_american_theocracy_dictatorial_desc: "これは、[concept_country] が単一の教会ボディの頭によって支配される [concept_government_type] である \n\n$TRANSFER_OF_POWER_NAME_DESC$"
 
-# Presidential Republics
  gov_brazil_oligarchic_republic_presidential: "Oligarchic共和国"
  gov_brazil_oligarchic_republic_presidential_desc: "これは [concept_country] が [Concept('concept_ruler','$RULER_TITLE_PRESIDENT$')] [Concept('concept_election','$concept_elected$')] によって規定される [concept_government_type] の \n\n$TRANSFER_OF_POWER_NAME_DESC$"
  gov_peru_bolivia_confederal_state: "連邦国家"
@@ -446,7 +441,6 @@
  gov_fascist_state:0 "ファシスト州"
  gov_fascist_state_desc:2 "これは [concept_government_type] の [concept_ideology] を fascist [concept_ideology] に示す [concept_government_type] です。 これは、残酷で方向性政令です。\n\n$TRANSFER_OF_POWER_NAME_DESC$"
 
- ### Colonial Administrations
  gov_crown_colony_india: "クラウンコロニー"
  gov_crown_colony_india_desc: "これは、限られた自律性のコロニアル管理者によって支配される英国の王冠のコロニーです。\n\n$TRANSFER_OF_POWER_NAME_DESC$"
  gov_crown_colony:0 "クラウンコロニー"
@@ -468,7 +462,6 @@
  gov_dominion_elected: "ドミニオン"
  gov_dominion_elected_desc: "これは、民主的に[Concept('concept_election','$concept_elected$')]コロニアルアセンブリによって規定される[concept_government_type]です。\n\n$TRANSFER_OF_POWER_NAME_DESC$"
 
- ### Corporate States
  gov_fascist_corporate_state: "ファシスト州"
  gov_fascist_corporate_state_desc: "これは [concept_government_type] の [concept_ideology] を fascist [concept_ideology] に示す [concept_government_type] です。 これは、残酷で方向性政令です。\n\n$TRANSFER_OF_POWER_NAME_DESC$"
  gov_corporate_state: "コーポレート・ステート"
@@ -488,7 +481,6 @@
  gov_corporate_state_austrofascist: "ステルネスタット"
  gov_corporate_state_austrofascist_desc: "これは、政府が異なる社会的なクラス間の仲介者として公式に役立たせる、corporatistラインに沿って編成された[concept_government_type]です。 [Concept('concept_ruler','$RULER_TITLE_CHANCELLOR$')] で先頭に、 dictatorial の電源で規則する。\n\n$TRANSFER_OF_POWER_NAME_DESC$"
 
-# Parliamentary Republics
  gov_french_2nd_republic_parliamentary: "第二共和国"
  gov_french_2nd_republic_parliamentary_desc: "これは、[concept_country] が民主的に [Concept('concept_election','$concept_elected$')] parliament.\n\n$TRANSFER_OF_POWER_NAME_DESC$ によって除外される [concept_government_type] です。"
  gov_french_2nd_republic_parliamentary_dictator: "第二共和国"
@@ -528,7 +520,6 @@
  gov_danubian_federation_parliamentary_republic_dictatorship: "ダヌビアン連邦"
  gov_danubian_federation_parliamentary_republic_dictatorship_desc: "これは、州が民族線に沿って描画された連邦単位の多岐に組織されている [concept_government_type] 内のものです。 中央電力は、豊かで強力な政治クラスで選択したBundesratによって保持されます。\n\n$TRANSFER_OF_POWER_NAME_DESC$"
 
-#Council Republics
  gov_council_dictatorship:1 "ヴァンガード州"
  gov_council_dictatorship_desc:2 "これは、[concept_government_type] が選択されていない評議会によって規定される [concept_government_type] である \n\n$TRANSFER_OF_POWER_NAME_DESC$"
  gov_council_republic:0 "評議会議員"
@@ -550,7 +541,6 @@
  gov_phalanstere: "フィランステレ"
  gov_phalanstere_desc: "これは、[concept_government_type] が、[concept_country] が、社会主義者の技術的な臓器の代表者によって任命された専門家の評議会によって規定される [concept_government_type]\n$TRANSFER_OF_POWER_NAME_DESC$"
 
-# Transfer of Power
  transfer_of_power_hereditary:0 "遺伝学"
  transfer_of_power_hereditary_desc:1 "遺伝[concept_transfer_of_power] では、[Concept('concept_ruler', '$concept_rulers$')] は生命を連想させ、[concept_heir] は $concept_ruler$ が $concept_ruler$ が死ぬとき新しい $concept_ruler$ になる。"
  transfer_of_power_presidential_elective:0 "大統領選挙"
@@ -567,7 +557,6 @@
  TRANSFER_OF_POWER_TOOLTIP_DESC:0 "[GovernmentType.GetTransferOfPowerDesc]"
  TRANSFER_OF_POWER_PLAYER_TOOLTIP_DESC:0 "[GetPlayer.GetGovernment.GetTransferOfPowerDesc]"
 
-# Titles
  RULER_TITLE_DEFAULT:0 "ルーラー"
  RULER_TITLE_KING:0 "キングス"
  RULER_TITLE_QUEEN:0 "クイーン"

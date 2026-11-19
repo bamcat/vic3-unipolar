@@ -1,48 +1,43 @@
 ﻿l_english:
-#################### JE ####################
-# The Internet
+ economic_union:0 "Economic Union"
+ economic_union_pact_desc:0 "A diplomatic pact in which there is a unified market and currency between two states."
+ subject_type_economic_union:0 "Economic Union"
+ subject_type_economic_union_desc:0 "A diplomatic pact in which there is a unified market and currency between two states."
+ concept_economic_union:0 "Economic Union"
+ concept_subject_type_economic_union:0 "Economic Union"
+ subject_type_economic_union_no_icon:0 "Economic Union"
+ concept_economic_union_desc:0 "A diplomatic pact in which there is a unified market and currency between two states."
 
-economic_union:0 "Economic Union"
-economic_union_pact_desc:0 "A diplomatic pact in which there is a unified market and currency between two states."
-subject_type_economic_union:0 "Economic Union"
-subject_type_economic_union:0 "Economic Union"
-subject_type_economic_union_desc:0 "A diplomatic pact in which there is a unified market and currency between two states."
-concept_economic_union:0 "Economic Union"
-concept_subject_type_economic_union:0 "Economic Union"
-subject_type_economic_union_no_icon:0 "Economic Union"
-concept_economic_union_desc:0 "A diplomatic pact in which there is a unified market and currency between two states."
+ economic_union2:0 "Economic Union"
+ economic_union2_pact_desc:0 "A diplomatic pact in which there is a unified market and currency between two states."
 
-economic_union2:0 "Economic Union"
-economic_union2_pact_desc:0 "A diplomatic pact in which there is a unified market and currency between two states."
+ eu_events.400:0 "European Union"
 
-eu_events.400:0 "European Union"
+ support_revolution:0 "Support Revolution"
+ support_revolution_action_propose_name:0 "Support Revolution"
+ support_revolution_action_break_name:0 "Halt Support"
 
-support_revolution:0 "Support Revolution"
-support_revolution_action_propose_name:0 "Support Revolution"
-support_revolution_action_break_name:0 "Halt Support"
+ impose_sanctions:0 "Impose Sanctions"
+ impose_sanctions_desc: "Seize the financial assets of this country. In game terms, this creates a reverse bank-roll in which money is directly transferred from the treasury of the target based on the difference in GDP between the two countries."
+ impose_sanctions_action_propose_name:0 "Financial Sanctions"
+ impose_sanctions_action_break_name:0 "Lift Sanctions"
+ impose_sanctions_pact_desc: "[SCOPE.GetRootScope.GetDiplomaticPact.GetFirstCountry.GetName] has imposed sanctions against us!"
+ impose_sanctions_notification_name: "[INITIATOR_COUNTRY.GetName] has imposed sanctions against us!"
+ impose_sanctions_notification_desc: "We've been hit with financial sanctions!"
 
-impose_sanctions:0 "Impose Sanctions"
-impose_sanctions_desc: "Seize the financial assets of this country. In game terms, this creates a reverse bank-roll in which money is directly transferred from the treasury of the target based on the difference in GDP between the two countries."
-impose_sanctions_action_propose_name:0 "Financial Sanctions"
-impose_sanctions_action_break_name:0 "Lift Sanctions"
-impose_sanctions_pact_desc: "[SCOPE.GetRootScope.GetDiplomaticPact.GetFirstCountry.GetName] has imposed sanctions against us!"
-impose_sanctions_notification_name: "[INITIATOR_COUNTRY.GetName] has imposed sanctions against us!"
-impose_sanctions_notification_desc: "We've been hit with financial sanctions!"
+ humanitarian_aid:0 "Send Humanitarian Aid"
+ humanitarian_aid_desc: "Provide financial assistance to pops living in this country. Transfers money from our treasury directly into the pockets of pops living in this country."
+ humanitarian_aid_action_propose_name:0 "Humanitarian Aid"
+ humanitarian_aid_action_break_name:0 "Halt Humanitarian Aid"
+ humanitarian_aid_pact_desc:0 "Provide financial assistance to pops living in this country. Transfers money from our treasury directly into the pockets of pops living in this country."
+ humanitarian_aid_notification_name: "[INITIATOR_COUNTRY.GetName] is sending us humanitarian aid!"
+ humanitarian_aid_notification_desc: "We are recieving humanitarian aid."
+ humanitarian_aid_proposal_accepted_name: "Humanitarian aid accepted"
+ humanitarian_aid_proposal_accepted_desc: "We are now providing humanitarian aid."
 
-humanitarian_aid:0 "Send Humanitarian Aid"
-humanitarian_aid_desc: "Provide financial assistance to pops living in this country. Transfers money from our treasury directly into the pockets of pops living in this country."
-humanitarian_aid_action_propose_name:0 "Humanitarian Aid"
-humanitarian_aid_action_break_name:0 "Halt Humanitarian Aid"
-humanitarian_aid_pact_desc:0 "Provide financial assistance to pops living in this country. Transfers money from our treasury directly into the pockets of pops living in this country."
-humanitarian_aid_notification_name: "[INITIATOR_COUNTRY.GetName] is sending us humanitarian aid!"
-humanitarian_aid_notification_desc: "We are recieving humanitarian aid."
-humanitarian_aid_proposal_accepted_name: "Humanitarian aid accepted"
-humanitarian_aid_proposal_accepted_desc: "We are now providing humanitarian aid."
-
-
-host_military_bases_desc: ""
-host_military_bases_effects_desc: "• Establishes a military agreement between two [Concept('concept_country', '$concept_countries$')] where one $concept_country$ is allowed to launch $concept_missile$ using the airbases of the other $concept_country$"
-host_military_bases_article_short_desc: "[TARGET_COUNTRY.GetNameNoFormatting] can launch missiles through [SOURCE_COUNTRY.GetNameNoFormatting]"
+ host_military_bases_desc: ""
+ host_military_bases_effects_desc: "• Establishes a military agreement between two [Concept('concept_country', '$concept_countries$')] where one $concept_country$ is allowed to launch $concept_missile$ using the airbases of the other $concept_country$"
+ host_military_bases_article_short_desc: "[TARGET_COUNTRY.GetNameNoFormatting] can launch missiles through [SOURCE_COUNTRY.GetNameNoFormatting]"
 
  smd_create_economic_union:0 "Propose Economic Union"
  smd_create_economic_union_action_name:0 "Propose Economic Union"
@@ -73,7 +68,7 @@ host_military_bases_article_short_desc: "[TARGET_COUNTRY.GetNameNoFormatting] ca
  smd_diplomatic_unification_proposal_declined_desc:0 "[TARGET_COUNTRY.GetName] has rejected [INITIATOR_COUNTRY.GetName]'s proposal for diplomatic unification."
  smd_economic_union_base_resistance_tt:0 "Countries have a base reluctance to enter economic unions."
  smd_unification_base_resistance_tt:0 "Countries have a strong base reluctance to accept annexation through diplomatic unification."
- 
+
  treaty_name_smd_economic_union:0 "Economic Union"
  treaty_name_smd_diplomatic_unification:0 "Diplomatic Unification Treaty"
 
@@ -90,7 +85,7 @@ host_military_bases_article_short_desc: "[TARGET_COUNTRY.GetNameNoFormatting] ca
  smd_unification_requires_culture_tt:0 "The countries must have similar primary cultures, sharing a primary culture, heritage group and language group, or heritage and language traits."
  smd_unification_requires_good_relations_tt:0 "Relations must be at least amicable."
  smd_diplomatic_unification_effect_tt:0 "The accepting country becomes a dominion of the initiator."
- 
+
  threaten_nuclear_hostilities:0 "Threaten Nuclear Hostilities"
  threaten_nuclear_hostilities_action_name:0 "Threaten Nuclear Hostilities"
  threaten_nuclear_hostilities_action_propose_name:0 "Threaten Nuclear Hostilities"
@@ -106,14 +101,9 @@ host_military_bases_article_short_desc: "[TARGET_COUNTRY.GetNameNoFormatting] ca
 
  threatened_nuclear_hostilities_diplomatic_reputation:0 "Threatened Nuclear Hostilities"
  threatened_nuclear_hostilities_diplomatic_reputation_desc:0 "Nuclear brinkmanship has temporarily increased this country's diplomatic reputation, making other countries more likely to accept treaties from it."
- 
+
  war_goal_nuclear_disarmament:0 "Destroy [concept_nuclear_weapon]"
  southern_tour_market_push:0 "Southern Tour Market Push"
- 
- l_english:
- # Auto-generated diplomatic action localization patch.
- # Source checked: common/diplomatic_actions/ against localization/ plus supplied vanilla diplomacy_l_english.yml.
- # Contains only keys missing from the mod English localization.
 
  increase_relations:0 "Improve Relations"
  increase_relations_action_break_name:2 "Stop Improving [concept_relations]"
@@ -749,7 +739,7 @@ host_military_bases_article_short_desc: "[TARGET_COUNTRY.GetNameNoFormatting] ca
  da_evangelize_action_notification_name: "Evangelizing in [TARGET_COUNTRY.GetName]"
  da_evangelize_action_notification_third_party_break_desc: "[INITIATOR_COUNTRY.GetName] has stopped evangelizing in [TARGET_COUNTRY.GetName]."
  da_evangelize_action_notification_third_party_break_name: "[INITIATOR_COUNTRY.GetAdjective] evangelizing stops in [TARGET_COUNTRY.GetName]."
- da_evangelize_action_notification_third_party_desc:  "[INITIATOR_COUNTRY.GetName] is spreading its faith in [TARGET_COUNTRY.GetName]."
+ da_evangelize_action_notification_third_party_desc: "[INITIATOR_COUNTRY.GetName] is spreading its faith in [TARGET_COUNTRY.GetName]."
  da_evangelize_action_notification_third_party_name: "Evangelizing in [TARGET_COUNTRY.GetName]"
  da_evangelize_action_propose_name: "Evangelize"
  da_evangelize_action_trigger_desc_first: "[COUNTRY.GetAdjectiveNoFlag] is evangelizing in their subject [TARGET_COUNTRY.GetName]"
@@ -987,7 +977,7 @@ host_military_bases_article_short_desc: "[TARGET_COUNTRY.GetNameNoFormatting] ca
  da_overlord_grant_investment_rights_action_notification_break_name: "$da_subject_request_investment_rights_action_notification_break_name$"
  da_overlord_grant_investment_rights_action_notification_desc: "[INITIATOR_COUNTRY.GetName] has [concept_foreign_investment_rights] in [TARGET_COUNTRY.GetName]"
  da_overlord_grant_investment_rights_action_notification_name: "[INITIATOR_COUNTRY.GetName] gains [concept_foreign_investment_rights] in [TARGET_COUNTRY.GetName]"
- da_overlord_grant_investment_rights_action_notification_third_party_break_desc:  "$da_subject_request_investment_rights_action_notification_third_party_break_desc$"
+ da_overlord_grant_investment_rights_action_notification_third_party_break_desc: "$da_subject_request_investment_rights_action_notification_third_party_break_desc$"
  da_overlord_grant_investment_rights_action_notification_third_party_break_name: "$da_subject_request_investment_rights_action_notification_third_party_break_name$"
  da_overlord_grant_investment_rights_action_notification_third_party_desc: "[INITIATOR_COUNTRY.GetName] has [concept_foreign_investment_rights] in [TARGET_COUNTRY.GetName]"
  da_overlord_grant_investment_rights_action_notification_third_party_name: "[INITIATOR_COUNTRY.GetName] has gained [concept_foreign_investment_rights] in [TARGET_COUNTRY.GetName]"
@@ -1221,3 +1211,24 @@ host_military_bases_article_short_desc: "[TARGET_COUNTRY.GetNameNoFormatting] ca
  coup_strength_greater_than_coup_resistance_tt:0 "Coup strength must be greater than coup resistance."
  DIPLOMATIC_ACCEPTANCE_POWER_BLOC:0 "[concept_power_bloc] alignment"
  request_humanitarian_aid_weekly_obligation_effect:0 "Each week there is a small chance that humanitarian aid changes an [concept_obligation] between the two countries."
+
+ treaty_name_czechoslovakia_germany_trade:0 "Czechoslovakia-Germany Trade and Transit Agreement"
+ treaty_name_austria_germany_trade:0 "Austria-Germany Trade and Transit Agreement"
+ treaty_name_austria_italy_trade:0 "Austria-Italy Trade and Transit Agreement"
+ treaty_name_hungary_romania_trade:0 "Hungary-Romania Trade and Transit Agreement"
+ treaty_name_czechoslovakia_austria_trade:0 "Czechoslovakia-Austria Trade and Transit Agreement"
+
+ treaty_name_timor_gap:0 "Timor Gap Treaty"
+ treaty_name_montevideo:0 "Treaty of Montevideo"
+ treaty_name_elysee_treaty:0 "Élysée Treaty"
+ treaty_name_indus_waters_treaty:0 "Indus Waters Treaty"
+ treaty_name_us_israel_alliance:0 "United States-Israel Alliance"
+ treaty_name_us_australia_alliance:0 "United States-Australia Alliance"
+ treaty_name_us_new_zealand_alliance:0 "United States-New Zealand Alliance"
+ treaty_name_us_japan_alliance:0 "United States-Japan Alliance"
+ treaty_name_us_south_korea_alliance:0 "United States-South Korea Alliance"
+ treaty_name_us_philippines_alliance:0 "United States-Philippines Alliance"
+ treaty_name_us_taiwan_act:0 "Taiwan Relations Act"
+ treaty_name_china_north_korea_pact:0 "Sino-North Korean Defense Pact"
+ DIPLOMATIC_ACCEPTANCE_STRAIT_DEPENDENCE:0 "from our #b dependence#! on [Concept('concept_strait', '$concept_straits$')] they control"
+ DIPLOMATIC_ACCEPTANCE_NO_STRAIT_DEPENDENCE:0 "from our #b lack of dependence#! on [Concept('concept_strait', '$concept_straits$')] they control"

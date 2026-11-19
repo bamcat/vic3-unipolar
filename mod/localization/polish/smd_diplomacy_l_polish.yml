@@ -1,48 +1,43 @@
 ﻿l_polish:
-#################### JE ####################
-# The Internet
+ economic_union:0 "Unia Gospodarcza"
+ economic_union_pact_desc:0 "Pakt dyplomatyczny, w którym istnieje jednolity rynek i waluta między dwoma państwami."
+ subject_type_economic_union:0 "Unia Gospodarcza"
+ subject_type_economic_union_desc:0 "Pakt dyplomatyczny, w którym istnieje jednolity rynek i waluta między dwoma państwami."
+ concept_economic_union:0 "Unia Gospodarcza"
+ concept_subject_type_economic_union:0 "Unia Gospodarcza"
+ subject_type_economic_union_no_icon:0 "Unia Gospodarcza"
+ concept_economic_union_desc:0 "Pakt dyplomatyczny, w którym istnieje jednolity rynek i waluta między dwoma państwami."
 
-economic_union:0 "Unia Gospodarcza"
-economic_union_pact_desc:0 "Pakt dyplomatyczny, w którym istnieje jednolity rynek i waluta między dwoma państwami."
-subject_type_economic_union:0 "Unia Gospodarcza"
-subject_type_economic_union:0 "Unia Gospodarcza"
-subject_type_economic_union_desc:0 "Pakt dyplomatyczny, w którym istnieje jednolity rynek i waluta między dwoma państwami."
-concept_economic_union:0 "Unia Gospodarcza"
-concept_subject_type_economic_union:0 "Unia Gospodarcza"
-subject_type_economic_union_no_icon:0 "Unia Gospodarcza"
-concept_economic_union_desc:0 "Pakt dyplomatyczny, w którym istnieje jednolity rynek i waluta między dwoma państwami."
+ economic_union2:0 "Unia Gospodarcza"
+ economic_union2_pact_desc:0 "Pakt dyplomatyczny, w którym istnieje jednolity rynek i waluta między dwoma państwami."
 
-economic_union2:0 "Unia Gospodarcza"
-economic_union2_pact_desc:0 "Pakt dyplomatyczny, w którym istnieje jednolity rynek i waluta między dwoma państwami."
+ eu_events.400:0 "Unia Europejska"
 
-eu_events.400:0 "Unia Europejska"
+ support_revolution:0 "Wsparcie rewolucji"
+ support_revolution_action_propose_name:0 "Wsparcie rewolucji"
+ support_revolution_action_break_name:0 "Zatrzymać wsparcie"
 
-support_revolution:0 "Wsparcie rewolucji"
-support_revolution_action_propose_name:0 "Wsparcie rewolucji"
-support_revolution_action_break_name:0 "Zatrzymać wsparcie"
+ impose_sanctions:0 "Sankcje nakładane"
+ impose_sanctions_desc: "Przejmij aktywa finansowe tego kraju. Jeśli chodzi o grę, tworzy to odwrotny bank-roll, w którym pieniądze są bezpośrednio przekazywane ze skarbca celu w oparciu o różnicę w PKB między dwoma krajami."
+ impose_sanctions_action_propose_name:0 "Sankcje finansowe"
+ impose_sanctions_action_break_name:0 "Sankcje podnoszone"
+ impose_sanctions_pact_desc: "[SCOPE.GetRootScope.GetDiplomaticPact.GetFirstCountry.GetName] nałożył na nas sankcje!"
+ impose_sanctions_notification_name: "[INITIATOR_COUNTRY.GetName] nałożył na nas sankcje!"
+ impose_sanctions_notification_desc: "Dostaliśmy sankcje finansowe!"
 
-impose_sanctions:0 "Sankcje nakładane"
-impose_sanctions_desc: "Przejmij aktywa finansowe tego kraju. Jeśli chodzi o grę, tworzy to odwrotny bank-roll, w którym pieniądze są bezpośrednio przekazywane ze skarbca celu w oparciu o różnicę w PKB między dwoma krajami."
-impose_sanctions_action_propose_name:0 "Sankcje finansowe"
-impose_sanctions_action_break_name:0 "Sankcje podnoszone"
-impose_sanctions_pact_desc: "[SCOPE.GetRootScope.GetDiplomaticPact.GetFirstCountry.GetName] nałożył na nas sankcje!"
-impose_sanctions_notification_name: "[INITIATOR_COUNTRY.GetName] nałożył na nas sankcje!"
-impose_sanctions_notification_desc: "Dostaliśmy sankcje finansowe!"
+ humanitarian_aid:0 "Wyślij pomoc humanitarną"
+ humanitarian_aid_desc: "Zapewnić pomoc finansową ojczulkom mieszkającym w tym kraju. Przenosi pieniądze z naszego skarbu prosto do kieszeni ojca mieszkającego w tym kraju."
+ humanitarian_aid_action_propose_name:0 "Pomoc humanitarna"
+ humanitarian_aid_action_break_name:0 "USTALENIE POMOCY Humanitarnej"
+ humanitarian_aid_pact_desc:0 "Zapewnić pomoc finansową ojczulkom mieszkającym w tym kraju. Przenosi pieniądze z naszego skarbu prosto do kieszeni ojca mieszkającego w tym kraju."
+ humanitarian_aid_notification_name: "[INITIATOR_COUNTRY.GetName] wysyła nam pomoc humanitarną!"
+ humanitarian_aid_notification_desc: "Odbieramy pomoc humanitarną."
+ humanitarian_aid_proposal_accepted_name: "Przyjęta pomoc humanitarna"
+ humanitarian_aid_proposal_accepted_desc: "Zapewniamy teraz pomoc humanitarną."
 
-humanitarian_aid:0 "Wyślij pomoc humanitarną"
-humanitarian_aid_desc: "Zapewnić pomoc finansową ojczulkom mieszkającym w tym kraju. Przenosi pieniądze z naszego skarbu prosto do kieszeni ojca mieszkającego w tym kraju."
-humanitarian_aid_action_propose_name:0 "Pomoc humanitarna"
-humanitarian_aid_action_break_name:0 "USTALENIE POMOCY Humanitarnej"
-humanitarian_aid_pact_desc:0 "Zapewnić pomoc finansową ojczulkom mieszkającym w tym kraju. Przenosi pieniądze z naszego skarbu prosto do kieszeni ojca mieszkającego w tym kraju."
-humanitarian_aid_notification_name: "[INITIATOR_COUNTRY.GetName] wysyła nam pomoc humanitarną!"
-humanitarian_aid_notification_desc: "Odbieramy pomoc humanitarną."
-humanitarian_aid_proposal_accepted_name: "Przyjęta pomoc humanitarna"
-humanitarian_aid_proposal_accepted_desc: "Zapewniamy teraz pomoc humanitarną."
-
-
-host_military_bases_desc: ""
-host_military_bases_effects_desc: "• Ustanawia umowę wojskową między dwoma [Concept('concept_country', '$concept_countries$')], gdzie jeden $concept_country$ może uruchomić $concept_missile$ przy użyciu baz lotniczych innego $concept_country$"
-host_military_bases_article_short_desc: "[TARGET_COUNTRY.GetNameNoFormatting] może wystrzelić pociski przez [SOURCE_COUNTRY.GetNameNoFormatting]"
+ host_military_bases_desc: ""
+ host_military_bases_effects_desc: "• Ustanawia umowę wojskową między dwoma [Concept('concept_country', '$concept_countries$')], gdzie jeden $concept_country$ może uruchomić $concept_missile$ przy użyciu baz lotniczych innego $concept_country$"
+ host_military_bases_article_short_desc: "[TARGET_COUNTRY.GetNameNoFormatting] może wystrzelić pociski przez [SOURCE_COUNTRY.GetNameNoFormatting]"
 
  smd_create_economic_union:0 "Propozycja unii gospodarczej"
  smd_create_economic_union_action_name:0 "Propozycja unii gospodarczej"
@@ -73,7 +68,7 @@ host_military_bases_article_short_desc: "[TARGET_COUNTRY.GetNameNoFormatting] mo
  smd_diplomatic_unification_proposal_declined_desc:0 "[TARGET_COUNTRY.GetName] odrzucił [INITIATOR_COUNTRY.GetName] propozycję zjednoczenia dyplomatycznego."
  smd_economic_union_base_resistance_tt:0 "Kraje mają podstawową niechęć do przystępowania do związków gospodarczych."
  smd_unification_base_resistance_tt:0 "Kraje mają silną niechęć do zaakceptowania aneksji poprzez zjednoczenie dyplomatyczne."
- 
+
  treaty_name_smd_economic_union:0 "Unia Gospodarcza"
  treaty_name_smd_diplomatic_unification:0 "Traktat o unii dyplomatycznej"
 
@@ -90,7 +85,7 @@ host_military_bases_article_short_desc: "[TARGET_COUNTRY.GetNameNoFormatting] mo
  smd_unification_requires_culture_tt:0 "Kraje te muszą posiadać podobne kultury pierwotne, dzieląc się kulturą podstawową, grupą dziedzictwa i grupą językową lub dziedzictwem i cechami językowymi."
  smd_unification_requires_good_relations_tt:0 "Stosunki muszą być przynajmniej polubowne."
  smd_diplomatic_unification_effect_tt:0 "Kraj przyjmujący staje się panowaniem inicjatora."
- 
+
  threaten_nuclear_hostilities:0 "Groźby nuklearne"
  threaten_nuclear_hostilities_action_name:0 "Groźby nuklearne"
  threaten_nuclear_hostilities_action_propose_name:0 "Groźby nuklearne"
@@ -106,3 +101,18 @@ host_military_bases_article_short_desc: "[TARGET_COUNTRY.GetNameNoFormatting] mo
 
  threatened_nuclear_hostilities_diplomatic_reputation:0 "Zagrożone wrogość jądrowa"
  threatened_nuclear_hostilities_diplomatic_reputation_desc:0 "Murarstwo jądrowe tymczasowo zwiększyło reputację dyplomatyczną tego kraju, co zwiększa prawdopodobieństwo przyjęcia traktatów przez inne kraje."
+
+ treaty_name_timor_gap:0 "Traktat w sprawie różnic w czasie"
+ treaty_name_montevideo:0 "Traktat z Montevideo"
+ treaty_name_elysee_treaty:0 "Traktat Élysée"
+ treaty_name_indus_waters_treaty:0 "Traktat o wodach śródlądowych"
+ treaty_name_us_israel_alliance:0 "Stany Zjednoczone - Izrael"
+ treaty_name_us_australia_alliance:0 "United States - Australia Alliance"
+ treaty_name_us_new_zealand_alliance:0 "Stany Zjednoczone - Sojusz Nowej Zelandii"
+ treaty_name_us_japan_alliance:0 "United States - Japan Alliance"
+ treaty_name_us_south_korea_alliance:0 "Stany Zjednoczone - Korea Południowa"
+ treaty_name_us_philippines_alliance:0 "United States-Philippines Alliance"
+ treaty_name_us_taiwan_act:0 "Tajwan Relations Act"
+ treaty_name_china_north_korea_pact:0 "Północnokoreański pakt obronny"
+ DIPLOMATIC_ACCEPTANCE_STRAIT_DEPENDENCE:0 "ze względu na naszą #b zależność#! od kontrolowanych przez nich [Concept('concept_strait', 'cieśnin')]"
+ DIPLOMATIC_ACCEPTANCE_NO_STRAIT_DEPENDENCE:0 "ze względu na naszą #b niezależność#! od kontrolowanych przez nich [Concept('concept_strait', 'cieśnin')]"

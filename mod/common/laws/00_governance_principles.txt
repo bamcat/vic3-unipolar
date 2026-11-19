@@ -84,7 +84,7 @@ law_monarchy = {
 		}		
 	}
 	
-	ai_enact_weight_modifier = { #Petitions
+	ai_enact_weight_modifier = {
 		value = 0
 
 		if = {
@@ -101,7 +101,7 @@ law_monarchy = {
 				has_law = law_type:law_monarchy
 				has_strategy = ai_strategy_reactionary_agenda
 				power_bloc ?= { has_identity = identity:identity_ideological_union }
-				scope:target_country = { # Is their law different enough from what we want to impose?
+				scope:target_country = {
 					NOT = { has_law_or_variant = law_type:law_theocracy }
 				}
 			}
@@ -115,7 +115,7 @@ law_monarchy = {
 				multiply = 5
 			}
 			else = {
-				multiply = 0.5 # AI is less likely to mess with governance principles unless dealing with council republics
+				multiply = 0.5
 			}
 		}
 
@@ -168,7 +168,7 @@ law_presidential_republic = {
 	ai_will_do = {
 		exists = ruler
 		ruler = {
-			has_ideology = ideology_liberal_leader
+			has_ideology = ideology:ideology_liberal_leader
 		}
 	}
 	
@@ -194,7 +194,7 @@ law_presidential_republic = {
 				has_law = law_type:law_presidential_republic
 				has_strategy = ai_strategy_progressive_agenda
 				power_bloc ?= { has_identity = identity:identity_ideological_union }
-				scope:target_country = { # Is their law different enough from what we want to impose?
+				scope:target_country = {
 					NOT = { has_law_or_variant = law_type:law_parliamentary_republic }
 				}
 			}
@@ -208,7 +208,7 @@ law_presidential_republic = {
 				multiply = 5
 			}
 			else = {
-				multiply = 0.5 # AI is less likely to mess with governance principles unless dealing with council republics
+				multiply = 0.5
 			}
 		}
 
@@ -257,7 +257,7 @@ law_parliamentary_republic = {
 		}
 	}
 	
-	ai_enact_weight_modifier = { #Petitions
+	ai_enact_weight_modifier = {
 		value = 0
 
 		if = {
@@ -274,7 +274,7 @@ law_parliamentary_republic = {
 				has_law = law_type:law_parliamentary_republic
 				has_strategy = ai_strategy_progressive_agenda
 				power_bloc ?= { has_identity = identity:identity_ideological_union }
-				scope:target_country = { # Is their law different enough from what we want to impose?
+				scope:target_country = {
 					NOT = { has_law_or_variant = law_type:law_presidential_republic }
 				}
 			}
@@ -288,7 +288,7 @@ law_parliamentary_republic = {
 				multiply = 5
 			}
 			else = {
-				multiply = 0.5 # AI is less likely to mess with governance principles unless dealing with council republics
+				multiply = 0.5
 			}
 		}
 
@@ -342,11 +342,11 @@ law_theocracy = {
 	ai_will_do = {
 		exists = ruler
 		ruler = {
-			has_ideology = ideology_traditionalist
+			has_ideology = ideology:ideology_conservative_leader
 		}
 	}
 	
-	ai_enact_weight_modifier = { #Petitions
+	ai_enact_weight_modifier = {
 		value = 0
 
 		if = {
@@ -364,7 +364,7 @@ law_theocracy = {
 				has_strategy = ai_strategy_reactionary_agenda
 				power_bloc ?= { has_identity = identity:identity_religious }
 				religion = scope:target_country.religion
-				scope:target_country = { # Is their law different enough from what we want to impose?
+				scope:target_country = {
 					NOT = { has_law = law_type:law_monarchy }
 				}
 			}
@@ -378,7 +378,7 @@ law_theocracy = {
 				multiply = 5
 			}
 			else = {
-				multiply = 0.5 # AI is less likely to mess with governance principles unless dealing with council republics
+				multiply = 0.5
 			}
 		}
 
@@ -394,6 +394,15 @@ law_theocracy = {
 				}
 			}
 			multiply = 0
+		}
+	}
+
+	on_activate = {
+		if = {
+			limit = {
+				has_law = law_type:law_caesaropapism
+			}
+			activate_law = law_type:law_state_religion
 		}
 	}
 }
@@ -433,9 +442,9 @@ law_council_republic = {
 		exists = ruler
 		ruler = {
 			OR = {
-				has_ideology = ideology_communist_leader
-				has_ideology = ideology_anarchist
-				has_ideology = ideology_vanguardist
+				has_ideology = ideology:ideology_marxist_leader
+				has_ideology = ideology:ideology_anarchist_leader
+				has_ideology = ideology:ideology_state_socialist_leader
 				}
 			}
 		}
@@ -518,7 +527,7 @@ law_corporate_state = {
 		OR = {
 			ruler = {
 				OR = {
-					has_ideology = ideology:ideology_nationalist_leader
+					has_ideology = ideology:ideology_right_wing_populist_leader
 					has_ideology = ideology:ideology_corporatist_leader
 				}
 			}
@@ -527,7 +536,7 @@ law_corporate_state = {
 				is_powerful = yes
 				leader = {
 					OR = {
-						has_ideology = ideology:ideology_nationalist_leader
+						has_ideology = ideology:ideology_right_wing_populist_leader
 						has_ideology = ideology:ideology_corporatist_leader
 					}
 				}
@@ -535,7 +544,7 @@ law_corporate_state = {
 		}
 	}
 
-	ai_enact_weight_modifier = { #Petitions
+	ai_enact_weight_modifier = {
 		value = 0
 
 		if = {

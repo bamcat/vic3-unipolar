@@ -7,8 +7,8 @@
 		require_target_be_part_of_war
 		can_add_for_other_country
 		skip_build_list
+		assent_required
 
-		# Validation
 		validate_conflicts_war_goals_holder
 		validate_revoke_claims
 	}
@@ -39,6 +39,10 @@
 
 	on_enforced = {
 		# script effect on top of the predefined code effect
+	}
+
+	mirrored_wargoal = {
+		method = no_mirror
 	}
 
 	ai = {

@@ -1,12 +1,11 @@
 ﻿l_polish:
-
  je_national_development: "Krajowa ścieżka rozwoju"
  je_national_development_reason: "Każdy naród musi wybrać, gdzie skupić swoją energię. Krajowy plan rozwoju skupia zasoby, politykę i wolę polityczną na jednej wizji strategicznej na dziesięć lat. Wybór mądrze - wyboru nie można odwrócić, dopóki program się nie zakończy."
 
  je_foreign_investment: "Inwestycje zagraniczne"
  je_foreign_investment_reason: "Przyciągnięcie kapitału z wielkich potęg może przyspieszyć rozwój wykraczający poza to, na co pozwalają zasoby krajowe. Traktat dotyczący inwestycji zagranicznych otworzyłby kraj na przedsiębiorstwa zewnętrzne - ze wszystkimi możliwościami i zależnościami, jakie z tego wynikają."
  has_foreign_investment_or_trade_agreement_with_west_tt:0 "Podpisanie umowy inwestycyjnej i handlowej ze Stanami Zjednoczonymi, Zjednoczonym Królestwem lub Francją"
- 
+
  ndp_status_industrial_tt: "Rozbudowa przemysłu jest w toku. Kraj kieruje zasoby na budowę swojej bazy produkcyjnej i przemysłowej."
  ndp_status_military_tt: "Rozbudowa wojskowa jest w toku. Kraj inwestuje w swoje siły zbrojne, doktrynę i przemysł obronny."
  ndp_status_resource_tt: "Trwa rozwój gospodarki zasobami. Kraj koncentruje się na rolnictwie i wydobyciu surowców."
@@ -34,7 +33,6 @@
  fi_button_reject_name: "Odrzucenie inwestycji zagranicznych"
  fi_button_reject_desc: "Zamknij drzwi do stolicy. Pozwoli to zakończyć wejście do czasopisma i zastosować długoterminową karę inwestycyjną, ale zachowa niezależność gospodarczą i wzmocni władzę."
 
- # Tooltip keys
  ndp_no_path_active_tt: "Brak ścieżki rozwoju jest obecnie aktywny"
  ndp_abandon_cost_tt: "Porzucenie ścieżki będzie miało zastosowanie do 2 lat kary prawowitej i prestiż"
 
@@ -52,10 +50,6 @@
  ndp_bar_turmoil_tt: "Wysokie zawirowania spowalniające rozwój"
  ndp_bar_at_war_tt: "Wojna zakłóca program rozwoju"
 
- # ==========================================
- # OPENING EVENT — ndp_events.0
- # ==========================================
-
  ndp_events.0.t: "Krajowy program rozwoju rozpoczyna się"
  ndp_events.0.d_industrial: "Rząd [ROOT.GetCountry.GetName] zobowiązał się do dekady ekspansji przemysłowej. Inwestycje będą płynąć w kierunku fabryk, kopalni i infrastruktury, która je łączy. Plan jest ambitny - a przeszkody są znaczne - ale wizja jest jasna: budowanie zdolności produkcyjnych, które określą miejsce [ROOT.GetCountry.GetName] na świecie."
  ndp_events.0.d_military: "Rząd [ROOT.GetCountry.GetName] zobowiązał się do dekady wojskowej ekspansji. Będą budowane baraki, oficerowie szkoleni i reformowane doktryny. Niezależnie od tego, czy motywacją jest obrona, odstraszanie czy ambicja, przesłanie do świata jest jednoznaczne: [ROOT.GetCountry.GetName] ma być traktowane poważnie."
@@ -63,10 +57,6 @@
  ndp_events.0.d_service: "Rząd [ROOT.GetCountry.GetName] zobowiązał się do dekady rozwoju gospodarki usług. Szkoły, banki i ministerstwa rządowe zobaczą inwestycje. Zakład jest taki, że mądrzejszy, lepiej zarządzany kraj jest ostatecznie silniejszy."
  ndp_events.0.f: "Dziesięć lat. Jeden kierunek."
  ndp_events.0.a: "Niech program się rozpocznie"
-
- # ==========================================
- # INDUSTRIAL PATH EVENTS
- # ==========================================
 
  ndp_events.1.t: "Pytanie branżowe"
  ndp_events.1.d: "Dwa lata w programie rozwoju należy wyjaśnić kierunek inwestycji przemysłowych. Kraj nie może budować wszystkiego naraz. Planiści i przemysłowcy są podzieleni: niektórzy opowiadają się za koncentracją zasobów na przemyśle ciężkim - żelazo, stal, węgiel - ścięgna nowoczesnej energii. Inni twierdzą, że lekka produkcja zapewnia szybszy zwrot i szersze zatrudnienie."
@@ -91,9 +81,7 @@
  ndp_events.4.f: "Kuźnia wykonała swoją pracę."
  ndp_events.4.a: "Wykres następny kurs"
  ten_year_programme_concluded:0 "Zakończył się dziesięcioletni program."
- # ==========================================
- # MILITARY PATH EVENTS
- # ==========================================
+ smd_ndp_programme_restarts_tt:0 "Ścieżka rozwoju narodowego zostaje zresetowana i można wybrać nowy program."
 
  ndp_events.11.t: "Pytanie doktrynowe"
  ndp_events.11.d: "Dwa lata ekspansji wojskowej przyniosły więcej żołnierzy, więcej broni i więcej opcji - ale podstawowa kwestia doktryny pozostaje nierozwiązana. Sztab Generalny jest podzielony. Jedna frakcja naciska, aby skupić się na władzy lądowej: masowe armie, głębokość obronna i dominacja kontynentalna. Inna argumentuje, że ekspansja marynarki oferuje większą elastyczność strategiczną i zdolność do projektowania energii poza granicami [ROOT.GetCountry.GetName]."
@@ -118,10 +106,6 @@
  ndp_events.14.f: "Miecz został wykuty. Teraz musi znaleźć swój cel."
  ndp_events.14.a: "Wykres następny kurs"
 
- # ==========================================
- # RESOURCE ECONOMY PATH EVENTS
- # ==========================================
-
  ndp_events.21.t: "The Land 's Bounty"
  ndp_events.21.d: "Dwa lata w programie zasobów należy dokonać zasadniczego wyboru: jaki rodzaj gospodarki zasobami będzie [ROOT.GetCountry.GetName]? Rolnictwo - żywienie rosnącej populacji i tworzenie upraw eksportowych - zapewnia stabilność i szerokie zatrudnienie. Wydobycie surowców - wydobycie, wyręb, wiercenie - zapewnia szybsze dochody, ale jest bardziej niestabilne i sprawia, że gospodarka jest narażona na wahania cen surowców."
  ndp_events.21.f: "Ziemia daje to, co daje. Pytanie brzmi, o co pan pyta."
@@ -145,10 +129,6 @@
  ndp_events.24.f: "Co ziemia daje, ziemia pamięta."
  ndp_events.24.a: "Wykres następny kurs"
 
- # ==========================================
- # SERVICE ECONOMY PATH EVENTS
- # ==========================================
-
  ndp_events.31.t: "Pytanie dotyczące usługi"
  ndp_events.31.d: "Dwa lata w programie usług, należy wyjaśnić kierunek. Dwie wizje gospodarki usługowej konkurują o priorytet: sektor finansowy - bankowość, ubezpieczenia i handel - który szybko generuje bogactwo i przyciąga inwestycje, lub edukacja i biurokracja - szkoły, uniwersytety i instytucje państwowe - które budują kapitał ludzki i zdolności zarządzania, które stanowią podstawę wszystkiego innego."
  ndp_events.31.f: "Książka czy biblioteka - oba są fundamentami nowoczesności."
@@ -171,10 +151,6 @@
  ndp_events.34.d: "Ukończono dziesięć lat rozwoju gospodarki usługowej. Banki są bardziej wyrafinowane, szkoły lepiej obsadzone, rząd jest bardziej zdolny niż wtedy, gdy program się rozpoczął. Czy przekłada się to na szeroki dobrobyt, który uzasadnia inwestycję, jest pytaniem dłuższym - pytaniem, na które w następnej dekadzie zacznie odpowiadać."
  ndp_events.34.f: "Infrastruktura umysłu przewyższa wszystkie inne."
  ndp_events.34.a: "Wykres następny kurs"
-
- # ==========================================
- # MODIFIERS
- # ==========================================
 
  ndp_modifier_industrial: "Ścieżka rozwoju przemysłowego"
  ndp_modifier_industrial_desc: "Zasoby krajowe są ukierunkowane na ekspansję przemysłową. Stopy budownictwa rosną, a przepustowość produkcji ogólnie się poprawia."

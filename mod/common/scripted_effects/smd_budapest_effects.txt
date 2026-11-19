@@ -1,0 +1,49 @@
+﻿smd_budapest_guarantors_relations = {
+	c:USA ?= {
+		change_relations = { country = ROOT value = $V$ }
+	}
+	c:GBR ?= {
+		change_relations = { country = ROOT value = $V$ }
+	}
+	c:RUS ?= {
+		change_relations = { country = ROOT value = $V$ }
+	}
+}
+
+smd_budapest_refuse_disarmament = {
+	set_variable = budapest_refused
+	if = {
+		limit = { has_variable = io_treaty_npt_signed }
+		remove_variable = io_treaty_npt_signed
+		remove_modifier = io_treaty_npt_signatory
+		io_treaty_withdrawal_penalty = { T = npt INFAMY = 15 }
+	}
+	smd_budapest_guarantors_relations = { V = -40 }
+	add_modifier = { name = budapest_nuclear_holdout months = 120 }
+}
+
+smd_budapest_complete_disarmament = {
+	remove_variable = budapest_transfer_active
+	remove_variable = budapest_transfer_rate
+	remove_variable = nukes
+	remove_variable = nuclear_capable
+	remove_variable = nuclear_enrichment_active
+	remove_variable = uranium_enrichment_progress
+	remove_variable = nuclear_production_active
+	remove_variable = nuclear_production_progress
+	remove_variable = nuclear_deployment_percentage
+	remove_variable = nuclear_kill_rate_cache
+	clear_variable_list = wmd_target_list
+	clear_variable_list = wmd_target_list_c
+	clear_variable_list = nuclear_enemy_list
+	clear_variable_list = nuclear_enemy_states_list
+	remove_modifier = nuclear_capable_modifier
+	remove_modifier = nuclear_warhead_produced_modifier
+	if = {
+		limit = { NOT = { has_variable = io_treaty_npt_signed } }
+		set_variable = io_treaty_npt_signed
+		add_modifier = { name = io_treaty_npt_signatory }
+	}
+	add_modifier = { name = budapest_non_nuclear_state months = 120 }
+	nuclear_recompute_top_5 = yes
+}

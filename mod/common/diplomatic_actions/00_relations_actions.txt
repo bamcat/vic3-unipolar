@@ -28,7 +28,7 @@
 		max_target_involvement = 1000
 		target_involvement_applies_to = source_country
 
-		relations_progress_per_day = 3 # At 100, +1 relations
+		relations_progress_per_day = 3
 		relations_improvement_max = 50
 
 			requirement_to_maintain = {
@@ -91,6 +91,17 @@
 
 		propose_score = {
 			value = 5
+
+			if = {
+				limit = {
+					OR = {
+						ai_has_regional_objective_befriend_reason = { TARGET = scope:target_country }
+						ai_is_regional_objective_protect_target = { TARGET = scope:target_country }
+					}
+				}
+
+				add = 20
+			}
 
 			if = {
 				limit = {
@@ -162,10 +173,17 @@
 					who = scope:target_country
 					attitude = protective
 				}
+				ai_has_regional_objective_befriend_reason = { TARGET = scope:target_country }
+				ai_is_regional_objective_protect_target = { TARGET = scope:target_country }
 			}
 		}
 
 		will_break = {
+			NOR = {
+				ai_has_regional_objective_befriend_reason = { TARGET = scope:target_country }
+				ai_is_regional_objective_protect_target = { TARGET = scope:target_country }
+			}
+
 			OR = {
 				NOR = {
 					has_attitude = {
@@ -232,7 +250,7 @@ damage_relations = {
 		infamy_affects_maintenance = no
 		show_in_outliner = yes
 
-		relations_progress_per_day = -3 # At -100, -1 relations
+		relations_progress_per_day = -3
 		relations_improvement_min = -50
 
 		requirement_to_maintain = {
@@ -313,7 +331,6 @@ damage_relations = {
 							has_radical_leftist_government = yes
 						}
 					}
-
 				}
 				multiply = 2
 			}
@@ -382,4 +399,3 @@ damage_relations = {
 		}
 	}
 }
-

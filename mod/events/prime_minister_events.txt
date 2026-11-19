@@ -1,0 +1,20 @@
+﻿namespace = prime_minister
+
+prime_minister.1 = {
+	type = country_event
+	placement = root
+	hidden = yes
+
+	trigger = {
+		NOT = { has_variable = pm_appointed_by_script }
+		NOT = { has_variable = pm_start_hold }
+		OR = {
+			pm_country_elects_prime_minister = yes
+			any_scope_character = { has_role = character_role_prime_minister }
+		}
+	}
+
+	immediate = {
+		pm_update_prime_minister = yes
+	}
+}

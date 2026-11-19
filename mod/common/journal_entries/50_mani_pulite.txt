@@ -10,19 +10,18 @@ je_tangentopoli = {
 
 	is_shown_when_inactive = {
 		c:ITA ?= this
-		current_game_date >= 1992.2.1
+		game_date >= 1992.2.1
 		NOT = { has_variable = tangentopoli_collapsed }
 	}
 
 	possible = {
 		c:ITA ?= this
-		current_game_date >= 1992.2.1
+		custom_description = { text = smd_date_from_1992_2_1 game_date >= 1992.2.1 }
 		NOT = { has_variable = tangentopoli_collapsed }
 	}
 
 	immediate = {
 		set_variable = { name = tangentopoli_exposure value = 0 }
-		# The kickback system is entrenched from the start
 		add_modifier = {
 			name = tangentopoli_systemic_corruption
 			months = -1
@@ -33,12 +32,10 @@ je_tangentopoli = {
 
 	on_monthly_pulse = {
 		effect = {
-			# Exposure grows organically each month
-			# Slowed by authority and accelerated by radicalism
 			change_variable = { name = tangentopoli_exposure add = 2 }
 			if = {
 				limit = {
-					country_legitimacy >= 60
+					legitimacy >= 60
 				}
 				change_variable = { name = tangentopoli_exposure add = -1 }
 			}
@@ -59,23 +56,31 @@ je_tangentopoli = {
 		}
 	}
 
-	complete = {
-		je:je_tangentopoli = {
-                "scripted_bar_progress(tangentopoli_exposure_bar)" >= 96
-				}
+
+	outcome = {
+		header = je_standard_completion_header
+		effect_header = je_standard_on_completion_header
+		color = "gold_positive"
+		flags = { historical }
+		conclusion_desc = je_standard_completion_conclusion_desc
+		trigger = {
+			je:je_tangentopoli = {
+			"scripted_bar_progress(tangentopoli_exposure_bar)" >= 96
+					}
+		}
+		effect = {
+			set_variable = tangentopoli_collapsed
+			remove_modifier = tangentopoli_systemic_corruption
+			add_journal_entry = { type = je_mani_pulite }
+			trigger_event = { id = mani_pulite.5 popup = yes }
+		}
 	}
 
-	on_complete = {
-		set_variable = tangentopoli_collapsed
-		remove_modifier = tangentopoli_systemic_corruption
-		add_journal_entry = { type = je_mani_pulite }
-		trigger_event = { id = mani_pulite.5 popup = yes }
+	outcome = {
+		flags = { hidden invalid_outcome }
+		conclusion_desc = je_standard_failure_conclusion_desc
+		trigger = { NOT = { c:ITA ?= this } }
 	}
-
-	invalid = {
-		NOT = { c:ITA ?= this }
-	}
-
 	weight = 5000
 	transferable = no
 	can_revolution_inherit = no
@@ -140,11 +145,9 @@ je_mani_pulite = {
 
 	on_monthly_pulse = {
 		effect = {
-			# Investigation advances each month
 			change_variable = { name = investigation_progress add = 3 }
-			# Political resistance builds if authority is high
 			if = {
-				limit = { country_authority_add >= 100 }
+				limit = { authority >= 100 }
 				change_variable = { name = political_resistance add = 2 }
 			}
 			else = {
@@ -161,37 +164,47 @@ je_mani_pulite = {
 		}
 	}
 
-	# Investigation wins — First Republic falls
-	complete = {
-		scripted_bar_progress = {
-			name = investigation_progress_bar
-			value > 0.98
+	outcome = {
+		header = je_standard_completion_header
+		effect_header = je_standard_on_completion_header
+		color = "gold_positive"
+		flags = { historical }
+		conclusion_desc = je_standard_completion_conclusion_desc
+		trigger = {
+			scope:journal_entry = {
+				"scripted_bar_progress(investigation_progress_bar)" >= 98
+			}
+			var:investigation_progress > var:political_resistance
 		}
-		var:investigation_progress > var:political_resistance
+		effect = {
+			set_variable = mani_pulite_resolved
+			trigger_event = { id = mani_pulite.10 popup = yes }
+		}
 	}
 
-	on_complete = {
-		set_variable = mani_pulite_resolved
-		trigger_event = { id = mani_pulite.10 popup = yes }
+	outcome = {
+		header = je_standard_failure_header
+		effect_header = je_standard_on_failure_header
+		color = "blue_negative"
+		conclusion_desc = je_standard_failure_conclusion_desc
+		trigger = {
+			je:je_mani_pulite = {
+			"scripted_bar_progress(political_resistance_bar)" >= "scripted_bar_progress(investigation_progress_bar)"
+					}
+			je:je_mani_pulite = {
+			"scripted_bar_progress(political_resistance_bar)" >= 99
+					}
+		}
+		effect = {
+			set_variable = mani_pulite_resolved
+			trigger_event = { id = mani_pulite.15 popup = yes }
+		}
 	}
 
-	# Investigation suppressed — scandal buried
-	fail = {
-		je:je_mani_pulite = {
-                "scripted_bar_progress(political_resistance_bar)" >= "scripted_bar_progress(investigation_progress_bar)"
-				}
-		je:je_mani_pulite = {
-                "scripted_bar_progress(political_resistance_bar)" >= 99
-				}
-	}
-
-	on_fail = {
-		set_variable = mani_pulite_resolved
-		trigger_event = { id = mani_pulite.15 popup = yes }
-	}
-
-	invalid = {
-		NOT = { c:ITA ?= this }
+	outcome = {
+		flags = { hidden invalid_outcome }
+		conclusion_desc = je_standard_failure_conclusion_desc
+		trigger = { NOT = { c:ITA ?= this } }
 	}
 
 	weight = 5001

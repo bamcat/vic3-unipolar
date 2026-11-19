@@ -15,34 +15,48 @@ je_rwandan_genocide = {
 		NOT = { has_variable = genocide_ended }
     }
 
-    on_monthly_pulse = {
-        change_variable = { name = genocide_progress value = 10 }
-        if = {
-            limit = { check_variable = { name = genocide_progress value >= 100 } }
-            set_variable = genocide_ended
-        }
-    }
-
-    complete = {
-		OR = {
-		custom_tooltip = {
-			text = genocide_ended
-			has_variable = genocide_ended
+	status_desc = je_rwandan_genocide_progress_tt
+	immediate = {
+		if = {
+			limit = { NOT = { has_variable = genocide_progress } }
+			set_variable = { name = genocide_progress value = 0 }
 		}
-		AND = { 
-			NOT = { has_modifier = rwandan_genocide }
-			game_date >= 1994.05.01
+	}
+	on_monthly_pulse = {
+		effect = {
+			change_variable = { name = genocide_progress add = 10 }
+			if = {
+				limit = { var:genocide_progress >= 100 }
+				set_variable = genocide_ended
 			}
 		}
-    }
+	}
 
-    on_complete = {
-        add_modifier = {
-            name = post_rwandan_genocide_reconstruction
-            months = 8
-        }
-        add_radicals = { value = -0.05 }
-    }
 
-    custom_tooltip = je_rwandan_genocide_progress_tt
+	outcome = {
+		header = je_standard_completion_header
+		effect_header = je_standard_on_completion_header
+		color = "gold_positive"
+		flags = { historical }
+		conclusion_desc = je_standard_completion_conclusion_desc
+		trigger = {
+			OR = {
+			custom_tooltip = {
+				text = genocide_ended
+				has_variable = genocide_ended
+			}
+			AND = { 
+				NOT = { has_modifier = rwandan_genocide }
+				custom_description = { text = smd_date_from_1994_5_1 game_date >= 1994.5.1 }
+				}
+			}
+		}
+		effect = {
+			add_modifier = {
+			    name = post_rwandan_genocide_reconstruction
+			    months = 8
+			}
+			add_radicals = { value = -0.05 }
+		}
+	}
 }

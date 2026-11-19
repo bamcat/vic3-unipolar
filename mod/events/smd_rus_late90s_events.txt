@@ -1,0 +1,962 @@
+﻿﻿namespace = rus_l90
+
+rus_l90.0 = {
+	type = country_event
+	hidden = yes
+
+	trigger = {
+		c:RUS ?= this
+	}
+
+	immediate = {
+		if = {
+			limit = {
+				has_variable = chechen_war_started
+				NOT = { has_variable = rus_l90_khasavyurt_fired }
+				NOT = { has_variable = rus_l90_ichkeria_started }
+				NOT = { has_journal_entry = je_first_chechen_war }
+				rus_l90_ichkeria_independent = yes
+				rus_l90_at_peace_with_ichkeria = yes
+			}
+			set_variable = rus_l90_khasavyurt_fired
+			trigger_event = { id = rus_l90.1 popup = yes }
+		}
+		if = {
+			limit = {
+				NOT = { has_variable = chechen_war_started }
+				NOT = { has_global_variable = chechen_war_started }
+				NOT = { has_variable = rus_l90_ichkeria_started }
+				NOT = { has_global_variable = ichkeria_recognised }
+				game_date >= 1997.1.1
+				rus_l90_ichkeria_independent = yes
+				rus_l90_at_peace_with_ichkeria = yes
+			}
+			rus_l90_unlock_ichkeria = { R = 15 }
+			trigger_event = { id = rus_l90.7 popup = yes }
+		}
+		if = {
+			limit = {
+				has_variable = rus_l90_ichkeria_started
+				NOT = { has_global_variable = rus_l90_cch_election_done }
+				game_date >= 1997.1.1
+				rus_l90_ichkeria_independent = yes
+				rus_l90_at_peace_with_ichkeria = yes
+			}
+			set_global_variable = rus_l90_cch_election_done
+			c:CCH = { trigger_event = { id = rus_l90.3 popup = yes } }
+		}
+		if = {
+			limit = {
+				has_variable = rus_l90_ichkeria_started
+				NOT = { has_variable = rus_l90_dagestan_done }
+				NOT = { has_variable = rus_l90_second_war }
+				NOT = { has_global_variable = ichkeria_recognised }
+				rus_l90_rad_above = { V = 65 }
+				rus_l90_ichkeria_independent = yes
+				rus_l90_at_peace_with_ichkeria = yes
+				rus_l90_owns_dagestan = yes
+			}
+			random = {
+				chance = 20
+				set_variable = rus_l90_dagestan_done
+				set_variable = { name = rus_l90_dagestan_recent days = 20 }
+				trigger_event = { id = rus_l90.10 popup = yes }
+			}
+		}
+		if = {
+			limit = {
+				has_variable = rus_l90_dagestan_done
+				NOT = { has_variable = rus_l90_dagestan_recent }
+				NOT = { has_variable = rus_l90_explosions_done }
+				rus_l90_rad_above = { V = 50 }
+			}
+			random = {
+				chance = 50
+				set_variable = rus_l90_explosions_done
+				trigger_event = { id = rus_l90.11 popup = yes }
+			}
+		}
+		if = {
+			limit = {
+				has_variable = rus_wn_default_happened
+				NOT = { has_variable = rus_l90_primakov_fired }
+				NOT = { has_variable = rus_wn_succession_done }
+				rus_wn_yeltsin_in_power = yes
+				rus_wn_has_character = { T = RUS_yevgeny_primakov }
+			}
+			set_variable = rus_l90_primakov_fired
+			trigger_event = { id = rus_l90.20 popup = yes }
+		}
+		if = {
+			limit = {
+				has_variable = rus_l90_primakov_govt
+				NOT = { has_variable = rus_l90_primakov_recent }
+				NOT = { has_variable = rus_l90_family_clash_fired }
+				rus_l90_primakov_is_pm = yes
+				rus_wn_yeltsin_in_power = yes
+				rus_wn_family_above = { V = 40 }
+			}
+			set_variable = rus_l90_family_clash_fired
+			trigger_event = { id = rus_l90.21 popup = yes }
+		}
+		if = {
+			limit = {
+				NOT = { has_variable = rus_l90_governors_fired }
+				NOT = { has_variable = rus_wn_succession_done }
+				rus_wn_yeltsin_in_power = yes
+				game_date >= 1999.6.1
+				rus_wn_has_character = { T = RUS_yuri_luzhkov }
+				OR = {
+					has_variable = rus_l90_primakov_dismissed
+					any_scope_character = {
+						has_template = RUS_yuri_luzhkov
+						has_variable = rus_wn_standing
+						var:rus_wn_standing >= 25
+					}
+				}
+			}
+			set_variable = rus_l90_governors_fired
+			trigger_event = { id = rus_l90.22 popup = yes }
+		}
+		if = {
+			limit = {
+				NOT = { has_variable = rus_l90_impeachment_fired }
+				NOT = { has_variable = rus_wn_succession_done }
+				rus_wn_yeltsin_in_power = yes
+				game_date >= 1998.9.1
+				legitimacy < 50
+				OR = {
+					has_variable = rus_wn_default_happened
+					has_variable = chechen_war_started
+				}
+			}
+			random = {
+				chance = 25
+				set_variable = rus_l90_impeachment_fired
+				trigger_event = { id = rus_l90.23 popup = yes }
+			}
+		}
+		if = {
+			limit = {
+				NOT = { has_variable = rus_l90_kosovo_fired }
+				c:YUG ?= { has_variable = nato_bombing_started }
+			}
+			set_variable = rus_l90_kosovo_fired
+			trigger_event = { id = rus_l90.30 popup = yes }
+		}
+		if = {
+			limit = {
+				NOT = { has_variable = rus_l90_pristina_fired }
+				has_global_variable = kosovo_under_international_administration
+				is_at_war = no
+			}
+			set_variable = rus_l90_pristina_fired
+			trigger_event = { id = rus_l90.31 popup = yes }
+		}
+	}
+}
+
+rus_l90.1 = {
+	type = country_event
+	placement = root
+	title = rus_l90.1.t
+	desc = rus_l90.1.d
+	flavor = rus_l90.1.f
+	event_image = { video = "africa_diplomats_negotiating" }
+	icon = "gfx/interface/icons/event_icons/event_military.dds"
+	duration = 3
+
+	option = {
+		name = rus_l90.1.a
+		default_option = yes
+		add_modifier = { name = rus_l90_khasavyurt_signed months = 36 }
+		rus_l90_unlock_ichkeria = { R = 25 }
+		c:CCH ?= {
+			change_relations = { country = ROOT value = 30 }
+			trigger_event = { id = rus_l90.2 popup = yes }
+		}
+		rus_wn_inst_change = { I = army V = -5 }
+		custom_tooltip = rus_l90_unlock_ichkeria_tt
+		ai_chance = { base = 80 }
+	}
+
+	option = {
+		name = rus_l90.1.b
+		add_modifier = { name = rus_l90_khasavyurt_refused months = 36 }
+		rus_l90_unlock_ichkeria = { R = 40 }
+		c:CCH ?= {
+			change_relations = { country = ROOT value = -30 }
+			trigger_event = { id = rus_l90.2 popup = yes }
+		}
+		custom_tooltip = rus_l90_unlock_ichkeria_tt
+		ai_chance = { base = 20 }
+	}
+}
+
+rus_l90.2 = {
+	type = country_event
+	placement = root
+	title = rus_l90.2.t
+	desc = rus_l90.2.d
+	event_image = { video = "unspecific_military_parade" }
+	icon = "gfx/interface/icons/event_icons/event_military.dds"
+	duration = 3
+
+	trigger = {
+		c:CCH ?= this
+	}
+
+	option = {
+		name = rus_l90.2.a
+		default_option = yes
+		add_modifier = { name = cch_l90_khasavyurt months = 60 }
+		add_modifier = { name = cch_l90_war_ruins months = 60 }
+	}
+}
+
+rus_l90.3 = {
+	type = country_event
+	placement = root
+	title = rus_l90.3.t
+	desc = rus_l90.3.d
+	flavor = rus_l90.3.f
+	event_image = { video = "southamerica_election" }
+	icon = "gfx/interface/icons/event_icons/event_portrait.dds"
+	duration = 3
+
+	trigger = {
+		c:CCH ?= this
+	}
+
+	option = {
+		name = rus_l90.3.a
+		default_option = yes
+		trigger = {
+			any_scope_character = {
+				has_template = CCH_aslan_maskhadov
+				is_character_alive = yes
+			}
+		}
+		random_scope_character = {
+			limit = { has_template = CCH_aslan_maskhadov }
+			set_character_as_ruler = yes
+		}
+		rus_l90_rad_change = { V = -10 }
+		ai_chance = { base = 80 }
+	}
+
+	option = {
+		name = rus_l90.3.b
+		trigger = {
+			any_scope_character = {
+				has_template = CCH_shamil_basayev
+				is_character_alive = yes
+			}
+		}
+		random_scope_character = {
+			limit = { has_template = CCH_shamil_basayev }
+			set_character_as_ruler = yes
+		}
+		rus_l90_rad_change = { V = 15 }
+		ai_chance = { base = 15 }
+	}
+
+	option = {
+		name = rus_l90.3.c
+		rus_l90_rad_change = { V = 5 }
+		ai_chance = { base = 5 }
+	}
+}
+
+rus_l90.5 = {
+	type = country_event
+	placement = root
+	title = rus_l90.5.t
+	desc = rus_l90.5.d
+	event_image = { video = "middleeast_police_breaking_door" }
+	icon = "gfx/interface/icons/event_icons/event_unrest.dds"
+	duration = 3
+
+	trigger = {
+		c:RUS ?= this
+		rus_l90_ichkeria_independent = yes
+		rus_l90_rad_above = { V = 20 }
+	}
+
+	option = {
+		name = rus_l90.5.a
+		default_option = yes
+		add_treasury = {
+			value = gdp
+			multiply = -0.002
+		}
+		rus_l90_rad_change = { V = 3 }
+		ai_chance = { base = 50 }
+	}
+
+	option = {
+		name = rus_l90.5.b
+		rus_l90_pm_standing = { V = -5 }
+		ai_chance = { base = 30 }
+	}
+
+	option = {
+		name = rus_l90.5.c
+		rus_wn_inst_change = { I = mvd V = 3 }
+		random_list = {
+			60 = {
+				rus_l90_pm_standing = { V = 5 }
+			}
+			40 = {
+				rus_l90_pm_standing = { V = -10 }
+				rus_l90_rad_change = { V = 2 }
+			}
+		}
+		ai_chance = { base = 20 }
+	}
+}
+
+rus_l90.6 = {
+	type = country_event
+	placement = root
+	title = rus_l90.6.t
+	desc = rus_l90.6.d
+	event_image = { video = "unspecific_vandalized_storefront" }
+	icon = "gfx/interface/icons/event_icons/event_unrest.dds"
+	duration = 3
+
+	trigger = {
+		c:RUS ?= this
+		rus_l90_rad_above = { V = 45 }
+		NOT = { has_variable = rus_l90_kadar_seen }
+		rus_l90_owns_dagestan = yes
+	}
+
+	immediate = {
+		set_variable = rus_l90_kadar_seen
+	}
+
+	option = {
+		name = rus_l90.6.a
+		default_option = yes
+		rus_l90_rad_change = { V = 5 }
+		ai_chance = { base = 50 }
+	}
+
+	option = {
+		name = rus_l90.6.b
+		add_modifier = { name = rus_l90_kadar_blockade months = 12 }
+		rus_wn_inst_change = { I = mvd V = 5 }
+		rus_l90_rad_change = { V = -5 }
+		ai_chance = { base = 50 }
+	}
+}
+
+rus_l90.7 = {
+	type = country_event
+	placement = root
+	title = rus_l90.7.t
+	desc = rus_l90.7.d
+	event_image = { video = "africa_diplomats_negotiating" }
+	icon = "gfx/interface/icons/event_icons/event_military.dds"
+	duration = 3
+
+	option = {
+		name = rus_l90.7.a
+		default_option = yes
+		custom_tooltip = rus_l90_unlock_ichkeria_tt
+	}
+}
+
+rus_l90.10 = {
+	type = country_event
+	placement = root
+	title = rus_l90.10.t
+	desc = rus_l90.10.d
+	flavor = rus_l90.10.f
+	event_image = { video = "middleeast_battlefield_trenches" }
+	icon = "gfx/interface/icons/event_icons/event_military.dds"
+	duration = 3
+
+	option = {
+		name = rus_l90.10.a
+		default_option = yes
+		add_treasury = {
+			value = gdp
+			multiply = -0.005
+		}
+		set_variable = rus_l90_casus_belli
+		rus_wn_inst_change = { I = army V = 5 }
+		rus_l90_pm_standing = { V = 10 }
+		custom_tooltip = rus_l90_casus_belli_tt
+		ai_chance = { base = 70 }
+	}
+
+	option = {
+		name = rus_l90.10.b
+		s:STATE_DAGESTAN.region_state:RUS ?= {
+			add_modifier = { name = rus_l90_dagestan_militias months = 36 }
+		}
+		set_variable = rus_l90_casus_belli
+		rus_l90_pm_standing = { V = 5 }
+		custom_tooltip = rus_l90_casus_belli_tt
+		ai_chance = { base = 25 }
+	}
+
+	option = {
+		name = rus_l90.10.c
+		s:STATE_DAGESTAN.region_state:RUS ?= {
+			add_modifier = { name = rus_l90_dagestan_shaken months = 36 }
+		}
+		rus_l90_rad_change = { V = 10 }
+		rus_l90_pm_standing = { V = -15 }
+		ai_chance = { base = 5 }
+	}
+}
+
+rus_l90.11 = {
+	type = country_event
+	placement = root
+	title = rus_l90.11.t
+	desc = rus_l90.11.d
+	event_image = { video = "unspecific_vandalized_storefront" }
+	icon = "gfx/interface/icons/event_icons/event_unrest.dds"
+	duration = 3
+
+	option = {
+		name = rus_l90.11.a
+		default_option = yes
+		trigger = {
+			rus_l90_second_war_possible = yes
+		}
+		add_modifier = { name = rus_l90_rally_round_flag months = 24 }
+		rus_l90_pm_standing = { V = 20 }
+		rus_l90_start_second_war = yes
+		ai_chance = { base = 70 }
+	}
+
+	option = {
+		name = rus_l90.11.b
+		add_modifier = { name = rus_l90_security_crackdown months = 36 }
+		rus_wn_inst_change = { I = mvd V = 10 }
+		rus_l90_pm_standing = { V = 10 }
+		ai_chance = { base = 25 }
+	}
+
+	option = {
+		name = rus_l90.11.c
+		add_modifier = { name = rus_l90_public_inquiry months = 36 }
+		rus_l90_pm_standing = { V = -5 }
+		ai_chance = { base = 5 }
+	}
+}
+
+rus_l90.12 = {
+	type = country_event
+	placement = root
+	title = rus_l90.12.t
+	desc = rus_l90.12.d
+	event_image = { video = "yugoslav_war" }
+	icon = "gfx/interface/icons/event_icons/event_military.dds"
+	duration = 3
+
+	trigger = {
+		c:CCH ?= this
+	}
+
+	option = {
+		name = rus_l90.12.a
+		default_option = yes
+	}
+}
+
+rus_l90.13 = {
+	type = country_event
+	placement = root
+	title = rus_l90.13.t
+	desc = rus_l90.13.d
+	flavor = rus_l90.13.f
+	event_image = { video = "unspecific_politicians_arguing" }
+	icon = "gfx/interface/icons/event_icons/event_portrait.dds"
+	duration = 3
+
+	trigger = {
+		exists = c:CCH
+		c:CCH ?= { has_war_with = c:RUS }
+	}
+
+	option = {
+		name = rus_l90.13.a
+		default_option = yes
+		set_variable = rus_l90_kadyrov
+		create_character = {
+			first_name = smd_cn_akhmad
+			last_name = smd_cn_kadyrov
+			historical = yes
+			culture = cu:chechen
+			birth_date = 1951.8.23
+			interest_group = ig_devout
+			ideology = ideology_conservative_leader
+			traits = {
+				ruthless
+			}
+		}
+		c:CCH = {
+			add_modifier = { name = cch_l90_kadyrov_split months = 24 }
+		}
+		custom_tooltip = rus_l90_kadyrov_tt
+		ai_chance = { base = 80 }
+	}
+
+	option = {
+		name = rus_l90.13.b
+		rus_wn_inst_change = { I = army V = 5 }
+		ai_chance = { base = 20 }
+	}
+}
+
+rus_l90.14 = {
+	type = country_event
+	placement = root
+	title = rus_l90.14.t
+	desc = rus_l90.14.d
+	event_image = { video = "unspecific_vandalized_storefront" }
+	icon = "gfx/interface/icons/event_icons/event_unrest.dds"
+	duration = 3
+
+	trigger = {
+		rus_l90_insurgency_phase = yes
+		rus_l90_insurgency_above = { V = 40 }
+	}
+
+	option = {
+		name = rus_l90.14.a
+		default_option = yes
+		rus_wn_inst_change = { I = mvd V = 3 }
+		rus_l90_insurgency_change = { V = -3 }
+		add_radicals = {
+			value = 0.02
+			strata = lower
+		}
+		ai_chance = { base = 60 }
+	}
+
+	option = {
+		name = rus_l90.14.b
+		rus_l90_insurgency_change = { V = 2 }
+		rus_l90_pm_standing = { V = -5 }
+		ai_chance = { base = 40 }
+	}
+}
+
+rus_l90.15 = {
+	type = country_event
+	placement = root
+	title = rus_l90.15.t
+	desc = rus_l90.15.d
+	event_image = { video = "unspecific_military_parade" }
+	icon = "gfx/interface/icons/event_icons/event_military.dds"
+	duration = 3
+
+	immediate = {
+		je:je_rus_second_chechen_war ?= {
+			set_bar_progress = {
+				name = rus_l90_insurgency_bar
+				value = {
+					value = 30
+					if = {
+						limit = { has_global_variable = ichkeria_radicalisation }
+						value = global_var:ichkeria_radicalisation
+						multiply = 0.8
+						min = 30
+					}
+				}
+			}
+		}
+	}
+
+	option = {
+		name = rus_l90.15.a
+		default_option = yes
+		rus_l90_pm_standing = { V = 15 }
+		custom_tooltip = rus_l90_insurgency_start_tt
+	}
+}
+
+rus_l90.20 = {
+	type = country_event
+	placement = root
+	title = rus_l90.20.t
+	desc = rus_l90.20.d
+	flavor = rus_l90.20.f
+	event_image = { video = "parliament" }
+	icon = "gfx/interface/icons/event_icons/event_portrait.dds"
+	duration = 3
+
+	option = {
+		name = rus_l90.20.a
+		default_option = yes
+		trigger = {
+			rus_wn_can_be_pm = { T = RUS_yevgeny_primakov }
+		}
+		rus_wn_appoint_pm = { T = RUS_yevgeny_primakov M = rus_pm_primakov }
+		add_modifier = { name = rus_l90_primakov_compromise months = 24 }
+		set_variable = rus_l90_primakov_govt
+		set_variable = { name = rus_l90_primakov_recent days = 180 }
+		rus_wn_oligarchs_change = { V = -10 }
+		rus_wn_family_change = { V = -5 }
+		ai_chance = { base = 70 }
+	}
+
+	option = {
+		name = rus_l90.20.b
+		trigger = {
+			rus_wn_can_be_pm = { T = RUS_viktor_chernomyrdin }
+		}
+		rus_wn_appoint_pm = { T = RUS_viktor_chernomyrdin M = rus_pm_chernomyrdin }
+		add_modifier = { name = rus_l90_duma_defied months = 24 }
+		rus_wn_family_change = { V = 5 }
+		ai_chance = { base = 20 }
+	}
+
+	option = {
+		name = rus_l90.20.c
+		rus_wn_add_blame = { V = 10 }
+		ai_chance = { base = 10 }
+	}
+}
+
+rus_l90.21 = {
+	type = country_event
+	placement = root
+	title = rus_l90.21.t
+	desc = rus_l90.21.d
+	event_image = { video = "unspecific_politicians_arguing" }
+	icon = "gfx/interface/icons/event_icons/event_portrait.dds"
+	duration = 3
+
+	trigger = {
+		rus_l90_primakov_is_pm = yes
+	}
+
+	option = {
+		name = rus_l90.21.a
+		default_option = yes
+		rus_wn_clear_pm = yes
+		set_variable = rus_l90_primakov_dismissed
+		rus_wn_family_change = { V = 10 }
+		rus_wn_add_standing = { T = RUS_yevgeny_primakov V = 15 }
+		custom_tooltip = rus_l90_primakov_dismissed_tt
+		ai_chance = { base = 60 }
+	}
+
+	option = {
+		name = rus_l90.21.b
+		rus_wn_family_change = { V = -15 }
+		rus_wn_oligarchs_change = { V = -10 }
+		rus_wn_add_standing = { T = RUS_yevgeny_primakov V = 20 }
+		rus_wn_health_change = { V = -5 }
+		ai_chance = { base = 40 }
+	}
+}
+
+rus_l90.22 = {
+	type = country_event
+	placement = root
+	title = rus_l90.22.t
+	desc = rus_l90.22.d
+	event_image = { video = "southamerica_election" }
+	icon = "gfx/interface/icons/event_icons/event_portrait.dds"
+	duration = 3
+
+	option = {
+		name = rus_l90.22.a
+		default_option = yes
+		trigger = {
+			OR = {
+				rus_wn_family_above = { V = 30 }
+				rus_wn_oligarchs_above = { V = 30 }
+			}
+		}
+		add_modifier = { name = rus_l90_unity_bloc months = 36 }
+		set_global_variable = rus_unity_bloc_formed
+		rus_wn_oligarchs_change = { V = 5 }
+		rus_wn_add_standing = { T = RUS_yuri_luzhkov V = -15 }
+		rus_l90_pm_standing = { V = 15 }
+		ai_chance = { base = 70 }
+	}
+
+	option = {
+		name = rus_l90.22.b
+		rus_wn_add_standing = { T = RUS_yuri_luzhkov V = 15 }
+		rus_wn_family_change = { V = -10 }
+		ai_chance = { base = 20 }
+	}
+
+	option = {
+		name = rus_l90.22.c
+		rus_l90_pm_standing = { V = -10 }
+		rus_wn_add_standing = { T = RUS_yuri_luzhkov V = 10 }
+		ai_chance = { base = 10 }
+	}
+}
+
+rus_l90.23 = {
+	type = country_event
+	placement = root
+	title = rus_l90.23.t
+	desc = rus_l90.23.d
+	flavor = rus_l90.23.f
+	event_image = { video = "parliament" }
+	icon = "gfx/interface/icons/event_icons/event_portrait.dds"
+	duration = 3
+
+	option = {
+		name = rus_l90.23.a
+		default_option = yes
+		add_treasury = {
+			value = gdp
+			multiply = -0.01
+		}
+		rus_wn_oligarchs_change = { V = 5 }
+		custom_tooltip = rus_l90_impeachment_bought_tt
+		ai_chance = { base = 50 }
+	}
+
+	option = {
+		name = rus_l90.23.b
+		rus_wn_inst_change = { I = regions V = -10 }
+		custom_tooltip = rus_l90_impeachment_regions_tt
+		ai_chance = { base = 30 }
+	}
+
+	option = {
+		name = rus_l90.23.c
+		custom_tooltip = rus_l90_impeachment_gamble_tt
+		if = {
+			limit = { legitimacy < 30 }
+			random_list = {
+				30 = {
+					rus_l90_pm_standing = { V = 5 }
+				}
+				70 = {
+					add_modifier = { name = rus_l90_impeachment_scar months = 24 }
+					rus_wn_health_change = { V = -10 }
+				}
+			}
+		}
+		else = {
+			random_list = {
+				60 = {
+					rus_l90_pm_standing = { V = 5 }
+				}
+				40 = {
+					add_modifier = { name = rus_l90_impeachment_scar months = 24 }
+					rus_wn_health_change = { V = -10 }
+				}
+			}
+		}
+		ai_chance = { base = 20 }
+	}
+}
+
+rus_l90.30 = {
+	type = country_event
+	placement = root
+	title = rus_l90.30.t
+	desc = {
+		first_valid = {
+			triggered_desc = {
+				desc = rus_l90.30.d_primakov
+				trigger = { rus_l90_primakov_is_pm = yes }
+			}
+			triggered_desc = {
+				desc = rus_l90.30.d
+			}
+		}
+	}
+	event_image = { video = "fighterjets" }
+	icon = "gfx/interface/icons/event_icons/event_military.dds"
+	duration = 3
+
+	option = {
+		name = rus_l90.30.a
+		default_option = yes
+		add_modifier = { name = rus_l90_atlantic_turn months = 24 }
+		c:USA ?= {
+			change_relations = { country = ROOT value = -20 }
+		}
+		c:YUG ?= {
+			change_relations = { country = ROOT value = 20 }
+		}
+		ai_chance = { base = 70 }
+	}
+
+	option = {
+		name = rus_l90.30.b
+		c:USA ?= {
+			change_relations = { country = ROOT value = 10 }
+		}
+		add_radicals = {
+			value = 0.02
+			strata = middle
+		}
+		ai_chance = { base = 30 }
+	}
+}
+
+rus_l90.31 = {
+	type = country_event
+	placement = root
+	title = rus_l90.31.t
+	desc = rus_l90.31.d
+	event_image = { video = "unspecific_military_parade" }
+	icon = "gfx/interface/icons/event_icons/event_military.dds"
+	duration = 3
+
+	option = {
+		name = rus_l90.31.a
+		default_option = yes
+		add_modifier = { name = rus_l90_pristina_dash months = 24 }
+		c:USA ?= {
+			change_relations = { country = ROOT value = -15 }
+		}
+		c:GBR ?= {
+			change_relations = { country = ROOT value = -15 }
+		}
+		ai_chance = { base = 60 }
+	}
+
+	option = {
+		name = rus_l90.31.b
+		c:USA ?= {
+			change_relations = { country = ROOT value = 10 }
+		}
+		c:GBR ?= {
+			change_relations = { country = ROOT value = 10 }
+		}
+		rus_wn_inst_change = { I = army V = -5 }
+		ai_chance = { base = 40 }
+	}
+}
+
+rus_l90.40 = {
+	type = country_event
+	placement = root
+	title = rus_l90.40.t
+	desc = rus_l90.40.d
+	event_image = { video = "africa_diplomats_negotiating" }
+	icon = "gfx/interface/icons/event_icons/event_military.dds"
+	duration = 3
+
+	option = {
+		name = rus_l90.40.a
+		default_option = yes
+	}
+}
+
+rus_l90.41 = {
+	type = country_event
+	placement = root
+	title = rus_l90.41.t
+	desc = {
+		first_valid = {
+			triggered_desc = {
+				desc = rus_l90.41.d_2
+				trigger = { c:RUS ?= { var:rus_l90_union_stage >= 2 } }
+			}
+			triggered_desc = {
+				desc = rus_l90.41.d_1
+				trigger = { c:RUS ?= { var:rus_l90_union_stage >= 1 } }
+			}
+			triggered_desc = {
+				desc = rus_l90.41.d_0
+			}
+		}
+	}
+	event_image = { video = "africa_diplomats_negotiating" }
+	icon = "gfx/interface/icons/event_icons/event_portrait.dds"
+	duration = 3
+
+	trigger = {
+		c:BYL ?= this
+	}
+
+	option = {
+		name = rus_l90.41.a
+		default_option = yes
+		c:RUS ?= {
+			rus_l90_union_stage_up = yes
+			je:je_rus_union_state ?= {
+				add_progress = { name = rus_l90_union_bar value = -12 }
+			}
+			trigger_event = { id = rus_l90.42 popup = yes }
+		}
+		change_relations = { country = c:RUS value = 10 }
+		ai_chance = {
+			base = 80
+			modifier = {
+				trigger = { NOT = { rus_l90_byl_open_to_union = yes } }
+				add = -80
+			}
+		}
+	}
+
+	option = {
+		name = rus_l90.41.b
+		c:RUS ?= {
+			je:je_rus_union_state ?= {
+				add_progress = { name = rus_l90_union_bar value = -6 }
+			}
+		}
+		ai_chance = { base = 15 }
+	}
+
+	option = {
+		name = rus_l90.41.c
+		c:RUS ?= {
+			set_variable = { name = rus_l90_union_rejected days = 1825 }
+		}
+		change_relations = { country = c:RUS value = -30 }
+		ai_chance = {
+			base = 5
+			modifier = {
+				trigger = { NOT = { rus_l90_byl_open_to_union = yes } }
+				add = 80
+			}
+		}
+	}
+}
+
+rus_l90.42 = {
+	type = country_event
+	placement = root
+	title = rus_l90.42.t
+	desc = {
+		first_valid = {
+			triggered_desc = {
+				desc = rus_l90.42.d_3
+				trigger = { var:rus_l90_union_stage >= 3 }
+			}
+			triggered_desc = {
+				desc = rus_l90.42.d_2
+				trigger = { var:rus_l90_union_stage >= 2 }
+			}
+			triggered_desc = {
+				desc = rus_l90.42.d_1
+			}
+		}
+	}
+	event_image = { video = "africa_diplomats_negotiating" }
+	icon = "gfx/interface/icons/event_icons/event_portrait.dds"
+	duration = 3
+
+	trigger = {
+		c:RUS ?= this
+	}
+
+	option = {
+		name = rus_l90.42.a
+		default_option = yes
+	}
+}

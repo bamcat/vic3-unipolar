@@ -1,0 +1,32 @@
+﻿country_has_interest_marker_in_middle_east = {
+	OR = {
+		has_interest_marker_in_region = sr:region_near_east
+		has_interest_marker_in_region = sr:region_arabia
+		has_interest_marker_in_region = sr:region_greater_persia
+		has_interest_marker_in_region = sr:region_nile_basin
+		has_interest_marker_in_region = sr:region_north_africa
+	}
+}
+
+arab_spring_liberal_victory_trigger = {
+	je:je_arab_winter ?= {
+		"scripted_bar_progress(arab_spring_progress_bar)" >= 100
+	}
+}
+
+arab_spring_islamist_victory_trigger = {
+	any_interest_group = {
+		is_in_government = yes
+		is_powerful = yes
+		leader = {
+			OR = {
+				has_ideology = ideology:ideology_theocrat_leader
+				has_ideology = ideology:ideology_jihadist_leader
+			}
+		}
+	}
+	je:je_arab_winter ?= {
+		"scripted_bar_progress(arab_spring_progress_bar)" >= 50
+		"scripted_bar_progress(arab_winter_crackdown_progress_bar)" < 100
+	}
+}

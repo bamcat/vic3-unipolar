@@ -2,29 +2,10 @@
 
 # ==========================================
 # DISABILITY RIGHTS ENACTMENT EVENTS
-#
-# disability_laws.1 — Employer resistance
-#                     (workplace accommodations)
-# disability_laws.2 — Construction industry
-#                     lobbying (architecture)
-# disability_laws.3 — Budget crisis debate
-#                     (architecture)
-# disability_laws.4 — Medical profession
-#                     endorsement (treatments)
-# disability_laws.5 — Fiscal conservatives
-#                     resist (treatments)
-# disability_laws.6 — Disability advocates
-#                     mobilize (any progressive)
-# disability_laws.7 — Conservative backlash
-#                     (any progressive)
 # ==========================================
 
 # ==========================================
 # disability_laws.1
-# "Employers Push Back"
-# Fires when enacting workplace accommodations.
-# Industrialists argue the compliance costs
-# are unworkable.
 # ==========================================
 
 disability_laws.1 = {
@@ -87,7 +68,6 @@ disability_laws.1 = {
 		}
 	}
 
-	# Option A: Hold firm — compliance is non-negotiable
 	option = {
 		name = disability_laws.1.a
 		default_option = yes
@@ -103,16 +83,13 @@ disability_laws.1 = {
 		}
 	}
 
-	# Option B: Offer a transition period — slower compliance
 	option = {
 		name = disability_laws.1.b
 		add_enactment_modifier = {
 			name = disability_employer_pressure
-			# = 2
 		}
 		add_enactment_modifier = {
 			name = disability_compliance_delay
-			# = -1
 		}
 		ai_chance = { base = 40 }
 	}
@@ -120,10 +97,6 @@ disability_laws.1 = {
 
 # ==========================================
 # disability_laws.2
-# "The Construction Lobby Objects"
-# Fires when enacting anti-ableist architecture.
-# Builders argue retrofitting is prohibitively
-# expensive and the timeline is unrealistic.
 # ==========================================
 
 disability_laws.2 = {
@@ -158,7 +131,6 @@ disability_laws.2 = {
 		}
 	}
 
-	# Option A: Enforce strict standards — full compliance on schedule
 	option = {
 		name = disability_laws.2.a
 		default_option = yes
@@ -167,17 +139,14 @@ disability_laws.2 = {
 		}
 		add_enactment_modifier = {
 			name = disability_strict_standards
-			# = 2
 		}
 		ai_chance = { base = 50 }
 	}
 
-	# Option B: Phase compliance — grandfathering existing structures
 	option = {
 		name = disability_laws.2.b
 		add_enactment_modifier = {
 			name = disability_construction_lobby
-			# = 2
 		}
 		add_enactment_modifier = {
 			name = disability_phased_compliance
@@ -188,10 +157,6 @@ disability_laws.2 = {
 
 # ==========================================
 # disability_laws.3
-# "Who Pays for the Ramps?"
-# Fires when enacting anti-ableist architecture.
-# A funding debate erupts over whether
-# the state or private owners bear the cost.
 # ==========================================
 
 disability_laws.3 = {
@@ -226,12 +191,10 @@ disability_laws.3 = {
 		}
 	}
 
-	# Option A: State subsidy — government absorbs retrofit costs
 	option = {
 		name = disability_laws.3.a
 		add_enactment_modifier = {
 			name = disability_funding_debate
-			# = 2
 		}
 		add_enactment_modifier = {
 			name = disability_state_subsidy
@@ -251,7 +214,6 @@ disability_laws.3 = {
 		}
 	}
 
-	# Option B: Private obligation — owners bear the cost
 	option = {
 		name = disability_laws.3.b
 		default_option = yes
@@ -270,10 +232,6 @@ disability_laws.3 = {
 
 # ==========================================
 # disability_laws.4
-# "The Medical Establishment Endorses the Law"
-# Fires when enacting public treatments.
-# Doctors argue state-funded treatment is
-# both humane and economically rational.
 # ==========================================
 
 disability_laws.4 = {
@@ -326,13 +284,11 @@ disability_laws.4 = {
 		}
 	}
 
-	# Option A: Formally commission a public health report
 	option = {
 		name = disability_laws.4.a
 		default_option = yes
 		add_enactment_modifier = {
 			name = disability_medical_endorsement
-			# = 3
 		}
 		ai_chance = {
 			base = 65
@@ -348,7 +304,6 @@ disability_laws.4 = {
 		}
 	}
 
-	# Option B: Keep the framing political — not medical
 	option = {
 		name = disability_laws.4.b
 		add_enactment_modifier = {
@@ -360,10 +315,6 @@ disability_laws.4 = {
 
 # ==========================================
 # disability_laws.5
-# "The Expense Is Unsustainable"
-# Fires when enacting public treatments.
-# Fiscal conservatives argue the state
-# cannot afford comprehensive disability
 # support.
 # ==========================================
 
@@ -427,7 +378,6 @@ disability_laws.5 = {
 		}
 	}
 
-	# Option A: Hold the line — the expense is justified
 	option = {
 		name = disability_laws.5.a
 		default_option = yes
@@ -443,12 +393,10 @@ disability_laws.5 = {
 		}
 	}
 
-	# Option B: Phase in spending — staged implementation
 	option = {
 		name = disability_laws.5.b
 		add_enactment_modifier = {
 			name = disability_fiscal_resistance
-			# = 2
 		}
 		add_enactment_modifier = {
 			name = disability_phased_spending
@@ -465,10 +413,6 @@ disability_laws.5 = {
 
 # ==========================================
 # disability_laws.6
-# "Disability Advocates Rally"
-# Fires for any progressive disability law.
-# A coalition of disability rights groups
-# and their allies makes a public push.
 # ==========================================
 
 disability_laws.6 = {
@@ -507,13 +451,11 @@ disability_laws.6 = {
 		}
 	}
 
-	# Option A: Formally receive their delegation — amplify the campaign
 	option = {
 		name = disability_laws.6.a
 		default_option = yes
 		add_enactment_modifier = {
 			name = disability_advocate_push
-			# = 3
 		}
 		ai_chance = {
 			base = 65
@@ -524,7 +466,6 @@ disability_laws.6 = {
 		}
 	}
 
-	# Option B: Acknowledge but do not amplify
 	option = {
 		name = disability_laws.6.b
 		add_enactment_modifier = {
@@ -536,11 +477,6 @@ disability_laws.6 = {
 
 # ==========================================
 # disability_laws.7
-# "Conservative Opposition Mobilizes"
-# Fires for any progressive disability law.
-# Religious and conservative groups argue
-# disability support undermines self-reliance
-# and burdens the productive population.
 # ==========================================
 
 disability_laws.7 = {
@@ -607,7 +543,6 @@ disability_laws.7 = {
 		}
 	}
 
-	# Option A: Rebut publicly — make the moral case for the law
 	option = {
 		name = disability_laws.7.a
 		default_option = yes
@@ -616,19 +551,16 @@ disability_laws.7 = {
 		}
 		add_enactment_modifier = {
 			name = disability_public_rebuttal
-			# = 2
 		}
 		ai_chance = { base = 60 }
 	}
 
-	# Option B: Ignore the opposition — don't dignify it
 	option = {
 		name = disability_laws.7.b
 		random_list = {
 			3 = {
 				add_enactment_modifier = {
 					name = disability_conservative_opposition
-					# = 2
 				}
 			}
 			7 = {

@@ -8,26 +8,28 @@
     farm = "x8B56F5"
     mine = "x24AEFA"
     wood = "x799B34"
-    arable_land = 40
+    arable_land = 98
     arable_resources = { "building_wheat_farm" "building_livestock_ranch" "building_cotton_plantation" "building_tea_plantation" "building_sugar_plantation" "building_vineyard" }
     capped_resources = {
-        building_coal_mine = 80
-        building_lead_mine = 24
-        building_iron_mine = 36
-        building_logging_camp = 7
+        building_coal_mine = 99
+        building_lead_mine = 46
+        building_iron_mine = 107
+        building_logging_camp = 12
         building_whaling_station = 4
-        building_fishing_wharf = 8
+        building_fishing_wharf = 3
     }
     resource = {
         type = "building_gold_field"
         depleted_type = "building_gold_mine"
-        undiscovered_amount = 12
+        undiscovered_amount = 17
     }
     resource = {
         type = "building_oil_rig"
-        undiscovered_amount = 30
+        undiscovered_amount = 61
     }
-    naval_exit_id = 3122
+naval_exit_id = 3122
+    min_cold_effect = 0.00
+    max_cold_effect = 0.07
 }
 
 STATE_VICTORIA = {
@@ -40,20 +42,22 @@ STATE_VICTORIA = {
     farm = "xCC9C60"
     mine = "xC04012"
     wood = "xC21B54"
-    arable_land = 40
+    arable_land = 98
     arable_resources = { "building_wheat_farm" "building_livestock_ranch" "building_cotton_plantation" "building_tea_plantation" "building_sugar_plantation" "building_vineyard" }
     capped_resources = {
-        building_sulfur_mine = 24
-        building_logging_camp = 11
+        building_sulfur_mine = 4
+        building_logging_camp = 17
         building_whaling_station = 3
-        building_fishing_wharf = 8
+        building_fishing_wharf = 3
     }
     resource = {
         type = "building_gold_field"
         depleted_type = "building_gold_mine"
-        undiscovered_amount = 6
+        undiscovered_amount = 9
     }
     naval_exit_id = 3122
+    min_cold_effect = 0.00
+    max_cold_effect = 0.12
 }
 
 STATE_TASMANIA = {
@@ -66,21 +70,24 @@ STATE_TASMANIA = {
     farm = "xEC439A"
     mine = "x05B74C"
     wood = "xBB312B"
-    arable_land = 15
+    arable_land = 39
     arable_resources = { "building_wheat_farm" "building_livestock_ranch" "building_cotton_plantation" "building_tea_plantation" "building_sugar_plantation" "building_opium_plantation" }
     capped_resources = {
-        building_iron_mine = 15
-        building_lead_mine = 15
-        building_logging_camp = 8
+        building_water_works = 16
+        building_iron_mine = 45
+        building_lead_mine = 28
+        building_logging_camp = 12
         building_whaling_station = 2
-        building_fishing_wharf = 6
+        building_fishing_wharf = 2
     }
     resource = {
         type = "building_gold_field"
         depleted_type = "building_gold_mine"
-        undiscovered_amount = 6
+        undiscovered_amount = 9
     }
     naval_exit_id = 3122
+    min_cold_effect = 0.00
+    max_cold_effect = 0.12
 }
 
 STATE_QUEENSLAND = {
@@ -95,16 +102,20 @@ STATE_QUEENSLAND = {
     farm = "x0E58D6"
     mine = "x57456E"
     wood = "xA70E88"
-    arable_land = 20
+    arable_land = 39
     arable_resources = { "building_wheat_farm" "building_livestock_ranch" "building_cotton_plantation" "building_tea_plantation" "building_sugar_plantation" }
     capped_resources = {
-        building_iron_mine = 45
-        building_lead_mine = 45
-        building_logging_camp = 5
+        building_water_works = 12
+        building_uranium_mine = 2
+        building_iron_mine = 134
+        building_lead_mine = 85
+        building_logging_camp = 6
         building_whaling_station = 3
-        building_fishing_wharf = 12
+        building_fishing_wharf = 5
     }
     naval_exit_id = 3129
+    min_cold_effect = 0.00
+    max_cold_effect = 0.01
 }
 
 STATE_SOUTH_AUSTRALIA = {
@@ -119,14 +130,16 @@ STATE_SOUTH_AUSTRALIA = {
     farm = "xC53983"
     mine = "x6F472E"
     wood = "xD471D4"
-    arable_land = 40
+    arable_land = 98
     arable_resources = { "building_wheat_farm" "building_livestock_ranch" "building_vineyard" }
     capped_resources = {
-        building_iron_mine = 30
-        building_lead_mine = 36
-        building_sulfur_mine = 60
+        building_uranium_mine = 35
+        building_iron_mine = 89
+        building_lead_mine = 68
+        building_sulfur_mine = 11
         building_whaling_station = 2
-        building_fishing_wharf = 8
+        building_fishing_wharf = 3
+        building_water_works = 8
     }
     naval_exit_id = 3121
 }
@@ -143,21 +156,27 @@ STATE_WESTERN_AUSTRALIA = {
     farm = "x98FA26"
     mine = "x8D829F"
     wood = "x74551C"
-    arable_land = 36
+    arable_land = 79
     arable_resources = { "building_wheat_farm" "building_livestock_ranch" "building_vineyard" }
     capped_resources = {
-        building_coal_mine = 40
-        building_iron_mine = 30
-        building_logging_camp = 6
+        building_uranium_mine = 6
+        building_coal_mine = 42
+        building_iron_mine = 89
+        building_logging_camp = 11
         building_whaling_station = 3
-        building_fishing_wharf = 9
+        building_fishing_wharf = 3
+        building_copper_mine = 42
+        building_rare_earth_mine = 10
+        building_water_works = 8
     }
     resource = {
         type = "building_gold_field"
         depleted_type = "building_gold_mine"
-        undiscovered_amount = 8
+        undiscovered_amount = 12
     }
     naval_exit_id = 3110
+    min_cold_effect = 0.00
+    max_cold_effect = 0.02
 }
 
 STATE_NORTHERN_TERRITORY = {
@@ -172,12 +191,13 @@ STATE_NORTHERN_TERRITORY = {
     farm = "xF943B8"
     mine = "x3F7FA7"
     wood = "xA4B8B3"
-    arable_land = 10
+    arable_land = 20
     arable_resources = { "building_livestock_ranch" "building_cotton_plantation" }
     capped_resources = {
-        building_logging_camp = 5
+        building_uranium_mine = 25
+        building_logging_camp = 6
         building_whaling_station = 2
-        building_fishing_wharf = 6
+        building_fishing_wharf = 2
     }
     naval_exit_id = 3125
 }
@@ -192,19 +212,20 @@ STATE_NORTH_ISLAND = {
     farm = "xEBB583"
     mine = "x59DF28"
     wood = "x0AA01A"
-    arable_land = 30
+    arable_land = 4
     arable_resources = { "building_wheat_farm" "building_livestock_ranch" }
     capped_resources = {
-        building_coal_mine = 28
-        building_iron_mine = 27
-        building_logging_camp = 11
+        building_water_works = 18
+        building_coal_mine = 2
+        building_iron_mine = 1
+        building_logging_camp = 32
         building_whaling_station = 3
-        building_fishing_wharf = 8
+        building_fishing_wharf = 3
     }
     resource = {
         type = "building_gold_field"
         depleted_type = "building_gold_mine"
-        undiscovered_amount = 4
+        undiscovered_amount = 2
     }
     naval_exit_id = 3122
 }
@@ -219,18 +240,21 @@ STATE_SOUTH_ISLAND = {
     farm = "x6A5DDE"
     mine = "xD040B0"
     wood = "x50F19B"
-    arable_land = 30
+    arable_land = 4
     arable_resources = { "building_wheat_farm" "building_livestock_ranch" }
     capped_resources = {
-        building_logging_camp = 7
+        building_water_works = 20
+        building_logging_camp = 21
         building_whaling_station = 4
-        building_fishing_wharf = 10
+        building_fishing_wharf = 4
     }
     resource = {
         type = "building_gold_field"
         depleted_type = "building_gold_mine"
-        undiscovered_amount = 6
+        undiscovered_amount = 3
     }
     naval_exit_id = 3156
+    min_cold_effect = 0.02
+    max_cold_effect = 0.22
 }
 

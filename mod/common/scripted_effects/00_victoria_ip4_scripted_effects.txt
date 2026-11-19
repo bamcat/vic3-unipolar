@@ -225,7 +225,7 @@ ip4_coup_get_allied_pronunciamento_state = {
 	}
 }
 
-add_regency_modifier = { # Applied in country scope, always uses monarch_scope
+add_regency_modifier = {
 	if = {
 		limit = {
 			scope:monarch_scope ?= {
@@ -295,7 +295,7 @@ add_regency_modifier = { # Applied in country scope, always uses monarch_scope
 	}
 }
 
-remove_regency_modifier = { # Applied in country scope
+remove_regency_modifier = {
 	if = {
 		limit = {
 			has_modifier = modifier_regency_landowners
@@ -353,7 +353,7 @@ remove_regency_modifier = { # Applied in country scope
 }
 
 ip4_coup_victory_effect = {
-	ROOT = { # For notifications
+	ROOT = {
 		save_scope_as = coup_country
 	}
 	ip4_coup_victory_government_effects = yes
@@ -476,7 +476,7 @@ ip4_coup_victory_law_effects = {
 			scope:golpista_ig ?= {
 				law_enactment_stance = {
 					law = owner.currently_enacting_law.type
-					value <= neutral # Will halt enactment unless they approve of the law
+					value <= neutral
 				}
 			}
 		}
@@ -488,7 +488,7 @@ ip4_coup_victory_law_effects = {
 		}
 		activate_law = scope:coup_desired_law.type
 	}
-	else_if = { # In case
+	else_if = {
 		limit = {
 			scope:golpista_ig ?= {
 				any_preferred_law = {
@@ -785,7 +785,7 @@ ip4_coup_victory_effect_interaction_display = {
 	}
 	if = {
 		limit = {
-			AND = { # To mirror the conditions of Isabella II's dethroning
+			AND = {
 				has_journal_entry = je_the_two_spains
 				has_law = law_type:law_monarchy
 				var:two_spains_tension_current_var >= 50
@@ -969,8 +969,8 @@ ip4_coup_cleanup_effects = {
 	}
 }
 
-create_coup_from_character = { # Takes scope golpista_character
-	if = { # Ignores the cooldown
+create_coup_from_character = {
+	if = {
 		limit = {
 			has_variable = coup_cooldown_var
 		}
@@ -983,7 +983,7 @@ create_coup_from_character = { # Takes scope golpista_character
 			set_variable = golpista_ig_var
 			save_scope_as = golpista_ig
 		}
-		set_variable = { name = monthly_cached_units_share value = this.num_units_share } # Updates at start of coup
+		set_variable = { name = monthly_cached_units_share value = this.num_units_share }
 		set_variable = { name = monthly_cached_commander_coup_strength value = this.commander_coup_strength }
 		character_get_and_save_coup_reason = yes
 		owner = {
@@ -992,8 +992,8 @@ create_coup_from_character = { # Takes scope golpista_character
 	}
 }
 
-create_coup_event_from_character = { # Takes scope golpista_character
-	if = { # Ignores the cooldown
+create_coup_event_from_character = {
+	if = {
 		limit = {
 			has_variable = coup_cooldown_var
 		}
@@ -1006,7 +1006,7 @@ create_coup_event_from_character = { # Takes scope golpista_character
 			set_variable = golpista_ig_var
 			save_scope_as = golpista_ig
 		}
-		set_variable = { name = monthly_cached_units_share value = this.num_units_share } # Updates at start of coup
+		set_variable = { name = monthly_cached_units_share value = this.num_units_share }
 		set_variable = { name = monthly_cached_commander_coup_strength value = this.commander_coup_strength }
 		character_get_and_save_coup_reason = yes
 		owner = {
@@ -1216,7 +1216,7 @@ country_remove_colonial_variables = {
 	}
 }
 
-character_execute_immediate_coup = { # Must be executed in an "owner" scope when the relevant character is "root"
+character_execute_immediate_coup = {
 	if = {
 		limit = {
 			has_journal_entry = je_ip4_coup
@@ -1521,7 +1521,6 @@ country_generate_miguelist_portugal_ruler = {
 		}
 		remove_regency_modifier = yes
 	}
-	### Miguelist Portuguese Monarchs
 	if = {
 		limit = {
 			game_date >= 1836.1.1
@@ -1585,7 +1584,6 @@ country_generate_constitutional_portugal_ruler = {
 		}
 		remove_regency_modifier = yes
 	}
-	#### Portuguese Monarchs
 	if = {
 		limit = {
 			game_date <= 1837.9.16
@@ -1600,7 +1598,7 @@ country_generate_constitutional_portugal_ruler = {
 			}
 		}
 	}
-	if = { # if Maria II dies naturally, make Pedro V the ruler
+	if = {
 		limit = {
 			game_date < 1861.11.11
 			game_date > 1837.9.16
@@ -1615,7 +1613,7 @@ country_generate_constitutional_portugal_ruler = {
 			}
 		}
 	}
-	else_if = { # if Pedro V dies naturally, make Luis I the ruler
+	else_if = {
 		limit = {
 			game_date < 1889.10.19
 			game_date > 1838.10.3
@@ -1630,7 +1628,7 @@ country_generate_constitutional_portugal_ruler = {
 			}
 		}
 	}
-	else_if = { # if Luis I dies naturally, make Carlos I the ruler
+	else_if = {
 		limit = {
 			game_date < 1908.2.1
 			game_date > 1863.9.28
@@ -1645,7 +1643,7 @@ country_generate_constitutional_portugal_ruler = {
 			}
 		}
 	}
-	else_if = { # if Carlos I dies naturally, make Manuel II the ruler
+	else_if = {
 		limit = {
 			game_date > 1889.7.2
 		}
@@ -1662,7 +1660,7 @@ country_generate_constitutional_portugal_ruler = {
 }
 
 second_amendment_add_obsessions_effect = {
-	if = { # Second Amendment - add obsessions
+	if = {
 		limit = {
 			owner ?= {
 				OR = {
@@ -1689,7 +1687,7 @@ second_amendment_add_obsessions_effect = {
 }
 
 second_amendment_remove_obsessions_effect = {
-	if = { # Second Amendment - remove obsessions
+	if = {
 		limit = {
 			OR = {
 				country_has_primary_culture = cu:yankee
@@ -1923,7 +1921,7 @@ remove_electoral_fraud_effect = {
 	}
 }
 
-summon_napoleon_the_woat = { # Special case
+summon_napoleon_the_woat = {
 	save_scope_as = summoning_country
 	if = {
 		limit = {
@@ -1943,7 +1941,7 @@ summon_napoleon_the_woat = { # Special case
 				year >= 1857
 				year < 1873
 			}
-			create_character = { # As heir
+			create_character = {
 				template = FRA_napoleon_eugene_louis_bonaparte
 			}
 		}
@@ -1967,13 +1965,13 @@ summon_napoleon_the_woat = { # Special case
 				year >= 1857
 				year < 1873
 			}
-			create_character = { # As heir
+			create_character = {
 				template = FRA_napoleon_eugene_louis_bonaparte
 			}
 		}
 	}
 	else = {
-		create_character = { # El Generico
+		create_character = {
 			first_name = "NapoleO_n"
 			last_name = "Bonaparte"
 			culture = cu:french
@@ -2012,7 +2010,7 @@ summon_napoleon_the_woat = { # Special case
 			create_character = {
 				template = $TEMPLATE$
 				on_created = {
-					$ON_CREATED_EFFECT$ = yes # I heard you like scripted effects, so I put scripted effects in your scripted effects so you can call scripted effects whilst you call scripted effects.
+					$ON_CREATED_EFFECT$ = yes
 				}
 			}
 		}
@@ -2065,7 +2063,7 @@ transfer_character_of_unknown_status_to_country_effects = {
 	}
 }
 
-transfer_character_of_unknown_status_to_country_and_make_ruler_effects = { # Requires summoned_character_scope, occurs within this scope, scope:summoning_country is the summoning country
+transfer_character_of_unknown_status_to_country_and_make_ruler_effects = {
 	if = {
 		limit = {
 			is_in_void = yes
@@ -2095,7 +2093,7 @@ transfer_character_of_unknown_status_to_country_and_make_ruler_effects = { # Req
 		owner = {
 			save_scope_as = yoink_country
 		}
-		if = { # Surely this won't cause any utterly insane Personal Unions
+		if = {
 			limit = {
 				AND = {
 					scope:summoning_country ?= {
@@ -2158,7 +2156,6 @@ transfer_character_of_unknown_status_to_country_and_make_ruler_effects = { # Req
 			}
 			transfer_character = scope:summoning_country
 			scope:summoning_country ?= {
-				# Make monarch
 				if = {
 					limit = {
 						owner = scope:summoning_country
@@ -2188,7 +2185,7 @@ transfer_character_of_unknown_status_to_country_and_make_ruler_effects = { # Req
 	}
 }
 
-set_character_of_unknown_status_as_heir = { # Fired in a country scope, requires new_heir_scope
+set_character_of_unknown_status_as_heir = {
 	set_heir = scope:new_heir_scope
 	if = {
 		limit = {
@@ -2253,16 +2250,16 @@ cleanup_ruler_character_roles = {
 	}
 }
 
-run_colonial_governor_cycle = { # Run in character scope
+run_colonial_governor_cycle = {
 	save_scope_as = current_governor
-	owner = { # Saving scopes for the sake of the templates
+	owner = {
 		save_colonial_governor_generation_scopes = yes
 	}
 	if = {
 		limit = {
 			has_variable = colonial_governor_term
 		}
-		random_list = { # Average term length of 4 years
+		random_list = {
 			4 = {
 				change_variable = { name = colonial_governor_term add = 1 }
 			}
@@ -2282,17 +2279,17 @@ run_colonial_governor_cycle = { # Run in character scope
 		}
 	}
 	else = {
-		set_variable = { name = colonial_governor_term value = 1 } # Just in case something strange has happened
+		set_variable = { name = colonial_governor_term value = 1 }
 	}
 }
 
-save_colonial_governor_generation_scopes = { # Run in an owner scope
+save_colonial_governor_generation_scopes = {
 	save_scope_as = colony_scope
 	random_primary_culture = {
 		save_scope_as = primary_culture_scope
 	}
 	if = {
-		limit = { # BIC governors are company men
+		limit = {
 			c:BIC ?= this
 		}
 		ig:ig_industrialists ?= {
@@ -2322,7 +2319,7 @@ save_colonial_governor_generation_scopes = { # Run in an owner scope
 	}
 }
 
-generate_governor_of_same_type = { # Run in country scope
+generate_governor_of_same_type = {
 	if = {
 		limit = {
 			scope:current_governor ?= {
@@ -2408,7 +2405,7 @@ generate_governor_of_same_type = { # Run in country scope
 			}
 		}
 	}
-	else = { # Fallback for edge cases
+	else = {
 		scope:current_governor ?= {
 			remove_variable = colonial_governor_term
 		}

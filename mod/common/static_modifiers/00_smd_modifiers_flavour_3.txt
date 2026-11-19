@@ -125,43 +125,33 @@ booming_trade_economy = {
 # PRC reunification bonus — permanent on JE completion
 one_china_reunification_bonus = {
 	icon = gfx/interface/icons/timed_modifier_icons/modifier_flag_positive.dds
-	# National triumph — the century-long wound is healed
 	country_authority_mult                      = 0.20
 	country_legitimacy_base_add                 = 25
 	country_prestige_mult                       = 0.15
-	# Reunification suppresses separatism and turmoil
 	state_turmoil_effects_mult                  = -0.15
 	country_revolution_progress_mult            = -0.15
 	country_secession_progress_mult             = -0.20
-	# Boost to construction and expansion
 	state_incorporation_speed_mult              = 0.20
 	state_contiguous_incorporation_speed_mult   = 0.30
 }
  
-# ROC integration bonus — permanent on JE completion
-# Focused on absorbing the vast mainland population
 one_china_roc_integration_bonus = {
 	icon = gfx/interface/icons/timed_modifier_icons/modifier_flag_positive.dds
-	# Accelerated incorporation of mainland states
 	state_incorporation_speed_mult              = 0.40
 	state_contiguous_incorporation_speed_mult   = 0.50
-	# Legitimacy from historic accomplishment
 	country_legitimacy_base_add                 = 20
 	country_prestige_mult                       = 0.15
 	country_authority_mult                      = 0.10
-	# Turmoil suppression as the mainland is integrated
 	state_turmoil_effects_mult                  = -0.10
 	country_secession_progress_mult             = -0.15
 }
 
-# The foundational corruption modifier —
-# applied from the start of je_tangentopoli
 tangentopoli_systemic_corruption = {
 	icon = gfx/interface/icons/timed_modifier_icons/modifier_statue_negative.dds
 	country_legitimacy_base_add                 = -10
 	country_infamy_generation_mult              = 0.05
 	country_law_enactment_success_add           = -0.05
-	country_expenses_add                        = 20
+	state_tax_collection_mult = -0.03
 }
 
 # Chiesa arrest — initial crack in the system
@@ -204,7 +194,7 @@ tangentopoli_party_collapse = {
 # Legitimacy crisis during the investigation
 tangentopoli_legitimacy_crisis = {
 	icon = gfx/interface/icons/timed_modifier_icons/modifier_fire_negative.dds
-	country_legitimacy_base_add                 = -15
+	country_legitimacy_base_add                 = -10
 	country_authority_mult                      = -0.10
 	state_radicals_from_political_movements_mult = 0.15
 }
@@ -226,15 +216,12 @@ mani_pulite_investigation_begins = {
 # Public mandate from Biondi Decree withdrawal
 mani_pulite_public_mandate = {
 	icon = gfx/interface/icons/timed_modifier_icons/modifier_fist_positive.dds
-	country_legitimacy_base_add                 = 5
 	state_loyalists_from_political_movements_mult = 0.10
 }
 
-# Investigation wins — First Republic falls
-# Clean Hands Victory
 mani_pulite_clean_hands_victory = {
 	icon = gfx/interface/icons/timed_modifier_icons/modifier_flag_positive.dds
-	country_legitimacy_base_add                 = 20
+	country_legitimacy_base_add                 = 5
 	country_law_enactment_success_add           = 0.10
 	country_prestige_mult                       = 0.05
 	country_infamy_decay_mult                   = 0.10
@@ -244,14 +231,13 @@ mani_pulite_clean_hands_victory = {
 # Controlled transition
 mani_pulite_cautious_transition = {
 	icon = gfx/interface/icons/timed_modifier_icons/modifier_documents_positive.dds
-	country_legitimacy_base_add                 = 8
 	country_law_enactment_success_add           = 0.05
 }
 
 # Investigation buried — permanent shame
 mani_pulite_investigation_buried = {
 	icon = gfx/interface/icons/timed_modifier_icons/modifier_fire_negative.dds
-	country_legitimacy_base_add                 = -20
+	country_legitimacy_base_add                 = -10
 	country_prestige_mult                       = -0.08
 	country_law_enactment_success_add           = -0.10
 	state_radicals_from_political_movements_mult = 0.20
@@ -266,7 +252,7 @@ czh_federal_strain = {
  
 czh_slovak_subsidy = {
 	icon = gfx/interface/icons/timed_modifier_icons/modifier_coins_negative.dds
-	country_legitimacy_base_add                 = 5
+	country_government_wages_mult = 0.05
 }
  
 czh_federal_authority_asserted = {
@@ -284,7 +270,6 @@ czh_autonomy_negotiations = {
 czh_confederation_talks = {
 	icon = gfx/interface/icons/timed_modifier_icons/modifier_documents_positive.dds
 	country_law_enactment_success_add           = 0.08
-	country_legitimacy_base_add                 = 3
 	country_authority_mult                      = -0.03
 }
  
@@ -295,7 +280,7 @@ czh_referendum_blocked = {
  
 czh_federal_union_preserved = {
 	icon = gfx/interface/icons/timed_modifier_icons/modifier_flag_positive.dds
-	country_legitimacy_base_add                 = 15
+	country_legitimacy_base_add                 = 5
 	country_prestige_mult                       = 0.05
 	country_law_enactment_success_add           = 0.08
 	state_loyalists_from_political_movements_mult = 0.10
@@ -303,13 +288,13 @@ czh_federal_union_preserved = {
  
 czc_new_republic_founding = {
 	icon = gfx/interface/icons/timed_modifier_icons/modifier_flag_positive.dds
-	country_legitimacy_base_add                 = 10
+	country_legitimacy_base_add                 = 5
 	country_prestige_mult                       = 0.15
 }
  
 svk_new_republic_founding = {
 	icon = gfx/interface/icons/timed_modifier_icons/modifier_flag_positive.dds
-	country_legitimacy_base_add                 = 10
+	country_legitimacy_base_add                 = 5
 	country_prestige_mult                       = 0.15
 	country_infamy_decay_mult                   = 0.05
 }
@@ -358,7 +343,7 @@ chechen_war_devastation = {
 ### Raid expenses
 chechen_war_raid_expenses = {
 	icon = gfx/interface/icons/timed_modifier_icons/modifier_coins_negative.dds
-	country_expenses_add = 25000
+	country_military_goods_cost_mult = 0.1
 }
  
 ### Victory rewards

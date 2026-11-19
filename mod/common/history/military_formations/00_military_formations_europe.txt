@@ -1,11 +1,5 @@
 MILITARY_FORMATIONS = {
 
-	### GREAT BRITAIN ###
-	# ~293,000 active in 1992. Post-Options for Change cuts underway (~18% reduction).
-	# BAOR (Germany) handled separately. UK forces: mostly mechanized/armoured.
-	# Royal Navy: carrier Invincible-class, Type 42 destroyers, Type 23 frigates, SSNs, SSBNs (Vanguard entering service).
-	# RAF: Tornado GR1/F3, Harrier GR7, Nimrod.
-
 	c:GBR ?= {
 
 		create_military_formation = {
@@ -13,31 +7,31 @@ MILITARY_FORMATIONS = {
 			hq_region = sr:region_western_europe
 			name = "UK_Home_Forces"
 
-			# 1st (UK) Armoured Division elements remaining in UK
 			combat_unit = {
 				type = unit_type:combat_unit_type_armored_infantry
 				state_region = s:STATE_YORKSHIRE
 				count = 12
 			}
-			# 3rd (UK) Division — Bulford, mechanized
 			combat_unit = {
 				type = unit_type:combat_unit_type_mechanized_infantry
 				state_region = s:STATE_WEST_COUNTRY
-				count = 14
+				count = 7
 			}
-			# 5th Airborne Brigade (Aldershot)
+			combat_unit = {
+				type = unit_type:combat_unit_type_light_infantry
+				state_region = s:STATE_WEST_COUNTRY
+				count = 7
+			}
 			combat_unit = {
 				type = unit_type:combat_unit_type_light_infantry
 				state_region = s:STATE_HOME_COUNTIES
 				count = 8
 			}
-			# Northern Ireland garrison (Ulster)
 			combat_unit = {
 				type = unit_type:combat_unit_type_light_infantry
 				state_region = s:STATE_ULSTER
 				count = 10
 			}
-			# Scottish garrison
 			combat_unit = {
 				type = unit_type:combat_unit_type_light_infantry
 				state_region = s:STATE_HIGHLANDS
@@ -62,25 +56,21 @@ MILITARY_FORMATIONS = {
 			transfer_to_formation = scope:gbr_uk_home_forces_scope
 		}
 
-
-		create_military_formation = {
+create_military_formation = {
 			type = army
 			hq_region = sr:region_western_europe
 			name = "Royal_Air_Force"
 
-			# Tornado F3 air defence
 			combat_unit = {
 				type = unit_type:combat_unit_type_multirole_aircraft
 				state_region = s:STATE_YORKSHIRE
 				count = 4
 			}
-			# Tornado GR1 strike
 			combat_unit = {
 				type = unit_type:combat_unit_type_multirole_aircraft
 				state_region = s:STATE_EAST_ANGLIA
 				count = 4
 			}
-			# Harrier GR7
 			combat_unit = {
 				type = unit_type:combat_unit_type_multirole_aircraft
 				state_region = s:STATE_MIDLANDS
@@ -100,38 +90,31 @@ MILITARY_FORMATIONS = {
 			transfer_to_formation = scope:gbr_royal_air_force_scope
 		}
 
-
-		create_military_formation = {
+create_military_formation = {
 			type = fleet
 			hq_region = sr:region_western_europe
 			name = "Royal_Navy"
 
-			# HMS Invincible and HMS Illustrious (Ark Royal refit)
 			ship = {
 				type = ship_type:ship_type_aircraft_carrier
 				count = 2
 			}
-			# Type 42 destroyers (Sheffield class)
 			ship = {
 				type = ship_type:ship_type_destroyer
 				count = 6
 			}
-			# Type 22 and Type 23 frigates
 			ship = {
 				type = ship_type:ship_type_frigate
 				count = 8
 			}
-			# Trafalgar/Swiftsure-class SSNs
 			ship = {
 				type = ship_type:ship_type_submarine
 				count = 8
 			}
-			# Resolution-class SSBNs (Vanguard entering service 1993)
 			ship = {
 				type = ship_type:ship_type_troop_ship
 				count = 4
 			}
-			# HMS Ocean / LPH assault ships
 			ship = {
 				type = ship_type:ship_type_battleship
 				count = 2
@@ -152,12 +135,6 @@ MILITARY_FORMATIONS = {
 
 	}
 
-	### FRANCE ###
-	# ~408,000 active in 1992. Force de Frappe nuclear deterrent.
-	# Armée de Terre: heavy mechanized/armoured with AMX-30B2 and early Leclerc.
-	# Marine Nationale: Charles de Gaulle under construction; Clemenceau/Foch in service.
-	# Armée de l'Air: Mirage 2000, Jaguar, Mirage F1.
-
 	c:FRA ?= {
 
 		create_military_formation = {
@@ -165,7 +142,6 @@ MILITARY_FORMATIONS = {
 			hq_region = sr:region_western_europe
 			name = "Ire_Armee"
 
-			# 1ère Armée — Metz/Alsace, main mechanized force facing Germany
 			combat_unit = {
 				type = unit_type:combat_unit_type_armored_infantry
 				state_region = s:STATE_ALSACE_LORRAINE
@@ -174,12 +150,22 @@ MILITARY_FORMATIONS = {
 			combat_unit = {
 				type = unit_type:combat_unit_type_mechanized_infantry
 				state_region = s:STATE_ALSACE_LORRAINE
-				count = 15
+				count = 8
+			}
+			combat_unit = {
+				type = unit_type:combat_unit_type_light_infantry
+				state_region = s:STATE_ALSACE_LORRAINE
+				count = 7
 			}
 			combat_unit = {
 				type = unit_type:combat_unit_type_mechanized_infantry
 				state_region = s:STATE_CHAMPAGNE
-				count = 10
+				count = 5
+			}
+			combat_unit = {
+				type = unit_type:combat_unit_type_light_infantry
+				state_region = s:STATE_CHAMPAGNE
+				count = 5
 			}
 			save_scope_as = fra_ire_armee_scope
 		}
@@ -194,13 +180,11 @@ MILITARY_FORMATIONS = {
 			transfer_to_formation = scope:fra_ire_armee_scope
 		}
 
-
-		create_military_formation = {
+create_military_formation = {
 			type = army
 			hq_region = sr:region_western_europe
 			name = "Force_dAction_Rapide"
 
-			# FAR — rapid reaction: 4th Airmobile, 6th Light Armoured, 9th Marine, 11th Parachute, 27th Alpine Divisions
 			combat_unit = {
 				type = unit_type:combat_unit_type_light_infantry
 				state_region = s:STATE_ILE_DE_FRANCE
@@ -214,7 +198,12 @@ MILITARY_FORMATIONS = {
 			combat_unit = {
 				type = unit_type:combat_unit_type_mechanized_infantry
 				state_region = s:STATE_PROVENCE
-				count = 10
+				count = 5
+			}
+			combat_unit = {
+				type = unit_type:combat_unit_type_light_infantry
+				state_region = s:STATE_PROVENCE
+				count = 5
 			}
 			combat_unit = {
 				type = unit_type:combat_unit_type_light_infantry
@@ -240,13 +229,11 @@ MILITARY_FORMATIONS = {
 			transfer_to_formation = scope:fra_force_daction_rapide_scope
 		}
 
-
-		create_military_formation = {
+create_military_formation = {
 			type = army
 			hq_region = sr:region_western_europe
 			name = "Armee_de_lAir"
 
-			# Mirage 2000C/N, Mirage F1, Jaguar A
 			combat_unit = {
 				type = unit_type:combat_unit_type_multirole_aircraft
 				state_region = s:STATE_ILE_DE_FRANCE
@@ -276,33 +263,27 @@ MILITARY_FORMATIONS = {
 			transfer_to_formation = scope:fra_armee_de_lair_scope
 		}
 
-
-		create_military_formation = {
+create_military_formation = {
 			type = fleet
 			hq_region = sr:region_western_europe
 			name = "Marine_Nationale"
 
-			# Clemenceau and Foch conventional carriers
 			ship = {
 				type = ship_type:ship_type_aircraft_carrier
 				count = 2
 			}
-			# Georges Leygues-class destroyers, Suffren-class
 			ship = {
 				type = ship_type:ship_type_destroyer
 				count = 6
 			}
-			# D'Estienne d'Orves-class frigates
 			ship = {
 				type = ship_type:ship_type_frigate
 				count = 8
 			}
-			# Rubis-class SSNs
 			ship = {
 				type = ship_type:ship_type_submarine
 				count = 6
 			}
-			# L'Inflexible and Redoutable-class SSBNs (Force Océanique Stratégique)
 			ship = {
 				type = ship_type:ship_type_troop_ship
 				count = 5
@@ -327,11 +308,6 @@ MILITARY_FORMATIONS = {
 
 	}
 
-	### SPAIN ###
-	# ~217,000 active in 1992. Post-Franco modernization ongoing; NATO member since 1982.
-	# Heavily oriented toward internal stability and Ceuta/Melilla; ETA threat.
-	# Air force has F/A-18 Hornets and Mirage F1s; small carrier fleet.
-
 	c:SPA ?= {
 
 		create_military_formation = {
@@ -339,18 +315,21 @@ MILITARY_FORMATIONS = {
 			hq_region = sr:region_southern_europe
 			name = "Ejercito_de_Tierra"
 
-			# Central command — Madrid, Toledo
 			combat_unit = {
 				type = unit_type:combat_unit_type_mechanized_infantry
-				state_region = s:STATE_CASTILE
-				count = 18
+				state_region = s:STATE_NEW_CASTILE
+				count = 9
+			}
+			combat_unit = {
+				type = unit_type:combat_unit_type_light_infantry
+				state_region = s:STATE_NEW_CASTILE
+				count = 9
 			}
 			combat_unit = {
 				type = unit_type:combat_unit_type_armored_infantry
-				state_region = s:STATE_CASTILE
+				state_region = s:STATE_NEW_CASTILE
 				count = 10
 			}
-			# Northeastern — Catalonia, Aragon (counterterrorism + border)
 			combat_unit = {
 				type = unit_type:combat_unit_type_light_infantry
 				state_region = s:STATE_CATALONIA
@@ -359,15 +338,18 @@ MILITARY_FORMATIONS = {
 			combat_unit = {
 				type = unit_type:combat_unit_type_mechanized_infantry
 				state_region = s:STATE_ARAGON
-				count = 8
+				count = 4
 			}
-			# Southern — Andalusia (proximity to Africa/Ceuta/Melilla)
 			combat_unit = {
 				type = unit_type:combat_unit_type_light_infantry
-				state_region = s:STATE_ANDALUSIA
+				state_region = s:STATE_ARAGON
+				count = 4
+			}
+			combat_unit = {
+				type = unit_type:combat_unit_type_light_infantry
+				state_region = s:STATE_LOWER_ANDALUSIA
 				count = 10
 			}
-			# Northwest — Galicia, Asturias (ETA ops)
 			combat_unit = {
 				type = unit_type:combat_unit_type_light_infantry
 				state_region = s:STATE_GALICIA
@@ -375,7 +357,7 @@ MILITARY_FORMATIONS = {
 			}
 			combat_unit = {
 				type = unit_type:combat_unit_type_field_artillery
-				state_region = s:STATE_CASTILE
+				state_region = s:STATE_NEW_CASTILE
 				count = 5
 			}
 
@@ -392,21 +374,19 @@ MILITARY_FORMATIONS = {
 			transfer_to_formation = scope:spa_ejercito_de_tierra_scope
 		}
 
-
-		create_military_formation = {
+create_military_formation = {
 			type = army
 			hq_region = sr:region_southern_europe
 			name = "Ejercito_del_Aire"
 
-			# EF-18 Hornet, Mirage F1CE/EE
 			combat_unit = {
 				type = unit_type:combat_unit_type_multirole_aircraft
-				state_region = s:STATE_CASTILE
+				state_region = s:STATE_NEW_CASTILE
 				count = 5
 			}
 			combat_unit = {
 				type = unit_type:combat_unit_type_multirole_aircraft
-				state_region = s:STATE_ANDALUSIA
+				state_region = s:STATE_LOWER_ANDALUSIA
 				count = 3
 			}
 			combat_unit = {
@@ -428,23 +408,19 @@ MILITARY_FORMATIONS = {
 			transfer_to_formation = scope:spa_ejercito_del_aire_scope
 		}
 
-
-		create_military_formation = {
+create_military_formation = {
 			type = fleet
 			hq_region = sr:region_southern_europe
 			name = "Armada_Espanola"
 
-			# Príncipe de Asturias (STOVL carrier, Harrier AV-8B)
 			ship = {
 				type = ship_type:ship_type_aircraft_carrier
 				count = 1
 			}
-			# Baleares-class frigates, Santa María-class (Oliver Hazard Perry)
 			ship = {
 				type = ship_type:ship_type_frigate
 				count = 8
 			}
-			# Galerna-class (Type 209) submarines
 			ship = {
 				type = ship_type:ship_type_submarine
 				count = 4
@@ -465,10 +441,6 @@ MILITARY_FORMATIONS = {
 
 	}
 
-	### PORTUGAL ###
-	# ~54,000 active in 1992. NATO member; small but professional force.
-	# Primarily light infantry; small navy and air force with F-16As and A-7 Corsairs.
-
 	c:XPO ?= {
 
 		create_military_formation = {
@@ -479,7 +451,12 @@ MILITARY_FORMATIONS = {
 			combat_unit = {
 				type = unit_type:combat_unit_type_mechanized_infantry
 				state_region = s:STATE_ESTREMADURA
-				count = 18
+				count = 9
+			}
+			combat_unit = {
+				type = unit_type:combat_unit_type_light_infantry
+				state_region = s:STATE_ESTREMADURA
+				count = 9
 			}
 			combat_unit = {
 				type = unit_type:combat_unit_type_light_infantry
@@ -510,13 +487,11 @@ MILITARY_FORMATIONS = {
 			transfer_to_formation = scope:xpo_exercito_portugues_scope
 		}
 
-
-		create_military_formation = {
+create_military_formation = {
 			type = army
 			hq_region = sr:region_southern_europe
 			name = "Forca_Aerea_Portuguesa"
 
-			# A-7P Corsair, F-16A/B (deliveries from 1994, but on order)
 			combat_unit = {
 				type = unit_type:combat_unit_type_multirole_aircraft
 				state_region = s:STATE_ESTREMADURA
@@ -536,13 +511,11 @@ MILITARY_FORMATIONS = {
 			transfer_to_formation = scope:xpo_forca_aerea_portuguesa_scope
 		}
 
-
-		create_military_formation = {
+create_military_formation = {
 			type = fleet
 			hq_region = sr:region_southern_europe
 			name = "Marinha_Portuguesa"
 
-			# Vasco da Gama-class frigates (MEKO 200), Baptista de Andrade-class
 			ship = {
 				type = ship_type:ship_type_frigate
 				count = 5
@@ -567,11 +540,6 @@ MILITARY_FORMATIONS = {
 
 	}
 
-	### ITALY ###
-	# ~322,000 active in 1992 (large conscript army, reducing under post-Cold War plans).
-	# Leopard 1 and Centauro tank destroyers; Tornado IDS strike; Garibaldi carrier.
-	# Three army regions: North (NATO priority), Central, South.
-
 	c:ITA ?= {
 
 		create_military_formation = {
@@ -579,7 +547,6 @@ MILITARY_FORMATIONS = {
 			hq_region = sr:region_southern_europe
 			name = "3_Corpo_Armata"
 
-			# 3rd Army Corps — Northern Italy, NATO Central Front commitment
 			combat_unit = {
 				type = unit_type:combat_unit_type_armored_infantry
 				state_region = s:STATE_LOMBARDY
@@ -588,12 +555,22 @@ MILITARY_FORMATIONS = {
 			combat_unit = {
 				type = unit_type:combat_unit_type_mechanized_infantry
 				state_region = s:STATE_VENETIA
-				count = 15
+				count = 8
+			}
+			combat_unit = {
+				type = unit_type:combat_unit_type_light_infantry
+				state_region = s:STATE_VENETIA
+				count = 7
 			}
 			combat_unit = {
 				type = unit_type:combat_unit_type_mechanized_infantry
 				state_region = s:STATE_PIEDMONT
-				count = 12
+				count = 6
+			}
+			combat_unit = {
+				type = unit_type:combat_unit_type_light_infantry
+				state_region = s:STATE_PIEDMONT
+				count = 6
 			}
 			combat_unit = {
 				type = unit_type:combat_unit_type_light_infantry
@@ -619,17 +596,20 @@ MILITARY_FORMATIONS = {
 			transfer_to_formation = scope:ita_x_3_corpo_armata_scope
 		}
 
-
-		create_military_formation = {
+create_military_formation = {
 			type = army
 			hq_region = sr:region_southern_europe
 			name = "5_Corpo_Armata"
 
-			# 5th Army Corps — Central and Southern Italy
 			combat_unit = {
 				type = unit_type:combat_unit_type_mechanized_infantry
 				state_region = s:STATE_LAZIO
-				count = 15
+				count = 8
+			}
+			combat_unit = {
+				type = unit_type:combat_unit_type_light_infantry
+				state_region = s:STATE_LAZIO
+				count = 7
 			}
 			combat_unit = {
 				type = unit_type:combat_unit_type_light_infantry
@@ -665,13 +645,11 @@ MILITARY_FORMATIONS = {
 			transfer_to_formation = scope:ita_x_5_corpo_armata_scope
 		}
 
-
-		create_military_formation = {
+create_military_formation = {
 			type = army
 			hq_region = sr:region_southern_europe
 			name = "Aeronautica_Militare"
 
-			# Tornado IDS/ADV, F-104S ASA, AMX
 			combat_unit = {
 				type = unit_type:combat_unit_type_multirole_aircraft
 				state_region = s:STATE_LOMBARDY
@@ -701,28 +679,23 @@ MILITARY_FORMATIONS = {
 			transfer_to_formation = scope:ita_aeronautica_militare_scope
 		}
 
-
-		create_military_formation = {
+create_military_formation = {
 			type = fleet
 			hq_region = sr:region_southern_europe
 			name = "Marina_Militare"
 
-			# Giuseppe Garibaldi (STOVL carrier, Harrier/AV-8B)
 			ship = {
 				type = ship_type:ship_type_aircraft_carrier
 				count = 1
 			}
-			# Audace-class destroyers, De la Penne-class
 			ship = {
 				type = ship_type:ship_type_destroyer
 				count = 4
 			}
-			# Maestrale-class frigates, Lupo-class
 			ship = {
 				type = ship_type:ship_type_frigate
 				count = 8
 			}
-			# Sauro-class submarines
 			ship = {
 				type = ship_type:ship_type_submarine
 				count = 6
@@ -747,11 +720,6 @@ MILITARY_FORMATIONS = {
 
 	}
 
-	### GERMANY ###
-	# ~447,000 active in 1992 (unified Bundeswehr absorbing NVA; rapid reduction underway).
-	# Leopard 2 main battle tank; Tornado IDS; BAOR co-located with Allied forces.
-	# One of NATO's largest land forces; cuts announced under Stoltenberg defence review.
-
 	c:GER ?= {
 
 		create_military_formation = {
@@ -759,7 +727,6 @@ MILITARY_FORMATIONS = {
 			hq_region = sr:region_central_europe
 			name = "I_Korps"
 
-			# I Corps — Münster, northern Germany
 			combat_unit = {
 				type = unit_type:combat_unit_type_armored_infantry
 				state_region = s:STATE_WESTPHALIA
@@ -768,12 +735,22 @@ MILITARY_FORMATIONS = {
 			combat_unit = {
 				type = unit_type:combat_unit_type_mechanized_infantry
 				state_region = s:STATE_HANNOVER
-				count = 18
+				count = 9
+			}
+			combat_unit = {
+				type = unit_type:combat_unit_type_light_infantry
+				state_region = s:STATE_HANNOVER
+				count = 9
 			}
 			combat_unit = {
 				type = unit_type:combat_unit_type_mechanized_infantry
 				state_region = s:STATE_SCHLESWIG_HOLSTEIN
-				count = 10
+				count = 5
+			}
+			combat_unit = {
+				type = unit_type:combat_unit_type_light_infantry
+				state_region = s:STATE_SCHLESWIG_HOLSTEIN
+				count = 5
 			}
 			save_scope_as = ger_i_korps_scope
 		}
@@ -788,13 +765,11 @@ MILITARY_FORMATIONS = {
 			transfer_to_formation = scope:ger_i_korps_scope
 		}
 
-
-		create_military_formation = {
+create_military_formation = {
 			type = army
 			hq_region = sr:region_central_europe
 			name = "II_Korps"
 
-			# II Corps — Ulm, southern Germany
 			combat_unit = {
 				type = unit_type:combat_unit_type_armored_infantry
 				state_region = s:STATE_BAVARIA
@@ -803,12 +778,22 @@ MILITARY_FORMATIONS = {
 			combat_unit = {
 				type = unit_type:combat_unit_type_mechanized_infantry
 				state_region = s:STATE_WURTTEMBERG
-				count = 15
+				count = 8
+			}
+			combat_unit = {
+				type = unit_type:combat_unit_type_light_infantry
+				state_region = s:STATE_WURTTEMBERG
+				count = 7
 			}
 			combat_unit = {
 				type = unit_type:combat_unit_type_mechanized_infantry
 				state_region = s:STATE_HESSE
-				count = 12
+				count = 6
+			}
+			combat_unit = {
+				type = unit_type:combat_unit_type_light_infantry
+				state_region = s:STATE_HESSE
+				count = 6
 			}
 			combat_unit = {
 				type = unit_type:combat_unit_type_howitzer_artillery
@@ -829,27 +814,40 @@ MILITARY_FORMATIONS = {
 			transfer_to_formation = scope:ger_ii_korps_scope
 		}
 
-
-		create_military_formation = {
+create_military_formation = {
 			type = army
 			hq_region = sr:region_central_europe
 			name = "III_Korps_Ost"
 
-			# Eastern forces — former NVA states, rapidly reducing
 			combat_unit = {
 				type = unit_type:combat_unit_type_mechanized_infantry
 				state_region = s:STATE_SAXONY
-				count = 12
+				count = 6
+			}
+			combat_unit = {
+				type = unit_type:combat_unit_type_light_infantry
+				state_region = s:STATE_SAXONY
+				count = 6
 			}
 			combat_unit = {
 				type = unit_type:combat_unit_type_mechanized_infantry
 				state_region = s:STATE_MECKLENBURG
-				count = 8
+				count = 4
+			}
+			combat_unit = {
+				type = unit_type:combat_unit_type_light_infantry
+				state_region = s:STATE_MECKLENBURG
+				count = 4
 			}
 			combat_unit = {
 				type = unit_type:combat_unit_type_mechanized_infantry
 				state_region = s:STATE_ANHALT
-				count = 8
+				count = 4
+			}
+			combat_unit = {
+				type = unit_type:combat_unit_type_light_infantry
+				state_region = s:STATE_ANHALT
+				count = 4
 			}
 			combat_unit = {
 				type = unit_type:combat_unit_type_field_artillery
@@ -870,13 +868,11 @@ MILITARY_FORMATIONS = {
 			transfer_to_formation = scope:ger_iii_korps_ost_scope
 		}
 
-
-		create_military_formation = {
+create_military_formation = {
 			type = army
 			hq_region = sr:region_central_europe
 			name = "Luftwaffe"
 
-			# Tornado IDS/ECR, F-4F Phantom, MiG-29 (ex-NVA)
 			combat_unit = {
 				type = unit_type:combat_unit_type_multirole_aircraft
 				state_region = s:STATE_RHINELAND
@@ -906,13 +902,11 @@ MILITARY_FORMATIONS = {
 			transfer_to_formation = scope:ger_luftwaffe_scope
 		}
 
-
-		create_military_formation = {
+create_military_formation = {
 			type = fleet
 			hq_region = sr:region_central_europe
 			name = "Deutsche_Marine"
 
-			# Hamburg-class destroyers, Bremen-class (Type 122) frigates
 			ship = {
 				type = ship_type:ship_type_destroyer
 				count = 4
@@ -921,7 +915,6 @@ MILITARY_FORMATIONS = {
 				type = ship_type:ship_type_frigate
 				count = 6
 			}
-			# Type 206 submarines
 			ship = {
 				type = ship_type:ship_type_submarine
 				count = 6
@@ -942,10 +935,6 @@ MILITARY_FORMATIONS = {
 
 	}
 
-	### DENMARK ###
-	# ~29,000 active in 1992. NATO member; small professional force.
-	# Leopard 1 tanks; F-16A/B Fighting Falcons; HDMS Niels Juel frigates.
-
 	c:XDE ?= {
 
 		create_military_formation = {
@@ -956,7 +945,12 @@ MILITARY_FORMATIONS = {
 			combat_unit = {
 				type = unit_type:combat_unit_type_mechanized_infantry
 				state_region = s:STATE_JUTLAND
-				count = 14
+				count = 7
+			}
+			combat_unit = {
+				type = unit_type:combat_unit_type_light_infantry
+				state_region = s:STATE_JUTLAND
+				count = 7
 			}
 			combat_unit = {
 				type = unit_type:combat_unit_type_armored_infantry
@@ -987,13 +981,11 @@ MILITARY_FORMATIONS = {
 			transfer_to_formation = scope:xde_haeren_danmark_scope
 		}
 
-
-		create_military_formation = {
+create_military_formation = {
 			type = army
 			hq_region = sr:region_northern_europe
 			name = "Flyvevabnet"
 
-			# F-16A/B
 			combat_unit = {
 				type = unit_type:combat_unit_type_multirole_aircraft
 				state_region = s:STATE_JUTLAND
@@ -1013,13 +1005,11 @@ MILITARY_FORMATIONS = {
 			transfer_to_formation = scope:xde_flyvevabnet_scope
 		}
 
-
-		create_military_formation = {
+create_military_formation = {
 			type = fleet
 			hq_region = sr:region_central_europe
 			name = "Sovaernet"
 
-			# Niels Juel-class corvettes and StanFlex vessels
 			ship = {
 				type = ship_type:ship_type_frigate
 				count = 4
@@ -1044,11 +1034,6 @@ MILITARY_FORMATIONS = {
 
 	}
 
-	### SWEDEN ###
-	# ~64,000 active in 1992. Non-NATO but heavily armed; total defence concept.
-	# Gripen entering service (first flight 1988, operational 1996 — still on Viggen in 1992).
-	# Coastal navy; conscript army with Leopard 2 (Strv 121).
-
 	c:SWD ?= {
 
 		create_military_formation = {
@@ -1064,12 +1049,22 @@ MILITARY_FORMATIONS = {
 			combat_unit = {
 				type = unit_type:combat_unit_type_mechanized_infantry
 				state_region = s:STATE_GOTALAND
-				count = 15
+				count = 8
+			}
+			combat_unit = {
+				type = unit_type:combat_unit_type_light_infantry
+				state_region = s:STATE_GOTALAND
+				count = 7
 			}
 			combat_unit = {
 				type = unit_type:combat_unit_type_mechanized_infantry
 				state_region = s:STATE_SCANIA
-				count = 10
+				count = 5
+			}
+			combat_unit = {
+				type = unit_type:combat_unit_type_light_infantry
+				state_region = s:STATE_SCANIA
+				count = 5
 			}
 			combat_unit = {
 				type = unit_type:combat_unit_type_light_infantry
@@ -1095,13 +1090,11 @@ MILITARY_FORMATIONS = {
 			transfer_to_formation = scope:swd_armen_sverige_scope
 		}
 
-
-		create_military_formation = {
+create_military_formation = {
 			type = army
 			hq_region = sr:region_northern_europe
 			name = "Flygvapnet"
 
-			# AJ 37 Viggen, JA 37 Viggen (Gripen not yet operational)
 			combat_unit = {
 				type = unit_type:combat_unit_type_multirole_aircraft
 				state_region = s:STATE_SVEALAND
@@ -1131,18 +1124,15 @@ MILITARY_FORMATIONS = {
 			transfer_to_formation = scope:swd_flygvapnet_scope
 		}
 
-
-		create_military_formation = {
+create_military_formation = {
 			type = fleet
 			hq_region = sr:region_eastern_europe
 			name = "Marinen_Sverige"
 
-			# Gotland-class submarines (A19 entering service), Nacken-class
 			ship = {
 				type = ship_type:ship_type_submarine
 				count = 6
 			}
-			# Göteborg-class corvettes
 			ship = {
 				type = ship_type:ship_type_frigate
 				count = 4
@@ -1167,11 +1157,6 @@ MILITARY_FORMATIONS = {
 
 	}
 
-	### NORWAY ###
-	# ~33,000 active in 1992. NATO member; focus on northern/Arctic defence.
-	# F-16A/B fighters; Ula-class submarines; Oslo-class frigates.
-	# Forces spread thin across long coastline.
-
 	c:NRW ?= {
 
 		create_military_formation = {
@@ -1179,21 +1164,29 @@ MILITARY_FORMATIONS = {
 			hq_region = sr:region_northern_europe
 			name = "Haeren_Norge"
 
-			# Brigade Nord (Bardufoss) — main manoeuvre force
 			combat_unit = {
 				type = unit_type:combat_unit_type_mechanized_infantry
 				state_region = s:STATE_NORTHERN_NORWAY
-				count = 12
-			}
-			# Brigade Sør and Oslo garrison
-			combat_unit = {
-				type = unit_type:combat_unit_type_mechanized_infantry
-				state_region = s:STATE_EASTERN_NORWAY
-				count = 10
+				count = 6
 			}
 			combat_unit = {
 				type = unit_type:combat_unit_type_light_infantry
-				state_region = s:STATE_FINNMARK
+				state_region = s:STATE_NORTHERN_NORWAY
+				count = 6
+			}
+			combat_unit = {
+				type = unit_type:combat_unit_type_mechanized_infantry
+				state_region = s:STATE_EASTERN_NORWAY
+				count = 5
+			}
+			combat_unit = {
+				type = unit_type:combat_unit_type_light_infantry
+				state_region = s:STATE_EASTERN_NORWAY
+				count = 5
+			}
+			combat_unit = {
+				type = unit_type:combat_unit_type_light_infantry
+				state_region = s:STATE_NORTHERN_NORWAY
 				count = 5
 			}
 			combat_unit = {
@@ -1220,13 +1213,11 @@ MILITARY_FORMATIONS = {
 			transfer_to_formation = scope:nrw_haeren_norge_scope
 		}
 
-
-		create_military_formation = {
+create_military_formation = {
 			type = army
 			hq_region = sr:region_northern_europe
 			name = "Luftforsvaret"
 
-			# F-16A/B Fighting Falcon
 			combat_unit = {
 				type = unit_type:combat_unit_type_multirole_aircraft
 				state_region = s:STATE_EASTERN_NORWAY
@@ -1251,18 +1242,15 @@ MILITARY_FORMATIONS = {
 			transfer_to_formation = scope:nrw_luftforsvaret_scope
 		}
 
-
-		create_military_formation = {
+create_military_formation = {
 			type = fleet
 			hq_region = sr:region_eastern_europe
 			name = "Sjoeforsvaret"
 
-			# Oslo-class frigates
 			ship = {
 				type = ship_type:ship_type_frigate
 				count = 4
 			}
-			# Ula-class submarines (Type 210)
 			ship = {
 				type = ship_type:ship_type_submarine
 				count = 6
@@ -1287,11 +1275,6 @@ MILITARY_FORMATIONS = {
 
 	}
 
-	### POLAND ###
-	# ~296,000 active in 1992. Largest post-Warsaw Pact army in Eastern Europe.
-	# Transitioning from Soviet doctrine; T-72 and T-55 tanks; MiG-29 and Su-22.
-	# Three military districts: Warsaw, Pomerania, Silesia.
-
 	c:POL ?= {
 
 		create_military_formation = {
@@ -1299,7 +1282,6 @@ MILITARY_FORMATIONS = {
 			hq_region = sr:region_eastern_europe
 			name = "Warszawski_Okreg_Wojskowy"
 
-			# Warsaw Military District
 			combat_unit = {
 				type = unit_type:combat_unit_type_armored_infantry
 				state_region = s:STATE_MAZOVIA
@@ -1308,12 +1290,22 @@ MILITARY_FORMATIONS = {
 			combat_unit = {
 				type = unit_type:combat_unit_type_mechanized_infantry
 				state_region = s:STATE_MAZOVIA
-				count = 15
+				count = 8
+			}
+			combat_unit = {
+				type = unit_type:combat_unit_type_light_infantry
+				state_region = s:STATE_MAZOVIA
+				count = 7
 			}
 			combat_unit = {
 				type = unit_type:combat_unit_type_mechanized_infantry
-				state_region = s:STATE_BIALYSTOK
-				count = 10
+				state_region = s:STATE_MAZOVIA
+				count = 5
+			}
+			combat_unit = {
+				type = unit_type:combat_unit_type_light_infantry
+				state_region = s:STATE_MAZOVIA
+				count = 5
 			}
 			save_scope_as = pol_warszawski_okreg_wojskowy_scope
 		}
@@ -1328,36 +1320,49 @@ MILITARY_FORMATIONS = {
 			transfer_to_formation = scope:pol_warszawski_okreg_wojskowy_scope
 		}
 
-
-		create_military_formation = {
+create_military_formation = {
 			type = army
 			hq_region = sr:region_central_europe
 			name = "Slaski_Okreg_Wojskowy"
 
-			# Silesian and Pomeranian Military Districts
 			combat_unit = {
 				type = unit_type:combat_unit_type_armored_infantry
-				state_region = s:STATE_SILESIA
+				state_region = s:STATE_LOWER_SILESIA
 				count = 18
 			}
 			combat_unit = {
 				type = unit_type:combat_unit_type_mechanized_infantry
 				state_region = s:STATE_LESSER_POLAND
-				count = 15
+				count = 8
+			}
+			combat_unit = {
+				type = unit_type:combat_unit_type_light_infantry
+				state_region = s:STATE_LESSER_POLAND
+				count = 7
 			}
 			combat_unit = {
 				type = unit_type:combat_unit_type_mechanized_infantry
 				state_region = s:STATE_POMERANIA
-				count = 12
+				count = 6
+			}
+			combat_unit = {
+				type = unit_type:combat_unit_type_light_infantry
+				state_region = s:STATE_POMERANIA
+				count = 6
 			}
 			combat_unit = {
 				type = unit_type:combat_unit_type_mechanized_infantry
 				state_region = s:STATE_GREATER_POLAND
-				count = 10
+				count = 5
+			}
+			combat_unit = {
+				type = unit_type:combat_unit_type_light_infantry
+				state_region = s:STATE_GREATER_POLAND
+				count = 5
 			}
 			combat_unit = {
 				type = unit_type:combat_unit_type_howitzer_artillery
-				state_region = s:STATE_SILESIA
+				state_region = s:STATE_LOWER_SILESIA
 				count = 6
 			}
 
@@ -1374,13 +1379,11 @@ MILITARY_FORMATIONS = {
 			transfer_to_formation = scope:pol_slaski_okreg_wojskowy_scope
 		}
 
-
-		create_military_formation = {
+create_military_formation = {
 			type = army
 			hq_region = sr:region_central_europe
 			name = "Sily_Powietrzne"
 
-			# MiG-29A, Su-22M4, MiG-21bis
 			combat_unit = {
 				type = unit_type:combat_unit_type_multirole_aircraft
 				state_region = s:STATE_MAZOVIA
@@ -1388,7 +1391,7 @@ MILITARY_FORMATIONS = {
 			}
 			combat_unit = {
 				type = unit_type:combat_unit_type_fixed_wing_aircraft
-				state_region = s:STATE_SILESIA
+				state_region = s:STATE_LOWER_SILESIA
 				count = 4
 			}
 			combat_unit = {
@@ -1410,18 +1413,15 @@ MILITARY_FORMATIONS = {
 			transfer_to_formation = scope:pol_sily_powietrzne_scope
 		}
 
-
-		create_military_formation = {
+create_military_formation = {
 			type = fleet
 			hq_region = sr:region_eastern_europe
 			name = "Marynarka_Wojenna"
 
-			# Kilo-class submarines, ORP Orzeł
 			ship = {
 				type = ship_type:ship_type_submarine
 				count = 3
 			}
-			# Kashin-class destroyers, Oliver Hazard Perry-equivalent frigates
 			ship = {
 				type = ship_type:ship_type_destroyer
 				count = 2
@@ -1446,10 +1446,6 @@ MILITARY_FORMATIONS = {
 
 	}
 
-	### CZECHIA ###
-	# ~106,000 active in 1992 (Czech and Slovak Federal Republic dissolving end-1992).
-	# Czechoslovak People's Army: T-72, MiG-29, Su-25. Amicable split Jan 1993.
-
 	c:CZC ?= {
 
 		create_military_formation = {
@@ -1465,12 +1461,22 @@ MILITARY_FORMATIONS = {
 			combat_unit = {
 				type = unit_type:combat_unit_type_mechanized_infantry
 				state_region = s:STATE_MORAVIA
-				count = 18
+				count = 9
+			}
+			combat_unit = {
+				type = unit_type:combat_unit_type_light_infantry
+				state_region = s:STATE_MORAVIA
+				count = 9
 			}
 			combat_unit = {
 				type = unit_type:combat_unit_type_mechanized_infantry
 				state_region = s:STATE_BOHEMIA
-				count = 12
+				count = 6
+			}
+			combat_unit = {
+				type = unit_type:combat_unit_type_light_infantry
+				state_region = s:STATE_BOHEMIA
+				count = 6
 			}
 			combat_unit = {
 				type = unit_type:combat_unit_type_howitzer_artillery
@@ -1491,13 +1497,11 @@ MILITARY_FORMATIONS = {
 			transfer_to_formation = scope:czc_armada_ceske_republiky_scope
 		}
 
-
-		create_military_formation = {
+create_military_formation = {
 			type = army
 			hq_region = sr:region_central_europe
 			name = "Vzdusne_Sily"
 
-			# MiG-29, MiG-21MF, Su-25K
 			combat_unit = {
 				type = unit_type:combat_unit_type_multirole_aircraft
 				state_region = s:STATE_BOHEMIA
@@ -1524,10 +1528,6 @@ MILITARY_FORMATIONS = {
 
 	}
 
-	### HUNGARY ###
-	# ~72,000 active in 1992. Warsaw Pact successor; T-72, MiG-29.
-	# Applying for NATO membership; reducing forces under CFE Treaty.
-
 	c:HUN ?= {
 
 		create_military_formation = {
@@ -1543,12 +1543,22 @@ MILITARY_FORMATIONS = {
 			combat_unit = {
 				type = unit_type:combat_unit_type_mechanized_infantry
 				state_region = s:STATE_TRANSDANUBIA
-				count = 15
+				count = 8
+			}
+			combat_unit = {
+				type = unit_type:combat_unit_type_light_infantry
+				state_region = s:STATE_TRANSDANUBIA
+				count = 7
 			}
 			combat_unit = {
 				type = unit_type:combat_unit_type_mechanized_infantry
 				state_region = s:STATE_CENTRAL_HUNGARY
-				count = 12
+				count = 6
+			}
+			combat_unit = {
+				type = unit_type:combat_unit_type_light_infantry
+				state_region = s:STATE_CENTRAL_HUNGARY
+				count = 6
 			}
 			combat_unit = {
 				type = unit_type:combat_unit_type_field_artillery
@@ -1569,13 +1579,11 @@ MILITARY_FORMATIONS = {
 			transfer_to_formation = scope:hun_magyar_honvedseg_scope
 		}
 
-
-		create_military_formation = {
+create_military_formation = {
 			type = army
 			hq_region = sr:region_balkans
 			name = "Magyar_Legiero"
 
-			# MiG-29, MiG-21bis, Su-22M3
 			combat_unit = {
 				type = unit_type:combat_unit_type_multirole_aircraft
 				state_region = s:STATE_CENTRAL_HUNGARY
@@ -1602,11 +1610,6 @@ MILITARY_FORMATIONS = {
 
 	}
 
-	### GREECE ###
-	# ~158,000 active in 1992. NATO member; heavy focus on Turkish rivalry.
-	# Large army with M60/Leopard 1 tanks; F-16C and Mirage 2000 air force.
-	# Significant navy: MEKO frigates, Type 209 submarines.
-
 	c:GRK ?= {
 
 		create_military_formation = {
@@ -1614,7 +1617,6 @@ MILITARY_FORMATIONS = {
 			hq_region = sr:region_balkans
 			name = "Ellinikos_Stratos"
 
-			# 1st Army — Thrace/Macedonia, facing Turkey
 			combat_unit = {
 				type = unit_type:combat_unit_type_armored_infantry
 				state_region = s:STATE_WESTERN_THRACE
@@ -1623,13 +1625,22 @@ MILITARY_FORMATIONS = {
 			combat_unit = {
 				type = unit_type:combat_unit_type_mechanized_infantry
 				state_region = s:STATE_MACEDONIA
-				count = 18
+				count = 9
 			}
-			# 2nd Army — Attica, southern mainland
+			combat_unit = {
+				type = unit_type:combat_unit_type_light_infantry
+				state_region = s:STATE_MACEDONIA
+				count = 9
+			}
 			combat_unit = {
 				type = unit_type:combat_unit_type_mechanized_infantry
 				state_region = s:STATE_ATTICA
-				count = 15
+				count = 8
+			}
+			combat_unit = {
+				type = unit_type:combat_unit_type_light_infantry
+				state_region = s:STATE_ATTICA
+				count = 7
 			}
 			combat_unit = {
 				type = unit_type:combat_unit_type_light_infantry
@@ -1660,13 +1671,11 @@ MILITARY_FORMATIONS = {
 			transfer_to_formation = scope:grk_ellinikos_stratos_scope
 		}
 
-
-		create_military_formation = {
+create_military_formation = {
 			type = army
 			hq_region = sr:region_balkans
 			name = "Elliniki_Polemiki_Aeroporia"
 
-			# F-16C/D Block 30, Mirage 2000EG, A-7 Corsair
 			combat_unit = {
 				type = unit_type:combat_unit_type_multirole_aircraft
 				state_region = s:STATE_ATTICA
@@ -1696,13 +1705,11 @@ MILITARY_FORMATIONS = {
 			transfer_to_formation = scope:grk_elliniki_polemiki_aeroporia_scope
 		}
 
-
-		create_military_formation = {
+create_military_formation = {
 			type = fleet
 			hq_region = sr:region_balkans
 			name = "Elliniko_Polemiko_Nautiko"
 
-			# MEKO 200HN (Hydra-class) frigates, Adams-class destroyers
 			ship = {
 				type = ship_type:ship_type_destroyer
 				count = 4
@@ -1711,7 +1718,6 @@ MILITARY_FORMATIONS = {
 				type = ship_type:ship_type_frigate
 				count = 6
 			}
-			# Type 209 submarines
 			ship = {
 				type = ship_type:ship_type_submarine
 				count = 8
@@ -1732,11 +1738,6 @@ MILITARY_FORMATIONS = {
 
 	}
 
-	### TURKEY ###
-	# ~503,000 active in 1992. Second largest NATO army.
-	# Heavy focus on SE — PKK insurgency ongoing.
-	# M60 Patton and Leopard 1; F-16C/D and F-4E Phantom; Kilo-class subs.
-
 	c:TRK ?= {
 
 		create_military_formation = {
@@ -1744,7 +1745,6 @@ MILITARY_FORMATIONS = {
 			hq_region = sr:region_balkans
 			name = "Birinci_Ordu"
 
-			# 1st Army — Istanbul/Thrace, European front
 			combat_unit = {
 				type = unit_type:combat_unit_type_armored_infantry
 				state_region = s:STATE_EASTERN_THRACE
@@ -1753,12 +1753,22 @@ MILITARY_FORMATIONS = {
 			combat_unit = {
 				type = unit_type:combat_unit_type_mechanized_infantry
 				state_region = s:STATE_HUDAVENDIGAR
-				count = 18
+				count = 9
+			}
+			combat_unit = {
+				type = unit_type:combat_unit_type_light_infantry
+				state_region = s:STATE_HUDAVENDIGAR
+				count = 9
 			}
 			combat_unit = {
 				type = unit_type:combat_unit_type_mechanized_infantry
 				state_region = s:STATE_ANKARA
-				count = 15
+				count = 8
+			}
+			combat_unit = {
+				type = unit_type:combat_unit_type_light_infantry
+				state_region = s:STATE_ANKARA
+				count = 7
 			}
 			combat_unit = {
 				type = unit_type:combat_unit_type_howitzer_artillery
@@ -1779,17 +1789,20 @@ MILITARY_FORMATIONS = {
 			transfer_to_formation = scope:trk_birinci_ordu_scope
 		}
 
-
-		create_military_formation = {
+create_military_formation = {
 			type = army
 			hq_region = sr:region_near_east
 			name = "Ikinci_Ordu"
 
-			# 2nd Army — Malatya, eastern Anatolia
 			combat_unit = {
 				type = unit_type:combat_unit_type_mechanized_infantry
 				state_region = s:STATE_ERZURUM
-				count = 18
+				count = 9
+			}
+			combat_unit = {
+				type = unit_type:combat_unit_type_light_infantry
+				state_region = s:STATE_ERZURUM
+				count = 9
 			}
 			combat_unit = {
 				type = unit_type:combat_unit_type_armored_infantry
@@ -1801,7 +1814,6 @@ MILITARY_FORMATIONS = {
 				state_region = s:STATE_DIYARBAKIR
 				count = 20
 			}
-			# Southeast — heavy PKK counterinsurgency
 			combat_unit = {
 				type = unit_type:combat_unit_type_light_infantry
 				state_region = s:STATE_KARS
@@ -1826,13 +1838,11 @@ MILITARY_FORMATIONS = {
 			transfer_to_formation = scope:trk_ikinci_ordu_scope
 		}
 
-
-		create_military_formation = {
+create_military_formation = {
 			type = army
 			hq_region = sr:region_near_east
 			name = "Turk_Hava_Kuvvetleri"
 
-			# F-16C/D Block 40, F-4E Phantom, RF-4E
 			combat_unit = {
 				type = unit_type:combat_unit_type_multirole_aircraft
 				state_region = s:STATE_ANKARA
@@ -1867,23 +1877,19 @@ MILITARY_FORMATIONS = {
 			transfer_to_formation = scope:trk_turk_hava_kuvvetleri_scope
 		}
 
-
-		create_military_formation = {
+create_military_formation = {
 			type = fleet
 			hq_region = sr:region_near_east
 			name = "Turk_Deniz_Kuvvetleri"
 
-			# Oliver Hazard Perry-class (Gabya-class) frigates, Knox-class
 			ship = {
 				type = ship_type:ship_type_frigate
 				count = 8
 			}
-			# Yildiray-class (Guppy-class) and Type 209 submarines
 			ship = {
 				type = ship_type:ship_type_submarine
 				count = 10
 			}
-			# Destroyers (Gearing FRAM)
 			ship = {
 				type = ship_type:ship_type_destroyer
 				count = 5
@@ -1904,11 +1910,6 @@ MILITARY_FORMATIONS = {
 
 	}
 
-	### UKRAINE ###
-	# ~230,000 active in 1992. Newly independent; inheriting massive Soviet forces.
-	# Black Sea Fleet contested with Russia; large tank park.
-	# Still figuring out what to keep — nuclear weapons transferred to Russia by 1994.
-
 	c:UKR ?= {
 
 		create_military_formation = {
@@ -1916,7 +1917,6 @@ MILITARY_FORMATIONS = {
 			hq_region = sr:region_eastern_europe
 			name = "Sukhoputni_Viiska_Ukrainy"
 
-			# Kiev Military District
 			combat_unit = {
 				type = unit_type:combat_unit_type_armored_infantry
 				state_region = s:STATE_KIEV
@@ -1925,29 +1925,47 @@ MILITARY_FORMATIONS = {
 			combat_unit = {
 				type = unit_type:combat_unit_type_mechanized_infantry
 				state_region = s:STATE_KIEV
-				count = 18
+				count = 9
 			}
-			# Kharkiv — major armour concentration
+			combat_unit = {
+				type = unit_type:combat_unit_type_light_infantry
+				state_region = s:STATE_KIEV
+				count = 9
+			}
 			combat_unit = {
 				type = unit_type:combat_unit_type_armored_infantry
-				state_region = s:STATE_KHARKIV
+				state_region = s:STATE_KHARKOV
 				count = 15
 			}
 			combat_unit = {
 				type = unit_type:combat_unit_type_mechanized_infantry
-				state_region = s:STATE_ZAPORIZH
-				count = 12
+				state_region = s:STATE_TAURIDA
+				count = 6
 			}
-			# Western Ukraine / Galicia
+			combat_unit = {
+				type = unit_type:combat_unit_type_light_infantry
+				state_region = s:STATE_TAURIDA
+				count = 6
+			}
 			combat_unit = {
 				type = unit_type:combat_unit_type_mechanized_infantry
 				state_region = s:STATE_EAST_GALICIA
-				count = 12
+				count = 6
+			}
+			combat_unit = {
+				type = unit_type:combat_unit_type_light_infantry
+				state_region = s:STATE_EAST_GALICIA
+				count = 6
 			}
 			combat_unit = {
 				type = unit_type:combat_unit_type_mechanized_infantry
 				state_region = s:STATE_VOLHYNIA
-				count = 10
+				count = 5
+			}
+			combat_unit = {
+				type = unit_type:combat_unit_type_light_infantry
+				state_region = s:STATE_VOLHYNIA
+				count = 5
 			}
 			save_scope_as = ukr_sukhoputni_viiska_ukrainy_scope
 		}
@@ -1962,13 +1980,11 @@ MILITARY_FORMATIONS = {
 			transfer_to_formation = scope:ukr_sukhoputni_viiska_ukrainy_scope
 		}
 
-
-		create_military_formation = {
+create_military_formation = {
 			type = army
 			hq_region = sr:region_eastern_europe
 			name = "Povitryani_Sily_Ukrainy"
 
-			# MiG-29, Su-27, Su-25, Tu-22 (inherited from Soviet forces)
 			combat_unit = {
 				type = unit_type:combat_unit_type_multirole_aircraft
 				state_region = s:STATE_KIEV
@@ -1976,7 +1992,7 @@ MILITARY_FORMATIONS = {
 			}
 			combat_unit = {
 				type = unit_type:combat_unit_type_multirole_aircraft
-				state_region = s:STATE_KHARKIV
+				state_region = s:STATE_KHARKOV
 				count = 5
 			}
 			combat_unit = {
@@ -1998,13 +2014,11 @@ MILITARY_FORMATIONS = {
 			transfer_to_formation = scope:ukr_povitryani_sily_ukrainy_scope
 		}
 
-
-		create_military_formation = {
+create_military_formation = {
 			type = fleet
 			hq_region = sr:region_eastern_europe
 			name = "Viiskovo_Morski_Sily"
 
-			# Contested Black Sea Fleet vessels — Ukraine's share
 			ship = {
 				type = ship_type:ship_type_frigate
 				count = 4
@@ -2033,10 +2047,6 @@ MILITARY_FORMATIONS = {
 
 	}
 
-	### BELARUS ###
-	# ~92,000 active in 1992. Newly independent; inheriting Soviet Western Military District forces.
-	# Large tank and artillery park; T-72/T-80; MiG-29; strategic nuclear weapons (transferred to Russia by 1996).
-
 	c:BYL ?= {
 
 		create_military_formation = {
@@ -2052,17 +2062,32 @@ MILITARY_FORMATIONS = {
 			combat_unit = {
 				type = unit_type:combat_unit_type_mechanized_infantry
 				state_region = s:STATE_MINSK
-				count = 20
-			}
-			combat_unit = {
-				type = unit_type:combat_unit_type_mechanized_infantry
-				state_region = s:STATE_VICIEBSK
-				count = 12
-			}
-			combat_unit = {
-				type = unit_type:combat_unit_type_mechanized_infantry
-				state_region = s:STATE_HRODNO
 				count = 10
+			}
+			combat_unit = {
+				type = unit_type:combat_unit_type_light_infantry
+				state_region = s:STATE_MINSK
+				count = 10
+			}
+			combat_unit = {
+				type = unit_type:combat_unit_type_mechanized_infantry
+				state_region = s:STATE_VITEBSK
+				count = 6
+			}
+			combat_unit = {
+				type = unit_type:combat_unit_type_light_infantry
+				state_region = s:STATE_VITEBSK
+				count = 6
+			}
+			combat_unit = {
+				type = unit_type:combat_unit_type_mechanized_infantry
+				state_region = s:STATE_BREST
+				count = 5
+			}
+			combat_unit = {
+				type = unit_type:combat_unit_type_light_infantry
+				state_region = s:STATE_BREST
+				count = 5
 			}
 			save_scope_as = byl_sukhaputnyya_voyski_belarusi_scope
 		}
@@ -2077,13 +2102,11 @@ MILITARY_FORMATIONS = {
 			transfer_to_formation = scope:byl_sukhaputnyya_voyski_belarusi_scope
 		}
 
-
-		create_military_formation = {
+create_military_formation = {
 			type = army
 			hq_region = sr:region_eastern_europe
 			name = "Vaenна_Pavetranaya_Flota_Belarusi"
 
-			# MiG-29, Su-27, Su-24M, MiG-25
 			combat_unit = {
 				type = unit_type:combat_unit_type_multirole_aircraft
 				state_region = s:STATE_MINSK
@@ -2091,7 +2114,7 @@ MILITARY_FORMATIONS = {
 			}
 			combat_unit = {
 				type = unit_type:combat_unit_type_fixed_wing_aircraft
-				state_region = s:STATE_VICIEBSK
+				state_region = s:STATE_VITEBSK
 				count = 4
 			}
 
@@ -2110,11 +2133,6 @@ MILITARY_FORMATIONS = {
 
 	}
 
-	### RUSSIA ###
-	# ~1,500,000 active in 1992 (Western Military District forces only counted here).
-	# Inheriting bulk of Soviet military. Massive but chaotic — unpaid, deserting, equipment rusting.
-	# European Russia: Moscow MD, Leningrad MD, North Caucasus MD.
-
 	c:RUS ?= {
 
 		create_military_formation = {
@@ -2122,7 +2140,6 @@ MILITARY_FORMATIONS = {
 			hq_region = sr:region_russia
 			name = "Moskovski_Voyenny_Okrug"
 
-			# Moscow Military District — strategic reserve and capital defence
 			combat_unit = {
 				type = unit_type:combat_unit_type_armored_infantry
 				state_region = s:STATE_MOSCOW
@@ -2131,17 +2148,32 @@ MILITARY_FORMATIONS = {
 			combat_unit = {
 				type = unit_type:combat_unit_type_mechanized_infantry
 				state_region = s:STATE_MOSCOW
-				count = 25
+				count = 13
+			}
+			combat_unit = {
+				type = unit_type:combat_unit_type_light_infantry
+				state_region = s:STATE_MOSCOW
+				count = 12
 			}
 			combat_unit = {
 				type = unit_type:combat_unit_type_mechanized_infantry
 				state_region = s:STATE_TVER
-				count = 15
+				count = 8
+			}
+			combat_unit = {
+				type = unit_type:combat_unit_type_light_infantry
+				state_region = s:STATE_TVER
+				count = 7
 			}
 			combat_unit = {
 				type = unit_type:combat_unit_type_mechanized_infantry
 				state_region = s:STATE_RYAZAN
-				count = 12
+				count = 6
+			}
+			combat_unit = {
+				type = unit_type:combat_unit_type_light_infantry
+				state_region = s:STATE_RYAZAN
+				count = 6
 			}
 			save_scope_as = rus_moskovski_voyenny_okrug_scope
 		}
@@ -2156,13 +2188,11 @@ MILITARY_FORMATIONS = {
 			transfer_to_formation = scope:rus_moskovski_voyenny_okrug_scope
 		}
 
-
-		create_military_formation = {
+create_military_formation = {
 			type = army
 			hq_region = sr:region_russia
 			name = "Leningradski_Voyenny_Okrug"
 
-			# Leningrad Military District — northwestern Russia/Finland border
 			combat_unit = {
 				type = unit_type:combat_unit_type_armored_infantry
 				state_region = s:STATE_INGRIA
@@ -2171,12 +2201,22 @@ MILITARY_FORMATIONS = {
 			combat_unit = {
 				type = unit_type:combat_unit_type_mechanized_infantry
 				state_region = s:STATE_INGRIA
-				count = 18
+				count = 9
+			}
+			combat_unit = {
+				type = unit_type:combat_unit_type_light_infantry
+				state_region = s:STATE_INGRIA
+				count = 9
 			}
 			combat_unit = {
 				type = unit_type:combat_unit_type_mechanized_infantry
 				state_region = s:STATE_NOVGOROD
-				count = 12
+				count = 6
+			}
+			combat_unit = {
+				type = unit_type:combat_unit_type_light_infantry
+				state_region = s:STATE_NOVGOROD
+				count = 6
 			}
 			combat_unit = {
 				type = unit_type:combat_unit_type_light_infantry
@@ -2202,17 +2242,20 @@ MILITARY_FORMATIONS = {
 			transfer_to_formation = scope:rus_leningradski_voyenny_okrug_scope
 		}
 
-
-		create_military_formation = {
+create_military_formation = {
 			type = army
 			hq_region = sr:region_russia
 			name = "Severo_Kavkazsky_Voyenny_Okrug"
 
-			# North Caucasus MD — volatile region, Chechen war approaching
 			combat_unit = {
 				type = unit_type:combat_unit_type_mechanized_infantry
 				state_region = s:STATE_ROSTOV
-				count = 18
+				count = 9
+			}
+			combat_unit = {
+				type = unit_type:combat_unit_type_light_infantry
+				state_region = s:STATE_ROSTOV
+				count = 9
 			}
 			combat_unit = {
 				type = unit_type:combat_unit_type_armored_infantry
@@ -2243,13 +2286,11 @@ MILITARY_FORMATIONS = {
 			transfer_to_formation = scope:rus_severo_kavkazsky_voyenny_okrug_scope
 		}
 
-
-		create_military_formation = {
+create_military_formation = {
 			type = army
 			hq_region = sr:region_russia
 			name = "Voyenno_Vozdushnye_Sily_Zapad"
 
-			# Western aerospace forces
 			combat_unit = {
 				type = unit_type:combat_unit_type_multirole_aircraft
 				state_region = s:STATE_MOSCOW
@@ -2279,39 +2320,31 @@ MILITARY_FORMATIONS = {
 			transfer_to_formation = scope:rus_voyenno_vozdushnye_sily_zapad_scope
 		}
 
-
-		# Northern Fleet (Murmansk/Kola) — most powerful Russian fleet
-		create_military_formation = {
+create_military_formation = {
 			type = fleet
 			hq_region = sr:region_russia
 			name = "Severny_Flot"
 
-			# Kuznetsov-class carrier (Admiral Kuznetsov, entered service 1990)
 			ship = {
 				type = ship_type:ship_type_aircraft_carrier
 				count = 1
 			}
-			# Kirov-class battlecruisers and Slava-class cruisers
 			ship = {
 				type = ship_type:ship_type_armored_cruiser
 				count = 4
 			}
-			# Udaloy and Sovremennyy-class destroyers
 			ship = {
 				type = ship_type:ship_type_destroyer
 				count = 8
 			}
-			# Krivak-class frigates
 			ship = {
 				type = ship_type:ship_type_frigate
 				count = 6
 			}
-			# Akula, Victor III, Sierra SSNs
 			ship = {
 				type = ship_type:ship_type_submarine
 				count = 15
 			}
-			# Typhoon and Delta IV SSBNs
 			ship = {
 				type = ship_type:ship_type_troop_ship
 				count = 10
@@ -2334,9 +2367,7 @@ MILITARY_FORMATIONS = {
 			transfer_to_formation = scope:rus_severny_flot_scope
 		}
 
-
-		# Baltic Fleet
-		create_military_formation = {
+create_military_formation = {
 			type = fleet
 			hq_region = sr:region_russia
 			name = "Baltiysky_Flot"
@@ -2367,9 +2398,7 @@ MILITARY_FORMATIONS = {
 			transfer_to_formation = scope:rus_baltiysky_flot_scope
 		}
 
-
-		# Black Sea Fleet (contested with Ukraine — Russia's majority share)
-		create_military_formation = {
+create_military_formation = {
 			type = fleet
 			hq_region = sr:region_russia
 			name = "Chernomorsky_Flot"
@@ -2406,13 +2435,7 @@ MILITARY_FORMATIONS = {
 
 	}
 
-	### FINLAND ###
-	# ~31,000 active (but ~500,000 reservists — enormous reserve army).
-	# Non-NATO; Finnish Defence Forces: Leopard 2 (ordered, arriving mid-90s), T-72 inherited.
-	# F/A-18 Hornets on order (delivered 1995-2000); still on MiG-21/Saab Draken in 1992.
-	# No heavy navy; coastal defence corvettes and minelayers.
-
-	c:FNL ?= {
+c:FNL ?= {
 
 		create_military_formation = {
 			type = army
@@ -2422,19 +2445,23 @@ MILITARY_FORMATIONS = {
 			combat_unit = {
 				type = unit_type:combat_unit_type_mechanized_infantry
 				state_region = s:STATE_UUSIMAA
-				count = 12
+				count = 6
 			}
 			combat_unit = {
 				type = unit_type:combat_unit_type_light_infantry
-				state_region = s:STATE_SOUTHERN_FINLAND
+				state_region = s:STATE_UUSIMAA
+				count = 6
+			}
+			combat_unit = {
+				type = unit_type:combat_unit_type_light_infantry
+				state_region = s:STATE_UUSIMAA
 				count = 10
 			}
 			combat_unit = {
 				type = unit_type:combat_unit_type_light_infantry
-				state_region = s:STATE_KESKI_SUOMI
+				state_region = s:STATE_KUOPIO
 				count = 8
 			}
-			# Northern/Lapland — key defensive corridor
 			combat_unit = {
 				type = unit_type:combat_unit_type_light_infantry
 				state_region = s:STATE_OULU
@@ -2464,13 +2491,11 @@ MILITARY_FORMATIONS = {
 			transfer_to_formation = scope:fnl_maavoimat_scope
 		}
 
-
-		create_military_formation = {
+create_military_formation = {
 			type = army
 			hq_region = sr:region_northern_europe
 			name = "Ilmavoimat"
 
-			# MiG-21bis, SAAB Draken (J35F), Hawk Mk 51
 			combat_unit = {
 				type = unit_type:combat_unit_type_fixed_wing_aircraft
 				state_region = s:STATE_UUSIMAA
@@ -2495,13 +2520,11 @@ MILITARY_FORMATIONS = {
 			transfer_to_formation = scope:fnl_ilmavoimat_scope
 		}
 
-
-		create_military_formation = {
+create_military_formation = {
 			type = fleet
 			hq_region = sr:region_northern_europe
 			name = "Merivoimat"
 
-			# Helsinki-class missile boats, Hämeenmaa-class minelayers
 			ship = {
 				type = ship_type:ship_type_destroyer
 				count = 5
@@ -2526,12 +2549,7 @@ MILITARY_FORMATIONS = {
 
 	}
 
-	### SWITZERLAND ###
-	# ~3,500 active (militia system — 625,000 mobilizable reservists).
-	# Non-NATO, permanent neutrality. F/A-18C/D on order; still on F-5E Tiger II and Mirage IIIS.
-	# Represented with small active cadre.
-
-	c:SWS ?= {
+c:SWS ?= {
 
 		create_military_formation = {
 			type = army
@@ -2541,12 +2559,22 @@ MILITARY_FORMATIONS = {
 			combat_unit = {
 				type = unit_type:combat_unit_type_mechanized_infantry
 				state_region = s:STATE_WEST_SWITZERLAND
-				count = 10
+				count = 5
+			}
+			combat_unit = {
+				type = unit_type:combat_unit_type_light_infantry
+				state_region = s:STATE_WEST_SWITZERLAND
+				count = 5
 			}
 			combat_unit = {
 				type = unit_type:combat_unit_type_mechanized_infantry
 				state_region = s:STATE_EAST_SWITZERLAND
-				count = 8
+				count = 4
+			}
+			combat_unit = {
+				type = unit_type:combat_unit_type_light_infantry
+				state_region = s:STATE_EAST_SWITZERLAND
+				count = 4
 			}
 			combat_unit = {
 				type = unit_type:combat_unit_type_light_infantry
@@ -2572,13 +2600,11 @@ MILITARY_FORMATIONS = {
 			transfer_to_formation = scope:sws_schweizer_armee_scope
 		}
 
-
-		create_military_formation = {
+create_military_formation = {
 			type = army
 			hq_region = sr:region_central_europe
 			name = "Schweizer_Luftwaffe"
 
-			# F-5E Tiger II, Mirage IIIS
 			combat_unit = {
 				type = unit_type:combat_unit_type_fixed_wing_aircraft
 				state_region = s:STATE_WEST_SWITZERLAND
@@ -2599,10 +2625,6 @@ MILITARY_FORMATIONS = {
 		}
 
 	}
-
-	### IRELAND ###
-	# ~13,000 active. Non-NATO; UN peacekeeping focus.
-	# Light infantry only; no air combat capability; no navy to speak of.
 
 	c:IRE ?= {
 
@@ -2642,11 +2664,6 @@ MILITARY_FORMATIONS = {
 
 	}
 
-	### SERBIA ###
-	# ~135,000 active in 1992. Yugoslav People's Army successor; Bosnian War ongoing.
-	# Controls Republika Srpska forces; T-55/T-72; MiG-29 and J-22 Orao.
-	# YUG tag owns Bosnia states reflecting VRS/Republika Srpska situation.
-
 	c:YUG ?= {
 
 		create_military_formation = {
@@ -2654,38 +2671,50 @@ MILITARY_FORMATIONS = {
 			hq_region = sr:region_balkans
 			name = "Vojska_Jugoslavije"
 
-			# Serbia proper
 			combat_unit = {
 				type = unit_type:combat_unit_type_armored_infantry
-				state_region = s:STATE_NORTHERN_SERBIA
+				state_region = s:STATE_WESTERN_SERBIA
 				count = 20
 			}
 			combat_unit = {
 				type = unit_type:combat_unit_type_mechanized_infantry
-				state_region = s:STATE_NORTHERN_SERBIA
-				count = 15
+				state_region = s:STATE_WESTERN_SERBIA
+				count = 8
+			}
+			combat_unit = {
+				type = unit_type:combat_unit_type_light_infantry
+				state_region = s:STATE_WESTERN_SERBIA
+				count = 7
 			}
 			combat_unit = {
 				type = unit_type:combat_unit_type_mechanized_infantry
-				state_region = s:STATE_SOUTHERN_SERBIA
-				count = 12
+				state_region = s:STATE_EASTERN_SERBIA
+				count = 6
 			}
-			# Montenegro
+			combat_unit = {
+				type = unit_type:combat_unit_type_light_infantry
+				state_region = s:STATE_EASTERN_SERBIA
+				count = 6
+			}
 			combat_unit = {
 				type = unit_type:combat_unit_type_light_infantry
 				state_region = s:STATE_MONTENEGRO
 				count = 8
 			}
-			# Republika Srpska / Bosnian Serb forces
 			combat_unit = {
 				type = unit_type:combat_unit_type_armored_infantry
-				state_region = s:STATE_BANJA_LUKA
+				state_region = s:STATE_BOSNIA
 				count = 12
 			}
 			combat_unit = {
 				type = unit_type:combat_unit_type_mechanized_infantry
-				state_region = s:STATE_VLASENICA
-				count = 10
+				state_region = s:STATE_BOSNIA
+				count = 5
+			}
+			combat_unit = {
+				type = unit_type:combat_unit_type_light_infantry
+				state_region = s:STATE_BOSNIA
+				count = 5
 			}
 			combat_unit = {
 				type = unit_type:combat_unit_type_light_infantry
@@ -2694,12 +2723,12 @@ MILITARY_FORMATIONS = {
 			}
 			combat_unit = {
 				type = unit_type:combat_unit_type_howitzer_artillery
-				state_region = s:STATE_NORTHERN_SERBIA
+				state_region = s:STATE_WESTERN_SERBIA
 				count = 8
 			}
 			combat_unit = {
 				type = unit_type:combat_unit_type_field_artillery
-				state_region = s:STATE_BANJA_LUKA
+				state_region = s:STATE_BOSNIA
 				count = 6
 			}
 
@@ -2716,21 +2745,19 @@ MILITARY_FORMATIONS = {
 			transfer_to_formation = scope:yug_vojska_jugoslavije_scope
 		}
 
-
-		create_military_formation = {
+create_military_formation = {
 			type = army
 			hq_region = sr:region_balkans
 			name = "Ratno_Vazduhoplovstvo"
 
-			# MiG-29, J-22 Orao, G-4 Super Galeb
 			combat_unit = {
 				type = unit_type:combat_unit_type_multirole_aircraft
-				state_region = s:STATE_NORTHERN_SERBIA
+				state_region = s:STATE_WESTERN_SERBIA
 				count = 4
 			}
 			combat_unit = {
 				type = unit_type:combat_unit_type_fixed_wing_aircraft
-				state_region = s:STATE_SOUTHERN_SERBIA
+				state_region = s:STATE_EASTERN_SERBIA
 				count = 3
 			}
 
@@ -2749,11 +2776,6 @@ MILITARY_FORMATIONS = {
 
 	}
 
-	### CROATIA ###
-	# ~105,000 active in 1992. Newly independent; Croatian War of Independence ongoing.
-	# Poorly equipped at start — captured JNA equipment and emergency imports.
-	# HVO (Bosnian Croat forces) also active.
-
 	c:HRV ?= {
 
 		create_military_formation = {
@@ -2761,24 +2783,26 @@ MILITARY_FORMATIONS = {
 			hq_region = sr:region_balkans
 			name = "Hrvatska_Vojska"
 
-			# Zagreb and central Croatia
 			combat_unit = {
 				type = unit_type:combat_unit_type_mechanized_infantry
 				state_region = s:STATE_CROATIA
-				count = 20
+				count = 10
+			}
+			combat_unit = {
+				type = unit_type:combat_unit_type_light_infantry
+				state_region = s:STATE_CROATIA
+				count = 10
 			}
 			combat_unit = {
 				type = unit_type:combat_unit_type_light_infantry
 				state_region = s:STATE_CROATIA
 				count = 25
 			}
-			# Dalmatia — coastal defence (Dubrovnik siege)
 			combat_unit = {
 				type = unit_type:combat_unit_type_light_infantry
 				state_region = s:STATE_DALMATIA
 				count = 20
 			}
-			# Slavonia — eastern front
 			combat_unit = {
 				type = unit_type:combat_unit_type_light_infantry
 				state_region = s:STATE_SLAVONIA
@@ -2803,13 +2827,11 @@ MILITARY_FORMATIONS = {
 			transfer_to_formation = scope:hrv_hrvatska_vojska_scope
 		}
 
-
-		create_military_formation = {
+create_military_formation = {
 			type = army
 			hq_region = sr:region_balkans
 			name = "Hrvatsko_Ratno_Zrakoplovstvo"
 
-			# MiG-21 (defected from JNA), captured aircraft
 			combat_unit = {
 				type = unit_type:combat_unit_type_fixed_wing_aircraft
 				state_region = s:STATE_CROATIA
@@ -2831,11 +2853,6 @@ MILITARY_FORMATIONS = {
 
 	}
 
-	### ROMANIA ###
-	# ~200,000 active in 1992. Post-Ceaușescu; undergoing painful transition.
-	# Soviet-era equipment: T-55/TR-85 tanks; MiG-21/MiG-23/IAR 93 Vultur.
-	# Large but outdated force; significant reductions underway.
-
 	c:ROM ?= {
 
 		create_military_formation = {
@@ -2851,17 +2868,32 @@ MILITARY_FORMATIONS = {
 			combat_unit = {
 				type = unit_type:combat_unit_type_mechanized_infantry
 				state_region = s:STATE_WALLACHIA
-				count = 20
+				count = 10
+			}
+			combat_unit = {
+				type = unit_type:combat_unit_type_light_infantry
+				state_region = s:STATE_WALLACHIA
+				count = 10
 			}
 			combat_unit = {
 				type = unit_type:combat_unit_type_mechanized_infantry
 				state_region = s:STATE_NORTHERN_TRANSYLVANIA
-				count = 15
+				count = 8
+			}
+			combat_unit = {
+				type = unit_type:combat_unit_type_light_infantry
+				state_region = s:STATE_NORTHERN_TRANSYLVANIA
+				count = 7
 			}
 			combat_unit = {
 				type = unit_type:combat_unit_type_mechanized_infantry
 				state_region = s:STATE_MOLDAVIA
-				count = 12
+				count = 6
+			}
+			combat_unit = {
+				type = unit_type:combat_unit_type_light_infantry
+				state_region = s:STATE_MOLDAVIA
+				count = 6
 			}
 			combat_unit = {
 				type = unit_type:combat_unit_type_light_infantry
@@ -2887,13 +2919,11 @@ MILITARY_FORMATIONS = {
 			transfer_to_formation = scope:rom_armata_romana_scope
 		}
 
-
-		create_military_formation = {
+create_military_formation = {
 			type = army
 			hq_region = sr:region_balkans
 			name = "Fortele_Aeriene_Romane"
 
-			# MiG-21 Lancer, MiG-23MF, IAR 93 Vultur
 			combat_unit = {
 				type = unit_type:combat_unit_type_fixed_wing_aircraft
 				state_region = s:STATE_WALLACHIA
@@ -2918,13 +2948,11 @@ MILITARY_FORMATIONS = {
 			transfer_to_formation = scope:rom_fortele_aeriene_romane_scope
 		}
 
-
-		create_military_formation = {
+create_military_formation = {
 			type = fleet
 			hq_region = sr:region_balkans
 			name = "Fortele_Navale_Romane"
 
-			# Mărăști-class destroyers, Tetal-class frigates
 			ship = {
 				type = ship_type:ship_type_destroyer
 				count = 2
@@ -2933,7 +2961,6 @@ MILITARY_FORMATIONS = {
 				type = ship_type:ship_type_frigate
 				count = 4
 			}
-			# Kilo-class submarine
 			ship = {
 				type = ship_type:ship_type_submarine
 				count = 1
@@ -2954,10 +2981,6 @@ MILITARY_FORMATIONS = {
 
 	}
 
-	### BULGARIA ###
-	# ~100,000 active in 1992. Post-communist transition; CFE Treaty reductions.
-	# T-72/T-55 tanks; MiG-29 and MiG-23; small Black Sea navy.
-
 	c:BUL ?= {
 
 		create_military_formation = {
@@ -2973,12 +2996,22 @@ MILITARY_FORMATIONS = {
 			combat_unit = {
 				type = unit_type:combat_unit_type_mechanized_infantry
 				state_region = s:STATE_BULGARIA
-				count = 18
+				count = 9
+			}
+			combat_unit = {
+				type = unit_type:combat_unit_type_light_infantry
+				state_region = s:STATE_BULGARIA
+				count = 9
 			}
 			combat_unit = {
 				type = unit_type:combat_unit_type_mechanized_infantry
 				state_region = s:STATE_NORTHERN_THRACE
-				count = 12
+				count = 6
+			}
+			combat_unit = {
+				type = unit_type:combat_unit_type_light_infantry
+				state_region = s:STATE_NORTHERN_THRACE
+				count = 6
 			}
 			combat_unit = {
 				type = unit_type:combat_unit_type_field_artillery
@@ -2999,13 +3032,11 @@ MILITARY_FORMATIONS = {
 			transfer_to_formation = scope:bul_bulgarska_armiya_scope
 		}
 
-
-		create_military_formation = {
+create_military_formation = {
 			type = army
 			hq_region = sr:region_balkans
 			name = "Bulgarski_Vozdushni_Sili"
 
-			# MiG-29, MiG-23MLD, Su-25K
 			combat_unit = {
 				type = unit_type:combat_unit_type_multirole_aircraft
 				state_region = s:STATE_BULGARIA
@@ -3030,13 +3061,11 @@ MILITARY_FORMATIONS = {
 			transfer_to_formation = scope:bul_bulgarski_vozdushni_sili_scope
 		}
 
-
-		create_military_formation = {
+create_military_formation = {
 			type = fleet
 			hq_region = sr:region_balkans
 			name = "Voenno_Morski_Sili_Bulgaria"
 
-			# Koni-class frigates, Romeo-class submarines
 			ship = {
 				type = ship_type:ship_type_frigate
 				count = 3

@@ -32,7 +32,6 @@ cartel.1 = {
 
 	immediate = {
 		set_variable = escobar_captured
-		# Check if turmoil exists for future Colombian Conflict trigger
 		if = {
 			limit = {
 				any_scope_state = {
@@ -55,7 +54,6 @@ cartel.1 = {
 			name = cartel_crackdown_success
 			months = 36
 		}
-		# Notify all Americas countries
 		hidden_effect = {
 			every_country = {
 				limit = {
@@ -76,10 +74,6 @@ cartel.1 = {
 }
 
 # ==========================================
-# cartel.2 — El Chapo Captured (MEX only)
-# Fires when opium 25%+ above base and
-# Mexico is cracking down.
-# Hidden effect queues first escape.
 # ==========================================
 
 cartel.2 = {
@@ -123,7 +117,6 @@ cartel.2 = {
 			name = cartel_crackdown_success
 			months = 36
 		}
-		# Queue first escape — fires approximately 3-5 years later
 		hidden_effect = {
 			trigger_event = { id = cartel.3 days = 1460 }
 		}
@@ -131,9 +124,6 @@ cartel.2 = {
 }
 
 # ==========================================
-# cartel.3 — El Chapo's First Escape (MEX)
-# Hidden queued event — fires ~4 years
-# after capture. Sets up further events.
 # ==========================================
 
 cartel.3 = {
@@ -168,7 +158,6 @@ cartel.3 = {
 			name = cartel_el_chapo_escaped
 			months = 36
 		}
-		# Sinaloa cartel resurgence in Sinaloa state if it exists
 		if = {
 			limit = {
 				any_scope_state = {
@@ -191,10 +180,6 @@ cartel.3 = {
 }
 
 # ==========================================
-# cartel.4 — Cartel Turf Division (MEX timeout)
-# Fires when Mexico's JE times out without
-# completing. Mexican states get cartel
-# territory modifiers.
 # ==========================================
 
 cartel.4 = {
@@ -225,15 +210,13 @@ cartel.4 = {
 			name = cartel_narco_state
 			months = 60
 		}
-		# Assign cartel territory modifiers to Mexican states
-		# CJNG — central/western states
 		every_scope_state = {
 			limit = {
 				owner = c:MEX
 				OR = {
 					state_region = s:STATE_JALISCO
-					state_region = s:STATE_GUANAJUATO
-					state_region = s:STATE_MICHOACAN
+					state_region = s:STATE_BAJIO
+					state_region = s:STATE_JALISCO
 				}
 			}
 			add_modifier = {
@@ -241,14 +224,13 @@ cartel.4 = {
 				months = 60
 			}
 		}
-		# Gulf Cartel — northeast/Gulf coast
 		every_scope_state = {
 			limit = {
 				owner = c:MEX
 				OR = {
-					state_region = s:STATE_TAMAULIPAS
+					state_region = s:STATE_RIO_GRANDE
 					state_region = s:STATE_VERACRUZ
-					state_region = s:STATE_NUEVO_LEON
+					state_region = s:STATE_RIO_GRANDE
 				}
 			}
 			add_modifier = {
@@ -256,7 +238,6 @@ cartel.4 = {
 				months = 60
 			}
 		}
-		# Sinaloa Cartel — northwest
 		every_scope_state = {
 			limit = {
 				owner = c:MEX
@@ -271,12 +252,11 @@ cartel.4 = {
 				months = 60
 			}
 		}
-		# Northeast Cartel
 		every_scope_state = {
 			limit = {
 				owner = c:MEX
 				OR = {
-					state_region = s:STATE_COAHUILA
+					state_region = s:STATE_RIO_GRANDE
 					state_region = s:STATE_ZACATECAS
 				}
 			}
@@ -391,7 +371,6 @@ cartel.6 = {
 		set_variable = cartel_laundering_fired
 	}
 
-	# Option A: Pursue the investigation
 	option = {
 		name = cartel.6.a
 		trigger = { has_variable = cartel_crackdown }
@@ -399,11 +378,10 @@ cartel.6 = {
 			name = cartel_laundering_investigation
 			months = 18
 		}
-		add_infamy = -5
+		change_infamy = -5
 		ai_chance = { base = 70 }
 	}
 
-	# Option B: Let it go
 	option = {
 		name = cartel.6.b
 		default_option = yes
@@ -411,7 +389,7 @@ cartel.6 = {
 			name = cartel_laundering_ignored
 			months = 12
 		}
-		add_infamy = 5
+		change_infamy = 5
 		ai_chance = { base = 30 }
 	}
 }
@@ -443,7 +421,6 @@ cartel.7 = {
 		set_variable = cartel_us_pressure_fired
 	}
 
-	# Option A: Cooperate with US anti-drug programs
 	option = {
 		name = cartel.7.a
 		if = {
@@ -460,7 +437,6 @@ cartel.7 = {
 		ai_chance = { base = 60 }
 	}
 
-	# Option B: Reject US interference — sovereignty first
 	option = {
 		name = cartel.7.b
 		default_option = yes
@@ -510,10 +486,9 @@ cartel.8 = {
 		}
 	}
 
-	# Option A: Escalate — double down on the crackdown
 	option = {
 		name = cartel.8.a
-		add_authority = -50
+		add_modifier = { name = smd_authority_shift multiplier = -50 months = 24 }
 		add_modifier = {
 			name = cartel_retaliation_escalate
 			months = 18
@@ -524,7 +499,6 @@ cartel.8 = {
 		ai_chance = { base = 50 }
 	}
 
-	# Option B: Pull back — protect civilians over progress
 	option = {
 		name = cartel.8.b
 		default_option = yes
@@ -572,7 +546,6 @@ cartel.9 = {
 	option = {
 		name = cartel.9.a
 		default_option = yes
-		# Clean up variables and modifiers
 		remove_variable = cartel_cooperation
 		remove_variable = cartel_crackdown
 		remove_variable = cartel_assassination_fired
@@ -608,7 +581,6 @@ cartel.100 = {
 		remove_modifier = cartel_cooperation_modifier
 		remove_modifier = cartel_crackdown_modifier
 		remove_banned_goods = g:opium
-		# Open cartel fighting JE for non-MEX, non-CLM countries
 		if = {
 			limit = {
 				NOR = {

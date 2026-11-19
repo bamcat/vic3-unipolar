@@ -1,12 +1,11 @@
 ﻿l_german:
-
  je_national_development: "Nationaler Entwicklungspfad"
  je_national_development_reason: "Jede Nation muss wählen, wo sie ihre Energien konzentrieren. Ein nationaler Entwicklungsplan konzentriert sich auf Ressourcen, Politik und politischen Willen für zehn Jahre. — die Wahl kann erst nach Abschluß des Programms rückgängig gemacht werden."
 
  je_foreign_investment: "Auslandsinvestitionen"
  je_foreign_investment_reason: "Kapital von großen Mächten zu gewinnen, kann die Entwicklung über das hinaus beschleunigen, was Haushaltsmittel erlauben. Ein ausländischer Investitionsvertrag würde das Land außerhalb des Unternehmens öffnen — mit allen Möglichkeiten und Abhängigkeiten, die mit sich bringen."
  has_foreign_investment_or_trade_agreement_with_west_tt:0 "Unterzeichnung eines ausländischen Investitions- und Handelsabkommens mit den Vereinigten Staaten, Großbritannien oder Frankreich"
- 
+
  ndp_status_industrial_tt: "Industrielle Expansion ist im Gange. Das Land leitet Ressourcen für den Aufbau seiner Produktions- und Schwerindustriebasis."
  ndp_status_military_tt: "Militärische Expansion ist im Gange. Das Land investiert in seine Streitkräfte, Lehre und Verteidigungsindustrie."
  ndp_status_resource_tt: "Die Entwicklung der Ressourcenwirtschaft ist im Gange. Das Land konzentriert sich auf die Landwirtschaft und die Rohstoffgewinnung."
@@ -34,7 +33,6 @@
  fi_button_reject_name: "Ausländische Investitionen"
  fi_button_reject_desc: "Schließen Sie die Tür zu ausländischem Kapital. Dies wird den Journaleintrag beenden und eine langfristige Investitionsstrafe anwenden, wird jedoch die wirtschaftliche Unabhängigkeit und die Stärkung der Autorität erhalten."
 
- # Tooltip keys
  ndp_no_path_active_tt: "Kein Entwicklungspfad ist derzeit aktiv"
  ndp_abandon_cost_tt: "Der Weg wird eine Legitimität und Prestigestrafe für 2 Jahre anwenden"
 
@@ -52,10 +50,6 @@
  ndp_bar_turmoil_tt: "Hohe Turbulenzen verlangsamen Entwicklung"
  ndp_bar_at_war_tt: "Krieg stört das Entwicklungsprogramm"
 
- # ==========================================
- # OPENING EVENT — ndp_events.0
- # ==========================================
-
  ndp_events.0.t: "Ein nationales Entwicklungsprogramm beginnt"
  ndp_events.0.d_industrial: "Die Regierung von [ROOT.GetCountry.GetName] hat sich zu einem Jahrzehnt der industriellen Expansion verpflichtet. Die Investitionen fließen in Fabriken, Minen und die Infrastruktur, die sie verbindet. Der Plan ist ehrgeizig - und die Hindernisse beträchtlich - aber die Vision ist klar: die Produktionskapazität zu bauen, die [ROOT.GetCountry.GetName]'s Platz in der Welt definiert."
  ndp_events.0.d_military: "Die Regierung von [ROOT.GetCountry.GetName] hat sich zu einem Jahrzehnt der militärischen Expansion verpflichtet. Baracken werden gebaut, Offiziere trainiert und Lehren reformiert. Ob die Motivation Verteidigung, Abschreckung oder Ehrgeiz ist, die Botschaft an die Welt ist unverkennbar: [ROOT.GetCountry.GetName] will ernst genommen werden."
@@ -63,10 +57,6 @@
  ndp_events.0.d_service: "Die Regierung von [ROOT.GetCountry.GetName] hat sich zu einem Jahrzehnt der Entwicklung der Dienstleistungswirtschaft verpflichtet. Schulen, Banken und Regierungsministerien werden alle Investitionen sehen. Die Wette ist, dass ein intelligenteres, besser geführtes Land letztendlich stärker ist."
  ndp_events.0.f: "Zehn Jahre. Eine Richtung."
  ndp_events.0.a: "Beginn des Programms"
-
- # ==========================================
- # INDUSTRIAL PATH EVENTS
- # ==========================================
 
  ndp_events.1.t: "Die industrielle Frage"
  ndp_events.1.d: "Zwei Jahre in das Entwicklungsprogramm, die Richtung der industriellen Investitionen muss geklärt werden. Das Land kann nicht alles auf einmal aufbauen. Planer und Industrielle sind geteilt: einige befürworten die Konzentration der Ressourcen auf die Schwerindustrie — Eisen, Stahl, Kohle — die Süden der modernen Macht. Andere argumentieren, dass leichte Fertigung schnellere Rückkehr und breitere Beschäftigung bietet."
@@ -91,9 +81,7 @@
  ndp_events.4.f: "Die Schmiede hat ihre Arbeit getan."
  ndp_events.4.a: "Diagramm des nächsten Kurses"
  ten_year_programme_concluded:0 "Das Zehnjahresprogramm ist abgeschlossen."
- # ==========================================
- # MILITARY PATH EVENTS
- # ==========================================
+ smd_ndp_programme_restarts_tt:0 "Der nationale Entwicklungspfad wird zurückgesetzt, und ein neues Programm kann gewählt werden."
 
  ndp_events.11.t: "Die Frage der Lehre"
  ndp_events.11.d: "Zwei Jahre Militärexpansion haben mehr Soldaten, mehr Waffen und mehr Optionen produziert – aber die grundlegende Frage der Lehre bleibt ungelöst. Das Generalstab ist geteilt. Eine Fraktion drückt für einen Fokus auf Landkraft: Massenarmeen, Verteidigungstiefe und kontinentale Dominanz. Eine andere argumentiert, dass die Schiffsausweitung eine größere strategische Flexibilität und die Fähigkeit bietet, Strom über die Grenzen [ROOT.GetCountry.GetName] hinaus zu projizieren."
@@ -118,10 +106,6 @@
  ndp_events.14.f: "Das Schwert wurde geschmiedet. Jetzt muss er seinen Zweck finden."
  ndp_events.14.a: "Diagramm des nächsten Kurses"
 
- # ==========================================
- # RESOURCE ECONOMY PATH EVENTS
- # ==========================================
-
  ndp_events.21.t: "Das Land Bounty"
  ndp_events.21.d: "Zwei Jahre in das Ressourcenprogramm, die grundlegende Wahl muss getroffen werden: Welche Art von Ressourcenwirtschaft wird [ROOT.GetCountry.GetName] bauen? Die Landwirtschaft — die Ernährung einer wachsenden Bevölkerung und die Erzeugung von Exportpflanzen — bietet Stabilität und breite Beschäftigung. Rohmaterialgewinnung — Bergbau, Protokollierung, Bohrungen — bietet schnellere Einnahmen, ist jedoch volatiler und lässt die Wirtschaft den Preisschwankungen ausgesetzt."
  ndp_events.21.f: "Die Erde gibt, was sie gibt. Die Frage ist, was Sie darüber stellen."
@@ -145,10 +129,6 @@
  ndp_events.24.f: "Was das Land nachgibt, erinnert sich das Land."
  ndp_events.24.a: "Diagramm des nächsten Kurses"
 
- # ==========================================
- # SERVICE ECONOMY PATH EVENTS
- # ==========================================
-
  ndp_events.31.t: "Die Servicefrage"
  ndp_events.31.d: "Zwei Jahre in das Dienstprogramm, die Richtung muss geklärt werden. Zwei Visionen einer Dienstleistungswirtschaft stehen im Vordergrund: der Finanzsektor — Banken, Versicherungen und Handel — der schnell Reichtum erzeugt und Investitionen anzieht oder Bildung und Bürokratie — Schulen, Universitäten und staatliche Institutionen —, die die Fähigkeit des Humankapitals und der Governance, die alles andere untermauert, baut."
  ndp_events.31.f: "Der Leiter oder die Bibliothek — beide sind Grundlagen der Moderne."
@@ -171,10 +151,6 @@
  ndp_events.34.d: "Zehn Jahre Entwicklung der Dienstleistungswirtschaft sind abgeschlossen. Die Banken sind anspruchsvoller, die Schulen besser besetzt, die Regierung fähiger als wenn das Programm begann. Ob dies in die Art des breiten Wohlstands übergeht, der die Investition rechtfertigt, ist eine langfristige Frage — eine, die im nächsten Jahrzehnt zu beantworten beginnt."
  ndp_events.34.f: "Die Infrastruktur des Geistes überdauert alle anderen."
  ndp_events.34.a: "Diagramm des nächsten Kurses"
-
- # ==========================================
- # MODIFIERS
- # ==========================================
 
  ndp_modifier_industrial: "Pfad der industriellen Entwicklung"
  ndp_modifier_industrial_desc: "Die nationalen Ressourcen werden auf die industrielle Expansion ausgerichtet. Die Bauraten sind hoch und der Fertigungsdurchsatz verbessert sich über das gesamte Board."

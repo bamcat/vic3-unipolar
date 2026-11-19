@@ -21,11 +21,9 @@ eu_events.100 = {
 	}
 
 	immediate = {
-		# Reveal the EU and hide the EEC in the IO panel
 		set_global_variable = io_eu_formed
 		set_global_variable = io_eec_dissolved
 
-		# Send invitation to every EEC member
 		every_country = {
 			limit = {
 				is_target_in_global_variable_list = { name = io_eec_members target = this }
@@ -40,9 +38,6 @@ eu_events.100 = {
 }
 
 # ══════════════════════════════════════════════════════════════
-# Invitation to join the EU (Maastricht Treaty)
-# Sent to all EEC founding members — accept joins the EU,
-# decline means you leave the EEC and are NOT in the EU
 # ══════════════════════════════════════════════════════════════
 
 eu_events.1 = {
@@ -89,49 +84,41 @@ eu_events.1 = {
 	}
 
 	option = {
-		name = eu_events.1.a # Accept Membership
+		name = eu_events.1.a
 		default_option = yes
 		ai_chance = {
 			base = 100
 		}
 
-		# Original EU membership variable + modifier
 		set_variable = eu_member_state
 		add_loyalists = {
 			pop_type = shopkeepers
 			value = 0.05
 		}
 
-		# IO Panel integration — add to EU member list
 		add_to_global_variable_list = { name = io_eu_members target = ROOT }
 
-		# Keep the free trade modifier (carried over from EEC)
 		if = {
 			limit = { NOT = { has_modifier = io_free_trade_agreement_member } }
 			add_modifier = { name = io_free_trade_agreement_member }
 		}
 
-		# Stay in EUR power bloc (already there from EEC)
 		custom_tooltip = eu_membership_accept_tt
 	}
 
 	option = {
-		name = eu_events.1.b # Decline
+		name = eu_events.1.b
 		ai_chance = {
 			base = 0
 		}
 
-		# NOT added to io_eu_members — they chose to stay out
-		# Remove from EEC member list since EEC is dissolving
 		remove_list_global_variable = { name = io_eec_members target = ROOT }
 
-		# Remove the free trade modifier they had from EEC
 		if = {
 			limit = { has_modifier = io_free_trade_agreement_member }
 			remove_modifier = io_free_trade_agreement_member
 		}
 
-		# Relations hit with countries that did join the EU
 		every_country = {
 			limit = {
 				is_target_in_global_variable_list = { name = io_eu_members target = this }
@@ -147,8 +134,6 @@ eu_events.1 = {
 }
 
 # ══════════════════════════════════════════════════════════════
-# Formalization to the EU (for countries joining AFTER formation)
-# Used by the request_to_join_eu_decision for later joiners
 # ══════════════════════════════════════════════════════════════
 
 eu_events.99 = {
@@ -170,7 +155,7 @@ eu_events.99 = {
 	}
 
 	option = {
-		name = eu_events.1.a # Accept Membership
+		name = eu_events.1.a
 		default_option = yes
 		ai_chance = {
 			base = 100
@@ -186,7 +171,6 @@ eu_events.99 = {
 			value = 0.05
 		}
 
-		# IO Panel integration
 		add_to_global_variable_list = { name = io_eu_members target = ROOT }
 		if = {
 			limit = { NOT = { has_modifier = io_free_trade_agreement_member } }
@@ -198,7 +182,7 @@ eu_events.99 = {
 	}
 
 	option = {
-		name = eu_events.1.b # Decline
+		name = eu_events.1.b
 		add_radicals = {
 			pop_type = capitalists
 			value = 0.15
@@ -207,8 +191,6 @@ eu_events.99 = {
 }
 
 # ══════════════════════════════════════════════════════════════
-# Potential penalties for leaving
-# Now also removes from IO panel EU member list
 # ══════════════════════════════════════════════════════════════
 
 eu_events.2 = {
@@ -221,11 +203,10 @@ eu_events.2 = {
 	duration = 2
 
 	option = {
-		name = eu_events.2.a # Leave the EU
+		name = eu_events.2.a
 		remove_variable = eu_member_state
 		remove_modifier = modifier_eu_member_state
 
-		# IO Panel integration — remove from EU member list
 		remove_list_global_variable = { name = io_eu_members target = ROOT }
 		if = {
 			limit = { has_modifier = io_free_trade_agreement_member }
@@ -246,7 +227,7 @@ eu_events.2 = {
 	}
 
 	option = {
-		name = eu_events.2.b # Remain
+		name = eu_events.2.b
 		add_loyalists = {
 			pop_type = bureaucrats
 			value = 0.03
@@ -268,18 +249,18 @@ eu_events.3 = {
 	duration = 2
 
 	option = {
-		name = eu_events.3.a # Deepen Trade Ties
+		name = eu_events.3.a
 		add_loyalists = { pop_type = shopkeepers value = 0.02 }
 		add_modifier = { name = eu_deeper_trade_ties days = 730 }
 	}
 
 	option = {
-		name = eu_events.3.b # Coordinate Sanctions
+		name = eu_events.3.b
 		add_modifier = { name = eu_sanctions_ready days = 730 }
 	}
 
 	option = {
-		name = eu_events.3.c # Promote Cultural Exchange
+		name = eu_events.3.c
 		add_loyalists = { pop_type = academics value = 0.03 }
 		add_modifier = { name = eu_cultural_exchange days = 730 }
 	}

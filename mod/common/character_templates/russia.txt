@@ -20,7 +20,7 @@ RUS_igor_klochkov = {
 	last_name = Klochkov
 	historical = yes
 	culture = cu:russian
-	birth_date = 1940.1.1 # Approximate — birth date not publicly documented
+	birth_date = 1940.1.1
 	dna = dna_igor_klochkov
 	ig_leader = yes
 	interest_group = ig_trade_unions
@@ -58,7 +58,7 @@ RUS_alexander_rutskoy = {
 	dna = dna_alexander_rutskoy
 	ig_leader = yes
 	interest_group = ig_landowners
-	ideology = ideology_nationalist_leader
+	ideology = ideology_right_wing_populist_leader
 	traits = {
 		experienced_political_operator
 		demagogue
@@ -75,7 +75,7 @@ RUS_alexander_solzhenitsyn = {
 	dna = dna_alexander_solzhenitsyn
 	ig_leader = yes
 	interest_group = ig_intelligentsia
-	ideology = ideology_nationalist_leader
+	ideology = ideology_conservative_leader
 	traits = {
 		erudite
 		charismatic
@@ -109,7 +109,7 @@ RUS_gennady_zyuganov = {
 	dna = dna_gennady_zyuganov
 	ig_leader = yes
 	interest_group = ig_rural_folk
-	ideology = ideology_communist_leader
+	ideology = ideology_state_socialist_leader
 	traits = {
 		experienced_political_operator
 		demagogue
@@ -130,5 +130,336 @@ RUS_mikhail_gorbachev = {
 	ideology = ideology_democratic_socialist_leader
 	traits = {
 		charismatic
+	}
+}
+
+RUS_ruslan_khasbulatov = {
+	first_name = Ruslan
+	last_name = Khasbulatov
+	historical = yes
+	culture = cu:chechen
+	birth_date = 1942.11.22
+	dna = dna_ruslan_khasbulatov
+	role = character_role_politician
+	interest_group = ig_rural_folk
+	ideology = ideology_left_wing_populist_leader
+	traits = {
+		experienced_political_operator
+		ambitious
+		arrogant
+	}
+}
+
+RUS_yegor_gaidar = {
+	first_name = Yegor
+	last_name = Gaidar
+	historical = yes
+	culture = cu:russian
+	birth_date = 1956.3.19
+	dna = dna_yegor_gaidar
+	role = character_role_politician
+	interest_group = ig_intelligentsia
+	ideology = ideology_neoliberal_leader
+	traits = {
+		basic_political_operator
+		erudite
+		innovative
+	}
+}
+
+RUS_anatoly_chubais = {
+	first_name = Anatoly
+	last_name = Chubais
+	historical = yes
+	culture = cu:russian
+	birth_date = 1955.6.16
+	dna = dna_anatoly_chubais
+	role = character_role_politician
+	interest_group = ig_professionals
+	ideology = ideology_neoliberal_leader
+	traits = {
+		experienced_political_operator
+		ruthless
+		meticulous
+	}
+}
+
+RUS_viktor_chernomyrdin = {
+	first_name = Viktor
+	last_name = Chernomyrdin
+	historical = yes
+	culture = cu:russian
+	birth_date = 1938.4.9
+	dna = dna_viktor_chernomyrdin
+	role = character_role_politician
+	interest_group = ig_industrialists
+	ideology = ideology_state_capitalist_leader
+	traits = {
+		experienced_political_operator
+		cautious
+		persistent
+	}
+}
+
+RUS_boris_nemtsov = {
+	first_name = Boris
+	last_name = Nemtsov
+	historical = yes
+	culture = cu:russian
+	birth_date = 1959.10.9
+	dna = dna_boris_nemtsov
+	role = character_role_politician
+	interest_group = ig_petty_bourgeoisie
+	ideology = ideology_liberal_leader
+	traits = {
+		basic_political_operator
+		charismatic
+		ambitious
+	}
+}
+
+RUS_sergei_kiriyenko = {
+	first_name = Sergei
+	last_name = Kiriyenko
+	historical = yes
+	culture = cu:russian
+	birth_date = 1962.7.26
+	dna = dna_sergei_kiriyenko
+	role = character_role_politician
+	interest_group = ig_professionals
+	ideology = ideology_technocrat_leader
+	traits = {
+		basic_political_operator
+		meticulous
+	}
+}
+
+RUS_yevgeny_primakov = {
+	first_name = Yevgeny
+	last_name = Primakov
+	historical = yes
+	culture = cu:russian
+	birth_date = 1929.10.29
+	dna = dna_yevgeny_primakov
+	role = character_role_politician
+	interest_group = ig_professionals
+	ideology = ideology_moderate_leader
+	traits = {
+		expert_political_operator
+		experienced_diplomat
+		cautious
+	}
+}
+
+RUS_sergei_stepashin = {
+	first_name = Sergei
+	last_name = Stepashin
+	historical = yes
+	culture = cu:russian
+	birth_date = 1952.3.2
+	dna = dna_sergei_stepashin
+	role = character_role_politician
+	interest_group = ig_armed_forces
+	ideology = ideology_moderate_leader
+	traits = {
+		basic_political_operator
+		reserved
+	}
+}
+
+RUS_yuri_luzhkov = {
+	first_name = Yuri
+	last_name = Luzhkov
+	historical = yes
+	culture = cu:russian
+	birth_date = 1936.9.21
+	dna = dna_yuri_luzhkov
+	role = character_role_politician
+	interest_group = ig_petty_bourgeoisie
+	ideology = ideology_state_capitalist_leader
+	traits = {
+		experienced_political_operator
+		ambitious
+		expensive_tastes
+	}
+}
+
+RUS_alexander_lebed = {
+	first_name = Alexander
+	last_name = Lebed
+	historical = yes
+	culture = cu:russian
+	birth_date = 1950.4.20
+	dna = dna_alexander_lebed
+	role = character_role_politician
+	interest_group = ig_armed_forces
+	ideology = ideology_right_wing_populist_leader
+	traits = {
+		basic_political_operator
+		imposing
+		direct
+	}
+}
+
+RUS_alexander_korzhakov = {
+	first_name = Alexander
+	last_name = Korzhakov
+	historical = yes
+	culture = cu:russian
+	birth_date = 1950.1.31
+	dna = dna_alexander_korzhakov
+	role = character_role_notable
+	interest_group = ig_armed_forces
+	ideology = ideology_authoritarian_capitalist_leader
+	traits = {
+		ruthless
+		imposing
+	}
+}
+
+RUS_tatyana_dyachenko = {
+	first_name = Tatyana
+	last_name = Dyachenko
+	female = yes
+	historical = yes
+	culture = cu:russian
+	birth_date = 1960.1.17
+	dna = dna_tatyana_dyachenko
+	role = character_role_notable
+	interest_group = ig_petty_bourgeoisie
+	ideology = ideology_moderate_leader
+	traits = {
+		tactful
+		ambitious
+	}
+}
+
+RUS_boris_berezovsky = {
+	first_name = Boris
+	last_name = Berezovsky
+	historical = yes
+	culture = cu:russian
+	birth_date = 1946.1.23
+	dna = dna_boris_berezovsky
+	role = character_role_politician
+	interest_group = ig_industrialists
+	ideology = ideology_authoritarian_capitalist_leader
+	traits = {
+		experienced_political_operator
+		ambitious
+		grifter
+	}
+}
+
+RUS_vladimir_gusinsky = {
+	first_name = Vladimir
+	last_name = Gusinsky
+	historical = yes
+	culture = cu:russian
+	birth_date = 1952.10.6
+	dna = dna_vladimir_gusinsky
+	role = character_role_politician
+	interest_group = ig_industrialists
+	ideology = ideology_liberal_leader
+	traits = {
+		basic_political_operator
+		arrogant
+	}
+}
+
+RUS_vladimir_potanin = {
+	first_name = Vladimir
+	last_name = Potanin
+	historical = yes
+	culture = cu:russian
+	birth_date = 1961.1.3
+	dna = dna_vladimir_potanin
+	role = character_role_politician
+	interest_group = ig_industrialists
+	ideology = ideology_neoliberal_leader
+	traits = {
+		basic_political_operator
+		meticulous
+	}
+}
+
+RUS_vladimir_zhirinovsky = {
+	first_name = Vladimir
+	last_name = Zhirinovsky
+	historical = yes
+	culture = cu:russian
+	birth_date = 1946.4.25
+	dna = dna_vladimir_zhirinovsky
+	role = character_role_politician
+	interest_group = ig_petty_bourgeoisie
+	ideology = ideology_right_wing_populist_leader
+	traits = {
+		experienced_political_operator
+		demagogue
+		wrathful
+	}
+}
+
+RUS_grigory_yavlinsky = {
+	first_name = Grigory
+	last_name = Yavlinsky
+	historical = yes
+	culture = cu:russian
+	birth_date = 1952.4.10
+	dna = dna_grigory_yavlinsky
+	role = character_role_politician
+	interest_group = ig_intelligentsia
+	ideology = ideology_social_liberal_leader
+	traits = {
+		basic_political_operator
+		erudite
+		persistent
+	}
+}
+
+RUS_valery_zorkin = {
+	first_name = Valery
+	last_name = Zorkin
+	historical = yes
+	culture = cu:russian
+	birth_date = 1943.2.18
+	dna = dna_valery_zorkin
+	role = character_role_notable
+	interest_group = ig_intelligentsia
+	ideology = ideology_moderate_leader
+	traits = {
+		honorable
+		cautious
+	}
+}
+
+RUS_arkady_volsky = {
+	first_name = Arkady
+	last_name = Volsky
+	historical = yes
+	culture = cu:russian
+	birth_date = 1932.5.15
+	dna = dna_arkady_volsky
+	role = character_role_politician
+	interest_group = ig_industrialists
+	ideology = ideology_state_capitalist_leader
+	traits = {
+		experienced_political_operator
+		cautious
+	}
+}
+
+RUS_vladimir_putin = {
+	first_name = Vladimir
+	last_name = Putin
+	historical = yes
+	culture = cu:russian
+	birth_date = 1952.10.7
+	dna = dna_putin
+	ig_leader = yes
+	interest_group = ig_professionals
+	ideology = ideology_authoritarian_capitalist_leader
+	traits = {
+		experienced_political_operator
 	}
 }

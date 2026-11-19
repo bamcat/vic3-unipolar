@@ -1,7 +1,6 @@
 namespace = opec_events
 
 ### ══════════════════════════════════════════
-### VOTE NOTIFICATION — sent to all OPEC members when a vote begins
 ### ══════════════════════════════════════════
 
 opec_events.1 = {
@@ -20,12 +19,10 @@ opec_events.1 = {
 	option = {
 		name = opec_events.1.a
 		default_option = yes
-		# Player uses the journal entry buttons to vote
 	}
 }
 
 ### ══════════════════════════════════════════
-### VOTE RESULT — fires 30 days after vote proposal
 ### Checks the progress bar and applies the result
 ### ══════════════════════════════════════════
 
@@ -44,16 +41,12 @@ opec_events.10 = {
 	}
 
 	immediate = {
-		# Check if vote passed (progress > 0 means more yays than nays)
-		# Production Increase
 		if = {
 			limit = {
 				global_var:opec_vote_type = flag:opec_increase
 			}
-			# Vote passed — apply increased production to all members
 			every_country = {
 				limit = { is_target_in_global_variable_list = { name = io_opec_members target = this } }
-				# Remove opposite modifier if present
 				if = {
 					limit = { has_modifier = opec_decreased_production }
 					remove_modifier = opec_decreased_production
@@ -61,9 +54,12 @@ opec_events.10 = {
 				add_modifier = { name = opec_increased_production months = 12 }
 				trigger_event = { id = opec_events.11 days = 0 popup = yes }
 			}
+			every_country = {
+				limit = { NOT = { is_target_in_global_variable_list = { name = io_opec_members target = this } } }
+				post_notification = io_opec_increased_production
+			}
 		}
 
-		# Production Decrease
 		if = {
 			limit = {
 				global_var:opec_vote_type = flag:opec_decrease
@@ -77,25 +73,25 @@ opec_events.10 = {
 				add_modifier = { name = opec_decreased_production months = 12 }
 				trigger_event = { id = opec_events.12 days = 0 popup = yes }
 			}
+			every_country = {
+				limit = { NOT = { is_target_in_global_variable_list = { name = io_opec_members target = this } } }
+				post_notification = io_opec_decreased_production
+			}
 		}
 
-		# Oil Embargo
 		if = {
 			limit = {
 				global_var:opec_vote_type = flag:opec_embargo
 				has_global_variable = opec_embargo_target
 			}
-			# Apply embargo modifier to the target country
 			global_var:opec_embargo_target = {
 				add_modifier = { name = opec_oil_embargo_target months = 24 }
 			}
-			# Notify all countries (not just OPEC) since embargoes are major world events
 			every_country = {
 				trigger_event = { id = opec_events.13 days = 0 popup = yes }
 			}
 		}
 
-		# Clean up vote state
 		remove_global_variable = opec_vote_active
 		remove_global_variable = opec_vote_type
 		remove_global_variable = opec_yes_votes
@@ -126,7 +122,6 @@ opec_events.11 = {
 
 	option = {
 		name = opec_events.11.a
-		every_country = { post_notification = io_opec_increased_production }
 		default_option = yes
 	}
 }
@@ -143,7 +138,6 @@ opec_events.12 = {
 
 	option = {
 		name = opec_events.12.a
-		every_country = { post_notification = io_opec_decreased_production }
 		default_option = yes
 	}
 }

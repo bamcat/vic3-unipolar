@@ -1,7 +1,4 @@
-# To ensure the game rule 'monument_effects' works properly, the game rule needs to be amended with flags disabling any new monuments' Base method
-# PM Groups should have the 'is_hidden_when_unavailable' flag to ensure only one alternative is visible at any time (unless the player actually has an option they can switch to)
-
-pm_default_building_eiffel_tower = {
+﻿pm_default_building_eiffel_tower = {
 	texture = "gfx/interface/icons/production_method_icons/wonders.dds"
 
 	is_hidden_when_unavailable = yes
@@ -17,7 +14,7 @@ pm_default_building_eiffel_tower = {
 		#}
 
 		level_scaled = {
-			building_employment_machinists_add = 100
+			building_employment_machinists_add = 75
 		}
 	}
 }
@@ -39,7 +36,7 @@ pm_default_building_cristo_redentor = {
 		#}
 
 		level_scaled = {
-			building_employment_clergymen_add = 100
+			building_employment_clergymen_add = 75
 		}
 	}
 }
@@ -61,7 +58,7 @@ pm_default_building_angkor_wat = {
 #		}
 
 		level_scaled = {
-			building_employment_clergymen_add = 500
+			building_employment_clergymen_add = 375
 		}
 	}
 }
@@ -88,7 +85,7 @@ pm_default_building_big_ben = {
 		#}
 
 		level_scaled = {
-			building_employment_machinists_add = 100
+			building_employment_machinists_add = 75
 		}
 	}
 }
@@ -111,8 +108,8 @@ pm_default_building_forbidden_city = {
 		#}
 
 		level_scaled = {
-			building_employment_bureaucrats_add = 800
-			building_employment_clergymen_add = 200
+			building_employment_bureaucrats_add = 600
+			building_employment_clergymen_add = 150
 		}
 	}
 }
@@ -134,7 +131,7 @@ pm_default_building_hagia_sophia = {
 		#}
 
 		level_scaled = {
-			building_employment_clergymen_add = 200
+			building_employment_clergymen_add = 150
 		}
 	}
 }
@@ -158,7 +155,7 @@ pm_default_building_mosque_of_djenne = {
 		#}
 
 		level_scaled = {
-			building_employment_clergymen_add = 500
+			building_employment_clergymen_add = 375
 		}
 	}
 }
@@ -180,7 +177,7 @@ pm_default_building_saint_basils_cathedral = {
 		#}
 
 		level_scaled = {
-			building_employment_clergymen_add = 200
+			building_employment_clergymen_add = 150
 		}
 	}
 }
@@ -201,7 +198,7 @@ pm_default_building_statue_of_liberty = {
 		#}
 
 		level_scaled = {
-			building_employment_bureaucrats_add = 100
+			building_employment_bureaucrats_add = 75
 		}
 	}
 }
@@ -222,7 +219,7 @@ pm_default_building_taj_mahal = {
 		#}
 
 		level_scaled = {
-			building_employment_bureaucrats_add = 100
+			building_employment_bureaucrats_add = 75
 		}
 	}
 }
@@ -247,7 +244,7 @@ pm_default_building_vatican_city = {
 		#}
 
 		level_scaled = {
-			building_employment_clergymen_add = 500
+			building_employment_clergymen_add = 375
 		}
 	}
 }
@@ -279,7 +276,7 @@ pm_default_building_white_house = {
 
 	building_modifiers = {
 		level_scaled = {
-			building_employment_bureaucrats_add = 500
+			building_employment_bureaucrats_add = 375
 		}
 	}
 }
@@ -323,7 +320,7 @@ pm_power_bloc_statue_sovereign_empire = {
 
 	building_modifiers = {
 		level_scaled = {
-			building_employment_bureaucrats_add = 500
+			building_employment_bureaucrats_add = 375
 		}
 	}
 }
@@ -350,7 +347,7 @@ pm_power_bloc_statue_ideological_union = {
 
 	building_modifiers = {
 		level_scaled = {
-			building_employment_bureaucrats_add = 500
+			building_employment_bureaucrats_add = 375
 		}
 	}
 }
@@ -376,7 +373,7 @@ pm_power_bloc_statue_military_treaty = {
 
 	building_modifiers = {
 		level_scaled = {
-			building_employment_soldiers_add = 500
+			building_employment_soldiers_add = 375
 		}
 	}
 }
@@ -403,7 +400,7 @@ pm_power_bloc_statue_trade_league = {
 
 	building_modifiers = {
 		level_scaled = {
-			building_employment_clerks_add = 500
+			building_employment_clerks_add = 375
 		}
 	}
 }
@@ -430,7 +427,7 @@ pm_power_bloc_statue_religious = {
 
 	building_modifiers = {
 		level_scaled = {
-			building_employment_clergymen_add = 500
+			building_employment_clergymen_add = 375
 		}
 	}
 }
@@ -464,9 +461,283 @@ pm_default_building_victoria_terminus = {
 		#}
 
 		level_scaled = {
+			building_employment_laborers_add = 150
+			building_employment_machinists_add = 150
+			building_employment_clerks_add = 75
+		}
+	}
+}
+
+REPLACE_OR_CREATE:pm_default_building_gran_teatro_de_la_habana = {
+	texture = "gfx/interface/icons/production_method_icons/wonders.dds"
+
+	is_hidden_when_unavailable = yes
+
+	country_modifiers = {
+		workforce_scaled = {
+			country_prestige_add = 25
+		}
+	}
+
+	building_modifiers = {
+		workforce_scaled = {
+			# input goods
+			goods_input_paper_add = 10
+
+			# output goods
+			goods_output_fine_art_add = 5
+ # 700 profit
+		}
+
+		level_scaled = {
+			building_employment_academics_add = 150
+		}
+	}
+}
+
+# restored from vanilla: needed by the groups restored above
+
+pm_default_building_estacion_de_madrid_atocha = {
+	texture = "gfx/interface/icons/production_method_icons/wonders.dds"
+
+	is_hidden_when_unavailable = yes
+
+	country_modifiers = {
+		workforce_scaled = {
+			country_prestige_add = 50
+			building_railway_throughput_add = 0.20
+		}
+	}
+
+	building_modifiers = {
+		#workforce_scaled = {
+		#}
+
+		level_scaled = {
 			building_employment_laborers_add = 200
 			building_employment_machinists_add = 200
 			building_employment_clerks_add = 100
+		}
+	}
+}
+
+pm_default_building_kaiserforum_1 = {
+	texture = "gfx/interface/icons/production_method_icons/wonders.dds"
+
+	is_hidden_when_unavailable = yes
+
+	country_modifiers = {
+		workforce_scaled = {
+			country_prestige_add = 10
+		}
+	}
+
+}
+
+pm_default_building_kaiserforum_2 = {
+	texture = "gfx/interface/icons/production_method_icons/wonders.dds"
+
+	is_hidden_when_unavailable = yes
+
+	country_modifiers = {
+		workforce_scaled = {
+			country_prestige_add = 25
+		}
+	}
+}
+
+pm_default_building_kaiserforum_3 = {
+	texture = "gfx/interface/icons/production_method_icons/wonders.dds"
+
+	is_hidden_when_unavailable = yes
+
+	country_modifiers = {
+		workforce_scaled = {
+			country_legitimacy_headofstate_add = 5
+			country_prestige_add = 25
+		}
+	}
+
+	state_modifiers = {
+		workforce_scaled = {
+			building_government_administration_throughput_add = 0.2
+			state_migration_pull_mult = 0.5
+		}
+	}
+
+	building_modifiers = {
+		#workforce_scaled = {
+		#}
+
+		level_scaled = {
+			building_employment_aristocrats_add = 100
+			building_employment_academics_add = 100
+			building_employment_bureaucrats_add = 200
+		}
+	}
+}
+
+pm_default_building_kaiserforum_4 = {
+	texture = "gfx/interface/icons/production_method_icons/wonders.dds"
+
+	is_hidden_when_unavailable = yes
+
+	country_modifiers = {
+		workforce_scaled = {
+			country_legitimacy_headofstate_add = 5
+			country_prestige_add = 25
+		}
+	}
+
+	state_modifiers = {
+		workforce_scaled = {
+			state_migration_pull_mult = 0.5
+		}
+	}
+
+	building_modifiers = {
+		#workforce_scaled = {
+		#}
+
+		level_scaled = {
+			building_employment_aristocrats_add = 100
+			building_employment_academics_add = 100
+			building_employment_bureaucrats_add = 200
+		}
+	}
+}
+
+pm_default_building_manila_cathedral_monument = {
+	texture = "gfx/interface/icons/production_method_icons/wonders.dds"
+
+	is_hidden_when_unavailable = yes
+
+	country_modifiers = {
+		workforce_scaled = {
+			interest_group_ig_devout_pol_str_mult = 0.1
+			country_prestige_add = 25
+		}
+	}
+
+	building_modifiers = {
+		#workforce_scaled = {
+		#}
+
+		level_scaled = {
+			building_employment_clergymen_add = 100
+		}
+	}
+}
+
+pm_default_building_manila_cathedral_ruins = {
+	texture = "gfx/interface/icons/production_method_icons/wonders.dds"
+
+	is_hidden_when_unavailable = yes
+
+	country_modifiers = {
+		workforce_scaled = {
+			country_prestige_add = 10
+		}
+	}
+
+	building_modifiers = {
+		#workforce_scaled = {
+		#}
+
+		level_scaled = {
+			building_employment_clergymen_add = 50
+		}
+	}
+}
+
+pm_default_building_pena_convent = {
+	texture = "gfx/interface/icons/production_method_icons/wonders.dds"
+
+	is_hidden_when_unavailable = yes
+
+	country_modifiers = {
+		workforce_scaled = {
+			interest_group_ig_devout_pol_str_mult = 0.05
+			country_prestige_add = 10
+		}
+	}
+
+	building_modifiers = {
+		#workforce_scaled = {
+		#}
+
+		# level_scaled = {
+		# }
+	}
+}
+
+pm_default_building_pena_palace = {
+	texture = "gfx/interface/icons/production_method_icons/wonders.dds"
+
+	is_hidden_when_unavailable = yes
+
+	country_modifiers = {
+		workforce_scaled = {
+			country_legitimacy_headofstate_add = 5
+			country_prestige_add = 25
+		}
+	}
+
+	building_modifiers = {
+		#workforce_scaled = {
+		#}
+
+		level_scaled = {
+			building_employment_aristocrats_add = 100
+			building_employment_bureaucrats_add = 200
+		}
+	}
+}
+
+pm_default_building_sagrada_familia_cathedral_1 = {
+	texture = "gfx/interface/icons/production_method_icons/wonders.dds"
+
+	is_hidden_when_unavailable = yes
+
+	country_modifiers = {
+		workforce_scaled = {
+			interest_group_ig_devout_pol_str_mult = 0.1
+			country_prestige_add = 25
+		}
+	}
+}
+
+pm_default_building_sagrada_familia_cathedral_2 = {
+	texture = "gfx/interface/icons/production_method_icons/wonders.dds"
+
+	is_hidden_when_unavailable = yes
+
+	country_modifiers = {
+		workforce_scaled = {
+			interest_group_ig_industrialists_pol_str_mult = 0.1
+			country_prestige_add = 25
+		}
+	}
+}
+
+pm_default_building_sagrada_familia_cathedral_3 = {
+	texture = "gfx/interface/icons/production_method_icons/wonders.dds"
+
+	is_hidden_when_unavailable = yes
+
+	country_modifiers = {
+		workforce_scaled = {
+			interest_group_ig_devout_pol_str_mult = 0.1
+			country_prestige_add = 50
+		}
+	}
+
+	building_modifiers = {
+		#workforce_scaled = {
+		#}
+
+		level_scaled = {
+			building_employment_clergymen_add = 400
 		}
 	}
 }

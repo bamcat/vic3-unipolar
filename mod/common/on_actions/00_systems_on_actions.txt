@@ -1,0 +1,15 @@
+﻿on_government_reformed = {
+	events = {
+		prime_minister.1
+	}
+}
+
+on_monthly_pulse_country = {
+	events = {
+		prime_minister.1
+		financial_system.1
+		financial_system.2
+		smd_eu.1
+		rus_l90.0
+	}
+}

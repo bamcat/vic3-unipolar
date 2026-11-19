@@ -113,7 +113,7 @@ production_tech_events.102 = {
 	immediate = {
 	}
 
-	option = { # Make national to effect chemical plants to produce more explosives.
+	option = {
 		name = production_tech_events.102.a
 		default_option = yes
 		add_modifier = {
@@ -122,7 +122,7 @@ production_tech_events.102 = {
 		}
 	}
 
-	option = { # Make national to effect mining industries
+	option = {
 		name = production_tech_events.102.b
 		add_modifier = {
 			name = mining_production_modifier
@@ -130,7 +130,7 @@ production_tech_events.102 = {
 		}
 	}
 
-	option = { # Make national to effect munitions plants
+	option = {
 		name = production_tech_events.102.c
 		add_modifier = {
 			name = munitions_production_modifier

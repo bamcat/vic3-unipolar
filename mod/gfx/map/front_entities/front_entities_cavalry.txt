@@ -35,9 +35,23 @@
 REPLACE_OR_CREATE:military_tank_light_generic_diorama_entity = {
 	entity = "t55_entity"
 
-	group = "infantry"
-	
+	group = "cavalry"
+
 	trigger = {
 		scope:combat_unit_type = unit_type:combat_unit_type_armored_infantry
+	}
+}
+
+smd_vehicle_carrier_diorama_entity = {
+	entity = "military_tank_mechinfantry_generic_entity"
+
+	group = "cavalry"
+
+	trigger = {
+		OR = {
+			scope:combat_unit_type = unit_type:combat_unit_type_technicals
+			scope:combat_unit_type = unit_type:combat_unit_type_armored_personnel_carrier
+			scope:combat_unit_type = unit_type:combat_unit_type_mechanized_infantry
+		}
 	}
 }

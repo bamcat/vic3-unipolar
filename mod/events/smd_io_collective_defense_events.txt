@@ -1,0 +1,12 @@
+namespace = smd_io_cd
+
+smd_io_cd.1 = {
+	type = country_event
+	hidden = yes
+
+	immediate = {
+		save_scope_as = io_cd_target
+		io_collective_defense_pull_members = { ORG = nato }
+		io_collective_defense_pull_members = { ORG = csto }
+	}
+}

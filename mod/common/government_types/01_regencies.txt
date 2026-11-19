@@ -18,7 +18,7 @@ gov_regency_ethiopia_ras = {
 			c:GJM ?= this
 			c:QWR ?= this
 		}
-		has_gov_regency = yes  # This is not recursive, it's dependent on various modifiers
+		has_gov_regency = yes
 	}
 
 	on_government_type_change = {
@@ -82,7 +82,7 @@ gov_regency_princely_state_maharaja = {
 			AND = { exists = c:MEW c:MEW = ROOT }
 			AND = { exists = c:JOD c:JOD = ROOT }
 			AND = { exists = c:JAI c:JAI = ROOT }
-			AND = { exists = c:PTA c:PTA = ROOT } # Maharaja-e Rajgan
+			AND = { exists = c:PTA c:PTA = ROOT }
 		}
 		NOT = { is_subject_type = subject_type_crown_land }
 		has_gov_regency = yes
@@ -542,7 +542,7 @@ gov_regency_maharaja = {
 			AND = { exists = c:MEW c:MEW = ROOT }
 			AND = { exists = c:JOD c:JOD = ROOT }
 			AND = { exists = c:JAI c:JAI = ROOT }
-			AND = { exists = c:PTA c:PTA = ROOT } # Maharaja-e Rajgan
+			AND = { exists = c:PTA c:PTA = ROOT }
 		}
 		NOT = { is_subject_type = subject_type_crown_land }
 		has_gov_regency = yes
@@ -648,7 +648,7 @@ gov_regency_dey = {
 	female_ruler = "RULER_TITLE_REGENT"
 
 	male_heir = "RULER_TITLE_DEY"
-	female_heir = "" # Empty on purpose
+	female_heir = ""
 
 	possible = {
 		has_law = law_type:law_monarchy
@@ -672,7 +672,7 @@ gov_regency_wilayah = {
 	male_ruler = "RULER_TITLE_REGENT"
 	female_ruler = "RULER_TITLE_REGENT"
 
-	male_heir = "RULER_TITLE_LIWALI"	# Swahili form of al-wali
+	male_heir = "RULER_TITLE_LIWALI"
 	female_heir = "RULER_TITLE_LIWALI"
 
 	possible = {
@@ -683,7 +683,7 @@ gov_regency_wilayah = {
 			country_tier = grand_principality
 		}
 		OR = {
-			c:MBS ?= this # the rulers of Mombasa styled themselves governors even when they were de facto independent
+			c:MBS ?= this
 			AND = {
 				country_has_primary_culture = cu:swahili
 				is_subject = yes
@@ -739,7 +739,7 @@ gov_regency_sultanate = {
 	female_ruler = "RULER_TITLE_REGENT"
 
 	male_heir = "RULER_TITLE_SULTAN"
-	female_heir = "" # Empty on purpose
+	female_heir = ""
 
 	possible = {
 		has_law = law_type:law_monarchy
@@ -798,7 +798,7 @@ gov_regency_hakimate = {
 	female_ruler = "RULER_TITLE_REGENT"
 
 	male_heir = "RULER_TITLE_HAKIM"
-	female_heir = "" # Empty on purpose
+	female_heir = ""
 
 	possible = {
 		country_tier = principality
@@ -824,7 +824,7 @@ gov_regency_chitrali_monarchy = {
 	female_ruler = "RULER_TITLE_REGENT"
 
 	male_heir = "RULER_TITLE_MEHTAR"
-	female_heir = "" # Empty on purpose
+	female_heir = ""
 
 	possible = {
 		country_tier = principality
@@ -850,7 +850,7 @@ gov_regency_sheikhdom = {
 	female_ruler = "RULER_TITLE_REGENT"
 
 	male_heir = "RULER_TITLE_SHEIKH"
-	female_heir = "" # Empty on purpose
+	female_heir = ""
 
 	possible = {
 		country_tier = principality
@@ -903,7 +903,7 @@ gov_regency_sunanate = {
 	female_ruler = "RULER_TITLE_REGENT"
 
 	male_heir = "RULER_TITLE_SUSUHUNAN"
-	female_heir = "" # Empty on purpose
+	female_heir = ""
 
 	possible = {
 		has_law = law_type:law_monarchy
@@ -928,7 +928,7 @@ gov_regency_balinese_monarchy = {
 	female_ruler = "RULER_TITLE_REGENT"
 
 	male_heir = "RULER_TITLE_DEWA_AGUNG"
-	female_heir = "" # Empty on purpose
+	female_heir = ""
 
 	possible = {
 		has_law = law_type:law_monarchy
@@ -1028,7 +1028,7 @@ gov_regency_caliphate = {
 	female_ruler = "RULER_TITLE_REGENT"
 
 	male_heir = "RULER_TITLE_CALIPH"
-	female_heir = "" # Empty on purpose
+	female_heir = ""
 
 	possible = {
 		has_law = law_type:law_monarchy
@@ -1053,7 +1053,7 @@ gov_regency_khedive = {
 	female_ruler = "RULER_TITLE_REGENT"
 
 	male_heir = "RULER_TITLE_KHEDIVE"
-	female_heir = "" # Empty on purpose
+	female_heir = ""
 
 	possible = {
 		has_law = law_type:law_monarchy
@@ -1078,7 +1078,7 @@ gov_regency_shah = {
 	female_ruler = "RULER_TITLE_REGENT"
 
 	male_heir = "RULER_TITLE_SHAH"
-	female_heir = "" # Empty on purpose
+	female_heir = ""
 
 	possible = {
 		has_law = law_type:law_monarchy
@@ -1130,7 +1130,7 @@ gov_regency_sharif = {
 	female_ruler = "RULER_TITLE_REGENT"
 
 	male_heir = "RULER_TITLE_SHARIF"
-	female_heir = "" # Empty on purpose
+	female_heir = ""
 
 	possible = {
 		has_law = law_type:law_monarchy
@@ -1354,7 +1354,7 @@ gov_regency_ilkhanate = {
 	female_ruler = "RULER_TITLE_REGENT"
 
 	male_heir = "RULER_TITLE_ILKHAN"
-	female_heir = "" # Empty on purpose
+	female_heir = ""
 
 	possible = {
 		has_law = law_type:law_monarchy
@@ -1382,7 +1382,7 @@ gov_regency_zhuz = {
 	male_ruler = "RULER_TITLE_REGENT"
 	female_ruler = "RULER_TITLE_REGENT"
 
-	male_heir = "RULER_TITLE_SENIOR_SULTAN" # This is technically appointed by the Russian government, but this shouldn't cause problems
+	male_heir = "RULER_TITLE_SENIOR_SULTAN"
 	female_heir = "RULER_TITLE_SENIOR_SULTANA"
 
 	possible = {
@@ -1460,7 +1460,7 @@ gov_regency_empire = {
 				has_global_variable = empire_of_great_britain
 			}
 		}
-		OR = { # Accounts for France
+		OR = {
 			NOT = {
 				c:FRA ?= this
 			}
@@ -1892,6 +1892,5 @@ gov_provisional_government_spain = {
 		change_to_parliamentary_elective = yes
 	}
 	on_post_government_type_change = {
-		# Nothing, keeps current ruler
 	}
 }

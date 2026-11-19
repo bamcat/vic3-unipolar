@@ -24,6 +24,46 @@
          }
     }
     
+    um_cleric_beard = {
+        dna_modifiers = {
+            accessory = {
+                mode = replace
+                gene = beards
+                template = full_beards
+                range = { 0 0.24 }
+            }
+        }
+        weight = {
+            base = 0
+            modifier = {
+                add = 10000000
+                um_cleric_character_trigger = yes
+            }
+        }
+    }
+
+    um_gulf_beard = {
+        dna_modifiers = {
+            accessory = {
+                mode = replace
+                gene = beards
+                template = arabic_beards
+                range = { 0.34 1 }
+            }
+        }
+        weight = {
+            base = 0
+            modifier = {
+                add = 10000000
+                um_gulf_dress_character_trigger = yes
+                um_cleric_character_trigger = no
+                scope:character = {
+                    is_female = no
+                }
+            }
+        }
+    }
+
     asian_beards = {
         dna_modifiers = {
             accessory = {
@@ -211,7 +251,7 @@
                         scope:character = { 
                             age > 16 
                             religion = {
-                                has_discrimination_trait = jewish
+                                has_discrimination_trait = heritage_jewish
                             }
 							is_interest_group_type = ig_devout 
                         }
@@ -222,7 +262,7 @@
                         scope:pop = {
                             is_pop_type = clergymen
                             religion = {
-                                has_discrimination_trait = jewish
+                                has_discrimination_trait = heritage_jewish
                             }
                         }
                     }

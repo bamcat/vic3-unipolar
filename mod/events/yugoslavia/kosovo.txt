@@ -1,8 +1,5 @@
-# Kosovo War and Independence
-
 namespace = kosovo_events
 
-# Kosovo crisis begins
 kosovo_events.1 = {
 	type = country_event
 	placement = ROOT
@@ -37,7 +34,7 @@ kosovo_events.1 = {
 				add_war_goal = {
 					holder = c:ALB
 					type = conquer_state
-					target_state = scope:s:STATE_SOUTHERN_SERBIA
+					target_state = scope:s:STATE_EASTERN_SERBIA
 					primary_demand = yes
 					target_country = c:YUG
 				}
@@ -61,7 +58,6 @@ kosovo_events.1 = {
 	}
 }
 
-# NATO intervention decision
 kosovo_events.2 = {
 	type = country_event
 	placement = ROOT
@@ -103,7 +99,6 @@ kosovo_events.2 = {
 	}
 }
 
-# Yugoslavia receives NATO bombing / peace demand
 kosovo_events.3 = {
 	type = country_event
 	placement = ROOT
@@ -140,7 +135,6 @@ kosovo_events.3 = {
 	}
 }
 
-# Kosovo international administration / later independence
 kosovo_events.4 = {
 	type = country_event
 	placement = ROOT

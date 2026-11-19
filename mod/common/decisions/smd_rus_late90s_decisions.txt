@@ -1,0 +1,134 @@
+﻿rus_l90_found_csto = {
+	is_shown = {
+		c:RUS ?= this
+		NOT = { has_global_variable = csto_founded }
+		is_target_in_global_variable_list = { name = io_cis_members target = this }
+	}
+
+	possible = {
+		country_rank >= rank_value:major_power
+		NOT = { is_target_in_global_variable_list = { name = io_nato_members target = this } }
+		rus_l90_csto_willing_partners = yes
+	}
+
+	when_taken = {
+		set_global_variable = csto_founded
+		rus_l90_csto_add_member = yes
+		add_modifier = { name = rus_l90_csto_leader }
+		custom_tooltip = rus_l90_found_csto_tt
+		hidden_effect = {
+			every_country = {
+				limit = { rus_l90_csto_candidate = yes }
+				rus_l90_csto_add_member = yes
+				trigger_event = { id = rus_l90.40 popup = yes }
+			}
+		}
+	}
+
+	ai_chance = {
+		value = 0
+		if = {
+			limit = { game_date >= 1999.1.1 }
+			add = 10
+		}
+	}
+}
+
+rus_l90_join_csto = {
+	is_shown = {
+		is_ai = yes
+		has_global_variable = csto_founded
+		NOT = { c:RUS ?= this }
+		is_target_in_global_variable_list = { name = io_cis_members target = this }
+		NOT = { is_target_in_global_variable_list = { name = io_csto_members target = this } }
+	}
+
+	possible = {
+		NOT = { is_target_in_global_variable_list = { name = io_nato_members target = this } }
+		custom_description = {
+			text = rus_l90_csto_russia_friendly
+			c:RUS ?= {
+				relations:root >= relations_threshold:cordial
+				NOT = { has_war_with = root }
+			}
+		}
+		NOT = { has_variable = rus_l90_csto_left_recently }
+	}
+
+	when_taken = {
+		rus_l90_csto_add_member = yes
+		custom_tooltip = rus_l90_join_csto_tt
+	}
+
+	ai_chance = {
+		value = 0
+		if = {
+			limit = { c:RUS ?= { relations:root >= relations_threshold:amicable } }
+			add = 10
+		}
+	}
+}
+
+rus_l90_leave_csto = {
+	is_shown = {
+		is_ai = yes
+		NOT = { c:RUS ?= this }
+		is_target_in_global_variable_list = { name = io_csto_members target = this }
+	}
+
+	possible = {
+		always = yes
+	}
+
+	when_taken = {
+		rus_l90_csto_remove_member = yes
+		set_variable = { name = rus_l90_csto_left_recently years = 5 }
+		custom_tooltip = rus_l90_leave_csto_tt
+	}
+
+	ai_chance = {
+		value = 0
+		if = {
+			limit = { c:RUS ?= { relations:root <= relations_threshold:poor } }
+			add = 10
+		}
+		if = {
+			limit = { is_target_in_global_variable_list = { name = io_nato_members target = this } }
+			add = 50
+		}
+	}
+}
+
+rus_l90_propose_union_state = {
+	is_shown = {
+		c:RUS ?= this
+		exists = c:BYL
+		NOT = { has_variable = rus_l90_union_stage }
+		NOT = { has_global_variable = union_state_formed }
+	}
+
+	possible = {
+		rus_l90_byl_open_to_union = yes
+		rus_l90_byl_relations_at_least = { R = amicable }
+		rus_l90_byl_not_western = yes
+		custom_description = {
+			text = rus_l90_byl_in_cis
+			c:BYL ?= { is_target_in_global_variable_list = { name = io_cis_members target = this } }
+		}
+		NOT = { has_war_with = c:BYL }
+		NOT = { has_variable = rus_l90_union_rejected }
+	}
+
+	when_taken = {
+		set_variable = { name = rus_l90_union_stage value = 0 }
+		add_journal_entry = { type = je_rus_union_state }
+		c:BYL ?= {
+			change_relations = { country = ROOT value = 10 }
+		}
+		custom_tooltip = rus_l90_propose_union_tt
+	}
+
+	ai_chance = {
+		value = 5
+	}
+}

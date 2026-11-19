@@ -1,5 +1,4 @@
 ﻿l_simp_chinese:
-
  MOBILIZATION_OPTION_UPKEEP_SHORT: "[ConcatIfNeitherEmpty(MobilizationOption.GetUpkeepModifier.GetDesc,'\n')][MobilizationOption.GetUpkeepUnscaledModifier.GetDesc]"
  MOBILIZATION_OPTION_GROUP_TOOLTIP: "[MobilizationOptionGroup.GetDesc]"
  MOBILIZATION_OPTION_TOOLTIP: "[AddLocalizationIf(Not(MobilizationOption.GetUnitModifier.IsEmpty),'MOBILIZATION_OPTION_EFFECTS_HEADER')][MobilizationOption.GetUnitModifier.GetDesc][AddLocalizationIf(Not(MobilizationOption.GetUnitModifier.IsEmpty),'\n\n')][AddLocalizationIf(Not(MobilizationOption.GetUpkeepModifier.IsEmpty),'MOBILIZATION_OPTION_UPKEEP_HEADER')]$MOBILIZATION_OPTION_UPKEEP_SHORT$[AddLocalizationIf(Not(MobilizationOption.GetUpkeepModifier.IsEmpty),'\n\n')][MobilizationOption.GetDesc]"
@@ -9,7 +8,7 @@
  ACTIVATE_MOBILIZATION_OPTION_BUTTON_TOOLTIP: "活化活化活化活化活化活化活化活化活化活化活化活化活化活化活化活化活化活化活化活化活化活化活化活化活化活化活化活化活化活化活化活化活化活化活化活化活化活化活化活化活化活化活化活化活化活化活化活化活化活化活化活化活化活化活化活化活化活化活化活化活化活化活化活化活化活化活化活化活化活化活化活化活化活化活化活化活化活化活化活化活化活化活化活化活化活化活化活化活化活化活化活化活化活化活化活化活化活化活化活化活化活化活化活化活化活化活化活化活化活化活化活化活化活化活化活化活化活化活化活化活化活化活化活化活化活化活化活"
  ALREADY_ACTIVATED: "#i 已激活 #!"
  DEACTIVATE_MOBILIZATION_OPTION_BUTTON_TOOLTIP: "#header 解除 [MobilizationOption.GetName]#!\n$TOOLTIP_DELIMITER$\n[MobilizationOption.GetTooltipWithDeactivateDesc(MilitaryFormation.AccessSelf)]"
- 
+
  MOBILIZATION_OPTION_TOOLTIP_WITH_TOGGLE_DESC: "[ConcatIfNeitherEmpty('$TOGGLE_DESC$','\n\n')]$TOOLTIP$[ConcatIfNeitherEmpty('\n\n','$EFFECT_HEADER$')]$EFFECT$"
  MOBILIZATION_OPTION_TOOLTIP_WITH_TOGGLE_DESC_WARNING_HEADER: "#title @warning! 会产生以下效果: #!\n"
 
@@ -33,7 +32,7 @@
  mobilization_option_it_hurts_organization_when_you_adjust_equipment_tt: "在打开或关闭时将 [concept_organization] 的当前 [concept_army] 减少 #v 50%#!"
  mobilization_option_it_hurts_organization_to_add_medic_support_tt: "打开时将当前 [concept_organization] 的 [concept_army] 减少 #v 25%#! 。"
  mobilization_option_it_hurts_morale_and_organization_when_you_remove_medic_support_tt: "将当前 [Concept('concept_unit','$concept_unit_possessive$')] [concept_morale] 中的每个 #v 50%#! 和当前 [concept_organization] 中的 [concept_army] 中的每个 #v 25%#! 从一个 [Concept('concept_mobilize_army','$concept_mobilize_army_mobilized$')] [concept_army] 中去除后减少."
- 
+
  mobilization_option_extra_supplies: "进食准备"
  mobilization_option_extra_supplies_desc: "标准化的现代口粮给士兵"
  mobilization_option_luxurious_supplies: "奢侈的餐饮"
@@ -71,7 +70,6 @@
  mobilization_option_field_hospitals: "野外医院"
  mobilization_option_field_hospitals_desc: "熟练的外科医生可以接触强效草药,从而实现拯救生命的奇迹。"
 
- #Mobilization option groups
  supplies: "用品"
  supplies_desc: "给军队的补给"
  supplements: "补编"
@@ -85,8 +83,5 @@
  medic_support: "医疗支助"
  medic_support_desc: "你的军队有设备 治疗受伤的士兵"
 
- 
-# SMD
-
-mobilization_option_air_transport:0 "空运"
-mobilization_option_air_transport_desc:0 "将我们的单位装入飞机上 以方便和高效的移动。"
+ mobilization_option_air_transport:0 "空运"
+ mobilization_option_air_transport_desc:0 "将我们的单位装入飞机上 以方便和高效的移动。"

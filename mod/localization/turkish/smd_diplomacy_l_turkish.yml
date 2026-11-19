@@ -1,48 +1,43 @@
 ﻿l_turkish:
-#################### JE ####################
-# The Internet
+ economic_union:0 "Ekonomik Birlik"
+ economic_union_pact_desc:0 "İki devlet arasında birleşik bir pazar ve para var olan bir diplomatik anlaşma."
+ subject_type_economic_union:0 "Ekonomik Birlik"
+ subject_type_economic_union_desc:0 "İki devlet arasında birleşik bir pazar ve para var olan bir diplomatik anlaşma."
+ concept_economic_union:0 "Ekonomik Birlik"
+ concept_subject_type_economic_union:0 "Ekonomik Birlik"
+ subject_type_economic_union_no_icon:0 "Ekonomik Birlik"
+ concept_economic_union_desc:0 "İki devlet arasında birleşik bir pazar ve para var olan bir diplomatik anlaşma."
 
-economic_union:0 "Ekonomik Birlik"
-economic_union_pact_desc:0 "İki devlet arasında birleşik bir pazar ve para var olan bir diplomatik anlaşma."
-subject_type_economic_union:0 "Ekonomik Birlik"
-subject_type_economic_union:0 "Ekonomik Birlik"
-subject_type_economic_union_desc:0 "İki devlet arasında birleşik bir pazar ve para var olan bir diplomatik anlaşma."
-concept_economic_union:0 "Ekonomik Birlik"
-concept_subject_type_economic_union:0 "Ekonomik Birlik"
-subject_type_economic_union_no_icon:0 "Ekonomik Birlik"
-concept_economic_union_desc:0 "İki devlet arasında birleşik bir pazar ve para var olan bir diplomatik anlaşma."
+ economic_union2:0 "Ekonomik Birlik"
+ economic_union2_pact_desc:0 "İki devlet arasında birleşik bir pazar ve para var olan bir diplomatik anlaşma."
 
-economic_union2:0 "Ekonomik Birlik"
-economic_union2_pact_desc:0 "İki devlet arasında birleşik bir pazar ve para var olan bir diplomatik anlaşma."
+ eu_events.400:0 "Avrupa Birliği"
 
-eu_events.400:0 "Avrupa Birliği"
+ support_revolution:0 "Devrim Destek Desteği"
+ support_revolution_action_propose_name:0 "Devrim Destek Desteği"
+ support_revolution_action_break_name:0 "Halt Support Support Support"
 
-support_revolution:0 "Devrim Destek Desteği"
-support_revolution_action_propose_name:0 "Devrim Destek Desteği"
-support_revolution_action_break_name:0 "Halt Support Support Support"
+ impose_sanctions:0 "Impose Sanctions"
+ impose_sanctions_desc: "Bu ülkenin finansal varlıklarını inceleyin. Oyun açısından, bu, paranın doğrudan iki ülke arasında GSYİH'daki farka dayanan hedefin hazinesinden aktarıldığı bir ters banka kaydı oluşturur."
+ impose_sanctions_action_propose_name:0 "Finansal Sanctions"
+ impose_sanctions_action_break_name:0 "Asansör Sanctions"
+ impose_sanctions_pact_desc: "[SCOPE.GetRootScope.GetDiplomaticPact.GetFirstCountry.GetName] bize karşı yaptırımlar uyguladı!"
+ impose_sanctions_notification_name: "[INITIATOR_COUNTRY.GetName] bize karşı yaptırımlar uyguladı!"
+ impose_sanctions_notification_desc: "Finansal yaptırımlarla vurulduk!"
 
-impose_sanctions:0 "Impose Sanctions"
-impose_sanctions_desc: "Bu ülkenin finansal varlıklarını inceleyin. Oyun açısından, bu, paranın doğrudan iki ülke arasında GSYİH'daki farka dayanan hedefin hazinesinden aktarıldığı bir ters banka kaydı oluşturur."
-impose_sanctions_action_propose_name:0 "Finansal Sanctions"
-impose_sanctions_action_break_name:0 "Asansör Sanctions"
-impose_sanctions_pact_desc: "[SCOPE.GetRootScope.GetDiplomaticPact.GetFirstCountry.GetName] bize karşı yaptırımlar uyguladı!"
-impose_sanctions_notification_name: "[INITIATOR_COUNTRY.GetName] bize karşı yaptırımlar uyguladı!"
-impose_sanctions_notification_desc: "Finansal yaptırımlarla vurulduk!"
+ humanitarian_aid:0 "İnsani Yardım Gönder"
+ humanitarian_aid_desc: "Bu ülkede yaşayan popslara finansal yardım sağlayın. Parayı doğrudan bu ülkede yaşayan popların ceplerine transfer edin."
+ humanitarian_aid_action_propose_name:0 "İnsani Yardım"
+ humanitarian_aid_action_break_name:0 "Halt Humanitarian Aid"
+ humanitarian_aid_pact_desc:0 "Bu ülkede yaşayan popslara finansal yardım sağlayın. Parayı doğrudan bu ülkede yaşayan popların ceplerine transfer edin."
+ humanitarian_aid_notification_name: "[INITIATOR_COUNTRY.GetName] bize insani yardım gönderiyor!"
+ humanitarian_aid_notification_desc: "Biz insani yardımları yeniden değerlendiriyoruz."
+ humanitarian_aid_proposal_accepted_name: "İnsani yardım kabul edilen kabul edilen"
+ humanitarian_aid_proposal_accepted_desc: "Şimdi insani yardım sağlıyoruz."
 
-humanitarian_aid:0 "İnsani Yardım Gönder"
-humanitarian_aid_desc: "Bu ülkede yaşayan popslara finansal yardım sağlayın. Parayı doğrudan bu ülkede yaşayan popların ceplerine transfer edin."
-humanitarian_aid_action_propose_name:0 "İnsani Yardım"
-humanitarian_aid_action_break_name:0 "Halt Humanitarian Aid"
-humanitarian_aid_pact_desc:0 "Bu ülkede yaşayan popslara finansal yardım sağlayın. Parayı doğrudan bu ülkede yaşayan popların ceplerine transfer edin."
-humanitarian_aid_notification_name: "[INITIATOR_COUNTRY.GetName] bize insani yardım gönderiyor!"
-humanitarian_aid_notification_desc: "Biz insani yardımları yeniden değerlendiriyoruz."
-humanitarian_aid_proposal_accepted_name: "İnsani yardım kabul edilen kabul edilen"
-humanitarian_aid_proposal_accepted_desc: "Şimdi insani yardım sağlıyoruz."
-
-
-host_military_bases_desc: ""
-host_military_bases_effects_desc: "• İki [Concept('concept_country', '$concept_countries$')] arasında bir askeri anlaşma kurmak için bir $concept_country$ $concept_country$ diğer <x id=3 kullanarak $concept_country$"
-host_military_bases_article_short_desc: "[TARGET_COUNTRY.GetNameNoFormatting] füzeleri [SOURCE_COUNTRY.GetNameNoFormatting] aracılığıyla başlatabilir"
+ host_military_bases_desc: ""
+ host_military_bases_effects_desc: "• İki [Concept('concept_country', '$concept_countries$')] arasında bir askeri anlaşma kurmak için bir $concept_country$ $concept_country$ diğer <x id=3 kullanarak $concept_country$"
+ host_military_bases_article_short_desc: "[TARGET_COUNTRY.GetNameNoFormatting] füzeleri [SOURCE_COUNTRY.GetNameNoFormatting] aracılığıyla başlatabilir"
 
  smd_create_economic_union:0 "Ekonomik Birlik"
  smd_create_economic_union_action_name:0 "Ekonomik Birlik"
@@ -73,7 +68,7 @@ host_military_bases_article_short_desc: "[TARGET_COUNTRY.GetNameNoFormatting] f�
  smd_diplomatic_unification_proposal_declined_desc:0 "[TARGET_COUNTRY.GetName] [INITIATOR_COUNTRY.GetName] Diplomatik birleşme önerisini reddetti."
  smd_economic_union_base_resistance_tt:0 "Ülkelerin ekonomik sendikalara girmek için temel bir geri dönüşleri var."
  smd_unification_base_resistance_tt:0 "Ülkeler diplomatik birleşme yoluyla eksilmeyi kabul etmek için güçlü bir temele sahiptir."
- 
+
  treaty_name_smd_economic_union:0 "Ekonomik Birlik"
  treaty_name_smd_diplomatic_unification:0 "Diplomatik Doğrulama Antlaşması"
 
@@ -90,7 +85,7 @@ host_military_bases_article_short_desc: "[TARGET_COUNTRY.GetNameNoFormatting] f�
  smd_unification_requires_culture_tt:0 "Ülkelerin benzer birincil kültürlere sahip olması, birincil bir kültür, miras grubu ve dil grubu veya miras ve dil özellikleri paylaşması gerekir."
  smd_unification_requires_good_relations_tt:0 "İlişkiler en azından dostça olmalıdır."
  smd_diplomatic_unification_effect_tt:0 "Kabul edilen ülke, initiatorun bir parçası haline gelir."
- 
+
  threaten_nuclear_hostilities:0 "Tehdit Nükleer Evsizlikler"
  threaten_nuclear_hostilities_action_name:0 "Tehdit Nükleer Evsizlikler"
  threaten_nuclear_hostilities_action_propose_name:0 "Tehdit Nükleer Evsizlikler"
@@ -106,3 +101,18 @@ host_military_bases_article_short_desc: "[TARGET_COUNTRY.GetNameNoFormatting] f�
 
  threatened_nuclear_hostilities_diplomatic_reputation:0 "Nükleer Hostility Tehdit Ediyor"
  threatened_nuclear_hostilities_diplomatic_reputation_desc:0 "Nükleer eşlilik bu ülkenin diplomatik şöhretini geçici olarak artırdı, diğer ülkeleri ondan anlaşmalar kabul etmek daha muhtemel hale getirdi."
+
+ treaty_name_timor_gap:0 "Timor Gap Antlaşması"
+ treaty_name_montevideo:0 "Montevideo Antlaşması"
+ treaty_name_elysee_treaty:0 "Élysée Antlaşması"
+ treaty_name_indus_waters_treaty:0 "Indus Waters Antlaşması"
+ treaty_name_us_israel_alliance:0 "ABD-İsrail İttifakı"
+ treaty_name_us_australia_alliance:0 "ABD-Australia Alliance"
+ treaty_name_us_new_zealand_alliance:0 "Amerika Birleşik Devletleri-Yeni Zelanda Alliance"
+ treaty_name_us_japan_alliance:0 "Amerika Birleşik Devletleri-Japonya Alliance"
+ treaty_name_us_south_korea_alliance:0 "Amerika Birleşik Devletleri-Güney Kore İttifakı"
+ treaty_name_us_philippines_alliance:0 "Amerika Birleşik Devletleri-Philippines Alliance"
+ treaty_name_us_taiwan_act:0 "Tayvan İlişkileri Yasası"
+ treaty_name_china_north_korea_pact:0 "Sino-Kuzey Kore Savunma Paktı"
+ DIPLOMATIC_ACCEPTANCE_STRAIT_DEPENDENCE:0 "Onların kontrolündeki [Concept('concept_strait', 'Boğazlara')] #b bağımlı#! olmamızdan"
+ DIPLOMATIC_ACCEPTANCE_NO_STRAIT_DEPENDENCE:0 "Onların kontrolündeki [Concept('concept_strait', 'Boğazlardan')] #b bağımsız#! olmamızdan"

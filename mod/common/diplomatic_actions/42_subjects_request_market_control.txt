@@ -12,20 +12,20 @@
 
 	potential = {
 		scope:target_country = {
-		   this = root.market.owner # same market as the requester
+		   this = root.market.owner
 		}
 	}
 
 	possible = {
 		OR = {
-			AND = { # the target controls the market and the requester is independent
+			AND = {
 				scope:target_country = {
 					market.owner = this
 				}
 				is_subject = no
 			}
 			AND = {
-				is_direct_subject_of = scope:target_country # or the country is a direct subject of target country being asked
+				is_direct_subject_of = scope:target_country
 				liberty_desire >= 25
 			}
 		}

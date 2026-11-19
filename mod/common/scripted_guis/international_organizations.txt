@@ -21,17 +21,8 @@ io_join_un = {
 		NOT = { has_variable = io_pending_org }
 	}
 	effect = {
-		set_variable = { name = io_pending_org value = 1 }
-		set_variable = { name = io_cooldown_un years = 1 }
-		save_scope_as = io_applicant
-		every_country = {
-			limit = {
-				is_target_in_global_variable_list = { name = io_un_members target = this }
-				NOT = { this = ROOT }
-			}
-			trigger_event = { id = io_events.1 days = 0 popup = yes }
-		}
-		trigger_event = { id = io_events.2 days = 30 }
+		custom_tooltip = io_vote_projection_un_tt
+		io_apply_to_org = { ORG = un CODE = 1 TIER = open }
 		post_notification = io_join_request_sent_notification
 	}
 }
@@ -71,19 +62,11 @@ io_join_nato = {
 			capital = { is_in_geographic_region = geographic_region_north_america }
 			c:TRK ?= ROOT
 		}
+		io_meets_nato_accession_criteria = yes
 	}
 	effect = {
-		set_variable = { name = io_pending_org value = 2 }
-		set_variable = { name = io_cooldown_nato years = 1 }
-		save_scope_as = io_applicant
-		every_country = {
-			limit = {
-				is_target_in_global_variable_list = { name = io_nato_members target = this }
-				NOT = { this = ROOT }
-			}
-			trigger_event = { id = io_events.1 days = 0 popup = yes }
-		}
-		trigger_event = { id = io_events.2 days = 30 }
+		custom_tooltip = io_vote_projection_nato_tt
+		io_apply_to_org = { ORG = nato CODE = 2 TIER = veto }
 		post_notification = io_join_request_sent_notification
 	}
 }
@@ -137,17 +120,8 @@ io_join_g7 = {
 		}
 	}
 	effect = {
-		set_variable = { name = io_pending_org value = 3 }
-		set_variable = { name = io_cooldown_g7 years = 1 }
-		save_scope_as = io_applicant
-		every_country = {
-			limit = {
-				is_target_in_global_variable_list = { name = io_g7_members target = this }
-				NOT = { this = ROOT }
-			}
-			trigger_event = { id = io_events.1 days = 0 popup = yes }
-		}
-		trigger_event = { id = io_events.2 days = 30 }
+		custom_tooltip = io_vote_projection_g7_tt
+		io_apply_to_org = { ORG = g7 CODE = 3 TIER = veto }
 		post_notification = io_join_request_sent_notification
 	}
 }
@@ -185,17 +159,8 @@ io_join_opec = {
 		any_scope_state = { has_building = building_oil_rig }
 	}
 	effect = {
-		set_variable = { name = io_pending_org value = 4 }
-		set_variable = { name = io_cooldown_opec years = 1 }
-		save_scope_as = io_applicant
-		every_country = {
-			limit = {
-				is_target_in_global_variable_list = { name = io_opec_members target = this }
-				NOT = { this = ROOT }
-			}
-			trigger_event = { id = io_events.1 days = 0 popup = yes }
-		}
-		trigger_event = { id = io_events.2 days = 30 }
+		custom_tooltip = io_vote_projection_opec_tt
+		io_apply_to_org = { ORG = opec CODE = 4 TIER = majority }
 		post_notification = io_join_request_sent_notification
 	}
  
@@ -221,7 +186,6 @@ io_leave_opec = {
 }
  
 ### ══════════════════════════════════════════
-### EEC — Free Trade + Power Bloc, Europe only
 ### Hidden after io_eec_dissolved is set
 ### ══════════════════════════════════════════
  
@@ -240,6 +204,7 @@ io_join_eec = {
 		NOT = { io_has_authoritarian_government_laws = yes }
 	}
 	effect = {
+		custom_tooltip = io_vote_projection_eec_tt
 		set_variable = io_eec_membership_process_started
 		set_variable = { name = io_cooldown_eec years = 1 }
 		if = {
@@ -292,6 +257,7 @@ io_join_eu = {
 		NOT = { io_has_authoritarian_government_laws = yes }
 	}
 	effect = {
+		custom_tooltip = io_vote_projection_eu_tt
 		set_variable = eu_membership_process_started
 		set_variable = { name = io_cooldown_eu years = 1 }
 		if = {
@@ -343,17 +309,8 @@ io_join_arab_league = {
 		}
 	}
 	effect = {
-		set_variable = { name = io_pending_org value = 7 }
-		set_variable = { name = io_cooldown_arab_league years = 1 }
-		save_scope_as = io_applicant
-		every_country = {
-			limit = {
-				is_target_in_global_variable_list = { name = io_arab_league_members target = this }
-				NOT = { this = ROOT }
-			}
-			trigger_event = { id = io_events.1 days = 0 popup = yes }
-		}
-		trigger_event = { id = io_events.2 days = 30 }
+		custom_tooltip = io_vote_projection_arab_league_tt
+		io_apply_to_org = { ORG = arab_league CODE = 7 TIER = majority }
 		post_notification = io_join_request_sent_notification
 	}
 }
@@ -392,17 +349,8 @@ io_join_imf = {
 	}
 	effect = {
 		remove_variable = left_imf
-		set_variable = { name = io_pending_org value = 8 }
-		set_variable = { name = io_cooldown_imf years = 1 }
-		save_scope_as = io_applicant
-		every_country = {
-			limit = {
-				is_target_in_global_variable_list = { name = io_imf_members target = this }
-				NOT = { this = ROOT }
-			}
-			trigger_event = { id = io_events.1 days = 0 popup = yes }
-		}
-		trigger_event = { id = io_events.2 days = 30 }
+		custom_tooltip = io_vote_projection_imf_tt
+		io_apply_to_org = { ORG = imf CODE = 8 TIER = open }
 		post_notification = io_join_request_sent_notification
 	}
 }
@@ -445,17 +393,8 @@ io_join_esa = {
 		NOT = { has_variable = io_pending_org }
 	}
 	effect = {
-		set_variable = { name = io_pending_org value = 9 }
-		set_variable = { name = io_cooldown_esa years = 1 }
-		save_scope_as = io_applicant
-		every_country = {
-			limit = {
-				is_target_in_global_variable_list = { name = io_esa_members target = this }
-				NOT = { this = ROOT }
-			}
-			trigger_event = { id = io_events.1 days = 0 popup = yes }
-		}
-		trigger_event = { id = io_events.2 days = 30 }
+		custom_tooltip = io_vote_projection_esa_tt
+		io_apply_to_org = { ORG = esa CODE = 9 TIER = majority }
 		post_notification = io_join_request_sent_notification
 	}
 }
@@ -492,17 +431,8 @@ io_join_asean = {
 		NOT = { has_variable = io_pending_org }
 	}
 	effect = {
-		set_variable = { name = io_pending_org value = 10 }
-		set_variable = { name = io_cooldown_asean years = 1 }
-		save_scope_as = io_applicant
-		every_country = {
-			limit = {
-				is_target_in_global_variable_list = { name = io_asean_members target = this }
-				NOT = { this = ROOT }
-			}
-			trigger_event = { id = io_events.1 days = 0 popup = yes }
-		}
-		trigger_event = { id = io_events.2 days = 30 }
+		custom_tooltip = io_vote_projection_asean_tt
+		io_apply_to_org = { ORG = asean CODE = 10 TIER = majority }
 		post_notification = io_join_request_sent_notification
 	}
 }
@@ -539,17 +469,8 @@ io_join_saarc = {
 		NOT = { has_variable = io_pending_org }
 	}
 	effect = {
-		set_variable = { name = io_pending_org value = 11 }
-		set_variable = { name = io_cooldown_saarc years = 1 }
-		save_scope_as = io_applicant
-		every_country = {
-			limit = {
-				is_target_in_global_variable_list = { name = io_saarc_members target = this }
-				NOT = { this = ROOT }
-			}
-			trigger_event = { id = io_events.1 days = 0 popup = yes }
-		}
-		trigger_event = { id = io_events.2 days = 30 }
+		custom_tooltip = io_vote_projection_saarc_tt
+		io_apply_to_org = { ORG = saarc CODE = 11 TIER = majority }
 		post_notification = io_join_request_sent_notification
 	}
 }
@@ -589,17 +510,8 @@ io_join_cis = {
 		NOT = { has_variable = io_pending_org }
 	}
 	effect = {
-		set_variable = { name = io_pending_org value = 12 }
-		set_variable = { name = io_cooldown_cis years = 1 }
-		save_scope_as = io_applicant
-		every_country = {
-			limit = {
-				is_target_in_global_variable_list = { name = io_cis_members target = this }
-				NOT = { this = ROOT }
-			}
-			trigger_event = { id = io_events.1 days = 0 popup = yes }
-		}
-		trigger_event = { id = io_events.2 days = 30 }
+		custom_tooltip = io_vote_projection_cis_tt
+		io_apply_to_org = { ORG = cis CODE = 12 TIER = majority }
 		post_notification = io_join_request_sent_notification
 	}
 }
@@ -636,17 +548,8 @@ io_join_who = {
 		NOT = { has_variable = io_pending_org }
 	}
 	effect = {
-		set_variable = { name = io_pending_org value = 13 }
-		set_variable = { name = io_cooldown_who years = 1 }
-		save_scope_as = io_applicant
-		every_country = {
-			limit = {
-				is_target_in_global_variable_list = { name = io_who_members target = this }
-				NOT = { this = ROOT }
-			}
-			trigger_event = { id = io_events.1 days = 0 popup = yes }
-		}
-		trigger_event = { id = io_events.2 days = 30 }
+		custom_tooltip = io_vote_projection_who_tt
+		io_apply_to_org = { ORG = who CODE = 13 TIER = open }
 		post_notification = io_join_request_sent_notification
 	}
 }
@@ -673,21 +576,21 @@ io_leave_who = {
 ### TREATIES (unchanged from your working file)
 ### ══════════════════════════════════════════
  
-io_sign_geneva = { scope = country is_shown = { always = yes } is_valid = { NOT = { has_variable = io_treaty_geneva_signed } } effect = { set_variable = io_treaty_geneva_signed add_modifier = { name = io_treaty_geneva_signatory } } }
-io_withdraw_geneva = { scope = country is_shown = { always = yes } is_valid = { has_variable = io_treaty_geneva_signed } effect = { remove_variable = io_treaty_geneva_signed remove_modifier = io_treaty_geneva_signatory every_country = { limit = { has_variable = io_treaty_geneva_signed } change_relations = { country = ROOT value = -20 } } } }
-io_sign_cwc = { scope = country is_shown = { always = yes } is_valid = { NOT = { has_variable = io_treaty_cwc_signed } } effect = { set_variable = io_treaty_cwc_signed add_modifier = { name = io_treaty_cwc_signatory } } }
-io_withdraw_cwc = { scope = country is_shown = { always = yes } is_valid = { has_variable = io_treaty_cwc_signed } effect = { remove_variable = io_treaty_cwc_signed remove_modifier = io_treaty_cwc_signatory every_country = { limit = { has_variable = io_treaty_cwc_signed } change_relations = { country = ROOT value = -20 } } } }
-io_sign_npt = { scope = country is_shown = { always = yes } is_valid = { NOT = { has_variable = io_treaty_npt_signed } } effect = { set_variable = io_treaty_npt_signed add_modifier = { name = io_treaty_npt_signatory } } }
-io_withdraw_npt = { scope = country is_shown = { always = yes } is_valid = { has_variable = io_treaty_npt_signed } effect = { remove_variable = io_treaty_npt_signed remove_modifier = io_treaty_npt_signatory every_country = { limit = { has_variable = io_treaty_npt_signed } change_relations = { country = ROOT value = -20 } } } }
-io_sign_bwc = { scope = country is_shown = { always = yes } is_valid = { NOT = { has_variable = io_treaty_bwc_signed } } effect = { set_variable = io_treaty_bwc_signed add_modifier = { name = io_treaty_bwc_signatory } } }
-io_withdraw_bwc = { scope = country is_shown = { always = yes } is_valid = { has_variable = io_treaty_bwc_signed } effect = { remove_variable = io_treaty_bwc_signed remove_modifier = io_treaty_bwc_signatory every_country = { limit = { has_variable = io_treaty_bwc_signed } change_relations = { country = ROOT value = -20 } } } }
-io_sign_cat = { scope = country is_shown = { always = yes } is_valid = { NOT = { has_variable = io_treaty_cat_signed } } effect = { set_variable = io_treaty_cat_signed add_modifier = { name = io_treaty_cat_signatory } } }
-io_withdraw_cat = { scope = country is_shown = { always = yes } is_valid = { has_variable = io_treaty_cat_signed } effect = { remove_variable = io_treaty_cat_signed remove_modifier = io_treaty_cat_signatory every_country = { limit = { has_variable = io_treaty_cat_signed } change_relations = { country = ROOT value = -20 } } } }
+io_sign_geneva = { scope = country is_shown = { always = yes } is_valid = { NOT = { has_variable = io_treaty_geneva_signed } io_treaty_not_on_cooldown = { T = geneva } } effect = { set_variable = io_treaty_geneva_signed add_modifier = { name = io_treaty_geneva_signatory } } }
+io_withdraw_geneva = { scope = country is_shown = { always = yes } is_valid = { has_variable = io_treaty_geneva_signed } effect = { remove_variable = io_treaty_geneva_signed remove_modifier = io_treaty_geneva_signatory io_treaty_withdrawal_penalty = { T = geneva INFAMY = 10 } } }
+io_sign_cwc = { scope = country is_shown = { always = yes } is_valid = { NOT = { has_variable = io_treaty_cwc_signed } io_treaty_not_on_cooldown = { T = cwc } } effect = { set_variable = io_treaty_cwc_signed add_modifier = { name = io_treaty_cwc_signatory } } }
+io_withdraw_cwc = { scope = country is_shown = { always = yes } is_valid = { has_variable = io_treaty_cwc_signed } effect = { remove_variable = io_treaty_cwc_signed remove_modifier = io_treaty_cwc_signatory io_treaty_withdrawal_penalty = { T = cwc INFAMY = 10 } } }
+io_sign_npt = { scope = country is_shown = { always = yes } is_valid = { NOT = { has_variable = io_treaty_npt_signed } io_treaty_not_on_cooldown = { T = npt } } effect = { set_variable = io_treaty_npt_signed add_modifier = { name = io_treaty_npt_signatory } } }
+io_withdraw_npt = { scope = country is_shown = { always = yes } is_valid = { has_variable = io_treaty_npt_signed } effect = { remove_variable = io_treaty_npt_signed remove_modifier = io_treaty_npt_signatory io_treaty_withdrawal_penalty = { T = npt INFAMY = 15 } } }
+io_sign_bwc = { scope = country is_shown = { always = yes } is_valid = { NOT = { has_variable = io_treaty_bwc_signed } io_treaty_not_on_cooldown = { T = bwc } } effect = { set_variable = io_treaty_bwc_signed add_modifier = { name = io_treaty_bwc_signatory } } }
+io_withdraw_bwc = { scope = country is_shown = { always = yes } is_valid = { has_variable = io_treaty_bwc_signed } effect = { remove_variable = io_treaty_bwc_signed remove_modifier = io_treaty_bwc_signatory io_treaty_withdrawal_penalty = { T = bwc INFAMY = 10 } } }
+io_sign_cat = { scope = country is_shown = { always = yes } is_valid = { NOT = { has_variable = io_treaty_cat_signed } io_treaty_not_on_cooldown = { T = cat } } effect = { set_variable = io_treaty_cat_signed add_modifier = { name = io_treaty_cat_signatory } } }
+io_withdraw_cat = { scope = country is_shown = { always = yes } is_valid = { has_variable = io_treaty_cat_signed } effect = { remove_variable = io_treaty_cat_signed remove_modifier = io_treaty_cat_signatory io_treaty_withdrawal_penalty = { T = cat INFAMY = 5 } } }
 
 io_sign_paris = {
 	scope = country
 	is_shown = { has_global_variable = io_paris_agreement_available }
-	is_valid = { NOT = { has_variable = io_treaty_paris_signed } }
+	is_valid = { NOT = { has_variable = io_treaty_paris_signed } io_treaty_not_on_cooldown = { T = paris } }
 	effect = {
 		set_variable = io_treaty_paris_signed
 		add_modifier = { name = io_treaty_paris_signatory }
@@ -701,15 +604,11 @@ io_withdraw_paris = {
 	effect = {
 		remove_variable = io_treaty_paris_signed
 		remove_modifier = io_treaty_paris_signatory
-		every_country = {
-			limit = { has_variable = io_treaty_paris_signed }
-			change_relations = { country = ROOT value = -20 }
-		}
+		io_treaty_withdrawal_penalty = { T = paris INFAMY = 3 }
 	}
 }
 
 ### ══════════════════════════════════════════
-### NGOs — BAN / UNBAN / SUPPORT (renamed from Subsidize)
 ### 2-year cooldown on support, shared across NGOs
 ### ══════════════════════════════════════════
  
@@ -724,3 +623,48 @@ io_ngo_support_redcross = { scope = country is_shown = { always = yes } is_valid
 io_ngo_ban_amnesty = { scope = country is_shown = { always = yes } is_valid = { NOT = { has_variable = io_ngo_amnesty_banned } } effect = { set_variable = io_ngo_amnesty_banned if = { limit = { has_variable = io_ngo_amnesty_supported } remove_variable = io_ngo_amnesty_supported } change_variable = { name = io_ngo_amnesty_opinion add = -20 } clamp_variable = { name = io_ngo_amnesty_opinion min = 0 max = 100 } } }
 io_ngo_unban_amnesty = { scope = country is_shown = { always = yes } is_valid = { has_variable = io_ngo_amnesty_banned } effect = { remove_variable = io_ngo_amnesty_banned } }
 io_ngo_support_amnesty = { scope = country is_shown = { always = yes } is_valid = { NOT = { has_variable = io_ngo_amnesty_banned } NOT = { has_variable = io_ngo_amnesty_supported } NOT = { has_variable = io_ngo_support_cooldown } } effect = { set_variable = io_ngo_amnesty_supported change_variable = { name = io_ngo_amnesty_opinion add = 10 } clamp_variable = { name = io_ngo_amnesty_opinion min = 0 max = 100 } set_variable = { name = io_ngo_support_cooldown years = 2 } } }
+
+io_join_csto = {
+	scope = country
+	is_shown = { has_global_variable = csto_founded }
+	is_valid = {
+		NOT = { c:RUS ?= this }
+		NOT = { is_target_in_global_variable_list = { name = io_csto_members target = ROOT } }
+		custom_description = {
+			text = rus_l90_csto_in_cis
+			is_target_in_global_variable_list = { name = io_cis_members target = ROOT }
+		}
+		NOT = { is_target_in_global_variable_list = { name = io_nato_members target = ROOT } }
+		custom_description = {
+			text = rus_l90_csto_russia_friendly
+			c:RUS ?= {
+				relations:root >= relations_threshold:cordial
+				NOT = { has_war_with = root }
+			}
+		}
+		NOT = { has_variable = rus_l90_csto_left_recently }
+	}
+	effect = {
+		custom_tooltip = rus_l90_join_csto_tt
+		rus_l90_csto_add_member = yes
+	}
+}
+
+io_leave_csto = {
+	scope = country
+	is_shown = {
+		has_global_variable = csto_founded
+		is_target_in_global_variable_list = { name = io_csto_members target = ROOT }
+	}
+	is_valid = {
+		NOT = { c:RUS ?= this }
+	}
+	effect = {
+		custom_tooltip = rus_l90_leave_csto_tt
+		rus_l90_csto_remove_member = yes
+		hidden_effect = {
+			set_variable = { name = rus_l90_csto_left_recently years = 5 }
+		}
+		post_notification = io_left_org_notification
+	}
+}

@@ -6,29 +6,29 @@ shipname_prefixes_clone_template = {
 		{
 			type = custom_text
 			key = "PREFIX"
-			custom_text = "ship_prefix_ins" # Indian Navy Ship
+			custom_text = "ship_prefix_ins"
 			quick_trigger_required_country = BHT
 		}
 		{
 			type = custom_text
 			key = "PREFIX"
-			custom_text = "ship_prefix_hms"  # His/Her Majesty's Ship
+			custom_text = "ship_prefix_hms"
 			quick_trigger_required_law = law_monarchy
 			quick_trigger_required_country = GBR
 		}
 		{
 			type = custom_text
 			key = "PREFIX"
-			custom_text = "ship_prefix_hms"  # His/Her Majesty's Ship
+			custom_text = "ship_prefix_hms"
 			quick_trigger_required_law = law_monarchy
 			quick_trigger_required_country = ENG
 		}
 		{
 			type = custom_text
 			key = "PREFIX"
-			custom_text = "ship_prefix_hmcs_1" # His/Her Majesty's Colonial Ship
+			custom_text = "ship_prefix_hmcs_1"
 			quick_trigger_required_law = law_colonial_administration
-			trigger = { # TODO PRCAL-43787 investigate quick trigger possibility
+			trigger = {
 				owner = {
 					is_subject_of = c:GBR
 					c:GBR = {
@@ -40,9 +40,9 @@ shipname_prefixes_clone_template = {
 		{
 			type = custom_text
 			key = "PREFIX"
-			custom_text = "ship_prefix_hmcs_2"  # His/Her Majesty's Canadian Ship
+			custom_text = "ship_prefix_hmcs_2"
 			quick_trigger_required_country = CAN
-			trigger = { # TODO PRCAL-43787 investigate quick trigger possibility
+			trigger = {
 				owner = {
 					is_subject_of = c:GBR
 					c:GBR = {
@@ -54,9 +54,9 @@ shipname_prefixes_clone_template = {
 		{
 			type = custom_text
 			key = "PREFIX"
-			custom_text = "ship_prefix_hmsas" # His/Her Majesty's South African Ship 
+			custom_text = "ship_prefix_hmsas"
 			quick_trigger_required_country = SAF
-			trigger = { # TODO PRCAL-43787 investigate quick trigger possibility
+			trigger = {
 				owner = {
 					is_subject_of = c:GBR
 					c:GBR = {
@@ -68,9 +68,9 @@ shipname_prefixes_clone_template = {
 		{
 			type = custom_text
 			key = "PREFIX"
-			custom_text = "ship_prefix_hmas" # His/Her Majesty's Australian Ship 
+			custom_text = "ship_prefix_hmas"
 			quick_trigger_required_country = AST
-			trigger = { # TODO PRCAL-43787 investigate quick trigger possibility
+			trigger = {
 				owner = {
 					is_subject_of = c:GBR
 					c:GBR = {
@@ -82,9 +82,9 @@ shipname_prefixes_clone_template = {
 		{
 			type = custom_text
 			key = "PREFIX"
-			custom_text = "ship_prefix_hmnzs" # His/Her Majesty's New Zealand Ship 
+			custom_text = "ship_prefix_hmnzs"
 			quick_trigger_required_country = NZL
-			trigger = { # TODO PRCAL-43787 investigate quick trigger possibility
+			trigger = {
 				owner = {
 					is_subject_of = c:GBR
 					c:GBR = {
@@ -96,9 +96,9 @@ shipname_prefixes_clone_template = {
 		{
 			type = custom_text
 			key = "PREFIX"
-			custom_text = "ship_prefix_rims" # Royal Indian Marine Ship
+			custom_text = "ship_prefix_rims"
 			quick_trigger_required_country = BIC
-			trigger = { # TODO PRCAL-43787 investigate quick trigger possibility
+			trigger = {
 				owner = {
 					is_subject_of = c:GBR
 					c:GBR = {
@@ -110,9 +110,9 @@ shipname_prefixes_clone_template = {
 		{
 			type = custom_text
 			key = "PREFIX"
-			custom_text = "ship_prefix_hmis" # His/Her Majesty's Indian Ship 
+			custom_text = "ship_prefix_hmis"
 			quick_trigger_required_country = BHT
-			trigger = { # TODO PRCAL-43787 investigate quick trigger possibility
+			trigger = {
 				owner = {
 					is_subject_of = c:GBR
 					c:GBR = {
@@ -121,52 +121,52 @@ shipname_prefixes_clone_template = {
 				}
 			}
 		}
-		{ # TODO PRCAL-43787 investigate quick trigger possibility for culture check here instead of multiple tags
+		{
 			type = custom_text
 			key = "PREFIX"
-			custom_text = "ship_prefix_nms" # Nava Majestăţii Sale
+			custom_text = "ship_prefix_nms"
 			quick_trigger_required_country = ROM
 			quick_trigger_required_law = law_monarchy
 		}
 		{
 			type = custom_text
 			key = "PREFIX"
-			custom_text = "ship_prefix_nms" # Nava Majestăţii Sale
+			custom_text = "ship_prefix_nms"
 			quick_trigger_required_country = WAL
 			quick_trigger_required_law = law_monarchy
 		}
 		{
 			type = custom_text
 			key = "PREFIX"
-			custom_text = "ship_prefix_nms" # Nava Majestăţii Sale
+			custom_text = "ship_prefix_nms"
 			quick_trigger_required_country = MOL
 			quick_trigger_required_law = law_monarchy
 		}
 		{
 			type = custom_text
 			key = "PREFIX"
-			custom_text = "ship_prefix_kb" # Kraljevski brod
+			custom_text = "ship_prefix_kb"
 			quick_trigger_required_country = SER
 			quick_trigger_required_law = law_monarchy
 		}
 		{
 			type = custom_text
 			key = "PREFIX"
-			custom_text = "ship_prefix_kb" # Kraljevski brod
+			custom_text = "ship_prefix_kb"
 			quick_trigger_required_country = YUG
 			quick_trigger_required_law = law_monarchy
 		}
 		{
 			type = custom_text
 			key = "PREFIX"
-			custom_text = "ship_prefix_nrp" # Navio da República Portuguesa
+			custom_text = "ship_prefix_nrp"
 			quick_trigger_required_country = POR
 			quick_trigger_forbidden_law = law_monarchy
 		}
 		{
 			type = custom_text
 			key = "PREFIX"
-			custom_text = "ship_prefix_sms" # Seiner Majestät Schiff
+			custom_text = "ship_prefix_sms"
 			quick_trigger_required_country = PRU
 			quick_trigger_required_law = law_monarchy
 			quick_trigger_country_leader_female = no
@@ -174,7 +174,7 @@ shipname_prefixes_clone_template = {
 		{
 			type = custom_text
 			key = "PREFIX"
-			custom_text = "ship_prefix_sms" # Seiner Majestät Schiff
+			custom_text = "ship_prefix_sms"
 			quick_trigger_required_country = AUS
 			quick_trigger_required_law = law_monarchy
 			quick_trigger_country_leader_female = no
@@ -182,7 +182,7 @@ shipname_prefixes_clone_template = {
 		{
 			type = custom_text
 			key = "PREFIX"
-			custom_text = "ship_prefix_sms" # Seiner Majestät Schiff
+			custom_text = "ship_prefix_sms"
 			quick_trigger_required_country = GER
 			quick_trigger_required_law = law_monarchy
 			quick_trigger_country_leader_female = no
@@ -190,7 +190,7 @@ shipname_prefixes_clone_template = {
 		{
 			type = custom_text
 			key = "PREFIX"
-			custom_text = "ship_prefix_ims" # Ihrer Majestät Schiff
+			custom_text = "ship_prefix_ims"
 			quick_trigger_required_country = PRU
 			quick_trigger_required_law = law_monarchy
 			quick_trigger_country_leader_female = yes
@@ -198,7 +198,7 @@ shipname_prefixes_clone_template = {
 		{
 			type = custom_text
 			key = "PREFIX"
-			custom_text = "ship_prefix_ims" # Ihrer Majestät Schiff
+			custom_text = "ship_prefix_ims"
 			quick_trigger_required_country = AUS
 			quick_trigger_required_law = law_monarchy
 			quick_trigger_country_leader_female = yes
@@ -206,7 +206,7 @@ shipname_prefixes_clone_template = {
 		{
 			type = custom_text
 			key = "PREFIX"
-			custom_text = "ship_prefix_ims" # Ihrer Majestät Schiff
+			custom_text = "ship_prefix_ims"
 			quick_trigger_required_country = GER
 			quick_trigger_required_law = law_monarchy
 			quick_trigger_country_leader_female = yes
@@ -214,53 +214,53 @@ shipname_prefixes_clone_template = {
 		{
 			type = custom_text
 			key = "PREFIX"
-			custom_text = "ship_prefix_rn" # Regia Nave
+			custom_text = "ship_prefix_rn"
 			quick_trigger_required_country = ITA
 			quick_trigger_required_law = law_monarchy
 		}
 		{
 			type = custom_text
 			key = "PREFIX"
-			custom_text = "ship_prefix_uss" # United States Ship
+			custom_text = "ship_prefix_uss"
 			quick_trigger_required_country = USA
 		}
 		{
 			type = custom_text
 			key = "PREFIX"
-			custom_text = "ship_prefix_css" # Confederate States Ship
+			custom_text = "ship_prefix_css"
 			quick_trigger_required_country = CSA
 		}
 		{
 			type = custom_text
 			key = "PREFIX"
-			custom_text = "ship_prefix_ara" # Armada de la República Argentina
+			custom_text = "ship_prefix_ara"
 			quick_trigger_required_country = ARG
 			quick_trigger_forbidden_law = law_monarchy
 		}
 		{
 			type = custom_text
 			key = "PREFIX"
-			custom_text = "ship_prefix_arm" # Armada de la República Mexicana
+			custom_text = "ship_prefix_arm"
 			quick_trigger_required_country = MEX
 			quick_trigger_forbidden_law = law_monarchy
 		}
 		{
 			type = custom_text
 			key = "PREFIX"
-			custom_text = "ship_prefix_vp" # Vassilikón Ploíon
+			custom_text = "ship_prefix_vp"
 			quick_trigger_required_country = GRE
 			quick_trigger_required_law = law_monarchy
 		}
 		{
 			type = custom_text
 			key = "PREFIX"
-			custom_text = "ship_prefix_le" # Long Éireannach
+			custom_text = "ship_prefix_le"
 			quick_trigger_required_country = IRE
 		}
 		{
 			type = custom_text
 			key = "PREFIX"
-			custom_text = "ship_prefix_hrms" # Harer Majesteits
+			custom_text = "ship_prefix_hrms"
 			quick_trigger_required_country = NET
 			quick_trigger_required_law = law_monarchy
 			quick_trigger_country_leader_female = yes
@@ -268,7 +268,7 @@ shipname_prefixes_clone_template = {
 		{
 			type = custom_text
 			key = "PREFIX"
-			custom_text = "ship_prefix_zrms" # Zijner Majesteits
+			custom_text = "ship_prefix_zrms"
 			quick_trigger_required_country = NET
 			quick_trigger_required_law = law_monarchy
 			quick_trigger_country_leader_female = no
@@ -281,7 +281,7 @@ shipname_prefixes_clone_template = {
 # Generic, infinite fallbacks
 
 shipname_fallback_ordinal_battleship = {
-	name = "shipname_fallback_ordinal_battleship" # Battleship No. 1
+	name = "shipname_fallback_ordinal_battleship"
 	selection_weight = 1
 	fallback = yes
 
@@ -304,7 +304,7 @@ shipname_fallback_ordinal_battleship = {
 }
 
 shipname_fallback_ordinal_cruiser = {
-	name = "shipname_fallback_ordinal_cruiser" # Cruiser No. 1
+	name = "shipname_fallback_ordinal_cruiser"
 	selection_weight = 1
 	fallback = yes
 
@@ -325,7 +325,7 @@ shipname_fallback_ordinal_cruiser = {
 }
 
 shipname_fallback_ordinal_frigate = {
-	name = "shipname_fallback_ordinal_frigate" # Frigate No. 1
+	name = "shipname_fallback_ordinal_frigate"
 	selection_weight = 1
 	fallback = yes
 
@@ -345,7 +345,7 @@ shipname_fallback_ordinal_frigate = {
 }
 
 shipname_fallback_ordinal_monitor = {
-	name = "shipname_fallback_ordinal_monitor" # Monitor No. 1
+	name = "shipname_fallback_ordinal_monitor"
 	selection_weight = 1
 	fallback = yes
 
@@ -365,15 +365,13 @@ shipname_fallback_ordinal_monitor = {
 }
 
 shipname_fallback_ordinal_troopship = {
-	name = "shipname_fallback_ordinal_troopship" # Troopship No. 1
+	name = "shipname_fallback_ordinal_troopship"
 	selection_weight = 1
 	fallback = yes
 
 	allowed_ship_types = {
 		ship_type_troop_ship
 	}
-
-	# Civilian ships should not use military prefixes (Fallback troopships are imagined as civilian transports pressed into military service )
 
 	properties = {
 		{
@@ -385,15 +383,13 @@ shipname_fallback_ordinal_troopship = {
 
 
 shipname_fallback_ordinal_supply_ship = {
-	name = "shipname_fallback_ordinal_supply_ship" # Transport No. 1
+	name = "shipname_fallback_ordinal_supply_ship"
 	selection_weight = 1
 	fallback = yes
 
 	allowed_ship_types = {
 		ship_type_supply_ship
 	}
-
-	# Civilian ships should not use military prefixes (Fallback supply ships are imagined as civilian transports pressed into military service )
 
 	properties = {
 		{
@@ -404,7 +400,7 @@ shipname_fallback_ordinal_supply_ship = {
 }
 
 shipname_fallback_ordinal_torpedo_boat_flotilla = {
-	name = "shipname_fallback_ordinal_tb_flotilla" # 1st Torpedo Boat Flotilla
+	name = "shipname_fallback_ordinal_tb_flotilla"
 	selection_weight = 1
 	fallback = yes
 
@@ -424,7 +420,7 @@ shipname_fallback_ordinal_torpedo_boat_flotilla = {
 
 
 shipname_fallback_ordinal_generic = {
-	name = "shipname_fallback_ordinal_generic" # SHIP_TYPE No. 1
+	name = "shipname_fallback_ordinal_generic"
 	selection_weight = 1
 	fallback = yes
 
@@ -450,7 +446,7 @@ shipname_fallback_ordinal_generic = {
 	}
 }
 
-shipname_fallback_ordinal_submarine = { # S-1
+shipname_fallback_ordinal_submarine = {
 	name = "shipname_fallback_submarine"
 	selection_weight = 1
 	fallback = yes
@@ -469,10 +465,7 @@ shipname_fallback_ordinal_submarine = { # S-1
 	}
 }
 
-# Higher priority fallbacks tied to gamestate
-# Arranged in high/med/low definitions to have capital ships prioritize state names, cruisers hubs, etc.
-
-shipname_fallback_torpedo_craft_high = { # Torpedo boats and destroyers derive their names from primary culture surnames
+shipname_fallback_torpedo_craft_high = {
 	name = "shipname_default_format"
 	selection_weight = 5
 	fallback = yes
@@ -492,7 +485,7 @@ shipname_fallback_torpedo_craft_high = { # Torpedo boats and destroyers derive t
 	}
 }
 
-shipname_fallback_capital_ships_high = { # Capital ships derive their names from state names
+shipname_fallback_capital_ships_high = {
 	name = "shipname_default_format"
 	selection_weight = 5
 	fallback = yes
@@ -518,7 +511,7 @@ shipname_fallback_capital_ships_high = { # Capital ships derive their names from
 	}
 }
 
-shipname_fallback_cruisers_high = { # Cruisers derive their names from Hub names
+shipname_fallback_cruisers_high = {
 	name = "shipname_default_format"
 	selection_weight = 5
 	fallback = yes
@@ -544,7 +537,7 @@ shipname_fallback_cruisers_high = { # Cruisers derive their names from Hub names
 	}
 }
 
-shipname_fallback_torpedo_craft_medium = { # If surnames are exhaused, will be named after hub names
+shipname_fallback_torpedo_craft_medium = {
 	name = "shipname_default_format"
 	selection_weight = 4
 	fallback = yes
@@ -564,7 +557,7 @@ shipname_fallback_torpedo_craft_medium = { # If surnames are exhaused, will be n
 	}
 }
 
-shipname_fallback_capital_ships_medium = { # If state names are exhaused, will be named after hub names
+shipname_fallback_capital_ships_medium = {
 	name = "shipname_default_format"
 	selection_weight = 4
 	fallback = yes
@@ -590,7 +583,7 @@ shipname_fallback_capital_ships_medium = { # If state names are exhaused, will b
 	}
 }
 
-shipname_fallback_cruisers_medium = { # If hub names are exhaused, will be named after states
+shipname_fallback_cruisers_medium = {
 	name = "shipname_default_format"
 	selection_weight = 4
 	fallback = yes
@@ -616,7 +609,7 @@ shipname_fallback_cruisers_medium = { # If hub names are exhaused, will be named
 	}
 }
 
-shipname_fallback_torpedo_craft_low = { # If surnames and  hub names are exhaused, will be named after states
+shipname_fallback_torpedo_craft_low = {
 	name = "shipname_default_format"
 	selection_weight = 3
 	fallback = yes
@@ -636,7 +629,7 @@ shipname_fallback_torpedo_craft_low = { # If surnames and  hub names are exhause
 	}
 }
 
-shipname_fallback_capital_ships_low = { # If state names and hub names are exhaused, will be named after surnames
+shipname_fallback_capital_ships_low = {
 	name = "shipname_default_format"
 	selection_weight = 3
 	fallback = yes
@@ -662,7 +655,7 @@ shipname_fallback_capital_ships_low = { # If state names and hub names are exhau
 	}
 }
 
-shipname_fallback_cruisers_low = { # If hub names are exhaused and state names, will be named after surnames
+shipname_fallback_cruisers_low = {
 	name = "shipname_default_format"
 	selection_weight = 3
 	fallback = yes

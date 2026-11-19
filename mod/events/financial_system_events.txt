@@ -1,0 +1,42 @@
+﻿namespace = financial_system
+
+financial_system.1 = {
+	type = country_event
+	placement = root
+	hidden = yes
+
+	trigger = {
+		has_variable = fin_tracked
+	}
+
+	immediate = {
+		if = {
+			limit = {
+				OR = {
+					NOT = { has_journal_entry = je_rus_shock_therapy }
+					NOT = { has_journal_entry = je_russia_wild_nineties }
+				}
+			}
+			fin_end_tracking = yes
+		}
+		else = {
+			fin_monthly_update = yes
+		}
+	}
+}
+
+financial_system.2 = {
+	type = country_event
+	placement = root
+	hidden = yes
+
+	trigger = {
+		has_variable = cb_fiscal_policy
+		NOT = { has_law = law_type:law_fractional_reserve_banking }
+		NOT = { has_law = law_type:law_full_reserve_banking }
+	}
+
+	immediate = {
+		fin_clear_monetary_stance = yes
+	}
+}

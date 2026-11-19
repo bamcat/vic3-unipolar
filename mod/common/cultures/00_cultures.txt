@@ -264,7 +264,6 @@ ashkenazi= {
 	heritage = heritage_ashkenazi
 	language = language_yiddish
 	traditions = { tradition_israelite }
-	# could have German-speaking, but would make them not discriminated which would be very ahistorical
 	male_common_first_names = {
 		Abraham
 		Albert
@@ -402,7 +401,6 @@ dutch= {
 		Wilhelmina
 	}
 
-	# Dutch patrician families and some nobility
 	noble_last_names = {
 		Altes Abbing Ameshoff Arntzenius Andreae Alberdingk
 		Boddaert van_Boetzelaer Backer Baud Batenburg Buma Banga
@@ -1148,7 +1146,6 @@ griqua= {
 		Susanna Saartje
 	}
 
-	# surnames pulled from rolls of soldiers from Griqualands West and East during the frontier wars and the Second Boer War, and a few Orlam names
 	common_last_names = {
 		Adamson Allard Angman Anderson Aling Arnot Adrian Aylward
 		Brophy Bees Beukes Bezeudenhout Boag Britz Burmeister Beggs Booysen Botha Boucher de_Brayn Busse de_Bouin Bloem Barends
@@ -1230,7 +1227,7 @@ alemannic= {
 		Maria
 		Rosalie
 	}
-	noble_last_names = { # mostly patrician families of Bern
+	noble_last_names = {
 		von_Bonstetten von_BU_ren von_Bergmann
 		von_Donatz
 		Effinger von_Erlach
@@ -1950,7 +1947,7 @@ sami= {
 	}
 }
 
-british= { # "English" in localization
+british= {
 	color= rgb{ 210 156 140 }
 	religion = protestant
 	heritage = heritage_british
@@ -2105,7 +2102,6 @@ irish= {
 	}
 
 	traditions = { }
-	# could have anglophone but would make them non-discriminated in Britain
 	male_common_first_names = {
 		Alexander
 		Arthur
@@ -2584,7 +2580,6 @@ south_italian= {
 maltese= {
 	color= hsv{ 0.40 0.03 0.58 }
 	religion = catholic
-	# Maltese could be its own thing altogether but the culture is simply too small to justify that hence the results below
 	heritage = heritage_italic
 	language = language_arabic
 	traditions = { }
@@ -3466,7 +3461,6 @@ occitan= {
 	language = language_occitano_romance
 	traditions = { }
 
-	# the best wine is from Occitania, of course.
 	obsessions = {
 		wine
 	}
@@ -4981,7 +4975,6 @@ slovak= {
 		Terezia
 	}
 
-	# including Slovak forms of some Hungarian names
 	noble_last_names = {
 		AndrA_S_I AugustI_ni Ambrozi Abafi
 		Bernolak BenickY_ BatA_n BaroS_ BelA_nsky Bernolak
@@ -5739,8 +5732,6 @@ greek= {
 		Theodora
 	}
 
-	# some Hellenic forms of names from the "Livre d'Or de la Noblesse Ionienne"
-	# also added Souliotes
 	noble_last_names = {
 		Arvanitachi Argyropoulos
 		Benizelos Botsaris Boutzias Bousbos Boufis Bekas
@@ -6231,7 +6222,6 @@ turkish= {
 		Sabanci
 		Taymur
 		Yalaz
-		#
 		Bey
 		Pasha
 	}
@@ -6779,7 +6769,6 @@ bedouin= {
 		al_Saud Al_Sharqi al-Salimi
 		al_Ulayyan
 
-		# selection of Ba'Alawi families
 		al-Attas al-Aydarus al-Aydid Al-Maqdi al-A_yun al-_Adani
 		al-Bar al-Bayd
 		al-Habshi al-Haddad al-Haddar al-Hadi al-Hamid
@@ -6815,7 +6804,7 @@ bedouin= {
 	graphics = arabic
 }
 
-berber= { # Amazigh
+berber= {
 	color= hsv{ 0.20 0.55 0.45 }
 	religion = sunni
 	heritage = heritage_berber
@@ -8084,7 +8073,6 @@ avadhi= {
 		Vijay
 		Vishvanath
 
-		# Muslim
 		Muhammad_Husayn
 	}
 	female_common_first_names = {
@@ -8957,7 +8945,6 @@ filipino_mestizo= {
 		Ochoa
 		Plata del_Pilar
 		Ramos
-		# Sangley Mestizo surnames
 		Asico
 		Biazon
 		Chanco Cojuangco Cuyangkeng
@@ -8970,7 +8957,6 @@ filipino_mestizo= {
 		Sylianco
 		Tanbengco Tanchanco Tanjuatco Tetangco Tiongson Tuazon
 		Yaptinchay Yuchenco Yuchengco Yupangco
-		# Spanish Filipino names
 	}
 	ethnicities = {
 		2 = south_east_asian
@@ -9021,7 +9007,6 @@ tagalog= {
 		Victoria
 	}
 	common_last_names = {
-		# General/Spanish influence
 		A_lvarez
 		Bonifacio Buencamino Bautista 
 		Crisologo Constantino
@@ -9039,7 +9024,6 @@ tagalog= {
 		Teofilo
 		Yldefonso
 
-		# Tagalog
 		Arellano Abutin Abog Awa Atangan Atay
 		Balagtas Bunga Bunye Bugtong Buhain Buhay Bonotan Bondoc Bihis Bilog Batongbacal Batongmalaque Batao Bataanon Baon Basa Bantay Balubal Baluyut Balani Balagot Bahaghari Bagsic Bagasbas Babao Buaya
 		Cornejo Corotan Cayabyab Catubig Catig Catambay Catacataca Catacutan Carag Capinpin Candao Calumpang Camaganacan Cajucom Calaycay Cahambing Caganap Caculitan Caacbay
@@ -9109,7 +9093,6 @@ visayan= {
 		Victoria
 	}
 	common_last_names = {
-		# General/Spanish influence
 		A_lvarez
 		Bonifacio Buencamino Bautista 
 		Crisologo Constantino
@@ -9126,7 +9109,6 @@ visayan= {
 		Santos Sanidad
 		Teofilo
 		Yldefonso
-		# Visayan & Cebuano & Boholano
 		Amosin Ara-ay Adlao
 		Babaylan Badjao Baidingo Baliad Baybay Binaoro Bongon Bontuyan
 		Catalon Cambonga Cabagnot Cabatingan Calag Calibugan Caliso Caritan
@@ -10080,7 +10062,7 @@ manchu= {
 		Wengjing
 		Xingzhen
 	}
-	noble_last_names = { # Qing princely peerages
+	noble_last_names = {
 		An
 		Cheng
 		Chun
@@ -10842,7 +10824,7 @@ polynesian= {
 	graphics = polynesian
 }
 
-hawaiian= { #
+hawaiian= {
 	color= hsv{ 0.29 0.26 0.60 }
 	religion = protestant
 	heritage = heritage_polynesian
@@ -11107,7 +11089,7 @@ yuanzhumin= {
 	graphics = polynesian
 }
 
-aborigine= { # Aboriginal
+aborigine= {
 	color= hsv{ 0.08 0.28 0.61 }
 	religion = animist
 	heritage = heritage_australian
@@ -12358,7 +12340,7 @@ cherokee= {
 	graphics = decentralised_americas
 }
 
-muskogean= { # Creek and Seminole
+muskogean= {
 	color= hsv{ 0.27 0.2 0.67 }
 	religion = protestant
 	heritage = heritage_subarctic_indian
@@ -12713,7 +12695,7 @@ athabaskan= {
 	}
 	graphics = decentralised_americas
 }
-salish= { # Tlingit and Haida merged together, forgive me
+salish= {
 	color= hsv{ 0.55 0.47 0.54 }
 	religion = animist
 	heritage = heritage_northwest_coast_indian
@@ -12761,7 +12743,7 @@ salish= { # Tlingit and Haida merged together, forgive me
 	}
 	graphics = decentralised_americas
 }
-nez_perce= { # Nez Perce
+nez_perce= {
 	color= hsv{ 0.06 0.45 0.70 }
 	religion = animist
 	heritage = heritage_plateau_indian
@@ -12993,7 +12975,7 @@ iroquoian= {
 	}
 	graphics = decentralised_americas
 }
-caddoan= { # Choctaw
+caddoan= {
 	color= hsv{ 0.16 0.65 0.85 }
 	religion = animist
 	heritage = heritage_plains_indian
@@ -13035,7 +13017,7 @@ caddoan= { # Choctaw
 	}
 	graphics = decentralised_americas
 }
-paiute= { # Ute and Shoshone
+paiute= {
 	color= hsv{ 0.06 0.39 0.80 }
 	religion = animist
 	heritage = heritage_great_basin_indian
@@ -13473,7 +13455,7 @@ miskito = {
 	graphics = decentralised_americas
 }
 
-cariban= { # Hispanicized. Also includes some Garifuna and Warao names.
+cariban= {
 	color= { 52 120 25 }
 	religion = animist
 	heritage = heritage_caribbean
@@ -13525,7 +13507,7 @@ cariban= { # Hispanicized. Also includes some Garifuna and Warao names.
 }
 
 yankee= {
-	color= rgb{ 135 206 235 } # Sky Blue
+	color= rgb{ 135 206 235 }
 	religion = protestant
 	heritage = heritage_north_american_settler
 	language = language_anglophone
@@ -13658,7 +13640,7 @@ yankee= {
 }
 
 dixie= {
-	color=rgb{ 204 154 91 } # Butternut
+	color=rgb{ 204 154 91 }
 	religion = protestant
 	heritage = heritage_north_american_settler
 	language = language_anglophone
@@ -17672,7 +17654,7 @@ teda= {
 	graphics = african
 }
 
-equatorial_bantu= { # Gabon + Cameroon + CAR
+equatorial_bantu= {
 	color= rgb{ 227 194 96 }
 	religion = animist
 	heritage = heritage_congolese
@@ -17724,7 +17706,7 @@ equatorial_bantu= { # Gabon + Cameroon + CAR
 	graphics = african
 }
 
-fluvian_bantu = { # DRC
+fluvian_bantu = {
 	color= hsv{ 0.95 0.29 0.30 }
 	religion = animist
 	heritage = heritage_congolese
@@ -18778,13 +18760,11 @@ sukuma= {
 		Semboja Samaka
 	}
 
-	# 'wa ng’wa' functions a bit as a locative. 'wa' alone also works, but there's a distinction there I'm not fully cognizant of. If I encounter the longer locative, I use that, and if I see the shorter one in a specific case I use that there.
 	noble_last_names = {
 		wa_ng_wa_Busiya wa_Balyungu wa_Babinza
 		wa_ng_wa_Mapalala wa_ng_wa_Milolangulu wa_ng_wa_Mwadui
 	}
 
-	# 'ng’wana' is essentially a patronymic. It is not always included in documented sources, i.e. Juma ng'wana Hilya might have his name written as just Juma Hilya, or be cited simply as 'Hilya'. I am not good at Sukuma given names, so I'm not able to spot when a patronymic with an omitted ng'wana is in use and may accidentally omit that element myself.
 	common_last_names = {
 		ng_wana_Chiila
 		ng_wana_Dukiila
@@ -18796,7 +18776,6 @@ sukuma= {
 		ng_wana_Nguno ng_wana_Ngomage
 		ng_wana_Sato ng_wana_Sembeewe
 		ng_wana_Wile
-		#
 		Budaka Balabala
 		Kadelya Kishosha Kema Kihamuja Kifaru Kalunde
 		Lusana Lupande Lubimbi
@@ -18855,7 +18834,7 @@ swahili= {
 		Uba
 		Zari Zeyna Zuleika Zaynab Zuhura Zamzan
 	}
-	male_noble_first_names = { # Even more Arabic/Omani
+	male_noble_first_names = {
 		Ali Abdullah Ahmed Abu_Bakar
 		Barghash
 		Daud
@@ -18925,7 +18904,6 @@ swahili= {
 		bin_Usi
 		bin_Yusuf
 		bin_Zaharan bin_Zuberi
-		#
 		Atoofa Ayeb Ahmad Aseme
 		Bahamadi Bunu Bhaiji Brahim Barawa
 		Chaburre
@@ -18941,7 +18919,6 @@ swahili= {
 		Takadir
 		Wapi Waziri
 		Zaamuri
-		#
 		wa_Athman wa_Ali wa_Arugu wa_Anake
 		wa_Bwana_Husein wa_Baimu wa_Bakari wa_Boto
 		wa_Chaurembo wa_Chaa
@@ -19072,7 +19049,7 @@ nyamwezi= {
 	graphics = african
 }
 
-lacustrine_bantu= { # Lake Victoria + Lake Tanganyika + Lake Malawi
+lacustrine_bantu= {
 	color= hsv{ 0.58 0.51 0.96 }
 	religion = animist
 	heritage = heritage_eastern_bantu
@@ -20105,7 +20082,7 @@ zulu= {
 	graphics = african
 }
 
-kavango_bantu= { # Angola + Namibia
+kavango_bantu= {
 	color= hsv{ 0.1 0.29 0.60 }
 	religion = animist
 	heritage = heritage_southwest_bantu
@@ -20216,7 +20193,6 @@ anglo_canadian= {
 		Victoria Virna
 	}
 
-	# old V2 names + Family Compact of Upper Canada	and Chateau Clique (anglos!) of Lower Canada
 	noble_last_names = {
 		Abbott Acheson Allan
 		Bishop Byng Baby Boulton Bowen
@@ -21324,7 +21300,6 @@ bengali={
 		Wasif
 		Zainul
 
-		# Hindu names
 		Shivendra
 	}
 	female_common_first_names = {
@@ -21362,7 +21337,6 @@ bengali={
 		Sarfaraz
 		Tajuddin
 
-		# Hindu names
 		Lahiri
 		Singh
 	}
@@ -21678,7 +21652,6 @@ scottish_gaelic={
 		Laomainn 
 		Moireach
 		StiU_bhart Sutharlanaich
-		#
 		Mac_a__Bhreatannaich
 		Mac_a__Phearsain
 		Mac_an_Ghoill
@@ -21711,7 +21684,6 @@ scottish_gaelic={
 		RO_s Ros Ruiseal
 		StiU_bhart Sailcirc Singleir Sgot Siosal Sutharlanaich
 		Umphraidh Urchardan
-		#
 		MacAoidh Mac_Ailein MacAbhra MacAmhlaigh MacArtair MacAonghais MacAlasdair 
 		MacBhatair Mac_a__Bhreatunnaich MacBheathain
 		MacCoinnich MacColla MacCA_ba MacCuinn MacCailein
@@ -22716,8 +22688,6 @@ chechen ={
 		Musigyer Morgigier Mokhmadgyer Mavlidgler
 		Salmangier
 
-		# Chechen teips
-
 		Achalo Allaroy Anastoy
 		Buni Belgatoy Benoy Biltoy
 		Chartoy Chermoy Chantiy Chinkhoy
@@ -22850,7 +22820,7 @@ bashkir={
 	graphics = east_asian
 }
 
-buryat={ # partially Russified namelist
+buryat={
 	color= rgb{ 203 198 52 }
 	religion = gelugpa
 	heritage = heritage_mongolian
@@ -22943,7 +22913,7 @@ mordvin={
 chuvash={
 	color= rgb{ 249 125 4 }
 	religion = orthodox
-	heritage = heritage_tatar # Should really be Oghuric but that would make it completely isolated
+	heritage = heritage_tatar
 	language = language_oghuric
 	traditions = { }
 	male_common_first_names={

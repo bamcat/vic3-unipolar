@@ -1,0 +1,524 @@
+﻿fin_cpi_good = {
+	set_variable = { name = fin_price_$G$ value = 0 }
+	market_capital.market ?= {
+		mg:$G$ ?= {
+			if = { limit = { market_goods_pricier >= 0.005 } root = { change_variable = { name = fin_price_$G$ add = 1 } } }
+			if = { limit = { market_goods_pricier >= 0.015 } root = { change_variable = { name = fin_price_$G$ add = 1 } } }
+			if = { limit = { market_goods_pricier >= 0.025 } root = { change_variable = { name = fin_price_$G$ add = 1 } } }
+			if = { limit = { market_goods_pricier >= 0.035 } root = { change_variable = { name = fin_price_$G$ add = 1 } } }
+			if = { limit = { market_goods_pricier >= 0.045 } root = { change_variable = { name = fin_price_$G$ add = 1 } } }
+			if = { limit = { market_goods_pricier >= 0.055 } root = { change_variable = { name = fin_price_$G$ add = 1 } } }
+			if = { limit = { market_goods_pricier >= 0.065 } root = { change_variable = { name = fin_price_$G$ add = 1 } } }
+			if = { limit = { market_goods_pricier >= 0.075 } root = { change_variable = { name = fin_price_$G$ add = 1 } } }
+			if = { limit = { market_goods_pricier >= 0.085 } root = { change_variable = { name = fin_price_$G$ add = 1 } } }
+			if = { limit = { market_goods_pricier >= 0.095 } root = { change_variable = { name = fin_price_$G$ add = 1 } } }
+			if = { limit = { market_goods_pricier >= 0.105 } root = { change_variable = { name = fin_price_$G$ add = 1 } } }
+			if = { limit = { market_goods_pricier >= 0.115 } root = { change_variable = { name = fin_price_$G$ add = 1 } } }
+			if = { limit = { market_goods_pricier >= 0.125 } root = { change_variable = { name = fin_price_$G$ add = 1 } } }
+			if = { limit = { market_goods_pricier >= 0.135 } root = { change_variable = { name = fin_price_$G$ add = 1 } } }
+			if = { limit = { market_goods_pricier >= 0.145 } root = { change_variable = { name = fin_price_$G$ add = 1 } } }
+			if = { limit = { market_goods_pricier >= 0.155 } root = { change_variable = { name = fin_price_$G$ add = 1 } } }
+			if = { limit = { market_goods_pricier >= 0.165 } root = { change_variable = { name = fin_price_$G$ add = 1 } } }
+			if = { limit = { market_goods_pricier >= 0.175 } root = { change_variable = { name = fin_price_$G$ add = 1 } } }
+			if = { limit = { market_goods_pricier >= 0.185 } root = { change_variable = { name = fin_price_$G$ add = 1 } } }
+			if = { limit = { market_goods_pricier >= 0.195 } root = { change_variable = { name = fin_price_$G$ add = 1 } } }
+			if = { limit = { market_goods_pricier >= 0.205 } root = { change_variable = { name = fin_price_$G$ add = 1 } } }
+			if = { limit = { market_goods_pricier >= 0.215 } root = { change_variable = { name = fin_price_$G$ add = 1 } } }
+			if = { limit = { market_goods_pricier >= 0.225 } root = { change_variable = { name = fin_price_$G$ add = 1 } } }
+			if = { limit = { market_goods_pricier >= 0.235 } root = { change_variable = { name = fin_price_$G$ add = 1 } } }
+			if = { limit = { market_goods_pricier >= 0.245 } root = { change_variable = { name = fin_price_$G$ add = 1 } } }
+			if = { limit = { market_goods_pricier >= 0.255 } root = { change_variable = { name = fin_price_$G$ add = 1 } } }
+			if = { limit = { market_goods_pricier >= 0.265 } root = { change_variable = { name = fin_price_$G$ add = 1 } } }
+			if = { limit = { market_goods_pricier >= 0.275 } root = { change_variable = { name = fin_price_$G$ add = 1 } } }
+			if = { limit = { market_goods_pricier >= 0.285 } root = { change_variable = { name = fin_price_$G$ add = 1 } } }
+			if = { limit = { market_goods_pricier >= 0.295 } root = { change_variable = { name = fin_price_$G$ add = 1 } } }
+			if = { limit = { market_goods_pricier >= 0.305 } root = { change_variable = { name = fin_price_$G$ add = 1 } } }
+			if = { limit = { market_goods_pricier >= 0.315 } root = { change_variable = { name = fin_price_$G$ add = 1 } } }
+			if = { limit = { market_goods_pricier >= 0.325 } root = { change_variable = { name = fin_price_$G$ add = 1 } } }
+			if = { limit = { market_goods_pricier >= 0.335 } root = { change_variable = { name = fin_price_$G$ add = 1 } } }
+			if = { limit = { market_goods_pricier >= 0.345 } root = { change_variable = { name = fin_price_$G$ add = 1 } } }
+			if = { limit = { market_goods_pricier >= 0.355 } root = { change_variable = { name = fin_price_$G$ add = 1 } } }
+			if = { limit = { market_goods_pricier >= 0.365 } root = { change_variable = { name = fin_price_$G$ add = 1 } } }
+			if = { limit = { market_goods_pricier >= 0.375 } root = { change_variable = { name = fin_price_$G$ add = 1 } } }
+			if = { limit = { market_goods_pricier >= 0.385 } root = { change_variable = { name = fin_price_$G$ add = 1 } } }
+			if = { limit = { market_goods_pricier >= 0.395 } root = { change_variable = { name = fin_price_$G$ add = 1 } } }
+			if = { limit = { market_goods_pricier >= 0.405 } root = { change_variable = { name = fin_price_$G$ add = 1 } } }
+			if = { limit = { market_goods_pricier >= 0.415 } root = { change_variable = { name = fin_price_$G$ add = 1 } } }
+			if = { limit = { market_goods_pricier >= 0.425 } root = { change_variable = { name = fin_price_$G$ add = 1 } } }
+			if = { limit = { market_goods_pricier >= 0.435 } root = { change_variable = { name = fin_price_$G$ add = 1 } } }
+			if = { limit = { market_goods_pricier >= 0.445 } root = { change_variable = { name = fin_price_$G$ add = 1 } } }
+			if = { limit = { market_goods_pricier >= 0.455 } root = { change_variable = { name = fin_price_$G$ add = 1 } } }
+			if = { limit = { market_goods_pricier >= 0.465 } root = { change_variable = { name = fin_price_$G$ add = 1 } } }
+			if = { limit = { market_goods_pricier >= 0.475 } root = { change_variable = { name = fin_price_$G$ add = 1 } } }
+			if = { limit = { market_goods_pricier >= 0.485 } root = { change_variable = { name = fin_price_$G$ add = 1 } } }
+			if = { limit = { market_goods_pricier >= 0.495 } root = { change_variable = { name = fin_price_$G$ add = 1 } } }
+			if = { limit = { market_goods_pricier >= 0.505 } root = { change_variable = { name = fin_price_$G$ add = 1 } } }
+			if = { limit = { market_goods_pricier >= 0.515 } root = { change_variable = { name = fin_price_$G$ add = 1 } } }
+			if = { limit = { market_goods_pricier >= 0.525 } root = { change_variable = { name = fin_price_$G$ add = 1 } } }
+			if = { limit = { market_goods_pricier >= 0.535 } root = { change_variable = { name = fin_price_$G$ add = 1 } } }
+			if = { limit = { market_goods_pricier >= 0.545 } root = { change_variable = { name = fin_price_$G$ add = 1 } } }
+			if = { limit = { market_goods_pricier >= 0.555 } root = { change_variable = { name = fin_price_$G$ add = 1 } } }
+			if = { limit = { market_goods_pricier >= 0.565 } root = { change_variable = { name = fin_price_$G$ add = 1 } } }
+			if = { limit = { market_goods_pricier >= 0.575 } root = { change_variable = { name = fin_price_$G$ add = 1 } } }
+			if = { limit = { market_goods_pricier >= 0.585 } root = { change_variable = { name = fin_price_$G$ add = 1 } } }
+			if = { limit = { market_goods_pricier >= 0.595 } root = { change_variable = { name = fin_price_$G$ add = 1 } } }
+			if = { limit = { market_goods_pricier >= 0.605 } root = { change_variable = { name = fin_price_$G$ add = 1 } } }
+			if = { limit = { market_goods_pricier >= 0.615 } root = { change_variable = { name = fin_price_$G$ add = 1 } } }
+			if = { limit = { market_goods_pricier >= 0.625 } root = { change_variable = { name = fin_price_$G$ add = 1 } } }
+			if = { limit = { market_goods_pricier >= 0.635 } root = { change_variable = { name = fin_price_$G$ add = 1 } } }
+			if = { limit = { market_goods_pricier >= 0.645 } root = { change_variable = { name = fin_price_$G$ add = 1 } } }
+			if = { limit = { market_goods_pricier >= 0.655 } root = { change_variable = { name = fin_price_$G$ add = 1 } } }
+			if = { limit = { market_goods_pricier >= 0.665 } root = { change_variable = { name = fin_price_$G$ add = 1 } } }
+			if = { limit = { market_goods_pricier >= 0.675 } root = { change_variable = { name = fin_price_$G$ add = 1 } } }
+			if = { limit = { market_goods_pricier >= 0.685 } root = { change_variable = { name = fin_price_$G$ add = 1 } } }
+			if = { limit = { market_goods_pricier >= 0.695 } root = { change_variable = { name = fin_price_$G$ add = 1 } } }
+			if = { limit = { market_goods_pricier >= 0.705 } root = { change_variable = { name = fin_price_$G$ add = 1 } } }
+			if = { limit = { market_goods_pricier >= 0.715 } root = { change_variable = { name = fin_price_$G$ add = 1 } } }
+			if = { limit = { market_goods_pricier >= 0.725 } root = { change_variable = { name = fin_price_$G$ add = 1 } } }
+			if = { limit = { market_goods_pricier >= 0.735 } root = { change_variable = { name = fin_price_$G$ add = 1 } } }
+			if = { limit = { market_goods_pricier >= 0.745 } root = { change_variable = { name = fin_price_$G$ add = 1 } } }
+			if = { limit = { market_goods_cheaper >= 0.005 } root = { change_variable = { name = fin_price_$G$ add = -1 } } }
+			if = { limit = { market_goods_cheaper >= 0.015 } root = { change_variable = { name = fin_price_$G$ add = -1 } } }
+			if = { limit = { market_goods_cheaper >= 0.025 } root = { change_variable = { name = fin_price_$G$ add = -1 } } }
+			if = { limit = { market_goods_cheaper >= 0.035 } root = { change_variable = { name = fin_price_$G$ add = -1 } } }
+			if = { limit = { market_goods_cheaper >= 0.045 } root = { change_variable = { name = fin_price_$G$ add = -1 } } }
+			if = { limit = { market_goods_cheaper >= 0.055 } root = { change_variable = { name = fin_price_$G$ add = -1 } } }
+			if = { limit = { market_goods_cheaper >= 0.065 } root = { change_variable = { name = fin_price_$G$ add = -1 } } }
+			if = { limit = { market_goods_cheaper >= 0.075 } root = { change_variable = { name = fin_price_$G$ add = -1 } } }
+			if = { limit = { market_goods_cheaper >= 0.085 } root = { change_variable = { name = fin_price_$G$ add = -1 } } }
+			if = { limit = { market_goods_cheaper >= 0.095 } root = { change_variable = { name = fin_price_$G$ add = -1 } } }
+			if = { limit = { market_goods_cheaper >= 0.105 } root = { change_variable = { name = fin_price_$G$ add = -1 } } }
+			if = { limit = { market_goods_cheaper >= 0.115 } root = { change_variable = { name = fin_price_$G$ add = -1 } } }
+			if = { limit = { market_goods_cheaper >= 0.125 } root = { change_variable = { name = fin_price_$G$ add = -1 } } }
+			if = { limit = { market_goods_cheaper >= 0.135 } root = { change_variable = { name = fin_price_$G$ add = -1 } } }
+			if = { limit = { market_goods_cheaper >= 0.145 } root = { change_variable = { name = fin_price_$G$ add = -1 } } }
+			if = { limit = { market_goods_cheaper >= 0.155 } root = { change_variable = { name = fin_price_$G$ add = -1 } } }
+			if = { limit = { market_goods_cheaper >= 0.165 } root = { change_variable = { name = fin_price_$G$ add = -1 } } }
+			if = { limit = { market_goods_cheaper >= 0.175 } root = { change_variable = { name = fin_price_$G$ add = -1 } } }
+			if = { limit = { market_goods_cheaper >= 0.185 } root = { change_variable = { name = fin_price_$G$ add = -1 } } }
+			if = { limit = { market_goods_cheaper >= 0.195 } root = { change_variable = { name = fin_price_$G$ add = -1 } } }
+			if = { limit = { market_goods_cheaper >= 0.205 } root = { change_variable = { name = fin_price_$G$ add = -1 } } }
+			if = { limit = { market_goods_cheaper >= 0.215 } root = { change_variable = { name = fin_price_$G$ add = -1 } } }
+			if = { limit = { market_goods_cheaper >= 0.225 } root = { change_variable = { name = fin_price_$G$ add = -1 } } }
+			if = { limit = { market_goods_cheaper >= 0.235 } root = { change_variable = { name = fin_price_$G$ add = -1 } } }
+			if = { limit = { market_goods_cheaper >= 0.245 } root = { change_variable = { name = fin_price_$G$ add = -1 } } }
+			if = { limit = { market_goods_cheaper >= 0.255 } root = { change_variable = { name = fin_price_$G$ add = -1 } } }
+			if = { limit = { market_goods_cheaper >= 0.265 } root = { change_variable = { name = fin_price_$G$ add = -1 } } }
+			if = { limit = { market_goods_cheaper >= 0.275 } root = { change_variable = { name = fin_price_$G$ add = -1 } } }
+			if = { limit = { market_goods_cheaper >= 0.285 } root = { change_variable = { name = fin_price_$G$ add = -1 } } }
+			if = { limit = { market_goods_cheaper >= 0.295 } root = { change_variable = { name = fin_price_$G$ add = -1 } } }
+			if = { limit = { market_goods_cheaper >= 0.305 } root = { change_variable = { name = fin_price_$G$ add = -1 } } }
+			if = { limit = { market_goods_cheaper >= 0.315 } root = { change_variable = { name = fin_price_$G$ add = -1 } } }
+			if = { limit = { market_goods_cheaper >= 0.325 } root = { change_variable = { name = fin_price_$G$ add = -1 } } }
+			if = { limit = { market_goods_cheaper >= 0.335 } root = { change_variable = { name = fin_price_$G$ add = -1 } } }
+			if = { limit = { market_goods_cheaper >= 0.345 } root = { change_variable = { name = fin_price_$G$ add = -1 } } }
+			if = { limit = { market_goods_cheaper >= 0.355 } root = { change_variable = { name = fin_price_$G$ add = -1 } } }
+			if = { limit = { market_goods_cheaper >= 0.365 } root = { change_variable = { name = fin_price_$G$ add = -1 } } }
+			if = { limit = { market_goods_cheaper >= 0.375 } root = { change_variable = { name = fin_price_$G$ add = -1 } } }
+			if = { limit = { market_goods_cheaper >= 0.385 } root = { change_variable = { name = fin_price_$G$ add = -1 } } }
+			if = { limit = { market_goods_cheaper >= 0.395 } root = { change_variable = { name = fin_price_$G$ add = -1 } } }
+			if = { limit = { market_goods_cheaper >= 0.405 } root = { change_variable = { name = fin_price_$G$ add = -1 } } }
+			if = { limit = { market_goods_cheaper >= 0.415 } root = { change_variable = { name = fin_price_$G$ add = -1 } } }
+			if = { limit = { market_goods_cheaper >= 0.425 } root = { change_variable = { name = fin_price_$G$ add = -1 } } }
+			if = { limit = { market_goods_cheaper >= 0.435 } root = { change_variable = { name = fin_price_$G$ add = -1 } } }
+			if = { limit = { market_goods_cheaper >= 0.445 } root = { change_variable = { name = fin_price_$G$ add = -1 } } }
+			if = { limit = { market_goods_cheaper >= 0.455 } root = { change_variable = { name = fin_price_$G$ add = -1 } } }
+			if = { limit = { market_goods_cheaper >= 0.465 } root = { change_variable = { name = fin_price_$G$ add = -1 } } }
+			if = { limit = { market_goods_cheaper >= 0.475 } root = { change_variable = { name = fin_price_$G$ add = -1 } } }
+			if = { limit = { market_goods_cheaper >= 0.485 } root = { change_variable = { name = fin_price_$G$ add = -1 } } }
+			if = { limit = { market_goods_cheaper >= 0.495 } root = { change_variable = { name = fin_price_$G$ add = -1 } } }
+			if = { limit = { market_goods_cheaper >= 0.505 } root = { change_variable = { name = fin_price_$G$ add = -1 } } }
+			if = { limit = { market_goods_cheaper >= 0.515 } root = { change_variable = { name = fin_price_$G$ add = -1 } } }
+			if = { limit = { market_goods_cheaper >= 0.525 } root = { change_variable = { name = fin_price_$G$ add = -1 } } }
+			if = { limit = { market_goods_cheaper >= 0.535 } root = { change_variable = { name = fin_price_$G$ add = -1 } } }
+			if = { limit = { market_goods_cheaper >= 0.545 } root = { change_variable = { name = fin_price_$G$ add = -1 } } }
+			if = { limit = { market_goods_cheaper >= 0.555 } root = { change_variable = { name = fin_price_$G$ add = -1 } } }
+			if = { limit = { market_goods_cheaper >= 0.565 } root = { change_variable = { name = fin_price_$G$ add = -1 } } }
+			if = { limit = { market_goods_cheaper >= 0.575 } root = { change_variable = { name = fin_price_$G$ add = -1 } } }
+			if = { limit = { market_goods_cheaper >= 0.585 } root = { change_variable = { name = fin_price_$G$ add = -1 } } }
+			if = { limit = { market_goods_cheaper >= 0.595 } root = { change_variable = { name = fin_price_$G$ add = -1 } } }
+			if = { limit = { market_goods_cheaper >= 0.605 } root = { change_variable = { name = fin_price_$G$ add = -1 } } }
+			if = { limit = { market_goods_cheaper >= 0.615 } root = { change_variable = { name = fin_price_$G$ add = -1 } } }
+			if = { limit = { market_goods_cheaper >= 0.625 } root = { change_variable = { name = fin_price_$G$ add = -1 } } }
+			if = { limit = { market_goods_cheaper >= 0.635 } root = { change_variable = { name = fin_price_$G$ add = -1 } } }
+			if = { limit = { market_goods_cheaper >= 0.645 } root = { change_variable = { name = fin_price_$G$ add = -1 } } }
+			if = { limit = { market_goods_cheaper >= 0.655 } root = { change_variable = { name = fin_price_$G$ add = -1 } } }
+			if = { limit = { market_goods_cheaper >= 0.665 } root = { change_variable = { name = fin_price_$G$ add = -1 } } }
+			if = { limit = { market_goods_cheaper >= 0.675 } root = { change_variable = { name = fin_price_$G$ add = -1 } } }
+			if = { limit = { market_goods_cheaper >= 0.685 } root = { change_variable = { name = fin_price_$G$ add = -1 } } }
+			if = { limit = { market_goods_cheaper >= 0.695 } root = { change_variable = { name = fin_price_$G$ add = -1 } } }
+			if = { limit = { market_goods_cheaper >= 0.705 } root = { change_variable = { name = fin_price_$G$ add = -1 } } }
+			if = { limit = { market_goods_cheaper >= 0.715 } root = { change_variable = { name = fin_price_$G$ add = -1 } } }
+			if = { limit = { market_goods_cheaper >= 0.725 } root = { change_variable = { name = fin_price_$G$ add = -1 } } }
+			if = { limit = { market_goods_cheaper >= 0.735 } root = { change_variable = { name = fin_price_$G$ add = -1 } } }
+			if = { limit = { market_goods_cheaper >= 0.745 } root = { change_variable = { name = fin_price_$G$ add = -1 } } }
+		}
+	}
+	change_variable = { name = fin_cpi_sum add = var:fin_price_$G$ }
+}
+
+fin_update_cpi = {
+	if = {
+		limit = { exists = market_capital }
+		fin_update_cpi_inner = yes
+	}
+}
+
+fin_update_cpi_inner = {
+	if = {
+		limit = { has_variable = fin_cpi }
+		set_variable = { name = fin_cpi_last value = var:fin_cpi }
+	}
+	set_variable = { name = fin_cpi_sum value = 0 }
+	fin_cpi_good = { G = groceries }
+	fin_cpi_good = { G = grain }
+	fin_cpi_good = { G = clothes }
+	fin_cpi_good = { G = furniture }
+	fin_cpi_good = { G = liquor }
+	fin_cpi_good = { G = appliances }
+	set_variable = { name = fin_cpi value = var:fin_cpi_sum }
+	change_variable = { name = fin_cpi divide = 6 }
+	remove_variable = fin_cpi_sum
+}
+
+fin_apply_monetary_stance = {
+	if = { limit = { has_modifier = fin_monetary_stance_1 } remove_modifier = fin_monetary_stance_1 }
+	if = { limit = { has_modifier = fin_monetary_stance_2 } remove_modifier = fin_monetary_stance_2 }
+	if = { limit = { has_modifier = fin_monetary_stance_4 } remove_modifier = fin_monetary_stance_4 }
+	if = { limit = { has_modifier = fin_monetary_stance_5 } remove_modifier = fin_monetary_stance_5 }
+	if = {
+		limit = { var:cb_fiscal_policy ?= 1 }
+		add_modifier = { name = fin_monetary_stance_1 }
+	}
+	else_if = {
+		limit = { var:cb_fiscal_policy ?= 2 }
+		add_modifier = { name = fin_monetary_stance_2 }
+	}
+	else_if = {
+		limit = { var:cb_fiscal_policy ?= 4 }
+		add_modifier = { name = fin_monetary_stance_4 }
+	}
+	else_if = {
+		limit = { var:cb_fiscal_policy ?= 5 }
+		add_modifier = { name = fin_monetary_stance_5 }
+	}
+}
+
+fin_set_monetary_stance = {
+	fin_monetary_stance_preview_$S$ = yes
+	hidden_effect = {
+		if = { limit = { has_modifier = cb_policy_fractional_1 } remove_modifier = cb_policy_fractional_1 }
+		if = { limit = { has_modifier = cb_policy_fractional_2 } remove_modifier = cb_policy_fractional_2 }
+		if = { limit = { has_modifier = cb_policy_fractional_4 } remove_modifier = cb_policy_fractional_4 }
+		if = { limit = { has_modifier = cb_policy_fractional_5 } remove_modifier = cb_policy_fractional_5 }
+		if = { limit = { has_modifier = cb_policy_full_1 } remove_modifier = cb_policy_full_1 }
+		if = { limit = { has_modifier = cb_policy_full_2 } remove_modifier = cb_policy_full_2 }
+		if = { limit = { has_modifier = cb_policy_full_4 } remove_modifier = cb_policy_full_4 }
+		if = { limit = { has_modifier = cb_policy_full_5 } remove_modifier = cb_policy_full_5 }
+		set_variable = { name = cb_fiscal_policy value = $S$ }
+		if = {
+			limit = { has_law = law_type:law_fractional_reserve_banking }
+			if = {
+				limit = { var:cb_fiscal_policy = 1 }
+				add_modifier = { name = cb_policy_fractional_1 months = -1 }
+			}
+			else_if = {
+				limit = { var:cb_fiscal_policy = 2 }
+				add_modifier = { name = cb_policy_fractional_2 months = -1 }
+			}
+			else_if = {
+				limit = { var:cb_fiscal_policy = 4 }
+				add_modifier = { name = cb_policy_fractional_4 months = -1 }
+			}
+			else_if = {
+				limit = { var:cb_fiscal_policy = 5 }
+				add_modifier = { name = cb_policy_fractional_5 months = -1 }
+			}
+		}
+		else_if = {
+			limit = { has_law = law_type:law_full_reserve_banking }
+			if = {
+				limit = { var:cb_fiscal_policy = 1 }
+				add_modifier = { name = cb_policy_full_1 months = -1 }
+			}
+			else_if = {
+				limit = { var:cb_fiscal_policy = 2 }
+				add_modifier = { name = cb_policy_full_2 months = -1 }
+			}
+			else_if = {
+				limit = { var:cb_fiscal_policy = 4 }
+				add_modifier = { name = cb_policy_full_4 months = -1 }
+			}
+			else_if = {
+				limit = { var:cb_fiscal_policy = 5 }
+				add_modifier = { name = cb_policy_full_5 months = -1 }
+			}
+		}
+		fin_apply_monetary_stance = yes
+	}
+}
+
+fin_set_price_controls = {
+	fin_price_controls_preview_$L$ = yes
+	hidden_effect = {
+		if = { limit = { has_modifier = fin_price_controls } remove_modifier = fin_price_controls }
+		if = { limit = { has_modifier = fin_price_controls_partial } remove_modifier = fin_price_controls_partial }
+		set_variable = { name = fin_price_controls_level value = $L$ }
+		if = {
+			limit = { var:fin_price_controls_level = 2 }
+			add_modifier = { name = fin_price_controls }
+		}
+		else_if = {
+			limit = { var:fin_price_controls_level = 1 }
+			add_modifier = { name = fin_price_controls_partial }
+		}
+	}
+}
+
+fin_apply_wage_arrears = {
+	if = { limit = { has_modifier = fin_wage_arrears_1 } remove_modifier = fin_wage_arrears_1 }
+	if = { limit = { has_modifier = fin_wage_arrears_2 } remove_modifier = fin_wage_arrears_2 }
+	if = { limit = { has_modifier = fin_wage_arrears_3 } remove_modifier = fin_wage_arrears_3 }
+	if = {
+		limit = { var:fin_wage_arrears ?= 1 }
+		add_modifier = { name = fin_wage_arrears_1 }
+	}
+	else_if = {
+		limit = { var:fin_wage_arrears ?= 2 }
+		add_modifier = { name = fin_wage_arrears_2 }
+	}
+	else_if = {
+		limit = { var:fin_wage_arrears ?= 3 }
+		add_modifier = { name = fin_wage_arrears_3 }
+	}
+}
+
+fin_change_wage_arrears = {
+	custom_description = {
+		text = fin_wage_arrears_change
+		value = $V$
+		if = {
+			limit = { NOT = { has_variable = fin_wage_arrears } }
+			set_variable = { name = fin_wage_arrears value = 0 }
+		}
+		change_variable = { name = fin_wage_arrears add = $V$ }
+		clamp_variable = { name = fin_wage_arrears min = 0 max = 3 }
+		fin_apply_wage_arrears = yes
+	}
+}
+
+fin_change_capital_flight = {
+	custom_description = {
+		text = fin_capital_flight_change
+		value = $V$
+		if = {
+			limit = { NOT = { has_variable = fin_capital_flight } }
+			set_variable = { name = fin_capital_flight value = 0 }
+		}
+		change_variable = { name = fin_capital_flight add = $V$ }
+		clamp_variable = { name = fin_capital_flight min = 0 max = 100 }
+	}
+}
+
+fin_apply_capital_flight = {
+	if = { limit = { has_modifier = fin_capital_flight_outflow } remove_modifier = fin_capital_flight_outflow }
+	if = {
+		limit = { var:fin_capital_flight > 0 }
+		add_modifier = {
+			name = fin_capital_flight_outflow
+			multiplier = var:fin_capital_flight
+		}
+	}
+	if = { limit = { has_modifier = fin_capital_flight_1 } remove_modifier = fin_capital_flight_1 }
+	if = { limit = { has_modifier = fin_capital_flight_2 } remove_modifier = fin_capital_flight_2 }
+	if = { limit = { has_modifier = fin_capital_flight_3 } remove_modifier = fin_capital_flight_3 }
+	if = {
+		limit = { var:fin_capital_flight >= 70 }
+		add_modifier = { name = fin_capital_flight_3 }
+	}
+	else_if = {
+		limit = { var:fin_capital_flight >= 45 }
+		add_modifier = { name = fin_capital_flight_2 }
+	}
+	else_if = {
+		limit = { var:fin_capital_flight >= 20 }
+		add_modifier = { name = fin_capital_flight_1 }
+	}
+}
+
+fin_start_bonds = {
+	custom_tooltip = fin_start_bonds_tt
+	hidden_effect = {
+		set_variable = fin_bonds_issuing
+		if = {
+			limit = { NOT = { has_variable = fin_bond_stock } }
+			set_variable = { name = fin_bond_stock value = 0 }
+		}
+	}
+}
+
+fin_stop_bonds = {
+	if = {
+		limit = { has_variable = fin_bonds_issuing }
+		custom_tooltip = fin_stop_bonds_tt
+		remove_variable = fin_bonds_issuing
+	}
+}
+
+fin_default_on_bonds = {
+	custom_tooltip = fin_default_on_bonds_tt
+	fin_stop_bonds = yes
+	if = {
+		limit = { principal > 0 }
+		add_treasury = principal
+	}
+	set_variable = { name = fin_bond_stock value = 0 }
+	set_variable = { name = fin_bond_ratio_var value = 0 }
+	fin_apply_bond_interest = yes
+	add_modifier = { name = fin_sovereign_default months = 36 }
+	fin_change_capital_flight = { V = 20 }
+}
+
+fin_apply_bond_interest = {
+	if = { limit = { has_modifier = fin_gko_interest } remove_modifier = fin_gko_interest }
+	set_variable = { name = fin_bond_rate_var value = fin_bond_rate_steps }
+	if = {
+		limit = { var:fin_bond_rate_var > 0 }
+		add_modifier = {
+			name = fin_gko_interest
+			multiplier = var:fin_bond_rate_var
+		}
+	}
+}
+
+fin_update_bonds = {
+	if = {
+		limit = { has_variable = fin_bond_stock }
+		if = {
+			limit = { has_variable = fin_bonds_issuing }
+			add_treasury = fin_bond_issue_amount
+			change_variable = { name = fin_bond_stock add = fin_bond_issue_amount }
+		}
+		else = {
+			change_variable = { name = fin_bond_stock multiply = 0.97 }
+		}
+	}
+	set_variable = { name = fin_bond_ratio_var value = fin_bond_ratio }
+	set_variable = { name = fin_debt_ratio_var value = fin_debt_ratio }
+	fin_apply_bond_interest = yes
+}
+
+fin_monthly_update = {
+	fin_update_cpi = yes
+	fin_update_bonds = yes
+	if = {
+		limit = { NOT = { has_variable = fin_capital_flight } }
+		set_variable = { name = fin_capital_flight value = 0 }
+	}
+	if = {
+		limit = { var:fin_cpi >= 30 }
+		fin_change_capital_flight = { V = 0.5 }
+	}
+	if = {
+		limit = { var:fin_bond_ratio_var >= 10 }
+		fin_change_capital_flight = { V = 0.5 }
+	}
+	if = {
+		limit = {
+			var:fin_bond_ratio_var < 10
+			var:fin_cpi < 15
+		}
+		fin_change_capital_flight = { V = -1 }
+	}
+	else_if = {
+		limit = {
+			var:fin_bond_ratio_var < 10
+			var:fin_cpi < 30
+		}
+		fin_change_capital_flight = { V = -0.25 }
+	}
+	fin_apply_capital_flight = yes
+}
+
+fin_end_tracking = {
+	remove_variable = fin_tracked
+	remove_variable = fin_bonds_issuing
+	remove_variable = fin_bond_stock
+	remove_variable = fin_bond_ratio_var
+	remove_variable = fin_debt_ratio_var
+	remove_variable = fin_bond_rate_var
+	remove_variable = fin_capital_flight
+	remove_variable = fin_wage_arrears
+	remove_variable = fin_price_controls_level
+	if = { limit = { has_modifier = fin_gko_interest } remove_modifier = fin_gko_interest }
+	if = { limit = { has_modifier = fin_capital_flight_outflow } remove_modifier = fin_capital_flight_outflow }
+	if = { limit = { has_modifier = fin_capital_flight_1 } remove_modifier = fin_capital_flight_1 }
+	if = { limit = { has_modifier = fin_capital_flight_2 } remove_modifier = fin_capital_flight_2 }
+	if = { limit = { has_modifier = fin_capital_flight_3 } remove_modifier = fin_capital_flight_3 }
+	if = { limit = { has_modifier = fin_wage_arrears_1 } remove_modifier = fin_wage_arrears_1 }
+	if = { limit = { has_modifier = fin_wage_arrears_2 } remove_modifier = fin_wage_arrears_2 }
+	if = { limit = { has_modifier = fin_wage_arrears_3 } remove_modifier = fin_wage_arrears_3 }
+	if = { limit = { has_modifier = fin_price_controls } remove_modifier = fin_price_controls }
+	if = { limit = { has_modifier = fin_price_controls_partial } remove_modifier = fin_price_controls_partial }
+}
+
+fin_clear_monetary_stance = {
+	if = { limit = { has_modifier = cb_policy_fractional_1 } remove_modifier = cb_policy_fractional_1 }
+	if = { limit = { has_modifier = cb_policy_fractional_2 } remove_modifier = cb_policy_fractional_2 }
+	if = { limit = { has_modifier = cb_policy_fractional_4 } remove_modifier = cb_policy_fractional_4 }
+	if = { limit = { has_modifier = cb_policy_fractional_5 } remove_modifier = cb_policy_fractional_5 }
+	if = { limit = { has_modifier = cb_policy_full_1 } remove_modifier = cb_policy_full_1 }
+	if = { limit = { has_modifier = cb_policy_full_2 } remove_modifier = cb_policy_full_2 }
+	if = { limit = { has_modifier = cb_policy_full_4 } remove_modifier = cb_policy_full_4 }
+	if = { limit = { has_modifier = cb_policy_full_5 } remove_modifier = cb_policy_full_5 }
+	remove_variable = cb_fiscal_policy
+	fin_apply_monetary_stance = yes
+}
+
+fin_price_controls_preview_0 = {
+	custom_tooltip = fin_price_controls_preview_0_tt
+}
+
+fin_price_controls_preview_1 = {
+	show_as_tooltip = {
+		add_modifier = { name = fin_price_controls_partial }
+	}
+}
+
+fin_price_controls_preview_2 = {
+	show_as_tooltip = {
+		add_modifier = { name = fin_price_controls }
+	}
+}
+
+fin_monetary_stance_preview_1 = {
+	custom_tooltip = fin_monetary_stance_preview_1_tt
+	show_as_tooltip = {
+		add_modifier = { name = fin_monetary_stance_1 }
+	}
+}
+
+fin_monetary_stance_preview_2 = {
+	custom_tooltip = fin_monetary_stance_preview_2_tt
+	show_as_tooltip = {
+		add_modifier = { name = fin_monetary_stance_2 }
+	}
+}
+
+fin_monetary_stance_preview_3 = {
+	custom_tooltip = fin_monetary_stance_preview_3_tt
+}
+
+fin_monetary_stance_preview_4 = {
+	custom_tooltip = fin_monetary_stance_preview_4_tt
+	show_as_tooltip = {
+		add_modifier = { name = fin_monetary_stance_4 }
+	}
+}
+
+fin_monetary_stance_preview_5 = {
+	custom_tooltip = fin_monetary_stance_preview_5_tt
+	show_as_tooltip = {
+		add_modifier = { name = fin_monetary_stance_5 }
+	}
+}

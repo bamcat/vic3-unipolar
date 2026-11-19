@@ -26,7 +26,7 @@ mdw_events.1 = {
 			name = mdw_war_declared_modifier
 			months = -1
 		}
-		add_authority = -100
+		add_modifier = { name = smd_authority_shift multiplier = -100 months = 24 }
 	}
 }
 
@@ -78,7 +78,6 @@ mdw_events.2 = {
 			}
 			save_scope_as = mdw_commander_3
 		}
-		# Save an affected state for placement
 		random_scope_state = {
 			limit = {
 				owner = c:MEX
@@ -253,7 +252,6 @@ mdw_events.4 = {
 			 name = mdw_peril_bar
 			}
 		}
-		# Pick a cartel state to clear
 		random_scope_state = {
 			limit = {
 				owner = c:MEX
@@ -271,7 +269,6 @@ mdw_events.4 = {
 	option = {
 		name = mdw_events.4.a
 		default_option = yes
-		# Remove whichever cartel modifier the state has
 		scope:mdw_active_state = {
 			remove_modifier = cartel_cjng_controlled
 			remove_modifier = cartel_gulf_controlled
@@ -291,8 +288,6 @@ mdw_events.4 = {
 }
 
 # ==========================================
-# mdw_events.5 — Cartel Ambush
-# Dangerous event — high peril.
 # ==========================================
 
 mdw_events.5 = {
@@ -339,8 +334,7 @@ mdw_events.5 = {
 		}
 	}
 
-
-	option = {
+option = {
 		name = mdw_events.5.a
 		je:je_mexican_drug_war = {
 			add_progress = { name = mdw_suppression_bar value = 8 }
@@ -365,9 +359,6 @@ mdw_events.5 = {
 }
 
 # ==========================================
-# mdw_events.6 — Commander Under Fire
-# Fires when peril bar >= 40.
-# Player must choose to pull back or press on.
 # ==========================================
 
 mdw_events.6 = {
@@ -404,7 +395,6 @@ mdw_events.6 = {
 		}
 	}
 
-	# Pull the commander back
 	option = {
 		name = mdw_events.6.a
 		scope:mdw_commander = {
@@ -419,7 +409,6 @@ mdw_events.6 = {
 		ai_chance = { base = 60 }
 	}
 
-	# Press on regardless
 	option = {
 		name = mdw_events.6.b
 		default_option = yes
@@ -431,8 +420,6 @@ mdw_events.6 = {
 }
 
 # ==========================================
-# mdw_events.10 — Drug War Won
-# Fires on JE completion.
 # ==========================================
 
 mdw_events.10 = {
@@ -479,8 +466,6 @@ mdw_events.10 = {
 }
 
 # ==========================================
-# mdw_events.11 — Commander Killed
-# Fires on JE failure.
 # ==========================================
 
 mdw_events.11 = {
@@ -517,7 +502,6 @@ mdw_events.11 = {
 		}
 		remove_variable = mdw_commander_storage
 		remove_variable = mdw_commander_under_fire
-		# Cartels grow bolder — expand into adjacent states
 		every_scope_state = {
 			limit = {
 				owner = c:MEX
@@ -530,7 +514,6 @@ mdw_events.11 = {
 					has_modifier = state_military_occupation
 				}
 			}
-			# Only expands to 2 states
 			ordered_scope_state = {
 				max = 2
 				add_modifier = {
@@ -547,8 +530,6 @@ mdw_events.11 = {
 }
 
 # ==========================================
-# mdw_events.20 — US Military Aid Secured
-# Fires for Mexico when USA completes
 # je_us_mexico_drug_war_support.
 # ==========================================
 
@@ -570,8 +551,7 @@ mdw_events.20 = {
 	option = {
 		name = mdw_events.20.a
 		default_option = yes
-		# Free authority and legitimacy boost — US backing shores up the government
-		add_authority = 150
+		add_modifier = { name = smd_authority_shift multiplier = 150 months = 24 }
 		add_modifier = {
 			name = mdw_us_aid_modifier
 			months = 60

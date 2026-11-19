@@ -44,49 +44,54 @@ je_collapse_of_yugoslavia = {
 		}
 	}
 
-	complete = {
-		OR = {
-			custom_tooltip = {
-				text = yugo_collapse_complete_collapsed_tt
-				has_variable = yugoslavia_has_collapsed
+
+	outcome = {
+		header = je_standard_completion_header
+		effect_header = je_standard_on_completion_header
+		color = "gold_positive"
+		conclusion_desc = je_standard_completion_conclusion_desc
+		trigger = {
+			OR = {
+				custom_tooltip = {
+					text = yugo_collapse_complete_collapsed_tt
+					has_variable = yugoslavia_has_collapsed
+				}
+				AND = {
+					custom_tooltip = {
+						text = yugo_collapse_complete_salvaged_flag_tt
+						has_variable = yugoslavia_salvaged
+					}
+					custom_tooltip = {
+						text = yugo_collapse_complete_stability_tt
+						var:yugo_stability >= 70
+					}
+					custom_tooltip = {
+						text = yugo_collapse_complete_pressure_tt
+						var:yugo_secession_pressure <= 30
+					}
+				}
 			}
-			AND = {
-				custom_tooltip = {
-					text = yugo_collapse_complete_salvaged_flag_tt
-					has_variable = yugoslavia_salvaged
+		}
+		effect = {
+			if = {
+				limit = { has_variable = yugoslavia_salvaged }
+				add_modifier = {
+					name = yugoslav_confederal_compromise
+					days = 1825
 				}
-				custom_tooltip = {
-					text = yugo_collapse_complete_stability_tt
-					var:yugo_stability >= 70
+				custom_tooltip = yugoslavia_salvaged_tt
+			}
+			else = {
+				set_variable = yugoslavia_has_collapsed
+				remove_variable = yugoslavia_tensions_rising
+				add_modifier = {
+					name = post_yugoslav_turmoil
+					days = 1825
 				}
-				custom_tooltip = {
-					text = yugo_collapse_complete_pressure_tt
-					var:yugo_secession_pressure <= 30
-				}
+				custom_tooltip = yugoslavia_collapse_tt
 			}
 		}
 	}
-
-	on_complete = {
-		if = {
-			limit = { has_variable = yugoslavia_salvaged }
-			add_modifier = {
-				name = yugoslav_confederal_compromise
-				days = 1825
-			}
-			custom_tooltip = yugoslavia_salvaged_tt
-		}
-		else = {
-			set_variable = yugoslavia_has_collapsed
-			remove_variable = yugoslavia_tensions_rising
-			add_modifier = {
-				name = post_yugoslav_turmoil
-				days = 1825
-			}
-			custom_tooltip = yugoslavia_collapse_tt
-		}
-	}
-
 	on_monthly_pulse = {
 		effect = {
 			yugo_monthly_pressure_drift = yes
@@ -129,62 +134,73 @@ je_reunify_yugoslavia = {
 		has_variable = yugoslavia_has_collapsed
 	}
 
-	complete = {
-		OR = {
-			custom_tooltip = {
-				text = yugo_reunify_complete_flag_tt
-				has_variable = yugoslavia_reunified
-			}
-			AND = {
+
+	outcome = {
+		header = je_standard_completion_header
+		effect_header = je_standard_on_completion_header
+		color = "gold_positive"
+		conclusion_desc = je_standard_completion_conclusion_desc
+		trigger = {
+			OR = {
 				custom_tooltip = {
-					text = yugo_reunify_state_bosnia_tt
-					s:STATE_BOSNIA = { owner = c:YUG }
+					text = yugo_reunify_complete_flag_tt
+					has_variable = yugoslavia_reunified
 				}
-				custom_tooltip = {
-					text = yugo_reunify_state_croatia_tt
-					s:STATE_CROATIA = { owner = c:YUG }
-				}
-				custom_tooltip = {
-					text = yugo_reunify_state_slovenia_tt
-					s:STATE_SLOVENIA = { owner = c:YUG }
-				}
-				custom_tooltip = {
-					text = yugo_reunify_state_macedonia_tt
-					s:STATE_MACEDONIA = { owner = c:YUG }
-				}
-				custom_tooltip = {
-					text = yugo_reunify_state_montenegro_tt
-					s:STATE_MONTENEGRO = { owner = c:YUG }
-				}
-				custom_tooltip = {
-					text = yugo_reunify_state_southern_serbia_tt
-					s:STATE_SOUTHERN_SERBIA = { owner = c:YUG }
-				}
-				custom_tooltip = {
-					text = yugo_reunify_state_vlasenica_tt
-					s:STATE_VLASENICA = { owner = c:YUG }
+				AND = {
+					custom_tooltip = {
+						text = yugo_reunify_state_bosnia_tt
+						owns_entire_state_region = STATE_BOSNIA
+					}
+					custom_tooltip = {
+						text = yugo_reunify_state_croatia_tt
+						owns_entire_state_region = STATE_CROATIA
+					}
+					custom_tooltip = {
+						text = yugo_reunify_state_slovenia_tt
+						owns_entire_state_region = STATE_SLOVENIA
+					}
+					custom_tooltip = {
+						text = yugo_reunify_state_macedonia_tt
+						owns_entire_state_region = STATE_SKOPIA
+					}
+					custom_tooltip = {
+						text = yugo_reunify_state_montenegro_tt
+						owns_entire_state_region = STATE_MONTENEGRO
+					}
+					custom_tooltip = {
+						text = yugo_reunify_state_southern_serbia_tt
+						owns_entire_state_region = STATE_KOSOVO
+					}
+					custom_tooltip = {
+						text = yugo_reunify_state_vlasenica_tt
+						owns_entire_state_region = STATE_EASTERN_SERBIA
+					}
 				}
 			}
 		}
-	}
-
-	fail = { game_date >= 2006.1.2 }
-
-	on_complete = {
-		set_variable = yugoslavia_reunified
-		add_modifier = {
-			name = yugoslav_restoration_success
-			days = 1825
+		effect = {
+			set_variable = yugoslavia_reunified
+			add_modifier = {
+				name = yugoslav_restoration_success
+				days = 1825
+			}
+			custom_tooltip = reunification_success_tt
 		}
-		custom_tooltip = reunification_success_tt
 	}
 
+	outcome = {
+		header = je_standard_failure_header
+		effect_header = je_standard_on_failure_header
+		color = "blue_negative"
+		conclusion_desc = je_standard_failure_conclusion_desc
+		trigger = { custom_description = { text = smd_date_from_2006_1_2 game_date >= 2006.1.2 } }
+	}
 	on_monthly_pulse = {
 		effect = {
 			if = {
 				limit = {
-					has_diplomatic_pact = { country = c:HRV type = alliance }
-					has_diplomatic_pact = { country = c:BOS type = alliance }
+					has_treaty_alliance_with = { TARGET = c:HRV }
+					has_treaty_alliance_with = { TARGET = c:BOS }
 					num_subjects >= 3
 				}
 				set_variable = yugoslavia_reunified
@@ -203,10 +219,10 @@ je_yugoslav_wars_serbia = {
 			c:SRP ?= this
 			c:HRV ?= this
 			c:BOS ?= this
-			c:MCD ?= this
+			c:NMC ?= this
 			c:ALB ?= this
 			c:KOS ?= this
-			c:MNE ?= this
+			c:MGR ?= this
 		}
 	}
 
@@ -216,12 +232,12 @@ je_yugoslav_wars_serbia = {
 			c:SRP ?= this
 			c:HRV ?= this
 			c:BOS ?= this
-			c:MCD ?= this
+			c:NMC ?= this
 			c:ALB ?= this
 			c:KOS ?= this
-			c:MNE ?= this
+			c:MGR ?= this
 		}
-		game_date < 2006.1.1
+		custom_description = { text = smd_date_before_2006_1_1 game_date < 2006.1.1 }
 	}
 
 	status_desc = {
@@ -241,12 +257,18 @@ je_yugoslav_wars_serbia = {
 		}
 	}
 
-	complete = {
-		custom_tooltip = {
-			text = yugo_wars_complete_date_tt
-			game_date >= 2006.1.1
+
+	outcome = {
+		header = je_standard_completion_header
+		effect_header = je_standard_on_completion_header
+		color = "gold_positive"
+		conclusion_desc = je_standard_completion_conclusion_desc
+		trigger = {
+			custom_tooltip = {
+				text = yugo_wars_complete_date_tt
+				game_date >= 2006.1.1
+			}
 		}
 	}
-
 	should_be_pinned_by_default_uninvolved_or_context = yes
 }

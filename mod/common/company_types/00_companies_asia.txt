@@ -1,5 +1,4 @@
-﻿# United Company of Merchants of England Trading to the East Indies
-company_east_india_company = {
+﻿REPLACE_OR_CREATE:company_east_india_company = {
 	icon = "gfx/interface/icons/company_icons/historical_company_icons/gb_eic.dds"
 	background = "gfx/interface/icons/company_icons/company_backgrounds/comp_illu_plantation.dds"
 
@@ -32,11 +31,11 @@ company_east_india_company = {
 		}
 		any_scope_state = {
 			OR = {
-				region = sr:region_madras
-				region = sr:region_bombay
-				region = sr:region_bengal
-				region = sr:region_central_india
-				region = sr:region_punjab
+				is_in_geographic_region = geographic_region_madras_old
+				is_in_geographic_region = geographic_region_bombay_old
+				is_in_geographic_region = geographic_region_bengal_old
+				is_in_geographic_region = geographic_region_central_india_old
+				is_in_geographic_region = geographic_region_punjab_old
 			}
 			any_scope_building = {
 				OR = {
@@ -62,11 +61,11 @@ company_east_india_company = {
 		}
 		any_scope_state = {
 			OR = {
-				region = sr:region_madras
-				region = sr:region_bombay
-				region = sr:region_bengal
-				region = sr:region_central_india
-				region = sr:region_punjab
+				is_in_geographic_region = geographic_region_madras_old
+				is_in_geographic_region = geographic_region_bombay_old
+				is_in_geographic_region = geographic_region_bengal_old
+				is_in_geographic_region = geographic_region_central_india_old
+				is_in_geographic_region = geographic_region_punjab_old
 			}
 		}
 	}
@@ -76,11 +75,11 @@ company_east_india_company = {
 			level = 5
 			state_trigger = {
 				OR = {
-					region = sr:region_madras
-					region = sr:region_bombay
-					region = sr:region_bengal
-					region = sr:region_central_india
-					region = sr:region_punjab
+					is_in_geographic_region = geographic_region_madras_old
+					is_in_geographic_region = geographic_region_bombay_old
+					is_in_geographic_region = geographic_region_bengal_old
+					is_in_geographic_region = geographic_region_central_india_old
+					is_in_geographic_region = geographic_region_punjab_old
 				}
 			}
 		}
@@ -88,11 +87,11 @@ company_east_india_company = {
 			level = 5
 			state_trigger = {
 				OR = {
-					region = sr:region_madras
-					region = sr:region_bombay
-					region = sr:region_bengal
-					region = sr:region_central_india
-					region = sr:region_punjab
+					is_in_geographic_region = geographic_region_madras_old
+					is_in_geographic_region = geographic_region_bombay_old
+					is_in_geographic_region = geographic_region_bengal_old
+					is_in_geographic_region = geographic_region_central_india_old
+					is_in_geographic_region = geographic_region_punjab_old
 				}
 			}
 		}
@@ -100,23 +99,23 @@ company_east_india_company = {
 			level = 5
 			state_trigger = {
 				OR = {
-					region = sr:region_madras
-					region = sr:region_bombay
-					region = sr:region_bengal
-					region = sr:region_central_india
-					region = sr:region_punjab
+					is_in_geographic_region = geographic_region_madras_old
+					is_in_geographic_region = geographic_region_bombay_old
+					is_in_geographic_region = geographic_region_bengal_old
+					is_in_geographic_region = geographic_region_central_india_old
+					is_in_geographic_region = geographic_region_punjab_old
 				}
 			}
 		}
 	}
 
 	ai_weight = {
-		value = 3 # Higher base value for flavored companies
+		value = 3
 	}
 }
 
 # Imperial Arsenal
-company_imperial_arsenal = {
+REPLACE_OR_CREATE:company_imperial_arsenal = {
 	icon = "gfx/interface/icons/company_icons/historical_company_icons/imperial_arsenal.dds"
 	background = "gfx/interface/icons/company_icons/company_backgrounds/comp_illu_harbor_shipbuilding.dds"
 
@@ -133,11 +132,11 @@ company_imperial_arsenal = {
 	}
 
 	potential = {
-		has_interest_marker_in_region = geographic_region_anatolia_old
+		any_scope_state = { is_in_geographic_region = geographic_region_anatolia_old }
 	}
 
 	attainable = {
-		hidden_trigger = { # Hide attainable if it's always fulfilled by possible
+		hidden_trigger = {
 			any_scope_state = {
 				state_region = s:STATE_EASTERN_THRACE
 			}
@@ -176,12 +175,12 @@ company_imperial_arsenal = {
 	}
 
 	ai_weight = {
-		value = 3 # Higher base value for flavored companies
+		value = 3
 	}
 }
 
 # Ottoman Tobacco Company, later Tekel
-company_ottoman_tobacco_regie = {
+REPLACE_OR_CREATE:company_ottoman_tobacco_regie = {
 	icon = "gfx/interface/icons/company_icons/historical_company_icons/ottoman_tobacco_regie.dds"
 	background = "gfx/interface/icons/company_icons/company_backgrounds/comp_illu_plantation.dds"
 
@@ -244,12 +243,12 @@ company_ottoman_tobacco_regie = {
 	}
 
 	ai_weight = {
-		value = 3 # Higher base value for flavored companies
+		value = 3
 	}
 }
 
 # Allatini Mills
-company_allatini_mills = {
+REPLACE_OR_CREATE:company_allatini_mills = {
 	icon = "gfx/interface/icons/company_icons/historical_company_icons/allatini_mills.dds"
 	background = "gfx/interface/icons/company_icons/company_backgrounds/comp_illu_farm_rye.dds"
 
@@ -278,11 +277,11 @@ company_allatini_mills = {
 	}
 
 	potential = {
-		has_interest_marker_in_region = region_balkans
+		has_interest_marker_in_region = sr:region_balkans
 	}
 
 	attainable = {
-		hidden_trigger = { # Hide attainable if it's always fulfilled by possible
+		hidden_trigger = {
 			any_scope_state = {
 				state_region = s:STATE_MACEDONIA
 			}
@@ -332,7 +331,7 @@ company_allatini_mills = {
 	}
 
 	ai_weight = {
-		value = 3 # Higher base value for flavored companies
+		value = 3
 	}
 }
 
@@ -355,8 +354,8 @@ REPLACE_OR_CREATE:company_orient_express = {
 
 	potential = {
 		OR = {
-			has_interest_marker_in_region = geographic_region_anatolia_old
-			has_interest_marker_in_region = region_balkans
+			any_scope_state = { is_in_geographic_region = geographic_region_anatolia_old }
+			has_interest_marker_in_region = sr:region_balkans
 		}
 	}
 
@@ -406,12 +405,12 @@ REPLACE_OR_CREATE:company_orient_express = {
 	}
 
 	ai_weight = {
-		value = 3 # Higher base value for flavored companies
+		value = 3
 	}
 }
 
 # Great Indian Peninsula Railway
-company_great_indian_railway = {
+REPLACE_OR_CREATE:company_great_indian_railway = {
 	icon = "gfx/interface/icons/company_icons/historical_company_icons/india_great_indian_peninsula_railway.dds"
 	background = "gfx/interface/icons/company_icons/company_backgrounds/comp_illu_railways.dds"
 
@@ -427,23 +426,23 @@ company_great_indian_railway = {
 
 	potential = {
 		OR = {
-			has_interest_marker_in_region = geographic_region_madras_old
-			has_interest_marker_in_region = geographic_region_bombay_old
-			has_interest_marker_in_region = geographic_region_bengal_old
-			has_interest_marker_in_region = geographic_region_central_india_old
-			has_interest_marker_in_region = geographic_region_punjab_old
+			any_scope_state = { is_in_geographic_region = geographic_region_madras_old }
+			any_scope_state = { is_in_geographic_region = geographic_region_bombay_old }
+			any_scope_state = { is_in_geographic_region = geographic_region_bengal_old }
+			any_scope_state = { is_in_geographic_region = geographic_region_central_india_old }
+			any_scope_state = { is_in_geographic_region = geographic_region_punjab_old }
 		}
 	}
 
 	attainable = {
-		hidden_trigger = { # Hide attainable if it's always fulfilled by possible
+		hidden_trigger = {
 			any_scope_state = {
 				OR = {
-					region = sr:region_madras
-					region = sr:region_bombay
-					region = sr:region_bengal
-					region = sr:region_central_india
-					region = sr:region_punjab
+					is_in_geographic_region = geographic_region_madras_old
+					is_in_geographic_region = geographic_region_bombay_old
+					is_in_geographic_region = geographic_region_bengal_old
+					is_in_geographic_region = geographic_region_central_india_old
+					is_in_geographic_region = geographic_region_punjab_old
 				}
 			}
 		}
@@ -452,11 +451,11 @@ company_great_indian_railway = {
 	possible = {
 		any_scope_state = {
 			OR = {
-				region = sr:region_madras
-				region = sr:region_bombay
-				region = sr:region_bengal
-				region = sr:region_central_india
-				region = sr:region_punjab
+				is_in_geographic_region = geographic_region_madras_old
+				is_in_geographic_region = geographic_region_bombay_old
+				is_in_geographic_region = geographic_region_bengal_old
+				is_in_geographic_region = geographic_region_central_india_old
+				is_in_geographic_region = geographic_region_punjab_old
 			}
 			is_incorporated = yes
 			any_scope_building = {
@@ -475,11 +474,11 @@ company_great_indian_railway = {
 	ai_will_do = {
 		any_scope_state = {
 			OR = {
-				region = sr:region_madras
-				region = sr:region_bombay
-				region = sr:region_bengal
-				region = sr:region_central_india
-				region = sr:region_punjab
+				is_in_geographic_region = geographic_region_madras_old
+				is_in_geographic_region = geographic_region_bombay_old
+				is_in_geographic_region = geographic_region_bengal_old
+				is_in_geographic_region = geographic_region_central_india_old
+				is_in_geographic_region = geographic_region_punjab_old
 			}
 			is_incorporated = yes
 		}
@@ -490,11 +489,11 @@ company_great_indian_railway = {
 			level = 5
 			state_trigger = {
 				OR = {
-					region = sr:region_madras
-					region = sr:region_bombay
-					region = sr:region_bengal
-					region = sr:region_central_india
-					region = sr:region_punjab
+					is_in_geographic_region = geographic_region_madras_old
+					is_in_geographic_region = geographic_region_bombay_old
+					is_in_geographic_region = geographic_region_bengal_old
+					is_in_geographic_region = geographic_region_central_india_old
+					is_in_geographic_region = geographic_region_punjab_old
 				}
 				is_incorporated = yes
 			}
@@ -502,7 +501,7 @@ company_great_indian_railway = {
 	}
 
 	ai_weight = {
-		value = 3 # Higher base value for flavored companies
+		value = 3
 	}
 }
 
@@ -537,11 +536,11 @@ REPLACE_OR_CREATE:company_tata = {
 	}
 
 	potential = {
-		has_interest_marker_in_region = geographic_region_bombay_old
+		any_scope_state = { is_in_geographic_region = geographic_region_bombay_old }
 	}
 
 	attainable = {
-		hidden_trigger = { # Hide attainable if it's always fulfilled by possible
+		hidden_trigger = {
 			any_scope_state = {
 				state_region = s:STATE_BOMBAY
 			}
@@ -590,12 +589,12 @@ REPLACE_OR_CREATE:company_tata = {
 	}
 
 	ai_weight = {
-		value = 3 # Higher base value for flavored companies
+		value = 3
 	}
 }
 
 # Sunhwaguk
-company_sunhwaguk = {
+REPLACE_OR_CREATE:company_sunhwaguk = {
 	icon = "gfx/interface/icons/company_icons/historical_company_icons/korea_sunhwaguk.dds"
 	background = "gfx/interface/icons/company_icons/company_backgrounds/comp_illu_plantation.dds"
 
@@ -623,11 +622,11 @@ company_sunhwaguk = {
 	}
 
 	potential = {
-		has_interest_marker_in_region = geographic_region_manchuria_old
+		any_scope_state = { is_in_geographic_region = geographic_region_manchuria_old }
 	}
 
 	attainable = {
-		hidden_trigger = { # Hide attainable if it's always fulfilled by possible
+		hidden_trigger = {
 			any_scope_state = {
 				state_region = { is_homeland = cu:korean }
 			}
@@ -673,12 +672,12 @@ company_sunhwaguk = {
 	}
 
 	ai_weight = {
-		value = 3 # Higher base value for flavored companies
+		value = 3
 	}
 }
 
 # Nam Định Textile Factory
-company_nam_dinh = {
+REPLACE_OR_CREATE:company_nam_dinh = {
 	icon = "gfx/interface/icons/company_icons/historical_company_icons/vietnam_nam_dinh.dds"
 	background = "gfx/interface/icons/company_icons/company_backgrounds/comp_illu_manufacturing_light.dds"
 
@@ -707,11 +706,11 @@ company_nam_dinh = {
 	}
 
 	potential = {
-		has_interest_marker_in_region = region_indochina
+		has_interest_marker_in_region = sr:region_indochina
 	}
 
 	attainable = {
-		hidden_trigger = { # Hide attainable if it's always fulfilled by possible
+		hidden_trigger = {
 			any_scope_state = {
 				state_region = s:STATE_TONKIN
 			}
@@ -750,12 +749,12 @@ company_nam_dinh = {
 	}
 
 	ai_weight = {
-		value = 3 # Higher base value for flavored companies
+		value = 3
 	}
 }
 
 # Imperial Tobacco Corporation of Persia, Limited
-company_imperial_tobacco = {
+REPLACE_OR_CREATE:company_imperial_tobacco = {
 	icon = "gfx/interface/icons/company_icons/historical_company_icons/imperial_tobacco.dds"
 	background = "gfx/interface/icons/company_icons/company_backgrounds/comp_illu_plantation.dds"
 
@@ -770,20 +769,20 @@ company_imperial_tobacco = {
 	}
 
 	potential = {
-		has_interest_marker_in_region = geographic_region_persia_old
+		any_scope_state = { is_in_geographic_region = geographic_region_persia_old }
 	}
 
 	attainable = {
-		hidden_trigger = { # Hide attainable if it's always fulfilled by possible
+		hidden_trigger = {
 			any_scope_state = {
-				region = sr:region_persia
+				is_in_geographic_region = geographic_region_persia_old
 			}
 		}
 	}
 
 	possible = {
 		any_scope_state = {
-			region = sr:region_persia
+			is_in_geographic_region = geographic_region_persia_old
 			is_incorporated = yes
 			any_scope_building = {
 				is_building_type = building_tobacco_plantation
@@ -801,7 +800,7 @@ company_imperial_tobacco = {
 	ai_will_do = {
 		has_technology_researched = corporate_charters
 		any_scope_state = {
-			region = sr:region_persia
+			is_in_geographic_region = geographic_region_persia_old
 			is_incorporated = yes
 			has_potential_resource = bg_tobacco_plantations
 			count >= 4
@@ -812,19 +811,19 @@ company_imperial_tobacco = {
 		building_tobacco_plantation = {
 			level = 5
 			state_trigger = {
-				region = sr:region_persia
+				is_in_geographic_region = geographic_region_persia_old
 				is_incorporated = yes
 			}
 		}
 	}
 
 	ai_weight = {
-		value = 3 # Higher base value for flavored companies
+		value = 3
 	}
 }
 
 # San Miguel
-company_san_miguel = {
+REPLACE_OR_CREATE:company_san_miguel = {
 	icon = "gfx/interface/icons/company_icons/historical_company_icons/manila_la_fabrica_de_cerveza_san_miguel.dds"
 	background = "gfx/interface/icons/company_icons/company_backgrounds/comp_illu_farm_wheat.dds"
 
@@ -852,11 +851,11 @@ company_san_miguel = {
 	}
 
 	potential = {
-		has_interest_marker_in_region = region_indonesia
+		has_interest_marker_in_region = sr:region_indonesia
 	}
 
 	attainable = {
-		hidden_trigger = { # Hide attainable if it's always fulfilled by possible
+		hidden_trigger = {
 			any_scope_state = {
 				region = sr:region_indonesia
 			}
@@ -896,12 +895,12 @@ company_san_miguel = {
 	}
 
 	ai_weight = {
-		value = 3 # Higher base value for flavored companies
+		value = 3
 	}
 }
 
 # William Sandford Limited
-company_william_sandford = {
+REPLACE_OR_CREATE:company_william_sandford = {
 	icon = "gfx/interface/icons/company_icons/historical_company_icons/william_sandford_limited.dds"
 	background = "gfx/interface/icons/company_icons/company_backgrounds/comp_illu_manufacturing_heavy.dds"
 
@@ -930,11 +929,11 @@ company_william_sandford = {
 	}
 
 	potential = {
-		has_interest_marker_in_region = region_oceania
+		has_interest_marker_in_region = sr:region_oceania
 	}
 
 	attainable = {
-		hidden_trigger = { # Hide attainable if it's always fulfilled by possible
+		hidden_trigger = {
 			any_scope_state = {
 				state_region = s:STATE_NEW_SOUTH_WALES
 			}
@@ -973,12 +972,12 @@ company_william_sandford = {
 	}
 
 	ai_weight = {
-		value = 3 # Higher base value for flavored companies
+		value = 3
 	}
 }
 
 # B.Grimm
-company_b_grimm = {
+REPLACE_OR_CREATE:company_b_grimm = {
 	icon = "gfx/interface/icons/company_icons/historical_company_icons/thailand_b_grimm.dds"
 	background = "gfx/interface/icons/company_icons/company_backgrounds/comp_illu_manufacturing_heavy.dds"
 
@@ -1006,11 +1005,11 @@ company_b_grimm = {
 	}
 
 	potential = {
-		has_interest_marker_in_region = region_indochina
+		has_interest_marker_in_region = sr:region_indochina
 	}
 
 	attainable = {
-		hidden_trigger = { # Hide attainable if it's always fulfilled by possible
+		hidden_trigger = {
 			any_scope_state = {
 				state_region = s:STATE_BANGKOK
 			}
@@ -1050,7 +1049,7 @@ company_b_grimm = {
 	}
 
 	ai_weight = {
-		value = 3 # Higher base value for flavored companies
+		value = 3
 	}
 }
 

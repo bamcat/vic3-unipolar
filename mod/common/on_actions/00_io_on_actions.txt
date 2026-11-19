@@ -1,7 +1,5 @@
 ﻿on_game_started = {
 	effect = {
-		# Setup UN member list — all recognized countries join
-		# Global membership lists
 		io_setup_un_members = yes
 		io_setup_nato_members = yes
 		io_setup_g7_members = yes
@@ -17,7 +15,6 @@
 		io_audit_organization_modifiers = yes
 		io_setup_saarc_members = yes
 		
-		io_create_starting_nato_defensive_pacts = yes
 		
 		every_country = {
 			io_initialize_organizations = yes
@@ -25,7 +22,6 @@
 				is_country_type = recognized
 			}
 			add_to_global_variable_list = { name = io_un_members target = this }
-			# Initialize NGO opinions
 			set_variable = { name = io_ngo_iaea_opinion value = 50 }
 		}
 	}
@@ -33,14 +29,9 @@
 
 on_yearly_pulse = {
 	effect = {
-		# Check NGO high support bonuses per country
 		every_country = {
 			io_ngo_check_high_support = yes
 		}
- 
-		# Clean up any rejected applications
-		every_country = {
-			io_rejection_cleanup = yes
-		}
+
 	}
 }

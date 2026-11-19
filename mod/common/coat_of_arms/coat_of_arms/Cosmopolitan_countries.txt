@@ -383,7 +383,6 @@ DRK_zaire = {
 	pattern = "pattern_solid.tga"
 	color1 = "green_light"
 	
- 	# Torch cross-grip
 	textured_emblem = {
 		texture = "zaire.png"
 	}
@@ -6575,7 +6574,6 @@ MOR =
 #	{
 #		pattern = "pattern_solid.tga"
 #		color1 = "red"
-#		
 	#	colored_emblem =
 	#	{
 	#		texture = "ce_tricolor_horizontal.dds"
@@ -7845,7 +7843,7 @@ MRT =
 	}
 }
 
-DNK = { # Donetsk People's Republic
+DNK = {
 	pattern = "pattern_solid.tga"
 	color1 = "black"
 	
@@ -7861,7 +7859,7 @@ DNK = { # Donetsk People's Republic
 	}
 }
 
-LUH = { # Luhansk People's Republic
+LUH = {
 	pattern = "pattern_solid.tga"
 	color1 = "blue_light"
 	
@@ -7877,10 +7875,7 @@ LUH = { # Luhansk People's Republic
 	}
 }
 
-# Modern conflict COA / flag designs
-# Built with existing COA syntax and generic emblem textures.
-
-ANA = { # Afghan Northern Alliance / Islamic State of Afghanistan style
+ANA = {
 	pattern = "pattern_solid.tga"
 	color1 = "black"
 	color2 = "red"
@@ -7959,7 +7954,7 @@ ANA_subject_FRA = {
 	}
 }
 
-FSY = { # Free Syria / Syrian opposition flag
+FSY = {
 	pattern = "pattern_solid.tga"
 	color1 = "green"
 	color2 = "white"
@@ -8042,8 +8037,7 @@ FSY_subject_FRA = {
 	}
 }
 
-HTH = { # Houthis / Ansar Allah-inspired generic banner
-	# Avoids reproducing the full movement slogan; uses a white field with green edging and red/green central marks.
+HTH = {
 	pattern = "pattern_solid.tga"
 	color1 = "white"
 	color2 = "green"
@@ -8149,7 +8143,7 @@ HTH_subject_FRA = {
 	}
 }
 
-HMS = { # Hamas
+HMS = {
 	pattern = "pattern_solid.tga"
 	color1 = "green"
 	color2 = "white"

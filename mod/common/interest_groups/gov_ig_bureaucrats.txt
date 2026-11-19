@@ -6,16 +6,13 @@ REPLACE_OR_CREATE:ig_intelligentsia = {
 	
 	ideologies = {
 		
-		#Economic Ideologies
-		ideology_centre_economy 			#General Economic Beliefs 
-		ideology_regionalist 				#Foreign Economic Policy
+		ideology_centre_economy
+		ideology_regionalist
 	
-		#Political Ideologies
-		ideology_authoritarian				#General Political Beliefs
-		ideology_conservative				#Specific Political Beliefs
-		ideology_militarist					#Government Types 
+		ideology_authoritarian
+		ideology_conservative
+		ideology_militarist
 		
-		#Dynamic Ideologies
 		#ideology_neutral_spending
 		#ideology_neutral_population
 		
@@ -38,17 +35,16 @@ REPLACE_OR_CREATE:ig_intelligentsia = {
 		always = yes
 	}
 	
-	# Deprecated; use on_enable effect to assign traits instead
 	traits = {
-		ig_trait_compliant_civil_service
-		ig_trait_hostile_civil_service
+		ig_trait_avant_garde
+		ig_trait_social_criticism
 		ig_trait_propagandists
 	}
 	
 	on_enable = {
 		ig:ig_intelligentsia = {
-			set_ig_trait = ig_trait:ig_trait_compliant_civil_service
-			set_ig_trait = ig_trait:ig_trait_hostile_civil_service
+			set_ig_trait = ig_trait:ig_trait_avant_garde
+			set_ig_trait = ig_trait:ig_trait_social_criticism
 			set_ig_trait = ig_trait:ig_trait_propagandists
 		}
 	}
@@ -57,14 +53,12 @@ REPLACE_OR_CREATE:ig_intelligentsia = {
 	
 	pop_potential = {
 	
-		#Only Accepted Pops can organise into IGs
 		pop_acceptance >= acceptance_status_4
 		
-		#Any pop that works in the government
 		OR = { 
 			is_pop_type = bureaucrats
 			is_pop_type = academics
-			is_pop_type = engineers			#Technologists -- academia is where
+			is_pop_type = engineers
 											#the technical professions organise
 			#pop_employment_building_group = bg_government
 		}
@@ -110,7 +104,7 @@ REPLACE_OR_CREATE:ig_intelligentsia = {
 					is_in_government = yes
 				}
 			}
-			multiply = { # Multiplied by 1.25x max
+			multiply = {
 				desc = "POP_LOYALISTS"
 				value = pop_loyalist_fraction
 				divide = 4
@@ -123,7 +117,7 @@ REPLACE_OR_CREATE:ig_intelligentsia = {
 					is_in_government = no
 				}
 			}
-			multiply = { # Multiplied by 1.25x max
+			multiply = {
 				desc = "POP_RADICALS"
 				value = pop_radical_fraction
 				divide = 4
@@ -138,9 +132,7 @@ REPLACE_OR_CREATE:ig_intelligentsia = {
 	}	
 	
 	agitator_weight = {
-		# Agitators more likely to come from populist IG's rather than elitist
 		value = 0.75
-		# Agitators will never be part of a marginalized IG
 		if = {
 			limit = {
 				owner.ig:ig_intelligentsia = {
@@ -361,15 +353,11 @@ REPLACE_OR_CREATE:ig_intelligentsia = {
 		
 	}
 	
-	# The chance that a commander belonging to this IG takes over leadership when it changes
-	# scope:character is the most popular commander in the IG
 	commander_leader_chance = {
 		value = 0.25
 		multiply = ig_commander_leader_chance_mult
 	}
 	
-	# The chance that a executive belonging to this IG takes over leadership when it changes
-	# scope:character is the most popular executive in the IG
 	executive_leader_chance = {
 		value = 0.5
 	}

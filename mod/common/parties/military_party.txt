@@ -91,21 +91,21 @@ REPLACE_OR_CREATE:military_party = {
 		default = "/gfx/interface/icons/political_parties/military.dds"
 	}
 	
-	# THIS IS RUN ONLY ONCE AT GAME START
 	valid_for_country = {
+		NOT = { exists = c:RUS THIS = c:RUS }
 		always = yes
 	}
 
 		available_for_interest_group = {
 		is_marginal = no
 		OR = {
-			leader = { has_ideology = ideology:ideology_neocon_leader }
-			leader = { has_ideology = ideology:ideology_authoritarian_capitalist_leader }
-			leader = { has_ideology = ideology:ideology_fascist_leader }
-			leader = { has_ideology = ideology:ideology_state_capitalist_leader }
-			leader = { has_ideology = ideology:ideology_monarchist_leader }
-			leader = { has_ideology = ideology:ideology_conservative_leader }
-			leader = { has_ideology = ideology:ideology_jihadist_leader }
+			leader ?= { has_ideology = ideology:ideology_neocon_leader }
+			leader ?= { has_ideology = ideology:ideology_authoritarian_capitalist_leader }
+			leader ?= { has_ideology = ideology:ideology_fascist_leader }
+			leader ?= { has_ideology = ideology:ideology_state_capitalist_leader }
+			leader ?= { has_ideology = ideology:ideology_monarchist_leader }
+			leader ?= { has_ideology = ideology:ideology_conservative_leader }
+			leader ?= { has_ideology = ideology:ideology_jihadist_leader }
 			has_ideology = ideology:ideology_militarist
 			has_ideology = ideology:ideology_authoritarian
 			has_ideology = ideology:ideology_totalitarian
@@ -118,8 +118,6 @@ REPLACE_OR_CREATE:military_party = {
 		}
 	}
 
-	# Root - IG considering joining
-	# scope:number - the number of IGs that would join this party before the root IG
 	join_weight = {
 		value = {
 			value = -5
@@ -128,34 +126,50 @@ REPLACE_OR_CREATE:military_party = {
 		if = {
 			limit = {
 				OR = {
-				leader = { has_ideology = ideology:ideology_neocon_leader }
-				leader = { has_ideology = ideology:ideology_authoritarian_capitalist_leader }
-				leader = { has_ideology = ideology:ideology_fascist_leader }
+				leader ?= { has_ideology = ideology:ideology_neocon_leader }
+				leader ?= { has_ideology = ideology:ideology_authoritarian_capitalist_leader }
+				leader ?= { has_ideology = ideology:ideology_fascist_leader }
 			}
 			}
-			add = { value = 45 desc = "leader_ideological_compatibility" }
+			add = { value = 120 desc = "leader_ideological_compatibility" }
 		}
 		if = {
 			limit = {
 				OR = {
-				leader = { has_ideology = ideology:ideology_state_capitalist_leader }
-				leader = { has_ideology = ideology:ideology_monarchist_leader }
-				leader = { has_ideology = ideology:ideology_conservative_leader }
-				leader = { has_ideology = ideology:ideology_jihadist_leader }
+				leader ?= { has_ideology = ideology:ideology_state_capitalist_leader }
+				leader ?= { has_ideology = ideology:ideology_monarchist_leader }
+				leader ?= { has_ideology = ideology:ideology_conservative_leader }
+				leader ?= { has_ideology = ideology:ideology_jihadist_leader }
 			}
 			}
-			add = { value = 20 desc = "leader_adjacent_ideology" }
+			add = { value = 40 desc = "leader_adjacent_ideology" }
+		}
+		if = {
+			limit = {
+				leader ?= {
+					NOR = {
+						has_ideology = ideology:ideology_neocon_leader
+						has_ideology = ideology:ideology_authoritarian_capitalist_leader
+						has_ideology = ideology:ideology_fascist_leader
+						has_ideology = ideology:ideology_state_capitalist_leader
+						has_ideology = ideology:ideology_monarchist_leader
+						has_ideology = ideology:ideology_conservative_leader
+						has_ideology = ideology:ideology_jihadist_leader
+					}
+				}
+			}
+			add = { value = -40 desc = "leader_ideology_unrelated" }
 		}
 		if = {
 			limit = {
 				OR = {
-				leader = { has_ideology = ideology:ideology_anarchist_leader }
-				leader = { has_ideology = ideology:ideology_green_leader }
-				leader = { has_ideology = ideology:ideology_social_liberal_leader }
-				leader = { has_ideology = ideology:ideology_market_socialist_leader }
+				leader ?= { has_ideology = ideology:ideology_anarchist_leader }
+				leader ?= { has_ideology = ideology:ideology_green_leader }
+				leader ?= { has_ideology = ideology:ideology_social_liberal_leader }
+				leader ?= { has_ideology = ideology:ideology_market_socialist_leader }
 			}
 			}
-			add = { value = -50 desc = "leader_ideological_incompatibility" }
+			add = { value = -150 desc = "leader_ideological_incompatibility" }
 		}
 		if = {
 			limit = {
@@ -165,7 +179,7 @@ REPLACE_OR_CREATE:military_party = {
 				has_ideology = ideology:ideology_totalitarian
 			}
 			}
-			add = { value = 35 desc = "interest_group_ideological_compatibility" }
+			add = { value = 20 desc = "interest_group_ideological_compatibility" }
 		}
 		if = {
 			limit = {
@@ -177,7 +191,7 @@ REPLACE_OR_CREATE:military_party = {
 				has_ideology = ideology:ideology_theocrat
 			}
 			}
-			add = { value = 15 desc = "interest_group_adjacent_ideology" }
+			add = { value = 8 desc = "interest_group_adjacent_ideology" }
 		}
 		if = {
 			limit = {
@@ -187,13 +201,13 @@ REPLACE_OR_CREATE:military_party = {
 				has_ideology = ideology:ideology_communitarian
 			}
 			}
-			add = { value = -35 desc = "interest_group_ideological_incompatibility" }
+			add = { value = -20 desc = "interest_group_ideological_incompatibility" }
 		}
 		if = {
 			limit = {
 				is_interest_group_type = ig_armed_forces
 			}
-			add = { value = 20 desc = "from_archetype_party" }
+			add = { value = 15 desc = "from_archetype_party" }
 		}
 		if = {
 			limit = {
@@ -211,9 +225,9 @@ REPLACE_OR_CREATE:military_party = {
 			limit = {
 				is_powerful = yes
 				OR = {
-					leader = { has_ideology = ideology:ideology_neocon_leader }
-					leader = { has_ideology = ideology:ideology_authoritarian_capitalist_leader }
-					leader = { has_ideology = ideology:ideology_fascist_leader }
+					leader ?= { has_ideology = ideology:ideology_neocon_leader }
+					leader ?= { has_ideology = ideology:ideology_authoritarian_capitalist_leader }
+					leader ?= { has_ideology = ideology:ideology_fascist_leader }
 					has_ideology = ideology:ideology_militarist
 					has_ideology = ideology:ideology_authoritarian
 					has_ideology = ideology:ideology_totalitarian

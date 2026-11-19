@@ -1,6 +1,4 @@
 ﻿l_simp_chinese:
-
- # Fallback names if dynamic naming fails
  company_basic_agriculture_1: "优质谷物股份有限公司."
  company_basic_agriculture_2: "农业发展协会"
  company_basic_metal_mining: "金属采矿集团"
@@ -26,8 +24,7 @@
  company_basic_gold_mining: "贵金属"
  company_basic_electrics: "家电股份有限公司."
  company_basic_weapons: "军备工程"
- 
- # Dynamic company names
+
  company_basic_agriculture_1_dynamic_name_tag_singular: "谷物"
  company_basic_agriculture_1_dynamic_name_tag_plural: "谷物"
  company_basic_agriculture_2_dynamic_name_tag_singular: "农业"
@@ -78,7 +75,7 @@
  company_basic_electrics_dynamic_name_tag_plural: "电器"
  company_basic_weapons_dynamic_name_tag_singular: "军备"
  company_basic_weapons_dynamic_name_tag_plural: "军备"
- 
+
  dynamic_company_type_company: "企业"
  dynamic_company_type_consortium: "并入"
  dynamic_company_type_corporation: "公司"
@@ -88,20 +85,19 @@
  dynamic_company_type_guild: "后勤"
  dynamic_company_type_society: "持有量"
  dynamic_company_type_fellowship: "公司"
- 
+
  dynamic_company_name_country_1: "[COUNTRY.GetAdjectiveNoFormatting] $DYNAMIC_NAME_TAG$ $TYPE_NAME$"
  dynamic_company_name_country_2: "[COUNTRY.GetAdjectiveNoFormatting] $DYNAMIC_NAME_TAG$"
  dynamic_company_name_country_3: "$DYNAMIC_NAME_TAG$ $TYPE_NAME$的x id=2/ >"
  dynamic_company_name_country_4: "[COUNTRY.GetAdjectiveNoFormatting] $DYNAMIC_NAME_TAG$ 企业"
  dynamic_company_name_country_5: "组合 [COUNTRY.GetAdjectiveNoFormatting] $DYNAMIC_NAME_TAG$ $TYPE_NAME$"
- 
+
  dynamic_company_name_state_1: "[STATE_REGION.GetNameNoFormatting] $DYNAMIC_NAME_TAG$ $TYPE_NAME$"
  dynamic_company_name_state_2: "[STATE_REGION.GetNameNoFormatting] $DYNAMIC_NAME_TAG$"
  dynamic_company_name_state_3: "$DYNAMIC_NAME_TAG$ $TYPE_NAME$的x id=2/ >"
  dynamic_company_name_state_4: "[STATE_REGION.GetNameNoFormatting] ium $DYNAMIC_NAME_TAG$"
  dynamic_company_name_state_5: "联合 [STATE_REGION.GetNameNoFormatting] $DYNAMIC_NAME_TAG$ 生产商"
 
- # Flavored Companies
  company_krupp: "弗里德里希·克虏伯"
  company_rheinmetall: "莱因梅特尔"
  company_schichau: "F. Schichau先生(法国)"
@@ -149,8 +145,8 @@
 
  company_skoda: "什科达工程公司"
  company_mav: "马瓦格"
- company_manfred_weiss: "Manfréd Weiss Steel and Metal Works" # Weiss Manfréd Acél- és Fémművek
- company_galician_carpathian_oil: "Galician Carpathian Petroleum Company" # Galizisch-Karpathische Petroleum Aktien-Gesellschaft
+ company_manfred_weiss: "Manfréd Weiss Steel and Metal Works"
+ company_galician_carpathian_oil: "Galician Carpathian Petroleum Company"
  company_oevg: "瓦芬法布里克-格塞尔沙夫特"
 
  company_ccci: "刚果公司"
@@ -228,8 +224,8 @@
  company_eea: "协会企业"
 
  company_construction_power_bloc: "联合建筑集团"
- 
-  CANNOT_TOGGLE_COMPANY_GRANTED_CHARTER: "$DESC$"
+
+ CANNOT_TOGGLE_COMPANY_GRANTED_CHARTER: "$DESC$"
  COMPANY_CHARTER_INVESTMENT: "$NAME$"
  COMPANY_CHARTER_MONOPOLY: "$NAME$,用于 [BUILDING_TYPE.GetName]"
  COMPANY_CHARTER_INDUSTRY: "$NAME$,用于 [BUILDING_TYPE.GetName]"
@@ -238,7 +234,7 @@
  COMPANY_CHARTER_ON_COOLDOWN: "#b 无法 #! 被删除,直到 #b [DATE.GetString]#!"
 
  BUILDING_OWNED_BY_COMPANY: "拥有者: [Company.GetNameNoFormatting]"
- 
+
  PRODUCTIVITY_TREND: "[concept_productivity]"
  PROSPERITY_TREND: "[concept_prosperity]"
  PROFIT_TREND: "$COMPANY_PROFIT_TITLE$"
@@ -255,7 +251,6 @@
  COMMAND_CONFIRMATION_ENABLE_MONOPOLY_CHARTER: "您是否想要将 [CompanyCharterType.GetName] 授予 <x id=1/?>? \n\n@aut! #v [CompanyCharterType.GetAuthorityCost(Company.Self)|-0]#! 维护费用 \n当前使用 [Company.GetCountry.GetUsedFreeCharters|v] / [Company.GetCountry.GetModifier.GetNonFormattedValueWithBreakdownAndNoDecimalsFor('country_free_charters_add')] 免费 [Concept('concept_company_charter','$concept_company_charters$')]\n\n<x=14/>? 这一点不能被取消,因为 #v [GetDefine('NEconomy','COMPANY_MONOPOLY_COOLDOWN_MONTHS')] 月 #!在授予后. \n\n#title 效果:#!#indent_newline:3 \n$EFFECTS$#!"
  COMMAND_CONFIRMATION_DISABLE_CHARTER: "您是否想要取消 [CompanyCharterType.GetName] 从 [Company.GetName] ? \n\n 撤销 @aut! #v [CompanyCharterType.GetAuthorityCost(Company.Self)|+0]#! 维护费用 \n\n<x=10> 删除以下效果:#!#indent_newline:3\n$EFFECTS$#!"
  COMMAND_CONFIRMATION_DISABLE_CHARTER_WITH_REVOKE_EFFECTS: "$COMMAND_CONFIRMATION_DISABLE_CHARTER$\n\n$REVOKE_EFFECTS$"
-
 
  investment_charter_desc: "[CompanyCharter.GetType.GetNameNoFormatting]允许 [concept_company]建立 [Concept('concept_regional_company_hq','$concept_regional_company_hqs$')],扩大其影响和业务."
  investment_charter_type_desc: "[CompanyCharterType.GetNameNoFormatting]允许 [concept_company]建立 [Concept('concept_regional_company_hq','$concept_regional_company_hqs$')],扩大其影响和业务."
@@ -292,12 +287,11 @@
  PROSPERITY_INCREASE_FROM_PRODUCTIVITY: "从高[concept_productivity]"
  PROSPERITY_DECREASE_FROM_PRODUCTIVITY: "从低[concept_productivity]"
 
- # Charters of Commerce Companies
  company_ludwig_moser_and_sons: "格拉斯法布里克·路德维希·摩泽尔和索恩"
  company_compania_sansinena_de_carnes_congeladas: "卡内斯·康格拉达斯"
  company_konigliche_porzellan_manufaktur_meissen: "科尼克利切·波泽兰-马努法克图尔·梅森"
  company_jiangnan_weaving_bureaus: "江南织造局"
- company_russian_american_company: "Russian-American Company" # Alt. Rossiysko-Amerikanskaya Kompaniya
+ company_russian_american_company: "Russian-American Company"
  company_lee_wilson: "李·威尔逊公司"
  company_colt_firearms: "柯尔特专利火器制造公司"
  company_gebruder_thonet: "格布吕德·汤内"
@@ -314,9 +308,9 @@
  company_imperial_ethiopian_railways: "埃塞俄比亚帝国铁路公司"
  company_lanfang_kongsi: "兰芳·孔西"
  company_paradox: "约翰·帕拉多克(John Paradox)公司"
- 
+
  ## companies added by smd:
- 
+
  company_amazon: "Amazon.com 股份有限公司."
  company_apple: "苹果股份有限公司."
  company_atandt: "AT&T股份有限公司."
@@ -346,23 +340,22 @@
  company_blackrock: "BlackRock投资集团"
  company_cargill: "卡吉尔"
  company_caterpillar: "毛线"
- 
+
  company_samsung: "三星电子有限公司"
- 
+
  company_sberbank: "斯伯银行"
- 
+
  company_honda: "本田镇"
  company_toyota: "丰田"
  company_sony: "苏尼"
  company_nintendo: "任天堂"
- 
+
  company_tesco: "特斯克语Name"
  company_hsbc: "汇丰银行"
  company_shell: "贝壳"
- 
+
  company_saudi_aramco: "沙特石油公司"
- 
- # USA
+
  company_visa: "签证公司."
  company_bear_stearns: "熊纹"
  company_mgm: "大都会- 金通- Mayer"
@@ -373,14 +366,11 @@
  company_openai: "开放AI"
  company_anthropic: "安东尼"
  company_alphabet: "字母顺序"
- 
- # Germany
+
  company_adidas: "阿迪达斯"
- 
- # Great Britain
+
  company_astrazeneca: "阿斯特拉泽内卡"
- 
- # China
+
  company_alibaba: "阿里巴巴集团"
  company_tencent: "百分点"
  company_pingan: "平安保险"
@@ -390,22 +380,17 @@
  company_bytedance: "字节舞"
  company_sinopec: "西诺佩克"
  company_xiaomi: "晓美"
- 
- # Ireland
+
  company_accenture: "摄入"
- 
- # France
+
  company_totalenergies: "能源共计"
- 
- # ── NEW BASIC COMPANIES ──────────────────────────────────────────
- 
+
  company_basic_pharmaceuticals: "国家制药集团"
  company_basic_retail: "总零售集团"
  company_basic_food_service: "标准食品服务"
  company_basic_banking: "国家银行集团"
  company_basic_professional_services: "专业服务组"
- 
- # Dynamic name tags
+
  company_basic_pharmaceuticals_dynamic_name_tag_singular: "制药"
  company_basic_pharmaceuticals_dynamic_name_tag_plural: "药品"
  company_basic_retail_dynamic_name_tag_singular: "零售"

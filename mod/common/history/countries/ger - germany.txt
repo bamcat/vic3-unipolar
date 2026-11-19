@@ -1,13 +1,12 @@
 ﻿COUNTRIES = {
 	c:GER = {
-		set_next_election_date = 1993.8.31 #YYYY.MM.DD
+		set_next_election_date = 1993.8.31
 		
 		 
 
 		set_tax_level = high
 		
 		
-		# Laws
 		activate_law = law_type:law_professional_army
 		activate_law = law_type:law_elected_bureaucrats
 		activate_law = law_type:law_compulsory_primary_school
@@ -59,6 +58,17 @@
 		
 		ig:ig_rural_folk = {
 			add_ruling_interest_group = yes
+		}
+
+		add_company = company_type:company_basf
+		company:company_basf = {
+			set_company_establishment_date = 1865.4.6
+			set_company_state_region = s:STATE_RHINELAND
+		}
+		add_company = company_type:company_krupp
+		company:company_krupp = {
+			set_company_establishment_date = 1811.11.20
+			set_company_state_region = s:STATE_NORTH_RHINE
 		}
 	}
 }

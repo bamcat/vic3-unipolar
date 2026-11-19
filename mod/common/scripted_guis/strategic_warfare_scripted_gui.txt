@@ -1,8 +1,5 @@
 ﻿# ==========================================
 # NUCLEAR WEAPONS — SCRIPTED GUIs
-# Place in common/scripted_guis/
-#
-# State variables used (all country scope):
 #   nukes                    — warhead count
 #   uranium_enrichment_progress  — 0-100
 #   nuclear_production_progress  — 0-100
@@ -59,7 +56,6 @@ nuclear_has_no_warheads = {
 
 # ── BEGIN ENRICHMENT ────────────────────────
 
-# Button visibility: show only when no programme and not already capable
 nuclear_can_begin_enrichment = {
 	scope = country
 	is_shown = {
@@ -68,17 +64,13 @@ nuclear_can_begin_enrichment = {
 		NOT = { has_variable = nuclear_production_active }
 	}
 	is_valid = {
-		# Must have at least 3 nuclear plants
 		# nuclear_plant_count_sv is a scripted value you define that counts
 		# building_nuclear_plant in all states
-		any_scope_state = {
-			is_incorporated = yes
-			has_building = building_nuclear_plant
-			count >= 3
+		country_has_building_type_levels = {
+			target = bt:building_nuclear_plant
+			value >= 3
 		}
-		# Must be major or great power
 		country_rank >= rank_value:major_power
-		# Not already in default
 		in_default = no
 		NOT = { has_modifier = io_treaty_npt_signatory }
 	}
@@ -99,10 +91,9 @@ nuclear_begin_enrichment = {
 		NOT = { has_variable = nuclear_capable }
 	}
 	is_valid = {
-		any_scope_state = {
-			is_incorporated = yes
-			has_building = building_nuclear_plant
-			count >= 3
+		country_has_building_type_levels = {
+			target = bt:building_nuclear_plant
+			value >= 3
 		}
 		country_rank >= rank_value:major_power
 		in_default = no
@@ -113,7 +104,6 @@ nuclear_begin_enrichment = {
 			name = uranium_enrichment_progress
 			value = 0
 		}
-		# Open the enrichment journal entry
 		add_journal_entry = { type = je_uranium_enrichment }
 	}
 	ai_is_valid = { always = no }
@@ -128,7 +118,6 @@ nuclear_can_begin_production = {
 		NOT = { has_variable = nuclear_production_active }
 	}
 	is_valid = {
-		# Need at least one nuclear silo
 		any_scope_state = {
 			is_incorporated = yes
 			has_building = building_nuclear_silo
@@ -169,8 +158,6 @@ nuclear_begin_production = {
 
 # ── PRODUCTION QUEUE ─────────────────────────
 # nuclear_production_queue holds the number of warheads
-# queued for production. The + button adds to the queue.
-# Clicking "Manufacture Nuclear Warhead" begins producing the
 # first warhead; each time one completes, if the queue is > 0
 # it decrements and the next one starts automatically.
 
@@ -195,7 +182,6 @@ nuclear_queue_add = {
 		else = {
 			change_variable = { name = nuclear_production_queue add = 1 }
 		}
-		# Clamp to a sane maximum
 		if = {
 			limit = { var:nuclear_production_queue > 99 }
 			set_variable = { name = nuclear_production_queue value = 99 }
@@ -226,8 +212,6 @@ nuclear_queue_subtract = {
 }
 
 # ── DEPLOYMENT AND SHIT ───────────
-# Five buttons set nuclear_deployment_percentage.
-# Disabled when already at that value.
  
 nuclear_set_deploy_10 = {
 	scope = country
@@ -275,8 +259,6 @@ nuclear_set_deploy_100 = {
 }
  
 # ── TARGET LIST — STATE MEMBERSHIP CHECK ────
-# Used in GUI visible= to colour/show add vs remove.
-# Also used in map_markers.gui for the marker overlay.
  
 state_is_in_targetlist = {
 	scope = country
@@ -289,8 +271,6 @@ state_is_in_targetlist = {
 }
  
 # ── TARGET LIST — ADD STATE ──────────────────
-# Adds a state to wmd_target_list.
-# Also adds its owner to wmd_target_list_c if not present.
  
 nuclear_add_target_state = {
 	scope = country
@@ -311,7 +291,6 @@ nuclear_add_target_state = {
 			name = wmd_target_list
 			target = scope:target_list_selected_state
 		}
-		# Add the owning country to wmd_target_list_c if not already present
 		scope:target_list_selected_state = {
 			owner = {
 				if = {
@@ -337,8 +316,6 @@ nuclear_add_target_state = {
 }
  
 # ── TARGET LIST — REMOVE STATE ───────────────
-# Removes a state from wmd_target_list.
-# Also cleans up wmd_target_list_c if that country
 # has no more states in the list.
  
 nuclear_remove_target_state = {
@@ -354,7 +331,6 @@ nuclear_remove_target_state = {
 			name = wmd_target_list
 			target = scope:target_list_selected_state
 		}
-		# Clean up country from wmd_target_list_c if no states remain
 		every_in_list = {
 			variable = wmd_target_list_c
 			limit = {
@@ -417,7 +393,6 @@ nuclear_targetlist_contract_country = {
 }
  
 # ── FIRE CHECK (enabled gate) ─────────────────
-# Shown only when all conditions for firing are met.
  
 nuclear_can_fire = {
 	scope = country
@@ -430,8 +405,6 @@ nuclear_can_fire = {
 }
  
 # ── FIRE EXECUTE ─────────────────────────────
-# Triggers the launch confirmation event.
-# Does NOT immediately fire — the event is the
 # final decision gate.
  
 nuclear_fire_execute = {
@@ -454,7 +427,6 @@ nuclear_fire_execute = {
 }
  
 # ── TARGET LIST POPULATED CHECK ──────────────
-# Used for visible gates on the target list section.
  
 nuclear_targetlist_is_set = {
 	scope = country
@@ -464,7 +436,6 @@ nuclear_targetlist_is_set = {
 }
  
 # ── ENEMY STATES AVAILABLE CHECK ────────────
-# Shows the "add targets" section only when at war.
  
 nuclear_has_enemies = {
 	scope = country
@@ -477,19 +448,13 @@ nuclear_has_enemies = {
 
 # ── STATE ELIGIBILITY CHECKS ────────────────
  
-# Is this state a valid MISSILE target?
-# Must be: enemy-owned AND (neighbouring player state OR
-# bordering an ally OR bordering a military-base-host country)
-# OR blockaded by the player
 state_is_valid_missile_target = {
 	scope = country
 	is_shown = {
 		OR = {
-			# State borders a state owned by ROOT
 			any_neighbouring_state = {
 				owner = ROOT
 			}
-			# State borders a state owned by an ally
 			any_neighbouring_state = {
 				owner = {
 					has_diplomatic_pact = {
@@ -498,7 +463,6 @@ state_is_valid_missile_target = {
 					}
 				}
 			}
-			# State borders a country that hosts ROOT's military bases
 			any_neighbouring_state = {
 				owner = {
 					any_scope_treaty = {
@@ -509,9 +473,7 @@ state_is_valid_missile_target = {
 					}
 				}
 			}
-			# State is blockaded by ROOT
 			is_blockaded_by = ROOT
-			# ROOT has ICBMs — global range
 			has_variable = icbm_programme_complete
 		}
 	}
@@ -556,7 +518,6 @@ conventional_add_target = {
 			name = conventional_target_list
 			target = scope:conv_target_state
 		}
-		# Add owner to conventional_target_list_c for grouping
 		scope:conv_target_state = {
 			owner = {
 				if = {
@@ -743,14 +704,11 @@ conventional_fire_missiles = {
 		NOT = { has_variable = missile_cooldown }
 	}
 	effect = {
-		# Initialize deployment % to 100 if never set
 		if = {
 			limit = { NOT = { has_variable = conv_deployment_percentage } }
 			set_variable = { name = conv_deployment_percentage value = 100 }
 		}
-		# Strike handles missile consumption and building hits
 		conventional_missile_strike = yes
-		# Clear targets
 		clear_variable_list = conventional_target_list
 		clear_variable_list = conventional_target_list_c
 		# 60 day cooldown
@@ -940,7 +898,6 @@ bombing_on_cooldown = {
  
 # ── NUCLEAR RANGE GATE ───────────────────────
 # Nuclear targets must neighbour player OR
-# player has ICBMs
  
 nuclear_target_in_range = {
 	scope = country
@@ -1066,11 +1023,7 @@ nuclear_icbm_complete = {
 }
  
 # ── MISSILE PRODUCTION ───────────────────
-# Produces 5 missiles per salvo.
-# Requires explosives and steel production
 # (has building_munitions_plant or similar).
-# For now: requires major power + not in default.
-# Each production costs infamy (representing
 # the strategic commitment).
  
 can_produce_missiles = {
@@ -1111,7 +1064,6 @@ produce_missiles = {
 		else = {
 			change_variable = { name = conventional_missiles add = 5 }
 		}
-		# Small cost — representing production investment
 		add_modifier = {
 			name = missile_production_cost
 			months = 3
@@ -1122,7 +1074,6 @@ produce_missiles = {
 
 # ── MISSILE PRODUCTION QUEUE ─────────────────
 # missile_production_queue holds the number of salvos queued.
-# The + button adds to the queue. Each salvo produces when off
 # cooldown; the on_action (99_nuclear_on_actions) auto-produces
 # the next queued salvo when the cooldown expires.
 
@@ -1169,7 +1120,6 @@ missile_queue_subtract = {
 	ai_is_valid = { always = no }
 }
 
-# Process the missile queue — produce a salvo if off cooldown and queue > 0
 missile_process_queue = {
 	scope = country
 	effect = {

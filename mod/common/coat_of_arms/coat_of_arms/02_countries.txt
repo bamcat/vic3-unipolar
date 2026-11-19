@@ -16,13 +16,11 @@
 #ABO = { # Aboriginals
 #	pattern = "pattern_solid.tga"
 #	color1 = "black"
-#
 #	colored_emblem = {
 #		texture = "ce_bicolor_bottom.dds"
 #		color1 = "red"
 #		color2 = "red"
 #	}
-#
 #	colored_emblem = {
 #		texture = "ce_circle.dds"
 #		color1 = "yellow"
@@ -30,8 +28,7 @@
 #	}
 #}
 
-ABS = { # Absaroke Crow
-	# Combination of traditionnal Crow designs
+ABS = {
 
 	pattern = "pattern_solid.tga"
 	color1 = "blue_light"
@@ -122,14 +119,13 @@ ABS = { # Absaroke Crow
 	}
 }
 
-ABU = { # Abu Dhabi
-	# Peace treaty flag (replaced the traditionnal plain red flag)
+ABU = {
 
 	pattern = "pattern_solid.tga"
 	color1 = "red"
 
 	colored_emblem = {
-		texture = "ce_solid.dds" # Regular Border
+		texture = "ce_solid.dds"
 		color1 = "white"
 		color2 = "white"
 		instance = { scale = { 1.0 0.1 } position = { 0.5 0.05 } }
@@ -139,11 +135,8 @@ ABU = { # Abu Dhabi
 	}
 }
 #ABU_late = {
-#	# Later adopted the white stripe at the hoist as variant after reverting to traditionnal plain red
-#
 #	pattern = "pattern_solid.tga"
 #	color1 = "red"
-#
 #	colored_emblem = {
 #		texture = "ce_solid.dds"
 #		color1 = "white"
@@ -155,7 +148,7 @@ ABU_subject = {
 	color1 = "red"
 
 	colored_emblem = {
-		texture = "ce_solid.dds" # Regular Border
+		texture = "ce_solid.dds"
 		color1 = "white"
 		color2 = "white"
 		instance = { scale = { 1.0 0.1 } position = { 0.5 0.05 } }
@@ -186,7 +179,7 @@ ABU_subject_FRA = {
 	color1 = "red"
 
 	colored_emblem = {
-		texture = "ce_solid.dds" # Regular Border
+		texture = "ce_solid.dds"
 		color1 = "white"
 		color2 = "white"
 		instance = { scale = { 1.0 0.1 } position = { 0.5 0.05 } }
@@ -222,7 +215,6 @@ ACE = {
 	}
 }
 ACE_absolute_monarchy = {
-	# Early design, starting flag
 
 	pattern = "pattern_solid.tga"
 	color1 = "red"
@@ -241,7 +233,6 @@ ACE_absolute_monarchy = {
 	}
 }
 ACE_theocracy = {
-	# 1953
 
 	pattern = "pattern_solid.tga"
 	color1 = "green"
@@ -263,7 +254,6 @@ ACE_theocracy = {
 	}
 }
 ACE_republic = {
-	# 1976
 
 	pattern = "pattern_solid.tga"
 	color1 = "red"
@@ -325,7 +315,7 @@ ACE_subject = {
 	}
 }
 
-AFG = { # Afghanistan
+AFG = {
 	# 1901 design w/ stylized mosque - default monarchy
 	pattern = "pattern_solid.tga"
 	color1 = "black"
@@ -340,7 +330,6 @@ AFG = { # Afghanistan
 }
 
 AFG_durrani = {
-	# Durrani Empire banner
 	pattern = "pattern_solid.tga"
 	color1 = "black"
 	color2 = "black"
@@ -358,8 +347,6 @@ AFG_durrani = {
 }
 
 AFG_absolute_monarchy = {
-	# Staring flag
-	# Plain black flag of Kandahar
 
 	pattern = "pattern_solid.tga"
 	color1 = "black_light"
@@ -408,7 +395,6 @@ AFG_dictatorship = {
 	}
 }
 AFG_theocracy = {
-	# 1992 Islamic state, a bit simplified
 	pattern = "pattern_solid.tga"
 	color1 = "black"
 	color2 = "white"
@@ -456,7 +442,7 @@ AFG_subject_GBR = {
 	}
 }
 
-AFS = { # Free State
+AFS = {
 	pattern = "pattern_solid.tga"
 	color1 = "blue"
 	colored_emblem = {
@@ -466,7 +452,7 @@ AFS = { # Free State
 	}
 }
 
-AFS_orange = { # Orange Free State
+AFS_orange = {
 	pattern = "pattern_solid.tga"
 	color1 = "orange"
 	colored_emblem = {
@@ -476,7 +462,7 @@ AFS_orange = { # Orange Free State
 	}
 }
 
-AFS_zambezi = { #Zambezi Free State
+AFS_zambezi = {
 	pattern = "pattern_solid.tga"
 	color1 = "black"
 	colored_emblem = {
@@ -491,7 +477,7 @@ AFS_zambezi = { #Zambezi Free State
 	}
 }
 
-AFS_nile = { #Nile Free State
+AFS_nile = {
 	pattern = "pattern_solid.tga"
 	color1 = "white"
 	colored_emblem = {
@@ -501,7 +487,7 @@ AFS_nile = { #Nile Free State
 	}
 }
 
-AFS_niger = { #Niger Free State
+AFS_niger = {
 	pattern = "pattern_solid.tga"
 	color1 = "green"
 	colored_emblem = {
@@ -511,7 +497,7 @@ AFS_niger = { #Niger Free State
 	}
 }
 
-AFS_sahara = { #Sahara Free State
+AFS_sahara = {
 	pattern = "pattern_solid.tga"
 	color1 = "beige"
 	colored_emblem = {
@@ -580,7 +566,7 @@ ALB_communist = {
 	}
 }
 
-MAS = { # Mascara
+MAS = {
 	pattern = "pattern_solid.tga"
 	color1 = "white"
 
@@ -616,7 +602,7 @@ MAS = { # Mascara
 		instance = { scale = { 0.48 0.48 } position = { 0.5 0.5 } }
 	}
 }
-ALD = { # Algeria
+ALD = {
 	pattern = "pattern_solid.tga"
 	color1 = "red"
 
@@ -627,7 +613,6 @@ ALD = { # Algeria
 	}
 }
 ALD_republic = {
-	# Flag of the star of North Africa (base for the 1962 flag)
 	pattern = "pattern_solid.tga"
 	color1 = "green"
 	color2 = "red"
@@ -696,7 +681,7 @@ ALD_subject_FRA = {
 		instance = { position = { 0.5 0.5 } scale = { 1.0 @[1/7] } }
 	}
 }
-ALD_deylik = { # Deylik of Algiers
+ALD_deylik = {
 	pattern = "pattern_solid.tga"
 	color1 = "red"
 
@@ -725,7 +710,7 @@ ALD_deylik = { # Deylik of Algiers
 		instance = { scale = { 1.0 0.2 } position = { 0.5 0.9 } }
 	}
 }
-ALD_barbary = { # Barbary
+ALD_barbary = {
 	pattern = "pattern_solid.tga"
 	color1 = "red"
 
@@ -802,8 +787,7 @@ ALD_barbary = { # Barbary
 		instance = { scale = { 0.20 0.20 } position = { 0.34 0.5 } }
 	}
 }
-ALT = { # Los Altos
-	# simple tricolor variant of state flag, no CoA
+ALT = {
 
 	pattern = "pattern_solid.tga"
 	color1 = "blue"
@@ -844,7 +828,6 @@ ANH = {
 	}
 }
 ANH_absolute_monarchy = {
-	# 1863
 	pattern = "pattern_vertical_split_01.tga"
 	color1 = "red"
 	color2 = "red"
@@ -945,8 +928,7 @@ ARA_republic = {
 	}
 }
 
-ARG = { # Argentina
-	# Monarchy default flag
+ARG = {
 
 	pattern = "pattern_solid.tga"
 	color1 = "white"
@@ -974,11 +956,8 @@ ARG = { # Argentina
 	}
 }
 #ARG_early = {
-#	# 1818-29 Flag (light blue with larger central stripe)
-#
 #	pattern = "pattern_solid.tga"
 #	color1 = "white"
-#
 #	colored_emblem = {
 #		texture = "ce_solid.dds"
 #		color1 = "blue_light"
@@ -986,7 +965,6 @@ ARG = { # Argentina
 #		instance = { scale = { 1.0 0.25 } position = { 0.5 0.125 } }
 #		instance = { scale = { 1.0 0.25 } position = { 0.5 0.875 } }
 #	}
-#
 #	colored_emblem = {
 #		texture = "ce_inti.dds"
 #		color1 = "yellow"
@@ -1007,8 +985,7 @@ ARG_welsh = {
 		instance = { scale = { 1.0 0.25 } position = { 0.5 0.875 } }
 	}
 
-
-	colored_emblem = {
+colored_emblem = {
 		texture = "ce_dragon_wales.dds"
 		color1 = "red"
 		color2 = "red"
@@ -1018,7 +995,6 @@ ARG_welsh = {
 }
 
 ARG_dictatorship = {
-	# 1829 Flag
 
 	pattern = "pattern_solid.tga"
 	color1 = "blue"
@@ -1037,7 +1013,6 @@ ARG_dictatorship = {
 	}
 }
 ARG_republic = {
-	# Modern flag
 
 	pattern = "pattern_solid.tga"
 	color1 = "blue_light"
@@ -1185,7 +1160,6 @@ ARG_communist = {
 	}
 }
 ARG_fascist = {
-	# Nacionalistas
 	pattern = "pattern_solid.tga"
 	color1 = "white"
 
@@ -1246,7 +1220,6 @@ ARM_communist = {
 	}
 }
 
-
 ASA = {
 	pattern = "pattern_solid.tga"
 	color1 = "red"
@@ -1259,7 +1232,6 @@ ASA = {
 }
 
 ASH = {
-	# Ashanti Empire - 1935
 
 	pattern = "pattern_solid.tga"
 	color1 = "yellow"
@@ -1293,7 +1265,6 @@ ASH = {
 	}
 }
 ASH_absolute_monarchy = {
-	# Something looking less modern for the starting flag
 
 	pattern = "pattern_border_west_africa_05.dds"
 	color1 = "black"
@@ -1313,7 +1284,6 @@ ASH_absolute_monarchy = {
 	}
 }
 ASH_republic = {
-	# Modern Ghana
 
 	pattern = "pattern_solid.tga"
 	color1 = "red"
@@ -1380,8 +1350,7 @@ ASS = {
 	}
 }
 
-AST = { # Australia
-	# Eureka flag
+AST = {
 	pattern = "pattern_solid.tga"
 	color1 = "blue"
 	color2 = "white"
@@ -1431,7 +1400,6 @@ AST_subject = {
 	}
 }
 AST_theocracy = {
-	# Australian Anglican flag
 	pattern = "pattern_solid.tga"
 	color1 = "blue"
 	color2 = "white"
@@ -1466,7 +1434,6 @@ AST_theocracy = {
 	}
 }
 AST_monarchy = {
-	# Early COA
 	pattern = "pattern_solid.tga"
 	color1 = "white"
 	color2 = "white"
@@ -1548,7 +1515,6 @@ ATL_communist = {
 }
 
 ATL_subject_spa = {
-	# Cross of Burgundy, colonial flag
 	pattern = "pattern_solid.tga"
 	color1 = "white"
 	color2 = "red"
@@ -1581,7 +1547,6 @@ AUS_republic = {
 	}
 }
 AUS_absolute_monarchy = {
-	# Habsburg imperial coat of arms, on top of the imperial flag (to make it more distinct vs Russia)
 
 	pattern = "pattern_solid.tga"
 	color1 = "black"
@@ -1675,7 +1640,6 @@ AUS_communist = {
 	}
 }
 AUS_fascist = {
-	# Flag of Fatherland's Front
 	pattern = "pattern_solid.tga"
 	color1 = "red"
 
@@ -1707,7 +1671,7 @@ AUS_subject = {
     }
 }
 
-AWA = { # Awadh
+AWA = {
 	# 1842 design
 
 	pattern = "pattern_solid.tga"
@@ -1729,7 +1693,6 @@ AWA = { # Awadh
 	}
 }
 AWA_absolute_monarchy = {
-	# Simplified pre-1842 design
 
 	pattern = "pattern_solid.tga"
 	color1 = "red"
@@ -1783,7 +1746,6 @@ AWA_subject = {
 }
 
 AYM = {
-	# Wiphala
 	pattern = "pattern_solid.tga"
 	color1 = "yellow"
 
@@ -2058,7 +2020,7 @@ BAL = {
 	}
 }
 
-BAS = { # Bastar
+BAS = {
 	pattern = "pattern_vertical_split_01.tga"
 	color1 = "blue"
 	color2 = "white"
@@ -2107,14 +2069,12 @@ BAV = {
 	}
 }
 BAV_republic  = {
-	# Wittelsbach Lozengy flag
 
 	pattern = "pattern_lozengy_bend.dds"
 	color1 = "blue_light"
 	color2 = "white"
 }
 BAV_absolute_monarchy = {
-	# Wittelsbach arms
 
 	pattern = "pattern_solid.tga"
 	color1 = "black"
@@ -2191,7 +2151,6 @@ BAV_subject_PRU = {
 	}
 }
 
-
 BEL = {
 	pattern = "pattern_solid.tga"
 	color1 = "black"
@@ -2249,7 +2208,6 @@ BEL_absolute_monarchy = {
 	}
 }
 BEL_dictatorship = {
-	# Loosely based on a naval flag
 
 	pattern = "pattern_solid.tga"
 	color1 = "white"
@@ -2301,7 +2259,6 @@ BEL_communist = {
 	}
 }
 BEL_fascist = {
-	# VNV Flag (RWB version)
 	pattern = "pattern_solid.tga"
 	color1 = "red"
 
@@ -2362,14 +2319,13 @@ BEL_subject = {
 	}
 }
 
-BER = { # Beroda
-	# Saffron flag (bhagwa zenda) of the Marathi conf.
+BER = {
 
 	pattern = "pattern_solid.tga"
 	color1 = "saffron"
 }
 
-BGL  = { # Bengal
+BGL  = {
 	pattern = "pattern_solid.tga"
 	color1 = "white"
 
@@ -2382,7 +2338,7 @@ BGL  = { # Bengal
 	}
 }
 
-BHN = { # Bahrain
+BHN = {
 	pattern = "pattern_solid.tga"
 	color1 = "red"
 	color2 = "red"
@@ -2395,7 +2351,7 @@ BHN = { # Bahrain
 	}
 }
 
-BHO = { # Bhopal
+BHO = {
 	pattern = "pattern_solid.tga"
 	color1 = "black"
 
@@ -2459,7 +2415,7 @@ BHT_dominion_of_india = {
 	}
 }
 
-BHU = { # Bhutan
+BHU = {
 	pattern = "pattern_per_bend_senester.dds"
 	color1 = "yellow"
 	color2 = "orange"
@@ -2550,7 +2506,7 @@ BIC_dictatorship = {
     }
 }
 
-BIK = { # Bikaner
+BIK = {
 	pattern = "pattern_solid.tga"
 	color1 = "saffron"
 
@@ -2586,8 +2542,7 @@ BIK_subject = {
 	}
 }
 
-BLA = { # Bilua/Solomon Islands
-	# Modern flag simplified
+BLA = {
 	pattern = "pattern_per_bend_senester.dds"
 	color1 = "blue"
 	color2 = "green"
@@ -2600,7 +2555,6 @@ BLA = { # Bilua/Solomon Islands
 	}
 }
 BLA_republic = {
-	# Modern flag of Solomon Islands (bend is thinner)
 	pattern = "pattern_per_bend_senester.dds"
 	color1 = "blue"
 	color2 = "green"
@@ -2650,7 +2604,6 @@ BLA_subject_FRA = {
 	}
 }
 BLA_subject_GBR = {
-	# Solomon islands blue ensign
 	pattern = "pattern_solid.tga"
 	color1 = "blue"
 
@@ -2677,14 +2630,12 @@ BLA_subject_GBR = {
 	}
 }
 
-BLG = { # Bulungan
-	# Plain white flag (same as Johore and most sultanates in the region)
+BLG = {
 
 	pattern = "pattern_solid.tga"
 	color1 = "white"
 }
-BLG_republic = { # Bulungan
-	# Modern flag (no concrete info on intermediate designs)
+BLG_republic = {
 
 	pattern = "pattern_solid.tga"
 	color1 = "blue_light"
@@ -2696,7 +2647,7 @@ BLG_republic = { # Bulungan
 	}
 }
 
-BNJ = { # Banjar
+BNJ = {
 	pattern = "pattern_solid.tga"
 	color1 = "yellow"
 
@@ -2707,7 +2658,7 @@ BNJ = { # Banjar
 	}
 }
 
-BOH = { # Bohemia
+BOH = {
 	pattern = "pattern_solid.tga"
 	color1 = "white"
 	colored_emblem = {
@@ -2730,7 +2681,6 @@ BOH = { # Bohemia
 	}
 }
 BOH_absolute_monarchy = {
-	# Quartered moravian arms for this version perhaps
 
 	pattern = "pattern_solid.tga"
 	color1 = "white"
@@ -2759,7 +2709,6 @@ BOH_absolute_monarchy = {
 }
 
 BOL = {
-	# Default/republic
 
 	pattern = "pattern_solid.tga"
 	color1 = "red"
@@ -2770,8 +2719,7 @@ BOL = {
 		color2 = "green"
 	}
 }
-BOL_dictatorship = { # Bolivia
-	# Starting/Pres. dictatorship
+BOL_dictatorship = {
 
 	pattern = "pattern_solid.tga"
 	color1 = "red"
@@ -2889,7 +2837,7 @@ BOL_subject = {
 	}
 }
 
-BOS = { # Bosnia
+BOS = {
 	# 1878 flag
 
 	pattern = "pattern_solid.tga"
@@ -2925,7 +2873,7 @@ BOS_subject_aus = {
 	}
 }
 
-BRA = { # Brunswick
+BRA = {
 	pattern = "pattern_solid.tga"
 	color1 = "blue"
 
@@ -3255,7 +3203,6 @@ BRI = {
 	}
 }
 BRI_republic = {
-	# Gwenn-ha-du
 	pattern = "pattern_solid.tga"
 	color1 = "white"
 	color2 = "black"
@@ -3270,7 +3217,6 @@ BRI_republic = {
     }
 }
 BRI_theocracy = {
-	# Kroaz Du
 	pattern = "pattern_solid.tga"
 	color1 = "white"
 	color2 = "black"
@@ -3283,8 +3229,6 @@ BRI_theocracy = {
 }
 
 BRU = {
-	# 1906
-	# NB The two bends didnt have the same ratio
 
 	pattern = "pattern_solid.tga"
 	color1 = "yellow"
@@ -3304,7 +3248,6 @@ BRU = {
 	}
 }
 BRU_absolute_monarchy = {
-	# Before 1906 - Starting flag
 
 	pattern = "pattern_solid.tga"
 	color1 = "yellow"
@@ -3329,7 +3272,6 @@ BRU_republic = {
 	}
 }
 BRU_dictatorship = {
-	# Inspired from the Sarawak flag with republican colours (yellow & black being the colours of the royalty and the nobles)
 
 	pattern = "pattern_solid.tga"
 	color1 = "white"
@@ -3377,7 +3319,6 @@ BRU_theocracy = {
 	}
 }
 BRU_subject = {
-	# Based on North Borneo Red Ensign
 	pattern = "pattern_solid.tga"
 	color1 = "red"
 	color2 = "yellow"
@@ -3397,8 +3338,6 @@ BRU_subject = {
 	}
 }
 
-# Basutoland/Lesotho.
-# Fictional design, drawn from the coat of arms of Lesotho. Current flag of Lesotho is a 2006 creation and there doesn't seem to've been a non-British design prior to independence.
 BST = {
 	pattern = "pattern_solid.tga"
 	color1 = "yellow"
@@ -3412,7 +3351,7 @@ BST = {
 	}
 }
 
-BUR = { # Burma
+BUR = {
 	pattern = "pattern_solid.tga"
 	color1 = "white"
 	textured_emblem = {
@@ -3421,7 +3360,6 @@ BUR = { # Burma
 	}
 }
 BUR_absolute_monarchy = {
-	# Starting flag
 
 	pattern = "pattern_solid.tga"
 	color1 = "white"
@@ -3529,7 +3467,6 @@ BUR_theocracy = {
 	}
 }
 BUR_subject = {
-	# Colonial flag
 
 	pattern = "pattern_solid.tga"
 	color1 = "blue"
@@ -3548,7 +3485,6 @@ BUR_subject = {
 
 #BUR_late = {
 #	# 1941 design (similar in colour to colonial flag)
-#
 #	pattern = "pattern_solid.tga"
 #	color1 = "blue"
 #	colored_emblem = {
@@ -3563,8 +3499,7 @@ BUR_subject = {
 #	}
 #}
 
-BRZ = { # Brazil
-	# 1822-89
+BRZ = {
 
 	pattern = "pattern_rhombus.dds"
 	color1 = "green"
@@ -3653,7 +3588,6 @@ BRZ_communist = {
 	}
 }
 BRZ_fascist = {
-	# Flag of the AIB
 	pattern = "pattern_solid.tga"
 	color1 = "blue"
 
@@ -3750,7 +3684,7 @@ BRZ_subject_USA = {
 		color2 = "blue"
 	}
 }
-BUG = { # Buganda - 1881
+BUG = {
 	pattern = "pattern_solid.tga"
 	color1 = "red"
 
@@ -3761,7 +3695,7 @@ BUG = { # Buganda - 1881
 		color2 = "white"
 	}
 }
-BUK = { # Bukhara
+BUK = {
 	pattern = "pattern_border_of_3.dds"
 	color1 = "green"
 	color2 = "orange"
@@ -3788,8 +3722,6 @@ BUK = { # Bukhara
 	}
 }
 BUK_absolute_monarchy = {
-	# Starting flag
-	# Shahada replaces the legend on the right (name of the emir)
 
 	pattern = "pattern_solid.tga"
 	color1 = "green"
@@ -3913,7 +3845,6 @@ BUK_absolute_monarchy = {
 	}
 }
 BUK_republic = {
-	# Same construction as the communist flag, without the red
 	pattern = "pattern_solid.tga"
 	color1 = "green"
 	color2 = "orange"
@@ -3973,7 +3904,6 @@ BUK_dictatorship = {
 	}
 }
 BUK_communist = {
-	# Legend in uzbek using arabic characters
 
 	pattern = "pattern_solid.tga"
 	color1 = "green"
@@ -4004,7 +3934,6 @@ BUK_communist = {
 	}
 }
 BUK_soviet = {
-	# Russian legend in cyrillic once a soviet republic
 
 	pattern = "pattern_solid.tga"
 	color1 = "green"
@@ -4098,8 +4027,7 @@ BUK_subject_GBR = {
 	}
 }
 
-BUL = { # Bulgaria
-	# 1878
+BUL = {
 
 	pattern = "pattern_solid.tga"
 	color1 = "white"
@@ -4171,8 +4099,7 @@ BUL_rome = {
 	}
 }
 
-BYE = { # Belarus
-	# 1917
+BYE = {
 
 	pattern = "pattern_solid.tga"
 	color1 = "white"
@@ -4200,7 +4127,6 @@ BYE_communist = {
     }
 }
 BYE_absolute_monarchy = {
-	# Tricolor with Pahonia COA
 
 	pattern = "pattern_solid.tga"
 	color1 = "white"
@@ -4254,7 +4180,7 @@ BYZ = {
 	}
 }
 
-CAL = { # California
+CAL = {
 	pattern = "pattern_solid.tga"
 	color1 = "white"
 	color2 = "red"
@@ -4288,7 +4214,7 @@ CAL = { # California
 	}
 }
 
-CAL_baj = { # Two California Flag
+CAL_baj = {
 	pattern = "pattern_solid.tga"
 	color1 = "white"
 	color2 = "red"
@@ -4329,7 +4255,7 @@ CAL_baj = { # Two California Flag
 	}
 }
 
-CAL_ussr = { # Commiefornia Flag
+CAL_ussr = {
 	pattern = "pattern_solid.tga"
 	color1 = "red"
 	color2 = "yellow"
@@ -4391,8 +4317,7 @@ CAL_ussr = { # Commiefornia Flag
 	}
 }
 
-CAM = { # Cambodia
-	# Flag of Khmer Empire before 1863
+CAM = {
 
 	pattern = "pattern_border_of_3.dds"
 	color1 = "yellow"
@@ -4429,7 +4354,6 @@ CAM_communist = {
 	}
 }
 CAM_fascist = {
-	# WW2 Kampuchea
 	pattern = "pattern_solid.tga"
 	color1 = "red"
 
@@ -4457,7 +4381,6 @@ CAM_fascist = {
 	}
 }
 CAM_subject_FRA = {
-	# French protectorate flag
 
 	pattern = "pattern_border_of_4.dds"
 	color1 = "red"
@@ -4498,7 +4421,6 @@ CAN_subject = {
 	}
 }
 CAN_theocracy = {
-	# Anglican Church of Canada
 	pattern = "pattern_solid.tga"
 	color1 = "white"
 	color2 = "red"
@@ -4522,7 +4444,6 @@ CAN_theocracy = {
 	}
 }
 CAN_fascist = {
-	# Emblem of NUP
 	pattern = "pattern_solid.tga"
 	color1 = "blue"
 
@@ -4577,7 +4498,6 @@ CAN_republic = {
 	}
 }
 CAN_communist = {
-	# Flag of the canadian CP, only with an additionnal white stripe for difference
 
 	pattern = "pattern_solid.tga"
 	color1 = "red"
@@ -4653,7 +4573,7 @@ CAN_dictatorship = {
 	}
 }
 
-CAS = { # Castile
+CAS = {
 	pattern = "pattern_solid.tga"
 	color1 = "red"
 	color2 = "white"
@@ -4782,8 +4702,7 @@ CEL = {
 	}
 }
 
-CEY = { # Ceylon
-	# Flag of Kandy
+CEY = {
 	pattern = "pattern_solid.tga"
 	color1 = "saffron"
 	color2 = "purple"
@@ -4831,15 +4750,14 @@ CEY_subject_GBR = {
     }
 }
 
-CHC = { # Chechnya
+CHC = {
 	pattern = "pattern_solid.tga"
 	color1 = "green"
 	color2 = "yellow"
 
-	# That's it!
 }
 
-CHC_imamate = { # Caucasian Imamate
+CHC_imamate = {
 	pattern = "pattern_solid.tga"
 	color1 = "green"
 	color2 = "yellow"
@@ -4853,8 +4771,7 @@ CHC_imamate = { # Caucasian Imamate
 	}
 }
 
-CHE = { # Cherokee
-	# Cherokee flag - Alternate circle design
+CHE = {
 	pattern = "pattern_solid.tga"
 	color1 = "orange"
 	color2 = "yellow"
@@ -4943,7 +4860,6 @@ CHI_absolute_monarchy = {
 	}
 }
 CHI_republic = {
-	# Chinese republic 1912
 
 	pattern = "pattern_solid.tga"
 	color1 = "red"
@@ -4974,14 +4890,12 @@ CHI_republic = {
 	}
 }
 CHI_dictatorship = {
-	# Kuomintang flag war flag 1930
 
 	pattern = "pattern_border_of_4.dds"
 	color1 = "blue"
 	color2 = "red"
 
-
-	colored_emblem = {
+colored_emblem = {
 		texture = "ce_sun.dds"
 		color1 = "white"
 		color2 = "white"
@@ -5001,7 +4915,6 @@ CHI_dictatorship = {
 	}
 }
 CHI_theocracy = {
-	# Simple variant of the imperial dragon flag with a border
 	pattern = "pattern_solid.tga"
 	color1 = "yellow"
 	color2 = "yellow"
@@ -5129,7 +5042,7 @@ CHL_republic = {
 		instance = { scale = { 0.54 0.54 } position = { 0.5 0.5 } }
 	}
 }
-CHI_han_empire = { # Han Imperial China
+CHI_han_empire = {
 
 	pattern = "pattern_solid.tga"
 	color1 = "yellow"
@@ -5158,11 +5071,10 @@ CHI_han_empire = { # Han Imperial China
 		color2 = "red"
 	}
 }
-CHL = { # Chile
+CHL = {
 	@chl_width = @[0.5/1.5]
 	@chl_height = 0.5
 	@chl_star_scale = 0.6
-	# Starting/Pres. Oligarchy
 
 	pattern = "pattern_solid.tga"
 	color1 = "white"
@@ -5217,7 +5129,6 @@ CHL_monarchy = {
 	}
 }
 CHL_fascist = {
-	# MNS/Partido Nacista
 	pattern = "pattern_solid.tga"
 	color1 = "blue"
 
@@ -5297,7 +5208,7 @@ CHL_subject = {
 	}
 }
 
-CHP = { # Champasak
+CHP = {
 	pattern = "pattern_solid.tga"
 	color1 = "blue"
 
@@ -5325,19 +5236,14 @@ CIR = {
 		color1 = "yellow"
 		color2 = "yellow"
 
-		# Right side stars
-
         instance = { position = { 0.12 0.65 } scale = { 0.15 0.15 } }
         instance = { position = { 0.18 0.43 } scale = { 0.15 0.15 } }
         instance = { position = { 0.27 0.25 } scale = { 0.15 0.15 } }
         instance = { position = { 0.38 0.14 } scale = { 0.15 0.15 } }
         instance = { position = { 0.38 0.3 } scale = { 0.15 0.15 } }
 
-		# Middle row stars
         instance = { position = { 0.5 0.1 } scale = { 0.15 0.15 } }
         instance = { position = { 0.5 0.3 } scale = { 0.15 0.15 } }
-
-		# Left side stars
 
         instance = { position = { 0.88 0.65 } scale = { 0.15 0.15 } }
         instance = { position = { 0.82 0.43 } scale = { 0.15 0.15 } }
@@ -5364,19 +5270,14 @@ CIR_war = {
 		color1 = "yellow"
 		color2 = "yellow"
 
-		# Right side stars
-
         instance = { position = { 0.12 0.65 } scale = { 0.15 0.15 } }
         instance = { position = { 0.18 0.43 } scale = { 0.15 0.15 } }
         instance = { position = { 0.27 0.25 } scale = { 0.15 0.15 } }
         instance = { position = { 0.38 0.14 } scale = { 0.15 0.15 } }
         instance = { position = { 0.38 0.3 } scale = { 0.15 0.15 } }
 
-		# Middle row stars
         instance = { position = { 0.5 0.1 } scale = { 0.15 0.15 } }
         instance = { position = { 0.5 0.3 } scale = { 0.15 0.15 } }
-
-		# Left side stars
 
         instance = { position = { 0.88 0.65 } scale = { 0.15 0.15 } }
         instance = { position = { 0.82 0.43 } scale = { 0.15 0.15 } }
@@ -5404,7 +5305,6 @@ CLM= {
 }
 
 CLM_dictatorship = {
-	# 1861 US of New Granada 9 stars design
 
 	pattern = "pattern_solid.tga"
 	color1 = "red"
@@ -5431,7 +5331,6 @@ CLM_dictatorship = {
 	}
 }
 CLM_oligarchy = {
-	# 1834 Merchant flag
 
 	pattern = "pattern_solid.tga"
 	color1 = "red"
@@ -5473,7 +5372,7 @@ CLM_subject_SPA = {
 		instance = { scale = { 0.4 0.4 } position = { 0.5 0.5 } }
 	}
 }
-CLM_gran_colombia = { # Gran Colombia
+CLM_gran_colombia = {
 	pattern = "pattern_solid.tga"
 	color1 = "yellow"
 
@@ -5572,10 +5471,7 @@ CLM_subject_MEX = {
 	}
 }
 
-
-CMI = { # Chiang Mai
-	# Design based on the seal for Chiang Mai, which is rather similar to Lan Na (with an elephant)
-	# Colours are conjectured here (it's a red flag for sure and my guess is a golden buddha statue)
+CMI = {
 
 	pattern = "pattern_solid.tga"
 	color1 = "red"
@@ -5641,7 +5537,7 @@ CMI_subject_gold = {
 }
 
 # IGNORE
-CNG = { # Congo
+CNG = {
 	pattern = "pattern_solid.tga"
 	color1 = "blue"
 	color2 = "yellow"
@@ -5670,7 +5566,6 @@ CNW = {
 #	pattern = "pattern_solid.tga"
 #	color1 = "blue"
 #	color2 = "yellow"
-#
 #	colored_emblem = {
 #		texture = "ce_bend_sinister.dds"
 #		color1 = "yellow"
@@ -5695,7 +5590,6 @@ CNW = {
 #	pattern = "pattern_solid.tga"
 #	color1 = "blue"
 #	color2 = "yellow"
-#
 #	colored_emblem = {
 #		texture = "ce_star_05.dds"
 #		color1 = "yellow"
@@ -5715,9 +5609,7 @@ CNW = {
 #	}
 #}
 
-COM = { # Comanche
-	# Design from a period war shield featuring first rays of the sun
-	# BG colour works better in red vs blue of modern tribal flag
+COM = {
 
 	pattern = "pattern_solid.tga"
 	color1 = "red"
@@ -5749,7 +5641,7 @@ COM = { # Comanche
 	}
 }
 
-COR = { # Corsica
+COR = {
 	pattern = "pattern_solid.tga"
 	color1 = "white"
 	color2 = "black"
@@ -5778,8 +5670,7 @@ COR_subject = {
 	}
 }
 
-COS = { # Costa Rica
-	# Adopted 1848 (variants of the UCA design before that)
+COS = {
 
 	pattern = "pattern_solid.tga"
 	color1 = "blue"
@@ -5798,7 +5689,6 @@ COS = { # Costa Rica
 	}
 }
 COS_subject = {
-	# Based on early CoA
 	pattern = "pattern_solid.tga"
 	color1 = "red"
 	color2 = "red"
@@ -5927,7 +5817,6 @@ CRO_subject = {
 }
 
 CSA = {
-	# Stars & bars (13 stars version, arranged & rotated in circle)
 	pattern = "pattern_solid.tga"
 	color1 = "red"
 
@@ -5942,7 +5831,6 @@ CSA = {
     }
 }
 CSA_stainless = {
-	# Stainless banner (13 stars design, aligned with saltire)
 
 	pattern = "pattern_solid.tga"
 	color1 = "white"
@@ -6059,7 +5947,6 @@ CSA_communist = {
 	}
 }
 CSA_subject_MEX = {
-	# Mexican colours
 	pattern = "pattern_solid.tga"
 	color1 = "green"
 
@@ -6074,8 +5961,7 @@ CSA_subject_MEX = {
     }
 }
 
-CRE = { # Crete
-	# 1898 Ottoman star in canton
+CRE = {
 
 	pattern = "pattern_solid.tga"
 	color1 = "blue"
@@ -6100,7 +5986,6 @@ CRE = { # Crete
 }
 
 CRE_variant = {
-	# Variant with stripes
 
 	pattern = "pattern_solid.tga"
 	color1 = "white"
@@ -6136,7 +6021,7 @@ CRI = {
 	}
 }
 
-CUB = { # Cuba
+CUB = {
 	pattern = "pattern_solid.tga"
 	color1 = "blue"
 	color2 = "white"
@@ -6166,8 +6051,6 @@ CUB = { # Cuba
 	}
 }
 CUB_spa = {
-	# Autonomista flag. Didn't actually appear until the 1890s.
-	# Historically Cuba was using the Spanish flag which is a bit boring
 
 	pattern = "pattern_solid.tga"
 	color1 = "yellow"
@@ -6191,7 +6074,6 @@ CUB_spa = {
 	}
 }
 CUB_spa_burgundy = {
-	# Cross of Burgundy, colonial flag
 
 	pattern = "pattern_solid.tga"
 	color1 = "white"
@@ -6204,7 +6086,6 @@ CUB_spa_burgundy = {
 	}
 }
 CUB_early = {
-	# Bolivar Flag - First independentist flag
 
 	pattern = "pattern_solid.tga"
 	color1 = "blue"
@@ -6226,7 +6107,6 @@ CUB_early = {
 	}
 }
 CUB_subject_USA = {
-	# Inspired from 1847 Independentist flag (Club de la Habana) - Precusor to modern one
 
 	pattern = "pattern_solid.tga"
 	color1 = "white"
@@ -6250,7 +6130,6 @@ CUB_subject_USA = {
 	}
 }
 CUB_oligarchy = {
-	# 1848 Independentist Flag (Conspiración de La Mina)
 
 	pattern = "pattern_solid.tga"
 	color1 = "blue"
@@ -6269,7 +6148,6 @@ CUB_oligarchy = {
 	}
 }
 CUB_dictatorship = {
-	# 1868 Independentist Flag (Grito de Yara)
 
 	pattern = "pattern_solid.tga"
 	color1 = "white"
@@ -6296,7 +6174,6 @@ CUB_dictatorship = {
 	}
 }
 CUB_independence_war = {
-	# purposefully the same as CUB_dictatorship
 
 	pattern = "pattern_solid.tga"
 	color1 = "white"
@@ -6333,8 +6210,7 @@ CUB_subject = {
 	}
 }
 
-CYP = { # Cyprus
-	# Flag used by cypriots during greek war of independence
+CYP = {
 
 	pattern = "pattern_solid.tga"
 	color1 = "blue"
@@ -6382,7 +6258,7 @@ CYP_TUR = {
 	}
 }
 
-CZH = { # Czechoslovakia
+CZH = {
 	pattern = "pattern_solid.tga"
 	color1 = "white"
 	color2 = "red"
@@ -6430,8 +6306,7 @@ CZH_fascist = {
 	}
 }
 
-DAG = { # Dagestan
-	# Emirate flag, colours sometimes given in inverted order
+DAG = {
 
 	pattern = "pattern_border_of_3.dds"
 	color1 = "green"
@@ -6473,7 +6348,6 @@ DAG_communist = {
 }
 
 DAH = {
-	# Kingdom of Dahomey/Benin
 
 	pattern = "pattern_border_of_4.dds"
 	color1 = "white"
@@ -6543,8 +6417,7 @@ DAH_subject = {
 	}
 }
 
-DAI = { # Dai Nam
-	# Imperial flag
+DAI = {
 	pattern = "pattern_border_of_3.dds"
 	color1 = "yellow"
 	color2 = "blue_light"
@@ -6567,7 +6440,6 @@ DAI_monarchy = {
     }
 }
 DAI_republic = {
-	# Annam flag
 	pattern = "pattern_solid.tga"
 	color1 = "yellow"
 
@@ -6579,7 +6451,6 @@ DAI_republic = {
 	}
 }
 DAI_subject = {
-	# Annam Protectorate
 
 	pattern = "pattern_solid.tga"
 	color1 = "yellow"
@@ -6615,7 +6486,6 @@ DAI_fascist = {
 	}
 }
 DAI_subject_FRA = {
-	# Conchinchine
 	pattern = "pattern_solid.tga"
 	color1 = "yellow"
 
@@ -6656,7 +6526,7 @@ DEI_subject = {
 	}
 }
 
-DEI_voc = { #Company Flag
+DEI_voc = {
 	pattern = "pattern_solid.tga"
 	color1 = "red"
 
@@ -6683,7 +6553,6 @@ DEI_voc = { #Company Flag
 }
 
 DES = {
-	# Deseret
 
 	pattern = "pattern_solid.tga"
 	color1 = "white"
@@ -6753,8 +6622,7 @@ DES_dictatorship = {
     }
 }
 
-DKT = { # Dakota Sioux
-	# Combination of traditionnal pattern and thunderbird symbol
+DKT = {
 
 	pattern = "pattern_solid.tga"
 	color1 = "white"
@@ -6780,7 +6648,7 @@ DKT = { # Dakota Sioux
 	}
 }
 
-DOM = { # Dominican republic
+DOM = {
 	# 1844 design
 	pattern = "pattern_solid.tga"
 	color1 = "blue"
@@ -6803,10 +6671,8 @@ DOM = { # Dominican republic
 }
 #DOM_early = {
 #	# 1844 design, possibly used before (haitian flag with white cross, variants with stars)
-#
 #	pattern = "pattern_solid.tga"
 #	color1 = "blue"
-#
 #	colored_emblem = {
 #		texture = "ce_bicolor_bottom.dds"
 #		color1 = "red"
@@ -6819,7 +6685,7 @@ DOM = { # Dominican republic
 #	}
 #}
 
-DON = {	# Don Republic
+DON = {
 	pattern = "pattern_solid.tga"
 	color1 = "blue"
 
@@ -6927,8 +6793,7 @@ DZG_subject = {
 	}
 }
 
-ECU = { # Ecuador
-	# 1830-1845 Starting/Republic
+ECU = {
 
 	pattern = "pattern_solid.tga"
 	color1 = "yellow"
@@ -6992,7 +6857,6 @@ ECU_oligarchy = {
 	}
 }
 ECU_communist = {
-	# Emblem of PCE
 
 	pattern = "pattern_solid.tga"
 	color1 = "red"
@@ -7065,7 +6929,6 @@ ECU_subject = {
 	}
 }
 ECU_subject_USA = {
-	# Based on the 7 provinces flags (so also 7 stripes)
 
 	pattern = "pattern_solid.tga"
 	color1 = "white"
@@ -7081,8 +6944,7 @@ ECU_subject_USA = {
     }
 }
 
-ELS = { # El Salvador
-	# 1865 design (UCA flag before that)
+ELS = {
 
 	pattern = "pattern_solid.tga"
 	color1 = "white"
@@ -7142,7 +7004,7 @@ ENG_coa_france = {
     }
 }
 
-EOT = { # Emirate of Transjordan
+EOT = {
 	pattern = "pattern_solid.tga"
 	color1 = "black"
 	color2 = "white"
@@ -7167,7 +7029,7 @@ EOT = { # Emirate of Transjordan
 	}
 }
 
-EST = { # Estonia
+EST = {
 	pattern = "pattern_solid.tga"
 	color1 = "blue_light"
 
@@ -7178,7 +7040,6 @@ EST = { # Estonia
 	}
 }
 EST_absolute_monarchy = {
-	# variant with centered CoA
 
 	pattern = "pattern_solid.tga"
 	color1 = "blue_light"
@@ -7245,7 +7106,6 @@ ETH = {
 	}
 }
 ETH_absolute_monarchy = {
-	# Original design 1875
 
 	pattern = "pattern_solid.tga"
 	color1 = "red"
@@ -7266,7 +7126,6 @@ ETH_absolute_monarchy = {
 	}
 }
 ETH_republic = {
-	# 1881-1941
 
 	pattern = "pattern_solid.tga"
 	color1 = "red"
@@ -7324,7 +7183,6 @@ DEN = {
 	}
 }
 DEN_absolute_monarchy = {
-	# National Coat of Arms as placeholder
 
 	pattern = "pattern_solid.tga"
 	color1 = "red"
@@ -7429,8 +7287,7 @@ DEN_fascist = {
 	}
 }
 
-EGY = { # Egypt
-	# 1923-58
+EGY = {
 
 	pattern = "pattern_solid.tga"
 	color1 = "green"
@@ -7452,7 +7309,6 @@ EGY = { # Egypt
 	}
 }
 EGY_absolute_monarchy = {
-	# Late 19th c. design - Starting flag
 
 	pattern = "pattern_solid.tga"
 	color1 = "red"
@@ -7568,7 +7424,6 @@ EGY_subject_GBR = {
 }
 
 FER = {
-	# Alleged nationalist flag
 
 	pattern = "pattern_solid.tga"
 	color1 = "blue"
@@ -7580,8 +7435,6 @@ FER = {
 	}
 }
 FER_republic = {
-	# Possibly with DVR legend (like the political flag it's taken from)
-	# Or simple change in color (to these) from the communist flag (which is the only historical one)
 
 	pattern = "pattern_solid.tga"
 	color1 = "white"
@@ -7594,7 +7447,6 @@ FER_republic = {
 	}
 }
 FER_communist = {
-	# Cyrillic D V R in blue canton
 
 	pattern = "pattern_solid.tga"
 	color1 = "red"
@@ -7801,7 +7653,6 @@ FRA_subject = {
 	}
 }
 FRA_theocracy = {
-	# Inspired from flag from the Ancien Régime (so it may exist already)
 	pattern = "pattern_cross.dds"
 	color1 = "blue"
 	color2 = "white"
@@ -7850,7 +7701,6 @@ FRA_theocracy = {
 	}
 }
 FRA_dictatorship = {
-	# Variant based on tricolor with (lesser) coat of arms of the empire
 
 	pattern = "pattern_solid.tga"
 	color1 = "blue"
@@ -7877,14 +7727,10 @@ FRA_dictatorship = {
 	}
 }
 #FRA_dictatorship_emperor = {
-#	# Imperial standard of Napoleon
-#	# Iä! Iä! Napoleon fhtagn! Ph'nglui mglw'nfah Napoleon Les Invalides wgah'nagl fhtagn!
-#
 #	pattern = "pattern_border_double.dds"
 #	color1 = "white"
 #	color2 = "red"
 #	color3 = "blue"
-#
 #	textured_emblem = {
 #		texture = "te_crown_imperial_eagles.dds"
 #		instance = { scale = { 0.25 0.25 } position = { 0.5 0.22 } }
@@ -7936,7 +7782,6 @@ FRA_communist_canton = {
 	}
 }
 FRA_military = {
-	# Personal flag of Pétain
 	pattern = "pattern_solid.tga"
 	color1 = "blue"
 
@@ -7966,7 +7811,6 @@ FRA_military = {
 	}
 }
 FRA_fascist = {
-	# Based on PPF flag and emblem
 	pattern = "pattern_per_saltire.dds"
 	color1 = "red"
 	color2 = "blue"
@@ -8008,7 +7852,6 @@ FIN = {
 	}
 }
 FIN_subject = {
-	# renamed from FIN_canton
 	pattern = "pattern_solid.tga"
 	color1 = "white"
 	color2 = "blue"
@@ -8020,14 +7863,12 @@ FIN_subject = {
 	}
 }
 FIN_subject_RUS = {
-	# Default starting flag - renamed from FIN_subject
 
 	pattern = "pattern_solid.tga"
 	color1 = "blue"
 	color2 = "blue"
 }
 FIN_fascist = {
-	# Colors and overall design of Lapuan Liike with a pagan cross as the main symbol
 	pattern = "pattern_solid.tga"
 	color1 = "black"
 
@@ -8051,8 +7892,7 @@ FIN_fascist = {
 	}
 }
 
-FJI = { # Fidji
-	# First design 1865
+FJI = {
 
 	pattern = "pattern_solid.tga"
 	color1 = "blue"
@@ -8065,7 +7905,6 @@ FJI = { # Fidji
 	}
 }
 FJI_subject = {
-	# Colonial flag
 
 	pattern = "pattern_solid.tga"
 	color1 = "blue"
@@ -8101,7 +7940,7 @@ FJI_subject = {
 		instance = { scale = { 0.08 0.08 } position = { 0.728 0.338 } }
 	}
 }
-FND_andes_federation = { # Federation of the Andes
+FND_andes_federation = {
 
 	pattern = "pattern_solid.tga"
 	color1 = "yellow"
@@ -8118,7 +7957,7 @@ FND_andes_federation = { # Federation of the Andes
 	}
 }
 
-FND_united_provinces = { # Federation of the Andes
+FND_united_provinces = {
 
 	pattern = "pattern_solid.tga"
 	color1 = "blue"
@@ -8179,7 +8018,7 @@ FND_communist = {
 	}
 }
 
-FLA = {	# Flanders
+FLA = {
 	pattern = "pattern_solid.tga"
 	color1 = "yellow"
 	color2 = "black"
@@ -8498,7 +8337,7 @@ FSA_subject_MEX = {
 	}
 }
 
-GAL = { # Galicia (Halych)
+GAL = {
 	pattern = "pattern_solid.tga"
 	color1 = "azure"
 
@@ -8509,7 +8348,7 @@ GAL = { # Galicia (Halych)
 	}
 }
 
-GAL_tricolor = { # Galicia (Halych)	- 1849-1890
+GAL_tricolor = {
 	pattern = "pattern_solid.tga"
 	color1 = "medium_blue"
 
@@ -8520,7 +8359,7 @@ GAL_tricolor = { # Galicia (Halych)	- 1849-1890
 	}
 }
 
-GAL_white_and_red = { # Galicia (Halych) - 1890-1918
+GAL_white_and_red = {
 	pattern = "pattern_solid.tga"
 	color1 = "red"
 
@@ -8532,14 +8371,11 @@ GAL_white_and_red = { # Galicia (Halych) - 1890-1918
 }
 
 GBR = {
-	# 1707-1800 flag without the Irish red diagonals
     sub = {
         parent = "sub_GBR"
     }
 }
 GBR_dictatorship = {
-	# 1659 ensign
-	# Quarterly; England, Scotland, Scotland, England
 	pattern = "pattern_checkers_01.tga"
 
 	color1 = "white"
@@ -8563,8 +8399,6 @@ GBR_dictatorship = {
 	}
 }
 GBR_dictatorship_uk = {
-	# Based on personal standard of Jolly Olly
-	# Quarterly; England, Scotland, Ireland, England
 	pattern = "pattern_checkers_01.tga"
 
 	color1 = "white"
@@ -8593,7 +8427,6 @@ GBR_dictatorship_uk = {
 	}
 }
 GBR_republic = {
-	# same as Hungarian tricolor, also symbolised British Republicanism in this era
 	pattern = "pattern_solid.tga"
 	color1 = "red"
 
@@ -8619,8 +8452,6 @@ GBR_scotland = {
 	}
 }
 GBR_theocracy = {
-	# Inspired by the Australian Anglican flag because it still has some blue.
-	# Better to save the St George cross for England itself.
 	pattern = "pattern_solid.tga"
 	color1 = "blue"
 	color2 = "white"
@@ -8632,7 +8463,6 @@ GBR_theocracy = {
 	}
 }
 GBR_uk = {
-	# the modern British flag, with red diagonals
     sub = {
         parent = "sub_GBR_uk"
     }
@@ -8776,7 +8606,6 @@ GBR_uk_coa_france = {
     }
 }
 GBR_white_ensign  = {
-	# white ensign of the Royal Navy
 	pattern = "pattern_solid.tga"
 	color1 = "white"
 	color2 = "red"
@@ -8792,7 +8621,6 @@ GBR_white_ensign  = {
     }
 }
 GBR_uk_white_ensign  = {
-	# white ensign of the Royal Navy
 	pattern = "pattern_solid.tga"
 	color1 = "white"
 	color2 = "red"
@@ -8874,7 +8702,6 @@ GBR_communist_canton = {
 	}
 }
 GBR_fascist = {
-	# BUF
 	pattern = "pattern_solid.tga"
 	color1 = "blue"
 
@@ -8886,8 +8713,7 @@ GBR_fascist = {
 	}
 }
 
-GEO = { # Georgia
-	# since 1918 (outside USSR period)
+GEO = {
 	pattern = "pattern_solid.tga"
 	color1 = "red"
 	color2 = "black"
@@ -9051,7 +8877,6 @@ GER_ddr = {
 	}
 }
 GER_fascist = {
-	# War ensign with iron cross moved from canton to replace swastika
 	pattern = "pattern_solid.tga"
 	color1 = "red"
 	colored_emblem = {
@@ -9068,7 +8893,6 @@ GER_fascist = {
 }
 
 GGR_fascist = {
-	# Nazi flag, swastika replaced
 	pattern = "pattern_solid.tga"
 	color1 = "red"
 
@@ -9121,7 +8945,7 @@ GER_bavarian = {
 	}
 }
 
-GER_austrian = { # German Confederation
+GER_austrian = {
 	pattern = "pattern_solid.tga"
 	color1 = "black"
 	color2 = "red"
@@ -9254,7 +9078,7 @@ GER_wurttemberg = {
 
 ### end of country-specific Germany variants ###
 
-GLI = { #Galicia
+GLI = {
 	pattern = "pattern_solid.tga"
 	color1 = "white"
 
@@ -9311,7 +9135,6 @@ GRE_absolute_monarchy = {
 	}
 }
 GRE_fascist = {
-	# EON flag, without the crown in canton
 	pattern = "pattern_solid.tga"
 	color1 = "blue"
 
@@ -9369,8 +9192,7 @@ GRN = {
 	}
 }
 
-GUA = { # Guatemala
-	# Since 1871
+GUA = {
 
 	pattern = "pattern_solid.tga"
 	color1 = "blue_light"
@@ -9412,7 +9234,6 @@ GUA_absolute_monarchy = {
 	}
 }
 GUA_subject_SPA = {
-	# 1858 design (UCA & SPA combination)
 
 	pattern = "pattern_solid.tga"
 	color1 = "blue"
@@ -9474,7 +9295,6 @@ GUA_subject_MEX = {
 	}
 }
 GUA_republic = {
-	# 1851
 	pattern = "pattern_solid.tga"
 	color1 = "blue"
 	color2 = "white"
@@ -9517,7 +9337,7 @@ GUA_subject = {
 	}
 }
 
-GWA_princely = { # Gwalior
+GWA_princely = {
 
 	pattern = "pattern_large_bend_senester.dds"
 	color1 = "saffron"
@@ -9529,7 +9349,6 @@ GWA_princely = { # Gwalior
 	}
 }
 GWA = {
-	# Alternate type without bend
 
 	pattern = "pattern_border_of_3.dds"
 	color1 = "saffron"
@@ -9688,7 +9507,6 @@ HAI_subject = {
 	}
 }
 HAI_subject_SPA = {
-	# Spanish Haiti, derived from Great Columbia
 	pattern = "pattern_solid.tga"
 	color1 = "yellow"
 
@@ -9961,7 +9779,6 @@ HAN_subject = {
 	}
 }
 HAN_subject_GBR = {
-	# Subject flag for UK
 
 	pattern = "pattern_solid.tga"
 	color1 = "red"
@@ -10031,8 +9848,7 @@ HAN_subject_PRU = {
 	}
 }
 
-
-HAR = { # Harar
+HAR = {
 	pattern = "pattern_solid.tga"
 	color1 = "red"
 
@@ -10208,7 +10024,7 @@ HBC_communist = {
 	}
 }
 
-HDJ = { # Hedjaz
+HDJ = {
 
 	pattern = "pattern_solid.tga"
 	color1 = "green"
@@ -10223,7 +10039,6 @@ HDJ = { # Hedjaz
 	}
 }
 HDJ_republic = {
-	# 1917-26
 
 	pattern = "pattern_solid.tga"
 	color1 = "black"
@@ -10252,7 +10067,6 @@ HDJ_subject = {
 }
 
 HDJ_subject_GBR = {
-	# Blue ensign
 
 	pattern = "pattern_solid.tga"
 	color1 = "blue"
@@ -10337,7 +10151,6 @@ HES_republic = {
 	}
 }
 HES_oligarchy = {
-	# Merchant flag
 	pattern = "pattern_solid.tga"
 	color1 = "red"
 
@@ -10348,7 +10161,6 @@ HES_oligarchy = {
 	}
 }
 HES_communist = {
-	# Merchant flag
 	pattern = "pattern_solid.tga"
 	color1 = "red"
 
@@ -10424,8 +10236,7 @@ HES_subject_PRU = {
 	}
 }
 
-HND = { # India
-	# Modern flag (azad hind) with dharmachakra (since 1947)
+HND = {
 
 	pattern = "pattern_solid.tga"
 	color1 = "orange"
@@ -10458,7 +10269,6 @@ HND_subject = {
 	}
 }
 HND_communist = {
-	# Communist Party of India rather uniquely uses a white version of the hammer and sickle emblem
 	pattern = "pattern_solid.tga"
 	color1 = "red"
 	color2 = "white"
@@ -10477,13 +10287,11 @@ HND_communist = {
 	}
 }
 HND_fascist = {
-	# RSS flag
 	pattern = "pattern_solid.tga"
 	color1 = "saffron"
 }
 
-HOB = { # Hobyo
-	# The flag was historically plain red (same as most neighbours) so based on COA (simplified)
+HOB = {
 
 	pattern = "pattern_solid.tga"
 	color1 = "white"
@@ -10544,7 +10352,6 @@ HOL_republic = {
 	}
 }
 HOL_oligarchy = {
-	# Merchant flag
 	pattern = "pattern_solid.tga"
 	color1 = "blue"
 	color2 = "white"
@@ -10634,7 +10441,7 @@ HOL_subject_DEN = {
 	}
 }
 
-HON = { # Honduras
+HON = {
 	# 1866 design
 
 	pattern = "pattern_solid.tga"
@@ -10658,10 +10465,8 @@ HON = { # Honduras
 }
 #HON_early = {
 #	# early unofficial design without stars (1838-49)
-#
 #	pattern = "pattern_solid.tga"
 #	color1 = "blue"
-#
 #	colored_emblem = {
 #		texture = "ce_tricolor_horizontal.dds"
 #		color1 = "white"
@@ -10725,7 +10530,7 @@ HON_communist = {
 	}
 }
 
-HRO = { # Herero
+HRO = {
 	pattern = "pattern_solid.tga"
 	color1 = "black"
 
@@ -10754,7 +10559,6 @@ HUN = {
 	}
 }
 HUN_monarchy = {
-	# Kingdom of Hungary flag - 1848-1849, 1867-1869, and 1874-1896
 	pattern = "pattern_solid.tga"
 	color1 = "red"
 
@@ -10770,7 +10574,6 @@ HUN_monarchy = {
 	}
 }
 HUN_fascist = {
-	# Arrow cross party
 	pattern = "pattern_solid.tga"
 	color1 = "red"
 
@@ -10788,7 +10591,7 @@ HUN_fascist = {
 	}
 }
 
-HYD = { # Hyderabad
+HYD = {
 	pattern = "pattern_solid.tga"
 	color1 = "saffron"
 
@@ -10800,7 +10603,6 @@ HYD = { # Hyderabad
 	}
 }
 HYD_princely = {
-	# Princely state, before 1900
 
 	pattern = "pattern_solid.tga"
 	color1 = "saffron"
@@ -10814,7 +10616,6 @@ HYD_princely = {
 	}
 }
 HYD_republic = {
-	# Adopted c 1900
 
 	pattern = "pattern_solid.tga"
 	color1 = "orange" # or saffron, sometimes (wrongly) red
@@ -11486,7 +11287,7 @@ IDN = {
 	}
 }
 
-IDS = { # Industan
+IDS = {
 	pattern = "pattern_solid.tga"
 	color1 = "green"
 
@@ -11504,9 +11305,7 @@ IDS = { # Industan
 	}
 }
 
-IND = { # Indore
-	# Saffron flag hist. before 1924
-	# 1924
+IND = {
 
 	pattern = "pattern_solid.tga"
 	color1 = "white"
@@ -11529,8 +11328,7 @@ IND_subject = {
 	}
 }
 
-ION = { # Ionian Islands
-	# Septinsular Republic
+ION = {
 
 	pattern = "pattern_border_of_4.dds"
 	color1 = "blue"
@@ -11556,8 +11354,7 @@ ION_subject = {
 	}
 }
 
-IRC = { # Iron Confederacy
-	# Painted buffalo skull, borrowing colours from modern tribe flag
+IRC = {
 
 	pattern = "pattern_solid.tga"
 	color1 = "green"
@@ -11569,7 +11366,7 @@ IRC = { # Iron Confederacy
 	}
 }
 
-IRE = { # Ireland
+IRE = {
 	pattern = "pattern_solid.tga"
 	color1 = "green"
 
@@ -11591,7 +11388,6 @@ IRE_with_canton = {
 	}
 }
 IRE_republic = {
-	# Irish tricolor
 	pattern = "pattern_solid.tga"
 	color1 = "green"
 	color2 = "white"
@@ -11604,7 +11400,6 @@ IRE_republic = {
 	}
 }
 IRE_republic_state_religion = {
-	# Irish tricolor, but with Catholic yellow instead of Protestant Orange
 	pattern = "pattern_solid.tga"
 	color1 = "green"
 	color2 = "white"
@@ -11617,7 +11412,6 @@ IRE_republic_state_religion = {
 	}
 }
 IRE_republic_state_religion = {
-	# Irish tricolor, but with Catholic yellow instead of Protestant Orange
 	pattern = "pattern_solid.tga"
 	color1 = "green"
 	color2 = "white"
@@ -11647,7 +11441,6 @@ IRE_st_patrick_saltire = {
 	}
 }
 IRE_theocracy = {
-	# Irish tricolor, with Papal Tiara
 	pattern = "pattern_solid.tga"
 	color1 = "green"
 	color2 = "white"
@@ -11664,7 +11457,6 @@ IRE_theocracy = {
 	}
 }
 IRE_theocracy_state_religion = {
-	# Irish tricolor, but with Catholic yellow instead of Protestant Orange. Also has Papal Tiara
 	pattern = "pattern_solid.tga"
 	color1 = "green"
 	color2 = "white"
@@ -11703,7 +11495,6 @@ IRE_easter_rising = {
 	}
 }
 IRE_fascist = {
-	# Blue shirts (saltire can also be fimbriated gold)
 	pattern = "pattern_solid.tga"
 	color1 = "blue_light"
 
@@ -11713,7 +11504,6 @@ IRE_fascist = {
 		color2 = "red"
 	}
 }
-
 
 IRO = {
 	pattern = "pattern_solid.tga"
@@ -11726,9 +11516,7 @@ IRO = {
 	}
 }
 
-IRQ = { # Iraq
-	# Monarchy
-	# first design 1921
+IRQ = {
 
 	pattern = "pattern_solid.tga"
 	color1 = "black"
@@ -11748,7 +11536,6 @@ IRQ = { # Iraq
 	}
 }
 IRQ_absolute_monarchy = {
-	# Second more distinctive design (different from Hedjaz) which was used after 1924
 
 	pattern = "pattern_solid.tga"
 	color1 = "black"
@@ -11781,7 +11568,6 @@ IRQ_absolute_monarchy = {
 	}
 }
 IRQ_republic = {
-	# Adopted 1963
 
 	pattern = "pattern_solid.tga"
 	color1 = "red"
@@ -11809,7 +11595,7 @@ IRQ_republic = {
 	}
 }
 
-ISR = { # Israel
+ISR = {
 	pattern = "pattern_solid.tga"
 	color1 = "white"
 	color2 = "blue"
@@ -11829,8 +11615,7 @@ ISR = { # Israel
 	}
 }
 
-ITA = { # Italy
-	# Until 1946
+ITA = {
 	pattern = "pattern_solid.tga"
 	color1 = "green"
 
@@ -11964,7 +11749,6 @@ ITA_republic = {
 	}
 }
 ITA_dictatorship = {
-	# Flag of Napoleonic kingdom
 
 	pattern = "pattern_rhombus.dds"
 	color1 = "red"
@@ -12013,7 +11797,7 @@ ITA_fascist = {
     }
 }
 
-IUS = { # Idel-Ural State
+IUS = {
 	pattern = "pattern_solid.tga"
 	color1 = "blue_light"
 	colored_emblem = {
@@ -12042,7 +11826,7 @@ KNK = {
 	}
 }
 
-KTI = { # Kutai
+KTI = {
 	pattern = "pattern_solid.tga"
 	color1 = "yellow"
 
@@ -12053,7 +11837,7 @@ KTI = { # Kutai
 	}
 }
 
-JAB = { # Jabal Shammar
+JAB = {
 	pattern = "pattern_solid.tga"
 	color1 = "red"
 
@@ -12074,9 +11858,7 @@ JAB = { # Jabal Shammar
     }
 }
 
-JAI = { # Jaipur
-	# Sun face only added 1877 but helps differenciate with numerous similar designs in the area
-	# Colour order changed 1922 (to RYWGB)
+JAI = {
 
 	pattern = "pattern_solid.tga"
 	color1 = "red"
@@ -12214,7 +11996,7 @@ JAM_republic = {
 	}
 }
 
-JAN = { # Jan Mayen
+JAN = {
 	pattern = "pattern_solid.tga"
 	color1 = "blue"
 
@@ -12256,7 +12038,7 @@ JAN_subject = {
 	}
 }
 
-JAP = { # Japan
+JAP = {
 	pattern = "pattern_solid.tga"
 	color1 = "white"
 
@@ -12297,7 +12079,6 @@ JAP_taikunate = {
 	}
 }
 JAP_absolute_monarchy = {
-	# Imperial standard
 	pattern = "pattern_solid.tga"
 	color1 = "red"
 	color2 = "yellow"
@@ -12353,7 +12134,6 @@ JAP_dictatorship = {
 	}
 }
 JAP_theocracy_buddhist = {
-	# Buddhist theocracy, based on Buddhist flag
 
 	pattern = "pattern_solid.tga"
 	color1 = "green"
@@ -12386,7 +12166,7 @@ JAP_theocracy_buddhist = {
 		instance = { scale = { 1.0 0.6 } position = { 1.33 0.7 } }
 	}
 }
-JAP_theocracy_shinto = { # Japan
+JAP_theocracy_shinto = {
 	pattern = "pattern_solid.tga"
 	color1 = "white"
 
@@ -12397,7 +12177,6 @@ JAP_theocracy_shinto = { # Japan
 	}
 }
 JAP_subject = {
-	# Based on imperial std
 
 	pattern = "pattern_solid.tga"
 	color1 = "red"
@@ -12411,7 +12190,6 @@ JAP_subject = {
 	}
 }
 JAP_usa = {
-	# Flag during allied occupation
 
 	pattern = "pattern_solid.tga"
 	color1 = "blue"
@@ -12424,7 +12202,6 @@ JAP_usa = {
 	}
 }
 JAP_fascist = {
-	# Variant of the rising sun war flag (naval flag) - Another possibility is the nippon youth flag : red with with roundel (so invert of modern flag) or a mix of both
 	pattern = "pattern_gironny_16_center.dds"
 	color1 = "white"
 	color2 = "red"
@@ -12437,7 +12214,6 @@ JAP_fascist = {
 	}
 }
 JAP_communist = {
-	# Inspired by the slogan of the Heimin Shinbun
 	pattern = "pattern_solid.tga"
 	color1 = "white"
 	color2 = "red"
@@ -12461,7 +12237,7 @@ JAP_communist = {
 	}
 }
 
-JAS = { # Jaisalmer
+JAS = {
 	pattern = "pattern_solid.tga"
 	color1 = "purple"
 
@@ -12495,7 +12271,7 @@ JAS_subject = {
 	}
 }
 
-JAV = { # Java (Green & white flags were adopted by states of the federation, including W & E Java)
+JAV = {
 	pattern = "pattern_solid.tga"
 	color1 = "green"
 	color2 = "white"
@@ -12507,7 +12283,6 @@ JAV = { # Java (Green & white flags were adopted by states of the federation, in
 	}
 }
 JAV_theocracy = {
-	# Sultanate of Mataram
 	pattern = "pattern_border_of_3.dds"
 	color1 = "red"
 	color2 = "white"
@@ -12526,16 +12301,14 @@ JAV_theocracy = {
 	}
 }
 
-JMB = { # Jambi
-	# No really, this is it, this is the historical flag. If you read this comment and then file a bug on the forums I will be passive-aggressive and snide.
+JMB = {
 
 	pattern = "pattern_solid.tga"
 	color1 = "white"
 	color2 = "white"
 }
 
-JOD = { # Jodhpur
-	# 1877
+JOD = {
 
 	pattern = "pattern_solid.tga"
 	color1 = "saffron"
@@ -12604,8 +12377,7 @@ JOD_subject = {
 	}
 }
 
-JOH = { # Johore
-	# 1865 design with saltire - Monarchy default
+JOH = {
 
 	pattern = "pattern_solid.tga"
 	color1 = "black"
@@ -12623,9 +12395,7 @@ JOH = { # Johore
         instance = { position = { 0.25 0.25 } scale = { 0.5 0.5 } }
 	}
 }
-JOH_absolute_monarchy = { # Johore
-	# Early flag (1855) - Plain white before that
-	# Starting flag
+JOH_absolute_monarchy = {
 
 	pattern = "pattern_solid.tga"
 	color1 = "black"
@@ -12638,7 +12408,6 @@ JOH_absolute_monarchy = { # Johore
 	}
 }
 JOH_republic = {
-	# 1871 - 1958
 
 	pattern = "pattern_solid.tga"
 	color1 = "blue"
@@ -12662,8 +12431,7 @@ JOH_dictatorship = {
 	color2 = "yellow"
 	color3 = "blue"
 
-
-	colored_emblem = {
+colored_emblem = {
 		texture = "ce_crescent_star_turkey.dds"
 		color1 = "white"
 		color2 = "white"
@@ -12688,7 +12456,6 @@ JOH_theocracy = {
 	}
 }
 JOH_subject = {
-	# Yellow border to better distinguish from Turkey
 	pattern = "pattern_solid.tga"
 	color1 = "blue"
 
@@ -12712,10 +12479,7 @@ JOH_subject = {
 	}
 }
 
-
-
-KAL = { # Kalat
-	# Until 1952
+KAL = {
 
 	pattern = "pattern_solid.tga"
 	color1 = "red"
@@ -12847,8 +12611,7 @@ KAL_subject_green = {
 	}
 }
 
-KAS = { # Kashmir
-	# Princely state flag (mid 19th to 1936)
+KAS = {
 
 	pattern = "pattern_solid.tga"
 	color1 = "yellow"
@@ -12861,8 +12624,7 @@ KAS = { # Kashmir
 	}
 }
 
-KAZ = { # Kazakhstan
-	# Alash Orda flag
+KAZ = {
 
 	pattern = "pattern_solid.tga"
 	color1 = "red"
@@ -12875,8 +12637,6 @@ KAZ = { # Kazakhstan
 	}
 }
 KAZ_absolute_monarchy = {
-	# Starting flag
-	# Rearranged the design a little bit (border instead of stars) to make it feel less like a modern fabrication
 
 	pattern = "pattern_border_of_3.dds"
 	color1 = "blue_light"
@@ -12976,9 +12736,7 @@ KHI = {
 		instance = { scale = { 0.25 0.25 } position = { 0.64 0.5 } }
 	}
 }
-KHI_absolute_monarchy = { # Khiva
-	# early 20th c.
-	# Starting flag
+KHI_absolute_monarchy = {
 
 	pattern = "pattern_solid.tga"
 	color1 = "white"
@@ -12991,7 +12749,6 @@ KHI_absolute_monarchy = { # Khiva
 	}
 }
 KHI_republic = {
-	# Simplified variant of the modern Uzbek flag
 
 	pattern = "pattern_solid.tga"
 	color1 = "blue_light"
@@ -13055,8 +12812,7 @@ KHI_subject_GBR = {
 	}
 }
 
-KOK = { # Kokand
-	# Earliest flag of the khanate
+KOK = {
 
 	pattern = "pattern_solid.tga"
 	color1 = "green"
@@ -13120,7 +12876,6 @@ KOK_republic = {
 	}
 }
 KOK_dictatorship = {
-	# Basmachi flag
 
 	pattern = "pattern_solid.tga"
 	color1 = "white"
@@ -13180,7 +12935,6 @@ KOK_subject_GBR = {
 }
 
 KOR_joseon = {
-	# Flag of the Joseon Dynasty
 
 	pattern = "pattern_border_of_4.dds"
 	color1 = "red"
@@ -13245,8 +12999,6 @@ KOR_subject = {
 	}
 }
 KOR_subject_CHI = {
-	# Before 1882 flags with chinese dragons
-	# Earliest attested so historical flag at start
 
 	pattern = "pattern_border_of_3.dds"
 	color1 = "yellow"
@@ -13304,7 +13056,7 @@ KRA = {
 	}
 }
 
-KTI = { # Kutai
+KTI = {
 	pattern = "pattern_solid.tga"
 	color1 = "yellow"
 
@@ -13401,7 +13153,7 @@ KUK_communist = {
 	}
 }
 
-KUR = { # Kurdistan
+KUR = {
 	pattern = "pattern_solid.tga"
 	color1 = "red"
 
@@ -13417,7 +13169,7 @@ KUR = { # Kurdistan
 	}
 }
 
-KUT_princely = { # Kutch
+KUT_princely = {
 	pattern = "pattern_solid.tga"
 	color1 = "red"
 	color2 = "white"
@@ -13453,8 +13205,7 @@ KUT_princely = { # Kutch
 		instance = { scale = { 0.12 -0.24 } rotation = -90 position = { 0.50 0.25 } }
 	}
 }
-KUT = { # Kutch
-	# Merchant flag based on earlier designs
+KUT = {
 
 	pattern = "pattern_solid.tga"
 	color1 = "red"
@@ -13472,8 +13223,6 @@ KUT = { # Kutch
 	}
 }
 KUT_subject = {
-	# Based on later red ensign (1921)
-	# Legend (Kutch State) is arranged in circle rather than in line in the correct design
 
 	pattern = "pattern_solid.tga"
 	color1 = "red"
@@ -13570,7 +13319,7 @@ OZH = {
         instance = { position = { 0.5 0.5 } rotation = 180 scale = { 0.5 0.5 } }
 	}
 }
-LAD = { # Ladakh
+LAD = {
 	pattern = "pattern_border_of_3.dds"
 	color1 = "green"
 	color2 = "yellow"
@@ -13595,7 +13344,7 @@ LAD = { # Ladakh
 	}
 }
 
-KAT = { # Kathiri
+KAT = {
 	pattern = "pattern_solid.tga"
 	color1 = "yellow"
 
@@ -13622,7 +13371,7 @@ KAT = { # Kathiri
 	}
 }
 
-LAH = { # Lahej
+LAH = {
 	pattern = "pattern_solid.tga"
 	color1 = "white"
 
@@ -13655,7 +13404,7 @@ LAH = { # Lahej
 	}
 }
 
-LAN = { # Lanfang
+LAN = {
 
 	pattern = "pattern_solid.tga"
 	color1 = "yellow"
@@ -13696,9 +13445,7 @@ LAN_subject_GBR = {
 	}
 }
 
-LAO = { # Laos
-	# 1893 - Same as Luang Prabang (french Laos protectorate based on former flag of LP)
-
+LAO = {
 
 	pattern = "pattern_solid.tga"
 	color1 = "red"
@@ -13771,8 +13518,7 @@ LAT_communist = {
 	}
 }
 
-LEB = { # Lebanon
-	# 1861-1915
+LEB = {
 
 	pattern = "pattern_solid.tga"
 	color1 = "white"
@@ -13842,7 +13588,6 @@ LIB = {
 	}
 }
 LIB_dictatorship = {
-	# 1827-1847 American Colonization Society
 	pattern = "pattern_solid.tga"
 	color1 = "white"
 
@@ -13865,7 +13610,7 @@ LIB_dictatorship = {
 	}
 }
 
-LIT = { # Lithuania
+LIT = {
 	pattern = "pattern_solid.tga"
 	color1 = "yellow"
 
@@ -13930,8 +13675,7 @@ LIT_communist = {
 	}
 }
 
-LKT = { # Lakota Sioux
-	# Medicine wheel as traditionnal symbol
+LKT = {
 
 	pattern = "pattern_solid.tga"
 	color1 = "red"
@@ -13954,7 +13698,7 @@ LOM = {
 	}
 }
 
-LUA = { # Luang Prabang
+LUA = {
 	pattern = "pattern_border_of_4.dds"
 	color1 = "red"
 	color2 = "white"
@@ -13987,7 +13731,7 @@ LUA_subject = {
 	}
 }
 
-LUB = { # Lubeck
+LUB = {
 	pattern = "pattern_solid.tga"
 	color1 = "white"
 	colored_emblem = {
@@ -14078,7 +13822,6 @@ LUB_absolute_monarchy = {
 	}
 }
 LUB_oligarchy = {
-	# Derived from the 1890 flag
 	pattern = "pattern_solid.tga"
 	color1 = "white"
 	color2 = "red"
@@ -14106,7 +13849,6 @@ LUB_oligarchy = {
 	}
 }
 LUB_dictatorship = {
-	# Derived from the 1850 flag (only removed the upper waves and placed the eagle in canton)
 	pattern = "pattern_solid.tga"
 	color1 = "white"
 	color2 = "red"
@@ -14242,7 +13984,7 @@ LUX = {
 	}
 }
 
-MAC = { # Manchester
+MAC = {
 	pattern = "pattern_solid.tga"
 	color1 = "white"
 	color2 = "red"
@@ -14275,7 +14017,7 @@ MAC = { # Manchester
 	}
 }
 
-MAC_communist = { # Manchester
+MAC_communist = {
 	pattern = "pattern_solid.tga"
 	color1 = "red"
 	color2 = "red"
@@ -14294,14 +14036,11 @@ MAC_communist = { # Manchester
 #        instance = { position = { 0.525 0.58 } scale = { 0.20 0.20 } } #Bottom middle
 #        instance = { position = { 0.345 0.59 } scale = { 0.16 0.16 } } #Bottom left
 #        instance = { position = { 0.72 0.57 } scale = { 0.17 0.17 } } #Bottom right
-#
 #        instance = { position = { 0.54 0.37 } scale = { 0.13 0.13 } } #Center
 #        instance = { position = { 0.355 0.415 } scale = { 0.12 0.12 } } #Middle left
 #        instance = { position = { 0.72 0.38 } scale = { 0.12 0.12 } } #Middle right
-#
 #        instance = { position = { 0.56 0.245 } scale = { 0.075 0.075 } } #Top middle
 #        instance = { position = { 0.36 0.295 } scale = { 0.06 0.06 } } #Top left
-#
 #        instance = { position = { 0.15 0.5 } scale = { 0.12 0.12 } } #Fore right
 #        instance = { position = { 0.823 0.51 } scale = { 0.11 0.11 } } #Aft sail
 #    }
@@ -14319,7 +14058,7 @@ MAC_communist = { # Manchester
 	}
 }
 
-MAD = { # Madagascar
+MAD = {
 	pattern = "pattern_solid.tga"
 	color1 = "white"
 
@@ -14341,7 +14080,6 @@ MAD_republic = {
 	}
 }
 MAD_subject_FRA = {
-	# French protectorate
 
 	pattern = "pattern_solid.tga"
 	color1 = "blue"
@@ -14358,7 +14096,7 @@ MAD_subject_FRA = {
 		instance = { scale = { 0.38 0.38 } position = { @third 0.5 } }
 	}
 }
-SUD = { #Sudan
+SUD = {
 	pattern = "pattern_solid.tga"
 	color1 = "red"
 
@@ -14373,8 +14111,7 @@ SUD = { #Sudan
 		instance = { position = { 0 0.5 } }
 	}
 }
-SUD_theocracy = { # Mahdist State
-	# Another possible Mahdist flag is the plain black banner
+SUD_theocracy = {
 
 	pattern = "pattern_border_double.dds"
 	color1 = "yellow"
@@ -14389,7 +14126,7 @@ SUD_theocracy = { # Mahdist State
 	}
 }
 
-MAH = { # Mahra
+MAH = {
 	pattern = "pattern_solid.tga"
 	color1 = "green"
 
@@ -14407,7 +14144,7 @@ MAH = { # Mahra
 	}
 }
 
-MAK_republic = { # Makran
+MAK_republic = {
 	pattern = "pattern_solid.tga"
 	color1 = "green"
 
@@ -14441,9 +14178,7 @@ MAK_theocracy = {
 	}
 }
 
-MAL = {	# Mali
-	# 1959
-	# The Kanaga man symbol was removed in 1961 (to be more in line w/ islamic precepts)
+MAL = {
 	pattern = "pattern_solid.tga"
 	color1 = "green"
 
@@ -14460,7 +14195,7 @@ MAL = {	# Mali
 	}
 }
 
-MAY = { # Maya
+MAY = {
 	pattern = "pattern_solid.tga"
 	color1 = "white"
 
@@ -14485,8 +14220,7 @@ MAY = { # Maya
 	}
 }
 
-MCH = { # Manchuria
-	# Flag as chinese subject (rearranged five stripped flag)
+MCH = {
 	pattern = "pattern_solid.tga"
 	color1 = "yellow"
 	color2 = "black"
@@ -14564,7 +14298,6 @@ MEC_republic = {
 	}
 }
 MEC_oligarchy = {
-	# 1818 Merchant flag
 	pattern = "pattern_solid.tga"
 	color1 = "blue"
 
@@ -14683,7 +14416,7 @@ MEC_subject_PRU = {
     }
 }
 
-MEW = { # Mewar
+MEW = {
 	pattern = "pattern_solid.tga"
 	color1 = "purple"
 
@@ -14730,7 +14463,7 @@ MEW_subject = {
 	}
 }
 
-MEX = { # Mexico
+MEX = {
 	pattern = "pattern_solid.tga"
 	color1 = "green"
 
@@ -14783,7 +14516,6 @@ MEX_absolute_monarchy = {
 	}
 }
 MEX_dictatorship = {
-	# Inspired by the 1815 independentist flag
 
 	pattern = "pattern_border_of_4.dds"
 	color1 = "white"
@@ -14863,7 +14595,7 @@ MEX_subject_USA = {
 	}
 }
 
-MGB = { # Maghreb
+MGB = {
 	pattern = "pattern_solid.tga"
 	color1 = "green"
 
@@ -14887,7 +14619,7 @@ MGB = { # Maghreb
 	}
 }
 
-MGB_monarchy = { # Maghreb, based on Almohad dynasty flag from the Libro del Conocimiento. If you complain about the number of boxes in the checker pattern I will point to the different editions of the book and note that they're not consistent, and then I will fight you.
+MGB_monarchy = {
 
 	pattern = "pattern_solid.tga"
 	color1 = "red"
@@ -14904,15 +14636,13 @@ MGB_monarchy = { # Maghreb, based on Almohad dynasty flag from the Libro del Con
 	}
 }
 
-MGD = { # Maguindanao
-	# Starting flag
-	# Plain yellow flag
+MGD = {
 
 	pattern = "pattern_solid.tga"
 	color1 = "yellow"
 }
 
-MGL = { # Mongolia
+MGL = {
 	# 1911 (the design is somewhat simplified, from surviving flag)
 	pattern = "pattern_border_double.dds"
 	color1 = "saffron"
@@ -14989,8 +14719,7 @@ MGL_communist = {
 	}
 }
 
-MJT = { # Majerteen
-	# The flag was historically plain red (same as Hobyo and most sultanate in the area)
+MJT = {
 
 	pattern = "pattern_solid.tga"
 	color1 = "red"
@@ -15020,7 +14749,7 @@ MJT_subject = {
 	}
 }
 
-MKT = { # Miskito
+MKT = {
 	# 1824-52 6 stripes
 	pattern = "pattern_solid.tga"
 	color1 = "white"
@@ -15033,12 +14762,9 @@ MKT = { # Miskito
 	}
 }
 #MKT_late = {
-#	# Later 1853-81 variants have 10 or 12 stripes
-#
 #	pattern = "pattern_solid.tga"
 #	color1 = "white"
 #	color2 = "blue"
-#
 #	colored_emblem = {
 #		texture = "ce_stripes_10.dds"
 #		color1 = color2
@@ -15282,7 +15008,6 @@ MON_republic = {
 }
 
 MON_theocracy = {
-	# Flag from 1516 to 1852
 
 	pattern = "pattern_solid.tga"
 	color1 = "red"
@@ -15445,8 +15170,7 @@ MON_communist = {
 	}
 }
 
-MOR = { # Morocco
-	# Adopted 1915
+MOR = {
 
 	pattern = "pattern_solid.tga"
 	color1 = "red"
@@ -15460,7 +15184,6 @@ MOR = { # Morocco
 	}
 }
 MOR_absolute_monarchy = {
-	# Starting flag
 
 	pattern = "pattern_border_triangles_morocco.dds"
 	color1 = "red"
@@ -15532,7 +15255,7 @@ MTC_subject = {
 	}
 }
 
-MUG = { # Mughal Empire
+MUG = {
 	pattern = "pattern_solid.tga"
 	color1 = "green"
 
@@ -15645,8 +15368,7 @@ MUG_subject_GBR = {
 	}
 }
 
-MYS = { # Mysore
-	# Default
+MYS = {
 
 	pattern = "pattern_solid.tga"
 	color1 = "red"
@@ -15658,7 +15380,6 @@ MYS = { # Mysore
 	}
 }
 MYS_princely = {
-	# Princely State/Abs. Monarchy - Starting
 
 	pattern = "pattern_solid.tga"
 	color1 = "red"
@@ -15708,7 +15429,6 @@ MYS_princely = {
 	}
 }
 MYS_dictatorship = {
-	# Based on 18th c. naval flag
 
 	pattern = "pattern_border_of_4.dds"
 	color1 = "white"
@@ -15725,7 +15445,6 @@ MYS_dictatorship = {
 	}
 }
 MYS_theocracy = {
-	# 18th c. flag of the Sultanate
 
 	pattern = "pattern_solid.tga"
 	color1 = "green"
@@ -15817,8 +15536,7 @@ MYS_subject = {
 	}
 }
 
-NAG = { # Nagpur
-	# Hist. Saffron flag
+NAG = {
 
 	pattern = "pattern_solid.tga"
 	color1 = "orange"
@@ -15850,8 +15568,7 @@ NAH = {
 	}
 }
 
-NAL = { # Natal
-	# Natalia republic
+NAL = {
 	pattern = "pattern_solid.tga"
 	color1 = "red"
 	color2 = "blue"
@@ -15920,8 +15637,7 @@ NAL_subject_GBR = {
 	}
 }
 
-NAM = { # Namaland
-	# Derived from german Namibia
+NAM = {
 
 	pattern = "pattern_border_double.dds"
 	color1 = "blue_light"
@@ -16052,7 +15768,7 @@ NAV_republic = {
 	}
 }
 
-NBS = { # New Brunswick
+NBS = {
 	pattern = "pattern_solid.tga"
 	color1 = "yellow"
 	color2 = "red"
@@ -16107,8 +15823,7 @@ NBS_subject_FRA = {
     }
 }
 
-NCA = { # Northern Caucasus
-	# Emirate flag
+NCA = {
 
 	pattern = "pattern_solid.tga"
 	color1 = "green"
@@ -16129,7 +15844,6 @@ NCA = { # Northern Caucasus
 	}
 }
 NCA_republic = {
-	# Arrangement of those stars seems a bit dubious
 
 	pattern = "pattern_solid.tga"
 	color1 = "green"
@@ -16140,7 +15854,7 @@ NCA_republic = {
 	}
 	colored_emblem = {
 		texture = "ce_solid.dds"
-		color1 = "azure" # Blue light makes it hard to read
+		color1 = "azure"
 		color2 = "azure"
 		instance = { scale = { 0.5 0.435 } position = { 0.25 @[0.435/2] } }
 	}
@@ -16175,9 +15889,7 @@ NCA_theocracy = {
 	}
 }
 
-
-NEJ = { # Nejd
-	# 1822-90
+NEJ = {
 
 	pattern = "pattern_solid.tga"
 	color1 = "green"
@@ -16256,7 +15968,6 @@ NEN_republic = {
 	}
 }
 NEN_subject_GBR = {
-	# With modified Union Jack in canton
 	pattern = "pattern_solid.tga"
 	color1 = "red"
 	color2 = "white"
@@ -16345,7 +16056,6 @@ NET_republic = {
 	}
 }
 NET_dictatorship = {
-	# Inspired by a naval flag with arms of the republic in center
 
 	pattern = "pattern_gironny_12_tricolor.dds"
 	color1 = "orange"
@@ -16379,7 +16089,6 @@ NET_dictatorship = {
 	}
 }
 NET_fascist = {
-	# NSB Flag
 	pattern = "pattern_solid.tga"
 	color1 = "orange"
 
@@ -16529,9 +16238,7 @@ NEW_theocracy = {
 	}
 }
 
-NGF = { # North German Federation
-	# Actually used the simple tricolor given to GER
-	# version with german state crown
+NGF = {
 
 	pattern = "pattern_solid.tga"
 	color1 = "black"
@@ -16579,7 +16286,6 @@ NGF_absolute_monarchy = {
 	}
 }
 NGF_fascist = {
-	# Same as V2 NGF
 	pattern = "pattern_solid.tga"
 	color1 = "black"
 	color2 = "white"
@@ -16604,7 +16310,7 @@ NGF_fascist = {
 	}
 }
 
-NIC = { # Nicaragua
+NIC = {
 	# design adopted 1838
 
 	pattern = "pattern_solid.tga"
@@ -16729,7 +16435,6 @@ NOR_communist = {
 	}
 }
 NOR_fascist = {
-	# NS Flag
 	pattern = "pattern_solid.tga"
 	color1 = "red"
 
@@ -16742,7 +16447,6 @@ NOR_fascist = {
 }
 
 NRU = {
-	# Modern flag of Nauru
 	pattern = "pattern_solid.tga"
 	color1 = "blue"
 
@@ -16771,7 +16475,6 @@ NRU_subject = {
 	}
 }
 NRU_subject_GBR = {
-	# Blue ensign with original british name
 	pattern = "pattern_solid.tga"
 	color1 = "blue"
 
@@ -16798,7 +16501,6 @@ NRU_subject_GBR = {
 }
 
 NSW = {
-	# New South Wales Ensign
 	pattern = "pattern_solid.tga"
 	color1 = "white"
 	color2 = "blue"
@@ -16833,8 +16535,7 @@ NTU = {
 	}
 }
 
-NVJ = { # Navajo
-	# Traditionnal sun emblem with modern tribal flag colours
+NVJ = {
 
 	pattern = "pattern_solid.tga"
 	color1 = "peach"
@@ -16855,7 +16556,7 @@ NVJ = { # Navajo
 	}
 }
 
-NVS = { # Nova Scotia
+NVS = {
 	pattern = "pattern_solid.tga"
 	color1 = "red"
 	color2 = "red"
@@ -16951,7 +16652,6 @@ NZL_republic_maori = {
 	}
 }
 NZL_coa = {
-	# Not used in definitions
 	pattern = "pattern_solid.tga"
 	color1 = "blue"
 	color2 = "white"
@@ -17011,7 +16711,6 @@ NZL_coa = {
 	}
 }
 NZL_theocracy = {
-	# Based on the arms of the Anglican diocese of Auckland.
 	pattern = "pattern_solid.tga"
 	color1 = "blue"
 	color2 = "white"
@@ -17031,7 +16730,6 @@ NZL_theocracy_subject = {
     }
 }
 NZL_colony_subject = {
-	# Earliest blue ensign, not used in definitions atm
 	pattern = "pattern_solid.tga"
 	color1 = "blue"
 	color2 = "white"
@@ -17163,7 +16861,7 @@ NZL_fascist = {
 	}
 }
 
-NZP = { # Nez Percés
+NZP = {
 
 	pattern = "pattern_solid.tga"
 	color1 = "beige"
@@ -17196,7 +16894,7 @@ NZP = { # Nez Percés
 	}
 }
 
-OCC = { # Occitania
+OCC = {
 	pattern = "pattern_solid.tga"
 	color1 = "red"
 	color2 = "yellow"
@@ -17273,7 +16971,6 @@ OLD_civil_flag = {
 	}
 }
 OLD_oligarchy = {
-	# Free state 1919
 	pattern = "pattern_solid.tga"
 	color1 = "blue"
 
@@ -17370,15 +17067,12 @@ OLD_subject_PRU = {
 	}
 }
 
-OMA = { # Muscat-Oman
-	# Plain red flag, traditionnal emblem of most, if not all emirates of the arabian peninsula
-	# Variant : the (plain) white Imamate flag was in use 1868-71
+OMA = {
 
 	pattern = "pattern_solid.tga"
 	color1 = "red"
 }
 OMA_merchant = {
-	# Merchant flag
 
 	pattern = "pattern_solid.tga"
 	color1 = "red"
@@ -17393,7 +17087,6 @@ OMA_merchant = {
 	}
 }
 OMA_subject = {
-	# Based on merchant flag
 
 	pattern = "pattern_solid.tga"
 	color1 = "red"
@@ -17412,13 +17105,11 @@ OMA_subject = {
 	}
 }
 OMA_subject_GBR = {
-	# Blue ensign
 
 	pattern = "pattern_solid.tga"
 	color1 = "blue"
 
-
-	colored_emblem = {
+colored_emblem = {
 		texture = "ce_crescent_three.dds"
 		color1 = "white"
 		color2 = "white"
@@ -17453,7 +17144,6 @@ ONT = {
 	}
 }
 ONT_subject = {
-	# Red ensign with 1867 CoA
 
 	pattern = "pattern_solid.tga"
 	color1 = "red"
@@ -17512,7 +17202,6 @@ ONT_republic = {
 	}
 }
 ONT_secessionist = {
-	# 1837 Upper Canada Revolutionary flag
 
 	pattern = "pattern_solid.tga"
 	color1 = "white"
@@ -17622,9 +17311,7 @@ ORA_subject_GBR = {
 	}
 }
 
-ORG = { # Oregon/British Columbia
-	# More or less the design of the Oregon state flag reverse side (changed orientation since its not a reverse here)
-	# Design is possibly a bit lacking and could be improved
+ORG = {
 
 	pattern = "pattern_solid.tga"
 	color1 = "blue"
@@ -17730,8 +17417,7 @@ ORG_subject_GBR = {
 	}
 }
 
-ORI = { # Orissa
-	# Flag of Baudh, one of the main Orissa princely states
+ORI = {
 
 	pattern = "pattern_solid.tga"
 	color1 = "yellow"
@@ -17774,7 +17460,7 @@ ORI_subject = {
 	}
 }
 
-PAK = { # Pakistan
+PAK = {
 	pattern = "pattern_solid.tga"
 	color1 = "green"
 	colored_emblem = {
@@ -17813,8 +17499,7 @@ PAL = {
 	}
 }
 
-PAN_absolute_monarchy = { # Sikh Empire
-	# Starting flag
+PAN_absolute_monarchy = {
 
 	pattern = "pattern_solid.tga"
 	color1 = "saffron"
@@ -17943,7 +17628,6 @@ PAN_dictatorship = {
 	}
 }
 PAN_theocracy = {
-	# Actually the imperial war flag
 
 	pattern = "pattern_solid.tga"
 	color1 = "orange"
@@ -18021,7 +17705,6 @@ PAN_subject = {
 	}
 }
 PAN_subject_GBR = {
-	# Blue ensign for UK
 
 	pattern = "pattern_solid.tga"
 	color1 = "blue"
@@ -18055,7 +17738,6 @@ PAP_theocracy = {
 	}
 }
 PAP_republic = {
-	# BWR republican is for Rome/Latium
 	pattern = "pattern_solid.tga"
 	color1 = "black"
 
@@ -18111,7 +17793,6 @@ PAR = {
 	color2 = "white"
 }
 PAR_absolute_monarchy = {
-	# Great arms flag, before 1802 & after 1847
 
 	pattern = "pattern_solid.tga"
 	color1 = "white"
@@ -18131,7 +17812,6 @@ PAR_absolute_monarchy_subject = {
     }
 }
 PAR_republic = {
-	# 1848 Horiz. Bicolour
 
 	pattern = "pattern_solid.tga"
 	color1 = "yellow"
@@ -18142,7 +17822,6 @@ PAR_republic = {
 	}
 }
 PAR_dictatorship = {
-	# Gironny flag
 
 	pattern = "pattern_gironny_8.dds"
 	color1 = "yellow"
@@ -18171,8 +17850,7 @@ PAR_communist = {
 	}
 }
 
-PAT = { # Patagonia
-	# Leftraru flag
+PAT = {
 	pattern = "pattern_solid.tga"
 	color1 = "white"
 
@@ -18240,7 +17918,6 @@ PCO = {
 }
 
 PCO_spa_burgundy = {
-	# Cross of Burgundy, colonial flag
 
 	pattern = "pattern_solid.tga"
 	color1 = "white"
@@ -18253,7 +17930,7 @@ PCO_spa_burgundy = {
 	}
 }
 
-PER = { # Persia
+PER = {
 	pattern = "pattern_solid.tga"
 	color1 = "green"
 	color2 = "green"
@@ -18298,7 +17975,6 @@ PER = { # Persia
 	}
 }
 PER_absolute_monarchy = {
-	# Starting flag
 
 	pattern = "pattern_border_of_3.dds"
 	color1 = "white"
@@ -18487,7 +18163,6 @@ PER_subject = {
 	}
 }
 PER_fascist = {
-	# SUMKA flag
 	pattern = "pattern_solid.tga"
 	color1 = "red"
 
@@ -18537,8 +18212,7 @@ PER_subject_GBR = {
 	}
 }
 
-PEU = { # Peru
-	# Starting (Pres. Dictatorship)
+PEU = {
 
 	pattern = "pattern_solid.tga"
 	color1 = "red"
@@ -18766,7 +18440,6 @@ PHI = {
 	}
 }
 PHI_war = {
-	# upside down Filipino flag
 
 	pattern = "pattern_solid.tga"
 	color1 = "red"
@@ -18823,7 +18496,6 @@ PHI_dictatorship = {
 	}
 }
 PHI_fascist = {
-	# Kalibapi
 	pattern = "pattern_solid.tga"
 	color1 = "red"
 
@@ -18861,8 +18533,6 @@ PHI_subject = {
 	}
 }
 
-# Philippolis/Griqualand East
-# Fictional. Griqua flag, with a lion added. The captaincy of Phillipolis, led by Adam Kok, used a lion as a regular motif in some of its forms, so a lion's been added here to distinguish it from Griqualand West.
 PHL = {
 	pattern = "pattern_solid.tga"
 	color1 = "red"
@@ -18887,7 +18557,7 @@ PHL = {
 	}
 }
 
-PLC = { # Polish-Lithuanian Commonwealth
+PLC = {
 	pattern = "pattern_solid.tga"
 	color1 = "red"
 
@@ -18947,7 +18617,6 @@ PLC = { # Polish-Lithuanian Commonwealth
 }
 
 PNI = {
-	# Riograndese republic 1836-46
 	pattern = "pattern_solid.tga"
 	color1 = "green"
 	color2 = "red"
@@ -19023,7 +18692,6 @@ PNM_subject = {
 	}
 }
 PNM_subject_MEX = {
-	# Mexican colours
 	pattern = "pattern_solid.tga"
 	color1 = "white"
 	color2 = "red"
@@ -19055,7 +18723,7 @@ PNM_subject_MEX = {
 	}
 }
 
-POL = { # Poland
+POL = {
 	pattern = "pattern_solid.tga"
 	color1 = "white"
 
@@ -19080,7 +18748,6 @@ POL = { # Poland
 	}
 }
 POL_congress = {
-	# Congress Poland flag
 
 	pattern = "pattern_solid.tga"
 	color1 = "white"
@@ -19194,7 +18861,6 @@ POL_oligarchy = {
 	}
 }
 POL_fascist = {
-	# ONR falanga flag
 	pattern = "pattern_solid.tga"
 	color1 = "green"
 
@@ -19218,7 +18884,7 @@ POL_fascist = {
 	}
 }
 
-POM = { # Pomerania
+POM = {
 	pattern = "pattern_solid.tga"
 	color1 = "blue_light"
 
@@ -19229,7 +18895,7 @@ POM = { # Pomerania
 	}
 }
 
-PON = { # Pontianak
+PON = {
 
 	pattern = "pattern_solid.tga"
 	color1 = "yellow"
@@ -19242,7 +18908,7 @@ PON = { # Pontianak
 	}
 }
 
-POR = { # Portugal
+POR = {
 	pattern = "pattern_solid.tga"
 	color1 = "white"
 
@@ -19261,7 +18927,7 @@ POR = { # Portugal
 		instance = { scale = { 1.0 1.0 } position = { 0.5 0.67 } }
 	}
 }
-POR_uk = { # Portugal
+POR_uk = {
 	pattern = "pattern_solid.tga"
 	color1 = "white"
 
@@ -19293,7 +18959,6 @@ POR_uk = { # Portugal
 	}
 }
 POR_republic = {
-	# 1910 Republican flag
 	pattern = "pattern_solid.tga"
 	color1 = "red"
 
@@ -19315,7 +18980,6 @@ POR_republic = {
 	}
 }
 POR_dictatorship = {
-	# Design mostly borrowed from republican war flag
 
 	pattern = "pattern_solid.tga"
 	color1 = "red"
@@ -19344,7 +19008,7 @@ POR_dictatorship = {
 	}
 }
 
-POR_absolute_monarchy = { # Portugal
+POR_absolute_monarchy = {
 	pattern = "pattern_solid.tga"
 	color1 = "white"
 
@@ -19359,7 +19023,6 @@ POR_absolute_monarchy = { # Portugal
 }
 
 POR_absolute_monarchy_uk = {
-	# 1816-26
 	pattern = "pattern_solid.tga"
 	color1 = "white"
 	colored_emblem = {
@@ -19402,7 +19065,6 @@ POR_communist = {
 	}
 }
 POR_fascist = {
-	# MNS flag
 	pattern = "pattern_solid.tga"
 	color1 = "blue"
 
@@ -19433,7 +19095,6 @@ POR_subject = {
 	}
 }
 POR_anarchist = {
-	# From the "A Batalha" newspaper
 	pattern = "pattern_solid.tga"
 	color1 = "red"
 
@@ -19445,7 +19106,7 @@ POR_anarchist = {
 	}
 }
 
-PPU = { # Papua
+PPU = {
 	pattern = "pattern_solid.tga"
 	color1 = "blue_light"
 	color2 = "white"
@@ -19502,7 +19163,7 @@ PPU_subject_GBR = {
     }
 }
 
-PRA = { #Gao-Para
+PRA = {
 	pattern = "pattern_solid.tga"
 	color1 = "red"
 
@@ -19518,7 +19179,6 @@ PRA = { #Gao-Para
 	}
 }
 
-
 PRG = {
 	# before 1842
 	# default/republic
@@ -19532,8 +19192,7 @@ PRG = {
 		color2 = "blue"
 	}
 }
-PRG_dictatorship = { # Paraguay
-	# 1842 design (obverse of the flag, reverse featuring the lion) - Starting/Pres. dictatorship
+PRG_dictatorship = {
 
 	pattern = "pattern_solid.tga"
 	color1 = "red"
@@ -19595,7 +19254,6 @@ PRG_dictatorship = { # Paraguay
 	}
 }
 PRG_monarchy = {
-	# Loosely inspired from the very first independentist flag
 	pattern = "pattern_solid.tga"
 	color1 = "blue"
 
@@ -19814,8 +19472,6 @@ PRU_republic = {
 	}
 }
 PRU_absolute_monarchy = {
-	# Late 19th c. with stripes and changes to the eagle (scepter-sword, monogram, bone links)
-	# Starting flag although PRU is the historical one (more convenient and still fits the gov type)
 
 	pattern = "pattern_solid.tga"
 	color1 = "white"
@@ -19876,7 +19532,6 @@ PRU_communist = {
 	}
 }
 PRU_fascist = {
-	# Parteiadler with prussian design. The Iron cross replaces the swastika
 	pattern = "pattern_solid.tga"
 	color1 = "white"
 
@@ -19973,7 +19628,6 @@ QUE = {
 	}
 }
 QUE_communist = {
-	# 1837 Republican colours
 
 	pattern = "pattern_solid.tga"
 	color1 = "green"
@@ -20012,7 +19666,6 @@ QUE_subject = {
     }
 }
 QUE_secessionist = {
-	# 1837 Lower Canada
 
 	pattern = "pattern_solid.tga"
 	color1 = "green"
@@ -20121,7 +19774,6 @@ ROM = {
 	}
 }
 ROM_fascist = {
-	# Iron guard
 	pattern = "pattern_solid.tga"
 	color1 = "green"
 
@@ -20160,7 +19812,6 @@ RUS = {
 	}
 }
 RUS_imperial = {
-	# 1858-1914
 
 	pattern = "pattern_solid.tga"
 	color1 = "black"
@@ -20188,7 +19839,6 @@ RUS_absolute_monarchy = {
     }
 }
 RUS_republic = {
-	# Imperial flag & modern republican flag
 	pattern = "pattern_solid.tga"
 	color1 = "white"
 
@@ -20275,7 +19925,6 @@ RUS_soviet_technocracy = {
 }
 
 RUS_fascist = {
-	# ROA flag
 	pattern = "pattern_solid.tga"
 	color1 = "white"
 
@@ -20298,7 +19947,6 @@ RUS_nihilist = {
 	pattern = "pattern_solid.tga"
 	color1 = "black"
 }
-
 
 SAF = {
 	pattern = "pattern_solid.tga"
@@ -20332,7 +19980,6 @@ SAF = {
         parent = "sub_TRN"
         instance = { scale = { 0.11 0.11 } offset = { 0.54 0.445 }  }
     }
-
 
 }
 SAF_coa = {
@@ -20423,7 +20070,6 @@ SAF_communist = {
 	}
 }
 SAF_fascist = {
-	# Flag of AWB in orange
 	pattern = "pattern_solid.tga"
 	color1 = "orange"
 
@@ -20517,7 +20163,6 @@ SAR_communist = {
 	}
 }
 SAR_subject = {
-	# Based on royal standard
 	pattern = "pattern_border_of_4.dds"
 	color1 = "white"
 	color2 = "blue"
@@ -20681,7 +20326,6 @@ SAX_communist = {
 	}
 }
 SAX_subject_PRU = {
-	# 1882
 	pattern = "pattern_solid.tga"
 	color1 = "black"
 
@@ -20736,7 +20380,7 @@ SCA_canton = {
 	}
 }
 
-SCH = { # Schleswig
+SCH = {
 	pattern = "pattern_solid.tga"
 	color1 = "blue"
 
@@ -20787,7 +20431,6 @@ SCO = {
     }
 }
 SCO_theocracy = {
-	# similar to the Covenanters flags
 	pattern = "pattern_solid.tga"
 	color1 = "blue"
 	color2 = "yellow"
@@ -20814,7 +20457,6 @@ SCO_military = {
     }
 }
 SCO_fascist = {
-	# Inspired from Scottish Dawn
 	pattern = "pattern_solid.tga"
 	color1 = "blue"
 
@@ -20832,7 +20474,7 @@ SCO_fascist = {
 	}
 }
 
-SEL = { # Selangor
+SEL = {
 
 	pattern = "pattern_solid.tga"
 	color1 = "red"
@@ -20856,8 +20498,7 @@ SEL = { # Selangor
 	}
 }
 
-SEQ = { # Indian Territory
-	# Cherokee flag
+SEQ = {
 
 	pattern = "pattern_solid.tga"
 	color1 = "white"
@@ -20943,7 +20584,6 @@ SER_subject = {
 	}
 }
 SER_subject_TUR = {
-	# There are several variants of the Turkish constitution flag (four stars in canton, in gold or crescent+stars - some of them erroneous)
 
 	pattern = "pattern_solid.tga"
 	color1 = "red"
@@ -20979,7 +20619,6 @@ SER_subject_TUR = {
 }
 
 SGF = {
-	# Different colour order from Weimar/Modern Germany, but still keeps the 1848 colours (only reordered with Austrian colours paired) adopted by 1866 Austrian led coalition
 
 	pattern = "pattern_solid.tga"
 	color1 = "black"
@@ -21017,7 +20656,6 @@ SGF_republic = {
 	}
 }
 SGF_fascist = {
-	# Mix between the original Jena Students flag (from which the 1848 flag was based) and german fascist designs
 	pattern = "pattern_solid.tga"
 	color1 = "red"
 	color2 = "black"
@@ -21069,8 +20707,7 @@ SIA = {
 		instance = { scale = { 1.0 1.0 } position = { 0.50 0.48 } }
 	}
 }
-SIA_absolute_monarchy = { # Siam
-	# Early design, starting flag
+SIA_absolute_monarchy = {
 
 	pattern = "pattern_solid.tga"
 	color1 = "red"
@@ -21089,7 +20726,6 @@ SIA_absolute_monarchy = { # Siam
 	}
 }
 SIA_republic = {
-	# Modern flag of Thailand, adopted 1917
 
 	pattern = "pattern_solid.tga"
 	color1 = "red"
@@ -21260,8 +20896,7 @@ SIC_communist = {
 	}
 }
 
-SIK = { # Sikkim
-	# Simplified the design as much as possible (the auspicious symbols w/ ribbons are repeated on both sides instead of seven different ones)
+SIK = {
 
 	pattern = "pattern_solid.tga"
 	color1 = "white"
@@ -21390,7 +21025,6 @@ SIK_subject = {
 	}
 }
 
-
 SIL = {
 	pattern = "pattern_solid.tga"
 	color1 = "blue"
@@ -21420,7 +21054,6 @@ SIL_subject_west_africa = {
     }
 }
 SIL_republic = {
-	# Colours of the flag (officialy) have lighter shades than usual (green is pantone 361 & blue 292)
 	pattern = "pattern_solid.tga"
 	color1 = "green"
 
@@ -21431,7 +21064,7 @@ SIL_republic = {
 	}
 }
 
-SIN = { # Sindh
+SIN = {
 	pattern = "pattern_solid.tga"
 	color1 = "white"
 
@@ -21443,7 +21076,6 @@ SIN = { # Sindh
 	}
 }
 SIN_republic = {
-	# Simplified Khairpur
 
 	pattern = "pattern_solid.tga"
 	color1 = "green"
@@ -21455,13 +21087,11 @@ SIN_republic = {
 	}
 }
 SIN_theocracy = {
-	# Kalhora Black flag
 	pattern = "pattern_solid.tga"
 	color1 = "black_light"
 }
 
-SLV = { # Slovakia
-	# 1848 unofficial flag - First use of the coa during WW2
+SLV = {
 
 	pattern = "pattern_solid.tga"
 	color1 = "white"
@@ -21473,7 +21103,6 @@ SLV = { # Slovakia
 	}
 }
 SLV_fascist = {
-	# Hlinka Guard
 	pattern = "pattern_solid.tga"
 	color1 = "blue"
 
@@ -21491,7 +21120,7 @@ SLV_fascist = {
 	}
 }
 
-SMB = { # Sambas
+SMB = {
 
 	pattern = "pattern_solid.tga"
 	color1 = "yellow"
@@ -21555,7 +21184,6 @@ SMI_sweden_subject = {
 	}
 }
 SMI_republic = {
-	# Modern Sami flag
 	pattern = "pattern_verical_bicolor_offset.dds"
 	color1 = "blue"
 	color2 = "yellow"
@@ -21687,7 +21315,6 @@ SPA_republic_3 = {
 	}
 }
 SPA_dictatorship = {
-	# Just the overall idea for now : Will look much better with the corrected eagle as supporter
 	pattern = "pattern_solid.tga"
 	color1 = "white"
 	color2 = "red"
@@ -21856,15 +21483,14 @@ SRK = {
 	}
 }
 
-STG = { # Sintang
-	# This is also all the flag is and I will also fight you if you complain about this one.
+STG = {
 
 	pattern = "pattern_solid.tga"
 	color1 = "yellow"
 	color2 = "yellow"
 }
 
-SUL = { # Sulu
+SUL = {
 	pattern = "pattern_solid.tga"
 	color1 = "purple"
 
@@ -22050,8 +21676,6 @@ SWE_communist = {
 	}
 }
 SWE_fascist = {
-	# SNP/NRP mix
-	# SNP Hist flag is red with a yellow swastika on a blue roundel
 	pattern = "pattern_solid.tga"
 	color1 = "red"
 
@@ -22091,7 +21715,6 @@ SWI_dictatorship = {
 	}
 }
 SWI_fascist = {
-	# NSSAP without Swastika
 	pattern = "pattern_solid.tga"
 	color1 = "red"
 
@@ -22135,7 +21758,7 @@ SWI_subject = {
 	color1 = "red"
 
 	colored_emblem = {
-		texture = "ce_shield_heater.dds" # Bold outline
+		texture = "ce_shield_heater.dds"
 		color1 = "white"
 		instance = { scale = { 0.65 0.533 } position = { 0.75 0.5 } }
 	}
@@ -22159,7 +21782,7 @@ SWI_subject = {
 }
 
 # IGNORE
-SWK = { # Sarawak
+SWK = {
 	pattern = "pattern_vertical_split_01.tga"
 	color1 = "yellow"
 	color2 = "yellow"
@@ -22184,7 +21807,7 @@ SWK = { # Sarawak
 }
 
 # IGNORE
-SWN = { # Sweden-Norway
+SWN = {
 	pattern = "pattern_per_saltire.dds"
 	color1 = "red"
 	color2 = "blue"
@@ -22218,7 +21841,7 @@ SWZ = {
 	}
 }
 
-SYR = { # Syria
+SYR = {
 	pattern = "pattern_solid.tga"
 	color1 = "black"
 	color2 = "green"
@@ -22346,7 +21969,6 @@ TEX_subject_USA = {
 	}
 }
 TEX_subject = {
-	# subject, other than USA & SPA, based on a (speculative) battle flag
 
 	pattern = "pattern_solid.tga"
 	color1 = "blue"
@@ -22421,7 +22043,6 @@ TEX_merchant = {
 	}
 }
 TEX_Bonnie_Blue = {
-	# Bonnie blue w/ yellow border
 
 	pattern = "pattern_border_of_4.dds"
 	color1 = "blue"
@@ -22481,7 +22102,6 @@ TEX_subject_SPA = {
 	}
 }
 TEX_subject_MEX = {
-	# Flag of the Alamo
 	pattern = "pattern_solid.tga"
 	color1 = "green"
 
@@ -22496,9 +22116,7 @@ TEX_subject_MEX = {
     }
 }
 
-
-TIB = { # Tibet
-	# The early 20th c. flag which is basically the same as the later yellow design (1920) only without the mountain range and with the flaming jewel placed inside the lion's paw
+TIB = {
 	pattern = "pattern_solid.tga"
 	color1 = "red"
 	color2 = "white"
@@ -22538,8 +22156,6 @@ TIB = { # Tibet
 	}
 }
 TIB_monarchy = {
-	# Variant of the 1920 snow lion flag
-	# The Yin Yang flaming sphere should be in the bottom left rather than sitting in his paws
 
 	pattern = "pattern_solid.tga"
 	color1 = "yellow"
@@ -22630,7 +22246,6 @@ TIB_republic = {
 	}
 }
 TIB_subject = {
-	# Except as subject of China (since starting flag)
 
 	pattern = "pattern_solid.tga"
 	color1 = "blue"
@@ -22652,7 +22267,7 @@ TIB_subject = {
 
 }
 
-TID = { # Tidore
+TID = {
 	pattern = "pattern_solid.tga"
 	color1 = "red"
 
@@ -22668,7 +22283,7 @@ TID = { # Tidore
 	}
 }
 
-TIS = { # Turtle Island
+TIS = {
 	pattern = "pattern_solid.tga"
 	color1 = "white"
 
@@ -22687,7 +22302,7 @@ TIS = { # Turtle Island
 	}
 }
 
-TIS_republic = { # Turtle Island, republic
+TIS_republic = {
 	pattern = "pattern_vertical_split_01.tga"
 	color1 = "black"
 	color2 = "red"
@@ -22741,8 +22356,7 @@ TIS_haudenosaunee = {
 	}
 }
 
-TNG = { # Tonga
-	# First hist. design with Ave Maria monogram
+TNG = {
 
 	pattern = "pattern_solid.tga"
 	color1 = "white"
@@ -22768,7 +22382,7 @@ TNG = { # Tonga
 		instance = { scale = { 0.8 0.8 } position = { 0.50 0.50 } }
 	}
 }
-TNG_theocracy = { # Tonga
+TNG_theocracy = {
 	# 1862 design with center cross
 
 	pattern = "pattern_solid.tga"
@@ -22801,7 +22415,7 @@ TNG_republic = {
 	}
 }
 
-TNS = { # Tungus
+TNS = {
 	pattern = "pattern_solid.tga"
 	color1 = "white"
 
@@ -22812,7 +22426,7 @@ TNS = { # Tungus
 	}
 }
 
-TRA = { # Travancore
+TRA = {
 	pattern = "pattern_solid.tga"
 	color1 = "red"
 	color2 = "white"
@@ -22843,7 +22457,7 @@ TRA_subject = {
 	}
 }
 
-TRE = { # Trieste
+TRE = {
 	pattern = "pattern_solid.tga"
 	color1 = "red"
 	color2 = "white"
@@ -22894,7 +22508,6 @@ TRI = {
 	}
 }
 TRI_TUR = {
-	# As subject of Turkey
 
 	pattern = "pattern_solid.tga"
 	color1 = "green"
@@ -22974,7 +22587,7 @@ TRS = {
 	}
 }
 
-TUN = { # Tunis
+TUN = {
 	pattern = "pattern_solid.tga"
 	color1 = "blue"
 	color2 = "red"
@@ -23197,7 +22810,6 @@ TUS_communist = {
 }
 
 TWT = {
-	# Cusco rainbow flag
 	pattern = "pattern_solid.tga"
 	color1 = "white"
 
@@ -23263,7 +22875,7 @@ UBD = {
 	}
 }
 
-UCA = { # Central America
+UCA = {
 
 	pattern = "pattern_solid.tga"
 	color1 = "blue_light"
@@ -23330,7 +22942,6 @@ UCA_subject = {
 	}
 }
 UCA_subject_SPA = {
-	# Basically inverted colours of the Guatemalan design
 	pattern = "pattern_solid.tga"
 	color1 = "red"
 	color2 = "white"
@@ -23456,7 +23067,6 @@ UKR_free_state = {
 }
 
 ULS = {
-	# Ulster province
 	pattern = "pattern_solid.tga"
 	color1 = "yellow"
 
@@ -23476,7 +23086,6 @@ ULS = {
 	}
 }
 ULS_uk = {
-	# Ulster Banner (Northern Ireland) without crown
 	pattern = "pattern_solid.tga"
 	color1 = "white"
 
@@ -23501,7 +23110,6 @@ ULS_uk = {
 	}
 }
 ULS_uk_monarchy = {
-	# Ulster Banner (Northern Ireland) with crown
 	pattern = "pattern_solid.tga"
 	color1 = "white"
 
@@ -23533,7 +23141,6 @@ ULS_uk_monarchy = {
 	}
 }
 ULS_theocracy = {
-	# Orange Order flag. Not the best match, but a nice unique flag.
 
 	pattern = "pattern_solid.tga"
 	color1 = "orange"
@@ -23541,14 +23148,12 @@ ULS_theocracy = {
 	color3 = "white"
 	color4 = "red"
 
-	# Star
 	colored_emblem = {
 		texture = "ce_star_05.dds"
 		color1 = color2
 		color2 = color2
 		instance = { scale = { 0.4 0.4 } position = { 0.75 0.75 } }
 	}
-	# Canton
 	colored_emblem = {
 		texture = "ce_solid.dds"
 		color1 = color3
@@ -23563,13 +23168,11 @@ ULS_theocracy = {
 	}
 }
 ULS_third_way = {
-	# Red saltire on blue
 	pattern = "pattern_solid.tga"
 	color1 = "blue"
 	color2 = "red"
 
-
-	colored_emblem = {
+colored_emblem = {
 		texture = "ce_saltire.dds"
 		color1 = color2
 	}
@@ -23585,13 +23188,11 @@ ULS_third_way = {
 	}
 }
 ULS_third_way_monarchy = {
-	# Red saltire on blue
 	pattern = "pattern_solid.tga"
 	color1 = "blue"
 	color2 = "red"
 
-
-	colored_emblem = {
+colored_emblem = {
 		texture = "ce_saltire.dds"
 		color1 = color2
 	}
@@ -23719,7 +23320,6 @@ NCR_confederate_pre_1861 = {
 		instance = { scale = { 0.5 0.5 } position = { 0.17 0.5 } }
 	}
 }
-
 
 NCR_confederate = {
 	pattern = "pattern_solid.tga"
@@ -23889,7 +23489,7 @@ CLI_monarchist = {
 	pattern = "pattern_solid.tga"
 	color1 = "green"
 
-	colored_emblem = { #Literally just Charlotte's flag
+	colored_emblem = {
 		texture = "ce_crown_simple.dds"
 		color1 = "white"
 		color2 = "white"
@@ -23941,7 +23541,6 @@ GRG_communist = {
 		instance = { scale = { 0.2 0.27 } position = { 0.15 0.52 } }
 	}
 }
-
 
 FLR = {
 	pattern = "pattern_solid.tga"
@@ -23999,9 +23598,7 @@ FLR_communist = {
 	}
 }
 
-URU = { # Uruguay
-	# 1830 design (square canton, geometrical sun design)
-	# Starting/Republic
+URU = {
 
 	pattern = "pattern_solid.tga"
 	color1 = "blue"
@@ -24113,7 +23710,6 @@ URU_absolute_monarchy = {
 	}
 }
 URU_communist = {
-	# Inspired from UJC flag
 
 	pattern = "pattern_solid.tga"
 	color1 = "red"
@@ -24159,7 +23755,6 @@ URU_subject_SPA = {
 	}
 }
 URU_subject_BRZ = {
-	# Provincia Cisplatina before uruguayan independence
 	@cisplatine_scale = 0.36
 
 	pattern = "pattern_solid.tga"
@@ -24239,7 +23834,6 @@ USA = {
     }
 }
 USA_coa = {
-	# USA Coat of Arms used as a royal banner
 	pattern = "pattern_solid.tga"
 	color1 = "blue"
 	color2 = "white"
@@ -24372,7 +23966,7 @@ USA_technocracy = {
 	}
 }
 
-VEN = { # Venice
+VEN = {
 	pattern = "pattern_border_venice.dds"
 	color1 = "red"
 	color2 = "yellow"
@@ -24394,7 +23988,7 @@ VEN_subject = {
 	}
 }
 
-VIE = { # Vientiane
+VIE = {
 	pattern = "pattern_solid.tga"
 	color1 = "yellow"
 	color2 = "red"
@@ -24425,15 +24019,13 @@ VIE_subject = {
 	}
 }
 
-VNT = { # Vanuatu
-	# Simplified Independentist flag
+VNT = {
 	pattern = "pattern_solid.tga"
 	color1 = "red"
 	color2 = "blue"
 	color3 = "white"
 
-
-	colored_emblem = {
+colored_emblem = {
 		texture = "ce_rhombus.dds"
 		color1 = "black"
 		color2 = "black"
@@ -24447,14 +24039,12 @@ VNT = { # Vanuatu
 	}
 }
 VNT_subject = {
-	# Offset for overlord flag
 	pattern = "pattern_solid.tga"
 	color1 = "red"
 	color2 = "blue"
 	color3 = "white"
 
-
-	colored_emblem = {
+colored_emblem = {
 		texture = "ce_rhombus.dds"
 		color1 = "black"
 		color2 = "black"
@@ -24468,7 +24058,6 @@ VNT_subject = {
 	}
 }
 VNT_subject_GBR = {
-	# New Hebrides blue ensign
 	pattern = "pattern_solid.tga"
 	color1 = "blue"
 
@@ -24495,7 +24084,6 @@ VNT_subject_GBR = {
 	}
 }
 VNT_subject_FRA = {
-	# Franceville flag
 	pattern = "pattern_solid.tga"
 	color1 = "white"
 	color2 = "red"
@@ -24533,9 +24121,6 @@ VNZ= {
 	}
 }
 VNZ_oligarchy = {
-	# 1830-36 Starting flag
-	# Arms are sometimes represented directly in the field (this variant is easier to read)
-	# Varying size for the stripes too
 
 	pattern = "pattern_solid.tga"
 	color1 = "yellow"
@@ -24808,7 +24393,7 @@ WBL = {
 	}
 }
 
-WES = { # Westphalia
+WES = {
 	pattern = "pattern_solid.tga"
 	color1 = "white"
 	color2 = "blue"
@@ -24820,8 +24405,7 @@ WES = { # Westphalia
 	}
 }
 
-
-WIN = { # West Indies Federation
+WIN = {
 	# 1958 design, a bit uncertain (sun can be yellow or red, the stripes are sometimes mirrored, sometimes not)
 
 	pattern = "pattern_solid.tga"
@@ -24836,8 +24420,7 @@ WIN = { # West Indies Federation
 	}
 }
 
-WLL = { # Wallonia
-	# Arms of Hainaut (the rooster flag is very recent)
+WLL = {
 
 	pattern = "pattern_solid.tga"
 	color1 = "yellow"
@@ -24887,7 +24470,6 @@ WLS = {
 	}
 }
 WLS_theocracy = {
-	# St David's Cross
 	pattern = "pattern_solid.tga"
 	color1 = "black"
 	color2 = "yellow"
@@ -24997,7 +24579,6 @@ WLS_subject_GBR = {
 }
 
 WSG = {
-	# Flag of the Dervish state
 	pattern = "pattern_border_of_4.dds"
 	color1 = "azure"
 	color2 = "red"
@@ -25068,7 +24649,6 @@ WUR_absolute_monarchy = {
     }
 }
 WUR_republic = {
-	# 1810-16
 
 	pattern = "pattern_solid.tga"
 	color1 = "yellow"
@@ -25134,9 +24714,7 @@ WUR_subject_PRU = {
 	}
 }
 
-XIN = { # Xinjiang
-	# Kashgaria 1865 - A plain white banner was also used by the Kashgarian sultanate
-	# ext. similar to Turkey
+XIN = {
 
 	pattern = "pattern_solid.tga"
 	color1 = "red"
@@ -25151,7 +24729,6 @@ XIN = { # Xinjiang
 	}
 }
 XIN_republic = {
-	# East Turkestan 1933 - A more distinctive flag (short lived republic of Uighuristan)
 
 	pattern = "pattern_border_of_3.dds"
 	color1 = "blue_light"
@@ -25179,8 +24756,7 @@ XIN_subject = {
 	}
 }
 
-YAK = { # Yakutia
-	# very modern flag (only SSR flags before, 1922-91)
+YAK = {
 	pattern = "pattern_solid.tga"
 	color1 = "blue_light"
 	color2 = "green"
@@ -25212,8 +24788,7 @@ YAK = { # Yakutia
 	}
 }
 
-YEM = { # Yemen
-	# Adopted 1917
+YEM = {
 
 	pattern = "pattern_solid.tga"
 	color1 = "red"
@@ -25236,7 +24811,6 @@ YEM = { # Yemen
 	}
 }
 YEM_subject = {
-	# Scimitar only w/ canton
 
 	pattern = "pattern_solid.tga"
 	color1 = "red"
@@ -25254,7 +24828,6 @@ YEM_subject = {
 	}
 }
 YEM_subject_GBR = {
-	# Blue ensign for UK
 
 	pattern = "pattern_solid.tga"
 	color1 = "blue"
@@ -25306,8 +24879,7 @@ YUC = {
     }
 }
 
-YUG = { # Yugoslavia
-	# 1918-46
+YUG = {
 
 	pattern = "pattern_solid.tga"
 	color1 = "blue"
@@ -25388,8 +24960,7 @@ YUG_bulgaria_monarchy = {
 	}
 }
 
-ZIM = { # Zimbabwe Rhodesia
-	# Modern flag 1980
+ZIM = {
 
 	pattern = "pattern_solid.tga"
 	color1 = "green"
@@ -25445,7 +25016,7 @@ ZUL = {
 	}
 }
 
-TRH = { # Turkestan, using the flag of the Basmachi movement as a base
+TRH = {
 	pattern = "pattern_solid.tga"
 	color1 = "white"
 
@@ -25507,8 +25078,7 @@ LOU_monarchy = {
 	}
 }
 
-KLM = { # Kalmykia
-	# using the old flag of the Khanate rather than the 1930s-40s design
+KLM = {
 
 	pattern = "pattern_solid.tga"
 	color1 = "yellow"
@@ -25521,7 +25091,7 @@ KLM = { # Kalmykia
 	}
 }
 
-AIT = { # Ait Abbas
+AIT = {
 	pattern = "pattern_solid.tga"
 	color1 = "green"
 
@@ -25534,7 +25104,7 @@ AIT = { # Ait Abbas
 	}
 }
 
-CON = { # Constantine
+CON = {
 	pattern = "pattern_solid.tga"
 	color1 = "red"
 
@@ -25546,7 +25116,7 @@ CON = { # Constantine
 	}
 }
 
-TUG = { # Touggourt
+TUG = {
 	pattern = "pattern_solid.tga"
 	color1 = "green"
 
@@ -26007,7 +25577,6 @@ CKC = {
 	}
 }
 
-
 CKC_white = {
 	pattern = "pattern_solid.tga"
 	color1 = "blue"
@@ -26064,7 +25633,7 @@ EQT = {
 	}
 }
 
-CTR = {	# Catharinense Republic
+CTR = {
 	pattern = "pattern_solid.tga"
 	color1 = "green"
 
@@ -26075,7 +25644,7 @@ CTR = {	# Catharinense Republic
 	}
 }
 
-MNG = {	# Minas Gerais
+MNG = {
 	pattern = "pattern_solid.tga"
 	color1 = "white"
 
@@ -26552,7 +26121,7 @@ TJI_communist = {
 }
 
 # Kirghizia
-KYR = { #Based on the flag of the Khwarazmian Empire
+KYR = {
 	pattern = "pattern_solid.tga"
 	color1 = "black"
 
@@ -26723,7 +26292,7 @@ CAU_communist = {
 	}
 }
 
-PAU = {	# Paulistania
+PAU = {
 	pattern = "pattern_solid.tga"
 	color1 = "white"
 
@@ -26892,7 +26461,7 @@ PLT_communist = {
 	}
 }
 
-SML = { # Seminole
+SML = {
 
 	pattern = "pattern_solid.tga"
 	color1 = "yellow"
@@ -26918,7 +26487,6 @@ SML = { # Seminole
 }
 
 BEI_dictatorship = {
-	# Flag of the Beiyang Army
 
 	pattern = "pattern_solid.tga"
 	color1 = "red"
@@ -27119,9 +26687,6 @@ ZAN = {
 	pattern = "pattern_solid.tga"
 	color1 = "yellow"
 
-	# This is actually the Ya'rubid dynasty's flag of Oman, as far as I can tell, but it's repeated online as the flag of Zanzibar because of a Virginian cigarette card from 1890 said it was the flag.
-	# It /is/ distinctive from Oman's flag this way, so I will perpetuate the historical inaccuracy while acknowledging that it is wrong and telling you as much here. If you see someone on the paradox forums or reddit or what-have-you complaining about it, screenshot this and post it in the pertinent thread.
-
 	# each colored stripe is 1/19 of the total field
 	colored_emblem = {
 		texture = "ce_solid.dds"
@@ -27182,7 +26747,7 @@ ZAN_republic_afro_shirazi = {
 	}
 }
 
-WTU = {	# Wituland Protectorate flag
+WTU = {
 	pattern = "pattern_vertical_split_01.tga"
 	color1 = "white"
 	color2 = "red"
@@ -27194,7 +26759,7 @@ WTU = {	# Wituland Protectorate flag
 	}
 }
 
-MBS = {	# Mombasa. Just the EU4 flag design tbh, can't find a historical flag design for Mombasa under Mazrui or Busaidi rule
+MBS = {
 	pattern = "pattern_solid.tga"
 	color1 = "red_dark"
 
@@ -27206,13 +26771,12 @@ MBS = {	# Mombasa. Just the EU4 flag design tbh, can't find a historical flag de
 }
 
 red_flag = {
-	# Plain red flag. wow!
 
 	pattern = "pattern_solid.tga"
 	color1 = "red"
 }
 
-AJR = { # Ajuran
+AJR = {
 	pattern = "pattern_solid.tga"
 	color1 = "red"
 
@@ -27229,7 +26793,7 @@ AJR = { # Ajuran
 	}
 }
 
-BGM = { # Begemder. Riffing off an early Ethiopian banner design.
+BGM = {
 	pattern = "pattern_solid.tga"
 	color1 = "yellow"
 
@@ -27240,7 +26804,7 @@ BGM = { # Begemder. Riffing off an early Ethiopian banner design.
 	}
 }
 
-SHW = { # Shewa. Taking after the EU4 flag. Do not ask me where that design came from.
+SHW = {
 	pattern = "pattern_solid.tga"
 	color1 = "red_dark"
 
@@ -27253,7 +26817,7 @@ SHW = { # Shewa. Taking after the EU4 flag. Do not ask me where that design came
 	}
 }
 
-QWR = { # Qwara
+QWR = {
 	pattern = "pattern_solid.tga"
 	color1 = "red"
 
@@ -27264,20 +26828,18 @@ QWR = { # Qwara
 	}
 }
 
-ISQ = { # Isaaq
+ISQ = {
 	pattern = "pattern_solid.tga"
 	color1 = "green"
 
 	colored_emblem = {
-		texture = "ce_shahada_02.dds" # the Word of Purity
+		texture = "ce_shahada_02.dds"
 		color1 = "white"
 		color2 = "white"
 	}
 }
 
-# I have only found one photo of something that may be the flag of the Tungi Sultanate, and it was from a 2010s research paper prepared for Anadarko, a now-defunct /oil company/, at some point between 2012 and 2019. The photograph in question was cited as "Adamowicz, 2012". I have no leads beyond that.
-# I'm sure of the frame layout here but the photograph was too low-resolution for me to figure out what the central charge was. I /think/ there was a crescent and star in there? along with other emblems.
-TGI = { # Tungi Sultanate
+TGI = {
 	pattern = "pattern_border_of_3.dds"
 	color1 = "green"
 	color2 = "red"
@@ -27290,7 +26852,7 @@ TGI = { # Tungi Sultanate
 	}
 }
 
-WLT = { # Wolaita
+WLT = {
 	pattern = "pattern_solid.tga"
 	color1 = "red"
 
@@ -27301,7 +26863,7 @@ WLT = { # Wolaita
 	}
 }
 
-WLG = { # Welega. Hard to find an attested flag for Leqa Nekemte tbh
+WLG = {
 	pattern = "pattern_solid.tga"
 	color1 = "black"
 
@@ -27312,7 +26874,7 @@ WLG = { # Welega. Hard to find an attested flag for Leqa Nekemte tbh
 	}
 }
 
-NYM_centralized = { # Unyamwezi. Actually the flag of Tanganyika
+NYM_centralized = {
 	pattern = "pattern_solid.tga"
 	color1 = "yellow"
 
@@ -27324,7 +26886,7 @@ NYM_centralized = { # Unyamwezi. Actually the flag of Tanganyika
 	}
 }
 
-BNT = { # Banat
+BNT = {
 	pattern = "pattern_solid.tga"
 	color1 = "red_light"
 
@@ -27335,7 +26897,7 @@ BNT = { # Banat
 	}
 }
 
-ATB = { # Athabaska. Agglomeration of multiple Athabaskan nations, so this is mostly riffing off a simplified version of the Gwich'in Nation of NWT and Yukon's flag, sans caribou
+ATB = {
 	pattern = "pattern_solid.tga"
 	color1 = "venice_teal"
 
@@ -27346,7 +26908,7 @@ ATB = { # Athabaska. Agglomeration of multiple Athabaskan nations, so this is mo
 	}
 }
 
-MSN = { # Massina. Fellow on Wikipedia had a pattern like this, but didn't cite his sources. Only other thing I could briefly find was that the founder of Massina received a flag from Uthman dan Fodio of Sokoto, and Sokoto just has a plain green flag. I'm unsure where this yellow flag with a green crescent and stars pattern comes from then, but it's distinctive from Sokoto's so that counts for something. If you, the reader, have a better flag, please post about it /and cite where the design comes from, ideally pointing to primary sources/ please.
+MSN = {
 	pattern = "pattern_solid.tga"
 	color1 = "yellow"
 
@@ -27365,7 +26927,7 @@ MSN = { # Massina. Fellow on Wikipedia had a pattern like this, but didn't cite 
 	}
 }
 
-SPC = { # Carlist Spain
+SPC = {
 	pattern = "pattern_solid.tga"
 	color1 = "white"
 
@@ -27375,7 +26937,7 @@ SPC = { # Carlist Spain
 	}
 }
 
-ARN = { # Aragon
+ARN = {
 	pattern = "pattern_solid.tga"
 	color1 = "red"
 
@@ -27386,7 +26948,7 @@ ARN = { # Aragon
 	}
 }
 
-LEO = { # Leon
+LEO = {
 	pattern = "pattern_solid.tga"
 	color1 = "white"
 
@@ -27397,7 +26959,7 @@ LEO = { # Leon
 	}
 }
 
-ASU = { # Asturias
+ASU = {
 	pattern = "pattern_solid.tga"
 	color1 = "asturian_blue"
 
@@ -27407,18 +26969,18 @@ ASU = { # Asturias
 	}
 }
 
-FZN = { # Fezzan
+FZN = {
 	pattern = "pattern_solid.tga"
 	color1 = "red"
 
-	colored_emblem = { # This exists here purely so to make the flag distinct from Oman, no I am not taking suggestions
+	colored_emblem = {
 		texture = "ce_checkered_orle.dds"
 		color1 = "red"
 		color2 = "white"
 	}
 }
 
-CYR = { # Cyrenaica
+CYR = {
 	pattern = "pattern_solid.tga"
 	color1 = "black"
 
@@ -27430,7 +26992,7 @@ CYR = { # Cyrenaica
 	}
 }
 
-LBY = { # Libya
+LBY = {
 	pattern = "pattern_solid.tga"
 	color1 = "black"
 
@@ -27456,7 +27018,6 @@ LBY = { # Libya
 
 # New Spain
 SC1 = {
-	# Combination of 1865 Mexican Empire flag and colonial motifs
 
 	pattern = "pattern_solid.tga"
 	color1 = "white"
@@ -27490,7 +27051,7 @@ SC1 = {
 }
 
 # New Granada
-SC2 = { # Gran Colombia
+SC2 = {
 	pattern = "pattern_solid.tga"
 	color1 = "white"
 	color2 = "red"
@@ -27527,7 +27088,7 @@ SC2 = { # Gran Colombia
 	}
 }
 
-SC3 = { # Viceroalty of Peru
+SC3 = {
 	pattern = "pattern_solid.tga"
 	color1 = "white"
 	color2 = "red"
@@ -27563,7 +27124,6 @@ SC3 = { # Viceroalty of Peru
 		instance = { scale = { 1 1 } position = { 0.5 0.5 } }
 	}
 }
-
 
 SC4 = {
 	pattern = "pattern_solid.tga"
@@ -27636,7 +27196,6 @@ SC4 = {
 #		instance = { scale = { 0.35 0.35 } position = { 0.5 0.5 } }
 #	}
 }
-
 
 # === Modern tag CoAs ===
 
@@ -27787,7 +27346,7 @@ TRK_subject_GBR = {
 	}
 }
 
-XPO = { # Portugal
+XPO = {
 	pattern = "pattern_solid.tga"
 	color1 = "white"
 
@@ -27807,7 +27366,7 @@ XPO = { # Portugal
 	}
 }
 
-XPO_uk = { # Portugal
+XPO_uk = {
 	pattern = "pattern_solid.tga"
 	color1 = "white"
 
@@ -27840,7 +27399,6 @@ XPO_uk = { # Portugal
 }
 
 XPO_republic = {
-	# 1910 Republican flag
 	pattern = "pattern_solid.tga"
 	color1 = "red"
 
@@ -27863,7 +27421,6 @@ XPO_republic = {
 }
 
 XPO_dictatorship = {
-	# Design mostly borrowed from republican war flag
 
 	pattern = "pattern_solid.tga"
 	color1 = "red"
@@ -27892,7 +27449,7 @@ XPO_dictatorship = {
 	}
 }
 
-XPO_absolute_monarchy = { # Portugal
+XPO_absolute_monarchy = {
 	pattern = "pattern_solid.tga"
 	color1 = "white"
 
@@ -27907,7 +27464,6 @@ XPO_absolute_monarchy = { # Portugal
 }
 
 XPO_absolute_monarchy_uk = {
-	# 1816-26
 	pattern = "pattern_solid.tga"
 	color1 = "white"
 	colored_emblem = {
@@ -27952,7 +27508,6 @@ XPO_communist = {
 }
 
 XPO_fascist = {
-	# MNS flag
 	pattern = "pattern_solid.tga"
 	color1 = "blue"
 
@@ -27985,7 +27540,6 @@ XPO_subject = {
 }
 
 XPO_anarchist = {
-	# From the "A Batalha" newspaper
 	pattern = "pattern_solid.tga"
 	color1 = "red"
 
@@ -28040,7 +27594,6 @@ XDE = {
 }
 
 XDE_absolute_monarchy = {
-	# National Coat of Arms as placeholder
 
 	pattern = "pattern_solid.tga"
 	color1 = "red"
@@ -28201,7 +27754,6 @@ NRW_communist = {
 }
 
 NRW_fascist = {
-	# NS Flag
 	pattern = "pattern_solid.tga"
 	color1 = "red"
 
@@ -28257,7 +27809,6 @@ PRC_absolute_monarchy = {
 }
 
 PRC_republic = {
-	# Chinese republic 1912
 
 	pattern = "pattern_solid.tga"
 	color1 = "red"
@@ -28289,14 +27840,12 @@ PRC_republic = {
 }
 
 PRC_dictatorship = {
-	# Kuomintang flag war flag 1930
 
 	pattern = "pattern_border_of_4.dds"
 	color1 = "blue"
 	color2 = "red"
 
-
-	colored_emblem = {
+colored_emblem = {
 		texture = "ce_sun.dds"
 		color1 = "white"
 		color2 = "white"
@@ -28317,7 +27866,6 @@ PRC_dictatorship = {
 }
 
 PRC_theocracy = {
-	# Simple variant of the imperial dragon flag with a border
 	pattern = "pattern_solid.tga"
 	color1 = "yellow"
 	color2 = "yellow"
@@ -28433,7 +27981,7 @@ PRC_communist = {
 	}
 }
 
-PRC_han_empire = { # Han Imperial China
+PRC_han_empire = {
 
 	pattern = "pattern_solid.tga"
 	color1 = "yellow"
@@ -28474,7 +28022,7 @@ IDS_republic = {
 	}
 }
 
-IRA = { # Persia
+IRA = {
 	pattern = "pattern_solid.tga"
 	color1 = "green"
 	color2 = "green"
@@ -28520,7 +28068,6 @@ IRA = { # Persia
 }
 
 IRA_absolute_monarchy = {
-	# Starting flag
 
 	pattern = "pattern_border_of_3.dds"
 	color1 = "white"
@@ -28714,7 +28261,6 @@ IRA_subject = {
 }
 
 IRA_fascist = {
-	# SUMKA flag
 	pattern = "pattern_solid.tga"
 	color1 = "red"
 
@@ -28766,7 +28312,6 @@ IRA_subject_GBR = {
 }
 
 ROC_dictatorship = {
-	# Flag of the Beiyang Army
 
 	pattern = "pattern_solid.tga"
 	color1 = "red"
@@ -28777,5 +28322,16 @@ ROC_dictatorship = {
 		color1 = "black"
 		color2 = "yellow"
 		instance = { scale = { 0.8 0.8 } position = { 0.5 0.5 } }
+	}
+}
+
+RUS_republic_1991 = {
+	pattern = "pattern_solid.tga"
+	color1 = "white"
+
+	colored_emblem = {
+		texture = "ce_tricolor_horizontal.dds"
+		color1 = hsv360 { 212 80 72 }
+		color2 = "red"
 	}
 }

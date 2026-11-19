@@ -1,0 +1,122 @@
+rus_l90_radicalisation_bar = {
+	name = "rus_l90_radicalisation_bar_desc"
+	desc = "rus_l90_radicalisation_bar"
+	default_bad = yes
+
+	start_value = 0
+	min_value = 0
+	max_value = 100
+}
+
+cch_l90_radicalisation_bar = {
+	name = "cch_l90_radicalisation_bar_desc"
+	desc = "cch_l90_radicalisation_bar"
+	default_bad = yes
+
+	start_value = 0
+	min_value = 0
+	max_value = 100
+}
+
+rus_l90_insurgency_bar = {
+	name = "rus_l90_insurgency_bar_desc"
+	desc = "rus_l90_insurgency_bar"
+	default_bad = yes
+
+	monthly_progress = {
+		progress_condition = {
+			limit = {
+				has_variable = rus_l90_insurgency_phase
+				NOT = { has_modifier = rus_l90_chechenization }
+			}
+			add = {
+				desc = "rus_l90_insurgency_regroup_tt"
+				value = 0.5
+			}
+		}
+		progress_condition = {
+			limit = {
+				has_variable = rus_l90_insurgency_phase
+				has_modifier = rus_l90_chechenization
+			}
+			add = {
+				desc = "rus_l90_insurgency_chechenization_tt"
+				value = -1.5
+			}
+		}
+		progress_condition = {
+			limit = {
+				has_variable = rus_l90_insurgency_phase
+				has_modifier = rus_l90_grozny_rebuilding
+			}
+			add = {
+				desc = "rus_l90_insurgency_rebuilding_tt"
+				value = -1
+			}
+		}
+		progress_condition = {
+			limit = {
+				has_variable = rus_l90_insurgency_phase
+				has_modifier = rus_l90_sweeps
+			}
+			add = {
+				desc = "rus_l90_insurgency_sweeps_backlash_tt"
+				value = 0.3
+			}
+		}
+		progress_condition = {
+			limit = {
+				has_variable = rus_l90_insurgency_phase
+				has_variable = rus_l90_garrison
+			}
+			add = {
+				desc = "rus_l90_insurgency_garrison_tt"
+				value = -0.5
+			}
+		}
+	}
+
+	start_value = 0
+	min_value = 0
+	max_value = 100
+}
+
+rus_l90_union_bar = {
+	name = "rus_l90_union_bar_desc"
+	desc = "rus_l90_union_bar"
+	default_green = yes
+
+	monthly_progress = {
+		progress_condition = {
+			limit = {
+				rus_l90_byl_relations_at_least = { R = amicable }
+			}
+			add = {
+				desc = "rus_l90_union_relations_good_tt"
+				value = 1
+			}
+		}
+		progress_condition = {
+			limit = {
+				NOT = { rus_l90_byl_relations_at_least = { R = cordial } }
+			}
+			add = {
+				desc = "rus_l90_union_relations_bad_tt"
+				value = -1
+			}
+		}
+		progress_condition = {
+			limit = {
+				NOT = { rus_l90_byl_open_to_union = yes }
+			}
+			add = {
+				desc = "rus_l90_union_byl_hostile_tt"
+				value = -2
+			}
+		}
+	}
+
+	start_value = 0
+	min_value = 0
+	max_value = 12
+}

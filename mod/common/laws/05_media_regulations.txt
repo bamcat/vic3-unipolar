@@ -29,11 +29,6 @@ law_fully_unregulated_media = {
 }
 
 # ── DIGITAL RIGHTS ────────────────────────
-# Basic protections for citizens online —
-# privacy guarantees, anti-censorship
-# provisions, freedom of information.
-# Movements still thrive but the state
-# gets a small foothold.
 
 law_digital_rights = {
 	group = lawgroup_media_regulations
@@ -42,7 +37,6 @@ law_digital_rights = {
 	progressiveness = 25
 
 	modifier = {
-		# Freer information still benefits radical movements
 		state_radicals_from_political_movements_mult  = 0.10
 		political_movement_pop_attraction_mult = 0.10
 		political_movement_radicalism_add = 0.10
@@ -74,10 +68,6 @@ law_digital_rights = {
 }
 
 # ── FAIRNESS DOCTRINE ─────────────────────
-# Media outlets must present balanced
-# coverage of political issues.
-# Radical movements lose amplification.
-# State authority stabilises.
 
 law_fairness_doctrine = {
 	group = lawgroup_media_regulations
@@ -86,7 +76,6 @@ law_fairness_doctrine = {
 	progressiveness = 100
 
 	modifier = {
-		# Balanced coverage dampens radical movement recruitment
 		country_authority_mult                        = 0.05
 		country_legitimacy_base_add                   = 3
 		state_radicals_from_political_movements_mult  = -0.20
@@ -120,12 +109,6 @@ law_fairness_doctrine = {
 }
 
 # ── GOVERNMENT CONTENT MODERATORS ─────────
-# The state actively moderates online
-# content — removing disinformation,
-# extremist material, and content deemed
-# harmful. A powerful check on radical
-# movements at the cost of legitimacy
-# concerns about censorship.
 
 law_government_content_moderators = {
 	group = lawgroup_media_regulations
@@ -171,13 +154,6 @@ law_government_content_moderators = {
 }
 
 # ── STATE WIFI ────────────────────────────
-# The state operates the communications
-# infrastructure directly — internet
-# access is a public utility fully
-# controlled by the government. Maximum
-# authority, minimum movement attraction.
-# The information environment is a
-# state resource.
 
 law_state_wifi = {
 	group = lawgroup_media_regulations

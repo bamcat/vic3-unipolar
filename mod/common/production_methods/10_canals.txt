@@ -1,4 +1,4 @@
-REPLACE_OR_CREATE:pm_canal = {
+﻿REPLACE_OR_CREATE:pm_canal = {
 	texture = "gfx/interface/icons/production_method_icons/canals.dds"
 
 	country_modifiers = {
@@ -15,15 +15,14 @@ REPLACE_OR_CREATE:pm_canal = {
 
 	building_modifiers = {
 		workforce_scaled = {
-			# input goods
-			goods_input_tools_add = 6
-			goods_input_coal_add = 11
+			goods_input_tools_add = 10
+			goods_input_coal_add = 15
 		}
 
 		level_scaled = {
-			building_employment_clerks_add = 2000
-			building_employment_machinists_add = 2500
-			building_employment_bureaucrats_add = 500
+			building_employment_clerks_add = 1500
+			building_employment_machinists_add = 1875
+			building_employment_bureaucrats_add = 375
 		}
 	}
 }

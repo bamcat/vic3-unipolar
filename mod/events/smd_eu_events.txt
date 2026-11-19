@@ -1,0 +1,153 @@
+﻿namespace = smd_eu
+
+smd_eu.1 = {
+	type = country_event
+	placement = root
+	hidden = yes
+
+	trigger = {
+		c:EUR ?= this
+		OR = {
+			has_modifier = io_eu_prestige_anchor
+			power_bloc ?= { power_bloc_leader = c:EUR }
+		}
+	}
+
+	immediate = {
+		if = { limit = { has_modifier = io_eu_prestige_anchor } remove_modifier = io_eu_prestige_anchor }
+		if = {
+			limit = { power_bloc ?= { power_bloc_leader = c:EUR } }
+			set_variable = { name = io_eu_top_prestige value = 0 }
+			power_bloc = {
+				if = { limit = { any_power_bloc_member = { NOT = { this = c:EUR } prestige >= 250 } } root = { set_variable = { name = io_eu_top_prestige value = 250 } } }
+				if = { limit = { any_power_bloc_member = { NOT = { this = c:EUR } prestige >= 500 } } root = { set_variable = { name = io_eu_top_prestige value = 500 } } }
+				if = { limit = { any_power_bloc_member = { NOT = { this = c:EUR } prestige >= 750 } } root = { set_variable = { name = io_eu_top_prestige value = 750 } } }
+				if = { limit = { any_power_bloc_member = { NOT = { this = c:EUR } prestige >= 1000 } } root = { set_variable = { name = io_eu_top_prestige value = 1000 } } }
+				if = { limit = { any_power_bloc_member = { NOT = { this = c:EUR } prestige >= 1250 } } root = { set_variable = { name = io_eu_top_prestige value = 1250 } } }
+				if = { limit = { any_power_bloc_member = { NOT = { this = c:EUR } prestige >= 1500 } } root = { set_variable = { name = io_eu_top_prestige value = 1500 } } }
+				if = { limit = { any_power_bloc_member = { NOT = { this = c:EUR } prestige >= 1750 } } root = { set_variable = { name = io_eu_top_prestige value = 1750 } } }
+				if = { limit = { any_power_bloc_member = { NOT = { this = c:EUR } prestige >= 2000 } } root = { set_variable = { name = io_eu_top_prestige value = 2000 } } }
+				if = { limit = { any_power_bloc_member = { NOT = { this = c:EUR } prestige >= 2250 } } root = { set_variable = { name = io_eu_top_prestige value = 2250 } } }
+				if = { limit = { any_power_bloc_member = { NOT = { this = c:EUR } prestige >= 2500 } } root = { set_variable = { name = io_eu_top_prestige value = 2500 } } }
+				if = { limit = { any_power_bloc_member = { NOT = { this = c:EUR } prestige >= 2750 } } root = { set_variable = { name = io_eu_top_prestige value = 2750 } } }
+				if = { limit = { any_power_bloc_member = { NOT = { this = c:EUR } prestige >= 3000 } } root = { set_variable = { name = io_eu_top_prestige value = 3000 } } }
+				if = { limit = { any_power_bloc_member = { NOT = { this = c:EUR } prestige >= 3250 } } root = { set_variable = { name = io_eu_top_prestige value = 3250 } } }
+				if = { limit = { any_power_bloc_member = { NOT = { this = c:EUR } prestige >= 3500 } } root = { set_variable = { name = io_eu_top_prestige value = 3500 } } }
+				if = { limit = { any_power_bloc_member = { NOT = { this = c:EUR } prestige >= 3750 } } root = { set_variable = { name = io_eu_top_prestige value = 3750 } } }
+				if = { limit = { any_power_bloc_member = { NOT = { this = c:EUR } prestige >= 4000 } } root = { set_variable = { name = io_eu_top_prestige value = 4000 } } }
+				if = { limit = { any_power_bloc_member = { NOT = { this = c:EUR } prestige >= 4250 } } root = { set_variable = { name = io_eu_top_prestige value = 4250 } } }
+				if = { limit = { any_power_bloc_member = { NOT = { this = c:EUR } prestige >= 4500 } } root = { set_variable = { name = io_eu_top_prestige value = 4500 } } }
+				if = { limit = { any_power_bloc_member = { NOT = { this = c:EUR } prestige >= 4750 } } root = { set_variable = { name = io_eu_top_prestige value = 4750 } } }
+				if = { limit = { any_power_bloc_member = { NOT = { this = c:EUR } prestige >= 5000 } } root = { set_variable = { name = io_eu_top_prestige value = 5000 } } }
+				if = { limit = { any_power_bloc_member = { NOT = { this = c:EUR } prestige >= 5250 } } root = { set_variable = { name = io_eu_top_prestige value = 5250 } } }
+				if = { limit = { any_power_bloc_member = { NOT = { this = c:EUR } prestige >= 5500 } } root = { set_variable = { name = io_eu_top_prestige value = 5500 } } }
+				if = { limit = { any_power_bloc_member = { NOT = { this = c:EUR } prestige >= 5750 } } root = { set_variable = { name = io_eu_top_prestige value = 5750 } } }
+				if = { limit = { any_power_bloc_member = { NOT = { this = c:EUR } prestige >= 6000 } } root = { set_variable = { name = io_eu_top_prestige value = 6000 } } }
+				if = { limit = { any_power_bloc_member = { NOT = { this = c:EUR } prestige >= 6250 } } root = { set_variable = { name = io_eu_top_prestige value = 6250 } } }
+				if = { limit = { any_power_bloc_member = { NOT = { this = c:EUR } prestige >= 6500 } } root = { set_variable = { name = io_eu_top_prestige value = 6500 } } }
+				if = { limit = { any_power_bloc_member = { NOT = { this = c:EUR } prestige >= 6750 } } root = { set_variable = { name = io_eu_top_prestige value = 6750 } } }
+				if = { limit = { any_power_bloc_member = { NOT = { this = c:EUR } prestige >= 7000 } } root = { set_variable = { name = io_eu_top_prestige value = 7000 } } }
+				if = { limit = { any_power_bloc_member = { NOT = { this = c:EUR } prestige >= 7250 } } root = { set_variable = { name = io_eu_top_prestige value = 7250 } } }
+				if = { limit = { any_power_bloc_member = { NOT = { this = c:EUR } prestige >= 7500 } } root = { set_variable = { name = io_eu_top_prestige value = 7500 } } }
+				if = { limit = { any_power_bloc_member = { NOT = { this = c:EUR } prestige >= 7750 } } root = { set_variable = { name = io_eu_top_prestige value = 7750 } } }
+				if = { limit = { any_power_bloc_member = { NOT = { this = c:EUR } prestige >= 8000 } } root = { set_variable = { name = io_eu_top_prestige value = 8000 } } }
+				if = { limit = { any_power_bloc_member = { NOT = { this = c:EUR } prestige >= 8250 } } root = { set_variable = { name = io_eu_top_prestige value = 8250 } } }
+				if = { limit = { any_power_bloc_member = { NOT = { this = c:EUR } prestige >= 8500 } } root = { set_variable = { name = io_eu_top_prestige value = 8500 } } }
+				if = { limit = { any_power_bloc_member = { NOT = { this = c:EUR } prestige >= 8750 } } root = { set_variable = { name = io_eu_top_prestige value = 8750 } } }
+				if = { limit = { any_power_bloc_member = { NOT = { this = c:EUR } prestige >= 9000 } } root = { set_variable = { name = io_eu_top_prestige value = 9000 } } }
+				if = { limit = { any_power_bloc_member = { NOT = { this = c:EUR } prestige >= 9250 } } root = { set_variable = { name = io_eu_top_prestige value = 9250 } } }
+				if = { limit = { any_power_bloc_member = { NOT = { this = c:EUR } prestige >= 9500 } } root = { set_variable = { name = io_eu_top_prestige value = 9500 } } }
+				if = { limit = { any_power_bloc_member = { NOT = { this = c:EUR } prestige >= 9750 } } root = { set_variable = { name = io_eu_top_prestige value = 9750 } } }
+				if = { limit = { any_power_bloc_member = { NOT = { this = c:EUR } prestige >= 10000 } } root = { set_variable = { name = io_eu_top_prestige value = 10000 } } }
+				if = { limit = { any_power_bloc_member = { NOT = { this = c:EUR } prestige >= 10250 } } root = { set_variable = { name = io_eu_top_prestige value = 10250 } } }
+				if = { limit = { any_power_bloc_member = { NOT = { this = c:EUR } prestige >= 10500 } } root = { set_variable = { name = io_eu_top_prestige value = 10500 } } }
+				if = { limit = { any_power_bloc_member = { NOT = { this = c:EUR } prestige >= 10750 } } root = { set_variable = { name = io_eu_top_prestige value = 10750 } } }
+				if = { limit = { any_power_bloc_member = { NOT = { this = c:EUR } prestige >= 11000 } } root = { set_variable = { name = io_eu_top_prestige value = 11000 } } }
+				if = { limit = { any_power_bloc_member = { NOT = { this = c:EUR } prestige >= 11250 } } root = { set_variable = { name = io_eu_top_prestige value = 11250 } } }
+				if = { limit = { any_power_bloc_member = { NOT = { this = c:EUR } prestige >= 11500 } } root = { set_variable = { name = io_eu_top_prestige value = 11500 } } }
+				if = { limit = { any_power_bloc_member = { NOT = { this = c:EUR } prestige >= 11750 } } root = { set_variable = { name = io_eu_top_prestige value = 11750 } } }
+				if = { limit = { any_power_bloc_member = { NOT = { this = c:EUR } prestige >= 12000 } } root = { set_variable = { name = io_eu_top_prestige value = 12000 } } }
+				if = { limit = { any_power_bloc_member = { NOT = { this = c:EUR } prestige >= 12250 } } root = { set_variable = { name = io_eu_top_prestige value = 12250 } } }
+				if = { limit = { any_power_bloc_member = { NOT = { this = c:EUR } prestige >= 12500 } } root = { set_variable = { name = io_eu_top_prestige value = 12500 } } }
+				if = { limit = { any_power_bloc_member = { NOT = { this = c:EUR } prestige >= 12750 } } root = { set_variable = { name = io_eu_top_prestige value = 12750 } } }
+				if = { limit = { any_power_bloc_member = { NOT = { this = c:EUR } prestige >= 13000 } } root = { set_variable = { name = io_eu_top_prestige value = 13000 } } }
+				if = { limit = { any_power_bloc_member = { NOT = { this = c:EUR } prestige >= 13250 } } root = { set_variable = { name = io_eu_top_prestige value = 13250 } } }
+				if = { limit = { any_power_bloc_member = { NOT = { this = c:EUR } prestige >= 13500 } } root = { set_variable = { name = io_eu_top_prestige value = 13500 } } }
+				if = { limit = { any_power_bloc_member = { NOT = { this = c:EUR } prestige >= 13750 } } root = { set_variable = { name = io_eu_top_prestige value = 13750 } } }
+				if = { limit = { any_power_bloc_member = { NOT = { this = c:EUR } prestige >= 14000 } } root = { set_variable = { name = io_eu_top_prestige value = 14000 } } }
+				if = { limit = { any_power_bloc_member = { NOT = { this = c:EUR } prestige >= 14250 } } root = { set_variable = { name = io_eu_top_prestige value = 14250 } } }
+				if = { limit = { any_power_bloc_member = { NOT = { this = c:EUR } prestige >= 14500 } } root = { set_variable = { name = io_eu_top_prestige value = 14500 } } }
+				if = { limit = { any_power_bloc_member = { NOT = { this = c:EUR } prestige >= 14750 } } root = { set_variable = { name = io_eu_top_prestige value = 14750 } } }
+				if = { limit = { any_power_bloc_member = { NOT = { this = c:EUR } prestige >= 15000 } } root = { set_variable = { name = io_eu_top_prestige value = 15000 } } }
+				if = { limit = { any_power_bloc_member = { NOT = { this = c:EUR } prestige >= 15250 } } root = { set_variable = { name = io_eu_top_prestige value = 15250 } } }
+				if = { limit = { any_power_bloc_member = { NOT = { this = c:EUR } prestige >= 15500 } } root = { set_variable = { name = io_eu_top_prestige value = 15500 } } }
+				if = { limit = { any_power_bloc_member = { NOT = { this = c:EUR } prestige >= 15750 } } root = { set_variable = { name = io_eu_top_prestige value = 15750 } } }
+				if = { limit = { any_power_bloc_member = { NOT = { this = c:EUR } prestige >= 16000 } } root = { set_variable = { name = io_eu_top_prestige value = 16000 } } }
+				if = { limit = { any_power_bloc_member = { NOT = { this = c:EUR } prestige >= 16250 } } root = { set_variable = { name = io_eu_top_prestige value = 16250 } } }
+				if = { limit = { any_power_bloc_member = { NOT = { this = c:EUR } prestige >= 16500 } } root = { set_variable = { name = io_eu_top_prestige value = 16500 } } }
+				if = { limit = { any_power_bloc_member = { NOT = { this = c:EUR } prestige >= 16750 } } root = { set_variable = { name = io_eu_top_prestige value = 16750 } } }
+				if = { limit = { any_power_bloc_member = { NOT = { this = c:EUR } prestige >= 17000 } } root = { set_variable = { name = io_eu_top_prestige value = 17000 } } }
+				if = { limit = { any_power_bloc_member = { NOT = { this = c:EUR } prestige >= 17250 } } root = { set_variable = { name = io_eu_top_prestige value = 17250 } } }
+				if = { limit = { any_power_bloc_member = { NOT = { this = c:EUR } prestige >= 17500 } } root = { set_variable = { name = io_eu_top_prestige value = 17500 } } }
+				if = { limit = { any_power_bloc_member = { NOT = { this = c:EUR } prestige >= 17750 } } root = { set_variable = { name = io_eu_top_prestige value = 17750 } } }
+				if = { limit = { any_power_bloc_member = { NOT = { this = c:EUR } prestige >= 18000 } } root = { set_variable = { name = io_eu_top_prestige value = 18000 } } }
+				if = { limit = { any_power_bloc_member = { NOT = { this = c:EUR } prestige >= 18250 } } root = { set_variable = { name = io_eu_top_prestige value = 18250 } } }
+				if = { limit = { any_power_bloc_member = { NOT = { this = c:EUR } prestige >= 18500 } } root = { set_variable = { name = io_eu_top_prestige value = 18500 } } }
+				if = { limit = { any_power_bloc_member = { NOT = { this = c:EUR } prestige >= 18750 } } root = { set_variable = { name = io_eu_top_prestige value = 18750 } } }
+				if = { limit = { any_power_bloc_member = { NOT = { this = c:EUR } prestige >= 19000 } } root = { set_variable = { name = io_eu_top_prestige value = 19000 } } }
+				if = { limit = { any_power_bloc_member = { NOT = { this = c:EUR } prestige >= 19250 } } root = { set_variable = { name = io_eu_top_prestige value = 19250 } } }
+				if = { limit = { any_power_bloc_member = { NOT = { this = c:EUR } prestige >= 19500 } } root = { set_variable = { name = io_eu_top_prestige value = 19500 } } }
+				if = { limit = { any_power_bloc_member = { NOT = { this = c:EUR } prestige >= 19750 } } root = { set_variable = { name = io_eu_top_prestige value = 19750 } } }
+				if = { limit = { any_power_bloc_member = { NOT = { this = c:EUR } prestige >= 20000 } } root = { set_variable = { name = io_eu_top_prestige value = 20000 } } }
+				if = { limit = { any_power_bloc_member = { NOT = { this = c:EUR } prestige >= 20250 } } root = { set_variable = { name = io_eu_top_prestige value = 20250 } } }
+				if = { limit = { any_power_bloc_member = { NOT = { this = c:EUR } prestige >= 20500 } } root = { set_variable = { name = io_eu_top_prestige value = 20500 } } }
+				if = { limit = { any_power_bloc_member = { NOT = { this = c:EUR } prestige >= 20750 } } root = { set_variable = { name = io_eu_top_prestige value = 20750 } } }
+				if = { limit = { any_power_bloc_member = { NOT = { this = c:EUR } prestige >= 21000 } } root = { set_variable = { name = io_eu_top_prestige value = 21000 } } }
+				if = { limit = { any_power_bloc_member = { NOT = { this = c:EUR } prestige >= 21250 } } root = { set_variable = { name = io_eu_top_prestige value = 21250 } } }
+				if = { limit = { any_power_bloc_member = { NOT = { this = c:EUR } prestige >= 21500 } } root = { set_variable = { name = io_eu_top_prestige value = 21500 } } }
+				if = { limit = { any_power_bloc_member = { NOT = { this = c:EUR } prestige >= 21750 } } root = { set_variable = { name = io_eu_top_prestige value = 21750 } } }
+				if = { limit = { any_power_bloc_member = { NOT = { this = c:EUR } prestige >= 22000 } } root = { set_variable = { name = io_eu_top_prestige value = 22000 } } }
+				if = { limit = { any_power_bloc_member = { NOT = { this = c:EUR } prestige >= 22250 } } root = { set_variable = { name = io_eu_top_prestige value = 22250 } } }
+				if = { limit = { any_power_bloc_member = { NOT = { this = c:EUR } prestige >= 22500 } } root = { set_variable = { name = io_eu_top_prestige value = 22500 } } }
+				if = { limit = { any_power_bloc_member = { NOT = { this = c:EUR } prestige >= 22750 } } root = { set_variable = { name = io_eu_top_prestige value = 22750 } } }
+				if = { limit = { any_power_bloc_member = { NOT = { this = c:EUR } prestige >= 23000 } } root = { set_variable = { name = io_eu_top_prestige value = 23000 } } }
+				if = { limit = { any_power_bloc_member = { NOT = { this = c:EUR } prestige >= 23250 } } root = { set_variable = { name = io_eu_top_prestige value = 23250 } } }
+				if = { limit = { any_power_bloc_member = { NOT = { this = c:EUR } prestige >= 23500 } } root = { set_variable = { name = io_eu_top_prestige value = 23500 } } }
+				if = { limit = { any_power_bloc_member = { NOT = { this = c:EUR } prestige >= 23750 } } root = { set_variable = { name = io_eu_top_prestige value = 23750 } } }
+				if = { limit = { any_power_bloc_member = { NOT = { this = c:EUR } prestige >= 24000 } } root = { set_variable = { name = io_eu_top_prestige value = 24000 } } }
+				if = { limit = { any_power_bloc_member = { NOT = { this = c:EUR } prestige >= 24250 } } root = { set_variable = { name = io_eu_top_prestige value = 24250 } } }
+				if = { limit = { any_power_bloc_member = { NOT = { this = c:EUR } prestige >= 24500 } } root = { set_variable = { name = io_eu_top_prestige value = 24500 } } }
+				if = { limit = { any_power_bloc_member = { NOT = { this = c:EUR } prestige >= 24750 } } root = { set_variable = { name = io_eu_top_prestige value = 24750 } } }
+				if = { limit = { any_power_bloc_member = { NOT = { this = c:EUR } prestige >= 25000 } } root = { set_variable = { name = io_eu_top_prestige value = 25000 } } }
+				if = { limit = { any_power_bloc_member = { NOT = { this = c:EUR } prestige >= 25250 } } root = { set_variable = { name = io_eu_top_prestige value = 25250 } } }
+				if = { limit = { any_power_bloc_member = { NOT = { this = c:EUR } prestige >= 25500 } } root = { set_variable = { name = io_eu_top_prestige value = 25500 } } }
+				if = { limit = { any_power_bloc_member = { NOT = { this = c:EUR } prestige >= 25750 } } root = { set_variable = { name = io_eu_top_prestige value = 25750 } } }
+				if = { limit = { any_power_bloc_member = { NOT = { this = c:EUR } prestige >= 26000 } } root = { set_variable = { name = io_eu_top_prestige value = 26000 } } }
+				if = { limit = { any_power_bloc_member = { NOT = { this = c:EUR } prestige >= 26250 } } root = { set_variable = { name = io_eu_top_prestige value = 26250 } } }
+				if = { limit = { any_power_bloc_member = { NOT = { this = c:EUR } prestige >= 26500 } } root = { set_variable = { name = io_eu_top_prestige value = 26500 } } }
+				if = { limit = { any_power_bloc_member = { NOT = { this = c:EUR } prestige >= 26750 } } root = { set_variable = { name = io_eu_top_prestige value = 26750 } } }
+				if = { limit = { any_power_bloc_member = { NOT = { this = c:EUR } prestige >= 27000 } } root = { set_variable = { name = io_eu_top_prestige value = 27000 } } }
+				if = { limit = { any_power_bloc_member = { NOT = { this = c:EUR } prestige >= 27250 } } root = { set_variable = { name = io_eu_top_prestige value = 27250 } } }
+				if = { limit = { any_power_bloc_member = { NOT = { this = c:EUR } prestige >= 27500 } } root = { set_variable = { name = io_eu_top_prestige value = 27500 } } }
+				if = { limit = { any_power_bloc_member = { NOT = { this = c:EUR } prestige >= 27750 } } root = { set_variable = { name = io_eu_top_prestige value = 27750 } } }
+				if = { limit = { any_power_bloc_member = { NOT = { this = c:EUR } prestige >= 28000 } } root = { set_variable = { name = io_eu_top_prestige value = 28000 } } }
+				if = { limit = { any_power_bloc_member = { NOT = { this = c:EUR } prestige >= 28250 } } root = { set_variable = { name = io_eu_top_prestige value = 28250 } } }
+				if = { limit = { any_power_bloc_member = { NOT = { this = c:EUR } prestige >= 28500 } } root = { set_variable = { name = io_eu_top_prestige value = 28500 } } }
+				if = { limit = { any_power_bloc_member = { NOT = { this = c:EUR } prestige >= 28750 } } root = { set_variable = { name = io_eu_top_prestige value = 28750 } } }
+				if = { limit = { any_power_bloc_member = { NOT = { this = c:EUR } prestige >= 29000 } } root = { set_variable = { name = io_eu_top_prestige value = 29000 } } }
+				if = { limit = { any_power_bloc_member = { NOT = { this = c:EUR } prestige >= 29250 } } root = { set_variable = { name = io_eu_top_prestige value = 29250 } } }
+				if = { limit = { any_power_bloc_member = { NOT = { this = c:EUR } prestige >= 29500 } } root = { set_variable = { name = io_eu_top_prestige value = 29500 } } }
+				if = { limit = { any_power_bloc_member = { NOT = { this = c:EUR } prestige >= 29750 } } root = { set_variable = { name = io_eu_top_prestige value = 29750 } } }
+				if = { limit = { any_power_bloc_member = { NOT = { this = c:EUR } prestige >= 30000 } } root = { set_variable = { name = io_eu_top_prestige value = 30000 } } }
+			}
+			add_modifier = {
+				name = io_eu_prestige_anchor
+				multiplier = {
+					value = var:io_eu_top_prestige
+					add = 250
+					multiply = 1.3
+				}
+			}
+		}
+	}
+}

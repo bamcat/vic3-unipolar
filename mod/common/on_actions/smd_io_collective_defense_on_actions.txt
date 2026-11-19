@@ -1,0 +1,44 @@
+on_diplomatic_play_started = {
+	on_actions = { smd_io_collective_defense }
+}
+
+smd_io_collective_defense = {
+	effect = {
+		if = {
+			limit = {
+				NOR = {
+					is_diplomatic_play_type = dp_revolution
+					is_diplomatic_play_type = dp_secession
+					is_diplomatic_play_type = dp_independence
+					is_diplomatic_play_type = dp_native_uprising
+					is_diplomatic_play_type = dp_increase_autonomy
+					is_diplomatic_play_type = dp_hungarian_revolution
+					is_diplomatic_play_type = dp_taiping_rebellion
+					is_diplomatic_play_type = dp_sepoy_mutiny
+				}
+			}
+			initiator = { save_scope_as = io_cd_initiator }
+			target = { save_scope_as = io_cd_target }
+			if = {
+				limit = {
+					OR = {
+						AND = {
+							scope:io_cd_initiator = { is_target_in_global_variable_list = { name = io_nato_members target = this } }
+							scope:io_cd_target = { is_target_in_global_variable_list = { name = io_nato_members target = this } }
+						}
+						AND = {
+							scope:io_cd_initiator = { is_target_in_global_variable_list = { name = io_csto_members target = this } }
+							scope:io_cd_target = { is_target_in_global_variable_list = { name = io_csto_members target = this } }
+						}
+					}
+				}
+				end_play = yes
+			}
+			else = {
+				io_collective_defense_join = { ORG = nato }
+				io_collective_defense_join = { ORG = csto }
+				scope:io_cd_target = { trigger_event = { id = smd_io_cd.1 days = 1 } }
+			}
+		}
+	}
+}

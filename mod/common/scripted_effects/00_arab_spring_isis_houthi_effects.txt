@@ -1,8 +1,3 @@
-
-# Core idea:
-# - If SYR or IRQ undergo a revolution during the Arab Spring, ISIS forms.
-
-
 arab_spring_check_isis_houthi_breakaways = {
 	if = {
 		limit = {
@@ -112,42 +107,9 @@ arab_spring_spawn_isis_random_provinces = {
 			limit = {
 				is_incorporated = yes
 				owner = scope:arab_spring_parent_country
-			}
-			random_province = {
-				limit = { owner = scope:arab_spring_parent_country }
-				set_owner = c:DIS
-			}
-			random_province = {
-				limit = { owner = scope:arab_spring_parent_country }
-				set_owner = c:DIS
-			}
-		}
-
-		random_scope_state = {
-			limit = {
-				is_incorporated = yes
-				owner = scope:arab_spring_parent_country
-			}
-			random_province = {
-				limit = { owner = scope:arab_spring_parent_country }
-				set_owner = c:DIS
-			}
-			random_province = {
-				limit = { owner = scope:arab_spring_parent_country }
-				set_owner = c:DIS
-			}
-		}
-
-		random_scope_state = {
-			limit = {
-				is_incorporated = yes
-				owner = scope:arab_spring_parent_country
 				is_capital = no
 			}
-			random_province = {
-				limit = { owner = scope:arab_spring_parent_country }
-				set_owner = c:DIS
-			}
+			set_state_owner = c:DIS
 		}
 
 		c:DIS = {
@@ -172,38 +134,13 @@ arab_spring_spawn_houthis_random_provinces = {
 			set_variable = { name = arab_spring_houthi_parent_country value = scope:arab_spring_parent_country }
 		}
 
-		# Yemen-specific Houthi province grab.
-		# Replace these with northern Yemen state keys if desired.
 		random_scope_state = {
 			limit = {
 				is_incorporated = yes
 				owner = scope:arab_spring_parent_country
 				is_capital = no
 			}
-			random_province = {
-				limit = { owner = scope:arab_spring_parent_country }
-				set_owner = c:HOU
-			}
-			random_province = {
-				limit = { owner = scope:arab_spring_parent_country }
-				set_owner = c:HOU
-			}
-		}
-
-		random_scope_state = {
-			limit = {
-				is_incorporated = yes
-				owner = scope:arab_spring_parent_country
-				is_capital = no
-			}
-			random_province = {
-				limit = { owner = scope:arab_spring_parent_country }
-				set_owner = c:HOU
-			}
-			random_province = {
-				limit = { owner = scope:arab_spring_parent_country }
-				set_owner = c:HOU
-			}
+			set_state_owner = c:HOU
 		}
 
 		c:HOU = {
@@ -277,8 +214,6 @@ arab_spring_create_houthi_military_formations = {
 	}
 }
 
-# Breakaway conflict hook.
-
 arab_spring_make_isis_join_parent_conflicts = {
 	save_scope_as = arab_spring_parent_country_for_war
 
@@ -286,7 +221,6 @@ arab_spring_make_isis_join_parent_conflicts = {
 		limit = { exists = c:DIS }
 		c:DIS = { save_scope_as = arab_spring_breakaway_country_for_war }
 
-		# Join active wars against the parent.
 		random_scope_war = {
 			limit = {
 				is_war_participant = scope:arab_spring_parent_country_for_war
@@ -317,7 +251,6 @@ arab_spring_make_isis_join_parent_conflicts = {
 			}
 		}
 
-		# Join active diplomatic plays against the parent where parent side is obvious.
 		random_diplomatic_play = {
 			limit = {
 				is_war = no
@@ -339,7 +272,6 @@ arab_spring_make_isis_join_parent_conflicts = {
 			}
 		}
 
-		# Make sure there is at least a direct conflict if no suitable war/play join was possible.
 		if = {
 			limit = {
 				NOT = { c:DIS = { has_war_with = scope:arab_spring_parent_country_for_war } }
@@ -362,8 +294,6 @@ arab_spring_make_isis_join_parent_conflicts = {
 			}
 		}
 
-		# If DIS is now in a war with the parent, add a containment/humiliation style goal
-		# against the parent so the war has a clean anti-insurgency demand.
 		c:DIS = {
 			random_diplomatic_play = {
 				limit = {
@@ -401,7 +331,6 @@ arab_spring_make_houthis_join_parent_conflicts = {
 		limit = { exists = c:HOU }
 		c:HOU = { save_scope_as = arab_spring_breakaway_country_for_war }
 
-		# Join active wars against the parent.
 		random_scope_war = {
 			limit = {
 				is_war_participant = scope:arab_spring_parent_country_for_war
@@ -432,7 +361,6 @@ arab_spring_make_houthis_join_parent_conflicts = {
 			}
 		}
 
-		# Join active diplomatic plays against the parent where parent side is obvious.
 		random_diplomatic_play = {
 			limit = {
 				is_war = no
@@ -454,7 +382,6 @@ arab_spring_make_houthis_join_parent_conflicts = {
 			}
 		}
 
-		# Make sure there is at least a direct conflict if no suitable war/play join was possible.
 		if = {
 			limit = {
 				NOT = { c:HOU = { has_war_with = scope:arab_spring_parent_country_for_war } }
@@ -477,7 +404,6 @@ arab_spring_make_houthis_join_parent_conflicts = {
 			}
 		}
 
-		# Add a wargoal against Yemen/parent in the active conflict.
 		c:HOU = {
 			random_diplomatic_play = {
 				limit = {

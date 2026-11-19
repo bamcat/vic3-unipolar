@@ -1,6 +1,3 @@
-# The Rise of the Right modifiers
-# These use the custom movement modifier types created for the new movement system.
-
 rise_of_the_right_baseline = {
 	icon = gfx/interface/icons/timed_modifier_icons/modifier_fist_negative.dds
 
@@ -8,14 +5,12 @@ rise_of_the_right_baseline = {
 	political_movement_activism_growth_mult = 1.25
 	state_radicals_from_political_movements_mult = 0.10
 
-	# Right-wing movement gains.
 	state_pop_support_movement_conservative_add = 0.35
 	state_pop_support_movement_liberal_conservative_add = 0.35
 	state_pop_support_movement_traditionalist_add = 0.35
 	state_pop_support_movement_cultural_majority_add = 0.35
 	state_pop_support_movement_religious_majority_add = 0.35
 
-	# Some counter-mobilization.
 	state_pop_support_movement_liberal_add = 0.1
 	state_pop_support_movement_social_democratic_add = 0.1
 	state_pop_support_movement_cultural_minority_add = 0.1
@@ -78,7 +73,5 @@ rise_of_the_right_establishment_response = {
 rise_of_the_right_populist_leader_spawn_tooltip_modifier = {
 	icon = gfx/interface/icons/timed_modifier_icons/modifier_documents_negative.dds
 
-	# Spawn-rate effects are handled manually by the modder.
-	# This modifier exists so the JE/event tooltips can display that the chance is increased.
 	political_movement_activism_growth_mult = 0.25
 }

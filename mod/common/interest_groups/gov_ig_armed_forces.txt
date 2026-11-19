@@ -6,14 +6,12 @@ REPLACE_OR_CREATE:ig_armed_forces = {
 	
 	ideologies = {
 	
-		#Economic Ideologies
-		ideology_left_economy 				#General Economic Beliefs 
-		ideology_regionalist 				#Foreign Economic Policy
+		ideology_left_economy
+		ideology_regionalist
 	
-		#Political Ideologies
-		ideology_totalitarian				#General Political Beliefs
-		ideology_conservative				#Specific Political Beliefs
-		ideology_militarist					#Government Types 
+		ideology_totalitarian
+		ideology_conservative
+		ideology_militarist
 		
 	}
 	
@@ -33,7 +31,6 @@ REPLACE_OR_CREATE:ig_armed_forces = {
 		ideology_jihadist_leader
 	}
 	
-	# Deprecated; use on_enable effect to assign traits instead
 	traits = {
 		ig_trait_patriotic_fervor
 		ig_trait_veteran_consultation
@@ -52,10 +49,8 @@ REPLACE_OR_CREATE:ig_armed_forces = {
 	
 	pop_potential = {
 	
-		#Only Accepted Pops can organise into IGs
 		pop_acceptance >= acceptance_status_4
 		
-		#Correct pop type
 		OR = {
 			is_pop_type = officers
 			is_pop_type = soldiers
@@ -78,7 +73,7 @@ REPLACE_OR_CREATE:ig_armed_forces = {
 					pop_acceptance >= acceptance_status_4
 				}
 				value = 25
-				if = { # Militarisation of colonial settlers
+				if = {
 					limit = {
 						owner = {
 							has_law = law_type:law_colonial_resettlement
@@ -89,7 +84,7 @@ REPLACE_OR_CREATE:ig_armed_forces = {
 					}
 					add = 50
 				}
-				if = { # Separation of the military and people
+				if = {
 					limit = {
 						NOR = {
 							is_pop_type = soldiers
@@ -111,7 +106,7 @@ REPLACE_OR_CREATE:ig_armed_forces = {
 					is_pop_type = soldiers
 				}
 				value = 100
-				if = { # Institutional loyalty
+				if = {
 					limit = {
 						owner = {
 							has_law = law_type:law_professional_army
@@ -119,7 +114,7 @@ REPLACE_OR_CREATE:ig_armed_forces = {
 					}
 					add = 50
 				}
-				if = { # Pay makes soldiers more inclined to be loyal to Armed Forces
+				if = {
 					limit = {
 						owner = {
 							military_wage_level = very_low
@@ -172,7 +167,7 @@ REPLACE_OR_CREATE:ig_armed_forces = {
 			}
 		}
 		
-		add = { # There's one firearm for every twelve people on the planet. The question is, how do we arm the other eleven?
+		add = {
 			desc = "MILITARY_INDUSTRIES"
 			if = {
 				limit = {
@@ -234,7 +229,7 @@ REPLACE_OR_CREATE:ig_armed_forces = {
 					is_in_government = yes
 				}
 			}
-			multiply = { # Multiplied by 1.25x max
+			multiply = {
 				desc = "POP_LOYALISTS"
 				value = pop_loyalist_fraction
 				divide = 4
@@ -247,7 +242,7 @@ REPLACE_OR_CREATE:ig_armed_forces = {
 					is_in_government = no
 				}
 			}
-			multiply = { # Multiplied by 1.25x max
+			multiply = {
 				desc = "POP_RADICALS"
 				value = pop_radical_fraction
 				divide = 4
@@ -262,9 +257,7 @@ REPLACE_OR_CREATE:ig_armed_forces = {
 	}
 	
 	agitator_weight = {
-		# Agitators more likely to come from populist IG's rather than elitist
 		value = 0.5
-		# Agitators will never be part of a marginalized IG
 		if = {
 			limit = {
 				owner.ig:ig_armed_forces = {
@@ -481,15 +474,11 @@ REPLACE_OR_CREATE:ig_armed_forces = {
 		}
 	}
 	
-	# The chance that a commander belonging to this IG takes over leadership when it changes
-	# scope:character is the most popular commander in the IG
 	commander_leader_chance = {
 		value = 0.75
 		multiply = ig_commander_leader_chance_mult
 	}
 	
-	# The chance that a executive belonging to this IG takes over leadership when it changes
-	# scope:character is the most popular executive in the IG
 	executive_leader_chance = {
 		value = 0.1
 	}

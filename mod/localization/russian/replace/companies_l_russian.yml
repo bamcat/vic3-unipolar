@@ -1,6 +1,4 @@
 ﻿l_russian:
-
- # Fallback names if dynamic naming fails
  company_basic_agriculture_1: "Производитель Quality Grains Inc."
  company_basic_agriculture_2: "Общество сельскохозяйственного развития"
  company_basic_metal_mining: "Консорциум по добыче металлов"
@@ -26,8 +24,7 @@
  company_basic_gold_mining: "Синдикат драгоценных металлов"
  company_basic_electrics: "Home Electrics Inc."
  company_basic_weapons: "Вооружение работает"
- 
- # Dynamic company names
+
  company_basic_agriculture_1_dynamic_name_tag_singular: "зерно"
  company_basic_agriculture_1_dynamic_name_tag_plural: "зерно"
  company_basic_agriculture_2_dynamic_name_tag_singular: "Сельское хозяйство"
@@ -78,7 +75,7 @@
  company_basic_electrics_dynamic_name_tag_plural: "электричество"
  company_basic_weapons_dynamic_name_tag_singular: "Вооружение"
  company_basic_weapons_dynamic_name_tag_plural: "Вооружение"
- 
+
  dynamic_company_type_company: "Компания"
  dynamic_company_type_consortium: "инкорпорированный"
  dynamic_company_type_corporation: "корпорация"
@@ -88,20 +85,19 @@
  dynamic_company_type_guild: "Логистика"
  dynamic_company_type_society: "Холдинги"
  dynamic_company_type_fellowship: "корпорация"
- 
+
  dynamic_company_name_country_1: "[COUNTRY.GetAdjectiveNoFormatting] $DYNAMIC_NAME_TAG$ $TYPE_NAME$"
  dynamic_company_name_country_2: "[COUNTRY.GetAdjectiveNoFormatting] $DYNAMIC_NAME_TAG$"
  dynamic_company_name_country_3: "$DYNAMIC_NAME_TAG$ $TYPE_NAME$ [COUNTRY.GetNameNoFormatting]"
  dynamic_company_name_country_4: "[COUNTRY.GetAdjectiveNoFormatting] $DYNAMIC_NAME_TAG$ Инк."
  dynamic_company_name_country_5: "Комбинированный [COUNTRY.GetAdjectiveNoFormatting] $DYNAMIC_NAME_TAG$ $TYPE_NAME$"
- 
+
  dynamic_company_name_state_1: "[STATE_REGION.GetNameNoFormatting] $DYNAMIC_NAME_TAG$ $TYPE_NAME$"
  dynamic_company_name_state_2: "[STATE_REGION.GetNameNoFormatting] $DYNAMIC_NAME_TAG$"
  dynamic_company_name_state_3: "$DYNAMIC_NAME_TAG$ $TYPE_NAME$ [STATE_REGION.GetNameNoFormatting]"
  dynamic_company_name_state_4: "[STATE_REGION.GetNameNoFormatting] Премиум $DYNAMIC_NAME_TAG$"
  dynamic_company_name_state_5: "United [STATE_REGION.GetNameNoFormatting] $DYNAMIC_NAME_TAG$ Производители"
 
- # Flavored Companies
  company_krupp: "Фридрих Крупп"
  company_rheinmetall: "Рейнметалл"
  company_schichau: "Ф. Шихау"
@@ -149,8 +145,8 @@
 
  company_skoda: "Škoda Works"
  company_mav: "Маваг"
- company_manfred_weiss: "Manfréd Weiss Steel and Metal Works" # Weiss Manfréd Acél- és Fémművek
- company_galician_carpathian_oil: "Galician Carpathian Petroleum Company" # Galizisch-Karpathische Petroleum Aktien-Gesellschaft
+ company_manfred_weiss: "Manfréd Weiss Steel and Metal Works"
+ company_galician_carpathian_oil: "Galician Carpathian Petroleum Company"
  company_oevg: "Österreichische Waffenfabriks-Gesellschaft"
 
  company_ccci: "Компаньон Дю Конго"
@@ -228,8 +224,8 @@
  company_eea: "Empresas Eléctricas Asociadas"
 
  company_construction_power_bloc: "Объединенный конгломерат строительства"
- 
-  CANNOT_TOGGLE_COMPANY_GRANTED_CHARTER: "$DESC$"
+
+ CANNOT_TOGGLE_COMPANY_GRANTED_CHARTER: "$DESC$"
  COMPANY_CHARTER_INVESTMENT: "$NAME$"
  COMPANY_CHARTER_MONOPOLY: "$NAME$ для [BUILDING_TYPE.GetName]"
  COMPANY_CHARTER_INDUSTRY: "$NAME$ для [BUILDING_TYPE.GetName]"
@@ -238,7 +234,7 @@
  COMPANY_CHARTER_ON_COOLDOWN: "#b Невозможно удалить #!, пока #b [DATE.GetString]#!"
 
  BUILDING_OWNED_BY_COMPANY: "Принадлежит [Company.GetNameNoFormatting]"
- 
+
  PRODUCTIVITY_TREND: "[concept_productivity]"
  PROSPERITY_TREND: "[concept_prosperity]"
  PROFIT_TREND: "$COMPANY_PROFIT_TITLE$"
@@ -255,7 +251,6 @@
  COMMAND_CONFIRMATION_ENABLE_MONOPOLY_CHARTER: "Вы хотите предоставить [CompanyCharterType.GetName] [Company.GetName]?\n\n@aut! #v [CompanyCharterType.GetAuthorityCost(Company.Self)|-0]#! Стоимость обслуживания \n В настоящее время используется [Company.GetCountry.GetUsedFreeCharters|v]/[Company.GetCountry.GetModifier.GetNonFormattedValueWithBreakdownAndNoDecimalsFor('country_free_charters_add')] бесплатно [Concept('concept_company_charter','$concept_company_charters$')]\n\n@warning! Это не может быть отменено для #v [GetDefine('NEconomy','COMPANY_MONOPOLY_COOLDOWN_MONTHS')] месяцев#! после предоставления.\n\n#title Эффекты:#!#indent_newline:3 \n$EFFECTS$#!"
  COMMAND_CONFIRMATION_DISABLE_CHARTER: "Вы хотите отменить [CompanyCharterType.GetName] из [Company.GetName]?\n\n Удалить @aut! #v [CompanyCharterType.GetAuthorityCost(Company.Self)|+0]#! Стоимость обслуживания \n\n#title Устраняет следующие эффекты: #!#indent_newline:3 \n$EFFECTS$#!"
  COMMAND_CONFIRMATION_DISABLE_CHARTER_WITH_REVOKE_EFFECTS: "$COMMAND_CONFIRMATION_DISABLE_CHARTER$\n\n$REVOKE_EFFECTS$"
-
 
  investment_charter_desc: "[CompanyCharter.GetType.GetNameNoFormatting] позволяет [concept_company] устанавливать [Concept('concept_regional_company_hq','$concept_regional_company_hqs$')], расширяя его влияние и операции."
  investment_charter_type_desc: "[CompanyCharterType.GetNameNoFormatting] позволяет [concept_company] устанавливать [Concept('concept_regional_company_hq','$concept_regional_company_hqs$')], расширяя его влияние и операции."
@@ -292,12 +287,11 @@
  PROSPERITY_INCREASE_FROM_PRODUCTIVITY: "От высокого [concept_productivity]"
  PROSPERITY_DECREASE_FROM_PRODUCTIVITY: "От низкого [concept_productivity]"
 
- # Charters of Commerce Companies
  company_ludwig_moser_and_sons: "Гласфэбрик Людвиг Мозер и Соне"
  company_compania_sansinena_de_carnes_congeladas: "Compañía Sansinena de Carnes Congeladas"
  company_konigliche_porzellan_manufaktur_meissen: "Кёнильче Порзеллан-Мануфактур Мейсен"
  company_jiangnan_weaving_bureaus: "Бюро по ткачеству Jiangnan"
- company_russian_american_company: "Russian-American Company" # Alt. Rossiysko-Amerikanskaya Kompaniya
+ company_russian_american_company: "Russian-American Company"
  company_lee_wilson: "Ли Уилсон и компания"
  company_colt_firearms: "Производитель патентного огнестрельного оружия Colt"
  company_gebruder_thonet: "Гебрюдер Тоне"
@@ -314,9 +308,9 @@
  company_imperial_ethiopian_railways: "Имперская эфиопская железнодорожная компания"
  company_lanfang_kongsi: "Ланфан Конгси"
  company_paradox: "Джон Парадокс и компания"
- 
+
  ## companies added by smd:
- 
+
  company_amazon: "Amazon.com Inc."
  company_apple: "Apple Inc."
  company_atandt: "AT&T Inc."
@@ -346,23 +340,22 @@
  company_blackrock: "BlackRock Investment Group"
  company_cargill: "Каргил"
  company_caterpillar: "Гусеница"
- 
+
  company_samsung: "Samsung Electronics Co., Ltd."
- 
+
  company_sberbank: "Сбербанк"
- 
+
  company_honda: "Honda"
  company_toyota: "Toyota"
  company_sony: "Sony"
  company_nintendo: "Nintendo"
- 
+
  company_tesco: "Теско"
  company_hsbc: "HSBC"
  company_shell: "раковина"
- 
+
  company_saudi_aramco: "Saudi Aramco"
- 
- # USA
+
  company_visa: "Visa Inc."
  company_bear_stearns: "Слезы медведя"
  company_mgm: "Метро-Голдвин-Майер"
@@ -373,14 +366,11 @@
  company_openai: "OpenAI"
  company_anthropic: "антропный"
  company_alphabet: "Алфавит"
- 
- # Germany
+
  company_adidas: "Адидас"
- 
- # Great Britain
+
  company_astrazeneca: "АстраЗенека"
- 
- # China
+
  company_alibaba: "Alibaba Group"
  company_tencent: "Tencent"
  company_pingan: "Пинг Страхование"
@@ -390,22 +380,17 @@
  company_bytedance: "ByteDance"
  company_sinopec: "Синопсис"
  company_xiaomi: "Xiaomi"
- 
- # Ireland
+
  company_accenture: "Акцентура"
- 
- # France
+
  company_totalenergies: "TotalEnergies"
- 
- # ── NEW BASIC COMPANIES ──────────────────────────────────────────
- 
+
  company_basic_pharmaceuticals: "Национальная фармацевтическая группа"
  company_basic_retail: "Генеральный розничный консорциум"
  company_basic_food_service: "Стандартные продовольственные услуги"
  company_basic_banking: "Национальная банковская группа"
  company_basic_professional_services: "Группа профессиональных услуг"
- 
- # Dynamic name tags
+
  company_basic_pharmaceuticals_dynamic_name_tag_singular: "Фармацевтический"
  company_basic_pharmaceuticals_dynamic_name_tag_plural: "Фармацевтические препараты"
  company_basic_retail_dynamic_name_tag_singular: "розничная торговля"

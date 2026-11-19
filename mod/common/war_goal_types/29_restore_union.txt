@@ -1,4 +1,8 @@
 ﻿restore_union = {
+	mirrored_wargoal = {
+		method = no_mirror
+	}
+
 	icon = "gfx/interface/icons/war_goals/enforce_treaty_article.dds"
 
 	kind = custom
@@ -8,7 +12,6 @@
 		turns_into_subject
 		requires_interest
 
-		# Validation
 		conflicts_with_make_subject
 		validate_conflicts_make_subject
 	}

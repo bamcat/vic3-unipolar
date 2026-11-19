@@ -1,11 +1,7 @@
-﻿### Try to keep tags in alphabetical order if it's not too far gone, please.
-
-################################################################
-## DEFAULT COUNTRY NAMES EXAMPLE CAN BE USED WITH ANY COUNTRY ##
-################################################################
+﻿## DEFAULT COUNTRY NAMES EXAMPLE CAN BE USED WITH ANY COUNTRY ##
 
 # Uncomment when need a dynamic_country_name for any country
-LIT = { # Lithuania
+LIT = {
 	dynamic_country_name = {
 		name = dyn_c_kralovec
 		adjective = dyn_c_kralovec_adj
@@ -15,10 +11,10 @@ LIT = { # Lithuania
 		
 		trigger = {
 			coa_def_independent_trigger = yes
-			owns_entire_state_region = STATE_KRALOVEC
-			owns_entire_state_region = STATE_SIAULIAU
-			owns_entire_state_region = STATE_VILNIUS
-			owns_entire_state_region = STATE_LITHUANIA
+			scope:actor ?= { owns_entire_state_region = STATE_EAST_PRUSSIA }
+			scope:actor ?= { owns_entire_state_region = STATE_KAUNAS }
+			scope:actor ?= { owns_entire_state_region = STATE_VILNIUS }
+			scope:actor ?= { owns_entire_state_region = STATE_KAUNAS }
 		}
 	}
 	dynamic_country_name = {
@@ -30,33 +26,33 @@ LIT = { # Lithuania
 		
 		trigger = {
 			coa_def_independent_trigger = yes
-			owns_entire_state_region = STATE_KRALOVEC
-			owns_entire_state_region = STATE_SIAULIAU
-			owns_entire_state_region = STATE_VILNIUS
-			owns_entire_state_region = STATE_LITHUANIA
-			owns_entire_state_region = STATE_KURZEME
-			owns_entire_state_region = STATE_WEST_PRUSSIA
-			owns_entire_state_region = STATE_EAST_PRUSSIA
-			owns_entire_state_region = STATE_WEST_GALICIA
-			owns_entire_state_region = STATE_EAST_GALICIA
-			owns_entire_state_region = STATE_POSEN
-			owns_entire_state_region = STATE_VICIEBSK
-			owns_entire_state_region = STATE_MINSK
-			owns_entire_state_region = STATE_HRODNO
-			owns_entire_state_region = STATE_BREST
-			owns_entire_state_region = STATE_MAZOVIA
-			owns_entire_state_region = STATE_ORSHA
-			owns_entire_state_region = STATE_MAZYR
-			owns_entire_state_region = STATE_KHMELNYT
-			owns_entire_state_region = STATE_ZHYTOMYR
-			owns_entire_state_region = STATE_VOLHYNIA
-			owns_entire_state_region = STATE_LESSER_POLAND
-			owns_entire_state_region = STATE_GREATER_POLAND
+			scope:actor ?= { owns_entire_state_region = STATE_EAST_PRUSSIA }
+			scope:actor ?= { owns_entire_state_region = STATE_KAUNAS }
+			scope:actor ?= { owns_entire_state_region = STATE_VILNIUS }
+			scope:actor ?= { owns_entire_state_region = STATE_KAUNAS }
+			scope:actor ?= { owns_entire_state_region = STATE_COURLAND }
+			scope:actor ?= { owns_entire_state_region = STATE_WEST_PRUSSIA }
+			scope:actor ?= { owns_entire_state_region = STATE_EAST_PRUSSIA }
+			scope:actor ?= { owns_entire_state_region = STATE_WEST_GALICIA }
+			scope:actor ?= { owns_entire_state_region = STATE_EAST_GALICIA }
+			scope:actor ?= { owns_entire_state_region = STATE_POSEN }
+			scope:actor ?= { owns_entire_state_region = STATE_VITEBSK }
+			scope:actor ?= { owns_entire_state_region = STATE_MINSK }
+			scope:actor ?= { owns_entire_state_region = STATE_BREST }
+			scope:actor ?= { owns_entire_state_region = STATE_BREST }
+			scope:actor ?= { owns_entire_state_region = STATE_MAZOVIA }
+			scope:actor ?= { owns_entire_state_region = STATE_VITEBSK }
+			scope:actor ?= { owns_entire_state_region = STATE_MOGILEV }
+			scope:actor ?= { owns_entire_state_region = STATE_VOLHYNIA }
+			scope:actor ?= { owns_entire_state_region = STATE_VOLHYNIA }
+			scope:actor ?= { owns_entire_state_region = STATE_VOLHYNIA }
+			scope:actor ?= { owns_entire_state_region = STATE_LESSER_POLAND }
+			scope:actor ?= { owns_entire_state_region = STATE_GREATER_POLAND }
 		}
 	}
 }
 
-EUR = { # EEC -> EU
+EUR = {
 	dynamic_country_name = {
 		name = dyn_c_european_economic_community
 		adjective = EUR_ADJ
@@ -70,8 +66,7 @@ EUR = { # EEC -> EU
 	}
 }
 
-USA = { # United States of America
-	# Council republic / communist government
+USA = {
 	dynamic_country_name = {
 		name = dyn_c_usa_peoples_republic
 		adjective = USA_ADJ
@@ -83,7 +78,6 @@ USA = { # United States of America
 			coa_def_communist_flag_trigger = yes
 		}
 	}
-	# Fascist government
 	dynamic_country_name = {
 		name = dyn_c_usa_fascist
 		adjective = dyn_c_usa_fascist_adj
@@ -95,7 +89,6 @@ USA = { # United States of America
 			coa_def_fascist_flag_trigger = yes
 		}
 	}
-	# Theocratic government
 	dynamic_country_name = {
 		name = dyn_c_usa_theocracy
 		adjective = USA_ADJ
@@ -109,8 +102,7 @@ USA = { # United States of America
 	}
 }
 
-CUB = { # Cuba
-	# Revolution: communist/vanguardist
+CUB = {
 	dynamic_country_name = {
 		name = dyn_c_cuba_peoples_republic
 		adjective = CUB_ADJ
@@ -127,16 +119,15 @@ CUB = { # Cuba
 					is_powerful = yes
 					leader = {
 						OR = {
-							has_ideology = ideology_communist
-							has_ideology = ideology_vanguardist
-							has_ideology = ideology_anarchist
+							has_ideology = ideology:ideology_marxist_leader
+							has_ideology = ideology:ideology_state_socialist_leader
+							has_ideology = ideology:ideology_anarchist_leader
 						}
 					}
 				}
 			}
 		}
 	}
-	# Revolution: fascist / ethno-nationalist
 	dynamic_country_name = {
 		name = dyn_c_cuba_national_state
 		adjective = CUB_ADJ
@@ -153,15 +144,13 @@ CUB = { # Cuba
 					is_powerful = yes
 					leader = {
 						OR = {
-							has_ideology = ideology_fascist
-							has_ideology = ideology_ethno_nationalist
+							has_ideology = ideology:ideology_fascist_leader
 						}
 					}
 				}
 			}
 		}
 	}
-	# Revolution: any other (generic liberal/democratic/military)
 	dynamic_country_name = {
 		name = dyn_c_cuba_republic
 		adjective = CUB_ADJ
@@ -176,7 +165,6 @@ CUB = { # Cuba
 			}
 		}
 	}
-	# Non-revolution: republic government
 	dynamic_country_name = {
 		name = dyn_c_cuba_republic
 		adjective = CUB_ADJ
@@ -187,15 +175,14 @@ CUB = { # Cuba
 		trigger = {
 			coa_def_republic_flag_trigger = yes
 			NOR = {
-				has_law = law_type:law_council_republic
-				has_law = law_type:law_one_party_state
-				has_law = law_type:law_single_party_state
+				scope:actor ?= { has_law = law_type:law_council_republic }
+				scope:actor ?= { has_law = law_type:law_single_party_state }
+				scope:actor ?= { has_law = law_type:law_single_party_state }
 			}
 		}
 	}
 }
-RUS = { # Russia
-	# Communist -> Soviet Union
+RUS = {
 	dynamic_country_name = {
 		name = dyn_c_soviet_union
 		adjective = dyn_c_soviet_union_adj
@@ -204,10 +191,9 @@ RUS = { # Russia
 		priority = 20
 
 		trigger = {
-			has_law_or_variant = law_type:law_council_republic
+			scope:actor ?= { has_law_or_variant = law_type:law_council_republic }
 		}
 	}
-	# Communist revolution -> Soviet Union
 	dynamic_country_name = {
 		name = dyn_c_soviet_union
 		adjective = dyn_c_soviet_union_adj
@@ -224,16 +210,15 @@ RUS = { # Russia
 					is_powerful = yes
 					leader = {
 						OR = {
-							has_ideology = ideology_communist
-							has_ideology = ideology_vanguardist
-							has_ideology = ideology_anarchist
+							has_ideology = ideology:ideology_marxist_leader
+							has_ideology = ideology:ideology_state_socialist_leader
+							has_ideology = ideology:ideology_anarchist_leader
 						}
 					}
 				}
 			}
 		}
 	}
-	# Republic (non-communist)
 	dynamic_country_name = {
 		name = dyn_c_russian_republic
 		adjective = RUS_ADJ
@@ -243,16 +228,15 @@ RUS = { # Russia
 
 		trigger = {
 			OR = {
-				has_law_or_variant = law_type:law_presidential_republic
-				has_law_or_variant = law_type:law_parliamentary_republic
+				scope:actor ?= { has_law_or_variant = law_type:law_presidential_republic }
+				scope:actor ?= { has_law_or_variant = law_type:law_parliamentary_republic }
 			}
-			NOT = { has_law_or_variant = law_type:law_council_republic }
+			NOT = { scope:actor ?= { has_law_or_variant = law_type:law_council_republic } }
 		}
 	}
 }
 
-GBR = { # Great Britain
-	# Republic
+GBR = {
 	dynamic_country_name = {
 		name = dyn_c_british_republic
 		adjective = GBR_ADJ
@@ -262,13 +246,12 @@ GBR = { # Great Britain
 
 		trigger = {
 			OR = {
-				has_law_or_variant = law_type:law_presidential_republic
-				has_law_or_variant = law_type:law_parliamentary_republic
+				scope:actor ?= { has_law_or_variant = law_type:law_presidential_republic }
+				scope:actor ?= { has_law_or_variant = law_type:law_parliamentary_republic }
 			}
-			NOT = { has_law_or_variant = law_type:law_monarchy }
+			NOT = { scope:actor ?= { has_law_or_variant = law_type:law_monarchy } }
 		}
 	}
-	# Communist
 	dynamic_country_name = {
 		name = dyn_c_british_commonwealth
 		adjective = GBR_ADJ
@@ -277,13 +260,12 @@ GBR = { # Great Britain
 		priority = 15
 
 		trigger = {
-			has_law_or_variant = law_type:law_council_republic
+			scope:actor ?= { has_law_or_variant = law_type:law_council_republic }
 		}
 	}
 }
 
-GER = { # Germany
-	# Monarchy -> German Empire
+GER = {
 	dynamic_country_name = {
 		name = dyn_c_german_empire
 		adjective = GER_ADJ
@@ -292,13 +274,12 @@ GER = { # Germany
 		priority = 10
 
 		trigger = {
-			has_law_or_variant = law_type:law_monarchy
+			scope:actor ?= { has_law_or_variant = law_type:law_monarchy }
 		}
 	}
 }
 
-FRA = { # France
-	# Republic
+FRA = {
 	dynamic_country_name = {
 		name = dyn_c_french_republic
 		adjective = dyn_c_french_republic_adj
@@ -308,13 +289,12 @@ FRA = { # France
 
 		trigger = {
 			OR = {
-				has_law_or_variant = law_type:law_presidential_republic
-				has_law_or_variant = law_type:law_parliamentary_republic
+				scope:actor ?= { has_law_or_variant = law_type:law_presidential_republic }
+				scope:actor ?= { has_law_or_variant = law_type:law_parliamentary_republic }
 			}
-			NOT = { has_law_or_variant = law_type:law_council_republic }
+			NOT = { scope:actor ?= { has_law_or_variant = law_type:law_council_republic } }
 		}
 	}
-	# Monarchy
 	dynamic_country_name = {
 		name = dyn_c_french_empire
 		adjective = dyn_c_french_empire_adj
@@ -323,10 +303,9 @@ FRA = { # France
 		priority = 10
 
 		trigger = {
-			has_law_or_variant = law_type:law_monarchy
+			scope:actor ?= { has_law_or_variant = law_type:law_monarchy }
 		}
 	}
-	# Communist
 	dynamic_country_name = {
 		name = dyn_c_french_commune
 		adjective = FRA_ADJ
@@ -335,13 +314,12 @@ FRA = { # France
 		priority = 15
 
 		trigger = {
-			has_law_or_variant = law_type:law_council_republic
+			scope:actor ?= { has_law_or_variant = law_type:law_council_republic }
 		}
 	}
 }
 
-JAP = { # Japan
-	# Monarchy -> Empire of Japan
+JAP = {
 	dynamic_country_name = {
 		name = dyn_c_empire_of_japan
 		adjective = JAP_ADJ
@@ -350,10 +328,9 @@ JAP = { # Japan
 		priority = 10
 
 		trigger = {
-			has_law_or_variant = law_type:law_monarchy
+			scope:actor ?= { has_law_or_variant = law_type:law_monarchy }
 		}
 	}
-	# Republic
 	dynamic_country_name = {
 		name = dyn_c_republic_of_japan
 		adjective = JAP_ADJ
@@ -363,15 +340,14 @@ JAP = { # Japan
 
 		trigger = {
 			OR = {
-				has_law_or_variant = law_type:law_presidential_republic
-				has_law_or_variant = law_type:law_parliamentary_republic
+				scope:actor ?= { has_law_or_variant = law_type:law_presidential_republic }
+				scope:actor ?= { has_law_or_variant = law_type:law_parliamentary_republic }
 			}
 		}
 	}
 }
 
-TUR = { # Turkey
-	# Monarchy -> Ottoman Empire
+TUR = {
 	dynamic_country_name = {
 		name = dyn_c_ottoman_empire
 		adjective = dyn_c_ottoman_empire_adj
@@ -380,13 +356,12 @@ TUR = { # Turkey
 		priority = 10
 
 		trigger = {
-			has_law_or_variant = law_type:law_monarchy
+			scope:actor ?= { has_law_or_variant = law_type:law_monarchy }
 		}
 	}
 }
 
-MGL = { # Mongolia
-	# Communist -> Mongolian People's Republic
+MGL = {
 	dynamic_country_name = {
 		name = dyn_c_mongolian_peoples_republic
 		adjective = dyn_c_mongolian_peoples_republic_adj
@@ -395,13 +370,12 @@ MGL = { # Mongolia
 		priority = 15
 
 		trigger = {
-			has_law_or_variant = law_type:law_council_republic
+			scope:actor ?= { has_law_or_variant = law_type:law_council_republic }
 		}
 	}
 }
 
-CHI = { # China (ROC/Qing)
-	# Monarchy -> Empire of China
+CHI = {
 	dynamic_country_name = {
 		name = dyn_c_empire_of_china
 		adjective = dyn_c_empire_of_china_adj
@@ -410,13 +384,12 @@ CHI = { # China (ROC/Qing)
 		priority = 10
 
 		trigger = {
-			has_law_or_variant = law_type:law_monarchy
+			scope:actor ?= { has_law_or_variant = law_type:law_monarchy }
 		}
 	}
 }
 
-PRC = { # People's Republic of China
-	# Communist -> People's Republic of China
+PRC = {
 	dynamic_country_name = {
 		name = dyn_c_peoples_republic_of_china
 		adjective = PRC_ADJ
@@ -425,13 +398,12 @@ PRC = { # People's Republic of China
 		priority = 15
 
 		trigger = {
-			has_law_or_variant = law_type:law_council_republic
+			scope:actor ?= { has_law_or_variant = law_type:law_council_republic }
 		}
 	}
 }
 
-KOR = { # Korea
-	# Monarchy -> Empire of Korea
+KOR = {
 	dynamic_country_name = {
 		name = dyn_c_empire_of_korea
 		adjective = dyn_c_empire_of_korea_adj
@@ -440,13 +412,12 @@ KOR = { # Korea
 		priority = 10
 
 		trigger = {
-			has_law_or_variant = law_type:law_monarchy
+			scope:actor ?= { has_law_or_variant = law_type:law_monarchy }
 		}
 	}
 }
 
-MEX = { # Mexico
-	# Monarchy -> Mexican Empire
+MEX = {
 	dynamic_country_name = {
 		name = dyn_c_mexican_empire
 		adjective = MEX_ADJ
@@ -455,13 +426,12 @@ MEX = { # Mexico
 		priority = 10
 
 		trigger = {
-			has_law_or_variant = law_type:law_monarchy
+			scope:actor ?= { has_law_or_variant = law_type:law_monarchy }
 		}
 	}
 }
 
-SPA = { # Spain
-	# Republic -> Spanish Republic
+SPA = {
 	dynamic_country_name = {
 		name = dyn_c_spanish_republic
 		adjective = SPA_ADJ
@@ -471,16 +441,15 @@ SPA = { # Spain
 
 		trigger = {
 			OR = {
-				has_law_or_variant = law_type:law_presidential_republic
-				has_law_or_variant = law_type:law_parliamentary_republic
+				scope:actor ?= { has_law_or_variant = law_type:law_presidential_republic }
+				scope:actor ?= { has_law_or_variant = law_type:law_parliamentary_republic }
 			}
-			NOT = { has_law_or_variant = law_type:law_council_republic }
+			NOT = { scope:actor ?= { has_law_or_variant = law_type:law_council_republic } }
 		}
 	}
 }
 
-YUG = { # Yugoslavia
-	# Communist
+YUG = {
 	dynamic_country_name = {
 		name = dyn_c_socialist_yugoslavia
 		adjective = YUG_ADJ
@@ -489,13 +458,13 @@ YUG = { # Yugoslavia
 		priority = 15
 
 		trigger = {
-			has_law_or_variant = law_type:law_council_republic
+			scope:actor ?= { has_law_or_variant = law_type:law_council_republic }
 		}
 	}
 }
 
 
-TRK = { # Turkey
+TRK = {
 	dynamic_country_name = {
 		name = dyn_c_ottoman_empire
 		adjective = dyn_c_ottoman_empire_adj
@@ -528,7 +497,7 @@ XPO = {
 	}
 }
 
-IDS = { # Indonesia
+IDS = {
 	dynamic_country_name = {
 		name = dyn_c_majapahit
 		adjective = dyn_c_majapahit_adj
@@ -547,7 +516,7 @@ IDS = { # Indonesia
 		}
 	}
 
-	dynamic_country_name = { # Srivijaya
+	dynamic_country_name = {
 		name = dyn_c_srivijaya
 		adjective = dyn_c_srivijaya_adj
 

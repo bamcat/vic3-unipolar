@@ -79,7 +79,7 @@ REPLACE_OR_CREATE:building_naval_fortification = {
 	ai_value = {
 		value = 1000
 
-		if = { # Tenpo Crisis
+		if = {
 			limit = {
 				owner = {
 					has_journal_entry = je_tenpo_crisis

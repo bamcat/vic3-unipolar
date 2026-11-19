@@ -352,7 +352,7 @@ da_increase_autonomy_of_self = {
 		propose_score = {
 			value = 100
 
-			if = { # Hungary should want independence
+			if = {
 				limit = {
 					has_journal_entry = je_hungarian_revolution
 					scope:target_country = {

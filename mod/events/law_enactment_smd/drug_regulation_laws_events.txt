@@ -1,12 +1,7 @@
 ﻿namespace = drug_laws
 
-
 # ==========================================
 # drug_laws.1
-# "The Cost of Prohibition"
-# Fires when enacting total prohibition.
-# Enforcement is expensive — the question
-# is how hard to push.
 # ==========================================
 
 drug_laws.1 = {
@@ -48,13 +43,10 @@ drug_laws.1 = {
 		}
 	}
 
-	# Option A: Full enforcement — spare no expense
 	option = {
 		name = drug_laws.1.a
-		# Heavy spending boosts enactment success but costs
 		add_enactment_modifier = {
 			name = drug_law_prohibition_enforcement
-			# = 3
 		}
 		add_enactment_modifier = {
 			name = drug_law_enforcement_cost
@@ -63,7 +55,6 @@ drug_laws.1 = {
 		ai_chance = { base = 40 }
 	}
 
-	# Option B: Measured enforcement — let compliance build naturally
 	option = {
 		name = drug_laws.1.b
 		default_option = yes
@@ -76,10 +67,6 @@ drug_laws.1 = {
 
 # ==========================================
 # drug_laws.2
-# "The Church Speaks"
-# Fires when enacting any restrictive law
-# (total prohibition or alcohol/tobacco).
-# The devout IG weighs in on moral grounds.
 # ==========================================
 
 drug_laws.2 = {
@@ -131,13 +118,11 @@ drug_laws.2 = {
 		}
 	}
 
-	# Option A: Welcome their support publicly
 	option = {
 		name = drug_laws.2.a
 		default_option = yes
 		add_enactment_modifier = {
 			name = drug_law_religious_backing
-			# = 2
 		}
 		scope:devout_ig = {
 			add_modifier = {
@@ -148,7 +133,6 @@ drug_laws.2 = {
 		ai_chance = { base = 60 }
 	}
 
-	# Option B: Keep it a secular matter — decline their framing
 	option = {
 		name = drug_laws.2.b
 		add_enactment_modifier = {
@@ -160,10 +144,6 @@ drug_laws.2 = {
 
 # ==========================================
 # drug_laws.3
-# "The Intelligentsia Makes Its Case"
-# Fires when enacting decriminalization
-# laws. Academics and progressives push
-# for evidence-based policy.
 # ==========================================
 
 drug_laws.3 = {
@@ -219,13 +199,11 @@ drug_laws.3 = {
 		}
 	}
 
-	# Option A: Publish the research — let the evidence lead
 	option = {
 		name = drug_laws.3.a
 		default_option = yes
 		add_enactment_modifier = {
 			name = drug_law_academic_push
-			# = 2
 		}
 		scope:intelligentsia_ig = {
 			add_modifier = {
@@ -242,7 +220,6 @@ drug_laws.3 = {
 		}
 	}
 
-	# Option B: Keep academics out of politics
 	option = {
 		name = drug_laws.3.b
 		add_enactment_modifier = {
@@ -260,10 +237,6 @@ drug_laws.3 = {
 
 # ==========================================
 # drug_laws.4
-# "The Medical Establishment Intervenes"
-# Fires when enacting safe-injection sites.
-# Doctors and public health officials make
-# the case for harm reduction.
 # ==========================================
 
 drug_laws.4 = {
@@ -311,13 +284,11 @@ drug_laws.4 = {
 		}
 	}
 
-	# Option A: Publicly back the medical consensus
 	option = {
 		name = drug_laws.4.a
 		default_option = yes
 		add_enactment_modifier = {
 			name = drug_law_medical_backing
-			# = 3
 		}
 		ai_chance = {
 			base = 60
@@ -333,7 +304,6 @@ drug_laws.4 = {
 		}
 	}
 
-	# Option B: Frame it as a moral failing, not a medical one
 	option = {
 		name = drug_laws.4.b
 		add_enactment_modifier = {
@@ -341,7 +311,6 @@ drug_laws.4 = {
 		}
 		add_enactment_modifier = {
 			name = drug_law_moral_framing
-			# = -1
 		}
 		ai_chance = { base = 40 }
 	}
@@ -349,9 +318,6 @@ drug_laws.4 = {
 
 # ==========================================
 # drug_laws.5
-# "International Condemnation"
-# Fires when enacting trafficking allowed.
-# The world takes notice.
 # ==========================================
 
 drug_laws.5 = {
@@ -386,24 +352,19 @@ drug_laws.5 = {
 		}
 	}
 
-	# Option A: Defy international opinion — this is our sovereign right
 	option = {
 		name = drug_laws.5.a
 		default_option = yes
 		add_enactment_modifier = {
 			name = drug_law_international_pressure
-			# = -1
 		}
 		add_enactment_modifier = {
 			name = drug_law_sovereignty_declared
-			# = 2
 		}
-		# Infamy from international condemnation
-		add_infamy = 10
+		change_infamy = 10
 		ai_chance = { base = 60 }
 	}
 
-	# Option B: Quietly proceed — avoid making statements
 	option = {
 		name = drug_laws.5.b
 		add_enactment_modifier = {
@@ -415,11 +376,6 @@ drug_laws.5 = {
 
 # ==========================================
 # drug_laws.6
-# "Criminal Networks Resist the Crackdown"
-# Fires when enacting total prohibition or
-# moving toward more restrictive laws.
-# Organised crime fights back against
-# the legislative threat to their business.
 # ==========================================
 
 drug_laws.6 = {
@@ -447,7 +403,6 @@ drug_laws.6 = {
 			is_enacting_law = law_type:law_alcohol_tobacco_legal
 			is_enacting_law = law_type:law_marijuana_decriminalization
 		}
-		# Only fires if cartels are present
 		OR = {
 			has_journal_entry = je_drug_trafficking
 			has_variable = mexican_drug_war_active
@@ -463,18 +418,15 @@ drug_laws.6 = {
 		}
 	}
 
-	# Option A: Accept the setback — the networks are too entrenched for now
 	option = {
 		name = drug_laws.6.a
 		default_option = yes
 		add_enactment_modifier = {
 			name = drug_law_criminal_pushback
-			# = -2
 		}
 		ai_chance = { base = 50 }
 	}
 
-	# Option B: Escalate enforcement — root them out
 	option = {
 		name = drug_laws.6.b
 		add_enactment_modifier = {
@@ -484,7 +436,6 @@ drug_laws.6 = {
 			name = drug_law_enforcement_cost
 			# = money_amount_#_small
 		}
-		# Turmoil rises as enforcement escalates
 		every_scope_state = {
 			limit = { is_incorporated = yes }
 			add_radicals_in_state = { value = small_radicals }

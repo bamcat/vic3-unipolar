@@ -1,16 +1,15 @@
 ﻿academics = {
 	texture = "gfx/interface/icons/pops_icons/academics.dds"
 	color = hsv{ 0.94 0.51 0.37 }
-	start_quality_of_life = 10
+	start_quality_of_life = 20
 	wage_weight = 20
 	paid_private_wage = yes
 	literacy_target = 0.80
 	education_access = 0.5
-	dependent_wage = 0.5	# per year
+	dependent_wage = 0.5
 	unemployment = yes
 
 	
-	# 70% - 100% politically engaged
 	political_engagement_base = 0.7
 	political_engagement_literacy_factor = 0.3
 	
@@ -43,7 +42,6 @@
 				is_peasant_under_serfdom = no
 				literacy_rate > 0.0625
 			}
-			# baseline: ( literacy - 0.25 ) * 80 + ( wealth / 10 ), education matters enormously
 			add = {
 				value = literacy_rate
 				subtract = 0.0625

@@ -333,12 +333,17 @@ modern_formables_WAF.1 = {
 
 namespace = modern_formables_KOU
 
-country_event = {
-	id = modern_formables_KOU.1
+modern_formables_KOU.1 = {
+	type = country_event
+	placement = ROOT
 	title = modern_formables_KOU.1.t
 	desc = modern_formables_KOU.1.d
-	picture = "gfx/interface/icons/event_icons/event_politics.dds"
-	is_triggered_only = yes
+	flavor = modern_formables_KOU.1.d
+	event_image = {
+		video = "unspecific_ruler_speaking_to_people"
+	}
+	icon = "gfx/interface/icons/event_icons/event_map.dds"
+	duration = 3
 
 	option = {
 		name = modern_formables_KOU.1.a

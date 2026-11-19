@@ -257,7 +257,7 @@
                     multiply = {
                         "scope:article.input_market_goods(root)" ?= {
                             value = ai_treaty_export_value:root
-                            divide = 6 # Have to pay for convoys etc
+                            divide = 6
                         }
                     }
                     divide = {
@@ -269,7 +269,7 @@
                     max = {
                         "scope:article.input_market_goods(root)" ?= {
                             value = ai_treaty_export_value:root
-                            divide = 6 # Have to pay for convoys etc
+                            divide = 6
                         }
                         max = 10
                     }

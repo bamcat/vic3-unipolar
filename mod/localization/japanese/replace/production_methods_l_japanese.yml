@@ -1,6 +1,4 @@
 ﻿l_japanese:
-  
-  # Common
  pm_base:0 "ベース"
  pmg_base_building_food_industry:1 "$pm_base$"
  pmg_base_building_textile_mill:1 "$pm_base$"
@@ -62,7 +60,7 @@
 
  pm_disabled:0 "バリアフリー"
  pm_paused:0 "建設用パユース"
-  
+
  pm_pharmacies:0 "薬局"
  pm_no_pharmacies:0 "医薬品製造"
  pm_apothecaries:0 "アポテカリ"
@@ -83,7 +81,7 @@
  pmg_urban_clergy:0 "都市の教会"
  pm_state_urban_clergy:0 "ステート・ラン教会"
  pm_free_urban_clergy:0 "無料教会"
-  
+
  pm_steam_power:0 "蒸気力"
  pm_disabled_steam_power:0 "蒸気力無し"
  pm_watertube_boiler_building_furniture_manufactory:0 "ロボット組立ライン"
@@ -99,8 +97,6 @@
  pm_rotary_valve_engine_building_motor_industry:0 "コンピュータ化されたアセンブリ ライン"
  pm_rotary_valve_engine_building_arms_industry:0 "コンピュータ化されたアセンブリ ライン"
 
-
-  # Trains
  pm_no_passenger_trains:0 "貨物優先順位付け"
  pm_wooden_passenger_carriages:0 "乗客の運送"
  pm_steel_passenger_carriages:0 "トランスポートポッド"
@@ -119,8 +115,7 @@
  pm_armored_trains:0 "装甲列車"
  pm_railway_guns:0 "鉄道銃"
  pm_assembly_lines_building_automotive_industry:0 "ロボットアセンブリ"
- 
-  # Food Industry
+
  pmg_canning:0 "パッケージング"
  pm_disabled_canning:0 "真空包装"
  pm_cannery:0 "ラボ肉"
@@ -128,28 +123,26 @@
  pm_disabled_cannery:0 "キャンディーなし"
  pm_vacuum_canning:1 "プラスチック"
  pm_vacuum_canning_principle_3: "効率的な缶詰の練習"
-  
+
  pmg_distillery:0 "アクセサリー"
  pm_disabled_distillery:0 "食料品の生産を優先"
  pm_pot_stills:0 "特許文献"
  pm_patent_stills:0 "粉の混合"
  pm_bakery:0 "ベーキングパウダー"
  pm_sweeteners:0 "人工甘味料"
-  
-  # Textile Mills
+
  pm_cotton_gin:0 "綿のジン"
  pm_disabled_gin:0 "機械ジンなし"
  pm_system_gin:0 "システム ジン"
-  
+
  pm_elastics:0 "カスタムオーダー"
  pm_disabled_elastics:0 "ゴムなし"
  pm_masticators:0 "マスティック"
  pm_rubber_bands:0 "ゴムバンド"
-  
+
  pm_no_luxury_clothes:0 "非ラグジュアリーな服を優先"
  pm_luxury_clothes:0 "贅沢な衣類の生産"
-  
-  # Furniture Manufacturies
+
  pm_textile_looms:0 "織物の織機"
  pm_handcrafted_furniture:0 "手作り家具"
  pm_machine_tools:0 "工作機械"
@@ -164,31 +157,26 @@
  pm_no_luxuries:0 "非ラグジュアリー家具を優先"
  pm_luxury_furniture:0 "贅沢な家具の生産"
 
-  
-  # Glassworks
  pm_forest_glass:0 "クリスタルガラス"
  pmg_glassblowing:0 "ガラスブローイング"
  pm_disabled_glassblowing:0 "ガラス繊維なし"
  pm_crystal_glass:0 "マイクロウェーブアシスト加工"
  pm_automatic_bottle_blowers:0 "ポリエチレンテレフタレートプロセス"
-  
+
  pm_ceramics:0 "セラミックス"
  pm_disabled_ceramics:0 "ガラスの生産を優先します"
  pm_bone_china:0 "骨中国"
-  
-  # Tooling Workshops
+
  pm_crude_tools:0 "スチールツール"
  pm_pig_iron:1 "パワーツール"
  pm_steel:0 "高度なパワーツール"
  pm_rubber_grips: "直接エネルギーツール"
 
- # Arms Industry
  pm_muskets:0 "アサルト・ライフル"
  pm_rifles:0 "ヘビーライフル"
  pm_repeaters:0 "高度なライフル"
  pm_bolt_action_rifles:0 "レーザーライフル"
-  
-  # Paper Mills
+
  pm_pulp_pressing:0 "ペーパー漂白"
  pm_crude_paper:0 "空気乾燥による"
  pm_sulfite_pulping:0 "酸素ベースの漂白"
@@ -196,39 +184,33 @@
  pm_no_publishing:0 "出版業界なし"
  pm_newspapers:0 "新聞"
  pm_printing_presses:0 "印刷プレス"
-  
-  # Steel Mills
+
  pmg_steelmaking_process:0 "製鉄工程"
  pm_blister_steel_process:0 "電気アークプロセス"
  pm_bessemer_process:0 "連続鋳造"
  pm_open_hearth_process:0 "直接減らされた鉄"
  pm_electric_arc_process:0 "アンドロイド処理"
-  
- # Munitions Plant
+
  pm_munitions_plants:0 "マンディションプラント"
  pm_disabled_munitions_plants:0 "ムンディプラントなし"
  pm_cartridge_crafting:0 "カートリッジ クラフト"
  pm_percussion_caps:0 "標準化ラウンド"
  pm_explosive_shells:0 "スマート弾丸"
-  
-  # Motor Industry
+
  pm_steam_engines:0 "ディーゼルエンジン"
  pm_electric_engines:0 "電動エンジン"
  pm_diesel_engines:0 "量子エンジン"
 
-  # War Machine Industry
  pmg_aeroplanes:0 "航空機"
  pm_no_aeroplane_production:0 "航空機の生産無し"
  pm_aeroplane_production:0 "航空機の生産"
  pmg_tanks:0 "タンク"
  pm_no_tank_production:0 "航空機の生産を優先"
  pm_tank_production:0 "タンク生産"
-  
-  # Foundries
+
  pm_civilian:0 "民間人"
  pm_wartime:0 "ウォータイム"
 
-  # Arts Academy
  pmg_schools_of_art:0 "美術学校"
  pm_traditional_art:0 "ビジュアルアート"
  pm_realist_art:0 "映画・写真"
@@ -239,16 +221,14 @@
  pm_bourgeoisie_patronage:0 "インターネットのテラス"
  pm_independent_artists:0 "NFTの特長"
 
-  # University
  pm_analytical_philosophy_department:0 "量子物理学科"
  pm_philosophy_department:0 "コンピュータサイエンス事業部"
  pm_scholastic_education:0 "科学研究"
- 
+
  pmg_university_academia:1 "セキュリズム"
  pm_secular_academia:0 "循環アカデミア"
  pm_religious_academia:0 "臨床教育者"
-  
-  # Fishing Wharf
+
  pm_fish_oil:0 "魚油"
  pm_disabled_fish_oil:0 "魚の生産を優先"
  pm_oil_extraction:0 "オイル抽出"
@@ -271,8 +251,7 @@
  pm_simple_whaling:0 "簡単な捕鯨"
  pm_wooden_whaling_ships:0 "捕鯨艦隊"
  pm_steam_whaling_ships:0 "蒸気動力を与えられた捕鯨器"
- 
-  # Grain Farms
+
  pm_simple_farming:0 "化学肥料"
  pm_simple_farming_building_rice_farm:0 "化学肥料"
  pm_intensive_farming:0 "遺伝子改変作物"
@@ -293,7 +272,6 @@
  pm_tools_building_rice_farm:0 "投げる機械"
  pm_steam_threshers_building_rice_farm:0 "自動スロースイング"
 
-  # Ranches
  pm_simple_ranch:0 "羊牧場"
  pm_sheep_farms:0 "ウールギャザリングの増加"
  pm_intensive_grazing_ranch:1 "集中的なウールギャザリング"
@@ -306,8 +284,7 @@
  pm_electric_fencing:0 "電気塀"
  pm_orchards:0 "オーチャード"
  pm_orchards_no:0 "オーチャードなし"
-  
-  # Mines
+
  pmg_mining_equipment_building_coal_mine:0 "鉱山装置"
  pmg_mining_equipment_building_iron_mine:0 "鉱山装置"
  pmg_mining_equipment_building_lead_mine:0 "鉱山装置"
@@ -368,7 +345,6 @@
  pm_diesel_pump_building_sulfur_mine:0 "バイオマイニング"
  pm_diesel_pump_building_gold_mine:0 "バイオマイニング"
 
-  # Government Administration
  pm_simple_organization:0 "電話のスイッチボード"
  pm_horizontal_drawer_cabinets:1 "デジタル スイッチボード"
  pm_vertical_filing_cabinets:1 "ブロックチェーン"
@@ -376,16 +352,15 @@
  pm_census:0 "通常のCensus"
  pm_identification_documents:0 "必須書類"
  pm_personal_files:0 "個々の人員ファイル"
- 
+
  pmg_government_administration_bureaucrat_professionalism:1 "プロフェッショナル"
  pm_hereditary_bureaucrats:0 "遺伝局員"
  pm_professional_bureaucrats:0 "専門局員"
- 
+
  pmg_government_administration_religious_administration:1 "セキュリズム"
  pm_secular_bureaucrats:0 "循環管理"
  pm_religious_bureaucrats:0 "行政書士"
-  
-  # Barracks
+
  pmg_training:0 "トレーニング"
  pm_no_organization:0 "総合トレーニング"
  pm_general_training:0 "複合アーム戦術"
@@ -393,9 +368,7 @@
  pm_training_streamlining:0 "ドローン戦場"
  pm_nco_incorporation:0 "ロングランゲストライク"
  pm_mobile_warfare_tactics: "サイバーワルファーレ"
- 
- ###
- 
+
  pmg_training_conscription:0 "$pmg_training$"
  pm_no_organization_conscription:0 "$pm_no_organization$"
  pm_general_training_conscription:0 "$pm_general_training$"
@@ -404,20 +377,17 @@
  pm_nco_incorporation_conscription:0 "$pm_nco_incorporation$"
  pm_mobile_warfare_tactics_conscription: "$pm_mobile_warfare_tactics$"
 
-  # Electrics
  pm_no_radios:0 "電話制作優先"
  pm_radios:0 "テレビ・ラジオ"
  pm_flatscreens:0 "フラットスクリーン"
  pm_smart_tv:0 "スマートテレビ"
- 
+
  pm_telephones:0 "携帯電話制作"
  pm_smartphones:0 "スマートフォン制作"
 
-  #´Textile Mills
  pm_dye_workshops:0 "電気ミシン"
  pm_handsewn_clothes:0 "縫製機"
-  
-  # Logging
+
  pm_no_equipment:0 "チェーンソー"
  pm_simple_forestry:0 "ミルソー"
  pm_saw_mills:0 "ウッドグラインダー"
@@ -427,7 +397,6 @@
  pm_hardwood:0 "堅材の生産"
  pm_increased_hardwood: "焦点を合わせられた堅材の生産"
 
-  # Shipbuilding
  pm_basic_shipbuilding:0 "アーク溶接"
  pm_complex_shipbuilding:0 "ブロック構造"
  pm_metal_shipbuilding:0 "ディーププレースメント"
@@ -439,7 +408,6 @@
  pm_military_shipbuilding_steam:1 "ステルス・ハルス"
  pm_military_shipbuilding_steam_2:1 "コンピュータ・オプティマル・ハルス"
 
-  # Port
  pm_anchorage:0 "アンカー"
  pm_basic_port:0 "貨物港"
  pm_basic_port_canal:0 "貨物港"
@@ -448,17 +416,15 @@
  pm_modern_port:0 "グローバル化港"
  pm_modern_port_canal:0 "グローバル化港"
 
-  # Trade Center
  pm_trade_center: "貿易センター"
  pm_trade_center_principle_external_trade_2: "インフルエンサートレードセンター"
- 
+
  pmg_trade_quantity_trade_center:0 "数量"
  pm_trade_center_trade_quantity_limited:0 "限られた貿易容積"
  pm_trade_center_trade_quantity_normal:0 "正常な貿易容積"
  pm_trade_center_trade_quantity_high:0 "高い貿易容積"
  pm_trade_center_trade_quantity_very_high:0 "非常に高い貿易容積"
- 
-  # Naval Base
+
  pm_man_o_wars:1 "マン・オウォー"
  pm_ironclads:1 "アイアンクラッド"
  pm_monitors:1 "モニター"
@@ -473,7 +439,6 @@
  pm_sea_lane_strategies:0 "Naval Swarms, オーストラリア"
  pm_battlefleet_tactics:0 "ドローンコーディネート"
 
-  # Unsorted
  pmg_amenities:0 "アメニティ"
  pm_publishing:0 "出版業界"
  pm_maintenance:0 "メンテナンス"
@@ -491,14 +456,14 @@
  pm_best_lightbulbs:0 "最高の電球"
  pmg_telephones_category:0 "電話番号"
  pmg_radios_category:0 "ラジオ"
- 
+
  pmg_harvesting_process:0 "収穫プロセス"
  pmg_harvesting_process_building_rye_farm:1 "$pmg_harvesting_process$"
  pmg_harvesting_process_building_wheat_farm:1 "$pmg_harvesting_process$"
  pmg_harvesting_process_building_rice_farm:1 "$pmg_harvesting_process$"
  pmg_harvesting_process_building_maize_farm:1 "$pmg_harvesting_process$"
  pmg_harvesting_process_building_millet_farm:1 "$pmg_harvesting_process$"
- 
+
  pmg_sheep_ranch:0 "ウールの生産"
  pmg_fencing:0 "フェンシング"
 
@@ -532,14 +497,14 @@
  pmg_transportation_building_logging_camp:0 "交通アクセス"
  pmg_transportation_building_oil_rig:0 "交通アクセス"
  pm_road_carts:0 "ロードカート"
- 
+
  pm_rail_transport:0 "鉄道輸送"
  pm_rail_transport_mine:1 "$pm_rail_transport$"
  pm_rail_transport_building_logging_camp:1 "$pm_rail_transport$"
  pm_rail_transport_building_oil_rig:1 "$pm_rail_transport$"
  pm_rail_transport_building_lead_mine:1 "$pm_rail_transport$"
  pm_rail_transport_building_coal_mine:1 "$pm_rail_transport$"
- 
+
  pm_log_carts:0 "レールログカート"
  pm_fish_press:0 "フィッシュプレス"
  pm_steam_derricks:0 "オイルデリック"
@@ -561,7 +526,7 @@
  pm_manual_dough_processing:0 "トラック無し"
  pm_automated_bakery:0 "トラックサービス"
  pm_precision_tools:0 "加熱家具"
- 
+
  pm_munition_plants:0 "マンディプラント"
  pm_no_munitions:0 "マンディションの生産無し"
  pm_synthetics:0 "合成物"
@@ -571,14 +536,12 @@
  pmg_automation_building_arms_industry:0 "オートメーション"
  pmg_automation_building_munition_plant:0 "オートメーション"
 
-  # Power Bloc Principle PMs
  pm_principle_freedom_of_movement_3: "増加した為替"
  pmg_principle_freedom_of_movement_3: "運動の自由"
  pm_freedom_of_movement_no_effect: "効果なし"
  pm_manor_house_principle_divine_economics_2: "増加した エネルギー監督"
  pm_financial_district_principle_divine_economics_2: "増加した エネルギー監督"
 
-  # Power Bloc Statues
  pmg_base_building_power_bloc_statue: "力の支柱の彫像"
  pm_power_bloc_statue_sovereign_empire: "$identity_sovereign_empire$"
  pm_power_bloc_statue_military_treaty: "$identity_military_treaty_organization$"
@@ -587,8 +550,6 @@
  pm_power_bloc_statue_religious: "$identity_religious$"
  pm_power_bloc_prestige_only: "プレステージのみ"
 
-  
-  # Home Workshops
  pmg_home_workshops:0 "ホーム ワークショップ"
  pmg_home_workshops_building_subsistence_farm:1 "$pmg_home_workshops$"
  pmg_home_workshops_building_subsistence_orchard:1 "$pmg_home_workshops$"
@@ -610,7 +571,6 @@
  pm_home_workshops_no_building_subsistence_fishing_village:0 "$pm_home_workshops_no$"
  pm_home_workshops_no_building_subsistence_rice_farm:0 "$pm_home_workshops_no$"
 
-  # Serfdom
  pm_serfdom:2 "セルフダム"
  pmg_serfdom_building_subsistence_farm:1 "$pm_serfdom$"
  pmg_serfdom_building_subsistence_orchard:1 "$pm_serfdom$"
@@ -624,9 +584,9 @@
  pm_serfdom_pastures:1 "$pm_serfdom$"
  pm_serfdom_no:0 "無料の農民"
  pm_slavery:0 "スラヴァリー"
- 
+
  pm_default:0 "基礎生産"
- 
+
  default:0 "$pm_default$"
  default_building_gold_field:0 "$pm_default$"
  default_building_coffee_plantation:0 "$pm_default$"
@@ -658,8 +618,7 @@
  automatic_irrigation_building_silk_plantation:0 "$GMOs$"
  automatic_irrigation_building_rubber_plantation:0 "$GMOs$"
  automatic_irrigation_building_vineyard: "$GMOs$"
- 
-  # Construction Camp
+
  pm_wooden_buildings:0 "プレファブリケーション"
  pm_iron_frame_buildings:0 "自動化機械"
  pm_steel_frame_buildings:0 "ロボット構造"
@@ -669,7 +628,6 @@
  pm_industrial_canal:0 "産業運河"
  pm_modern_canal:0 "近代運河"
 
-  # Ownership
  pmg_ownership:0 "オーナーシップ"
  pmg_ownership_capital_building_food_industry:1 "$pmg_ownership$"
  pmg_ownership_capital_building_textile_mill:1 "$pmg_ownership$"
@@ -726,7 +684,7 @@
  pmg_ownership_building_company_headquarter: "$pmg_ownership$"
  pmg_additional_ownership_building_manor_house: "追加 $pmg_ownership$"
  pmg_additional_ownership_building_financial_district: "追加 $pmg_ownership$"
- 
+
  pm_merchant_guilds:0 "マーチャントガイド"
  pm_merchant_guilds_building_food_industry:1 "$pm_merchant_guilds$"
  pm_merchant_guilds_building_textile_mill:1 "$pm_merchant_guilds$"
@@ -746,7 +704,7 @@
  pm_merchant_guilds_building_lead_mine:1 "$pm_merchant_guilds$"
  pm_merchant_guilds_building_sulfur_mine:1 "$pm_merchant_guilds$"
  pm_merchant_guilds_building_gold_mine:1 "$pm_merchant_guilds$"
- 
+
  pm_trade_center_merchant_guilds:0 "$pm_merchant_guilds$"
 
  pm_privately_owned:0 "個人所有"
@@ -781,7 +739,7 @@
  pm_financial_district_privately_owned: "$pm_privately_owned$"
  pm_financial_district_publicly_traded: "$pm_publicly_traded$"
  pm_company_headquarter_privately_owned: "$pm_privately_owned$"
- 
+
  pm_publicly_traded:0 "パブリックトレード"
  pm_publicly_traded_building_food_industry:0 "$pm_publicly_traded$"
  pm_publicly_traded_building_textile_mill:1 "$pm_publicly_traded$"
@@ -815,7 +773,7 @@
 
  pm_publicly_traded_building_railway:0 "$pm_publicly_traded$"
  pm_trade_center_government_run:1 "$pm_government_run$"
- 
+
  pm_government_run:0 "政府の操業"
  pm_government_run_building_food_industry:1 "$pm_government_run$"
  pm_government_run_building_textile_mill:1 "$pm_government_run$"
@@ -836,7 +794,7 @@
  pm_government_run_building_lead_mine:1 "$pm_government_run$"
  pm_government_run_building_sulfur_mine:1 "$pm_government_run$"
  pm_government_run_building_gold_mine:1 "$pm_government_run$"
- 
+
  pm_government_run_building_railway:0 "$pm_government_run$"
 
  pm_worker_cooperative:0 "労働者の協同組合"
@@ -865,7 +823,7 @@
  pm_worker_cooperative_building_lead_mine:1 "$pm_worker_cooperative$"
  pm_worker_cooperative_building_sulfur_mine:1 "$pm_worker_cooperative$"
  pm_worker_cooperative_building_gold_mine:1 "$pm_worker_cooperative$"
- 
+
  pm_worker_cooperative_building_railway:0 "$pm_worker_cooperative$"
 
  pmg_base_building_skyscraper:0 "スカイスクレイパー"
@@ -878,21 +836,17 @@
  pm_monument_prestige_only:0 "プレステージ"
  pm_monument_prestige_only_vatican_city:0 "$pm_monument_prestige_only$"
  pm_monument_no_effects:0 "効果なし"
- 
+
  pmg_dummy:0 "グラフィックのみの建物のためのDummy PMグループ。 決してUIに表示されないで下さい。"
  pm_dummy:0 "グラフィックのみの建物のためのDummy PM。 UIに表示されていない場合。"
 
- 
-#SMD methods
-
-#Plastics
  pmg_chemical_plastics:0 "プラスチック生産"
  pm_bakelite:0 "ベークライト"
+ pm_no_plastics:0 "プラスチックなし"
  pm_thermoforming:0 "熱成形"
  pm_nanocomposites:0 "ナノコンポジット"
  pm_bioplastics:0 "バイオプラスチック"
- 
- #Pesticides
+
  pm_no_pesticides:0 "農薬なし"
  pm_yes_pesticides:0 "殺虫剤"
  pm_pesticides_fruit:0 "殺虫剤"
@@ -904,222 +858,207 @@
  pmg_pesticide_use_fruit:0 "殺虫剤"
  pmg_pesticide_use_coco:0 "殺虫剤"
  pmg_pesticide_use:0 "殺虫剤"
- 
+
  pmg_pesticides:0 "殺虫剤"
  pmg_pesticides_fruit:0 "殺虫剤"
- 
+
  pm_synthetic_fabric:0 "総合的な生地"
- 
- #Engine
- 
+
  pm_hydrogen_combustion_engines:0 "水素燃焼エンジン"
 
-#Transport
+ pm_mass_transit_system:0 "マストランジットシステム"
 
-pm_mass_transit_system:0 "マストランジットシステム"
+ pm_container_truck_mine:0 "コンテナトラック"
+ pm_electric_container_truck_mine:0 "電気容器のトラック"
 
-pm_container_truck_mine:0 "コンテナトラック"
-pm_electric_container_truck_mine:0 "電気容器のトラック"
+ pm_refrigerated_truck_container_building_livestock_ranch:0 "冷凍コンテナトラック"
 
-pm_refrigerated_truck_container_building_livestock_ranch:0 "冷凍コンテナトラック"
-
-#EVs
-pm_e_veh_production:0 "電気自動車の生産"
+ pm_e_veh_production:0 "電気自動車の生産"
 
 #microencap
 
-pm_microencap:0 "マイクロカプセル化"
+ pm_microencap:0 "マイクロカプセル化"
 
-#nuclear Plant
-
-pmg_base_building_nuclear_plant:0 "反応器"
-pm_fission_plant:0 "Fissionリアクター"
-pm_fusion_plant:0 "フュージョンリアクター"
+ pmg_base_building_nuclear_plant:0 "反応器"
+ pm_fission_plant:0 "Fissionリアクター"
+ pm_fusion_plant:0 "フュージョンリアクター"
 
 #clean energy
-pmg_base_building_green_plant:0 "ゼロエミッションオプション"
-pm_windmill_field:0 "ウインドミルズ"
-pm_solar_field:0 "太陽電池パネル"
+ pmg_base_building_green_plant:0 "ゼロエミッションオプション"
+ pm_windmill_field:0 "ウインドミルズ"
+ pm_solar_field:0 "太陽電池パネル"
 
 #airport
-pmg_base_building_airport:0 "空港アクセス"
-pmg_base_building_airport_prioritization:0 "航空機の優先順位"
+ pmg_base_building_airport:0 "空港アクセス"
+ pmg_base_building_airport_prioritization:0 "航空機の優先順位"
 
-pm_base_airport:0 "空港アクセス"
-pm_cargo_plane_prioritization:0 "貨物優先順位付け"
-pm_regional_port:0 "地域空港"
-pm_passenger_port:0 "国際空港"
+ pm_base_airport:0 "空港アクセス"
+ pm_cargo_plane_prioritization:0 "貨物優先順位付け"
+ pm_regional_port:0 "地域空港"
+ pm_passenger_port:0 "国際空港"
 
 #spaceport
 
-pmg_base_building_spaceport:0 "ローンチパッド"
-pm_launchpads:0 "ロケットの範囲"
-pm_space_shuttle:0 "スペースシャトル"
-pm_reusable_rocket:0 "再使用可能なロケット"
-pm_starship:0 "スターシップ"
+ pmg_base_building_spaceport:0 "ローンチパッド"
+ pm_launchpads:0 "ロケットの範囲"
+ pm_space_shuttle:0 "スペースシャトル"
+ pm_reusable_rocket:0 "再使用可能なロケット"
+ pm_starship:0 "スターシップ"
 
-pmg_base_building_mission_control:0 "ミッション・コントロール"
-pm_mission_control:0 "国際宇宙ステーション"
-pm_satellite_assisted_control:0 "衛星支援"
-pm_autonomous_mission_control:0 "自動ミッション制御"
+ pmg_base_building_mission_control:0 "ミッション・コントロール"
+ pm_mission_control:0 "国際宇宙ステーション"
+ pm_satellite_assisted_control:0 "衛星支援"
+ pm_autonomous_mission_control:0 "自動ミッション制御"
 
 ### retailer
 
+ pmg_base_retailer:0 "リテール"
+ pm_outlet_malls:0 "アウトレットモール"
+ pm_big_box_mart:0 "ビッグボックスマーツ"
+ pm_online_shopping:0 "オンラインショッピング"
+ pm_food_subscription_services:0 "オンラインサブスクリプションサービス"
 
-pmg_base_retailer:0 "リテール"
-pm_outlet_malls:0 "アウトレットモール"
-pm_big_box_mart:0 "ビッグボックスマーツ"
-pm_online_shopping:0 "オンラインショッピング"
-pm_food_subscription_services:0 "オンラインサブスクリプションサービス"
+ pmg_base_delivery:0 "デリバリー"
+ pm_no_delivery:0 "配送サービスなし"
+ pm_delivery_services:0 "配送サービス"
+ pm_delivery_drone:0 "配信ドローン"
 
-pmg_base_delivery:0 "デリバリー"
-pm_no_delivery:0 "配送サービスなし"
-pm_delivery_services:0 "配送サービス"
-pm_delivery_drone:0 "配信ドローン"
+ pmg_base_profser:0 "本社所在地"
+ pmg_base_profser_type:0 "サービスタイプ"
+ pm_computer_office:0 "オフィスビル"
+ pm_remote_working:0 "ワークからホーム"
+ pm_ai_professional_services:0 "自動サービス"
 
-#professional Services
+ pm_internet_service_provider:0 "インターネットサービスプロバイダ"
+ pm_investment_bankers:0 "投資銀行"
+ pm_law_offices:0 "法律事務所"
+ pm_accountants:0 "会計サービス"
 
-pmg_base_profser:0 "本社所在地"
-pmg_base_profser_type:0 "サービスタイプ"
-pm_computer_office:0 "オフィスビル"
-pm_remote_working:0 "ワークからホーム"
-pm_ai_professional_services:0 "自動サービス"
-
-pm_internet_service_provider:0 "インターネットサービスプロバイダ"
-pm_investment_bankers:0 "投資銀行"
-pm_law_offices:0 "法律事務所"
-pm_accountants:0 "会計サービス"
-
-pmg_base_microchip_type:0 "半導体製造"
+ pmg_base_microchip_type:0 "半導体製造"
 
 ### computer industry
 
-pmg_base_computer_industry:0 "コンピュータ技術"
-pmg_base_gaming_console:0 "ゲームコンソール"
+ pmg_base_computer_industry:0 "コンピュータ技術"
+ pmg_base_gaming_console:0 "ゲームコンソール"
 
-pm_operating_systems:0 "オペレーティングシステム"
-pm_solid_state_drive:0 "ソリッドステートドライブ"
-pm_multicore_processor:0 "マルチコアプロセッサ"
-pm_gpt:0 "GPT支援"
-pm_quantum_computing:0 "Quantumコンピューティング"
+ pm_operating_systems:0 "オペレーティングシステム"
+ pm_solid_state_drive:0 "ソリッドステートドライブ"
+ pm_multicore_processor:0 "マルチコアプロセッサ"
+ pm_gpt:0 "GPT支援"
+ pm_quantum_computing:0 "Quantumコンピューティング"
 
-pm_no_console:0 "ゲーミングコンソールなし"
-pm_gaming_console:0 "ゲームコンソール"
+ pm_no_console:0 "ゲーミングコンソールなし"
+ pm_gaming_console:0 "ゲームコンソール"
 
-# public Housing
-pmg_public_housing:0 "公共住宅"
+ pmg_public_housing:0 "公共住宅"
 
-building_group_bg_banking_throughput_add:0 "商業銀行スループット"
-building_financial_district_throughput_add:0 "金融地区のスループット"
-pm_no_public_housing: "公設住宅なし"
-pm_no_public_housing_desc: "状態はハウジング サポートを提供しません。 アーバンセンターは、プライベートマーケットアクティビティによって生成された不動産のみを生産しています。"
- 
-pm_the_projects: "プロジェクト"
-pm_the_projects_desc: "高密度のタワーブロックとセメントのハウジング。 木材やプレハブ材から、基礎、機能、そしてすぐに構築。 状態が主要なコンストラクタになるにつれて、不動産の出力が大幅に増加します。"
- 
-pm_affordable_construction: "手頃な価格の建設"
-pm_affordable_construction_desc: "高品質の構造、鉄骨造建築、適切な基礎、耐久性のある材料を使用した包括的な公共住宅プログラム。 不動産の出力が大幅に増加します。. エンジニアと官僚は、拡張プログラムを管理します。"
- 
-pm_housing_for_all: "すべてのハウジング"
-pm_housing_for_all_desc: "スケールで供給される普遍的なハウジング。 国家は、すべての市民のための高品質の住宅を構築し、維持します, 重要な建設の入力を消費します. 不動産の出力は最大に達します。 労働者、エンジニア、および官僚の大規模な労働力はプログラムを支持します。"
+ building_group_bg_banking_throughput_add:0 "商業銀行スループット"
+ building_financial_district_throughput_add:0 "金融地区のスループット"
+ pm_no_public_housing: "公設住宅なし"
+ pm_no_public_housing_desc: "状態はハウジング サポートを提供しません。 アーバンセンターは、プライベートマーケットアクティビティによって生成された不動産のみを生産しています。"
+
+ pm_the_projects: "プロジェクト"
+ pm_the_projects_desc: "高密度のタワーブロックとセメントのハウジング。 木材やプレハブ材から、基礎、機能、そしてすぐに構築。 状態が主要なコンストラクタになるにつれて、不動産の出力が大幅に増加します。"
+
+ pm_affordable_construction: "手頃な価格の建設"
+ pm_affordable_construction_desc: "高品質の構造、鉄骨造建築、適切な基礎、耐久性のある材料を使用した包括的な公共住宅プログラム。 不動産の出力が大幅に増加します。. エンジニアと官僚は、拡張プログラムを管理します。"
+
+ pm_housing_for_all: "すべてのハウジング"
+ pm_housing_for_all_desc: "スケールで供給される普遍的なハウジング。 国家は、すべての市民のための高品質の住宅を構築し、維持します, 重要な建設の入力を消費します. 不動産の出力は最大に達します。 労働者、エンジニア、および官僚の大規模な労働力はプログラムを支持します。"
 ### drone & missile
 
-pmg_base_missile_production:0 "ミサイル生産"
-pm_no_missile_production:0 "ミサイル生産なし"
-pm_missile_production:0 "ミサイル生産"
+ pmg_base_missile_production:0 "ミサイル生産"
+ pm_no_missile_production:0 "ミサイル生産なし"
+ pm_missile_production:0 "ミサイル生産"
 
-pmg_base_rotor_production:0 "ロトルクラフト"
-pm_no_helicopter_production:0 "ヘリコプターの生産なし"
-pm_helicopter_production:0 "ヘリコプターの生産"
-pm_drone_production:0 "ドローン制作"
+ pmg_base_rotor_production:0 "ロトルクラフト"
+ pm_no_helicopter_production:0 "ヘリコプターの生産なし"
+ pm_helicopter_production:0 "ヘリコプターの生産"
+ pm_drone_production:0 "ドローン制作"
 
-### spacecraft Production
-pmg_base_spacecraft_production:0 "宇宙船の生産"
-pm_no_spacecraft_production:0 "宇宙船の生産なし"
-pm_spacecraft_production:0 "宇宙船の生産"
+ pmg_base_spacecraft_production:0 "宇宙船の生産"
+ pm_no_spacecraft_production:0 "宇宙船の生産なし"
+ pm_spacecraft_production:0 "宇宙船の生産"
 
-pmg_base_aircraft_production:0 "平面生産"
-pm_base_plane_production:0 "基礎生産"
-pm_base_airliner_production:0 "乗客のエアライナー"
-pm_base_ultra_long_range_production:0 "超長期フライト"
-pm_base_space_travel:0 "商業スペース旅行"
+ pmg_base_aircraft_production:0 "平面生産"
+ pm_base_plane_production:0 "基礎生産"
+ pm_base_airliner_production:0 "乗客のエアライナー"
+ pm_base_ultra_long_range_production:0 "超長期フライト"
+ pm_base_space_travel:0 "商業スペース旅行"
 
-#Telecommunications
-pm_power_lines:0 "パワーライン"
-pm_cellular_tower:0 "セルラータワー"
-pm_starlink:0 "スターリンク"
- 
-pmg_base_telecommunications:0 "通信事業"
-pmg_cellular_network:0 "携帯電話ネットワーク"
-pm_1g:0 "1G 携帯電話ネットワーク"
-pm_2g:0 "2G 携帯電話ネットワーク"
-pm_3g:0 "3G 携帯電話ネットワーク"
-pm_4g:0 "4G 携帯電話ネットワーク"
-pm_5g:0 "5G 携帯電話ネットワーク"
-pm_6g:0 "6G 携帯電話ネットワーク"
-pm_7g:0 "7G 携帯電話ネットワーク"
-pm_8g:0 "8G 携帯電話ネットワーク"
+ pm_power_lines:0 "パワーライン"
+ pm_cellular_tower:0 "セルラータワー"
+ pm_starlink:0 "スターリンク"
 
-#Pharmacies
+ pmg_base_telecommunications:0 "通信事業"
+ pmg_cellular_network:0 "携帯電話ネットワーク"
+ pm_1g:0 "1G 携帯電話ネットワーク"
+ pm_2g:0 "2G 携帯電話ネットワーク"
+ pm_3g:0 "3G 携帯電話ネットワーク"
+ pm_4g:0 "4G 携帯電話ネットワーク"
+ pm_5g:0 "5G 携帯電話ネットワーク"
+ pm_6g:0 "6G 携帯電話ネットワーク"
+ pm_7g:0 "7G 携帯電話ネットワーク"
+ pm_8g:0 "8G 携帯電話ネットワーク"
 
-pm_medicines:0 "基礎医学"
-pm_pills:0 "ピルス"
-pm_stem_cells:0 "STEMセル"
+ pm_medicines:0 "基礎医学"
+ pm_pills:0 "ピルス"
+ pm_stem_cells:0 "STEMセル"
 
-pm_no_vaccines:0 "ワクチンなし"
-pm_trna:0 "tRNAについて"
-pm_subunit:0 "サブユニットワクチン"
-pm_mrna:0 "mRNAの"
-pm_viral_vector:0 "ウイルスベクトルワクチン"
-pm_gene_editing:0 "遺伝子の編集"
+ pm_no_vaccines:0 "ワクチンなし"
+ pm_trna:0 "tRNAについて"
+ pm_subunit:0 "サブユニットワクチン"
+ pm_mrna:0 "mRNAの"
+ pm_viral_vector:0 "ウイルスベクトルワクチン"
+ pm_gene_editing:0 "遺伝子の編集"
 
 #warehouse
 
-pmg_warehouses:0 "倉庫"
-pm_no_warehouse:0 "倉庫なし"
-pm_warehouses:0 "倉庫"
+ pmg_warehouses:0 "倉庫"
+ pm_no_warehouse:0 "倉庫なし"
+ pm_warehouses:0 "倉庫"
 
 #smd financial districts
-pm_financial_district_etfs:0 "為替取引ファンド"
-pm_financial_district_crypto:0 "暗号通貨"
-pm_financial_district_subprime_mortgages:0 "モーゲージ・バック・証券"
-pm_financial_district_tokenization:0 "トークン化"
+ pm_financial_district_etfs:0 "為替取引ファンド"
+ pm_financial_district_crypto:0 "暗号通貨"
+ pm_financial_district_subprime_mortgages:0 "モーゲージ・バック・証券"
+ pm_financial_district_tokenization:0 "トークン化"
 
 # appliances
 
-pm_watertube_boiler_building_appliances:0 "ロボット組立ライン"
-pm_rotary_valve_engine_building_appliances:0 "コンピュータ化されたアセンブリ ライン"
-pm_assembly_lines_building_appliances:0 "3Dプリントアプライアンス"
+ pm_watertube_boiler_building_appliances:0 "ロボット組立ライン"
+ pm_rotary_valve_engine_building_appliances:0 "コンピュータ化されたアセンブリ ライン"
+ pm_assembly_lines_building_appliances:0 "3Dプリントアプライアンス"
 
-pm_dishwashers:0 "ディッシュウォッシャー&ブレンダー"
-pm_microwave:0 "世帯の電子レンジ"
-pm_airfryer:0 "エアフライヤー"
-pm_cooking_robots:0 "調理ロボット"
-pm_portable_freezedryer:0 "家庭用凍結乾燥機"
+ pm_dishwashers:0 "ディッシュウォッシャー&ブレンダー"
+ pm_microwave:0 "世帯の電子レンジ"
+ pm_airfryer:0 "エアフライヤー"
+ pm_cooking_robots:0 "調理ロボット"
+ pm_portable_freezedryer:0 "家庭用凍結乾燥機"
 
-pmg_automation_building_appliance_manufactory:0 "オートメーション"
-pmg_appliance_production:0 "家電製品製造"
+ pmg_automation_building_appliance_manufactory:0 "オートメーション"
+ pmg_appliance_production:0 "家電製品製造"
 
 ### software
 
-building_software_industry: "ソフトウェア業界"
-building_software_industry_desc: "ソフトウェア開発と知的財産に特化したナレッジ経済企業。 主にエンジニアやスタッフを雇用します。 知的財産を生成し、より高い層、専門サービスで。"
+ building_software_industry: "ソフトウェア業界"
+ building_software_industry_desc: "ソフトウェア開発と知的財産に特化したナレッジ経済企業。 主にエンジニアやスタッフを雇用します。 知的財産を生成し、より高い層、専門サービスで。"
 
-pm_no_casino: "カジノなし"
-pm_casino: "カジノ"
-pm_online_gambling: "オンラインギャンブル"
-pmg_casino: "カジノオペレーション"
+ pm_no_casino: "カジノなし"
+ pm_casino: "カジノ"
+ pm_online_gambling: "オンラインギャンブル"
+ pmg_casino: "カジノオペレーション"
 
-pm_basic_software_development: "基本的なソフトウェア開発"
-pm_commercial_software: "商用ソフトウェア"
-pm_enterprise_software: "エンタープライズソフトウェア"
-pm_ai_software: "AIソフトウェア"
-pmg_software_production: "ソフトウェア開発"
+ pm_basic_software_development: "基本的なソフトウェア開発"
+ pm_commercial_software: "商用ソフトウェア"
+ pm_enterprise_software: "エンタープライズソフトウェア"
+ pm_ai_software: "AIソフトウェア"
+ pmg_software_production: "ソフトウェア開発"
 
-pm_manual_development: "マニュアル開発"
-pm_dev_tooling: "開発者ツール"
-pm_cloud_infrastructure: "クラウドインフラ"
-pmg_software_automation: "開発インフラ"
+ pm_manual_development: "マニュアル開発"
+ pm_dev_tooling: "開発者ツール"
+ pm_cloud_infrastructure: "クラウドインフラ"
+ pmg_software_automation: "開発インフラ"
 
-luxury_services: "高級サービス"
-popneed_luxury_services: "高級サービス"
+ luxury_services: "高級サービス"
+ popneed_luxury_services: "高級サービス"

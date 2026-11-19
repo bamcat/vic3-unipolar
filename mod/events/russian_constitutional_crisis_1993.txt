@@ -1,139 +1,379 @@
 ﻿namespace = rus_events
 
-# Starts the Crisis 
-rus_events.0 = {
-    type = country_event
-    placement = ROOT
-    title = rus_events.0.t
-    desc = rus_events.0.d
-    event_image = { video = "1993_russian_crisis" }
-	icon = "gfx/interface/icons/event_icons/event_map.dds"
-    trigger = {
-        c:RUS ?= this
-        game_date >= 1993.8.21
-        NOT = { has_variable = russia_constitution_crisis_active }
-    }
-
-    immediate = {
-        add_modifier = {
-            name = russia_constitution_crisis_active
-            days = 180
-        }
-		set_variable = russia_constitution_crisis_active
-    }
-
-    option = {
-        name = rus_events.0.a
-        trigger_event = { id = rus_events.1 days = 30 } # Moves to next decision point after 10 days
-    }
-}
-
 rus_events.1 = {
-    type = country_event
-    placement = ROOT
-    title = rus_events.1.t
-    desc = rus_events.1.d
-    event_image = { video = "1993_russian_crisis" }
-	icon = "gfx/interface/icons/event_icons/event_map.dds"
-    trigger = {
-        has_variable = russia_constitution_crisis_active
-    }
+	type = country_event
+	placement = root
 
-    option = {
-        name = rus_events.1.a
-        desc = rus_events.1.a.tt
+	event_image = { video = "parliament" }
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+	icon = "gfx/interface/icons/event_icons/event_scales.dds"
+
+	title = rus_events.1.t
+	desc = rus_events.1.d
+	flavor = rus_events.1.f
+	left_icon = scope:rus_khasbulatov_scope
+
+	duration = 3
+
+	immediate = {
+		random_scope_character = {
+			limit = { has_template = RUS_ruslan_khasbulatov }
+			save_scope_as = rus_khasbulatov_scope
+		}
+	}
+
+	option = {
+		name = rus_events.1.a
 		default_option = yes
-		ig:ig_armed_forces = {
-        add_modifier = {
-            name = russia_military_loyalty
-            days = 180
-        }
-		}
-		ig:ig_rural_folk = {
-        add_modifier = {
-            name = russia_military_loyalty
-            days = 180
-        }
-		}
-        trigger_event = { id = rus_events.2 days = 30 }
-		trigger_event = { id = rus_events.4 days = 60 }
-    }
-    option = {
-        name = rus_events.1.b
-        desc = rus_events.1.b.tt
-		ig:ig_intelligentsia = {
-        add_modifier = {
-            name = russia_parliamentary_support
-            days = 720
-        }
-		}
-		ig:ig_petty_bourgeoisie = {
-        add_modifier = {
-            name = russia_parliamentary_support
-            days = 720
-        }
-		}
-        trigger_event = { id = rus_events.3 days = 30 }
-    }
+		rus_wn_dvoe_change = { V = 3 }
+	}
+
+	option = {
+		name = rus_events.1.b
+		rus_wn_dvoe_change = { V = -2 }
+		rus_wn_inst_change = { I = court V = 10 }
+	}
 }
 
 rus_events.2 = {
-    type = country_event
-    placement = ROOT
-    title = rus_events.2.t
-    desc = rus_events.2.d
-    event_image = { video = "1993_russian_crisis" }
-	icon = "gfx/interface/icons/event_icons/event_map.dds"
-    option = {
-        name = rus_events.2.a
-        add_loyalists = { value = 0.05 }
-    }
+	type = country_event
+	placement = root
+
+	event_image = { video = "unspecific_politicians_arguing" }
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+	icon = "gfx/interface/icons/event_icons/event_scales.dds"
+
+	title = rus_events.2.t
+	desc = rus_events.2.d
+	left_icon = scope:rus_chernomyrdin_scope
+
+	duration = 3
+
+	trigger = {
+		rus_wn_is_pm = { T = RUS_yegor_gaidar }
+	}
+
+	immediate = {
+		random_scope_character = {
+			limit = { has_template = RUS_viktor_chernomyrdin }
+			save_scope_as = rus_chernomyrdin_scope
+		}
+	}
+
+	option = {
+		name = rus_events.2.a
+		default_option = yes
+		trigger = {
+			rus_wn_has_character = { T = RUS_viktor_chernomyrdin }
+		}
+		rus_wn_appoint_pm = { T = RUS_viktor_chernomyrdin M = rus_pm_chernomyrdin }
+		rus_wn_dvoe_change = { V = 3 }
+		rus_wn_inst_change = { I = regions V = 10 }
+	}
+
+	option = {
+		name = rus_events.2.b
+		rus_wn_dvoe_change = { V = -8 }
+		rus_wn_inst_change = { I = court V = -10 }
+		rus_wn_add_standing = { T = RUS_yegor_gaidar V = 10 }
+	}
+
+	option = {
+		name = rus_events.2.c
+		rus_wn_dvoe_change = { V = 5 }
+		rus_wn_inst_change = { I = army V = -5 }
+		rus_wn_add_blame = { V = 10 }
+	}
 }
 
 rus_events.3 = {
-    type = country_event
-    placement = ROOT
-    title = rus_events.3.t
-    desc = rus_events.3.d
-    event_image = { video = "parliament" }
-	icon = "gfx/interface/icons/event_icons/event_map.dds"
-    option = {
-        name = rus_events.3.a
-        add_radicals = { value = 0.05 }
-        add_modifier = {
-            name = russia_constitution_crisis_resolved_mod
-            days = 730
-        }
-        set_variable = russia_constitution_crisis_resolved
-    }
+	type = country_event
+	placement = root
+
+	event_image = { video = "parliament" }
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+	icon = "gfx/interface/icons/event_icons/event_scales.dds"
+
+	title = rus_events.3.t
+	desc = rus_events.3.d
+
+	duration = 3
+
+	trigger = {
+		rus_wn_yeltsin_in_power = yes
+	}
+
+	option = {
+		name = rus_events.3.a
+		default_option = yes
+		trigger = {
+			rus_wn_dvoevlastie_president_ahead = { V = 30 }
+		}
+		rus_wn_dvoe_change = { V = 5 }
+	}
+
+	option = {
+		name = rus_events.3.b
+		trigger = {
+			NOT = { rus_wn_dvoevlastie_president_ahead = { V = 30 } }
+		}
+		rus_wn_parliament_victory = yes
+	}
 }
 
-
-# Storming of the white house
 rus_events.4 = {
-    type = country_event
-    placement = ROOT
-    title = rus_events.4.t
-    desc = rus_events.4.d
-    event_image = { video = "stormingofwhitehouse" }
-	icon = "gfx/interface/icons/event_icons/event_map.dds"
-    trigger = {
-        has_modifier = russia_military_loyalty
-    }
+	type = country_event
+	placement = root
 
-    immediate = {
-        add_radicals = { value = 0.02 }
-        add_loyalists = { value = 0.02 }
-    }
+	event_image = { video = "southamerica_election" }
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+	icon = "gfx/interface/icons/event_icons/event_election.dds"
 
-    option = {
-        name = rus_events.4.a
-        add_modifier = {
-            name = russia_constitution_crisis_resolved_mod
-            days = 730
-        }
-        set_variable = russia_constitution_crisis_resolved
-    }
+	title = rus_events.4.t
+	desc = rus_events.4.d
+
+	duration = 3
+
+	trigger = {
+		rus_wn_yeltsin_in_power = yes
+	}
+
+	option = {
+		name = rus_events.4.a
+		default_option = yes
+		trigger = {
+			rus_wn_dvoevlastie_president_ahead = { V = 45 }
+		}
+		add_modifier = { name = rus_1993_referendum_won months = 12 }
+		rus_wn_dvoe_change = { V = 10 }
+		rus_wn_inst_change = { I = regions V = 10 }
+	}
+
+	option = {
+		name = rus_events.4.b
+		trigger = {
+			NOT = { rus_wn_dvoevlastie_president_ahead = { V = 45 } }
+		}
+		add_modifier = { name = rus_1993_referendum_lost months = 12 }
+		rus_wn_dvoe_change = { V = -10 }
+	}
 }
 
+rus_events.5 = {
+	type = country_event
+	placement = root
 
+	event_image = { video = "unspecific_ruler_speaking_to_people" }
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+	icon = "gfx/interface/icons/event_icons/event_scales.dds"
+
+	title = rus_events.5.t
+	desc = rus_events.5.d
+
+	duration = 3
+
+	trigger = {
+		rus_wn_yeltsin_in_power = yes
+	}
+
+	option = {
+		name = rus_events.5.a
+		default_option = yes
+		rus_wn_inst_change = { I = regions V = 15 }
+	}
+
+	option = {
+		name = rus_events.5.b
+		rus_wn_dvoe_change = { V = 5 }
+		rus_wn_inst_change = { I = court V = -10 }
+	}
+}
+
+rus_events.6 = {
+	type = country_event
+	placement = root
+
+	event_image = { video = "1993_russian_crisis" }
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+	icon = "gfx/interface/icons/event_icons/event_protest.dds"
+
+	title = rus_events.6.t
+	desc = rus_events.6.d
+	left_icon = scope:rus_rutskoy_scope
+
+	duration = 3
+
+	immediate = {
+		random_scope_character = {
+			limit = { has_template = RUS_alexander_rutskoy }
+			save_scope_as = rus_rutskoy_scope
+		}
+		trigger_event = { id = rus_events.7 days = 12 popup = yes }
+	}
+
+	option = {
+		name = rus_events.6.a
+		default_option = yes
+		rus_wn_inst_change = { I = mvd V = 10 }
+		rus_wn_dvoe_change = { V = 5 }
+	}
+
+	option = {
+		name = rus_events.6.b
+		rus_wn_inst_change = { I = church V = 15 }
+		rus_wn_dvoe_change = { V = -5 }
+	}
+}
+
+rus_events.7 = {
+	type = country_event
+	placement = root
+
+	event_image = { video = "stormingofwhitehouse" }
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+	icon = "gfx/interface/icons/event_icons/event_protest.dds"
+
+	title = rus_events.7.t
+	desc = rus_events.7.d
+	left_icon = scope:rus_grachev_scope
+
+	duration = 3
+
+	trigger = {
+		rus_wn_yeltsin_in_power = yes
+		NOT = { has_variable = rus_1993_result }
+	}
+
+	immediate = {
+		random_scope_character = {
+			limit = { has_template = RUS_pavel_grachev }
+			save_scope_as = rus_grachev_scope
+		}
+	}
+
+	option = {
+		name = rus_events.7.a
+		default_option = yes
+		trigger = {
+			var:rus_inst_army >= 20
+		}
+		set_variable = { name = rus_1993_result value = flag:president }
+		add_modifier = { name = rus_october_1993_storming months = 24 }
+		rus_wn_add_standing = { T = RUS_pavel_grachev V = 10 }
+		trigger_event = { id = rus_events.9 days = 60 popup = yes }
+	}
+
+	option = {
+		name = rus_events.7.b
+		trigger = {
+			var:rus_inst_army <= -20
+		}
+		rus_wn_parliament_victory = yes
+	}
+
+	option = {
+		name = rus_events.7.c
+		trigger = {
+			var:rus_inst_army > -20
+			var:rus_inst_army < 20
+		}
+		set_variable = { name = rus_1993_result value = flag:stalemate }
+		add_modifier = { name = rus_long_october months = 24 }
+		trigger_event = { id = rus_events.9 days = 120 popup = yes }
+	}
+}
+
+rus_events.8 = {
+	type = country_event
+	placement = root
+
+	event_image = { video = "africa_diplomats_negotiating" }
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+	icon = "gfx/interface/icons/event_icons/event_diplomacy.dds"
+
+	title = rus_events.8.t
+	desc = rus_events.8.d
+
+	duration = 3
+
+	trigger = {
+		NOT = { has_variable = rus_1993_result }
+	}
+
+	option = {
+		name = rus_events.8.a
+		default_option = yes
+		rus_wn_compromise_constitution = yes
+	}
+
+	option = {
+		name = rus_events.8.b
+		rus_wn_dvoe_change = { V = -3 }
+	}
+}
+
+rus_events.9 = {
+	type = country_event
+	placement = root
+
+	event_image = { video = "parliament" }
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+	icon = "gfx/interface/icons/event_icons/event_newspaper.dds"
+
+	title = rus_events.9.t
+	desc = rus_events.9.d
+	left_icon = scope:rus_zhirinovsky_scope
+
+	duration = 3
+
+	immediate = {
+		random_scope_character = {
+			limit = { has_template = RUS_vladimir_zhirinovsky }
+			save_scope_as = rus_zhirinovsky_scope
+		}
+	}
+
+	option = {
+		name = rus_events.9.a
+		default_option = yes
+		rus_wn_adopt_1993_constitution = yes
+		rus_wn_add_standing = { T = RUS_vladimir_zhirinovsky V = 10 }
+		add_radicals = { value = 0.02 }
+	}
+}
+
+rus_events.10 = {
+	type = country_event
+	placement = root
+
+	event_image = { video = "unspecific_politicians_arguing" }
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+	icon = "gfx/interface/icons/event_icons/event_scales.dds"
+
+	title = rus_events.10.t
+	desc = rus_events.10.d
+
+	duration = 3
+
+	trigger = {
+		NOT = { has_variable = rus_1993_result }
+	}
+
+	option = {
+		name = rus_events.10.a
+		default_option = yes
+		trigger = {
+			rus_wn_dvoevlastie_president_ahead = { V = 50 }
+		}
+		set_variable = { name = rus_1993_result value = flag:president }
+		trigger_event = { id = rus_events.9 days = 10 popup = yes }
+	}
+
+	option = {
+		name = rus_events.10.b
+		trigger = {
+			NOT = { rus_wn_dvoevlastie_president_ahead = { V = 50 } }
+		}
+		rus_wn_compromise_constitution = yes
+	}
+}

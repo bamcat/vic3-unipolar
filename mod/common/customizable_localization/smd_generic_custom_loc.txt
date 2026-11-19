@@ -1,0 +1,126 @@
+﻿smd_crime_states_list = {
+	type = country
+
+	text = {
+		localization_key = smd_crime_states_list_many
+		trigger = {
+			smd_crime_state_count >= 4
+			has_variable = smd_crime_state_3
+		}
+	}
+
+	text = {
+		localization_key = smd_crime_states_list_3
+		trigger = {
+			has_variable = smd_crime_state_3
+		}
+	}
+
+	text = {
+		localization_key = smd_crime_states_list_2
+		trigger = {
+			has_variable = smd_crime_state_2
+		}
+	}
+
+	text = {
+		localization_key = smd_crime_states_list_1
+		trigger = {
+			has_variable = smd_crime_state_1
+		}
+	}
+
+	text = {
+		localization_key = smd_crime_states_list_none
+		trigger = {
+			always = yes
+		}
+	}
+}
+
+smd_language_minority_name = {
+	type = country
+
+	text = {
+		localization_key = smd_language_minority_name_known
+		trigger = {
+			has_variable = smd_language_minority
+		}
+	}
+
+	text = {
+		localization_key = smd_language_minority_name_unknown
+		trigger = {
+			always = yes
+		}
+	}
+}
+
+smd_language_other_minorities = {
+	type = country
+
+	text = {
+		localization_key = smd_language_others_many
+		trigger = {
+			has_variable = smd_language_other_2
+			smd_language_other_count >= 3
+		}
+	}
+
+	text = {
+		localization_key = smd_language_others_2
+		trigger = {
+			has_variable = smd_language_other_2
+		}
+	}
+
+	text = {
+		localization_key = smd_language_others_1
+		trigger = {
+			has_variable = smd_language_other_1
+		}
+	}
+
+	text = {
+		localization_key = smd_language_others_none
+		trigger = {
+			always = yes
+		}
+	}
+}
+
+smd_devolution_region = {
+	type = country
+
+	text = {
+		localization_key = smd_devolution_region_known
+		trigger = {
+			has_variable = smd_devolution_state
+		}
+	}
+
+	text = {
+		localization_key = smd_devolution_region_unknown
+		trigger = {
+			always = yes
+		}
+	}
+}
+
+smd_devolution_people = {
+	type = country
+
+	text = {
+		localization_key = smd_devolution_people_known
+		trigger = {
+			has_variable = smd_devolution_culture
+		}
+	}
+
+	text = {
+		localization_key = smd_devolution_people_unknown
+		trigger = {
+			always = yes
+		}
+	}
+}

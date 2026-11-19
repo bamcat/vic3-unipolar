@@ -85,21 +85,21 @@ war_crimes.1 = {
  		}
  	}
 
- 	option = {  #we will win by any means necessary
+ 	option = {
  		name = war_crimes.1.a
  		default_option = yes
  		scope:war_crimes_perpetrator = {
  			add_trait = war_criminal
  		}
  		scope:war_crimes_state = {
- 			add_modifier = {  #mortality, welfare
+ 			add_modifier = {
  				name = mustard_gas
  				days = normal_modifier_time
  				multiplier = 2
  			}
  		}
  	}
- 	option = {  #try the general for war crimes
+ 	option = {
  		name = war_crimes.1.b
 		 scope:war_crimes_perpetrator = {
 			kill_character = {
@@ -107,19 +107,18 @@ war_crimes.1 = {
 		   }
 		}
  		scope:war_crimes_state = {
- 			add_modifier = {  #mortality, welfare
+ 			add_modifier = {
  				name = mustard_gas
  				days = normal_modifier_time
  			}
  		}
- 		add_modifier = {  #reduced kill rate
+ 		add_modifier = {
  			name = laws_against_war_crimes
  			days = long_modifier_time
  		}
  	}
 }
 
-# Munitions Plants
 war_crimes.2 = {
 	type = country_event
 	placement = scope:munitions_state
@@ -173,7 +172,7 @@ war_crimes.2 = {
 		name = war_crimes.2.a
 		default_option = yes
 		scope:munitions_state = {
-			add_modifier = { # munitions plants throughput
+			add_modifier = {
 				name = munitions_modifier
 				days = normal_modifier_time
 			}

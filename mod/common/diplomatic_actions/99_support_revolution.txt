@@ -28,8 +28,8 @@
 			text = DIPLO_ACTION_MARKET_CONNECTION_REQUIRED
 			OR = {
 				AND = {
-					market = { has_port = yes }
-					scope:target_country.market = { has_port = yes }
+					any_scope_state = { is_coastal = yes }
+					scope:target_country = { any_scope_state = { is_coastal = yes } }
 				}
 				market = {
 					any_scope_country = {
@@ -108,8 +108,8 @@
 					text = DIPLO_ACTION_MARKET_CONNECTION_REQUIRED
 					OR = {
 						AND = {
-							market = { has_port = yes }
-							scope:target_country.market = { has_port = yes }
+							any_scope_state = { is_coastal = yes }
+							scope:target_country = { any_scope_state = { is_coastal = yes } }
 						}
 						market = {
 							any_scope_country = {
@@ -163,18 +163,16 @@
 		will_propose = {
 			scaled_debt <= 0
  
-			# Sponsor shares ruling ideology with the revolutionary target
 			OR = {
-				# Both have vanguardist/communist governance
 				AND = {
 					any_interest_group = {
 						is_in_government = yes
-						leader = { has_ideology = ideology:ideology_communist_leader }
+						leader = { has_ideology = ideology:ideology_marxist_leader }
 					}
 					scope:target_country = {
 						any_interest_group = {
 							is_in_government = yes
-							leader = { has_ideology = ideology:ideology_communist_leader }
+							leader = { has_ideology = ideology:ideology_marxist_leader }
 						}
 					}
 				}
@@ -193,12 +191,12 @@
 				AND = {
 					any_interest_group = {
 						is_in_government = yes
-						leader = { has_ideology = ideology:ideology_populist_leader }
+						leader = { has_ideology = ideology:ideology_right_wing_populist_leader }
 					}
 					scope:target_country = {
 						any_interest_group = {
 							is_in_government = yes
-							leader = { has_ideology = ideology:ideology_populist_leader }
+							leader = { has_ideology = ideology:ideology_right_wing_populist_leader }
 						}
 					}
 				}
@@ -217,12 +215,12 @@
 				AND = {
 					any_interest_group = {
 						is_in_government = yes
-						leader = { has_ideology = ideology:ideology_socialist_leader }
+						leader = { has_ideology = ideology:ideology_democratic_socialist_leader }
 					}
 					scope:target_country = {
 						any_interest_group = {
 							is_in_government = yes
-							leader = { has_ideology = ideology:ideology_socialist_leader }
+							leader = { has_ideology = ideology:ideology_democratic_socialist_leader }
 						}
 					}
 				}
@@ -238,7 +236,6 @@
 						}
 					}
 				}
-				# Both have democratic/liberal governance
 				AND = {
 					any_interest_group = {
 						is_in_government = yes
@@ -251,33 +248,30 @@
 						}
 					}
 				}
-				# Both have nationalist governance
 				AND = {
 					any_interest_group = {
 						is_in_government = yes
-						leader = { has_ideology = ideology:ideology_nationalist_leader }
+						leader = { has_ideology = ideology:ideology_right_wing_populist_leader }
 					}
 					scope:target_country = {
 						any_interest_group = {
 							is_in_government = yes
-							leader = { has_ideology = ideology:ideology_nationalist_leader }
+							leader = { has_ideology = ideology:ideology_right_wing_populist_leader }
 						}
 					}
 				}
-				# Both have theocratic governance
 				AND = {
 					any_interest_group = {
 						is_in_government = yes
-						leader = { has_ideology = ideology:ideology_traditionalist_leader }
+						leader = { has_ideology = ideology:ideology_conservative_leader }
 					}
 					scope:target_country = {
 						any_interest_group = {
 							is_in_government = yes
-							leader = { has_ideology = ideology:ideology_traditionalist_leader }
+							leader = { has_ideology = ideology:ideology_conservative_leader }
 						}
 					}
 				}
-				# Target is rivalled by someone THIS rivals
 				any_country = {
 					has_war_with = scope:target_country
 					has_diplomatic_pact = {
@@ -292,29 +286,28 @@
 			OR = {
 				scaled_debt > 0.5
  
-				# No longer share any ruling ideology with the target
 				NOR = {
 					AND = {
 						any_interest_group = {
 							is_in_government = yes
-							leader = { has_ideology = ideology:ideology_vanguardist }
+							leader = { has_ideology = ideology:ideology_state_socialist_leader }
 						}
 						scope:target_country = {
 							any_interest_group = {
 								is_in_government = yes
-								leader = { has_ideology = ideology:ideology_vanguardist }
+								leader = { has_ideology = ideology:ideology_state_socialist_leader }
 							}
 						}
 					}
 					AND = {
 						any_interest_group = {
 							is_in_government = yes
-							leader = { has_ideology = ideology:ideology_liberal }
+							leader = { has_ideology = ideology:ideology_liberal_leader }
 						}
 						scope:target_country = {
 							any_interest_group = {
 								is_in_government = yes
-								leader = { has_ideology = ideology:ideology_liberal }
+								leader = { has_ideology = ideology:ideology_liberal_leader }
 							}
 						}
 					}

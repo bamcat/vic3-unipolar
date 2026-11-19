@@ -54,19 +54,22 @@
 			}
 		}
 	}
- 
-	complete = {
-		"goods_production_rank(g:oil)" <= 3
-	}
- 
-	on_complete = {
-		add_modifier = {
-			name = oil_titans_bonus
-			months = -1
+
+
+
+	outcome = {
+		header = je_standard_completion_header
+		effect_header = je_standard_on_completion_header
+		color = "gold_positive"
+		conclusion_desc = je_standard_completion_conclusion_desc
+		trigger = { "goods_production_rank(g:oil)" <= 3 }
+		effect = {
+			add_modifier = {
+				name = oil_titans_bonus
+				months = -1
+			}
 		}
-	}
- 
-	transferable = no
+	}	transferable = no
 	can_revolution_inherit = no
 	weight = 7000
 }

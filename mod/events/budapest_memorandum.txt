@@ -1,0 +1,240 @@
+﻿namespace = budapest
+
+budapest.1 = {
+	type = country_event
+	placement = root
+	title = budapest.1.t
+	desc = {
+		first_valid = {
+			triggered_desc = {
+				desc = budapest.1.d_ukr
+				trigger = { c:UKR ?= this }
+			}
+			triggered_desc = {
+				desc = budapest.1.d_kzk
+			}
+		}
+	}
+	flavor = budapest.1.f
+	icon = "gfx/interface/icons/event_icons/event_diplomacy.dds"
+	event_image = { video = "africa_diplomats_negotiating" }
+	duration = 3
+
+	trigger = {
+		OR = {
+			c:UKR ?= this
+			c:KZK ?= this
+		}
+		has_variable = nuclear_capable
+	}
+
+	option = {
+		name = budapest.1.a
+		default_option = yes
+		ai_chance = {
+			base = 90
+		}
+		custom_tooltip = budapest_commit_tt
+		set_variable = budapest_lisbon_signed
+		smd_budapest_guarantors_relations = { V = 20 }
+		add_modifier = { name = budapest_lisbon_goodwill months = 36 }
+	}
+
+	option = {
+		name = budapest.1.b
+		ai_chance = {
+			base = 10
+		}
+		custom_tooltip = budapest_stall_tt
+		set_variable = budapest_stalling
+		smd_budapest_guarantors_relations = { V = -20 }
+	}
+}
+
+budapest.2 = {
+	type = country_event
+	placement = root
+	title = budapest.2.t
+	desc = budapest.2.d
+	flavor = budapest.2.f
+	icon = "gfx/interface/icons/event_icons/event_diplomacy.dds"
+	event_image = { video = "unspecific_politicians_arguing" }
+	duration = 3
+
+	trigger = {
+		c:UKR ?= this
+		has_variable = nuclear_capable
+		NOT = { has_variable = budapest_refused }
+	}
+
+	option = {
+		name = budapest.2.a
+		default_option = yes
+		ai_chance = {
+			base = 85
+		}
+		custom_tooltip = budapest_trilateral_accept_tt
+		set_variable = budapest_lisbon_signed
+		remove_variable = budapest_stalling
+		add_treasury = {
+			value = gdp
+			multiply = 0.02
+		}
+		add_modifier = { name = budapest_fuel_deliveries months = 60 }
+		smd_budapest_guarantors_relations = { V = 15 }
+	}
+
+	option = {
+		name = budapest.2.b
+		ai_chance = {
+			base = 15
+		}
+		custom_tooltip = budapest_stall_tt
+		set_variable = budapest_stalling
+		smd_budapest_guarantors_relations = { V = -25 }
+	}
+}
+
+budapest.3 = {
+	type = country_event
+	placement = root
+	title = budapest.3.t
+	desc = {
+		first_valid = {
+			triggered_desc = {
+				desc = budapest.3.d_stalling
+				trigger = { has_variable = budapest_stalling }
+			}
+			triggered_desc = {
+				desc = budapest.3.d
+			}
+		}
+	}
+	flavor = budapest.3.f
+	icon = "gfx/interface/icons/event_icons/event_diplomacy.dds"
+	event_image = { video = "africa_diplomats_negotiating" }
+	duration = 3
+
+	trigger = {
+		OR = {
+			c:UKR ?= this
+			c:KZK ?= this
+		}
+		has_variable = nuclear_capable
+		NOT = { has_variable = budapest_refused }
+	}
+
+	option = {
+		name = budapest.3.a
+		default_option = yes
+		ai_chance = {
+			base = 90
+		}
+		custom_tooltip = budapest_sign_tt
+		set_variable = budapest_transfer_active
+		set_variable = {
+			name = budapest_transfer_rate
+			value = {
+				value = var:nukes
+				divide = 18
+				round = yes
+				min = 1
+			}
+		}
+		remove_variable = budapest_stalling
+		set_variable = budapest_memorandum_signed
+		set_global_variable = budapest_memorandum_in_force
+		add_modifier = { name = budapest_security_assurances }
+		smd_budapest_guarantors_relations = { V = 30 }
+		custom_tooltip = budapest_transfer_tt
+	}
+
+	option = {
+		name = budapest.3.b
+		ai_chance = {
+			base = 10
+		}
+		custom_tooltip = budapest_refuse_tt
+		smd_budapest_refuse_disarmament = yes
+	}
+}
+
+budapest.4 = {
+	type = country_event
+	placement = root
+	title = budapest.4.t
+	desc = budapest.4.d
+	flavor = budapest.4.f
+	icon = "gfx/interface/icons/event_icons/event_diplomacy.dds"
+	event_image = { video = "unspecific_military_parade" }
+	duration = 3
+
+	trigger = {
+		c:KZK ?= this
+		has_variable = nuclear_capable
+		NOT = { has_variable = budapest_refused }
+	}
+
+	option = {
+		name = budapest.4.a
+		default_option = yes
+		ai_chance = {
+			base = 90
+		}
+		custom_tooltip = budapest_sapphire_tt
+		add_treasury = {
+			value = gdp
+			multiply = 0.015
+		}
+		c:USA ?= {
+			change_relations = { country = ROOT value = 25 }
+		}
+	}
+
+	option = {
+		name = budapest.4.b
+		ai_chance = {
+			base = 10
+		}
+		c:USA ?= {
+			change_relations = { country = ROOT value = -15 }
+		}
+	}
+}
+
+budapest.5 = {
+	type = country_event
+	placement = root
+	title = budapest.5.t
+	desc = {
+		first_valid = {
+			triggered_desc = {
+				desc = budapest.5.d_ukr
+				trigger = { c:UKR ?= this }
+			}
+			triggered_desc = {
+				desc = budapest.5.d_kzk
+			}
+		}
+	}
+	flavor = budapest.5.f
+	icon = "gfx/interface/icons/event_icons/event_diplomacy.dds"
+	event_image = { video = "unspecific_ruler_speaking_to_people" }
+	duration = 3
+
+	trigger = {
+		OR = {
+			c:UKR ?= this
+			c:KZK ?= this
+		}
+	}
+
+	option = {
+		name = budapest.5.a
+		default_option = yes
+		ai_chance = {
+			base = 100
+		}
+	}
+}
+

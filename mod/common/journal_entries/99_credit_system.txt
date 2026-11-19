@@ -94,17 +94,20 @@ je_the_dollar = {
 		}
 	}
 
-	invalid = {
-		NOT = {
-			market_capital.market = {
-				market_exports = {
-					goods = credit
-					value > 1000
+outcome = {
+		flags = { hidden invalid_outcome }
+		conclusion_desc = je_standard_failure_conclusion_desc
+		trigger = {
+			NOT = {
+				market_capital.market = {
+					market_exports = {
+						goods = credit
+						value > 1000
+					}
 				}
 			}
 		}
 	}
-
 	transferable = no
 	can_revolution_inherit = no
 	weight = 4000
@@ -113,8 +116,6 @@ je_the_dollar = {
 
 # ==========================================
 # THE RESERVE CURRENCY
-# For any non-US country exporting >1000
-# units of credit.
 # ==========================================
 
 je_reserve_currency = {
@@ -172,20 +173,23 @@ je_reserve_currency = {
 		}
 	}
 
-	invalid = {
-		OR = {
-			c:USA ?= this
-			NOT = {
-				market_capital.market = {
-					market_exports = {
-						goods = credit
-						value > 1000
+outcome = {
+		flags = { hidden invalid_outcome }
+		conclusion_desc = je_standard_failure_conclusion_desc
+		trigger = {
+			OR = {
+				c:USA ?= this
+				NOT = {
+					market_capital.market = {
+						market_exports = {
+							goods = credit
+							value > 1000
+						}
 					}
 				}
 			}
 		}
 	}
-
 	transferable = no
 	can_revolution_inherit = no
 	weight = 3500
@@ -207,7 +211,6 @@ je_financial_system = {
 
 	status_desc = {
 		first_valid = {
-			# Credit is expensive — banks profitable, construction costly
 			triggered_desc = {
 				desc = je_financial_credit_expensive_tt
 				trigger = {
@@ -218,7 +221,6 @@ je_financial_system = {
 					}
 				}
 			}
-			# Securities expensive — investors squeezed, construction slower
 			triggered_desc = {
 				desc = je_financial_securities_expensive_tt
 				trigger = {
@@ -229,7 +231,6 @@ je_financial_system = {
 					}
 				}
 			}
-			# Balanced
 			triggered_desc = {
 				desc = je_financial_balanced_tt
 			}

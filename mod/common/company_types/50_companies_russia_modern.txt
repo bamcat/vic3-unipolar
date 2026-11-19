@@ -1,0 +1,484 @@
+﻿REPLACE_OR_CREATE:company_gazprom = {
+	icon = "gfx/interface/icons/company_icons/russia/gazprom.dds"
+	background = "gfx/interface/icons/company_icons/company_backgrounds/comp_illu_oil_drills.dds"
+	flavored_company = yes
+
+	building_types = {
+		building_gas_field
+	}
+
+	extension_building_types = {
+		building_power_plant
+	}
+
+	potential = {
+		country_has_primary_culture = cu:russian
+	}
+
+	attainable = {
+		hidden_trigger = {
+			any_scope_state = {
+				state_region = s:STATE_OB
+			}
+		}
+	}
+
+	possible = {
+		any_scope_state = {
+			state_region = s:STATE_OB
+			is_incorporated = yes
+			any_scope_building = {
+				is_building_type = building_gas_field
+				level >= 2
+			}
+		}
+	}
+
+	prosperity_modifier = {
+		building_group_bg_oil_extraction_throughput_add = 0.15
+		country_prestige_mult = 0.05
+	}
+
+	ai_weight = {
+		value = 3
+	}
+}
+
+REPLACE_OR_CREATE:company_lukoil = {
+	icon = "gfx/interface/icons/company_icons/russia/lukoil.dds"
+	background = "gfx/interface/icons/company_icons/company_backgrounds/comp_illu_oil_drills.dds"
+	flavored_company = yes
+
+	building_types = {
+		building_oil_rig
+	}
+
+	extension_building_types = {
+		building_oil_refinery
+	}
+
+	potential = {
+		country_has_primary_culture = cu:russian
+	}
+
+	attainable = {
+		hidden_trigger = {
+			any_scope_state = {
+				state_region = s:STATE_TOBOLSK
+			}
+		}
+	}
+
+	possible = {
+		any_scope_state = {
+			state_region = s:STATE_TOBOLSK
+			is_incorporated = yes
+			any_scope_building = {
+				is_building_type = building_oil_rig
+				level >= 3
+			}
+		}
+	}
+
+	prosperity_modifier = {
+		building_oil_rig_throughput_add = 0.15
+	}
+
+	ai_weight = {
+		value = 3
+	}
+}
+
+REPLACE_OR_CREATE:company_yukos = {
+	icon = "gfx/interface/icons/company_icons/russia/yukos.dds"
+	background = "gfx/interface/icons/company_icons/company_backgrounds/comp_illu_oil_drills.dds"
+	flavored_company = yes
+
+	building_types = {
+		building_oil_rig
+	}
+
+	extension_building_types = {
+		building_oil_refinery
+	}
+
+	potential = {
+		country_has_primary_culture = cu:russian
+	}
+
+	attainable = {
+		hidden_trigger = {
+			any_scope_state = {
+				state_region = s:STATE_SAMARA
+			}
+		}
+	}
+
+	possible = {
+		any_scope_state = {
+			state_region = s:STATE_SAMARA
+			is_incorporated = yes
+			any_scope_building = {
+				is_building_type = building_oil_rig
+				level >= 2
+			}
+		}
+	}
+
+	prosperity_modifier = {
+		building_oil_rig_throughput_add = 0.15
+	}
+
+	ai_weight = {
+		value = 3
+	}
+}
+
+REPLACE_OR_CREATE:company_rosneft = {
+	icon = "gfx/interface/icons/company_icons/russia/rosneft.dds"
+	background = "gfx/interface/icons/company_icons/company_backgrounds/comp_illu_oil_drills.dds"
+	flavored_company = yes
+
+	building_types = {
+		building_oil_rig
+	}
+
+	extension_building_types = {
+		building_oil_refinery
+	}
+
+	potential = {
+		country_has_primary_culture = cu:russian
+	}
+
+	attainable = {
+		hidden_trigger = {
+			any_scope_state = {
+				state_region = s:STATE_SAKHALIN
+			}
+		}
+	}
+
+	possible = {
+		any_scope_state = {
+			state_region = s:STATE_SAKHALIN
+			is_incorporated = yes
+			any_scope_building = {
+				is_building_type = building_oil_rig
+				level >= 2
+			}
+		}
+	}
+
+	prosperity_modifier = {
+		building_oil_rig_throughput_add = 0.1
+	}
+
+	ai_weight = {
+		value = 3
+	}
+}
+
+REPLACE_OR_CREATE:company_sibneft = {
+	icon = "gfx/interface/icons/company_icons/russia/sibneft.dds"
+	background = "gfx/interface/icons/company_icons/company_backgrounds/comp_illu_oil_drills.dds"
+	flavored_company = yes
+
+	building_types = {
+		building_oil_rig
+	}
+
+	extension_building_types = {
+		building_oil_refinery
+	}
+
+	potential = {
+		country_has_primary_culture = cu:russian
+	}
+
+	attainable = {
+		hidden_trigger = {
+			any_scope_state = {
+				state_region = s:STATE_OB
+			}
+		}
+	}
+
+	possible = {
+		any_scope_state = {
+			state_region = s:STATE_OB
+			is_incorporated = yes
+			any_scope_building = {
+				is_building_type = building_oil_rig
+				level >= 2
+			}
+		}
+	}
+
+	prosperity_modifier = {
+		building_oil_rig_throughput_add = 0.1
+	}
+
+	ai_weight = {
+		value = 3
+	}
+}
+
+REPLACE_OR_CREATE:company_norilsk_nickel = {
+	icon = "gfx/interface/icons/company_icons/russia/nornickel.dds"
+	background = "gfx/interface/icons/company_icons/company_backgrounds/comp_illu_mining.dds"
+	flavored_company = yes
+
+	building_types = {
+		building_copper_mine
+	}
+
+	extension_building_types = {
+		building_lead_mine
+	}
+
+	potential = {
+		country_has_primary_culture = cu:russian
+	}
+
+	attainable = {
+		hidden_trigger = {
+			any_scope_state = {
+				state_region = s:STATE_UPPER_YENISEYSK
+			}
+		}
+	}
+
+	possible = {
+		any_scope_state = {
+			state_region = s:STATE_UPPER_YENISEYSK
+			is_incorporated = yes
+			any_scope_building = {
+				is_building_type = building_copper_mine
+				level >= 2
+			}
+		}
+	}
+
+	prosperity_modifier = {
+		building_copper_mine_throughput_add = 0.2
+	}
+
+	ai_weight = {
+		value = 3
+	}
+}
+
+REPLACE_OR_CREATE:company_alrosa = {
+	icon = "gfx/interface/icons/company_icons/russia/alrosa.dds"
+	background = "gfx/interface/icons/company_icons/company_backgrounds/comp_illu_mining.dds"
+	flavored_company = yes
+
+	building_types = {
+		building_gold_mine
+	}
+
+	potential = {
+		country_has_primary_culture = cu:russian
+	}
+
+	attainable = {
+		hidden_trigger = {
+			any_scope_state = {
+				state_region = s:STATE_YAKUTSK
+			}
+		}
+	}
+
+	possible = {
+		any_scope_state = {
+			state_region = s:STATE_YAKUTSK
+			is_incorporated = yes
+			any_scope_building = {
+				is_building_type = building_gold_mine
+				level >= 1
+			}
+		}
+	}
+
+	prosperity_modifier = {
+		building_gold_mine_throughput_add = 0.2
+	}
+
+	ai_weight = {
+		value = 3
+	}
+}
+
+REPLACE_OR_CREATE:company_severstal = {
+	icon = "gfx/interface/icons/company_icons/russia/severstal.dds"
+	background = "gfx/interface/icons/company_icons/company_backgrounds/comp_illu_manufacturing_heavy.dds"
+	flavored_company = yes
+
+	building_types = {
+		building_steel_mill
+	}
+
+	extension_building_types = {
+		building_iron_mine
+	}
+
+	potential = {
+		country_has_primary_culture = cu:russian
+	}
+
+	attainable = {
+		hidden_trigger = {
+			any_scope_state = {
+				state_region = s:STATE_YAROSLAVL
+			}
+		}
+	}
+
+	possible = {
+		any_scope_state = {
+			state_region = s:STATE_YAROSLAVL
+			is_incorporated = yes
+			any_scope_building = {
+				is_building_type = building_steel_mill
+				level >= 2
+			}
+		}
+	}
+
+	prosperity_modifier = {
+		building_steel_mill_throughput_add = 0.15
+	}
+
+	ai_weight = {
+		value = 3
+	}
+}
+
+REPLACE_OR_CREATE:company_avtovaz = {
+	icon = "gfx/interface/icons/company_icons/russia/avtovaz.dds"
+	background = "gfx/interface/icons/company_icons/company_backgrounds/comp_illu_manufacturing_heavy.dds"
+	flavored_company = yes
+
+	building_types = {
+		building_automotive_industry
+	}
+
+	extension_building_types = {
+		building_motor_industry
+	}
+
+	potential = {
+		country_has_primary_culture = cu:russian
+	}
+
+	attainable = {
+		hidden_trigger = {
+			any_scope_state = {
+				state_region = s:STATE_SAMARA
+			}
+		}
+	}
+
+	possible = {
+		any_scope_state = {
+			state_region = s:STATE_SAMARA
+			is_incorporated = yes
+			any_scope_building = {
+				is_building_type = building_automotive_industry
+				level >= 2
+			}
+		}
+	}
+
+	prosperity_modifier = {
+		building_automotive_industry_throughput_add = 0.15
+	}
+
+	ai_weight = {
+		value = 3
+	}
+}
+
+REPLACE_OR_CREATE:company_aeroflot = {
+	icon = "gfx/interface/icons/company_icons/russia/aeroflot.dds"
+	background = "gfx/interface/icons/company_icons/company_backgrounds/comp_illu_railways.dds"
+	flavored_company = yes
+
+	building_types = {
+		building_airport
+	}
+
+	potential = {
+		country_has_primary_culture = cu:russian
+	}
+
+	attainable = {
+		hidden_trigger = {
+			any_scope_state = {
+				state_region = s:STATE_MOSCOW
+			}
+		}
+	}
+
+	possible = {
+		any_scope_state = {
+			state_region = s:STATE_MOSCOW
+			is_incorporated = yes
+			any_scope_building = {
+				is_building_type = building_airport
+				level >= 1
+			}
+		}
+	}
+
+	prosperity_modifier = {
+		building_group_bg_private_infrastructure_throughput_add = 0.1
+		country_prestige_mult = 0.05
+	}
+
+	ai_weight = {
+		value = 3
+	}
+}
+
+REPLACE_OR_CREATE:company_svyazinvest = {
+	icon = "gfx/interface/icons/company_icons/russia/svyazinvest.dds"
+	background = "gfx/interface/icons/company_icons/company_backgrounds/comp_illu_manufactering_light.dds"
+	flavored_company = yes
+
+	building_types = {
+		building_telecommunications
+	}
+
+	potential = {
+		country_has_primary_culture = cu:russian
+	}
+
+	attainable = {
+		hidden_trigger = {
+			any_scope_state = {
+				state_region = s:STATE_MOSCOW
+			}
+		}
+	}
+
+	possible = {
+		any_scope_state = {
+			state_region = s:STATE_MOSCOW
+			is_incorporated = yes
+			any_scope_building = {
+				is_building_type = building_telecommunications
+				level >= 2
+			}
+		}
+	}
+
+	prosperity_modifier = {
+		building_telecommunications_throughput_add = 0.15
+	}
+
+	ai_weight = {
+		value = 3
+	}
+}

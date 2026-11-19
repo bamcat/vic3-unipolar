@@ -17,7 +17,6 @@ colored_emblem_texture_lists = {
 		1 = 	"ce_star_13.dds"
 		1 = 	"ce_star_14.dds"
 
-		# Christians only
 		special_selection = {
 			trigger = {
 				coa_def_cross_trigger = yes
@@ -25,7 +24,6 @@ colored_emblem_texture_lists = {
 			10 = "ce_cross_switzerland.dds"
 		}
 
-		# Christian theocracies
 		special_selection = {
 			trigger = {
 				coa_def_cross_trigger = yes
@@ -40,7 +38,6 @@ colored_emblem_texture_lists = {
 			25 = "ce_sacred_heart.dds"
 		}
 
-		# Native americans specific
 		special_selection = {
 			trigger = {
 				coa_def_native_american_trigger = yes
@@ -56,14 +53,7 @@ colored_emblem_texture_lists = {
 			20 = "ce_buffalo_02.dds"
 			20 = "ce_morning_star.dds"
 
-			# Bow and quiver
-			# Bow and Tomahawk
-			# ceremonial pipe
-			# feather (both pal and fess, in varying numbers)
-			# Turtle (+spiral variant), bear
-			# thunderbird variants
 			# labyrinth
-			# sun variant (spiral)
 		}
 
 		special_selection = {
@@ -100,7 +90,6 @@ colored_emblem_texture_lists = {
 			}
 			20 = "ce_circle.dds"
 
-			# Crescents
 			25 = "ce_crescent.dds"
 			25 = "ce_crescent_large.dds"
 			25 = "ce_crescent_rotated.dds"
@@ -117,10 +106,6 @@ colored_emblem_texture_lists = {
 			50 = "ce_takbir.dds"
 			20 = "ce_hand.dds"
 
-			# maybe slightly different hand of fatima style
-			# crescent btw crossed scimitars
-			# bow and arrow
-			# India : 4 & 5 bezants india, crescent acc. star
 		}
 		special_selection = {
 			trigger = {
@@ -130,7 +115,6 @@ colored_emblem_texture_lists = {
 			25 = "ce_crescent_three.dds"
 		}
 
-		# Asian generic used by all faiths
 		special_selection = {
 			trigger = {
 				any_primary_culture = {
@@ -148,7 +132,6 @@ colored_emblem_texture_lists = {
 			10 = "ce_umbrella_champasak.dds"
 			10 = "ce_falcon.dds"
 
-			# Sun w/ face 12p variant
 		}
 		special_selection = {
 			trigger = {
@@ -160,7 +143,6 @@ colored_emblem_texture_lists = {
 			25 = "ce_crossed_kris_daggers.dds"
 			25 = "ce_crossed_scimitars.dds"
 		}
-		# Sikh exclusive would be a better scope
 		special_selection = {
 			trigger = {
 			 	exists = scope:actor
@@ -193,7 +175,6 @@ colored_emblem_texture_lists = {
 			20 = "ce_angkor_vat.dds"
 		}
 
-		# More specific to buddhist
 		special_selection = {
 			trigger = {
 				coa_def_buddhist_trigger = yes
@@ -231,7 +212,6 @@ colored_emblem_texture_lists = {
 			}
 			50 = "ce_dragon_china.dds"
 		}
-		# Specific to Hindu
 		special_selection = {
 			trigger = {
 				any_primary_culture = {
@@ -245,9 +225,6 @@ colored_emblem_texture_lists = {
 			20 = "ce_umbrella.dds"
 			20 = "ce_falcon.dds"
 
-			# most needed :
-			# Hanuman
-			# Feet of Krishna
 		}
 		special_selection = {
 			trigger = {
@@ -291,11 +268,9 @@ colored_emblem_texture_lists = {
 			10 = "ce_southern_cross_brazil.dds"
 			25 = "ce_star_05.dds"
 
+}
 
-		}
-
-
-		special_selection = {
+special_selection = {
 			trigger = {
 					country_definition_has_culture = cu:brazilian
 			}
@@ -319,7 +294,6 @@ colored_emblem_texture_lists = {
 			250 = "ce_hammer_sickle_star_wreath.dds"
 
 			special_selection = {
-				# SSRs
 				trigger = {
 					coa_def_russian_ensign_trigger = yes
 				}
@@ -367,17 +341,13 @@ colored_emblem_texture_lists = {
 				coa_def_crescent_trigger = no
 				coa_def_cross_trigger = no
 			}
-			# Generic
 			100 = "ce_rising_sun.dds"
 			20 = "ce_shield_african.dds"
 
-			# Central & Eastern Africans with Bantu & Masai designs
 			100 = "ce_masai_shield.dds"
 
-			# Western Africans, possibly some Adinkra symbols
 			20 = "ce_kanaga.dds"
 
-			# Southern Africans with Zulu designs
 			100 = "ce_nguni_shield.dds"
 			100 = "ce_nguni_shield_02.dds"
 			100 = "ce_nguni_shield_03.dds"
@@ -459,7 +429,6 @@ colored_emblem_texture_lists = {
 		10 = "ce_bicolor_left.dds"
 		10 = "ce_bicolor_right.dds"
 
-		# Christians only
 		special_selection = {
 			trigger = {
 				coa_def_cross_trigger = yes
@@ -648,7 +617,6 @@ colored_emblem_texture_lists = {
 	}
 
 	full_size_charges = {
-	# Uses charge that fit the canvas horizontally (1300x680)
 
 		1 = "ce_solid.dds"
 		# dragon bhutan
@@ -665,7 +633,6 @@ colored_emblem_texture_lists = {
 			}
 			10 = "ce_elephant_asia.dds"
 
-			# move those two to TE cases
 			# 10 = "ce_elephant_asia_decorated.dds"
 			# 10 = "ce_golden_fishes.dds"
 		}
@@ -760,8 +727,6 @@ colored_emblem_texture_lists = {
 	}
 
 	communist_opposite_charges = {
-		# specific generic list for communist center charges
-		# Selection of charges to avoid any odd/misaligned result
 
 		10 = "ce_hammer_and_sickle_round.dds"
 
@@ -869,7 +834,6 @@ colored_emblem_texture_lists = {
 			50 = "ce_dharmachakra.dds"
 			50 = "ce_snow_lion.dds"
 		}
-		# Specific to Hindu
 		special_selection = {
 			trigger = {
 				any_primary_culture = {
@@ -947,7 +911,6 @@ colored_emblem_texture_lists = {
 		25 = "ce_hammer_wheat.dds"
 
 		special_selection = {
-			# Soviet Republics
 			trigger = {
 				coa_def_russian_ensign_trigger = yes
 			}
@@ -955,14 +918,12 @@ colored_emblem_texture_lists = {
 			1000 = "ce_hammer_sickle_star_wreath.dds"
 		}
 		special_selection = {
-			# CPUSA
 			trigger = {
 				coa_def_american_ensign_trigger = yes
 			}
 			1000 = "ce_hammer_sickle_cogwheel_usa.dds"
 		}
 		special_selection = {
-			# PCI
 			trigger = {
 				coa_def_italian_trigger = yes
 			}
@@ -1003,7 +964,6 @@ colored_emblem_texture_lists = {
 		20 = "ce_solid.dds"
 	}
 	fascist_charges = {
-		# Listed separately for now
 
 		50 = "ce_cross_pointed.dds"
 		50 = "ce_cross_celtic.dds"
@@ -1057,7 +1017,6 @@ colored_emblem_texture_lists = {
 		}
 	}
 	fascist_charges_square = {
-		# Selected to fit within square. Pb Needs more diversity
 
 		50 = "ce_cross_pointed.dds"
 		50 = "ce_cross_celtic.dds"
@@ -1117,8 +1076,6 @@ colored_emblem_texture_lists = {
 		20 = "pb_center_07.dds"
 		20 = "pb_center_08.dds"
 		20 = "pb_center_09.dds"
-		### CoA Icons
-		# Heraldic
 	    20 = "pb_shield_iberian.dds"
 	    20 = "pb_shield_hesse.dds"
 	    20 = "pb_shield_accolade.dds"
@@ -1136,7 +1093,6 @@ colored_emblem_texture_lists = {
 	    20 = "pb_corseca_trieste.dds"
 	    20 = "pb_coa_saf_hope_allegory.dds"
 	    20 = "pb_coa_saf_wagon.dds"
-		# Astral
 	    20 = "pb_sun.dds"
 	    20 = "pb_sunburst.dds"
 	    20 = "pb_sun_of_may.dds"
@@ -1161,7 +1117,6 @@ colored_emblem_texture_lists = {
 	    20 = "pb_southern_cross_brazil.dds"
 	    20 = "pb_southern_cross_australia.dds"
 	    20 = "pb_alaska_big_dipper.dds"
-	    # Misc Cultural
 	    20 = "pb_tunduk.dds"
 	    20 = "pb_tamga_idel_ural.dds"
 	    20 = "pb_tamga_tatar.dds"
@@ -1180,19 +1135,15 @@ colored_emblem_texture_lists = {
 	    20 = "pb_ashanti_golden_stool.dds"
 	    20 = "pb_elephant_charge_kutch.dds"
 	    20 = "pb_hand_dreaming.dds"
-	    # Weapons / Tools
 	    20 = "pb_katar.dds"
 	    20 = "pb_crossed_kris_daggers.dds"
 	    20 = "pb_trident.dds"
 	    20 = "pb_mining_hammers.dds"
-	    # Hands
 	    20 = "pb_hand_mena.dds"
 	    20 = "pb_hand.dds"
-	    # Resources
 	    20 = "pb_wheat_garb.dds"
 	    20 = "pb_corn_sickle.dds"
 	    20 = "pb_mining_hammers.dds"
-	    # Geometric
 	    20 = "pb_circle.dds"
 	    20 = "pb_triangle.dds"
 	    20 = "pb_rhombus.dds"
@@ -1210,8 +1161,6 @@ colored_emblem_texture_lists = {
 	    20 = "pb_laurel_circled.dds"
 	    20 = "pb_laurel.dds"
 
-		### Religious
-		# Islamic
 		special_selection = {
 			trigger = {
 				power_bloc_leader ?= {
@@ -1251,7 +1200,6 @@ colored_emblem_texture_lists = {
 			20 = "pb_coa_afghanistan.dds"
 			20 = "pb_sulu.dds"
 		}
-		# Christian
 		special_selection = {
 			trigger = {
 				power_bloc_leader ?= {
@@ -1282,7 +1230,6 @@ colored_emblem_texture_lists = {
 			20 = "pb_fleur_de_lis.dds"
 			20 = "pb_fleur_quebec.dds"
 		}
-		# Sikh
 		special_selection = {
 			trigger = {
 				power_bloc_leader ?= {
@@ -1293,7 +1240,6 @@ colored_emblem_texture_lists = {
 			20 = "pb_khanda.dds"
 			20 = "pb_sun_sikh.dds"
 		}
-		# Jewish
 		special_selection = {
 			trigger = {
 				power_bloc_leader ?= {
@@ -1303,7 +1249,6 @@ colored_emblem_texture_lists = {
 			}
 			20 = "pb_star_hexagram.dds"
 		}
-		# Dharmic
 		special_selection = {
 			trigger = {
 				power_bloc_leader ?= {
@@ -1327,8 +1272,6 @@ colored_emblem_texture_lists = {
 			20 = "pb_coa_temple_ceylon.dds"
 			20 = "pb_pakhangba.dds"
 		}
-		### Ideological
-		# Communist
 		special_selection = {
 			trigger = {
 				power_bloc_leader ?= {
@@ -1351,7 +1294,6 @@ colored_emblem_texture_lists = {
 		    20 = "pb_cogwheel_machete_angola.dds"
 		    20 = "pb_hammer_wheat.dds"
 		}
-		# Fascist
 		special_selection = {
 			trigger = {
 				power_bloc_leader ?= {
@@ -1368,7 +1310,6 @@ colored_emblem_texture_lists = {
 		    20 = "pb_vlajka_emblem.dds"
 		    20 = "pb_labrys_ppf.dds"
 		    20 = "pb_triskel_wolfsangel.dds"
-		    # Runic / Nordic / Pagan
 		    20 = "pb_walknut.dds"
 		    20 = "pb_rune_tiwaz.dds"
 		    20 = "pb_rune_hagal.dds"
@@ -1382,7 +1323,6 @@ colored_emblem_texture_lists = {
 		}
 	}
 	chartered_companies_charges = {
-		# Generic Icons
 		20 = "ce_southern_cross_australia.dds"
 		20 = "ce_southern_cross_brazil.dds"
 		20 = "ce_southern_cross_brazil_tilted.dds"
@@ -1405,7 +1345,6 @@ colored_emblem_texture_lists = {
 		20 = "ce_armillary_sphere.dds"
 		20 = "ce_alaska_big_dipper.dds"
 
-		# African Chartered Companies
 		special_selection = {
 			trigger = {
 				scope:actor ?= {
@@ -1426,7 +1365,6 @@ colored_emblem_texture_lists = {
 			50 = "ce_wreath.dds"
 			50 = "ce_masai_shield.dds"
 		}
-		# American Chartered Companies
 		special_selection = {
 			trigger = {
 				scope:actor ?= {
@@ -1441,7 +1379,6 @@ colored_emblem_texture_lists = {
 			50 = "ce_bear_california.dds"
 			50 = "ce_beehive.dds"
 		}
-		# Asian Chartered Companies
 		special_selection = {
 			trigger = {
 				scope:actor ?= {
@@ -1459,5 +1396,33 @@ colored_emblem_texture_lists = {
 			50 = "ce_umbrella_champasak.dds"
 			50 = "ce_bird_paradise.dds"
 		}
+	}
+	russian_small_charges = {
+		20 = "ce_cross_couped.dds"
+		20 = "ce_cross_patty.dds"
+		20 = "ce_cross_patty_hollow.dds"
+		20 = "ce_eagle_double_headed.dds"
+		20 = "ce_crown_imperial_russia.dds"
+		10 = "ce_banner_escutcheon.dds"
+		10 = "ce_horse.dds"
+	}
+	russian_full_charges = {
+		20 = "ce_saltire_fimbriated.dds"
+		20 = "ce_saltire_fimbriated_02.dds"
+		20 = "ce_cross_patty_hollow.dds"
+		20 = "ce_eagle_double_headed.dds"
+		20 = "ce_bend_dexter_fimbriated.dds"
+		20 = "ce_bend_sinister_fimbriated.dds"
+		10 = "ce_iron_cross.dds"
+	}
+	russian_regimental_flag_frames = {
+		20 = "ce_border_russian_regimental_flag.dds"
+		20 = "ce_border_russian_regimental_flag_2knots.dds"
+		20 = "ce_border_russian_regimental_flag_3knots.dds"
+	}
+	russian_central_shield_charge = {
+		10 = "ce_shield_accolade_02.dds"
+		10 = "ce_shield_accolade_03.dds"
+		10 = "ce_shield_heater_border.dds"
 	}
 }

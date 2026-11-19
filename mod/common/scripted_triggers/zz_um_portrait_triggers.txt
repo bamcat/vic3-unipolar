@@ -1,0 +1,288 @@
+﻿um_gulf_country_trigger = {
+	OR = {
+		c:SAU ?= this
+		c:KUW ?= this
+		c:UAE ?= this
+		c:QAT ?= this
+		c:BHR ?= this
+		c:OMA ?= this
+		c:XOM ?= this
+	}
+}
+
+um_veil_country_trigger = {
+	OR = {
+		c:IRA ?= this
+		c:SAU ?= this
+		c:KUW ?= this
+		c:UAE ?= this
+		c:QAT ?= this
+		c:BHR ?= this
+		c:OMA ?= this
+		c:XOM ?= this
+		c:YMN ?= this
+		c:AFG ?= this
+	}
+}
+
+um_cleric_character_trigger = {
+	exists = scope:character
+	scope:character = {
+		is_adult = yes
+		is_female = no
+		religion = {
+			has_discrimination_trait = heritage_islamic
+		}
+		NOR = {
+			has_role_of_type = general
+			has_role_of_type = admiral
+		}
+		NOT = {
+			culture = {
+				has_discrimination_trait = heritage_anatolian
+			}
+		}
+		OR = {
+			AND = {
+				is_interest_group_type = ig_devout
+				culture = {
+					OR = {
+						has_discrimination_trait_group = heritage_group_middle_eastern
+						has_discrimination_trait_group = heritage_group_central_asian
+					}
+				}
+			}
+			AND = {
+				is_interest_group_type = ig_devout
+				home_country ?= {
+					has_law_or_variant = law_type:law_theocracy
+				}
+			}
+			AND = {
+				has_ideology = ideology:ideology_theocrat_leader
+				is_ruler_of_own_country = yes
+				home_country ?= {
+					has_law_or_variant = law_type:law_theocracy
+				}
+			}
+		}
+	}
+}
+
+um_gulf_dress_character_trigger = {
+	exists = scope:character
+	scope:character = {
+		is_adult = yes
+		culture = cu:bedouin
+		NOR = {
+			has_role_of_type = general
+			has_role_of_type = admiral
+		}
+	}
+}
+
+um_gulf_royal_character_trigger = {
+	um_gulf_dress_character_trigger = yes
+	scope:character = {
+		is_female = no
+		OR = {
+			is_ruler_of_own_country = yes
+			is_heir_of_own_country = yes
+		}
+	}
+}
+
+um_military_dress_character_trigger = {
+	exists = scope:character
+	scope:character = {
+		is_adult = yes
+		OR = {
+			has_role_of_type = general
+			has_role_of_type = admiral
+			AND = {
+				is_interest_group_type = ig_armed_forces
+				OR = {
+					has_role_of_type = politician
+					has_role_of_type = agitator
+					is_ruler_of_own_country = yes
+				}
+			}
+			AND = {
+				is_ruler_of_own_country = yes
+				is_historical = yes
+				home_country ?= {
+					c:LBY ?= this
+				}
+			}
+		}
+	}
+	um_cleric_character_trigger = no
+	um_gulf_royal_character_trigger = no
+}
+
+um_military_cap_character_trigger = {
+	um_military_dress_character_trigger = yes
+	scope:character = {
+		is_ruler_of_own_country = no
+		OR = {
+			has_role_of_type = general
+			has_role_of_type = admiral
+		}
+	}
+}
+
+um_veiled_female_character_trigger = {
+	exists = scope:character
+	scope:character = {
+		is_adult = yes
+		is_female = yes
+		religion = {
+			has_discrimination_trait = heritage_islamic
+		}
+		home_country ?= {
+			um_veil_country_trigger = yes
+		}
+	}
+	um_military_dress_character_trigger = no
+}
+
+um_south_asian_character_trigger = {
+	exists = scope:character
+	scope:character = {
+		is_adult = yes
+		culture = {
+			has_discrimination_trait_group = heritage_group_south_asian
+		}
+	}
+}
+
+um_gulf_dress_pop_trigger = {
+	exists = scope:pop
+	scope:pop = {
+		OR = {
+			culture = cu:bedouin
+			culture = cu:yemenite
+		}
+		NOR = {
+			is_pop_type = soldiers
+			is_pop_type = officers
+			is_pop_type = clergymen
+		}
+	}
+}
+
+um_rural_pop_trigger = {
+	exists = scope:pop
+	scope:pop = {
+		OR = {
+			is_pop_type = peasants
+			is_pop_type = farmers
+		}
+	}
+}
+
+um_suit_pop_trigger = {
+	exists = scope:pop
+	scope:pop = {
+		OR = {
+			is_pop_type = aristocrats
+			is_pop_type = capitalists
+			is_pop_type = academics
+			is_pop_type = bureaucrats
+			is_pop_type = professionals
+		}
+	}
+}
+
+um_shirt_pop_trigger = {
+	exists = scope:pop
+	scope:pop = {
+		OR = {
+			is_pop_type = clerks
+			is_pop_type = engineers
+			is_pop_type = shopkeepers
+		}
+	}
+}
+
+um_worker_pop_trigger = {
+	exists = scope:pop
+	scope:pop = {
+		OR = {
+			is_pop_type = laborers
+			is_pop_type = machinists
+			is_pop_type = farmers
+			is_pop_type = peasants
+			is_pop_type = slaves
+		}
+	}
+}
+
+um_arab_rural_pop_trigger = {
+	um_rural_pop_trigger = yes
+	scope:pop = {
+		culture = {
+			OR = {
+				has_discrimination_trait = heritage_arab
+				has_discrimination_trait = heritage_berber
+				has_discrimination_trait = heritage_afro_arab
+			}
+		}
+		NOR = {
+			culture = cu:bedouin
+			culture = cu:yemenite
+		}
+	}
+}
+
+um_african_rural_pop_trigger = {
+	um_rural_pop_trigger = yes
+	scope:pop = {
+		culture = {
+			has_discrimination_trait_group = heritage_group_african
+			NOR = {
+				has_discrimination_trait = heritage_african_diaspora
+				has_discrimination_trait = heritage_african_settler
+				has_discrimination_trait = heritage_berber
+				has_discrimination_trait = heritage_afro_arab
+			}
+		}
+	}
+}
+
+um_south_asian_rural_pop_trigger = {
+	um_rural_pop_trigger = yes
+	scope:pop = {
+		culture = {
+			has_discrimination_trait_group = heritage_group_south_asian
+		}
+	}
+}
+
+um_central_asian_rural_pop_trigger = {
+	um_rural_pop_trigger = yes
+	scope:pop = {
+		culture = {
+			has_discrimination_trait_group = heritage_group_central_asian
+		}
+	}
+}
+
+um_southeast_asian_peasant_pop_trigger = {
+	exists = scope:pop
+	scope:pop = {
+		is_pop_type = peasants
+		culture = {
+			has_discrimination_trait_group = heritage_group_southeast_asian
+		}
+	}
+}
+
+um_buddhist_religion_trigger = {
+	OR = {
+		religion = rel:mahayana
+		religion = rel:theravada
+		religion = rel:gelugpa
+		religion = rel:shinto
+	}
+}

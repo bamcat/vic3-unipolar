@@ -1,0 +1,154 @@
+﻿namespace = smd_contagion
+
+smd_contagion.1 = {
+	type = country_event
+	placement = ROOT
+	title = smd_contagion.1.t
+	desc = smd_contagion.1.d
+	flavor = smd_contagion.1.f
+	event_image = { video = "votp_barricade" }
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+	icon = "gfx/interface/icons/event_icons/event_newspaper.dds"
+	duration = 3
+
+	trigger = {
+	}
+
+	option = {
+		name = smd_contagion.1.a
+		default_option = yes
+		add_modifier = {
+			name = smd_raised_alert
+			days = 730
+		}
+		je:smd_je_fear_of_contagion ?= {
+			add_progress = { value = -10 name = smd_contagion_bar }
+		}
+		ai_chance = { base = 50 }
+	}
+
+	option = {
+		name = smd_contagion.1.b
+		add_modifier = {
+			name = smd_alarm_dismissed
+			days = short_modifier_time
+		}
+		je:smd_je_fear_of_contagion ?= {
+			add_progress = { value = 5 name = smd_contagion_bar }
+		}
+		ai_chance = { base = 50 }
+	}
+}
+
+smd_contagion.2 = {
+	type = country_event
+	placement = ROOT
+	title = smd_contagion.2.t
+	desc = smd_contagion.2.d
+	flavor = smd_contagion.2.f
+	event_image = { video = "unspecific_military_parade" }
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+	icon = "gfx/interface/icons/event_icons/event_military.dds"
+	duration = 3
+	cooldown = { days = normal_modifier_time }
+
+	trigger = {
+		has_journal_entry = smd_je_fear_of_contagion
+	}
+
+	option = {
+		name = smd_contagion.2.a
+		default_option = yes
+		add_modifier = {
+			name = smd_army_purge
+			days = short_modifier_time
+		}
+		je:smd_je_fear_of_contagion ?= {
+			add_progress = { value = -10 name = smd_contagion_bar }
+		}
+		ai_chance = { base = 50 }
+	}
+
+	option = {
+		name = smd_contagion.2.b
+		add_modifier = {
+			name = smd_purge_refused
+			days = short_modifier_time
+		}
+		je:smd_je_fear_of_contagion ?= {
+			add_progress = { value = 10 name = smd_contagion_bar }
+		}
+		ai_chance = { base = 50 }
+	}
+}
+
+smd_contagion.3 = {
+	type = country_event
+	placement = ROOT
+	title = smd_contagion.3.t
+	desc = smd_contagion.3.d
+	flavor = smd_contagion.3.f
+	event_image = { video = "ip3_police_raid" }
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+	icon = "gfx/interface/icons/event_icons/event_protest.dds"
+	duration = 3
+
+	trigger = {
+	}
+
+	option = {
+		name = smd_contagion.3.a
+		default_option = yes
+		add_modifier = {
+			name = smd_emergency_powers
+			days = normal_modifier_time
+		}
+		if = {
+			limit = {
+				enacting_any_law = no
+				NOT = { has_law_or_variant = law_type:law_secret_police }
+				any_law = {
+					type = law_type:law_secret_police
+					can_be_enacted = yes
+				}
+			}
+			start_enactment = law_type:law_secret_police
+			add_enactment_phase = 1
+		}
+		ai_chance = { base = 60 }
+	}
+
+	option = {
+		name = smd_contagion.3.b
+		add_modifier = {
+			name = smd_emergency_refused
+			days = short_modifier_time
+		}
+		ai_chance = { base = 40 }
+	}
+}
+
+smd_contagion.4 = {
+	type = country_event
+	placement = ROOT
+	title = smd_contagion.4.t
+	desc = smd_contagion.4.d
+	flavor = smd_contagion.4.f
+	event_image = { video = "unspecific_ruler_speaking_to_people" }
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+	icon = "gfx/interface/icons/event_icons/event_newspaper.dds"
+	duration = 3
+
+	trigger = {
+	}
+
+	option = {
+		name = smd_contagion.4.a
+		default_option = yes
+		add_modifier = {
+			name = smd_calm_restored
+			days = short_modifier_time
+		}
+		ai_chance = { base = 100 }
+	}
+}

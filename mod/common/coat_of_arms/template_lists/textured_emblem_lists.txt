@@ -1,12 +1,5 @@
 textured_emblem_texture_lists = {
 	coa_charge = {
-		# TEST CONCEPT : template with geometrical flags & coa in center or canton, very limited scopes (since CoA must be relevant to the state)
-		# This would only work using a CoA with a defined enough border (black or not, like coa_portugal in bold gold)
-		# Fall backs with weighting that would include crowns and laurels for monarchy, keys of st peter for theocracies etc
-
-		# Strategic regions in scope ? Capitals for smaller states ?
-
-		# Generic fall back entries
 
 		# 10 blank
 		1 = "te_crown.dds"
@@ -25,8 +18,6 @@ textured_emblem_texture_lists = {
 			}
 			100 = "te_keys_st_peter.dds"
 		}
-		# Prussia (Brandenburg)
-		# Would actually need a trigger to check that the state in question is not just a conquered state but the capital
 		special_selection = {
 				trigger = {
 					exists = scope:target
@@ -36,7 +27,6 @@ textured_emblem_texture_lists = {
 			}
 			1000 = "te_eagle_prussia_monogram_crown.dds"
 		}
-		# Spain (Toledo)
 		special_selection = {
 				trigger = {
 					exists = scope:target
@@ -46,7 +36,6 @@ textured_emblem_texture_lists = {
 			}
 			1000 = "te_coa_spain.dds"
 		}
-		# PORTUGAL (Estremadura)
 		special_selection = {
 				trigger = {
 					exists = scope:target
@@ -68,8 +57,6 @@ textured_emblem_texture_lists = {
 			# elephant decorated
 			# golden fishes
 
-			# add : elephant and peacock can be used for all of SE asia regardless of faith
-			# possibly make this a separate asian template for specific patterns (per bend, stripes)
 		}
 	}
     power_bloc_top = {

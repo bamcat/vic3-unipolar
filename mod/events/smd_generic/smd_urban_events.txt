@@ -1,0 +1,182 @@
+﻿namespace = smd_urban
+
+smd_urban.1 = {
+	type = country_event
+	placement = ROOT
+	title = smd_urban.1.t
+	desc = smd_urban.1.d
+	flavor = smd_urban.1.f
+	event_image = { video = "unspecific_fire" }
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+	icon = "gfx/interface/icons/event_icons/event_fire.dds"
+	duration = 3
+	cooldown = { days = normal_modifier_time }
+
+	trigger = {
+		has_journal_entry = smd_je_rapid_urbanisation
+	}
+
+	option = {
+		name = smd_urban.1.a
+		default_option = yes
+		add_treasury = {
+			value = gdp
+			multiply = -0.001
+		}
+		add_modifier = {
+			name = smd_shanty_fire_relief
+			days = 730
+		}
+		je:smd_je_rapid_urbanisation ?= {
+			add_progress = { value = -5 name = smd_urban_bar }
+		}
+		ai_chance = { base = 70 }
+	}
+
+	option = {
+		name = smd_urban.1.b
+		add_modifier = {
+			name = smd_shanty_fire_neglect
+			days = short_modifier_time
+		}
+		je:smd_je_rapid_urbanisation ?= {
+			add_progress = { value = 5 name = smd_urban_bar }
+		}
+		ai_chance = { base = 30 }
+	}
+}
+
+smd_urban.2 = {
+	type = country_event
+	placement = ROOT
+	title = smd_urban.2.t
+	desc = smd_urban.2.d
+	flavor = smd_urban.2.f
+	event_image = { video = "asia_farmers_market" }
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+	icon = "gfx/interface/icons/event_icons/event_trade.dds"
+	duration = 3
+	cooldown = { days = normal_modifier_time }
+
+	trigger = {
+		has_journal_entry = smd_je_rapid_urbanisation
+	}
+
+	option = {
+		name = smd_urban.2.a
+		default_option = yes
+		add_modifier = {
+			name = smd_informal_economy_tolerated
+			days = short_modifier_time
+		}
+		je:smd_je_rapid_urbanisation ?= {
+			add_progress = { value = -3 name = smd_urban_bar }
+		}
+		ai_chance = { base = 60 }
+	}
+
+	option = {
+		name = smd_urban.2.b
+		add_modifier = {
+			name = smd_informal_economy_crackdown
+			days = short_modifier_time
+		}
+		je:smd_je_rapid_urbanisation ?= {
+			add_progress = { value = 4 name = smd_urban_bar }
+		}
+		ai_chance = { base = 40 }
+	}
+}
+
+smd_urban.3 = {
+	type = country_event
+	placement = ROOT
+	title = smd_urban.3.t
+	desc = smd_urban.3.d
+	flavor = smd_urban.3.f
+	event_image = { video = "asia_poor_people_moving" }
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+	icon = "gfx/interface/icons/event_icons/event_default.dds"
+	duration = 3
+	cooldown = { days = normal_modifier_time }
+
+	trigger = {
+		has_journal_entry = smd_je_rapid_urbanisation
+	}
+
+	option = {
+		name = smd_urban.3.a
+		default_option = yes
+		add_treasury = {
+			value = gdp
+			multiply = -0.002
+		}
+		smd_build_in_capital = { BUILDING = building_water_works }
+		je:smd_je_rapid_urbanisation ?= {
+			add_progress = { value = -6 name = smd_urban_bar }
+		}
+		ai_chance = { base = 60 }
+	}
+
+	option = {
+		name = smd_urban.3.b
+		add_modifier = {
+			name = smd_water_rationing
+			days = 365
+		}
+		je:smd_je_rapid_urbanisation ?= {
+			add_progress = { value = 4 name = smd_urban_bar }
+		}
+		ai_chance = { base = 40 }
+	}
+}
+
+smd_urban.4 = {
+	type = country_event
+	placement = ROOT
+	title = smd_urban.4.t
+	desc = smd_urban.4.d
+	flavor = smd_urban.4.f
+	event_image = { video = "rp1_brazilian_city" }
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+	icon = "gfx/interface/icons/event_icons/event_industry.dds"
+	duration = 3
+
+	trigger = {
+	}
+
+	option = {
+		name = smd_urban.4.a
+		default_option = yes
+		add_modifier = {
+			name = smd_managed_urbanisation
+			days = long_modifier_time
+		}
+		ai_chance = { base = 100 }
+	}
+}
+
+smd_urban.5 = {
+	type = country_event
+	placement = ROOT
+	title = smd_urban.5.t
+	desc = smd_urban.5.d
+	flavor = smd_urban.5.f
+	event_image = { video = "ip2_india_urban_scene" }
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+	icon = "gfx/interface/icons/event_icons/event_skull.dds"
+	duration = 3
+
+	trigger = {
+	}
+
+	option = {
+		name = smd_urban.5.a
+		default_option = yes
+		add_modifier = {
+			name = smd_megaslums
+			days = long_modifier_time
+		}
+		ai_chance = { base = 100 }
+	}
+}

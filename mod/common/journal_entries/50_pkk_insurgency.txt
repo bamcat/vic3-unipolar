@@ -93,54 +93,59 @@ je_kurdistan_war = {
 		}
 	}
 
-	complete = {
-		custom_tooltip = {
-			text = je_kurdistan_war_complete
-			NAND = {
-				exists = c:KDS
-				exists = c:TRK
+
+	outcome = {
+		header = je_standard_completion_header
+		effect_header = je_standard_on_completion_header
+		color = "gold_positive"
+		conclusion_desc = je_standard_completion_conclusion_desc
+		trigger = {
+			custom_tooltip = {
+				text = je_kurdistan_war_complete
+				NAND = {
+					exists = c:KDS
+					exists = c:TRK
+				}
+			}
+		}
+		effect_all_involved = {
+			if = {
+				limit = {
+					c:KDS ?= this
+				}
+				add_modifier = {
+					name = kurdistan_war_kur_reward
+					years = 20
+					is_decaying = yes
+				}
+			}
+			else_if = {
+				limit = {
+					c:TRK ?= this
+				}
+				add_modifier = {
+					name = kurdistan_war_trk_reward
+					years = 20
+					is_decaying = yes
+				}
+			}
+			trigger_event = kurdistan_war.2
+			hidden_effect = {
+				remove_global_variable = trk_kurdistan_war_score
+				remove_global_variable = kur_kurdistan_war_score
+				remove_global_variable = kurdistan_war_skirmish_phase
+				remove_global_variable = kurdistan_war_final_phase
+				remove_modifier = trk_security_operation
+				remove_modifier = kur_mountain_resistance
+				remove_modifier = trk_counterinsurgency_expenses
+				remove_modifier = kur_guerrilla_networks
+				set_immune_to_revolutions = no
+				remove_variable = coup_immunity
 			}
 		}
 	}
-
-	on_complete_all_involved = {
-		if = {
-			limit = {
-				c:KDS ?= this
-			}
-			add_modifier = {
-				name = kurdistan_war_kur_reward
-				years = 20
-				is_decaying = yes
-			}
-		}
-		else_if = {
-			limit = {
-				c:TRK ?= this
-			}
-			add_modifier = {
-				name = kurdistan_war_trk_reward
-				years = 20
-				is_decaying = yes
-			}
-		}
-		trigger_event = kurdistan_war.2
-		hidden_effect = {
-			remove_global_variable = trk_kurdistan_war_score
-			remove_global_variable = kur_kurdistan_war_score
-			remove_global_variable = kurdistan_war_skirmish_phase
-			remove_global_variable = kurdistan_war_final_phase
-			remove_modifier = trk_security_operation
-			remove_modifier = kur_mountain_resistance
-			remove_modifier = trk_counterinsurgency_expenses
-			remove_modifier = kur_guerrilla_networks
-			set_immune_to_revolutions = no
-			remove_variable = coup_immunity
-		}
-	}
-
 	weight = 10000
 
 	should_be_pinned_by_default_involved = yes
-	should_be_pinned_by_default_uninvolved_or_ineligible = no
+	should_be_pinned_by_default_uninvolved_or_context = no
 }

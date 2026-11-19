@@ -1,5 +1,5 @@
 ﻿# J. & P. Coats
-company_j_p_coats = {
+REPLACE_OR_CREATE:company_j_p_coats = {
 	icon = "gfx/interface/icons/company_icons/historical_company_icons/gb_jp_coats.dds"
 	background = "gfx/interface/icons/company_icons/company_backgrounds/comp_illu_manufacturing_light.dds"
 
@@ -27,11 +27,11 @@ company_j_p_coats = {
 	}
 
 	potential = {
-		has_interest_marker_in_region = region_north_sea_coast
+		any_scope_state = { is_in_geographic_region = geographic_region_north_sea_coast_old }
 	}
 
 	attainable = {
-		hidden_trigger = { # Hide attainable if it's always fulfilled by possible
+		hidden_trigger = {
 			any_scope_state = {
 				state_region = s:STATE_LOWLANDS
 			}
@@ -71,7 +71,7 @@ company_j_p_coats = {
 	}
 
 	ai_weight = {
-		value = 3 # Higher base value for flavored companies
+		value = 3
 	}
 }
 
@@ -99,11 +99,11 @@ REPLACE_OR_CREATE:company_armstrong_whitworth = {
 	}
 
 	potential = {
-		has_interest_marker_in_region = geographic_region_england_old
+		any_scope_state = { is_in_geographic_region = geographic_region_england_old }
 	}
 
 	attainable = {
-		hidden_trigger = { # Hide attainable if it's always fulfilled by possible
+		hidden_trigger = {
 			any_scope_state = {
 				state_region = s:STATE_YORKSHIRE
 			}
@@ -143,12 +143,12 @@ REPLACE_OR_CREATE:company_armstrong_whitworth = {
 	}
 
 	ai_weight = {
-		value = 3 # Higher base value for flavored companies
+		value = 3
 	}
 }
 
 # John Brown & Company
-company_john_brown = {
+REPLACE_OR_CREATE:company_john_brown = {
 	icon = "gfx/interface/icons/company_icons/historical_company_icons/gb_jb_co.dds"
 	background = "gfx/interface/icons/company_icons/company_backgrounds/comp_illu_harbor_shipbuilding.dds"
 
@@ -171,11 +171,11 @@ company_john_brown = {
 	}
 
 	potential = {
-		has_interest_marker_in_region = region_north_sea_coast
+		any_scope_state = { is_in_geographic_region = geographic_region_north_sea_coast_old }
 	}
 
 	attainable = {
-		hidden_trigger = { # Hide attainable if it's always fulfilled by possible
+		hidden_trigger = {
 			any_scope_state = {
 				state_region = s:STATE_LOWLANDS
 			}
@@ -215,12 +215,12 @@ company_john_brown = {
 	}
 
 	ai_weight = {
-		value = 3 # Higher base value for flavored companies
+		value = 3
 	}
 }
 
 # Great Western Railway
-company_gwr = {
+REPLACE_OR_CREATE:company_gwr = {
 	icon = "gfx/interface/icons/company_icons/historical_company_icons/gb_great_western_railway.dds"
 	background = "gfx/interface/icons/company_icons/company_backgrounds/comp_illu_railways.dds"
 
@@ -235,20 +235,20 @@ company_gwr = {
 	}
 
 	potential = {
-		has_interest_marker_in_region = geographic_region_england_old
+		any_scope_state = { is_in_geographic_region = geographic_region_england_old }
 	}
 
 	attainable = {
-		hidden_trigger = { # Hide attainable if it's always fulfilled by possible
+		hidden_trigger = {
 			any_scope_state = {
-				region = sr:region_england
+				is_in_geographic_region = geographic_region_england_old
 			}
 		}
 	}
 
 	possible = {
 		any_scope_state = {
-			region = sr:region_england
+			is_in_geographic_region = geographic_region_england_old
 			is_incorporated = yes
 			any_scope_building = {
 				is_building_type = building_railway
@@ -265,7 +265,7 @@ company_gwr = {
 
 	ai_will_do = {
 		any_scope_state = {
-			region = sr:region_england
+			is_in_geographic_region = geographic_region_england_old
 			is_incorporated = yes
 			count >= 3
 		}
@@ -275,19 +275,18 @@ company_gwr = {
 		building_railway = {
 			level = 5
 			state_trigger = {
-				region = sr:region_england
+				is_in_geographic_region = geographic_region_england_old
 				is_incorporated = yes
 			}
 		}
 	}
 
 	ai_weight = {
-		value = 3 # Higher base value for flavored companies
+		value = 3
 	}
 }
 
-# Bolckow, Vaughan & Co.
-company_bolckow_vaughan = {
+REPLACE_OR_CREATE:company_bolckow_vaughan = {
 	icon = "gfx/interface/icons/company_icons/historical_company_icons/gb_bolckow_vaughan_and_co.dds"
 	background = "gfx/interface/icons/company_icons/company_backgrounds/comp_illu_mining.dds"
 
@@ -310,11 +309,11 @@ company_bolckow_vaughan = {
 	}
 
 	potential = {
-		has_interest_marker_in_region = geographic_region_england_old
+		any_scope_state = { is_in_geographic_region = geographic_region_england_old }
 	}
 
 	attainable = {
-		hidden_trigger = { # Hide attainable if it's always fulfilled by possible
+		hidden_trigger = {
 			any_scope_state = {
 				state_region = s:STATE_YORKSHIRE
 			}
@@ -338,7 +337,6 @@ company_bolckow_vaughan = {
 
 	prosperity_modifier = {
 		building_shipyard_throughput_add = 0.1
-		building_military_shipyard_throughput_add = 0.1
 	}
 
 	ai_will_do = {
@@ -370,6 +368,6 @@ company_bolckow_vaughan = {
 	}
 
 	ai_weight = {
-		value = 3 # Higher base value for flavored companies
+		value = 3
 	}
 }

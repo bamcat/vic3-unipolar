@@ -1,0 +1,46 @@
+﻿fin_cpi_above = {
+	custom_description = {
+		text = fin_cpi_above_$V$
+		has_variable = fin_cpi
+		var:fin_cpi >= $V$
+	}
+}
+
+fin_wage_arrears_at_least = {
+	custom_description = {
+		text = fin_wage_arrears_at_least_$L$
+		has_variable = fin_wage_arrears
+		var:fin_wage_arrears >= $L$
+	}
+}
+
+fin_capital_flight_above = {
+	custom_description = {
+		text = fin_capital_flight_above_$V$
+		has_variable = fin_capital_flight
+		var:fin_capital_flight >= $V$
+	}
+}
+
+fin_bond_ratio_above = {
+	custom_description = {
+		text = fin_bond_ratio_above_$V$
+		has_variable = fin_bond_ratio_var
+		var:fin_bond_ratio_var >= $V$
+	}
+}
+
+fin_bonds_issuing = {
+	custom_description = {
+		text = fin_bonds_issuing
+		has_variable = fin_bonds_issuing
+	}
+}
+
+fin_debt_ratio_above = {
+	custom_description = {
+		text = fin_debt_ratio_above_$V$
+		has_variable = fin_debt_ratio_var
+		var:fin_debt_ratio_var >= $V$
+	}
+}

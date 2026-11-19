@@ -1,10 +1,5 @@
-﻿
-# ==========================================
+﻿# ==========================================
 # CONDEMN
-# Formal public condemnation. Requires
-# the target to have infamy. Applies a
-# prestige/legitimacy penalty to the target
-# for the duration of the pact.
 # ==========================================
 
 REPLACE_OR_CREATE:condemn = {
@@ -26,14 +21,12 @@ REPLACE_OR_CREATE:condemn = {
 	}
 
 	possible = {
-		# Only condemn countries with notable infamy
 		custom_tooltip = {
 			text = condemn_requires_infamy_tt
 			scope:target_country = {
 				infamy >= infamy_threshold:infamous
 			}
 		}
-		# Cannot condemn allies or bloc partners
 		NOT = {
 			has_diplomatic_pact = {
 				who = scope:target_country
@@ -107,7 +100,7 @@ REPLACE_OR_CREATE:condemn = {
 		is_hostile = yes
 		is_two_sided_pact = no
 
-		relations_progress_per_day = -1 # At -100, -1 relations
+		relations_progress_per_day = -1
 
 		first_modifier = {
 			country_pact_leverage_generation_mult = -0.5
@@ -198,10 +191,6 @@ REPLACE_OR_CREATE:condemn = {
 
 # ==========================================
 # PROPOSE UN SANCTIONS
-# Starts a UN vote to sanction the target.
-# Only UNSC permanent members can propose.
-# If the vote passes, severe economic
-# penalties apply to the target via
 # un_events.202.
 # ==========================================
 
@@ -221,12 +210,10 @@ REPLACE_OR_CREATE:propose_un_sanctions = {
 		scope:target_country = {
 			NOT = { is_country_type = decentralized }
 		}
-		# Only permanent UNSC members can propose
 		has_modifier = permanent_unsc_member
 	}
 
 	possible = {
-		# No active UN motion already in progress
 		custom_tooltip = {
 			text = un_no_motion_active_tt
 			NOT = { has_global_variable = un_motion_active }
@@ -235,19 +222,16 @@ REPLACE_OR_CREATE:propose_un_sanctions = {
 			text = un_not_sanctioned
 			NOT = { scope:target_country = { has_modifier = un_sanctions_target } }
 		}
-		# Target must have significant infamy
 		custom_tooltip = {
 			text = condemn_requires_infamy_tt
 			scope:target_country = {
 				infamy >= infamy_threshold:notorious
 			}
 		}
-		# Cannot propose against bloc partners or allies
 		NOT = { is_in_same_power_bloc = scope:target_country }
 	}
 
 	accept_effect = {
-		# Register the sanction target globally for un_events.202
 		set_global_variable = {
 			name = un_sanction_target
 			value = scope:target_country
@@ -256,16 +240,13 @@ REPLACE_OR_CREATE:propose_un_sanctions = {
 		set_global_variable = { name = un_current_motion_type value = flag:motion_sanctions }
 		set_global_variable = { name = un_motion_yes_votes value = 0 }
 		set_global_variable = { name = un_motion_no_votes value = 0 }
-		# Clear prior vote flags
 		every_country = {
 			limit = { has_variable = un_voted_on_motion }
 			remove_variable = un_voted_on_motion
 		}
-		# Notify all countries
 		every_country = {
 			trigger_event = { id = un_events.102 days = 7 }
 		}
-		# Schedule result
 		trigger_event = { id = un_events.202 days = 35 }
 	}
 
@@ -307,9 +288,6 @@ REPLACE_OR_CREATE:propose_un_sanctions = {
 
 # ==========================================
 # PROPOSE UN CONDEMNATION
-# Starts a UN vote to formally condemn
-# the target. Less severe than sanctions.
-# Prestige and legitimacy penalties only.
 # ==========================================
 
 REPLACE_OR_CREATE:propose_un_condemnation = {

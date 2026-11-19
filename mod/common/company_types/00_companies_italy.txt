@@ -1,5 +1,5 @@
 ﻿# Ilva
-company_ilva = {
+REPLACE_OR_CREATE:company_ilva = {
 	icon = "gfx/interface/icons/company_icons/historical_company_icons/ilva.dds"
 	background = "gfx/interface/icons/company_icons/company_backgrounds/comp_illu_manufacturing_heavy.dds"
 
@@ -28,11 +28,11 @@ company_ilva = {
 	}
 
 	potential = {
-		has_interest_marker_in_region = region_italy
+		any_scope_state = { is_in_geographic_region = geographic_region_italy_old }
 	}
 
 	attainable = {
-		hidden_trigger = { # Hide attainable if it's always fulfilled by possible
+		hidden_trigger = {
 			any_scope_state = {
 				state_region = s:STATE_PIEDMONT
 			}
@@ -72,7 +72,7 @@ company_ilva = {
 	}
 
 	ai_weight = {
-		value = 3 # Higher base value for flavored companies
+		value = 3
 	}
 }
 
@@ -107,11 +107,11 @@ REPLACE_OR_CREATE:company_ansaldo = {
 	}
 
 	potential = {
-		has_interest_marker_in_region = region_italy
+		any_scope_state = { is_in_geographic_region = geographic_region_italy_old }
 	}
 
 	attainable = {
-		hidden_trigger = { # Hide attainable if it's always fulfilled by possible
+		hidden_trigger = {
 			any_scope_state = {
 				state_region = s:STATE_PIEDMONT
 			}
@@ -167,12 +167,12 @@ REPLACE_OR_CREATE:company_ansaldo = {
 	}
 
 	ai_weight = {
-		value = 3 # Higher base value for flavored companies
+		value = 3
 	}
 }
 
 # Casa Ricordi
-company_ricordi = {
+REPLACE_OR_CREATE:company_ricordi = {
 	icon = "gfx/interface/icons/company_icons/historical_company_icons/ricordi.dds"
 	background = "gfx/interface/icons/company_icons/company_backgrounds/comp_illu_farm_corn.dds"
 
@@ -189,11 +189,11 @@ company_ricordi = {
 	}
 
 	potential = {
-		has_interest_marker_in_region = region_italy
+		any_scope_state = { is_in_geographic_region = geographic_region_italy_old }
 	}
 
 	attainable = {
-		hidden_trigger = { # Hide attainable if it's always fulfilled by possible
+		hidden_trigger = {
 			any_scope_state = {
 				state_region = s:STATE_LOMBARDY
 			}
@@ -233,7 +233,7 @@ company_ricordi = {
 	}
 
 	ai_weight = {
-		value = 3 # Higher base value for flavored companies
+		value = 3
 	}
 }
 
@@ -259,11 +259,11 @@ REPLACE_OR_CREATE:company_fiat = {
 	}
 
 	potential = {
-		has_interest_marker_in_region = region_italy
+		any_scope_state = { is_in_geographic_region = geographic_region_italy_old }
 	}
 
 	attainable = {
-		hidden_trigger = { # Hide attainable if it's always fulfilled by possible
+		hidden_trigger = {
 			any_scope_state = {
 				state_region = s:STATE_PIEDMONT
 			}
@@ -305,7 +305,7 @@ REPLACE_OR_CREATE:company_fiat = {
 	}
 
 	ai_weight = {
-		value = 3 # Higher base value for flavored companies
+		value = 3
 	}
 }
 
@@ -329,11 +329,11 @@ REPLACE_OR_CREATE:company_stt = {
 	}
 
 	potential = {
-		has_interest_marker_in_region = region_italy
+		any_scope_state = { is_in_geographic_region = geographic_region_italy_old }
 	}
 
 	attainable = {
-		hidden_trigger = { # Hide attainable if it's always fulfilled by possible
+		hidden_trigger = {
 			any_scope_state = {
 				state_region = s:STATE_ISTRIA
 			}
@@ -382,6 +382,6 @@ REPLACE_OR_CREATE:company_stt = {
 	}
 
 	ai_weight = {
-		value = 3 # Higher base value for flavored companies
+		value = 3
 	}
 }

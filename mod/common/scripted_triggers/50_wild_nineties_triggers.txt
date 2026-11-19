@@ -1,0 +1,141 @@
+﻿rus_wn_has_character = {
+	custom_description = {
+		text = rus_wn_has_character_$T$
+		any_scope_character = {
+			has_template = $T$
+			is_character_alive = yes
+		}
+	}
+}
+
+rus_wn_is_pm = {
+	custom_description = {
+		text = rus_wn_is_pm_$T$
+		any_scope_character = {
+			has_template = $T$
+			has_role = character_role_prime_minister
+		}
+	}
+}
+
+rus_wn_can_be_pm = {
+	custom_description = {
+		text = rus_wn_can_be_pm_$T$
+		any_scope_character = {
+			has_template = $T$
+			is_character_alive = yes
+			NOT = { has_role = character_role_prime_minister }
+			is_ruler_of_own_country = no
+		}
+	}
+}
+
+rus_wn_yeltsin_in_power = {
+	custom_description = {
+		text = rus_wn_yeltsin_in_power
+		ruler ?= { has_variable = rus_wn_yeltsin }
+	}
+}
+
+rus_wn_health_below = {
+	custom_description = {
+		text = rus_wn_health_below_$V$
+		je:je_russia_wild_nineties ?= {
+			scripted_bar_progress = {
+				name = rus_wn_health_bar
+				value < $V$
+			}
+		}
+	}
+}
+
+rus_wn_family_above = {
+	custom_description = {
+		text = rus_wn_family_above_$V$
+		je:je_russia_wild_nineties ?= {
+			scripted_bar_progress = {
+				name = rus_wn_family_bar
+				value >= $V$
+			}
+		}
+	}
+}
+
+rus_wn_oligarchs_above = {
+	custom_description = {
+		text = rus_wn_oligarchs_above_$V$
+		je:je_russia_wild_nineties ?= {
+			scripted_bar_progress = {
+				name = rus_wn_oligarch_bar
+				value >= $V$
+			}
+		}
+	}
+}
+
+rus_wn_active_ukaz_count_at_least_3 = {
+	custom_description = {
+		text = rus_wn_active_ukaz_count_at_least_3
+		calc_true_if = {
+			amount >= 3
+			has_modifier = rus_ukaz_voucher
+			has_modifier = rus_ukaz_land
+			has_modifier = rus_ukaz_anti_banditry
+			has_modifier = rus_ukaz_chechnya
+			has_modifier = rus_ukaz_tax_amnesty
+			has_modifier = rus_ukaz_wage_arrears
+			has_modifier = rus_ukaz_decree_1400
+		}
+	}
+}
+
+rus_wn_dvoevlastie_president_ahead = {
+	custom_description = {
+		text = rus_wn_dvoevlastie_president_ahead_$V$
+		je:je_russian_constitutional_crisis ?= {
+			scripted_bar_progress = {
+				name = rus_dvoevlastie_bar
+				value >= $V$
+			}
+		}
+	}
+}
+
+rus_wn_institutions_backing_president = {
+	calc_true_if = {
+		amount >= $N$
+		var:rus_inst_army >= 20
+		var:rus_inst_mvd >= 20
+		var:rus_inst_moscow >= 20
+		var:rus_inst_court >= 20
+		var:rus_inst_regions >= 20
+		var:rus_inst_church >= 20
+	}
+}
+
+rus_wn_institutions_backing_parliament = {
+	calc_true_if = {
+		amount >= $N$
+		var:rus_inst_army <= -20
+		var:rus_inst_mvd <= -20
+		var:rus_inst_moscow <= -20
+		var:rus_inst_court <= -20
+		var:rus_inst_regions <= -20
+		var:rus_inst_church <= -20
+	}
+}
+
+rus_wn_chechen_war_possible = {
+	custom_description = {
+		text = rus_wn_chechen_war_possible
+		NOT = { has_variable = chechen_war_started }
+		NOT = { has_global_variable = chechen_war_started }
+		NOT = { has_variable = rus_l90_ichkeria_started }
+		exists = c:CCH
+		c:CCH ?= {
+			any_scope_state = { is_incorporated = yes }
+			NOT = { has_war_with = c:RUS }
+			is_subject = no
+		}
+	}
+}

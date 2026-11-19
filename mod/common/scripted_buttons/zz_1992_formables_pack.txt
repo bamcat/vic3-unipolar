@@ -177,7 +177,7 @@ je_forming_KOU_button_form = {
 	}
 	effect = {
 		change_tag = KOU
-		trigger_event = modern_formables_KOU.1
+		trigger_event = { id = modern_formables_KOU.1 popup = yes }
 	}
 	ai_chance = { base = 1 }
 }

@@ -1,9 +1,5 @@
 # ==========================================
 # DRUG REGULATION — ENACTMENT MODIFIERS
-#
-# These are used as add_enactment_modifier
-# targets during drug law enactment events.
-# They affect law enactment success/failure.
 # ==========================================
 
 # ── PROHIBITION ───────────────────────────
@@ -17,7 +13,7 @@ drug_law_prohibition_enforcement = {
 # Enforcement is expensive
 drug_law_enforcement_cost = {
 	icon = gfx/interface/icons/timed_modifier_icons/modifier_coins_negative.dds
-	country_expenses_add                        = 12500
+	country_institution_cost_institution_police_mult = 0.15
 }
 
 # ── RELIGIOUS BACKING ─────────────────────
@@ -142,7 +138,7 @@ disability_funding_debate = {
 disability_state_subsidy = {
 	icon = gfx/interface/icons/timed_modifier_icons/modifier_coins_negative.dds
 	country_law_enactment_success_add           = 0.10
-	country_expenses_add                        = 20000
+	country_institution_cost_institution_social_security_mult = 0.15
 }
  
 # ── MEDICAL ENDORSEMENT (disability_laws.4) ─
@@ -236,7 +232,7 @@ env_polluter_pays = {
 env_state_subsidy = {
 	icon = gfx/interface/icons/timed_modifier_icons/modifier_coins_negative.dds
 	country_law_enactment_success_add           = 0.06
-	country_expenses_add                        = 25000
+	country_government_wages_mult = 0.05
 }
  
 # ── CONSTITUTIONAL CHALLENGE ──────────────
@@ -305,7 +301,7 @@ childrens_rights_fiscal_resistance = {
 childrens_rights_funded_mandate = {
 	icon = gfx/interface/icons/timed_modifier_icons/modifier_coins_negative.dds
 	country_law_enactment_success_add           = 0.10
-	country_expenses_add                        = 25000
+	country_institution_cost_institution_schools_mult = 0.15
 }
 
 # Labour movement mobilized behind the law
@@ -500,7 +496,7 @@ welfare_ubi_fiscal_alarm = {
 welfare_ubi_funded_commitment = {
 	icon = gfx/interface/icons/timed_modifier_icons/modifier_coins_negative.dds
 	country_law_enactment_success_add           = 0.10
-	country_expenses_add                        = 25
+	country_institution_cost_institution_social_security_mult = 0.25
 }
 
 # Labour disincentive debate engaged — rebutted publicly
@@ -557,7 +553,7 @@ education_college_fiscal_resistance = {
 education_college_public_funded = {
 	icon = gfx/interface/icons/timed_modifier_icons/modifier_coins_negative.dds
 	country_law_enactment_success_add           = 0.10
-	country_expenses_add                        = 20
+	country_institution_cost_institution_schools_mult = 0.2
 }
 
 # Meritocracy debate engaged — universal access defended publicly
@@ -696,7 +692,6 @@ gun_law_military_sidelined = {
 	interest_group_approval_add                 = -2
 }
 
-# Rural folk alienated — uniform enforcement ignores their way of life
 gun_law_rural_folk_alienated = {
 	icon = gfx/interface/icons/timed_modifier_icons/modifier_flag_negative.dds
 	interest_group_pol_str_mult                 = 0.05
@@ -735,7 +730,7 @@ lgbtq_law_enforcement_scope = {
 # Enforcement costs absorbed
 lgbtq_law_enforcement_cost = {
 	icon = gfx/interface/icons/timed_modifier_icons/modifier_coins_negative.dds
-	country_expenses_add                        = 20
+	country_institution_cost_institution_police_mult = 0.05
 }
 
 # Decriminalization framed carefully — not endorsement, merely removal of punishment
@@ -811,7 +806,6 @@ lgbtq_law_intelligentsia_sidelined = {
 	interest_group_approval_add                 = -3
 }
 
-# Devout frames the ban as moral absolute — life begins at conception
 abortion_law_moral_absolute = {
 	icon = gfx/interface/icons/timed_modifier_icons/modifier_documents_positive.dds
 	country_law_enactment_success_add           = 0.08

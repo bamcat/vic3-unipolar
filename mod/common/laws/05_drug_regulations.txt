@@ -27,7 +27,6 @@
 			limit = { ai_has_enact_weight_modifier_journal_entries = yes }
 			add = 750
 		}
-		# Authoritarian governments more likely to prohibit
 		if = {
 			limit = {
 				OR = {
@@ -37,7 +36,6 @@
 			}
 			add = 100
 		}
-		# Devout IG in government pushes for prohibition
 		if = {
 			limit = {
 				any_interest_group = {
@@ -52,9 +50,6 @@
 }
 
 # ── ALCOHOL & TOBACCO LEGAL ───────────────
-# The default legal framework for most
-# countries at game start. Legal alcohol
-# and tobacco, all other substances banned.
 
 law_alcohol_tobacco_legal = {
 	group = lawgroup_drug_regulations
@@ -84,10 +79,6 @@ law_alcohol_tobacco_legal = {
 }
 
 # ── MARIJUANA DECRIMINALIZATION ───────────
-# Personal possession of cannabis is no
-# longer a criminal offence. Trade remains
-# illegal. SOL improves slightly as
-# enforcement costs fall.
 
 law_marijuana_decriminalization = {
 	group = lawgroup_drug_regulations
@@ -128,12 +119,6 @@ law_marijuana_decriminalization = {
 }
 
 # ── HARD DRUG DECRIMINALIZATION ───────────
-# Possession of harder substances is
-# treated as a public health matter rather
-# than a criminal one. Reduces turmoil
-# from prosecution but increases usage.
-# Referenced in je_war_on_drugs as a
-# disqualifying condition.
 
 law_hard_drugs_decriminalized = {
 	group = lawgroup_drug_regulations
@@ -177,11 +162,6 @@ law_hard_drugs_decriminalized = {
 }
 
 # ── SAFE-INJECTION SITES ──────────────────
-# Supervised facilities where users can
-# consume drugs under medical supervision.
-# Significantly reduces mortality.
-# Referenced in je_war_on_drugs as a
-# disqualifying condition.
 
 law_safe_injection_sites = {
 	group = lawgroup_drug_regulations
@@ -190,7 +170,6 @@ law_safe_injection_sites = {
 	progressiveness = 80
 
 	modifier = {
-		# Significant mortality reduction — the point of the policy
 		state_mortality_mult                               = -0.01
 		country_legitimacy_base_add                        = -10
 		country_prestige_mult                              = -0.05
@@ -223,12 +202,6 @@ law_safe_injection_sites = {
 }
 
 # ── TRAFFICKING ALLOWED ───────────────────
-# The trade in controlled substances is
-# fully legalised and regulated.
-# Massive economic boon from drug trade
-# but crippling prestige and legitimacy
-# costs. Referenced in je_war_on_drugs as
-# a disqualifying condition.
 
 law_trafficking_allowed = {
 	group = lawgroup_drug_regulations
@@ -247,7 +220,6 @@ law_trafficking_allowed = {
 	}
 
 	ai_will_do = {
-		# AI will only take this if cooperating with cartels
 		has_variable = cartel_cooperation
 	}
 

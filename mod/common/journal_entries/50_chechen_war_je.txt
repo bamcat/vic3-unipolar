@@ -1,4 +1,3 @@
-
 je_first_chechen_war = {
 	group = je_group_international
 	icon = "gfx/interface/icons/event_icons/event_military.dds"
@@ -67,7 +66,6 @@ je_first_chechen_war = {
 
 	on_monthly_pulse = {
 		effect = {
-			# Random Chechen guerrilla events
 			c:CCH ?= {
 				random_list = {
 					8 = {}
@@ -78,83 +76,88 @@ je_first_chechen_war = {
 		}
 	}
 
-	complete = {
-		custom_tooltip = {
-			text = je_chechen_war_complete_tt
-			NAND = {
-				exists = c:CCH
-				exists = c:RUS
+
+	outcome = {
+		header = je_standard_completion_header
+		effect_header = je_standard_on_completion_header
+		color = "gold_positive"
+		conclusion_desc = je_standard_completion_conclusion_desc
+		trigger = {
+			custom_tooltip = {
+				text = je_chechen_war_complete_tt
+				NAND = {
+					exists = c:CCH
+					exists = c:RUS
+				}
+			}
+		}
+		effect_all_involved = {
+			if = {
+				limit = {
+					c:CCH ?= this
+				}
+				add_modifier = {
+					name = chechen_war_che_reward
+					years = 20
+					is_decaying = yes
+				}
+				set_variable = chechen_independence_secured
+			}
+			else_if = {
+				limit = {
+					c:RUS ?= this
+				}
+				add_modifier = {
+					name = chechen_war_rus_reward
+					years = 20
+					is_decaying = yes
+				}
+			}
+			trigger_event = chechen_war.2
+			hidden_effect = {
+				remove_global_variable = rus_chechen_war_score
+				remove_global_variable = che_chechen_war_score
+				remove_modifier = chechen_storm_grozny
+				remove_modifier = chechen_mountain_resistance
+				remove_modifier = chechen_ambush_tactics
+				remove_modifier = chechen_war_rus_morale
+				set_immune_to_revolutions = no
+				remove_variable = coup_immunity
+
+				every_scope_state = {
+					limit = { has_modifier = chechen_war_devastation }
+					remove_modifier = chechen_war_devastation
+				}
 			}
 		}
 	}
 
-	invalid = {
-		# Works in contextless scope — checks if RUS and CHE are no longer at war
-		NOT = {
-			any_country = {
-				c:RUS ?= this
-				has_war_with = c:CCH
+	outcome = {
+		flags = { hidden invalid_outcome }
+		conclusion_desc = je_standard_failure_conclusion_desc
+		trigger = {
+			NOT = {
+				any_country = {
+					c:RUS ?= this
+					has_war_with = c:CCH
+				}
 			}
 		}
-	}
- 
-	on_invalid = {
-		trigger_event = chechen_war.2
-		hidden_effect = {
-			remove_global_variable = rus_chechen_war_score
-			remove_global_variable = che_chechen_war_score
-			remove_global_variable = chechen_war_started
-			remove_variable = coup_immunity
- 
-			every_scope_state = {
-				limit = { has_modifier = chechen_war_devastation }
-				remove_modifier = chechen_war_devastation
-			}
-		}
-	}
-	
-	on_complete_all_involved = {
-		if = {
-			limit = {
-				c:CCH ?= this
-			}
-			# Chechen victory — independence secured
-			add_modifier = {
-				name = chechen_war_che_reward
-				years = 20
-				is_decaying = yes
-			}
-			set_variable = chechen_independence_secured
-		}
-		else_if = {
-			limit = {
-				c:RUS ?= this
-			}
-			# Russian victory — territorial integrity
-			add_modifier = {
-				name = chechen_war_rus_reward
-				years = 20
-				is_decaying = yes
-			}
-		}
-		trigger_event = chechen_war.2
-		hidden_effect = {
-			remove_global_variable = rus_chechen_war_score
-			remove_global_variable = che_chechen_war_score
-			remove_modifier = chechen_storm_grozny
-			remove_modifier = chechen_mountain_resistance
-			remove_modifier = chechen_ambush_tactics
-			remove_modifier = chechen_war_rus_morale
-			set_immune_to_revolutions = no
-			remove_variable = coup_immunity
+		effect = {
+			trigger_event = chechen_war.2
+			hidden_effect = {
+				remove_global_variable = rus_chechen_war_score
+				remove_global_variable = che_chechen_war_score
+				remove_global_variable = chechen_war_started
+				remove_variable = coup_immunity
 
-			every_scope_state = {
-				limit = { has_modifier = chechen_war_devastation }
-				remove_modifier = chechen_war_devastation
+				every_scope_state = {
+					limit = { has_modifier = chechen_war_devastation }
+					remove_modifier = chechen_war_devastation
+				}
 			}
 		}
 	}
-
 	weight = 10000
 
 	should_be_pinned_by_default_involved = yes

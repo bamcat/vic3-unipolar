@@ -13,8 +13,8 @@
             months = 48
         }
 		
-		# Laws
 		activate_law = law_type:law_professional_army
+		activate_law = law_type:law_professional_navy
 		activate_law = law_type:law_appointed_bureaucrats
 		activate_law = law_type:law_compulsory_primary_school
 		activate_law = law_type:law_state_atheism
@@ -75,6 +75,17 @@
 
 		ig:ig_trade_unions = {
 			set_ig_suppression = yes
+		}
+
+		add_company = company_type:company_cnpc
+		company:company_cnpc = {
+			set_company_establishment_date = 1988.9.17
+			set_company_state_region = s:STATE_BEIJING
+		}
+		add_company = company_type:company_sinopec
+		company:company_sinopec = {
+			set_company_establishment_date = 1983.7.12
+			set_company_state_region = s:STATE_BEIJING
 		}
 	}
 }

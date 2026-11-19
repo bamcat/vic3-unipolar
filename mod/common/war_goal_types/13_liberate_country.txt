@@ -8,7 +8,6 @@
 		country_creation
 		requires_interest
 
-		# Validation
 		conflicts_with_country_creation
 		conflicts_with_annex_state
 		conflicts_with_annex_country
@@ -40,12 +39,27 @@
 		}
 	}
 
+	infamy_severity = 0.1
+
 	infamy = {
 		value = 0
+
+		add = {
+			desc = "INFAMY_RELEASED_STATES"
+			scope:target_country = {
+				every_releasable_state = {
+					add = state_infamy_value
+				}
+			}
+		}
 	}
 
 	on_enforced = {
 		# script effect on top of the predefined code effect
+	}
+
+	mirrored_wargoal = {
+		method = liberate_loser
 	}
 
 	ai = {

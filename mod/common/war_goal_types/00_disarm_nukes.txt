@@ -1,4 +1,8 @@
 ﻿nuclear_disarmament = {
+	mirrored_wargoal = {
+		method = no_mirror
+	}
+
 	icon = "gfx/interface/icons/war_goals/contain_threat.dds"
 
 	kind = contain_threat
@@ -14,7 +18,6 @@
 	target_type = country
 
 	possible = {
-		# Initiator must be a great or major power
 		ROOT = {
 			country_rank >= rank_value:major_power
 		}
@@ -102,24 +105,17 @@
 
 	on_enforced = {
 		scope:target_country ?= {
-			# ── STRIP THE ARSENAL ────────────────────
-			# Warhead count
 			remove_variable = nukes
 
-			# ── STRIP PROGRAMME STATUS ───────────────
-			# Enrichment
 			remove_variable = nuclear_enrichment_active
 			remove_variable = uranium_enrichment_progress
 			remove_variable = nuclear_enrichment_active
 
-			# Capability
 			remove_variable = nuclear_capable
 
-			# Production
 			remove_variable = nuclear_production_active
 			remove_variable = nuclear_production_progress
 
-			# Exposure / diplomatic flags
 			remove_variable = nuclear_programme_exposed
 			remove_variable = nuclear_programme_denied
 			remove_variable = nuclear_programme_acknowledged
@@ -128,29 +124,23 @@
 			remove_variable = nuclear_un_sanctions_active
 			remove_variable = nuclear_complied_with_un
 
-			# Deployment settings
 			remove_variable = nuclear_deployment_percentage
 			remove_variable = nuclear_kill_rate_cache
 
-			# ── CLEAR TARGET LISTS ───────────────────
 			clear_variable_list = wmd_target_list
 			clear_variable_list = wmd_target_list_c
 			clear_variable_list = nuclear_enemy_list
 			clear_variable_list = nuclear_enemy_states_list
 
-			# ── REMOVE NUCLEAR MODIFIERS ─────────────
 			remove_modifier = nuclear_capable_modifier
 			remove_modifier = nuclear_programme_denied
 			remove_modifier = nuclear_programme_acknowledged
 			remove_modifier = nuclear_warhead_produced_modifier
-			remove_modifier = nuclear_un_sanctions
 			remove_modifier = nuclear_iaea_defiance
 			remove_modifier = nuclear_military_ultimatum
 			remove_modifier = nuclear_great_power_pressure
 
-			# ── POLITICAL CONSEQUENCES ───────────────
-			# The disarmed country pays a heavy domestic price
-			country_add_legitimacy = -20
+			add_modifier = { name = smd_legitimacy_shift multiplier = -20 months = 24 }
 			add_modifier = {
 				name = nuclear_disarmament_enforced
 				months = 120
@@ -160,17 +150,15 @@
 				add_radicals_in_state = { value = large_radicals }
 			}
 
-			# Notify the target country
 			trigger_event = { id = nuclear_events.10 popup = yes }
 		}
 
-		# The enforcing country gets prestige for non-proliferation
 		ROOT = {
 			add_modifier = {
 				name = nuclear_disarmament_enforcer
 				months = 60
 			}
-			country_add_legitimacy = 10
+			add_modifier = { name = smd_legitimacy_shift multiplier = 10 months = 24 }
 		}
 	}
 

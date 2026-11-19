@@ -6,16 +6,13 @@ REPLACE_OR_CREATE:ig_petty_bourgeoisie = {
 	
 	ideologies = {
 	
-		#Economic Ideologies
-		ideology_right_economy 				#General Economic Beliefs 
-		ideology_regionalist 				#Foreign Economic Policy
+		ideology_right_economy
+		ideology_regionalist
 		
-		#Political Ideologies
-		ideology_individualist				#General Political Beliefs
-		ideology_progressive				#Specific Political Beliefs
-		ideology_republican					#Government Types 
+		ideology_individualist
+		ideology_progressive
+		ideology_republican
 		
-		#Dynamic Ideologies
 		#ideology_neutral_spending
 		#ideology_neutral_population
 		
@@ -38,7 +35,6 @@ REPLACE_OR_CREATE:ig_petty_bourgeoisie = {
 		always = yes
 	}
 	
-	# Deprecated; use on_enable effect to assign traits instead
 	traits = {
 		ig_trait_treasury_bonds
 		ig_trait_middle_managers
@@ -63,10 +59,8 @@ REPLACE_OR_CREATE:ig_petty_bourgeoisie = {
 	
 	pop_potential = {
 	
-		#Only Accepted Pops can organise into IGs
 		#pop_acceptance >= acceptance_status_3
 		
-		#Correct pop type
 		OR = {
 			is_pop_type = clerks
 			is_pop_type = shopkeepers
@@ -165,7 +159,7 @@ REPLACE_OR_CREATE:ig_petty_bourgeoisie = {
 					is_in_government = yes
 				}
 			}
-			multiply = { # Multiplied by 1.25x max
+			multiply = {
 				desc = "POP_LOYALISTS"
 				value = pop_loyalist_fraction
 				divide = 4
@@ -178,7 +172,7 @@ REPLACE_OR_CREATE:ig_petty_bourgeoisie = {
 					is_in_government = no
 				}
 			}
-			multiply = { # Multiplied by 1.25x max
+			multiply = {
 				desc = "POP_RADICALS"
 				value = pop_radical_fraction
 				divide = 4
@@ -193,9 +187,7 @@ REPLACE_OR_CREATE:ig_petty_bourgeoisie = {
 	}	
 	
 	agitator_weight = {
-		# Agitators more likely to come from populist IG's rather than elitist
 		value = 1.0
-		# Agitators will never be part of a marginalized IG
 		if = {
 			limit = {
 				owner.ig:ig_petty_bourgeoisie = {
@@ -416,15 +408,11 @@ REPLACE_OR_CREATE:ig_petty_bourgeoisie = {
 		
 	}
 	
-	# The chance that a commander belonging to this IG takes over leadership when it changes
-	# scope:character is the most popular commander in the IG
 	commander_leader_chance = {
 		value = 0.25
 		multiply = ig_commander_leader_chance_mult
 	}
 	
-	# The chance that a executive belonging to this IG takes over leadership when it changes
-	# scope:character is the most popular executive in the IG
 	executive_leader_chance = {
 		value = 0.5
 	}

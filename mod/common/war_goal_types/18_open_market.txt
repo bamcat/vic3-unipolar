@@ -1,4 +1,8 @@
 ﻿open_market = {
+	mirrored_wargoal = {
+		method = reparations
+	}
+
 	icon = "gfx/interface/icons/war_goals/open_market.dds"
 
 	kind = open_market
@@ -6,7 +10,6 @@
 	settings = {
 		require_target_be_part_of_war
 
-		# Validation
 		validate_conflicts_war_goals_all
 	}
 
@@ -111,7 +114,7 @@
 		}
 
 		multiply = {
-			desc = "INFAMY_FROM_REBELLIOUS_SUBJECT" # Rebellious as in they are the aggressor in the play
+			desc = "INFAMY_FROM_REBELLIOUS_SUBJECT"
 			value = 1
 
 			if = {

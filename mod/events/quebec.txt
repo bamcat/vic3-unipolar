@@ -1,6 +1,5 @@
 ﻿namespace = quebec
 
-# Event 1: Tensions Rise
 quebec.1 = {
     type = country_event
     placement = s:STATE_QUEBEC.region_state:ROOT
@@ -16,15 +15,14 @@ quebec.1 = {
 
     option = {
         name = quebec.1.a
-        change_variable = { name = quebec_happiness_var value = 5 }
+        change_variable = { name = quebec_happiness_var add = 5 }
     }
     option = {
         name = quebec.1.b
-        change_variable = { name = quebec_happiness_var value = -5 }
+        change_variable = { name = quebec_happiness_var add = -5 }
     }
 }
 
-# Event 2: 1995 Referendum
 quebec.2 = {
     type = country_event
     placement = s:STATE_QUEBEC.region_state:ROOT
@@ -78,7 +76,6 @@ quebec.2 = {
 }
 
 
-# Event 3: French Language Dispute
 quebec.3 = {
     type = country_event
     placement = s:STATE_QUEBEC.region_state:ROOT
@@ -121,7 +118,6 @@ quebec.3 = {
     }
 }
 
-# Event 4: Federal Funding Cuts
 quebec.4 = {
     type = country_event
     placement = s:STATE_QUEBEC.region_state:ROOT
@@ -168,7 +164,6 @@ quebec.4 = {
     }
 }
 
-# Event 5: Quebec Cultural Festival
 quebec.5 = {
     type = country_event
     placement = s:STATE_QUEBEC.region_state:ROOT
@@ -231,13 +226,13 @@ quebec.6 = {
 		ig:ig_industrialists = { 
 			add_modifier = {
             name = complacent_on_quebec
-            days = 730 # 2 years
+            days = 730
 			}
 		}
 		ig:ig_intelligentsia = { 
 			add_modifier = {
             name = complacent_on_quebec
-            days = 730 # 2 years
+            days = 730
 			}
 		}
         je:je_quebec_happiness = {

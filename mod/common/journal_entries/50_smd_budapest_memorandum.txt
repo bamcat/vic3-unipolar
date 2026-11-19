@@ -1,0 +1,291 @@
+﻿je_budapest_memorandum = {
+	icon = "gfx/interface/icons/event_icons/nuclear_bomb.dds"
+	group = je_group_foreign_policy
+	should_be_pinned_by_default_uninvolved_or_context = yes
+
+	is_shown_when_inactive = {
+		c:UKR ?= this
+		has_variable = nuclear_capable
+	}
+
+	possible = {
+		c:UKR ?= this
+	}
+
+	on_monthly_pulse = {
+		effect = {
+			if = {
+				limit = {
+					game_date >= 1992.5.23
+					NOT = { has_variable = budapest_lisbon_fired }
+				}
+				set_variable = budapest_lisbon_fired
+				trigger_event = { id = budapest.1 popup = yes }
+			}
+			if = {
+				limit = {
+					game_date >= 1994.1.14
+					NOT = { has_variable = budapest_trilateral_fired }
+					NOT = { has_variable = budapest_refused }
+				}
+				set_variable = budapest_trilateral_fired
+				trigger_event = { id = budapest.2 popup = yes }
+			}
+			if = {
+				limit = {
+					game_date >= 1994.12.5
+					NOT = { has_variable = budapest_memorandum_fired }
+					NOT = { has_variable = budapest_refused }
+				}
+				set_variable = budapest_memorandum_fired
+				trigger_event = { id = budapest.3 popup = yes }
+			}
+			if = {
+				limit = {
+					has_variable = budapest_transfer_active
+					has_variable = nukes
+					var:nukes > 0
+				}
+				set_variable = {
+					name = nukes
+					value = {
+						value = var:nukes
+						subtract = var:budapest_transfer_rate
+						min = 0
+					}
+				}
+				nuclear_recompute_top_5 = yes
+			}
+		}
+	}
+
+	status_desc = {
+		first_valid = {
+			triggered_desc = {
+				desc = budapest_status_transfer
+				trigger = { has_variable = budapest_transfer_active }
+			}
+			triggered_desc = {
+				desc = budapest_status_committed_ukr_trilateral
+				trigger = {
+					has_variable = budapest_lisbon_signed
+					NOT = { has_variable = budapest_trilateral_fired }
+				}
+			}
+			triggered_desc = {
+				desc = budapest_status_stalling_ukr_trilateral
+				trigger = {
+					has_variable = budapest_stalling
+					NOT = { has_variable = budapest_trilateral_fired }
+				}
+			}
+			triggered_desc = {
+				desc = budapest_status_committed
+				trigger = { has_variable = budapest_lisbon_signed }
+			}
+			triggered_desc = {
+				desc = budapest_status_stalling
+				trigger = { has_variable = budapest_stalling }
+			}
+			triggered_desc = {
+				desc = budapest_status_start
+			}
+		}
+	}
+
+	outcome = {
+		header = je_standard_completion_header
+		effect_header = je_standard_on_completion_header
+		color = "gold_positive"
+		conclusion_desc = je_budapest_memorandum_disarmed_conclusion_desc
+		trigger = {
+			custom_description = {
+				text = budapest_transfer_started
+				has_variable = budapest_transfer_active
+			}
+			custom_description = {
+				text = budapest_no_warheads_left
+				OR = {
+					NOT = { has_variable = nukes }
+					var:nukes <= 0
+				}
+			}
+		}
+		effect = {
+			smd_budapest_complete_disarmament = yes
+			trigger_event = { id = budapest.5 popup = yes }
+		}
+	}
+
+	outcome = {
+		header = je_standard_failure_header
+		effect_header = je_standard_on_failure_header
+		color = "blue_negative"
+		conclusion_desc = je_budapest_memorandum_refused_conclusion_desc
+		trigger = {
+			custom_description = {
+				text = budapest_refused
+				has_variable = budapest_refused
+			}
+		}
+	}
+
+	outcome = {
+		flags = { hidden invalid_outcome }
+		conclusion_desc = je_standard_failure_conclusion_desc
+		trigger = {
+			NOT = { has_variable = nuclear_capable }
+			NOT = { has_variable = budapest_transfer_active }
+		}
+	}
+
+	weight = 900
+	transferable = no
+	can_revolution_inherit = no
+}
+
+je_kzk_denuclearization = {
+	icon = "gfx/interface/icons/event_icons/nuclear_bomb.dds"
+	group = je_group_foreign_policy
+	should_be_pinned_by_default_uninvolved_or_context = yes
+
+	is_shown_when_inactive = {
+		c:KZK ?= this
+		has_variable = nuclear_capable
+	}
+
+	possible = {
+		c:KZK ?= this
+	}
+
+	on_monthly_pulse = {
+		effect = {
+			if = {
+				limit = {
+					game_date >= 1992.5.23
+					NOT = { has_variable = budapest_lisbon_fired }
+				}
+				set_variable = budapest_lisbon_fired
+				trigger_event = { id = budapest.1 popup = yes }
+			}
+			if = {
+				limit = {
+					game_date >= 1994.11.21
+					NOT = { has_variable = budapest_sapphire_fired }
+					NOT = { has_variable = budapest_refused }
+				}
+				set_variable = budapest_sapphire_fired
+				trigger_event = { id = budapest.4 popup = yes }
+			}
+			if = {
+				limit = {
+					game_date >= 1994.12.5
+					NOT = { has_variable = budapest_memorandum_fired }
+					NOT = { has_variable = budapest_refused }
+				}
+				set_variable = budapest_memorandum_fired
+				trigger_event = { id = budapest.3 popup = yes }
+			}
+			if = {
+				limit = {
+					has_variable = budapest_transfer_active
+					has_variable = nukes
+					var:nukes > 0
+				}
+				set_variable = {
+					name = nukes
+					value = {
+						value = var:nukes
+						subtract = var:budapest_transfer_rate
+						min = 0
+					}
+				}
+				nuclear_recompute_top_5 = yes
+			}
+		}
+	}
+
+	status_desc = {
+		first_valid = {
+			triggered_desc = {
+				desc = budapest_status_transfer
+				trigger = { has_variable = budapest_transfer_active }
+			}
+			triggered_desc = {
+				desc = budapest_status_committed_kzk_sapphire
+				trigger = {
+					has_variable = budapest_lisbon_signed
+					NOT = { has_variable = budapest_sapphire_fired }
+				}
+			}
+			triggered_desc = {
+				desc = budapest_status_stalling_kzk_sapphire
+				trigger = {
+					has_variable = budapest_stalling
+					NOT = { has_variable = budapest_sapphire_fired }
+				}
+			}
+			triggered_desc = {
+				desc = budapest_status_committed
+				trigger = { has_variable = budapest_lisbon_signed }
+			}
+			triggered_desc = {
+				desc = budapest_status_stalling
+				trigger = { has_variable = budapest_stalling }
+			}
+			triggered_desc = {
+				desc = budapest_status_start
+			}
+		}
+	}
+
+	outcome = {
+		header = je_standard_completion_header
+		effect_header = je_standard_on_completion_header
+		color = "gold_positive"
+		conclusion_desc = je_kzk_denuclearization_disarmed_conclusion_desc
+		trigger = {
+			custom_description = {
+				text = budapest_transfer_started
+				has_variable = budapest_transfer_active
+			}
+			custom_description = {
+				text = budapest_no_warheads_left
+				OR = {
+					NOT = { has_variable = nukes }
+					var:nukes <= 0
+				}
+			}
+		}
+		effect = {
+			smd_budapest_complete_disarmament = yes
+			trigger_event = { id = budapest.5 popup = yes }
+		}
+	}
+
+	outcome = {
+		header = je_standard_failure_header
+		effect_header = je_standard_on_failure_header
+		color = "blue_negative"
+		conclusion_desc = je_kzk_denuclearization_refused_conclusion_desc
+		trigger = {
+			custom_description = {
+				text = budapest_refused
+				has_variable = budapest_refused
+			}
+		}
+	}
+
+	outcome = {
+		flags = { hidden invalid_outcome }
+		conclusion_desc = je_standard_failure_conclusion_desc
+		trigger = {
+			NOT = { has_variable = nuclear_capable }
+			NOT = { has_variable = budapest_transfer_active }
+		}
+	}
+
+	weight = 900
+	transferable = no
+	can_revolution_inherit = no
+}

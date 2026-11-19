@@ -1,14 +1,9 @@
-
-# These exist because AI countries do not use the scripted GUI buttons.
-# They mirror the IO button flow while adding anti-spam global cooldowns.
-
 #io_ai_request_join_un = {
 #	is_shown = {
 #		is_ai = yes
 #		is_country_type = recognized
 #		NOT = { is_target_in_global_variable_list = { name = io_un_members target = this } }
 #	}
-#
 #	possible = {
 #		is_ai = yes
 #		is_country_type = recognized
@@ -18,11 +13,9 @@
 #		NOT = { has_variable = io_ai_application_cooldown }
 #		NOT = { has_global_variable = io_ai_un_application_global_cooldown }
 #	}
-#
 #	when_taken = {
 #		io_ai_apply_to_un = yes
 #	}
-#
 #	ai_chance = {
 #		base = 2
 #		modifier = {
@@ -30,7 +23,6 @@
 #			add = 5
 #		}
 #	}
-#
 #	cooldown = { days = 365 }
 #}
 
@@ -58,6 +50,7 @@ io_ai_request_join_nato = {
 			capital = { is_in_geographic_region = geographic_region_north_america }
 			c:TRK ?= this
 		}
+		io_meets_nato_accession_criteria = yes
 	}
 
 	when_taken = {

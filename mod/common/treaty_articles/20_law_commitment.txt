@@ -343,7 +343,7 @@
                         }
                     }
 
-                    if = { # Governance Principles
+                    if = {
                         limit = {
                             scope:article.input_law = {
                                 is_same_law_group_as = law_type:law_monarchy
@@ -352,7 +352,7 @@
                         add = -100
                     }
 
-                    if = { # Distribution of Power
+                    if = {
                         limit = {
                             scope:article.input_law = {
                                 is_same_law_group_as = law_type:law_autocracy
@@ -557,7 +557,6 @@
 
                 if = {
                     limit = {
-                        # We want to support them irrespective of which law we have and they wish to enact
                         OR = {
                             scope:article.input_law = law_type:law_presidential_republic
                             scope:article.input_law = law_type:law_parliamentary_republic
@@ -651,7 +650,6 @@
 					scope:article.input_law ?= law_type:law_slavery_banned
 				}
 
-				# Britain will prioritize ending slavery in Brazil if they have the Aberdeen Act JE
 				if = {
 					limit = {
 						has_journal_entry = je_aberdeen_act
@@ -661,7 +659,6 @@
 					}
 					add = 0.5
 				}
-				# Great Powers with slavery banned will prioritize ending slavery in Brazil if that country failed its slavery JE
 				if = {
 					limit = {
 						has_law_or_variant = law_type:law_slavery_banned

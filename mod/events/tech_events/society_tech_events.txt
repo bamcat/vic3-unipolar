@@ -1,6 +1,6 @@
 ﻿namespace = society_tech_events
 
-society_tech_events.104 = { #Evelators
+society_tech_events.104 = {
 	type = country_event
 
 	trigger = {
@@ -44,7 +44,7 @@ society_tech_events.104 = { #Evelators
 	immediate = {
 	}
 
-	option = { #Gives bonus for steel and glass industries
+	option = {
 		name = society_tech_events.104.a
 		default_option = yes
 		add_modifier = {
@@ -53,7 +53,7 @@ society_tech_events.104 = { #Evelators
 		}
 	}
 
-	option = { #Gives bonus for urban centers
+	option = {
 		name = society_tech_events.104.b
 		add_modifier = {
 			name = elevator_services_production_modifier
@@ -62,7 +62,7 @@ society_tech_events.104 = { #Evelators
 	}
 }
 
-society_tech_events.105 = { #Mutual Funds
+society_tech_events.105 = {
 	type = country_event
 
 	trigger = {

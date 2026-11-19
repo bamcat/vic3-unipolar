@@ -4,14 +4,10 @@
 
 # ──────────────────────────────────────────
 # JE ACTIVE MODIFIER
-# Applied to all involved countries while
-# je_arab_spring is active.
-# Scope: country
 # ──────────────────────────────────────────
 
 modifier_arab_spring = {
 	icon = gfx/interface/icons/timed_modifier_icons/modifier_flag_negative.dds
-	# Destabilization: authority erodes, turmoil bites harder
 	country_authority_mult = -0.10
 	state_turmoil_effects_mult = 0.15
 	state_radicals_from_political_movements_mult = 1
@@ -20,28 +16,20 @@ modifier_arab_spring = {
 
 # ──────────────────────────────────────────
 # CHARACTER MODIFIER — PROTEST FIGUREHEAD
-# Applied to the prominent protest leader
-# identified in arab_spring.1.
-# Scope: character
 # ──────────────────────────────────────────
 
 arab_spring_popular_dissident = {
 	icon = gfx/interface/icons/timed_modifier_icons/modifier_flag_positive.dds
-	# This character draws support and attention
 	character_popularity_add = 15
 	character_ig_attraction_mult = 0.15
 }
 
 # ──────────────────────────────────────────
 # REGIME CRACKDOWN
-# Applied to countries that choose to
-# suppress protests by force (arab_spring.1 option A).
-# Scope: country
 # ──────────────────────────────────────────
 
 suppressing_protests = {
 	icon = gfx/interface/icons/timed_modifier_icons/modifier_flag_negative.dds
-	# Show of force boosts short-term authority...
 	country_authority_mult = 0.10
 	# ...but galvanises opposition and draws international censure
 	country_turmoil_effects_mult = 0.25
@@ -51,43 +39,31 @@ suppressing_protests = {
 
 # ──────────────────────────────────────────
 # ENACTMENT MODIFIER — SECURITY LEGISLATION
-# Speeds up secret police / national guard
-# law enactment during the crisis.
-# Scope: country (enactment modifier)
 # ──────────────────────────────────────────
 
 arab_spring_reactionary_enactment = {
 	icon = gfx/interface/icons/timed_modifier_icons/modifier_flag_negative.dds
-	# Boosts enactment chance for security-related laws
 	country_law_enactment_success_add = 0.15
 	country_law_enactment_contradict_chance_add = -0.05
 }
 
 # ──────────────────────────────────────────
 # INSTITUTION SPEED BOOST
-# Applied when a country doubles down on
-# investing in its security apparatus.
-# Scope: country
 # ──────────────────────────────────────────
 
 arab_spring_institution_speed = {
 	icon = gfx/interface/icons/timed_modifier_icons/modifier_flag_negative.dds
-	# Faster institution growth at the cost of spending
 	country_institution_size_change_speed_mult = 0.20
 	country_expenses_mult = 0.05
 }
 
 # ──────────────────────────────────────────
 # POST-REVOLUTION TRANSITION
-# Applied to countries that successfully
-# complete the Arab Spring JE.
-# Scope: country
 # ──────────────────────────────────────────
 
 arab_spring_democratic_transition = {
 	icon = gfx/interface/icons/timed_modifier_icons/modifier_flag_positive.dds
-	# Fragile optimism — legitimacy up, but stability not guaranteed
-	country_legitimacy_base_add = 15
+	country_legitimacy_base_add = 5
 	country_turmoil_effects_mult = 0.10
 	country_authority_mult = -0.05
 	country_political_strength_mult = 0.10
@@ -95,14 +71,10 @@ arab_spring_democratic_transition = {
 
 # ──────────────────────────────────────────
 # ARAB WINTER — REVOLUTION CRUSHED
-# Applied when je_arab_winter fails
-# (crackdown reaches 100%).
-# Scope: country
 # ──────────────────────────────────────────
 
 arab_winter_revolution_crushed = {
 	icon = gfx/interface/icons/timed_modifier_icons/modifier_flag_negative.dds
-	# Regime reasserted — but underlying grievances remain
 	country_legitimacy_base_add = -10
 	country_authority_mult = 0.10
 	country_turmoil_effects_mult = 0.20
@@ -111,15 +83,11 @@ arab_winter_revolution_crushed = {
 
 # ──────────────────────────────────────────
 # ARAB WINTER — ISLAMIST TAKEOVER
-# Applied when je_arab_winter completes via
 # arab_spring_islamist_victory_trigger.
-# Scope: country
 # ──────────────────────────────────────────
 
 arab_winter_islamist_consolidation = {
 	icon = gfx/interface/icons/timed_modifier_icons/modifier_flag_negative.dds
-	# Theocratic consolidation: authority and legitimacy up for devout...
-	country_legitimacy_base_add = 10
 	country_authority_mult = 0.15
 	# ...but secular and minority populations radicalize
 	country_turmoil_effects_mult = 0.15
@@ -128,11 +96,6 @@ arab_winter_islamist_consolidation = {
 
 # ──────────────────────────────────────────
 # TRANSITION CABINET
-# Applied to the country when arab_spring.9
-# fires — mirrors modifier_revolutionary_cabinet.
-# Keeps the new government immune to
-# immediate counter-revolution while it
-# consolidates. Scope: country
 # ──────────────────────────────────────────
 
 modifier_arab_spring_transition_cabinet = {
@@ -142,12 +105,7 @@ modifier_arab_spring_transition_cabinet = {
 
 # ──────────────────────────────────────────
 # KICK OUT OF INSURRECTION
-# Applied to the leading reformist IG after
-# the revolution — mirrors
 # modifier_springtime_kick_out_of_insurrection.
-# High approval boost pulls them off the
-# barricades and into government.
-# Scope: interest_group
 # ──────────────────────────────────────────
 
 modifier_arab_spring_kick_out_of_insurrection = {
@@ -157,10 +115,6 @@ modifier_arab_spring_kick_out_of_insurrection = {
 
 # ──────────────────────────────────────────
 # REGIME IG DEFEATED
-# Applied to non-reformist IGs removed from
-# government after the revolution.
-# Mirrors modifier_revolution_defeated_light.
-# Scope: interest_group
 # ──────────────────────────────────────────
 
 modifier_arab_spring_regime_ig_defeated = {
@@ -171,10 +125,6 @@ modifier_arab_spring_regime_ig_defeated = {
 
 # ──────────────────────────────────────────
 # REGIONAL CONTAGION
-# Applied to neighbouring Arab states
-# watching the Spring spread. Represents
-# the 'domino effect' of regional unrest.
-# Scope: country
 # ──────────────────────────────────────────
 
 arab_spring_regional_contagion = {
@@ -186,9 +136,6 @@ arab_spring_regional_contagion = {
 
 # ──────────────────────────────────────────
 # REGIME COLLABORATOR
-# Applied to a character leader who chose
-# to distance themselves from the protest
-# movement. Scope: character
 # ──────────────────────────────────────────
  
 arab_spring_regime_collaborator = {
@@ -199,8 +146,6 @@ arab_spring_regime_collaborator = {
  
 # ──────────────────────────────────────────
 # DISSIDENTS WITHIN
-# Applied to an IG when agitators begin
-# operating inside it. Scope: interest_group
 # ──────────────────────────────────────────
  
 arab_spring_dissidents_within = {
@@ -211,9 +156,6 @@ arab_spring_dissidents_within = {
  
 # ──────────────────────────────────────────
 # SPREAD THE SPRING
-# Applied to IGs that actively reach out to
-# opposition movements in neighbouring
-# countries. Scope: interest_group
 # ──────────────────────────────────────────
  
 arab_spring_spread_the_spring = {
@@ -224,9 +166,6 @@ arab_spring_spread_the_spring = {
  
 # ──────────────────────────────────────────
 # CONTAINED MOVEMENT
-# Applied to IGs that chose to stay focused
-# domestically rather than export the
-# revolution. Scope: interest_group
 # ──────────────────────────────────────────
  
 arab_spring_contained_movement = {
@@ -269,7 +208,6 @@ arab_spring_intl_western_backing = {
 arab_spring_intl_regime_backing = {
 	icon = gfx/interface/icons/timed_modifier_icons/modifier_flag_negative.dds
 	country_authority_mult              = 0.10
-	country_legitimacy_base_add         = 5
 }
 
 # No-fly zone / limited military intervention

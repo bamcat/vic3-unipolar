@@ -1,0 +1,726 @@
+﻿smd_alarm_dismissed = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_flag_negative.dds
+	interest_group_ig_armed_forces_approval_add = -2
+}
+
+smd_annulled_election = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_documents_negative.dds
+	country_legitimacy_base_add = -10
+}
+
+smd_army_purge = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_rifle_negative.dds
+	interest_group_ig_armed_forces_approval_add = -2
+	country_legitimacy_base_add = 3
+}
+
+smd_bilingual_schools = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_lightbulb_positive.dds
+	state_education_access_add = 0.1
+	state_radicals_from_political_movements_mult = -0.1
+}
+
+smd_blockade_broken = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_fist_negative.dds
+	interest_group_ig_petty_bourgeoisie_approval_add = -2
+	interest_group_ig_trade_unions_approval_add = -1
+}
+
+smd_border_closed = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_flag_negative.dds
+	country_migration_restrictiveness_add = 30
+	country_prestige_add = -10
+	interest_group_ig_intelligentsia_approval_add = -1
+}
+
+smd_border_opened = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_flag_positive.dds
+	country_migration_restrictiveness_add = -30
+	country_prestige_add = 10
+	interest_group_ig_intelligentsia_approval_add = 2
+	interest_group_ig_petty_bourgeoisie_approval_add = -1
+}
+
+smd_brain_gain = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_lightbulb_positive.dds
+	country_weekly_innovation_mult = 0.05
+	state_pop_qualifications_mult = 0.1
+}
+
+smd_bread_riots_crushed = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_fist_negative.dds
+	state_radicals_from_political_movements_mult = 0.15
+	country_legitimacy_base_add = -5
+}
+
+smd_calm_restored = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_statue_positive.dds
+	country_legitimacy_base_add = 5
+}
+
+smd_camp_unrest_policed = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_fist_negative.dds
+	state_radicals_from_political_movements_mult = 0.1
+}
+
+smd_capital_flight = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_coins_negative.dds
+	interest_group_ig_industrialists_approval_add = -3
+	state_capitalists_investment_pool_efficiency_mult = -0.2
+}
+
+smd_captured_state = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_statue_negative.dds
+	country_legitimacy_base_add = -10
+	country_bureaucracy_mult = -0.1
+	state_tax_waste_add = 0.5
+}
+
+smd_clean_government = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_statue_positive.dds
+	country_legitimacy_base_add = 10
+	state_tax_waste_add = -0.05
+}
+
+smd_consolidated_democracy = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_statue_positive.dds
+	country_legitimacy_base_add = 10
+	state_radicals_from_political_movements_mult = -0.1
+}
+
+smd_court_defied = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_statue_negative.dds
+	country_legitimacy_base_add = -5
+	interest_group_ig_intelligentsia_approval_add = -2
+}
+
+smd_court_respected = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_statue_positive.dds
+	country_legitimacy_base_add = 5
+	interest_group_ig_intelligentsia_approval_add = 1
+}
+
+smd_courts_packed_mod = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_documents_negative.dds
+	interest_group_ig_intelligentsia_approval_add = -3
+	country_authority_mult = 0.1
+}
+
+smd_cover_up_exposed = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_statue_negative.dds
+	country_legitimacy_base_add = -15
+	interest_group_ig_intelligentsia_approval_add = -2
+}
+
+smd_crime_crackdown_abuses = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_fist_negative.dds
+	interest_group_ig_intelligentsia_approval_add = -3
+	state_radicals_from_political_movements_mult = 0.15
+}
+
+smd_crime_gang_truce = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_documents_negative.dds
+	country_legitimacy_base_add = -5
+}
+
+smd_crime_independent_inquiry = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_documents_positive.dds
+	interest_group_ig_intelligentsia_approval_add = 2
+	country_legitimacy_base_add = 3
+}
+
+smd_crime_kingpin_trial = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_documents_positive.dds
+	country_legitimacy_base_add = 5
+}
+
+smd_crime_police_purge = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_documents_negative.dds
+	country_bureaucracy_mult = -0.05
+	country_legitimacy_base_add = 3
+}
+
+smd_crime_police_shielded = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_documents_negative.dds
+	country_legitimacy_base_add = -3
+	interest_group_ig_intelligentsia_approval_add = -1
+}
+
+smd_crime_private_security = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_documents_negative.dds
+	interest_group_ig_petty_bourgeoisie_approval_add = -2
+}
+
+smd_crime_protection_unit = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_documents_positive.dds
+	interest_group_ig_petty_bourgeoisie_approval_add = 1
+	country_legitimacy_base_add = 3
+}
+
+smd_crime_troops_on_streets = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_rifle_negative.dds
+	state_turmoil_effects_mult = -0.2
+	state_radicals_from_political_movements_mult = 0.15
+}
+
+smd_crony_privatisation = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_coins_negative.dds
+	country_legitimacy_base_add = -5
+	interest_group_ig_industrialists_approval_add = 2
+	state_tax_waste_add = 0.5
+}
+
+smd_democratic_backsliding = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_statue_negative.dds
+	country_legitimacy_base_add = -10
+	state_radicals_from_political_movements_mult = 0.1
+}
+
+smd_democratic_resilience = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_statue_positive.dds
+	country_legitimacy_base_add = 10
+	interest_group_ig_intelligentsia_approval_add = 2
+}
+
+smd_devolution_backlash = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_flag_negative.dds
+	interest_group_ig_armed_forces_approval_add = -1
+	country_authority_mult = -0.1
+}
+
+smd_devolution_settlement = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_statue_positive.dds
+	country_legitimacy_base_add = 5
+	state_turmoil_effects_mult = -0.15
+}
+
+smd_devolved_assembly = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_flag_positive.dds
+	state_turmoil_effects_mult = -0.2
+	state_radicals_from_political_movements_mult = -0.5
+}
+
+smd_dissident_crackdown = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_fist_negative.dds
+	interest_group_ig_intelligentsia_approval_add = -3
+	state_radicals_from_political_movements_mult = 0.15
+}
+
+smd_doctors_leave = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_documents_negative.dds
+	state_mortality_mult = 0.05
+}
+
+smd_doctors_pay_rise = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_documents_positive.dds
+	state_mortality_mult = -0.05
+	interest_group_ig_intelligentsia_approval_add = 1
+}
+
+smd_emergency_food_aid = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_documents_positive.dds
+	country_legitimacy_base_add = 5
+}
+
+smd_emergency_powers = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_flag_negative.dds
+	country_authority_mult = 0.2
+	interest_group_ig_intelligentsia_approval_add = -3
+	state_radicals_from_political_movements_mult = 0.15
+}
+
+smd_emergency_refused = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_flag_negative.dds
+	country_legitimacy_base_add = -5
+	interest_group_ig_armed_forces_approval_add = -2
+}
+
+smd_entrenched_regime = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_flag_positive.dds
+	country_authority_mult = 0.2
+	country_legitimacy_base_add = 10
+	interest_group_ig_intelligentsia_approval_add = -3
+	state_radicals_from_political_movements_mult = 0.15
+}
+
+smd_factories_seized = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_fist_negative.dds
+	interest_group_ig_industrialists_approval_add = -4
+	interest_group_ig_trade_unions_approval_add = 2
+}
+
+smd_foreign_criticism_defied = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_flag_positive.dds
+	country_legitimacy_base_add = 5
+	country_influence_add = -50
+}
+
+smd_generals_retired = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_rifle_negative.dds
+	interest_group_ig_armed_forces_approval_add = -3
+	country_legitimacy_base_add = 3
+}
+
+smd_gradual_reform = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_gear_positive.dds
+	interest_group_ig_trade_unions_approval_add = 1
+	interest_group_ig_industrialists_approval_add = -1
+	state_radicals_from_political_movements_mult = -0.1
+}
+
+smd_hollowed_out = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_lightbulb_negative.dds
+	country_weekly_innovation_mult = -0.05
+	state_pop_qualifications_mult = -0.1
+}
+
+smd_humanitarian_reputation = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_statue_positive.dds
+	country_prestige_add = 25
+	country_influence_add = 50
+}
+
+smd_hyperinflation = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_coins_negative.dds
+	building_throughput_add = -0.1
+	country_legitimacy_base_add = -10
+	state_radicals_and_loyalists_from_sol_change_mult = 0.25
+}
+
+smd_indifference_charge = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_documents_negative.dds
+	country_legitimacy_base_add = -3
+}
+
+smd_informal_economy_crackdown = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_fist_negative.dds
+	interest_group_ig_petty_bourgeoisie_approval_add = -2
+	country_legitimacy_base_add = -3
+}
+
+smd_informal_economy_tolerated = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_coins_positive.dds
+	interest_group_ig_petty_bourgeoisie_approval_add = 1
+	state_tax_waste_add = 0.5
+}
+
+smd_investigation_obstructed = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_documents_negative.dds
+	country_legitimacy_base_add = -10
+	interest_group_ig_intelligentsia_approval_add = -2
+}
+
+smd_language_assimilation_policy = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_flag_negative.dds
+	state_assimilation_mult = 0.2
+	state_radicals_from_political_movements_mult = 0.1
+}
+
+smd_language_conflict = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_statue_negative.dds
+	state_radicals_from_political_movements_mult = 0.15
+	country_legitimacy_base_add = -5
+}
+
+smd_language_dialogue = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_documents_positive.dds
+	country_legitimacy_base_add = 3
+}
+
+smd_language_rights_policy = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_flag_positive.dds
+	state_radicals_from_political_movements_mult = -0.1
+	state_assimilation_mult = -0.2
+}
+
+smd_language_riots = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_fist_negative.dds
+	state_turmoil_effects_mult = 0.15
+}
+
+smd_language_settled = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_statue_positive.dds
+	state_radicals_from_political_movements_mult = -0.1
+	country_legitimacy_base_add = 5
+}
+
+smd_left_reversal = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_flag_negative.dds
+	interest_group_ig_trade_unions_approval_add = -2
+}
+
+smd_lockout_settlement = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_documents_negative.dds
+	interest_group_ig_industrialists_approval_add = 1
+	interest_group_ig_trade_unions_approval_add = -2
+}
+
+smd_loose_money = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_coins_negative.dds
+	interest_group_ig_trade_unions_approval_add = 1
+	country_legitimacy_base_add = -5
+}
+
+smd_lustration = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_documents_positive.dds
+	interest_group_ig_intelligentsia_approval_add = 2
+	interest_group_ig_armed_forces_approval_add = -2
+	country_bureaucracy_mult = -0.1
+}
+
+smd_majority_language_schools = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_documents_negative.dds
+	state_assimilation_mult = 0.2
+	state_radicals_from_political_movements_mult = 0.1
+}
+
+smd_managed_urbanisation = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_statue_positive.dds
+	state_mortality_mult = -0.05
+	country_legitimacy_base_add = 5
+}
+
+smd_market_economy_established = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_coins_positive.dds
+	country_legitimacy_base_add = 5
+	state_construction_mult = 0.1
+	state_capitalists_investment_pool_efficiency_mult = 0.15
+}
+
+smd_mass_protests = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_fist_negative.dds
+	state_turmoil_effects_mult = 0.15
+}
+
+smd_media_takeover = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_documents_negative.dds
+	interest_group_ig_intelligentsia_approval_add = -2
+	country_authority_mult = 0.1
+}
+
+smd_megaslums = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_statue_negative.dds
+	state_mortality_mult = 0.1
+	state_turmoil_effects_mult = 0.15
+	country_legitimacy_base_add = -5
+}
+
+smd_minister_arrested = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_documents_positive.dds
+	country_legitimacy_base_add = 5
+}
+
+smd_moderate_programme = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_documents_positive.dds
+	interest_group_ig_trade_unions_approval_add = 1
+	interest_group_ig_industrialists_approval_add = 1
+}
+
+smd_nationalisation_programme = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_coins_positive.dds
+	building_nationalization_cost_mult = -0.5
+	building_nationalization_radicals_mult = -0.5
+	interest_group_ig_trade_unions_approval_add = 2
+}
+
+smd_oligarch_influence = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_coins_negative.dds
+	interest_group_ig_industrialists_approval_add = 3
+	country_legitimacy_base_add = -5
+	state_tax_waste_add = 0.5
+}
+
+smd_oligarchs_prosecuted = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_documents_positive.dds
+	interest_group_ig_industrialists_approval_add = -3
+	country_legitimacy_base_add = 5
+}
+
+smd_party_system_shaken = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_flag_negative.dds
+	interest_group_in_government_approval_add = -2
+}
+
+smd_pension_indexation = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_documents_positive.dds
+	interest_group_ig_trade_unions_approval_add = 2
+	country_legitimacy_base_add = 3
+}
+
+smd_price_controls_blamed = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_documents_negative.dds
+	interest_group_ig_industrialists_approval_add = -1
+	interest_group_ig_petty_bourgeoisie_approval_add = -1
+}
+
+smd_privatisation_wave = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_coins_positive.dds
+	interest_group_ig_industrialists_approval_add = 2
+	interest_group_ig_trade_unions_approval_add = -2
+	state_radicals_and_loyalists_from_sol_change_mult = 0.25
+}
+
+smd_prosecutors_intimidated = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_documents_negative.dds
+	country_legitimacy_base_add = -5
+}
+
+smd_protest_concessions = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_documents_positive.dds
+	country_authority_mult = -0.1
+	interest_group_ig_intelligentsia_approval_add = 2
+}
+
+smd_protest_crackdown = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_fist_negative.dds
+	interest_group_ig_intelligentsia_approval_add = -3
+	state_radicals_from_political_movements_mult = 0.15
+}
+
+smd_purge_refused = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_rifle_negative.dds
+	interest_group_ig_armed_forces_approval_add = -2
+	interest_group_ig_intelligentsia_approval_add = 1
+}
+
+smd_radical_programme = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_flag_positive.dds
+	interest_group_ig_trade_unions_approval_add = 2
+	interest_group_ig_industrialists_approval_add = -2
+}
+
+smd_raised_alert = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_rifle_positive.dds
+	country_authority_mult = 0.1
+	interest_group_ig_intelligentsia_approval_add = -1
+}
+
+smd_rationing = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_documents_negative.dds
+	interest_group_ig_petty_bourgeoisie_approval_add = -2
+	interest_group_ig_rural_folk_approval_add = -2
+}
+
+smd_recentralised_state = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_fist_negative.dds
+	state_radicals_from_political_movements_mult = 0.25
+	state_turmoil_effects_mult = 0.1
+}
+
+smd_reform_pledge = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_documents_positive.dds
+	country_influence_add = 50
+}
+
+smd_refugee_aid_appeal = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_coins_positive.dds
+	country_prestige_add = -10
+}
+
+smd_refugee_backlash = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_statue_negative.dds
+	country_legitimacy_base_add = -10
+	state_radicals_from_political_movements_mult = 0.15
+}
+
+smd_regional_compromise = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_documents_positive.dds
+	state_turmoil_effects_mult = -0.15
+}
+
+smd_regional_hardline = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_fist_negative.dds
+	state_radicals_from_political_movements_mult = 0.15
+}
+
+smd_regional_party_wins = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_flag_negative.dds
+	state_turmoil_effects_mult = 0.1
+}
+
+smd_remittance_boom = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_coins_positive.dds
+	interest_group_ig_petty_bourgeoisie_approval_add = 1
+	state_construction_mult = 0.05
+}
+
+smd_research_funding = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_lightbulb_positive.dds
+	country_weekly_innovation_mult = 0.05
+}
+
+smd_restoration = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_flag_negative.dds
+	interest_group_ig_industrialists_approval_add = -3
+	interest_group_ig_trade_unions_approval_add = 2
+}
+
+smd_returning_entrepreneurs = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_coins_positive.dds
+	state_construction_mult = 0.05
+	state_capitalists_investment_pool_efficiency_mult = 0.1
+}
+
+smd_rule_of_law_restored = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_statue_positive.dds
+	country_legitimacy_base_add = 5
+	state_turmoil_effects_mult = -0.15
+	state_tax_waste_add = -0.05
+}
+
+smd_scandal_defiance = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_documents_negative.dds
+	interest_group_ig_intelligentsia_approval_add = -2
+	country_legitimacy_base_add = -3
+}
+
+smd_scandal_resignations = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_documents_negative.dds
+	country_legitimacy_base_add = -5
+}
+
+smd_separatist_crisis = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_statue_negative.dds
+	country_legitimacy_base_add = -10
+	state_turmoil_effects_mult = 0.2
+	country_secession_progress_mult = 0.25
+}
+
+smd_shanty_fire_neglect = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_fire_negative.dds
+	country_legitimacy_base_add = -5
+}
+
+smd_shanty_fire_relief = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_documents_positive.dds
+	country_legitimacy_base_add = 3
+}
+
+smd_shock_therapy = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_gear_negative.dds
+	interest_group_ig_trade_unions_approval_add = -3
+	interest_group_ig_industrialists_approval_add = 2
+	state_radicals_and_loyalists_from_sol_change_mult = 0.25
+}
+
+smd_slum_clearances = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_fist_negative.dds
+	state_radicals_from_political_movements_mult = 0.15
+	interest_group_ig_intelligentsia_approval_add = -2
+	interest_group_ig_rural_folk_approval_add = -1
+}
+
+smd_slum_upgrading = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_statue_positive.dds
+	state_mortality_mult = -0.05
+	country_legitimacy_base_add = 3
+}
+
+smd_social_state = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_statue_positive.dds
+	country_legitimacy_base_add = 10
+	interest_group_ig_trade_unions_approval_add = 2
+	state_radicals_from_political_movements_mult = -0.1
+}
+
+smd_softer_tone = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_documents_positive.dds
+	interest_group_ig_intelligentsia_approval_add = 1
+	country_legitimacy_base_add = -3
+}
+
+smd_stalled_transition = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_gear_negative.dds
+	state_tax_waste_add = 0.5
+	country_legitimacy_base_add = -5
+}
+
+smd_street_revolt = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_flag_negative.dds
+	country_authority_mult = -0.1
+	state_turmoil_effects_mult = 0.15
+	state_radicals_from_political_movements_mult = 0.5
+	political_movement_pop_attraction_mult = 2
+}
+
+smd_term_extension = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_flag_negative.dds
+	country_legitimacy_base_add = -10
+	interest_group_ig_intelligentsia_approval_add = -2
+}
+
+smd_thick_line = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_documents_positive.dds
+	country_legitimacy_base_add = 3
+	interest_group_ig_armed_forces_approval_add = 1
+	interest_group_ig_intelligentsia_approval_add = -1
+}
+
+smd_tight_money = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_coins_negative.dds
+	state_construction_mult = -0.1
+	interest_group_ig_trade_unions_approval_add = -1
+}
+
+smd_veterans_benefits = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_rifle_positive.dds
+	interest_group_ig_armed_forces_approval_add = 3
+	country_legitimacy_base_add = 3
+}
+
+smd_veterans_ignored = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_documents_negative.dds
+	interest_group_ig_armed_forces_approval_add = -2
+}
+
+smd_veterans_movement = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_statue_negative.dds
+	interest_group_ig_armed_forces_approval_add = -3
+	state_radicals_from_political_movements_mult = 0.15
+}
+
+smd_veterans_reintegrated = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_statue_positive.dds
+	interest_group_ig_armed_forces_approval_add = 2
+	country_legitimacy_base_add = 5
+}
+
+smd_victory_parade = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_flag_positive.dds
+	country_legitimacy_base_add = 5
+	interest_group_ig_armed_forces_approval_add = 1
+}
+
+smd_war_memorial = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_statue_positive.dds
+	country_legitimacy_base_add = 3
+}
+
+smd_war_syndrome_denied = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_lightbulb_negative.dds
+	interest_group_ig_armed_forces_approval_add = -2
+	country_legitimacy_base_add = -3
+}
+
+smd_war_syndrome_research = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_lightbulb_positive.dds
+	interest_group_ig_armed_forces_approval_add = 2
+}
+
+smd_water_rationing = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_documents_negative.dds
+	state_mortality_mult = 0.05
+	state_turmoil_effects_mult = 0.15
+}
+
+smd_xenophobia_appeased = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_documents_negative.dds
+	country_prestige_add = -10
+	interest_group_ig_petty_bourgeoisie_approval_add = 1
+}
+
+smd_xenophobia_condemned = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_documents_positive.dds
+	interest_group_ig_intelligentsia_approval_add = 1
+	interest_group_ig_petty_bourgeoisie_approval_add = -1
+}

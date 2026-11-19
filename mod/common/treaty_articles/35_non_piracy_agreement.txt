@@ -107,7 +107,6 @@
 					scope:source_country ?= this
 				}
 
-				# We are doing this to be able to reuse loc across treaties and diplomatic actions
 				scope:source_country = {
 					save_temporary_scope_as = target
 				}

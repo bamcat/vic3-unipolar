@@ -1,4 +1,4 @@
-color_lists = {
+﻿color_lists = {
 	normal_colors = {
 		100 = "red"
 		100 = "blue"
@@ -25,6 +25,19 @@ color_lists = {
 			5000 = "black"
 			5000 = "red"
 		}
+	}
+
+	rcw_breakaway_colors = {
+		1 = "rcw_breakaway_1_teal"
+		1 = "rcw_breakaway_2_indigo"
+		1 = "rcw_breakaway_3_brown"
+		1 = "rcw_breakaway_4_olive"
+		1 = "rcw_breakaway_5_navy"
+		1 = "rcw_breakaway_6_sand"
+		1 = "rcw_breakaway_7_aquamarine"
+		1 = "rcw_breakaway_8_cerulean"
+		1 = "rcw_breakaway_9_slate"
+		1 = "rcw_breakaway_10_periwinkle"
 	}
 
 	metal_colors = {
@@ -102,14 +115,12 @@ color_lists = {
 	}
 
 	com_normal_colors = {
-	# Normal colours excluding Red for communist templates
 		100 = "blue"
 		20 = "black"
 		20 = "green"
 		20 = "blue_light"
 	}
 	com_red_opposites = {
-	# Colours opposites of Red for communist templates
 		10 = "white"
 		10 = "yellow"
 		20 = "green"
@@ -144,7 +155,6 @@ color_lists = {
 		}
 	}
 	fascist_normal_bg_colors = {
-	# Normal bg colours for fascist flags
 		100 = "red"
 		50 = "blue"
 		25 = "green"
@@ -153,19 +163,16 @@ color_lists = {
 		5 = "brown_light"
 	}
 	fascist_normal_charge_colors = {
-	# Fascist charge, black is the most common pick
 		250 = "black"
 		50 = "red"
 		50 = "blue"
 		25 = "green"
 	}
 	fascist_metal_colors = {
-	# Allows some diversity by picking gold sometimes
 		90 = "white"
 		10 = "yellow"
 	}
 
-    # root scope: Power Bloc
     power_bloc_colors = {
         100 = "red"
         100 = "blue"

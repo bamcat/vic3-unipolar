@@ -1,6 +1,5 @@
 ﻿namespace = ruler_term_limits
 
-# replace ig leader if the current leader already had two terms
 ruler_term_limits.1 = {	 
 	type = country_event 
 	hidden = yes
@@ -45,7 +44,6 @@ ruler_term_limits.1 = {
 	}	
 }
 
-# start timer to replace ig leader before election starts if he already has two terms
 ruler_term_limits.2 = {	
 	type = country_event 
 	hidden = yes
@@ -68,7 +66,6 @@ ruler_term_limits.2 = {
 	}		
 }
 
-# set ruler term modifier after election
 ruler_term_limits.3 = {	
 	type = country_event 
 	hidden = yes
@@ -106,14 +103,13 @@ ruler_term_limits.3 = {
 			ruler = {
 				add_modifier = { 
 					name = tl_first_term
-					months = 49 # one election cycle + 1 month to ensure temporary overlap
+					months = 49
 				}
 			}
 		}		
 	}
 }
 
-# mark first term of starting characters
 ruler_term_limits.4 = {	
 	type = character_event 
 	hidden = yes
@@ -136,7 +132,7 @@ ruler_term_limits.4 = {
 	immediate = {
 		add_modifier = { 
 			name = tl_first_term
-			months = 49 # one election cycle + 1 month to ensure temporary overlap
+			months = 49
 		}
 		
 	}	

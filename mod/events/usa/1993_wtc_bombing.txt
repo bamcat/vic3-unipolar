@@ -4,11 +4,15 @@ wtc_bombing.1 = {
     type = country_event
     title = wtc_bombing.1.t
     desc = wtc_bombing.1.d
-    picture = "gfx/event_pictures/terrorist_attack.dds"
+    event_image = {
+    	video = "unspecific_politicians_arguing"
+    }
+    icon = "gfx/interface/icons/event_icons/event_fire.dds"
 
     trigger = {
         c:USA ?= this
-        game_date = 1993.2.26
+        game_date >= 1993.2.26
+        game_date < 1993.5.1
         NOT = { has_variable = wtc_1993_bombing_happened }
     }
 

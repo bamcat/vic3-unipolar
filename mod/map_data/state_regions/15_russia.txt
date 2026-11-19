@@ -7,13 +7,15 @@
     farm = "x25CC83"
     mine = "x5C8F48"
     wood = "x80A021"
-    arable_land = 22
+    arable_land = 3
     arable_resources = { "building_rye_farm" "building_livestock_ranch" }
     capped_resources = {
-        building_logging_camp = 9
-        building_fishing_wharf = 8
+        building_logging_camp = 2
+        building_fishing_wharf = 3
     }
     naval_exit_id = 3082
+    min_cold_effect = 0.03
+    max_cold_effect = 0.69
 }
 
 STATE_TARTU = {
@@ -25,13 +27,15 @@ STATE_TARTU = {
     farm = "xB9FF4E"
     mine = "x297D54"
     wood = "xBF6060"
-    arable_land = 18
+    arable_land = 2
     arable_resources = { "building_rye_farm" "building_livestock_ranch" }
     capped_resources = {
-        building_logging_camp = 7
-        building_fishing_wharf = 7
+        building_logging_camp = 2
+        building_fishing_wharf = 2
     }
     naval_exit_id = 3000
+    min_cold_effect = 0.03
+    max_cold_effect = 0.68
 }
 
 
@@ -44,13 +48,15 @@ STATE_RIGA = {
     farm = "xE7C9B1"
     mine = "x521396"
     wood = "xBF2060"
-    arable_land = 38
+    arable_land = 5
     arable_resources = { "building_rye_farm" "building_livestock_ranch" }
     capped_resources = {
-        building_logging_camp = 11
-        building_fishing_wharf = 10
+        building_logging_camp = 3
+        building_fishing_wharf = 4
     }
     naval_exit_id = 3000
+    min_cold_effect = 0.01
+    max_cold_effect = 0.65
 }
 
 STATE_COURLAND = {
@@ -62,13 +68,15 @@ STATE_COURLAND = {
     farm = "xFD1424"
     mine = "xFA8436"
     wood = "x74042F"
-    arable_land = 22
+    arable_land = 3
     arable_resources = { "building_rye_farm" "building_livestock_ranch" }
     capped_resources = {
-        building_logging_camp = 7
-        building_fishing_wharf = 6
+        building_logging_camp = 2
+        building_fishing_wharf = 2
     }
     naval_exit_id = 3000
+    min_cold_effect = 0.01
+    max_cold_effect = 0.64
 }
 
 STATE_KAUNAS = {
@@ -80,13 +88,15 @@ STATE_KAUNAS = {
     farm = "xE0B943"
     mine = "x0980C8"
     wood = "xC0A0A0"
-    arable_land = 56
+    arable_land = 7
     arable_resources = { "building_rye_farm" "building_livestock_ranch" }
     capped_resources = {
-        building_logging_camp = 8
-        building_fishing_wharf = 2
+        building_logging_camp = 2
+        building_fishing_wharf = 1
     }
     naval_exit_id = 3000
+    min_cold_effect = 0.00
+    max_cold_effect = 0.61
 }
 
 STATE_VILNIUS = {
@@ -97,11 +107,13 @@ STATE_VILNIUS = {
     farm = "x41E061"
     wood = "x0161A0"
     mine = "x0161A0"
-    arable_land = 31
+    arable_land = 4
     arable_resources = { "building_rye_farm" "building_livestock_ranch" }
     capped_resources = {
-        building_logging_camp = 7
+        building_logging_camp = 2
     }
+    min_cold_effect = 0.00
+    max_cold_effect = 0.59
 }
 
 STATE_KUOPIO = {
@@ -112,13 +124,15 @@ STATE_KUOPIO = {
     farm = "xB81268"
     mine = "x51CC44"
     wood = "xED8DC6"
-    arable_land = 25
+    arable_land = 6
     arable_resources = { "building_rye_farm" "building_livestock_ranch" }
     traits = { "state_trait_scandinavian_forests" }
     capped_resources = {
-        building_logging_camp = 42
-        building_iron_mine = 11
+        building_water_works = 24
+        building_logging_camp = 27
     }
+    min_cold_effect = 0.08
+    max_cold_effect = 0.83
 }
 
 STATE_UUSIMAA = {
@@ -131,15 +145,16 @@ STATE_UUSIMAA = {
     farm = "x22CBD6"
     mine = "xAFE141"
     wood = "x61C0E0"
-    arable_land = 32
+    arable_land = 7
     arable_resources = { "building_rye_farm" "building_livestock_ranch" }
     capped_resources = {
-        building_iron_mine = 5
-        building_lead_mine = 5
-        building_logging_camp = 36
-        building_fishing_wharf = 8
+        building_lead_mine = 1
+        building_logging_camp = 25
+        building_fishing_wharf = 3
     }
     naval_exit_id = 3000
+    min_cold_effect = 0.05
+    max_cold_effect = 0.73
 }
 
 STATE_WEST_KARELIA = {
@@ -152,14 +167,17 @@ STATE_WEST_KARELIA = {
     farm = "x3CFB81"
     mine = "xAD3FF9"
     wood = "x934610"
-    arable_land = 22
+    arable_land = 5
     arable_resources = { "building_rye_farm" "building_livestock_ranch" }
     capped_resources = {
-        building_iron_mine = 18
-        building_logging_camp = 28
-        building_fishing_wharf = 2
+        building_water_works = 20
+        building_iron_mine = 1
+        building_logging_camp = 19
+        building_fishing_wharf = 1
     }
     naval_exit_id = 3082
+    min_cold_effect = 0.07
+    max_cold_effect = 0.80
 }
 
 STATE_ALAND = {
@@ -174,10 +192,12 @@ STATE_ALAND = {
     arable_land = 2
     arable_resources = { "building_rye_farm" "building_livestock_ranch" }
     capped_resources = {
-        building_logging_camp = 2
-        building_fishing_wharf = 2
+        building_logging_camp = 3
+        building_fishing_wharf = 1
     }
     naval_exit_id = 3000
+    min_cold_effect = 0.04
+    max_cold_effect = 0.72
 }
 
 STATE_OSTROBOTHNIA = {
@@ -190,14 +210,16 @@ STATE_OSTROBOTHNIA = {
     farm = "xC4EB7D"
     mine = "x993955"
     wood = "x3DBB6E"
-    arable_land = 15
+    arable_land = 4
     arable_resources = { "building_rye_farm" "building_livestock_ranch" }
     capped_resources = {
-        building_lead_mine = 5
-        building_logging_camp = 25
-        building_fishing_wharf = 10
+        building_water_works = 16
+        building_logging_camp = 16
+        building_fishing_wharf = 4
     }
     naval_exit_id = 3000
+    min_cold_effect = 0.09
+    max_cold_effect = 0.83
 }
 
 STATE_OULU = {
@@ -211,14 +233,17 @@ STATE_OULU = {
     farm = "x0193AC"
     mine = "x73B911"
     wood = "x9AB681"
-    arable_land = 8
+    arable_land = 2
     arable_resources = { "building_livestock_ranch" }
     capped_resources = {
-        building_iron_mine = 45
-        building_logging_camp = 56
-        building_fishing_wharf = 10
+        building_water_works = 20
+        building_iron_mine = 2
+        building_logging_camp = 38
+        building_fishing_wharf = 3
     }
     naval_exit_id = 3000
+    min_cold_effect = 0.13
+    max_cold_effect = 0.92
 }
 
 STATE_EAST_KARELIA = {
@@ -231,14 +256,17 @@ STATE_EAST_KARELIA = {
     farm = "xC16D56"
     mine = "xA857F6"
     wood = "xB7363A"
-    arable_land = 10
+    arable_land = 5
     arable_resources = { "building_rye_farm" "building_livestock_ranch" }
     capped_resources = {
-        building_iron_mine = 25
-        building_logging_camp = 30
-        building_fishing_wharf = 5
+        building_water_works = 22
+        building_iron_mine = 10
+        building_logging_camp = 22
+        building_fishing_wharf = 7
     }
     naval_exit_id = 3039
+    min_cold_effect = 0.09
+    max_cold_effect = 0.85
 }
 
 STATE_KOLA = {
@@ -252,15 +280,17 @@ STATE_KOLA = {
     farm = "x57190F"
     mine = "xE229D5"
     wood = "xA09A15"
-    arable_land = 2
+    arable_land = 5
     arable_resources = { "building_livestock_ranch" }
     capped_resources = {
-        building_iron_mine = 85
-        building_sulfur_mine = 10
-        building_logging_camp = 25
-        building_fishing_wharf = 10
+        building_iron_mine = 36
+        building_sulfur_mine = 9
+        building_logging_camp = 16
+        building_fishing_wharf = 14
     }
     naval_exit_id = 3039
+    min_cold_effect = 0.15
+    max_cold_effect = 0.95
 }
 
 STATE_INGRIA = {
@@ -273,13 +303,15 @@ STATE_INGRIA = {
     farm = "xDED975"
     mine = "xB64167"
     wood = "x80A0E0"
-    arable_land = 50
+    arable_land = 28
     arable_resources = { "building_rye_farm" "building_livestock_ranch" }
     capped_resources = {
-        building_logging_camp = 25
-        building_fishing_wharf = 10
+        building_logging_camp = 16
+        building_fishing_wharf = 14
     }
     naval_exit_id = 3082
+    min_cold_effect = 0.03
+    max_cold_effect = 0.70
 }
 
 STATE_MOSCOW = {
@@ -291,13 +323,16 @@ STATE_MOSCOW = {
     farm = "x54C962"
     mine = "x8B324E"
     wood = "xE19E7E"
-    arable_land = 60
+    arable_land = 37
     arable_resources = { "building_rye_farm" "building_livestock_ranch" }
     capped_resources = {
-        building_coal_mine = 60
-        building_iron_mine = 30
-        building_logging_camp = 34
+        building_coal_mine = 11
+        building_iron_mine = 13
+        building_logging_camp = 22
+        building_water_works = 22
     }
+    min_cold_effect = 0.02
+    max_cold_effect = 0.69
 }
 
 STATE_BREST = {
@@ -309,11 +344,13 @@ STATE_BREST = {
     farm = "xAB3AC5"
     mine = "x157352"
     wood = "xA6BED3"
-    arable_land = 75
+    arable_land = 16
     arable_resources = { "building_rye_farm" "building_livestock_ranch" }
     capped_resources = {
-        building_logging_camp = 14
+        building_logging_camp = 4
     }
+    min_cold_effect = 0.00
+    max_cold_effect = 0.57
 }
 
 STATE_VOLHYNIA = {
@@ -325,12 +362,14 @@ STATE_VOLHYNIA = {
     farm = "x5A26AE"
     mine = "x8201CF"
     wood = "xAC3079"
-    arable_land = 40
+    arable_land = 15
     arable_resources = { "building_wheat_farm" "building_livestock_ranch" }
     capped_resources = {
-        building_coal_mine = 42
-        building_logging_camp = 18
+        building_coal_mine = 9
+        building_logging_camp = 4
     }
+    min_cold_effect = 0.00
+    max_cold_effect = 0.52
 }
 
 STATE_KIEV = {
@@ -342,13 +381,15 @@ STATE_KIEV = {
     farm = "x2472F3"
     mine = "xCD2CE5"
     wood = "x54B5C4"
-    arable_land = 175
+    arable_land = 67
     arable_resources = { "building_wheat_farm" "building_livestock_ranch" }
     capped_resources = {
-        building_coal_mine = 36
-        building_iron_mine = 14
-        building_logging_camp = 32
+        building_coal_mine = 8
+        building_iron_mine = 21
+        building_logging_camp = 7
     }
+    min_cold_effect = 0.00
+    max_cold_effect = 0.49
 }
 
 STATE_ORYOL = {
@@ -359,13 +400,15 @@ STATE_ORYOL = {
     farm = "x92C7C8"
     mine = "x8BC0CA"
     wood = "xA02120"
-    arable_land = 180
+    arable_land = 102
     arable_resources = { "building_rye_farm" "building_livestock_ranch" }
     capped_resources = {
-        building_logging_camp = 72
-        building_coal_mine = 58
-        building_iron_mine = 16
+        building_logging_camp = 48
+        building_coal_mine = 11
+        building_iron_mine = 6
     }
+    min_cold_effect = 0.00
+    max_cold_effect = 0.56
 }
 
 STATE_SMOLENSK = {
@@ -377,12 +420,14 @@ STATE_SMOLENSK = {
     farm = "xD8537A"
     mine = "x93DF31"
     wood = "x9692BD"
-    arable_land = 62
+    arable_land = 37
     arable_resources = { "building_rye_farm" "building_livestock_ranch" }
     capped_resources = {
-        building_coal_mine = 8
-        building_logging_camp = 24
+        building_coal_mine = 2
+        building_logging_camp = 16
     }
+    min_cold_effect = 0.00
+    max_cold_effect = 0.61
 }
 
 STATE_MOGILEV = {
@@ -394,11 +439,13 @@ STATE_MOGILEV = {
     farm = "xC0A0E0"
     mine = "x8061E0"
     wood = "xC6D645"
-    arable_land = 70
+    arable_land = 16
     arable_resources = { "building_rye_farm" "building_livestock_ranch" }
     capped_resources = {
-        building_logging_camp = 21
+        building_logging_camp = 4
     }
+    min_cold_effect = 0.00
+    max_cold_effect = 0.58
 }
 
 STATE_ARKHANGELSK = {
@@ -411,12 +458,14 @@ STATE_ARKHANGELSK = {
     farm = "xF29885"
     mine = "x956021"
     wood = "x360D95"
-    arable_land = 15
+    arable_land = 9
     arable_resources = { "building_rye_farm" "building_livestock_ranch" }
     capped_resources = {
-        building_gold_mine = 2
-        building_logging_camp = 14
-        building_fishing_wharf = 10
+        building_gold_mine = 6
+        building_logging_camp = 11
+        building_fishing_wharf = 14
+        building_gas_field = 40
+        building_water_works = 20
     }
     resource = {
         type = "building_gold_field"
@@ -424,6 +473,8 @@ STATE_ARKHANGELSK = {
         undiscovered_amount = 8
     }
     naval_exit_id = 3039
+    min_cold_effect = 0.09
+    max_cold_effect = 0.84
 }
 
 STATE_NOVGOROD = {
@@ -435,12 +486,15 @@ STATE_NOVGOROD = {
     farm = "x834B21"
     mine = "x68E99E"
     wood = "xA90928"
-    arable_land = 70
+    arable_land = 42
     arable_resources = { "building_rye_farm" "building_livestock_ranch" }
     capped_resources = {
-        building_coal_mine = 24
-        building_logging_camp = 40
+        building_water_works = 20
+        building_coal_mine = 4
+        building_logging_camp = 27
     }
+    min_cold_effect = 0.05
+    max_cold_effect = 0.76
 }
 
 STATE_CRIMEA = {
@@ -453,14 +507,16 @@ STATE_CRIMEA = {
     farm = "x61F467"
     mine = "x706060"
     wood = "xf56D13"
-    arable_land = 40
+    arable_land = 15
     arable_resources = { "building_wheat_farm" "building_livestock_ranch" "building_tobacco_plantation" "building_vineyard" }
     capped_resources = {
-        building_iron_mine = 15
-        building_logging_camp = 4
-        building_fishing_wharf = 12
+        building_iron_mine = 21
+        building_logging_camp = 1
+        building_fishing_wharf = 5
     }
     naval_exit_id = 3036
+    min_cold_effect = 0.00
+    max_cold_effect = 0.40
 }
 
 STATE_KHARKOV = {
@@ -472,17 +528,19 @@ STATE_KHARKOV = {
     farm = "xD0DA95"
     mine = "x628FBE"
     wood = "x1CB8D8"
-    arable_land = 150
+    arable_land = 58
     arable_resources = { "building_wheat_farm" "building_livestock_ranch" }
     capped_resources = {
-        building_coal_mine = 60
-        building_iron_mine = 28
-        building_logging_camp = 20
+        building_coal_mine = 14
+        building_iron_mine = 37
+        building_logging_camp = 4
     }
     resource = {
         type = "building_oil_rig"
-        undiscovered_amount = 12
+        undiscovered_amount = 11
     }
+    min_cold_effect = 0.00
+    max_cold_effect = 0.49
 }
 
 STATE_KURSK = {
@@ -493,19 +551,21 @@ STATE_KURSK = {
     farm = "x40DFDF"
     mine = "xC761A3"
     wood = "x6161A0"
-    arable_land = 115
+    arable_land = 65
     traits = { "state_trait_don_river" "state_trait_black_soil" }
     arable_resources = { "building_rye_farm" "building_livestock_ranch" }
     capped_resources = {
-        building_logging_camp = 31
-        building_iron_mine = 93
-        building_sulfur_mine = 12
+        building_logging_camp = 21
+        building_iron_mine = 40
+        building_sulfur_mine = 11
     }
     resource = {
         type = "building_gold_field"
         depleted_type = "building_gold_mine"
-        undiscovered_amount = 3
+        undiscovered_amount = 2
     }
+    min_cold_effect = 0.00
+    max_cold_effect = 0.52
 }
 
 STATE_TVER = {
@@ -517,12 +577,15 @@ STATE_TVER = {
     farm = "xBA8413"
     mine = "x9A12DD"
     wood = "x391276"
-    arable_land = 68
+    arable_land = 37
     arable_resources = { "building_rye_farm" "building_livestock_ranch" }
     capped_resources = {
-        building_logging_camp = 36
-        building_coal_mine = 8
+        building_water_works = 20
+        building_logging_camp = 24
+        building_coal_mine = 2
     }
+    min_cold_effect = 0.03
+    max_cold_effect = 0.71
 }
 
 STATE_CHERSON = {
@@ -535,15 +598,18 @@ STATE_CHERSON = {
     farm = "x89CE7C"
     mine = "xFD6659"
     wood = "x5BE6ED"
-    arable_land = 80
+    arable_land = 31
     arable_resources = { "building_wheat_farm" "building_livestock_ranch" "building_vineyard" }
     capped_resources = {
-        building_coal_mine = 48
-        building_iron_mine = 92
-        building_logging_camp = 8
-        building_fishing_wharf = 12
+        building_uranium_mine = 12
+        building_coal_mine = 11
+        building_iron_mine = 129
+        building_logging_camp = 2
+        building_fishing_wharf = 4
     }
     naval_exit_id = 3036
+    min_cold_effect = 0.00
+    max_cold_effect = 0.45
 }
 
 STATE_GALICH = {
@@ -555,17 +621,19 @@ STATE_GALICH = {
     farm = "x21F08B"
     mine = "x13128B"
     wood = "x29DFEF"
-    arable_land = 70
+    arable_land = 42
     arable_resources = { "building_rye_farm" "building_livestock_ranch" }
     capped_resources = {
-        building_logging_camp = 48
-        building_coal_mine = 72
-        building_iron_mine = 12
+        building_logging_camp = 32
+        building_coal_mine = 13
+        building_iron_mine = 5
     }
     resource = {
         type = "building_oil_rig"
-        undiscovered_amount = 20
+        undiscovered_amount = 14
     }
+    min_cold_effect = 0.11
+    max_cold_effect = 0.88
 }
 
 STATE_MINSK = {
@@ -577,13 +645,14 @@ STATE_MINSK = {
     farm = "x2EB844"
     mine = "x80E0A0"
     wood = "x26722B"
-    arable_land = 90
+    arable_land = 19
     arable_resources = { "building_rye_farm" "building_livestock_ranch" }
     capped_resources = {
-        building_logging_camp = 35
-        building_iron_mine = 8
-        building_coal_mine = 5
+        building_logging_camp = 8
+        building_coal_mine = 1
     }
+    min_cold_effect = 0.00
+    max_cold_effect = 0.56
 }
 
 STATE_ROSTOV = {
@@ -595,14 +664,16 @@ STATE_ROSTOV = {
     farm = "xFE531B"
     mine = "x3B9730"
     wood = "xA71AE3"
-    arable_land = 125
+    arable_land = 74
     traits = { "state_trait_don_river" "state_trait_western_steppe" "state_trait_black_soil" }
     arable_resources = { "building_wheat_farm" "building_livestock_ranch" "building_cotton_plantation" "building_vineyard" }
     capped_resources = {
-        building_coal_mine = 108
-        building_logging_camp = 7
+        building_coal_mine = 20
+        building_logging_camp = 5
     }
     naval_exit_id = 3094
+    min_cold_effect = 0.00
+    max_cold_effect = 0.47
 }
 
 STATE_PERM = {
@@ -614,17 +685,20 @@ STATE_PERM = {
     mine = "x4E936E"
     wood = "xE53D48"
     traits = { "state_trait_russian_forest" "state_trait_ural_iron" }
-    arable_land = 70
+    arable_land = 42
     arable_resources = { "building_rye_farm" "building_livestock_ranch" }
     capped_resources = {
-        building_coal_mine = 80
-        building_iron_mine = 75
-        building_logging_camp = 35
+        building_water_works = 20
+        building_coal_mine = 16
+        building_iron_mine = 33
+        building_logging_camp = 24
     }
     resource = {
         type = "building_oil_rig"
-        undiscovered_amount = 60
+        undiscovered_amount = 102
     }
+    min_cold_effect = 0.08
+    max_cold_effect = 0.82
 }
 
 STATE_KAZAN = {
@@ -636,16 +710,19 @@ STATE_KAZAN = {
     farm = "x118263"
     mine = "xDEBD6D"
     wood = "x0E6979"
-    arable_land = 85
+    arable_land = 51
     arable_resources = { "building_rye_farm" "building_livestock_ranch" }
     capped_resources = {
-        building_logging_camp = 12
-        building_coal_mine = 30
+        building_water_works = 22
+        building_logging_camp = 8
+        building_coal_mine = 6
     }
     resource = {
         type = "building_oil_rig"
-        undiscovered_amount = 60
+        undiscovered_amount = 14
     }
+    min_cold_effect = 0.02
+    max_cold_effect = 0.67
 }
 
 STATE_URALSK = {
@@ -656,16 +733,20 @@ STATE_URALSK = {
     farm = "x77E944"
     mine = "xD1364F"
     wood = "xEFFD2B"
-    arable_land = 35
+    arable_land = 45
     traits = { "state_trait_western_steppe" }
     arable_resources = { "building_livestock_ranch" }
     capped_resources = {
-        building_logging_camp = 7
+        building_copper_mine = 8
+        building_sulfur_mine = 7
+        building_logging_camp = 2
     }
     resource = {
         type = "building_oil_rig"
-        undiscovered_amount = 60
+        undiscovered_amount = 54
     }
+    min_cold_effect = 0.05
+    max_cold_effect = 0.56
 }
 
 STATE_KHIVA = {
@@ -676,11 +757,13 @@ STATE_KHIVA = {
     farm = "x5BB27E"
     mine = "xC6FC10"
     wood = "xA487BA"
-    arable_land = 85
+    arable_land = 124
     arable_resources = { "building_wheat_farm" "building_livestock_ranch" "building_opium_plantation" "building_cotton_plantation" }
     capped_resources = {
-        building_logging_camp = 4
+        building_logging_camp = 1
     }
+    min_cold_effect = 0.00
+    max_cold_effect = 0.36
 }
 
 STATE_SEMIRECHE = {
@@ -691,14 +774,19 @@ STATE_SEMIRECHE = {
     farm = "x02DF90"
     mine = "x7D13F1"
     wood = "x25DC1F"
-    arable_land = 32
+    arable_land = 45
     traits = { "state_trait_western_steppe" "state_trait_irtysh_river" }
     arable_resources = { "building_livestock_ranch" }
     capped_resources = {
-        building_coal_mine = 28
-        building_lead_mine = 16
-        building_logging_camp = 4
+        building_copper_mine = 8
+        building_sulfur_mine = 7
+        building_uranium_mine = 6
+        building_coal_mine = 18
+        building_lead_mine = 26
+        building_logging_camp = 1
     }
+    min_cold_effect = 0.05
+    max_cold_effect = 0.62
 }
 
 STATE_JETISY = {
@@ -710,13 +798,18 @@ STATE_JETISY = {
     farm = "x61B92A"
     mine = "x1240CA"
     wood = "x5A8261"
-    arable_land = 50
+    arable_land = 68
     arable_resources = { "building_livestock_ranch" "building_wheat_farm" }
     capped_resources = {
-        building_coal_mine = 12
-        building_lead_mine = 20
-        building_logging_camp = 4
+        building_copper_mine = 7
+        building_sulfur_mine = 7
+        building_uranium_mine = 12
+        building_coal_mine = 9
+        building_lead_mine = 37
+        building_logging_camp = 1
     }
+    min_cold_effect = 0.05
+    max_cold_effect = 0.54
 }
 
 STATE_AKMOLINSK = {
@@ -727,14 +820,19 @@ STATE_AKMOLINSK = {
     farm = "x9C66DA"
     mine = "xFA13C2"
     wood = "xDF3E66"
-    arable_land = 45
+    arable_land = 68
     traits = { "state_trait_western_steppe" }
     arable_resources = { "building_rye_farm" "building_livestock_ranch" }
     capped_resources = {
-        building_iron_mine = 16
-        building_coal_mine = 68
-        building_logging_camp = 6
+        building_copper_mine = 7
+        building_sulfur_mine = 7
+        building_uranium_mine = 12
+        building_iron_mine = 69
+        building_coal_mine = 55
+        building_logging_camp = 1
     }
+    min_cold_effect = 0.05
+    max_cold_effect = 0.65
 }
 
 STATE_FERGANA = {
@@ -745,12 +843,14 @@ STATE_FERGANA = {
     farm = "x6EA842"
     mine = "x542EFD"
     wood = "xAD3425"
-    arable_land = 150
+    arable_land = 19
     arable_resources = { "building_wheat_farm" "building_livestock_ranch" "building_tea_plantation" "building_cotton_plantation" }
     capped_resources = {
-        building_iron_mine = 21
-        building_logging_camp = 5
+        building_iron_mine = 7
+        building_logging_camp = 1
     }
+    min_cold_effect = 0.00
+    max_cold_effect = 0.29
 }
 
 STATE_MERZ = {
@@ -761,12 +861,14 @@ STATE_MERZ = {
     farm = "x6D1768"
     mine = "x070194"
     wood = "x622B3C"
-    arable_land = 38
+    arable_land = 5
     arable_resources = { "building_wheat_farm" "building_livestock_ranch" "building_tea_plantation" }
     capped_resources = {
-        building_iron_mine = 21
-        building_logging_camp = 5
+        building_iron_mine = 7
+        building_logging_camp = 1
     }
+    min_cold_effect = 0.00
+    max_cold_effect = 0.22
 }
 
 STATE_SYRDARYA = {
@@ -777,13 +879,15 @@ STATE_SYRDARYA = {
     farm = "x78E5EA"
     mine = "x669165"
     wood = "x73AEDA"
-    arable_land = 65
+    arable_land = 8
     arable_resources = { "building_livestock_ranch" }
     capped_resources = {
-        building_iron_mine = 15
-        building_lead_mine = 60
-        building_logging_camp = 6
+        building_iron_mine = 5
+        building_lead_mine = 20
+        building_logging_camp = 2
     }
+    min_cold_effect = 0.00
+    max_cold_effect = 0.41
 }
 
 STATE_AKTOBE = {
@@ -794,17 +898,19 @@ STATE_AKTOBE = {
     farm = "xF66290"
     mine = "x5DCF1A"
     wood = "x62EE42"
-    arable_land = 24
+    arable_land = 3
     traits = { "state_trait_western_steppe" }
     arable_resources = { "building_livestock_ranch" }
     capped_resources = {
-        building_iron_mine = 10
-        building_logging_camp = 3
+        building_iron_mine = 3
+        building_logging_camp = 1
     }
     resource = {
         type = "building_oil_rig"
-        undiscovered_amount = 30
+        undiscovered_amount = 2
     }
+    min_cold_effect = 0.05
+    max_cold_effect = 0.59
 }
 
 STATE_KALMYKIA = {
@@ -815,7 +921,7 @@ STATE_KALMYKIA = {
     farm = "xCAF7B3"
     mine = "x9743F5"
     wood = "xEEDC59"
-    arable_land = 8
+    arable_land = 4
     traits = { "state_trait_western_steppe" }
     arable_resources = { "building_livestock_ranch" "building_wheat_farm" }
     capped_resources = {
@@ -823,8 +929,10 @@ STATE_KALMYKIA = {
     }
     resource = {
         type = "building_oil_rig"
-        undiscovered_amount = 10
+        undiscovered_amount = 7
     }
+    min_cold_effect = 0.00
+    max_cold_effect = 0.43
 }
 
 STATE_NORTH_CAUCASUS = {
@@ -835,23 +943,25 @@ STATE_NORTH_CAUCASUS = {
     farm = "xEE9B40"
     mine = "x0BDBDA"
     wood = "x2790A8"
-    arable_land = 25
+    arable_land = 14
     traits = { "state_trait_caucasus_mountains" }
     arable_resources = { "building_wheat_farm" "building_livestock_ranch" }
     capped_resources = {
-        building_coal_mine = 16
-        building_iron_mine = 12
-        building_logging_camp = 25
+        building_coal_mine = 2
+        building_iron_mine = 5
+        building_logging_camp = 16
     }
     resource = {
         type = "building_oil_rig"
-        undiscovered_amount = 25
+        undiscovered_amount = 14
     }
-    resource = {
+resource = {
         type = "building_gold_field"
         depleted_type = "building_gold_mine"
-        undiscovered_amount = 4
+        undiscovered_amount = 2
     }
+    min_cold_effect = 0.05
+    max_cold_effect = 0.50
 }
 
 STATE_TAURIDA = {
@@ -864,15 +974,17 @@ STATE_TAURIDA = {
     farm = "x0EBC1D"
     mine = "xC262E0"
     wood = "x5AB195"
-    arable_land = 110
+    arable_land = 43
     arable_resources = { "building_wheat_farm" "building_livestock_ranch" "building_vineyard" }
     capped_resources = {
-        building_coal_mine = 35
-        building_iron_mine = 48
-        building_logging_camp = 8
-        building_fishing_wharf = 12
+        building_coal_mine = 8
+        building_iron_mine = 67
+        building_logging_camp = 2
+        building_fishing_wharf = 4
     }
     naval_exit_id = 3094
+    min_cold_effect = 0.00
+    max_cold_effect = 0.45
 }
 
 STATE_TAMBOV = {
@@ -883,13 +995,15 @@ STATE_TAMBOV = {
     mine = "xFE56AF"
     wood = "x74730E"
     provinces = { "x003D07" "x00DA3C" "x0434D7" "x0B35A0" "x0DCAF1" "x1084B6" "x11A456" "x135BEB" "x2121A0" "x248B83" "x341DB2" "x352ACF" "x41D846" "x45E723" "x47EA0C" "x54F76C" "x5F82DE" "x61384B" "x616020" "x6DC89F" "x74730E" "x75659C" "x75FC6F" "x783E80" "x79F049" "x7A26E0" "x7B5279" "x7D40C9" "x7EB0D3" "xA2AEA2" "xB2B5F4" "xB3B6D0" "xB80B2E" "xBFDE90" "xC57104" "xCC3356" "xD7547A" "xE66DB2" "xEB7873" "xF49A5A" "xFE56AF" }
-    arable_land = 155
+    arable_land = 88
     traits = { "state_trait_black_soil" }
     arable_resources = { "building_rye_farm" "building_livestock_ranch" }
     capped_resources = {
-        building_iron_mine = 10
-        building_logging_camp = 35
+        building_iron_mine = 4
+        building_logging_camp = 24
     }
+    min_cold_effect = 0.02
+    max_cold_effect = 0.63
 }
 
 STATE_RYAZAN = {
@@ -900,12 +1014,14 @@ STATE_RYAZAN = {
     mine = "xC6A70B"
     wood = "x92470A"
     provinces = { "x089C80" "x0F54C0" "x11B251" "x14830F" "x19C20A" "x22B4AF" "x3EAD17" "x5EA87F" "x6121A0" "x617404" "x6E8ED4" "x729CED" "x77D1E9" "x8DE32D" "x92470A" "x9DF0D8" "xB0B91E" "xC1A5DD" "xC6A70B" "xC7194D" "xE1114E" "xEB025B" "xF402D3" "xF4F224" }
-    arable_land = 65
+    arable_land = 37
     arable_resources = { "building_rye_farm" "building_livestock_ranch" }
     capped_resources = {
-        building_coal_mine = 21
-        building_logging_camp = 28
+        building_coal_mine = 4
+        building_logging_camp = 19
     }
+    min_cold_effect = 0.02
+    max_cold_effect = 0.65
 }
 
 STATE_VITEBSK = {
@@ -916,12 +1032,14 @@ STATE_VITEBSK = {
     farm = "x0153E3"
     mine = "x3D1AAA"
     wood = "xEF4591"
-    arable_land = 55
+    arable_land = 12
     traits = { "state_trait_russian_forest" }
     arable_resources = { "building_rye_farm" "building_livestock_ranch" }
     capped_resources = {
-        building_logging_camp = 12
+        building_logging_camp = 3
     }
+    min_cold_effect = 0.00
+    max_cold_effect = 0.61
 }
 
 STATE_PSKOV = {
@@ -932,12 +1050,14 @@ STATE_PSKOV = {
     farm = "x6859CA"
     mine = "x3266DE"
     wood = "x89D566"
-    arable_land = 52
+    arable_land = 28
     traits = { "state_trait_russian_forest" }
     arable_resources = { "building_rye_farm" "building_livestock_ranch" }
     capped_resources = {
-        building_logging_camp = 24
+        building_logging_camp = 16
     }
+    min_cold_effect = 0.01
+    max_cold_effect = 0.65
 }
 
 STATE_YAROSLAVL = {
@@ -948,13 +1068,16 @@ STATE_YAROSLAVL = {
     farm = "xFFEC80"
     mine = "xCC840C"
     wood = "x130A3E"
-    arable_land = 185
+    arable_land = 107
     traits = { "state_trait_volga_river" "state_trait_russian_forest" }
     arable_resources = { "building_rye_farm" "building_livestock_ranch" }
     capped_resources = {
-        building_logging_camp = 67
-        building_iron_mine = 6
+        building_water_works = 20
+        building_logging_camp = 46
+        building_iron_mine = 3
     }
+    min_cold_effect = 0.04
+    max_cold_effect = 0.71
 }
 
 STATE_NIZHNY_NOVGOROD = {
@@ -965,13 +1088,16 @@ STATE_NIZHNY_NOVGOROD = {
     farm = "xF0B801"
     mine = "xE1A4D3"
     wood = "x9439A0"
-    arable_land = 80
+    arable_land = 46
     traits = { "state_trait_volga_river" "state_trait_russian_forest" }
     arable_resources = { "building_rye_farm" "building_livestock_ranch" }
     capped_resources = {
-        building_iron_mine = 25
-        building_logging_camp = 24
+        building_water_works = 22
+        building_iron_mine = 10
+        building_logging_camp = 16
     }
+    min_cold_effect = 0.02
+    max_cold_effect = 0.68
 }
 
 STATE_VYATKA = {
@@ -982,18 +1108,21 @@ STATE_VYATKA = {
     farm = "x2D9E21"
     mine = "x2101B3"
     wood = "x3BB87B"
-    arable_land = 115
+    arable_land = 14
     traits = { "state_trait_russian_forest" }
     arable_resources = { "building_rye_farm" "building_livestock_ranch" }
     capped_resources = {
-        building_coal_mine = 15
-        building_sulfur_mine = 10
-        building_logging_camp = 36
+        building_water_works = 18
+        building_coal_mine = 2
+        building_sulfur_mine = 3
+        building_logging_camp = 9
     }
     resource = {
         type = "building_oil_rig"
-        undiscovered_amount = 25
+        undiscovered_amount = 2
     }
+    min_cold_effect = 0.07
+    max_cold_effect = 0.80
 }
 
 STATE_UFA = {
@@ -1004,19 +1133,21 @@ STATE_UFA = {
     farm = "x2C4BD2"
     mine = "x420ECB"
     wood = "xA6E140"
-    arable_land = 75
+    arable_land = 9
     traits = { "state_trait_ural_iron" }
     arable_resources = { "building_rye_farm" "building_livestock_ranch" }
     capped_resources = {
-        building_iron_mine = 25
-        building_coal_mine = 10
-        building_logging_camp = 25
-        building_lead_mine = 16
+        building_iron_mine = 8
+        building_coal_mine = 2
+        building_logging_camp = 6
+        building_lead_mine = 5
     }
     resource = {
         type = "building_oil_rig"
-        undiscovered_amount = 35
+        undiscovered_amount = 2
     }
+    min_cold_effect = 0.02
+    max_cold_effect = 0.65
 }
 
 STATE_SURGUT = {
@@ -1027,16 +1158,19 @@ STATE_SURGUT = {
     farm = "xD3E041"
     mine = "xD3522B"
     wood = "x5775A5"
-    arable_land = 4
+    arable_land = 1
     traits = { "state_trait_ob_river" }
     arable_resources = { "building_rye_farm" "building_livestock_ranch" }
     capped_resources = {
-        building_logging_camp = 32
+        building_water_works = 22
+        building_logging_camp = 8
     }
     resource = {
         type = "building_oil_rig"
-        undiscovered_amount = 120
+        undiscovered_amount = 52
     }
+    min_cold_effect = 0.11
+    max_cold_effect = 0.87
 }
 
 STATE_KRASNOYARSK = {
@@ -1047,19 +1181,29 @@ STATE_KRASNOYARSK = {
     farm = "xCD6CFD"
     mine = "x212D4B"
     wood = "x6CC996"
-    arable_land = 45
+    arable_land = 6
     traits = { "state_trait_yenisei_river" }
     arable_resources = { "building_rye_farm" "building_livestock_ranch" }
     capped_resources = {
-        building_iron_mine = 15
-        building_coal_mine = 40
-        building_logging_camp = 60
+        building_iron_mine = 5
+        building_coal_mine = 6
+        building_logging_camp = 15
+        building_copper_mine = 9
+        building_rare_earth_mine = 4
+        building_gas_field = 45
+        building_water_works = 28
     }
     resource = {
         type = "building_gold_field"
         depleted_type = "building_gold_mine"
         undiscovered_amount = 12
     }
+    resource = {
+        type = "building_oil_rig"
+        undiscovered_amount = 2
+    }
+    min_cold_effect = 0.05
+    max_cold_effect = 0.73
 }
 
 STATE_ALTAI = {
@@ -1070,18 +1214,20 @@ STATE_ALTAI = {
     farm = "x9ED072"
     mine = "x141B8F"
     wood = "xC59F9C"
-    arable_land = 10
+    arable_land = 1
     arable_resources = { "building_livestock_ranch" }
     capped_resources = {
-        building_iron_mine = 7
-        building_logging_camp = 18
-        building_lead_mine = 12
+        building_iron_mine = 2
+        building_logging_camp = 4
+        building_lead_mine = 4
     }
     resource = {
         type = "building_gold_field"
         depleted_type = "building_gold_mine"
         undiscovered_amount = 3
     }
+    min_cold_effect = 0.05
+    max_cold_effect = 0.64
 }
 
 STATE_BURYATIA = {
@@ -1092,18 +1238,21 @@ STATE_BURYATIA = {
     farm = "xDB6156"
     mine = "x9CA95C"
     wood = "xF45742"
-    arable_land = 15
+    arable_land = 2
     arable_resources = { "building_rye_farm" "building_livestock_ranch" }
     capped_resources = {
-        building_iron_mine = 10
-        building_coal_mine = 24
-        building_logging_camp = 16
+        building_water_works = 22
+        building_iron_mine = 3
+        building_coal_mine = 4
+        building_logging_camp = 4
     }
     resource = {
         type = "building_gold_field"
         depleted_type = "building_gold_mine"
         undiscovered_amount = 16
     }
+    min_cold_effect = 0.05
+    max_cold_effect = 0.70
 }
 
 STATE_KOLYMA = {
@@ -1115,18 +1264,21 @@ STATE_KOLYMA = {
     farm = "x8FBCC5"
     mine = "x2671FA"
     wood = "x7E6390"
-    arable_land = 4
+    arable_land = 1
     traits = { "state_trait_siberian_terrain" }
     arable_resources = { "building_livestock_ranch" }
     capped_resources = {
-        building_logging_camp = 10
-        building_coal_mine = 8
+        building_water_works = 18
+        building_logging_camp = 2
+        building_coal_mine = 2
     }
     resource = {
         type = "building_gold_field"
         depleted_type = "building_gold_mine"
         undiscovered_amount = 16
     }
+    min_cold_effect = 0.17
+    max_cold_effect = 0.98
 }
 
 STATE_AMUR = {
@@ -1138,12 +1290,13 @@ STATE_AMUR = {
     farm = "x78287D"
     mine = "x6F35E7"
     wood = "xFF3881"
-    arable_land = 30
+    arable_land = 4
     arable_resources = { "building_rye_farm" "building_livestock_ranch" }
     capped_resources = {
-        building_iron_mine = 25
-        building_coal_mine = 20
-        building_logging_camp = 25
+        building_water_works = 24
+        building_iron_mine = 8
+        building_coal_mine = 4
+        building_logging_camp = 6
         building_fishing_wharf = 6
     }
     resource = {
@@ -1152,6 +1305,8 @@ STATE_AMUR = {
         undiscovered_amount = 18
     }
     naval_exit_id = 3118
+    min_cold_effect = 0.05
+    max_cold_effect = 0.66
 }
 
 STATE_CHELYABINSK = {
@@ -1163,20 +1318,22 @@ STATE_CHELYABINSK = {
     farm = "xC470FD"
     mine = "xC158DC"
     wood = "x16720C"
-    arable_land = 42
+    arable_land = 5
     arable_resources = { "building_rye_farm" "building_livestock_ranch" }
     traits = { "state_trait_ural_iron" }
     capped_resources = {
-        building_iron_mine = 95
-        building_coal_mine = 25
-        building_logging_camp = 16
-        building_gold_mine = 3
+        building_iron_mine = 32
+        building_coal_mine = 4
+        building_logging_camp = 4
+        building_gold_mine = 1
     }
     resource = {
         type = "building_gold_field"
         depleted_type = "building_gold_mine"
         undiscovered_amount = 9
     }
+    min_cold_effect = 0.02
+    max_cold_effect = 0.63
 }
 
 
@@ -1189,12 +1346,14 @@ STATE_ELIZAVETPOL = {
     farm = "xEE1A87"
     mine = "xDFB2B0"
     wood = "x2F7A57"
-    arable_land = 35
+    arable_land = 4
     arable_resources = { "building_livestock_ranch" "building_vineyard" }
     capped_resources = {
-        building_iron_mine = 10
-        building_logging_camp = 12
+        building_iron_mine = 3
+        building_logging_camp = 3
     }
+    min_cold_effect = 0.00
+    max_cold_effect = 0.29
 }
 
 STATE_STAVROPOL = {
@@ -1205,16 +1364,18 @@ STATE_STAVROPOL = {
     mine = "x1ED727"
     wood = "x7685A4"
     provinces = { "x1ED727" "x32FEBA" "x3E954F" "x565E50" "x6B2515" "x7685A4" "x76C012" "x793FDE" "x796017" "x891792" "x929AC4" "x9A43C9" "x9B5EC8" "x9BAE11" "x9CDC20" "xA4B654" "xAA6E62" "xB3593A" "xBC214C" "xC0D001" "xD7EDE7" "xE0E16A" "xE2E1EB" "xF7D005" "xF88EA3" }
-    arable_land = 100
+    arable_land = 12
     traits = { "state_trait_western_steppe" "state_trait_black_soil" }
     arable_resources = { "building_wheat_farm" "building_livestock_ranch" "building_cotton_plantation" "building_tea_plantation" "building_tobacco_plantation" }
     capped_resources = {
-        building_logging_camp = 14
+        building_logging_camp = 4
     }
     resource = {
         type = "building_oil_rig"
-        undiscovered_amount = 30
+        undiscovered_amount = 2
     }
+    min_cold_effect = 0.00
+    max_cold_effect = 0.40
 }
 
 STATE_CHUVASHIA = {
@@ -1225,17 +1386,19 @@ STATE_CHUVASHIA = {
     mine = "x811458"
     wood = "xE89369"
     provinces = { "x062B1B" "x0D7D00" "x1066EF" "x1D5A12" "x307CEB" "x5D97AC" "x635E09" "x67980D" "x80F7CE" "x811458" "x83DB48" "xA000C0" "xC23BD0" "xD13AC6" "xD6E65F" "xDA0014" "xDB5DBD" "xE89369" }
-    arable_land = 45
+    arable_land = 6
     traits = { "state_trait_volga_river" }
     arable_resources = { "building_rye_farm" "building_livestock_ranch" }
     capped_resources = {
-        building_sulfur_mine = 15
-        building_logging_camp = 25
+        building_sulfur_mine = 5
+        building_logging_camp = 6
     }
     resource = {
         type = "building_oil_rig"
-        undiscovered_amount = 24
+        undiscovered_amount = 2
     }
+    min_cold_effect = 0.03
+    max_cold_effect = 0.69
 }
 
 STATE_CHERNIHIV = {
@@ -1247,15 +1410,17 @@ STATE_CHERNIHIV = {
     farm = "xDD344F"
     mine = "x925213"
     wood = "xFB1DC5"
-    arable_land = 75
+    arable_land = 28
     arable_resources = { "building_wheat_farm" "building_livestock_ranch" }
     capped_resources = {
-        building_logging_camp = 16
+        building_logging_camp = 3
     }
     resource = {
         type = "building_oil_rig"
-        undiscovered_amount = 6
+        undiscovered_amount = 5
     }
+    min_cold_effect = 0.00
+    max_cold_effect = 0.53
 }
 
 STATE_NENETSIA = {
@@ -1269,16 +1434,18 @@ STATE_NENETSIA = {
     farm = "x8F45AB"
     mine = "xAEC9AB"
     wood = "xB71DD4"
-    arable_land = 5
+    arable_land = 4
     arable_resources = { "building_livestock_ranch" }
     capped_resources = {
-        building_logging_camp = 13
-        building_fishing_wharf = 12
-        building_coal_mine = 30
+        building_logging_camp = 8
+        building_fishing_wharf = 17
+        building_coal_mine = 5
     }
     resource = {
         type = "building_oil_rig"
-        undiscovered_amount = 30
+        undiscovered_amount = 14
     }
-    naval_exit_id = 3039
+naval_exit_id = 3039
+    min_cold_effect = 0.18
+    max_cold_effect = 1.00
 }

@@ -2,10 +2,6 @@
 
 # ==========================================
 # environment_laws.1
-# "Industry Offers Voluntary Compliance"
-# Advance event. Fires for any progressive
-# environmental law. Industrialists propose
-# self-regulation to pre-empt enforcement.
 # ==========================================
 
 environment_laws.1 = {
@@ -59,13 +55,11 @@ environment_laws.1 = {
 		}
 	}
 
-	# Option A: Accept — build voluntary compliance into the framework
 	option = {
 		name = environment_laws.1.a
 		default_option = yes
 		add_enactment_modifier = {
 			name = env_voluntary_compliance
-			# = 2
 		}
 		ai_chance = {
 			base = 50
@@ -76,7 +70,6 @@ environment_laws.1 = {
 		}
 	}
 
-	# Option B: Reject — mandatory enforcement only
 	option = {
 		name = environment_laws.1.b
 		add_enactment_modifier = {
@@ -84,7 +77,6 @@ environment_laws.1 = {
 		}
 		add_enactment_modifier = {
 			name = env_mandatory_enforcement
-			# = 2
 		}
 		ai_chance = {
 			base = 50
@@ -98,10 +90,6 @@ environment_laws.1 = {
 
 # ==========================================
 # environment_laws.2
-# "Scientists Back the Legislation"
-# Advance event. Fires for recycling and
-# above. The intelligentsia publishes
-# evidence supporting environmental law.
 # ==========================================
 
 environment_laws.2 = {
@@ -158,13 +146,11 @@ environment_laws.2 = {
 		}
 	}
 
-	# Option A: Commission and publish the findings officially
 	option = {
 		name = environment_laws.2.a
 		default_option = yes
 		add_enactment_modifier = {
 			name = env_scientific_backing
-			# = 3
 		}
 		ai_chance = {
 			base = 70
@@ -175,7 +161,6 @@ environment_laws.2 = {
 		}
 	}
 
-	# Option B: Acknowledge quietly — don't amplify
 	option = {
 		name = environment_laws.2.b
 		add_enactment_modifier = {
@@ -187,10 +172,6 @@ environment_laws.2 = {
 
 # ==========================================
 # environment_laws.3
-# "International Praise for Environmental
-#  Leadership"
-# Advance event. Fires for protection
-# agency and guaranteed rights of nature.
 # ==========================================
 
 environment_laws.3 = {
@@ -228,13 +209,11 @@ environment_laws.3 = {
 		}
 	}
 
-	# Option A: Leverage the moment — host international talks
 	option = {
 		name = environment_laws.3.a
 		default_option = yes
 		add_enactment_modifier = {
 			name = env_international_praise
-			# = 2
 		}
 		add_enactment_modifier = {
 			name = env_diplomatic_push
@@ -244,8 +223,8 @@ environment_laws.3 = {
 			modifier = {
 				trigger = {
 					OR = {
-						is_great_power = yes
-						is_major_power = yes
+						country_rank = rank_value:great_power
+						country_rank = rank_value:major_power
 					}
 				}
 				add = 20
@@ -253,7 +232,6 @@ environment_laws.3 = {
 		}
 	}
 
-	# Option B: Keep it domestic — avoid overcommitting internationally
 	option = {
 		name = environment_laws.3.b
 		add_enactment_modifier = {
@@ -265,10 +243,6 @@ environment_laws.3 = {
 
 # ==========================================
 # environment_laws.4
-# "Who Bears the Compliance Cost?"
-# Debate event. Fires for protection
-# agency and above. A funding and
-# responsibility dispute.
 # ==========================================
 
 environment_laws.4 = {
@@ -306,12 +280,10 @@ environment_laws.4 = {
 		}
 	}
 
-	# Option A: Industry pays — polluter principle
 	option = {
 		name = environment_laws.4.a
 		add_enactment_modifier = {
 			name = env_compliance_cost_debate
-			# = 2
 		}
 		add_enactment_modifier = {
 			name = env_polluter_pays
@@ -325,7 +297,6 @@ environment_laws.4 = {
 		}
 	}
 
-	# Option B: State subsidises compliance — shared burden
 	option = {
 		name = environment_laws.4.b
 		default_option = yes
@@ -348,10 +319,6 @@ environment_laws.4 = {
 
 # ==========================================
 # environment_laws.5
-# "Industry Claims Nature Rights Are
-#  Unconstitutional"
-# Debate event. Fires only when enacting
-# guaranteed rights of nature.
 # ==========================================
 
 environment_laws.5 = {
@@ -414,7 +381,6 @@ environment_laws.5 = {
 		}
 	}
 
-	# Option A: Defend the legal framework — let courts decide
 	option = {
 		name = environment_laws.5.a
 		default_option = yes
@@ -423,17 +389,14 @@ environment_laws.5 = {
 		}
 		add_enactment_modifier = {
 			name = env_legal_defence
-			# = 2
 		}
 		ai_chance = { base = 60 }
 	}
 
-	# Option B: Compromise — limit scope to avoid legal battle
 	option = {
 		name = environment_laws.5.b
 		add_enactment_modifier = {
 			name = env_constitutional_challenge
-			# = 2
 		}
 		ai_chance = { base = 40 }
 	}
@@ -441,11 +404,6 @@ environment_laws.5 = {
 
 # ==========================================
 # environment_laws.6
-# "Environmental Disaster Mid-Enactment"
-# Stall event. Fires for any law.
-# A pollution event or ecological collapse
-# either galvanises support or
-# reveals the state's inability to act.
 # ==========================================
 
 environment_laws.6 = {
@@ -496,13 +454,11 @@ environment_laws.6 = {
 		}
 	}
 
-	# Option A: Use the disaster to accelerate — demand urgent passage
 	option = {
 		name = environment_laws.6.a
 		default_option = yes
 		add_enactment_modifier = {
 			name = env_disaster_response
-			# = 2
 		}
 		scope:disaster_state_scope = {
 			add_modifier = {
@@ -519,7 +475,6 @@ environment_laws.6 = {
 		}
 	}
 
-	# Option B: Contain the story — don't let a disaster become a crisis
 	option = {
 		name = environment_laws.6.b
 		add_enactment_modifier = {
@@ -527,7 +482,6 @@ environment_laws.6 = {
 		}
 		add_enactment_modifier = {
 			name = env_disaster_suppressed
-			# = -1
 		}
 		scope:disaster_state_scope = {
 			add_modifier = {

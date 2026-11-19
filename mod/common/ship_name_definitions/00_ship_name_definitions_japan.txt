@@ -13,7 +13,7 @@ ship_names_historical_japanese_early = {
 
 	properties = {
 		{
-			type = custom_text # This country should not use ship prefixes
+			type = custom_text
 			key = "PREFIX"
 			custom_text = "ship_prefix_blank"
 		}
@@ -45,7 +45,7 @@ ship_names_historical_japanese_early_fallback = {
 
 	properties = {
 		{
-			type = custom_text # This country should not use ship prefixes
+			type = custom_text
 			key = "PREFIX"
 			custom_text = "ship_prefix_blank"
 		}
@@ -70,7 +70,7 @@ ship_names_historical_japanese_capital_ships = {
 
 	properties = {
 		{
-			type = custom_text # This country should not use ship prefixes
+			type = custom_text
 			key = "PREFIX"
 			custom_text = "ship_prefix_blank"
 		}
@@ -78,41 +78,23 @@ ship_names_historical_japanese_capital_ships = {
 			type = name_list
 			key = "SHIP_NAMESAKE"
 			name_list = {
-				# Fuji class
 				sn_fuji sn_yashima
-				# Shikishima class
 				sn_shikishima sn_hatsuse
-				# Asahi
 				sn_asahi
-				# Mikasa
 				sn_mikasa
-				# Tango
 				sn_tango
-				# Sagami and Suwo
 				sn_sagami sn_suwo
-				# Hizen
 				sn_hizen
-				# Iwami
 				sn_iwami
-				# Katori class
 				sn_katori sn_kashima
-				# Satsuma class
 				sn_satsuma sn_aki
-				# Kawachi class
 				sn_kawachi sn_settsu
-				# FusO_ class
 				sn_fusO_ sn_yamashiro
-				# Ise class
 				sn_ise sn_hyU_ga
-				# Nagato class
 				sn_nagato sn_mutsu
-				# Tosa class
 				sn_tosa sn_kaga
-				# Kii class
 				sn_kii sn_owari
-				# Kongo class battlecruisers
 				sn_kongO_ sn_hiei sn_haruna sn_kirishima
-				# Yamato class
 				sn_yamato sn_musashi
 			}
 		}
@@ -132,7 +114,7 @@ ship_names_historical_japanese_cruisers = {
 
 	properties = {
 		{
-			type = custom_text # This country should not use ship prefixes
+			type = custom_text
 			key = "PREFIX"
 			custom_text = "ship_prefix_blank"
 		}
@@ -140,73 +122,39 @@ ship_names_historical_japanese_cruisers = {
 			type = name_list
 			key = "SHIP_NAMESAKE"
 			name_list = {
-				# Tsukushi class
 				sn_tsukushi
-				# Naniwa class
 				sn_naniwa sn_takachiho
-				# Single protected / unprotected cruisers
 				sn_unebi sn_takao sn_yaeyama sn_chiyoda sn_chishima
-				# Matsushima class
 				sn_matsushima sn_itsukushima sn_hashidate
-				# Single protected / unprotected cruisers
 				sn_yoshino sn_akitsushima sn_tatsuta sn_izumi sn_saien
-				# Suma class
 				sn_suma sn_akashi
-				# Kasagi class
 				sn_chitose sn_kasagi
-				# Single protected / unprotected cruisers
 				sn_takasago sn_miyako sn_chihaya
-				# Niitaka class
 				sn_niitaka sn_tsushima
-				# Single protected / unprotected cruisers
 				sn_otowa sn_suzuya sn_soya sn_tsugaru
-				# Yodo class
 				sn_yodo sn_mogami
-				# Single protected cruiser
 				sn_tone
-				# Chikuma class
 				sn_chikuma sn_hirado sn_yahagi
-				# Tenryu class
 				sn_tatsuta sn_tenryU_
-				# Kuma class
 				sn_kuma sn_tama sn_kiso sn_kitakami sn_O_i
-				# Nagara class
 				sn_nagara sn_natori sn_kinu sn_yura sn_isuzu sn_abukuma
-				# Sendai class
 				sn_sendai sn_jintsU_ sn_naka
-				# Yubari
 				sn_yU_bari
-				# Katori class
 				sn_katori sn_kashima sn_kashii
-				# Agano class
 				sn_agano sn_noshiro sn_yahagi sn_sakawa
-				# Oyodo class
 				sn_O_yodo
-				# Ioshima class
 				sn_ioshima sn_yasoshima
-				# Single armoured cruisers
 				sn_yakumo sn_azuma
-				# Izumo class
 				sn_izumo sn_iwate
-				# Kasuga class
 				sn_kasuga sn_nisshin
-				# Tsukuba class
 				sn_tsukuba sn_ikoma
-				# Ibuki class
 				sn_ibuki sn_kurama
-				# Bayan class
 				sn_aso
-				# Furutaka class
 				sn_furutaka sn_kako
-				# Aoba class
 				sn_aoba sn_kinugasa
-				# Myoko class
 				sn_myO_kO_ sn_nachi sn_ashigara sn_haguro
-				# Takao class
 				sn_takao sn_atago sn_chO_kai sn_maya
-				# Mogami class
 				sn_mogami sn_mikuma sn_suzuya sn_kumano
-				# Tone class
 				sn_tone sn_chikuma
 			}
 		}
@@ -225,7 +173,7 @@ ship_names_historical_japanese_destroyers = {
 
 	properties = {
 		{
-			type = custom_text # This country should not use ship prefixes
+			type = custom_text
 			key = "PREFIX"
 			custom_text = "ship_prefix_blank"
 		}
@@ -233,81 +181,45 @@ ship_names_historical_japanese_destroyers = {
 			type = name_list
 			key = "SHIP_NAMESAKE"
 			name_list = {
-				# Murakumo class
 				sn_murakumo sn_shinonome sn_yU_giri sn_shiranui sn_kagerO_ sn_usugumo
-				# Ikazuchi class
 				sn_ikazuchi sn_inazuma sn_akebono sn_sazanami sn_niji sn_oboro
-				# Shirataka class
 				sn_shirataka
-				# Hayabusa class
 				sn_hayabusa sn_manazuru sn_kasasagi sn_chidori sn_kari sn_aotaka sn_hato sn_tsubame sn_hibari sn_kiji sn_hashitaka sn_sagi sn_uzura sn_kamome sn_O_tori
-				# Shirakumo class
 				sn_shirakumo sn_asashio
-				# Akatsuki class
 				sn_akatsuki sn_kasumi
-				# Harusame class
 				sn_harusame sn_murasame sn_hayatori sn_asagiri sn_ariake sn_fubuki sn_arare
-				# Sokol class
 				sn_akatsuki
-				# Kamikaze class
 				sn_kamikaze sn_hatsushimo sn_yayoi sn_ushio sn_nenohi sn_kisaragi sn_wakaba sn_asakaze sn_harukaze sn_hatsuyuki sn_yU_gure sn_shigure sn_yU_dachi
 				sn_oite sn_shiratsuyu sn_hibiki sn_mikazuki sn_shirayuki sn_nowaki sn_asatsuyu sn_yU_nagi sn_shirotae sn_minatsuki sn_hatsuharu
 				sn_uzuki sn_matsukaze sn_hayate sn_nagatsuki sn_kikutsuki sn_uranami sn_isonami sn_ayanami
-				# Umikaze class
 				sn_umikaze sn_yamakaze
-				# Sakura class
 				sn_sakura sn_tachibana
-				# Kaba class
 				sn_kaba sn_kaede sn_katsura sn_ume sn_sakaki sn_kusunoki sn_kashiwa sn_matsu sn_sugi sn_kiri
-				# Urakaze class
 				sn_urakaze sn_kawakaze
-				# Momo class
 				sn_momo sn_kashi sn_hinoki sn_yanagi
-				# Isokaze class
 				sn_isokaze sn_hamakaze sn_amatsukaze sn_tokitsukaze
-				# Acorn class / Kanran class
 				sn_kanran sn_sendan
-				# Kawakaze class
 				sn_kawakaze sn_tanikaze
-				# Enoki class
 				sn_kuwa sn_maki sn_keyaki sn_enoki sn_tsubaki sn_nara
-				# Momi class
 				sn_nashi sn_take sn_momi sn_kaya sn_nire sn_kuri sn_tsuga sn_kaki sn_kiku sn_aoi sn_hagi sn_susuki sn_fuji sn_tsuta sn_ashi sn_warabi sn_hishi sn_hasu sn_tade sn_yomogi sn_sumire
-				# Minekaze class
 				sn_sawakaze sn_minekaze sn_yakaze sn_okikaze sn_hakaze sn_shimakaze sn_shiokaze sn_yU_kaze sn_akikaze sn_nadakaze sn_tachikaze sn_hokaze sn_nokaze sn_numakaze sn_namikaze
-				# Wakatake class
 				sn_wakatake sn_kuretake sn_sanae sn_sawarabi sn_asagao sn_yU_gao sn_fuyO_ sn_karukaya
-				# Kamikaze class
 				sn_kamikaze sn_asakaze sn_harukaze sn_matsukaze sn_hatakaze sn_oite sn_hayate sn_asanagi sn_yU_nagi
-				# Mutsuki class
 				sn_satsuki sn_mutsuki sn_kisaragi sn_yayoi sn_uzuki sn_minazuki sn_fumizuki sn_nagatsuki sn_kikutsuki sn_mikazuki sn_mochizuki sn_yU_zuki
-				# Fubuki class (Special Type I)
 				sn_fubuki sn_shirayuki sn_hatsuyuki sn_miyuki sn_murakumo sn_shinonome sn_usugumo sn_shirakumo sn_isonami sn_uranami
-				# Ayanami class (Special Type II)
 				sn_ayanami sn_shikinami sn_asagiri sn_yU_giri sn_amagiri sn_sagiri sn_oboro sn_akebono sn_ushio sn_sazanami
-				# Akatsuki class (Special Type III)
 				sn_akatsuki sn_hibiki sn_ikazuchi sn_inazuma
-				# Hatsuharu class
 				sn_hatsuharu sn_nenohi sn_wakaba sn_hatsushimo sn_ariake sn_yU_gure
-				# Chidori class
 				sn_chidori sn_manazuru sn_tomozuru sn_hatsukari
 				# Ōtori class
 				sn_O_tori sn_hayabusa sn_hiyodori sn_kasasagi sn_kiji sn_sagi sn_hato sn_kari
-				# Shiratsuyu class
 				sn_shiratsuyu sn_shigure sn_murasame sn_yU_dachi sn_harusame sn_samidare sn_umikaze sn_yamakaze sn_kawakaze sn_suzukaze
-				# Asashio class
 				sn_asashio sn_O_shio sn_michishio sn_arashio sn_yamagumo sn_natsugumo sn_asagumo sn_minegumo sn_arare sn_kasumi
-				# Kagerō class
 				sn_kagerO_ sn_shiranui sn_yukikaze sn_kuroshio sn_hatsukaze sn_oyashio sn_natsushio sn_hayashio sn_amatsukaze sn_tokitsukaze sn_urakaze sn_isokaze sn_hamakaze sn_tanikaze sn_nowaki sn_hagikaze sn_maikaze sn_akigumo
-				# Akizuki class
 				sn_akizuki sn_teruzuki sn_suzutsuki sn_hatsuzuki sn_niizuki sn_wakatsuki sn_shimotsuki sn_fuyutsuki sn_hanazuki sn_harutsuki sn_yoizuki sn_natsuzuki
-				# Yūgumo class
 				sn_yU_gumo sn_makigumo sn_kazagumo sn_naganami sn_makinami sn_takanami sn_O_nami sn_kiyonami sn_tamanami sn_suzunami sn_fujinami sn_hayanami sn_hamanami sn_asashimo sn_kishinami sn_okinami sn_hayashimo sn_akishimo sn_kiyoshimo
-				# Shimakaze class
 				sn_shimakaze
-				# Matsu class
 				sn_matsu sn_momo sn_take sn_ume sn_kuwa sn_maki sn_kiri sn_sugi sn_momi sn_kashi sn_kaya sn_hinoki sn_kaede sn_sakura sn_nara sn_tsubaki sn_keyaki sn_yanagi
-				# Tachibana class
 				sn_tachibana sn_nire sn_tsuta sn_hagi sn_kaki sn_shii sn_nashi sn_sumire sn_enoki sn_kusunoki sn_odake sn_hatsuzakura sn_kaba sn_hatsuume
 			}
 		}
@@ -325,7 +237,7 @@ ship_names_historical_japanese_seaplane_tenders = {
 
 	properties = {
 		{
-			type = custom_text # This country should not use ship prefixes
+			type = custom_text
 			key = "PREFIX"
 			custom_text = "ship_prefix_blank"
 		}
@@ -333,21 +245,13 @@ ship_names_historical_japanese_seaplane_tenders = {
 			type = name_list
 			key = "SHIP_NAMESAKE"
 			name_list = {
-				# Wakamiya
 				sn_wakamiya
-				# Notoro
 				sn_notoro
-				# Akitsushima class
 				sn_akitsushima sn_chihaya
-				# Kamoi
 				sn_kamoi
-				# Chitose class
 				sn_chiyoda sn_chitose
-				# Mizuho
 				sn_mizuho
-				# Nisshin
 				sn_nisshin
-				# Kamikawa Maru class
 				sn_kamikawa_maru sn_kiyokawa_maru sn_kimikawa_maru sn_kunikawa_maru
 			}
 		}
@@ -365,7 +269,7 @@ ship_names_historical_japanese_carriers = {
 
 	properties = {
 		{
-			type = custom_text # This country should not use ship prefixes
+			type = custom_text
 			key = "PREFIX"
 			custom_text = "ship_prefix_blank"
 		}
@@ -373,41 +277,22 @@ ship_names_historical_japanese_carriers = {
 			type = name_list
 			key = "SHIP_NAMESAKE"
 			name_list = {
-				# Akagi
 				sn_akagi
-				# Kaga
 				sn_kaga
-				# Soryu
 				sn_sO_ryU_
-				# Hiryu
 				sn_hiryU_
-				# Shokaku class
 				sn_shO_kaku sn_zuikaku
-				# Taiho
 				sn_taihO_
-				# Unryu class
 				sn_amagi sn_unryU_ sn_katsuragi sn_kasagi sn_aso sn_ikoma
-				# Shinano
 				sn_shinano
-				# Light aircraft carriers
-				# Hosho
 				sn_hO_shO_
-				# Ryujo
 				sn_ryU_jO_
-				# Zuiho class
 				sn_zuihO_ sn_shO_hO_
-				# Hiyo class
 				sn_jun_yO_ sn_hiyO_
-				# Ibuki
 				sn_ibuki
-				# Escort aircraft carriers
-				# Taiyo class
 				sn_taiyO_ sn_unyO_ sn_chU_yO_
-				# Kaiyo
 				sn_kaiyO_
-				# Ryuho
 				sn_ryU_hO_
-				# Shinyo
 				sn_shin_yO_
 			}
 		}
@@ -426,7 +311,7 @@ ship_names_historical_japanese_transport_ships = {
 
 	properties = {
 		{
-			type = custom_text # This country should not use ship prefixes
+			type = custom_text
 			key = "PREFIX"
 			custom_text = "ship_prefix_blank"
 		}

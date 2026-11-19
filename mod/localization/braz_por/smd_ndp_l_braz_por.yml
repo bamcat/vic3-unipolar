@@ -1,12 +1,11 @@
 ﻿l_braz_por:
-
  je_national_development: "Caminho Nacional para o Desenvolvimento"
  je_national_development_reason: "Cada nação deve escolher onde focar suas energias. Um plano de desenvolvimento nacional concentra recursos, políticas e vontade política por trás de uma visão estratégica única por dez anos. Escolha sabiamente — a escolha não pode ser revertida até que o programa termine."
 
  je_foreign_investment: "Investimento estrangeiro"
  je_foreign_investment_reason: "Atrair capital de grandes poderes pode acelerar o desenvolvimento para além do que os recursos internos permitem. Um tratado de investimento estrangeiro abriria o país a empresas externas — com todas as oportunidades e dependências que isso implica."
  has_foreign_investment_or_trade_agreement_with_west_tt:0 "Assinar um acordo de investimento e comércio estrangeiros com os Estados Unidos, Reino Unido ou França"
- 
+
  ndp_status_industrial_tt: "A expansão industrial está em curso. O país está direcionando recursos para a construção de sua base industrial e industrial pesada."
  ndp_status_military_tt: "A expansão militar está em andamento. O país está investindo em suas indústrias armadas, doutrina e defesa."
  ndp_status_resource_tt: "Recursos Desenvolvimento da economia está em andamento. O país está focado na agricultura e extração de matéria-prima."
@@ -34,7 +33,6 @@
  fi_button_reject_name: "Rejeitar investimento estrangeiro"
  fi_button_reject_desc: "Feche a porta para o capital estrangeiro. Isto acabará com a entrada na revista e aplicará uma pena de investimento de longo prazo, mas preservará a independência econômica e impulsionará a autoridade."
 
- # Tooltip keys
  ndp_no_path_active_tt: "Nenhum caminho de desenvolvimento está ativo atualmente"
  ndp_abandon_cost_tt: "Abandonar o caminho aplicará uma penalidade de legitimidade e prestígio por 2 anos"
 
@@ -52,10 +50,6 @@
  ndp_bar_turmoil_tt: "Alto tumulto retardando o desenvolvimento"
  ndp_bar_at_war_tt: "A guerra está a perturbar o programa de desenvolvimento"
 
- # ==========================================
- # OPENING EVENT — ndp_events.0
- # ==========================================
-
  ndp_events.0.t: "Começa um Programa Nacional de Desenvolvimento"
  ndp_events.0.d_industrial: "O governo de [ROOT.GetCountry.GetName] comprometeu-se com uma década de expansão industrial. O investimento fluirá para fábricas, minas e a infraestrutura que as conecta. O plano é ambicioso — e os obstáculos consideráveis — mas a visão é clara: construir a capacidade produtiva que definirá o lugar de [ROOT.GetCountry.GetName] no mundo."
  ndp_events.0.d_military: "O governo de [ROOT.GetCountry.GetName] comprometeu-se a uma década de expansão militar. Barracos serão construídos, oficiais treinados, e doutrinas reformadas. Quer a motivação seja defesa, dissuasão ou ambição, a mensagem ao mundo é inconfundível: [ROOT.GetCountry.GetName] pretende ser levada a sério."
@@ -63,10 +57,6 @@
  ndp_events.0.d_service: "O governo de [ROOT.GetCountry.GetName] comprometeu-se com uma década de desenvolvimento da economia de serviços. Escolas, bancos e ministérios do governo vão ver o investimento. A aposta é que um país mais inteligente e melhor governado é, em última análise, mais forte."
  ndp_events.0.f: "Dez anos. Uma direcção."
  ndp_events.0.a: "Que o programa comece"
-
- # ==========================================
- # INDUSTRIAL PATH EVENTS
- # ==========================================
 
  ndp_events.1.t: "A questão industrial"
  ndp_events.1.d: "Dois anos para o programa de desenvolvimento, é necessário clarificar a direcção do investimento industrial. O país não pode construir tudo ao mesmo tempo. — o ferro, o aço, o carvão — os tendões da potência moderna. Outros argumentam que a fabricação leve oferece retornos mais rápidos e emprego mais amplo."
@@ -91,9 +81,7 @@
  ndp_events.4.f: "A forja fez o seu trabalho."
  ndp_events.4.a: "Marcar o próximo curso"
  ten_year_programme_concluded:0 "O programa de dez anos terminou."
- # ==========================================
- # MILITARY PATH EVENTS
- # ==========================================
+ smd_ndp_programme_restarts_tt:0 "O caminho de desenvolvimento nacional é reiniciado e um novo programa pode ser escolhido."
 
  ndp_events.11.t: "A questão da doutrina"
  ndp_events.11.d: "Dois anos de expansão militar produziram mais soldados, mais armas e mais opções — mas a questão fundamental da doutrina continua por resolver. O Estado-Maior está dividido. Uma facção exige um foco no poder terrestre: exércitos de massa, profundidade defensiva e domínio continental. Outro argumenta que a expansão naval oferece maior flexibilidade estratégica e a capacidade de projetar poder além das fronteiras de [ROOT.GetCountry.GetName]."
@@ -118,10 +106,6 @@
  ndp_events.14.f: "A espada foi forjada. Agora tem de encontrar o seu propósito."
  ndp_events.14.a: "Marcar o próximo curso"
 
- # ==========================================
- # RESOURCE ECONOMY PATH EVENTS
- # ==========================================
-
  ndp_events.21.t: "A recompensa da terra"
  ndp_events.21.d: "Dois anos no programa de recursos, a escolha fundamental deve ser feita: que tipo de economia de recursos irá [ROOT.GetCountry.GetName] construir? A agricultura — alimentar uma população em crescimento e gerar culturas de exportação — oferece estabilidade e emprego alargado. A extração de matérias-primas — mineração, exploração madeireira, perfuração — oferece receita mais rápida, mas é mais volátil e deixa a economia exposta às oscilações dos preços das commodities."
  ndp_events.21.f: "A terra dá o que dá. A questão é o que lhe pedes."
@@ -145,10 +129,6 @@
  ndp_events.24.f: "O que a terra produz, a terra lembra-se."
  ndp_events.24.a: "Marcar o próximo curso"
 
- # ==========================================
- # SERVICE ECONOMY PATH EVENTS
- # ==========================================
-
  ndp_events.31.t: "A Pergunta de Serviço"
  ndp_events.31.d: "Há dois anos que o programa de serviços tem de ser clarificado. Duas visões de uma economia de serviços competem pela prioridade: o setor financeiro — bancário, seguro e comércio — que gera riqueza rapidamente e atrai investimento, ou educação e burocracia — escolas, universidades e instituições estatais — que constrói o capital humano e a capacidade de governança que sustenta tudo o mais."
  ndp_events.31.f: "O livro de contabilidade ou a biblioteca — ambos são fundamentos da modernidade."
@@ -171,10 +151,6 @@
  ndp_events.34.d: "Dez anos de desenvolvimento da economia de serviços estão completos. Os bancos são mais sofisticados, as escolas melhor funcionários, o governo mais capaz do que quando o programa começou. Se isso se traduz no tipo de prosperidade ampla que justifica o investimento é uma questão de longo prazo — uma questão que a próxima década começará a responder."
  ndp_events.34.f: "A infra-estrutura da mente sobrevive a todas as outras."
  ndp_events.34.a: "Marcar o próximo curso"
-
- # ==========================================
- # MODIFIERS
- # ==========================================
 
  ndp_modifier_industrial: "Caminho do Desenvolvimento Industrial"
  ndp_modifier_industrial_desc: "Os recursos nacionais estão sendo direcionados para a expansão industrial. As taxas de construção estão em alta e o rendimento de fabricação está melhorando em todos os sentidos."

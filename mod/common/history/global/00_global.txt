@@ -27,11 +27,6 @@ GLOBAL = {
 		if = { limit = { NOT = { country_rank >= rank_value:great_power } }
 			add_journal_entry = { type = je_foreign_investment }
 		}
-		if = { limit = { NOT = { any_scope_state = {
-				is_coastal = yes
-			} } }
-			add_journal_entry = { type = je_transit_rights }
-		}
 		if = { limit = { country_rank >= rank_value:major_power }
 		set_variable = { name = conventional_missiles value = 350 }
 		}
@@ -42,7 +37,7 @@ GLOBAL = {
 	}
 	
 	c:USA = {
-		set_next_election_date = 1993.01.20 #YYYY.MM.DD
+		set_next_election_date = 1993.01.20
 	}
 	c:CBD = {
 		every_scope_state = { limit = { state_has_sufficient_population = yes }

@@ -1,20 +1,17 @@
 ﻿arab_spring_progress_bar = {
 	name = "arab_spring_progress_bar"
 	desc = "arab_spring_progress_bar_desc"
-	default_bad = no
+	default_green = yes
 	is_inverted = no
  
 	monthly_progress = {
  
-		# ── ADVANCE ──────────────────────────────────
- 
-		# Liberal/progressive IGs in government
-		if = {
+		progress_condition = {
 			limit = {
 				any_interest_group = {
 					is_in_government = yes
 					OR = {
-						has_ideology = ideology:ideology_liberal_movement
+						has_ideology = ideology:ideology_progressive
 						leader = {
 							OR = {
 								has_ideology = ideology:ideology_liberal_leader
@@ -30,7 +27,7 @@
 					limit = {
 						is_in_government = yes
 						OR = {
-							has_ideology = ideology:ideology_liberal_movement
+							has_ideology = ideology:ideology_progressive
 							leader = {
 								OR = {
 									has_ideology = ideology:ideology_liberal_leader
@@ -44,8 +41,7 @@
 			}
 		}
  
-		# Universal suffrage enacted
-		if = {
+		progress_condition = {
 			limit = {
 				has_law_or_variant = law_type:law_universal_suffrage
 			}
@@ -53,19 +49,19 @@
 				desc = "arab_spring_universal_suffrage_tt"
 				value = 3
 			}
-		}
-		else_if = {
-			limit = {
-				has_law_or_variant = law_type:law_census_voting
-			}
-			add = {
-				desc = "arab_spring_census_voting_tt"
-				value = 1
+			else = {
+				limit = {
+					has_law_or_variant = law_type:law_census_voting
+				}
+				add = {
+					desc = "arab_spring_census_voting_tt"
+					value = 1
+				}
+		
 			}
 		}
  
-		# Free press
-		if = {
+		progress_condition = {
 			limit = {
 				has_law = law_type:law_protected_speech
 			}
@@ -73,19 +69,19 @@
 				desc = "arab_spring_free_press_tt"
 				value = 2
 			}
-		}
-		else_if = {
-			limit = {
-				has_law = law_type:law_right_of_assembly
-			}
-			add = {
-				desc = "arab_spring_right_of_assembly_tt"
-				value = 1
+			else = {
+				limit = {
+					has_law = law_type:law_right_of_assembly
+				}
+				add = {
+					desc = "arab_spring_right_of_assembly_tt"
+					value = 1
+				}
+		
 			}
 		}
  
-		# High literacy
-		if = {
+		progress_condition = {
 			limit = {
 				literacy_rate >= 0.50
 			}
@@ -95,20 +91,17 @@
 			}
 		}
  
-		# ── DEPLETE ───────────────────────────────────
- 
-		# Islamist/nationalist IGs in government
-		if = {
+		progress_condition = {
 			limit = {
 				any_interest_group = {
 					is_in_government = yes
 					OR = {
-						has_ideology = ideology:ideology_jihadist_movement
+						has_ideology = ideology:ideology_theocrat
 						leader = {
 							OR = {
 								has_ideology = ideology:ideology_jihadist_leader
-								has_ideology = ideology:ideology_nationalist_leader
-								has_ideology = ideology:ideology_traditionalist_leader
+								has_ideology = ideology:ideology_right_wing_populist_leader
+								has_ideology = ideology:ideology_theocrat_leader
 							}
 						}
 					}
@@ -120,12 +113,12 @@
 					limit = {
 						is_in_government = yes
 						OR = {
-							has_ideology = ideology:ideology_jihadist_movement
+							has_ideology = ideology:ideology_theocrat
 							leader = {
 								OR = {
 									has_ideology = ideology:ideology_jihadist_leader
-									has_ideology = ideology:ideology_nationalist_leader
-									has_ideology = ideology:ideology_traditionalist_leader
+									has_ideology = ideology:ideology_right_wing_populist_leader
+									has_ideology = ideology:ideology_theocrat_leader
 								}
 							}
 						}
@@ -135,8 +128,7 @@
 			}
 		}
  
-		# Turmoil — stepped thresholds
-		if = {
+		progress_condition = {
 			limit = {
 				country_turmoil >= 0.10
 			}
@@ -145,7 +137,7 @@
 				value = -2
 			}
 		}
-		if = {
+		progress_condition = {
 			limit = {
 				country_turmoil >= 0.20
 			}
@@ -154,7 +146,7 @@
 				value = -2
 			}
 		}
-		if = {
+		progress_condition = {
 			limit = {
 				country_turmoil >= 0.30
 			}
@@ -164,8 +156,7 @@
 			}
 		}
  
-		# Repressive laws still in place
-		if = {
+		progress_condition = {
 			limit = {
 				OR = {
 					has_law = law_type:law_autocracy
@@ -179,8 +170,7 @@
 			}
 		}
  
-		# At war
-		if = {
+		progress_condition = {
 			limit = {
 				is_at_war = yes
 			}
@@ -198,8 +188,6 @@
  
 # ──────────────────────────────────────────
 # REGIME CRACKDOWN
-# High = crackdown succeeding.
-# Reaches 100 = je_arab_winter fails.
 # ──────────────────────────────────────────
  
 arab_winter_crackdown_progress_bar = {
@@ -210,10 +198,7 @@ arab_winter_crackdown_progress_bar = {
  
 	monthly_progress = {
  
-		# ── ADVANCE ──────────────────────────────────
- 
-		# Jihadist/nationalist movements gaining support
-		if = {
+		progress_condition = {
 			limit = {
 				any_political_movement = {
 					OR = {
@@ -240,8 +225,7 @@ arab_winter_crackdown_progress_bar = {
 			}
 		}
  
-		# Armed forces in opposition and powerful
-		if = {
+		progress_condition = {
 			limit = {
 				any_interest_group = {
 					is_interest_group_type = ig_armed_forces
@@ -255,8 +239,7 @@ arab_winter_crackdown_progress_bar = {
 			}
 		}
  
-		# Repressive security laws
-		if = {
+		progress_condition = {
 			limit = {
 				has_law = law_type:law_secret_police
 			}
@@ -264,19 +247,19 @@ arab_winter_crackdown_progress_bar = {
 				desc = "arab_winter_security_laws_tt"
 				value = 2
 			}
-		}
-		else_if = {
-			limit = {
-				has_law = law_type:law_outlawed_dissent
-			}
-			add = {
-				desc = "arab_winter_security_laws_tt"
-				value = 1
+			else = {
+				limit = {
+					has_law = law_type:law_outlawed_dissent
+				}
+				add = {
+					desc = "arab_winter_security_laws_tt"
+					value = 1
+				}
+		
 			}
 		}
  
-		# At war
-		if = {
+		progress_condition = {
 			limit = {
 				is_at_war = yes
 			}
@@ -286,8 +269,7 @@ arab_winter_crackdown_progress_bar = {
 			}
 		}
  
-		# High turmoil
-		if = {
+		progress_condition = {
 			limit = {
 				any_scope_state = {
 					is_incorporated = yes
@@ -300,10 +282,7 @@ arab_winter_crackdown_progress_bar = {
 			}
 		}
  
-		# ── DEPLETE ───────────────────────────────────
- 
-		# Strong reformist movements
-		if = {
+		progress_condition = {
 			limit = {
 				any_political_movement = {
 					OR = {
@@ -320,8 +299,7 @@ arab_winter_crackdown_progress_bar = {
 			}
 		}
  
-		# Universal suffrage entrenched
-		if = {
+		progress_condition = {
 			limit = {
 				has_law_or_variant = law_type:law_universal_suffrage
 			}
@@ -331,8 +309,7 @@ arab_winter_crackdown_progress_bar = {
 			}
 		}
  
-		# Elected bureaucracy resists coups
-		if = {
+		progress_condition = {
 			limit = {
 				has_law = law_type:law_elected_bureaucrats
 			}
@@ -342,8 +319,7 @@ arab_winter_crackdown_progress_bar = {
 			}
 		}
  
-		# Defensive preparations from arab_spring.10 option B
-		if = {
+		progress_condition = {
 			limit = {
 				has_variable = var_counter_revolution_bonus
 			}

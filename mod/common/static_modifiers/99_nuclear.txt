@@ -50,8 +50,6 @@ nuclear_strike_victim_modifier = {
 	state_turmoil_effects_mult                  = 0.05
 }
 
-# Applied to country that allows IAEA inspectors
-# Encourages civilian nuclear energy investment
 nuclear_iaea_cooperation = {
 	icon = gfx/interface/icons/timed_modifier_icons/modifier_flag_positive.dds
 	building_group_bg_power_throughput_add           = 0.25
@@ -66,20 +64,17 @@ nuclear_iaea_defiance = {
 	country_prestige_mult                           = -0.03
 }
  
-# Applied when UN ultimatum is accepted — political cost of capitulation
 nuclear_un_compliance = {
 	icon = gfx/interface/icons/timed_modifier_icons/modifier_documents_positive.dds
 	state_radicals_from_political_movements_mult    = 0.10
 	country_infamy_generation_mult                  = -0.15
 }
  
-# Applied to the nuclear country when a great power launches a diplomatic play
 nuclear_military_ultimatum = {
 	icon = gfx/interface/icons/timed_modifier_icons/modifier_rifle_negative.dds
 	state_radicals_from_political_movements_mult    = 0.15
 }
  
-# Applied to the nuclear country when great powers issue threats without war
 nuclear_great_power_pressure = {
 	icon = gfx/interface/icons/timed_modifier_icons/modifier_flag_negative.dds
 	country_prestige_mult                           = -0.05
@@ -104,7 +99,6 @@ nuclear_disarmament_enforced = {
 	country_tech_research_speed_mult                = -0.05
 }
  
-# Applied to the country that enforced disarmament — 5 year duration
 nuclear_disarmament_enforcer = {
 	icon = gfx/interface/icons/timed_modifier_icons/modifier_statue_positive.dds
 	country_prestige_mult                           = 0.05
@@ -113,7 +107,6 @@ nuclear_disarmament_enforcer = {
 military_base_host_modifier = {
 	icon = gfx/interface/icons/timed_modifier_icons/modifier_rifle_positive.dds
 	country_prestige_mult                           = 0.02
-	# Minor tension from foreign troops on soil
 	state_radicals_from_political_movements_mult    = 0.05
 }
  
@@ -140,7 +133,6 @@ nuclear_first_strike_response = {
 	country_infamy_decay_mult = 0.5
 }
 
-# Applied when a country chooses to absorb a nuclear strike without retaliating
 nuclear_absorbed_first_strike = {
 	country_prestige_mult                           = 0.15
 	country_infamy_generation_mult                  = -0.80

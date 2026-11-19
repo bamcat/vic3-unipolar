@@ -1,9 +1,5 @@
 MILITARY_FORMATIONS = {
 
-	### AFGHAN NORTHERN ALLIANCE ###
-	# Mostly militia/irregular anti-Taliban formations in northern Afghanistan.
-	# If your map has more detailed Afghan state regions, useful alternatives are:
-	# STATE_BADAKHSHAN, STATE_AFGHAN_TURKESTAN, STATE_KABUL, STATE_HERAT.
 	c:ANA ?= {
 
 		create_military_formation = {
@@ -14,17 +10,32 @@ MILITARY_FORMATIONS = {
 			combat_unit = {
 				type = unit_type:combat_unit_type_irregular_infantry
 				state_region = s:STATE_BALKH
-				count = 12
+				count = 10
 			}
 			combat_unit = {
-				type = unit_type:combat_unit_type_irregular_infantry
+				type = unit_type:combat_unit_type_technicals
 				state_region = s:STATE_BALKH
-				count = 10
+				count = 2
 			}
 			combat_unit = {
 				type = unit_type:combat_unit_type_irregular_infantry
 				state_region = s:STATE_BALKH
 				count = 8
+			}
+			combat_unit = {
+				type = unit_type:combat_unit_type_technicals
+				state_region = s:STATE_BALKH
+				count = 2
+			}
+			combat_unit = {
+				type = unit_type:combat_unit_type_irregular_infantry
+				state_region = s:STATE_BALKH
+				count = 6
+			}
+			combat_unit = {
+				type = unit_type:combat_unit_type_technicals
+				state_region = s:STATE_BALKH
+				count = 2
 			}
 		}
 
@@ -36,19 +47,26 @@ MILITARY_FORMATIONS = {
 			combat_unit = {
 				type = unit_type:combat_unit_type_irregular_infantry
 				state_region = s:STATE_BALKH
-				count = 8
+				count = 6
+			}
+			combat_unit = {
+				type = unit_type:combat_unit_type_technicals
+				state_region = s:STATE_BALKH
+				count = 2
 			}
 			combat_unit = {
 				type = unit_type:combat_unit_type_irregular_infantry
 				state_region = s:STATE_BALKH
-				count = 6
+				count = 5
+			}
+			combat_unit = {
+				type = unit_type:combat_unit_type_technicals
+				state_region = s:STATE_BALKH
+				count = 1
 			}
 		}
 	}
 
-	### KURDISTAN ###
-	# Guerrilla-oriented Kurdish formations. Adjust state regions depending on whether KDS starts in Turkey, Iraq, Syria, or a broader Kurdistan setup.
-	# Useful alternatives may include STATE_KURDISTAN, STATE_MOSUL, STATE_ERBIL, STATE_DIYARBAKIR, STATE_VAN.
 	c:KDS ?= {
 
 		create_military_formation = {
@@ -59,12 +77,22 @@ MILITARY_FORMATIONS = {
 			combat_unit = {
 				type = unit_type:combat_unit_type_irregular_infantry
 				state_region = s:STATE_ERZURUM
-				count = 12
+				count = 10
+			}
+			combat_unit = {
+				type = unit_type:combat_unit_type_technicals
+				state_region = s:STATE_ERZURUM
+				count = 2
 			}
 			combat_unit = {
 				type = unit_type:combat_unit_type_irregular_infantry
 				state_region = s:STATE_ERZURUM
-				count = 8
+				count = 6
+			}
+			combat_unit = {
+				type = unit_type:combat_unit_type_technicals
+				state_region = s:STATE_ERZURUM
+				count = 2
 			}
 		}
 
@@ -76,19 +104,26 @@ MILITARY_FORMATIONS = {
 			combat_unit = {
 				type = unit_type:combat_unit_type_irregular_infantry
 				state_region = s:STATE_DIYARBAKIR
-				count = 10
+				count = 8
+			}
+			combat_unit = {
+				type = unit_type:combat_unit_type_technicals
+				state_region = s:STATE_DIYARBAKIR
+				count = 2
 			}
 			combat_unit = {
 				type = unit_type:combat_unit_type_irregular_infantry
 				state_region = s:STATE_DIYARBAKIR
-				count = 6
+				count = 5
+			}
+			combat_unit = {
+				type = unit_type:combat_unit_type_technicals
+				state_region = s:STATE_DIYARBAKIR
+				count = 1
 			}
 		}
 	}
 
-	### CHECHNYA ###
-	# Small, high-mobilization irregular force.
-	# If your map uses a broader North Caucasus state, replace STATE_CHECHNYA with that state region.
 	c:CCH ?= {
 
 		create_military_formation = {
@@ -99,12 +134,22 @@ MILITARY_FORMATIONS = {
 			combat_unit = {
 				type = unit_type:combat_unit_type_irregular_infantry
 				state_region = s:STATE_NORTH_CAUCASUS
-				count = 10
+				count = 8
+			}
+			combat_unit = {
+				type = unit_type:combat_unit_type_technicals
+				state_region = s:STATE_NORTH_CAUCASUS
+				count = 2
 			}
 			combat_unit = {
 				type = unit_type:combat_unit_type_irregular_infantry
 				state_region = s:STATE_NORTH_CAUCASUS
-				count = 6
+				count = 5
+			}
+			combat_unit = {
+				type = unit_type:combat_unit_type_technicals
+				state_region = s:STATE_NORTH_CAUCASUS
+				count = 1
 			}
 		}
 
@@ -116,12 +161,15 @@ MILITARY_FORMATIONS = {
 			combat_unit = {
 				type = unit_type:combat_unit_type_irregular_infantry
 				state_region = s:STATE_NORTH_CAUCASUS
-				count = 8
+				count = 6
+			}
+			combat_unit = {
+				type = unit_type:combat_unit_type_technicals
+				state_region = s:STATE_NORTH_CAUCASUS
+				count = 2
 			}
 		}
 	}
-	### PALESTINE ###
-	# Lightly armed security forces and militia-style formations.
 
 	c:PAL ?= {
 
@@ -132,13 +180,23 @@ MILITARY_FORMATIONS = {
 
 			combat_unit = {
 				type = unit_type:combat_unit_type_irregular_infantry
-				state_region = s:STATE_GAZA
-				count = 6
+				state_region = s:STATE_PALESTINE
+				count = 5
+			}
+			combat_unit = {
+				type = unit_type:combat_unit_type_technicals
+				state_region = s:STATE_PALESTINE
+				count = 1
 			}
 			combat_unit = {
 				type = unit_type:combat_unit_type_irregular_infantry
 				state_region = s:STATE_PALESTINE
-				count = 6
+				count = 5
+			}
+			combat_unit = {
+				type = unit_type:combat_unit_type_technicals
+				state_region = s:STATE_PALESTINE
+				count = 1
 			}
 		}
 
@@ -150,7 +208,12 @@ MILITARY_FORMATIONS = {
 			combat_unit = {
 				type = unit_type:combat_unit_type_irregular_infantry
 				state_region = s:STATE_PALESTINE
-				count = 8
+				count = 6
+			}
+			combat_unit = {
+				type = unit_type:combat_unit_type_technicals
+				state_region = s:STATE_PALESTINE
+				count = 2
 			}
 		}
 
@@ -161,8 +224,13 @@ MILITARY_FORMATIONS = {
 
 			combat_unit = {
 				type = unit_type:combat_unit_type_irregular_infantry
-				state_region = s:STATE_GAZA
-				count = 8
+				state_region = s:STATE_PALESTINE
+				count = 6
+			}
+			combat_unit = {
+				type = unit_type:combat_unit_type_technicals
+				state_region = s:STATE_PALESTINE
+				count = 2
 			}
 		}
 	}

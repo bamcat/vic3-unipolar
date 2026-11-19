@@ -6,7 +6,6 @@
 	settings = {
 		require_target_be_part_of_war
 
-		#Validation
 		validate_conflicts_war_goals_all
 	}
 
@@ -32,6 +31,9 @@
 		}
 	}
 
+	fill_per_week = 2
+	deplete_per_week = 2
+
 	maneuvers = {
 		value = 0
 
@@ -47,6 +49,11 @@
 
 	on_enforced = {
 		# script effect on top of the predefined code effect
+	}
+
+	mirrored_wargoal = {
+		method = swap
+		type = join_power_bloc
 	}
 
 	ai = {

@@ -9,7 +9,7 @@
 	default = yes
  
 	monthly_progress = {
-		if = {
+		progress_condition = {
 			limit = { exists = var:federal_cohesion }
 			add = {
 				desc = "federal_cohesion_bar_progress_tt"
@@ -30,7 +30,7 @@ separatist_pressure_bar = {
 	default_bad = yes
  
 	monthly_progress = {
-		if = {
+		progress_condition = {
 			limit = { exists = var:separatist_pressure }
 			add = {
 				desc = "separatist_pressure_bar_progress_tt"

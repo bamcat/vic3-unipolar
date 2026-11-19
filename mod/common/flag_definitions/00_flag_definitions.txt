@@ -1,18 +1,13 @@
 ﻿# FLAG_DEFINITION_LIST = {		# countries search for a list with the same name as their tag, the DEFAULT list is always included, if no flag definition is applicable for a country then its tag is used a COA_KEY
 # 	includes = ANOTHER_LIST		# includes another list in this list, can be repeated
-#
 # 	flag_definition = {			# the flag definitions that make up this list, can be repeated
-# 		coa = [list] COA_KEY	# main flag, optional list keyword denotes a coa template
 # 		allow_overlord_canton = yes				# default no
 # 		coa_with_overlord_canton = <[list] coa>	# flag where a canton can be placed, optional list keyword same as above, defaults to coa
 # 		overlord_canton_offset = { x y }		# canton placement offset, default { 0 0 }
 # 		overlord_canton_scale = { x y }			# canton placement scale, default { 0.5 0.5 }
-# 		subject_canton = [list] COA_KEY	# canton applied to subjects by this country, optional list keyword same as above
-#
 # 		priority = value		# valid flag definition with the highest priority applies
 # 		trigger = {}			# a trigger that determines if this flag definition is valid, see below for scope
 #       allow_revolutionary_indicator = no      # Default = yes. If yes, a temporary revolutionary indicator will appear while the country is revolutionary
-#       revolutionary_canton = [list] COA_KEY   # Optional. Default = default_revolutionary_canton. Defines which flag should be used as canton while this country is revolutionary
 # 	}
 # }
 
@@ -132,7 +127,7 @@ DEFAULT = {
 	}
 }
 
-ABS = { # Absaroka
+ABS = {
 	flag_definition = {
 		coa = ABS
 		subject_canton = ABS
@@ -140,7 +135,7 @@ ABS = { # Absaroka
 	}
 }
 
-ABU = { # Abu Dhabi
+ABU = {
 	flag_definition = {
 		coa = ABU
 		subject_canton = ABU
@@ -178,7 +173,7 @@ ABU = { # Abu Dhabi
 	}
 }
 
-ACE = { # Aceh
+ACE = {
 	flag_definition = {
 		coa = ACE
 		subject_canton = ACE
@@ -232,7 +227,7 @@ ACE = { # Aceh
 	}
 }
 
-AFG = { # Afghanistan
+AFG = {
 	flag_definition = {
 		coa = AFG
 		subject_canton = AFG
@@ -364,7 +359,7 @@ AFS = {
     }
 }
 
-AIT = { # Ait Abbas
+AIT = {
 	flag_definition = {
 		coa = AIT
 		subject_canton = AIT
@@ -372,7 +367,7 @@ AIT = { # Ait Abbas
 	}
 }
 
-ALA = { # Alba
+ALA = {
 	flag_definition = {
 		coa = ALA
 		subject_canton = ALA
@@ -380,7 +375,7 @@ ALA = { # Alba
 	}
 }
 
-ALB = { # Albania
+ALB = {
 	flag_definition = {
 		coa = ALB
 		subject_canton = ALB
@@ -395,7 +390,7 @@ ALB = { # Albania
 	}
 }
 
-ALD = { # Algeria
+ALD = {
 	flag_definition = {
 		coa = ALD
 		subject_canton = ALD
@@ -460,7 +455,7 @@ ALD = { # Algeria
 	}
 }
 
-ALW = { # Alwar
+ALW = {
 	flag_definition = {
 		coa = ALW
 		subject_canton = ALW
@@ -469,14 +464,14 @@ ALW = { # Alwar
 	}
 }
 
-AMZ = { # Amazonia
+AMZ = {
 	flag_definition = {
 		coa = AMZ
 		subject_canton = AMZ
 	}
 }
 
-ANH = { # Anhalt
+ANH = {
 	flag_definition = {
 		coa = ANH
 		subject_canton = ANH
@@ -492,7 +487,7 @@ ANH = { # Anhalt
 	}
 }
 
-ARA = { # Arabia
+ARA = {
 	flag_definition = {
 		coa = ARA
 		subject_canton = ARA
@@ -508,7 +503,7 @@ ARA = { # Arabia
 	}
 }
 
-ARG = { # Argentina
+ARG = {
 	flag_definition = {
 		coa = ARG
 		subject_canton = ARG
@@ -575,7 +570,7 @@ ARG = { # Argentina
 	}
 }
 
-ARK = { # Arakan
+ARK = {
 	flag_definition = {
 		coa = ARK
 		subject_canton = ARK
@@ -593,7 +588,7 @@ ARK = { # Arakan
 	}
 }
 
-ARM = { # Armenia
+ARM = {
 	flag_definition = {
 		coa = ARM
 		subject_canton = ARM
@@ -608,7 +603,7 @@ ARM = { # Armenia
 	}
 }
 
-ASH = { # Ashanti
+ASH = {
 	flag_definition = {
 		coa = ASH
 		subject_canton = ASH
@@ -632,7 +627,7 @@ ASH = { # Ashanti
 	}
 }
 
-ASM = { # Assam
+ASM = {
 	flag_definition = {
 		coa = ASM
 		subject_canton = ASM
@@ -641,7 +636,7 @@ ASM = { # Assam
 	}
 }
 
-ASS = { # Assyria
+ASS = {
 	flag_definition = {
 		coa = ASS
 		subject_canton = ASS
@@ -649,7 +644,7 @@ ASS = { # Assyria
 	}
 }
 
-AST = { # Australia
+AST = {
 	flag_definition = {
 		coa = AST
 		coa_with_overlord_canton = AST_subject
@@ -680,7 +675,7 @@ AST = { # Australia
 	}
 }
 
-ATL = { # Antillean Confederation
+ATL = {
 	flag_definition = {
 		coa = ATL
 		subject_canton = ATL
@@ -705,7 +700,7 @@ ATL = { # Antillean Confederation
 	}
 }
 
-AUS = { # Austria
+AUS = {
 	flag_definition = {
 		coa = AUS
 		subject_canton = AUS
@@ -765,15 +760,15 @@ AUS = { # Austria
 	}
 }
 
-KUK = { # United States of Greater Austria/Danubian State
-	flag_definition = { # Red white red red white green
+KUK = {
+	flag_definition = {
 		coa = KUK
 		subject_canton = KUK
 		allow_overlord_canton = yes
 		priority = 10
 	}
 
-	flag_definition = { # Black and Yellow and fancy
+	flag_definition = {
 		coa = KUK_monarchy
 		subject_canton = KUK_monarchy
 		allow_overlord_canton = yes
@@ -786,7 +781,7 @@ KUK = { # United States of Greater Austria/Danubian State
 		}
 	}
 
-	flag_definition = { # Proletarier aller Länder, vereinigt Euch!
+	flag_definition = {
 		coa = KUK_communist
 		subject_canton = KUK_communist
 		allow_overlord_canton = yes
@@ -797,7 +792,7 @@ KUK = { # United States of Greater Austria/Danubian State
 	}
 }
 
-AWA = { # Awadh
+AWA = {
 	flag_definition = {
 		coa = AWA
 		subject_canton = AWA
@@ -820,7 +815,7 @@ AWA = { # Awadh
 		}
 	}
 	flag_definition = {
-		coa = AWA # Princely state
+		coa = AWA
 		subject_canton = AWA
 		allow_overlord_canton = no
 		priority = 50
@@ -833,7 +828,7 @@ AWA = { # Awadh
 	}
 }
 
-AZB = { # Azerbaijan
+AZB = {
 	flag_definition = {
 		coa = AZB
 		subject_canton = AZB
@@ -868,7 +863,7 @@ AZB = { # Azerbaijan
 	}
 }
 
-BAD = { # Baden
+BAD = {
 	flag_definition = {
 		coa = BAD
 		subject_canton = BAD
@@ -908,7 +903,7 @@ BAD = { # Baden
 	}
 }
 
-BAG = { # Rewah
+BAG = {
 	flag_definition = {
 		coa = BAG
 		subject_canton = BAG
@@ -925,7 +920,7 @@ BAG = { # Rewah
 	}
 }
 
-BAH = { # Bahamas
+BAH = {
 	flag_definition = {
 		coa = BAH
 		coa_with_overlord_canton = BAH_subject
@@ -934,7 +929,7 @@ BAH = { # Bahamas
 	}
 }
 
-BAS = { # Bastar
+BAS = {
 	flag_definition = {
 		coa = BAS
 		subject_canton = BAS
@@ -950,7 +945,7 @@ BAS = { # Bastar
 		}
 	}
 	flag_definition = {
-		coa = BAS # Princely State
+		coa = BAS
 		subject_canton = BAS
 		allow_overlord_canton = no
 		priority = 50
@@ -963,7 +958,7 @@ BAS = { # Bastar
 	}
 }
 
-BAV = { # Bavaria
+BAV = {
 	flag_definition = {
 		coa = BAV
 		subject_canton = BAV
@@ -1010,7 +1005,7 @@ BAV = { # Bavaria
 	}
 }
 
-BEL = { # Belgium
+BEL = {
 	flag_definition = {
 		coa = BEL
 		subject_canton = BEL
@@ -1081,7 +1076,7 @@ BEL = { # Belgium
 	}
 }
 
-BER = { # Beroda
+BER = {
 	flag_definition = {
 		coa = BER
 		subject_canton = BER
@@ -1089,7 +1084,7 @@ BER = { # Beroda
 		priority = 1
 	}
 	flag_definition = {
-		coa = BER # Princely State
+		coa = BER
 		subject_canton = BER
 		allow_overlord_canton = no
 		priority = 50
@@ -1102,7 +1097,7 @@ BER = { # Beroda
 	}
 }
 
-BHN = { # Bahrain
+BHN = {
 	flag_definition = {
 		coa = BHN
 		subject_canton = BHN
@@ -1110,7 +1105,7 @@ BHN = { # Bahrain
 	}
 }
 
-BHO = { # Bhopal
+BHO = {
 	flag_definition = {
 		coa = BHO
 		subject_canton = BHO
@@ -1160,7 +1155,7 @@ BHT = {
 	}
 }
 
-BHU = { # Bhutan
+BHU = {
 	flag_definition = {
 		coa = BHU
 		subject_canton = BHU
@@ -1180,7 +1175,7 @@ BHU = { # Bhutan
 	}
 }
 
-BHV = { # Bhavnagar
+BHV = {
 	flag_definition = {
 		coa = BHV
 		subject_canton = BHV
@@ -1217,7 +1212,7 @@ BHV = { # Bhavnagar
 	}
 }
 
-BIC = { # British East India Company
+BIC = {
 	flag_definition = { # this is the raj flag
 		coa = BIC
 		coa_with_overlord_canton = BIC_subject
@@ -1257,7 +1252,7 @@ BIC = { # British East India Company
 	}
 }
 
-BIK = { # Bikaner
+BIK = {
 	flag_definition = {
 		coa = BIK
 		subject_canton = BIK
@@ -1273,7 +1268,7 @@ BIK = { # Bikaner
 		}
 	}
 	flag_definition = {
-		coa = BIK # Princely State
+		coa = BIK
 		subject_canton = BIK
 		allow_overlord_canton = no
 		priority = 50
@@ -1286,7 +1281,7 @@ BIK = { # Bikaner
 	}
 }
 
-BLA = { # Solomon Islands
+BLA = {
 	flag_definition = {
 		coa = BLA
 		allow_overlord_canton = yes
@@ -1320,7 +1315,7 @@ BLA = { # Solomon Islands
 	}
 }
 
-BLG = { # Bulungan
+BLG = {
 	flag_definition = {
 		coa = BLG
 		subject_canton = BLG
@@ -1337,7 +1332,7 @@ BLG = { # Bulungan
 	}
 }
 
-BGL = { # Bengal
+BGL = {
 	flag_definition = {
 		coa = BGL
 		subject_canton = BGL
@@ -1345,7 +1340,7 @@ BGL = { # Bengal
 	}
 }
 
-BNJ = { # Banjar
+BNJ = {
 	flag_definition = {
 		coa = BNJ
 		subject_canton = BNJ
@@ -1353,7 +1348,7 @@ BNJ = { # Banjar
 	}
 }
 
-BOH = { # Bohemia
+BOH = {
 	flag_definition = {
 		coa = BOH
 		subject_canton = BOH
@@ -1369,7 +1364,7 @@ BOH = { # Bohemia
 	}
 }
 
-BOL = { # Bolivia
+BOL = {
 	flag_definition = {
 		coa = BOL
 		subject_canton = BOL
@@ -1413,7 +1408,7 @@ BOL = { # Bolivia
 	}
 }
 
-BOS = { # Bosnia
+BOS = {
 	flag_definition = {
 		coa = BOS
 		subject_canton = BOS
@@ -1447,7 +1442,7 @@ BOS = { # Bosnia
 	}
 }
 
-BRA = { # Brunswick
+BRA = {
 	flag_definition = {
 		coa = BRA
 		subject_canton = BRA
@@ -1471,7 +1466,7 @@ BRA = { # Brunswick
 	}
 }
 
-BRE = { # Bremen
+BRE = {
 	flag_definition = {
 		coa = BRE
 		subject_canton = BRE
@@ -1523,7 +1518,7 @@ BRE = { # Bremen
 	}
 }
 
-BRI = { # Brittany
+BRI = {
 	flag_definition = {
 		coa = BRI
 		subject_canton = BRI
@@ -1549,7 +1544,7 @@ BRI = { # Brittany
 	}
 }
 
-BRU = { # Brunei
+BRU = {
 	flag_definition = {
 		coa = BRU
 		subject_canton = BRU
@@ -1603,12 +1598,11 @@ BRU = { # Brunei
 #		allow_overlord_canton = yes
 #		priority = 25
 #		trigger = {
-#
 #		}
 #	}
 }
 
-BRZ = { # Brazil
+BRZ = {
 	flag_definition = {
 		coa = BRZ
 		subject_canton = BRZ
@@ -1616,7 +1610,7 @@ BRZ = { # Brazil
 		coa_with_overlord_canton = BRZ_subject
 		priority = 1
 	}
-	flag_definition = { # United Kingdom
+	flag_definition = {
 		coa = BRZ
 		subject_canton = BRZ
 		allow_overlord_canton = no
@@ -1704,7 +1698,7 @@ BRZ = { # Brazil
 	}
 }
 
-BST = { # Basutoland/Lesotho
+BST = {
 	flag_definition = {
 		coa = BST
 		allow_overlord_canton = no
@@ -1713,7 +1707,7 @@ BST = { # Basutoland/Lesotho
 	}
 }
 
-BUK = { # Bukhara
+BUK = {
 	flag_definition = {
 		coa = BUK
 		subject_canton = BUK
@@ -1780,7 +1774,7 @@ BUK = { # Bukhara
 	}
 }
 
-BUL = { # Bulgaria
+BUL = {
 	flag_definition = {
 		coa = BUL
 		subject_canton = BUL
@@ -1802,7 +1796,7 @@ BUL = { # Bulgaria
 	}
 
 	flag_definition = {
-		coa = BUL_rome # THERE IS ANOTHER
+		coa = BUL_rome
 		subject_canton = BUL_rome
 		priority = 10000
 
@@ -1820,7 +1814,7 @@ BUL = { # Bulgaria
 	}
 }
 
-BUN = { # Orchha/Bundelkhand
+BUN = {
 	flag_definition = {
 		coa = BUN_motto
 		subject_canton = BUN_motto
@@ -1836,7 +1830,7 @@ BUN = { # Orchha/Bundelkhand
 		}
 	}
 	flag_definition = {
-		coa = BUN # Princely State
+		coa = BUN
 		subject_canton = BUN
 		allow_overlord_canton = no
 		priority = 50
@@ -1857,7 +1851,7 @@ BUN = { # Orchha/Bundelkhand
 	}
 }
 
-BUR = { # Burma
+BUR = {
 	flag_definition = {
 		coa = BUR
 		subject_canton = BUR
@@ -1901,7 +1895,7 @@ BUR = { # Burma
 	}
 }
 
-BYE = { # Belarus
+BYE = {
 	flag_definition = {
 		coa = BYE
 		subject_canton = BYE
@@ -1924,7 +1918,7 @@ BYE = { # Belarus
 	}
 }
 
-BYZ = { # Byzantium
+BYZ = {
 	flag_definition = {
 		coa = BYZ
 		allow_overlord_canton = yes
@@ -1933,7 +1927,7 @@ BYZ = { # Byzantium
 	}
 }
 
-CAL = { # California
+CAL = {
 	flag_definition = {
 		coa = CAL
 		allow_overlord_canton = yes
@@ -1964,7 +1958,7 @@ CAL = { # California
 
 
 
-CAM = { # Cambodia
+CAM = {
 	flag_definition = {
 		coa = CAM
 		subject_canton = CAM
@@ -2015,7 +2009,7 @@ CAM = { # Cambodia
 	}
 }
 
-CAN = { # Canada
+CAN = {
 	flag_definition = {
 		coa = CAN
 		coa_with_overlord_canton = CAN_subject
@@ -2081,7 +2075,7 @@ CAN = { # Canada
 	}
 }
 
-CAR = { # Carnatic
+CAR = {
 	flag_definition = {
 		coa = CAR
 		allow_overlord_canton = no
@@ -2090,7 +2084,7 @@ CAR = { # Carnatic
 	}
 }
 
-CAT = { # Catalonia
+CAT = {
 	flag_definition = {
 		coa = CAT
 		coa_with_overlord_canton = CAT
@@ -2123,7 +2117,7 @@ CAT = { # Catalonia
 	}
 }
 
-CEY = { # Ceylon
+CEY = {
 	flag_definition = {
 		coa = CEY
 		subject_canton = CEY
@@ -2161,7 +2155,7 @@ CEY = { # Ceylon
 	}
 }
 
-CHC = { # Chechnya
+CHC = {
 	flag_definition = {
 		coa = CHC
 		allow_overlord_canton = yes
@@ -2180,7 +2174,7 @@ CHC = { # Chechnya
 	}
 }
 
-CHE = { # Cherokee
+CHE = {
 	flag_definition = {
 		coa = CHE
 		allow_overlord_canton = yes
@@ -2190,7 +2184,7 @@ CHE = { # Cherokee
 	}
 }
 
-CHI = { # China
+CHI = {
 	flag_definition = {
 		coa = CHI_han_empire
 		coa_with_overlord_canton = CHI_han_empire
@@ -2254,7 +2248,7 @@ CHI = { # China
 	}
 }
 
-CON = { # Constantine
+CON = {
 	flag_definition = {
 		coa = CON
 		subject_canton = CON
@@ -2262,7 +2256,7 @@ CON = { # Constantine
 	}
 }
 
-CHL = { # Chile
+CHL = {
 	flag_definition = {
 		coa = CHL
 		subject_canton = CHL
@@ -2322,7 +2316,7 @@ CHL = { # Chile
 	}
 }
 
-CHP = { # Champasak
+CHP = {
 	flag_definition = {
 		coa = CHP
 		subject_canton = CHP
@@ -2348,7 +2342,7 @@ CHP = { # Champasak
 	}
 }
 
-CIR = { # Circassia
+CIR = {
 	flag_definition = {
 		coa = CIR
 		subject_canton = CIR
@@ -2372,7 +2366,7 @@ CIR = { # Circassia
 }
 
 
-CLM = { # Colombia
+CLM = {
 	flag_definition = {
 		coa = CLM
 		subject_canton = CLM
@@ -2419,7 +2413,7 @@ CLM = { # Colombia
 	}
 }
 
-CMI = { # Chiang Mai
+CMI = {
 	flag_definition = {
 		coa = CMI
 		subject_canton = CMI
@@ -2476,7 +2470,7 @@ COB = {
 	}
 }
 
-COC = { # Cochin
+COC = {
 	flag_definition = {
 		coa = COC_tricolor_roundel
 		subject_canton = COC_tricolor_roundel
@@ -2513,7 +2507,7 @@ COC = { # Cochin
 	}
 }
 
-COM = { # Comanche
+COM = {
 	flag_definition = {
 		coa = COM
 		subject_canton = COM
@@ -2521,7 +2515,7 @@ COM = { # Comanche
 	}
 }
 
-COO = { # Cooch Behar
+COO = {
 	flag_definition = {
 		coa = COO
 		subject_canton = COO
@@ -2539,7 +2533,7 @@ COO = { # Cooch Behar
 	}
 }
 
-COR = { # Corsica
+COR = {
 	flag_definition = {
 		coa = COR
 		subject_canton = COR
@@ -2549,7 +2543,7 @@ COR = { # Corsica
 	}
 }
 
-COS = { # Costa Rica
+COS = {
 	flag_definition = {
 		coa = COS
 		subject_canton = COS
@@ -2566,7 +2560,7 @@ COS = { # Costa Rica
 	}
 }
 
-CRE = { # Crete
+CRE = {
 	flag_definition = {
 		coa = CRE
 		subject_canton = CRE
@@ -2581,7 +2575,7 @@ CRE = { # Crete
 	}
 }
 
-CRO = { # Croatia
+CRO = {
 	flag_definition = {
 		coa = CRO
 		subject_canton = CRO
@@ -2631,7 +2625,7 @@ CRO = { # Croatia
 	}
 }
 
-CSA = { # Confederate States of America
+CSA = {
 	flag_definition = {
 		coa = CSA
 		subject_canton = sub_CSA_canton_stars
@@ -2731,8 +2725,6 @@ CSA = { # Confederate States of America
 		}
 	}
 
-	### DUPLICATE FOR DURING THE ACW THAT REMOVES THE REVOLUTIONARY TEAR IN THE FLAG
-
 	flag_definition = {
 		coa = CSA
 		subject_canton = sub_CSA_canton_stars
@@ -2828,7 +2820,7 @@ CSA = { # Confederate States of America
 	}
 }
 
-CUB = { # Cuba
+CUB = {
 	flag_definition = {
 		coa = CUB_early
 		subject_canton = CUB_early
@@ -2893,7 +2885,7 @@ CUB = { # Cuba
 	}
 }
 
-CYP = { # Cyprus
+CYP = {
 	flag_definition = {
 		coa = CYP
 		subject_canton = CYP
@@ -2911,7 +2903,7 @@ CYP = { # Cyprus
 	}
 }
 
-CZH = { # Czechoslovakia
+CZH = {
 	flag_definition = {
 		coa = CZH
 		subject_canton = CZH
@@ -2927,7 +2919,7 @@ CZH = { # Czechoslovakia
 	}
 }
 
-DAG = { # Dagestan
+DAG = {
 	flag_definition = {
 		coa = DAG
 		subject_canton = DAG
@@ -2950,7 +2942,7 @@ DAG = { # Dagestan
 	}
 }
 
-DAH = { # Dahomey
+DAH = {
 	flag_definition = {
 		coa = DAH
 		subject_canton = DAH
@@ -2981,7 +2973,7 @@ DAH = { # Dahomey
 	}
 }
 
-DAI = { # Dai Nam
+DAI = {
 	flag_definition = {
 		coa = DAI
 		subject_canton = DAI
@@ -3035,7 +3027,7 @@ DAI = { # Dai Nam
 	}
 }
 
-DEI = { # Dutch East India Company
+DEI = {
 	flag_definition = {
 		coa = DEI
 		subject_canton = DEI
@@ -3067,7 +3059,7 @@ DEI = { # Dutch East India Company
 #	}
 }
 
-DEN = { # Denmark
+DEN = {
 	flag_definition = {
 		coa = DEN
 		coa_with_overlord_canton = DEN
@@ -3100,7 +3092,7 @@ DEN = { # Denmark
 	}
 }
 
-DES = { # Deseret
+DES = {
 	flag_definition = {
 		coa = DES
 		subject_canton = DES
@@ -3116,7 +3108,7 @@ DES = { # Deseret
 	}
 }
 
-DHA = { # Dharampur
+DHA = {
 	flag_definition = {
 		coa = DHA
 		subject_canton = DHA
@@ -3134,7 +3126,7 @@ DHA = { # Dharampur
 	}
 }
 
-DIR = { # Dir
+DIR = {
 	flag_definition = {
 		coa = DIR
 		subject_canton = DIR
@@ -3143,7 +3135,7 @@ DIR = { # Dir
 	}
 }
 
-DKT = { # Dakota Sioux
+DKT = {
 	flag_definition = {
 		coa = DKT
 		subject_canton = DKT
@@ -3151,7 +3143,7 @@ DKT = { # Dakota Sioux
 	}
 }
 
-DOM = { # Dominican republic
+DOM = {
 	flag_definition = {
 		coa = DOM
 		subject_canton = DOM
@@ -3159,7 +3151,7 @@ DOM = { # Dominican republic
 	}
 }
 
-DON = {	# Don Republic
+DON = {
 	flag_definition = {
 		coa = DON
 		subject_canton = DON
@@ -3167,7 +3159,7 @@ DON = {	# Don Republic
 	}
 }
 
-DZG = { # Danzig
+DZG = {
 	flag_definition = {
 		coa = DZG
 		subject_canton = DZG
@@ -3211,7 +3203,7 @@ DZG = { # Danzig
 	}
 }
 
-ECU = { # Ecuador
+ECU = {
 	flag_definition = {
 		coa = ECU
 		subject_canton = ECU
@@ -3251,7 +3243,7 @@ ECU = { # Ecuador
 	}
 }
 
-EGY = { # Egypt
+EGY = {
 	flag_definition = {
 		coa = EGY
 		subject_canton = EGY
@@ -3295,7 +3287,7 @@ EGY = { # Egypt
 	}
 }
 
-ELS = { # El Salvador
+ELS = {
 	flag_definition = {
 		coa = ELS
 		subject_canton = ELS
@@ -3305,7 +3297,7 @@ ELS = { # El Salvador
 	}
 }
 
-ENG = { # England
+ENG = {
 	flag_definition = {
 		coa = ENG
 		subject_canton = ENG
@@ -3315,7 +3307,6 @@ ENG = { # England
 		priority = 1
 	}
 	flag_definition = {
-		# no colonial canton when ruled by UK
 		coa = ENG
 		subject_canton = ENG
 		priority = 2
@@ -3340,7 +3331,7 @@ ENG = { # England
 	}
 }
 
-EOT = { # Emirate of Transjordan
+EOT = {
 	flag_definition = {
 		coa = EOT
 		subject_canton = EOT
@@ -3348,7 +3339,7 @@ EOT = { # Emirate of Transjordan
 	}
 }
 
-EST = { # Estonia
+EST = {
 	flag_definition = {
 		coa = EST
 		subject_canton = EST
@@ -3370,7 +3361,7 @@ EST = { # Estonia
 	}
 }
 
-ETH = { # Ethiopia
+ETH = {
 	flag_definition = {
 		coa = ETH
 		subject_canton = ETH
@@ -3396,7 +3387,7 @@ ETH = { # Ethiopia
 	}
 }
 
-EZO = { # Ezo
+EZO = {
 	flag_definition = {
 		coa = EZO_tokugawa
 		subject_canton = EZO_tokugawa
@@ -3410,7 +3401,7 @@ EZO = { # Ezo
 	}
 }
 
-FER = { # Far Eastern Republic
+FER = {
 	flag_definition = {
 		coa = FER
 		allow_overlord_canton = yes
@@ -3434,7 +3425,7 @@ FER = { # Far Eastern Republic
 	}
 }
 
-FIN = { # Finland
+FIN = {
 	flag_definition = {
 		coa = FIN
 		allow_overlord_canton = yes
@@ -3461,7 +3452,7 @@ FIN = { # Finland
 	}
 }
 
-FJI = { # Fidji
+FJI = {
 	flag_definition = {
 		coa = FJI
 		allow_overlord_canton = yes
@@ -3471,7 +3462,7 @@ FJI = { # Fidji
 	}
 }
 
-FLA = {	# Flanders
+FLA = {
 	flag_definition = {
 		coa = FLA
 		subject_canton = FLA
@@ -3481,7 +3472,7 @@ FLA = {	# Flanders
 	}
 }
 
-FRA = { # France
+FRA = {
 	flag_definition = {
 		coa = FRA
 		subject_canton = FRA
@@ -3577,7 +3568,7 @@ FRA = { # France
 	}
 }
 
-FRM = { # Frankfurt
+FRM = {
 	flag_definition = {
 		coa = FRM
 		subject_canton = FRM
@@ -3620,7 +3611,7 @@ FRM = { # Frankfurt
 	}
 }
 
-FSA = { # Free States of America
+FSA = {
 	flag_definition = {
 		coa = FSA
 		subject_canton = FSA
@@ -3652,7 +3643,7 @@ FSA = { # Free States of America
 	}
 }
 
-GAL = { # Galicia (Halych)
+GAL = {
 	flag_definition = {
 		coa = GAL
 		subject_canton = GAL
@@ -3692,7 +3683,7 @@ GAL = { # Galicia (Halych)
 	}
 }
 
-GAR = { # Garhwal
+GAR = {
 	flag_definition = {
 		coa = GAR
 		subject_canton = GAR
@@ -3713,7 +3704,7 @@ GAR = { # Garhwal
 	}
 }
 
-GBR = { # Great Britain / United Kingdom
+GBR = {
 	flag_definition = {
 		coa = GBR
 		subject_canton = GBR
@@ -3750,7 +3741,6 @@ GBR = { # Great Britain / United Kingdom
 		}
 	}
 	flag_definition = {
-		# English and Scottish flags quartered
 		coa = GBR_dictatorship
 		subject_canton = ENG
 		priority = 16
@@ -3759,7 +3749,6 @@ GBR = { # Great Britain / United Kingdom
 		}
 	}
 	flag_definition = {
-		# English, Scottish, Irish crosses quartered
 		coa = GBR_dictatorship_uk
 		subject_canton = ENG
 		priority = 17
@@ -3903,7 +3892,7 @@ GBR = { # Great Britain / United Kingdom
 	}
 }
 
-GCO = { # Gran Colombia
+GCO = {
 	flag_definition = {
 		coa = CLM_gran_colombia
 		subject_canton = CLM_gran_colombia
@@ -3950,7 +3939,7 @@ FND = {
 	}
 }
 
-GEO = { # Georgia
+GEO = {
 	flag_definition = {
 		coa = GEO
 		allow_overlord_canton = yes
@@ -3984,7 +3973,7 @@ GEO = { # Georgia
 	}
 }
 
-GER = { # Germany
+GER = {
 	flag_definition = {
 		coa = GER_modern
 		allow_overlord_canton = no
@@ -4030,9 +4019,9 @@ GER = { # Germany
 						}
 						ruler ?= {
 							OR = {
-								has_ideology = ideology:ideology_communist
-								has_ideology = ideology:ideology_vanguardist
-								has_ideology = ideology:ideology_anarchist
+								has_ideology = ideology:ideology_marxist_leader
+								has_ideology = ideology:ideology_state_socialist_leader
+								has_ideology = ideology:ideology_anarchist_leader
 							}
 						}
 					}
@@ -4058,8 +4047,6 @@ GER = { # Germany
 			coa_def_fascist_flag_trigger = yes
 		}
 	}
-
-### country-specific Germany variants ###
 
 	flag_definition = {
 		coa = GER_bavarian
@@ -4145,7 +4132,6 @@ GER = { # Germany
 		}
 	}
 
-	# Black-White-Red tricolor is reserved for a Prussian monarchy
 	flag_definition = {
 		coa = GER
 		subject_canton = GER
@@ -4181,7 +4167,7 @@ GER = { # Germany
 	}
 }
 
-GRE = { # Greece
+GRE = {
 	flag_definition = {
 		coa = GRE
 		allow_overlord_canton = yes
@@ -4218,7 +4204,7 @@ GRE = { # Greece
 	}
 }
 
-GUA = { # Guatemala
+GUA = {
 	flag_definition = {
 		coa = GUA
 		allow_overlord_canton = yes
@@ -4257,7 +4243,7 @@ GUA = { # Guatemala
 	}
 }
 
-GWA = { # Gwalior
+GWA = {
 	flag_definition = {
 		coa = GWA
 		subject_canton = GWA
@@ -4307,7 +4293,7 @@ GWA = { # Gwalior
 	}
 }
 
-HAI = { # Haiti
+HAI = {
 	flag_definition = {
 		coa = HAI
 		allow_overlord_canton = yes
@@ -4368,7 +4354,7 @@ HAI = { # Haiti
 	}
 }
 
-HAM = { # Hamburg
+HAM = {
 	flag_definition = {
 		coa = HAM_monarchy
 		subject_canton = HAM_monarchy
@@ -4422,7 +4408,7 @@ HAM = { # Hamburg
 	}
 }
 
-HAN = { # Hannover
+HAN = {
 	flag_definition = {
 		coa = HAN
 		allow_overlord_canton = yes
@@ -4493,7 +4479,7 @@ HAN = { # Hannover
 	}
 }
 
-HAR = { # Harar
+HAR = {
 	flag_definition = {
 		coa = HAR
 		subject_canton = HAR
@@ -4503,7 +4489,7 @@ HAR = { # Harar
 	}
 }
 
-HBC = { # Hudson Bay Company
+HBC = {
 	flag_definition = {
 		coa = HBC
 		coa_with_overlord_canton = HBC_subject
@@ -4542,7 +4528,7 @@ HBC = { # Hudson Bay Company
 	}
 }
 
-HDJ = { # Hedjaz
+HDJ = {
 	flag_definition = {
 		coa = HDJ
 		subject_canton = HDJ
@@ -4577,7 +4563,7 @@ HEK = {
 	}
 }
 
-HES = { # Hesse
+HES = {
 	flag_definition = {
 		coa = HES
 		subject_canton = HES
@@ -4635,7 +4621,7 @@ HES = { # Hesse
 	}
 }
 
-HND = { # India
+HND = {
 	flag_definition = {
 		coa = HND
 		allow_overlord_canton = yes
@@ -4660,7 +4646,7 @@ HND = { # India
 	}
 }
 
-HOB = { # Hobyo
+HOB = {
 	flag_definition = {
 		coa = HOB
 		subject_canton = HOB
@@ -4678,7 +4664,7 @@ HOH = {
 	}
 }
 
-HOL = { # Holstein
+HOL = {
 	flag_definition = {
 		coa = HOL
 		subject_canton = HOL
@@ -4717,7 +4703,7 @@ HOL = { # Holstein
 	}
 }
 
-HON = { # Honduras
+HON = {
 	flag_definition = {
 		coa = HON
 		subject_canton = HON
@@ -4741,7 +4727,7 @@ HON = { # Honduras
 	}
 }
 
-HRO = { # Herero
+HRO = {
 	flag_definition = {
 		coa = HRO
 		subject_canton = HRO
@@ -4749,7 +4735,7 @@ HRO = { # Herero
 	}
 }
 
-HUN = { # Hungary
+HUN = {
 	flag_definition = {
 		coa = HUN
 		subject_canton = HUN
@@ -4773,7 +4759,7 @@ HUN = { # Hungary
 	}
 }
 
-HYD = { # Hyderabad
+HYD = {
 	flag_definition = {
 		coa = HYD
 		subject_canton = HYD
@@ -4818,7 +4804,7 @@ HYD = { # Hyderabad
 	}
 }
 
-IBE = { # Iberia
+IBE = {
 	flag_definition = {
 		coa = IBE
 		subject_canton = IBE
@@ -4826,7 +4812,6 @@ IBE = { # Iberia
 		priority = 1
 	}
 
-	### Various dynasties ###
 	flag_definition = {
 		coa = IBE_monarchy
 		subject_canton = IBE_monarchy
@@ -4982,8 +4967,7 @@ IBE = { # Iberia
 		}
 	}
 
-	### Republic ###
-	flag_definition = { # Union flag
+	flag_definition = {
 		coa = IBE_republic_1
 		subject_canton = IBE_republic_1
 		allow_overlord_canton = no
@@ -4992,7 +4976,7 @@ IBE = { # Iberia
 			coa_def_republic_flag_trigger = yes
 		}
 	}
-	flag_definition = { # Tricolor
+	flag_definition = {
 		coa = IBE_republic_2
 		subject_canton = IBE_republic_2
 		allow_overlord_canton = no
@@ -5004,7 +4988,7 @@ IBE = { # Iberia
 			}
 		}
 	}
-	flag_definition = { # Federal
+	flag_definition = {
 		coa = IBE_republic_3
 		subject_canton = IBE_republic_3
 		allow_overlord_canton = no
@@ -5061,7 +5045,7 @@ IBE = { # Iberia
 			scope:actor ?= {
 				has_law_or_variant = law_type:law_corporate_state
 				has_law_or_variant = law_type:law_single_party_state
-				any_primary_culture = { # Only one primary culture
+				any_primary_culture = {
 					count = 1
 				}
 				country_has_primary_culture = cu:iberian
@@ -5070,7 +5054,7 @@ IBE = { # Iberia
 	}
 }
 
-IDA = { # Idar
+IDA = {
 	flag_definition = {
 		coa = IDA
 		subject_canton = IDA
@@ -5100,7 +5084,7 @@ IDA = { # Idar
 	}
 }
 
-IDN = { # Indonesia
+IDN = {
 	flag_definition = {
 		coa = IDN
 		subject_canton = IDN
@@ -5117,7 +5101,7 @@ IDN = { # Indonesia
 	}
 }
 
-IND = { # Indore
+IND = {
 	flag_definition = {
 		coa = IND
 		subject_canton = IND
@@ -5133,7 +5117,7 @@ IND = { # Indore
 		}
 	}
 	flag_definition = {
-		coa = IND # Princely State
+		coa = IND
 		subject_canton = IND
 		allow_overlord_canton = no
 		priority = 50
@@ -5146,7 +5130,7 @@ IND = { # Indore
 	}
 }
 
-ION = { # Ionian Islands
+ION = {
 	flag_definition = {
 		coa = ION
 		allow_overlord_canton = yes
@@ -5158,7 +5142,7 @@ ION = { # Ionian Islands
 	}
 }
 
-IRC = { # Iron Confederacy
+IRC = {
 	flag_definition = {
 		coa = IRC
 		subject_canton = IRC
@@ -5166,7 +5150,7 @@ IRC = { # Iron Confederacy
 	}
 }
 
-IRE = { # Ireland
+IRE = {
 	flag_definition = {
 		coa = IRE
 		allow_overlord_canton = yes
@@ -5246,7 +5230,7 @@ IRE = { # Ireland
 	}
 }
 
-IRQ = { # Iraq
+IRQ = {
 	flag_definition = {
 		coa = IRQ
 		subject_canton = IRQ
@@ -5270,7 +5254,7 @@ IRQ = { # Iraq
 	}
 }
 
-ISR = { # Israel
+ISR = {
 	flag_definition = {
 		coa = ISR
 		subject_canton = ISR
@@ -5278,7 +5262,7 @@ ISR = { # Israel
 	}
 }
 
-ITA = { # Italy
+ITA = {
 	flag_definition = {
 		coa = ITA_republic
 		subject_canton = ITA_republic
@@ -5290,14 +5274,11 @@ ITA = { # Italy
 		priority = 15
 
 		trigger = {
-			NOT = { exists = c:PAP } # Can't be Pope if the Pope is still in control of another country!
+			NOT = { exists = c:PAP }
 			coa_def_theocracy_flag_trigger = yes
 		}
 	}
 
-	### Different monarchist Italies ###
-
-	# Sardinia-Piedmont Italy
 	flag_definition = {
 		coa = ITA
 		subject_canton = ITA
@@ -5311,7 +5292,6 @@ ITA = { # Italy
 		}
 	}
 
-	## Two Sicilies Italy
 	flag_definition = {
 		coa = ITA_sicilian
 		subject_canton = ITA_sicilian
@@ -5325,7 +5305,6 @@ ITA = { # Italy
 		}
 	}
 
-	# Tuscany Italy
 	flag_definition = {
 		coa = ITA_tuscan
 		subject_canton = ITA_tuscan
@@ -5339,7 +5318,6 @@ ITA = { # Italy
 		}
 	}
 
-	# Modena Italy
 	flag_definition = {
 		coa = ITA_modenan
 		subject_canton = ITA_modenan
@@ -5353,7 +5331,6 @@ ITA = { # Italy
 		}
 	}
 
-	# Parma Italy
 	flag_definition = {
 		coa = ITA_parmesan
 		subject_canton = ITA_parmesan
@@ -5367,7 +5344,6 @@ ITA = { # Italy
 		}
 	}
 
-	# Lucca Italy
 	flag_definition = {
 		coa = ITA_luccan
 		subject_canton = ITA_luccan
@@ -5416,7 +5392,7 @@ ITA = { # Italy
 	}
 }
 
-IUS = { # Idel-Ural State
+IUS = {
 	flag_definition = {
 		coa = IUS
 		subject_canton = IUS
@@ -5433,7 +5409,7 @@ KNK = {
 	}
 }
 
-JAB = { # Jabal Shammar
+JAB = {
 	flag_definition = {
 		coa = JAB
 		subject_canton = JAB
@@ -5441,7 +5417,7 @@ JAB = { # Jabal Shammar
 	}
 }
 
-JAI = { # Jaipur
+JAI = {
 	flag_definition = {
 		coa = JAI
 		subject_canton = JAI
@@ -5458,7 +5434,7 @@ JAI = { # Jaipur
 		}
 	}
 	flag_definition = {
-		coa = JAI # Princely State
+		coa = JAI
 		subject_canton = JAI
 		allow_overlord_canton = no
 		priority = 50
@@ -5471,7 +5447,7 @@ JAI = { # Jaipur
 	}
 }
 
-JAM = { # Jamaica
+JAM = {
 	flag_definition = {
 		coa = JAM
 		subject_canton = JAM
@@ -5510,7 +5486,7 @@ JAM = { # Jamaica
 	}
 }
 
-JAN = { # Jan Mayen
+JAN = {
 	flag_definition = {
 		coa = JAN
 		subject_canton = JAN
@@ -5530,7 +5506,7 @@ JAN = { # Jan Mayen
 	}
 }
 
-JAP = { # Japan
+JAP = {
 	flag_definition = {
 		coa = JAP
 		allow_overlord_canton = yes
@@ -5656,7 +5632,7 @@ JAP = { # Japan
 	}
 }
 
-JAS = { # Jaisalmer
+JAS = {
 	flag_definition = {
 		coa = JAS
 		subject_canton = JAS
@@ -5671,7 +5647,7 @@ JAS = { # Jaisalmer
 		}
 	}
 	flag_definition = {
-		coa = JAS # Princely State
+		coa = JAS
 		subject_canton = JAS
 		allow_overlord_canton = no
 		priority = 50
@@ -5684,7 +5660,7 @@ JAS = { # Jaisalmer
 	}
 }
 
-JAV = { # Java
+JAV = {
 	flag_definition = {
 		coa = JAV
 		subject_canton = JAV
@@ -5701,7 +5677,7 @@ JAV = { # Java
 	}
 }
 
-JEY = { # Jeypore
+JEY = {
 	flag_definition = {
 		coa = JEY
 		allow_overlord_canton = no
@@ -5710,7 +5686,7 @@ JEY = { # Jeypore
 	}
 }
 
-JHN = { # Jhansi
+JHN = {
 	flag_definition = {
 		coa = JHN
 		subject_canton = JHN
@@ -5727,7 +5703,7 @@ JHN = { # Jhansi
 	}
 }
 
-JMB = { # Jambi
+JMB = {
 	flag_definition = {
 		coa = JMB
 		subject_canton = JMB
@@ -5735,7 +5711,7 @@ JMB = { # Jambi
 	}
 }
 
-JOD = { # Jodhpur
+JOD = {
 	flag_definition = {
 		coa = JOD
 		subject_canton = JOD
@@ -5751,7 +5727,7 @@ JOD = { # Jodhpur
 		}
 	}
 	flag_definition = {
-		coa = JOD # Princely State
+		coa = JOD
 		subject_canton = JOD
 		allow_overlord_canton = no
 		priority = 50
@@ -5764,7 +5740,7 @@ JOD = { # Jodhpur
 	}
 }
 
-JOH = { # Johore
+JOH = {
 	flag_definition = {
 		coa = JOH
 		subject_canton = JOH
@@ -5808,7 +5784,7 @@ JOH = { # Johore
 	}
 }
 
-JUN = { # Junagadh
+JUN = {
 	flag_definition = {
 		coa = JUN
 		subject_canton = JUN
@@ -5847,7 +5823,7 @@ JUN = { # Junagadh
 	}
 }
 
-KAL = { # Kalat
+KAL = {
 	flag_definition = {
 		coa = KAL
 		subject_canton = KAL
@@ -5891,7 +5867,7 @@ KAL = { # Kalat
 	}
 }
 
-KAS = { # Kashmir
+KAS = {
 	flag_definition = {
 		coa = KAS
 		allow_overlord_canton = no
@@ -5900,7 +5876,7 @@ KAS = { # Kashmir
 	}
 }
 
-KAZ = { # Kazakhstan
+KAZ = {
 	flag_definition = {
 		coa = KAZ
 		subject_canton = KAZ
@@ -5948,7 +5924,7 @@ KAZ = { # Kazakhstan
 	}
 }
 
-KHI = { # Khiva
+KHI = {
 	flag_definition = {
 		coa = KHI
 		subject_canton = KHI
@@ -5993,7 +5969,7 @@ KHI = { # Khiva
 	}
 }
 
-KHP = { # Kolhapur
+KHP = {
 	flag_definition = {
 		coa = KHP
 		allow_overlord_canton = no
@@ -6002,7 +5978,7 @@ KHP = { # Kolhapur
 	}
 }
 
-KHR = { # Kharan
+KHR = {
 	flag_definition = {
 		coa = KHR
 		subject_canton = KHR
@@ -6011,7 +5987,7 @@ KHR = { # Kharan
 	}
 }
 
-KLM = { # Kalmykia
+KLM = {
 	flag_definition = {
 		coa = KLM
 		subject_canton = KLM
@@ -6019,7 +5995,7 @@ KLM = { # Kalmykia
 	}
 }
 
-KNO = { # Kurnool
+KNO = {
 	flag_definition = {
 		coa = KNO
 		subject_canton = KNO
@@ -6028,7 +6004,7 @@ KNO = { # Kurnool
 	}
 }
 
-KOK = { # Kokand
+KOK = {
 	flag_definition = {
 		coa = KOK
 		subject_canton = KOK
@@ -6072,7 +6048,7 @@ KOK = { # Kokand
 	}
 }
 
-KOR = { # Korea
+KOR = {
 	flag_definition = {
 		coa = KOR_joseon
 		subject_canton = KOR_joseon
@@ -6108,7 +6084,7 @@ KOR = { # Korea
 	}
 }
 
-KOT = { # Kotah
+KOT = {
 	flag_definition = {
 		coa = KOT
 		subject_canton = KOT
@@ -6138,7 +6114,7 @@ KOT = { # Kotah
 	}
 }
 
-KPR = { # Khairpur
+KPR = {
 	flag_definition = {
 		coa = KPR
 		subject_canton = KPR
@@ -6146,7 +6122,7 @@ KPR = { # Khairpur
 	}
 }
 
-KTI = { # Kutai
+KTI = {
 	flag_definition = {
 		coa = KTI
 		subject_canton = KTI
@@ -6164,7 +6140,7 @@ KTI = { # Kutai
 	}
 }
 
-KUT = { # Kutch
+KUT = {
 	flag_definition = {
 		coa = KUT
 		subject_canton = KUT
@@ -6196,7 +6172,7 @@ KUT = { # Kutch
 	}
 }
 
-KAT = { # Kathiri
+KAT = {
 	flag_definition = {
 		coa = KAT
 		subject_canton = KAT
@@ -6204,7 +6180,7 @@ KAT = { # Kathiri
 	}
 }
 
-LAD = { # Ladakh
+LAD = {
 	flag_definition = {
 		coa = LAD
 		subject_canton = LAD
@@ -6212,7 +6188,7 @@ LAD = { # Ladakh
 	}
 }
 
-LAH = { # Lahej
+LAH = {
 	flag_definition = {
 		coa = LAH
 		subject_canton = LAH
@@ -6220,7 +6196,7 @@ LAH = { # Lahej
 	}
 }
 
-LAN = { # Lanfang
+LAN = {
 	flag_definition = {
 		coa = LAN
 		subject_canton = LAN
@@ -6238,7 +6214,7 @@ LAN = { # Lanfang
 	}
 }
 
-LAO = { # Laos
+LAO = {
 	flag_definition = {
 		coa = LAO
 		subject_canton = LAO
@@ -6255,7 +6231,7 @@ LAO = { # Laos
 	}
 }
 
-LAT = { # Latvia
+LAT = {
 	flag_definition = {
 		coa = LAT
 		subject_canton = LAT
@@ -6271,7 +6247,7 @@ LAT = { # Latvia
 	}
 }
 
-LBL = { # Lasbela
+LBL = {
 	flag_definition = {
 		coa = LBL
 		subject_canton = LBL
@@ -6279,7 +6255,7 @@ LBL = { # Lasbela
 	}
 }
 
-LEB = { # Lebanon
+LEB = {
 	flag_definition = {
 		coa = LEB
 		subject_canton = LEB
@@ -6297,7 +6273,7 @@ LEB = { # Lebanon
 	}
 }
 
-LIB = { # Liberia
+LIB = {
 	flag_definition = {
 		coa = LIB
 		subject_canton = LIB
@@ -6332,7 +6308,7 @@ LIP = {
 	}
 }
 
-LIT = { # Lithuania
+LIT = {
 	flag_definition = {
 		coa = LIT
 		subject_canton = LIT
@@ -6364,7 +6340,7 @@ LIT = { # Lithuania
 	}
 }
 
-LKT = { # Lakota Sioux
+LKT = {
 	flag_definition = {
 		coa = LKT
 		subject_canton = LKT
@@ -6372,7 +6348,7 @@ LKT = { # Lakota Sioux
 	}
 }
 
-LOU = { # Louisiana
+LOU = {
 	flag_definition = {
 		coa = LOU
 		subject_canton = LOU
@@ -6396,7 +6372,7 @@ LOU = { # Louisiana
 	}
 }
 
-LUA = { # Luang Prabang
+LUA = {
 	flag_definition = {
 		coa = LUA
 		subject_canton = LUA
@@ -6423,7 +6399,7 @@ LUA = { # Luang Prabang
 	}
 }
 
-LUB = { # Lubeck
+LUB = {
 	flag_definition = {
 		coa = LUB
 		subject_canton = LUB
@@ -6470,7 +6446,7 @@ LUB = { # Lubeck
 	}
 }
 
-LUC = { # Lucca
+LUC = {
 	flag_definition = {
 		coa = LUC
 		allow_overlord_canton = yes
@@ -6503,7 +6479,7 @@ LUC = { # Lucca
 	}
 }
 
-MAD = { # Madagascar
+MAD = {
 	flag_definition = {
 		coa = MAD
 		subject_canton = MAD
@@ -6527,7 +6503,7 @@ MAD = { # Madagascar
 	}
 }
 
-SUD = { #Sudan
+SUD = {
 	flag_definition = {
 		coa = SUD
 		subject_canton = SUD
@@ -6543,7 +6519,7 @@ SUD = { #Sudan
 	}
 }
 
-MAH = { # Mahra
+MAH = {
 	flag_definition = {
 		coa = MAH
 		subject_canton = MAH
@@ -6551,7 +6527,7 @@ MAH = { # Mahra
 	}
 }
 
-MAK = { # Makran
+MAK = {
 	flag_definition = {
 		coa = MAK
 		subject_canton = MAK
@@ -6575,7 +6551,7 @@ MAK = { # Makran
 	}
 }
 
-MAL = {	# Mali
+MAL = {
 	flag_definition = {
 		coa = MAL
 		subject_canton = MAL
@@ -6583,7 +6559,7 @@ MAL = {	# Mali
 	}
 }
 
-MAS = { # Mascara
+MAS = {
 	flag_definition = {
 		coa = MAS
 		subject_canton = MAS
@@ -6591,7 +6567,7 @@ MAS = { # Mascara
 	}
 }
 
-MCH = { # Manchuria
+MCH = {
 	flag_definition = {
 		coa = MCH
 		allow_overlord_canton = no
@@ -6600,7 +6576,7 @@ MCH = { # Manchuria
 	}
 }
 
-MEC = { # Mecklenburg
+MEC = {
 	flag_definition = {
 		coa = MEC
 		subject_canton = MEC
@@ -6657,7 +6633,7 @@ MEI = {
 	}
 }
 
-MEW = { # Mewar
+MEW = {
 	flag_definition = {
 		coa = MEW
 		subject_canton = MEW
@@ -6673,7 +6649,7 @@ MEW = { # Mewar
 		}
 	}
 	flag_definition = {
-		coa = MEW # Princely State
+		coa = MEW
 		subject_canton = MEW
 		allow_overlord_canton = no
 		priority = 50
@@ -6686,7 +6662,7 @@ MEW = { # Mewar
 	}
 }
 
-MEX = { # Mexico
+MEX = {
 	flag_definition = {
 		coa = MEX
 		subject_canton = MEX
@@ -6728,7 +6704,7 @@ MEX = { # Mexico
 	}
 }
 
-MGB = { # Maghreb
+MGB = {
 	flag_definition = {
 		coa = MGB
 		subject_canton = MGB
@@ -6749,7 +6725,7 @@ MGB = { # Maghreb
 	}
 }
 
-MGD = { # Maguindanao
+MGD = {
 	flag_definition = {
 		coa = MGD
 		subject_canton = MGD
@@ -6757,7 +6733,7 @@ MGD = { # Maguindanao
 	}
 }
 
-MGL = { # Mongolia
+MGL = {
 	flag_definition = {
 		coa = MGL
 		allow_overlord_canton = yes
@@ -6782,7 +6758,7 @@ MGL = { # Mongolia
 	}
 }
 
-MJT = { # Majerteen
+MJT = {
 	flag_definition = {
 		coa = MJT
 		subject_canton = MJT
@@ -6802,14 +6778,14 @@ MJT = { # Majerteen
 	}
 }
 
-MKT = { # Miskitia
+MKT = {
 	flag_definition = {
 		coa = MKT
 		allow_overlord_canton = yes
 	}
 }
 
-MLD = { # Maldives
+MLD = {
 	flag_definition = {
 		coa = MLD
 		subject_canton = MLD
@@ -6826,7 +6802,7 @@ MLD = { # Maldives
 	}
 }
 
-MLT = { # Malta
+MLT = {
 	flag_definition = {
 		coa = MLT
 		coa_with_overlord_canton = MLT
@@ -6835,7 +6811,7 @@ MLT = { # Malta
 	}
 }
 
-MNP = { # Manipur
+MNP = {
 	flag_definition = {
 		coa = MNP
 		subject_canton = MNP
@@ -6853,7 +6829,7 @@ MNP = { # Manipur
 	}
 }
 
-MOD = { # Modena
+MOD = {
 	flag_definition = {
 		coa = MOD
 		subject_canton = MOD
@@ -6890,7 +6866,7 @@ MOD = { # Modena
 	}
 }
 
-MOL = { # Moldavia
+MOL = {
 	flag_definition = {
 		coa = MOL
 		subject_canton = MOL
@@ -6899,7 +6875,6 @@ MOL = { # Moldavia
 		priority = 1
 	}
 	flag_definition = {
-		# Corner cantons with stars when ruled by the Ottoman Empire
 		coa = MOL_subject_TUR
 		subject_canton = MOL
 		priority = 2
@@ -6925,7 +6900,7 @@ MOL = { # Moldavia
 	}
 }
 
-MON = { # Montenegro
+MON = {
 	flag_definition = {
 		coa = MON_theocracy
 		subject_canton = MON_theocracy
@@ -6991,7 +6966,7 @@ MON = { # Montenegro
 	}
 }
 
-MOR = { # Morocco
+MOR = {
 	flag_definition = {
 		coa = MOR
 		subject_canton = MOR
@@ -7041,7 +7016,7 @@ MST = {
 	}
 }
 
-MTC = { # Metis
+MTC = {
 	flag_definition = {
 		coa = MTC
 		coa_with_overlord_canton = MTC_subject
@@ -7049,7 +7024,7 @@ MTC = { # Metis
 	}
 }
 
-MUG = { # Mughalistan
+MUG = {
 	flag_definition = {
 		coa = MUG
 		subject_canton = MUG
@@ -7081,7 +7056,7 @@ MUG = { # Mughalistan
 	}
 }
 
-MYB = { # Mayurbhanj
+MYB = {
 	flag_definition = {
 		coa = MYB_bicolor
 		allow_overlord_canton = yes
@@ -7110,7 +7085,7 @@ MYB = { # Mayurbhanj
 	}
 }
 
-MYS = { # Mysore
+MYS = {
 	flag_definition = {
 		coa = MYS
 		subject_canton = MYS
@@ -7163,7 +7138,7 @@ MYS = { # Mysore
 	}
 }
 
-NAG = { # Nagpur
+NAG = {
 	flag_definition = {
 		coa = NAG
 		subject_canton = NAG
@@ -7171,7 +7146,7 @@ NAG = { # Nagpur
 		priority = 1
 	}
 	flag_definition = {
-		coa = NAG # Princely State
+		coa = NAG
 		subject_canton = NAG
 		allow_overlord_canton = no
 		priority = 50
@@ -7184,7 +7159,7 @@ NAG = { # Nagpur
 	}
 }
 
-NAL = { # Natal
+NAL = {
 	flag_definition = {
 		coa = NAL
 		subject_canton = NAL
@@ -7200,7 +7175,7 @@ NAL = { # Natal
 	}
 }
 
-NAM = { # Namaland
+NAM = {
 	flag_definition = {
 		coa = NAM
 		subject_canton = NAM
@@ -7208,7 +7183,7 @@ NAM = { # Namaland
 	}
 }
 
-NAR = { # Narsinghpur
+NAR = {
 	flag_definition = {
 		coa = NAR
 		allow_overlord_canton = yes
@@ -7229,7 +7204,7 @@ NAR = { # Narsinghpur
 	}
 }
 
-NAS = { # Nassau
+NAS = {
 	flag_definition = {
 		coa = NAS
 		subject_canton = NAS
@@ -7260,7 +7235,7 @@ NAS = { # Nassau
 	}
 }
 
-NAV = { # Navarre / Basque
+NAV = {
 	flag_definition = {
 		coa = NAV_republic
 		priority = 10
@@ -7270,7 +7245,7 @@ NAV = { # Navarre / Basque
 	}
 }
 
-NAW = { # Nawanagar
+NAW = {
 	flag_definition = {
 		coa = NAW
 		subject_canton = NAW
@@ -7309,7 +7284,7 @@ NAW = { # Nawanagar
 	}
 }
 
-NBS = { # New Brunswick
+NBS = {
 	flag_definition = {
 		coa = NBS
 		coa_with_overlord_canton = NBS_subject
@@ -7325,7 +7300,7 @@ NBS = { # New Brunswick
 	}
 }
 
-NCA = { # Northern Caucasus
+NCA = {
 	flag_definition = {
 		coa = NCA
 		subject_canton = NCA
@@ -7349,7 +7324,7 @@ NCA = { # Northern Caucasus
 	}
 }
 
-NEJ = { # Nejd
+NEJ = {
 	flag_definition = {
 		coa = NEJ
 		subject_canton = NEJ
@@ -7367,7 +7342,7 @@ NEJ = { # Nejd
 	}
 }
 
-NEN = { # New England
+NEN = {
 	flag_definition = {
 		coa = NEN
 		subject_canton = NEN
@@ -7390,7 +7365,7 @@ NEN = { # New England
 	}
 }
 
-NEP = { # Nepal
+NEP = {
 	flag_definition = {
 		coa = NEP
 		subject_canton = NEP
@@ -7413,7 +7388,7 @@ NEP = { # Nepal
 	}
 }
 
-NET = { # Netherlands
+NET = {
 	flag_definition = {
 		coa = NET
 		allow_overlord_canton = yes
@@ -7453,7 +7428,7 @@ NET = { # Netherlands
 	}
 }
 
-NEW = { # Newfoundland
+NEW = {
 	flag_definition = {
 		coa = NEW
 		coa_with_overlord_canton = NEW_subject
@@ -7483,7 +7458,7 @@ NEW = { # Newfoundland
 	}
 }
 
-NGF = { # North Germany
+NGF = {
 	includes = GER
 	flag_definition = {
 		coa = NGF
@@ -7507,7 +7482,7 @@ NGF = { # North Germany
 	}
 }
 
-NIC = { # Nicaragua
+NIC = {
 	flag_definition = {
 		coa = NIC
 		subject_canton = NIC
@@ -7524,7 +7499,7 @@ NIC = { # Nicaragua
 	}
 }
 
-NNV = { # Nunavut
+NNV = {
 	flag_definition = {
 		coa = NNV
 		coa_with_overlord_canton = NNV_subject
@@ -7532,7 +7507,7 @@ NNV = { # Nunavut
 	}
 }
 
-NOR = { # Norway
+NOR = {
 	flag_definition = {
 		coa = NOR
 		priority = 1
@@ -7546,7 +7521,6 @@ NOR = { # Norway
 		priority = 5
 		subject_canton = NOR_canton
 		trigger = {
-			# Norway didn't use a Swedish canton in 1836
 			coa_SWE_use_union_mark_canton_trigger = no
 			coa_def_swedish_ensign_trigger = yes
 		}
@@ -7568,7 +7542,7 @@ NOR = { # Norway
 	}
 }
 
-NSW = { # New South Wales
+NSW = {
 	flag_definition = {
 		coa = NSW
 		coa_with_overlord_canton = NSW
@@ -7578,7 +7552,7 @@ NSW = { # New South Wales
 	}
 }
 
-NVJ = { # Navajo
+NVJ = {
 	flag_definition = {
 		coa = NVJ
 		subject_canton = NVJ
@@ -7586,7 +7560,7 @@ NVJ = { # Navajo
 	}
 }
 
-NVS = { # Nova Scotia
+NVS = {
 	flag_definition = {
 		coa = NVS
 		coa_with_overlord_canton = NVS_subject
@@ -7594,7 +7568,7 @@ NVS = { # Nova Scotia
 	}
 }
 
-NRU = { # Nauru
+NRU = {
 	flag_definition = {
 		coa = NRU
 		subject_canton = NRU
@@ -7618,7 +7592,7 @@ NRU = { # Nauru
 	}
 }
 
-NZL = { # New Zealand
+NZL = {
 	flag_definition = {
 		coa = NZL
 		coa_with_overlord_canton = NZL_canton
@@ -7681,7 +7655,7 @@ NZL = { # New Zealand
 	}
 }
 
-NZP = { # Nez Percés
+NZP = {
 	flag_definition = {
 		coa = NZP
 		subject_canton = NZP
@@ -7750,7 +7724,7 @@ OLD = {
 	}
 }
 
-OMA = { # Oman
+OMA = {
 	flag_definition = {
 		coa = OMA
 		subject_canton = OMA
@@ -7795,7 +7769,7 @@ OMA = { # Oman
 	}
 }
 
-ONT = { # Ontario
+ONT = {
 	flag_definition = {
 		coa = ONT
 		coa_with_overlord_canton = ONT_subject
@@ -7861,7 +7835,7 @@ ORA = {
 	}
 }
 
-ORG = { # Oregon
+ORG = {
 	flag_definition = {
 		coa = ORG
 		subject_canton = ORG
@@ -7886,7 +7860,7 @@ ORG = { # Oregon
 	}
 }
 
-ORI = { # Orissa
+ORI = {
 	flag_definition = {
 		coa = ORI
 		subject_canton = ORI
@@ -7915,7 +7889,7 @@ ORI = { # Orissa
 	}
 }
 
-PAK = { # Pakistan
+PAK = {
 	flag_definition = {
 		coa = PAK
 		subject_canton = PAK
@@ -7924,7 +7898,7 @@ PAK = { # Pakistan
 	}
 }
 
-PAN = { # Sikh Empire
+PAN = {
 	flag_definition = {
 		coa = PAN
 		subject_canton = PAN
@@ -7976,7 +7950,7 @@ PAN = { # Sikh Empire
 	}
 }
 
-PAP = { # Papal States
+PAP = {
 	flag_definition = {
 		coa = PAP
 		allow_overlord_canton = yes
@@ -8017,7 +7991,7 @@ PAP = { # Papal States
 	}
 }
 
-PAR = { # Parma
+PAR = {
 	flag_definition = {
 		coa = PAR
 		subject_canton = PAR
@@ -8062,7 +8036,7 @@ PAR = { # Parma
 	}
 }
 
-PAT = { # Patagonia
+PAT = {
 	flag_definition = {
 		coa = PAT
 		subject_canton = PAT
@@ -8070,7 +8044,7 @@ PAT = { # Patagonia
 	}
 }
 
-PBC = { # Peru-Bolivia
+PBC = {
 	flag_definition = {
 		coa = PBC
 		subject_canton = PBC
@@ -8078,7 +8052,7 @@ PBC = { # Peru-Bolivia
 	}
 }
 
-PER = { # Persia
+PER = {
 	flag_definition = {
 		coa = PER
 		subject_canton = PER
@@ -8138,7 +8112,7 @@ PER = { # Persia
 	}
 }
 
-PEU = { # Peru
+PEU = {
 	flag_definition = {
 		coa = PEU
 		subject_canton = PEU
@@ -8204,7 +8178,7 @@ PEU = { # Peru
 	}
 }
 
-NPU = { # Peru
+NPU = {
 	flag_definition = {
 		coa = PEU
 		allow_overlord_canton = no
@@ -8260,7 +8234,7 @@ NPU = { # Peru
 	}
 }
 
-PHI = { # Philippines
+PHI = {
 	flag_definition = {
 		coa = PHI
 		subject_canton = PHI
@@ -8300,7 +8274,7 @@ PHI = { # Philippines
 	}
 }
 
-PHL = { # Philippolis
+PHL = {
 	flag_definition = {
 		coa = PHL
 		subject_canton = PHL
@@ -8308,7 +8282,7 @@ PHL = { # Philippolis
 	}
 }
 
-PLC = { # Poland-Lithuania
+PLC = {
 	flag_definition = {
 		coa = PLC
 		subject_canton = PLC
@@ -8316,7 +8290,7 @@ PLC = { # Poland-Lithuania
 	}
 }
 
-PLP = { # Palanpur
+PLP = {
 	flag_definition = {
 		coa = PLP
 		subject_canton = PLP
@@ -8355,7 +8329,7 @@ PLP = { # Palanpur
 	}
 }
 
-PNM = { # Panama
+PNM = {
 	flag_definition = {
 		coa = PNM
 		subject_canton = PNM
@@ -8372,7 +8346,7 @@ PNM = { # Panama
 	}
 }
 
-POL = { # Poland
+POL = {
 	flag_definition = {
 		coa = POL
 		subject_canton = POL
@@ -8435,7 +8409,7 @@ POL = { # Poland
 	}
 }
 
-POM = { # Pommerania
+POM = {
 	flag_definition = {
 		coa = POM
 		subject_canton = POM
@@ -8444,7 +8418,7 @@ POM = { # Pommerania
 	}
 }
 
-PON = { # Pontianak
+PON = {
 	flag_definition = {
 		coa = PON
 		coa_with_overlord_canton = PON
@@ -8452,7 +8426,7 @@ PON = { # Pontianak
 	}
 }
 
-POR = { # Portugal
+POR = {
 	flag_definition = {
 		coa = POR
 		subject_canton = POR
@@ -8551,7 +8525,7 @@ POR = { # Portugal
 	}
 }
 
-PPU = { # Papua
+PPU = {
 	flag_definition = {
 		coa = PPU
 		subject_canton = PPU
@@ -8569,7 +8543,7 @@ PPU = { # Papua
 	}
 }
 
-PRG = { # Paraguay
+PRG = {
 	flag_definition = {
 		coa = PRG
 		subject_canton = PRG
@@ -8614,7 +8588,7 @@ PRG = { # Paraguay
 	}
 }
 
-PRK = { # Perak
+PRK = {
 	flag_definition = {
 		coa = PRK
 		subject_canton = PRK
@@ -8622,7 +8596,7 @@ PRK = { # Perak
 	}
 }
 
-PRU = { # Prussia
+PRU = {
 	flag_definition = {
 		coa = PRU
 		subject_canton = PRU
@@ -8677,7 +8651,7 @@ PRU = { # Prussia
 	}
 }
 
-PTA = { # Patiala
+PTA = {
 	flag_definition = {
 		coa = PTA_simple
 		subject_canton = PTA_simple
@@ -8705,7 +8679,7 @@ PTA = { # Patiala
 	}
 }
 
-PTN = { # Patna
+PTN = {
 	flag_definition = {
 		coa = PTN_stripes
 		subject_canton = PTN_stripes
@@ -8713,7 +8687,7 @@ PTN = { # Patna
 		priority = 1
 	}
 	flag_definition = {
-		coa = PTN # Princely State
+		coa = PTN
 		subject_canton = PTN
 		allow_overlord_canton = no
 		priority = 50
@@ -8726,7 +8700,7 @@ PTN = { # Patna
 	}
 }
 
-PUD = { # Pudukottai
+PUD = {
 	flag_definition = {
 		coa = PUD_green
 		subject_canton = PUD_green
@@ -8754,7 +8728,7 @@ PUD = { # Pudukottai
 	}
 }
 
-PUE = { # Pueblo
+PUE = {
 	flag_definition = {
 		coa = PUE
 		allow_overlord_canton = yes
@@ -8764,7 +8738,7 @@ PUE = { # Pueblo
 	}
 }
 
-QUE = { # Quebec
+QUE = {
 	flag_definition = {
 		coa = QUE
 		coa_with_overlord_canton = QUE_subject
@@ -8793,7 +8767,7 @@ QUE = { # Quebec
 	}
 }
 
-RHE = { # Rhineland
+RHE = {
 	flag_definition = {
 		coa = RHE
 		subject_canton = RHE
@@ -8801,7 +8775,7 @@ RHE = { # Rhineland
 	}
 }
 
-RIO = { # Rio Grande
+RIO = {
 	flag_definition = {
 		coa = RIO_coa
 		priority = 20
@@ -8811,7 +8785,7 @@ RIO = { # Rio Grande
 	}
 }
 
-ROM = { # Romania
+ROM = {
 	flag_definition = {
 		coa = ROM
 		subject_canton = ROM
@@ -8827,7 +8801,7 @@ ROM = { # Romania
 	}
 }
 
-RUS = { # Russia
+RUS = {
 	flag_definition = {
 		coa = RUS_imperial
 		allow_overlord_canton = yes
@@ -8851,6 +8825,15 @@ RUS = { # Russia
 		}
 	}
 	flag_definition = {
+		coa = RUS_republic_1991
+		subject_canton = RUS_republic_1991
+		priority = 11
+		trigger = {
+			coa_def_republic_flag_trigger = yes
+			scope:actor ?= { NOT = { has_variable = rus_1993_constitution } }
+		}
+	}
+	flag_definition = {
 		coa = RUS_dictatorship
 		subject_canton = RUS_dictatorship
 		priority = 20
@@ -8868,14 +8851,14 @@ RUS = { # Russia
 	}
 	flag_definition = {
 		coa = RUS_soviet_union
-		priority = 1500 # need to override the DEFAULT
+		priority = 1500
 		trigger = {
 			coa_def_communist_flag_trigger = yes
 		}
 	}
 	flag_definition = {
 		coa = RUS_soviet_technocracy
-		priority = 1750 # need to override the DEFAULT
+		priority = 1750
 		trigger = {
 			coa_def_communist_flag_trigger = yes
 			scope:actor ?= {
@@ -8901,14 +8884,14 @@ RUS = { # Russia
 	}
 	flag_definition = {
 		coa = RUS_nihilist
-		priority = 1500 # need to override the DEFAULT
+		priority = 1500
 		trigger = {
 			coa_def_nihilist_flag_trigger = yes
 		}
 	}
 }
 
-SAF = { # South Africa
+SAF = {
 	flag_definition = {
 		coa = SAF
 		priority = 1
@@ -8955,7 +8938,7 @@ SAF = { # South Africa
 	}
 }
 
-SAK = { # Siak
+SAK = {
 	flag_definition = {
 		coa = SAK
 		subject_canton = SAK
@@ -8963,7 +8946,7 @@ SAK = { # Siak
 	}
 }
 
-SAR = { # Sardignia-Piedmont
+SAR = {
 	flag_definition = {
 		coa = SAR
 		subject_canton = SAR_canton
@@ -8999,7 +8982,7 @@ SAR = { # Sardignia-Piedmont
 	}
 }
 
-SAS = { # South Australia
+SAS = {
 	flag_definition = {
 		coa = SAS
 		coa_with_overlord_canton = SAS_subject
@@ -9007,7 +8990,7 @@ SAS = { # South Australia
 	}
 }
 
-SAT = { # Satara
+SAT = {
 	flag_definition = {
 		coa = SAT
 		allow_overlord_canton = no
@@ -9016,7 +8999,7 @@ SAT = { # Satara
 	}
 }
 
-SAV = { # Savoy
+SAV = {
 	flag_definition = {
 		coa = SAV
 		subject_canton = SAV
@@ -9024,7 +9007,7 @@ SAV = { # Savoy
 	}
 }
 
-SAX = { # Saxony
+SAX = {
 	flag_definition = {
 		coa = SAX
 		allow_overlord_canton = yes
@@ -9063,7 +9046,7 @@ SAX = { # Saxony
 	}
 }
 
-SCA = { # Scandinavia
+SCA = {
 	flag_definition = {
 		coa = SCA
 		allow_overlord_canton = yes
@@ -9092,7 +9075,7 @@ SCM = {
 	}
 }
 
-SCN = { # Scania
+SCN = {
 	flag_definition = {
 		coa = SCN
 		allow_overlord_canton = yes
@@ -9124,7 +9107,7 @@ SCN = { # Scania
 }
 
 
-SCO = { # Scotland
+SCO = {
 	flag_definition = {
 		coa = SCO
 		subject_canton = SCO
@@ -9180,7 +9163,7 @@ SCW = {
 	}
 }
 
-SEL = { # Selangor
+SEL = {
 	flag_definition = {
 		coa = SEL
 		subject_canton = SEL
@@ -9188,7 +9171,7 @@ SEL = { # Selangor
 	}
 }
 
-SEQ = { # Indian Territory
+SEQ = {
 	flag_definition = {
 		coa = SEQ
 		subject_canton = SEQ
@@ -9196,7 +9179,7 @@ SEQ = { # Indian Territory
 	}
 }
 
-SER = { # Serbia
+SER = {
 	flag_definition = {
 		coa = SER
 		subject_canton = SER
@@ -9232,7 +9215,7 @@ SER = { # Serbia
 	}
 }
 
-SGF = { # South German Federation
+SGF = {
 	flag_definition = {
 		coa = SGF
 		subject_canton = SGF
@@ -9256,7 +9239,7 @@ SGF = { # South German Federation
 	}
 }
 
-SHS = { # Shan
+SHS = {
 	flag_definition = {
 		coa = SHS
 		subject_canton = SHS
@@ -9265,7 +9248,7 @@ SHS = { # Shan
 	}
 }
 
-SIA = { # Siam
+SIA = {
 	flag_definition = {
 		coa = SIA
 		coa_with_overlord_canton = SIA_subject
@@ -9329,7 +9312,7 @@ SIA = { # Siam
 	}
 }
 
-SIC = { # Two Sicilies
+SIC = {
 	flag_definition = {
 		coa = SIC
 		coa_with_overlord_canton = SIC_subject
@@ -9362,7 +9345,7 @@ SIC = { # Two Sicilies
 	}
 }
 
-SIK = { # Sikkim
+SIK = {
 	flag_definition = {
 		coa = SIK
 		subject_canton = SIK
@@ -9380,7 +9363,7 @@ SIK = { # Sikkim
 	}
 }
 
-SIL = { # Sierra Leone
+SIL = {
 	flag_definition = {
 		coa = SIL
 		coa_with_overlord_canton = SIL_subject
@@ -9418,7 +9401,7 @@ SIL = { # Sierra Leone
 	}
 }
 
-SIN = { # Sindh
+SIN = {
 	flag_definition = {
 		coa = SIN
 		subject_canton = SIN
@@ -9443,7 +9426,7 @@ SIN = { # Sindh
 	}
 }
 
-SLV = { # Slovakia
+SLV = {
 	flag_definition = {
 		coa = SLV
 		subject_canton = SLV
@@ -9459,7 +9442,7 @@ SLV = { # Slovakia
 	}
 }
 
-SMB = { # Sambas
+SMB = {
 	flag_definition = {
 		coa = SMB
 		coa_with_overlord_canton = SMB
@@ -9467,7 +9450,7 @@ SMB = { # Sambas
 	}
 }
 
-SMI = { # Sapmi Lappland
+SMI = {
 	flag_definition = {
 		coa = SMI
 		coa_with_overlord_canton = SMI_subject
@@ -9491,7 +9474,7 @@ SMI = { # Sapmi Lappland
 	}
 }
 
-SPA = { # Spain
+SPA = {
 	flag_definition = {
 		coa = SPA
 		subject_canton = SPA
@@ -9590,7 +9573,7 @@ SPA = { # Spain
 	}
 }
 
-SRK = { # Surakarta
+SRK = {
 	flag_definition = {
 		coa = SRK
 		subject_canton = SRK
@@ -9598,7 +9581,7 @@ SRK = { # Surakarta
 	}
 }
 
-STG = { # Sintang
+STG = {
 	flag_definition = {
 		coa = STG
 		subject_canton = STG
@@ -9607,7 +9590,7 @@ STG = { # Sintang
 	}
 }
 
-SUL = { # Sulu
+SUL = {
 	flag_definition = {
 		coa = SUL
 		subject_canton = SUL
@@ -9615,7 +9598,7 @@ SUL = { # Sulu
 	}
 }
 
-SUR = { # Surguja
+SUR = {
 	flag_definition = {
 		coa = SUR
 		allow_overlord_canton = no
@@ -9624,7 +9607,7 @@ SUR = { # Surguja
 	}
 }
 
-SWE = { # Sweden
+SWE = {
 	flag_definition = {
 		coa = SWE
 		allow_overlord_canton = yes
@@ -9700,7 +9683,7 @@ SWE = { # Sweden
 	}
 }
 
-SWI = { # Switzerland
+SWI = {
 	flag_definition = {
 		coa = SWI
 		subject_canton = SWI
@@ -9743,7 +9726,7 @@ SWI = { # Switzerland
 	}
 }
 
-SWT = { # Swat
+SWT = {
 	flag_definition = {
 		coa = SWT
 		subject_canton = SWT
@@ -9751,7 +9734,7 @@ SWT = { # Swat
 	}
 }
 
-SYR = { # Syria
+SYR = {
 	flag_definition = {
 		coa = SYR
 		subject_canton = SYR
@@ -9779,7 +9762,7 @@ SYR = { # Syria
 	}
 }
 
-TAS = { # Tasmania
+TAS = {
 	flag_definition = {
 		coa = TAS
 		coa_with_overlord_canton = TAS_subject
@@ -9787,7 +9770,7 @@ TAS = { # Tasmania
 	}
 }
 
-TEX = { # Texas
+TEX = {
 	flag_definition = {
 		coa = TEX_Bonnie_Blue
 		subject_canton = TEX_Bonnie_Blue
@@ -9861,7 +9844,7 @@ TEX = { # Texas
 	}
 }
 
-TIB = { # Tibet
+TIB = {
 	flag_definition = {
 		coa = TIB
 		subject_canton = TIB
@@ -9899,7 +9882,7 @@ TIB = { # Tibet
 	}
 }
 
-TID = { # Tidore
+TID = {
 	flag_definition = {
 		coa = TID
 		subject_canton = TID
@@ -9907,7 +9890,7 @@ TID = { # Tidore
 	}
 }
 
-TIS = { # Turtle Island
+TIS = {
 	flag_definition = {
 		coa = TIS
 		subject_canton = TIS
@@ -9934,7 +9917,7 @@ TIS = { # Turtle Island
 	}
 }
 
-TPG = { # Taiping
+TPG = {
 	flag_definition = {
 		coa = TPG
 		subject_canton = TPG
@@ -9951,7 +9934,7 @@ TPG = { # Taiping
 	}
 }
 
-TNG = { # Tonga
+TNG = {
 	flag_definition = {
 		coa = TNG
 		subject_canton = TNG
@@ -9975,7 +9958,7 @@ TNG = { # Tonga
 	}
 }
 
-TNS = { # Tungus
+TNS = {
 	flag_definition = {
 		coa = TNS
 		subject_canton = TNS
@@ -9983,7 +9966,7 @@ TNS = { # Tungus
 	}
 }
 
-TRA = { # Travancore
+TRA = {
 	flag_definition = {
 		coa = TRA
 		subject_canton = TRA
@@ -10010,7 +9993,7 @@ TRA = { # Travancore
 		}
 	}
 	flag_definition = {
-		coa = TRA # Princely State
+		coa = TRA
 		subject_canton = TRA
 		allow_overlord_canton = no
 		priority = 50
@@ -10023,7 +10006,7 @@ TRA = { # Travancore
 	}
 }
 
-TRE = { # Trieste
+TRE = {
 	flag_definition = {
 		coa = TRE
 		allow_overlord_canton = yes
@@ -10033,7 +10016,7 @@ TRE = { # Trieste
 	}
 }
 
-TRI = { # Tripoli
+TRI = {
 	flag_definition = {
 		coa = TRI
 		subject_canton = TRI
@@ -10051,7 +10034,7 @@ TRI = { # Tripoli
 	}
 }
 
-TRN = { # Transvaal
+TRN = {
 	flag_definition = {
 		coa = TRN
 		subject_canton = TRN
@@ -10089,7 +10072,7 @@ TRN = { # Transvaal
 	}
 }
 
-TSW = { # Botswana
+TSW = {
 	flag_definition = {
 		coa = TSW
 		subject_canton = TSW
@@ -10097,7 +10080,7 @@ TSW = { # Botswana
 	}
 }
 
-TUN = { # Tunis
+TUN = {
 	flag_definition = {
 		coa = TUN
 		allow_overlord_canton = yes
@@ -10107,7 +10090,7 @@ TUN = { # Tunis
 	}
 }
 
-TUG = { # Touggourt
+TUG = {
 	flag_definition = {
 		coa = TUG
 		subject_canton = TUG
@@ -10115,7 +10098,7 @@ TUG = { # Touggourt
 	}
 }
 
-TUR = { # Turkey
+TUR = {
 	flag_definition = {
 		coa = TUR
 		subject_canton = TUR
@@ -10199,7 +10182,7 @@ TUR = { # Turkey
 	}
 }
 
-TUS = { # Tuscany
+TUS = {
 	flag_definition = {
 		coa = TUS
 		allow_overlord_canton = yes
@@ -10235,7 +10218,7 @@ TUS = { # Tuscany
 	}
 }
 
-UCA = { # Central America
+UCA = {
 	flag_definition = {
 		coa = UCA
 		subject_canton = UCA
@@ -10274,7 +10257,7 @@ UCA = { # Central America
 	}
 }
 
-UKR = { # Ukraine
+UKR = {
 	flag_definition = {
 		coa = UKR
 		allow_overlord_canton = yes
@@ -10308,7 +10291,7 @@ UKR = { # Ukraine
 	}
 }
 
-ULS = { # Ulster / Northern Ireland flegs
+ULS = {
 	flag_definition = {
 		coa = ULS_uk
 		priority = 5
@@ -10349,7 +10332,7 @@ ULS = { # Ulster / Northern Ireland flegs
 	}
 }
 
-UNT = { # United Tribes of New Zealand
+UNT = {
 	flag_definition = {
 		coa = UNT
 		subject_canton = sub_UNT_canton_black
@@ -10364,14 +10347,14 @@ UNT = { # United Tribes of New Zealand
 	}
 }
 
-UOM = { # Michigam
+UOM = {
 	flag_definition = {
 		coa = UOM_state_of_michigan
 		priority = 5
 	}
 }
 
-URU = { # Uruguay
+URU = {
 	flag_definition = {
 		coa = URU
 		subject_canton = URU
@@ -10442,7 +10425,7 @@ URU = { # Uruguay
 	}
 }
 
-VEN = { # Venice
+VEN = {
 	flag_definition = {
 		coa = VEN
 		allow_overlord_canton = yes
@@ -10452,7 +10435,7 @@ VEN = { # Venice
 	}
 }
 
-VIE = { # Vientiane
+VIE = {
 	flag_definition = {
 		coa = VIE
 		allow_overlord_canton = yes
@@ -10462,7 +10445,7 @@ VIE = { # Vientiane
 	}
 }
 
-VNT = { # Vanuatu
+VNT = {
 	flag_definition = {
 		coa = VNT
 		allow_overlord_canton = yes
@@ -10488,7 +10471,7 @@ VNT = { # Vanuatu
 	}
 }
 
-VNZ = { # Venezuela
+VNZ = {
 	flag_definition = {
 		coa = VNZ_monarchy
 		subject_canton = VNZ_monarchy
@@ -10553,7 +10536,7 @@ VNZ = { # Venezuela
 	}
 }
 
-WAL = { # Wallachia
+WAL = {
 	flag_definition = {
 		coa = WAL
 		allow_overlord_canton = yes
@@ -10562,7 +10545,6 @@ WAL = { # Wallachia
 		priority = 1
 	}
 	flag_definition = {
-		# Canton with stars when ruled by the Ottoman Empire
 		coa = WAL_subject
 		subject_canton = WAL
 		priority = 2
@@ -10582,7 +10564,7 @@ WAL = { # Wallachia
 	}
 }
 
-WAS = { # Western Australia
+WAS = {
 	flag_definition = {
 		coa = WAS
 		coa_with_overlord_canton = WAS_subject
@@ -10590,7 +10572,7 @@ WAS = { # Western Australia
 	}
 }
 
-WBL = { # Griqualand/Griqualand West/Waterboersland
+WBL = {
 	flag_definition = {
 		coa = WBL
 		coa_with_overlord_canton = WAS_subject
@@ -10607,7 +10589,7 @@ WEI = {
 	}
 }
 
-WES = { # Westphalia
+WES = {
 	flag_definition = {
 		coa = WES
 		allow_overlord_canton = yes
@@ -10616,7 +10598,7 @@ WES = { # Westphalia
 	}
 }
 
-WIN = { # West Indies Federation
+WIN = {
 	flag_definition = {
 		coa = WIN
 		allow_overlord_canton = no
@@ -10634,7 +10616,7 @@ WLD = {
 	}
 }
 
-WLL = { # Wallonia
+WLL = {
 	flag_definition = {
 		coa = WLL
 		# allow_overlord_canton = yes
@@ -10643,7 +10625,7 @@ WLL = { # Wallonia
 	}
 }
 
-WLS = { # Wales
+WLS = {
 	flag_definition = {
 		coa = WLS_republic
 		priority = 10
@@ -10691,7 +10673,7 @@ WLS = { # Wales
 	}
 }
 
-WUR = { # Wurttemberg
+WUR = {
 	flag_definition = {
 		coa = WUR
 		subject_canton = WUR
@@ -10738,7 +10720,7 @@ WUR = { # Wurttemberg
 	}
 }
 
-XIN = { # Xinjiang
+XIN = {
 	flag_definition = {
 		coa = XIN
 		allow_overlord_canton = yes
@@ -10756,7 +10738,7 @@ XIN = { # Xinjiang
 	}
 }
 
-YAK = { # Yakutia
+YAK = {
 	flag_definition = {
 		coa = YAK
 		subject_canton = YAK
@@ -10764,7 +10746,7 @@ YAK = { # Yakutia
 	}
 }
 
-YEM = { # Yemen
+YEM = {
 	flag_definition = {
 		coa = YEM
 		subject_canton = YEM
@@ -10801,7 +10783,7 @@ YEM = { # Yemen
 	}
 }
 
-YOG = { # Yogyakarta
+YOG = {
 	flag_definition = {
 		coa = YOG
 		subject_canton = YOG
@@ -10809,7 +10791,7 @@ YOG = { # Yogyakarta
 	}
 }
 
-YUG = { # Yugoslavia
+YUG = {
 	flag_definition = {
 		coa = YUG
 		subject_canton = YUG
@@ -10850,9 +10832,9 @@ YUG = { # Yugoslavia
 	}
 }
 
-ZAI = { # Zaidi State
+ZAI = {
 	flag_definition = {
-		coa = YEM # the ruling Qasimid dynasty of the Zaidi State was Yemen's ruling dynasty until the monarchy was overthrown in 1970
+		coa = YEM
 		subject_canton = YEM
 		allow_overlord_canton = yes
 		coa_with_overlord_canton = YEM_subject
@@ -10860,7 +10842,7 @@ ZAI = { # Zaidi State
 	}
 }
 
-ZIM = { # Zimbabwe
+ZIM = {
 	flag_definition = {
 		coa = ZIM
 		subject_canton = ZIM
@@ -10868,7 +10850,7 @@ ZIM = { # Zimbabwe
 	}
 }
 
-YUZ = { # Yuanzhumin
+YUZ = {
 	flag_definition = {
 		coa = YUZ
 		subject_canton = YUZ
@@ -10876,7 +10858,7 @@ YUZ = { # Yuanzhumin
 	}
 }
 
-PNS = { # Polynesia
+PNS = {
 	flag_definition = {
 		coa = PNS
 		subject_canton = PNS
@@ -10891,7 +10873,7 @@ PNS = { # Polynesia
 	}
 }
 
-PLY = { # Tahiti
+PLY = {
 	flag_definition = {
 		coa = PLY
 		subject_canton = PLY
@@ -10906,7 +10888,7 @@ PLY = { # Tahiti
 	}
 }
 
-KAU = { # Kaurna
+KAU = {
 	flag_definition = {
 		coa = KAU
 		subject_canton = KAU
@@ -10914,7 +10896,7 @@ KAU = { # Kaurna
 	}
 }
 
-EQT = { # Confederation of the Equator
+EQT = {
 	flag_definition = {
 		coa = EQT
 		subject_canton = EQT
@@ -10922,7 +10904,7 @@ EQT = { # Confederation of the Equator
 	}
 }
 
-CTR = { # Catharinense Republic
+CTR = {
 	flag_definition = {
 		coa = CTR
 		subject_canton = CTR
@@ -10930,7 +10912,7 @@ CTR = { # Catharinense Republic
 	}
 }
 
-MNG = { # Minas Gerais
+MNG = {
 	flag_definition = {
 		coa = MNG
 		subject_canton = MNG
@@ -10938,7 +10920,7 @@ MNG = { # Minas Gerais
 	}
 }
 
-PAU = { # Paulistania
+PAU = {
 	flag_definition = {
 		coa = PAU
 		subject_canton = PAU
@@ -10946,14 +10928,14 @@ PAU = { # Paulistania
 	}
 }
 
-BHI = { # Bahia
+BHI = {
 	flag_definition = {
 		coa = BHI
 		subject_canton = BHI
 	}
 }
 
-PRC = { # Paris Commune
+PRC = {
 	flag_definition = {
 		coa = PRC
 		subject_canton = PRC
@@ -11007,7 +10989,7 @@ PRC = { # Paris Commune
 	}
 }
 
-KRL = { # Karelia
+KRL = {
 	flag_definition = {
 		coa = KRL
 		subject_canton = KRL
@@ -11035,13 +11017,13 @@ KRL = { # Karelia
 	}
 }
 
-TAR = { # Tatarstan
+TAR = {
 	flag_definition = {
 		coa = TAR
 		subject_canton = TAR
 		priority = 1
 	}
-	flag_definition = { # Based on the flag of the Kazan Khanate
+	flag_definition = {
 		coa = TAR_monarchy
 		subject_canton = TAR_monarchy
 		priority = 20
@@ -11059,13 +11041,13 @@ TAR = { # Tatarstan
 	}
 }
 
-BKR = { # Bashkiria
+BKR = {
 	flag_definition = {
 		coa = BKR
 		subject_canton = BKR
 		priority = 1
 	}
-	flag_definition = { # Based on the flag of Salavat Yulaev
+	flag_definition = {
 		coa = BKR_monarchy
 		subject_canton = BKR_monarchy
 		priority = 20
@@ -11073,7 +11055,7 @@ BKR = { # Bashkiria
 			coa_def_monarchy_flag_trigger = yes
 		}
 	}
-	flag_definition = { # Based on the flag of the Bashkir Separate Corps
+	flag_definition = {
 		coa = BKR_dictatorship
 		subject_canton = BKR_dictatorship
 		priority = 30
@@ -11084,7 +11066,7 @@ BKR = { # Bashkiria
 			}
 		}
 	}
-	flag_definition = { # Not based on anything in particular
+	flag_definition = {
 		coa = BKR_communist
 		subject_canton = BKR_communist
 		priority = 1000
@@ -11094,13 +11076,13 @@ BKR = { # Bashkiria
 	}
 }
 
-BRY = { # Buryatia
+BRY = {
 	flag_definition = {
 		coa = BRY
 		subject_canton = BRY
 		priority = 1
 	}
-	flag_definition = {  # To the madness of daring, we chant a song.
+	flag_definition = {
 		coa = BRY_communist
 		subject_canton = BRY_communist
 		priority = 1000
@@ -11110,7 +11092,7 @@ BRY = { # Buryatia
 	}
 }
 
-KMC = { # Kamchatka
+KMC = {
 	flag_definition = {
 		coa = KMC
 		subject_canton = KMC
@@ -11126,7 +11108,7 @@ KMC = { # Kamchatka
 	}
 }
 
-CKC = { # Chukotka
+CKC = {
 	flag_definition = {
 		coa = CKC
 		subject_canton = CKC
@@ -11213,7 +11195,7 @@ HRE = {
 	}
 }
 
-ALI = { # Altai
+ALI = {
 	flag_definition = {
 		coa = ALI
 		subject_canton = ALI
@@ -11221,7 +11203,7 @@ ALI = { # Altai
 	}
 }
 
-URL = { # Ural
+URL = {
 	flag_definition = {
 		coa = URL
 		subject_canton = URL
@@ -11280,7 +11262,7 @@ UNL = {
 	}
 }
 
-KNT = { # Kanty-Mansi
+KNT = {
 	flag_definition = {
 		coa = KNT
 		subject_canton = KNT
@@ -11333,7 +11315,7 @@ RHN = {
 	}
 }
 
-UDM = { # Udmurtia
+UDM = {
 	flag_definition = {
 		coa = UDM
 		subject_canton = UDM
@@ -11363,7 +11345,7 @@ UDM = { # Udmurtia
 	}
 }
 
-SPU = { # South Peru
+SPU = {
 	flag_definition = {
 		coa = SPU
 		subject_canton = SPU
@@ -11371,7 +11353,7 @@ SPU = { # South Peru
 	}
 }
 
-CHV = { # Chuvashia
+CHV = {
 	flag_definition = {
 		coa = CHV
 		subject_canton = CHV
@@ -11388,7 +11370,7 @@ CHV = { # Chuvashia
 	}
 }
 
-IQU = { # South Peru
+IQU = {
 	flag_definition = {
 		coa = IQU
 		subject_canton = IQU
@@ -11396,7 +11378,7 @@ IQU = { # South Peru
 	}
 }
 
-MRI = { # Mari El
+MRI = {
 	flag_definition = {
 		coa = MRI
 		subject_canton = MRI
@@ -11413,7 +11395,7 @@ MRI = { # Mari El
 	}
 }
 
-ALT = { # Los Altos
+ALT = {
 	flag_definition = {
 		coa = ALT
 		subject_canton = ALT
@@ -11421,7 +11403,7 @@ ALT = { # Los Altos
 	}
 }
 
-MRD = { # Erzya-Moksha
+MRD = {
 	flag_definition = {
 		coa = MRD
 		subject_canton = MRD
@@ -11439,7 +11421,7 @@ MRD = { # Erzya-Moksha
 	}
 }
 
-TJI = { # Tajikistan
+TJI = {
 	flag_definition = {
 		coa = TJI
 		subject_canton = TJI
@@ -11463,7 +11445,7 @@ TJI = { # Tajikistan
 	}
 }
 
-NCR = { # North Carolina
+NCR = {
 	flag_definition = {
 		coa = NCR
 		subject_canton = NCR
@@ -11502,7 +11484,7 @@ NCR = { # North Carolina
 	}
 }
 
-KYR = { # Kirgizia
+KYR = {
 	flag_definition = {
 		coa = KYR
 		subject_canton = KYR
@@ -11526,7 +11508,7 @@ KYR = { # Kirgizia
 	}
 }
 
-SCR = { # South Carolina
+SCR = {
 	flag_definition = {
 		coa = SCR
 		subject_canton = SCR
@@ -11541,7 +11523,7 @@ SCR = { # South Carolina
 	}
 }
 
-UZB = { # Uzbekistan
+UZB = {
 	flag_definition = {
 		coa = UZB
 		subject_canton = UZB
@@ -11565,7 +11547,7 @@ UZB = { # Uzbekistan
 	}
 }
 
-CLI = { # United Carolina
+CLI = {
 	flag_definition = {
 		coa = CLI
 		subject_canton = CLI
@@ -11587,7 +11569,7 @@ CLI = { # United Carolina
 	}
 }
 
-CAU = { # Transcaucasia
+CAU = {
 	flag_definition = {
 		coa = CAU
 		subject_canton = CAU
@@ -11603,7 +11585,7 @@ CAU = { # Transcaucasia
 	}
 }
 
-SIB = { # Siberia
+SIB = {
 	flag_definition = {
 		coa = SIB
 		subject_canton = SIB
@@ -11619,7 +11601,7 @@ SIB = { # Siberia
 	}
 }
 
-GRG = { # Georgia
+GRG = {
 	flag_definition = {
 		coa = GRG
 		subject_canton = GRG
@@ -11634,7 +11616,7 @@ GRG = { # Georgia
 	}
 }
 
-FLR = { # Florida
+FLR = {
 	flag_definition = {
 		coa = FLR
 		subject_canton = FLR
@@ -11664,7 +11646,7 @@ PLT = {
 	}
 }
 
-SML = { # Seminole
+SML = {
 	flag_definition = {
 		coa = SML
 		subject_canton = SML
@@ -11672,7 +11654,7 @@ SML = { # Seminole
 	}
 }
 
-UBD = { # United Baltic
+UBD = {
 	flag_definition = {
 		coa = UBD
 		subject_canton = UBD
@@ -11687,7 +11669,7 @@ UBD = { # United Baltic
 	}
 }
 
-BEI = { # Beiyang Government
+BEI = {
 	flag_definition = {
 		coa = CHI
 		subject_canton = CHI
@@ -11754,7 +11736,7 @@ BEI = { # Beiyang Government
 	}
 }
 
-KAF = { # Kafiristan
+KAF = {
 	flag_definition = {
 		coa = KAF
 		subject_canton = KAF
@@ -11775,7 +11757,7 @@ KAF = { # Kafiristan
 	}
 }
 
-ALK = { # Alaska
+ALK = {
 	flag_definition = {
 		coa = ALK
 		subject_canton = ALK
@@ -11827,7 +11809,7 @@ ALK = { # Alaska
 	}
 }
 
-BCE = { # Ceylon
+BCE = {
 	flag_definition = {
 		coa = CEY
 		subject_canton = CEY
@@ -11865,7 +11847,7 @@ BCE = { # Ceylon
 	}
 }
 
-AWS = { # Aussa
+AWS = {
 	flag_definition = {
 		coa = red_flag
 		subject_canton = red_flag
@@ -11873,7 +11855,7 @@ AWS = { # Aussa
 	}
 }
 
-WTU = {	# Wituland
+WTU = {
 	flag_definition = {
 		coa = WTU
 		allow_overlord_canton = no
@@ -11882,7 +11864,7 @@ WTU = {	# Wituland
 	}
 }
 
-ZAN = {	# Zanzibar
+ZAN = {
 	flag_definition = {
 		coa = ZAN
 		allow_overlord_canton = no
@@ -11902,7 +11884,6 @@ ZAN = {	# Zanzibar
 			}
 		}
 	}
-	# ZAN republic if Swahili and only Swahili is the primary culture
 	flag_definition = {
 		coa = ZAN_republic_afro_shirazi
 		subject_canton = ZAN_republic_afro_shirazi
@@ -11923,7 +11904,7 @@ ZAN = {	# Zanzibar
 	}
 }
 
-MBS = { # Mombasa
+MBS = {
 	flag_definition = {
 		coa = MBS
 		subject_canton = MBS
@@ -11931,7 +11912,7 @@ MBS = { # Mombasa
 	}
 }
 
-AJR = { # Ajuran
+AJR = {
 	flag_definition = {
 		coa = AJR
 		subject_canton = AJR
@@ -11939,7 +11920,7 @@ AJR = { # Ajuran
 	}
 }
 
-BGM = { # Begemder
+BGM = {
 	flag_definition = {
 		coa = BGM
 		subject_canton = BGM
@@ -11947,7 +11928,7 @@ BGM = { # Begemder
 	}
 }
 
-SHW = { # Shewa
+SHW = {
 	flag_definition = {
 		coa = SHW
 		subject_canton = SHW
@@ -11955,7 +11936,7 @@ SHW = { # Shewa
 	}
 }
 
-QWR = { # Qwara
+QWR = {
 	flag_definition = {
 		coa = QWR
 		subject_canton = QWR
@@ -11963,7 +11944,7 @@ QWR = { # Qwara
 	}
 }
 
-ISQ = { # Isaaq
+ISQ = {
 	flag_definition = {
 		coa = ISQ
 		subject_canton = ISQ
@@ -11971,7 +11952,7 @@ ISQ = { # Isaaq
 	}
 }
 
-UTR = { # Utetera. No known flag of its own, just seems to've flown Zanzibar's flag. Using the more-historical Busaidi red flag b/c that contrasts with ZAN's striped flag more.
+UTR = {
 	flag_definition = {
 		coa = red_flag
 		subject_canton = red_flag
@@ -11979,7 +11960,7 @@ UTR = { # Utetera. No known flag of its own, just seems to've flown Zanzibar's f
 	}
 }
 
-BUG = { # Buganda - Flag prior to 1881 was a plain red flag, this flag is from 1881
+BUG = {
 	flag_definition = {
 		coa = BUG
 		subject_canton = BUG
@@ -11987,7 +11968,7 @@ BUG = { # Buganda - Flag prior to 1881 was a plain red flag, this flag is from 1
 	}
 }
 
-TGI = { # Tungi
+TGI = {
 	flag_definition = {
 		coa = TGI
 		subject_canton = TGI
@@ -11995,7 +11976,7 @@ TGI = { # Tungi
 	}
 }
 
-WLT = { # Wolaita
+WLT = {
 	flag_definition = {
 		coa = WLT
 		subject_canton = WLT
@@ -12003,7 +11984,7 @@ WLT = { # Wolaita
 	}
 }
 
-WLG = { # Welega
+WLG = {
 	flag_definition = {
 		coa = WLG
 		subject_canton = WLG
@@ -12012,7 +11993,6 @@ WLG = { # Welega
 }
 
 NYM = {
-	# Nyamwezi gets the old flag of Tanganyika if/when it becomes centralized. Don't want to set it before then because there'll be /someone/ who asks why Nyamwezi has that flag, but if it becomes its own centralized state it makes a bit more contextual sense as the main centralized state in what's literally just called Tanganyika.
 	flag_definition = {
 		coa = NYM_centralized
 		subject_canton = NYM_centralized
@@ -12025,7 +12005,7 @@ NYM = {
 	}
 }
 
-ATB = { # Athabaska
+ATB = {
 	flag_definition = {
 		coa = ATB
 		subject_canton = ATB
@@ -12033,7 +12013,7 @@ ATB = { # Athabaska
 	}
 }
 
-SWZ = { # Swaziland
+SWZ = {
 	flag_definition = {
 		coa = SWZ
 		subject_canton = SWZ
@@ -12042,7 +12022,7 @@ SWZ = { # Swaziland
 }
 
 
-MSN = { # Massina
+MSN = {
 	flag_definition = {
 		coa = MSN
 		subject_canton = MSN
@@ -12064,30 +12044,30 @@ PCO = {
 	}
 }
 
-SC1 = { # New Spain
+SC1 = {
 	flag_definition = {
-		coa = SC1 # Cross of Burgundy with Mexican coat of arms
+		coa = SC1
 		priority = 1
 	}
 }
 
-SC2 = { # New Grenada
+SC2 = {
 	flag_definition = {
-		coa = SC2 # Cross of Burgundy with Colombian coat of arms
+		coa = SC2
 		priority = 1
 	}
 }
 
-SC3 = { # Peru
+SC3 = {
 	flag_definition = {
-		coa = SC3 # Cross of Burgundy with Absolute Monarchy Peru CoA
+		coa = SC3
 		priority = 1
 	}
 }
 
-SC4 = { # River Plate
+SC4 = {
 	flag_definition = {
-		coa = SC4 # Cross of Burgundy with Argentine tricolor vertically slapped on
+		coa = SC4
 		priority = 1
 	}
 }
@@ -12102,7 +12082,7 @@ LBY = {
 }
 
 
-REPLACE_OR_CREATE:TRK = { # Turkey
+REPLACE_OR_CREATE:TRK = {
 	flag_definition = {
 		coa = TRK
 		subject_canton = TRK
@@ -12186,7 +12166,7 @@ REPLACE_OR_CREATE:TRK = { # Turkey
 	}
 }
 
-REPLACE_OR_CREATE:XPO = { # Portugal
+REPLACE_OR_CREATE:XPO = {
 	flag_definition = {
 		coa = XPO
 		subject_canton = XPO
@@ -12285,7 +12265,7 @@ REPLACE_OR_CREATE:XPO = { # Portugal
 	}
 }
 
-REPLACE_OR_CREATE:XDE = { # Denmark
+REPLACE_OR_CREATE:XDE = {
 	flag_definition = {
 		coa = XDE
 		coa_with_overlord_canton = DEN
@@ -12318,7 +12298,7 @@ REPLACE_OR_CREATE:XDE = { # Denmark
 	}
 }
 
-REPLACE_OR_CREATE:NRW = { # Norway
+REPLACE_OR_CREATE:NRW = {
 	flag_definition = {
 		coa = NRW
 		priority = 1
@@ -12332,7 +12312,6 @@ REPLACE_OR_CREATE:NRW = { # Norway
 		priority = 5
 		subject_canton = NRW_canton
 		trigger = {
-			# Norway didn't use a Swedish canton in 1836
 			coa_SWE_use_union_mark_canton_trigger = no
 			coa_def_swedish_ensign_trigger = yes
 		}
@@ -12354,7 +12333,7 @@ REPLACE_OR_CREATE:NRW = { # Norway
 	}
 }
 
-REPLACE_OR_CREATE:IDS = { # Indonesia
+REPLACE_OR_CREATE:IDS = {
 	flag_definition = {
 		coa = IDS
 		subject_canton = IDS
@@ -12371,7 +12350,7 @@ REPLACE_OR_CREATE:IDS = { # Indonesia
 	}
 }
 
-REPLACE_OR_CREATE:IRA = { # Iran
+REPLACE_OR_CREATE:IRA = {
 	flag_definition = {
 		coa = IRA
 		subject_canton = IRA
@@ -12431,7 +12410,7 @@ REPLACE_OR_CREATE:IRA = { # Iran
 	}
 }
 
-REPLACE_OR_CREATE:ROC = { # Republic of China
+REPLACE_OR_CREATE:ROC = {
 	flag_definition = {
 		coa = CHI
 		subject_canton = CHI

@@ -1,4 +1,9 @@
 ﻿ban_slavery = {
+	mirrored_wargoal = {
+		method = swap
+		type = break_enforced_treaties
+	}
+
 	icon = "gfx/interface/icons/war_goals/ban_slavery.dds"
 
 	kind = ban_slavery
@@ -7,7 +12,6 @@
 		require_target_be_part_of_war
 		skip_build_list
 
-		# Validation
 		validate_conflicts_war_goals_all
 	}
 
@@ -27,7 +31,6 @@
 		has_law_or_variant = law_type:law_slavery_banned
 	}
 
-	# Uses the same maneuvers and infamy values as law_commitment
 	maneuvers = {
 		value = 0
 
@@ -118,7 +121,7 @@
 		}
 
 		multiply = {
-			desc = "INFAMY_FROM_REBELLIOUS_SUBJECT" # Rebellious as in they are the aggressor in the play
+			desc = "INFAMY_FROM_REBELLIOUS_SUBJECT"
 			value = 1
 
 			if = {

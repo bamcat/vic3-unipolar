@@ -1,15 +1,9 @@
-# The Rise of the Right scripted triggers
-# This is intended for Western / developed liberal-democratic countries outside the USA.
-# USA keeps the stronger Great Polarization system instead.
-
 rise_of_the_right_is_western_country = {
 	OR = {
-		# North America / Oceania
 		c:CAN ?= this
 		c:AST ?= this
 		c:NZL ?= this
 
-		# Western / Northern Europe
 		c:GBR ?= this
 		c:IRE ?= this
 		c:FRA ?= this
@@ -28,7 +22,6 @@ rise_of_the_right_is_western_country = {
 		c:FIN ?= this
 		c:ICE ?= this
 
-		# Central / Eastern EU and NATO-adjacent democracies
 		c:POL ?= this
 		c:CZH ?= this
 		c:SLO ?= this
@@ -41,7 +34,6 @@ rise_of_the_right_is_western_country = {
 		c:LAT ?= this
 		c:LIT ?= this
 
-		# Eastern Mediterranean / democratic US-aligned West-ish bloc
 		c:GRE ?= this
 		c:CYP ?= this
 		c:ISR ?= this

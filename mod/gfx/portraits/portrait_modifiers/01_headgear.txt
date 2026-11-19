@@ -1,0 +1,207 @@
+﻿headgear = {
+	usage = game
+	selection_behavior = weighted_random
+	fallback = no_headgear
+
+	no_headgear = {
+		dna_modifiers = {
+			accessory = {
+				mode = add
+				gene = headgear
+				template = no_headgear
+				range = { 0 1 }
+			}
+		}
+		weight = {
+			base = 100
+			modifier = {
+				add = 1000000
+				scope:character ?= {
+					is_adult = no
+				}
+			}
+		}
+	}
+
+	um_military_cap = {
+		dna_modifiers = {
+			accessory = {
+				mode = add
+				gene = headgear
+				template = european_late_military_headgear
+				accessory = male_headgear_european_military_cap_01
+			}
+		}
+		weight = {
+			base = 0
+			modifier = {
+				add = 300
+				um_military_cap_character_trigger = yes
+				scope:character = {
+					is_female = no
+				}
+			}
+			modifier = {
+				add = 300
+				officers_clothes_pop_trigger = yes
+			}
+		}
+	}
+
+	um_military_female_cap = {
+		dna_modifiers = {
+			accessory = {
+				mode = add
+				gene = headgear
+				template = female_headgear_european_common_02
+				range = { 0 1 }
+			}
+		}
+		weight = {
+			base = 0
+			modifier = {
+				add = 300
+				um_military_cap_character_trigger = yes
+				scope:character = {
+					is_female = yes
+				}
+			}
+		}
+	}
+
+	um_gulf_ghutra = {
+		dna_modifiers = {
+			accessory = {
+				mode = add
+				gene = headgear
+				template = arabic_turban
+				range = { 0.76 1.0 }
+			}
+		}
+		weight = {
+			base = 0
+			modifier = {
+				add = 1000000
+				um_gulf_dress_character_trigger = yes
+				um_military_dress_character_trigger = no
+				um_cleric_character_trigger = no
+			}
+			modifier = {
+				add = 1000000
+				um_gulf_dress_pop_trigger = yes
+			}
+		}
+	}
+
+	um_cleric_turban = {
+		dna_modifiers = {
+			accessory = {
+				mode = add
+				gene = headgear
+				template = arabic_turban
+				range = { 0 0.24 }
+			}
+		}
+		weight = {
+			base = 0
+			modifier = {
+				add = 1000000
+				um_cleric_character_trigger = yes
+			}
+			modifier = {
+				add = 1000000
+				clergy_clothes_pop_trigger = yes
+				muslim_clothes_pop_trigger = yes
+			}
+		}
+	}
+
+	um_veiled_female_headscarf = {
+		dna_modifiers = {
+			accessory = {
+				mode = add
+				gene = headgear
+				template = arabic_turban
+				range = { 0.76 1.0 }
+			}
+		}
+		weight = {
+			base = 0
+			modifier = {
+				add = 1000000
+				um_veiled_female_character_trigger = yes
+				um_gulf_dress_character_trigger = no
+			}
+		}
+	}
+
+	um_arab_rural_keffiyeh = {
+		dna_modifiers = {
+			accessory = {
+				mode = add
+				gene = headgear
+				template = arabic_turban
+				range = { 0.76 1.0 }
+			}
+		}
+		weight = {
+			base = 0
+			modifier = {
+				add = 300
+				um_arab_rural_pop_trigger = yes
+			}
+		}
+	}
+
+	um_sikh_turban = {
+		dna_modifiers = {
+			accessory = {
+				mode = add
+				gene = headgear
+				template = indian_common_headgear
+				range = { 0 1 }
+			}
+		}
+		weight = {
+			base = 0
+			modifier = {
+				add = 1000000
+				scope:character ?= {
+					is_adult = yes
+					is_female = no
+					religion = rel:sikh
+				}
+				um_military_cap_character_trigger = no
+			}
+			modifier = {
+				add = 1000000
+				scope:pop ?= {
+					religion = rel:sikh
+				}
+				officers_clothes_pop_trigger = no
+			}
+		}
+	}
+
+	um_orthodox_clergy_headgear = {
+		dna_modifiers = {
+			accessory = {
+				mode = add
+				gene = headgear
+				template = orthodox_headgear
+				range = { 0 1 }
+			}
+		}
+		weight = {
+			base = 0
+			modifier = {
+				add = 1000000
+				has_dlc_feature = ip5_cosmetics
+				clergy_clothes_pop_trigger = yes
+				scope:pop = {
+					religion = rel:orthodox
+				}
+			}
+		}
+	}
+}

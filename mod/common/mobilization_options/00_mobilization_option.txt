@@ -88,9 +88,6 @@ mobilization_option_luxurious_supplies = {
 			mg:meat ?= {
 				market_goods_sell_orders > 0
 			}
-			mg:wine ?= {
-				market_goods_sell_orders > 0
-			}
 		}
 	}
 	
@@ -112,7 +109,6 @@ mobilization_option_luxurious_supplies = {
 	
 	upkeep_modifier = {
 		goods_input_meat_add = 1
-		goods_input_wine_add = 1
 		goods_input_groceries_add = 1
 	}
 	upkeep_modifier_unscaled = {
@@ -928,12 +924,10 @@ mobilization_option_fpv_drone = {
 # 		goods_input_ironclads_add = 1
 # 	}
 # 	unit_modifier = {
-# 		#needs code support to reduce naval invasion penalty
 # 	}
 # 	ai_weight = {
 #		value = 1
 #	}
-#
 #     group = special_weapons
 # }
 

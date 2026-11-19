@@ -28,47 +28,58 @@ je_subprime_mortgage_crisis = {
 		c:USA ?= this
 	}
 
-	# Complete if securities price drops to
-	# 35% or more below base before timeout
-	complete = {
-		market_capital.market = {
-			mg:securities = {
-				market_goods_cheaper > 0.35
+outcome = {
+		header = je_standard_completion_header
+		effect_header = je_standard_on_completion_header
+		color = "gold_positive"
+		conclusion_desc = je_standard_completion_conclusion_desc
+		trigger = {
+			market_capital.market = {
+				mg:securities = {
+					market_goods_cheaper > 0.35
+				}
+			}
+		}
+		effect = {}
+	}
+
+	outcome = {
+		header = JOURNAL_ENTRY_TIMEOUT
+		effect_header = JOURNAL_ENTRY_ON_TIMEOUT
+		flags = { timeout historical }
+		conclusion_desc = JOURNAL_ENTRY_TIMEOUT_CONCLUSION_DESC
+		effect = {
+			add_journal_entry = { type = je_great_recession }
+			every_country = {
+				limit = {
+					NOT = { c:USA ?= this }
+					exists = c:USA
+					market_capital.market = {
+						market_trade = {
+							target = c:USA.market_capital.market
+							value > 5000
+						}
+					}
+				}
+				add_journal_entry = { type = je_great_recession }
 			}
 		}
 	}
 
-	on_complete = {
+	outcome = {
+		flags = { hidden invalid_outcome }
+		conclusion_desc = je_standard_failure_conclusion_desc
+		trigger = {
+			NOT = {
+				any_scope_building = {
+					is_building_type = building_financial_district
+					has_active_production_method = pm_financial_district_subprime_mortgages
+				}
+			}
+		}
 	}
 
 	# 8 months to correct before the crash
-	on_timeout = {
-		# USA enters the Great Recession
-		add_journal_entry = { type = je_great_recession }
-		# Fire for every country with substantial US trade
-		every_country = {
-			limit = {
-				NOT = { c:USA ?= this }
-				exists = c:USA
-				market_capital.market = {
-					market_trade = {
-						target = c:USA.market_capital.market
-						value > 5000
-					}
-				}
-			}
-			add_journal_entry = { type = je_great_recession }
-		}
-	}
-
-	invalid = {
-		NOT = {
-			any_scope_building = {
-				is_building_type = building_financial_district
-				has_active_production_method = pm_financial_district_subprime_mortgages
-			}
-		}
-	}
 
 	transferable = no
 	can_revolution_inherit = no
@@ -107,4 +118,11 @@ je_great_recession = {
 	can_revolution_inherit = no
 	weight = 9000
 	timeout = 300
+
+	outcome = {
+		header = JOURNAL_ENTRY_TIMEOUT
+		effect_header = JOURNAL_ENTRY_ON_TIMEOUT
+		flags = { timeout }
+		conclusion_desc = JOURNAL_ENTRY_TIMEOUT_CONCLUSION_DESC
+	}
 }

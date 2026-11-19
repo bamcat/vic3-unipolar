@@ -1,6 +1,4 @@
-﻿### BANKING
-
-pmg_base_banking = {
+﻿pmg_base_banking = {
 	texture = "gfx/interface/icons/production_method_icons/medicines.dds"
 	production_methods = {
 		pm_basic_banking
@@ -30,8 +28,6 @@ pmg_automation_banking = {
 	}
 }
 
-### FOOD SERVICES
-
 pmg_base_food_services = {
 	texture = "gfx/interface/icons/production_method_icons/medicines.dds"
 	production_methods = {
@@ -56,13 +52,11 @@ pmg_food_service_logistics = {
 	texture ="gfx/interface/icons/production_method_icons/medicines.dds"
 	production_methods = {
 		pm_manual_food_checkout
-		pm_self_checkout_food
 		pm_food_delivery_services
+		pm_self_checkout_food
 		pm_drone_food_delivery
 	}
 }
-
-### RETAIL SERVICES
 
 pmg_base_retail = {
 	texture = "gfx/interface/icons/production_method_icons/medicines.dds"
@@ -94,8 +88,6 @@ pmg_retail_logistics = {
 	}
 }
 
-### ADVERTISING
-
 pmg_base_advertising = {
 	texture = "gfx/interface/icons/production_method_icons/medicines.dds"
 	production_methods = {
@@ -125,8 +117,6 @@ pmg_advertising_research = {
 	}
 }
 
-### WAREHOUSING
-
 pmg_base_warehousing = {
 	texture = "gfx/interface/icons/production_method_icons/medicines.dds"
 	production_methods = {
@@ -146,8 +136,6 @@ pmg_warehousing_logistics = {
 		pm_ai_inventory_management
 	}
 }
-
-### PHARMACEUTICAL SERVICES
 
 pmg_base_pharmaceutical_services = {
 	texture = "gfx/interface/icons/production_method_icons/medicines.dds"
@@ -177,8 +165,6 @@ pmg_pharmaceutical_automation = {
 		pm_robotic_pharmacy
 	}
 }
-
-## nuke
 
 pmg_base_building_nuclear_silo = {
 	texture = "gfx/interface/icons/production_method_icons/medicines.dds"
@@ -217,4 +203,28 @@ pmg_software_automation = {
 		pm_cloud_infrastructure
 	}
 }
- 
+
+REPLACE_OR_CREATE:pmg_base_building_data_center = {
+	texture = "gfx/interface/icons/production_method_groups/telephones.dds"
+	ai_selection = most_productive
+	production_methods = {
+		pm_server_farm
+		pm_machine_learning_cluster
+		pm_quantum_compute_cluster
+	}
+}
+
+REPLACE_OR_CREATE:pmg_automation_building_data_center = {
+	texture = "gfx/interface/icons/generic_icons/mixed_icon_automation.dds"
+	production_methods = {
+		pm_automation_disabled
+	}
+}
+
+REPLACE_OR_CREATE:pmg_cooling_building_data_center = {
+	texture = "gfx/interface/icons/production_method_groups/water_pump.dds"
+	production_methods = {
+		pm_air_cooling
+		pm_liquid_cooling
+	}
+}

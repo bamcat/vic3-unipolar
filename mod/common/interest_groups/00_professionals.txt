@@ -5,16 +5,13 @@ REPLACE_OR_CREATE:ig_professionals = {
 	index = 3
 
 	ideologies = {
-		#Economic Ideologies
-		ideology_right_economy 				#General Economic Beliefs 
-		ideology_globalist 				#Foreign Economic Policy
+		ideology_right_economy
+		ideology_globalist
 		
-		#Political Ideologies
-		ideology_individualist				#General Political Beliefs
-		ideology_progressive				#Specific Political Beliefs
-		ideology_republican					#Government Types 
+		ideology_individualist
+		ideology_progressive
+		ideology_republican
 		
-		#Dynamic Ideologies
 		#ideology_neutral_spending
 		#ideology_neutral_population
 	}
@@ -36,7 +33,6 @@ REPLACE_OR_CREATE:ig_professionals = {
 		always = yes
 	}
 
-	# Deprecated; use on_enable effect to assign traits instead
 	traits = {
 		ig_trait_engines_of_progress
 		ig_trait_tax_avoidance
@@ -58,7 +54,7 @@ REPLACE_OR_CREATE:ig_professionals = {
 			
 	}
 	on_disable = {}
-	priority_cultures = { #Country scope
+	priority_cultures = {
 		rule = {
 			trigger = {
 				c:BIC ?= this
@@ -75,14 +71,12 @@ REPLACE_OR_CREATE:ig_professionals = {
 
 	pop_potential = {
 	
-		#Only Accepted Pops can organise into IGs
 		#pop_acceptance >= acceptance_status_3
 		
-		#Correct pop type
 		OR = {
 			is_pop_type = professionals		#the core of this group
-			is_pop_type = engineers 			#Technologists
-			is_pop_type = clerks				#Associates
+			is_pop_type = engineers
+			is_pop_type = clerks
 		}
 		NOT = { is_pop_type = capitalists }
 		
@@ -178,7 +172,7 @@ REPLACE_OR_CREATE:ig_professionals = {
 					is_in_government = yes
 				}
 			}
-			multiply = { # Multiplied by 1.25x max
+			multiply = {
 				desc = "POP_LOYALISTS"
 				value = pop_loyalist_fraction
 				divide = 4
@@ -191,7 +185,7 @@ REPLACE_OR_CREATE:ig_professionals = {
 					is_in_government = no
 				}
 			}
-			multiply = { # Multiplied by 1.25x max
+			multiply = {
 				desc = "POP_RADICALS"
 				value = pop_radical_fraction
 				divide = 4
@@ -203,7 +197,6 @@ REPLACE_OR_CREATE:ig_professionals = {
 
 	monarch_weight = {
 		value = 1
-		# Monarch is not likely to adopt a marginal IG
 		if = {
 			limit = {
 				is_marginal = yes
@@ -212,7 +205,6 @@ REPLACE_OR_CREATE:ig_professionals = {
 				value = 0.1
 			}
 		}
-		# Monarch is more likely to adopt a Powerful IG
 		if = {
 			limit = {
 				is_powerful = yes
@@ -221,7 +213,6 @@ REPLACE_OR_CREATE:ig_professionals = {
 				value = 2
 			}
 		}
-		# Much more likely with Technocracy
 		if = {
 			limit = {
 				owner = {
@@ -232,7 +223,6 @@ REPLACE_OR_CREATE:ig_professionals = {
 				value = 3
 			}
 		}
-		# More likely with Appointed Bureaucrats
 		if = {
 			limit = {
 				owner = {
@@ -243,7 +233,6 @@ REPLACE_OR_CREATE:ig_professionals = {
 				value = 1.5
 			}
 		}
-		# Impossible without Empiricism
 		if = {
 			limit = {
 				owner = {
@@ -257,9 +246,7 @@ REPLACE_OR_CREATE:ig_professionals = {
 	}
 
 	agitator_weight = {
-		# Agitators more likely to come from populist IG's rather than elitist
 		value = 0.75
-		# Agitators will never be part of a marginalized IG
 		if = {
 			limit = {
 				owner.ig:ig_professionals = {
@@ -426,8 +413,6 @@ REPLACE_OR_CREATE:ig_professionals = {
 		}		
 	}
 
-	# The chance that a commander belonging to this IG takes over leadership when it changes
-	# scope:character is the most popular commander in the IG
 	commander_leader_chance = {
 		value = 0.25
 		multiply = ig_commander_leader_chance_mult

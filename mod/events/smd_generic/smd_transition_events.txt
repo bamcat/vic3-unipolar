@@ -1,0 +1,236 @@
+﻿namespace = smd_transition
+
+smd_transition.1 = {
+	type = country_event
+	placement = ROOT
+	title = smd_transition.1.t
+	desc = smd_transition.1.d
+	flavor = smd_transition.1.f
+	event_image = { video = "europenorthamerica_capitalists_meeting" }
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+	icon = "gfx/interface/icons/event_icons/event_trade.dds"
+	duration = 3
+
+	trigger = {
+	}
+
+	option = {
+		name = smd_transition.1.a
+		default_option = yes
+		set_variable = smd_shock_therapy
+		add_modifier = {
+			name = smd_shock_therapy
+			days = 1095
+		}
+		smd_try_start_law = { LAW = law_laissez_faire }
+		ai_chance = { base = 50 }
+	}
+
+	option = {
+		name = smd_transition.1.b
+		set_variable = smd_gradualism
+		add_modifier = {
+			name = smd_gradual_reform
+			days = 1825
+		}
+		smd_try_start_law = { LAW = law_interventionism }
+		ai_chance = { base = 50 }
+	}
+}
+
+smd_transition.2 = {
+	type = country_event
+	placement = ROOT
+	title = smd_transition.2.t
+	desc = smd_transition.2.d
+	flavor = smd_transition.2.f
+	event_image = { video = "europenorthamerica_rich_and_poor" }
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+	icon = "gfx/interface/icons/event_icons/event_trade.dds"
+	duration = 3
+	cooldown = { days = normal_modifier_time }
+
+	trigger = {
+		has_journal_entry = smd_je_market_transition
+		has_variable = smd_shock_therapy
+	}
+
+	immediate = {
+		add_modifier = {
+			name = smd_hyperinflation
+			days = 365
+		}
+		add_radicals = {
+			value = small_radicals
+			strata = lower
+		}
+	}
+
+	option = {
+		name = smd_transition.2.a
+		default_option = yes
+		add_modifier = {
+			name = smd_tight_money
+			days = 730
+		}
+		je:smd_je_market_transition ?= {
+			add_progress = { value = 5 name = smd_transition_bar }
+		}
+		ai_chance = { base = 60 }
+	}
+
+	option = {
+		name = smd_transition.2.b
+		add_modifier = {
+			name = smd_loose_money
+			days = 730
+		}
+		je:smd_je_market_transition ?= {
+			add_progress = { value = -10 name = smd_transition_bar }
+		}
+		ai_chance = { base = 40 }
+	}
+}
+
+smd_transition.3 = {
+	type = country_event
+	placement = ROOT
+	title = smd_transition.3.t
+	desc = smd_transition.3.d
+	flavor = smd_transition.3.f
+	event_image = { video = "europenorthamerica_capitalists_meeting" }
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+	icon = "gfx/interface/icons/event_icons/event_trade.dds"
+	duration = 3
+	cooldown = { days = normal_modifier_time }
+
+	trigger = {
+		has_journal_entry = smd_je_market_transition
+		has_variable = smd_vouchers_issued
+	}
+
+	option = {
+		name = smd_transition.3.a
+		default_option = yes
+		add_modifier = {
+			name = smd_oligarch_influence
+			days = normal_modifier_time
+		}
+		je:smd_je_market_transition ?= {
+			add_progress = { value = 5 name = smd_transition_bar }
+		}
+		ai_chance = { base = 60 }
+	}
+
+	option = {
+		name = smd_transition.3.b
+		add_modifier = {
+			name = smd_oligarchs_prosecuted
+			days = normal_modifier_time
+		}
+		je:smd_je_market_transition ?= {
+			add_progress = { value = -5 name = smd_transition_bar }
+		}
+		ai_chance = { base = 40 }
+	}
+}
+
+smd_transition.4 = {
+	type = country_event
+	placement = ROOT
+	title = smd_transition.4.t
+	desc = smd_transition.4.d
+	flavor = smd_transition.4.f
+	event_image = { video = "unspecific_factory_closed" }
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+	icon = "gfx/interface/icons/event_icons/event_protest.dds"
+	duration = 3
+	cooldown = { days = normal_modifier_time }
+
+	trigger = {
+		has_journal_entry = smd_je_market_transition
+		NOT = { has_variable = smd_nostalgia_wave }
+		ig:ig_trade_unions ?= { ig_approval <= unhappy }
+	}
+
+	immediate = {
+		set_variable = { name = smd_nostalgia_wave days = 1825 }
+	}
+
+	option = {
+		name = smd_transition.4.a
+		default_option = yes
+		add_treasury = {
+			value = gdp
+			multiply = -0.003
+		}
+		add_modifier = {
+			name = smd_pension_indexation
+			days = 1825
+		}
+		remove_variable = smd_nostalgia_wave
+		ai_chance = { base = 50 }
+	}
+
+	option = {
+		name = smd_transition.4.b
+		add_radicals = {
+			value = small_radicals
+			strata = lower
+		}
+		je:smd_je_market_transition ?= {
+			add_progress = { value = -5 name = smd_transition_bar }
+		}
+		ai_chance = { base = 50 }
+	}
+}
+
+smd_transition.5 = {
+	type = country_event
+	placement = ROOT
+	title = smd_transition.5.t
+	desc = smd_transition.5.d
+	flavor = smd_transition.5.f
+	event_image = { video = "southamerica_factory_opening" }
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+	icon = "gfx/interface/icons/event_icons/event_industry.dds"
+	duration = 3
+
+	trigger = {
+	}
+
+	option = {
+		name = smd_transition.5.a
+		default_option = yes
+		add_modifier = {
+			name = smd_market_economy_established
+			days = long_modifier_time
+		}
+		ai_chance = { base = 100 }
+	}
+}
+
+smd_transition.6 = {
+	type = country_event
+	placement = ROOT
+	title = smd_transition.6.t
+	desc = smd_transition.6.d
+	flavor = smd_transition.6.f
+	event_image = { video = "ip5_soviet_deliberation" }
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+	icon = "gfx/interface/icons/event_icons/event_revolutionary_flag.dds"
+	duration = 3
+
+	trigger = {
+	}
+
+	option = {
+		name = smd_transition.6.a
+		default_option = yes
+		add_modifier = {
+			name = smd_restoration
+			days = normal_modifier_time
+		}
+		ai_chance = { base = 100 }
+	}
+}

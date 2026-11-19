@@ -1,12 +1,7 @@
 ﻿namespace = lgbtq_laws
 
-
 # ==========================================
 # lgbtq_laws.1
-# "The Church Demands Action"
-# Fires when enacting active oppression.
-# The devout IG frames the law in
-# explicitly moral and religious terms.
 # checkpoint_advance
 # ==========================================
 
@@ -56,13 +51,11 @@ lgbtq_laws.1 = {
 		}
 	}
 
-	# Option A: Embrace the religious framing — this is a matter of moral law
 	option = {
 		name = lgbtq_laws.1.a
 		default_option = yes
 		add_enactment_modifier = {
 			name = lgbtq_law_religious_mandate
-			# = 2
 		}
 		scope:devout_ig = {
 			add_modifier = {
@@ -73,7 +66,6 @@ lgbtq_laws.1 = {
 		ai_chance = { base = 65 }
 	}
 
-	# Option B: Frame it as a matter of social order — keep religion out of the justification
 	option = {
 		name = lgbtq_laws.1.b
 		add_enactment_modifier = {
@@ -89,14 +81,8 @@ lgbtq_laws.1 = {
 	}
 }
 
-
 # ==========================================
 # lgbtq_laws.2
-# "The Cost of Enforcement"
-# Fires when enacting active oppression
-# or restricted lgbtq.
-# The state apparatus must decide how
-# far enforcement will go.
 # checkpoint_stall
 # ==========================================
 
@@ -135,13 +121,11 @@ lgbtq_laws.2 = {
 		}
 	}
 
-	# Option A: Full enforcement — spare no expense
 	option = {
 		name = lgbtq_laws.2.a
 		default_option = yes
 		add_enactment_modifier = {
 			name = lgbtq_law_enforcement_scope
-			# = 2
 		}
 		add_enactment_modifier = {
 			name = lgbtq_law_enforcement_cost
@@ -150,7 +134,6 @@ lgbtq_laws.2 = {
 		ai_chance = { base = 50 }
 	}
 
-	# Option B: Passive enforcement — let social pressure do the work
 	option = {
 		name = lgbtq_laws.2.b
 		add_enactment_modifier = {
@@ -160,14 +143,8 @@ lgbtq_laws.2 = {
 	}
 }
 
-
 # ==========================================
 # lgbtq_laws.3
-# "Decriminalization Is Not Endorsement"
-# Fires when enacting decriminalized gays.
-# The government must manage the
-# conservative backlash while making
-# the case for reform.
 # checkpoint_debate
 # ==========================================
 
@@ -223,13 +200,11 @@ lgbtq_laws.3 = {
 		}
 	}
 
-	# Option A: Frame it clearly — decriminalization removes punishment, not endorsement
 	option = {
 		name = lgbtq_laws.3.a
 		default_option = yes
 		add_enactment_modifier = {
 			name = lgbtq_law_decrim_framing
-			# = 2
 		}
 		scope:conservative_ig = {
 			add_modifier = {
@@ -244,8 +219,8 @@ lgbtq_laws.3 = {
 					exists = ruler
 					ruler = {
 						OR = {
-							has_ideology = ideology_liberal_leader
-							has_ideology = ideology_progressive_leader
+							has_ideology = ideology:ideology_liberal_leader
+							has_ideology = ideology:ideology_progressive_leader
 						}
 					}
 				}
@@ -254,7 +229,6 @@ lgbtq_laws.3 = {
 		}
 	}
 
-	# Option B: Keep it quiet — pass the reform without drawing attention to it
 	option = {
 		name = lgbtq_laws.3.b
 		add_enactment_modifier = {
@@ -267,13 +241,8 @@ lgbtq_laws.3 = {
 	}
 }
 
-
 # ==========================================
 # lgbtq_laws.4
-# "The Intelligentsia Makes Its Case"
-# Fires when enacting decriminalized gays.
-# Reformers argue on grounds of personal
-# liberty and harm reduction.
 # checkpoint_advance
 # ==========================================
 
@@ -323,13 +292,11 @@ lgbtq_laws.4 = {
 		}
 	}
 
-	# Option A: Let them lead the argument — personal liberty is inalienable
 	option = {
 		name = lgbtq_laws.4.a
 		default_option = yes
 		add_enactment_modifier = {
 			name = lgbtq_law_liberty_argument
-			# = 2
 		}
 		scope:intelligentsia_ig = {
 			add_modifier = {
@@ -346,7 +313,6 @@ lgbtq_laws.4 = {
 		}
 	}
 
-	# Option B: Keep it a legislative matter — avoid the philosophical debate
 	option = {
 		name = lgbtq_laws.4.b
 		add_enactment_modifier = {
@@ -362,14 +328,8 @@ lgbtq_laws.4 = {
 	}
 }
 
-
 # ==========================================
 # lgbtq_laws.5
-# "Marriage Is a Social Institution"
-# Fires when enacting gay marriage.
-# Conservatives argue the institution
-# of marriage cannot be redefined
-# without tearing at the social fabric.
 # checkpoint_debate
 # ==========================================
 
@@ -425,13 +385,11 @@ lgbtq_laws.5 = {
 		}
 	}
 
-	# Option A: Reframe marriage as a civil institution — the state, not the church, defines it
 	option = {
 		name = lgbtq_laws.5.a
 		default_option = yes
 		add_enactment_modifier = {
 			name = lgbtq_law_institution_debate
-			# = 2
 		}
 		scope:conservative_ig = {
 			add_modifier = {
@@ -446,8 +404,8 @@ lgbtq_laws.5 = {
 					exists = ruler
 					ruler = {
 						OR = {
-							has_ideology = ideology_progressive_leader
-							has_ideology = ideology_liberal_leader
+							has_ideology = ideology:ideology_progressive_leader
+							has_ideology = ideology:ideology_liberal_leader
 						}
 					}
 				}
@@ -456,7 +414,6 @@ lgbtq_laws.5 = {
 		}
 	}
 
-	# Option B: Offer religious exemptions — churches may decline to perform ceremonies
 	option = {
 		name = lgbtq_laws.5.b
 		add_enactment_modifier = {
@@ -475,14 +432,8 @@ lgbtq_laws.5 = {
 	}
 }
 
-
 # ==========================================
 # lgbtq_laws.6
-# "Equal Before the Law"
-# Fires when enacting gay marriage.
-# The intelligentsia and progressive
-# IGs frame marriage equality as the
-# logical conclusion of civil rights.
 # checkpoint_advance
 # ==========================================
 
@@ -532,13 +483,11 @@ lgbtq_laws.6 = {
 		}
 	}
 
-	# Option A: Make it a landmark — equality before the law admits no exceptions
 	option = {
 		name = lgbtq_laws.6.a
 		default_option = yes
 		add_enactment_modifier = {
 			name = lgbtq_law_equality_mandate
-			# = 2
 		}
 		scope:intelligentsia_ig = {
 			add_modifier = {
@@ -553,9 +502,9 @@ lgbtq_laws.6 = {
 					exists = ruler
 					ruler = {
 						OR = {
-							has_ideology = ideology_progressive_leader
-							has_ideology = ideology_socialist_leader
-							has_ideology = ideology_communist_leader
+							has_ideology = ideology:ideology_progressive_leader
+							has_ideology = ideology:ideology_democratic_socialist_leader
+							has_ideology = ideology:ideology_marxist_leader
 						}
 					}
 				}
@@ -564,7 +513,6 @@ lgbtq_laws.6 = {
 		}
 	}
 
-	# Option B: Keep it administrative — extend benefits quietly without a declaration
 	option = {
 		name = lgbtq_laws.6.b
 		add_enactment_modifier = {

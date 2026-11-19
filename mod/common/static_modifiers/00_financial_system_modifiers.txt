@@ -1,0 +1,113 @@
+﻿fin_monetary_stance_1 = {
+	icon = "gfx/interface/icons/timed_modifier_icons/modifier_coins_negative.dds"
+	country_minting_mult = -0.25
+	state_dependent_wage_mult = -0.1
+}
+
+fin_monetary_stance_2 = {
+	icon = "gfx/interface/icons/timed_modifier_icons/modifier_coins_negative.dds"
+	country_minting_mult = -0.1
+	state_dependent_wage_mult = -0.05
+}
+
+fin_monetary_stance_4 = {
+	icon = "gfx/interface/icons/timed_modifier_icons/modifier_coins_positive.dds"
+	country_minting_mult = 0.1
+	state_dependent_wage_mult = 0.05
+}
+
+fin_monetary_stance_5 = {
+	icon = "gfx/interface/icons/timed_modifier_icons/modifier_coins_positive.dds"
+	country_minting_mult = 0.25
+	state_dependent_wage_mult = 0.1
+}
+
+fin_price_controls = {
+	icon = "gfx/interface/icons/timed_modifier_icons/modifier_documents_positive.dds"
+	goods_output_groceries_mult = 0.2
+	goods_output_grain_mult = 0.15
+	goods_output_clothes_mult = 0.2
+	goods_output_furniture_mult = 0.2
+	goods_output_liquor_mult = 0.2
+	country_legitimacy_base_add = 3
+}
+
+fin_price_controls_partial = {
+	icon = "gfx/interface/icons/timed_modifier_icons/modifier_documents_positive.dds"
+	goods_output_groceries_mult = 0.1
+	goods_output_grain_mult = 0.08
+	goods_output_clothes_mult = 0.1
+	goods_output_furniture_mult = 0.1
+	goods_output_liquor_mult = 0.1
+}
+
+fin_wage_arrears_1 = {
+	icon = "gfx/interface/icons/timed_modifier_icons/modifier_fist_negative.dds"
+	country_government_wages_mult = -0.15
+	country_military_wages_mult = -0.15
+	interest_group_ig_armed_forces_approval_add = -1
+	interest_group_ig_trade_unions_approval_add = -1
+}
+
+fin_wage_arrears_2 = {
+	icon = "gfx/interface/icons/timed_modifier_icons/modifier_fist_negative.dds"
+	country_government_wages_mult = -0.3
+	country_military_wages_mult = -0.3
+	interest_group_ig_armed_forces_approval_add = -2
+	interest_group_ig_trade_unions_approval_add = -2
+}
+
+fin_wage_arrears_3 = {
+	icon = "gfx/interface/icons/timed_modifier_icons/modifier_fist_negative.dds"
+	country_government_wages_mult = -0.5
+	country_military_wages_mult = -0.5
+	interest_group_ig_armed_forces_approval_add = -4
+	interest_group_ig_trade_unions_approval_add = -3
+}
+
+fin_capital_flight_1 = {
+	icon = "gfx/interface/icons/timed_modifier_icons/modifier_coins_negative.dds"
+	country_private_construction_allocation_mult = -0.1
+}
+
+fin_capital_flight_2 = {
+	icon = "gfx/interface/icons/timed_modifier_icons/modifier_coins_negative.dds"
+	country_private_construction_allocation_mult = -0.2
+	state_tax_collection_mult = -0.05
+}
+
+fin_capital_flight_3 = {
+	icon = "gfx/interface/icons/timed_modifier_icons/modifier_coins_negative.dds"
+	country_private_construction_allocation_mult = -0.3
+	state_tax_collection_mult = -0.1
+}
+
+fin_capital_flight_outflow = {
+	icon = "gfx/interface/icons/timed_modifier_icons/modifier_coins_negative.dds"
+	state_aristocrats_investment_pool_efficiency_mult = -0.0075
+	state_capitalists_investment_pool_efficiency_mult = -0.0075
+	state_shopkeepers_investment_pool_efficiency_mult = -0.0075
+	state_engineers_investment_pool_efficiency_mult = -0.0075
+	state_clerks_investment_pool_efficiency_mult = -0.0075
+	state_bureaucrats_investment_pool_efficiency_mult = -0.0075
+	state_academics_investment_pool_efficiency_mult = -0.0075
+	state_clergymen_investment_pool_efficiency_mult = -0.0075
+	state_officers_investment_pool_efficiency_mult = -0.0075
+	state_farmers_investment_pool_efficiency_mult = -0.0075
+	state_machinists_investment_pool_efficiency_mult = -0.0075
+	state_laborers_investment_pool_efficiency_mult = -0.0075
+	state_peasants_investment_pool_efficiency_mult = -0.0075
+	state_soldiers_investment_pool_efficiency_mult = -0.0075
+}
+
+fin_sovereign_default = {
+	icon = "gfx/interface/icons/timed_modifier_icons/modifier_coins_negative.dds"
+	country_loan_interest_rate_mult = 1
+	country_private_construction_allocation_mult = -0.25
+	country_legitimacy_base_add = -10
+}
+
+fin_gko_interest = {
+	icon = "gfx/interface/icons/timed_modifier_icons/modifier_coins_negative.dds"
+	country_loan_interest_rate_add = 0.001
+}

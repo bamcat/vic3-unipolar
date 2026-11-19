@@ -11,8 +11,7 @@ national_development_progress_bar = {
 
 	monthly_progress = {
 
-		# Only ticks when a path is active
-		if = {
+		progress_condition = {
 			limit = {
 				OR = {
 					has_variable = ndp_industrial
@@ -27,8 +26,7 @@ national_development_progress_bar = {
 			}
 		}
 
-		# ── INDUSTRIAL BONUSES ──────────────────────────
-		if = {
+		progress_condition = {
 			limit = {
 				has_variable = ndp_industrial
 				any_scope_state = {
@@ -43,12 +41,12 @@ national_development_progress_bar = {
 				value = 0.5
 			}
 		}
-		if = {
+		progress_condition = {
 			limit = {
 				has_variable = ndp_industrial
 				any_scope_state = {
 					any_scope_building = {
-						is_building_type = building_textile_mills
+						is_building_type = building_textile_mill
 						level >= 3
 					}
 				}
@@ -59,8 +57,7 @@ national_development_progress_bar = {
 			}
 		}
 
-		# ── MILITARY BONUSES ────────────────────────────
-		if = {
+		progress_condition = {
 			limit = {
 				has_variable = ndp_military
 				army_size >= 50
@@ -70,7 +67,7 @@ national_development_progress_bar = {
 				value = 1
 			}
 		}
-		if = {
+		progress_condition = {
 			limit = {
 				has_variable = ndp_military
 				has_law = law_type:law_mass_conscription
@@ -81,8 +78,7 @@ national_development_progress_bar = {
 			}
 		}
 
-		# ── RESOURCE BONUSES ────────────────────────────
-		if = {
+		progress_condition = {
 			limit = {
 				has_variable = ndp_resource
 				any_scope_state = {
@@ -97,7 +93,7 @@ national_development_progress_bar = {
 				value = 0.5
 			}
 		}
-		if = {
+		progress_condition = {
 			limit = {
 				has_variable = ndp_resource
 				any_scope_state = {
@@ -113,8 +109,7 @@ national_development_progress_bar = {
 			}
 		}
 
-		# ── SERVICE BONUSES ─────────────────────────────
-		if = {
+		progress_condition = {
 			limit = {
 				has_variable = ndp_service
 				literacy_rate >= 0.30
@@ -124,7 +119,7 @@ national_development_progress_bar = {
 				value = 1
 			}
 		}
-		if = {
+		progress_condition = {
 			limit = {
 				has_variable = ndp_service
 				any_scope_state = {
@@ -140,9 +135,7 @@ national_development_progress_bar = {
 			}
 		}
 
-		# ── UNIVERSAL PENALTIES ─────────────────────────
-		# High turmoil slows development
-		if = {
+		progress_condition = {
 			limit = {
 				country_turmoil >= 0.10
 			}
@@ -151,7 +144,7 @@ national_development_progress_bar = {
 				value = -1
 			}
 		}
-		if = {
+		progress_condition = {
 			limit = {
 				country_turmoil >= 0.25
 			}
@@ -161,8 +154,7 @@ national_development_progress_bar = {
 			}
 		}
 
-		# At war slows development
-		if = {
+		progress_condition = {
 			limit = {
 				is_at_war = yes
 			}

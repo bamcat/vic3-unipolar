@@ -1,8 +1,8 @@
-﻿# Capital Ships
-
-REPLACE_OR_CREATE:ship_type_battleship = {
+﻿REPLACE_OR_CREATE:ship_type_battleship = {
 
     ship_group = ship_group_capital_ships
+    ai_ship_category = ai_ship_category_battle_line
+    vulnerability_exploitation = 140
 
     modification_construction_cost = 150
 
@@ -103,6 +103,8 @@ REPLACE_OR_CREATE:ship_type_battleship = {
 REPLACE_OR_CREATE:ship_type_aircraft_carrier = {
 
     ship_group = ship_group_capital_ships
+    ai_ship_category = ai_ship_category_carriers
+    vulnerability_exploitation = 140
 
     modification_construction_cost = 180
 
@@ -113,7 +115,7 @@ REPLACE_OR_CREATE:ship_type_aircraft_carrier = {
     modifier = {
         ship_construction_progress_max_add = 25
         ship_hit_points_max_add = 2200
-        ship_crew_max_add = 600 # ~ including air crew
+        ship_crew_max_add = 600
         ship_movement_speed_add = 5
         ship_supply_capacity_add = 75
         ship_hull_damage_add = 112
@@ -192,6 +194,8 @@ REPLACE_OR_CREATE:ship_type_aircraft_carrier = {
 ship_type_supercarrier = {
 
     ship_group = ship_group_capital_ships
+    ai_ship_category = ai_ship_category_carriers
+    vulnerability_exploitation = 140
 
     modification_construction_cost = 200
 
@@ -202,7 +206,7 @@ ship_type_supercarrier = {
     modifier = {
         ship_construction_progress_max_add = 25
         ship_hit_points_max_add = 2200
-        ship_crew_max_add = 1000 # ~ including air crew
+        ship_crew_max_add = 1000
         ship_movement_speed_add = 5
         ship_supply_capacity_add = 100
         ship_hull_damage_add = 112
@@ -277,10 +281,10 @@ ship_type_supercarrier = {
         }
     }
 }
- # Cruisers
 
 REPLACE_OR_CREATE:ship_type_troop_ship = {
     ship_group = ship_group_cruisers
+    ai_ship_category = ai_ship_category_transports
 
     modification_construction_cost = 25
 
@@ -349,6 +353,8 @@ REPLACE_OR_CREATE:ship_type_troop_ship = {
 REPLACE_OR_CREATE:ship_type_frigate = {
 
     ship_group = ship_group_cruisers
+    ai_ship_category = ai_ship_category_screens
+    vulnerability_exploitation = 125
 
     modification_construction_cost = 70
 
@@ -430,6 +436,8 @@ REPLACE_OR_CREATE:ship_type_frigate = {
 REPLACE_OR_CREATE:ship_type_armored_cruiser = {
 
     ship_group = ship_group_cruisers
+    ai_ship_category = ai_ship_category_screens
+    vulnerability_exploitation = 125
 
     modification_construction_cost = 60
 
@@ -518,6 +526,8 @@ REPLACE_OR_CREATE:ship_type_armored_cruiser = {
 REPLACE_OR_CREATE:ship_type_light_cruiser = {
 
     ship_group = ship_group_cruisers
+    ai_ship_category = ai_ship_category_screens
+    vulnerability_exploitation = 140
 
     modification_construction_cost = 80
 
@@ -592,11 +602,11 @@ REPLACE_OR_CREATE:ship_type_light_cruiser = {
     }
 }
 
-# Torpedo Craft
-
 REPLACE_OR_CREATE:ship_type_submarine = {
 
     ship_group = ship_group_torpedo_craft
+    ai_ship_category = ai_ship_category_submarines
+    vulnerability_exploitation = 125
 
     modification_construction_cost = 80
 
@@ -663,6 +673,8 @@ REPLACE_OR_CREATE:ship_type_submarine = {
 ship_type_nuclear_submarine = {
 
     ship_group = ship_group_torpedo_craft
+    ai_ship_category = ai_ship_category_submarines
+    vulnerability_exploitation = 140
 
 	can_be_flagship = yes
     modification_construction_cost = 80
@@ -730,6 +742,8 @@ ship_type_nuclear_submarine = {
 REPLACE_OR_CREATE:ship_type_destroyer = {
 
     ship_group = ship_group_torpedo_craft
+    ai_ship_category = ai_ship_category_torpedo_craft
+    vulnerability_exploitation = 140
 
     modification_construction_cost = 80
 
@@ -807,6 +821,8 @@ REPLACE_OR_CREATE:ship_type_destroyer = {
 ship_type_littoral_combat_ship = {
 
     ship_group = ship_group_cruisers
+    ai_ship_category = ai_ship_category_coastal_defense
+    vulnerability_exploitation = 100
 
     modification_construction_cost = 70
 
@@ -891,6 +907,7 @@ ship_type_littoral_combat_ship = {
 
 REPLACE_OR_CREATE:ship_type_supply_ship = {
     ship_group = ship_group_supply_ships
+    ai_ship_category = ai_ship_category_transports
 
     base_construction_cost = 25
 
@@ -924,6 +941,8 @@ REPLACE_OR_CREATE:ship_type_supply_ship = {
 ship_type_helicopter_carrier = {
 
     ship_group = ship_group_cruisers
+    ai_ship_category = ai_ship_category_carriers
+    vulnerability_exploitation = 125
 
     modification_construction_cost = 200
 
@@ -934,7 +953,7 @@ ship_type_helicopter_carrier = {
     modifier = {
         ship_construction_progress_max_add = 25
         ship_hit_points_max_add = 1400
-        ship_crew_max_add = 150 # ~ including air crew
+        ship_crew_max_add = 150
         ship_movement_speed_add = 10
         ship_supply_capacity_add = 750
         ship_hull_damage_add = 65
@@ -1010,6 +1029,8 @@ ship_type_helicopter_carrier = {
 ship_type_stealth_destroyer = {
 
     ship_group = ship_group_torpedo_craft
+    ai_ship_category = ai_ship_category_torpedo_craft
+    vulnerability_exploitation = 140
 
     modification_construction_cost = 80
 

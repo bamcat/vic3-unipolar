@@ -1,16 +1,19 @@
+﻿# UNIPOLAR SUBSISTENCE WORKFORCE ADJUSTMENT
+
 REPLACE_OR_CREATE:default_building_subsistence_farm = {
 	texture = "gfx/interface/icons/production_method_icons/subsistence_farming.dds"
 	
 	building_modifiers = {
 		workforce_scaled = {
-			goods_output_grain_add = 6
-			goods_output_fabric_add = 12
-			goods_output_wood_add = 9
-			goods_output_services_add = 1.5
+			# output goods
+			goods_output_grain_add = 1
+			goods_output_fabric_add = 0.5
+			goods_output_wood_add = 0.5
+			goods_output_services_add = 0.5
 		}
 
 		level_scaled = {
-			building_employment_peasants_add = 37500
+			building_employment_peasants_add = 5000
 		}
 	}
 }
@@ -21,11 +24,12 @@ REPLACE_OR_CREATE:pm_home_workshops_no_building_subsistence_farm = {
 		law_collectivized_agriculture
 	}
 	
-	building_modifiers = { # 20
+	building_modifiers = {
 		workforce_scaled = {
-			goods_output_grain_add = 0.4  # 10
-			goods_output_fabric_add = 0.45  # 5
-			goods_output_wood_add = 0.4 # 5
+			# output goods
+			goods_output_grain_add = 0.56
+			goods_output_fabric_add = 0.28
+			goods_output_wood_add = 0.28
 		}
 	}				
 }		
@@ -37,10 +41,11 @@ REPLACE_OR_CREATE:pm_home_workshops_building_subsistence_farm = {
 	}
 	
 	building_modifiers = {
-		workforce_scaled = { # 22.5
-			goods_output_clothes_add = 0.19 # 7.5
-			goods_output_furniture_add = 0.3 # 7.5
-			goods_output_liquor_add = 0.15 # 7.5 
+		workforce_scaled = {
+			# output goods
+			goods_output_clothes_add = 0.38
+			goods_output_furniture_add = 0.38
+			goods_output_liquor_add = 0.38
 		}
 	}
 }
@@ -55,7 +60,7 @@ REPLACE_OR_CREATE:pm_serfdom_no = {
 	
 	building_modifiers = {					
 		unscaled = {
-			building_subsistence_output_add = 4
+			building_subsistence_output_add = 6
 		}
 	}
 }
@@ -68,11 +73,12 @@ REPLACE_OR_CREATE:pm_homesteading_building_subsistence = {
 	
 	building_modifiers = {
 		workforce_scaled = {
-			goods_output_grain_add = 0.15
+			# output goods
+			goods_output_grain_add = 0.52
 		}	
 	
 		unscaled = {
-			building_subsistence_output_add = 4
+			building_subsistence_output_add = 6
 		}
 		
 		level_scaled = {
@@ -89,11 +95,12 @@ REPLACE_OR_CREATE:pm_serfdom = {
 	}
 	building_modifiers = {
 		workforce_scaled = {
-			goods_output_grain_add = 0.4 # 10
+			# output goods
+			goods_output_grain_add = 0.25
 		}
 
 		unscaled = {
-			building_subsistence_output_add = 3
+			building_subsistence_output_add = 4.5
 		}		
 	}
 }		
@@ -103,15 +110,16 @@ REPLACE_OR_CREATE:default_building_subsistence_orchard = {
 	
 	building_modifiers = {
 		workforce_scaled = {
-			goods_output_grain_add = 5
-			goods_output_fruit_add = 62
-			goods_output_fabric_add = 28
-			goods_output_wood_add = 24
-			goods_output_services_add = 2.5
+			# output goods
+			goods_output_grain_add = 0.25
+			goods_output_fruit_add = 0.5
+			goods_output_fabric_add = 0.5
+			goods_output_wood_add = 0.5
+			goods_output_services_add = 0.5
 		}
 
 		level_scaled = {
-			building_employment_peasants_add = 37500
+			building_employment_peasants_add = 5000
 		}
 	}
 }
@@ -122,11 +130,12 @@ REPLACE_OR_CREATE:pm_home_workshops_no_building_subsistence_orchard = {
 		law_collectivized_agriculture
 	}
 	
-	building_modifiers = { # 20
+	building_modifiers = {
 		workforce_scaled = {
-			goods_output_fruit_add = 1.5 # 10
-			goods_output_fabric_add = 0.45 # 5
-			goods_output_wood_add = 0.4 # 5
+			# output goods
+			goods_output_fruit_add = 0.37
+			goods_output_fabric_add = 0.28
+			goods_output_wood_add = 0.28
 		}
 	}					
 }		
@@ -138,10 +147,11 @@ REPLACE_OR_CREATE:pm_home_workshops_building_subsistence_orchard = {
 	}
 
 	building_modifiers = {
-		workforce_scaled = { # 22.5
-			goods_output_clothes_add = 0.19 # 7.5
-			goods_output_furniture_add = 0.3 # 7.5
-			goods_output_liquor_add = 0.15 # 7.5
+		workforce_scaled = {
+			# output goods
+			goods_output_clothes_add = 0.38
+			goods_output_furniture_add = 0.38
+			goods_output_liquor_add = 0.38
 		}
 	}
 }
@@ -153,11 +163,12 @@ REPLACE_OR_CREATE:pm_serfdom_building_subsistence_orchard = {
 	}
 	building_modifiers = {
 		workforce_scaled = {
-			goods_output_fruit_add = 1.5 # 10
+			# output goods
+			goods_output_fruit_add = 0.25
 		}
 
 		unscaled = {
-			building_subsistence_output_add = 3
+			building_subsistence_output_add = 4.5
 		}			
 	}
 }		
@@ -167,15 +178,16 @@ REPLACE_OR_CREATE:default_building_subsistence_pasture = {
 	
 	building_modifiers = {
 		workforce_scaled = {
-			goods_output_grain_add = 5
-			goods_output_meat_add = 22
-			goods_output_fabric_add = 42
-			goods_output_wood_add = 12
-			goods_output_services_add = 2.5
+			# output goods
+			goods_output_grain_add = 0.25
+			goods_output_meat_add = 0.5
+			goods_output_fabric_add = 0.75
+			goods_output_wood_add = 0.25
+			goods_output_services_add = 0.5
 		}
 
 		level_scaled = {
-			building_employment_peasants_add = 37500
+			building_employment_peasants_add = 5000
 		}
 	}
 }
@@ -187,9 +199,10 @@ REPLACE_OR_CREATE:pm_home_workshops_no_building_subsistence_pasture = {
 	}
 	
 	building_modifiers = {					
-		workforce_scaled = { # 20
-			goods_output_meat_add = 0.6 # 10
-			goods_output_fabric_add = 1 # 10
+		workforce_scaled = {
+			# output goods
+			goods_output_meat_add = 0.37
+			goods_output_fabric_add = 0.57
 		}
 	}				
 }		
@@ -201,10 +214,11 @@ REPLACE_OR_CREATE:pm_home_workshops_building_subsistence_pasture = {
 	}
 	
 	building_modifiers = {
-		workforce_scaled = { # 22.5
-			goods_output_clothes_add = 0.19 # 0.75
-			goods_output_furniture_add = 0.3 # 0.75
-			goods_output_liquor_add = 0.15 # 0.75
+		workforce_scaled = {
+			# output goods
+			goods_output_clothes_add = 0.38
+			goods_output_furniture_add = 0.38
+			goods_output_liquor_add = 0.38
 		}
 	}
 }
@@ -216,11 +230,12 @@ REPLACE_OR_CREATE:pm_serfdom_building_subsistence_pasture = {
 	}
 	building_modifiers = {
 		workforce_scaled = {
-			goods_output_meat_add = 0.6 # 10
+			# output goods
+			goods_output_meat_add = 0.25
 		}
 
 		unscaled = {
-			building_subsistence_output_add = 3
+			building_subsistence_output_add = 4.5
 		}			
 	}
 }
@@ -230,15 +245,16 @@ REPLACE_OR_CREATE:default_building_subsistence_fishing_village = {
 	
 	building_modifiers = {
 		workforce_scaled = {
-			goods_output_grain_add = 4
-			goods_output_fish_add = 8
-			goods_output_fabric_add = 14
-			goods_output_wood_add = 12
-			goods_output_services_add = 2.5
+			# output goods
+			goods_output_grain_add = 0.5
+			goods_output_fish_add = 1
+			goods_output_fabric_add = 0.25
+			goods_output_wood_add = 0.25
+			goods_output_services_add = 0.5
 		}
 
 		level_scaled = {
-			building_employment_peasants_add = 37500
+			building_employment_peasants_add = 5000
 		}
 	}
 }
@@ -249,11 +265,12 @@ REPLACE_OR_CREATE:pm_home_workshops_no_building_subsistence_fishing_village = {
 		law_collectivized_agriculture
 	}
 	
-	building_modifiers = { # 20
+	building_modifiers = {
 		workforce_scaled = {
-			goods_output_fish_add = 0.3 # 10
-			goods_output_fabric_add = 0.45 # 5
-			goods_output_wood_add = 0.4 # 5
+			# output goods
+			goods_output_fish_add = 0.56
+			goods_output_fabric_add = 0.28
+			goods_output_wood_add = 0.28
 		}
 	}					
 }		
@@ -265,10 +282,11 @@ REPLACE_OR_CREATE:pm_home_workshops_building_subsistence_fishing_village = {
 	}
 
 	building_modifiers = {
-		workforce_scaled = { # 22.5
-			goods_output_clothes_add = 0.19 # 7.5
-			goods_output_furniture_add = 0.3 # 7.5
-			goods_output_liquor_add = 0.15 # 7.5
+		workforce_scaled = {
+			# output goods
+			goods_output_clothes_add = 0.38
+			goods_output_furniture_add = 0.38
+			goods_output_liquor_add = 0.38
 		}
 	}
 }
@@ -280,11 +298,12 @@ REPLACE_OR_CREATE:pm_serfdom_building_subsistence_fishing_village = {
 	}		
 	building_modifiers = {
 		workforce_scaled = {
-			goods_output_fish_add = 0.3 # 10
+			# output goods
+			goods_output_fish_add = 0.38
 		}
 
 		unscaled = {
-			building_subsistence_output_add = 3
+			building_subsistence_output_add = 4.5
 		}			
 	}
 }		
@@ -294,14 +313,15 @@ REPLACE_OR_CREATE:default_building_subsistence_rice_farm = {
 	
 	building_modifiers = {
 		workforce_scaled = {
-			goods_output_grain_add = 6
-			goods_output_fabric_add = 4
-			goods_output_wood_add = 3.5
-			goods_output_services_add = 1.5
+			# output goods
+			goods_output_grain_add = 2
+			goods_output_fabric_add = 0.75
+			goods_output_wood_add = 0.75
+			goods_output_services_add = 1
 		}
 
 		level_scaled = {
-			building_employment_peasants_add = 62500
+			building_employment_peasants_add = 100000
 		}
 	}
 }
@@ -313,10 +333,11 @@ REPLACE_OR_CREATE:pm_home_workshops_no_building_subsistence_rice_farm = {
 	}
 	
 	building_modifiers = {					
-		workforce_scaled = { # 40
-			goods_output_grain_add = 0.75 # 20
-			goods_output_fabric_add = 1 # 10
-			goods_output_wood_add = 0.95 # 10
+		workforce_scaled = {
+			# output goods
+			goods_output_grain_add = 1.12
+			goods_output_fabric_add = 0.56
+			goods_output_wood_add = 0.56
 		}
 	}				
 }		
@@ -328,10 +349,11 @@ REPLACE_OR_CREATE:pm_home_workshops_building_subsistence_rice_farm = {
 	}
 	
 	building_modifiers = {
-		workforce_scaled = { # 45
-			goods_output_clothes_add = 0.45 # 15
-			goods_output_furniture_add = 0.7 # 15
-			goods_output_liquor_add = 0.4 # 15
+		workforce_scaled = {
+			# output goods
+			goods_output_clothes_add = 0.75
+			goods_output_furniture_add = 0.75
+			goods_output_liquor_add = 0.75
 		}
 	}
 }
@@ -343,11 +365,59 @@ REPLACE_OR_CREATE:pm_serfdom_building_subsistence_rice_farm = {
 	}	
 	building_modifiers = {
 		workforce_scaled = {
-			goods_output_grain_add = 0.75 # 20
+			# output goods
+			goods_output_grain_add = 0.38
+		}
+
+		unscaled = {
+			building_subsistence_output_add = 4.5
+		}			
+	}
+}
+
+REPLACE_OR_CREATE:pm_corvee_labor = {
+	texture = "gfx/interface/icons/production_method_icons/corvee_labor.dds"
+	unlocking_laws = {
+		law_manorialism
+	}
+	building_modifiers = {
+		workforce_scaled = {
+			# output goods
+			goods_output_grain_add = 0.38
 		}
 
 		unscaled = {
 			building_subsistence_output_add = 3
-		}			
+		}
+	}
+
+	state_modifiers = {
+		workforce_scaled = {
+			building_group_bg_agriculture_construction_efficiency_add = 0.001
+			building_group_bg_plantations_construction_efficiency_add = 0.001
+		}
+	}
+}
+
+REPLACE_OR_CREATE:pm_peasant_proprietorship_building_subsistence = {
+	texture = "gfx/interface/icons/production_method_icons/homesteading.dds"
+	unlocking_laws = {
+		law_peasant_proprietorship
+	}
+
+	building_modifiers = {
+		workforce_scaled = {
+			# output goods
+			goods_output_grain_add = 0.71
+		}
+
+		unscaled = {
+			building_subsistence_output_add = 4
+		}
+
+		level_scaled = {
+			building_employment_peasants_add = -50
+			building_employment_farmers_add = 50
+		}
 	}
 }

@@ -1,0 +1,223 @@
+﻿namespace = smd_democracy
+
+smd_democracy.1 = {
+	type = country_event
+	placement = ROOT
+	title = smd_democracy.1.t
+	desc = smd_democracy.1.d
+	flavor = smd_democracy.1.f
+	event_image = { video = "votp_hostile_court" }
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+	icon = "gfx/interface/icons/event_icons/event_scales.dds"
+	duration = 3
+
+	trigger = {
+	}
+
+	option = {
+		name = smd_democracy.1.a
+		default_option = yes
+		add_modifier = {
+			name = smd_lustration
+			days = normal_modifier_time
+		}
+		je:smd_je_democratic_consolidation ?= {
+			add_progress = { value = 5 name = smd_democracy_bar }
+		}
+		ai_chance = { base = 50 }
+	}
+
+	option = {
+		name = smd_democracy.1.b
+		add_modifier = {
+			name = smd_thick_line
+			days = normal_modifier_time
+		}
+		ai_chance = { base = 50 }
+	}
+}
+
+smd_democracy.2 = {
+	type = country_event
+	placement = ROOT
+	title = smd_democracy.2.t
+	desc = smd_democracy.2.d
+	flavor = smd_democracy.2.f
+	event_image = { video = "southamerica_election" }
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+	icon = "gfx/interface/icons/event_icons/event_election.dds"
+	duration = 3
+	cooldown = { days = normal_modifier_time }
+
+	trigger = {
+		has_journal_entry = smd_je_democratic_consolidation
+	}
+
+	option = {
+		name = smd_democracy.2.a
+		default_option = yes
+		je:smd_je_democratic_consolidation ?= {
+			add_progress = { value = 8 name = smd_democracy_bar }
+		}
+		ai_chance = { base = 70 }
+	}
+
+	option = {
+		name = smd_democracy.2.b
+		trigger = {
+			in_election_campaign = no
+		}
+		add_modifier = {
+			name = smd_annulled_election
+			days = short_modifier_time
+		}
+		call_election = {
+			months = 3
+		}
+		je:smd_je_democratic_consolidation ?= {
+			add_progress = { value = -10 name = smd_democracy_bar }
+		}
+		ai_chance = { base = 30 }
+	}
+}
+
+smd_democracy.3 = {
+	type = country_event
+	placement = ROOT
+	title = smd_democracy.3.t
+	desc = smd_democracy.3.d
+	flavor = smd_democracy.3.f
+	event_image = { video = "middleeast_courtroom_upheaval" }
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+	icon = "gfx/interface/icons/event_icons/event_scales.dds"
+	duration = 3
+	cooldown = { days = normal_modifier_time }
+
+	trigger = {
+		has_journal_entry = smd_je_democratic_consolidation
+	}
+
+	option = {
+		name = smd_democracy.3.a
+		default_option = yes
+		add_modifier = {
+			name = smd_court_respected
+			days = short_modifier_time
+		}
+		je:smd_je_democratic_consolidation ?= {
+			add_progress = { value = 6 name = smd_democracy_bar }
+		}
+		ai_chance = { base = 70 }
+	}
+
+	option = {
+		name = smd_democracy.3.b
+		add_modifier = {
+			name = smd_court_defied
+			days = short_modifier_time
+		}
+		je:smd_je_democratic_consolidation ?= {
+			add_progress = { value = -12 name = smd_democracy_bar }
+		}
+		ai_chance = { base = 30 }
+	}
+}
+
+smd_democracy.4 = {
+	type = country_event
+	placement = ROOT
+	title = smd_democracy.4.t
+	desc = smd_democracy.4.d
+	flavor = smd_democracy.4.f
+	event_image = { video = "unspecific_military_parade" }
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+	icon = "gfx/interface/icons/event_icons/event_military.dds"
+	duration = 3
+	cooldown = { days = normal_modifier_time }
+
+	trigger = {
+		has_journal_entry = smd_je_democratic_consolidation
+		ig:ig_armed_forces ?= { ig_approval <= 0 }
+	}
+
+	option = {
+		name = smd_democracy.4.a
+		trigger = {
+			military_wage_level < high
+		}
+		set_military_wage_level = high
+		je:smd_je_democratic_consolidation ?= {
+			add_progress = { value = 3 name = smd_democracy_bar }
+		}
+		ai_chance = { base = 60 }
+	}
+
+	option = {
+		name = smd_democracy.4.b
+		default_option = yes
+		add_modifier = {
+			name = smd_generals_retired
+			days = short_modifier_time
+		}
+		ig:ig_armed_forces ?= {
+			if = {
+				limit = { is_in_government = yes }
+				remove_ruling_interest_group = yes
+			}
+		}
+		je:smd_je_democratic_consolidation ?= {
+			add_progress = { value = 5 name = smd_democracy_bar }
+		}
+		ai_chance = { base = 40 }
+	}
+}
+
+smd_democracy.5 = {
+	type = country_event
+	placement = ROOT
+	title = smd_democracy.5.t
+	desc = smd_democracy.5.d
+	flavor = smd_democracy.5.f
+	event_image = { video = "crowd_celebrating" }
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+	icon = "gfx/interface/icons/event_icons/event_election.dds"
+	duration = 3
+
+	trigger = {
+	}
+
+	option = {
+		name = smd_democracy.5.a
+		default_option = yes
+		add_modifier = {
+			name = smd_consolidated_democracy
+			days = very_long_modifier_time
+		}
+		ai_chance = { base = 100 }
+	}
+}
+
+smd_democracy.6 = {
+	type = country_event
+	placement = ROOT
+	title = smd_democracy.6.t
+	desc = smd_democracy.6.d
+	flavor = smd_democracy.6.f
+	event_image = { video = "europenorthamerica_political_extremism" }
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+	icon = "gfx/interface/icons/event_icons/event_protest.dds"
+	duration = 3
+
+	trigger = {
+	}
+
+	option = {
+		name = smd_democracy.6.a
+		default_option = yes
+		add_modifier = {
+			name = smd_democratic_backsliding
+			days = normal_modifier_time
+		}
+		ai_chance = { base = 100 }
+	}
+}

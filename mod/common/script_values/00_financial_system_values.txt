@@ -1,0 +1,63 @@
+﻿fin_bond_issue_amount = {
+	value = gdp
+	multiply = 0.015
+}
+
+fin_bond_ratio = {
+	value = 0
+	if = {
+		limit = {
+			gdp > 0
+			has_variable = fin_bond_stock
+		}
+		value = var:fin_bond_stock
+		divide = gdp
+		multiply = 100
+	}
+}
+
+fin_debt_ratio = {
+	value = 0
+	if = {
+		limit = { gdp > 0 }
+		value = principal
+		divide = gdp
+		multiply = 100
+	}
+}
+
+fin_bond_rate = {
+	value = 0
+	if = {
+		limit = {
+			has_variable = fin_bond_stock
+			var:fin_bond_stock > 0
+		}
+		add = {
+			value = fin_bond_ratio
+			multiply = 0.0025
+		}
+		if = {
+			limit = { has_variable = fin_capital_flight }
+			add = {
+				value = var:fin_capital_flight
+				multiply = 0.001
+			}
+		}
+	}
+}
+
+fin_bond_rate_steps = {
+	value = fin_bond_rate
+	multiply = 1000
+	round = yes
+}
+
+fin_capital_flight_outflow_pct = {
+	value = 0
+	if = {
+		limit = { has_variable = fin_capital_flight }
+		value = var:fin_capital_flight
+		multiply = 0.75
+	}
+}

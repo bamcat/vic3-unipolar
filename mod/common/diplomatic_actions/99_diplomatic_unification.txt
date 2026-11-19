@@ -86,7 +86,6 @@ REPLACE_OR_CREATE:smd_create_economic_union = {
 				value = -175
 			}
 
-			### Leverage
 			add = {
 				desc = "DIPLOMATIC_ACCEPTANCE_LEVERAGE"
 				value = "scope:actor.leverage(root)"
@@ -97,7 +96,6 @@ REPLACE_OR_CREATE:smd_create_economic_union = {
 				max = 200
 			}
 
-			### Relative rank
 			add = {
 				desc = "DIPLOMATIC_ACCEPTANCE_RANK"
 				value = scope:actor.country_rank
@@ -313,7 +311,6 @@ REPLACE_OR_CREATE:smd_diplomatic_unification = {
 	}
 
 	potential = {
-		# Always visible against proper non-decentralized countries.
 		scope:target_country = {
 			NOT = { is_country_type = decentralized }
 		}
@@ -383,7 +380,6 @@ REPLACE_OR_CREATE:smd_diplomatic_unification = {
 				value = -250
 			}
 
-			### Leverage
 			add = {
 				desc = "DIPLOMATIC_ACCEPTANCE_LEVERAGE"
 				value = "scope:actor.leverage(root)"
@@ -394,7 +390,6 @@ REPLACE_OR_CREATE:smd_diplomatic_unification = {
 				max = 250
 			}
 
-			### Cultural acceptance - major factor for unification
 			if = {
 				limit = { smd_primary_cultures_similar_to_target = yes }
 				add = {
@@ -403,7 +398,6 @@ REPLACE_OR_CREATE:smd_diplomatic_unification = {
 				}
 			}
 
-			### Relative rank
 			add = {
 				desc = "DIPLOMATIC_ACCEPTANCE_RANK"
 				value = scope:actor.country_rank
@@ -498,7 +492,7 @@ REPLACE_OR_CREATE:smd_diplomatic_unification = {
 				desc = "DIPLOMATIC_ACCEPTANCE_RELATIONS"
 				if = {
 					limit = {
-						"relations(scope:actor)" >= relations_threshold:genial
+						"relations(scope:actor)" >= define:NDiplomacy|MAX_RELATIONS
 					}
 					value = 40
 				}

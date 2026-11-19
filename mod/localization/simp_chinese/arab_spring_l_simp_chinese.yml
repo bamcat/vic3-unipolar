@@ -1,41 +1,24 @@
 ﻿l_simp_chinese:
-
- # ==========================================
- # JOURNAL ENTRY NAMES & HEADERS
- # ==========================================
-
  je_arab_spring: "阿拉伯之春"
  je_arab_spring_reason: "整个阿拉伯世界,对专制统治、腐败和经济停滞的长期沮丧情绪已经爆发为大规模抗议。 从突尼斯开始,动乱浪潮正在蔓延——该地区没有任何一个政权能够感到完全安全。"
 
  je_arab_winter: "阿拉伯之冬"
  je_arab_winter_reason: "阿拉伯之春的乐观已经让位于一场为革命的灵魂而作的苦战. 伊斯兰运动、军事派别和外国势力填补倒台或被削弱的政权留下的真空。 该地区的命运在于平衡。"
 
- # Completion headers
  je_arab_spring_complete_header: "民主过渡"
  je_arab_spring_on_complete_header: "一个新的黎明"
  je_arab_spring_fail_header: "被镇压的革命"
  je_arab_spring_on_fail_header: "崩溃"
 
- # ==========================================
- # MODIFIER
- # ==========================================
-
  modifier_arab_spring: "阿拉伯之春"
  modifier_arab_spring_desc: "民众起义席卷了阿拉伯世界。 政府面临着要求民主改革、经济正义和结束专制统治的抗议运动的强大压力。"
 
- # ==========================================
- # TOOLTIPS
- # ==========================================
-
- # Possible condition
  arab_spring_underway_tt: "阿拉伯之春即将到来"
 
- # Completion conditions
  had_arab_spring_revolution_tt_no_scope: "在阿拉伯之春经历了一场革命"
  has_liberal_or_progressive_in_government_tt: "自由或进步利益集团在政府"
  has_census_voting_or_universal_suffrage_tt: "颁布了人口普查投票或普选法;"
 
- # Failure conditions
  no_protest_leaders_tt: "没有自由或进步的政治家或煽动者"
  arab_spring_timer_dummy_tt: "抗议运动遭到镇压,"
  all_protest_movements_crushed_tt: "所有抗议运动都被镇压和镇压"
@@ -56,17 +39,9 @@
  on_reformist_victory_tt: "改革派联盟已占上风——民主过渡开始."
  on_islamist_victory_tt: "伊斯兰主义或军事势力已经巩固了权力——革命已经结束."
 
- # ==========================================
- # EVENT OUTCOME DESCRIPTIONS
- # ==========================================
-
  event_effects_arab_spring.8_tt: "起义已经平息. 忠于该政权的安全部队驱散了抗议者,逮捕了反对派领导人,并重新实行专制控制. 改革的窗口现已关闭。"
 
  event_effects_arab_spring.10_tt: "抗议运动取得了成功。 旧政权倒台或作出重大让步. 脆弱的民主过渡已经开始,尽管前面的道路仍然不确定。"
-
- # ==========================================
- # SCRIPTED PROGRESS BARS
- # ==========================================
 
  arab_spring_progress_bar: "革命时刻"
  arab_spring_progress_bar_desc: "抗议运动在实现目标方面取得了多大进展。"
@@ -74,23 +49,11 @@
  arab_winter_crackdown_progress_bar: "制度崩溃"
  arab_winter_crackdown_progress_bar_desc: "政府如何有效地镇压起义. 如果达到100%,革命就会被粉碎."
 
- # ==========================================
- # SCRIPTED TRIGGER NAMES (for tooltips)
- # ==========================================
-
  arab_spring_liberal_victory_trigger: "改革派的胜利条件"
  arab_spring_islamist_victory_trigger: "伊斯兰/民族主义胜利条件"
 
- # ==========================================
- # VARIABLES
- # ==========================================
-
  had_arab_spring_revolution: "阿拉伯之春革命经验"
  arab_winter_revolution_crushed: "革命被粉碎"
-
- # ==========================================
- # TUNISIA SPARK EVENT (arab_spring.1)
- # ==========================================
 
  arab_spring.1.t: "街道正在兴起"
  arab_spring.1.d: "在"xid=0"中,人们走上了街头. 开始于零散的反对腐败和失业的抗议活动已经发展为群众运动,要求结束"x id=1/"统治. 安全部队正在努力遏制示威活动,阿拉伯世界的目光也在看着。 政府如何在早期作出反应,不仅将决定这个国家的命运,而且将决定整个地区的轨迹。"
@@ -98,16 +61,8 @@
  arab_spring.1.b: "与反对派领导人公开对话"
  arab_spring.1.c: "宣布有限的改革以争取时间"
 
- # ==========================================
- # MONTHLY PULSE — SPREAD EVENT (arab_spring.2)
- # ==========================================
-
  arab_spring.2.t: "浪波散开"
  arab_spring.2.d: "邻国起义的消息通过卫星电视和社交媒体传播. 在"x id=0"中,活动人士胆大妄为,政权日益紧张. 抗议组织者正在实时分享战术——这是前一代持不同政见者无法做到的."
-
- # ==========================================
- # RANDOM MONTHLY EVENTS (3–5)
- # ==========================================
 
  arab_spring.3.t: "社会媒体动员"
  arab_spring.3.d: "在[ROOT.GetCountry.GetName]中的组织者使用社交媒体平台协调了在[ROOT.GetCapital.GetName]中的重大演示. 数以千计的抗议活动正在国际传播。 政府面临着越来越大的压力——无论来自内部还是外部."
@@ -124,17 +79,9 @@
  arab_spring.5.a: "忽略国际社会"
  arab_spring.5.b: "外交反应"
 
- # ==========================================
- # FAILURE EVENTS
- # ==========================================
-
  arab_spring.8.t: "崩溃"
  arab_spring.8.d: "已经打破了[ROOT.GetCountry.GetName]的起义。 安全部队——必要时由忠义民兵补充——驱散了最后一批抗议营地,逮捕了最著名的反对派人士并封锁了边界,以对付外部的煽动者。 国家媒体已经在重写叙述。 \n\n 阿拉伯之春从[ROOT.GetCountry.GetName]来来来去去去去,只留下了新的怨恨来恶化。"
  arab_spring.8.a: "秩序已经恢复"
-
- # ==========================================
- # SUCCESS EVENTS
- # ==========================================
 
  arab_spring.9.t: "政权阴谋"
  arab_spring.9.d: "面对没有减少迹象的抗议, " x id=0 " 宣布了全面让步,包括承诺自由选举和新宪法。 这些诺言是否会被兑现,仍然有待观察,但抗议运动声称取得了历史性的胜利."
@@ -144,10 +91,6 @@
  arab_spring.10.d: "旧令已倒入[ROOT.GetCountry.GetName]. 经过数周的大规模抗议后,该政权倒台了——无论是通过统治者的出逃,军队的叛逃,还是经过谈判的过渡. 在一代人中,在[ROOT.GetCountry.GetName]中,普通人第一次大胆地希望有不同的东西.\n\n 建设新政治秩序的艰苦工作现在开始。"
  arab_spring.10.a: "人民说话了"
 
- # ==========================================
- # ARAB WINTER EVENTS
- # ==========================================
-
  arab_spring.7.t: "伊斯兰力量巩固权力"
  arab_spring.7.d: "革命被俘. 在"x id=0"中,伊斯兰运动——比起世俗的抗议运动更有组织,更有资金,更深入地扎根于社会上——已经把"阿拉伯之春"的胜利变成他们自己的优势. 投票箱曾经是抗议者的最大希望, 却让自由派反对派做出从未预料到的判决。"
  arab_spring.7.a: "痛苦的结果"
@@ -155,10 +98,6 @@
  arab_spring.71.t: "民主过渡"
  arab_spring.71.d: "在[ROOT.GetCountry.GetName]中,阿拉伯之春至少兑现了其中的一些承诺。 真正的权力转移已经发生,新政府——无论多么不完善和脆弱——代表着与专制历史的真正决裂. 这是一个罕见的亮点,在这样的过渡经常被逆转的区域。\n\n 在 " x id=3/ " 中巩固民主的工作需要警惕、妥协和不小的运气。"
  arab_spring.71.a: "历史在看"
-
- # ==========================================
- # MODIFIER NAMES (referenced in events)
- # ==========================================
 
  arab_spring_popular_dissident: "起义的声音"
  arab_spring_popular_dissident_desc: "这名领导人已经成了抗议运动的象征. 他们的话在街上举足轻重,外国政府也密切关注。"
@@ -175,7 +114,6 @@
  arab_spring_democratic_transition: "民主过渡"
  arab_spring_democratic_transition_desc: "旧政权倒台了,正在建立新的政治秩序. 乐观主义很高,但不稳定性也很高——巩固民主成果的艰苦工作才刚刚开始。"
 
- arab_winter_revolution_crushed: "革命被粉碎"
  arab_winter_revolution_crushed_desc: "起义被武力镇压. 该政权幸存了下来,但驱使人们上街的不满仍未得到解决。 令人不快地在地表下腐烂"
 
  arab_winter_islamist_consolidation: "伊斯兰团结组织"
@@ -184,20 +122,11 @@
  arab_spring_regional_contagion: "区域复苏"
  arab_spring_regional_contagion_desc: "阿拉伯之春正在蔓延。 邻国的抗议运动正在激起国内的反对,该政权对传染越来越紧张."
 
- # ==========================================
- # arab_spring.1 — The Streets Are Rising
- # ==========================================
-
  arab_spring.1.t: "全国起义"
- arab_spring.1.d: "在"xid=0"中,人们走上了街头. 开始于零散的反对腐败和失业的抗议活动已经发展为群众运动,要求结束"x id=1/"统治. 安全部队正在努力遏制示威活动,阿拉伯世界的目光也在看着。 政府如何在早期作出反应,不仅将决定这个国家的命运,而且将决定整个地区的轨迹。"
  arab_spring.1.d_no_leader: "在"xid=0"中,街道上充满了抗议者. 这些示威缺乏一个统一的数字,但推动他们的不满情绪——腐败、失业、专制统治的磨难之重——是真实而广泛的共有的。 政权必须决定在局势失控前如何作出反应。"
  arab_spring.1.f: "政府面临着一个决定其遗产的选择。"
  arab_spring.1.a: "以武力驱散示威"
  arab_spring.1.b: "与反对派展开对话"
-
- # ==========================================
- # arab_spring.2 — The Security Apparatus Responds
- # ==========================================
 
  arab_spring.2.t: "安全设备响应"
  arab_spring.2.d: "安全部门正要求政府采取果断行动。 将军和情报主管警告说,犹豫不决将被视为弱点——有效遏制的窗口正在关闭。 问题不在于是否部署国家的强制力,而在于如何部署."
@@ -205,10 +134,6 @@
  arab_spring.2.a: "扩大秘密警察——监视和拘留"
  arab_spring.2.b: "部署军队——以武力守住街道"
  arab_spring.2.c: "等待和观看——不要反应过度"
-
- # ==========================================
- # ADDITIONAL MODIFIERS (referenced in events)
- # ==========================================
 
  modifier_arab_spring_momentum: "革命时刻"
  modifier_arab_spring_momentum_desc: "抗议运动正获得能量和民众支持. 激进情绪正在蔓延到社会下层和中层。"
@@ -233,10 +158,6 @@
 
  modifier_arab_spring_regime_ig_defeated: "革命失败"
  modifier_arab_spring_regime_ig_defeated_desc: "这个团体与旧政权的联系付出了高昂的代价. 它在新的政治秩序中被边缘化。"
-
- # ==========================================
- # EVENTS 1–6 (additional keys)
- # ==========================================
 
  arab_spring.1.d_tunisia: "开始于[ROOT.GetCapital.GetName]的街头摊贩自焚事件, [SCOPE.GetRootScope.GetCountry.GetRuler.GetLastName] 的制度正在恶化。 安全部队正在努力遏制从首都蔓延到每个主要城市的示威活动。 世出世间相. 在整个阿拉伯世界,其他国家政府也在以希望或恐惧来观察。"
  arab_spring.1.f: "初多米诺已倒地."
@@ -274,10 +195,6 @@
  arab_spring.6.a: "结束一章"
  arab_spring.6.a.tt: "阿拉伯之春已经结束。 将通知所有有关国家。"
 
- # ==========================================
- # EVENTS 7–10 (additional keys)
- # ==========================================
-
  arab_spring.7.f: "革命被窃取了"
  arab_spring.7.a: "新秩序为信仰服务——拥抱它"
  arab_spring.7.b: "稳定首先是——接受结果"
@@ -305,22 +222,12 @@
  arab_spring.10.a: "面对反革命"
  arab_spring.10.b: "准备防御阵地——防御反击"
 
- # Tooltip keys for arab_spring.10
  arab_winter_tt: "阿拉伯之冬开始——一新期刊条目,追踪改革派和反革命势力之间的斗争."
  arab_winter_counter_revolution_bonus_tt: "新政府采取了防御性准备. 反革命势力将面临更有组织的抵抗."
 
- # ==========================================
- # SCRIPTED TRIGGERS (tooltip names)
- # ==========================================
-
  arab_spring_liberal_victory_trigger: "改革者胜利条件"
- arab_spring_islamist_victory_trigger: "伊斯兰/民族主义胜利条件"
  arab_spring_valid_country_trigger: "有效的阿拉伯春季目标"
  tunisia_arab_spring_spark_trigger: "突尼斯:春季条件"
-
- # ==========================================
- # SCRIPTED PROGRESS BAR TOOLTIPS
- # ==========================================
 
  arab_spring_reformists_in_govt_tt: "改革主义利益集团在政府"
  arab_spring_universal_suffrage_tt: "颁布了普选法"
@@ -342,10 +249,6 @@
  arab_winter_elected_bureaucrats_tt: "民选官僚机构抵制政变企图"
  arab_winter_prepared_defence_tt: "新政府准备防御阵地"
 
- # ==========================================
- # SPARK EVENTS
- # ==========================================
-
  2011_protests.1.t: "街上卖家自己点燃"
  2011_protests.1.d: "在省会Sidi Bouzid镇,一个名叫Mohamed Bouazizi的街头小贩在警察没收他的推车并公开羞辱他后,在地方政府办公室前放火自焚。 绝望的行为变成了一丝电击棒. 数小时内,他抗议的镜头就传遍了社交媒体. 民众不仅聚集在Sidi Bouzid, 一代人所积累的愤怒——关于腐败、失业和专制统治的磨重——找到了它的象征。 [SCOPE.GetRootScope.GetCountry.GetRuler.GetLastName]的制度必须决定如何应对。 不管它做什么,世界都在看着。"
  2011_protests.1.f: "一个人的绝望变成了一个国家的绝望."
@@ -358,22 +261,12 @@
  2011_protests.2.a: "突尼斯是不同的,不会蔓延到[ROOT.GetCountry.GetName]。"
  2011_protests.2.b: "采取预防措施——加强安全,以免失控"
 
- # ==========================================
- # MISSING STRUCTURAL MODIFIERS
- # ==========================================
-
- modifier_arab_spring_transition_cabinet: "过渡政府"
  modifier_arab_spring_transition_cabinet_desc: "革命后正在组建新政府. 正当性在这些早期是很高的——但是在反革命找到立足点之前,必须巩固它."
 
  modifier_arab_spring_kick_out_of_insurrection: "站起起身来,从营起"
  modifier_arab_spring_kick_out_of_insurrection_desc: "革命实现了眼前的目标. 这个集团正在放弃其叛乱姿态并进入正式的政治生活,而此时的善意使这种姿态更加活跃。"
 
- modifier_arab_spring_regime_ig_defeated: "革命失败"
  modifier_arab_spring_regime_ig_defeated_desc: "这个团体与旧政权的联系付出了高昂的代价. 它被推出政府,其政治力量被削弱。 它是否能够从边缘重建,仍有待观察。"
-
-# ==========================================
- # ARAB SPRING INTERNATIONAL EVENTS
- # ==========================================
 
  # ── arab_spring_intl.1 ───────────────────
 
@@ -401,10 +294,6 @@
  arab_spring_intl.3.d_failure: "阿拉伯之春被扑灭. 似乎颤抖的政权已经稳定下来,他们的安全部门已经重组,他们的反对派正在流亡或被监禁。 对于[ROOT.GetName],该集提醒人们,道德清晰比道德有效性容易. 引发起义的冤情尚未解决. 它们只被推迟。"
  arab_spring_intl.3.f: "世界在继续前进。 该地区没有忘记。"
  arab_spring_intl.3.a: "盘点一下发生了什么"
-
- # ==========================================
- # INTERNATIONAL MODIFIER NAMES
- # ==========================================
 
  arab_spring_intl_pro_democracy_stance: "支持民主的阵营"
  arab_spring_intl_pro_democracy_stance_desc: "该国公开赞同阿拉伯之春的抗议运动。 它在民主国家中的威望已经提高,但同现任阿拉伯政权的关系已经缓和。"

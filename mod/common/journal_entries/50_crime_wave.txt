@@ -1,0 +1,111 @@
+﻿smd_je_crime_wave = {
+	icon = "gfx/interface/icons/event_icons/event_skull.dds"
+
+	group = je_group_domestic_policy
+
+	is_shown_when_inactive = {
+		has_variable = smd_generic_ready
+		NOT = { is_country_type = decentralized }
+		NOT = { has_variable = smd_crime_wave_cooldown }
+		any_scope_state = { smd_crime_entrenched_state = yes }
+	}
+
+	possible = {
+		institution_investment_level = {
+			institution = institution_police
+			value <= 2
+		}
+	}
+
+	immediate = {
+		smd_update_crime_states = yes
+	}
+
+	scripted_progress_bar = smd_crime_wave_bar
+
+	scripted_button = smd_btn_crime_task_force
+	scripted_button = smd_btn_crime_crackdown
+
+	on_monthly_pulse = {
+		random_events = {
+			100 = 0
+			2 = smd_crime.1
+			2 = smd_crime.2
+			2 = smd_crime.3
+			2 = smd_crime.4
+			2 = smd_crime.5
+		}
+	}
+
+	outcome = {
+		header = je_standard_completion_header
+		effect_header = je_standard_on_completion_header
+		color = "gold_positive"
+		conclusion_desc = smd_je_crime_wave_success_desc
+		trigger = {
+			custom_tooltip = {
+				text = smd_je_crime_wave_success_tt
+				scope:journal_entry ?= {
+					"scripted_bar_progress(smd_crime_wave_bar)" <= 5
+				}
+			}
+		}
+		effect = {
+			trigger_event = { id = smd_crime.6 popup = yes }
+			remove_variable = smd_crime_task_force
+			smd_clear_crime_states = yes
+			set_variable = { name = smd_crime_wave_cooldown days = 3650 }
+		}
+	}
+
+	outcome = {
+		header = je_standard_failure_header
+		effect_header = je_standard_on_failure_header
+		color = "blue_negative"
+		conclusion_desc = smd_je_crime_wave_failure_desc
+		trigger = {
+			custom_tooltip = {
+				text = smd_je_crime_wave_failure_tt
+				scope:journal_entry ?= {
+					"scripted_bar_progress(smd_crime_wave_bar)" >= 100
+				}
+			}
+		}
+		effect = {
+			trigger_event = { id = smd_crime.7 popup = yes }
+			remove_variable = smd_crime_task_force
+			smd_clear_crime_states = yes
+			set_variable = { name = smd_crime_wave_cooldown days = 3650 }
+		}
+	}
+
+	outcome = {
+		flags = { hidden invalid_outcome }
+		conclusion_desc = smd_je_crime_wave_invalid_desc
+		trigger = {
+			NOT = { any_scope_state = { smd_crime_affected_state = yes } }
+		}
+		effect = {
+			remove_variable = smd_crime_task_force
+			smd_clear_crime_states = yes
+			set_variable = { name = smd_crime_wave_cooldown days = 1095 }
+		}
+	}
+
+	outcome = {
+		header = JOURNAL_ENTRY_TIMEOUT
+		effect_header = JOURNAL_ENTRY_ON_TIMEOUT
+		flags = { timeout }
+		conclusion_desc = smd_je_crime_wave_timeout_desc
+		effect = {
+			remove_variable = smd_crime_task_force
+			smd_clear_crime_states = yes
+			set_variable = { name = smd_crime_wave_cooldown days = 1825 }
+		}
+	}
+
+	timeout = 3650
+
+	weight = 100
+	should_be_pinned_by_default_uninvolved_or_context = yes
+}

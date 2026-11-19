@@ -1,12 +1,8 @@
-
 nuclear_plant_count_sv = {
 	value = 0
-	every_scope_state = {
-		limit = {
-			is_incorporated = yes
-			has_building = building_nuclear_plant
-		}
-		add = 1
+	every_scope_building = {
+		limit = { is_building_type = building_nuclear_plant }
+		add = level
 	}
 }
 
@@ -26,19 +22,10 @@ nuclear_warheads_to_use_sv = {
 	}
 }
  
-# Estimated casualties per targeted state.
-# Formula: warheads_spread_across_targets * base_kill_rate
-# Base: each warhead kills ~5% of a state's population.
-# Warheads per state = total_warheads_to_use / number_of_targeted_states
-# Capped at 75% (ouch!)
-#
-# This is called with the state in scope so the GUI
 # can display per-state estimates.
 nuclear_estimated_casualties_per_state_sv = {
 	value = 0
-		# Start from warheads_to_use
 		add = nuclear_warheads_to_use_sv
-		# Divide across all targeted states
 		divide = {
 			value = 0
 			every_in_list = {
@@ -46,9 +33,7 @@ nuclear_estimated_casualties_per_state_sv = {
 				add = 1
 			}
 		}
-		# Each warhead = 5% population kill per state
 		multiply = 0.05
-		# Cap at 0.90 (90% kill ceiling)
 		max = 0.75
 }
 
@@ -58,16 +43,11 @@ nuclear_estimated_casualties_per_state_full_percent_sv = {
 	max = 0.75
 }
 
-# Total estimated casualties across all targeted states
-# Sum of (state_population * kill_rate) per state.
-# Used for the headline "Estimated Deaths:" display.
-# Called with ROOT = firing country.
 nuclear_estimated_total_casualties_sv = {
 	value = 0
 	every_in_list = {
 		variable = wmd_target_list
 		add = {
-			# This state's population × the per-state kill rate
 			value = state_population
 		}
 	}
@@ -89,8 +69,6 @@ nuclear_target_count_sv = {
 # Place in common/script_values/
 # ==========================================
  
-# Count of own military formations with ≥25% aircraft
-# Used for strategic bombing devastation calculation
 aircraft_formation_count_sv = {
 	value = 0
 	every_military_formation = {
@@ -111,16 +89,12 @@ aircraft_formation_count_sv = {
 	}
 }
  
-# Devastation per bombing run per state:
-# Base 2 + 1 per qualifying formation, capped at 15
 bombing_devastation_per_run_sv = {
 	value = 5
 	add = aircraft_formation_count_sv
 	max = 45
 }
  
-# Whether ICBM capability is unlocked
-# Requires nuclear_capable + the icbm_programme_complete variable
 # (set by je_icbm_programme on completion)
 icbm_capable_sv = {
 	value = 0
@@ -167,8 +141,6 @@ conventional_missiles_to_use_sv = {
 	}
 }
 
-# Returns the country's nuke count, or 0 if no variable.
-# Used to order countries when computing the global top-5 list.
 country_nukes_count_sv = {
 	value = 0
 	if = {
@@ -177,7 +149,6 @@ country_nukes_count_sv = {
 	}
 }
 
-# Buffed conventional missile devastation — 3x the raw salvo size,
 # so each strike does substantially more damage to a state.
 conventional_missile_devastation_sv = {
 	value = 0

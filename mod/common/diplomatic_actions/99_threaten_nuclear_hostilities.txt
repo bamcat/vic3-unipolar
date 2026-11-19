@@ -1,6 +1,3 @@
-# Threaten Nuclear Hostilities
-# A diplomatic action for nuclear-capable countries.
-
 REPLACE_OR_CREATE:threaten_nuclear_hostilities = {
 	groups = { general }
 
@@ -33,7 +30,6 @@ REPLACE_OR_CREATE:threaten_nuclear_hostilities = {
 			NOT = { has_variable = threaten_nuclear_hostilities_cooldown }
 		}
 
-		#THIS is not friendly with Target in anyway
 		NOR = { 
 			has_diplomatic_pact = { who = scope:target_country type = increase_relations }
 			any_scope_treaty = { binds = scope:target_country any_scope_article = { has_type = alliance } }
@@ -42,7 +38,6 @@ REPLACE_OR_CREATE:threaten_nuclear_hostilities = {
 			scope:target_country = { is_subject_of = scope:actor }
 		}
 		
-		#THIS has poor or less relations with Target
 		custom_tooltip = {
 			text = DIPLO_ACTION_RELATIONS_POOR_OR_LESS
 			scope:target_country.relations:root <= relations_threshold:poor
@@ -98,7 +93,10 @@ REPLACE_OR_CREATE:threaten_nuclear_hostilities = {
 			if = {
 				limit = {
 					scope:target_country = {
-						has_rivalry = ROOT
+						OR = {
+						any_rival_country = { this = ROOT }
+						any_rivaling_country = { this = ROOT }
+					}
 					}
 				}
 				add = 10
@@ -124,7 +122,10 @@ REPLACE_OR_CREATE:threaten_nuclear_hostilities = {
 
 			OR = {
 				scope:target_country = {
-					has_rivalry = ROOT
+					OR = {
+						any_rival_country = { this = ROOT }
+						any_rivaling_country = { this = ROOT }
+					}
 				}
 				infamy >= 25
 			}

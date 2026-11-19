@@ -32,18 +32,41 @@
 REPLACE_OR_CREATE:generic_aerial_bleriotxi_01_diorama_entity = {
 	entity = "generic_aerial_bleriotxi_01_entity"
 
-	group = "cavalry"
+	group = "aerialrecon"
 
 	trigger = {
-		OR = {
-		scope:combat_unit_type = unit_type:combat_unit_type_fixed_wing_aircraft
-		scope:combat_unit_type = unit_type:combat_unit_type_multirole_aircraft
-		scope:combat_unit_type = unit_type:combat_unit_type_stealth_aircraft
-		scope:combat_unit_type = unit_type:combat_unit_type_uav
-		scope:combat_unit_type = unit_type:combat_unit_type_autonomous_aircraft
+		scope:military_formation = {
+			NOT = {
+				has_mobilization_option = mobilization_option:mobilization_option_attack_helicopter
+			}
+			OR = {
+				has_mobilization_option = mobilization_option:mobilization_option_aerial_recon
+				any_combat_unit = {
+					OR = {
+						has_unit_type = unit_type:combat_unit_type_fixed_wing_aircraft
+						has_unit_type = unit_type:combat_unit_type_multirole_aircraft
+						has_unit_type = unit_type:combat_unit_type_stealth_aircraft
+						has_unit_type = unit_type:combat_unit_type_uav
+						has_unit_type = unit_type:combat_unit_type_autonomous_aircraft
+					}
+				}
+			}
 		}
 	}
 }
+
+smd_attack_helicopter_diorama_entity = {
+	entity = "mi_24_entity"
+
+	group = "aerialrecon"
+
+	trigger = {
+		scope:military_formation = {
+			has_mobilization_option = mobilization_option:mobilization_option_attack_helicopter
+		}
+	}
+}
+
 
 
 ### Machinegunner ###

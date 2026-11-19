@@ -1,0 +1,133 @@
+﻿je_intifada_military_operation_button = {
+	name = "je_intifada_military_operation"
+	desc = "je_intifada_military_operation_desc"
+
+	visible = {
+		c:ISR ?= this
+	}
+
+	possible = {
+		c:ISR ?= this
+		hidden_trigger = {
+			NOT = { has_global_variable = intifada_offensive_launched }
+		}
+		OR = {
+			custom_tooltip = {
+				text = intifada_minimum_score_isr_tt
+				global_var:isr_intifada_score >= 5
+			}
+			game_date >= 2002.3.29
+		}
+	}
+
+	selected = {
+		has_global_variable = intifada_offensive_launched
+	}
+
+	effect = {
+		je:je_second_intifada ?= {
+			remove_modifier = intifada_urban_uprising
+		}
+		set_global_variable = intifada_offensive_launched
+		remove_global_variable = intifada_uprising_phase
+		trigger_event = { id = intifada_events.1 popup = yes }
+		hidden_effect = { c:PAL ?= { trigger_event = { id = intifada_events.1 popup = yes } } }
+
+		add_modifier = {
+			name = intifada_isr_morale
+			multiplier = {
+				value = global_var:isr_intifada_score
+				min = 1
+			}
+			years = 2
+			is_decaying = yes
+		}
+		c:PAL ?= {
+			add_modifier = {
+				name = intifada_popular_resistance
+				multiplier = {
+					value = global_var:pal_intifada_score
+					min = 1
+				}
+				years = 1
+				is_decaying = yes
+			}
+		}
+	}
+
+	ai_chance = {
+		value = 100
+
+		if = {
+			limit = {
+				c:PAL ?= { is_player = yes }
+			}
+			multiply = 0
+		}
+	}
+}
+
+je_intifada_mass_resistance_button = {
+	name = "je_intifada_mass_resistance"
+	desc = "je_intifada_mass_resistance_desc"
+
+	visible = {
+		c:PAL ?= this
+	}
+
+	possible = {
+		c:PAL ?= this
+		hidden_trigger = {
+			NOT = { has_global_variable = intifada_offensive_launched }
+		}
+		OR = {
+			custom_tooltip = {
+				text = intifada_minimum_score_pal_tt
+				global_var:pal_intifada_score >= 5
+			}
+			game_date >= 2002.3.29
+		}
+	}
+
+	selected = {
+		has_global_variable = intifada_offensive_launched
+	}
+
+	effect = {
+		je:je_second_intifada ?= {
+			remove_modifier = intifada_urban_uprising
+		}
+		set_global_variable = intifada_offensive_launched
+		remove_global_variable = intifada_uprising_phase
+		trigger_event = { id = intifada_events.1 popup = yes }
+		hidden_effect = { c:ISR ?= { trigger_event = { id = intifada_events.1 popup = yes } } }
+
+		add_modifier = {
+			name = intifada_popular_resistance
+			multiplier = {
+				value = global_var:pal_intifada_score
+				min = 1
+			}
+			years = 2
+			is_decaying = yes
+		}
+		c:ISR ?= {
+			add_modifier = {
+				name = intifada_idf_crackdown
+				years = 1
+				is_decaying = yes
+			}
+		}
+	}
+
+	ai_chance = {
+		value = 100
+
+		if = {
+			limit = {
+				c:ISR ?= { is_player = yes }
+			}
+			multiply = 0
+		}
+	}
+}

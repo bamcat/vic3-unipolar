@@ -36,7 +36,6 @@ usa_wot.1 = {
     }
 
     immediate = {
-        # mark the War on Terror active for the USA
 		set_variable = 911_happened
 		set_global_variable = { name = 911_usa value = yes }
         add_modifier = {
@@ -109,19 +108,16 @@ usa_wot.2 = {
 #    type = country_event
 #   placement = ROOT
 #    hidden = yes
-#
 #    trigger = {
 #      tag = USA
 #        has_variable = war_on_terror_campaign_started
 #    }
-#
 #    immediate = {
 #        remove_variable = war_on_terror_active
 #        remove_variable = war_on_terror_campaign_started
 #        remove_modifier = attacked_on_home_soil
 #        remove_modifier = war_on_terror_campaign
 #    }
-#
 #    option = { name = usa_wot.3.a }
 #}
 

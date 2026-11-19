@@ -51,11 +51,10 @@ war_on_terror_campaign = {
 	country_legitimacy_add = 50
     country_authority_mult = 0.75
     army_defense_mult = 0.05
-    # leave room for modder to add diplomatic/financial drains or IG effects
 }
 
 recent_ira_attack = {
-	icon = gfx/interface/icons/timed_modifier_icons/modifier_flag_negative.dds.dds
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_flag_negative.dds
 	state_protestant_standard_of_living_add = -3
 	state_catholic_standard_of_living_add = -3
 	state_infrastructure_from_population_mult = -0.05
@@ -65,7 +64,8 @@ recent_ira_attack = {
 }
 
 reunification_pride = {
-    country_legitimacy_base_add = 10
+    icon = gfx/interface/icons/timed_modifier_icons/modifier_flag_positive.dds
+    country_legitimacy_base_add = 5
     country_authority_mult = 0.15
 }
 
@@ -100,15 +100,12 @@ iraq_invasion = {
 # Applied to countries that invest in Y2K compliance
 y2k_compliance_investment = {
 	icon = gfx/interface/icons/timed_modifier_icons/modifier_documents_positive.dds
-	country_expenses_add                        = 20
 	state_infrastructure_mult                   = 0.03
-	country_legitimacy_base_add                 = 3
 }
  
 # Applied to all countries on New Year 2000
 millennium_celebration = {
 	icon = gfx/interface/icons/timed_modifier_icons/modifier_flag_positive.dds
-	country_legitimacy_base_add                 = 5
 	country_prestige_mult                       = 0.02
 	state_loyalists_from_political_movements_mult = 0.05
 }
@@ -121,24 +118,18 @@ y2k_minor_disruption = {
 	country_legitimacy_base_add                 = -3
 }
 
-### The permanent crisis — applied at game start, removed on JE completion
 demographic_crisis_workforce_penalty = {
 	icon = gfx/interface/icons/timed_modifier_icons/modifier_flag_negative.dds
 	state_working_adult_ratio_add = -0.50
 	state_birth_rate_mult = -0.25
 }
 
-### Decaying buffer — starts at +50% workforce ratio, lasts 50 years then expires
-### While this is active, the penalty and buffer cancel out
-### As the buffer expires, the net effect becomes increasingly severe
 demographic_crisis_buffer = {
 	icon = gfx/interface/icons/timed_modifier_icons/modifier_flag_positive.dds
 	state_working_adult_ratio_add = 0.50
 	state_birth_rate_mult = 0.25
 }
 
-### Applied when the JE is completed — replaces the penalty
-### Permanent positive modifier representing demographic recovery
 demographic_crisis_resolved = {
 	icon = gfx/interface/icons/timed_modifier_icons/modifier_flag_positive.dds
 	state_birth_rate_mult = 0.05
@@ -234,7 +225,7 @@ chechen_war_devastation = {
 ### Raid expenses
 chechen_war_raid_expenses = {
 	icon = gfx/interface/icons/timed_modifier_icons/modifier_coins_negative.dds
-	country_expenses_add = 25000
+	country_military_goods_cost_mult = 0.1
 }
  
 ### Victory rewards
@@ -343,7 +334,7 @@ ip_mass_mobilization = {
 ip_security_alert = {
 	icon = gfx/interface/icons/timed_modifier_icons/modifier_rifle_negative.dds
 	country_army_power_projection_mult = 0.02
-	country_expenses_add = 5000
+	country_institution_cost_institution_police_mult = 0.15
 }
 
 ip_international_scrutiny = {
@@ -371,7 +362,6 @@ ip_breakdown_of_calm = {
 	country_prestige_mult = -0.05
 }
 
-### Active during uprising phase — -99% combat width for the tiny territory
 intifada_urban_uprising = {
 	icon = gfx/interface/icons/timed_modifier_icons/modifier_rifle_negative.dds
 	character_advancement_speed_mult = -0.99
@@ -415,7 +405,7 @@ intifada_devastation = {
 ### Raid expenses
 intifada_raid_expenses = {
 	icon = gfx/interface/icons/timed_modifier_icons/modifier_coins_negative.dds
-	country_expenses_add = 15000
+	country_military_goods_cost_mult = 0.1
 }
 
 ### International pressure on Israel from media coverage
@@ -487,7 +477,7 @@ ip_mass_mobilization = {
 ip_security_alert = {
 	icon = gfx/interface/icons/timed_modifier_icons/modifier_rifle_negative.dds
 	country_army_power_projection_mult = 0.02
-	country_expenses_add = 5000
+	country_institution_cost_institution_police_mult = 0.15
 }
 
 ip_international_scrutiny = {
@@ -519,7 +509,7 @@ wot_article_5_commitment = {
 	icon = gfx/interface/icons/timed_modifier_icons/modifier_rifle_positive.dds
 	country_army_power_projection_mult = 0.05
 	country_diplomatic_reputation_add = 1
-	country_expenses_add = 5000
+	country_military_goods_cost_mult = 0.05
 }
 
 wot_pakistan_cooperation = {
@@ -697,4 +687,22 @@ threatened_nuclear_hostilities_diplomatic_reputation = {
 	icon = gfx/interface/icons/timed_modifier_icons/modifier_flag_negative.dds
 
 	country_diplomatic_reputation_add = 5
+}
+
+smd_authority_shift = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_documents_positive.dds
+	country_authority_add = 1
+}
+
+smd_legitimacy_shift = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_flag_positive.dds
+	country_legitimacy_base_add = 1
+}
+
+modifier_surveying_panama = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_documents_positive.dds
+}
+
+modifier_surveying_suez = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_documents_positive.dds
 }

@@ -1,0 +1,80 @@
+﻿pm_update_prime_minister = {
+	if = {
+		limit = { pm_country_elects_prime_minister = yes }
+		ordered_interest_group = {
+			limit = {
+				is_in_government = yes
+				leader ?= {
+					is_character_alive = yes
+					is_ruler_of_own_country = no
+				}
+			}
+			order_by = ig_clout
+			position = 0
+			check_range_bounds = no
+			leader = { save_scope_as = pm_candidate }
+		}
+		if = {
+			limit = { NOT = { exists = scope:pm_candidate } }
+			every_scope_character = {
+				limit = { has_role = character_role_prime_minister }
+				remove_character_role = character_role_prime_minister
+			}
+		}
+		else_if = {
+			limit = {
+				scope:pm_candidate = {
+					NOT = { has_role = character_role_prime_minister }
+				}
+			}
+			every_scope_character = {
+				limit = { has_role = character_role_prime_minister }
+				remove_character_role = character_role_prime_minister
+			}
+			scope:pm_candidate = {
+				add_character_role = character_role_prime_minister
+			}
+			pm_announce = { PM = scope:pm_candidate }
+		}
+	}
+	else_if = {
+		limit = {
+			NOT = { has_variable = pm_appointed_by_script }
+			any_scope_character = { has_role = character_role_prime_minister }
+		}
+		every_scope_character = {
+			limit = { has_role = character_role_prime_minister }
+			remove_character_role = character_role_prime_minister
+		}
+	}
+}
+
+pm_start_appoint = {
+	ig:$IG$ ?= {
+		leader ?= {
+			if = {
+				limit = {
+					is_character_alive = yes
+					is_ruler_of_own_country = no
+				}
+				owner = {
+					every_scope_character = {
+						limit = { has_role = character_role_prime_minister }
+						remove_character_role = character_role_prime_minister
+					}
+					set_variable = { name = pm_start_hold days = 28 }
+				}
+				add_character_role = character_role_prime_minister
+			}
+		}
+	}
+}
+
+pm_announce = {
+	set_variable = { name = pm_latest value = $PM$ }
+	$PM$ = { save_scope_as = pm_new }
+	if = {
+		limit = { game_date > 1992.1.1 }
+		post_notification = prime_minister_changed
+	}
+}

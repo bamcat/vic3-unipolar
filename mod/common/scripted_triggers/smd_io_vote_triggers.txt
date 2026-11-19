@@ -1,0 +1,41 @@
+﻿io_member_vetoes_applicant = {
+	OR = {
+		has_war_with = root
+		any_rival_country = { this = root }
+		any_rivaling_country = { this = root }
+		has_attitude = { who = root attitude = antagonistic }
+		has_attitude = { who = root attitude = belligerent }
+		has_diplomatic_pact = { who = root type = embargo }
+		relations:root <= relations_threshold:poor
+	}
+}
+
+io_member_opposes_applicant = {
+	OR = {
+		io_member_vetoes_applicant = yes
+		relations:root <= relations_threshold:cold
+	}
+}
+
+io_member_at_war_with_applicant = {
+	has_war_with = root
+}
+
+io_member_rule_open = {
+	io_member_at_war_with_applicant = yes
+}
+
+io_member_rule_majority = {
+	io_member_opposes_applicant = yes
+}
+
+io_member_rule_veto = {
+	io_member_vetoes_applicant = yes
+}
+
+io_no_member_vetoes = {
+	custom_description = {
+		text = io_no_member_vetoes_$ORG$
+		io_vote_$ORG$_against_projected = 0
+	}
+}

@@ -744,7 +744,7 @@ gov_princely_state_maharaja = {
 			AND = { exists = c:MEW c:MEW = ROOT }
 			AND = { exists = c:JOD c:JOD = ROOT }
 			AND = { exists = c:JAI c:JAI = ROOT }
-			AND = { exists = c:PTA c:PTA = ROOT } # Maharaja-e Rajgan
+			AND = { exists = c:PTA c:PTA = ROOT }
 		}
 		NOT = { is_subject_type = subject_type_crown_land }
 		has_gov_regency = no
@@ -1120,8 +1120,8 @@ gov_malikdom = {
 	male_ruler = "RULER_TITLE_MALIK"
 	female_ruler = "RULER_TITLE_MALIKA"
 
-	male_heir = "RULER_TITLE_PRINCE" # Empty on purpose
-	female_heir = "RULER_TITLE_PRINCESS" # Empty on purpose
+	male_heir = "RULER_TITLE_PRINCE"
+	female_heir = "RULER_TITLE_PRINCESS"
 
 	possible = {
 		has_law = law_type:law_monarchy
@@ -1217,7 +1217,7 @@ gov_maharaja = {
 			AND = { exists = c:MEW c:MEW = ROOT }
 			AND = { exists = c:JOD c:JOD = ROOT }
 			AND = { exists = c:JAI c:JAI = ROOT }
-			AND = { exists = c:PTA c:PTA = ROOT } # Maharaja-e Rajgan
+			AND = { exists = c:PTA c:PTA = ROOT }
 		}
 		NOT = { is_subject_type = subject_type_crown_land }
 		has_gov_regency = no
@@ -1319,7 +1319,7 @@ gov_dey = {
 	transfer_of_power = hereditary
 
 	male_ruler = "RULER_TITLE_DEY"
-	female_ruler = "" # Empty on purpose
+	female_ruler = ""
 
 	possible = {
 		has_law = law_type:law_monarchy
@@ -1340,11 +1340,11 @@ gov_dey = {
 gov_wilayah = {
 	transfer_of_power = hereditary
 
-	male_ruler = "RULER_TITLE_LIWALI"	# Swahili form of al-wali
+	male_ruler = "RULER_TITLE_LIWALI"
 	female_ruler = "RULER_TITLE_LIWALI"
 
-	male_heir = "" # Empty on purpose
-	female_heir = "" # Empty on purpose
+	male_heir = ""
+	female_heir = ""
 
 	possible = {
 		has_law = law_type:law_monarchy
@@ -1354,7 +1354,7 @@ gov_wilayah = {
 			country_tier = grand_principality
 		}
 		OR = {
-			c:MBS ?= this # the rulers of Mombasa styled themselves governors even when they were de facto independent
+			c:MBS ?= this
 			AND = {
 				country_has_primary_culture = cu:swahili
 				is_subject = yes
@@ -1407,10 +1407,10 @@ gov_sultanate = {
 	transfer_of_power = hereditary
 
 	male_ruler = "RULER_TITLE_SULTAN"
-	female_ruler = "" # Empty on purpose
+	female_ruler = ""
 
 	male_heir = "RULER_TITLE_IMPERIAL_PRINCE"
-	female_heir = "" # Empty on purpose
+	female_heir = ""
 
 	possible = {
 		has_law = law_type:law_monarchy
@@ -1466,10 +1466,10 @@ gov_hakimate = {
 	transfer_of_power = hereditary
 
 	male_ruler = "RULER_TITLE_HAKIM"
-	female_ruler = "" # Empty on purpose
+	female_ruler = ""
 
 	male_heir = "RULER_TITLE_PRINCE"
-	female_heir = "" # Empty on purpose
+	female_heir = ""
 
 	possible = {
 		country_tier = principality
@@ -1492,10 +1492,10 @@ gov_chitrali_monarchy = {
 	transfer_of_power = hereditary
 
 	male_ruler = "RULER_TITLE_MEHTAR"
-	female_ruler = "" # Empty on purpose
+	female_ruler = ""
 
 	male_heir = "RULER_TITLE_PRINCE"
-	female_heir = "" # Empty on purpose
+	female_heir = ""
 
 	possible = {
 		country_tier = principality
@@ -1518,10 +1518,10 @@ gov_sheikhdom = {
 	transfer_of_power = hereditary
 
 	male_ruler = "RULER_TITLE_SHEIKH"
-	female_ruler = "" # Empty on purpose
+	female_ruler = ""
 
 	male_heir = "RULER_TITLE_PRINCE"
-	female_heir = "" # Empty on purpose
+	female_heir = ""
 
 	possible = {
 		country_tier = principality
@@ -1571,10 +1571,10 @@ gov_sunanate = {
 	transfer_of_power = hereditary
 
 	male_ruler = "RULER_TITLE_SUSUHUNAN"
-	female_ruler = "" # Empty on purpose
+	female_ruler = ""
 
 	male_heir = "RULER_TITLE_PRINCE"
-	female_heir = "" # Empty on purpose
+	female_heir = ""
 
 	possible = {
 		has_law = law_type:law_monarchy
@@ -1596,10 +1596,10 @@ gov_balinese_monarchy = {
 	transfer_of_power = hereditary
 
 	male_ruler = "RULER_TITLE_DEWA_AGUNG"
-	female_ruler = "" # Empty on purpose
+	female_ruler = ""
 
 	male_heir = "RULER_TITLE_PRINCE"
-	female_heir = "" # Empty on purpose
+	female_heir = ""
 
 	possible = {
 		has_law = law_type:law_monarchy
@@ -1696,10 +1696,10 @@ gov_caliphate = {
 	transfer_of_power = hereditary
 
 	male_ruler = "RULER_TITLE_CALIPH"
-	female_ruler = "" # Empty on purpose
+	female_ruler = ""
 
 	male_heir = "RULER_TITLE_PRINCE"
-	female_heir = "" # Empty on purpose
+	female_heir = ""
 
 	possible = {
 		has_law = law_type:law_monarchy
@@ -1721,10 +1721,10 @@ gov_khedive = {
 	transfer_of_power = hereditary
 
 	male_ruler = "RULER_TITLE_KHEDIVE"
-	female_ruler = "" # Empty on purpose
+	female_ruler = ""
 
 	male_heir = "RULER_TITLE_PRINCE"
-	female_heir = "" # Empty on purpose
+	female_heir = ""
 
 	possible = {
 		has_law = law_type:law_monarchy
@@ -1746,11 +1746,11 @@ gov_khedive = {
 gov_vilayet = {
 	transfer_of_power = hereditary
 
-	male_ruler = "RULER_TITLE_VALI"			# Governor. This post would usually be appointed by the Ottoman Sultan, and not be hereditary.
-	female_ruler = "" # Empty on purpose
+	male_ruler = "RULER_TITLE_VALI"
+	female_ruler = ""
 
-	male_heir = "RULER_TITLE_MUTASARRIF"	# Governor of a Vilayet's subunit, the Sanjak, who would assume command in the Vali's absence
-	female_heir = "" # Empty on purpose
+	male_heir = "RULER_TITLE_MUTASARRIF"
+	female_heir = ""
 
 	possible = {
 		has_law = law_type:law_monarchy
@@ -1774,10 +1774,10 @@ gov_shah = {
 	transfer_of_power = hereditary
 
 	male_ruler = "RULER_TITLE_SHAH"
-	female_ruler = "" # Empty on purpose
+	female_ruler = ""
 
 	male_heir = "RULER_TITLE_CROWN_PRINCE"
-	female_heir = "" # Empty on purpose
+	female_heir = ""
 
 	possible = {
 		has_law = law_type:law_monarchy
@@ -1800,10 +1800,10 @@ gov_prince = {
 	transfer_of_power = hereditary
 
 	male_ruler = "RULER_TITLE_PRINCE"
-	female_ruler = "" # Empty on purpose
+	female_ruler = ""
 
 	male_heir = "RULER_TITLE_HEIR_APPARENT"
-	female_heir = "" # Empty on purpose
+	female_heir = ""
 
 	possible = {
 		has_law = law_type:law_monarchy
@@ -1840,7 +1840,7 @@ gov_bey = {
 	female_ruler = "RULER_TITLE_BEGUM"
 
 	male_heir = "RULER_TITLE_Bey_AL_MAHALLA"
-	female_heir = "" # Empty on purpose
+	female_heir = ""
 
 	possible = {
 		has_law = law_type:law_monarchy
@@ -1864,10 +1864,10 @@ gov_sharif = {
 	transfer_of_power = hereditary
 
 	male_ruler = "RULER_TITLE_SHARIF"
-	female_ruler = "" # Empty on purpose
+	female_ruler = ""
 
-	male_heir = "" # Empty on purpose
-	female_heir = "" # Empty on purpose
+	male_heir = ""
+	female_heir = ""
 
 	possible = {
 		has_law = law_type:law_monarchy
@@ -1962,8 +1962,8 @@ gov_decentralized_realm = {
 	male_ruler = "RULER_TITLE_KING"
 	female_ruler = "RULER_TITLE_QUEEN"
 
-	male_heir = "" # Empty on purpose
-	female_heir = "" # Empty on purpose
+	male_heir = ""
+	female_heir = ""
 
 
 
@@ -2286,7 +2286,7 @@ gov_ilkhanate = {
 	transfer_of_power = hereditary
 
 	male_ruler = "RULER_TITLE_ILKHAN"
-	female_ruler = "" # Empty on purpose
+	female_ruler = ""
 
 	male_heir = "RULER_TITLE_PRINCE"
 	female_heir = "RULER_TITLE_PRINCESS"
@@ -2345,8 +2345,8 @@ gov_absolute_principality_muslim = {
 	male_ruler = "RULER_TITLE_EMIR"
 	female_ruler = "RULER_TITLE_EMIRA"
 
-	male_heir = "" # Empty on purpose
-	female_heir = "" # Empty on purpose
+	male_heir = ""
+	female_heir = ""
 
 	possible = {
 		has_law = law_type:law_monarchy
@@ -2666,8 +2666,8 @@ gov_absolute_county = {
 	male_ruler = "RULER_TITLE_COUNT"
 	female_ruler = "RULER_TITLE_COUNTESS"
 
-	male_heir = "" # Empty on purpose
-	female_heir = "" # Empty on purpose
+	male_heir = ""
+	female_heir = ""
 
 
 
@@ -2694,8 +2694,8 @@ gov_constitutional_county = {
 	male_ruler = "RULER_TITLE_COUNT"
 	female_ruler = "RULER_TITLE_COUNTESS"
 
-	male_heir = "" # Empty on purpose
-	female_heir = "" # Empty on purpose
+	male_heir = ""
+	female_heir = ""
 
 
 
@@ -2723,8 +2723,8 @@ gov_county = {
 	male_ruler = "RULER_TITLE_COUNT"
 	female_ruler = "RULER_TITLE_COUNTESS"
 
-	male_heir = "" # Empty on purpose
-	female_heir = "" # Empty on purpose
+	male_heir = ""
+	female_heir = ""
 
 
 
@@ -2756,8 +2756,8 @@ gov_absolute_duchy = {
 	male_ruler = "RULER_TITLE_DUKE"
 	female_ruler = "RULER_TITLE_DUCHESS"
 
-	male_heir = "" # Empty on purpose
-	female_heir = "" # Empty on purpose
+	male_heir = ""
+	female_heir = ""
 
 
 
@@ -2789,8 +2789,8 @@ gov_constitutional_duchy = {
 	male_ruler = "RULER_TITLE_DUKE"
 	female_ruler = "RULER_TITLE_DUCHESS"
 
-	male_heir = "" # Empty on purpose
-	female_heir = "" # Empty on purpose
+	male_heir = ""
+	female_heir = ""
 
 
 
@@ -2817,8 +2817,8 @@ gov_duchy = {
 	male_ruler = "RULER_TITLE_DUKE"
 	female_ruler = "RULER_TITLE_DUCHESS"
 
-	male_heir = "" # Empty on purpose
-	female_heir = "" # Empty on purpose
+	male_heir = ""
+	female_heir = ""
 
 
 
@@ -2853,8 +2853,8 @@ gov_absolute_principality = {
 	male_ruler = "RULER_TITLE_PRINCE"
 	female_ruler = "RULER_TITLE_PRINCESS"
 
-	male_heir = "" # Empty on purpose
-	female_heir = "" # Empty on purpose
+	male_heir = ""
+	female_heir = ""
 
 	possible = {
 		has_law = law_type:law_monarchy
@@ -2886,8 +2886,8 @@ gov_principality = {
 	male_ruler = "RULER_TITLE_PRINCE"
 	female_ruler = "RULER_TITLE_PRINCESS"
 
-	male_heir = "" # Empty on purpose
-	female_heir = "" # Empty on purpose
+	male_heir = ""
+	female_heir = ""
 
 	possible = {
 		has_law = law_type:law_monarchy
@@ -2918,8 +2918,8 @@ gov_constitutional_principality = {
 	male_ruler = "RULER_TITLE_PRINCE"
 	female_ruler = "RULER_TITLE_PRINCESS"
 
-	male_heir = "" # Empty on purpose
-	female_heir = "" # Empty on purpose
+	male_heir = ""
+	female_heir = ""
 
 	possible = {
 		has_law = law_type:law_monarchy
@@ -2946,8 +2946,8 @@ gov_absolute_grand_duchy = {
 	male_ruler = "RULER_TITLE_GRAND_DUKE"
 	female_ruler = "RULER_TITLE_GRAND_DUCHESS"
 
-	male_heir = "" # Empty on purpose
-	female_heir = "" # Empty on purpose
+	male_heir = ""
+	female_heir = ""
 
 	possible = {
 		has_law = law_type:law_monarchy
@@ -2971,8 +2971,8 @@ gov_grand_duchy = {
 	male_ruler = "RULER_TITLE_GRAND_DUKE"
 	female_ruler = "RULER_TITLE_GRAND_DUCHESS"
 
-	male_heir = "" # Empty on purpose
-	female_heir = "" # Empty on purpose
+	male_heir = ""
+	female_heir = ""
 
 	possible = {
 		has_law = law_type:law_monarchy
@@ -3001,8 +3001,8 @@ gov_constitutional_grand_duchy = {
 	male_ruler = "RULER_TITLE_GRAND_DUKE"
 	female_ruler = "RULER_TITLE_GRAND_DUCHESS"
 
-	male_heir = "" # Empty on purpose
-	female_heir = "" # Empty on purpose
+	male_heir = ""
+	female_heir = ""
 
 	possible = {
 		has_law = law_type:law_monarchy
@@ -3027,8 +3027,8 @@ gov_absolute_grand_principality = {
 	male_ruler = "RULER_TITLE_GRAND_PRINCE"
 	female_ruler = "RULER_TITLE_GRAND_PRINCESS"
 
-	male_heir = "" # Empty on purpose
-	female_heir = "" # Empty on purpose
+	male_heir = ""
+	female_heir = ""
 
 	possible = {
 		has_law = law_type:law_monarchy
@@ -3052,8 +3052,8 @@ gov_grand_principality = {
 	male_ruler = "RULER_TITLE_GRAND_PRINCE"
 	female_ruler = "RULER_TITLE_GRAND_PRINCESS"
 
-	male_heir = "" # Empty on purpose
-	female_heir = "" # Empty on purpose
+	male_heir = ""
+	female_heir = ""
 
 	possible = {
 		has_law = law_type:law_monarchy
@@ -3081,8 +3081,8 @@ gov_constitutional_grand_principality = {
 	male_ruler = "RULER_TITLE_GRAND_PRINCE"
 	female_ruler = "RULER_TITLE_GRAND_PRINCESS"
 
-	male_heir = "" # Empty on purpose
-	female_heir = "" # Empty on purpose
+	male_heir = ""
+	female_heir = ""
 
 	possible = {
 		has_law = law_type:law_monarchy

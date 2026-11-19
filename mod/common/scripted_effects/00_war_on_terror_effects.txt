@@ -44,8 +44,6 @@ wot_create_pakistan_coalition_access_treaties = {
 }
 
 
-# Northern Alliance integration for Operation Enduring Freedom.
-# Called immediately after the USA creates the Afghanistan diplomatic play in usa_wot.6.
 wot_activate_northern_alliance_for_afghanistan_war = {
 	if = {
 		limit = {
@@ -78,8 +76,6 @@ wot_transfer_kabul_to_northern_alliance = {
 			exists = c:AFG
 		}
 
-		# STATE_KABUL starts owned by Afghanistan/Taliban in the bookmark.
-		# This uses the state-region -> region_state country-specific state pattern used elsewhere in the mod.
 		s:STATE_KABUL.region_state:AFG = {
 			set_state_owner = c:ANA
 		}
@@ -106,7 +102,7 @@ wot_create_northern_alliance_war_army = {
 				}
 				combat_unit = {
 					type = unit_type:combat_unit_type_irregular_infantry
-					state_region = s:STATE_BADAKHSHAN
+					state_region = s:STATE_BALKH
 					count = 6
 				}
 			}
@@ -134,7 +130,6 @@ wot_northern_alliance_join_afghanistan_play_or_war = {
 			exists = c:AFG
 		}
 
-		# If the USA-AFG conflict is still a diplomatic play, ANA backs the US/initiator side.
 		random_diplomatic_play = {
 			limit = {
 				is_war = no
@@ -145,7 +140,6 @@ wot_northern_alliance_join_afghanistan_play_or_war = {
 			add_initiator_backers = { c:ANA }
 		}
 
-		# If the play has already become a war, ANA joins the US side.
 		c:USA ?= {
 			random_scope_war = {
 				limit = {

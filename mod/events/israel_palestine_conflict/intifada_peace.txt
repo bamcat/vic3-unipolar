@@ -1,7 +1,5 @@
 namespace = intifada_2005
 
-# 2005 White Peace / End of the Second Intifada
-# Fires from the yearly check if Israel and Palestine are still at war in 2005.
 intifada_2005.1 = {
 	type = country_event
 	placement = ROOT
@@ -32,18 +30,16 @@ intifada_2005.1 = {
 
 		set_global_variable = intifada_2005_white_peace_fired
 
-		# End the war in a white peace.
-		# If your build uses a different peace effect, replace this block.
 		c:ISR ?= {
-			create_truce = {
+			create_bidirectional_truce = {
 				country = c:PAL
-				years = 5
+				months = 60
 			}
 		}
 		c:PAL ?= {
-			create_truce = {
+			create_bidirectional_truce = {
 				country = c:ISR
-				years = 5
+				months = 60
 			}
 		}
 

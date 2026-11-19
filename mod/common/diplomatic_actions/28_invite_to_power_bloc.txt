@@ -12,7 +12,6 @@
 		is_revolutionary = no
 		is_in_power_bloc = yes
 
-		# Note that most of the script below has been written under the assumption that root is the power bloc leader.
 		is_power_bloc_leader = yes      # if you change this line, remember to change power_bloc_invite_available
 	}
 
@@ -23,7 +22,6 @@
 	}
 
 	possible = {
-		# Must not be able to immediately start a power struggle
 		custom_tooltip = {
 			text = "NO_POWER_STRUGGLE_BLOC_JOIN"
 			OR = {
@@ -48,7 +46,6 @@
 			is_revolutionary = no
 		}
 		custom_tooltip = {
-			# This effectively sets a 2 year cooldown on invites. This length needs to be updated both in loc and in the catalyst definition
 			text = invite_to_power_bloc_recently_declined
 			NOT = {
 				any_diplomatic_catalyst = {
@@ -92,12 +89,10 @@
 				value = -100
 			}
 
-			### Leverage
 			add = {
 				desc = "DIPLOMATIC_ACCEPTANCE_LEVERAGE"
 				value = "scope:actor.power_bloc.leverage_advantage(root)"
 
-				### Current members get an offset equal to the invite threshold, so they won't leave
 				### unless negative leverage exceeds what another bloc would need to poach them
 				if = {
 					limit = { is_in_same_power_bloc = scope:actor }
@@ -106,7 +101,6 @@
 
 				multiply = 0.5
 
-				### Leverage effect when already part of the bloc can go into negative, to help determine if they want to leave
 				if = {
 					limit = { is_in_same_power_bloc = scope:actor	}
 					min = -200
@@ -123,13 +117,11 @@
 					scope:target_country = { is_in_power_bloc = yes }
 				}
 
-				### Cohesion of current Bloc
 				subtract = {
 					desc = "DIPLOMATIC_ACCEPTANCE_COHESION_OF_TARGET"
 					value = "scope:target_country.power_bloc.current_cohesion_number"
 					subtract = 50
 
-					### Low cohesion is more impactful than high cohesion
 					if = {
 						limit = { scope:target_country.power_bloc = { current_cohesion_number < 20 } }
 						multiply = 2
@@ -141,13 +133,11 @@
 				}
 			}
 
-			### Cohesion
 			add = {
 				desc = "DIPLOMATIC_ACCEPTANCE_COHESION"
 				value = "scope:actor.power_bloc.current_cohesion_number"
 				subtract = 50
 
-				### Low cohesion is more impactful than high cohesion
 				if = {
 					limit = { scope:actor.power_bloc = { current_cohesion_number < 20 } }
 					multiply = 4
@@ -157,7 +147,6 @@
 					multiply = 2
 				}
 
-				### Care more about cohesion when part of bloc
 				if = {
 					limit = { is_in_same_power_bloc = scope:actor }
 					multiply = 2
@@ -212,14 +201,10 @@
 				}
 			}
 
-			### How the selected identity fits them
 			add = ai_power_bloc_identity_score
 
-			### Similar to identities but considers selected principles
 			add = ai_power_bloc_principle_score
 
-			# Ideological opinion is always a factor, but much weaker for non ideological unions
-			# Score for ideological unions is handled in ai_power_bloc_identity_score script value
 			if = {
 				limit = {
 					power_bloc ?= {
@@ -235,7 +220,6 @@
 				}
 			}
 
-			### Powerful Protectors is always a factor, but less so if not being invited to a sovereign empire
 			if = {
 				limit = {
 					scope:actor.power_bloc ?= {
@@ -251,7 +235,6 @@
 				}
 			}
 
-			### Relative rank
 			add = {
 				desc = "DIPLOMATIC_ACCEPTANCE_RANK"
 				value = scope:actor.country_rank

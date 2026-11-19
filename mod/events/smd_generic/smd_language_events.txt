@@ -1,0 +1,215 @@
+﻿namespace = smd_language
+
+smd_language.1 = {
+	type = country_event
+	placement = ROOT
+	title = smd_language.1.t
+	desc = smd_language.1.d
+	flavor = smd_language.1.f
+	event_image = { video = "ip2_cross_cultural_festival" }
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+	icon = "gfx/interface/icons/event_icons/event_newspaper.dds"
+	duration = 3
+
+	trigger = {
+	}
+
+	immediate = {
+		var:smd_language_minority ?= { save_scope_as = smd_language_minority }
+	}
+
+	option = {
+		name = smd_language.1.a
+		default_option = yes
+		set_variable = smd_language_assimilation
+		add_modifier = {
+			name = smd_language_assimilation_policy
+			days = long_modifier_time
+		}
+		if = {
+			limit = { exists = scope:smd_language_minority }
+			add_radicals = {
+				value = medium_radicals
+				culture = scope:smd_language_minority
+			}
+		}
+		ai_chance = { base = 40 }
+	}
+
+	option = {
+		name = smd_language.1.b
+		set_variable = smd_language_rights
+		add_modifier = {
+			name = smd_language_rights_policy
+			days = long_modifier_time
+		}
+		if = {
+			limit = { exists = scope:smd_language_minority }
+			add_loyalists = {
+				value = small_radicals
+				culture = scope:smd_language_minority
+			}
+		}
+		ai_chance = { base = 60 }
+	}
+}
+
+smd_language.2 = {
+	type = country_event
+	placement = ROOT
+	title = smd_language.2.t
+	desc = smd_language.2.d
+	flavor = smd_language.2.f
+	event_image = { video = "ip3_village_school" }
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+	icon = "gfx/interface/icons/event_icons/event_newspaper.dds"
+	duration = 3
+	cooldown = { days = normal_modifier_time }
+
+	trigger = {
+		has_journal_entry = smd_je_language_question
+	}
+
+	immediate = {
+		var:smd_language_minority ?= { save_scope_as = smd_language_minority }
+	}
+
+	option = {
+		name = smd_language.2.a
+		default_option = yes
+		add_treasury = {
+			value = gdp
+			multiply = -0.002
+		}
+		set_variable = { name = smd_bilingual_schools days = 1825 }
+		add_modifier = {
+			name = smd_bilingual_schools
+			days = 1825
+		}
+		je:smd_je_language_question ?= {
+			add_progress = { value = 5 name = smd_language_bar }
+		}
+		ai_chance = { base = 60 }
+	}
+
+	option = {
+		name = smd_language.2.b
+		add_modifier = {
+			name = smd_majority_language_schools
+			days = 1825
+		}
+		je:smd_je_language_question ?= {
+			add_progress = { value = -5 name = smd_language_bar }
+		}
+		ai_chance = { base = 40 }
+	}
+}
+
+smd_language.3 = {
+	type = country_event
+	placement = ROOT
+	title = smd_language.3.t
+	desc = smd_language.3.d
+	flavor = smd_language.3.f
+	event_image = { video = "ip2_intercommunal_tensions" }
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+	icon = "gfx/interface/icons/event_icons/event_protest.dds"
+	duration = 3
+	cooldown = { days = normal_modifier_time }
+
+	trigger = {
+		has_journal_entry = smd_je_language_question
+		has_variable = smd_language_minority
+		radical_fraction = {
+			culture = var:smd_language_minority
+			value >= 0.15
+		}
+	}
+
+	immediate = {
+		var:smd_language_minority ?= { save_scope_as = smd_language_minority }
+	}
+
+	option = {
+		name = smd_language.3.a
+		default_option = yes
+		add_modifier = {
+			name = smd_language_dialogue
+			days = short_modifier_time
+		}
+		je:smd_je_language_question ?= {
+			add_progress = { value = 5 name = smd_language_bar }
+		}
+		ai_chance = { base = 60 }
+	}
+
+	option = {
+		name = smd_language.3.b
+		add_modifier = {
+			name = smd_language_riots
+			days = 365
+		}
+		je:smd_je_language_question ?= {
+			add_progress = { value = -5 name = smd_language_bar }
+		}
+		ai_chance = { base = 40 }
+	}
+}
+
+smd_language.4 = {
+	type = country_event
+	placement = ROOT
+	title = smd_language.4.t
+	desc = smd_language.4.d
+	flavor = smd_language.4.f
+	event_image = { video = "ip2_cross_cultural_festival" }
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+	icon = "gfx/interface/icons/event_icons/event_newspaper.dds"
+	duration = 3
+
+	trigger = {
+	}
+
+	immediate = {
+		var:smd_language_minority ?= { save_scope_as = smd_language_minority }
+	}
+
+	option = {
+		name = smd_language.4.a
+		default_option = yes
+		add_modifier = {
+			name = smd_language_settled
+			days = long_modifier_time
+		}
+		ai_chance = { base = 100 }
+	}
+}
+
+smd_language.5 = {
+	type = country_event
+	placement = ROOT
+	title = smd_language.5.t
+	desc = smd_language.5.d
+	flavor = smd_language.5.f
+	event_image = { video = "ip3_angry_mob_raiding_minorities" }
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+	icon = "gfx/interface/icons/event_icons/event_protest.dds"
+	duration = 3
+
+	trigger = {
+	}
+
+	immediate = {
+		var:smd_language_minority ?= { save_scope_as = smd_language_minority }
+	}
+
+	option = {
+		name = smd_language.5.a
+		default_option = yes
+		add_modifier = {
+			name = smd_language_conflict
+			days = long_modifier_time
+		}
+		ai_chance = { base = 100 }
+	}
+}

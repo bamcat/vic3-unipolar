@@ -20,12 +20,15 @@
 		law_universal_suffrage = strongly_disapprove
 		law_anarchy = strongly_disapprove
 		law_technocracy = strongly_disapprove
+		law_labour_suffrage = strongly_disapprove
 	}
 
 	lawgroup_bureaucracy = {
 		law_hereditary_bureaucrats = approve
 		law_appointed_bureaucrats = approve
 		law_elected_bureaucrats = disapprove
+		law_communal_administration = strongly_disapprove
+		law_military_bureaucrats = approve
 	}
 
 	lawgroup_economic_system = {	
@@ -127,6 +130,7 @@ REPLACE_OR_CREATE:ideology_anarchist_movement = {
 		law_oligarchy = strongly_disapprove
 		law_autocracy = strongly_disapprove	
 		law_single_party_state = disapprove		
+		law_labour_suffrage = approve
 	}
 
 	lawgroup_economic_system = {	
@@ -145,6 +149,7 @@ REPLACE_OR_CREATE:ideology_anarchist_movement = {
 		law_professional_army = neutral
 		law_mass_conscription = disapprove
 		law_peasant_levies = strongly_disapprove
+		law_revolutionary_guard = approve
 	}
 
 	lawgroup_free_speech = {
@@ -193,6 +198,7 @@ REPLACE_OR_CREATE:ideology_vanguardist_movement = {
 		law_landed_voting = strongly_disapprove
 		law_technocracy = approve
 		law_single_party_state = strongly_approve
+		law_labour_suffrage = approve
 	}
 	
 	lawgroup_economic_system = {	
@@ -244,6 +250,7 @@ REPLACE_OR_CREATE:ideology_radical_movement = {
 		law_oligarchy = strongly_disapprove
 		law_autocracy = strongly_disapprove
 		law_single_party_state = disapprove
+		law_labour_suffrage = strongly_disapprove
 	}
 
 	lawgroup_free_speech = {
@@ -258,6 +265,7 @@ REPLACE_OR_CREATE:ideology_radical_movement = {
 		law_no_home_affairs = approve
 		law_national_guard = strongly_disapprove
 		law_secret_police = strongly_disapprove
+		law_extraordinary_commission = disapprove
 	}
 	
 	lawgroup_education_system = {
@@ -282,6 +290,7 @@ REPLACE_OR_CREATE:ideology_liberal_movement = {
 		law_no_home_affairs = neutral
 		law_national_guard = disapprove
 		law_secret_police = strongly_disapprove
+		law_extraordinary_commission = strongly_disapprove
 	}
 	
 	lawgroup_free_speech = {
@@ -308,12 +317,15 @@ REPLACE_OR_CREATE:ideology_liberal_movement = {
 		law_oligarchy = disapprove
 		law_autocracy = strongly_disapprove
 		law_anarchy = strongly_disapprove
+		law_labour_suffrage = strongly_disapprove
 	}
 	
 	lawgroup_bureaucracy = {
 		law_elected_bureaucrats = approve
 		law_appointed_bureaucrats = neutral
 		law_hereditary_bureaucrats = disapprove
+		law_communal_administration = strongly_disapprove
+		law_military_bureaucrats = disapprove
 	}
 }
 
@@ -324,6 +336,7 @@ REPLACE_OR_CREATE:ideology_anti_war_movement = {
 		law_no_home_affairs = neutral
 		law_national_guard = disapprove
 		law_secret_police = strongly_disapprove
+		law_extraordinary_commission = strongly_disapprove
 	}
 	
 	lawgroup_free_speech = {
@@ -345,11 +358,12 @@ REPLACE_OR_CREATE:ideology_anti_war_movement = {
 		law_professional_army = approve
 		law_national_militia = strongly_disapprove
 		law_peasant_levies = strongly_disapprove
+		law_revolutionary_guard = strongly_disapprove
 	}
 	
 }
 
-REPLACE_OR_CREATE:ideology_pluralist_movement_1 = { # National Supremacy
+REPLACE_OR_CREATE:ideology_pluralist_movement_1 = {
 	icon = "gfx/interface/icons/ideology_icons/reformer.dds"
 
 	lawgroup_citizenship = {
@@ -362,7 +376,7 @@ REPLACE_OR_CREATE:ideology_pluralist_movement_1 = { # National Supremacy
 	}
 }
 
-REPLACE_OR_CREATE:ideology_pluralist_movement_2 = { # Racial Segregation
+REPLACE_OR_CREATE:ideology_pluralist_movement_2 = {
 	icon = "gfx/interface/icons/ideology_icons/reformer.dds"
 	
 	lawgroup_citizenship = {
@@ -375,7 +389,7 @@ REPLACE_OR_CREATE:ideology_pluralist_movement_2 = { # Racial Segregation
 	}
 }
 
-REPLACE_OR_CREATE:ideology_pluralist_movement_3 = { # Cultural Exclusion
+REPLACE_OR_CREATE:ideology_pluralist_movement_3 = {
 	icon = "gfx/interface/icons/ideology_icons/reformer.dds"
 	
 	lawgroup_citizenship = {
@@ -394,7 +408,7 @@ REPLACE_OR_CREATE:ideology_pluralist_movement_3 = { # Cultural Exclusion
 	}
 }
 
-REPLACE_OR_CREATE:ideology_pluralist_movement_4 = { # Multicultural
+REPLACE_OR_CREATE:ideology_pluralist_movement_4 = {
 	icon = "gfx/interface/icons/ideology_icons/reformer.dds"
 	
 	lawgroup_citizenship = {
@@ -501,12 +515,15 @@ REPLACE_OR_CREATE:ideology_absolutist_movement = {
 		law_universal_suffrage = strongly_disapprove
 		law_anarchy = strongly_disapprove
 		law_technocracy = strongly_disapprove
+		law_labour_suffrage = strongly_disapprove
 	}
 
 	lawgroup_bureaucracy = {
 		law_hereditary_bureaucrats = approve
 		law_appointed_bureaucrats = approve
 		law_elected_bureaucrats = disapprove
+		law_communal_administration = strongly_disapprove
+		law_military_bureaucrats = approve
 	}
 
 	lawgroup_economic_system = {
@@ -715,6 +732,7 @@ REPLACE_OR_CREATE:ideology_anarchist_movement = {
 		law_oligarchy = strongly_disapprove
 		law_autocracy = strongly_disapprove
 		law_single_party_state = disapprove
+		law_labour_suffrage = approve
 	}
 
 	lawgroup_economic_system = {
@@ -733,6 +751,7 @@ REPLACE_OR_CREATE:ideology_anarchist_movement = {
 		law_professional_army = neutral
 		law_mass_conscription = disapprove
 		law_peasant_levies = strongly_disapprove
+		law_revolutionary_guard = approve
 	}
 
 	lawgroup_free_speech = {
@@ -781,6 +800,7 @@ REPLACE_OR_CREATE:ideology_vanguardist_movement = {
 		law_landed_voting = strongly_disapprove
 		law_technocracy = approve
 		law_single_party_state = strongly_approve
+		law_labour_suffrage = approve
 	}
 
 	lawgroup_economic_system = {
@@ -831,6 +851,7 @@ REPLACE_OR_CREATE:ideology_fascist_movement = {
 		law_census_voting = strongly_disapprove
 		law_wealth_voting = strongly_disapprove
 		law_landed_voting = strongly_disapprove
+		law_labour_suffrage = strongly_disapprove
 	}
 
 	lawgroup_citizenship = {
@@ -847,6 +868,7 @@ REPLACE_OR_CREATE:ideology_fascist_movement = {
 		law_professional_army = approve
 		law_national_militia = disapprove
 		law_peasant_levies = disapprove
+		law_revolutionary_guard = strongly_disapprove
 	}
 
 	lawgroup_free_speech = {
@@ -921,6 +943,7 @@ REPLACE_OR_CREATE:ideology_liberal_movement = {
 		law_no_home_affairs = neutral
 		law_national_guard = neutral
 		law_secret_police = strongly_disapprove
+		law_extraordinary_commission = strongly_disapprove
 	}
 
 	lawgroup_free_speech = {
@@ -940,12 +963,15 @@ REPLACE_OR_CREATE:ideology_liberal_movement = {
 		law_oligarchy = disapprove
 		law_autocracy = strongly_disapprove
 		law_anarchy = strongly_disapprove
+		law_labour_suffrage = strongly_disapprove
 	}
 
 	lawgroup_bureaucracy = {
 		law_elected_bureaucrats = approve
 		law_appointed_bureaucrats = neutral
 		law_hereditary_bureaucrats = disapprove
+		law_communal_administration = strongly_disapprove
+		law_military_bureaucrats = disapprove
 	}
 
 	lawgroup_citizenship = {
@@ -988,6 +1014,7 @@ REPLACE_OR_CREATE:ideology_radical_movement = {
 		law_oligarchy = strongly_disapprove
 		law_autocracy = strongly_disapprove
 		law_single_party_state = disapprove
+		law_labour_suffrage = strongly_disapprove
 	}
 
 	lawgroup_free_speech = {
@@ -1002,6 +1029,7 @@ REPLACE_OR_CREATE:ideology_radical_movement = {
 		law_no_home_affairs = neutral
 		law_national_guard = approve
 		law_secret_police = strongly_disapprove
+		law_extraordinary_commission = disapprove
 	}
 
 	lawgroup_education_system = {
@@ -1011,7 +1039,7 @@ REPLACE_OR_CREATE:ideology_radical_movement = {
 		law_religious_schools = disapprove
 	}
 
-	lawgroup_labour_associations = { # The Sans-Culottes resented the ban on workers' associations.
+	lawgroup_labour_associations = {
 		law_combination_acts = disapprove
 		law_guild_system = strongly_disapprove
 		law_anti_strike_laws = neutral
@@ -1076,12 +1104,15 @@ REPLACE_OR_CREATE:ideology_positivist_movement = {
 		law_landed_voting = disapprove
 		law_universal_suffrage = strongly_disapprove
 		law_anarchy = strongly_disapprove
+		law_labour_suffrage = strongly_disapprove
 	}
 
 	lawgroup_bureaucracy = {
 		law_appointed_bureaucrats = strongly_approve
 		law_elected_bureaucrats = disapprove
 		law_hereditary_bureaucrats = strongly_disapprove
+		law_communal_administration = strongly_disapprove
+		law_military_bureaucrats = approve
 	}
 }
 
@@ -1274,6 +1305,7 @@ REPLACE_OR_CREATE:ideology_liberal_republican_movement = {
 		law_national_guard = neutral
 		law_no_home_affairs = neutral
 		law_secret_police = strongly_disapprove
+		law_extraordinary_commission = strongly_disapprove
 	}
 
 	lawgroup_free_speech = {
@@ -1293,12 +1325,15 @@ REPLACE_OR_CREATE:ideology_liberal_republican_movement = {
 		law_oligarchy = disapprove
 		law_autocracy = strongly_disapprove
 		law_anarchy = strongly_disapprove
+		law_labour_suffrage = strongly_disapprove
 	}
 
 	lawgroup_bureaucracy = {
 		law_elected_bureaucrats = approve
 		law_appointed_bureaucrats = neutral
 		law_hereditary_bureaucrats = disapprove
+		law_communal_administration = strongly_disapprove
+		law_military_bureaucrats = disapprove
 	}
 
 	lawgroup_citizenship = {
@@ -1311,7 +1346,7 @@ REPLACE_OR_CREATE:ideology_liberal_republican_movement = {
 	}
 }
 
-REPLACE_OR_CREATE:ideology_pluralist_movement_1 = { # National Supremacy
+REPLACE_OR_CREATE:ideology_pluralist_movement_1 = {
 	icon = "gfx/interface/icons/ideology_icons/reformer.dds"
 
 	lawgroup_citizenship = {
@@ -1325,7 +1360,7 @@ REPLACE_OR_CREATE:ideology_pluralist_movement_1 = { # National Supremacy
 	}
 }
 
-REPLACE_OR_CREATE:ideology_pluralist_movement_2 = { # Racial Segregation
+REPLACE_OR_CREATE:ideology_pluralist_movement_2 = {
 	icon = "gfx/interface/icons/ideology_icons/reformer.dds"
 
 	lawgroup_citizenship = {
@@ -1339,7 +1374,7 @@ REPLACE_OR_CREATE:ideology_pluralist_movement_2 = { # Racial Segregation
 	}
 }
 
-REPLACE_OR_CREATE:ideology_pluralist_movement_3 = { # Cultural Exclusion
+REPLACE_OR_CREATE:ideology_pluralist_movement_3 = {
 	icon = "gfx/interface/icons/ideology_icons/reformer.dds"
 
 	lawgroup_citizenship = {
@@ -1353,7 +1388,7 @@ REPLACE_OR_CREATE:ideology_pluralist_movement_3 = { # Cultural Exclusion
 	}
 }
 
-REPLACE_OR_CREATE:ideology_pluralist_movement_4 = { # Multicultural
+REPLACE_OR_CREATE:ideology_pluralist_movement_4 = {
 	icon = "gfx/interface/icons/ideology_icons/reformer.dds"
 
 	lawgroup_citizenship = {
@@ -1470,6 +1505,7 @@ REPLACE_OR_CREATE:ideology_orleanist_movement = {
 		law_anarchy = strongly_disapprove
 		law_single_party_state = disapprove
 		law_technocracy = strongly_disapprove
+		law_labour_suffrage = strongly_disapprove
 	}
 
 	lawgroup_economic_system = {
@@ -1516,6 +1552,7 @@ REPLACE_OR_CREATE:ideology_bonapartist_movement = {
 		law_universal_suffrage = disapprove
 		law_anarchy = strongly_disapprove
 		law_technocracy = strongly_disapprove
+		law_labour_suffrage = strongly_disapprove
 	}
 
 	lawgroup_army_model = {
@@ -1523,6 +1560,7 @@ REPLACE_OR_CREATE:ideology_bonapartist_movement = {
 		law_professional_army = strongly_approve
 		law_national_militia = disapprove
 		law_peasant_levies = disapprove
+		law_revolutionary_guard = strongly_disapprove
 	}
 
 	lawgroup_economic_system = {
@@ -1561,6 +1599,7 @@ REPLACE_OR_CREATE:ideology_legitimist_movement = {
 		law_universal_suffrage = strongly_disapprove
 		law_anarchy = strongly_disapprove
 		law_technocracy = strongly_disapprove
+		law_labour_suffrage = strongly_disapprove
 	}
 
 	lawgroup_church_and_state = {
@@ -1588,6 +1627,7 @@ REPLACE_OR_CREATE:ideology_national_liberal_movement = {
 		law_no_home_affairs = neutral
 		law_national_guard = neutral
 		law_secret_police = strongly_disapprove
+		law_extraordinary_commission = strongly_disapprove
 	}
 
 	lawgroup_free_speech = {
@@ -1607,6 +1647,7 @@ REPLACE_OR_CREATE:ideology_national_liberal_movement = {
 		law_oligarchy = disapprove
 		law_autocracy = strongly_disapprove
 		law_anarchy = strongly_disapprove
+		law_labour_suffrage = strongly_disapprove
 	}
 
 	lawgroup_education_system = {
@@ -1616,7 +1657,7 @@ REPLACE_OR_CREATE:ideology_national_liberal_movement = {
 		law_religious_schools = disapprove
 	}
 
-	lawgroup_labour_associations = { # Mostly just want to break the guilds
+	lawgroup_labour_associations = {
 		law_combination_acts = neutral
 		law_guild_system = disapprove
 		law_anti_strike_laws = neutral
@@ -1672,6 +1713,7 @@ REPLACE_OR_CREATE:ideology_integralist_movement = {
 		law_census_voting = strongly_disapprove
 		law_universal_suffrage = strongly_disapprove
 		law_anarchy = strongly_disapprove
+		law_labour_suffrage = strongly_disapprove
 	}
 
 	lawgroup_governance_principles = {

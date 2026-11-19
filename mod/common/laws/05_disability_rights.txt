@@ -8,8 +8,6 @@ law_minimal_recognition = {
 	progressiveness = 0
 
 	modifier = {
-		# Disabled workers are excluded from most employment
-		# reducing effective workforce and overall productivity
 		state_pop_qualifications_mult               = -0.02
 		state_mortality_mult                        = 0.02
 	}
@@ -29,11 +27,6 @@ law_minimal_recognition = {
 }
 
 # ── WORKPLACE ACCOMMODATIONS ──────────────
-# Employers are required to make reasonable
-# adjustments to allow disabled workers to
-# participate in the workforce. Productivity
-# gains from an expanded working population,
-# at modest cost to employers.
 
 law_workplace_accommodations = {
 	group = lawgroup_disability_rights
@@ -42,11 +35,8 @@ law_workplace_accommodations = {
 	progressiveness = 33
 
 	modifier = {
-		# Disabled workers enter the workforce
 		state_pop_qualifications_mult               = 0.02
-		# Employers bear some adjustment costs
 		building_throughput_add                     = -0.01
-		# Modest mortality improvement from reduced exclusion
 		state_mortality_mult                        = 0.01
 	}
 
@@ -78,12 +68,6 @@ law_workplace_accommodations = {
 }
 
 # ── ANTI-ABLEIST ARCHITECTURE ─────────────
-# Public buildings, transport, and
-# infrastructure are required to be
-# accessible. Construction costs rise
-# as existing buildings are retrofitted,
-# but population participation expands
-# and standard of living improves.
 
 law_anti_ableist_architecture = {
 	group = lawgroup_disability_rights
@@ -92,13 +76,10 @@ law_anti_ableist_architecture = {
 	progressiveness = 66
 
 	modifier = {
-		# Accessible infrastructure broadens workforce participation
 		state_pop_qualifications_mult               = 0.04
 		state_lower_strata_standard_of_living_add   = 0.25
 		state_middle_strata_standard_of_living_add  = 0.10
-		# Retrofit and ongoing compliance costs
 		country_construction_goods_cost_mult        = 0.02
-		# Mortality improves as infrastructure no longer excludes
 		state_mortality_mult                        = -0.01
 	}
 
@@ -126,12 +107,6 @@ law_anti_ableist_architecture = {
 }
 
 # ── PUBLIC TREATMENTS ─────────────────────
-# The state funds medical treatments,
-# assistive devices, therapy, and support
-# services for disabled citizens. Significant
-# mortality reduction and standard of living
-# gains across the population, at substantial
-# ongoing cost.
 
 law_public_treatments = {
 	group = lawgroup_disability_rights
@@ -140,14 +115,10 @@ law_public_treatments = {
 	progressiveness = 100
 
 	modifier = {
-		# Full workforce participation and human capital gains
 		state_pop_qualifications_mult               = 0.06
 		state_standard_of_living_add                = 0.50
 		state_lower_strata_standard_of_living_add   = 0.50
-		# Significant mortality reduction from active treatment
 		state_mortality_mult                        = -0.03
-		# Substantial ongoing state expenditure
-		# Education access improves as barriers fall
 		state_education_access_add                  = 0.02
 		state_welfare_payments_mult = 0.10
 	}

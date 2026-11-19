@@ -1,0 +1,1328 @@
+﻿smd_crime_wave_bar = {
+	name = "smd_crime_wave_bar_desc"
+	desc = "smd_crime_wave_bar"
+
+	default_bad = yes
+
+	start_value = 40
+	min_value = 0
+	max_value = 100
+
+	monthly_progress = {
+		progress_condition = {
+			limit = {
+				any_scope_state = {
+					smd_crime_affected_state = yes
+					turmoil >= 0.3
+				}
+			}
+			add = {
+				value = 1
+				desc = "smd_crime_bar_turmoil"
+			}
+		}
+		progress_condition = {
+			limit = {
+				smd_crime_state_count >= 3
+			}
+			add = {
+				value = 1
+				desc = "smd_crime_bar_spread"
+			}
+		}
+		progress_condition = {
+			limit = {
+				any_scope_state = {
+					is_incorporated = yes
+					population_below_expected_sol >= 0.4
+				}
+			}
+			add = {
+				value = 1
+				desc = "smd_crime_bar_poverty"
+			}
+		}
+		progress_condition = {
+			limit = {
+				has_variable = smd_post_socialist
+			}
+			add = {
+				value = 0.5
+				desc = "smd_crime_bar_transition"
+			}
+		}
+		progress_condition = {
+			limit = {
+				OR = {
+					has_law_or_variant = law_type:law_no_police
+					has_law_or_variant = law_type:law_local_police
+				}
+			}
+			add = {
+				value = 1
+				desc = "smd_crime_bar_weak_police"
+			}
+		}
+		progress_condition = {
+			limit = {
+				OR = {
+					has_law_or_variant = law_type:law_dedicated_police
+					has_law_or_variant = law_type:law_militarized_police
+				}
+			}
+			subtract = {
+				value = 0.5
+				desc = "smd_crime_bar_strong_police"
+			}
+		}
+		progress_condition = {
+			limit = {
+				institution_investment_level = {
+					institution = institution_police
+					value >= 2
+				}
+			}
+			subtract = {
+				value = 1
+				desc = "smd_crime_bar_police_investment"
+			}
+		}
+		progress_condition = {
+			limit = {
+				institution_investment_level = {
+					institution = institution_courts
+					value >= 2
+				}
+			}
+			subtract = {
+				value = 1
+				desc = "smd_crime_bar_courts_investment"
+			}
+		}
+		progress_condition = {
+			limit = {
+				NOT = {
+					any_scope_state = {
+						smd_crime_affected_state = yes
+						turmoil >= 0.2
+					}
+				}
+			}
+			subtract = {
+				value = 1
+				desc = "smd_crime_bar_calming"
+			}
+		}
+		progress_condition = {
+			limit = {
+				has_variable = smd_crime_task_force
+			}
+			subtract = {
+				value = 2
+				desc = "smd_crime_bar_task_force"
+			}
+		}
+	}
+}
+
+smd_democracy_bar = {
+	name = "smd_democracy_bar_desc"
+	desc = "smd_democracy_bar"
+
+	default_green = yes
+
+	start_value = 40
+	min_value = 0
+	max_value = 100
+
+	monthly_progress = {
+		progress_condition = {
+			limit = {
+				OR = {
+					has_law_or_variant = law_type:law_protected_speech
+					has_law_or_variant = law_type:law_right_of_assembly
+				}
+			}
+			add = {
+				value = 1
+				desc = "smd_dem_bar_free_speech"
+			}
+		}
+		progress_condition = {
+			limit = {
+				institution_investment_level = {
+					institution = institution_courts
+					value >= 2
+				}
+			}
+			add = {
+				value = 1
+				desc = "smd_dem_bar_courts"
+			}
+		}
+		progress_condition = {
+			limit = {
+				legitimacy >= 50
+			}
+			add = {
+				value = 1
+				desc = "smd_dem_bar_legitimacy"
+			}
+		}
+		progress_condition = {
+			limit = {
+				has_variable = smd_judicial_reform
+			}
+			add = {
+				value = 1
+				desc = "smd_dem_bar_judicial_reform"
+			}
+		}
+		progress_condition = {
+			limit = {
+				has_variable = smd_civic_education
+			}
+			add = {
+				value = 0.5
+				desc = "smd_dem_bar_civic_education"
+			}
+		}
+		progress_condition = {
+			limit = {
+				OR = {
+					has_law_or_variant = law_type:law_secret_police
+					has_law_or_variant = law_type:law_extraordinary_commission
+					has_law_or_variant = law_type:law_okhrana
+					has_law_or_variant = law_type:law_third_section
+				}
+			}
+			subtract = {
+				value = 1.5
+				desc = "smd_dem_bar_repression"
+			}
+		}
+		progress_condition = {
+			limit = {
+				OR = {
+					has_law_or_variant = law_type:law_censorship
+					has_law_or_variant = law_type:law_outlawed_dissent
+				}
+			}
+			subtract = {
+				value = 2
+				desc = "smd_dem_bar_censorship"
+			}
+		}
+		progress_condition = {
+			limit = {
+				OR = {
+					has_law_or_variant = law_type:law_government_content_moderators
+					has_law_or_variant = law_type:law_state_wifi
+				}
+			}
+			subtract = {
+				value = 1
+				desc = "smd_dem_bar_media_capture"
+			}
+		}
+		progress_condition = {
+			limit = {
+				ig:ig_armed_forces ?= {
+					is_powerful = yes
+					ig_approval <= unhappy
+				}
+			}
+			subtract = {
+				value = 2
+				desc = "smd_dem_bar_restless_army"
+			}
+		}
+		progress_condition = {
+			limit = {
+				radical_fraction = {
+					value >= 0.2
+				}
+			}
+			subtract = {
+				value = 1
+				desc = "smd_dem_bar_radicals"
+			}
+		}
+		progress_condition = {
+			limit = {
+				in_default = yes
+			}
+			subtract = {
+				value = 1
+				desc = "smd_dem_bar_default"
+			}
+		}
+	}
+}
+
+smd_illiberal_bar = {
+	name = "smd_illiberal_bar_desc"
+	desc = "smd_illiberal_bar"
+
+	default = yes
+
+	start_value = 10
+	min_value = 0
+	max_value = 100
+
+	monthly_progress = {
+		progress_condition = {
+			limit = {
+				OR = {
+					has_law_or_variant = law_type:law_government_content_moderators
+					has_law_or_variant = law_type:law_state_wifi
+				}
+			}
+			add = {
+				value = 1.5
+				desc = "smd_ill_bar_media"
+			}
+		}
+		progress_condition = {
+			limit = {
+				OR = {
+					has_law_or_variant = law_type:law_censorship
+					has_law_or_variant = law_type:law_outlawed_dissent
+				}
+			}
+			add = {
+				value = 1
+				desc = "smd_ill_bar_censorship"
+			}
+		}
+		progress_condition = {
+			limit = {
+				has_law_or_variant = law_type:law_secret_police
+			}
+			add = {
+				value = 1
+				desc = "smd_ill_bar_secret_police"
+			}
+		}
+		progress_condition = {
+			limit = {
+				has_variable = smd_courts_packed
+			}
+			add = {
+				value = 1
+				desc = "smd_ill_bar_courts"
+			}
+		}
+		progress_condition = {
+			limit = {
+				legitimacy >= 50
+			}
+			add = {
+				value = 1
+				desc = "smd_ill_bar_popular"
+			}
+		}
+		progress_condition = {
+			limit = {
+				has_variable = smd_backslid
+			}
+			add = {
+				value = 0.5
+				desc = "smd_ill_bar_backslid"
+			}
+		}
+		progress_condition = {
+			limit = {
+				has_law_or_variant = law_type:law_protected_speech
+			}
+			subtract = {
+				value = 1
+				desc = "smd_ill_bar_free_press"
+			}
+		}
+		progress_condition = {
+			limit = {
+				ig:ig_intelligentsia ?= {
+					is_powerful = yes
+					ig_approval <= unhappy
+				}
+			}
+			subtract = {
+				value = 1
+				desc = "smd_ill_bar_intelligentsia"
+			}
+		}
+		progress_condition = {
+			limit = {
+				has_modifier = smd_mass_protests
+			}
+			subtract = {
+				value = 2
+				desc = "smd_ill_bar_protests"
+			}
+		}
+		progress_condition = {
+			limit = {
+				power_bloc ?= {
+					has_principle = principle:principle_freedom_of_movement_3
+				}
+			}
+			subtract = {
+				value = 1
+				desc = "smd_ill_bar_bloc_conditionality"
+			}
+		}
+	}
+}
+
+smd_transition_bar = {
+	name = "smd_transition_bar_desc"
+	desc = "smd_transition_bar"
+
+	default_green = yes
+
+	start_value = 10
+	min_value = 0
+	max_value = 100
+
+	monthly_progress = {
+		progress_condition = {
+			limit = {
+				has_variable = smd_shock_therapy
+			}
+			add = {
+				value = 2
+				desc = "smd_transition_bar_shock"
+			}
+		}
+		progress_condition = {
+			limit = {
+				has_variable = smd_gradualism
+			}
+			add = {
+				value = 1
+				desc = "smd_transition_bar_gradual"
+			}
+		}
+		progress_condition = {
+			limit = {
+				OR = {
+					has_law_or_variant = law_type:law_laissez_faire
+					has_law_or_variant = law_type:law_interventionism
+				}
+			}
+			add = {
+				value = 0.5
+				desc = "smd_transition_bar_market_law"
+			}
+		}
+		progress_condition = {
+			limit = {
+				has_law_or_variant = law_type:law_free_trade
+			}
+			add = {
+				value = 0.5
+				desc = "smd_transition_bar_free_trade"
+			}
+		}
+		progress_condition = {
+			limit = {
+				has_modifier = smd_privatisation_wave
+			}
+			add = {
+				value = 1
+				desc = "smd_transition_bar_privatisation"
+			}
+		}
+		progress_condition = {
+			limit = {
+				has_law_or_variant = law_type:law_cooperative_ownership
+			}
+			subtract = {
+				value = 1
+				desc = "smd_transition_bar_cooperative"
+			}
+		}
+		progress_condition = {
+			limit = {
+				ig:ig_trade_unions ?= {
+					is_powerful = yes
+					ig_approval <= unhappy
+				}
+			}
+			subtract = {
+				value = 1
+				desc = "smd_transition_bar_unions"
+			}
+		}
+		progress_condition = {
+			limit = {
+				has_variable = smd_nostalgia_wave
+			}
+			subtract = {
+				value = 1
+				desc = "smd_transition_bar_nostalgia"
+			}
+		}
+		progress_condition = {
+			limit = {
+				in_default = yes
+			}
+			subtract = {
+				value = 1
+				desc = "smd_transition_bar_default"
+			}
+		}
+	}
+}
+
+smd_leftturn_bar = {
+	name = "smd_leftturn_bar_desc"
+	desc = "smd_leftturn_bar"
+
+	default_green = yes
+
+	start_value = 0
+	min_value = 0
+	max_value = 100
+
+	monthly_progress = {
+		progress_condition = {
+			limit = {
+				OR = {
+					has_law_or_variant = law_type:law_old_age_pension
+					has_law_or_variant = law_type:law_wage_subsidies
+					has_law_or_variant = law_type:law_universal_basic_income
+				}
+			}
+			add = {
+				value = 1
+				desc = "smd_left_bar_welfare"
+			}
+		}
+		progress_condition = {
+			limit = {
+				has_law_or_variant = law_type:law_public_health_insurance
+			}
+			add = {
+				value = 0.5
+				desc = "smd_left_bar_health"
+			}
+		}
+		progress_condition = {
+			limit = {
+				OR = {
+					has_law_or_variant = law_type:law_interventionism
+					has_law_or_variant = law_type:law_cooperative_ownership
+				}
+			}
+			add = {
+				value = 0.5
+				desc = "smd_left_bar_economy"
+			}
+		}
+		progress_condition = {
+			limit = {
+				has_variable = smd_social_missions
+			}
+			add = {
+				value = 1.5
+				desc = "smd_left_bar_missions"
+			}
+		}
+		progress_condition = {
+			limit = {
+				any_scope_building = {
+					OR = {
+						is_building_type = building_oil_rig
+						is_building_type = building_gas_field
+						is_building_type = building_copper_mine
+						is_building_type = building_iron_mine
+						is_building_type = building_gold_mine
+						is_building_type = building_coal_mine
+						is_building_type = building_rare_earth_mine
+					}
+					country_ownership_fraction >= 0.5
+				}
+			}
+			add = {
+				value = 1.5
+				desc = "smd_left_bar_nationalised"
+			}
+		}
+		progress_condition = {
+			limit = {
+				ig:ig_industrialists ?= {
+					is_powerful = yes
+					ig_approval <= angry
+				}
+			}
+			subtract = {
+				value = 1.5
+				desc = "smd_left_bar_business_hostility"
+			}
+		}
+		progress_condition = {
+			limit = {
+				has_modifier = smd_capital_flight
+			}
+			subtract = {
+				value = 1
+				desc = "smd_left_bar_capital_flight"
+			}
+		}
+		progress_condition = {
+			limit = {
+				in_default = yes
+			}
+			subtract = {
+				value = 2
+				desc = "smd_left_bar_default"
+			}
+		}
+	}
+}
+
+smd_contagion_bar = {
+	name = "smd_contagion_bar_desc"
+	desc = "smd_contagion_bar"
+
+	default_bad = yes
+
+	start_value = 50
+	min_value = 0
+	max_value = 100
+
+	monthly_progress = {
+		add = {
+			value = -2
+			desc = "smd_contagion_bar_decay"
+		}
+		progress_condition = {
+			limit = {
+				radical_fraction = {
+					value >= 0.15
+				}
+			}
+			add = {
+				value = 1.5
+				desc = "smd_contagion_bar_radicals"
+			}
+		}
+		progress_condition = {
+			limit = {
+				any_interest_group = {
+					is_powerful = yes
+					OR = {
+						is_interest_group_type = ig_armed_forces
+						is_interest_group_type = ig_devout
+						is_interest_group_type = ig_landowners
+					}
+				}
+			}
+			add = {
+				value = 1
+				desc = "smd_contagion_bar_conservatives"
+			}
+		}
+		progress_condition = {
+			limit = {
+				has_law_or_variant = law_type:law_protected_speech
+			}
+			subtract = {
+				value = 0.5
+				desc = "smd_contagion_bar_free_speech"
+			}
+		}
+	}
+}
+
+smd_urban_bar = {
+	name = "smd_urban_bar_desc"
+	desc = "smd_urban_bar"
+
+	default_bad = yes
+
+	start_value = 30
+	min_value = 0
+	max_value = 100
+
+	monthly_progress = {
+		progress_condition = {
+			limit = {
+				pop_type_percent_country = {
+					target = pop_type:peasants
+					value >= 0.4
+				}
+			}
+			add = {
+				value = 1
+				desc = "smd_urban_bar_exodus"
+			}
+		}
+		progress_condition = {
+			limit = {
+				any_scope_state = {
+					is_incorporated = yes
+					population_below_expected_sol >= 0.5
+				}
+			}
+			add = {
+				value = 1
+				desc = "smd_urban_bar_poverty"
+			}
+		}
+		progress_condition = {
+			limit = {
+				has_law_or_variant = law_type:law_no_public_housing
+			}
+			add = {
+				value = 1
+				desc = "smd_urban_bar_no_housing"
+			}
+		}
+		progress_condition = {
+			limit = {
+				OR = {
+					has_law_or_variant = law_type:law_public_housing_program
+					has_law_or_variant = law_type:law_universal_housing
+				}
+			}
+			subtract = {
+				value = 1.5
+				desc = "smd_urban_bar_public_housing"
+			}
+		}
+		progress_condition = {
+			limit = {
+				has_law_or_variant = law_type:law_housing_projects
+			}
+			subtract = {
+				value = 0.5
+				desc = "smd_urban_bar_housing_projects"
+			}
+		}
+		progress_condition = {
+			limit = {
+				institution_investment_level = {
+					institution = institution_health_system
+					value >= 2
+				}
+			}
+			subtract = {
+				value = 0.5
+				desc = "smd_urban_bar_health"
+			}
+		}
+		progress_condition = {
+			limit = {
+				has_variable = smd_slum_upgrading
+			}
+			subtract = {
+				value = 2
+				desc = "smd_urban_bar_upgrading"
+			}
+		}
+	}
+}
+
+smd_costliving_bar = {
+	name = "smd_costliving_bar_desc"
+	desc = "smd_costliving_bar"
+
+	default_bad = yes
+
+	start_value = 20
+	min_value = 0
+	max_value = 100
+
+	monthly_progress = {
+		progress_condition = {
+			limit = {
+				market_capital.market ?= {
+					mg:grain ?= { market_goods_pricier > 0.4 }
+				}
+			}
+			add = {
+				value = 2
+				desc = "smd_costliving_bar_bread"
+			}
+		}
+		progress_condition = {
+			limit = {
+				market_capital.market ?= {
+					mg:groceries ?= { market_goods_pricier > 0.4 }
+				}
+			}
+			add = {
+				value = 1
+				desc = "smd_costliving_bar_food"
+			}
+		}
+		progress_condition = {
+			limit = {
+				market_capital.market ?= {
+					mg:refined_fuel ?= { market_goods_pricier > 0.4 }
+				}
+			}
+			add = {
+				value = 1.5
+				desc = "smd_costliving_bar_fuel"
+			}
+		}
+		progress_condition = {
+			limit = {
+				any_scope_state = {
+					is_incorporated = yes
+					population_below_expected_sol >= 0.4
+				}
+			}
+			add = {
+				value = 1
+				desc = "smd_costliving_bar_poverty"
+			}
+		}
+		progress_condition = {
+			limit = {
+				NOT = {
+					market_capital.market ?= {
+						OR = {
+							mg:grain ?= { market_goods_pricier > 0.15 }
+							mg:groceries ?= { market_goods_pricier > 0.15 }
+							mg:refined_fuel ?= { market_goods_pricier > 0.15 }
+						}
+					}
+				}
+			}
+			subtract = {
+				value = 1
+				desc = "smd_costliving_bar_easing"
+			}
+		}
+		progress_condition = {
+			limit = {
+				OR = {
+					has_any_subventions_on = g:grain
+					has_any_subventions_on = g:groceries
+					has_any_subventions_on = g:refined_fuel
+				}
+			}
+			subtract = {
+				value = 3
+				desc = "smd_costliving_bar_subsidies"
+			}
+		}
+		progress_condition = {
+			limit = {
+				has_variable = smd_rationing
+			}
+			subtract = {
+				value = 1.5
+				desc = "smd_costliving_bar_rationing"
+			}
+		}
+		progress_condition = {
+			limit = {
+				OR = {
+					has_law_or_variant = law_type:law_old_age_pension
+					has_law_or_variant = law_type:law_wage_subsidies
+					has_law_or_variant = law_type:law_universal_basic_income
+				}
+			}
+			subtract = {
+				value = 0.5
+				desc = "smd_costliving_bar_safety_net"
+			}
+		}
+	}
+}
+
+smd_language_bar = {
+	name = "smd_language_bar_desc"
+	desc = "smd_language_bar"
+
+	default_green = yes
+
+	start_value = 50
+	min_value = 0
+	max_value = 100
+
+	monthly_progress = {
+		progress_condition = {
+			limit = {
+				has_variable = smd_language_rights
+			}
+			add = {
+				value = 0.5
+				desc = "smd_language_bar_rights"
+			}
+		}
+		progress_condition = {
+			limit = {
+				has_variable = smd_bilingual_schools
+			}
+			add = {
+				value = 1
+				desc = "smd_language_bar_bilingual"
+			}
+		}
+		progress_condition = {
+			limit = {
+				has_variable = smd_language_minority
+				radical_fraction = {
+					culture = var:smd_language_minority
+					value <= 0.1
+				}
+			}
+			add = {
+				value = 1
+				desc = "smd_language_bar_content"
+			}
+		}
+		progress_condition = {
+			limit = {
+				has_variable = smd_language_assimilation
+				has_variable = smd_language_minority
+				culture_percent_country = {
+					target = var:smd_language_minority
+					value < 0.2
+				}
+			}
+			add = {
+				value = 1
+				desc = "smd_language_bar_assimilating"
+			}
+		}
+		progress_condition = {
+			limit = {
+				has_variable = smd_language_minority
+				radical_fraction = {
+					culture = var:smd_language_minority
+					value >= 0.25
+				}
+			}
+			subtract = {
+				value = 1.5
+				desc = "smd_language_bar_radicalised"
+			}
+		}
+		progress_condition = {
+			limit = {
+				has_variable = smd_language_assimilation
+			}
+			subtract = {
+				value = 0.5
+				desc = "smd_language_bar_resentment"
+			}
+		}
+		progress_condition = {
+			limit = {
+				has_modifier = smd_language_riots
+			}
+			subtract = {
+				value = 1
+				desc = "smd_language_bar_riots"
+			}
+		}
+	}
+}
+
+smd_devolution_bar = {
+	name = "smd_devolution_bar_desc"
+	desc = "smd_devolution_bar"
+
+	default_bad = yes
+
+	start_value = 50
+	min_value = 0
+	max_value = 100
+
+	monthly_progress = {
+		progress_condition = {
+			limit = {
+				var:smd_devolution_state ?= { turmoil >= 0.2 }
+			}
+			add = {
+				value = 1.5
+				desc = "smd_devolution_bar_turmoil"
+			}
+		}
+		progress_condition = {
+			limit = {
+				var:smd_devolution_state ?= {
+					radical_fraction = {
+						value >= 0.2
+					}
+				}
+			}
+			add = {
+				value = 1
+				desc = "smd_devolution_bar_radicals"
+			}
+		}
+		progress_condition = {
+			limit = {
+				has_variable = smd_recentralised
+			}
+			add = {
+				value = 1
+				desc = "smd_devolution_bar_recentralised"
+			}
+		}
+		progress_condition = {
+			limit = {
+				var:smd_devolution_state ?= { has_modifier = smd_devolved_assembly }
+			}
+			subtract = {
+				value = 3
+				desc = "smd_devolution_bar_assembly"
+			}
+		}
+		progress_condition = {
+			limit = {
+				has_variable = smd_devolution_talks
+			}
+			subtract = {
+				value = 1
+				desc = "smd_devolution_bar_talks"
+			}
+		}
+		progress_condition = {
+			limit = {
+				legitimacy >= 50
+			}
+			subtract = {
+				value = 0.5
+				desc = "smd_devolution_bar_legitimacy"
+			}
+		}
+	}
+}
+
+smd_braindrain_bar = {
+	name = "smd_braindrain_bar_desc"
+	desc = "smd_braindrain_bar"
+
+	default_bad = yes
+
+	start_value = 30
+	min_value = 0
+	max_value = 100
+
+	monthly_progress = {
+		progress_condition = {
+			limit = {
+				power_bloc ?= {
+					OR = {
+						has_principle = principle:principle_freedom_of_movement_1
+						has_principle = principle:principle_freedom_of_movement_2
+						has_principle = principle:principle_freedom_of_movement_3
+					}
+				}
+			}
+			add = {
+				value = 1
+				desc = "smd_braindrain_bar_free_movement"
+			}
+		}
+		progress_condition = {
+			limit = {
+				any_scope_state = {
+					is_incorporated = yes
+					population_below_expected_sol >= 0.4
+				}
+			}
+			add = {
+				value = 1
+				desc = "smd_braindrain_bar_poverty"
+			}
+		}
+		progress_condition = {
+			limit = {
+				has_law_or_variant = law_type:law_no_migration_controls
+			}
+			add = {
+				value = 0.5
+				desc = "smd_braindrain_bar_open_borders"
+			}
+		}
+		progress_condition = {
+			limit = {
+				average_sol >= average_expected_sol
+			}
+			subtract = {
+				value = 1
+				desc = "smd_braindrain_bar_prosperity"
+			}
+		}
+		progress_condition = {
+			limit = {
+				any_scope_building = {
+					is_building_type = building_university
+					level >= 5
+				}
+			}
+			subtract = {
+				value = 0.5
+				desc = "smd_braindrain_bar_universities"
+			}
+		}
+		progress_condition = {
+			limit = {
+				has_variable = smd_diaspora_incentives
+			}
+			subtract = {
+				value = 2
+				desc = "smd_braindrain_bar_diaspora"
+			}
+		}
+		progress_condition = {
+			limit = {
+				has_variable = smd_research_funding
+			}
+			subtract = {
+				value = 1
+				desc = "smd_braindrain_bar_research"
+			}
+		}
+	}
+}
+
+smd_corruption_bar = {
+	name = "smd_corruption_bar_desc"
+	desc = "smd_corruption_bar"
+
+	default_green = yes
+
+	start_value = 10
+	min_value = 0
+	max_value = 100
+
+	monthly_progress = {
+		progress_condition = {
+			limit = {
+				institution_investment_level = {
+					institution = institution_courts
+					value >= 2
+				}
+			}
+			add = {
+				value = 1
+				desc = "smd_corruption_bar_courts"
+			}
+		}
+		progress_condition = {
+			limit = {
+				institution_investment_level = {
+					institution = institution_courts
+					value >= 4
+				}
+			}
+			add = {
+				value = 1
+				desc = "smd_corruption_bar_courts_strong"
+			}
+		}
+		progress_condition = {
+			limit = {
+				OR = {
+					has_law_or_variant = law_type:law_adversarial_judiciary
+					has_law_or_variant = law_type:law_inquisitive_judiciary
+				}
+			}
+			add = {
+				value = 0.5
+				desc = "smd_corruption_bar_judiciary"
+			}
+		}
+		progress_condition = {
+			limit = {
+				has_law_or_variant = law_type:law_protected_speech
+			}
+			add = {
+				value = 0.5
+				desc = "smd_corruption_bar_press"
+			}
+		}
+		progress_condition = {
+			limit = {
+				has_variable = smd_special_prosecutor
+			}
+			add = {
+				value = 2
+				desc = "smd_corruption_bar_prosecutor"
+			}
+		}
+		progress_condition = {
+			limit = {
+				OR = {
+					has_law_or_variant = law_type:law_customary_judiciary
+					has_law_or_variant = law_type:law_religious_judiciary
+				}
+			}
+			subtract = {
+				value = 0.5
+				desc = "smd_corruption_bar_weak_courts"
+			}
+		}
+		progress_condition = {
+			limit = {
+				has_modifier = smd_investigation_obstructed
+			}
+			subtract = {
+				value = 2
+				desc = "smd_corruption_bar_obstruction"
+			}
+		}
+	}
+}
+
+smd_refugee_bar = {
+	name = "smd_refugee_bar_desc"
+	desc = "smd_refugee_bar"
+
+	default_bad = yes
+
+	start_value = 20
+	min_value = 0
+	max_value = 100
+
+	monthly_progress = {
+		progress_condition = {
+			limit = {
+				var:smd_refugee_source ?= { is_at_war = yes }
+			}
+			add = {
+				value = 1.5
+				desc = "smd_refugee_bar_war"
+			}
+		}
+		progress_condition = {
+			limit = {
+				has_law_or_variant = law_type:law_no_migration_controls
+			}
+			add = {
+				value = 0.5
+				desc = "smd_refugee_bar_open_border"
+			}
+		}
+		progress_condition = {
+			limit = {
+				any_scope_state = {
+					is_incorporated = yes
+					population_below_expected_sol >= 0.4
+				}
+			}
+			add = {
+				value = 0.5
+				desc = "smd_refugee_bar_poverty"
+			}
+		}
+		progress_condition = {
+			limit = {
+				has_law_or_variant = law_type:law_closed_borders
+			}
+			subtract = {
+				value = 1
+				desc = "smd_refugee_bar_closed"
+			}
+		}
+		progress_condition = {
+			limit = {
+				has_variable = smd_refugee_camps
+			}
+			subtract = {
+				value = 1
+				desc = "smd_refugee_bar_camps"
+			}
+		}
+		progress_condition = {
+			limit = {
+				has_variable = smd_refugee_aid
+			}
+			subtract = {
+				value = 2
+				desc = "smd_refugee_bar_aid"
+			}
+		}
+		progress_condition = {
+			limit = {
+				var:smd_refugee_source ?= { is_at_war = no }
+			}
+			subtract = {
+				value = 1
+				desc = "smd_refugee_bar_peace"
+			}
+		}
+	}
+}
+
+smd_veterans_bar = {
+	name = "smd_veterans_bar_desc"
+	desc = "smd_veterans_bar"
+
+	default_bad = yes
+
+	start_value = 40
+	min_value = 0
+	max_value = 100
+
+	monthly_progress = {
+		add = {
+			value = -0.5
+			desc = "smd_veterans_bar_time"
+		}
+		progress_condition = {
+			limit = {
+				ig:ig_armed_forces ?= { ig_approval <= unhappy }
+			}
+			add = {
+				value = 1
+				desc = "smd_veterans_bar_army"
+			}
+		}
+		progress_condition = {
+			limit = {
+				has_law_or_variant = law_type:law_no_social_security
+			}
+			add = {
+				value = 1
+				desc = "smd_veterans_bar_no_welfare"
+			}
+		}
+		progress_condition = {
+			limit = {
+				OR = {
+					has_law_or_variant = law_type:law_old_age_pension
+					has_law_or_variant = law_type:law_wage_subsidies
+					has_law_or_variant = law_type:law_universal_basic_income
+				}
+			}
+			subtract = {
+				value = 0.5
+				desc = "smd_veterans_bar_welfare"
+			}
+		}
+		progress_condition = {
+			limit = {
+				institution_investment_level = {
+					institution = institution_health_system
+					value >= 2
+				}
+			}
+			subtract = {
+				value = 0.5
+				desc = "smd_veterans_bar_health"
+			}
+		}
+		progress_condition = {
+			limit = {
+				has_modifier = smd_veterans_benefits
+			}
+			subtract = {
+				value = 2
+				desc = "smd_veterans_bar_benefits"
+			}
+		}
+	}
+}

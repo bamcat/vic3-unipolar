@@ -1,0 +1,98 @@
+﻿io_apply_to_org = {
+	set_variable = { name = io_pending_org value = $CODE$ }
+	set_variable = { name = io_cooldown_$ORG$ years = 1 }
+	set_variable = { name = io_vote_human_no value = 0 }
+	save_scope_as = io_applicant
+	io_apply_tier_$TIER$ = { ORG = $ORG$ }
+}
+
+io_apply_tier_open = {
+	custom_tooltip = io_apply_open_tt
+	hidden_effect = {
+		trigger_event = { id = io_events.20 days = 1 }
+	}
+}
+
+io_apply_tier_majority = {
+	custom_tooltip = io_apply_majority_tt
+	hidden_effect = {
+		every_country = {
+			limit = {
+				is_target_in_global_variable_list = { name = io_$ORG$_members target = this }
+				NOT = { this = ROOT }
+				is_ai = no
+			}
+			trigger_event = { id = io_events.1 days = 0 popup = yes }
+		}
+		trigger_event = { id = io_events.20 days = 30 }
+	}
+}
+
+io_apply_tier_veto = {
+	custom_tooltip = io_apply_veto_tt
+	hidden_effect = {
+		every_country = {
+			limit = {
+				is_target_in_global_variable_list = { name = io_$ORG$_members target = this }
+				NOT = { this = ROOT }
+				is_ai = no
+			}
+			trigger_event = { id = io_events.1 days = 0 popup = yes }
+		}
+		trigger_event = { id = io_events.20 days = 30 }
+	}
+}
+
+io_resolve_application = {
+	set_variable = { name = io_vote_members value = io_vote_$ORG$_members }
+	set_variable = { name = io_vote_against value = io_vote_$ORG$_against_ai }
+	change_variable = { name = io_vote_against add = var:io_vote_human_no }
+	random_country = {
+		limit = {
+			is_target_in_global_variable_list = { name = io_$ORG$_members target = this }
+			NOT = { this = ROOT }
+			is_ai = yes
+			io_member_rule_$TIER$ = yes
+		}
+		save_scope_as = io_blocker
+	}
+	io_decide_tier_$TIER$ = yes
+}
+
+io_decide_tier_open = {
+	if = {
+		limit = { var:io_vote_against = 0 }
+		trigger_event = { id = io_events.2 popup = yes }
+	}
+	else = {
+		set_variable = { name = io_rejected_for_war days = 5 }
+		trigger_event = { id = io_events.3 popup = yes }
+	}
+}
+
+io_decide_tier_veto = {
+	if = {
+		limit = { var:io_vote_against = 0 }
+		trigger_event = { id = io_events.2 popup = yes }
+	}
+	else = {
+		trigger_event = { id = io_events.3 popup = yes }
+	}
+}
+
+io_decide_tier_majority = {
+	set_variable = {
+		name = io_vote_threshold
+		value = {
+			value = var:io_vote_members
+			divide = 3
+		}
+	}
+	if = {
+		limit = { var:io_vote_against <= var:io_vote_threshold }
+		trigger_event = { id = io_events.2 popup = yes }
+	}
+	else = {
+		trigger_event = { id = io_events.3 popup = yes }
+	}
+}

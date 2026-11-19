@@ -1,0 +1,31 @@
+﻿types prime_minister_types
+{
+	type country_panel_prime_minister = widget {
+		datacontext = "[Country.GetHighestProminenceCharacterOfRole('character_role_prime_minister')]"
+		visible = "[Character.IsValid]"
+		size = { 145 200 }
+
+		character_portrait_medium_torso = {
+			visible = "[Not(Character.IsHistorical)]"
+			parentanchor = top|hcenter
+		}
+
+		character_portrait_medium_torso_historical_info_link = {
+			visible = "[And( Character.IsHistorical, Not(StringIsEmpty(Character.GetHistoricalUrl)) )]"
+			parentanchor = top|hcenter
+		}
+
+		character_portrait_medium_torso_historical_no_info_link = {
+			visible = "[And( Character.IsHistorical, StringIsEmpty(Character.GetHistoricalUrl) )]"
+			parentanchor = top|hcenter
+		}
+
+		textbox = {
+			parentanchor = bottom|hcenter
+			size = { 145 24 }
+			align = center|nobaseline
+			default_format = "#title"
+			text = "COUNTRY_PANEL_PRIME_MINISTER"
+		}
+	}
+}

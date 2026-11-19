@@ -1,914 +1,1324 @@
 types objective_types
 {
-	type objective_selection_menu = widget {
-		size = { 100% 100% }
+    type objective_selection_menu = widget {
+        size = { 100% 100% }
 
-		vbox = {
-			
-			expand = {}
-			
-			vbox = {
-				layoutpolicy_horizontal = expanding
-				layoutpolicy_vertical = preferred
-				margin = { 20 25 }
-				minimumsize = { 0 650 }
-				spacing = 10
-				
-				background = {
-					using = default_background
-					alpha = 0.92
-					margin = { 30 0 }
-					margin_top = -60
-				}
+        ### HEADER
+        icon = {
+            texture = "gfx/interface/new_game_panel/frame_start_menu_top.dds"
+            size = { 560 56 }
+            parentanchor = hcenter
+            position = { 0 26 }
+            spriteType = Corneredtiled
+            spriteborder = { 100 0 }
+            texture_density = 2
 
-				background = {
-					texture = "gfx/interface/backgrounds/popup_bg_frame_frontend.dds"
-					spriteType = Corneredstretched
-					spriteborder = { 80 80 }
-					texture_density = 2
-					margin = { 28 10 }
-					margin_top = -50
-				}
-				
-				### HEADER
-				icon = {
-					texture = "gfx/interface/new_game_panel/frame_start_menu_top.dds"
-					size = { 450 56 }
-					spriteType = Corneredtiled
-					spriteborder = { 100 0 }
-					texture_density = 2
-					
-					textbox = {
-						using = header_font_fancy
-						using = header_font_fancy_size
-						align = center|nobaseline
-						text = "SELECT_OBJECTIVE_TITLE"
-						size = { 100% 100% }
-						elide = right
-						fontsize_min = 14
-						margin = { 75 0 }
-						margin_bottom = 5
-					}
-				}
-				
-				hbox = {
-					layoutpolicy_horizontal = expanding
-					layoutpolicy_vertical = preferred
-					margin_top = 10
-					margin_bottom = 10
-					minimumsize = { 1400 60 }
-					maximumsize = { 1700 -1 }
-					spacing = 8
+            textbox = {
+                using = header_font_fancy
+                using = header_font_fancy_size
+                align = center|nobaseline
+                text = "UNI_NS_TITLE"
+                size = { 100% 100% }
+                elide = right
+                fontsize_min = 14
+                margin = { 75 0 }
+                margin_bottom = 5
+            }
+        }
 
-					### objectives
-					widget = {
-						layoutpolicy_horizontal = expanding
-						layoutpolicy_vertical = preferred
-						
-						hbox = {	
-							layoutpolicy_horizontal = expanding
-							layoutpolicy_vertical = preferred
-							spacing = 5
-							datamodel = "[GameSetup.GetObjectives]"
-							
-							item = {
-								widget = {
-									layoutpolicy_horizontal = preferred
-									layoutpolicy_vertical = preferred
-									minimumsize = { 270 82 }
-									maximumsize = { 270 600 }
-									
-									enabled = "[ObjectiveType.IsAvailable]"
-									
-									widget = {
-										size = { 100% 100% }
-										
-										background = {
-											texture = "[ObjectiveType.GetDisabledBackground]"
-											visible = "[Not(ObjectiveType.IsAvailable)]"
-											fittype = centercrop
-										}
-										background = {
-											texture = "[ObjectiveType.GetEnabledBackground]"
-											visible = "[ObjectiveType.IsAvailable]"
-											fittype = centercrop
-										}
+        ### BACK BUTTON
+        button_standard_back = {
+            position = { 1% 94% }
+            size = { 300 55 }
+            name = "back_button"
+            shortcut = "close_window"
+            using = fontsize_large
+            onclick = "[GameSetup.OnBack]"
+            oversound = "event:/SFX/UI/Global/pointer_over"
+            clicksound = "event:/SFX/UI/Global/close"
+        }
 
-										widget = {
-											size = { 100% 77 }
-											parentanchor = hcenter|bottom
+        ### BOTTOM BAR
+        container = {
+            position = { 25% 92% }
+            name = "bottom_panel_not_selected"
+            layoutpolicy_horizontal = expanding
+            margin = { 15 0 }
+            using = default_fade_in_out
 
-											widget = {
-												size = { 100% 62 }
-												parentanchor = hcenter|bottom
+            widget = {
+                layoutpolicy_horizontal = expanding
+                layoutpolicy_vertical = expanding
+            }
 
-												icon = {
-													size = { 100% 5% }
-													texture = "gfx/interface/backgrounds/divider_gold.dds"
-												}
+            game_rules_hbox = {}
 
-												background = {
-													#visible = "[Not(GameSetup.HasSelectedObjective)]"
-													using = dark_area
-													alpha = 0.7
-													
-													modify_texture = {
-														texture = "gfx/interface/masks/fade_horizontal_center.dds"
-														spriteType = Corneredstretched
-														spriteborder = { 0 0 }
-														blend_mode = alphamultiply
-														alpha = 0.5
-													}
-												}
-											}
+            widget = {
+                layoutpolicy_horizontal = expanding
+                layoutpolicy_vertical = expanding
+            }
 
-											vbox = {
-												icon = {
-													size = { 47 47 }
-													texture = "gfx/interface/backgrounds/round_button_bg.dds"
-													icon = {
-														size = { 82% 82% }
-														parentanchor = center
-														texture = "[ObjectiveType.GetIcon]"
-													}
-												}
+            start_game_buttons = {}
+        }
 
-												textbox = {
-													layoutpolicy_horizontal = expanding
-													layoutpolicy_vertical = expanding
-													text = "[ObjectiveType.GetName]"
-													margin_bottom = 10
-											
-													align = center|nobaseline
-													using = fontsize_xl
-													alwaystransparent = yes
-													elide = right
-													autoresize = yes
-													minimumsize = { 250 -1 }
-													maximumsize = { 250 -1 }
-													fontsize_min = 14
-												}
-											}
-										}
-										
-										button = {
-											using = glow_button_border
-											alpha = 0.65
-											size = { 100% 100% }
-											onclick = "[GameSetup.ToggleObjective(ObjectiveType.AccessSelf)]"
-											
-											
-											tooltip = "[ObjectiveType.GetIsAvailableDescription]"
-										}
-									}
-									
-									icon = {
-										size = { 100% 100% }
-										using = entry_bg_unit_dark
-									}
-									
-									icon = {
-										using = highlighted_square_selection
-										visible = "[ObjectsEqual(ObjectiveType.AccessSelf, GameSetup.GetSelectedObjective)]"
-									}
-								}
-							}
-						}
-					}
-					
-					### sandbox (select any country)
-					widget = {
-						layoutpolicy_horizontal = expanding
-						layoutpolicy_vertical = preferred
-						maximumsize = { 285 620 }
-						visible = "[Not(GameSetup.HasSelectedObjective)]"
 
-						background = {
-								texture = "gfx/interface/icons/objectives/sandbox.dds"
-								fittype = centercrop
-								using = frame_small_mask
-							}
 
-						default_header_clean = {
-							blockoverride "text" {
-								text = "SANDBOX"
-							}
-							blockoverride "header_mask" {
-								using = frame_small_mask_top
-							}
-							blockoverride "size" {
-								size = { 100% 42 }
-							}
-						}
+        ### NATION BRIEFINGS
+        widget = {
+            position = { 15% 13% }
+            size = { 1290 720 }
 
-						widget = {
-							size = { 100% 100 }
-							parentanchor = hcenter|bottom
+            scrollbox = {
+                layoutpolicy_vertical = expanding
+                layoutpolicy_horizontal = expanding
+				size = { 1290 720 }
+                blockoverride "scrollbox_content" {
 
-							vbox = {	
-								background = {
-									using = dark_area
-									alpha = 0.7
-									using = frame_small_mask
-									
-									modify_texture = {
-										texture = "gfx/interface/masks/fade_horizontal_center.dds"
-										spriteType = Corneredstretched
-										spriteborder = { 0 0 }
-										blend_mode = alphamultiply
-									}
-								}
+                    vbox = {
+                        spacing = 12
+                        margin_top = 26
 
-								textbox = {
-									text = "START_GAME"
-									margin_top = 2
-									align = center|nobaseline
-									minimumsize = { 280 -1 }
-									maximumsize = { 280 -1 }
-									autoresize = yes
-									multiline = yes
-									using = fontsize_xxl
-								}
+                        hbox = {
+                            spacing = 12
 
-								textbox = {
-									text = "START_GAME_NO_OBJECTIVE_NO_TAG"
-									align = hcenter|nobaseline
-									default_format = "#instruction"
-									margin_bottom = 15
-									minimumsize = { 260 -1 }
-									maximumsize = { 260 -1 }
-									fontsize_min = 10
-									autoresize = yes
-									multiline = yes
-									using = fontsize_medium
-								}
-								
-								
-							}
-						}
+                            ### USA
+                            widget = {
+                                size = { 400 236 }
 
-						button = {
-							using = glow_button_border
-							size = { 100% 100% }
-							onclick = "[GameSetup.OnStart]"
-							using = frame_small_mask
-							using = start_game_button_sound
-							
-							state = {
-								trigger_on_create = yes
-								name = 1
-								next = 2
-								alpha = 0.3
-								duration = 0.5
-								using = Animation_Curve_Default
-							}
-							state = {
-								name = 2
-								next = 1
-								alpha = 1
-								duration = 0.5
-								using = Animation_Curve_Default
-							}
-						}
-						
-						icon = {
-							size = { 100% 100% }
-							using = frame_small
-						}
-					}
+                                background = {
+                                    using = default_background
+                                }
 
-					
+                                icon = {
+                                    position = { 14 14 }
+                                    size = { 120 80 }
+                                    texture = "gfx/interface/nation_select/flag_usa.dds"
 
-					widget = {
-						visible = "[GameSetup.HasSelectedObjective]"
-						size = { 285 20 }
-					}
-				}
-				
-				
-				flowcontainer = {
-					spacing = 5
-					### SELECTED OBJECTIVE INFO
-					widget = {
-						visible = "[GameSetup.HasSelectedObjective]"
-						datacontext = "[GameSetup.GetSelectedObjective]"
-						size = { 480 0 }
-						
-						state = {
-							name = _show
-							size = { 480 610 }
-							duration = 0.3
-							alpha = 1
-							using = Animation_Curve_Default
-							on_finish = "[PdxGuiWidget.AccessChild('content').TriggerAnimation('show')]"
-						}
-						state = {
-							name = _hide
-							size = { 480 0 }
-							duration = 0.3
-							alpha = 0
-							using = Animation_Curve_Default
-							on_start = "[PdxGuiWidget.AccessChild('content').TriggerAnimation('hide')]"
-						}
-						
-						widget = {
-							name = "content"
-							size = { 100% 100% }
+                                    background = {
+                                        using = simple_frame
+                                        margin = { 3 3 }
+                                    }
+                                }
 
-							state = {
-								name = show
-								duration = 0.3
-								using = Animation_Curve_Default
-								alpha = 1
-							}
-							state = {
-								name = hide
-								duration = 0
-								alpha = 0
-							}
-							
-							background = {
-								texture = "[ObjectiveType.GetEnabledBackground]"
-								fittype = centercrop
-								using = frame_small_mask
-								margin = { -1 -1 }
-							}
-							background = {
-								using = dark_area
-								using = frame_small_mask
-								margin = { -1 -1 }
-								alpha = 0.6
-							}
-							
-							using = entry_bg_fancy
-						
-							vbox = {
-								margin = { 20 20 }
-								spacing = 20
-							
-								textbox = {
-									layoutpolicy_horizontal = expanding
-									size = { 0 50 }
-									text = "[ObjectiveType.GetName]"
-							
-									align = center|nobaseline
-									using = fontsize_mega
-									alwaystransparent = yes
-									elide = right
-									fontsize_min = 16
-									
-									background = {
-										using = default_header_bg_faded
-										margin = { -5 0 }
-									}
-								}
+                                textbox = {
+                                    position = { 148 16 }
+                                    using = header_font_fancy
+                                    using = header_font_fancy_size
+                                    text = "UNI_NS_USA_NAME"
+                                    size = { 238 38 }
+                                    align = nobaseline
+                                    elide = right
+                                    fontsize_min = 14
+                                }
 
-								icon = {
-									size = { 100 100 }
-									texture = "gfx/interface/backgrounds/round_button_bg.dds"
-									icon = {
-										size = { 80 80 }
-										parentanchor = center
-										texture = "[ObjectiveType.GetIcon]"
-									}
-								}
-								
-								scrollarea = {
-									layoutpolicy_horizontal = expanding
-									layoutpolicy_vertical = expanding
+                                textbox = {
+                                    position = { 148 52 }
+                                    text = "UNI_NS_USA_TAGLINE"
+                                    default_format = "#I"
+                                    maximumsize = { 238 42 }
+                                    fontsize_min = 10
+                                    autoresize = yes
+                                    multiline = yes
+                                    using = fontsize_medium
+                                }
 
-									scrollbarpolicy_horizontal = always_off
-									
-									scrollbar_vertical = {
-										using = vertical_scrollbar		
-									}
+                                textbox = {
+                                    position = { 16 104 }
+                                    text = "UNI_NS_USA_BODY"
+                                    default_format = "#variable"
+                                    maximumsize = { 368 76 }
+                                    fontsize_min = 10
+                                    autoresize = yes
+                                    multiline = yes
+                                    using = fontsize_medium
 
-									scrollwidget = {
-										vbox = {
-											text_multi = {
-												layoutpolicy_horizontal = expanding
-												layoutpolicy_vertical = expanding
-												text = "[ObjectiveType.GetDesc]"
-												align = top|nobaseline
-												using = fontsize_xl
-												alwaystransparent = yes
-											}
+                                    divider_decorative = {
+                                        size = { 100% 1 }
+                                        parentanchor = bottom
+                                    }
+                                }
 
-											text_multi = {
-												visible = [ObjectiveType.HasRecommendedGameRules]
-												layoutpolicy_horizontal = expanding
-												layoutpolicy_vertical = expanding
-												text = "OBJECTIVE_TYPE_RECOMMENDED_GAME_RULE_DESC"
+                                textbox = {
+                                    position = { 16 190 }
+                                    text = "UNI_NS_USA_STATS"
+                                    default_format = "#instruction"
+                                    maximumsize = { 368 36 }
+                                    fontsize_min = 9
+                                    autoresize = yes
+                                    multiline = yes
+                                    using = fontsize_medium
+                                }
+                            
+                                ### SELECTION (cosmetic only)
+                                button = {
+                                    size = { 100% 100% }
+                                    name = "uni_select_button"
+                                    visible = "[Not( GetVariableSystem.HasValue('uni_nation', 'USA') )]"
+                                    oversound = "event:/SFX/UI/Global/pointer_over"
+                                    clicksound = "event:/SFX/UI/Global/select"
+                                    onclick = "[GetVariableSystem.Set('uni_nation', 'USA')]"
+                                }
 
-												align = bottom|nobaseline
-												using = fontsize_xl
-												alwaystransparent = yes
-											}
+                                button = {
+                                    size = { 100% 100% }
+                                    name = "uni_deselect_button"
+                                    visible = "[GetVariableSystem.HasValue('uni_nation', 'USA')]"
+                                    oversound = "event:/SFX/UI/Global/pointer_over"
+                                    clicksound = "event:/SFX/UI/Global/select"
+                                    onclick = "[GetVariableSystem.Clear('uni_nation')]"
 
-											vbox = {
-												margin = { 4 0 }
-												layoutpolicy_horizontal = expanding
-												datamodel = "[ObjectiveType.GetRecommendedGameRules]"
-												visible = "[DataModelHasItems( ObjectiveType.GetRecommendedGameRules )]"
+                                    icon = {
+                                        name = "uni_selection_border"
+                                        size = { 100% 100% }
+                                        texture = "gfx/interface/selections/selected_square_selection.dds"
+                                        spriteType = Corneredstretched
+                                        spriteborder = { 16 16 }
+                                        alwaystransparent = yes
+                                    }
+                                }
+                            }
 
-												item = {
-													text_single = {
-														layoutpolicy_horizontal = expanding
-														text = "OBJECTIVE_TYPE_RECOMMENDED_GAME_RULE_ITEM_TEXT"
-														tooltip = "[GameRuleSetting.GetDescription]"
-													}
-												}
-											}
-										}
-									}
-								}
-							}
-						}
-					}
-				
-					### RECOMMENDED COUNTRIES
-					widget = {
-						visible = "[GameSetup.HasSelectedObjective]"
-						size = { 1300 0 }
+                            ### RUS
+                            widget = {
+                                size = { 400 236 }
 
-						state = {
-							name = _show
-							size = { 1300 610 }
-							duration = 0.3
-							alpha = 1
-							using = Animation_Curve_Default
-							on_finish = "[PdxGuiWidget.AccessChild('content').TriggerAnimation('show')]"
-						}
-						state = {
-							name = _hide
-							next = 2
-							size = { 1300 610 }
-							duration = 0
-							alpha = 1
-							on_start = "[PdxGuiWidget.AccessChild('content').TriggerAnimation('hide')]"
-						}
-						state = {
-							name = 2
-							size = { 1300 0 }
-							duration = 0.3
-							alpha = 0
-							using = Animation_Curve_Default
-						}
-						
-						widget = {
-							name = "content"
-							size = { 100% 100% }
-							
-							state = {
-								name = show
-								duration = 0.3
-								using = Animation_Curve_Default
-								alpha = 1
-							}
-							state = {
-								name = hide
-								duration = 0
-								alpha = 0
-							}
-							
-							scrollarea = {
-								parentanchor = bottom|hcenter
-								size = { 100% 100% }
+                                background = {
+                                    using = default_background
+                                }
 
-								scrollbarpolicy_horizontal = always_off
-								
-								scrollbar_vertical = {
-									using = vertical_scrollbar
-								}
+                                icon = {
+                                    position = { 14 14 }
+                                    size = { 120 80 }
+                                    texture = "gfx/interface/nation_select/flag_rus.dds"
 
-								scrollwidget = {
+                                    background = {
+                                        using = simple_frame
+                                        margin = { 3 3 }
+                                    }
+                                }
 
-									flowcontainer = {
-										parentanchor = hcenter
-										direction = vertical
-										margin = { 10 10 }
+                                textbox = {
+                                    position = { 148 16 }
+                                    using = header_font_fancy
+                                    using = header_font_fancy_size
+                                    text = "UNI_NS_RUS_NAME"
+                                    size = { 238 38 }
+                                    align = nobaseline
+                                    elide = right
+                                    fontsize_min = 14
+                                }
 
-										background = {
-											using = entry_bg_simple
-										}
+                                textbox = {
+                                    position = { 148 52 }
+                                    text = "UNI_NS_RUS_TAGLINE"
+                                    default_format = "#I"
+                                    maximumsize = { 238 42 }
+                                    fontsize_min = 10
+                                    autoresize = yes
+                                    multiline = yes
+                                    using = fontsize_medium
+                                }
 
-										textbox = {
-											text = "SELECT_OBJECTIVE_TAG_TITLE"
-											autoresize = yes
-											using = fontsize_large
-											margin = { 10 10 }
-											align = nobaseline
-										}
+                                textbox = {
+                                    position = { 16 104 }
+                                    text = "UNI_NS_RUS_BODY"
+                                    default_format = "#variable"
+                                    maximumsize = { 368 76 }
+                                    fontsize_min = 10
+                                    autoresize = yes
+                                    multiline = yes
+                                    using = fontsize_medium
 
-										dynamicgridbox = {
-											parentanchor = hcenter
-											datamodel_wrap = 4
-											flipdirection = yes
-											datamodel = "[GameSetup.GetSelectedObjective.GetRecommendedTags]"
+                                    divider_decorative = {
+                                        size = { 100% 1 }
+                                        parentanchor = bottom
+                                    }
+                                }
 
-											item = {
-												flowcontainer = {
-													direction = vertical
-													
-													recommended_country = {
-														visible = "[LessThanOrEqualTo_int32(GetDataModelSize(GameSetup.GetSelectedObjective.GetRecommendedTags), '(int32)4')]"
-													}
+                                textbox = {
+                                    position = { 16 190 }
+                                    text = "UNI_NS_RUS_STATS"
+                                    default_format = "#instruction"
+                                    maximumsize = { 368 36 }
+                                    fontsize_min = 9
+                                    autoresize = yes
+                                    multiline = yes
+                                    using = fontsize_medium
+                                }
 
-													recommended_country = {
-														visible = "[GreaterThan_int32(GetDataModelSize(GameSetup.GetSelectedObjective.GetRecommendedTags), '(int32)4')]"
-														size = { 320 400 }
-													}
-												}
-											}
-										}
-									}
-								}
-							}
-						}
-					}
-				}
+                                icon = {
+                                    name = "uni_new_content_frame"
+                                    visible = "[Not( GetVariableSystem.HasValue('uni_nation', 'RUS') )]"
+                                    size = { 100% 100% }
+                                    texture = "gfx/interface/selections/selected_square_selection.dds"
+                                    spriteType = Corneredstretched
+                                    spriteborder = { 16 16 }
+                                    color = { 1.0 0.78 0.28 1.0 }
+                                    alwaystransparent = yes
+                                }
 
-				widget = {
-					visible = "[GameSetup.HasSelectedObjective]"
-					size = { 1 20 }
-				}
-				
-				### BOTTOM BAR - OBJECTIVE NOT SELECTED
-				hbox = {
-					name = "bottom_panel_not_selected"
-					visible = "[Not(GameSetup.HasSelectedObjective)]"
-					layoutpolicy_horizontal = expanding
-					margin = { 15 0 }
-					using = default_fade_in_out
+                                textbox = {
+                                    name = "uni_new_content_label"
+                                    parentanchor = top|hcenter
+                                    widgetanchor = bottom|hcenter
+                                    position = { 0 2 }
+                                    autoresize = yes
+                                    align = center|nobaseline
+                                    margin = { 14 3 }
+                                    using = fontsize_large
+                                    default_format = "#gold"
+                                    text = "UNI_NS_NEW_CONTENT"
+                                    alwaystransparent = yes
 
-					widget = {
-						layoutpolicy_horizontal = expanding
-						layoutpolicy_vertical = expanding
-					}
+                                    background = {
+                                        using = dark_area
+                                    }
+                                }
+                            
+                                ### SELECTION (cosmetic only)
+                                button = {
+                                    size = { 100% 100% }
+                                    name = "uni_select_button"
+                                    visible = "[Not( GetVariableSystem.HasValue('uni_nation', 'RUS') )]"
+                                    oversound = "event:/SFX/UI/Global/pointer_over"
+                                    clicksound = "event:/SFX/UI/Global/select"
+                                    onclick = "[GetVariableSystem.Set('uni_nation', 'RUS')]"
+                                }
 
-					game_rules_hbox = {}
+                                button = {
+                                    size = { 100% 100% }
+                                    name = "uni_deselect_button"
+                                    visible = "[GetVariableSystem.HasValue('uni_nation', 'RUS')]"
+                                    oversound = "event:/SFX/UI/Global/pointer_over"
+                                    clicksound = "event:/SFX/UI/Global/select"
+                                    onclick = "[GetVariableSystem.Clear('uni_nation')]"
 
-					widget = {
-						layoutpolicy_horizontal = expanding
-						layoutpolicy_vertical = expanding
-					}
-					
-					start_game_buttons = {}
-				}
+                                    icon = {
+                                        name = "uni_selection_border"
+                                        size = { 100% 100% }
+                                        texture = "gfx/interface/selections/selected_square_selection.dds"
+                                        spriteType = Corneredstretched
+                                        spriteborder = { 16 16 }
+                                        alwaystransparent = yes
+                                    }
+                                }
 
-				### BOTTOM BAR - OBJECTIVE SELECTED
-				hbox = {
-					name = "bottom_panel"
-					visible = "[GameSetup.HasSelectedObjective]"
-					layoutpolicy_horizontal = expanding
-					margin = { 15 0 }
-					using = default_fade_in_out
+                            }
 
-					game_rules_hbox = {}
+                            ### PRC
+                            widget = {
+                                size = { 400 236 }
 
-					widget = {
-						layoutpolicy_horizontal = expanding
-						layoutpolicy_vertical = expanding
-					}
-					
-					start_game_buttons = {}
-				}
-			}
-			
-			expand = {}
-			
-			### BACK BUTTON
-			hbox = {
-				layoutpolicy_horizontal = expanding
-				margin = { 15 0 }
-				margin_bottom = 10
-				
-				button_standard_back = {
-					visible = "[Not(GameSetup.HasSelectedObjective)]"
-					size = { 300 55 }
-					name = "back_button"
-					shortcut = "close_window"
-					using = fontsize_large
+                                background = {
+                                    using = default_background
+                                }
 
-					onclick = "[GameSetup.OnBack]"
-					oversound = "event:/SFX/UI/Global/pointer_over"
-					clicksound = "event:/SFX/UI/Global/close"
-				}
+                                icon = {
+                                    position = { 14 14 }
+                                    size = { 120 80 }
+                                    texture = "gfx/interface/nation_select/flag_prc.dds"
 
-				button_standard_back = {
-					visible = "[GameSetup.HasSelectedObjective]"
-					size = { 300 55 }
-					name = "back_button_objective_selected"
-					shortcut = "close_window"
-					using = fontsize_large
+                                    background = {
+                                        using = simple_frame
+                                        margin = { 3 3 }
+                                    }
+                                }
 
-					onclick = "[GameSetup.ToggleObjective(GameSetup.GetSelectedObjective)]"
-					oversound = "event:/SFX/UI/Global/pointer_over"
-					clicksound = "event:/SFX/UI/Global/close"
-				}
-				
-				expand = {}
-			}
-		}	
-	}
+                                textbox = {
+                                    position = { 148 16 }
+                                    using = header_font_fancy
+                                    using = header_font_fancy_size
+                                    text = "UNI_NS_PRC_NAME"
+                                    size = { 238 38 }
+                                    align = nobaseline
+                                    elide = right
+                                    fontsize_min = 14
+                                }
 
-	type recommended_country = widget {
-		size = { 320 540 }
+                                textbox = {
+                                    position = { 148 52 }
+                                    text = "UNI_NS_PRC_TAGLINE"
+                                    default_format = "#I"
+                                    maximumsize = { 238 42 }
+                                    fontsize_min = 10
+                                    autoresize = yes
+                                    multiline = yes
+                                    using = fontsize_medium
+                                }
 
-		button = {
-			using = default_button
-			size = { 100% 100% }
+                                textbox = {
+                                    position = { 16 104 }
+                                    text = "UNI_NS_PRC_BODY"
+                                    default_format = "#variable"
+                                    maximumsize = { 368 76 }
+                                    fontsize_min = 10
+                                    autoresize = yes
+                                    multiline = yes
+                                    using = fontsize_medium
 
-			down = "[ObjectsEqual(CountryDefinition.AccessSelf, GameSetup.GetSelectedTag)]"
-			onclick = "[GameSetup.ToggleTag(CountryDefinition.AccessSelf)]"
-			using = check_button_sound
-		}
+                                    divider_decorative = {
+                                        size = { 100% 1 }
+                                        parentanchor = bottom
+                                    }
+                                }
 
-		vbox = {
-			datacontext = "[GameSetup.GetSelectedObjective]"
-			layoutpolicy_horizontal = expanding
-			margin = { 15 20 }
-			spacing = 10
+                                textbox = {
+                                    position = { 16 190 }
+                                    text = "UNI_NS_PRC_STATS"
+                                    default_format = "#instruction"
+                                    maximumsize = { 368 36 }
+                                    fontsize_min = 9
+                                    autoresize = yes
+                                    multiline = yes
+                                    using = fontsize_medium
+                                }
+                            
+                                ### SELECTION (cosmetic only)
+                                button = {
+                                    size = { 100% 100% }
+                                    name = "uni_select_button"
+                                    visible = "[Not( GetVariableSystem.HasValue('uni_nation', 'PRC') )]"
+                                    oversound = "event:/SFX/UI/Global/pointer_over"
+                                    clicksound = "event:/SFX/UI/Global/select"
+                                    onclick = "[GetVariableSystem.Set('uni_nation', 'PRC')]"
+                                }
 
-			hbox = {
-				layoutpolicy_horizontal = expanding
-				margin = { 5 0 }
-				spacing = 12
+                                button = {
+                                    size = { 100% 100% }
+                                    name = "uni_deselect_button"
+                                    visible = "[GetVariableSystem.HasValue('uni_nation', 'PRC')]"
+                                    oversound = "event:/SFX/UI/Global/pointer_over"
+                                    clicksound = "event:/SFX/UI/Global/select"
+                                    onclick = "[GetVariableSystem.Clear('uni_nation')]"
 
-				icon = {
-					size = { 48 32 }
-					# Using medium size textures in small flag for better downscaling of flag details
-					texture = "[CountryDefinition.GetBaseFlag.GetMediumFlagTexture]"
-					frame = "[CountryDefinition.GetBaseFlag.GetMediumFlagFrame]"
-					framesize = "[GetMediumFlagFrameSize]"
-					using = flag_overlay
+                                    icon = {
+                                        name = "uni_selection_border"
+                                        size = { 100% 100% }
+                                        texture = "gfx/interface/selections/selected_square_selection.dds"
+                                        spriteType = Corneredstretched
+                                        spriteborder = { 16 16 }
+                                        alwaystransparent = yes
+                                    }
+                                }
+                            }
 
-					background = {
-						using = simple_frame
-						margin = { 3 3 }
-					}
-				}
+                        }
 
-				text_single = {
-					layoutpolicy_horizontal = expanding
-					text = "[ObjectiveType.GetNameForCountryDef(CountryDefinition.AccessSelf)]"
-					align = nobaseline
-					elide = right
-					minimumsize = { 210 -1 }
-					maximumsize = { 210 -1 }
-					fontsize_min = 14
-					using = fontsize_xxl
-					alwaystransparent = yes
-				}
-			}
+                        hbox = {
+                            spacing = 12
 
-			text_multi = {
-				layoutpolicy_horizontal = expanding
-				layoutpolicy_vertical = expanding
-				text = "[ObjectiveType.GetDescForCountryDef(CountryDefinition.AccessSelf)]"
-				align = top|nobaseline
-				using = fontsize_large
-				alwaystransparent = yes
-				margin = { 10 5 }
+                            ### BHT
+                            widget = {
+                                size = { 400 236 }
 
-				background = {
-					using = entry_bg_simple
-				}
-			}
-		}
+                                background = {
+                                    using = default_background
+                                }
 
-		icon = {
-			using = highlighted_square_selection
-			visible = "[ObjectsEqual(CountryDefinition.AccessSelf, GameSetup.GetSelectedTag)]"
-		}
-	}
+                                icon = {
+                                    position = { 14 14 }
+                                    size = { 120 80 }
+                                    texture = "gfx/interface/nation_select/flag_bht.dds"
 
-	type game_rules_hbox = hbox {
+                                    background = {
+                                        using = simple_frame
+                                        margin = { 3 3 }
+                                    }
+                                }
 
-		### GAME RULES
-		layoutpolicy_horizontal = preferred
-		spacing = 15
-		margin = { 15 0 }
-		using = default_fade_in_out
+                                textbox = {
+                                    position = { 148 16 }
+                                    using = header_font_fancy
+                                    using = header_font_fancy_size
+                                    text = "UNI_NS_BHT_NAME"
+                                    size = { 238 38 }
+                                    align = nobaseline
+                                    elide = right
+                                    fontsize_min = 14
+                                }
+
+                                textbox = {
+                                    position = { 148 52 }
+                                    text = "UNI_NS_BHT_TAGLINE"
+                                    default_format = "#I"
+                                    maximumsize = { 238 42 }
+                                    fontsize_min = 10
+                                    autoresize = yes
+                                    multiline = yes
+                                    using = fontsize_medium
+                                }
+
+                                textbox = {
+                                    position = { 16 104 }
+                                    text = "UNI_NS_BHT_BODY"
+                                    default_format = "#variable"
+                                    maximumsize = { 368 76 }
+                                    fontsize_min = 10
+                                    autoresize = yes
+                                    multiline = yes
+                                    using = fontsize_medium
+
+                                    divider_decorative = {
+                                        size = { 100% 1 }
+                                        parentanchor = bottom
+                                    }
+                                }
+
+                                textbox = {
+                                    position = { 16 190 }
+                                    text = "UNI_NS_BHT_STATS"
+                                    default_format = "#instruction"
+                                    maximumsize = { 368 36 }
+                                    fontsize_min = 9
+                                    autoresize = yes
+                                    multiline = yes
+                                    using = fontsize_medium
+                                }
+                            
+                                ### SELECTION (cosmetic only)
+                                button = {
+                                    size = { 100% 100% }
+                                    name = "uni_select_button"
+                                    visible = "[Not( GetVariableSystem.HasValue('uni_nation', 'BHT') )]"
+                                    oversound = "event:/SFX/UI/Global/pointer_over"
+                                    clicksound = "event:/SFX/UI/Global/select"
+                                    onclick = "[GetVariableSystem.Set('uni_nation', 'BHT')]"
+                                }
+
+                                button = {
+                                    size = { 100% 100% }
+                                    name = "uni_deselect_button"
+                                    visible = "[GetVariableSystem.HasValue('uni_nation', 'BHT')]"
+                                    oversound = "event:/SFX/UI/Global/pointer_over"
+                                    clicksound = "event:/SFX/UI/Global/select"
+                                    onclick = "[GetVariableSystem.Clear('uni_nation')]"
+
+                                    icon = {
+                                        name = "uni_selection_border"
+                                        size = { 100% 100% }
+                                        texture = "gfx/interface/selections/selected_square_selection.dds"
+                                        spriteType = Corneredstretched
+                                        spriteborder = { 16 16 }
+                                        alwaystransparent = yes
+                                    }
+                                }
+                            }
+
+                            ### JPN
+                            widget = {
+                                size = { 400 236 }
+
+                                background = {
+                                    using = default_background
+                                }
+
+                                icon = {
+                                    position = { 14 14 }
+                                    size = { 120 80 }
+                                    texture = "gfx/interface/nation_select/flag_jpn.dds"
+
+                                    background = {
+                                        using = simple_frame
+                                        margin = { 3 3 }
+                                    }
+                                }
+
+                                textbox = {
+                                    position = { 148 16 }
+                                    using = header_font_fancy
+                                    using = header_font_fancy_size
+                                    text = "UNI_NS_JPN_NAME"
+                                    size = { 238 38 }
+                                    align = nobaseline
+                                    elide = right
+                                    fontsize_min = 14
+                                }
+
+                                textbox = {
+                                    position = { 148 52 }
+                                    text = "UNI_NS_JPN_TAGLINE"
+                                    default_format = "#I"
+                                    maximumsize = { 238 42 }
+                                    fontsize_min = 10
+                                    autoresize = yes
+                                    multiline = yes
+                                    using = fontsize_medium
+                                }
+
+                                textbox = {
+                                    position = { 16 104 }
+                                    text = "UNI_NS_JPN_BODY"
+                                    default_format = "#variable"
+                                    maximumsize = { 368 76 }
+                                    fontsize_min = 10
+                                    autoresize = yes
+                                    multiline = yes
+                                    using = fontsize_medium
+
+                                    divider_decorative = {
+                                        size = { 100% 1 }
+                                        parentanchor = bottom
+                                    }
+                                }
+
+                                textbox = {
+                                    position = { 16 190 }
+                                    text = "UNI_NS_JPN_STATS"
+                                    default_format = "#instruction"
+                                    maximumsize = { 368 36 }
+                                    fontsize_min = 9
+                                    autoresize = yes
+                                    multiline = yes
+                                    using = fontsize_medium
+                                }
+                            
+                                ### SELECTION (cosmetic only)
+                                button = {
+                                    size = { 100% 100% }
+                                    name = "uni_select_button"
+                                    visible = "[Not( GetVariableSystem.HasValue('uni_nation', 'JPN') )]"
+                                    oversound = "event:/SFX/UI/Global/pointer_over"
+                                    clicksound = "event:/SFX/UI/Global/select"
+                                    onclick = "[GetVariableSystem.Set('uni_nation', 'JPN')]"
+                                }
+
+                                button = {
+                                    size = { 100% 100% }
+                                    name = "uni_deselect_button"
+                                    visible = "[GetVariableSystem.HasValue('uni_nation', 'JPN')]"
+                                    oversound = "event:/SFX/UI/Global/pointer_over"
+                                    clicksound = "event:/SFX/UI/Global/select"
+                                    onclick = "[GetVariableSystem.Clear('uni_nation')]"
+
+                                    icon = {
+                                        name = "uni_selection_border"
+                                        size = { 100% 100% }
+                                        texture = "gfx/interface/selections/selected_square_selection.dds"
+                                        spriteType = Corneredstretched
+                                        spriteborder = { 16 16 }
+                                        alwaystransparent = yes
+                                    }
+                                }
+                            }
+
+                            ### GER
+                            widget = {
+                                size = { 400 236 }
+
+                                background = {
+                                    using = default_background
+                                }
+
+                                icon = {
+                                    position = { 14 14 }
+                                    size = { 120 80 }
+                                    texture = "gfx/interface/nation_select/flag_ger.dds"
+
+                                    background = {
+                                        using = simple_frame
+                                        margin = { 3 3 }
+                                    }
+                                }
+
+                                textbox = {
+                                    position = { 148 16 }
+                                    using = header_font_fancy
+                                    using = header_font_fancy_size
+                                    text = "UNI_NS_GER_NAME"
+                                    size = { 238 38 }
+                                    align = nobaseline
+                                    elide = right
+                                    fontsize_min = 14
+                                }
+
+                                textbox = {
+                                    position = { 148 52 }
+                                    text = "UNI_NS_GER_TAGLINE"
+                                    default_format = "#I"
+                                    maximumsize = { 238 42 }
+                                    fontsize_min = 10
+                                    autoresize = yes
+                                    multiline = yes
+                                    using = fontsize_medium
+                                }
+
+                                textbox = {
+                                    position = { 16 104 }
+                                    text = "UNI_NS_GER_BODY"
+                                    default_format = "#variable"
+                                    maximumsize = { 368 76 }
+                                    fontsize_min = 10
+                                    autoresize = yes
+                                    multiline = yes
+                                    using = fontsize_medium
+
+                                    divider_decorative = {
+                                        size = { 100% 1 }
+                                        parentanchor = bottom
+                                    }
+                                }
+
+                                textbox = {
+                                    position = { 16 190 }
+                                    text = "UNI_NS_GER_STATS"
+                                    default_format = "#instruction"
+                                    maximumsize = { 368 36 }
+                                    fontsize_min = 9
+                                    autoresize = yes
+                                    multiline = yes
+                                    using = fontsize_medium
+                                }
+                            
+                                ### SELECTION (cosmetic only)
+                                button = {
+                                    size = { 100% 100% }
+                                    name = "uni_select_button"
+                                    visible = "[Not( GetVariableSystem.HasValue('uni_nation', 'GER') )]"
+                                    oversound = "event:/SFX/UI/Global/pointer_over"
+                                    clicksound = "event:/SFX/UI/Global/select"
+                                    onclick = "[GetVariableSystem.Set('uni_nation', 'GER')]"
+                                }
+
+                                button = {
+                                    size = { 100% 100% }
+                                    name = "uni_deselect_button"
+                                    visible = "[GetVariableSystem.HasValue('uni_nation', 'GER')]"
+                                    oversound = "event:/SFX/UI/Global/pointer_over"
+                                    clicksound = "event:/SFX/UI/Global/select"
+                                    onclick = "[GetVariableSystem.Clear('uni_nation')]"
+
+                                    icon = {
+                                        name = "uni_selection_border"
+                                        size = { 100% 100% }
+                                        texture = "gfx/interface/selections/selected_square_selection.dds"
+                                        spriteType = Corneredstretched
+                                        spriteborder = { 16 16 }
+                                        alwaystransparent = yes
+                                    }
+                                }
+                            }
+
+                        }
+
+                        hbox = {
+                            spacing = 12
+
+                            ### GBR
+                            widget = {
+                                size = { 400 236 }
+
+                                background = {
+                                    using = default_background
+                                }
+
+                                icon = {
+                                    position = { 14 14 }
+                                    size = { 120 80 }
+                                    texture = "gfx/interface/nation_select/flag_gbr.dds"
+
+                                    background = {
+                                        using = simple_frame
+                                        margin = { 3 3 }
+                                    }
+                                }
+
+                                textbox = {
+                                    position = { 148 16 }
+                                    using = header_font_fancy
+                                    using = header_font_fancy_size
+                                    text = "UNI_NS_GBR_NAME"
+                                    size = { 238 38 }
+                                    align = nobaseline
+                                    elide = right
+                                    fontsize_min = 14
+                                }
+
+                                textbox = {
+                                    position = { 148 52 }
+                                    text = "UNI_NS_GBR_TAGLINE"
+                                    default_format = "#I"
+                                    maximumsize = { 238 42 }
+                                    fontsize_min = 10
+                                    autoresize = yes
+                                    multiline = yes
+                                    using = fontsize_medium
+                                }
+
+                                textbox = {
+                                    position = { 16 104 }
+                                    text = "UNI_NS_GBR_BODY"
+                                    default_format = "#variable"
+                                    maximumsize = { 368 76 }
+                                    fontsize_min = 10
+                                    autoresize = yes
+                                    multiline = yes
+                                    using = fontsize_medium
+
+                                    divider_decorative = {
+                                        size = { 100% 1 }
+                                        parentanchor = bottom
+                                    }
+                                }
+
+                                textbox = {
+                                    position = { 16 190 }
+                                    text = "UNI_NS_GBR_STATS"
+                                    default_format = "#instruction"
+                                    maximumsize = { 368 36 }
+                                    fontsize_min = 9
+                                    autoresize = yes
+                                    multiline = yes
+                                    using = fontsize_medium
+                                }
+                            
+                                ### SELECTION (cosmetic only)
+                                button = {
+                                    size = { 100% 100% }
+                                    name = "uni_select_button"
+                                    visible = "[Not( GetVariableSystem.HasValue('uni_nation', 'GBR') )]"
+                                    oversound = "event:/SFX/UI/Global/pointer_over"
+                                    clicksound = "event:/SFX/UI/Global/select"
+                                    onclick = "[GetVariableSystem.Set('uni_nation', 'GBR')]"
+                                }
+
+                                button = {
+                                    size = { 100% 100% }
+                                    name = "uni_deselect_button"
+                                    visible = "[GetVariableSystem.HasValue('uni_nation', 'GBR')]"
+                                    oversound = "event:/SFX/UI/Global/pointer_over"
+                                    clicksound = "event:/SFX/UI/Global/select"
+                                    onclick = "[GetVariableSystem.Clear('uni_nation')]"
+
+                                    icon = {
+                                        name = "uni_selection_border"
+                                        size = { 100% 100% }
+                                        texture = "gfx/interface/selections/selected_square_selection.dds"
+                                        spriteType = Corneredstretched
+                                        spriteborder = { 16 16 }
+                                        alwaystransparent = yes
+                                    }
+                                }
+                            }
+
+                            ### FRA
+                            widget = {
+                                size = { 400 236 }
+
+                                background = {
+                                    using = default_background
+                                }
+
+                                icon = {
+                                    position = { 14 14 }
+                                    size = { 120 80 }
+                                    texture = "gfx/interface/nation_select/flag_fra.dds"
+
+                                    background = {
+                                        using = simple_frame
+                                        margin = { 3 3 }
+                                    }
+                                }
+
+                                textbox = {
+                                    position = { 148 16 }
+                                    using = header_font_fancy
+                                    using = header_font_fancy_size
+                                    text = "UNI_NS_FRA_NAME"
+                                    size = { 238 38 }
+                                    align = nobaseline
+                                    elide = right
+                                    fontsize_min = 14
+                                }
+
+                                textbox = {
+                                    position = { 148 52 }
+                                    text = "UNI_NS_FRA_TAGLINE"
+                                    default_format = "#I"
+                                    maximumsize = { 238 42 }
+                                    fontsize_min = 10
+                                    autoresize = yes
+                                    multiline = yes
+                                    using = fontsize_medium
+                                }
+
+                                textbox = {
+                                    position = { 16 104 }
+                                    text = "UNI_NS_FRA_BODY"
+                                    default_format = "#variable"
+                                    maximumsize = { 368 76 }
+                                    fontsize_min = 10
+                                    autoresize = yes
+                                    multiline = yes
+                                    using = fontsize_medium
+
+                                    divider_decorative = {
+                                        size = { 100% 1 }
+                                        parentanchor = bottom
+                                    }
+                                }
+
+                                textbox = {
+                                    position = { 16 190 }
+                                    text = "UNI_NS_FRA_STATS"
+                                    default_format = "#instruction"
+                                    maximumsize = { 368 36 }
+                                    fontsize_min = 9
+                                    autoresize = yes
+                                    multiline = yes
+                                    using = fontsize_medium
+                                }
+                            
+                                ### SELECTION (cosmetic only)
+                                button = {
+                                    size = { 100% 100% }
+                                    name = "uni_select_button"
+                                    visible = "[Not( GetVariableSystem.HasValue('uni_nation', 'FRA') )]"
+                                    oversound = "event:/SFX/UI/Global/pointer_over"
+                                    clicksound = "event:/SFX/UI/Global/select"
+                                    onclick = "[GetVariableSystem.Set('uni_nation', 'FRA')]"
+                                }
+
+                                button = {
+                                    size = { 100% 100% }
+                                    name = "uni_deselect_button"
+                                    visible = "[GetVariableSystem.HasValue('uni_nation', 'FRA')]"
+                                    oversound = "event:/SFX/UI/Global/pointer_over"
+                                    clicksound = "event:/SFX/UI/Global/select"
+                                    onclick = "[GetVariableSystem.Clear('uni_nation')]"
+
+                                    icon = {
+                                        name = "uni_selection_border"
+                                        size = { 100% 100% }
+                                        texture = "gfx/interface/selections/selected_square_selection.dds"
+                                        spriteType = Corneredstretched
+                                        spriteborder = { 16 16 }
+                                        alwaystransparent = yes
+                                    }
+                                }
+                            }
+
+                            ### CAN
+                            widget = {
+                                size = { 400 236 }
+
+                                background = {
+                                    using = default_background
+                                }
+
+                                icon = {
+                                    position = { 14 14 }
+                                    size = { 120 80 }
+                                    texture = "gfx/interface/nation_select/flag_can.dds"
+
+                                    background = {
+                                        using = simple_frame
+                                        margin = { 3 3 }
+                                    }
+                                }
+
+                                textbox = {
+                                    position = { 148 16 }
+                                    using = header_font_fancy
+                                    using = header_font_fancy_size
+                                    text = "UNI_NS_CAN_NAME"
+                                    size = { 238 38 }
+                                    align = nobaseline
+                                    elide = right
+                                    fontsize_min = 14
+                                }
+
+                                textbox = {
+                                    position = { 148 52 }
+                                    text = "UNI_NS_CAN_TAGLINE"
+                                    default_format = "#I"
+                                    maximumsize = { 238 42 }
+                                    fontsize_min = 10
+                                    autoresize = yes
+                                    multiline = yes
+                                    using = fontsize_medium
+                                }
+
+                                textbox = {
+                                    position = { 16 104 }
+                                    text = "UNI_NS_CAN_BODY"
+                                    default_format = "#variable"
+                                    maximumsize = { 368 76 }
+                                    fontsize_min = 10
+                                    autoresize = yes
+                                    multiline = yes
+                                    using = fontsize_medium
+
+                                    divider_decorative = {
+                                        size = { 100% 1 }
+                                        parentanchor = bottom
+                                    }
+                                }
+
+                                textbox = {
+                                    position = { 16 190 }
+                                    text = "UNI_NS_CAN_STATS"
+                                    default_format = "#instruction"
+                                    maximumsize = { 368 36 }
+                                    fontsize_min = 9
+                                    autoresize = yes
+                                    multiline = yes
+                                    using = fontsize_medium
+                                }
+                            
+                                ### SELECTION (cosmetic only)
+                                button = {
+                                    size = { 100% 100% }
+                                    name = "uni_select_button"
+                                    visible = "[Not( GetVariableSystem.HasValue('uni_nation', 'CAN') )]"
+                                    oversound = "event:/SFX/UI/Global/pointer_over"
+                                    clicksound = "event:/SFX/UI/Global/select"
+                                    onclick = "[GetVariableSystem.Set('uni_nation', 'CAN')]"
+                                }
+
+                                button = {
+                                    size = { 100% 100% }
+                                    name = "uni_deselect_button"
+                                    visible = "[GetVariableSystem.HasValue('uni_nation', 'CAN')]"
+                                    oversound = "event:/SFX/UI/Global/pointer_over"
+                                    clicksound = "event:/SFX/UI/Global/select"
+                                    onclick = "[GetVariableSystem.Clear('uni_nation')]"
+
+                                    icon = {
+                                        name = "uni_selection_border"
+                                        size = { 100% 100% }
+                                        texture = "gfx/interface/selections/selected_square_selection.dds"
+                                        spriteType = Corneredstretched
+                                        spriteborder = { 16 16 }
+                                        alwaystransparent = yes
+                                    }
+                                }
+                            }
+
+                        }
+
+                        hbox = {
+                            spacing = 12
+
+                            ### BRZ
+                            widget = {
+                                size = { 400 236 }
+
+                                background = {
+                                    using = default_background
+                                }
+
+                                icon = {
+                                    position = { 14 14 }
+                                    size = { 120 80 }
+                                    texture = "gfx/interface/nation_select/flag_brz.dds"
+
+                                    background = {
+                                        using = simple_frame
+                                        margin = { 3 3 }
+                                    }
+                                }
+
+                                textbox = {
+                                    position = { 148 16 }
+                                    using = header_font_fancy
+                                    using = header_font_fancy_size
+                                    text = "UNI_NS_BRZ_NAME"
+                                    size = { 238 38 }
+                                    align = nobaseline
+                                    elide = right
+                                    fontsize_min = 14
+                                }
+
+                                textbox = {
+                                    position = { 148 52 }
+                                    text = "UNI_NS_BRZ_TAGLINE"
+                                    default_format = "#I"
+                                    maximumsize = { 238 42 }
+                                    fontsize_min = 10
+                                    autoresize = yes
+                                    multiline = yes
+                                    using = fontsize_medium
+                                }
+
+                                textbox = {
+                                    position = { 16 104 }
+                                    text = "UNI_NS_BRZ_BODY"
+                                    default_format = "#variable"
+                                    maximumsize = { 368 76 }
+                                    fontsize_min = 10
+                                    autoresize = yes
+                                    multiline = yes
+                                    using = fontsize_medium
+
+                                    divider_decorative = {
+                                        size = { 100% 1 }
+                                        parentanchor = bottom
+                                    }
+                                }
+
+                                textbox = {
+                                    position = { 16 190 }
+                                    text = "UNI_NS_BRZ_STATS"
+                                    default_format = "#instruction"
+                                    maximumsize = { 368 36 }
+                                    fontsize_min = 9
+                                    autoresize = yes
+                                    multiline = yes
+                                    using = fontsize_medium
+                                }
+                            
+                                ### SELECTION (cosmetic only)
+                                button = {
+                                    size = { 100% 100% }
+                                    name = "uni_select_button"
+                                    visible = "[Not( GetVariableSystem.HasValue('uni_nation', 'BRZ') )]"
+                                    oversound = "event:/SFX/UI/Global/pointer_over"
+                                    clicksound = "event:/SFX/UI/Global/select"
+                                    onclick = "[GetVariableSystem.Set('uni_nation', 'BRZ')]"
+                                }
+
+                                button = {
+                                    size = { 100% 100% }
+                                    name = "uni_deselect_button"
+                                    visible = "[GetVariableSystem.HasValue('uni_nation', 'BRZ')]"
+                                    oversound = "event:/SFX/UI/Global/pointer_over"
+                                    clicksound = "event:/SFX/UI/Global/select"
+                                    onclick = "[GetVariableSystem.Clear('uni_nation')]"
+
+                                    icon = {
+                                        name = "uni_selection_border"
+                                        size = { 100% 100% }
+                                        texture = "gfx/interface/selections/selected_square_selection.dds"
+                                        spriteType = Corneredstretched
+                                        spriteborder = { 16 16 }
+                                        alwaystransparent = yes
+                                    }
+                                }
+                            }
+
+                            ### SAF
+                            widget = {
+                                size = { 400 236 }
+
+                                background = {
+                                    using = default_background
+                                }
+
+                                icon = {
+                                    position = { 14 14 }
+                                    size = { 120 80 }
+                                    texture = "gfx/interface/nation_select/flag_saf.dds"
+
+                                    background = {
+                                        using = simple_frame
+                                        margin = { 3 3 }
+                                    }
+                                }
+
+                                textbox = {
+                                    position = { 148 16 }
+                                    using = header_font_fancy
+                                    using = header_font_fancy_size
+                                    text = "UNI_NS_SAF_NAME"
+                                    size = { 238 38 }
+                                    align = nobaseline
+                                    elide = right
+                                    fontsize_min = 14
+                                }
+
+                                textbox = {
+                                    position = { 148 52 }
+                                    text = "UNI_NS_SAF_TAGLINE"
+                                    default_format = "#I"
+                                    maximumsize = { 238 42 }
+                                    fontsize_min = 10
+                                    autoresize = yes
+                                    multiline = yes
+                                    using = fontsize_medium
+                                }
+
+                                textbox = {
+                                    position = { 16 104 }
+                                    text = "UNI_NS_SAF_BODY"
+                                    default_format = "#variable"
+                                    maximumsize = { 368 76 }
+                                    fontsize_min = 10
+                                    autoresize = yes
+                                    multiline = yes
+                                    using = fontsize_medium
+
+                                    divider_decorative = {
+                                        size = { 100% 1 }
+                                        parentanchor = bottom
+                                    }
+                                }
+
+                                textbox = {
+                                    position = { 16 190 }
+                                    text = "UNI_NS_SAF_STATS"
+                                    default_format = "#instruction"
+                                    maximumsize = { 368 36 }
+                                    fontsize_min = 9
+                                    autoresize = yes
+                                    multiline = yes
+                                    using = fontsize_medium
+                                }
+                            
+                                ### SELECTION (cosmetic only)
+                                button = {
+                                    size = { 100% 100% }
+                                    name = "uni_select_button"
+                                    visible = "[Not( GetVariableSystem.HasValue('uni_nation', 'SAF') )]"
+                                    oversound = "event:/SFX/UI/Global/pointer_over"
+                                    clicksound = "event:/SFX/UI/Global/select"
+                                    onclick = "[GetVariableSystem.Set('uni_nation', 'SAF')]"
+                                }
+
+                                button = {
+                                    size = { 100% 100% }
+                                    name = "uni_deselect_button"
+                                    visible = "[GetVariableSystem.HasValue('uni_nation', 'SAF')]"
+                                    oversound = "event:/SFX/UI/Global/pointer_over"
+                                    clicksound = "event:/SFX/UI/Global/select"
+                                    onclick = "[GetVariableSystem.Clear('uni_nation')]"
+
+                                    icon = {
+                                        name = "uni_selection_border"
+                                        size = { 100% 100% }
+                                        texture = "gfx/interface/selections/selected_square_selection.dds"
+                                        spriteType = Corneredstretched
+                                        spriteborder = { 16 16 }
+                                        alwaystransparent = yes
+                                    }
+                                }
+                            }
+
+                        }
+                    }
+                }
+            }
+        }
 		
-		background = {
-			using = dark_area_rounded
-			alpha = 0.3
-		}
-		
-		button_standard = {
-			name = "game_rules_button"
-			size = { 200 45 }
+		widget {
 
-			text = "GAME_RULES"
-			onclick = "[OpenGameRules]"
-
-			button_rules = {
-				size = { 25 25 }
-				parentanchor = left|vcenter
-				position = { 5 0 }
-				alwaystransparent = yes
-			}
-		}
-		
-		divider_light = {
-			layoutpolicy_vertical = expanding
-		}
-		
-		flowcontainer_game_rules_mini = {
-			name = "game_rules_mini"
-		}
-
-		divider_light = {
-			layoutpolicy_vertical = expanding
-		}
-
-		widget = {
-			size = { 180 60 }
-			
-			hbox = {
-				name = "buttons"
-				visible = "[Not( IsInGame )]"
-
-				button_checkbox_label = {
-					visible = "[Not( IsIronmanEnabled )]"
-					onclick = "[SetIronmanEnabledStatus( '(bool)yes' )]"
-
-					blockoverride "checkbox"
-					{
-						checked = "[IsIronmanEnabled]"
-					}
-
-					blockoverride "text"
-					{
-						text = "BOOKMARK_IRONMAN_DISABLED"
-					}
-				}
-
-				button_checkbox_label = {
-					visible = "[IsIronmanEnabled]"
-					onclick = "[SetIronmanEnabledStatus( '(bool)no' )]"
-
-					blockoverride "checkbox"
-					{
-						checked = "[IsIronmanEnabled]"
-					}
-
-					blockoverride "text"
-					{
-						text = "BOOKMARK_IRONMAN_ENABLED"
-					}
-				}
-			}
-		}						
-
-		divider_light = {
-			layoutpolicy_vertical = expanding
-		}
-
-		widget = {
-			datacontext = "[AccessGameRules]"
-			datacontext = "[JominiGameRules.AccessNamedGameRule( 'custom_rng_seed' )]"
-			datacontext = "[GuiGameRule.GetRule]"
-			datacontext = "[GuiGameRule.GetSetting]"
-			size = { 180 60 }
-			visible = "[GameRuleSetting.HasFlag( 'use_custom_rng_seed' )]" 
-
-			textbox = {
-				align = nobaseline
-				raw_text = "[GameRule.GetName]:"
-				default_format = "#medium"
-				size = { 180 25 }
-			}
-
-			hbox = {
-				name = "buttons"
-				margin_top = 20
-
-				editbox = {
-					name = "custom_rng_seed_edit"
-					maxcharacters = 25
-					size = { 180 40 }
-					margin_left = 10
-					alwaystransparent = no
-					focuspolicy = click
-					focus_on_visible = no
-					align = nobaseline
-
-					background = {
-						using = text_edit_bg
-					}
-
-					text = "CHANGE_RNG_SEED"
-					ontextedited = "[GameSetup.OnEditRNGSeed]"
-
-					textbox = {
-						visible = "[StringIsEmpty(GameSetup.GetCustomRNGSeed)]"
-						parentanchor = vcenter
-						align = nobaseline
-						position = { 10 0 }
-						autoresize = yes
-						default_format = "#title"
-						text = "RNG_SEED_CLICK_TO_CHANGE"
-					}
-				}
-			}
-		}
-
-		divider_light = {
-			datacontext = "[AccessGameRules]"
-			datacontext = "[JominiGameRules.AccessNamedGameRule( 'custom_rng_seed' )]"
-			datacontext = "[GuiGameRule.GetSetting]"
-			visible = "[GameRuleSetting.HasFlag( 'use_custom_rng_seed' )]"
-			layoutpolicy_vertical = expanding
-		}
-
-		widget = {
-			size = { 180 80 }
-			
-			hbox_achievements_info = {
-				using = tooltip_ne
-				blockoverride "ai_background" {}
-
-				blockoverride "ai_icon_size"
-				{
-					size = { 36 36 }
-				}
-			}
-		}
-	}
-
-	type start_game_buttons = widget {
-		
-		### BUTTONS BOTTOM RIGHT
-		size = { 680 80 }
-		visible = "[GameSetup.HasSelectedObjective]"
-		using = default_fade_in_out
-		
-		# select any country
-		button = {
-			using = default_button_primary_big_action
-			parentanchor = left|vcenter
-			size = { 330 60 }
-			enabled = "[And(Not(GameSetup.HasSelectedTag), GameSetup.GetSelectedObjective.IsAvailableForAllCountries)]"
-			visible = "[GameSetup.HasSelectedObjective]"
-			onclick = "[GameSetup.OnStart]"
-			onclick = "[PdxGuiTriggerAllAnimations('bookmarks_game_start')]"
+			### BUTTONS BOTTOM RIGHT
+			size = { 680 80 }
 			using = default_fade_in_out
-			using = start_game_button_sound
-			
-			using = tooltip_above
-			tooltip = "[SelectLocalization(GameSetup.HasSelectedTag, 'HAS_SELECTED_COUNTRY_TOOLTIP', 'START_ANY_COUNTRY_TOOLTIP')]"
 
-			textbox = {
-				size = { 100% 100% }
-				text = "SELECT_ANY_COUNTRY"
-				align = center|nobaseline
-				using = fontsize_xl
-				fontsize_min = 14
-				elide = right
-				margin = { 20 0 }
-			}
-		}
-		
-		# start game
-		button = {
-			using = default_button_primary_big_action
-			parentanchor = right|vcenter
-			size = { 330 60 }
-			enabled = "[GameSetup.HasSelectedTag]"
-			visible = "[GameSetup.HasSelectedObjective]"
-			onclick = "[GameSetup.OnStart]"
-			onclick = "[PdxGuiTriggerAllAnimations('bookmarks_game_start')]"
-			using = default_fade_in_out
-			using = start_game_button_sound
-
-			# tooltip if country selected
-			widget = {
-				visible = "[GameSetup.HasSelectedTag]"
-				size = { 100% 100% }
-				using = tooltip_above
-				datacontext = "[GameSetup.GetSelectedTag]"
-				tooltip = "START_GAME_TOOLTIP"
-			}
-
-			# tooltip if no country selected
-			widget = {
-				visible = "[Not(GameSetup.HasSelectedTag)]"
-				size = { 100% 100% }
-				using = tooltip_above
-				tooltip = "NO_SELECTED_COUNTRY_TOOLTIP"
-			}
-
-			textbox = {
-				size = { 100% 100% }
+			button = {
+				using = default_button_primary_big_action
+				parentanchor = center
+				position = { 0 400 }
+				size = { 725 60 }
+				onclick = "[GameSetup.OnStart]"
+				using = default_fade_in_out
+				using = start_game_button_sound
 				text = "START_GAME"
-				align = center|nobaseline
-				using = fontsize_xxl
-				fontsize_min = 14
-				elide = right
-				margin = { 20 0 }
+				using = tooltip_above
+				tooltip = "UNI_NS_START_TOOLTIP"
+
 			}
 		}
-	}
+		
+    }
+
+		type game_rules_hbox = hbox {
+	
+					### GAME RULES
+					layoutpolicy_horizontal = preferred
+					spacing = 15
+					margin = { 15 0 }
+					using = default_fade_in_out
+
+					background = {
+						using = dark_area_rounded
+						alpha = 0.3
+					}
+
+					button_standard = {
+						name = "game_rules_button"
+						size = { 200 45 }
+
+						text = "GAME_RULES"
+						onclick = "[OpenGameRules]"
+
+						button_rules = {
+							size = { 25 25 }
+							parentanchor = left|vcenter
+							position = { 5 0 }
+							alwaystransparent = yes
+						}
+					}
+
+					divider_light = {
+						layoutpolicy_vertical = expanding
+					}
+
+					flowcontainer_game_rules_mini = {
+						name = "game_rules_mini"
+					}
+
+					divider_light = {
+						layoutpolicy_vertical = expanding
+					}
+
+					widget = {
+						size = { 180 60 }
+
+						hbox = {
+							name = "buttons"
+							visible = "[Not( IsInGame )]"
+
+							button_checkbox_label = {
+								visible = "[Not( IsIronmanEnabled )]"
+								onclick = "[SetIronmanEnabledStatus( '(bool)yes' )]"
+
+								blockoverride "checkbox"
+								{
+									checked = "[IsIronmanEnabled]"
+								}
+
+								blockoverride "text"
+								{
+									text = "BOOKMARK_IRONMAN_DISABLED"
+								}
+							}
+
+							button_checkbox_label = {
+								visible = "[IsIronmanEnabled]"
+								onclick = "[SetIronmanEnabledStatus( '(bool)no' )]"
+
+								blockoverride "checkbox"
+								{
+									checked = "[IsIronmanEnabled]"
+								}
+
+								blockoverride "text"
+								{
+									text = "BOOKMARK_IRONMAN_ENABLED"
+								}
+							}
+						}
+					}
+
+					divider_light = {
+						layoutpolicy_vertical = expanding
+					}
+
+					widget = {
+						size = { 180 80 }
+
+						hbox_achievements_info = {
+							using = tooltip_ne
+							blockoverride "ai_background" {}
+
+							blockoverride "ai_icon_size"
+							{
+								size = { 36 36 }
+							}
+						}
+					}
+				}
+				
 }
+

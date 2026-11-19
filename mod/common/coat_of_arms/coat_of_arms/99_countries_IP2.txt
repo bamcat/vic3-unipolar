@@ -1,6 +1,6 @@
 ### Jeypore
 
-JEY = { # Jeypore
+JEY = {
 	pattern = "pattern_solid.tga"
 	color1 = "red"
 	color2 = "yellow"
@@ -16,7 +16,7 @@ JEY = { # Jeypore
 
 ### Patna
 
-PTN = { # Patna
+PTN = {
 	pattern = "pattern_solid.tga"
 	color1 = "azure"
 	color2 = "yellow"
@@ -60,7 +60,7 @@ PTN = { # Patna
 	}
 }
 
-PTN_stripes = { # Patna without CoA
+PTN_stripes = {
 	pattern = "pattern_solid.tga"
 	color1 = "azure"
 	color2 = "yellow"
@@ -102,7 +102,7 @@ PTN_stripes = { # Patna without CoA
 
 ### Narsinghpur
 
-NAR = { # Narsinghpur
+NAR = {
 	pattern = "pattern_solid.tga"
 	color1 = "yellow"
 	color2 = "green"
@@ -117,7 +117,7 @@ NAR = { # Narsinghpur
 
 ### Mayurbhanj
 
-MYB = { # Mayurbhanj
+MYB = {
 	pattern = "pattern_solid.tga"
 	color1 = "yellow"
 	color2 = "azure"
@@ -136,7 +136,7 @@ MYB = { # Mayurbhanj
 	}
 }
 
-MYB_bicolor = { # Mayurbhanj
+MYB_bicolor = {
 	pattern = "pattern_solid.tga"
 	color1 = "yellow"
 	color2 = "azure"
@@ -149,7 +149,7 @@ MYB_bicolor = { # Mayurbhanj
 	}
 }
 
-MYB_republic = { # Mayurbhanj
+MYB_republic = {
 	pattern = "pattern_solid.tga"
 	color1 = "yellow"
 	color2 = "azure"
@@ -164,7 +164,7 @@ MYB_republic = { # Mayurbhanj
 
 ### Surguja
 
-SUR = { # Surguja
+SUR = {
 	pattern = "pattern_solid.tga"
 	color1 = "yellow"
 	color2 = "green"
@@ -179,7 +179,7 @@ SUR = { # Surguja
 
 ### Rewah
 
-BAG = { # Rewah
+BAG = {
 	pattern = "pattern_solid.tga"
 	color1 = hsv360 	{	44	80	75	}
 	color2 = "white"
@@ -193,7 +193,7 @@ BAG = { # Rewah
 	}
 }
 
-BAG_stripe = { # Rewah - Bicolour variant with stripe at hoist
+BAG_stripe = {
 	pattern = "pattern_solid.tga"
 	color1 = hsv360 	{	44	80	75	}
 	color2 = "white"
@@ -208,7 +208,7 @@ BAG_stripe = { # Rewah - Bicolour variant with stripe at hoist
 
 ### Orchha
 
-BUN = { # Orchha
+BUN = {
 	pattern = "pattern_solid.tga"
 	color1 = "black"
 	color2 = "yellow"
@@ -221,7 +221,7 @@ BUN = { # Orchha
 	}
 }
 
-BUN_motto = { # Orchha - Raja flag with motto
+BUN_motto = {
 	pattern = "pattern_solid.tga"
 	color1 = "yellow"
 	color2 = "red"
@@ -234,7 +234,7 @@ BUN_motto = { # Orchha - Raja flag with motto
 	}
 }
 
-BUN_motto_stripe = { # Orchha - Tricolour variant with motto in fess (republic)
+BUN_motto_stripe = {
 	pattern = "pattern_solid.tga"
 	color1 = "yellow"
 	color2 = "red"
@@ -255,7 +255,7 @@ BUN_motto_stripe = { # Orchha - Tricolour variant with motto in fess (republic)
 
 ### Jhansi
 
-JHN = { # Jhansi - 1857 flag other than the saffron flag
+JHN = {
 	pattern = "pattern_border_fringe.tga"
 	color1 = "red"
 	color2 = "yellow"
@@ -266,7 +266,7 @@ JHN = { # Jhansi - 1857 flag other than the saffron flag
 	}
 }
 
-JHN_stripe = { # Jhansi - Republic as similar design to Bundelkhand and Rewah
+JHN_stripe = {
 	pattern = "pattern_solid.tga"
 	color1 = "red"
 	color2 = "yellow"
@@ -281,7 +281,7 @@ JHN_stripe = { # Jhansi - Republic as similar design to Bundelkhand and Rewah
 
 ### Satara
 
-SAT = { # Satara - Saffron flag with sun for difference (alternatively Baroda could be altered to keep this one historical)
+SAT = {
 	pattern = "pattern_solid.tga"
 	color1 = hsv360 	{	32	85	70	}
 	color2 = "yellow_light"
@@ -297,7 +297,7 @@ SAT = { # Satara - Saffron flag with sun for difference (alternatively Baroda co
 
 ### Kolhapur
 
-KHP = { # Kolhapur - Raja flag for difference (otherwise saffron flag)
+KHP = {
 	pattern = "pattern_per_bend.dds"
 	color1 = "saffron"
 	color2 = "red"
@@ -305,7 +305,7 @@ KHP = { # Kolhapur - Raja flag for difference (otherwise saffron flag)
 
 ### Pudukkotai
 
-PUD = { # Pudukottai
+PUD = {
 	pattern = "pattern_solid.tga"
 	color1 = "white"
 	color2 = "red"
@@ -349,7 +349,7 @@ PUD = { # Pudukottai
 	}
 }
 
-PUD_green = { # Pudukottai - Green variant of the hanuman flag (Could alternatively be switched with the starting design)
+PUD_green = {
 	pattern = "pattern_solid.tga"
 	color1 = "green"
 	color2 = "white"
@@ -369,7 +369,7 @@ PUD_green = { # Pudukottai - Green variant of the hanuman flag (Could alternativ
 	}
 }
 
-PUD_stripes = { # Pudukottai - Republican flag with colour setup converted to stripes
+PUD_stripes = {
 	pattern = "pattern_solid.tga"
 	color1 = "white"
 	color2 = "red"
@@ -411,7 +411,7 @@ PUD_stripes = { # Pudukottai - Republican flag with colour setup converted to st
 
 ### Carnatic
 
-CAR = { # Carnatic
+CAR = {
 	pattern = "pattern_solid.tga"
 	color1 = "white"
 	color2 = "green"
@@ -438,7 +438,7 @@ CAR = { # Carnatic
 
 ### Cochin
 
-COC = { # Cochin
+COC = {
 	pattern = "pattern_solid.tga"
 	color1 = "pink"
 	color2 = "blue_light"
@@ -449,7 +449,7 @@ COC = { # Cochin
 	}
 }
 
-COC_tricolor = { # Cochin - 20th c tricolour flag - Simple version
+COC_tricolor = {
 	pattern = "pattern_solid.tga"
 	color1 = "red"
 	color2 = "yellow"
@@ -462,7 +462,7 @@ COC_tricolor = { # Cochin - 20th c tricolour flag - Simple version
 	}
 }
 
-COC_tricolor_roundel = { # Cochin - 20th c tricolour flag - Roundel version
+COC_tricolor_roundel = {
 	pattern = "pattern_solid.tga"
 	color1 = hsv360 	{	340	75	65	}
 	color2 = "yellow"
@@ -484,7 +484,7 @@ COC_tricolor_roundel = { # Cochin - 20th c tricolour flag - Roundel version
 	}
 }
 
-COC_subject = { # Cochin - Red Ensign merchant flag
+COC_subject = {
 	pattern = "pattern_solid.tga"
 	color1 = "red"
 	color2 = "white"
@@ -507,7 +507,7 @@ COC_subject = { # Cochin - Red Ensign merchant flag
 
 ### Manipur
 
-MNP = { # Manipur
+MNP = {
 	pattern = "pattern_solid.tga"
 	color1 = "red"
 	color2 = "white"
@@ -521,7 +521,7 @@ MNP = { # Manipur
 	}
 }
 
-MNP_stripes = { # Kangleipak 6 stripes design
+MNP_stripes = {
 	pattern = "pattern_solid.tga"
 	color1 = "red"
 	color2 = "white"
@@ -536,7 +536,7 @@ MNP_stripes = { # Kangleipak 6 stripes design
 
 ### Assam
 
-ASM = { # Assam
+ASM = {
 	pattern = "pattern_solid.tga"
 	color1 = "red"
 	color2 = "white"
@@ -552,7 +552,7 @@ ASM = { # Assam
 
 ### Cooch Behar
 
-COO = { # Cooch Behar
+COO = {
 	pattern = "pattern_solid.tga"
 	color1 = "red"
 	color2 = "yellow"
@@ -566,7 +566,7 @@ COO = { # Cooch Behar
 	}
 }
 
-COO_roundel = { # Cooch Behar - A tricolor design in dynastic colours with roundel
+COO_roundel = {
 	pattern = "pattern_solid.tga"
 	color1 = "red"
 	color2 = "yellow"
@@ -606,7 +606,7 @@ COO_roundel = { # Cooch Behar - A tricolor design in dynastic colours with round
 
 ### Dharampur
 
-DHA = { # Dharampur
+DHA = {
 	pattern = "pattern_solid.tga"
 	color1 = "white"
 	color2 = "yellow"
@@ -621,7 +621,7 @@ DHA = { # Dharampur
 	}
 }
 
-DHA_red = { # Dharampur - Red variant with same design
+DHA_red = {
 	pattern = "pattern_solid.tga"
 	color1 = "red"
 	color2 = "yellow"
@@ -637,7 +637,7 @@ DHA_red = { # Dharampur - Red variant with same design
 
 ### Bhavnagar
 
-BHV = { # Bhavnagar
+BHV = {
 	pattern = "pattern_solid.tga"
 	color1 = "red"
 	color2 = "white"
@@ -654,7 +654,7 @@ BHV = { # Bhavnagar
 	}
 }
 
-BHV_subject = { # Bhavnagar - Red ensign merchant flag
+BHV_subject = {
 	pattern = "pattern_solid.tga"
 	color1 = "red"
 	color2 = "white"
@@ -665,7 +665,7 @@ BHV_subject = { # Bhavnagar - Red ensign merchant flag
 	}
 }
 
-BHV_republic = { # Bhavnagar - Bicolour without the achievement
+BHV_republic = {
 	pattern = "pattern_solid.tga"
 	color1 = "red"
 	color2 = "white"
@@ -680,7 +680,7 @@ BHV_republic = { # Bhavnagar - Bicolour without the achievement
 
 ### Junagadh
 
-JUN = { # Junagadh
+JUN = {
 	pattern = "pattern_solid.tga"
 	color1 = "yellow_dark"
 	color2 = "red"
@@ -697,7 +697,7 @@ JUN = { # Junagadh
 	}
 }
 
-JUN_subject = { # Junagadh Red ensign
+JUN_subject = {
 	pattern = "pattern_solid.tga"
 	color1 = "red"
 	color2 = "white"
@@ -713,7 +713,7 @@ JUN_subject = { # Junagadh Red ensign
 	}
 }
 
-JUN_tricolor = { # Junagadh later mid 20th c variant (the nawab's coa is different in the historical design)
+JUN_tricolor = {
 	pattern = "pattern_solid.tga"
 	color1 = "green"
 	color2 = "white"
@@ -765,7 +765,7 @@ JUN_tricolor = { # Junagadh later mid 20th c variant (the nawab's coa is differe
 
 ### Nawanagar
 
-NAW = { # Nawanagar
+NAW = {
 	pattern = "pattern_solid.tga"
 	color1 = "yellow"
 	color2 = hsv360 	{	0	0	15	}
@@ -781,7 +781,7 @@ NAW = { # Nawanagar
 	}
 }
 
-NAW_subject = { # Nawanagar Red ensign
+NAW_subject = {
 	pattern = "pattern_solid.tga"
 	color1 = "red"
 	color2 = "white"
@@ -792,7 +792,7 @@ NAW_subject = { # Nawanagar Red ensign
 	}
 }
 
-NAW_republic = { # Nawanagar 20 th c stripes flag (identical to Khairpur)
+NAW_republic = {
 	pattern = "pattern_solid.tga"
 	color1 = "white"
 	color2 = "red"
@@ -807,7 +807,7 @@ NAW_republic = { # Nawanagar 20 th c stripes flag (identical to Khairpur)
 
 ### Idar
 
-IDA = { # Idar
+IDA = {
 	pattern = "pattern_solid.tga"
 	color1 = hsv360 	{	308	67	55	}
 	color2 = hsv360 	{	200	55	50	}
@@ -844,7 +844,7 @@ IDA = { # Idar
 	}
 }
 
-IDA_sun = { # Idar
+IDA_sun = {
 	pattern = "pattern_solid.tga"
 	color1 = hsv360 	{	308	67	55	}
 	color2 = hsv360 	{	200	55	50	}
@@ -890,7 +890,7 @@ IDA_sun = { # Idar
 
 ### Palanpur
 
-PLP = { # Palanpur
+PLP = {
 	pattern = "pattern_solid.tga"
 	color1 = "red"
 	color2 = "green_light"
@@ -906,7 +906,7 @@ PLP = { # Palanpur
 	}
 }
 
-PLP_tricolor = { # Palanpur - Later tricolor design
+PLP_tricolor = {
 	pattern = "pattern_solid.tga"
 	color1 = "green"
 	color2 = "yellow"
@@ -919,7 +919,7 @@ PLP_tricolor = { # Palanpur - Later tricolor design
 	}
 }
 
-PLP_subject = { # Palanpur - Subject flag
+PLP_subject = {
 	pattern = "pattern_solid.tga"
 	color1 = "red"
 	color2 = "white"
@@ -932,7 +932,7 @@ PLP_subject = { # Palanpur - Subject flag
 
 ### Alwar
 
-ALW = { # Alwar
+ALW = {
 	pattern = "pattern_solid.tga"
 	color1 = "red"
 	color2 = hsv360 	{	154	85	40	}
@@ -974,7 +974,7 @@ ALW = { # Alwar
 
 ### Kotah
 
-KOT = { # Kotah
+KOT = {
 	pattern = "pattern_solid.tga"
 	color1 = "red"
 	color2 = "white"
@@ -985,7 +985,7 @@ KOT = { # Kotah
 	}
 }
 
-KOT_subject = { #  Kotah ensign style
+KOT_subject = {
 	pattern = "pattern_solid.tga"
 	color1 = "red"
 	color2 = "white"
@@ -1004,7 +1004,7 @@ KOT_subject = { #  Kotah ensign style
 
 ### Garhwal
 
-GAR = { # Teri Garhwal
+GAR = {
 	pattern = "pattern_solid.tga"
 	color1 = "white"
 	color2 = "green"
@@ -1019,7 +1019,7 @@ GAR = { # Teri Garhwal
 
 ### Patiala
 
-PTA = { # Patiala Princely state flag with CoA
+PTA = {
 	pattern = "pattern_solid.tga"
 	color1 = "red"
 	color2 = "green"
@@ -1059,7 +1059,7 @@ PTA = { # Patiala Princely state flag with CoA
 	}
 }
 
-PTA_simple = { # Patiala simplified without CoA
+PTA_simple = {
 	pattern = "pattern_solid.tga"
 	color1 = "red"
 	color2 = "green"
@@ -1074,7 +1074,7 @@ PTA_simple = { # Patiala simplified without CoA
 	}
 }
 
-PTA_tricolor = { # Patiala - Tricolour design
+PTA_tricolor = {
 	pattern = "pattern_solid.tga"
 	color1 = "red"
 	color2 = "green"
@@ -1089,7 +1089,7 @@ PTA_tricolor = { # Patiala - Tricolour design
 
 ### Arakan
 
-ARK = { # Arakan srivatsa
+ARK = {
 	pattern = "pattern_solid.tga"
 	color1 = "blue"
 	color2 = "white"
@@ -1114,7 +1114,7 @@ ARK = { # Arakan srivatsa
 	}
 }
 
-ARK_bicolor = { # Arakan - Modern Rakhine state version
+ARK_bicolor = {
 	pattern = "pattern_solid.tga"
 	color1 = "white"
 	color2 = "red"
@@ -1155,7 +1155,7 @@ ARK_bicolor = { # Arakan - Modern Rakhine state version
 
 ### Swat
 
-SWT = { # Swat
+SWT = {
 	pattern = "pattern_solid.tga"
 	color1 = "green"
 	color2 = "yellow"
@@ -1172,7 +1172,7 @@ SWT = { # Swat
 
 ### Dir
 
-DIR = { # Dir
+DIR = {
 	pattern = "pattern_solid.tga"
 	color1 = "green"
 	color2 = "white"
@@ -1212,7 +1212,7 @@ DIR = { # Dir
 
 ### Khairpur
 
-KPR = { # Khairpur - Five stripes variant for difference with Sindh
+KPR = {
 	pattern = "pattern_solid.tga"
 	color1 = "white"
 	color2 = "red"
@@ -1227,7 +1227,7 @@ KPR = { # Khairpur - Five stripes variant for difference with Sindh
 
 ### Las Bela
 
-LBL = { # Lasbela
+LBL = {
 	pattern = "pattern_solid.tga"
 	color1 = "green"
 	color2 = "red"
@@ -1268,7 +1268,7 @@ LBL = { # Lasbela
 
 ### Kharan
 
-KHR = { # Kharan
+KHR = {
 	pattern = "pattern_solid.tga"
 	color1 = hsv360 	{	200	55	50	}
 	color2 = "red"
@@ -1290,7 +1290,7 @@ KHR = { # Kharan
 
 ### Shan states
 
-SHS = { # Shan state
+SHS = {
 	pattern = "pattern_solid.tga"
 	color1 = "yellow"
 	color2 = "green"
@@ -1312,7 +1312,7 @@ SHS = { # Shan state
 
 ### Kurnool
 
-KNO = { # Kurnool
+KNO = {
 	pattern = "pattern_solid.tga"
 	color1 = "green"
 	color2 = "white"
@@ -1328,7 +1328,7 @@ KNO = { # Kurnool
 
 ### Maldives
 
-MLD = { # Maldives - Flag would be plain red the stripes at hoist were added c. 1930
+MLD = {
 	pattern = "pattern_solid.tga"
 	color1 = "red"
 	color2 = "white"
@@ -1342,7 +1342,7 @@ MLD = { # Maldives - Flag would be plain red the stripes at hoist were added c. 
 	}
 }
 
-MLD_merchant = { # Maldives - Merchant flag c. 1930 (intermediary composition before dropping the hoist stripes)
+MLD_merchant = {
 	pattern = "pattern_solid.tga"
 	color1 = "red"
 	color2 = "white"
@@ -1363,7 +1363,7 @@ MLD_merchant = { # Maldives - Merchant flag c. 1930 (intermediary composition be
 	}
 }
 
-MLD_crescent = { # Maldives - State flag c. 1930 with crescent (intermediary composition before dropping the hoist stripes)
+MLD_crescent = {
 	pattern = "pattern_solid.tga"
 	color1 = "red"
 	color2 = "white"
@@ -1392,7 +1392,7 @@ MLD_crescent = { # Maldives - State flag c. 1930 with crescent (intermediary com
 
 ### Bihar
 
-BIH = { # Bihar
+BIH = {
 	pattern = "pattern_solid.tga"
 	color1 = "green"
 	color2 = "white"
@@ -1407,7 +1407,7 @@ BIH = { # Bihar
 
 ### Dravida Nadu
 
-DRA = { # Dravida Nadu
+DRA = {
 	pattern = "pattern_solid.tga"
 	color1 = "black"
 	color2 = "red"
@@ -1422,7 +1422,7 @@ DRA = { # Dravida Nadu
 
 ### Gujarat
 
-GUJ = { # Gujarat
+GUJ = {
 	pattern = "pattern_solid.tga"
 	color1 = "red"
 	color2 = "white"
@@ -1436,7 +1436,7 @@ GUJ = { # Gujarat
 
 ### Orissa
 
-ORI = { # Orissa
+ORI = {
 	pattern = "pattern_solid.tga"
 	color1 = "red"
 	color2 = "yellow"
@@ -1451,7 +1451,7 @@ ORI = { # Orissa
 
 ### Rajputana
 
-RAJ = { # Rajputana - Sun flag (black, green or red)
+RAJ = {
 	pattern = "pattern_solid.tga"
 	color1 = "black"
 	color2 = "yellow"
@@ -1467,7 +1467,7 @@ RAJ = { # Rajputana - Sun flag (black, green or red)
 
 ### India
 
-BHT_vande_mataram = { # Independentist flag early 20th c.
+BHT_vande_mataram = {
 	pattern = "pattern_solid.tga"
 	color1 = "red"
 	color2 = "yellow"
@@ -1490,7 +1490,7 @@ BHT_vande_mataram = { # Independentist flag early 20th c.
 
 ### Kuki
 
-KKI = { # Kuki
+KKI = {
 	pattern = "pattern_solid.tga"
 	color1 = "azure"
 	color2 = "red_light"
@@ -1519,7 +1519,7 @@ KKI = { # Kuki
 
 ### Khasi
 
-MGH = { # Khasi/Meghalaya
+MGH = {
 	pattern = "pattern_solid.tga"
 	color1 = "red"
 	color2 = "white"
@@ -1571,7 +1571,7 @@ MGH = { # Khasi/Meghalaya
 
 ### Nagaland
 
-NGA = { # Nagaland
+NGA = {
 	pattern = "pattern_solid.tga"
 	color1 = "blue_light"
 	color2 = "white"
@@ -1595,7 +1595,7 @@ NGA = { # Nagaland
 
 ### Tripura
 
-TIP = { # Tripura - Simple bicolour version (Ancient 19th c flag in plain gold, later variant bicolor with heraldic achievement)
+TIP = {
 	pattern = "pattern_solid.tga"
 	color1 = "red"
 	color2 = "yellow"
@@ -1608,9 +1608,7 @@ TIP = { # Tripura - Simple bicolour version (Ancient 19th c flag in plain gold, 
 	}
 }
 
-### Other (improved designs that you may want to copy/paste over old instance)
-
-BHW = { # Bahawalpur
+BHW = {
 	pattern = "pattern_solid.tga"
 	color1 = "red"
 	color2 = "yellow"
@@ -1630,7 +1628,7 @@ BHW = { # Bahawalpur
 	}
 }
 
-MAK = { # Makran
+MAK = {
 	pattern = "pattern_solid.tga"
 	color1 = "green"
 	color2 = "red"
@@ -1650,7 +1648,7 @@ MAK = { # Makran
 	}
 }
 
-NEP = { # Nepal
+NEP = {
 	pattern = "pattern_solid.tga"
 	color1 = hsv360 	{	08 	82	60	}
 	color2 = hsv360 	{	97	60	50	}

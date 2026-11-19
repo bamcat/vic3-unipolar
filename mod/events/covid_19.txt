@@ -25,7 +25,6 @@ covid.1 = {
  
 	trigger = {
 		NOT = { has_global_variable = covid_pandemic }
-		# Fires for China only
 		c:PRC ?= this
 		# 2020 start
 		game_date >= 2020.1.1
@@ -35,7 +34,6 @@ covid.1 = {
 		set_global_variable = covid_pandemic 
 		set_variable = { name = plague_originator }
 		save_scope_as = plague_originator_country
-		# Origin: China's central state (Hubei region)
 		random_scope_state = {
 			limit = {
 				is_incorporated = yes
@@ -228,7 +226,7 @@ covid.2 = {
 				}
 			}
 			add_journal_entry = { type = je_spanish_flu }
-			set_variable = country_hit_by_plague # so that countries cannot get JE multiple times
+			set_variable = country_hit_by_plague
 		}
 		custom_tooltip = plague_decisions_available.tt
 	}
@@ -563,11 +561,11 @@ covid.8 = {
 		if = {
 			limit = {
 				any_interest_group = {
-					leader = { has_ideology = ideology:ideology_anarchist }
+					leader = { has_ideology = ideology:ideology_anarchist_leader }
 				}
 			}
 			every_interest_group = {
-				limit = { has_ideology = ideology:ideology_anarchist }
+				limit = { has_ideology = ideology:ideology_anarchist_leader }
 				add_modifier = plague_eviction_ban_anarchist
 			}
 		}
@@ -588,9 +586,9 @@ covid.8 = {
 				any_interest_group = {
 					leader = {
 						OR = {
-							has_ideology = ideology:ideology_vanguardist
-							has_ideology = ideology:ideology_communist
-							has_ideology = ideology:ideology_social_democrat
+							has_ideology = ideology:ideology_state_socialist_leader
+							has_ideology = ideology:ideology_marxist_leader
+							has_ideology = ideology:ideology_democratic_socialist_leader
 						}
 					}
 				}
@@ -599,9 +597,9 @@ covid.8 = {
 				limit = {
 					leader = {
 						OR = {
-							has_ideology = ideology:ideology_vanguardist
-							has_ideology = ideology:ideology_communist
-							has_ideology = ideology:ideology_social_democrat
+							has_ideology = ideology:ideology_state_socialist_leader
+							has_ideology = ideology:ideology_marxist_leader
+							has_ideology = ideology:ideology_democratic_socialist_leader
 						}
 					}
 				}
@@ -624,10 +622,10 @@ covid.8 = {
 				any_interest_group = {
 					leader = {
 						OR = {
-							has_ideology = ideology:ideology_vanguardist
-							has_ideology = ideology:ideology_communist
-							has_ideology = ideology:ideology_social_democrat
-							has_ideology = ideology:ideology_anarchist
+							has_ideology = ideology:ideology_state_socialist_leader
+							has_ideology = ideology:ideology_marxist_leader
+							has_ideology = ideology:ideology_democratic_socialist_leader
+							has_ideology = ideology:ideology_anarchist_leader
 						}
 					}
 				}
@@ -636,10 +634,10 @@ covid.8 = {
 				limit = {
 					leader = {
 						OR = {
-							has_ideology = ideology:ideology_vanguardist
-							has_ideology = ideology:ideology_communist
-							has_ideology = ideology:ideology_social_democrat
-							has_ideology = ideology:ideology_anarchist
+							has_ideology = ideology:ideology_state_socialist_leader
+							has_ideology = ideology:ideology_marxist_leader
+							has_ideology = ideology:ideology_democratic_socialist_leader
+							has_ideology = ideology:ideology_anarchist_leader
 						}
 					}
 				}

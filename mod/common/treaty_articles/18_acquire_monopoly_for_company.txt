@@ -53,8 +53,8 @@
 			}
 			custom_description = {
 				text = has_treaty_foreign_investment_rights_with_trigger
-				subject = scope:target_country # Country
-				object = scope:source_country # Country
+				subject = scope:target_country
+				object = scope:source_country
 
 				hidden_trigger = {
 					OR = {
@@ -182,7 +182,6 @@
 					scope:source_country ?= this
 				}
 
-				# We are doing this to be able to reuse loc across treaties and diplomatic actions
 				scope:source_country = {
 					save_temporary_scope_as = target
 				}
@@ -213,7 +212,6 @@
 					limit = {
 						country_rank >= scope:target_country.country_rank
 					}
-					### Relative rank
 					add = {
 						desc = "DIPLOMATIC_ACCEPTANCE_RANK"
 						value = scope:target_country.country_rank
@@ -274,7 +272,6 @@
 					scope:target_country ?= this
 				}
 
-				# We are doing this to be able to reuse loc across treaties and diplomatic actions
 				scope:target_country = {
 					save_temporary_scope_as = target
 				}

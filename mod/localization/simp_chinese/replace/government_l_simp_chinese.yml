@@ -1,6 +1,4 @@
 ﻿l_simp_chinese:
-
-# Monarchies
  gov_absolute_kingdom:0 "绝对君主制"
  gov_absolute_kingdom_desc:2 "这是一个[concept_government_type],电能完全与[Concept('concept_ruler','$RULER_TITLE_KING$')]或[Concept('concept_ruler','$RULER_TITLE_QUEEN$')]. \n\n$TRANSFER_OF_POWER_NAME_DESC$."
  gov_kingdom:0 "君主制"
@@ -209,7 +207,6 @@
  gov_united_kingdom_braz_por_spa_kingdom: "$gov_united_kingdom_braz_por_spa$"
  gov_united_kingdom_braz_por_spa_kingdom_desc: "$gov_united_kingdom_braz_por_spa_desc$"
 
- # Regencies
  gov_regency_ethiopia_ras: "户口"
  gov_regency_ethiopia_ras_desc: "这是[concept_government_type], 权力在于[Concept('concept_ruler','$RULER_TITLE_REGENT$')], 代表尚不能登上王位的[Concept('concept_ruler','$RULER_TITLE_RAS$')]。\n\n$TRANSFER_OF_POWER_NAME_DESC$"
  gov_regency_princely_state_rawalate: "户口"
@@ -339,7 +336,6 @@
  gov_provisional_government_spain: "临时政府"
  gov_provisional_government_spain_desc: "这是一个[concept_government_type],其中[Concept('concept_ruler','$RULER_TITLE_REGENT$')]的规则是临时的,因为科特斯决定了国家的未来政府.\n\n$TRANSFER_OF_POWER_NAME_DESC$"
 
-# Theocracies
  gov_theocracy:0 "专制"
  gov_theocracy_desc:2 "这是由神职人员统治的[concept_government_type]。[concept_country]"
  gov_theocratic_dictatorship:0 "专制独裁"
@@ -381,7 +377,6 @@
  gov_american_theocracy_dictatorial: "教会独裁"
  gov_american_theocracy_dictatorial_desc: "这是[concept_government_type],其中[concept_country]由单一教会机构的负责人统治.\n\n$TRANSFER_OF_POWER_NAME_DESC$"
 
-# Presidential Republics
  gov_brazil_oligarchic_republic_presidential: "奥利加尔奇克共和国"
  gov_brazil_oligarchic_republic_presidential_desc: "这是一个[concept_government_type],其中[concept_country]由[Concept('concept_ruler','$RULER_TITLE_PRESIDENT$')][Concept('concept_election','$concept_elected$')]主要由农业寡头统治.\n\n$TRANSFER_OF_POWER_NAME_DESC$"
  gov_peru_bolivia_confederal_state: "邦联州"
@@ -446,7 +441,6 @@
  gov_fascist_state:0 "法西斯国家"
  gov_fascist_state_desc:2 "这是一个[concept_government_type],由它坚持法西斯主义[concept_ideology]所定义. 这是一个残酷和独裁的政权。 \n\n$TRANSFER_OF_POWER_NAME_DESC$"
 
- ### Colonial Administrations
  gov_crown_colony_india: "英国殖民地"
  gov_crown_colony_india_desc: "这是英国王室的殖民地,由拥有有限自治权的殖民行政人员统治. \n\n$TRANSFER_OF_POWER_NAME_DESC$"
  gov_crown_colony:0 "英国殖民地"
@@ -468,7 +462,6 @@
  gov_dominion_elected: "统治"
  gov_dominion_elected_desc: "这是由民主的[Concept('concept_election','$concept_elected$')]殖民集会统治的[concept_government_type]。\n\n$TRANSFER_OF_POWER_NAME_DESC$"
 
- ### Corporate States
  gov_fascist_corporate_state: "法西斯国家"
  gov_fascist_corporate_state_desc: "这是一个[concept_government_type],由它坚持法西斯主义[concept_ideology]所定义. 这是一个残酷和独裁的政权。 \n\n$TRANSFER_OF_POWER_NAME_DESC$"
  gov_corporate_state: "公司国家"
@@ -488,7 +481,6 @@
  gov_corporate_state_austrofascist: "圣地斯塔特"
  gov_corporate_state_austrofascist_desc: "这是一个按照社团主义路线组织的 " x id=0 " ,其中政府正式担任不同社会阶层之间的调解人。 它由[Concept('concept_ruler','$RULER_TITLE_CHANCELLOR$')]领导,后者以独裁权统治.\n\n$TRANSFER_OF_POWER_NAME_DESC$"
 
-# Parliamentary Republics
  gov_french_2nd_republic_parliamentary: "第二共和国"
  gov_french_2nd_republic_parliamentary_desc: "这是一个[concept_government_type],其中[concept_country]由一个民主的[Concept('concept_election','$concept_elected$')]议会统治.\n\n$TRANSFER_OF_POWER_NAME_DESC$"
  gov_french_2nd_republic_parliamentary_dictator: "第二共和国"
@@ -528,7 +520,6 @@
  gov_danubian_federation_parliamentary_republic_dictatorship: "达努比亚联合会"
  gov_danubian_federation_parliamentary_republic_dictatorship_desc: "这是一个 " x id=0 " ,其中各州按照族裔划分成许多联邦单位。 中央权力由富强政治阶层选出的联邦参议院掌握. \n\n$TRANSFER_OF_POWER_NAME_DESC$"
 
-#Council Republics
  gov_council_dictatorship:1 "保护国"
  gov_council_dictatorship_desc:2 "这是一个[concept_government_type],其中[concept_country]由未经选举产生的议会统治.\n\n$TRANSFER_OF_POWER_NAME_DESC$"
  gov_council_republic:0 "理事会"
@@ -550,7 +541,6 @@
  gov_phalanstere: "法兰斯蒂尔"
  gov_phalanstere_desc: "这是一个"x id=0",其中"x id=1/"由由由社会主义国家技术机关代表任命的专业人士理事会来统治. \n\n<x id=4/""
 
-# Transfer of Power
  transfer_of_power_hereditary:0 "遗传"
  transfer_of_power_hereditary_desc:1 "在 Hereditary [concept_transfer_of_power],[Concept('concept_ruler', '$concept_rulers$')]统治终身,并有一个[concept_heir],当$concept_ruler$死亡后,成为新$concept_ruler$."
  transfer_of_power_presidential_elective:0 "总统选举"
@@ -567,7 +557,6 @@
  TRANSFER_OF_POWER_TOOLTIP_DESC:0 "[GovernmentType.GetTransferOfPowerDesc]"
  TRANSFER_OF_POWER_PLAYER_TOOLTIP_DESC:0 "[GetPlayer.GetGovernment.GetTransferOfPowerDesc]"
 
-# Titles
  RULER_TITLE_DEFAULT:0 "标尺"
  RULER_TITLE_KING:0 "国王"
  RULER_TITLE_QUEEN:0 "皇后 皇后 皇后 皇后"

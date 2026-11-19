@@ -31,25 +31,18 @@ REPLACE_OR_CREATE:law_subjecthood = {
 		country_support_separatism_resistance_mult = -0.5
 		country_support_separatism_strength_mult = -0.5
 
-		#If primary culture, only apply this value
 		country_acceptance_primary_culture_add = 100
 		country_acceptance_homeland_add = 30
 		country_acceptance_not_homeland_add = 0
 
-		#Heritage
-		#From this block, we only apply the highest value a Pop qualifies for
 		country_acceptance_shared_heritage_trait_add = 20
 		country_acceptance_shared_heritage_trait_group_add = 15
 		country_acceptance_no_shared_heritage_trait_add = 0
 
-		#Language
-		#From this block, we only apply the highest value a Pop qualifies for
 		country_acceptance_shared_language_trait_add = 20
 		country_acceptance_shared_language_trait_group_add = 15
 		country_acceptance_no_shared_language_trait_add = 0
 
-		#Tradition
-		#From this block, we only apply the highest value a Pop qualifies for
 		country_acceptance_shared_tradition_trait_add = 25
 		country_acceptance_no_shared_tradition_trait_add = 0
 	}
@@ -127,27 +120,19 @@ REPLACE_OR_CREATE:law_ethnostate = {
 		country_support_separatism_resistance_mult = -0.5
 		country_support_separatism_strength_mult = 0.5
 
-		#If primary culture, only apply this value
 		country_acceptance_primary_culture_add = 100
 
-		#Heritage
-		#From this block, we only apply the highest value a Pop qualifies for
 		country_acceptance_shared_heritage_trait_add = 20
 		country_acceptance_shared_heritage_trait_group_add = 10
 		country_acceptance_no_shared_heritage_trait_add = -10
 
-		#Language
-		#From this block, we only apply the highest value a Pop qualifies for
 		country_acceptance_shared_language_trait_add = 15
 		country_acceptance_shared_language_trait_group_add = 5
 		country_acceptance_no_shared_language_trait_add = 0
 
-		#Tradition
-		#From this block, we only apply the highest value a Pop qualifies for
 		country_acceptance_shared_tradition_trait_add = 10
 		country_acceptance_no_shared_tradition_trait_add = 0
 
-		#Fervor
 		country_primary_culture_fervor_from_laws_add = 20
 	}
 
@@ -203,7 +188,7 @@ REPLACE_OR_CREATE:law_ethnostate = {
 		country_disallow_government_work_full_acceptance_bool = no
 	}
 
-	ai_enact_weight_modifier = { #Petitions
+	ai_enact_weight_modifier = {
 		value = 0
 
 		if = {
@@ -235,27 +220,19 @@ REPLACE_OR_CREATE:law_national_supremacy = {
 		country_support_separatism_resistance_mult = -0.25
 		country_support_separatism_strength_mult = 0.25
 
-		#If primary culture, only apply this value
 		country_acceptance_primary_culture_add = 100
 
-		#Heritage
-		#From this block, we only apply the highest value a Pop qualifies for
 		country_acceptance_shared_heritage_trait_add = 40
 		country_acceptance_shared_heritage_trait_group_add = 20
 		country_acceptance_no_shared_heritage_trait_add = -10
 
-		#Language
-		#From this block, we only apply the highest value a Pop qualifies for
 		country_acceptance_shared_language_trait_add = 30
 		country_acceptance_shared_language_trait_group_add = 15
 		country_acceptance_no_shared_language_trait_add = -5
 
-		#Tradition
-		#From this block, we only apply the highest value a Pop qualifies for
 		country_acceptance_shared_tradition_trait_add = 15
 		country_acceptance_no_shared_tradition_trait_add = 0
 
-		#Fervor
 		country_primary_culture_fervor_from_laws_add = 15
 	}
 
@@ -311,7 +288,7 @@ REPLACE_OR_CREATE:law_national_supremacy = {
 		country_disallow_government_work_full_acceptance_bool = no
 	}
 
-	ai_enact_weight_modifier = { #Petitions
+	ai_enact_weight_modifier = {
 		value = 0
 
 		if = {
@@ -347,27 +324,19 @@ REPLACE_OR_CREATE:law_racial_segregation = {
 	modifier = {
 		country_authority_add = 100
 
-		#If primary culture, only apply this value
 		country_acceptance_primary_culture_add = 100
 
-		#Heritage
-		#From this block, we only apply the highest value a Pop qualifies for
 		country_acceptance_shared_heritage_trait_add = 60
 		country_acceptance_shared_heritage_trait_group_add = 50
 		country_acceptance_no_shared_heritage_trait_add = -20
 
-		#Language
-		#From this block, we only apply the highest value a Pop qualifies for
 		country_acceptance_shared_language_trait_add = 30
 		country_acceptance_shared_language_trait_group_add = 15
 		country_acceptance_no_shared_language_trait_add = -5
 
-		#Tradition
-		#From this block, we only apply the highest value a Pop qualifies for
 		country_acceptance_shared_tradition_trait_add = 20
 		country_acceptance_no_shared_tradition_trait_add = 0
 
-		#Fervor
 		country_primary_culture_fervor_from_laws_add = 10
 	}
 
@@ -416,7 +385,7 @@ REPLACE_OR_CREATE:law_racial_segregation = {
 		country_disallow_government_work_full_acceptance_bool = no
 	}
 
-	ai_enact_weight_modifier = { #Petitions
+	ai_enact_weight_modifier = {
 		value = 0
 
 		if = {
@@ -460,27 +429,19 @@ REPLACE_OR_CREATE:law_cultural_exclusion = {
 		country_support_separatism_resistance_mult = 0.25
 		country_support_separatism_strength_mult = -0.25
 
-		#If primary culture, only apply this value
 		country_acceptance_primary_culture_add = 100
 
-		#Heritage
-		#From this block, we only apply the highest value a Pop qualifies for
 		country_acceptance_shared_heritage_trait_add = 60
 		country_acceptance_shared_heritage_trait_group_add = 50
 		country_acceptance_no_shared_heritage_trait_add = 10
 
-		#Language
-		#From this block, we only apply the highest value a Pop qualifies for
 		country_acceptance_shared_language_trait_add = 50
 		country_acceptance_shared_language_trait_group_add = 25
 		country_acceptance_no_shared_language_trait_add = 10
 
-		#Tradition
-		#From this block, we only apply the highest value a Pop qualifies for
 		country_acceptance_shared_tradition_trait_add = 25
 		country_acceptance_no_shared_tradition_trait_add = 0
 
-		#Fervor
 		country_primary_culture_fervor_from_laws_add = 5
 	}
 
@@ -528,7 +489,7 @@ REPLACE_OR_CREATE:law_cultural_exclusion = {
 		country_disallow_government_work_full_acceptance_bool = no
 	}
 
-	ai_enact_weight_modifier = { #Petitions
+	ai_enact_weight_modifier = {
 		value = 0
 
 		if = {
@@ -566,30 +527,22 @@ REPLACE_OR_CREATE:law_multicultural = {
 	}
 
 	modifier = {
-		#If primary culture, only apply this value
 		country_acceptance_primary_culture_add = 100
 		country_support_separatism_resistance_mult = 0.5
 		country_support_separatism_strength_mult = -0.5
 		state_assimilation_mult = -0.25
 
-		#Heritage
-		#From this block, we only apply the highest value a Pop qualifies for
 		country_acceptance_shared_heritage_trait_add = 60
 		country_acceptance_shared_heritage_trait_group_add = 50
 		country_acceptance_no_shared_heritage_trait_add = 20
 
-		#Language
-		#From this block, we only apply the highest value a Pop qualifies for
 		country_acceptance_shared_language_trait_add = 50
 		country_acceptance_shared_language_trait_group_add = 30
 		country_acceptance_no_shared_language_trait_add = 20
 
-		#Tradition
-		#From this block, we only apply the highest value a Pop qualifies for
 		country_acceptance_shared_tradition_trait_add = 10
 		country_acceptance_no_shared_tradition_trait_add = 0
 
-		#Fervor
 		country_primary_culture_fervor_from_laws_add = -10
 	}
 
@@ -622,7 +575,7 @@ REPLACE_OR_CREATE:law_multicultural = {
 		country_disallow_government_work_full_acceptance_bool = no
 	}
 
-	ai_enact_weight_modifier = { #Petitions
+	ai_enact_weight_modifier = {
 		value = 0
 
 		if = {
@@ -651,30 +604,22 @@ REPLACE_OR_CREATE:law_affirmative_action = {
 	}
 
 	modifier = {
-		#If primary culture, only apply this value
 		country_acceptance_primary_culture_add = 100
 		country_support_separatism_resistance_mult = 0.5
 		country_support_separatism_strength_mult = -0.5
 		state_assimilation_mult = -0.25
 
-		#Heritage
-		#From this block, we only apply the highest value a Pop qualifies for
 		country_acceptance_shared_heritage_trait_add = 60
 		country_acceptance_shared_heritage_trait_group_add = 50
 		country_acceptance_no_shared_heritage_trait_add = 20
 
-		#Language
-		#From this block, we only apply the highest value a Pop qualifies for
 		country_acceptance_shared_language_trait_add = 50
 		country_acceptance_shared_language_trait_group_add = 30
 		country_acceptance_no_shared_language_trait_add = 20
 
-		#Tradition
-		#From this block, we only apply the highest value a Pop qualifies for
 		country_acceptance_shared_tradition_trait_add = 10
 		country_acceptance_no_shared_tradition_trait_add = 0
 
-		#Fervor
 		country_primary_culture_fervor_from_laws_add = -10
 	}
 
@@ -707,7 +652,7 @@ REPLACE_OR_CREATE:law_affirmative_action = {
 		country_disallow_government_work_full_acceptance_bool = no
 	}
 	
-	ai_enact_weight_modifier = { #Petitions
+	ai_enact_weight_modifier = {
 		value = 0
 		
 		if = {

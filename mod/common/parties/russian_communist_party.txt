@@ -1,5 +1,5 @@
-REPLACE_OR_CREATE:russian_communist_party = {
-	color = { 170 30 35 }
+﻿REPLACE_OR_CREATE:russian_communist_party = {
+	color = { 200 30 30 }
 	name = {
 		first_valid = {
 			triggered_desc = {
@@ -13,31 +13,27 @@ REPLACE_OR_CREATE:russian_communist_party = {
 	icon = {
 		default = "/gfx/interface/icons/political_parties/russian_communist.dds"
 	}
-	
-	# THIS IS RUN ONLY ONCE AT GAME START
+
 	valid_for_country = {
-	THIS = c:RUS
+		THIS = c:RUS
 	}
 
-		available_for_interest_group = {
+	available_for_interest_group = {
 		is_marginal = no
 		OR = {
-			leader = { has_ideology = ideology:ideology_marxist_leader }
-			leader = { has_ideology = ideology:ideology_state_socialist_leader }
-			leader = { has_ideology = ideology:ideology_anarchist_leader }
-			leader = { has_ideology = ideology:ideology_market_socialist_leader }
-			leader = { has_ideology = ideology:ideology_democratic_socialist_leader }
-			leader = { has_ideology = ideology:ideology_left_wing_populist_leader }
+			leader ?= { has_ideology = ideology:ideology_state_socialist_leader }
+			leader ?= { has_ideology = ideology:ideology_marxist_leader }
+			leader ?= { has_ideology = ideology:ideology_left_wing_populist_leader }
+			leader ?= { has_ideology = ideology:ideology_democratic_socialist_leader }
+			leader ?= { has_ideology = ideology:ideology_anarchist_leader }
 			has_ideology = ideology:ideology_far_left_economy
 			has_ideology = ideology:ideology_communist
+			has_ideology = ideology:ideology_totalitarian
 			has_ideology = ideology:ideology_left_economy
 			has_ideology = ideology:ideology_communitarian
-			has_ideology = ideology:ideology_totalitarian
 		}
 	}
 
-	# Root - IG considering joining
-	# scope:number - the number of IGs that would join this party before the root IG
 	join_weight = {
 		value = {
 			value = -5
@@ -46,82 +42,84 @@ REPLACE_OR_CREATE:russian_communist_party = {
 		if = {
 			limit = {
 				OR = {
-				leader = { has_ideology = ideology:ideology_marxist_leader }
-				leader = { has_ideology = ideology:ideology_state_socialist_leader }
-				leader = { has_ideology = ideology:ideology_anarchist_leader }
+					leader ?= { has_ideology = ideology:ideology_state_socialist_leader }
+					leader ?= { has_ideology = ideology:ideology_marxist_leader }
+				}
 			}
-			}
-			add = { value = 45 desc = "leader_ideological_compatibility" }
+			add = { value = 120 desc = "leader_ideological_compatibility" }
 		}
 		if = {
 			limit = {
 				OR = {
-				leader = { has_ideology = ideology:ideology_market_socialist_leader }
-				leader = { has_ideology = ideology:ideology_democratic_socialist_leader }
-				leader = { has_ideology = ideology:ideology_left_wing_populist_leader }
+					leader ?= { has_ideology = ideology:ideology_left_wing_populist_leader }
+					leader ?= { has_ideology = ideology:ideology_democratic_socialist_leader }
+					leader ?= { has_ideology = ideology:ideology_anarchist_leader }
+				}
 			}
+			add = { value = 40 desc = "leader_adjacent_ideology" }
+		}
+		if = {
+			limit = {
+				leader ?= {
+					NOR = {
+						has_ideology = ideology:ideology_state_socialist_leader
+						has_ideology = ideology:ideology_marxist_leader
+						has_ideology = ideology:ideology_left_wing_populist_leader
+						has_ideology = ideology:ideology_democratic_socialist_leader
+						has_ideology = ideology:ideology_anarchist_leader
+					}
+				}
 			}
-			add = { value = 20 desc = "leader_adjacent_ideology" }
+			add = { value = -40 desc = "leader_ideology_unrelated" }
 		}
 		if = {
 			limit = {
 				OR = {
-				leader = { has_ideology = ideology:ideology_fascist_leader }
-				leader = { has_ideology = ideology:ideology_authoritarian_capitalist_leader }
-				leader = { has_ideology = ideology:ideology_neoliberal_leader }
-				leader = { has_ideology = ideology:ideology_right_wing_libertarian_leader }
-				leader = { has_ideology = ideology:ideology_classical_liberal_leader }
-				leader = { has_ideology = ideology:ideology_minarchist_leader }
+					leader ?= { has_ideology = ideology:ideology_neoliberal_leader }
+					leader ?= { has_ideology = ideology:ideology_classical_liberal_leader }
+					leader ?= { has_ideology = ideology:ideology_right_wing_libertarian_leader }
+					leader ?= { has_ideology = ideology:ideology_minarchist_leader }
+					leader ?= { has_ideology = ideology:ideology_fascist_leader }
+					leader ?= { has_ideology = ideology:ideology_monarchist_leader }
+				}
 			}
-			}
-			add = { value = -50 desc = "leader_ideological_incompatibility" }
+			add = { value = -150 desc = "leader_ideological_incompatibility" }
 		}
 		if = {
 			limit = {
 				OR = {
-				has_ideology = ideology:ideology_far_left_economy
-				has_ideology = ideology:ideology_communist
+					has_ideology = ideology:ideology_far_left_economy
+					has_ideology = ideology:ideology_communist
+					has_ideology = ideology:ideology_totalitarian
+				}
 			}
-			}
-			add = { value = 35 desc = "interest_group_ideological_compatibility" }
+			add = { value = 20 desc = "interest_group_ideological_compatibility" }
 		}
 		if = {
 			limit = {
 				OR = {
-				has_ideology = ideology:ideology_left_economy
-				has_ideology = ideology:ideology_communitarian
-				has_ideology = ideology:ideology_totalitarian
+					has_ideology = ideology:ideology_left_economy
+					has_ideology = ideology:ideology_communitarian
+				}
 			}
-			}
-			add = { value = 15 desc = "interest_group_adjacent_ideology" }
+			add = { value = 8 desc = "interest_group_adjacent_ideology" }
 		}
 		if = {
 			limit = {
 				OR = {
-				has_ideology = ideology:ideology_far_right_economy
-				has_ideology = ideology:ideology_right_economy
-				has_ideology = ideology:ideology_individualist
-				has_ideology = ideology:ideology_monarchist
-				has_ideology = ideology:ideology_theocrat
+					has_ideology = ideology:ideology_right_economy
+					has_ideology = ideology:ideology_individualist
+					has_ideology = ideology:ideology_globalist
+				}
 			}
-			}
-			add = { value = -35 desc = "interest_group_ideological_incompatibility" }
-		}
-		if = {
-			limit = {
-				owner = { OR = { has_law = law_type:law_council_republic has_law = law_type:law_command_economy has_law = law_type:law_cooperative_ownership } }
-			}
-			add = { value = 15 desc = "socialist_laws" }
+			add = { value = -20 desc = "interest_group_ideological_incompatibility" }
 		}
 		if = {
 			limit = {
 				is_powerful = yes
 				OR = {
-					leader = { has_ideology = ideology:ideology_marxist_leader }
-					leader = { has_ideology = ideology:ideology_state_socialist_leader }
-					leader = { has_ideology = ideology:ideology_anarchist_leader }
-					has_ideology = ideology:ideology_far_left_economy
-					has_ideology = ideology:ideology_communist
+					leader ?= { has_ideology = ideology:ideology_state_socialist_leader }
+					leader ?= { has_ideology = ideology:ideology_marxist_leader }
 				}
 			}
 			add = { value = 20 desc = "powerful_ig" }
@@ -139,5 +137,4 @@ REPLACE_OR_CREATE:russian_communist_party = {
 			multiply = { value = 0.75 desc = "from_two_prior_members" }
 		}
 	}
-
 }

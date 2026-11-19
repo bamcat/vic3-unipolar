@@ -16,7 +16,6 @@ REPLACE_OR_CREATE:french_national_front_party = {
 	}
 	
 	
-	# THIS IS RUN ONLY ONCE AT GAME START
 	valid_for_country = {
 	THIS = c:FRA
 	}
@@ -24,12 +23,12 @@ REPLACE_OR_CREATE:french_national_front_party = {
 		available_for_interest_group = {
 		is_marginal = no
 		OR = {
-			leader = { has_ideology = ideology:ideology_fascist_leader }
-			leader = { has_ideology = ideology:ideology_authoritarian_capitalist_leader }
-			leader = { has_ideology = ideology:ideology_right_wing_populist_leader }
-			leader = { has_ideology = ideology:ideology_neocon_leader }
-			leader = { has_ideology = ideology:ideology_corporatist_leader }
-			leader = { has_ideology = ideology:ideology_state_capitalist_leader }
+			leader ?= { has_ideology = ideology:ideology_fascist_leader }
+			leader ?= { has_ideology = ideology:ideology_authoritarian_capitalist_leader }
+			leader ?= { has_ideology = ideology:ideology_right_wing_populist_leader }
+			leader ?= { has_ideology = ideology:ideology_neocon_leader }
+			leader ?= { has_ideology = ideology:ideology_corporatist_leader }
+			leader ?= { has_ideology = ideology:ideology_state_capitalist_leader }
 			has_ideology = ideology:ideology_totalitarian
 			has_ideology = ideology:ideology_nationalist
 			has_ideology = ideology:ideology_militarist
@@ -41,8 +40,6 @@ REPLACE_OR_CREATE:french_national_front_party = {
 		}
 	}
 
-	# Root - IG considering joining
-	# scope:number - the number of IGs that would join this party before the root IG
 	join_weight = {
 		value = {
 			value = -5
@@ -51,34 +48,49 @@ REPLACE_OR_CREATE:french_national_front_party = {
 		if = {
 			limit = {
 				OR = {
-				leader = { has_ideology = ideology:ideology_fascist_leader }
-				leader = { has_ideology = ideology:ideology_authoritarian_capitalist_leader }
-				leader = { has_ideology = ideology:ideology_right_wing_populist_leader }
+				leader ?= { has_ideology = ideology:ideology_fascist_leader }
+				leader ?= { has_ideology = ideology:ideology_authoritarian_capitalist_leader }
+				leader ?= { has_ideology = ideology:ideology_right_wing_populist_leader }
 			}
 			}
-			add = { value = 45 desc = "leader_ideological_compatibility" }
+			add = { value = 120 desc = "leader_ideological_compatibility" }
 		}
 		if = {
 			limit = {
 				OR = {
-				leader = { has_ideology = ideology:ideology_neocon_leader }
-				leader = { has_ideology = ideology:ideology_corporatist_leader }
-				leader = { has_ideology = ideology:ideology_state_capitalist_leader }
+				leader ?= { has_ideology = ideology:ideology_neocon_leader }
+				leader ?= { has_ideology = ideology:ideology_corporatist_leader }
+				leader ?= { has_ideology = ideology:ideology_state_capitalist_leader }
 			}
 			}
-			add = { value = 20 desc = "leader_adjacent_ideology" }
+			add = { value = 40 desc = "leader_adjacent_ideology" }
+		}
+		if = {
+			limit = {
+				leader ?= {
+					NOR = {
+						has_ideology = ideology:ideology_fascist_leader
+						has_ideology = ideology:ideology_authoritarian_capitalist_leader
+						has_ideology = ideology:ideology_right_wing_populist_leader
+						has_ideology = ideology:ideology_neocon_leader
+						has_ideology = ideology:ideology_corporatist_leader
+						has_ideology = ideology:ideology_state_capitalist_leader
+					}
+				}
+			}
+			add = { value = -40 desc = "leader_ideology_unrelated" }
 		}
 		if = {
 			limit = {
 				OR = {
-				leader = { has_ideology = ideology:ideology_anarchist_leader }
-				leader = { has_ideology = ideology:ideology_marxist_leader }
-				leader = { has_ideology = ideology:ideology_social_liberal_leader }
-				leader = { has_ideology = ideology:ideology_progressive_leader }
-				leader = { has_ideology = ideology:ideology_green_leader }
+				leader ?= { has_ideology = ideology:ideology_anarchist_leader }
+				leader ?= { has_ideology = ideology:ideology_marxist_leader }
+				leader ?= { has_ideology = ideology:ideology_social_liberal_leader }
+				leader ?= { has_ideology = ideology:ideology_progressive_leader }
+				leader ?= { has_ideology = ideology:ideology_green_leader }
 			}
 			}
-			add = { value = -50 desc = "leader_ideological_incompatibility" }
+			add = { value = -150 desc = "leader_ideological_incompatibility" }
 		}
 		if = {
 			limit = {
@@ -88,7 +100,7 @@ REPLACE_OR_CREATE:french_national_front_party = {
 				has_ideology = ideology:ideology_militarist
 			}
 			}
-			add = { value = 35 desc = "interest_group_ideological_compatibility" }
+			add = { value = 20 desc = "interest_group_ideological_compatibility" }
 		}
 		if = {
 			limit = {
@@ -98,7 +110,7 @@ REPLACE_OR_CREATE:french_national_front_party = {
 				has_ideology = ideology:ideology_far_right_economy
 			}
 			}
-			add = { value = 15 desc = "interest_group_adjacent_ideology" }
+			add = { value = 8 desc = "interest_group_adjacent_ideology" }
 		}
 		if = {
 			limit = {
@@ -109,7 +121,7 @@ REPLACE_OR_CREATE:french_national_front_party = {
 				has_ideology = ideology:ideology_globalist
 			}
 			}
-			add = { value = -35 desc = "interest_group_ideological_incompatibility" }
+			add = { value = -20 desc = "interest_group_ideological_incompatibility" }
 		}
 		if = {
 			limit = {
@@ -118,7 +130,7 @@ REPLACE_OR_CREATE:french_national_front_party = {
 				is_interest_group_type = ig_petty_bourgeoisie
 			}
 			}
-			add = { value = 20 desc = "from_archetype_party" }
+			add = { value = 15 desc = "from_archetype_party" }
 		}
 		if = {
 			limit = {
@@ -136,9 +148,9 @@ REPLACE_OR_CREATE:french_national_front_party = {
 			limit = {
 				is_powerful = yes
 				OR = {
-					leader = { has_ideology = ideology:ideology_fascist_leader }
-					leader = { has_ideology = ideology:ideology_authoritarian_capitalist_leader }
-					leader = { has_ideology = ideology:ideology_right_wing_populist_leader }
+					leader ?= { has_ideology = ideology:ideology_fascist_leader }
+					leader ?= { has_ideology = ideology:ideology_authoritarian_capitalist_leader }
+					leader ?= { has_ideology = ideology:ideology_right_wing_populist_leader }
 					has_ideology = ideology:ideology_totalitarian
 					has_ideology = ideology:ideology_nationalist
 					has_ideology = ideology:ideology_militarist

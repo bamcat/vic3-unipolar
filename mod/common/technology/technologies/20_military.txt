@@ -1,20 +1,16 @@
 ﻿### ERA 1
 
 REPLACE_OR_CREATE:standing_army = {
-	# Unlocks Barracks building
 	era = era_1
 	texture = "gfx/interface/icons/invention_icons/standing_army.dds"
 	category = military
 	
 	ai_weight = {
-		value = 3 # Very important tech in general
+		value = 3
 	}
 }
 
 REPLACE_OR_CREATE:navigation = {
-	# Unlocks Shipyards
-	# Unlocks Ports
-	# Increases Port max level by 2
 	era = era_1
 	texture = "gfx/interface/icons/invention_icons/navigation.dds"
 	category = military    
@@ -24,12 +20,11 @@ REPLACE_OR_CREATE:navigation = {
     }
 	
 	ai_weight = {
-		value = 2 # Important tech in general
+		value = 2
 	}
 }
 
 REPLACE_OR_CREATE:drydocks = {
-	# Increases Port max level by 3
 	era = era_1
 	texture = "gfx/interface/icons/invention_icons/drydock.dds"
 	category = military
@@ -45,7 +40,6 @@ REPLACE_OR_CREATE:drydocks = {
 	ai_weight = {
 		value = 1
 		
-		# Important for anyone with a navy
 		if = {
 			limit = { navy_size >= 5 }
 			add = 0.5
@@ -54,7 +48,6 @@ REPLACE_OR_CREATE:drydocks = {
 }
 
 REPLACE_OR_CREATE:mandatory_service = {
-	# Unlocks Army Model - National Militia
 	era = era_1
 	texture = "gfx/interface/icons/invention_icons/mandatory_service.dds"
 	category = military
@@ -68,13 +61,11 @@ REPLACE_OR_CREATE:mandatory_service = {
 	}
 	
 	ai_weight = {
-		value = 2 # Important tech in general
+		value = 2
 	}
 }
 
 REPLACE_OR_CREATE:gunsmithing = {
-	# Unlocks Arms Industry building
-	# Global Unlock for Muskets PM in Barracks
 	era = era_1
 	texture = "gfx/interface/icons/invention_icons/gunsmithing.dds"
 	category = military
@@ -84,13 +75,11 @@ REPLACE_OR_CREATE:gunsmithing = {
 	}
 	
 	ai_weight = {
-		value = 2 # Important tech in general
+		value = 2
 	}
 }
 
 REPLACE_OR_CREATE:artillery = {
-	# Unlocks Artillery Production PM in Arms Industries
-	# Unlocks Cannon Artillery PM in Barracks
 	era = era_1
 	texture = "gfx/interface/icons/invention_icons/artillery.dds"
 	category = military
@@ -100,7 +89,7 @@ REPLACE_OR_CREATE:artillery = {
 	}
 	
 	ai_weight = {
-		value = 2 # Important tech in general
+		value = 2
 	}
 }
 
@@ -118,12 +107,11 @@ REPLACE_OR_CREATE:military_drill = {
 	}
 	
 	ai_weight = {
-		value = 1.5 # Important tech in general
+		value = 1.5
 	}
 }
 
 REPLACE_OR_CREATE:napoleonic_warfare = {
-	# Unlocks Mobile Artillery PM in Barracks
 	era = era_1
 	texture = "gfx/interface/icons/invention_icons/napoleonic_warfare.dds"
 	category = military
@@ -134,7 +122,7 @@ REPLACE_OR_CREATE:napoleonic_warfare = {
 	}
 	
 	ai_weight = {
-		value = 1.5 # Important tech in general
+		value = 1.5
 		
 		if = {
 			limit = { has_journal_entry = je_sick_man_army }
@@ -144,7 +132,6 @@ REPLACE_OR_CREATE:napoleonic_warfare = {
 }
 
 REPLACE_OR_CREATE:admiralty = {
-	# Unlocks Naval Base building
 	era = era_1
 	texture = "gfx/interface/icons/invention_icons/admiralty.dds"
 	category = military
@@ -158,7 +145,7 @@ REPLACE_OR_CREATE:admiralty = {
 	}	
 	
 	ai_weight = {
-		value = 3 # Very important in general
+		value = 3
 	}
 }
 
@@ -181,7 +168,6 @@ REPLACE_OR_CREATE:army_reserves = {
 }
 
 REPLACE_OR_CREATE:line_infantry = {
-	# Unlocks Line Infantry PM in Barracks
 	era = era_1
 	texture = "gfx/interface/icons/invention_icons/line_infantry.dds"
 	category = military
@@ -192,7 +178,7 @@ REPLACE_OR_CREATE:line_infantry = {
 	}
 	
 	ai_weight = {
-		value = 2 # Important tech in general
+		value = 2
 	}
 }
 
@@ -213,7 +199,6 @@ REPLACE_OR_CREATE:paddle_steamer = {
 	ai_weight = {
 		value = 1
 		
-		# Important for naval powers
 		if = {
 			limit = { navy_size >= 20 }
 			add = 0.5
@@ -224,14 +209,11 @@ REPLACE_OR_CREATE:paddle_steamer = {
 ### ERA 2
 
 REPLACE_OR_CREATE:field_works = {
-	# Increases defense
 	era = era_2
 	texture = "gfx/interface/icons/invention_icons/field_works.dds"
 	category = military
 	
 	modifier = {
-		# defensive bonus, either directly to army or (ideally) a fortifications bonus, if we get forts
-		# Lower kill rate?
 		unit_army_defense_mult = 0.1
 	}
 	
@@ -274,7 +256,6 @@ REPLACE_OR_CREATE:logistics = {
 }
 
 REPLACE_OR_CREATE:triage = {
-	# Unlocks Basic Medical Aid PM in Barracks
 	era = era_2
 	texture = "gfx/interface/icons/invention_icons/triage.dds"
 	category = military
@@ -296,7 +277,6 @@ REPLACE_OR_CREATE:triage = {
 }
 
 REPLACE_OR_CREATE:shell_gun = {
-	# Unlocks Explosive Shell Artillery Production PM in Arms Industries
 	era = era_2
 	texture = "gfx/interface/icons/invention_icons/shell_gun.dds"
 	category = military
@@ -311,8 +291,6 @@ REPLACE_OR_CREATE:shell_gun = {
 }
 
 REPLACE_OR_CREATE:percussion_cap = {
-	# Unlocks Munition Plants building
-	# Global Unlock for Rifles PM in Barracks
 	era = era_2
 	texture = "gfx/interface/icons/invention_icons/percussion_cap.dds"
 	category = military
@@ -322,7 +300,7 @@ REPLACE_OR_CREATE:percussion_cap = {
 	}
 	
 	ai_weight = {
-		value = 2 # Important tech in general
+		value = 2
 	}
 	
 	modifier = {
@@ -331,7 +309,6 @@ REPLACE_OR_CREATE:percussion_cap = {
 }
 
 REPLACE_OR_CREATE:rifling = {
-	# Unlocks Rifles PM in Arms Industry
 	era = era_2
 	texture = "gfx/interface/icons/invention_icons/rifling.dds"
 	category = military
@@ -341,7 +318,7 @@ REPLACE_OR_CREATE:rifling = {
 	}
 	
 	ai_weight = {
-		value = 2 # Important tech in general
+		value = 2
 
 		if = {
 			limit = {
@@ -353,7 +330,6 @@ REPLACE_OR_CREATE:rifling = {
 }
 
 REPLACE_OR_CREATE:general_staff = {
-	# Unlocks Skirmish Infantry PM in Barracks / Conscription Centers
 	era = era_2
 	texture = "gfx/interface/icons/invention_icons/general_staff.dds"
 	category = military
@@ -363,7 +339,7 @@ REPLACE_OR_CREATE:general_staff = {
 	}
 	
 	ai_weight = {
-		value = 2 # Important tech in general
+		value = 2
 	}
 	
 	modifier = {
@@ -372,7 +348,6 @@ REPLACE_OR_CREATE:general_staff = {
 }
 
 REPLACE_OR_CREATE:screw_frigate = {
-	# Unlocks Complex Shipbuilding PM in Shipyards
 	era = era_2
 	texture = "gfx/interface/icons/invention_icons/screw_frigate.dds"
 	category = military
@@ -388,7 +363,6 @@ REPLACE_OR_CREATE:screw_frigate = {
 	ai_weight = {
 		value = 1
 		
-		# Important for naval powers
 		if = {
 			limit = { navy_size >= 20 }
 			add = 0.5
@@ -397,7 +371,6 @@ REPLACE_OR_CREATE:screw_frigate = {
 }
 
 REPLACE_OR_CREATE:power_of_the_purse = {
-	# Unlocks the Power of the Purse PM in Naval Bases
 	era = era_2
 	texture = "gfx/interface/icons/invention_icons/power_of_the_purse.dds"
 	category = military
@@ -416,7 +389,6 @@ REPLACE_OR_CREATE:power_of_the_purse = {
 }
 
 REPLACE_OR_CREATE:hydraulic_cranes = {
-	# Increases Port max level by 3
 	era = era_2
 	texture = "gfx/interface/icons/invention_icons/hydraulic_cranes.dds"
 	category = military
@@ -432,7 +404,6 @@ REPLACE_OR_CREATE:hydraulic_cranes = {
 	ai_weight = {
 		value = 1
 		
-		# Important for anyone with a navy
 		if = {
 			limit = { navy_size >= 5 }
 			add = 0.5
@@ -443,7 +414,6 @@ REPLACE_OR_CREATE:hydraulic_cranes = {
 ### ERA 3
 
 REPLACE_OR_CREATE:modern_nursing = {
-	# Unlocks Field Hospitals PM in Barracks
 	era = era_3
 	texture = "gfx/interface/icons/invention_icons/modern_nursing.dds"
 	category = military
@@ -512,9 +482,8 @@ REPLACE_OR_CREATE:military_statistics = {
 	era = era_3
 	texture = "gfx/interface/icons/invention_icons/military_statistics.dds"
 	category = military
-	
-	
-	modifier = {
+
+modifier = {
 		military_formation_organization_gain_mult = 0.2
 	}
 	
@@ -529,8 +498,6 @@ REPLACE_OR_CREATE:military_statistics = {
 }
 
 REPLACE_OR_CREATE:repeaters = {
-	# Unlocks Repeaters PM in Arms Industry
-	# Global Unlock for Repeaters PM in Barracks
 	era = era_3
 	texture = "gfx/interface/icons/invention_icons/repeaters.dds"
 	category = military
@@ -540,7 +507,7 @@ REPLACE_OR_CREATE:repeaters = {
 	}
 	
 	ai_weight = {
-		value = 1.5 # Important tech in general
+		value = 1.5
 	}
 	
 	modifier = {
@@ -549,9 +516,6 @@ REPLACE_OR_CREATE:repeaters = {
 }
 
 REPLACE_OR_CREATE:breech_loading_artillery = {
-	# Unlocks Breech Loading Artillery Production PM in Arms Industries
-	# Unlocks Breech Loading Artillery PM in Barracks
-	# Unlocks Railway Guns PM in Railways
 	era = era_3
 	texture = "gfx/interface/icons/invention_icons/breech_loading_artillery.dds"
 	category = military
@@ -562,7 +526,7 @@ REPLACE_OR_CREATE:breech_loading_artillery = {
 	}
 	
 	ai_weight = {
-		value = 1.5 # Important tech in general
+		value = 1.5
 
 		if = {
 			limit = {
@@ -595,7 +559,6 @@ REPLACE_OR_CREATE:handcranked_machine_gun = {
 }
 
 REPLACE_OR_CREATE:self_propelled_torpedoes = {
-	# Unlocks Torpedo Boat PM in Naval Base
 	era = era_3
 	texture = "gfx/interface/icons/invention_icons/self_propelled_torpedoes.dds"
 	category = military
@@ -611,7 +574,6 @@ REPLACE_OR_CREATE:self_propelled_torpedoes = {
 }
 
 REPLACE_OR_CREATE:monitor_tech = {
-	# Unlocks Monitors PM in Naval Base
 	era = era_3
 	texture = "gfx/interface/icons/invention_icons/monitor_tech.dds"
 	category = military
@@ -627,7 +589,6 @@ REPLACE_OR_CREATE:monitor_tech = {
 	ai_weight = {
 		value = 1
 		
-		# Important for naval powers
 		if = {
 			limit = { navy_size >= 20 }
 			add = 0.5
@@ -636,9 +597,6 @@ REPLACE_OR_CREATE:monitor_tech = {
 }
 
 REPLACE_OR_CREATE:ironclad_tech = {
-	# Unlocks Metal Shipbuilding PM in Shipyards
-	# Unlocks Ironclads PM in Naval Base
-	# Unlocks Steam Trawlers PM in Fishing Wharves
 	era = era_3
 	texture = "gfx/interface/icons/invention_icons/ironclad_tech.dds"
 	category = military
@@ -650,7 +608,6 @@ REPLACE_OR_CREATE:ironclad_tech = {
 	ai_weight = {
 		value = 1
 		
-		# Very Important for naval powers
 		if = {
 			limit = { navy_size >= 20 }
 			add = 2
@@ -659,7 +616,6 @@ REPLACE_OR_CREATE:ironclad_tech = {
 }
 
 REPLACE_OR_CREATE:jeune_ecole = {
-	# Unlocks Jeune Ecole PM in Naval Base
 	era = era_3
 	texture = "gfx/interface/icons/invention_icons/jeune_ecole.dds"
 	category = military
@@ -678,8 +634,6 @@ REPLACE_OR_CREATE:jeune_ecole = {
 }
 
 REPLACE_OR_CREATE:floating_harbor = {
-	# Unlocks Industrial Port PM in Ports
-	# Increases Port Level by 4
 	era = era_3
 	texture = "gfx/interface/icons/invention_icons/floating_harbor.dds"
 	category = military
@@ -695,7 +649,6 @@ REPLACE_OR_CREATE:floating_harbor = {
 	ai_weight = {
 		value = 1
 		
-		# Important for anyone with a navy
 		if = {
 			limit = { navy_size >= 5 }
 			add = 0.5
@@ -704,7 +657,6 @@ REPLACE_OR_CREATE:floating_harbor = {
 }
 
 REPLACE_OR_CREATE:gantry_cranes = {
-	# Increases Port max level by 4
 	era = era_3
 	texture = "gfx/interface/icons/invention_icons/gantry_crane.dds"
 	category = military
@@ -722,7 +674,6 @@ REPLACE_OR_CREATE:gantry_cranes = {
 	ai_weight = {
 		value = 1
 		
-		# Important for anyone with a navy
 		if = {
 			limit = { navy_size >= 5 }
 			add = 1
@@ -733,9 +684,6 @@ REPLACE_OR_CREATE:gantry_cranes = {
 ### ERA 4
 
 REPLACE_OR_CREATE:trench_works = {
-	# Unlocks Officer Training PM in Barracks
-	# Unlocks Barbed Wire Fences in Livestock Ranches
-	# Unlocks Trench Infantry
 	era = era_4
 	texture = "gfx/interface/icons/invention_icons/trench_works.dds"
 	category = military
@@ -770,8 +718,6 @@ REPLACE_OR_CREATE:war_propaganda = {
 }
 
 REPLACE_OR_CREATE:wargaming = {
-	# Unlocks Siege Artillery PM in Barracks
-	# Reduces Morale loss
 	era = era_4
 	texture = "gfx/interface/icons/invention_icons/wargaming.dds"
 	category = military
@@ -790,8 +736,6 @@ REPLACE_OR_CREATE:wargaming = {
 }
 
 REPLACE_OR_CREATE:defense_in_depth = {
-	# Increases defense
-	# Unlock Delay Order?
 	era = era_4
 	texture = "gfx/interface/icons/invention_icons/defense_in_depth.dds"
 	category = military
@@ -813,8 +757,6 @@ REPLACE_OR_CREATE:defense_in_depth = {
 }
 
 REPLACE_OR_CREATE:bolt_action_rifles = {
-	# Unlocks Bolt Action Rifles PM in Arms Industry
-	# Global Unlock for Bolt Action Rifles PM in Barracks
 	era = era_4
 	texture = "gfx/interface/icons/invention_icons/bolt_action_rifles.dds"
 	category = military
@@ -829,8 +771,6 @@ REPLACE_OR_CREATE:bolt_action_rifles = {
 }
 
 REPLACE_OR_CREATE:automatic_machine_guns = {
-	# Unlocks Recoil Mechaniscm PM in Arms Factory
-	# Unlocks Machine Gunners PMs in Barracks and Conscription Centers
 	era = era_4
 	texture = "gfx/interface/icons/invention_icons/machine_gun.dds"
 	category = military
@@ -846,7 +786,6 @@ REPLACE_OR_CREATE:automatic_machine_guns = {
 }
 
 REPLACE_OR_CREATE:submarine = {
-	# Unlocks Submarine PM on Naval Bases
 	era = era_4
 	texture = "gfx/interface/icons/invention_icons/submarine.dds"
 	category = military
@@ -865,7 +804,6 @@ REPLACE_OR_CREATE:submarine = {
 }
 
 REPLACE_OR_CREATE:destroyer = {
-	# Unlocks Destroyer PM on Naval Bases
 	era = era_4
 	texture = "gfx/interface/icons/invention_icons/destroyers.dds"
 	category = military
@@ -880,7 +818,6 @@ REPLACE_OR_CREATE:destroyer = {
 }
 
 REPLACE_OR_CREATE:drone_carrier = {
-	# Unlocks Dreadnoughts PM in Naval Bases
 	era = era_4
 	texture = "gfx/interface/icons/invention_icons/dreadnought.dds"
 	category = military
@@ -889,7 +826,6 @@ REPLACE_OR_CREATE:drone_carrier = {
 		# increased coal consumption
 		# increased offense and defense?
 		
-		# prestige bonus? Or a prestige bonus to overall naval size. Could apply this to mahanian_thought instead.
 	}
 	
 	unlocking_technologies = {
@@ -900,7 +836,6 @@ REPLACE_OR_CREATE:drone_carrier = {
 	ai_weight = {
 		value = 1
 		
-		# Important for naval powers
 		if = {
 			limit = { navy_size >= 20 }
 			add = 0.5
@@ -909,7 +844,6 @@ REPLACE_OR_CREATE:drone_carrier = {
 }
 
 REPLACE_OR_CREATE:sea_lane_strategies = {
-	# Unlocks Sea Lane Strategies PM in Naval Bases
 	era = era_4
 	texture = "gfx/interface/icons/invention_icons/sea_lane_strategies.dds"
 	category = military
@@ -943,7 +877,6 @@ REPLACE_OR_CREATE:landing_craft = {
 	ai_weight = {
 		value = 1
 		
-		# Important for naval powers
 		if = {
 			limit = { navy_size >= 20 }
 			add = 1
@@ -952,8 +885,6 @@ REPLACE_OR_CREATE:landing_craft = {
 }
 
 REPLACE_OR_CREATE:concrete_dockyards = {
-	# Unlocks Modern Port PM in Ports
-	# Increases Max Port Level by 4
 	era = era_4
 	texture = "gfx/interface/icons/invention_icons/concrete_dockyards.dds"
 	category = military
@@ -969,7 +900,6 @@ REPLACE_OR_CREATE:concrete_dockyards = {
 	ai_weight = {
 		value = 1
 		
-		# Important for anyone with a navy
 		if = {
 			limit = { navy_size >= 5 }
 			add = 0.5
@@ -980,7 +910,6 @@ REPLACE_OR_CREATE:concrete_dockyards = {
 ### ERA 5
 
 REPLACE_OR_CREATE:nco_training = {
-	# Unlocks Advanced Officer Training PM in Barracks
 	era = era_5
 	texture = "gfx/interface/icons/invention_icons/nco_training.dds"
 	category = military
@@ -991,12 +920,11 @@ REPLACE_OR_CREATE:nco_training = {
 	}
 	
 	ai_weight = {
-		value = 2 # Important tech in general
+		value = 2
 	}
 }
 
 REPLACE_OR_CREATE:chemical_warfare = {
-	# Unlocks Chemical Artillery PM in Barracks
 	era = era_5
 	texture = "gfx/interface/icons/invention_icons/chemical_warfare.dds"
 	category = military
@@ -1011,7 +939,6 @@ REPLACE_OR_CREATE:chemical_warfare = {
 }
 
 REPLACE_OR_CREATE:stormtroopers = {
-	# Unlocks Infiltrators PM in Barracks
 	era = era_5
 	texture = "gfx/interface/icons/invention_icons/stormtroopers.dds"
 	category = military
@@ -1033,14 +960,11 @@ REPLACE_OR_CREATE:stormtroopers = {
 }
 
 REPLACE_OR_CREATE:concrete_fortifications = {
-	# Increases defense
 	era = era_5
 	texture = "gfx/interface/icons/invention_icons/concrete_fortifications.dds"
 	category = military
 	
 	modifier = {
-		# build the maginot line and be completely unstoppable, forever, especially if you're France
-		# bonus to general defensiveness or specifically to forts if they become a thing
 		unit_army_defense_mult = 0.1
 	}
 	
@@ -1054,8 +978,6 @@ REPLACE_OR_CREATE:concrete_fortifications = {
 }
 
 REPLACE_OR_CREATE:mobile_armor = {
-	# Unlocks Tanks PM in Vehicles Industries
-	# Unlocks Tanks, Planes and Tanks PM in Barracks
 	era = era_5
 	texture = "gfx/interface/icons/invention_icons/mobile_armor.dds"
 	category = military
@@ -1067,13 +989,11 @@ REPLACE_OR_CREATE:mobile_armor = {
 	}
 	
 	ai_weight = {
-		value = 1.5 # Important tech in general
+		value = 1.5
 	}
 }
 
 REPLACE_OR_CREATE:military_aviation = {
-	# Unlocks Vehicles Industries
-	# Unlocks Tanks, Planes and Tanks PM in Barracks
 	era = era_5
 	texture = "gfx/interface/icons/invention_icons/military_aviation.dds"
 	category = military
@@ -1089,12 +1009,11 @@ REPLACE_OR_CREATE:military_aviation = {
 	}
 	
 	ai_weight = {
-		value = 1.5 # Important tech in general
+		value = 1.5
 	}
 }
 
 REPLACE_OR_CREATE:flamethrowers = {
-	# Increases kill rate (lowers opponent survival rate)
 	era = era_5
 	texture = "gfx/interface/icons/invention_icons/flamethrowers.dds"
 	category = military
@@ -1111,5 +1030,4 @@ REPLACE_OR_CREATE:flamethrowers = {
 		value = 1
 	}
 }
-
 

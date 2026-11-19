@@ -1,18 +1,13 @@
 ﻿# FLAG_DEFINITION_LIST = {		# countries search for a list with the same name as their tag, the DEFAULT list is always included, if no flag definition is applicable for a country then its tag is used a COA_KEY
 # 	includes = ANOTHER_LIST		# includes another list in this list, can be repeated
-# 
 # 	flag_definition = {			# the flag definitions that make up this list, can be repeated
-# 		coa = [list] COA_KEY	# main flag, optional list keyword denotes a coa template
 # 		allow_overlord_canton = yes				# default no
 # 		coa_with_overlord_canton = <[list] coa>	# flag where a canton can be placed, optional list keyword same as above, defaults to coa
 # 		overlord_canton_offset = { x y }		# canton placement offset, default { 0 0 }
 # 		overlord_canton_scale = { x y }			# canton placement scale, default { 0.5 0.5 }
-# 		subject_canton = [list] COA_KEY	# canton applied to subjects by this country, optional list keyword same as above
-# 
 # 		priority = value		# valid flag definition with the highest priority applies
 # 		trigger = {}			# a trigger that determines if this flag definition is valid, see below for scope
 #       allow_revolutionary_indicator = yes      # Default = yes. If yes, a temporary revolutionary indicator will appear while the country is revolutionary
-#       revolutionary_canton = [list] COA_KEY   # Optional. Default = default_revolutionary_canton. Defines which flag should be used as canton while this country is revolutionary
 # 	}
 # }
 
@@ -63,7 +58,7 @@ DEFAULT = {
 	}
 }
 
-REPLACE_OR_CREATE:TNT = { # Transnystria
+REPLACE_OR_CREATE:TNT = {
 	flag_definition = {
 		coa = TNT
 		subject_canton = TNT
@@ -77,7 +72,7 @@ REPLACE_OR_CREATE:TNT = { # Transnystria
 		}
 	}		
 }
-REPLACE_OR_CREATE:ZAP = { # Zapatista
+REPLACE_OR_CREATE:ZAP = {
 	flag_definition = {
 		coa = ZAP
 		subject_canton = ZAP
@@ -91,7 +86,7 @@ REPLACE_OR_CREATE:ZAP = { # Zapatista
 		}
 	}		
 }	
-REPLACE_OR_CREATE:FEJ = { # Fejuve
+REPLACE_OR_CREATE:FEJ = {
 	flag_definition = {
 		coa = FEJ
 		subject_canton = FEJ
@@ -144,7 +139,7 @@ REPLACE_OR_CREATE:CZC = { # czechia
 	}
 }
 
-REPLACE_OR_CREATE:KYR = { # Kyrgyzstan
+REPLACE_OR_CREATE:KYR = {
 	flag_definition = {
 		coa = KYR
 		allow_overlord_canton = yes
@@ -216,7 +211,7 @@ REPLACE_OR_CREATE:XEC = { # ecuador
 	}
 }
 
-REPLACE_OR_CREATE:DNK = { # Donetsk
+REPLACE_OR_CREATE:DNK = {
 	flag_definition = {
 		coa = DNK
 		subject_canton = DNK
@@ -228,7 +223,7 @@ REPLACE_OR_CREATE:DNK = { # Donetsk
 	}		
 }
 
-REPLACE_OR_CREATE:LUH = { # Luhansk
+REPLACE_OR_CREATE:LUH = {
 	flag_definition = {
 		coa = LUH
 		subject_canton = LUH
@@ -240,7 +235,7 @@ REPLACE_OR_CREATE:LUH = { # Luhansk
 	}		
 }
 
-REPLACE_OR_CREATE:ANA = { # Afghan Northern Alliance
+REPLACE_OR_CREATE:ANA = {
 	flag_definition = {
 		coa = ANA
 		subject_canton = ANA
@@ -278,7 +273,7 @@ REPLACE_OR_CREATE:ANA = { # Afghan Northern Alliance
 	}
 }
 
-REPLACE_OR_CREATE:FSY = { # Free Syria
+REPLACE_OR_CREATE:FSY = {
 	flag_definition = {
 		coa = FSY
 		subject_canton = FSY
@@ -316,7 +311,7 @@ REPLACE_OR_CREATE:FSY = { # Free Syria
 	}
 }
 
-REPLACE_OR_CREATE:HTH = { # Houthis
+REPLACE_OR_CREATE:HTH = {
 	flag_definition = {
 		coa = HTH
 		subject_canton = HTH
@@ -378,7 +373,7 @@ REPLACE_OR_CREATE:DRK = {
 	}
 }
 
-REPLACE_OR_CREATE:HMS = { # Hamas
+REPLACE_OR_CREATE:HMS = {
 	flag_definition = {
 		coa = HMS
 		subject_canton = HMS

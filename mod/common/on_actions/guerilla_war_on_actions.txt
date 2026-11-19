@@ -1,5 +1,3 @@
-# Triggered by on_battle_won
-# Root = attacker or defender country
 # scope:enemy_country = enemy of root
 # scope:battle = battle
 # scope:attacker = attacking commander
@@ -154,7 +152,6 @@ on_diplomatic_play_started = {
  
 chechen_war_start_check = {
 	effect = {
-		# Russia initiates against Chechnya
 		if = {
 			limit = {
 				scope:initiator = { c:RUS ?= this }
@@ -169,7 +166,6 @@ chechen_war_start_check = {
 				trigger_event = { id = chechen_war.7 days = 0 popup = yes }
 			}
 		}
-		# Chechnya initiates against Russia
 		if = {
 			limit = {
 				scope:initiator = { c:CCH ?= this }

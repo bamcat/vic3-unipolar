@@ -1,8 +1,3 @@
-# Kurdistan War Startup Effects
-# This initializes the journal-entry system. It intentionally does not include
-# an invented diplomatic-play/war creation effect because the provided Carlist
-# files do not contain the syntax for forcing a war. If your mod already has a
-# working create_diplomatic_play/create_war pattern, call it from this effect.
 
 start_kurdistan_war_journal_entry_system = {
 	if = {
@@ -60,9 +55,6 @@ start_afghan_civil_war_journal_entry_system = {
 			}
 			set_global_variable = afghan_civil_war_skirmish_phase
 		}
-
-		# Insert your existing war-start/diplomatic-play syntax here if AFG and ANA are not already at war from history setup.
-		# The Carlist reference files supplied for conversion do not contain a generic create-war command.
 
 		add_contextless_journal_entry = je_afghan_civil_war
 	}

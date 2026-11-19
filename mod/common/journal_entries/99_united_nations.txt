@@ -10,11 +10,14 @@ je_united_nations = {
 	
 	should_be_involved = { is_target_in_global_variable_list = { name = io_un_members target = this } }
 
-	invalid = { NOT = { has_global_variable_list = io_un_members } }
-	
+
+	outcome = {
+		flags = { hidden invalid_outcome }
+		conclusion_desc = je_standard_failure_conclusion_desc
+		trigger = { NOT = { has_global_variable_list = io_un_members } }
+	}
 	status_desc = {
 		first_valid = {
-			# Active vote — environmental protection
 			triggered_desc = {
 				desc = un_je_voting_environment_tt
 				trigger = {
@@ -22,7 +25,6 @@ je_united_nations = {
 					global_var:un_current_motion_type = flag:motion_environment
 				}
 			}
-			# Active vote — world peace
 			triggered_desc = {
 				desc = un_je_voting_peace_tt
 				trigger = {
@@ -30,7 +32,6 @@ je_united_nations = {
 					global_var:un_current_motion_type = flag:motion_peace
 				}
 			}
-			# Active vote — economic development
 			triggered_desc = {
 				desc = un_je_voting_economy_tt
 				trigger = {
@@ -38,7 +39,6 @@ je_united_nations = {
 					global_var:un_current_motion_type = flag:motion_economy
 				}
 			}
-			# Active vote — UNESCO technology
 			triggered_desc = {
 				desc = un_je_voting_technology_tt
 				trigger = {
@@ -46,7 +46,6 @@ je_united_nations = {
 					global_var:un_current_motion_type = flag:motion_technology
 				}
 			}
-			# Active vote — sanctions against a member state
 			triggered_desc = {
 				desc = un_je_voting_sanctions_tt
 				trigger = {
@@ -54,7 +53,6 @@ je_united_nations = {
 					global_var:un_current_motion_type = flag:motion_sanctions
 				}
 			}
-			# Active vote — condemnation of a member state
 			triggered_desc = {
 				desc = un_je_voting_condemnation_tt
 				trigger = {
@@ -62,14 +60,12 @@ je_united_nations = {
 					global_var:un_current_motion_type = flag:motion_condemnation
 				}
 			}
-			# No motion active
 			triggered_desc = {
 				desc = un_je_no_motion_tt
 			}
 		}
 	}
- 
-	
+
 	scripted_button = sb_request_peacekeepers
 	scripted_button = un_propose_motion_button
 	scripted_button = un_vote_yay_button

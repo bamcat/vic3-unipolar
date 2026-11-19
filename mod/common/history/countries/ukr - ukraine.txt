@@ -4,12 +4,12 @@
 		smd_medium_tech_effect = yes
 		
 		set_variable = nuclear_capable
-		set_variable = { name = nukes value = 17 }
+		set_variable = { name = nukes value = 190 }
 		add_modifier = nuclear_capable_modifier
+		add_journal_entry = { type = je_budapest_memorandum }
 		
 		set_tax_level = high
 		
-		# Laws
 		activate_law = law_type:law_professional_army
 		activate_law = law_type:law_elected_bureaucrats
 		activate_law = law_type:law_compulsory_primary_school

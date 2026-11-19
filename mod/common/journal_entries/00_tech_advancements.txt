@@ -20,22 +20,34 @@
 	immediate = {
 	}
 
-	complete = {
-		any_scope_building = {
-			is_building_type = building_telecommunications
-			has_active_production_method = pm_2g
-			occupancy >= 0.9
-			level >= 2
+
+	outcome = {
+		header = je_standard_completion_header
+		effect_header = je_standard_on_completion_header
+		color = "gold_positive"
+		conclusion_desc = je_standard_completion_conclusion_desc
+		trigger = {
+			any_scope_building = {
+				is_building_type = building_telecommunications
+				has_active_production_method = pm_2g
+				occupancy >= 0.9
+				level >= 2
+			}
+		}
+		effect = {
+			trigger_event = { id = smd_tech.1 }
+			set_variable = {
+				name = completed_internet_je
+			}
 		}
 	}
 
-	on_complete = {
-		trigger_event = { id = smd_tech.1 }
-		set_variable = {
-			name = completed_internet_je
-		}
+	outcome = {
+		header = JOURNAL_ENTRY_TIMEOUT
+		effect_header = JOURNAL_ENTRY_ON_TIMEOUT
+		flags = { timeout }
+		conclusion_desc = JOURNAL_ENTRY_TIMEOUT_CONCLUSION_DESC
 	}
-
 	timeout = 2540
 }
 
@@ -63,22 +75,34 @@ je_computer_science = {
 	immediate = {
 	}
 
-	complete = {
-		any_scope_building = {
-			is_building_type = building_university
-			has_active_production_method = pm_philosophy_department
-			occupancy >= 0.9
-			level >= 3
+
+	outcome = {
+		header = je_standard_completion_header
+		effect_header = je_standard_on_completion_header
+		color = "gold_positive"
+		conclusion_desc = je_standard_completion_conclusion_desc
+		trigger = {
+			any_scope_building = {
+				is_building_type = building_university
+				has_active_production_method = pm_philosophy_department
+				occupancy >= 0.9
+				level >= 3
+			}
+		}
+		effect = {
+			trigger_event = { id = smd_tech.2 }
+			set_variable = {
+				name = completed_cs_je
+			}
 		}
 	}
 
-	on_complete = {
-		trigger_event = { id = smd_tech.2 }
-		set_variable = {
-			name = completed_cs_je
-		}
+	outcome = {
+		header = JOURNAL_ENTRY_TIMEOUT
+		effect_header = JOURNAL_ENTRY_ON_TIMEOUT
+		flags = { timeout }
+		conclusion_desc = JOURNAL_ENTRY_TIMEOUT_CONCLUSION_DESC
 	}
-
 	timeout = 2540
 } 
 
@@ -90,7 +114,6 @@ je_pesticides = {
 
 	immediate = {
 	}
-
 
 	is_shown_when_inactive = {
 		is_player = yes
@@ -109,39 +132,53 @@ je_pesticides = {
 			}
 		}
 	}
+
 	
-	complete = {
-		OR = {
-			any_scope_building = {
-				filter = {
-					OR = {
-						is_building_type = building_rye_farm
-						is_building_type = building_wheat_farm
-						is_building_type = building_maize_farm
-						is_building_type = building_millet_farm
+
+	outcome = {
+		header = je_standard_completion_header
+		effect_header = je_standard_on_completion_header
+		color = "gold_positive"
+		conclusion_desc = je_standard_completion_conclusion_desc
+		trigger = {
+			OR = {
+				any_scope_building = {
+					filter = {
+						OR = {
+							is_building_type = building_rye_farm
+							is_building_type = building_wheat_farm
+							is_building_type = building_maize_farm
+							is_building_type = building_millet_farm
+						}
 					}
+					percent >= 0.75
+					OR = {
+						has_active_production_method = pm_yes_pesticides
+					}
+					weekly_profit > 0
+					occupancy >= 0.5
+					is_subsidized = no
 				}
-				percent >= 0.75
-				OR = {
-					has_active_production_method = pm_yes_pesticides
-				}
-				weekly_profit > 0
-				occupancy >= 0.5
-				is_subsidized = no
 			}
+		}
+		effect = {
+			set_variable = completed_pesticides
+			trigger_event = { id = smd_tech.3 }
 		}
 	}
 
-	on_complete = {
-		set_variable = completed_pesticides
-		trigger_event = { id = smd_tech.3 }
+	outcome = {
+		header = JOURNAL_ENTRY_TIMEOUT
+		effect_header = JOURNAL_ENTRY_ON_TIMEOUT
+		flags = { timeout }
+		conclusion_desc = JOURNAL_ENTRY_TIMEOUT_CONCLUSION_DESC
 	}
 
-	invalid = {
-		has_variable = completed_pesticides
-	}
-
-	weight = 1002
+	outcome = {
+		flags = { hidden invalid_outcome }
+		conclusion_desc = je_standard_failure_conclusion_desc
+		trigger = { has_variable = completed_pesticides }
+	}weight = 1002
 	timeout = 2540
 }
 
@@ -156,36 +193,41 @@ je_globalization = {
 	is_shown_when_inactive = {
 		NOT = { has_variable = completed_globalization_je }
 	}
-	
-	complete = {
-		OR = {
-			any_scope_building = {
-				filter = {
-					OR = {
-						is_building_type = building_trade_center
+
+
+
+	outcome = {
+		header = je_standard_completion_header
+		effect_header = je_standard_on_completion_header
+		color = "gold_positive"
+		conclusion_desc = je_standard_completion_conclusion_desc
+		trigger = {
+			OR = {
+				any_scope_building = {
+					filter = {
+						OR = {
+							is_building_type = building_trade_center
+						}
 					}
+					percent >= 0.75
+					OR = {
+						has_active_production_method = pm_trade_center_trade_quantity_high
+						has_active_production_method = pm_trade_center_trade_quantity_very_high
+					}
+					weekly_profit > 0
+					occupancy >= 0.5
+					is_subsidized = no
 				}
-				percent >= 0.75
-				OR = {
-					has_active_production_method = pm_trade_center_trade_quantity_high
-					has_active_production_method = pm_trade_center_trade_quantity_very_high
-				}
-				weekly_profit > 0
-				occupancy >= 0.5
-				is_subsidized = no
 			}
 		}
+		effect = { set_variable = completed_globalization_je }
 	}
 
-	on_complete = {
-		set_variable = completed_globalization_je
-	}
-
-	invalid = {
-		has_variable = completed_globalization_je
-	}
-
-	weight = 1002
+	outcome = {
+		flags = { hidden invalid_outcome }
+		conclusion_desc = je_standard_failure_conclusion_desc
+		trigger = { has_variable = completed_globalization_je }
+	}	weight = 1002
 }
 
 je_starships = {
@@ -211,33 +253,38 @@ je_starships = {
 	
 	immediate = {
 	}
-	
-	complete = {
-		OR = {
-			any_scope_building = {
-				filter = {
-					OR = {
-						is_building_type = building_spaceport
+
+
+
+	outcome = {
+		header = je_standard_completion_header
+		effect_header = je_standard_on_completion_header
+		color = "gold_positive"
+		conclusion_desc = je_standard_completion_conclusion_desc
+		trigger = {
+			OR = {
+				any_scope_building = {
+					filter = {
+						OR = {
+							is_building_type = building_spaceport
+						}
 					}
+					percent >= 0.75
+					OR = {
+						has_active_production_method = pm_starship
+					}
+					weekly_profit > 0
+					occupancy >= 0.5
+					is_subsidized = no
 				}
-				percent >= 0.75
-				OR = {
-					has_active_production_method = pm_starship
-				}
-				weekly_profit > 0
-				occupancy >= 0.5
-				is_subsidized = no
 			}
 		}
+		effect = { set_variable = completed_starships_je }
 	}
 
-	on_complete = {
-		set_variable = completed_starships_je
-	}
-
-	invalid = {
-		has_variable = completed_starships_je
-	}
-
-	weight = 1002
+	outcome = {
+		flags = { hidden invalid_outcome }
+		conclusion_desc = je_standard_failure_conclusion_desc
+		trigger = { has_variable = completed_starships_je }
+	}	weight = 1002
 }

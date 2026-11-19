@@ -1,10 +1,5 @@
 MILITARY_FORMATIONS = {
  
-	### MOROCCO ###
-	# ~195,000 active in 1992. Western Sahara occupation ongoing (vs POLISARIO).
-	# F-5E/F, Mirage F1CH; M60A3 tanks; large light infantry force.
-	# US-aligned; phosphate wealth funds modernization.
- 
 	c:MOR ?= {
  
 		create_military_formation = {
@@ -15,14 +10,18 @@ MILITARY_FORMATIONS = {
 			combat_unit = {
 				type = unit_type:combat_unit_type_mechanized_infantry
 				state_region = s:STATE_FEZ
-				count = 40
+				count = 20
+			}
+			combat_unit = {
+				type = unit_type:combat_unit_type_light_infantry
+				state_region = s:STATE_FEZ
+				count = 20
 			}
 			combat_unit = {
 				type = unit_type:combat_unit_type_armored_infantry
 				state_region = s:STATE_MARRAKECH
 				count = 20
 			}
-			# Western Sahara garrison
 			combat_unit = {
 				type = unit_type:combat_unit_type_light_infantry
 				state_region = s:STATE_AL_RIF
@@ -61,7 +60,6 @@ MILITARY_FORMATIONS = {
 			hq_region = sr:region_north_africa
 			name = "Marine_Royale_Marocaine"
  
-			# Floreal-class frigates and patrol vessels
 			ship = {
 				type = ship_type:ship_type_frigate
 				count = 3
@@ -84,11 +82,6 @@ MILITARY_FORMATIONS = {
 		}
 	}
  
-	### EGYPT ###
-	# ~440,000 active in 1992. Largest Arab military; US-equipped post-Camp David.
-	# M1A1 Abrams (co-produced), F-16C/D, M60A3; professional officer corps.
-	# Three field armies deployed across Sinai, Delta, and western desert.
- 
 	c:XEG ?= {
  
 		create_military_formation = {
@@ -96,7 +89,6 @@ MILITARY_FORMATIONS = {
 			hq_region = sr:region_nile_basin
 			name = "Egyptian_Armed_Forces"
  
-			# 2nd Army — Suez Canal/Sinai
 			combat_unit = {
 				type = unit_type:combat_unit_type_armored_infantry
 				state_region = s:STATE_SINAI
@@ -105,25 +97,33 @@ MILITARY_FORMATIONS = {
 			combat_unit = {
 				type = unit_type:combat_unit_type_mechanized_infantry
 				state_region = s:STATE_SINAI
-				count = 30
+				count = 15
 			}
-			# 3rd Army — Delta and Lower Egypt
+			combat_unit = {
+				type = unit_type:combat_unit_type_light_infantry
+				state_region = s:STATE_SINAI
+				count = 15
+			}
 			combat_unit = {
 				type = unit_type:combat_unit_type_mechanized_infantry
 				state_region = s:STATE_LOWER_EGYPT
-				count = 30
+				count = 15
+			}
+			combat_unit = {
+				type = unit_type:combat_unit_type_light_infantry
+				state_region = s:STATE_LOWER_EGYPT
+				count = 15
 			}
 			combat_unit = {
 				type = unit_type:combat_unit_type_armored_infantry
 				state_region = s:STATE_MIDDLE_EGYPT
 				count = 20
 			}
-			# Interior and Upper Egypt
 			combat_unit = {
 				type = unit_type:combat_unit_type_light_infantry
 				state_region = s:STATE_UPPER_EGYPT
 				count = 20
-			}			# EAF: F-16C/D, Mirage 2000, MiG-21
+			}
 			combat_unit = {
 				type = unit_type:combat_unit_type_multirole_aircraft
 				state_region = s:STATE_LOWER_EGYPT
@@ -152,7 +152,6 @@ MILITARY_FORMATIONS = {
 			hq_region = sr:region_nile_basin
 			name = "Egyptian_Navy"
  
-			# Romeo and Whiskey-class submarines, Knox-class frigates
 			ship = {
 				type = ship_type:ship_type_frigate
 				count = 5
@@ -179,11 +178,6 @@ MILITARY_FORMATIONS = {
 		}
 	}
  
-	### ETHIOPIA ###
-	# ~120,000 active in 1992. Transitional government post-Derg collapse (May 1991).
-	# Meles Zenawi's EPRDF in power; Eritrea de facto independent.
-	# Inheriting Soviet-supplied Derg equipment: T-55/T-62, MiG-21/MiG-23.
- 
 	c:ETH ?= {
  
 		create_military_formation = {
@@ -194,7 +188,12 @@ MILITARY_FORMATIONS = {
 			combat_unit = {
 				type = unit_type:combat_unit_type_mechanized_infantry
 				state_region = s:STATE_AMHARA
-				count = 35
+				count = 18
+			}
+			combat_unit = {
+				type = unit_type:combat_unit_type_light_infantry
+				state_region = s:STATE_AMHARA
+				count = 17
 			}
 			combat_unit = {
 				type = unit_type:combat_unit_type_armored_infantry
@@ -211,10 +210,9 @@ MILITARY_FORMATIONS = {
 				state_region = s:STATE_GONDER
 				count = 20
 			}
-			# Ogaden/Soma — counterinsurgency vs ONLF
 			combat_unit = {
 				type = unit_type:combat_unit_type_light_infantry
-				state_region = s:STATE_SOMA
+				state_region = s:STATE_OROMIA
 				count = 15
 			}
 			combat_unit = {
@@ -241,11 +239,6 @@ MILITARY_FORMATIONS = {
 		}
 	}
  
-	### SUDAN ###
-	# ~118,000 active in 1992. NIF/Bashir military regime (coup 1989).
-	# Ongoing civil war in the south (SPLA). Soviet and Chinese equipment.
-	# Large territory; thin force spread across enormous state.
- 
 	c:SDN ?= {
  
 		create_military_formation = {
@@ -253,24 +246,26 @@ MILITARY_FORMATIONS = {
 			hq_region = sr:region_nile_basin
 			name = "Sudanese_Armed_Forces"
  
-			# Khartoum / Dongola / Nile corridor
 			combat_unit = {
 				type = unit_type:combat_unit_type_mechanized_infantry
 				state_region = s:STATE_DONGOLA
-				count = 25
+				count = 13
+			}
+			combat_unit = {
+				type = unit_type:combat_unit_type_light_infantry
+				state_region = s:STATE_DONGOLA
+				count = 12
 			}
 			combat_unit = {
 				type = unit_type:combat_unit_type_armored_infantry
 				state_region = s:STATE_DONGOLA
 				count = 10
 			}
-			# Darfur — western garrisons
 			combat_unit = {
 				type = unit_type:combat_unit_type_light_infantry
 				state_region = s:STATE_DARFUR
 				count = 20
 			}
-			# South — active counterinsurgency vs SPLA
 			combat_unit = {
 				type = unit_type:combat_unit_type_light_infantry
 				state_region = s:STATE_EQUATORIA
@@ -310,10 +305,6 @@ MILITARY_FORMATIONS = {
 		}
 	}
  
-	### SOMALIA ###
-	# ~~0 organized military in 1992. State collapsed January 1991.
-	# UN/US intervention (UNITAF) underway late 1992. Only faction militias remain.
- 
 	c:SML ?= {
  
 		create_military_formation = {
@@ -324,7 +315,12 @@ MILITARY_FORMATIONS = {
 			combat_unit = {
 				type = unit_type:combat_unit_type_irregular_infantry
 				state_region = s:STATE_SOMALILAND
-				count = 15
+				count = 12
+			}
+			combat_unit = {
+				type = unit_type:combat_unit_type_technicals
+				state_region = s:STATE_SOMALILAND
+				count = 3
 			}
 
 			save_scope_as = sml_somali_faction_militias_formation
@@ -340,11 +336,6 @@ MILITARY_FORMATIONS = {
 		}
 	}
  
-	### SOUTH AFRICA ###
-	# ~72,000 active in 1992. SADF transitioning as apartheid ends; Namibia independent 1990.
-	# Most capable military in Africa: Rooivalk attack helicopter, Cheetah (Mirage upgrade), Ratel IFV.
-	# Nuclear weapons dismantled 1989-1991. UN arms embargo recently lifted.
- 
 	c:SAF ?= {
  
 		create_military_formation = {
@@ -352,7 +343,6 @@ MILITARY_FORMATIONS = {
 			hq_region = sr:region_southern_africa
 			name = "South_African_Defence_Force"
  
-			# Transvaal / Pretoria — main garrison and armoured force
 			combat_unit = {
 				type = unit_type:combat_unit_type_armored_infantry
 				state_region = s:STATE_TRANSVAAL
@@ -361,13 +351,22 @@ MILITARY_FORMATIONS = {
 			combat_unit = {
 				type = unit_type:combat_unit_type_mechanized_infantry
 				state_region = s:STATE_TRANSVAAL
-				count = 15
+				count = 8
 			}
-			# Cape — southwestern garrison
+			combat_unit = {
+				type = unit_type:combat_unit_type_light_infantry
+				state_region = s:STATE_TRANSVAAL
+				count = 7
+			}
 			combat_unit = {
 				type = unit_type:combat_unit_type_mechanized_infantry
 				state_region = s:STATE_CAPE_COLONY
-				count = 10
+				count = 5
+			}
+			combat_unit = {
+				type = unit_type:combat_unit_type_light_infantry
+				state_region = s:STATE_CAPE_COLONY
+				count = 5
 			}
 			combat_unit = {
 				type = unit_type:combat_unit_type_light_infantry
@@ -384,7 +383,6 @@ MILITARY_FORMATIONS = {
 				state_region = s:STATE_TRANSVAAL
 				count = 4
 			}
-			# SAAF: Cheetah C/D, Impala Mk II
 			combat_unit = {
 				type = unit_type:combat_unit_type_multirole_aircraft
 				state_region = s:STATE_TRANSVAAL
@@ -408,7 +406,6 @@ MILITARY_FORMATIONS = {
 			hq_region = sr:region_southern_africa
 			name = "South_African_Navy"
  
-			# President-class frigates, Daphné-class submarines
 			ship = {
 				type = ship_type:ship_type_frigate
 				count = 4
@@ -431,10 +428,6 @@ MILITARY_FORMATIONS = {
 		}
 	}
  
-	### NIGERIA ###
-	# ~76,000 active in 1992. Babangida military government; ECOMOG operations in Liberia.
-	# Alpha Jets and MiG-21; T-55 tanks; largely light infantry.
- 
 	c:NRI ?= {
  
 		create_military_formation = {
@@ -442,24 +435,31 @@ MILITARY_FORMATIONS = {
 			hq_region = sr:region_west_africa
 			name = "Nigerian_Armed_Forces"
  
-			# Lagos / Yoruba south — main garrison
 			combat_unit = {
 				type = unit_type:combat_unit_type_mechanized_infantry
 				state_region = s:STATE_YORUBA_STATES
-				count = 18
+				count = 9
 			}
-			# Hausaland — northern garrison
+			combat_unit = {
+				type = unit_type:combat_unit_type_light_infantry
+				state_region = s:STATE_YORUBA_STATES
+				count = 9
+			}
 			combat_unit = {
 				type = unit_type:combat_unit_type_mechanized_infantry
 				state_region = s:STATE_HAUSALAND
-				count = 15
+				count = 8
+			}
+			combat_unit = {
+				type = unit_type:combat_unit_type_light_infantry
+				state_region = s:STATE_HAUSALAND
+				count = 7
 			}
 			combat_unit = {
 				type = unit_type:combat_unit_type_light_infantry
 				state_region = s:STATE_EAST_HAUSALAND
 				count = 10
 			}
-			# Niger Delta — oil region security
 			combat_unit = {
 				type = unit_type:combat_unit_type_light_infantry
 				state_region = s:STATE_NIGER_DELTA
@@ -498,7 +498,6 @@ MILITARY_FORMATIONS = {
 			hq_region = sr:region_west_africa
 			name = "Nigerian_Navy"
  
-			# MEKO 360 frigates, Vosper Mark 9 corvettes
 			ship = {
 				type = ship_type:ship_type_frigate
 				count = 4
@@ -521,10 +520,6 @@ MILITARY_FORMATIONS = {
 		}
 	}
  
-	### KENYA ###
-	# ~24,500 active in 1992. US-aligned; small but professional.
-	# F-5E/F Tigers; Vickers Mk3 tanks; British-trained officer corps.
- 
 	c:KYA ?= {
  
 		create_military_formation = {
@@ -535,7 +530,12 @@ MILITARY_FORMATIONS = {
 			combat_unit = {
 				type = unit_type:combat_unit_type_mechanized_infantry
 				state_region = s:STATE_KENYA
-				count = 12
+				count = 6
+			}
+			combat_unit = {
+				type = unit_type:combat_unit_type_light_infantry
+				state_region = s:STATE_KENYA
+				count = 6
 			}
 			combat_unit = {
 				type = unit_type:combat_unit_type_light_infantry
@@ -588,10 +588,6 @@ MILITARY_FORMATIONS = {
 		}
 	}
  
-	### MOZAMBIQUE ###
-	# ~49,000 active in 1992. FRELIMO government; peace accord with RENAMO signed Oct 1992.
-	# Devastated economy; Soviet-supplied equipment; force rapidly demobilizing.
- 
 	c:MZB ?= {
  
 		create_military_formation = {
@@ -633,10 +629,6 @@ MILITARY_FORMATIONS = {
 		}
 	}
  
-	### MALI ###
-	# ~7,000 active in 1992. One of Africa's poorest militaries.
-	# Light infantry; MiG-17/21 (non-operational mostly); Tuareg rebellion underway.
- 
 	c:MLI ?= {
  
 		create_military_formation = {
@@ -673,11 +665,6 @@ MILITARY_FORMATIONS = {
 		}
 	}
  
-	### DRC (ZAIRE) ###
-	# ~49,000 active in 1992. Mobutu's Forces Armées du Zaïre (FAZ).
-	# Deeply corrupt and ineffective despite size; Chinese and Western equipment.
-	# Vast territory almost impossible to garrison effectively.
- 
 	c:DRK ?= {
  
 		create_military_formation = {
@@ -685,24 +672,26 @@ MILITARY_FORMATIONS = {
 			hq_region = sr:region_equatorial_africa
 			name = "Forces_Armees_du_Zaire"
  
-			# Kinshasa / Bas-Congo — regime protection
 			combat_unit = {
 				type = unit_type:combat_unit_type_mechanized_infantry
 				state_region = s:STATE_BAS_CONGO
-				count = 15
+				count = 8
+			}
+			combat_unit = {
+				type = unit_type:combat_unit_type_light_infantry
+				state_region = s:STATE_BAS_CONGO
+				count = 7
 			}
 			combat_unit = {
 				type = unit_type:combat_unit_type_light_infantry
 				state_region = s:STATE_BAS_CONGO
 				count = 10
 			}
-			# Katanga — mineral wealth garrison
 			combat_unit = {
 				type = unit_type:combat_unit_type_light_infantry
 				state_region = s:STATE_KATANGA
 				count = 8
 			}
-			# Eastern provinces — sparse coverage
 			combat_unit = {
 				type = unit_type:combat_unit_type_light_infantry
 				state_region = s:STATE_CONGO_ORIENTALE
@@ -737,11 +726,6 @@ MILITARY_FORMATIONS = {
 		}
 	}
  
-	### ANGOLA ###
-	# ~128,000 active in 1992. MPLA government vs UNITA; civil war resumed after failed 1992 elections.
-	# Soviet-equipped FAPLA: T-54/T-55/T-62, MiG-23ML, Su-22.
-	# Cuban troops withdrew 1991 but MPLA retains capable force.
- 
 	c:AGO ?= {
  
 		create_military_formation = {
@@ -749,7 +733,6 @@ MILITARY_FORMATIONS = {
 			hq_region = sr:region_equatorial_africa
 			name = "Forcas_Armadas_Angolanas"
  
-			# Luanda / North Angola — government heartland
 			combat_unit = {
 				type = unit_type:combat_unit_type_armored_infantry
 				state_region = s:STATE_NORTH_ANGOLA
@@ -758,9 +741,13 @@ MILITARY_FORMATIONS = {
 			combat_unit = {
 				type = unit_type:combat_unit_type_mechanized_infantry
 				state_region = s:STATE_NORTH_ANGOLA
-				count = 25
+				count = 13
 			}
-			# East and South — active UNITA war zones
+			combat_unit = {
+				type = unit_type:combat_unit_type_light_infantry
+				state_region = s:STATE_NORTH_ANGOLA
+				count = 12
+			}
 			combat_unit = {
 				type = unit_type:combat_unit_type_light_infantry
 				state_region = s:STATE_EAST_ANGOLA
@@ -799,7 +786,6 @@ MILITARY_FORMATIONS = {
 			hq_region = sr:region_equatorial_africa
 			name = "Marinha_de_Guerra_Angola"
  
-			# Soviet Pauk and Shershen-class patrol boats
 			ship = {
 				type = ship_type:ship_type_destroyer
 				count = 4
@@ -818,13 +804,6 @@ MILITARY_FORMATIONS = {
 		}
 	}
  
-	### ZIMBABWE ###
-	# ~48,000 active in 1992. Zimbabwe National Army; Mugabe government.
-	# Involved in Mozambican Civil War (supporting FPLM vs RENAMO).
-	# British-trained; Hawk jets; fairly capable for the region.
-	# NOTE: Zimbabwe tag not found in states file — using STATE_ZAMBEZI (ZMB).
-	# Verify correct tag before use.
- 
 	c:ZMB ?= {
  
 		create_military_formation = {
@@ -835,7 +814,12 @@ MILITARY_FORMATIONS = {
 			combat_unit = {
 				type = unit_type:combat_unit_type_mechanized_infantry
 				state_region = s:STATE_ZAMBEZI
-				count = 20
+				count = 10
+			}
+			combat_unit = {
+				type = unit_type:combat_unit_type_light_infantry
+				state_region = s:STATE_ZAMBEZI
+				count = 10
 			}
 			combat_unit = {
 				type = unit_type:combat_unit_type_light_infantry
@@ -865,10 +849,6 @@ MILITARY_FORMATIONS = {
 			transfer_to_formation = scope:zmb_zimbabwe_national_army_formation
 		}
 	}
- 
-	### BOTSWANA ###
-	# ~7,500 active in 1992. Small but well-funded by diamond wealth.
-	# British-equipped; CF-5A fighters; light infantry.
  
 	c:TSW ?= {
  

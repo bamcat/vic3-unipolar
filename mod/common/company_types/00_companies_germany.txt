@@ -1,5 +1,5 @@
 ﻿# Friedrich Krupp AG
-company_krupp = {
+REPLACE_OR_CREATE:company_krupp = {
 	icon = "gfx/interface/icons/company_icons/historical_company_icons/german_krupp.dds"
 	background = "gfx/interface/icons/company_icons/company_backgrounds/comp_illu_manufacturing_heavy.dds"
 
@@ -22,11 +22,14 @@ company_krupp = {
 	}
 
 	potential = {
-		has_interest_marker_in_region = geographic_region_north_germany_old
+		OR = {
+			any_scope_state = { is_in_geographic_region = geographic_region_north_germany_old }
+			any_scope_state = { state_region = s:STATE_RUHR }
+		}
 	}
 
 	attainable = {
-		hidden_trigger = { # Hide attainable if it's always fulfilled by possible
+		hidden_trigger = {
 			any_scope_state = {
 				state_region = s:STATE_RUHR
 			}
@@ -82,7 +85,7 @@ company_krupp = {
 	}
 
 	ai_weight = {
-		value = 3 # Higher base value for flavored companies
+		value = 3
 	}
 }
 
@@ -118,11 +121,15 @@ REPLACE_OR_CREATE:company_rheinmetall = {
 	}
 
 	potential = {
-		has_interest_marker_in_region = geographic_region_north_germany_old
+		OR = {
+			any_scope_state = { is_in_geographic_region = geographic_region_north_germany_old }
+			any_scope_state = { state_region = s:STATE_RUHR }
+			any_scope_state = { state_region = s:STATE_NORTH_RHINE }
+		}
 	}
 
 	attainable = {
-		hidden_trigger = { # Hide attainable if it's always fulfilled by possible
+		hidden_trigger = {
 			any_scope_state = {
 				OR = {
 					state_region = s:STATE_RUHR
@@ -200,7 +207,7 @@ REPLACE_OR_CREATE:company_rheinmetall = {
 	}
 
 	ai_weight = {
-		value = 3 # Higher base value for flavored companies
+		value = 3
 	}
 }
 
@@ -229,11 +236,11 @@ REPLACE_OR_CREATE:company_schichau = {
 	}
 
 	potential = {
-		has_interest_marker_in_region = region_poland
+		any_scope_state = { is_in_geographic_region = geographic_region_poland_old }
 	}
 
 	attainable = {
-		hidden_trigger = { # Hide attainable if it's always fulfilled by possible
+		hidden_trigger = {
 			any_scope_state = {
 				state_region = s:STATE_WEST_PRUSSIA
 			}
@@ -273,7 +280,7 @@ REPLACE_OR_CREATE:company_schichau = {
 	}
 
 	ai_weight = {
-		value = 3 # Higher base value for flavored companies
+		value = 3
 	}
 }
 
@@ -296,11 +303,11 @@ REPLACE_OR_CREATE:company_siemens_and_halske = {
 	}
 
 	potential = {
-		has_interest_marker_in_region = geographic_region_north_germany_old
+		any_scope_state = { is_in_geographic_region = geographic_region_north_germany_old }
 	}
 
 	attainable = {
-		hidden_trigger = { # Hide attainable if it's always fulfilled by possible
+		hidden_trigger = {
 			any_scope_state = {
 				state_region = s:STATE_BRANDENBURG
 			}
@@ -339,7 +346,7 @@ REPLACE_OR_CREATE:company_siemens_and_halske = {
 	}
 
 	ai_weight = {
-		value = 3 # Higher base value for flavored companies
+		value = 3
 	}
 }
 
@@ -368,10 +375,10 @@ REPLACE_OR_CREATE:company_prussian_state_railways = {
 	possible = {
 		any_scope_state = {
 			OR = {
-				region = sr:region_north_germany
-				region = sr:region_south_germany
-				region = sr:region_rhine
-				region = sr:region_poland
+				is_in_geographic_region = geographic_region_north_germany_old
+				is_in_geographic_region = geographic_region_south_germany_old
+				is_in_geographic_region = geographic_region_rhine_old
+				is_in_geographic_region = geographic_region_poland_old
 			}
 			is_incorporated = yes
 			any_scope_building = {
@@ -389,10 +396,10 @@ REPLACE_OR_CREATE:company_prussian_state_railways = {
 	ai_will_do = {
 		any_scope_state = {
 			OR = {
-				region = sr:region_north_germany
-				region = sr:region_south_germany
-				region = sr:region_rhine
-				region = sr:region_poland
+				is_in_geographic_region = geographic_region_north_germany_old
+				is_in_geographic_region = geographic_region_south_germany_old
+				is_in_geographic_region = geographic_region_rhine_old
+				is_in_geographic_region = geographic_region_poland_old
 			}
 			is_incorporated = yes
 		}
@@ -403,10 +410,10 @@ REPLACE_OR_CREATE:company_prussian_state_railways = {
 			level = 5
 			state_trigger = {
 				OR = {
-					region = sr:region_north_germany
-					region = sr:region_south_germany
-					region = sr:region_rhine
-					region = sr:region_poland
+					is_in_geographic_region = geographic_region_north_germany_old
+					is_in_geographic_region = geographic_region_south_germany_old
+					is_in_geographic_region = geographic_region_rhine_old
+					is_in_geographic_region = geographic_region_poland_old
 				}
 				is_incorporated = yes
 			}
@@ -414,13 +421,13 @@ REPLACE_OR_CREATE:company_prussian_state_railways = {
 	}
 
 	ai_weight = {
-		value = 3 # Higher base value for flavored companies
+		value = 3
 	}
 }
 
 
 # BASF
-company_basf = {
+REPLACE_OR_CREATE:company_basf = {
 	icon = "gfx/interface/icons/company_icons/historical_company_icons/german_basf.dds"
 	background = "gfx/interface/icons/company_icons/company_backgrounds/comp_illu_manufacturing_heavy.dds"
 
@@ -443,11 +450,11 @@ company_basf = {
 	}
 
 	potential = {
-		has_interest_marker_in_region = region_south_germany
+		any_scope_state = { is_in_geographic_region = geographic_region_south_germany_old }
 	}
 
 	attainable = {
-		hidden_trigger = { # Hide attainable if it's always fulfilled by possible
+		hidden_trigger = {
 			any_scope_state = {
 				state_region = s:STATE_BADEN
 			}
@@ -487,6 +494,6 @@ company_basf = {
 	}
 
 	ai_weight = {
-		value = 3 # Higher base value for flavored companies
+		value = 3
 	}
 }

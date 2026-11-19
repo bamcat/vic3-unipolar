@@ -1,5 +1,5 @@
 ﻿# Săedineni Tyutyunevi Fabriki AD
-company_united_tobacco_factories = {
+REPLACE_OR_CREATE:company_united_tobacco_factories = {
 	icon = "gfx/interface/icons/company_icons/historical_company_icons/company_united_tobacco_factories.dds"
 	background = "gfx/interface/icons/company_icons/company_backgrounds/comp_illu_plantation.dds"
 
@@ -20,7 +20,7 @@ company_united_tobacco_factories = {
 	}
 
 	potential = {
-		has_interest_marker_in_region = region_balkans
+		has_interest_marker_in_region = sr:region_balkans
 		has_dlc_feature = ip3_content
 	}
 
@@ -49,12 +49,12 @@ company_united_tobacco_factories = {
 	}
 
 	ai_weight = {
-		value = 3 # Higher base value for flavored companies
+		value = 3
 	}
 }
 
 # Mate Gavrilović i drug
-company_mate_gavrilovic = {
+REPLACE_OR_CREATE:company_mate_gavrilovic = {
 	icon = "gfx/interface/icons/company_icons/historical_company_icons/company_mate_gavrilovic.dds"
 	background = "gfx/interface/icons/company_icons/company_backgrounds/comp_illu_manufacturing_light.dds"
 
@@ -75,7 +75,7 @@ company_mate_gavrilovic = {
 	}
 
 	potential = {
-		has_interest_marker_in_region = region_balkans
+		has_interest_marker_in_region = sr:region_balkans
 	}
 
 	attainable = {
@@ -99,12 +99,12 @@ company_mate_gavrilovic = {
 	}
 
 	ai_weight = {
-		value = 3 # Higher base value for flavored companies
+		value = 3
 	}
 }
 
 # Stabilimento Tecnico di Fiume / alt. Torpedo-Fabrik von Robert Whitehead
-company_stabilimento_tecnico_di_fiume = {
+REPLACE_OR_CREATE:company_stabilimento_tecnico_di_fiume = {
 	icon = "gfx/interface/icons/company_icons/historical_company_icons/company_stabilimento_tecnico_di_fiume.dds"
 	background = "gfx/interface/icons/company_icons/company_backgrounds/comp_illu_harbor_shipbuilding.dds"
 
@@ -120,7 +120,7 @@ company_stabilimento_tecnico_di_fiume = {
 	}
 
 	potential = {
-		has_interest_marker_in_region = region_balkans
+		has_interest_marker_in_region = sr:region_balkans
 		has_dlc_feature = ip3_content
 	}
 
@@ -140,16 +140,15 @@ company_stabilimento_tecnico_di_fiume = {
 	}
 
 	prosperity_modifier = {
-		unit_navy_offense_mult = 0.15 # Whitehead torpedoes
+		unit_navy_offense_mult = 0.15
 	}
 
 	ai_weight = {
-		value = 3 # Higher base value for flavored companies
+		value = 3
 	}
 }
 
-# Klaničko Društvo, Srpsko akcionarsko društvo za klanje i preradu stoke u Beogradu
-company_klanicko_drustvo = {
+REPLACE_OR_CREATE:company_klanicko_drustvo = {
 	icon = "gfx/interface/icons/company_icons/historical_company_icons/company_klanicko_drustvo.dds"
 	background = "gfx/interface/icons/company_icons/company_backgrounds/comp_illu_manufacturing_light.dds"
 
@@ -170,7 +169,7 @@ company_klanicko_drustvo = {
 	}
 
 	potential = {
-		has_interest_marker_in_region = region_balkans
+		has_interest_marker_in_region = sr:region_balkans
 		has_dlc_feature = ip3_content
 	}
 
@@ -197,12 +196,11 @@ company_klanicko_drustvo = {
 	}
 
 	ai_weight = {
-		value = 3 # Higher base value for flavored companies
+		value = 3
 	}
 }
 
-# Jakub Klein a spol.
-company_jakub_klein = {
+REPLACE_OR_CREATE:company_jakub_klein = {
 	icon = "gfx/interface/icons/company_icons/historical_company_icons/company_jakub_klein.dds"
 	background = "gfx/interface/icons/company_icons/company_backgrounds/comp_illu_manufacturing_light.dds"
 
@@ -218,7 +216,7 @@ company_jakub_klein = {
 	}
 
 	potential = {
-		has_interest_marker_in_region = region_balkans
+		has_interest_marker_in_region = sr:region_balkans
 	}
 
 	attainable = {
@@ -226,7 +224,7 @@ company_jakub_klein = {
 
 	possible = {
 		any_scope_state = {
-			state_region = s:STATE_WEST_SLOVAKIA
+			state_region = s:STATE_SLOVAKIA
 			is_incorporated = yes
 			any_scope_building = {
 				OR = {
@@ -244,12 +242,11 @@ company_jakub_klein = {
 	}
 
 	ai_weight = {
-		value = 3 # Higher base value for flavored companies
+		value = 3
 	}
 }
 
-# Első Budapesti Gőzmalom Rt. / First Budapest Steam Mill Co.
-company_elso_budapesti_gozmalom = {
+REPLACE_OR_CREATE:company_elso_budapesti_gozmalom = {
 	icon = "gfx/interface/icons/company_icons/historical_company_icons/company_elso_budapesti_gozmalom.dds"
 	background = "gfx/interface/icons/company_icons/company_backgrounds/comp_illu_farm_wheat.dds"
 
@@ -269,7 +266,7 @@ company_elso_budapesti_gozmalom = {
 	}
 
 	potential = {
-		has_interest_marker_in_region = region_balkans
+		has_interest_marker_in_region = sr:region_balkans
 		has_dlc_feature = ip3_content
 	}
 
@@ -301,12 +298,12 @@ company_elso_budapesti_gozmalom = {
 	}
 
 	ai_weight = {
-		value = 3 # Higher base value for flavored companies
+		value = 3
 	}
 }
 
 # Witkowitzer Bergbau- und Hüttengewerkschaft
-company_witkowitzer_bergbau_und_huttengewerkschaft = {
+REPLACE_OR_CREATE:company_witkowitzer_bergbau_und_huttengewerkschaft = {
 	icon = "gfx/interface/icons/company_icons/historical_company_icons/company_witkowitzer_bergbau_und_huttengewerkschaft.dds"
 	background = "gfx/interface/icons/company_icons/company_backgrounds/comp_illu_mining.dds"
 
@@ -323,7 +320,7 @@ company_witkowitzer_bergbau_und_huttengewerkschaft = {
 	}
 
 	potential = {
-		has_interest_marker_in_region = region_south_germany
+		any_scope_state = { is_in_geographic_region = geographic_region_south_germany_old }
 		has_dlc_feature = ip3_content
 	}
 
@@ -353,12 +350,12 @@ company_witkowitzer_bergbau_und_huttengewerkschaft = {
 	}
 
 	ai_weight = {
-		value = 3 # Higher base value for flavored companies
+		value = 3
 	}
 }
 
 # Oesterreichisch-Alpine Montangesellschaft
-company_oesterreichisch_alpine_montangesellschaft = {
+REPLACE_OR_CREATE:company_oesterreichisch_alpine_montangesellschaft = {
 	icon = "gfx/interface/icons/company_icons/historical_company_icons/company_oesterreichisch_alpine_montangesellschaft.dds"
 	background = "gfx/interface/icons/company_icons/company_backgrounds/comp_illu_mining.dds"
 
@@ -374,7 +371,7 @@ company_oesterreichisch_alpine_montangesellschaft = {
 	}
 
 	potential = {
-		has_interest_marker_in_region = region_south_germany
+		any_scope_state = { is_in_geographic_region = geographic_region_south_germany_old }
 	}
 
 	attainable = {
@@ -400,12 +397,12 @@ company_oesterreichisch_alpine_montangesellschaft = {
 	}
 
 	ai_weight = {
-		value = 3 # Higher base value for flavored companies
+		value = 3
 	}
 }
 
 # Getzner, Mutter & Cie
-company_getzner_mutter = {
+REPLACE_OR_CREATE:company_getzner_mutter = {
 	icon = "gfx/interface/icons/company_icons/historical_company_icons/company_getzner_mutter.dds"
 	background = "gfx/interface/icons/company_icons/company_backgrounds/comp_illu_manufacturing_light.dds"
 
@@ -425,7 +422,7 @@ company_getzner_mutter = {
 	}
 
 	potential = {
-		has_interest_marker_in_region = region_south_germany
+		any_scope_state = { is_in_geographic_region = geographic_region_south_germany_old }
 		has_dlc_feature = ip3_content
 	}
 
@@ -452,12 +449,12 @@ company_getzner_mutter = {
 	}
 
 	ai_weight = {
-		value = 3 # Higher base value for flavored companies
+		value = 3
 	}
 }
 
 # Erste Brünner Maschinenfabriks-Gesellschaft / První brněnská strojírna
-company_erste_brunner = {
+REPLACE_OR_CREATE:company_erste_brunner = {
 	icon = "gfx/interface/icons/company_icons/historical_company_icons/company_erste_brunner.dds"
 	background = "gfx/interface/icons/company_icons/company_backgrounds/comp_illu_manufacturing_light.dds"
 
@@ -477,7 +474,7 @@ company_erste_brunner = {
 	}
 
 	potential = {
-		has_interest_marker_in_region = region_south_germany
+		any_scope_state = { is_in_geographic_region = geographic_region_south_germany_old }
 		has_dlc_feature = ip3_content
 	}
 
@@ -504,6 +501,6 @@ company_erste_brunner = {
 	}
 
 	ai_weight = {
-		value = 3 # Higher base value for flavored companies
+		value = 3
 	}
 }

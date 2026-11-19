@@ -34,10 +34,6 @@ cb_policy_fractional_5 = {
 }
 
 # ── FULL RESERVE BANKING POLICY ──────────
-# Inherits the institutional logic of law_full_reserve_banking.
-# Each step away from neutral: ±0.25% loan interest, ∓6.25% cash reserves.
-# At most contractionary: -1% interest, +25% cash reserves.
-# At most expansionary: +1% interest, -25% cash reserves.
 
 # 1 — Most Contractionary (full reserve)
 cb_policy_full_1 = {

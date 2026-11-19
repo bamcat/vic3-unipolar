@@ -1,54 +1,39 @@
 ﻿l_turkish:
-
- # ==========================================
- # ENACTMENT EVENT LOCALIZATION
- # ==========================================
-
- # drug_laws.1 — Cost of Prohibition
  drug_laws.1.t:0 "Prohibition Maliyeti"
  drug_laws.1.d:0 "[ROOT.GetCountry.GetName] tüm toksik maddeler yasaklama kampanyası başladı - ancak uygulama pahalı kanıtlıyor. Polis ve savcıların kaynaklara ihtiyacı vardır. Sınırların izlenmesi gerekir. Alternatif - yasağı ilan etmek ve uyumluluk takip etmeyi umut etmek - hiçbir yerde işe yaramadı.\n\n[ROOT.GetCountry.GetRuler.GetPrimaryRoleTitle] [ROOT.GetCountry.GetRuler.GetLastName] hükümeti bunu almaya hazır olduğuna karar vermelidir."
  drug_laws.1.f:0 "Uygulamasız bir yasa bir öneridir."
  drug_laws.1.a:0 "Full Execution – Hiçbir masrafı yok"
  drug_laws.1.b:0 "Önlemli uygulama – zamanla uyum kurmak"
 
- # drug_laws.2 — The Church Speaks
  drug_laws.2.t:0 "[SCOPE.sCharacter('devout_leader').GetPrimaryRoleTitle] Konuşuyor"
  drug_laws.2.d:0 "[SCOPE.sCharacter('devout_leader').GetFullName], [SCOPE.gsInterestGroup('devout_ig').GetName] lideri, hükümetin sıkı madde yönetmeliğine yönelik hareketi sona erdiren bir kamu açıklaması yayınladı. Framing açıkça ahlakidir - ruhsal yolsuzluk olarak toksikasyon, devletin doğru işi olarak yasaklamak. Soru, bu framing'i kucaklamak veya yasa için laik bir temel korumaktır."
  drug_laws.2.f:0 "Ahlaki otorite ve yasal otorite aynı şey değildir - ancak birlikte çalışabilirler."
  drug_laws.2.a:0 "Desteklerine hoş geldiniz – birleşik bir cephe yasayı güçlendiriyor"
  drug_laws.2.b:0 "Bu laik bir meseleyi tutun – framinglerini azaltın"
 
- # drug_laws.3 — The Intelligentsia Makes Its Case
  drug_laws.3.t:0 "[SCOPE.sCharacter('intelligentsia_leader').GetFullName] Kanıt için Vaka Oluşturun"
  drug_laws.3.d:0 "[SCOPE.sCharacter('intelligentsia_leader').GetFullName], [SCOPE.gsInterestGroup('intelligentsia_ig').GetName]'yi temsil etmek, halihazırda yürürlüğe giren ülkelerden ilaç decriminalizasyon politikasının ayrıntılı bir analizi yayınladı. Bulgular belirsizdir: incarcerasyon oranları düşer, aşırı doz ölümleri düşer, uygulama maliyetleri düşer. Rapor yaygın olarak okunur - ve kanıtları tartışan muhafazakar çıkarlar tarafından yaygın olarak saldırıya uğrar."
  drug_laws.3.f:0 "Veriler tartışma hakkında umursamıyor."
  drug_laws.3.a:0 "Araştırmaya geri dönün – bunu yayınlayın ve kanıtların liderlik etmesine izin verin"
  drug_laws.3.b:0 "Siyasetten akademik tutun"
 
- # drug_laws.4 — Medical Establishment
  drug_laws.4.t:0 "Doktorlar Harm Azaltımı Destekliyor"
  drug_laws.4.d:0 "[ROOT.GetCountry.GetAdjective] tıbbi kuruluş - halk sağlığı yetkilileri ve bağımlılık uzmanları tarafından yürütülen - resmi olarak önerilen güvenli-injeksiyon site yasalarını destekledi. Onların argümanı basittir: denetimli tüketim aşırı ölümleri azaltır, kullanıcıları tedaviye bağlar ve uyuşturucu kullanımını arttırmaz. Diğer ülkelerden gelen kanıtlar zorlayıcı. Dini ve muhafazakar gruplardan siyasi muhalefet eşit derecede öngörülebilirdir."
  drug_laws.4.f:0 "Tıp ahlak değildir. Ama hayatlar yaşıyor."
  drug_laws.4.a:0 "Tıbbi konsensüsü geri dönün - kanıtlar açık"
  drug_laws.4.b:0 "Bunu ahlaki bir soru olarak çizin – tıp tüm cevaplara sahip değil"
 
- # drug_laws.5 — International Condemnation
  drug_laws.5.t:0 "Dünya İzliyor"
  drug_laws.5.d:0 "[ROOT.GetCountry.GetName] İlaç ticaretinin yasallaştırılması, hemen uluslararası dikkat çekti. [SCOPE.sCountry('c:USA').GetName] resmi bir diplomatik not kaygısını yayınladı. Diğer birçok hükümet, bilinen dehşetlerini yarattı. Bununla birlikte, uyuşturucu yasağına ilişkin uluslararası fikir birliği - kesin değildir ve [ROOT.GetCountry.GetName] bunun dışında adım atmak üzeredir."
  drug_laws.5.f:0 "Egemenlik ilan etmek kolaydır. Sonuçları daha uzun sürer."
  drug_laws.5.a:0 "Uluslararası görüşü tanımlamak - [ROOT.GetCountry.GetName] kendi yasalarını yapar"
  drug_laws.5.b:0 "Sessizce sessizce - hiçbir açıklama yapmaz, çatışmayı davet et"
 
- # drug_laws.6 — Criminal Networks Resist
  drug_laws.6.t:0 "Karteller Kanunla Mücadele Ediyor"
  drug_laws.6.d:0 "Önerilen ilaç yasaları mevcut suç ekonomisini tehdit ediyor. Mevcut gri bölgeden hoşgörü ve yasak arasındaki kar sağlayan ağlar, yasanın geçişine aktif olarak çalışmaya başladı - yerel yetkililere yol açtı, bilgi dağıtıyor ve bazı durumlarda, kanun koyucular. The pushback organize edilir, iyi finanse edilir ve etkili.\n\n[ROOT.GetCountry.GetRuler.GetPrimaryRoleTitle] [ROOT.GetCountry.GetRuler.GetLastName] nasıl cevap vereceğine karar vermelidir."
  drug_laws.6.f:0 "Otomobilteller, onları işletmek için veren yasaları tercih eder."
  drug_laws.6.a:0 "Setback'i kabul edin - daha dikkatli hareket edin"
  drug_laws.6.b:0 "Dinalate Execution - yasaya karşı çıkan ağlardan kök"
-
- # ==========================================
- # ENACTMENT MODIFIER NAMES
- # ==========================================
 
  drug_law_prohibition_enforcement:0 "Prohibition Execution Kampanyası"
  drug_law_prohibition_enforcement_desc:0 "İyi kaynaklanmış bir uygulama kampanyası, yasaklanma ve gözlemlenme şansının iyileştirilmesidir."
@@ -86,179 +71,162 @@
  drug_law_criminal_pushback:0 "Ceza Ağları Direniyor"
  drug_law_criminal_pushback_desc:0 "Organize suç, faaliyetlerini tehdit edecek olan uyuşturucu mevzuatının geçişini önlemek için aktif olarak çalışmaktadır."
 
- # disability_laws.1 — Employer Resistance
  disability_laws.1.t:0 "İşverenler İşyeri Konaklamalarına Geri Döndü"
  disability_laws.1.d:0 "Önerilen işyeri konaklama mevzuatı, [ROOT.GetCountry.GetAdjective] işverenlerden organize edilen bir yanıt çıkardı. [SCOPE.sCharacter('employer_leader').GetFullName], [SCOPE.gsInterestGroup('employer_ig').GetName] için konuşma, uyum maliyetlerinin işe yaramadığını iddia etti - özellikle küçük işletmeler ekipman değiştirme, görevleri ayarlama ve yeniden yapılandırma işlerini devre dışı bırakmak.\n\n Hükümet nasıl yanıt vereceğine karar vermelidir."
  disability_laws.1.f:0 "Her kapsayıcı politika, maliyetlerin çok yüksek olduğunu iddia eden birine sahiptir."
  disability_laws.1.a:0 "Hold firm - yasalara uygun olmak istenmiyor"
  disability_laws.1.b:0 "Bir geçiş dönemi teklif edin – birkaç yıl boyunca uyum sağlar"
- 
- # disability_laws.2 — Construction Lobby
+
  disability_laws.2.t:0 "İnşaat Endüstrisi Objects"
  disability_laws.2.d:0 "Önerilen erişilebilir altyapı mevzuatı [ROOT.GetCountry.GetAdjective] inşaat endüstrisinden resmi bir itiraz çekti. Onların argümanı: Mevcut binaları erişilebilirlik standartlarını karşılamak için geri alma gereksinimi teknik olarak karmaşıktır ve birçok mülk sahibi için yasal olarak pahalıdır. Mevcut yapılar için ya da çok daha uzun bir uygulama süresi için bir büyükbaba koşulu arıyorlar."
  disability_laws.2.f:0 "Bir rampa olmadan inşa edilen her bina artık politik bir sorundur."
  disability_laws.2.a:0 "Enforce katı standartlar - programla tam uyum, istisnalar"
  disability_laws.2.b:0 "Aşama uyumluluğu - büyükbaba mevcut yapılar, yeni yapılar için yeni standartlar"
- 
- # disability_laws.3 — Who Pays
+
  disability_laws.3.t:0 "Accessible Altyapı için kim öder?"
  disability_laws.3.d:0 "erişilebilir altyapı mevzuatı, fatura taslağının şu ana kadar kaçındığı bir soruyu gündeme getiriyor: aslında retrofit için ödeme yapan kim? Borç tamamen özel mülk sahipleri üzerinde düşerse, daha küçük ev sahipleri ve işletmeler orantısız yüklenecek. Devlet çalışmayı destekliyorsa, halk bütçesi isabet alır. legislature soru üzerinde ölüdür."
  disability_laws.3.f:0 "Inclusion'un bir fiyatı vardır. Tartışma bunu kimin ödediği ile ilgilidir."
  disability_laws.3.a:0 "Devlet sübvansiyonu - hükümet retrofit maliyetlerini hızlandırmak için harcıyor"
  disability_laws.3.b:0 "Özel yükümlülük - mülk sahipleri uyumluluk maliyetini taşır"
- 
- # disability_laws.4 — Medical Endorsement
+
  disability_laws.4.t:0 "[SCOPE.sCharacter('medical_leader').GetFullName] Endorss Public Treatments"
  disability_laws.4.d:0 "[SCOPE.sCharacter('medical_leader').GetFullName] [SCOPE.gsInterestGroup('medical_ig').GetName] kamu tedavi mevzuatının resmi bir onayı yayınladı, devlet finanse edilen sakatlık tedavisinin işgücü katılımında ölçülebilir kazanımlar sağladığına dair kanıtlar, uzun vadeli sağlık maliyetlerini azaltır ve nüfus çapında sonuçları geliştirir. Onay, bunun hayırsever olmadığını tartışmak için destekçileri tarafından kullanılıyor - yatırım."
  disability_laws.4.f:0 "Tıp, koruyucu ve hasta olmayan hasta arasında ayrım yapmaz."
  disability_laws.4.a:0 "Komisyon bir halk sağlığı raporu – kanıtların davayı yapmasına izin verin"
  disability_laws.4.b:0 "Sraming politik tutun - bu bir hak meselesi, tıbbi değil"
- 
- # disability_laws.5 — Fiscal Resistance
+
  disability_laws.5.t:0 "[SCOPE.sCharacter('fiscal_leader').GetFullName] Devletin Afford olmadığını söyle"
  disability_laws.5.d:0 "[SCOPE.sCharacter('fiscal_leader').GetFullName], [SCOPE.gsInterestGroup('fiscal_ig').GetName]'yi temsil etmek, bir stark değerlendirme teslim etti: Kapsamlı kamu sakatlık tedavisi devam eden maliyet güvenilmezdir. Devlet zaten genişletiliyor. Bu mevzuat, eğer tam olarak yürürlüğe girerse, başka bir yerde vergi artışları veya kesintiler gerektirecektir. Soru, [ROOT.GetCountry.GetName]'nin engelli vatandaşlarına bakmak isteyip istemediğini değil - bunun mümkün olup olmadığıdır."
  disability_laws.5.f:0 "Bir bütçe ahlaki bir belgedir."
  disability_laws.5.a:0 "Hattı tut - masraf ahlaki bir zorunluluktur, bir seçim değil"
  disability_laws.5.b:0 "Harcamalarda Faz - birkaç yıl boyunca sahnelendi"
- 
- # disability_laws.6 — Advocates Rally
+
  disability_laws.6.t:0 "İmkansızlık Onların Vakalarını Yaptırır"
  disability_laws.6.d:0 "Engelli hakları örgütleri koalisyonu, önerilen mevzuatın desteğiyle kamu kampanyası başlattı. Onların mesajı doğrudan: [ROOT.GetCountry.GetAdjective] toplum, çok uzun süredir tam katılımtan engelli insanları dışladı. Tartışma edilen yasa bir iyilik değildir - uzun zamandır süren bir adaletsizliğin düzeltilmesidir. Kampanya sempatik kapsamı çekti ve halk görüşünü değiştiriyor."
  disability_laws.6.f:0 "Bizimle ilgili hiçbir şey yok."
  disability_laws.6.a:0 "Formally delegasyonlarını alır - kampanya yetkilisine geri vermek"
  disability_laws.6.b:0 "Kampanyayı basitleştirmeksizin kabul edin"
- 
- # disability_laws.7 — Conservative Opposition
+
  disability_laws.7.t:0 "[SCOPE.sCharacter('conservative_leader').GetFullName] Oppozisyona liderlik eder"
  disability_laws.7.d:0 "[SCOPE.sCharacter('conservative_leader').GetFullName] [SCOPE.gsInterestGroup('conservative_ig').GetName] Engelli mevzuatına karşı bir halk muhalefet kampanyası düzenledi. Tartışma tanıdıktır: devlet bağımlılığı bireysel karaktere zarar verir, üretken nüfusun geniş bir destek yükü taşıması beklenemez ve mevcut özel hayırseverlerin yeterli olması gerekir. Framing, engelli hakları gruplarından eleştiri çiziyor, ancak seçmenlerin parçalarıyla yeniden ilgileniyor."
  disability_laws.7.f:0 "Katılıma karşı tartışma her zaman başkasının yükü hakkındadır."
  disability_laws.7.a:0 "Ancak genel olarak – yasa için ahlaki davayı doğrudan yapın"
  disability_laws.7.b:0 "Bunu bir yanıtla kazımayın - basın ileriye"
- 
- # ==========================================
- # ENACTMENT MODIFIER NAMES
- # ==========================================
- 
+
  disability_employer_pressure:0 "İşveren Uyum Kampanyası"
  disability_employer_pressure_desc:0 "Hükümet, işveren direnişine karşı firma tuttu. Yasalar programa devam edecek."
- 
+
  disability_compliance_delay:0 "İşveren Geçiş Dönemi Desteklendi"
  disability_compliance_delay_desc:0 "İşverenler iş merkezi gereksinimlerine uymak için daha fazla zaman verildi, kanunun geçişini yavaşlatmak."
- 
+
  disability_construction_lobby:0 "İnşaat Sanayii Engaged"
  disability_construction_lobby_desc:0 "İnşaat endüstrisinin itirazları ele alındı, erişilebilir altyapı mevzuatına aktif muhalefeti azaltmak."
- 
+
  disability_strict_standards:0 "Strict Compliance Standartları"
  disability_strict_standards_desc:0 "Firma erişilebilirliği standartları, büyükbaba maddelerinle ayarlanmıştır. Uyum dolu ve programda olacak."
- 
+
  disability_phased_compliance:0 "Aşamalı Altyapı Uyum"
  disability_phased_compliance_desc:0 "Mevcut yapılar büyükbabaya uğradı. Yeni standartlar sadece yeni inşaata uygulanır, kanunun daha geniş etkisini yavaşlatır."
- 
+
  disability_funding_debate:0 "Fonlama Çerçeve kuruldu"
  disability_funding_debate_desc:0 "erişilebilir altyapı için ödeme yapanların sorusu çözüldü, yasanın pasajına büyük bir engel bıraktı."
- 
+
  disability_state_subsidy:0 "Devlet Altyapısı Subsidy"
  disability_state_subsidy_desc:0 "Devlet doğrudan retrofit maliyetlerini absorbe ediyor. Uyum daha hızlı olacak - ancak bütçe ek baskı altında."
- 
+
  disability_medical_endorsement:0 "Tıbbi Kuruluş Endorses Tedavisi"
  disability_medical_endorsement_desc:0 "Tıp mesleğinin kamu Engelliliğinin kamu onayı, mevzuata bilimsel güvenilirlik ödünç almaktadır."
- 
+
  disability_fiscal_resistance:0 "Fiscal Muhafazakarlar Engaged"
  disability_fiscal_resistance_desc:0 "Kamu sakatlık tedavisine karşı mali direniş ele alındı. Kanun ileriye doğru ilerliyor."
- 
+
  disability_phased_spending:0 "Aşamalı Engellilik Tedavi Ederek"
  disability_phased_spending_desc:0 "Kamu sakatlık tedavisi yavaş yavaş yavaş bir rollout pahasına acil bütçe basıncı azaltacaktır."
- 
+
  disability_advocate_push:0 "Engelliler Mobilize Edilebilir"
  disability_advocate_push_desc:0 "Engel hakları örgütleri tarafından kamu kampanyası, mevzuat için siyasi bir ivme yaratıyor."
- 
+
  disability_conservative_opposition:0 "Muhafazakar Opposition Adresed"
  disability_conservative_opposition_desc:0 "Engelli mevzuatına muhafazakar muhalefet meşgul ve kısmen tarafsız hale getirilmiştir."
- 
+
  disability_public_rebuttal:0 "Public Rebuttal of Muhafazakar Opposition"
  disability_public_rebuttal_desc:0 "Hükümetin doğrudan muhafazakar framing geri dönüşü, yasanın lehine tartışmanın şartlarını değiştirdi."
- 
-  # environment_laws.1 — Industry Voluntary Compliance
+
  environment_laws.1.t:0 "[SCOPE.sCharacter('industry_leader').GetFullName] Voluntary Compliance"
  environment_laws.1.d:0 "[SCOPE.sCharacter('industry_leader').GetFullName], [SCOPE.gsInterestGroup('industry_ig').GetName] için konuşma, kamu teklifi yaptı: eğer hükümet gönüllü uyum mekanizmaları, insan yürütmesi yerine çevresel çerçevede inşa etmeyi kabul ederse, endüstri işbirliği yapacak. Teklif pragmatik ortaklık olarak sunulmaktadır. Eleştirmenler, geçiş yapmadan önce mevzuatı ortadan kaldırmaya çalıştığını iddia ediyor."
  environment_laws.1.f:0 "Voluntary uyumluluğu, fosil yakıt endüstrisinin en sevdiği türüdür."
  environment_laws.1.a:0 "Kabul - çerçeveye gönüllü uyum inşa edin"
  environment_laws.1.b:0 "Reject - zorunlu uygulama sadece, araba bırakma yok"
- 
- # environment_laws.2 — Scientific Backing
+
  environment_laws.2.t:0 "[SCOPE.sCharacter('science_leader').GetFullName] Çevre Raporu"
  environment_laws.2.d:0 "[SCOPE.sCharacter('science_leader').GetFullName] [SCOPE.gsInterestGroup('science_ig').GetName], [ROOT.GetCountry.GetName]'nin mevcut yörüngesinin çevresel ve halk sağlığı maliyetlerini kapsamlı bir çalışma belgesi yayınladı. Bulgular belirsizdir: kirliliği seviyeleri yükseliyor, ölüm etkilenir ve ekosistemler stres altındadır. Önerilen mevzuat, rapor sonuçlandı, sadece arzu edilmez - gereklidir."
  environment_laws.2.f:0 "Veriler politik rahatlık için beklemez."
  environment_laws.2.a:0 "Komisyon resmi bir yanıt - hükümetle bulguları geri yayın"
  environment_laws.2.b:0 "Raporu basitleştirmeksizin kabul edin"
- 
- # environment_laws.3 — International Praise
+
  environment_laws.3.t:0 "Uluslararası Topluluk [ROOT.GetCountry.GetName] Çevre Liderliği"
  environment_laws.3.d:0 "[ROOT.GetCountry.GetName] önerilen çevresel mevzuatı uluslararası topluma ulaştı ve yanıt beklenmedik derecede sıcaktı. Birkaç ulus [ROOT.GetCountry.GetRuler.GetPrimaryRoleTitle] [ROOT.GetCountry.GetRuler.GetLastName] Onun hırsı için hükümetini övdü. Çevre savunuculuğu grupları [ROOT.GetCountry.GetName] diğerlerini takip etmek için bir model arıyor."
  environment_laws.3.f:0 "Liderlik sürdürmekten daha kolaydır."
  environment_laws.3.a:0 "Şu an yararlanın - uluslararası çevre görüşmeleri"
  environment_laws.3.b:0 "Bu evcil tutun - uluslararası yükümlülüklerin aşırıdan kaçın"
- 
- # environment_laws.4 — Compliance Cost Debate
+
  environment_laws.4.t:0 "Çevre Uyumunun Maliyetini Kim Ayılar?"
  environment_laws.4.d:0 "Çevre mevzuatı sorumluluğu hakkında şiddetli bir tartışma açtı. Endüstri, uyumluluk maliyetlerini tartışır - fabrikaları, tedarik zincirlerini değiştirmek, atık yönetimini güncellemek - üreticilere ve nihayetinde tüketicilere devre dışı bırakacaktır. Çevre grupları, bu maliyetlerin onlarca yıldır halkın sessiz bir şekilde doğduğu kirliliğin gerçek fiyatını temsil ediyor."
  environment_laws.4.f:0 "Kirlilik her zaman bir maliyete sahipti. Soru bunu kimin ödediğidir."
  environment_laws.4.a:0 "Kirli maaşlar - endüstri kendi uyumluluk maliyetini taşır"
  environment_laws.4.b:0 "Devlet sübvansiyonu - hükümet hız kabul edilmesi için uyum yükü paylaşıyor"
- 
- # environment_laws.5 — Constitutional Challenge
+
  environment_laws.5.t:0 "[SCOPE.sCharacter('industry_opposition_leader').GetFullName] Doğa Haklarının Yasallaştırılması"
  environment_laws.5.d:0 "[SCOPE.sCharacter('industry_opposition_leader').GetFullName] [SCOPE.gsInterestGroup('industry_opposition_ig').GetName], doğa mevzuatının önerilen garantili haklarına resmi bir yasal meydan okuma ilan etti. Tartışma: nehirlere, ormanlara ve ekosistemlere karşı duran yasal yardım, mülkiyet haklarına ve ekonomik özgürlüğe yönelik bir müdahale oluşturmaktadır. Zorluk toprak ve endüstriyel çıkarlardan önemli destek aldı."
  environment_laws.5.f:0 "Doğanın avukatlar yoktur. Bu bizim ödünç almak zorunda."
  environment_laws.5.a:0 "Çerçeveyi savun - mahkemelerin haklarına hükmetmesine izin verin"
  environment_laws.5.b:0 "kapsamı sınırlayın - uzun bir yasal savaştan kaçınmak için pazarlık"
- 
- # environment_laws.6 — Environmental Disaster
+
  environment_laws.6.t:0 "[SCOPE.sState('disaster_state_scope').GetName]"
  environment_laws.6.d:0 "Çevre mevzuatı tartışma altındayken, [SCOPE.sState('disaster_state_scope').GetName] çevresel bir kriz tarafından vuruldu - bir fabrika kirliliği, bir nehir kirliliği veya ulusal haberlere ulaştığı yeterli ölçek kirliliği olayı. zamanlama önemlidir. Destekçiler mevzuatın acilen gerekli olduğunu iddia ediyorlar. [ROOT.GetCountry.GetRuler.GetPrimaryRoleTitle] [ROOT.GetCountry.GetRuler.GetLastName] hükümeti nasıl yanıt vereceğine karar vermelidir."
  environment_laws.6.f:0 "Her felaket aynı zamanda bir tartışmadır."
  environment_laws.6.a:0 "Şimdi kullanın - çevresel kanunun acil pasajını talep edin"
  environment_laws.6.b:0 "Hikayeyi mahvediyor - halk tepkisini escalating olmadan yönetin"
- 
+
  env_voluntary_compliance:0 "Endüstri Gönüllülük"
  env_voluntary_compliance_desc:0 "Endüstri, çevresel çerçeveye gönüllü olarak uyum sağlamaya karar verdi, aktif muhalefeti azaltıp yasanın geçiş şansını artırmayı kabul etti."
- 
+
  env_mandatory_enforcement:0 "Mandatory Execution Framework"
  env_mandatory_enforcement_desc:0 "Hükümet zorunlu uygulama lehine gönüllü uyum reddetti. Yasa daha güçlüdür - ve endüstri daha kararlıdır."
- 
+
  env_scientific_backing:0 "Bilimsel Topluluk Endorsement"
  env_scientific_backing_desc:0 "Çevre mevzuatına son veren bir bilimsel rapor, lehine kamu ve yasama fikrini değiştiriyor."
- 
+
  env_international_praise:0 "Uluslararası Çevre Saygıları"
  env_international_praise_desc:0 "[ROOT.GetCountry.GetName] çevre liderliğinin uluslararası tanınması, mevzuat için yerel bir ivme inşa etmektir."
- 
+
  env_diplomatic_push:0 "Çevre Diplomasi Girişimi"
  env_diplomatic_push_desc:0 "[ROOT.GetCountry.GetName] uluslararası çevre görüşmelerine ev sahipliği yapıyor, diplomatik prestiji yasaya ekliyor."
- 
+
  env_compliance_cost_debate:0 "Uyumluluk Maliyet Framework Yeniden Çözüldü"
  env_compliance_cost_debate_desc:0 "Çevre uyum maliyetlerini taşıyan tartışma çözüldü, mevzuatın yolundan büyük bir engel çıkardı."
- 
+
  env_polluter_pays:0 "Polluter Pays Prensibi"
  env_polluter_pays_desc:0 "Endüstri kendi uyum maliyetlerinden sorumlu olmuştur. Yasa daha güçlüdür; muhalefet daha yüksek."
- 
+
  env_state_subsidy:0 "Devlet Çevre Uyum Subsidy"
  env_state_subsidy_desc:0 "Devlet, endüstri direncini azaltmak ve benimsenmesini hızlandırmaya çevresel uyum sağlıyor."
- 
+
  env_constitutional_challenge:0 "Anayasa"
  env_constitutional_challenge_desc:0 "Doğa mevzuatının garantili haklarına yasal bir meydan okuma, yasama yoluyla geçişini yavaşlatmıştır."
- 
+
  env_legal_defence:0 "Doğa Haklarının Yasal Savunma"
  env_legal_defence_desc:0 "Hükümetin doğa hakları çerçevesinin yasal savunması anayasal geçerliliğe güvenmiştir."
- 
+
  env_disaster_response:0 "Mevzuat için Afettaj"
  env_disaster_response_desc:0 "Hükümet, çevresel yasa için acil halk ve yasama desteği oluşturmak için çevresel bir felaket kullandı."
- 
+
  env_disaster_suppressed:0 "Afet Hikayesi Yıkıldı"
  env_disaster_suppressed_desc:0 "Çevre felaketi sessizce yönetiliyordu. Halk basıncı inşa edilmedi - ve yasama momentumu yok."
- 
+
  env_disaster_state_modifier:0 "Çevre Afeti"
  env_disaster_state_modifier_desc:0 "Bu devlet çevresel bir felakete maruz kaldı - bir döküntü, kirlenme veya ekolojik çöküntü - bu ek kirliliği ve ölümleri artırmak."
- 
+
  childrens_childcare.1.t:0 "Pazar en iyiyi bilir"
  childrens_childcare.1.d:0 "Özel okul öncesi okul öncesi tartışmayla, iş birliği coşkulu gericiler olarak ortaya çıktı. Özel sağlayıcılar, kalite için rekabet edecekler – bir devlet tekelinin asla mümkün olamayacağı yenilikler sürüyorlar. Bununla birlikte, eleştirmenler anlamlı bir düzenleme olmadan, sadece ücretleri ödeyen aileler fayda sağlayacaktır."
  childrens_childcare.1.f:0 "Piyasanın her şey için bir cevabı var. Buradaki doğru olanı görmek için kalır."
@@ -288,7 +256,7 @@
  childrens_childcare.5.f:0 "Kanıtlar nadiren kendi başlarına tartışmalar kazanır. Ama yardımcı olur."
  childrens_childcare.5.a:0 "Komisyon halka açık bir rapor – kanıtların liderlik etmesine izin verin."
  childrens_childcare.5.b:0 "Akademikleri yasama sürecinden uzak tut."
- 
+
  childrens_rights_market_preschool_framing:0 "Özel Sektör Geri Döndü"
  childrens_rights_market_preschool_framing_desc:0 "İş ilgileri, özel okul öncesi modelinin arkasındaki ağırlıklarını atladı, enactment sürecine ivme ödünç verdi."
 
@@ -330,7 +298,7 @@
 
  childrens_rights_intelligentsia_sidelined:0 "Akıllısia Sidelined"
  childrens_rights_intelligentsia_sidelined_desc:0 "Akademik topluluk yasama tartışmalarından kapatılmıştır, hükümetin gündeminden hayal kırıklığına uğratılmış ve çürük."
- 
+
  womens_rights_laws.1.t:0 "Yasanın mektubu"
  womens_rights_laws.1.d:0 "Yasal korumalarla ilgili mevzuat şekli aldığında, bir tartışma onun gelişi üzerine kırıldı. Akıllı maddedeki reformcular, bir nesil içinde dar bir yasanın belayacağını iddia ediyorlar – korumalar her kuruma yazılmalıdır veya hiçbir şey ifade etmeyeceklerdir. Rakipleri, şimdiye kadar tüm çabayı gömen bir anayasal krizin davet edeceğini uyarırlar."
  womens_rights_laws.1.f:0 "Her kanun sadece onu uygulamak için yapacak kadar güçlüdür - ve önemli ölçüde yazmak için cesaret."
@@ -420,7 +388,7 @@
 
  womens_rights_old_guard_negotiated:0 "Eski Muhafız Negotiated"
  womens_rights_old_guard_negotiated_desc:0 "Eski muhafızlara karşı mücadeleler, muhalefetlerinin en kötülerini dile getirdiler, ancak kanunla olan temel anlaşmazlıkları kalır."
- 
+
  ubi.1.t:0 "Koşulsuzluğun Maliyeti"
  ubi.1.d:0 "Evrensel temel gelirin fiyat etiketi görmezden gelmek imkansız hale geldi. Fiscal muhafazakarlar projeyi ele geçirdiler, her vatandaşa koşulsuz bir ödemenin - işe alınmadığı veya zengin ya da fakir olmadığı konusunda uyarıda bulundular - kamu finanslarına güvenilmez bir yük olacak. Hükümet şimdi tam olarak finanse etmek veya bir aşama yaklaşımı ile zaman satın almak için karar vermelidir."
  ubi.1.f:0 "Her evrensel düzenleme vaadi sonunda aynı soruyu karşılar: kim öder ve ne kadar?"
@@ -472,45 +440,30 @@
  gun_laws.1.a:0 "Halk sağlığı framing – veriler bizim tarafta."
  gun_laws.1.b:0 "Bunu hukuk ve düzen olarak yapın - halk sağlığı savunucuları tutun."
 
- # ==========================================
- # gun_laws.2 — The Armed Forces Weigh In
- # ==========================================
  gun_laws.2.t:0 "Silahlı Kuvvetler İçeriyoruz"
  gun_laws.2.d:0 "Askeri liderlik, politikanın ötesine geçen ateşli silah yasağına ilgi duyuyor. Silahsız bir sivil nüfusu, devlete karşı örgütlenmek, devlet terimleri üzerinde açıklama yapmak ve daha az olasılıkla bir aciliyet sürdürmek daha zordur. Geri dönüşleri belirleyici olabilir - ancak askeri evcil bir yasama tartışmasına getirmek kendi komplikasyonlarını taşır."
  gun_laws.2.f:0 "Ordu her zaman en tehlikeli silahın komutası altında olmadığı bilinmektedir."
  gun_laws.2.a:0 "Geri dönmelerine hoş geldiniz - silahsız bir nüfus bir emirdir."
  gun_laws.2.b:0 "Askeri iç hukuktan uzak durun – bu bir sivil mesele."
 
- # ==========================================
- # gun_laws.3 — Rural Resistance
- # ==========================================
  gun_laws.3.t:0 "Kırsal Direniş"
  gun_laws.3.d:0 "Kırsal, başkentte yapılan tartışmayı dinlemez. Kırsal topluluklar için, ateşli silahlar politik bir açıklama değildir - arazinin yanı sıra avcılık, hayvan koruma için ve izole yerleşimlerin temel güvenliği için kullanılan araçlardır. Onları ikna etmek bir politika sorusu değil, kişisel bir affront. Hükümet hattı ne kadar sıkı tutacağına karar vermelidir."
  gun_laws.3.f:0 "Yasayı yazan insanlar hiçbir zaman günde üç saat beklemek zorunda kalmadılar."
  gun_laws.3.a:0 "Sağlam firma – kentsel yasalar her yerde eşit şekilde uygulanır."
  gun_laws.3.b:0 "Kırsal muafiyetler sunmak - avlanma ve hayvan koruma meşru kullanımlardır."
 
- # ==========================================
- # gun_laws.4 — A Right, Not a Privilege
- # ==========================================
  gun_laws.4.t:0 "Doğru değil, bir Privilege"
  gun_laws.4.d:0 "Kısıtlanmamış ateşli silahların savunucuları argümanlarını buldular ve buna izin vermiyorlar: mülkiyet haklı, devlet tarafından verilen bir ayrıcalık değil. Herhangi bir lisans sistemi, herhangi bir kayıt gereksinimi, herhangi bir kısıtlama, tüm yoldaki ilk adımdır. Hükümet, bu framing'i ve siyasi enerjiyi elde etmeye veya davayı daha pratik nedenlerle yapmaya karar vermelidir."
  gun_laws.4.f:0 "Sadece silah noktasında tutulabilecek özel bir özgürlük var."
  gun_laws.4.a:0 "Özgürlük argümanını kabul et – silahlı bir vatandaş özgürdür."
  gun_laws.4.b:0 "Pratik olarak Çerçeve - kendi kendini ifade etmeye ve yazı yazmaya odaklanır."
 
- # ==========================================
- # gun_laws.5 — The Safety Lobby Fights Back
- # ==========================================
  gun_laws.5.t:0 "Güvenlik Lobisi Geri Mücadele Ediyor"
  gun_laws.5.d:0 "Silah yasağına karşı çıkan akıllı ve halk sağlığı sesleri sessiz gitmedi - karşılanmamış mülkiyete karşı enerjilerini yönlendirdiler. Tartışmaları tanıdıktır: Kanıtlar daha fazla silahın daha güvenli toplumlar ürettiğini iddia etmiyor. Hükümet onları kamusal tartışmada mı yoksa onları platformu inkar etmeye karar vermelidir."
  gun_laws.5.f:0 "Elsiz ateşli silahlar için her tartışma sonunda vücutlara cevap vermek zorundadır."
  gun_laws.5.a:0 "Yine de onları halka açık bir şekilde – özgürlük kendi risklerini taşır."
  gun_laws.5.b:0 "Onları görmezden gel - bir yanıtla muhalefeti abartmayın."
 
- # ==========================================
- # gun_laws.6 — Licensing Is Not Freedom
- # ==========================================
  gun_laws.6.t:0 "Licensing Özgürlük Değil"
  gun_laws.6.d:0 "Lisanslı ateşli silahlar fatura, muhalefetteki tartışmanın her iki tarafını da bir araya getirmeyi başardı. Silah hakları, temel bir özgürlükte ihlal olarak herhangi bir lisans gereksinimini görüyor. Güvenlik savunucuları, zararları azaltmak için anlamlı bir şey yapmadığının yarısını görüyorlar. Hükümet, ne flank’ın işgal etmek istediği orta bir zemini savunmaktadır."
  gun_laws.6.f:0 "Hiç kimsenin doğru cevabı olamayacağı bir uzlaşma."
@@ -567,100 +520,67 @@
 
  gun_law_rural_folk_energized:0 "Kırsal Halk Enerjili"
  gun_law_rural_folk_energized_desc:0 "Kolların serbest bırakılması, kırsal topluluklarla güçlü bir şekilde yeniden ortaya çıktı, yasa için güçlü çim kök desteği üretti."
- 
-  # ==========================================
- # lgbtq_laws.1 — The Church Demands Action
- # ==========================================
+
  lgbtq_laws.1.t:0 "Kilise Eylem Talepleri"
  lgbtq_laws.1.d:0 "Devout pozisyonlarını net hale getirdi: eşcinselliğin aktif baskısı sadece politik bir tercih değil, ahlaki bir zorunluluktur. Dini liderler, hükümet yasaları açıkça teolojik açıdan çerçevelemek, ilahi otoritenin yasaya ağırlığını ödünç almak talep ediyorlar. Hükümet, bu framing'i kucaklamak veya laik nedenlerle gerekçeyi tutmak için karar vermelidir."
  lgbtq_laws.1.f:0 "En tehlikeli yasalar daha yüksek bir otoriteye cevap verdiklerine inananlardır."
  lgbtq_laws.1.a:0 "Ahlaki framing – bu ilahi hukuk meselesidir."
  lgbtq_laws.1.b:0 "Bunu sosyal düzen olarak çizin - dini gerekçeden uzak tut."
 
- # ==========================================
- # lgbtq_laws.2 — The Cost of Enforcement
- # ==========================================
  lgbtq_laws.2.t:0 "Yürütme Maliyeti"
  lgbtq_laws.2.d:0 "eşcinselliğe karşı bir yasa sadece onun uygulanması kadar etkilidir. Hükümetin kısıtlaması olup olmadığı sorusu değil - bu tartışma yerleşik - ama devlet aygıtının ihlalleri nasıl takip edeceği. Tam uygulama pahalıdır ve invazivdir. Pasif uygulama sosyal baskı ve denciasyona dayanıyor. Her yaklaşım kendi maliyetlerini taşır."
  lgbtq_laws.2.f:0 "legislates özel davranışın ulaşmak istediği özel hayata ne kadar derinden karar vermesine karar vermesi gerekir."
  lgbtq_laws.2.a:0 "Tam uygulama - hiçbir masrafı kurtar."
  lgbtq_laws.2.b:0 "Pasif uygulama – sosyal baskının işi yapmasına izin verin."
 
- # ==========================================
- # lgbtq_laws.3 — Decriminalization Is Not Endorsement
- # ==========================================
  lgbtq_laws.3.t:0 "Decriminalization Is Not Endorsement"
  lgbtq_laws.3.d:0 "Muhafazakar sesler tahmin edilebilir alarm ile decriminalizasyon faturasını selamladı. Hükümetin tercih edilen argümanı - suçlu cezaların kaldırılması ahlaki bir onay değildir - onları memnun etmedi. Soru, bu davayı halka açık ve doğrudan yapmak ya da sessizce devam etmek ve bir halk tartışmasının ortaya çıkmasını önlemek."
  lgbtq_laws.3.f:0 "hoşgörü ve onay arasındaki mesafe asla bu kadar yarışmamış hissetmedi."
  lgbtq_laws.3.a:0 "Davayı açıkça yapın - decriminalizasyon cezayı ortadan kaldırır, onay vermez."
  lgbtq_laws.3.b:0 "Sessiz tutun - reformu ona dikkat etmeden geçin."
 
- # ==========================================
- # lgbtq_laws.4 — The Intelligentsia Makes Its Case
- # ==========================================
  lgbtq_laws.4.t:0 "Akıllıya Davasını Yapıyor"
  lgbtq_laws.4.d:0 "Reformcular ve yasal akademisyenler, basit bir tartışmayla tartışmaya girdiler: devlet, yetişkinlerin özel davranışlarına meşru bir ilgisi yoktur ve eşcinselliğin suçlanması kişisel özgürlüğün en temel ilkelerine aykırıdır. Hükümet, bu argümanla resmi olarak uyum sağlamanın veya reformu tamamen yasama şartlarda tutmanın karar vermesi gerekir."
  lgbtq_laws.4.f:0 "Devletin iznini gerektiren Liberty her şeyde özgürlük değildir."
  lgbtq_laws.4.a:0 "Tartışmaya liderlik edelim - kişisel özgürlük dayanılmaz."
  lgbtq_laws.4.b:0 "Yasal tutun - felsefi tartışmadan kaçının."
 
- # ==========================================
- # lgbtq_laws.5 — Marriage Is a Social Institution
- # ==========================================
  lgbtq_laws.5.t:0 "Evlilik Sosyal Bir Kurum"
  lgbtq_laws.5.d:0 "Muhafazakarlar evlilik eşitliğine karşı en güçlü argümanlarını buldular: evlilik sadece yasal bir düzenleme değil, devletten daha yaşlı kökleri olan bir sosyal kurumdur. Yeniden tanımlamak için, bir araya getirilmeyen bir şeyi çözmektir. Hükümet bu argüman başıyla yüzleşmek veya dini muafiyetlerle muhalefeti yumuşamaya çalışmalıdır."
  lgbtq_laws.5.f:0 "Her kurum bir kez yeniydi."
  lgbtq_laws.5.a:0 "Yeniden şekillendir - sivil evlilik devlete ait, kilise değil."
  lgbtq_laws.5.b:0 "Dini muafiyetler sunmak - kiliseler törenleri gerçekleştirmek için geri dönebilirler."
 
- # ==========================================
- # lgbtq_laws.6 — Equal Before the Law
- # ==========================================
  lgbtq_laws.6.t:0 "Hukuktan önce eşit"
  lgbtq_laws.6.d:0 "Zekizi, medeni haklarının mantıksal sonucu olarak evlilik eşitliğini çerçeveledi - bazı vatandaşların sevdiklerini, sevdiklerinin kendi vaatlerinde henüz iyi yapmamış olan bir toplum olduğuna dair inkar ettiği bir toplum. Hükümet bu anı bir dönüm noktası olarak mı tedavi etmeye karar vermeli ya da açıklama ağırlığı olmadan sessizce haklarını genişletmeye karar vermelidir."
  lgbtq_laws.6.f:0 "Sessiz kalmak zorunda olan eşitlik hiçbir zaman tamamen eşit değildi."
  lgbtq_laws.6.a:0 "Bir dönüm noktası yapın - yasadan önce eşitlik istisnaları kabul etmez."
  lgbtq_laws.6.b:0 "Bunu idari tut - bir bildirim olmadan sessizce haklarını genişletin."
 
- # ==========================================
- # abortion_laws.1 — Life Begins at Conception
- # ==========================================
  abortion_laws.1.t:0 "Hayat Kavrama Başlıyor"
  abortion_laws.1.d:0 "Devout, uzlaşmayı kabul eden bir pozisyonla kürtaj tartışmasına geldi: hayat, anlayışta başlıyor ve devlet o andan itibaren onu korumak için ahlaki olarak zorunlu. Onların talepleri sadece kürtaj yasaklanmış değil, ancak yasağın ahlaki ciddiyetini yansıtacak şekilde çerçevelenmiş olmasıdır. Hükümet, bu framing'i kucaklamak veya bunun yerine demografik ve siyasi gerekçelerle yasayı haklı çıkarmaya karar vermelidir."
  abortion_laws.1.f:0 "En mutlak ahlaki pozisyonları en zor vakalar için yer bırakmayanlardır."
  abortion_laws.1.a:0 "Ahlaki framing – hayat kutsaldır ve devlet onu korumalıdır."
  abortion_laws.1.b:0 "Bunu demografik politika olarak çizin – dini gerekçeden uzak tut."
 
- # ==========================================
- # abortion_laws.2 — The Exceptions Question
- # ==========================================
  abortion_laws.2.t:0 "The Exceptions Soru"
  abortion_laws.2.d:0 "Faturanın rakiplerinden daha en zor yere girilmesine gerek yok: tecavüz, enst ve tıbbi zorunluluk vakaları. Bunlar, soyut ahlaki pozisyonları yaşayan gerçeklere çeviren durumlardır. Hükümet, çizgiyi mutlak bir yasakla ya da en zor koşulları kabul eden dar tıbbi istisnaları önemsemeye karar vermelidir."
  abortion_laws.2.f:0 "Özet ilkeleri, başkasının hayatı olduğunda çok somut hale gelmenin bir yolu vardır."
  abortion_laws.2.a:0 "Hiçbir istisna yoktur - yasa her şey demek için mutlak olmalıdır."
  abortion_laws.2.b:0 "Dar tıbbi istisnalara izin verin - en zor vakalar ele alınmalıdır."
 
- # ==========================================
- # abortion_laws.3 — The State Has No Place in This Decision
- # ==========================================
  abortion_laws.3.t:0 "Devlet Bu Kararda Yeri Yok"
  abortion_laws.3.d:0 "Tartışmasız kürtaj davası, vücutsal özerklik dilinde en güçlü formülasyonunu buldu: hiçbir devletin kendi iradesine karşı bir hamilelik devam etmesi hakkına sahip değil. Zekizi bu argümanı halka açık ve önemli bir güçle yapıyor. Hükümet bunu reformun merkezi olarak kabul edip, sağlık erişiminin basit bir önemi olarak sunacağına karar vermelidir."
  abortion_laws.3.f:0 "Birinin kendi vücuduna doğru ya evrenseldir ya da hepsinde doğru değildir."
  abortion_laws.3.a:0 "Bedensel olarak merkez parçaya özerklik yapın - hiçbir devlet hamile kalmak hakkına sahiptir."
  abortion_laws.3.b:0 "Bunu sağlık olarak – felsefi argümanı devam edin."
 
- # ==========================================
- # abortion_laws.4 — The Devout Will Not Yield
- # ==========================================
  abortion_laws.4.t:0 "Devout Ayırmayacak"
  abortion_laws.4.d:0 "kürtaj yasasını liberalleştirmek için herhangi bir hareket, yumuşama işareti gösteren organize dini muhalefetle karşılandı. Bunu, uzlaşmanın mümkün olmadığı bir mesele olarak görmektedir ve mevzuatı durdurmak için mevcut olan her siyasi aracı kullanmaya hazırlar. Hükümet, doğrudan onlarla yüzleşip direnişlerini tatmin etmeden rahatlatan vicdan korumalarına karar vermelidir."
  abortion_laws.4.f:0 "Tanrı'ya cevap veren muhalefet, müzakere etmek için en zor muhalefettir."
  abortion_laws.4.a:0 "Onları doğrudan ara - devlet yönetir, kilise değil."
  abortion_laws.4.b:0 "vicdan korumaları - tıbbi personel ahlaki nedenlerle düşebilir."
 
- # ==========================================
- # LGBTQ Enactment Modifier Localization
- # ==========================================
  lgbtq_law_religious_mandate:0 "Mandate Declared"
  lgbtq_law_religious_mandate_desc:0 "Devout, baskı kanununu ahlaki ve dini bir zorunluluk olarak açıkça çerçeveledi, enactment çabasını ödünç aldı."
 

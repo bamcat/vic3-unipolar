@@ -1,0 +1,18 @@
+﻿io_treaty_withdrawal_penalty = {
+	custom_tooltip = io_treaty_withdraw_relations_tt
+	hidden_effect = {
+		every_country = {
+			limit = {
+				has_variable = io_treaty_$T$_signed
+				NOT = { this = ROOT }
+			}
+			change_relations = { country = ROOT value = -30 }
+		}
+	}
+	change_infamy = $INFAMY$
+	add_modifier = { name = io_treaty_breaker months = 120 }
+	custom_tooltip = io_treaty_withdraw_cooldown_tt
+	hidden_effect = {
+		set_variable = { name = io_cooldown_treaty_$T$ years = 10 }
+	}
+}

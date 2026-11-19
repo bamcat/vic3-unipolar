@@ -1,0 +1,842 @@
+﻿smd_btn_crime_task_force = {
+	name = "smd_btn_crime_task_force"
+	desc = "smd_btn_crime_task_force_desc"
+	cooldown = { days = 730 }
+
+	visible = {
+		always = yes
+	}
+
+	possible = {
+		NOT = { has_variable = smd_crime_task_force }
+		in_default = no
+	}
+
+	ai_chance = { value = 20 }
+
+	effect = {
+		add_treasury = {
+			value = gdp
+			multiply = -0.003
+		}
+		set_variable = { name = smd_crime_task_force days = 730 }
+		smd_raise_institution = { INST = institution_police }
+	}
+}
+
+smd_btn_crime_crackdown = {
+	name = "smd_btn_crime_crackdown"
+	desc = "smd_btn_crime_crackdown_desc"
+	cooldown = { days = 365 }
+
+	visible = {
+		always = yes
+	}
+
+	possible = {
+		custom_tooltip = {
+			text = smd_btn_crime_crackdown_law_tt
+			OR = {
+				has_law_or_variant = law_type:law_militarized_police
+				has_law_or_variant = law_type:law_secret_police
+				has_law_or_variant = law_type:law_national_guard
+			}
+		}
+	}
+
+	ai_chance = { value = 10 }
+
+	effect = {
+		je:smd_je_crime_wave ?= {
+			add_progress = { value = -12 name = smd_crime_wave_bar }
+		}
+		add_modifier = {
+			name = smd_crime_crackdown_abuses
+			days = 730
+		}
+	}
+}
+
+smd_btn_dem_judicial_reform = {
+	name = "smd_btn_dem_judicial_reform"
+	desc = "smd_btn_dem_judicial_reform_desc"
+	cooldown = { days = 1825 }
+
+	visible = {
+		always = yes
+	}
+
+	possible = {
+		NOT = { has_variable = smd_judicial_reform }
+		in_default = no
+	}
+
+	ai_chance = { value = 20 }
+
+	effect = {
+		add_treasury = {
+			value = gdp
+			multiply = -0.003
+		}
+		smd_raise_institution = { INST = institution_courts }
+		set_variable = { name = smd_judicial_reform days = 1825 }
+	}
+}
+
+smd_btn_dem_civic_education = {
+	name = "smd_btn_dem_civic_education"
+	desc = "smd_btn_dem_civic_education_desc"
+	cooldown = { days = 1825 }
+
+	visible = {
+		always = yes
+	}
+
+	possible = {
+		NOT = { has_variable = smd_civic_education }
+		in_default = no
+	}
+
+	ai_chance = { value = 15 }
+
+	effect = {
+		add_treasury = {
+			value = gdp
+			multiply = -0.002
+		}
+		smd_raise_institution = { INST = institution_schools }
+		set_variable = { name = smd_civic_education days = 1825 }
+	}
+}
+
+smd_btn_ill_pack_courts = {
+	name = "smd_btn_ill_pack_courts"
+	desc = "smd_btn_ill_pack_courts_desc"
+
+	visible = {
+		NOT = { has_variable = smd_courts_packed }
+	}
+
+	possible = {
+		legitimacy >= 30
+	}
+
+	ai_chance = { value = 10 }
+
+	effect = {
+		set_variable = smd_courts_packed
+		je:smd_je_illiberal_turn ?= {
+			add_progress = { value = 10 name = smd_illiberal_bar }
+		}
+		add_modifier = {
+			name = smd_courts_packed_mod
+			days = normal_modifier_time
+		}
+	}
+}
+
+smd_btn_ill_media_takeover = {
+	name = "smd_btn_ill_media_takeover"
+	desc = "smd_btn_ill_media_takeover_desc"
+	cooldown = { days = 1825 }
+
+	visible = {
+		NOR = {
+			has_law_or_variant = law_type:law_government_content_moderators
+			has_law_or_variant = law_type:law_state_wifi
+		}
+	}
+
+	possible = {
+		enacting_any_law = no
+		any_law = {
+			type = law_type:law_government_content_moderators
+			can_be_enacted = yes
+		}
+	}
+
+	ai_chance = { value = 10 }
+
+	effect = {
+		start_enactment = law_type:law_government_content_moderators
+		add_enactment_phase = 1
+		je:smd_je_illiberal_turn ?= {
+			add_progress = { value = 5 name = smd_illiberal_bar }
+		}
+		add_modifier = {
+			name = smd_media_takeover
+			days = normal_modifier_time
+		}
+	}
+}
+
+smd_btn_ill_extend_term = {
+	name = "smd_btn_ill_extend_term"
+	desc = "smd_btn_ill_extend_term_desc"
+
+	visible = {
+		NOT = { has_variable = smd_term_extended }
+	}
+
+	possible = {
+		in_election_campaign = no
+		custom_tooltip = {
+			text = smd_btn_ill_extend_term_tt
+			je:smd_je_illiberal_turn ?= {
+				"scripted_bar_progress(smd_illiberal_bar)" >= 50
+			}
+		}
+	}
+
+	ai_chance = { value = 5 }
+
+	effect = {
+		set_variable = smd_term_extended
+		call_election = {
+			months = 48
+		}
+		je:smd_je_illiberal_turn ?= {
+			add_progress = { value = 15 name = smd_illiberal_bar }
+		}
+		add_modifier = {
+			name = smd_term_extension
+			days = 730
+		}
+		add_radicals = {
+			value = medium_radicals
+			interest_group = ig:ig_intelligentsia
+		}
+	}
+}
+
+smd_btn_transition_vouchers = {
+	name = "smd_btn_transition_vouchers"
+	desc = "smd_btn_transition_vouchers_desc"
+
+	visible = {
+		NOT = { has_variable = smd_vouchers_issued }
+	}
+
+	possible = {
+		NOT = { has_law_or_variant = law_type:law_cooperative_ownership }
+	}
+
+	ai_chance = { value = 15 }
+
+	effect = {
+		set_variable = smd_vouchers_issued
+		je:smd_je_market_transition ?= {
+			add_progress = { value = 15 name = smd_transition_bar }
+		}
+		add_modifier = {
+			name = smd_privatisation_wave
+			days = 1095
+		}
+	}
+}
+
+smd_btn_transition_asset_sales = {
+	name = "smd_btn_transition_asset_sales"
+	desc = "smd_btn_transition_asset_sales_desc"
+
+	visible = {
+		NOT = { has_variable = smd_assets_sold }
+	}
+
+	possible = {
+		has_variable = smd_vouchers_issued
+	}
+
+	ai_chance = { value = 10 }
+
+	effect = {
+		set_variable = smd_assets_sold
+		je:smd_je_market_transition ?= {
+			add_progress = { value = 10 name = smd_transition_bar }
+		}
+		add_treasury = {
+			value = gdp
+			multiply = 0.03
+		}
+		add_modifier = {
+			name = smd_crony_privatisation
+			days = normal_modifier_time
+		}
+	}
+}
+
+smd_btn_left_nationalise = {
+	name = "smd_btn_left_nationalise"
+	desc = "smd_btn_left_nationalise_desc"
+	cooldown = { days = 1825 }
+
+	visible = {
+		any_scope_building = {
+			OR = {
+				is_building_type = building_oil_rig
+				is_building_type = building_gas_field
+				is_building_type = building_copper_mine
+				is_building_type = building_iron_mine
+				is_building_type = building_gold_mine
+				is_building_type = building_coal_mine
+				is_building_type = building_rare_earth_mine
+			}
+		}
+		NOT = {
+			any_scope_building = {
+				OR = {
+					is_building_type = building_oil_rig
+					is_building_type = building_gas_field
+					is_building_type = building_copper_mine
+					is_building_type = building_iron_mine
+					is_building_type = building_gold_mine
+					is_building_type = building_coal_mine
+					is_building_type = building_rare_earth_mine
+				}
+				country_ownership_fraction >= 0.5
+			}
+		}
+	}
+
+	possible = {
+		NOT = { has_variable = smd_nationalisation_programme }
+		custom_tooltip = {
+			text = smd_btn_left_nationalise_law_tt
+			NOT = { has_law_or_variant = law_type:law_laissez_faire }
+		}
+	}
+
+	ai_chance = { value = 10 }
+
+	effect = {
+		set_variable = { name = smd_nationalisation_programme days = 1825 }
+		add_modifier = {
+			name = smd_nationalisation_programme
+			days = 1825
+		}
+		add_modifier = {
+			name = smd_capital_flight
+			days = 1095
+		}
+		custom_tooltip = smd_btn_left_nationalise_how_tt
+	}
+}
+
+smd_btn_left_social_missions = {
+	name = "smd_btn_left_social_missions"
+	desc = "smd_btn_left_social_missions_desc"
+	cooldown = { days = 1825 }
+
+	visible = {
+		always = yes
+	}
+
+	possible = {
+		NOT = { has_variable = smd_social_missions }
+		in_default = no
+	}
+
+	ai_chance = { value = 20 }
+
+	effect = {
+		add_treasury = {
+			value = gdp
+			multiply = -0.005
+		}
+		smd_raise_institution = { INST = institution_health_system }
+		smd_raise_institution = { INST = institution_social_security }
+		set_variable = { name = smd_social_missions days = 1825 }
+	}
+}
+
+smd_btn_contagion_crackdown = {
+	name = "smd_btn_contagion_crackdown"
+	desc = "smd_btn_contagion_crackdown_desc"
+	cooldown = { days = 365 }
+
+	visible = {
+		always = yes
+	}
+
+	possible = {
+		always = yes
+	}
+
+	ai_chance = { value = 15 }
+
+	effect = {
+		je:smd_je_fear_of_contagion ?= {
+			add_progress = { value = -25 name = smd_contagion_bar }
+		}
+		add_modifier = {
+			name = smd_dissident_crackdown
+			days = 730
+		}
+	}
+}
+
+smd_btn_contagion_reassure = {
+	name = "smd_btn_contagion_reassure"
+	desc = "smd_btn_contagion_reassure_desc"
+	cooldown = { days = 180 }
+
+	visible = {
+		always = yes
+	}
+
+	possible = {
+		in_default = no
+	}
+
+	ai_chance = { value = 20 }
+
+	effect = {
+		add_treasury = {
+			value = gdp
+			multiply = -0.001
+		}
+		je:smd_je_fear_of_contagion ?= {
+			add_progress = { value = -8 name = smd_contagion_bar }
+		}
+	}
+}
+
+smd_btn_urban_upgrading = {
+	name = "smd_btn_urban_upgrading"
+	desc = "smd_btn_urban_upgrading_desc"
+	cooldown = { days = 1825 }
+
+	visible = {
+		always = yes
+	}
+
+	possible = {
+		NOT = { has_variable = smd_slum_upgrading }
+		in_default = no
+	}
+
+	ai_chance = { value = 20 }
+
+	effect = {
+		add_treasury = {
+			value = gdp
+			multiply = -0.005
+		}
+		ordered_scope_state = {
+			limit = {
+				is_incorporated = yes
+				can_construct_building = building_water_works
+			}
+			order_by = population_below_expected_sol
+			position = 0
+			check_range_bounds = no
+			start_building_construction = building_water_works
+		}
+		set_variable = { name = smd_slum_upgrading days = 1825 }
+		add_modifier = {
+			name = smd_slum_upgrading
+			days = 1825
+		}
+	}
+}
+
+smd_btn_urban_clearances = {
+	name = "smd_btn_urban_clearances"
+	desc = "smd_btn_urban_clearances_desc"
+	cooldown = { days = 1095 }
+
+	visible = {
+		always = yes
+	}
+
+	possible = {
+		always = yes
+	}
+
+	ai_chance = { value = 10 }
+
+	effect = {
+		je:smd_je_rapid_urbanisation ?= {
+			add_progress = { value = -15 name = smd_urban_bar }
+		}
+		add_modifier = {
+			name = smd_slum_clearances
+			days = 730
+		}
+	}
+}
+
+smd_btn_costliving_subsidies = {
+	name = "smd_btn_costliving_subsidies"
+	desc = "smd_btn_costliving_subsidies_desc"
+
+	visible = {
+		NOT = {
+			OR = {
+				has_any_subventions_on = g:grain
+				has_any_subventions_on = g:groceries
+				has_any_subventions_on = g:refined_fuel
+			}
+		}
+	}
+
+	possible = {
+		is_junior_in_customs_union = no
+	}
+
+	ai_chance = { value = 25 }
+
+	effect = {
+		custom_tooltip = {
+			text = smd_btn_costliving_subsidies_tt
+			set_import_tariff_level = {
+				goods = g:grain
+				level = low_subventions
+			}
+			set_import_tariff_level = {
+				goods = g:groceries
+				level = low_subventions
+			}
+			set_import_tariff_level = {
+				goods = g:refined_fuel
+				level = low_subventions
+			}
+		}
+	}
+}
+
+smd_btn_costliving_rationing = {
+	name = "smd_btn_costliving_rationing"
+	desc = "smd_btn_costliving_rationing_desc"
+	cooldown = { days = 1095 }
+
+	visible = {
+		NOT = { has_variable = smd_rationing }
+	}
+
+	possible = {
+		is_junior_in_customs_union = no
+	}
+
+	ai_chance = { value = 10 }
+
+	effect = {
+		custom_tooltip = {
+			text = smd_btn_costliving_rationing_tt
+			set_export_tariff_level = {
+				goods = g:grain
+				level = high_tariffs
+			}
+			set_export_tariff_level = {
+				goods = g:groceries
+				level = high_tariffs
+			}
+		}
+		set_variable = { name = smd_rationing days = 730 }
+		add_modifier = {
+			name = smd_rationing
+			days = 730
+		}
+	}
+}
+
+smd_btn_devolution_assembly = {
+	name = "smd_btn_devolution_assembly"
+	desc = "smd_btn_devolution_assembly_desc"
+
+	visible = {
+		var:smd_devolution_state ?= {
+			NOT = { has_modifier = smd_devolved_assembly }
+		}
+	}
+
+	possible = {
+		legitimacy >= 30
+	}
+
+	ai_chance = { value = 10 }
+
+	effect = {
+		var:smd_devolution_state ?= {
+			add_modifier = {
+				name = smd_devolved_assembly
+				days = very_long_modifier_time
+			}
+		}
+		add_modifier = {
+			name = smd_devolution_backlash
+			days = 1825
+		}
+		remove_variable = smd_recentralised
+	}
+}
+
+smd_btn_devolution_talks = {
+	name = "smd_btn_devolution_talks"
+	desc = "smd_btn_devolution_talks_desc"
+	cooldown = { days = 365 }
+
+	visible = {
+		always = yes
+	}
+
+	possible = {
+		NOT = { has_variable = smd_devolution_talks }
+	}
+
+	ai_chance = { value = 20 }
+
+	effect = {
+		set_variable = { name = smd_devolution_talks days = 365 }
+		je:smd_je_devolution ?= {
+			add_progress = { value = -5 name = smd_devolution_bar }
+		}
+	}
+}
+
+smd_btn_devolution_recentralise = {
+	name = "smd_btn_devolution_recentralise"
+	desc = "smd_btn_devolution_recentralise_desc"
+
+	visible = {
+		NOT = { has_variable = smd_recentralised }
+	}
+
+	possible = {
+		always = yes
+	}
+
+	ai_chance = { value = 5 }
+
+	effect = {
+		set_variable = smd_recentralised
+		je:smd_je_devolution ?= {
+			add_progress = { value = -20 name = smd_devolution_bar }
+		}
+		var:smd_devolution_state ?= {
+			add_modifier = {
+				name = smd_recentralised_state
+				days = normal_modifier_time
+			}
+		}
+	}
+}
+
+smd_btn_braindrain_diaspora = {
+	name = "smd_btn_braindrain_diaspora"
+	desc = "smd_btn_braindrain_diaspora_desc"
+	cooldown = { days = 1825 }
+
+	visible = {
+		always = yes
+	}
+
+	possible = {
+		NOT = { has_variable = smd_diaspora_incentives }
+		in_default = no
+	}
+
+	ai_chance = { value = 15 }
+
+	effect = {
+		add_treasury = {
+			value = gdp
+			multiply = -0.002
+		}
+		set_variable = { name = smd_diaspora_incentives days = 1825 }
+	}
+}
+
+smd_btn_braindrain_research = {
+	name = "smd_btn_braindrain_research"
+	desc = "smd_btn_braindrain_research_desc"
+	cooldown = { days = 1825 }
+
+	visible = {
+		always = yes
+	}
+
+	possible = {
+		NOT = { has_variable = smd_research_funding }
+		in_default = no
+	}
+
+	ai_chance = { value = 15 }
+
+	effect = {
+		add_treasury = {
+			value = gdp
+			multiply = -0.003
+		}
+		smd_build_in_capital = { BUILDING = building_university }
+		set_variable = { name = smd_research_funding days = 1825 }
+		add_modifier = {
+			name = smd_research_funding
+			days = 1825
+		}
+	}
+}
+
+smd_btn_corruption_prosecutor = {
+	name = "smd_btn_corruption_prosecutor"
+	desc = "smd_btn_corruption_prosecutor_desc"
+	cooldown = { days = 1095 }
+
+	visible = {
+		always = yes
+	}
+
+	possible = {
+		NOT = { has_variable = smd_special_prosecutor }
+		NOT = { has_modifier = smd_investigation_obstructed }
+	}
+
+	ai_chance = { value = 20 }
+
+	effect = {
+		add_treasury = {
+			value = gdp
+			multiply = -0.002
+		}
+		smd_raise_institution = { INST = institution_courts }
+		set_variable = { name = smd_special_prosecutor days = 1095 }
+	}
+}
+
+smd_btn_corruption_obstruct = {
+	name = "smd_btn_corruption_obstruct"
+	desc = "smd_btn_corruption_obstruct_desc"
+	cooldown = { days = 730 }
+
+	visible = {
+		always = yes
+	}
+
+	possible = {
+		NOT = { has_modifier = smd_investigation_obstructed }
+	}
+
+	ai_chance = { value = 5 }
+
+	effect = {
+		set_variable = smd_corruption_coverup
+		je:smd_je_anti_corruption ?= {
+			add_progress = { value = -20 name = smd_corruption_bar }
+		}
+		add_modifier = {
+			name = smd_investigation_obstructed
+			days = 1095
+		}
+	}
+}
+
+smd_btn_refugee_camps = {
+	name = "smd_btn_refugee_camps"
+	desc = "smd_btn_refugee_camps_desc"
+	cooldown = { days = 1095 }
+
+	visible = {
+		always = yes
+	}
+
+	possible = {
+		NOT = { has_variable = smd_refugee_camps }
+		in_default = no
+	}
+
+	ai_chance = { value = 25 }
+
+	effect = {
+		add_treasury = {
+			value = gdp
+			multiply = -0.003
+		}
+		set_variable = { name = smd_refugee_camps days = 1095 }
+	}
+}
+
+smd_btn_refugee_appeal = {
+	name = "smd_btn_refugee_appeal"
+	desc = "smd_btn_refugee_appeal_desc"
+	cooldown = { days = 1095 }
+
+	visible = {
+		always = yes
+	}
+
+	possible = {
+		NOT = { has_variable = smd_refugee_aid }
+	}
+
+	ai_chance = { value = 30 }
+
+	effect = {
+		add_treasury = {
+			value = gdp
+			multiply = 0.002
+		}
+		set_variable = { name = smd_refugee_aid days = 730 }
+		add_modifier = {
+			name = smd_refugee_aid_appeal
+			days = 730
+		}
+	}
+}
+
+smd_btn_veterans_benefits = {
+	name = "smd_btn_veterans_benefits"
+	desc = "smd_btn_veterans_benefits_desc"
+	cooldown = { days = 1825 }
+
+	visible = {
+		always = yes
+	}
+
+	possible = {
+		NOT = { has_modifier = smd_veterans_benefits }
+		in_default = no
+	}
+
+	ai_chance = { value = 25 }
+
+	effect = {
+		add_treasury = {
+			value = gdp
+			multiply = -0.003
+		}
+		add_modifier = {
+			name = smd_veterans_benefits
+			days = 1825
+		}
+	}
+}
+
+smd_btn_veterans_memorial = {
+	name = "smd_btn_veterans_memorial"
+	desc = "smd_btn_veterans_memorial_desc"
+
+	visible = {
+		NOT = { has_variable = smd_war_memorial_built }
+	}
+
+	possible = {
+		always = yes
+	}
+
+	ai_chance = { value = 20 }
+
+	effect = {
+		add_treasury = {
+			value = gdp
+			multiply = -0.001
+		}
+		set_variable = smd_war_memorial_built
+		je:smd_je_veterans ?= {
+			add_progress = { value = -10 name = smd_veterans_bar }
+		}
+		add_modifier = {
+			name = smd_war_memorial
+			days = very_long_modifier_time
+		}
+	}
+}

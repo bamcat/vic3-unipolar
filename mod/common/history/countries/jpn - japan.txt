@@ -7,8 +7,8 @@
 		
 		add_taxed_goods = g:liquor
 		add_journal_entry = { type = je_demographic_crisis }
-		# Laws
 		activate_law = law_type:law_national_militia
+		activate_law = law_type:law_professional_navy
 		activate_law = law_type:law_elected_bureaucrats
 		activate_law = law_type:law_compulsory_primary_school
 		activate_law = law_type:law_freedom_of_conscience
@@ -51,6 +51,17 @@
 
 		ig:ig_trade_unions = {
 			set_ig_suppression = yes
+		}
+
+		add_company = company_type:company_toyota
+		company:company_toyota = {
+			set_company_establishment_date = 1937.8.28
+			set_company_state_region = s:STATE_TOKAI
+		}
+		add_company = company_type:company_sony
+		company:company_sony = {
+			set_company_establishment_date = 1946.5.7
+			set_company_state_region = s:STATE_KANTO
 		}
 	}
 }

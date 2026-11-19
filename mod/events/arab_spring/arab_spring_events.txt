@@ -1,10 +1,6 @@
 ﻿namespace = arab_spring
 
 # ==========================================
-# arab_spring.1 — The Spark
-# Fired by on_action when a revolution
-# including liberals/progressives occurs.
-# Analogous to peoples_springtime.1
 # ==========================================
 
 arab_spring.18 = {
@@ -65,8 +61,8 @@ arab_spring.18 = {
 					}
 				}
 				OR = {
-					country_has_accepted_religion = sunni
-					country_has_accepted_religion = shiite
+					country_has_state_religion = rel:sunni
+					country_has_state_religion = rel:shiite
 				}
 			}
 			create_political_movement = { type = movement_traditionalist }
@@ -88,7 +84,7 @@ arab_spring.18 = {
 
 	duration = 3
 
-	option = {	# Rally behind the protests
+	option = {
 		name = arab_spring.1.a
 		add_radicals = { value = medium_radicals strata = lower }
 		add_radicals = { value = small_radicals strata = middle }
@@ -103,7 +99,7 @@ arab_spring.18 = {
 		}
 	}
 
-	option = {	# Acknowledge grievances without endorsing street protests
+	option = {
 		name = arab_spring.1.b
 		default_option = yes
 		add_radicals = { value = small_radicals strata = lower }
@@ -120,9 +116,6 @@ arab_spring.18 = {
 }
 
 # ==========================================
-# arab_spring.29 — The Contagion
-# Neighbouring country gets pulled into
-# the Spring. Analogous to peoples_springtime.2
 # ==========================================
 
 arab_spring.20 = {
@@ -139,7 +132,6 @@ arab_spring.20 = {
 	flavor = arab_spring.2.f
 
 	trigger = {
-		# Triggered by arab_spring.4
 	}
 
 	duration = 3
@@ -160,7 +152,7 @@ arab_spring.20 = {
 					NOR = {
 						has_ideology = ideology:ideology_liberal_leader
 						has_ideology = ideology:ideology_progressive_leader
-						has_ideology = ideology:ideology_communist_leader
+						has_ideology = ideology:ideology_marxist_leader
 						has_ideology = ideology:ideology_jihadist_leader
 					}
 				}
@@ -169,7 +161,7 @@ arab_spring.20 = {
 		}
 	}
 
-	option = {	# Welcome the contagion
+	option = {
 		name = arab_spring.2.a
 		scope:inspired_ig = {
 			leader = {
@@ -182,7 +174,7 @@ arab_spring.20 = {
 		}
 	}
 
-	option = {	# Denounce foreign agitators
+	option = {
 		name = arab_spring.2.b
 		default_option = yes
 		scope:inspired_ig = {
@@ -198,10 +190,6 @@ arab_spring.20 = {
 }
 
 # ==========================================
-# arab_spring.3 — New Voices of Dissent
-# Monthly pulse — IG leaders radicalize
-# toward liberal/progressive ideology.
-# Analogous to peoples_springtime.3
 # ==========================================
 
 arab_spring.3 = {
@@ -259,7 +247,7 @@ arab_spring.3 = {
 	duration = 3
 	cooldown = { days = short_modifier_time }
 
-	option = {	# Promote a liberal leader directly
+	option = {
 		name = arab_spring.3.a
 		ai_chance = { base = 25 }
 		custom_tooltip = {
@@ -272,7 +260,7 @@ arab_spring.3 = {
 		}
 	}
 
-	option = {	# Create an agitator instead
+	option = {
 		name = arab_spring.3.b
 		default_option = yes
 		ai_chance = {
@@ -299,9 +287,6 @@ arab_spring.3 = {
 }
 
 # ==========================================
-# arab_spring.4 — The Wave Spreads
-# Monthly pulse — spread to a neighbouring
-# country. Analogous to peoples_springtime.4
 # ==========================================
 
 arab_spring.4 = {
@@ -334,7 +319,7 @@ arab_spring.4 = {
 						NOR = {
 							has_ideology = ideology:ideology_liberal_leader
 							has_ideology = ideology:ideology_progressive_leader
-							has_ideology = ideology:ideology_communist_leader
+							has_ideology = ideology:ideology_marxist_leader
 							has_ideology = ideology:ideology_jihadist_leader
 						}
 					}
@@ -354,7 +339,7 @@ arab_spring.4 = {
 	duration = 3
 	cooldown = { days = normal_modifier_time }
 
-	option = {	# Actively export the revolution
+	option = {
 		name = arab_spring.4.a
 		random_neighbouring_state = {
 			limit = {
@@ -374,7 +359,7 @@ arab_spring.4 = {
 							NOR = {
 								has_ideology = ideology:ideology_liberal_leader
 								has_ideology = ideology:ideology_progressive_leader
-								has_ideology = ideology:ideology_communist_leader
+								has_ideology = ideology:ideology_marxist_leader
 								has_ideology = ideology:ideology_jihadist_leader
 							}
 						}
@@ -401,7 +386,7 @@ arab_spring.4 = {
 		}
 	}
 
-	option = {	# Stay focused at home
+	option = {
 		name = arab_spring.4.b
 		default_option = yes
 		every_interest_group = {
@@ -422,9 +407,6 @@ arab_spring.4 = {
 }
 
 # ==========================================
-# arab_spring.5 — Underground Networks
-# Monthly pulse — dissidents in the shadows
-# cause turmoil. Analogous to peoples_springtime.5
 # ==========================================
 
 arab_spring.5 = {
@@ -454,7 +436,7 @@ arab_spring.5 = {
 	duration = 3
 	cooldown = { days = short_modifier_time }
 
-	option = {	# Unrest in the provinces
+	option = {
 		name = arab_spring.5.a
 		random_scope_state = {
 			limit = {
@@ -478,7 +460,7 @@ arab_spring.5 = {
 		ai_chance = { base = 90 }
 	}
 
-	option = {	# Unrest reaches the capital
+	option = {
 		name = arab_spring.5.b
 		random_country = {
 			limit = { NOT = { is_in_geographic_region = geographic_region_middle_east }
@@ -499,10 +481,6 @@ arab_spring.5 = {
 }
 
 # ==========================================
-# arab_spring.6 — The Spring is Over
-# Fired by on_action when the JE ends.
-# Notifies all involved countries.
-# Analogous to peoples_springtime.6
 # ==========================================
 
 arab_spring.6 = {
@@ -544,9 +522,6 @@ arab_spring.6 = {
 }
 
 # ==========================================
-# arab_spring.7 — Islamist Forces Consolidate
-# Arab Winter completion — Islamist/nationalist
-# victory. Analogous to peoples_springtime.7
 # ==========================================
 
 arab_spring.7 = {
@@ -567,12 +542,12 @@ arab_spring.7 = {
 			limit = {
 				is_in_government = yes
 				OR = {
-					has_ideology = ideology:ideology_jihadist_movement
+					has_ideology = ideology:ideology_theocrat
 					leader = {
 						OR = {
 							has_ideology = ideology:ideology_jihadist_leader
-							has_ideology = ideology:ideology_traditionalist_leader
-							has_ideology = ideology:ideology_nationalist_leader
+							has_ideology = ideology:ideology_theocrat_leader
+							has_ideology = ideology:ideology_right_wing_populist_leader
 						}
 					}
 				}
@@ -581,7 +556,7 @@ arab_spring.7 = {
 		}
 	}
 
-	option = {	# Embrace the Islamist consolidation
+	option = {
 		name = arab_spring.7.a
 		add_modifier = {
 			name = arab_winter_islamist_consolidation
@@ -589,7 +564,7 @@ arab_spring.7 = {
 		}
 	}
 
-	option = {	# Grudging acceptance — stabilize without triumphalism
+	option = {
 		name = arab_spring.7.b
 		default_option = yes
 		add_loyalists = { value = 0.1 }
@@ -597,9 +572,6 @@ arab_spring.7 = {
 }
 
 # ==========================================
-# arab_spring.71 — A Democratic Transition
-# Arab Winter completion — reformist victory.
-# Analogous to peoples_springtime.71
 # ==========================================
 
 arab_spring.71 = {
@@ -633,7 +605,7 @@ arab_spring.71 = {
 		}
 	}
 
-	option = {	# Push for full democratic reform now
+	option = {
 		name = arab_spring.71.a
 		every_interest_group = {
 			limit = {
@@ -649,7 +621,7 @@ arab_spring.71 = {
 		}
 	}
 
-	option = {	# Consolidate cautiously
+	option = {
 		name = arab_spring.71.b
 		default_option = yes
 		add_loyalists = {
@@ -665,9 +637,6 @@ arab_spring.71 = {
 }
 
 # ==========================================
-# arab_spring.8 — The Crackdown
-# JE failure/timeout — uprising suppressed.
-# Analogous to peoples_springtime.8
 # ==========================================
 
 arab_spring.8 = {
@@ -721,7 +690,7 @@ arab_spring.8 = {
 		}
 	}
 
-	option = {	# Celebrate the restoration of order
+	option = {
 		name = arab_spring.8.a
 		add_modifier = {
 			name = arab_winter_revolution_crushed
@@ -729,7 +698,7 @@ arab_spring.8 = {
 		}
 	}
 
-	option = {	# Quiet relief — no triumphalism
+	option = {
 		name = arab_spring.8.b
 		default_option = yes
 		add_loyalists = { value = 0.1 }
@@ -742,7 +711,6 @@ arab_spring.8 = {
 		hidden_effect = {
 			set_strategy = ai_strategy_conservative_agenda
 		}
-		# Restore the authoritarian laws saved at JE start
 		if = {
 			limit = {
 				has_variable = authoritarian_distribution_of_power_law
@@ -772,9 +740,6 @@ arab_spring.8 = {
 }
 
 # ==========================================
-# arab_spring.9 — The People's Revolution
-# Weekly pulse — insurrectionary movement,
-# capital in revolt. Analogous to peoples_springtime.9
 # ==========================================
 
 arab_spring.9 = {
@@ -814,7 +779,7 @@ arab_spring.9 = {
 		has_variable = had_arab_spring_revolution
 	}
 
-	option = {	# Full democratic transition
+	option = {
 		name = arab_spring.9.a
 		default_option = yes
 		set_variable = had_arab_spring_revolution
@@ -842,7 +807,7 @@ arab_spring.9 = {
 			ordered_interest_group = {
 				limit = {
 					OR = {
-						has_ideology = ideology:ideology_liberal_movement
+						has_ideology = ideology:ideology_progressive
 						leader = {
 							OR = {
 								has_ideology = ideology:ideology_liberal_leader
@@ -864,7 +829,7 @@ arab_spring.9 = {
 			limit = {
 				is_in_government = yes
 				NOR = {
-					has_ideology = ideology:ideology_liberal_movement
+					has_ideology = ideology:ideology_progressive
 					leader = {
 						OR = {
 							has_ideology = ideology:ideology_liberal_leader
@@ -884,7 +849,7 @@ arab_spring.9 = {
 				limit = {
 					is_in_government = yes
 					NOR = {
-						has_ideology = ideology:ideology_liberal_movement
+						has_ideology = ideology:ideology_progressive
 						leader = {
 							OR = {
 								has_ideology = ideology:ideology_liberal_leader
@@ -898,7 +863,7 @@ arab_spring.9 = {
 			ordered_interest_group = {
 				limit = {
 					OR = {
-						has_ideology = ideology:ideology_liberal_movement
+						has_ideology = ideology:ideology_progressive
 						leader = {
 							OR = {
 								has_ideology = ideology:ideology_liberal_leader
@@ -921,7 +886,7 @@ arab_spring.9 = {
 		}
 	}
 
-	option = {	# Partial transition — census voting only
+	option = {
 		name = arab_spring.9.b
 		set_variable = had_arab_spring_revolution
 		hidden_effect = {
@@ -948,7 +913,7 @@ arab_spring.9 = {
 			ordered_interest_group = {
 				limit = {
 					OR = {
-						has_ideology = ideology:ideology_liberal_movement
+						has_ideology = ideology:ideology_progressive
 						leader = {
 							OR = {
 								has_ideology = ideology:ideology_liberal_leader
@@ -970,7 +935,7 @@ arab_spring.9 = {
 			limit = {
 				is_in_government = yes
 				NOR = {
-					has_ideology = ideology:ideology_liberal_movement
+					has_ideology = ideology:ideology_progressive
 					leader = {
 						OR = {
 							has_ideology = ideology:ideology_liberal_leader
@@ -990,7 +955,7 @@ arab_spring.9 = {
 				limit = {
 					is_in_government = yes
 					NOR = {
-						has_ideology = ideology:ideology_liberal_movement
+						has_ideology = ideology:ideology_progressive
 						leader = {
 							OR = {
 								has_ideology = ideology:ideology_liberal_leader
@@ -1004,7 +969,7 @@ arab_spring.9 = {
 			ordered_interest_group = {
 				limit = {
 					OR = {
-						has_ideology = ideology:ideology_liberal_movement
+						has_ideology = ideology:ideology_progressive
 						leader = {
 							OR = {
 								has_ideology = ideology:ideology_liberal_leader
@@ -1027,7 +992,7 @@ arab_spring.9 = {
 		}
 	}
 
-	option = {	# The civil war deepens
+	option = {
 		name = arab_spring.9.c
 		random_civil_war = {
 			add_civil_war_progress = revolution_advance_large
@@ -1036,10 +1001,6 @@ arab_spring.9 = {
 }
 
 # ==========================================
-# arab_spring.91 — Revolution Follow-up
-# Hidden — executes the government reshuffle
-# after the revolution fires.
-# Analogous to peoples_springtime.91
 # ==========================================
 
 arab_spring.91 = {
@@ -1057,7 +1018,7 @@ arab_spring.91 = {
 		ordered_interest_group = {
 			limit = {
 				OR = {
-					has_ideology = ideology:ideology_liberal_movement
+					has_ideology = ideology:ideology_progressive
 					leader = {
 						OR = {
 							has_ideology = ideology:ideology_liberal_leader
@@ -1076,7 +1037,7 @@ arab_spring.91 = {
 			limit = {
 				is_in_government = yes
 				NOR = {
-					has_ideology = ideology:ideology_liberal_movement
+					has_ideology = ideology:ideology_progressive
 					leader = {
 						OR = {
 							has_ideology = ideology:ideology_liberal_leader
@@ -1114,10 +1075,6 @@ arab_spring.91 = {
 }
 
 # ==========================================
-# arab_spring.10 — The Arab Winter Begins
-# Weekly pulse — revolution succeeded,
-# democratic laws in place. Spawns je_arab_winter.
-# Analogous to peoples_springtime.10
 # ==========================================
 
 arab_spring.10 = {
@@ -1140,7 +1097,7 @@ arab_spring.10 = {
 				any_interest_group = {
 					is_in_government = yes
 					OR = {
-						has_ideology = ideology:ideology_liberal_movement
+						has_ideology = ideology:ideology_progressive
 						leader = {
 							OR = {
 								has_ideology = ideology:ideology_liberal_leader
@@ -1160,7 +1117,6 @@ arab_spring.10 = {
 
 	immediate = {
 		set_variable = completed_arab_spring
-		# Tag the season for flavour text
 		if = {
 			limit = { OR = { month >= 11 month < 2 } }
 			set_variable = arab_winter_season_winter
@@ -1180,7 +1136,7 @@ arab_spring.10 = {
 		set_variable = { name = completed_arab_spring }
 	}
 
-	option = {	# Embrace the transition — push for consolidation
+	option = {
 		name = arab_spring.10.a
 		default_option = yes
 		custom_tooltip = {
@@ -1189,7 +1145,7 @@ arab_spring.10 = {
 		}
 	}
 
-	option = {	# Prepare for the counter-revolution
+	option = {
 		name = arab_spring.10.b
 		custom_tooltip = {
 			text = arab_winter_tt

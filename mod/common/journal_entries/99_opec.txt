@@ -1,4 +1,3 @@
-
 je_opec = {
 	icon = "gfx/interface/icons/event_icons/event_opec.dds"
 	group = je_group_international
@@ -18,7 +17,6 @@ je_opec = {
 
 	status_desc = {
 		first_valid = {
-			# Production increase vote active
 			triggered_desc = {
 				desc = opec_je_voting_increase_tt
 				trigger = {
@@ -26,7 +24,6 @@ je_opec = {
 					global_var:opec_vote_type = flag:opec_increase
 				}
 			}
-			# Production decrease vote active
 			triggered_desc = {
 				desc = opec_je_voting_decrease_tt
 				trigger = {
@@ -34,7 +31,6 @@ je_opec = {
 					global_var:opec_vote_type = flag:opec_decrease
 				}
 			}
-			# Embargo vote active
 			triggered_desc = {
 				desc = opec_je_voting_embargo_tt
 				trigger = {
@@ -42,21 +38,18 @@ je_opec = {
 					global_var:opec_vote_type = flag:opec_embargo
 				}
 			}
-			# Increased production in effect
 			triggered_desc = {
 				desc = opec_je_increased_production_tt
 				trigger = {
 					any_country = { has_modifier = opec_increased_production }
 				}
 			}
-			# Decreased production in effect
 			triggered_desc = {
 				desc = opec_je_decreased_production_tt
 				trigger = {
 					any_country = { has_modifier = opec_decreased_production }
 				}
 			}
-			# No vote active, no modifier active
 			triggered_desc = {
 				desc = opec_je_idle_tt
 			}

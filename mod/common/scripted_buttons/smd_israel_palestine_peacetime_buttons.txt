@@ -1,4 +1,3 @@
-
 je_ip_peacetime_security_coordination_button = {
 	name = "je_ip_peacetime_security_coordination"
 	desc = "je_ip_peacetime_security_coordination_desc"
@@ -27,7 +26,6 @@ je_ip_peacetime_security_coordination_button = {
 		change_global_variable = { name = ip_peacetime_security_coordination add = 12 }
 		ip_temperature_subtract_8 = yes
 
-		# Security coordination also creates domestic backlash.
 		if = {
 			limit = { c:PAL ?= this }
 			add_modifier = { name = ip_political_backlash months = 12 }
@@ -45,7 +43,7 @@ je_ip_peacetime_security_coordination_button = {
 			je:je_israel_palestine_peacetime ?= {
 				scripted_bar_progress = {
 					name = je_israel_palestine_tension_bar
-					value >= 0.70
+					value >= 70
 				}
 			}
 		}
@@ -91,7 +89,7 @@ je_ip_peacetime_closure_policy_button = {
 			je:je_israel_palestine_peacetime ?= {
 				scripted_bar_progress = {
 					name = je_israel_palestine_tension_bar
-					value >= 0.70
+					value >= 70
 				}
 			}
 		}
@@ -187,7 +185,7 @@ je_ip_peacetime_international_mediation_button = {
 			je:je_israel_palestine_peacetime ?= {
 				scripted_bar_progress = {
 					name = je_israel_palestine_tension_bar
-					value >= 0.65
+					value >= 65
 				}
 			}
 		}
@@ -266,7 +264,7 @@ je_ip_peacetime_mass_mobilization_button = {
 			je:je_israel_palestine_peacetime ?= {
 				scripted_bar_progress = {
 					name = je_israel_palestine_tension_bar
-					value >= 0.75
+					value >= 75
 				}
 			}
 		}
