@@ -1,0 +1,26 @@
+﻿on_game_started_after_lobby = {
+	on_actions = { smd_landlocked_start }
+}
+
+smd_landlocked_start = {
+	effect = {
+		every_country = {
+			limit = {
+				NOT = {
+					any_scope_state = {
+						is_coastal = yes
+					}
+				}
+				is_in_customs_union = no
+				NOT = {
+					any_scope_treaty = {
+						any_scope_article = {
+							has_type = transit_rights
+						}
+					}
+				}
+			}
+			add_journal_entry = { type = je_transit_rights }
+		}
+	}
+}

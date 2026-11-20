@@ -1,0 +1,15 @@
+﻿on_game_started_after_lobby = {
+	on_actions = { smd_set_eu_country }
+}
+
+smd_set_eu_country = {
+	effect = {
+		if = {
+			limit = { exists = c:EUR }
+			set_global_variable = {
+				name = smd_eu_country
+				value = c:EUR
+			}
+		}
+	}
+}
