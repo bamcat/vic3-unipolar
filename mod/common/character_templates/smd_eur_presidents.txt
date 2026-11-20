@@ -1,0 +1,139 @@
+﻿eur_santer_character_template = {
+	first_name = smd_cn_jacques
+	last_name = smd_cn_santer
+	historical = yes
+	culture = cu:wallonian
+	female = no
+	religion = rel:catholic
+	ideology = ideology_moderate_leader
+	interest_group = ig_devout
+	birth_date = 1937.5.18
+	traits = {
+		experienced_political_operator
+		cautious
+		tactful
+	}
+	interest_group_leader_usage = {
+		country_trigger = {
+			exists = c:EUR
+			c:EUR ?= THIS
+		}
+		interest_group_trigger = {
+			is_interest_group_type = ig_devout
+		}
+		earliest_usage_date = 1995.1.1
+		latest_usage_date = 1999.9.1
+	}
+}
+
+eur_prodi_character_template = {
+	first_name = smd_cn_romano
+	last_name = smd_cn_prodi
+	historical = yes
+	culture = cu:north_italian
+	female = no
+	religion = rel:catholic
+	ideology = ideology_social_liberal_leader
+	interest_group = ig_intelligentsia
+	birth_date = 1939.8.9
+	traits = {
+		erudite
+		persistent
+		meticulous
+	}
+	interest_group_leader_usage = {
+		country_trigger = {
+			exists = c:EUR
+			c:EUR ?= THIS
+		}
+		interest_group_trigger = {
+			is_interest_group_type = ig_intelligentsia
+		}
+		earliest_usage_date = 1999.9.1
+		latest_usage_date = 2004.11.1
+	}
+}
+
+eur_barroso_character_template = {
+	first_name = smd_cn_jose_manuel
+	last_name = smd_cn_barroso
+	historical = yes
+	culture = cu:portuguese
+	female = no
+	religion = rel:catholic
+	ideology = ideology_neoliberal_leader
+	interest_group = ig_industrialists
+	birth_date = 1956.3.23
+	traits = {
+		experienced_diplomat
+		ambitious
+		tactful
+	}
+	interest_group_leader_usage = {
+		country_trigger = {
+			exists = c:EUR
+			c:EUR ?= THIS
+		}
+		interest_group_trigger = {
+			is_interest_group_type = ig_industrialists
+		}
+		earliest_usage_date = 2004.11.1
+		latest_usage_date = 2014.11.1
+	}
+}
+
+eur_juncker_character_template = {
+	first_name = smd_cn_jean_claude
+	last_name = smd_cn_juncker
+	historical = yes
+	culture = cu:wallonian
+	female = no
+	religion = rel:catholic
+	ideology = ideology_moderate_leader
+	interest_group = ig_petty_bourgeoisie
+	birth_date = 1954.12.9
+	traits = {
+		expert_political_operator
+		charismatic
+		direct
+	}
+	interest_group_leader_usage = {
+		country_trigger = {
+			exists = c:EUR
+			c:EUR ?= THIS
+		}
+		interest_group_trigger = {
+			is_interest_group_type = ig_petty_bourgeoisie
+		}
+		earliest_usage_date = 2014.11.1
+		latest_usage_date = 2019.12.1
+	}
+}
+
+eur_von_der_leyen_character_template = {
+	first_name = smd_cn_ursula
+	last_name = smd_cn_von_der_leyen
+	historical = yes
+	culture = cu:north_german
+	female = yes
+	religion = rel:protestant
+	ideology = ideology_moderate_leader
+	interest_group = ig_professionals
+	birth_date = 1958.10.8
+	traits = {
+		experienced_political_operator
+		meticulous
+		ambitious
+	}
+	interest_group_leader_usage = {
+		country_trigger = {
+			exists = c:EUR
+			c:EUR ?= THIS
+		}
+		interest_group_trigger = {
+			is_interest_group_type = ig_professionals
+		}
+		earliest_usage_date = 2019.12.1
+		latest_usage_date = 2030.1.1
+	}
+}
