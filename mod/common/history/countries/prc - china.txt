@@ -57,6 +57,13 @@
 			}
 		}
 		
+		active_law:lawgroup_taxation ?= {
+			add_amendment = {
+				type = smd_amendment_rural_levies
+				sponsor = PREV.ig:ig_trade_unions
+			}
+		}
+
 		active_law:lawgroup_economic_system ?= {
 			add_amendment = {
 				type = amendment_socialist_market_economy

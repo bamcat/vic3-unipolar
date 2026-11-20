@@ -1,9 +1,45 @@
 ﻿TREATIES = {
 
 	create_treaty = {
-		name = treaty_name_czechoslovakia_germany_trade
+		name = smd_treaty_name_austria_eu_transit
+		first_country = c:OST
+		second_country = c:EUR
+
+		is_draft = no
+		entered_into_force_on = 1992.1.1
+		binding_period = { years = 20 }
+
+		articles_to_create = {
+			{
+				article = transit_rights
+				source_country = c:EUR
+				target_country = c:OST
+			}
+		}
+	}
+
+	create_treaty = {
+		name = smd_treaty_name_switzerland_eu_transit
+		first_country = c:SWS
+		second_country = c:EUR
+
+		is_draft = no
+		entered_into_force_on = 1992.1.1
+		binding_period = { years = 20 }
+
+		articles_to_create = {
+			{
+				article = transit_rights
+				source_country = c:EUR
+				target_country = c:SWS
+			}
+		}
+	}
+
+	create_treaty = {
+		name = smd_treaty_name_czechoslovakia_eu_transit
 		first_country = c:CZH
-		second_country = c:GER
+		second_country = c:EUR
 
 		is_draft = no
 		entered_into_force_on = 1992.1.1
@@ -12,59 +48,8 @@
 		articles_to_create = {
 			{
 				article = transit_rights
-				source_country = c:GER
+				source_country = c:EUR
 				target_country = c:CZH
-			}
-			{
-				article = transit_rights
-				source_country = c:CZH
-				target_country = c:GER
-			}
-		}
-	}
-
-	create_treaty = {
-		name = treaty_name_austria_germany_trade
-		first_country = c:OST
-		second_country = c:GER
-
-		is_draft = no
-		entered_into_force_on = 1992.1.1
-		binding_period = { years = 20 }
-
-		articles_to_create = {
-			{
-				article = transit_rights
-				source_country = c:GER
-				target_country = c:OST
-			}
-			{
-				article = transit_rights
-				source_country = c:OST
-				target_country = c:GER
-			}
-		}
-	}
-
-	create_treaty = {
-		name = treaty_name_austria_italy_trade
-		first_country = c:OST
-		second_country = c:ITA
-
-		is_draft = no
-		entered_into_force_on = 1992.1.1
-		binding_period = { years = 20 }
-
-		articles_to_create = {
-			{
-				article = transit_rights
-				source_country = c:ITA
-				target_country = c:OST
-			}
-			{
-				article = transit_rights
-				source_country = c:OST
-				target_country = c:ITA
 			}
 		}
 	}
@@ -111,29 +96,6 @@
 				article = transit_rights
 				source_country = c:CZH
 				target_country = c:OST
-			}
-		}
-	}
-
-	create_treaty = {
-		name = treaty_name_switzerland_germany_trade
-		first_country = c:SWS
-		second_country = c:GER
-
-		is_draft = no
-		entered_into_force_on = 1992.1.1
-		binding_period = { years = 20 }
-
-		articles_to_create = {
-			{
-				article = transit_rights
-				source_country = c:GER
-				target_country = c:SWS
-			}
-			{
-				article = transit_rights
-				source_country = c:SWS
-				target_country = c:GER
 			}
 		}
 	}

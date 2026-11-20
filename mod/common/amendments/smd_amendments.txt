@@ -254,10 +254,9 @@ amendment_china_tax_reform_1994 = {
 		law_consumption_based_taxation
 	}
 	modifier = {
-		country_tax_income_add                      = 30
-		state_tax_waste_add                         = -0.05
-		country_authority_mult                      = 0.03
-		country_minting_add                         = 10
+		state_tax_waste_add                         = -0.25
+		country_authority_mult                      = 0.05
+		country_minting_mult                         = 0.25
 		interest_group_ig_petty_bourgeoisie_approval_add = -3
 	}
 	possible = {
@@ -275,6 +274,30 @@ amendment_china_tax_reform_1994 = {
 }
 
 # ONE CHILD POLICY (CHINA)
+
+smd_amendment_rural_levies = {
+	parent = law_graduated_taxation
+	allowed_laws = {
+		law_graduated_taxation
+		law_proportional_taxation
+	}
+	modifier = {
+		tax_land_add = 0.50
+		tax_consumption_add = 0.15
+		tax_per_capita_add = 0.15
+		interest_group_ig_rural_folk_approval_add   = -2
+	}
+	possible = {
+		country_has_primary_culture = cu:han
+	}
+	ai_will_revoke = {
+		"pop_type_percent_country(pop_type:peasants)" < 0.2
+	}
+	can_repeal = {
+		legitimacy >= legitimacy_to_repeal_amendment
+	}
+	amendment_activism_multiplier = 0.5
+}
 
 amendment_one_child_policy = {
 	parent = law_public_health_insurance

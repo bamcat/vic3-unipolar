@@ -13,11 +13,6 @@
 		add_journal_entry = { type = je_national_development }
 		add_journal_entry = { type = je_financial_system }
 
-		if = { limit = { NOT = { any_scope_state = {
-				is_coastal = yes
-			} } }
-			add_journal_entry = { type = je_transit_rights }
-		}
 		smd_low_tech_effect = yes
 		fake_population_effect = yes
 		fake_gdp_effect = yes

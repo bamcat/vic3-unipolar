@@ -8,6 +8,26 @@ je_transit_rights = {
 
 	group = je_group_domestic_policy
 
+	status_desc = {
+		first_valid = {
+			triggered_desc = {
+				desc = smd_je_transit_rights_eu_note
+				trigger = {
+					has_global_variable = smd_eu_country
+					capital = {
+						is_in_geographic_region = geographic_region_europe
+					}
+				}
+			}
+			triggered_desc = {
+				desc = smd_je_transit_rights_status_blank
+				trigger = {
+					always = yes
+				}
+			}
+		}
+	}
+
 	is_shown_when_inactive = {
 		NOT = {
 			any_scope_state = {

@@ -1641,7 +1641,7 @@ NPops = {
 	COLONY_SPEED_POPULATION_INCREMENT = 100000			# Determines the number of people across both colonizing and colonized states that should start slowing down the rate of colonization; set to 0 to disable
 	COLONY_SPEED_MALUS_PER_POPULATION_INCREMENT = 0.25	# Starting at COLONY_SPEED_THRESHOLD_FROM_POPULATION inhabitants, increase the number of days to complete by this amount proportional to population in the colony + state of province being colonized above 200K (e.g. at COLONY_SPEED_THRESHOLD_FROM_POPULATION = 200K, this set to 0.5, and at 300K total inhabitants, multiply growth by 1/1.25 = 0.8; at 600K inhabitants, multiply by 0.25)
 
-	INDIVIDUALS_PER_POP_INFRASTRUCTURE = 100000			# Multiply state_infrastructure_from_population_add by this to determine infra from population
+	INDIVIDUALS_PER_POP_INFRASTRUCTURE = 50000			# Multiply state_infrastructure_from_population_add by this to determine infra from population
 
 	QUALIFICATIONS_UPDATE_FACTOR = 0.0003				# Calculated potential values are multiplied by this value and the workforce size of the pop before being added to the existing potentials
 	QUALIFICATIONS_NUM_MONTHS_AT_START = 60				# How many months of qualifications should be seeded to pops at start of game?

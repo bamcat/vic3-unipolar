@@ -83,7 +83,6 @@ democratic_party = {
 				OR = {
 					leader ?= { has_ideology = ideology:ideology_liberal_leader }
 					leader ?= { has_ideology = ideology:ideology_social_liberal_leader }
-					leader ?= { has_ideology = ideology:ideology_neoliberal_leader }
 				}
 			}
 			add = { value = 120 desc = "leader_ideological_compatibility" }
@@ -91,6 +90,7 @@ democratic_party = {
 		if = {
 			limit = {
 				OR = {
+					leader ?= { has_ideology = ideology:ideology_neoliberal_leader }
 					leader ?= { has_ideology = ideology:ideology_progressive_leader }
 					leader ?= { has_ideology = ideology:ideology_moderate_leader }
 					leader ?= { has_ideology = ideology:ideology_technocrat_leader }
@@ -197,7 +197,6 @@ democratic_party = {
 				OR = {
 					leader ?= { has_ideology = ideology:ideology_liberal_leader }
 					leader ?= { has_ideology = ideology:ideology_social_liberal_leader }
-					leader ?= { has_ideology = ideology:ideology_neoliberal_leader }
 					has_ideology = ideology:ideology_centre_economy
 					has_ideology = ideology:ideology_individualist
 					has_ideology = ideology:ideology_republican

@@ -247,6 +247,7 @@
 	
 	
 	valid_for_country = {
+		NOT = { exists = c:USA THIS = c:USA }
 		NOT = { exists = c:RUS THIS = c:RUS }
 	NOT = {
 		OR = {
