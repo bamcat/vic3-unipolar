@@ -606,10 +606,10 @@
 	HQ_OR_FRONT_SPLIT_FORCE_BASE_FRACTION = 1.0
 
 	# If splitting a force to cover undefended HQs/fronts, never send or leave behind less than this fraction of the source formation
-	HQ_OR_FRONT_SPLIT_FORCE_MIN_FRACTION = 0.1
+	HQ_OR_FRONT_SPLIT_FORCE_MIN_FRACTION = 0.3
 
 	# If splitting a force to cover undefended HQs/fronts, don't send splinter armies to already defended fronts if the split of the source formation ends up smaller than this
-	HQ_OR_FRONT_SPLIT_FORCE_DEFENDED_LOCATION_MIN_FRACTION_TO_SEND = 0.33
+	HQ_OR_FRONT_SPLIT_FORCE_DEFENDED_LOCATION_MIN_FRACTION_TO_SEND = 0.5
 
 	# If no fleet can carry an entire army for naval transport, the AI will split the army if the best fleet can carry at least this fraction of the army
 	TRANSPORT_SPLIT_MIN_FLEET_CAPACITY_FRACTION = 0.2
@@ -1147,7 +1147,7 @@
 	COMPANY_TYPE_COMPETITION_FACTOR = 2					# Divisor for AI weight of companies is increased by 1 + ( number of building types on existing companies that compete * this )
 	COMPANY_TYPE_BUILDING_GROUP_WEIGHT_IMPACT = 1.5		# The AI's average strategy weight mult for the building groups associated with this company is modulated towards 1 by this value and applied to AI preference for the company (ie; if this is 0.5, then the difference between the average AI preference and 1 is halved - 1.5 becomes 1.25, 0.5 becomes 0.75 etc)
 
-	MILITARY_UNITS_PER_FORMATION_ARMY = 50				# The AI aims to have armies of roughly this size, and will create new formations in land HQs accordingly
+	MILITARY_UNITS_PER_FORMATION_ARMY = 80				# The AI aims to have armies of roughly this size, and will create new formations in land HQs accordingly
 	MILITARY_UNITS_PER_FORMATION_FLEET = 100			# The AI aims to have fleets of roughly this size, and will create new formations in naval HQs accordingly
 	MILITARY_UNITS_MIN_FOR_GARRISON_FORMATION = 15 		# If a land HQ has at least this number of units we set the minimum number of formations to 2, so that there will be a garrison formation present
 	MILITARY_UNITS_MIN_FOR_GARRISON_FORMATION_IN_CAPITAL_HQ = 5 		# Overrides MILITARY_UNITS_MIN_FOR_GARRISON_FORMATION for the capital land HQ, since not leaving the capital undefended is extremely critical

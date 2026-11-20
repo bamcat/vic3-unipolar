@@ -1,0 +1,26 @@
+﻿l_turkish:
+
+ concept_smd_healthcare:0 "Sağlık"
+ concept_smd_healthcare_desc:0 "$concept_smd_healthcare$, sağlık sistemi [concept_institution] aracılığıyla yürütülen, nüfusa yönelik devlet finansmanlı tıbbi hizmetlerdir. Sürdürülmesi devlete her ay para harcatır; maliyet yatırıma, nüfusa ve ortalama [concept_sol] düzeyine göre değişir."
+ concept_smd_education:0 "Eğitim"
+ concept_smd_education_desc:0 "$concept_smd_education$, okullar [concept_institution] aracılığıyla yürütülen, nüfusun devlet finansmanlı öğrenimidir. Sürdürülmesi devlete her ay para harcatır; maliyet yatırıma, nüfusa ve ortalama [concept_sol] düzeyine göre değişir."
+ concept_smd_police:0 "Polis"
+ concept_smd_police_desc:0 "$concept_smd_police$, polis [concept_institution] aracılığıyla yürütülen, kanun ve düzenin devlet finansmanlı olarak sağlanmasıdır. Sürdürülmesi devlete her ay para harcatır; maliyet yatırıma, nüfusa ve ortalama [concept_sol] düzeyine göre değişir."
+
+ smd_institution_healthcare_expense_mult:0 "[concept_smd_healthcare] Giderlerine Katkı"
+ smd_institution_healthcare_expense_mult_desc:0 "Ulusal [concept_smd_healthcare] giderlerine göreli katkı. Esas olarak işlettiğiniz $building_government_administration$ seviyesi sayısına ([concept_bureaucracy]) bağlıdır; ayrıca [concept_institution] yatırım seviyesi, nüfusunuz ($peasants$ hariç) ve ortalama [concept_sol] de etkilidir.\nSağlık sistemi yasaları maliyeti değiştirir: #tt $law_charitable_health_system$#! en ucuzudur, #tt $law_private_health_insurance$#! standarttır ve #tt $law_public_health_insurance$#! en pahalısıdır. Sağlık sistemi yasası yoksa gider alınmaz."
+
+ smd_institution_education_expense_mult:0 "[concept_smd_education] Giderlerine Katkı"
+ smd_institution_education_expense_mult_desc:0 "Ulusal [concept_smd_education] giderlerine göreli katkı. Esas olarak işlettiğiniz $building_government_administration$ seviyesi sayısına ([concept_bureaucracy]) bağlıdır; ayrıca [concept_institution] yatırım seviyesi, nüfusunuz ($peasants$ hariç) ve ortalama [concept_sol] de etkilidir.\n#tt $law_public_schools$#! ve #tt $law_universal_college$#! ile çocuk bakımı yasaları #tt $law_compulsory_primary_school$#!, #tt $law_privatized_preschool_education$#! ve #tt $law_universal_childcare$#! tarafından artırılır. Bu yasalardan hiçbiri yoksa gider alınmaz."
+
+ smd_institution_police_expense_mult:0 "[concept_smd_police] Giderlerine Katkı"
+ smd_institution_police_expense_mult_desc:0 "Ulusal [concept_smd_police] giderlerine göreli katkı. Esas olarak işlettiğiniz $building_government_administration$ seviyesi sayısına ([concept_bureaucracy]) bağlıdır; ayrıca [concept_institution] yatırım seviyesi, nüfusunuz ($peasants$ hariç) ve ortalama [concept_sol] de etkilidir.\n#tt $law_local_police$#! en ucuzudur, ardından #tt $law_dedicated_police$#! gelir, #tt $law_militarized_police$#! ise en pahalısıdır. Polis yasası yoksa gider alınmaz."
+
+ smd_healthcare_expense_modifier:0 "[concept_smd_healthcare] Giderleri"
+ smd_healthcare_expense_modifier_desc:0 "Devlet sağlık sisteminin işletme maliyeti. Esas olarak işlettiğiniz $building_government_administration$ seviyesi sayısına ([concept_bureaucracy]) bağlıdır; ayrıca [concept_institution] yatırım seviyesi, nüfusunuz ($peasants$ hariç) ve ortalama [concept_sol] de etkilidir."
+
+ smd_education_expense_modifier:0 "[concept_smd_education] Giderleri"
+ smd_education_expense_modifier_desc:0 "Kamu eğitiminin işletme maliyeti. Esas olarak işlettiğiniz $building_government_administration$ seviyesi sayısına ([concept_bureaucracy]) bağlıdır; ayrıca [concept_institution] yatırım seviyesi, nüfusunuz ($peasants$ hariç) ve ortalama [concept_sol] de etkilidir."
+
+ smd_police_expense_modifier:0 "[concept_smd_police] Giderleri"
+ smd_police_expense_modifier_desc:0 "Kolluk kuvvetlerinin işletme maliyeti. Esas olarak işlettiğiniz $building_government_administration$ seviyesi sayısına ([concept_bureaucracy]) bağlıdır; ayrıca [concept_institution] yatırım seviyesi, nüfusunuz ($peasants$ hariç) ve ortalama [concept_sol] de etkilidir."

@@ -1,0 +1,26 @@
+﻿l_french:
+
+ concept_smd_healthcare:0 "Santé"
+ concept_smd_healthcare_desc:0 "$concept_smd_healthcare$ désigne les soins médicaux financés par l’État pour la population, assurés par l’[concept_institution] du système de santé. Son entretien coûte de l’argent à l’État chaque mois, selon l’investissement, la population et le [concept_sol] moyen."
+ concept_smd_education:0 "Éducation"
+ concept_smd_education_desc:0 "$concept_smd_education$ désigne la scolarisation de la population financée par l’État, assurée par l’[concept_institution] des écoles. Son entretien coûte de l’argent à l’État chaque mois, selon l’investissement, la population et le [concept_sol] moyen."
+ concept_smd_police:0 "Police"
+ concept_smd_police_desc:0 "$concept_smd_police$ désigne le maintien de l’ordre financé par l’État, assuré par l’[concept_institution] de la police. Son entretien coûte de l’argent à l’État chaque mois, selon l’investissement, la population et le [concept_sol] moyen."
+
+ smd_institution_healthcare_expense_mult:0 "Contribution aux dépenses : [concept_smd_healthcare]"
+ smd_institution_healthcare_expense_mult_desc:0 "Contribution relative aux dépenses nationales : [concept_smd_healthcare]. Il dépend surtout du nombre de niveaux de $building_government_administration$ que vous gérez ([concept_bureaucracy]), ainsi que du niveau d’investissement de l’[concept_institution], de votre population (hors $peasants$) et de votre [concept_sol] moyen.\nLes lois sur le système de santé modifient le coût : #tt $law_charitable_health_system$#! est la moins chère, #tt $law_private_health_insurance$#! est la norme et #tt $law_public_health_insurance$#! coûte le plus. Sans loi sur le système de santé, aucune dépense n’est prélevée."
+
+ smd_institution_education_expense_mult:0 "Contribution aux dépenses : [concept_smd_education]"
+ smd_institution_education_expense_mult_desc:0 "Contribution relative aux dépenses nationales : [concept_smd_education]. Il dépend surtout du nombre de niveaux de $building_government_administration$ que vous gérez ([concept_bureaucracy]), ainsi que du niveau d’investissement de l’[concept_institution], de votre population (hors $peasants$) et de votre [concept_sol] moyen.\nAugmentée par #tt $law_public_schools$#! et #tt $law_universal_college$#!, ainsi que par les lois sur la petite enfance #tt $law_compulsory_primary_school$#!, #tt $law_privatized_preschool_education$#! et #tt $law_universal_childcare$#!. Sans aucune de ces lois, aucune dépense n’est prélevée."
+
+ smd_institution_police_expense_mult:0 "Contribution aux dépenses : [concept_smd_police]"
+ smd_institution_police_expense_mult_desc:0 "Contribution relative aux dépenses nationales : [concept_smd_police]. Il dépend surtout du nombre de niveaux de $building_government_administration$ que vous gérez ([concept_bureaucracy]), ainsi que du niveau d’investissement de l’[concept_institution], de votre population (hors $peasants$) et de votre [concept_sol] moyen.\n#tt $law_local_police$#! est la moins chère, puis #tt $law_dedicated_police$#!, et #tt $law_militarized_police$#! est la plus coûteuse. Sans loi sur la police, aucune dépense n’est prélevée."
+
+ smd_healthcare_expense_modifier:0 "Dépenses : [concept_smd_healthcare]"
+ smd_healthcare_expense_modifier_desc:0 "Le coût de fonctionnement du système de santé public. Il dépend surtout du nombre de niveaux de $building_government_administration$ que vous gérez ([concept_bureaucracy]), ainsi que du niveau d’investissement de l’[concept_institution], de votre population (hors $peasants$) et de votre [concept_sol] moyen."
+
+ smd_education_expense_modifier:0 "Dépenses : [concept_smd_education]"
+ smd_education_expense_modifier_desc:0 "Le coût de fonctionnement de l’enseignement public. Il dépend surtout du nombre de niveaux de $building_government_administration$ que vous gérez ([concept_bureaucracy]), ainsi que du niveau d’investissement de l’[concept_institution], de votre population (hors $peasants$) et de votre [concept_sol] moyen."
+
+ smd_police_expense_modifier:0 "Dépenses : [concept_smd_police]"
+ smd_police_expense_modifier_desc:0 "Le coût de fonctionnement des forces de l’ordre. Il dépend surtout du nombre de niveaux de $building_government_administration$ que vous gérez ([concept_bureaucracy]), ainsi que du niveau d’investissement de l’[concept_institution], de votre population (hors $peasants$) et de votre [concept_sol] moyen."

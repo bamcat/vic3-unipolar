@@ -1,0 +1,26 @@
+﻿l_japanese:
+
+ concept_smd_healthcare:0 "医療"
+ concept_smd_healthcare_desc:0 "$concept_smd_healthcare$は、医療制度の[concept_institution]を通じて提供される、国費による住民への医療サービスです。 維持には毎月政府の資金が必要で、投資、人口、平均[concept_sol]に応じて増減します。"
+ concept_smd_education:0 "教育"
+ concept_smd_education_desc:0 "$concept_smd_education$は、学校の[concept_institution]を通じて提供される、国費による住民の教育です。 維持には毎月政府の資金が必要で、投資、人口、平均[concept_sol]に応じて増減します。"
+ concept_smd_police:0 "警察"
+ concept_smd_police_desc:0 "$concept_smd_police$は、警察の[concept_institution]を通じて行われる、国費による法と秩序の維持です。 維持には毎月政府の資金が必要で、投資、人口、平均[concept_sol]に応じて増減します。"
+
+ smd_institution_healthcare_expense_mult:0 "[concept_smd_healthcare]支出への寄与"
+ smd_institution_healthcare_expense_mult_desc:0 "国全体の[concept_smd_healthcare]支出への相対的な寄与です。 主に運営している$building_government_administration$のレベル数（[concept_bureaucracy]）に応じて増減し、さらに[concept_institution]への投資レベル、人口（$peasants$を除く）、平均[concept_sol]の影響を受けます。\n医療制度の法律で費用が変わります。#tt $law_charitable_health_system$#!が最も安く、#tt $law_private_health_insurance$#!が標準、#tt $law_public_health_insurance$#!が最も高くなります。医療制度の法律がない場合、支出は発生しません。"
+
+ smd_institution_education_expense_mult:0 "[concept_smd_education]支出への寄与"
+ smd_institution_education_expense_mult_desc:0 "国全体の[concept_smd_education]支出への相対的な寄与です。 主に運営している$building_government_administration$のレベル数（[concept_bureaucracy]）に応じて増減し、さらに[concept_institution]への投資レベル、人口（$peasants$を除く）、平均[concept_sol]の影響を受けます。\n#tt $law_public_schools$#!と#tt $law_universal_college$#!、さらに育児関連の法律#tt $law_compulsory_primary_school$#!、#tt $law_privatized_preschool_education$#!、#tt $law_universal_childcare$#!によって増加します。これらの法律がいずれもない場合、支出は発生しません。"
+
+ smd_institution_police_expense_mult:0 "[concept_smd_police]支出への寄与"
+ smd_institution_police_expense_mult_desc:0 "国全体の[concept_smd_police]支出への相対的な寄与です。 主に運営している$building_government_administration$のレベル数（[concept_bureaucracy]）に応じて増減し、さらに[concept_institution]への投資レベル、人口（$peasants$を除く）、平均[concept_sol]の影響を受けます。\n#tt $law_local_police$#!が最も安く、次に#tt $law_dedicated_police$#!、#tt $law_militarized_police$#!が最も高くなります。警察の法律がない場合、支出は発生しません。"
+
+ smd_healthcare_expense_modifier:0 "[concept_smd_healthcare]支出"
+ smd_healthcare_expense_modifier_desc:0 "国営医療制度の運営費です。 主に運営している$building_government_administration$のレベル数（[concept_bureaucracy]）に応じて増減し、さらに[concept_institution]への投資レベル、人口（$peasants$を除く）、平均[concept_sol]の影響を受けます。"
+
+ smd_education_expense_modifier:0 "[concept_smd_education]支出"
+ smd_education_expense_modifier_desc:0 "公教育の運営費です。 主に運営している$building_government_administration$のレベル数（[concept_bureaucracy]）に応じて増減し、さらに[concept_institution]への投資レベル、人口（$peasants$を除く）、平均[concept_sol]の影響を受けます。"
+
+ smd_police_expense_modifier:0 "[concept_smd_police]支出"
+ smd_police_expense_modifier_desc:0 "治安維持の運営費です。 主に運営している$building_government_administration$のレベル数（[concept_bureaucracy]）に応じて増減し、さらに[concept_institution]への投資レベル、人口（$peasants$を除く）、平均[concept_sol]の影響を受けます。"

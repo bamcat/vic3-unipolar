@@ -16,11 +16,19 @@ fin_bond_ratio = {
 	}
 }
 
+fin_total_debt = {
+	value = principal
+	if = {
+		limit = { has_variable = fin_bond_stock }
+		add = var:fin_bond_stock
+	}
+}
+
 fin_debt_ratio = {
 	value = 0
 	if = {
 		limit = { gdp > 0 }
-		value = principal
+		value = fin_total_debt
 		divide = gdp
 		multiply = 100
 	}

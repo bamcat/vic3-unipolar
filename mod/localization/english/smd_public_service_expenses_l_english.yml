@@ -1,0 +1,19 @@
+﻿l_english:
+
+ smd_institution_healthcare_expense_mult:0 "[concept_smd_healthcare] Expense Contribution"
+ smd_institution_healthcare_expense_mult_desc:0 "Relative contribution to national [concept_smd_healthcare] expenses. Scales primarily with the number of Government Administrations you run ([concept_bureaucracy]), plus the [concept_institution]'s investment level, your population (not counting $peasants$) and your average [concept_sol].\nHealth-system [concept_law|l]s change the cost: #tt $law_charitable_health_system$#! is cheapest, #tt $law_private_health_insurance$#! is standard, and #tt $law_public_health_insurance$#! costs the most. With no health-system law, no expense is charged."
+
+ smd_institution_education_expense_mult:0 "[concept_smd_education] Expense Contribution"
+ smd_institution_education_expense_mult_desc:0 "Relative contribution to national [concept_smd_education] expenses. Scales primarily with the number of Government Administrations you run ([concept_bureaucracy]), plus the [concept_institution]'s investment level, your population (not counting $peasants$) and your average [concept_sol].\nRaised by #tt $law_public_schools$#! and #tt $law_universal_college$#!, and by the childcare [concept_law|l]s #tt $law_compulsory_primary_school$#!, #tt $law_privatized_preschool_education$#! and #tt $law_universal_childcare$#!. With none of these laws, no expense is charged."
+
+ smd_institution_police_expense_mult:0 "[concept_smd_police] Expense Contribution"
+ smd_institution_police_expense_mult_desc:0 "Relative contribution to national [concept_smd_police] expenses. Scales primarily with the number of Government Administrations you run ([concept_bureaucracy]), plus the [concept_institution]'s investment level, your population (not counting $peasants$) and your average [concept_sol].\n#tt $law_local_police$#! is cheapest, then #tt $law_dedicated_police$#!, with #tt $law_militarized_police$#! the most expensive. With no policing law, no expense is charged."
+
+ smd_healthcare_expense_modifier:0 "[concept_smd_healthcare] Expenses"
+ smd_healthcare_expense_modifier_desc:0 "The running cost of the state health system. Scales primarily with the number of Government Administrations you run ([concept_bureaucracy]), plus the [concept_institution]'s investment level, your population (not counting $peasants$) and your average [concept_sol]."
+
+ smd_education_expense_modifier:0 "[concept_smd_education] Expenses"
+ smd_education_expense_modifier_desc:0 "The running cost of public [concept_smd_education|l]. Scales primarily with the number of Government Administrations you run ([concept_bureaucracy]), plus the [concept_institution]'s investment level, your population (not counting $peasants$) and your average [concept_sol]."
+
+ smd_police_expense_modifier:0 "[concept_smd_police] Expenses"
+ smd_police_expense_modifier_desc:0 "The running cost of law enforcement. Scales primarily with the number of Government Administrations you run ([concept_bureaucracy]), plus the [concept_institution]'s investment level, your population (not counting $peasants$) and your average [concept_sol]."

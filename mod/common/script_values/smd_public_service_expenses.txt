@@ -4,9 +4,23 @@
 	min = 1
 }
 
+smd_public_service_covered_share = {
+	value = 1
+	subtract = "pop_type_percent_country(pop_type:peasants)"
+	min = 0
+}
+
 smd_public_service_pop_factor = {
 	value = smd_population
-	divide = 1000000
+	multiply = smd_public_service_covered_share
+	divide = 2500000
+}
+
+smd_public_service_sol_factor = {
+	value = average_sol
+	divide = 20
+	min = 0.25
+	max = 2.5
 }
 
 # ================================================================
@@ -46,6 +60,7 @@ smd_healthcare_expense_value = {
 
 		# light population scaler
 		multiply = smd_public_service_pop_factor
+		multiply = smd_public_service_sol_factor
 	}
 
 	min = 0
@@ -103,6 +118,7 @@ smd_education_expense_value = {
 
 		# light population scaler
 		multiply = smd_public_service_pop_factor
+		multiply = smd_public_service_sol_factor
 	}
 
 	min = 0
@@ -145,6 +161,7 @@ smd_police_expense_value = {
 
 		# light population scaler
 		multiply = smd_public_service_pop_factor
+		multiply = smd_public_service_sol_factor
 	}
 
 	min = 0

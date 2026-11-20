@@ -101,6 +101,7 @@ smd_je_devolution = {
 		trigger = {
 			OR = {
 				NOT = { exists = scope:target }
+				has_law = law_type:law_multicultural
 				scope:target = {
 					NOT = { owner = ROOT }
 				}

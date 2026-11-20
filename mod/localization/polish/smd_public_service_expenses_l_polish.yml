@@ -1,0 +1,26 @@
+﻿l_polish:
+
+ concept_smd_healthcare:0 "Opieka zdrowotna"
+ concept_smd_healthcare_desc:0 "$concept_smd_healthcare$ to finansowana przez państwo opieka medyczna dla ludności, prowadzona przez [concept_institution] systemu ochrony zdrowia. Jej utrzymanie co miesiąc kosztuje państwo pieniądze, zależnie od inwestycji, liczby ludności i średniego poziomu życia."
+ concept_smd_education:0 "Edukacja"
+ concept_smd_education_desc:0 "$concept_smd_education$ to finansowane przez państwo kształcenie ludności, prowadzone przez [concept_institution] szkolnictwa. Jej utrzymanie co miesiąc kosztuje państwo pieniądze, zależnie od inwestycji, liczby ludności i średniego poziomu życia."
+ concept_smd_police:0 "Policja"
+ concept_smd_police_desc:0 "$concept_smd_police$ to finansowane przez państwo egzekwowanie prawa i porządku, prowadzone przez [concept_institution] policji. Jej utrzymanie co miesiąc kosztuje państwo pieniądze, zależnie od inwestycji, liczby ludności i średniego poziomu życia."
+
+ smd_institution_healthcare_expense_mult:0 "Udział w wydatkach: [concept_smd_healthcare]"
+ smd_institution_healthcare_expense_mult_desc:0 "Względny udział w krajowych wydatkach: [concept_smd_healthcare]. Zależy głównie od liczby poziomów budynku $building_government_administration$ ([concept_bureaucracy]). Wpływ mają też poziom inwestycji w [concept_institution], liczba ludności (bez grupy $peasants$) oraz średni [concept_sol].\nPrawa dotyczące systemu ochrony zdrowia zmieniają koszt: #tt $law_charitable_health_system$#! jest najtańsze, #tt $law_private_health_insurance$#! jest standardem, a #tt $law_public_health_insurance$#! kosztuje najwięcej. Bez takiego prawa wydatki nie są naliczane."
+
+ smd_institution_education_expense_mult:0 "Udział w wydatkach: [concept_smd_education]"
+ smd_institution_education_expense_mult_desc:0 "Względny udział w krajowych wydatkach: [concept_smd_education]. Zależy głównie od liczby poziomów budynku $building_government_administration$ ([concept_bureaucracy]). Wpływ mają też poziom inwestycji w [concept_institution], liczba ludności (bez grupy $peasants$) oraz średni [concept_sol].\nZwiększają go #tt $law_public_schools$#! i #tt $law_universal_college$#! oraz prawa dotyczące opieki nad dziećmi: #tt $law_compulsory_primary_school$#!, #tt $law_privatized_preschool_education$#! i #tt $law_universal_childcare$#!. Bez żadnego z tych praw wydatki nie są naliczane."
+
+ smd_institution_police_expense_mult:0 "Udział w wydatkach: [concept_smd_police]"
+ smd_institution_police_expense_mult_desc:0 "Względny udział w krajowych wydatkach: [concept_smd_police]. Zależy głównie od liczby poziomów budynku $building_government_administration$ ([concept_bureaucracy]). Wpływ mają też poziom inwestycji w [concept_institution], liczba ludności (bez grupy $peasants$) oraz średni [concept_sol].\n#tt $law_local_police$#! jest najtańsza, potem #tt $law_dedicated_police$#!, a #tt $law_militarized_police$#! jest najdroższa. Bez prawa dotyczącego policji wydatki nie są naliczane."
+
+ smd_healthcare_expense_modifier:0 "Wydatki: [concept_smd_healthcare]"
+ smd_healthcare_expense_modifier_desc:0 "Bieżący koszt państwowego systemu ochrony zdrowia. Zależy głównie od liczby poziomów budynku $building_government_administration$ ([concept_bureaucracy]). Wpływ mają też poziom inwestycji w [concept_institution], liczba ludności (bez grupy $peasants$) oraz średni [concept_sol]."
+
+ smd_education_expense_modifier:0 "Wydatki: [concept_smd_education]"
+ smd_education_expense_modifier_desc:0 "Bieżący koszt publicznej edukacji. Zależy głównie od liczby poziomów budynku $building_government_administration$ ([concept_bureaucracy]). Wpływ mają też poziom inwestycji w [concept_institution], liczba ludności (bez grupy $peasants$) oraz średni [concept_sol]."
+
+ smd_police_expense_modifier:0 "Wydatki: [concept_smd_police]"
+ smd_police_expense_modifier_desc:0 "Bieżący koszt egzekwowania prawa. Zależy głównie od liczby poziomów budynku $building_government_administration$ ([concept_bureaucracy]). Wpływ mają też poziom inwestycji w [concept_institution], liczba ludności (bez grupy $peasants$) oraz średni [concept_sol]."

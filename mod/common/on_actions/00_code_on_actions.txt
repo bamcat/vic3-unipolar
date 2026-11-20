@@ -4,6 +4,7 @@
 
 on_game_started_after_lobby = {
 	effect = {
+		set_global_variable = smd_public_service_expenses_enabled
 		every_country = {
 			limit = { exists = this }
 			smd_apply_public_service_expenses = yes

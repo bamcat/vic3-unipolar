@@ -1,0 +1,26 @@
+﻿l_german:
+
+ concept_smd_healthcare:0 "Gesundheitswesen"
+ concept_smd_healthcare_desc:0 "$concept_smd_healthcare$ ist die staatlich finanzierte medizinische Versorgung der Bevölkerung, organisiert über die [concept_institution] des Gesundheitssystems. Der Unterhalt kostet den Staat jeden Monat Geld, abhängig von Investitionen, Bevölkerung und durchschnittlichem [concept_sol]."
+ concept_smd_education:0 "Bildung"
+ concept_smd_education_desc:0 "$concept_smd_education$ ist die staatlich finanzierte Schulbildung der Bevölkerung, organisiert über die [concept_institution] des Schulwesens. Der Unterhalt kostet den Staat jeden Monat Geld, abhängig von Investitionen, Bevölkerung und durchschnittlichem [concept_sol]."
+ concept_smd_police:0 "Polizei"
+ concept_smd_police_desc:0 "$concept_smd_police$ ist die staatlich finanzierte Durchsetzung von Recht und Ordnung, organisiert über die [concept_institution] der Polizei. Der Unterhalt kostet den Staat jeden Monat Geld, abhängig von Investitionen, Bevölkerung und durchschnittlichem [concept_sol]."
+
+ smd_institution_healthcare_expense_mult:0 "Beitrag zu den Ausgaben für [concept_smd_healthcare]"
+ smd_institution_healthcare_expense_mult_desc:0 "Relativer Beitrag zu den landesweiten Ausgaben für [concept_smd_healthcare]. Sie richten sich vor allem nach der Zahl Ihrer Stufen von $building_government_administration$ ([concept_bureaucracy]), außerdem nach dem Investitionsniveau der [concept_institution], Ihrer Bevölkerung (ohne $peasants$) und Ihrem durchschnittlichen [concept_sol].\nDie Gesetze zum Gesundheitssystem bestimmen die Kosten: #tt $law_charitable_health_system$#! ist am günstigsten, #tt $law_private_health_insurance$#! ist der Standard, und #tt $law_public_health_insurance$#! ist am teuersten. Ohne ein solches Gesetz fallen keine Ausgaben an."
+
+ smd_institution_education_expense_mult:0 "Beitrag zu den Ausgaben für [concept_smd_education]"
+ smd_institution_education_expense_mult_desc:0 "Relativer Beitrag zu den landesweiten Ausgaben für [concept_smd_education]. Sie richten sich vor allem nach der Zahl Ihrer Stufen von $building_government_administration$ ([concept_bureaucracy]), außerdem nach dem Investitionsniveau der [concept_institution], Ihrer Bevölkerung (ohne $peasants$) und Ihrem durchschnittlichen [concept_sol].\nErhöht durch #tt $law_public_schools$#! und #tt $law_universal_college$#! sowie durch die Gesetze zur Kinderbetreuung #tt $law_compulsory_primary_school$#!, #tt $law_privatized_preschool_education$#! und #tt $law_universal_childcare$#!. Ohne eines dieser Gesetze fallen keine Ausgaben an."
+
+ smd_institution_police_expense_mult:0 "Beitrag zu den Ausgaben für [concept_smd_police]"
+ smd_institution_police_expense_mult_desc:0 "Relativer Beitrag zu den landesweiten Ausgaben für [concept_smd_police]. Sie richten sich vor allem nach der Zahl Ihrer Stufen von $building_government_administration$ ([concept_bureaucracy]), außerdem nach dem Investitionsniveau der [concept_institution], Ihrer Bevölkerung (ohne $peasants$) und Ihrem durchschnittlichen [concept_sol].\n#tt $law_local_police$#! ist am günstigsten, dann folgt #tt $law_dedicated_police$#!, und #tt $law_militarized_police$#! ist am teuersten. Ohne ein Polizeigesetz fallen keine Ausgaben an."
+
+ smd_healthcare_expense_modifier:0 "Ausgaben für [concept_smd_healthcare]"
+ smd_healthcare_expense_modifier_desc:0 "Die laufenden Kosten des staatlichen Gesundheitssystems. Sie richten sich vor allem nach der Zahl Ihrer Stufen von $building_government_administration$ ([concept_bureaucracy]), außerdem nach dem Investitionsniveau der [concept_institution], Ihrer Bevölkerung (ohne $peasants$) und Ihrem durchschnittlichen [concept_sol]."
+
+ smd_education_expense_modifier:0 "Ausgaben für [concept_smd_education]"
+ smd_education_expense_modifier_desc:0 "Die laufenden Kosten des öffentlichen Bildungswesens. Sie richten sich vor allem nach der Zahl Ihrer Stufen von $building_government_administration$ ([concept_bureaucracy]), außerdem nach dem Investitionsniveau der [concept_institution], Ihrer Bevölkerung (ohne $peasants$) und Ihrem durchschnittlichen [concept_sol]."
+
+ smd_police_expense_modifier:0 "Ausgaben für [concept_smd_police]"
+ smd_police_expense_modifier_desc:0 "Die laufenden Kosten der Strafverfolgung. Sie richten sich vor allem nach der Zahl Ihrer Stufen von $building_government_administration$ ([concept_bureaucracy]), außerdem nach dem Investitionsniveau der [concept_institution], Ihrer Bevölkerung (ohne $peasants$) und Ihrem durchschnittlichen [concept_sol]."

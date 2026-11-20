@@ -144,210 +144,216 @@ flowcontainer = {
 		widget = {
 			position = { 30 40 }
 			size = { 70 78 }
+			datacontext = "[GetGoods('groceries').WithMarketContext(AccessPlayer.GetMarket.Self)]"
 			tooltip = "RUS_ST_GOOD_GROCERIES_TT"
 			icon = {
 				position = { 14 0 }
 				size = { 42 42 }
-				texture = "gfx/interface/icons/goods_icons/groceries.dds"
+				texture = "[Goods.GetTexture]"
 			}
 			textbox = {
-				visible = "[GreaterThan_CFixedPoint(AccessPlayer.MakeScope.Var('fin_price_groceries').GetValue, '(CFixedPoint)0')]"
+				visible = "[GreaterThanOrEqualTo_CFixedPoint(Goods.GetPercentageDeltaAgainstBasePrice(Goods.GetMarketPrice), '(CFixedPoint)0.005')]"
 				position = { 0 46 }
 				size = { 70 24 }
 				align = center|nobaseline
 				using = fontsize_large
-				raw_text = "#negative [AccessPlayer.MakeScope.Var('fin_price_groceries').GetValue|+0]%#!"
+				text = "#negative +[Goods.GetPercentageDeltaAgainstBasePrice(Goods.GetMarketPrice)|%0]#!"
 			}
 			textbox = {
-				visible = "[LessThan_CFixedPoint(AccessPlayer.MakeScope.Var('fin_price_groceries').GetValue, '(CFixedPoint)0')]"
+				visible = "[LessThanOrEqualTo_CFixedPoint(Goods.GetPercentageDeltaAgainstBasePrice(Goods.GetMarketPrice), '(CFixedPoint)-0.005')]"
 				position = { 0 46 }
 				size = { 70 24 }
 				align = center|nobaseline
 				using = fontsize_large
-				raw_text = "#positive [AccessPlayer.MakeScope.Var('fin_price_groceries').GetValue|+0]%#!"
+				text = "#positive [Goods.GetPercentageDeltaAgainstBasePrice(Goods.GetMarketPrice)|%0]#!"
 			}
 			textbox = {
-				visible = "[EqualTo_CFixedPoint(AccessPlayer.MakeScope.Var('fin_price_groceries').GetValue, '(CFixedPoint)0')]"
+				visible = "[And(LessThan_CFixedPoint(Goods.GetPercentageDeltaAgainstBasePrice(Goods.GetMarketPrice), '(CFixedPoint)0.005'), GreaterThan_CFixedPoint(Goods.GetPercentageDeltaAgainstBasePrice(Goods.GetMarketPrice), '(CFixedPoint)-0.005'))]"
 				position = { 0 46 }
 				size = { 70 24 }
 				align = center|nobaseline
 				using = fontsize_large
-				raw_text = "0%"
+				text = "0%"
 			}
 		}
 
 		widget = {
 			position = { 106 40 }
 			size = { 70 78 }
+			datacontext = "[GetGoods('grain').WithMarketContext(AccessPlayer.GetMarket.Self)]"
 			tooltip = "RUS_ST_GOOD_GRAIN_TT"
 			icon = {
 				position = { 14 0 }
 				size = { 42 42 }
-				texture = "gfx/interface/icons/goods_icons/grain.dds"
+				texture = "[Goods.GetTexture]"
 			}
 			textbox = {
-				visible = "[GreaterThan_CFixedPoint(AccessPlayer.MakeScope.Var('fin_price_grain').GetValue, '(CFixedPoint)0')]"
+				visible = "[GreaterThanOrEqualTo_CFixedPoint(Goods.GetPercentageDeltaAgainstBasePrice(Goods.GetMarketPrice), '(CFixedPoint)0.005')]"
 				position = { 0 46 }
 				size = { 70 24 }
 				align = center|nobaseline
 				using = fontsize_large
-				raw_text = "#negative [AccessPlayer.MakeScope.Var('fin_price_grain').GetValue|+0]%#!"
+				text = "#negative +[Goods.GetPercentageDeltaAgainstBasePrice(Goods.GetMarketPrice)|%0]#!"
 			}
 			textbox = {
-				visible = "[LessThan_CFixedPoint(AccessPlayer.MakeScope.Var('fin_price_grain').GetValue, '(CFixedPoint)0')]"
+				visible = "[LessThanOrEqualTo_CFixedPoint(Goods.GetPercentageDeltaAgainstBasePrice(Goods.GetMarketPrice), '(CFixedPoint)-0.005')]"
 				position = { 0 46 }
 				size = { 70 24 }
 				align = center|nobaseline
 				using = fontsize_large
-				raw_text = "#positive [AccessPlayer.MakeScope.Var('fin_price_grain').GetValue|+0]%#!"
+				text = "#positive [Goods.GetPercentageDeltaAgainstBasePrice(Goods.GetMarketPrice)|%0]#!"
 			}
 			textbox = {
-				visible = "[EqualTo_CFixedPoint(AccessPlayer.MakeScope.Var('fin_price_grain').GetValue, '(CFixedPoint)0')]"
+				visible = "[And(LessThan_CFixedPoint(Goods.GetPercentageDeltaAgainstBasePrice(Goods.GetMarketPrice), '(CFixedPoint)0.005'), GreaterThan_CFixedPoint(Goods.GetPercentageDeltaAgainstBasePrice(Goods.GetMarketPrice), '(CFixedPoint)-0.005'))]"
 				position = { 0 46 }
 				size = { 70 24 }
 				align = center|nobaseline
 				using = fontsize_large
-				raw_text = "0%"
+				text = "0%"
 			}
 		}
 
 		widget = {
 			position = { 182 40 }
 			size = { 70 78 }
+			datacontext = "[GetGoods('clothes').WithMarketContext(AccessPlayer.GetMarket.Self)]"
 			tooltip = "RUS_ST_GOOD_CLOTHES_TT"
 			icon = {
 				position = { 14 0 }
 				size = { 42 42 }
-				texture = "gfx/interface/icons/goods_icons/clothes.dds"
+				texture = "[Goods.GetTexture]"
 			}
 			textbox = {
-				visible = "[GreaterThan_CFixedPoint(AccessPlayer.MakeScope.Var('fin_price_clothes').GetValue, '(CFixedPoint)0')]"
+				visible = "[GreaterThanOrEqualTo_CFixedPoint(Goods.GetPercentageDeltaAgainstBasePrice(Goods.GetMarketPrice), '(CFixedPoint)0.005')]"
 				position = { 0 46 }
 				size = { 70 24 }
 				align = center|nobaseline
 				using = fontsize_large
-				raw_text = "#negative [AccessPlayer.MakeScope.Var('fin_price_clothes').GetValue|+0]%#!"
+				text = "#negative +[Goods.GetPercentageDeltaAgainstBasePrice(Goods.GetMarketPrice)|%0]#!"
 			}
 			textbox = {
-				visible = "[LessThan_CFixedPoint(AccessPlayer.MakeScope.Var('fin_price_clothes').GetValue, '(CFixedPoint)0')]"
+				visible = "[LessThanOrEqualTo_CFixedPoint(Goods.GetPercentageDeltaAgainstBasePrice(Goods.GetMarketPrice), '(CFixedPoint)-0.005')]"
 				position = { 0 46 }
 				size = { 70 24 }
 				align = center|nobaseline
 				using = fontsize_large
-				raw_text = "#positive [AccessPlayer.MakeScope.Var('fin_price_clothes').GetValue|+0]%#!"
+				text = "#positive [Goods.GetPercentageDeltaAgainstBasePrice(Goods.GetMarketPrice)|%0]#!"
 			}
 			textbox = {
-				visible = "[EqualTo_CFixedPoint(AccessPlayer.MakeScope.Var('fin_price_clothes').GetValue, '(CFixedPoint)0')]"
+				visible = "[And(LessThan_CFixedPoint(Goods.GetPercentageDeltaAgainstBasePrice(Goods.GetMarketPrice), '(CFixedPoint)0.005'), GreaterThan_CFixedPoint(Goods.GetPercentageDeltaAgainstBasePrice(Goods.GetMarketPrice), '(CFixedPoint)-0.005'))]"
 				position = { 0 46 }
 				size = { 70 24 }
 				align = center|nobaseline
 				using = fontsize_large
-				raw_text = "0%"
+				text = "0%"
 			}
 		}
 
 		widget = {
 			position = { 258 40 }
 			size = { 70 78 }
+			datacontext = "[GetGoods('furniture').WithMarketContext(AccessPlayer.GetMarket.Self)]"
 			tooltip = "RUS_ST_GOOD_FURNITURE_TT"
 			icon = {
 				position = { 14 0 }
 				size = { 42 42 }
-				texture = "gfx/interface/icons/goods_icons/furniture.dds"
+				texture = "[Goods.GetTexture]"
 			}
 			textbox = {
-				visible = "[GreaterThan_CFixedPoint(AccessPlayer.MakeScope.Var('fin_price_furniture').GetValue, '(CFixedPoint)0')]"
+				visible = "[GreaterThanOrEqualTo_CFixedPoint(Goods.GetPercentageDeltaAgainstBasePrice(Goods.GetMarketPrice), '(CFixedPoint)0.005')]"
 				position = { 0 46 }
 				size = { 70 24 }
 				align = center|nobaseline
 				using = fontsize_large
-				raw_text = "#negative [AccessPlayer.MakeScope.Var('fin_price_furniture').GetValue|+0]%#!"
+				text = "#negative +[Goods.GetPercentageDeltaAgainstBasePrice(Goods.GetMarketPrice)|%0]#!"
 			}
 			textbox = {
-				visible = "[LessThan_CFixedPoint(AccessPlayer.MakeScope.Var('fin_price_furniture').GetValue, '(CFixedPoint)0')]"
+				visible = "[LessThanOrEqualTo_CFixedPoint(Goods.GetPercentageDeltaAgainstBasePrice(Goods.GetMarketPrice), '(CFixedPoint)-0.005')]"
 				position = { 0 46 }
 				size = { 70 24 }
 				align = center|nobaseline
 				using = fontsize_large
-				raw_text = "#positive [AccessPlayer.MakeScope.Var('fin_price_furniture').GetValue|+0]%#!"
+				text = "#positive [Goods.GetPercentageDeltaAgainstBasePrice(Goods.GetMarketPrice)|%0]#!"
 			}
 			textbox = {
-				visible = "[EqualTo_CFixedPoint(AccessPlayer.MakeScope.Var('fin_price_furniture').GetValue, '(CFixedPoint)0')]"
+				visible = "[And(LessThan_CFixedPoint(Goods.GetPercentageDeltaAgainstBasePrice(Goods.GetMarketPrice), '(CFixedPoint)0.005'), GreaterThan_CFixedPoint(Goods.GetPercentageDeltaAgainstBasePrice(Goods.GetMarketPrice), '(CFixedPoint)-0.005'))]"
 				position = { 0 46 }
 				size = { 70 24 }
 				align = center|nobaseline
 				using = fontsize_large
-				raw_text = "0%"
+				text = "0%"
 			}
 		}
 
 		widget = {
 			position = { 334 40 }
 			size = { 70 78 }
+			datacontext = "[GetGoods('liquor').WithMarketContext(AccessPlayer.GetMarket.Self)]"
 			tooltip = "RUS_ST_GOOD_LIQUOR_TT"
 			icon = {
 				position = { 14 0 }
 				size = { 42 42 }
-				texture = "gfx/interface/icons/goods_icons/liquor.dds"
+				texture = "[Goods.GetTexture]"
 			}
 			textbox = {
-				visible = "[GreaterThan_CFixedPoint(AccessPlayer.MakeScope.Var('fin_price_liquor').GetValue, '(CFixedPoint)0')]"
+				visible = "[GreaterThanOrEqualTo_CFixedPoint(Goods.GetPercentageDeltaAgainstBasePrice(Goods.GetMarketPrice), '(CFixedPoint)0.005')]"
 				position = { 0 46 }
 				size = { 70 24 }
 				align = center|nobaseline
 				using = fontsize_large
-				raw_text = "#negative [AccessPlayer.MakeScope.Var('fin_price_liquor').GetValue|+0]%#!"
+				text = "#negative +[Goods.GetPercentageDeltaAgainstBasePrice(Goods.GetMarketPrice)|%0]#!"
 			}
 			textbox = {
-				visible = "[LessThan_CFixedPoint(AccessPlayer.MakeScope.Var('fin_price_liquor').GetValue, '(CFixedPoint)0')]"
+				visible = "[LessThanOrEqualTo_CFixedPoint(Goods.GetPercentageDeltaAgainstBasePrice(Goods.GetMarketPrice), '(CFixedPoint)-0.005')]"
 				position = { 0 46 }
 				size = { 70 24 }
 				align = center|nobaseline
 				using = fontsize_large
-				raw_text = "#positive [AccessPlayer.MakeScope.Var('fin_price_liquor').GetValue|+0]%#!"
+				text = "#positive [Goods.GetPercentageDeltaAgainstBasePrice(Goods.GetMarketPrice)|%0]#!"
 			}
 			textbox = {
-				visible = "[EqualTo_CFixedPoint(AccessPlayer.MakeScope.Var('fin_price_liquor').GetValue, '(CFixedPoint)0')]"
+				visible = "[And(LessThan_CFixedPoint(Goods.GetPercentageDeltaAgainstBasePrice(Goods.GetMarketPrice), '(CFixedPoint)0.005'), GreaterThan_CFixedPoint(Goods.GetPercentageDeltaAgainstBasePrice(Goods.GetMarketPrice), '(CFixedPoint)-0.005'))]"
 				position = { 0 46 }
 				size = { 70 24 }
 				align = center|nobaseline
 				using = fontsize_large
-				raw_text = "0%"
+				text = "0%"
 			}
 		}
 
 		widget = {
 			position = { 410 40 }
 			size = { 70 78 }
+			datacontext = "[GetGoods('appliances').WithMarketContext(AccessPlayer.GetMarket.Self)]"
 			tooltip = "RUS_ST_GOOD_APPLIANCES_TT"
 			icon = {
 				position = { 14 0 }
 				size = { 42 42 }
-				texture = "gfx/interface/icons/goods_icons/appliances.dds"
+				texture = "[Goods.GetTexture]"
 			}
 			textbox = {
-				visible = "[GreaterThan_CFixedPoint(AccessPlayer.MakeScope.Var('fin_price_appliances').GetValue, '(CFixedPoint)0')]"
+				visible = "[GreaterThanOrEqualTo_CFixedPoint(Goods.GetPercentageDeltaAgainstBasePrice(Goods.GetMarketPrice), '(CFixedPoint)0.005')]"
 				position = { 0 46 }
 				size = { 70 24 }
 				align = center|nobaseline
 				using = fontsize_large
-				raw_text = "#negative [AccessPlayer.MakeScope.Var('fin_price_appliances').GetValue|+0]%#!"
+				text = "#negative +[Goods.GetPercentageDeltaAgainstBasePrice(Goods.GetMarketPrice)|%0]#!"
 			}
 			textbox = {
-				visible = "[LessThan_CFixedPoint(AccessPlayer.MakeScope.Var('fin_price_appliances').GetValue, '(CFixedPoint)0')]"
+				visible = "[LessThanOrEqualTo_CFixedPoint(Goods.GetPercentageDeltaAgainstBasePrice(Goods.GetMarketPrice), '(CFixedPoint)-0.005')]"
 				position = { 0 46 }
 				size = { 70 24 }
 				align = center|nobaseline
 				using = fontsize_large
-				raw_text = "#positive [AccessPlayer.MakeScope.Var('fin_price_appliances').GetValue|+0]%#!"
+				text = "#positive [Goods.GetPercentageDeltaAgainstBasePrice(Goods.GetMarketPrice)|%0]#!"
 			}
 			textbox = {
-				visible = "[EqualTo_CFixedPoint(AccessPlayer.MakeScope.Var('fin_price_appliances').GetValue, '(CFixedPoint)0')]"
+				visible = "[And(LessThan_CFixedPoint(Goods.GetPercentageDeltaAgainstBasePrice(Goods.GetMarketPrice), '(CFixedPoint)0.005'), GreaterThan_CFixedPoint(Goods.GetPercentageDeltaAgainstBasePrice(Goods.GetMarketPrice), '(CFixedPoint)-0.005'))]"
 				position = { 0 46 }
 				size = { 70 24 }
 				align = center|nobaseline
 				using = fontsize_large
-				raw_text = "0%"
+				text = "0%"
 			}
 		}
 
@@ -361,37 +367,37 @@ flowcontainer = {
 		}
 
 		textbox = {
-			visible = "[GreaterThanOrEqualTo_CFixedPoint(AccessPlayer.MakeScope.Var('fin_cpi').GetValue, '(CFixedPoint)15')]"
+			visible = "[GreaterThanOrEqualTo_CFixedPoint(Divide_CFixedPoint(Add_CFixedPoint(Add_CFixedPoint(Add_CFixedPoint(Add_CFixedPoint(Add_CFixedPoint(GetGoods('groceries').WithMarketContext(AccessPlayer.GetMarket.Self).GetPercentageDeltaAgainstBasePrice(GetGoods('groceries').WithMarketContext(AccessPlayer.GetMarket.Self).GetMarketPrice), GetGoods('grain').WithMarketContext(AccessPlayer.GetMarket.Self).GetPercentageDeltaAgainstBasePrice(GetGoods('grain').WithMarketContext(AccessPlayer.GetMarket.Self).GetMarketPrice)), GetGoods('clothes').WithMarketContext(AccessPlayer.GetMarket.Self).GetPercentageDeltaAgainstBasePrice(GetGoods('clothes').WithMarketContext(AccessPlayer.GetMarket.Self).GetMarketPrice)), GetGoods('furniture').WithMarketContext(AccessPlayer.GetMarket.Self).GetPercentageDeltaAgainstBasePrice(GetGoods('furniture').WithMarketContext(AccessPlayer.GetMarket.Self).GetMarketPrice)), GetGoods('liquor').WithMarketContext(AccessPlayer.GetMarket.Self).GetPercentageDeltaAgainstBasePrice(GetGoods('liquor').WithMarketContext(AccessPlayer.GetMarket.Self).GetMarketPrice)), GetGoods('appliances').WithMarketContext(AccessPlayer.GetMarket.Self).GetPercentageDeltaAgainstBasePrice(GetGoods('appliances').WithMarketContext(AccessPlayer.GetMarket.Self).GetMarketPrice)), '(CFixedPoint)6'), '(CFixedPoint)0.15')]"
 			position = { 25 152 }
 			size = { 150 44 }
 			align = left|nobaseline
 			using = fontsize_xxl
 			tooltip = "RUS_ST_CPI_TT"
-			raw_text = "#negative [AccessPlayer.MakeScope.Var('fin_cpi').GetValue|+0]%#!"
+			text = "#negative +[Divide_CFixedPoint(Add_CFixedPoint(Add_CFixedPoint(Add_CFixedPoint(Add_CFixedPoint(Add_CFixedPoint(GetGoods('groceries').WithMarketContext(AccessPlayer.GetMarket.Self).GetPercentageDeltaAgainstBasePrice(GetGoods('groceries').WithMarketContext(AccessPlayer.GetMarket.Self).GetMarketPrice), GetGoods('grain').WithMarketContext(AccessPlayer.GetMarket.Self).GetPercentageDeltaAgainstBasePrice(GetGoods('grain').WithMarketContext(AccessPlayer.GetMarket.Self).GetMarketPrice)), GetGoods('clothes').WithMarketContext(AccessPlayer.GetMarket.Self).GetPercentageDeltaAgainstBasePrice(GetGoods('clothes').WithMarketContext(AccessPlayer.GetMarket.Self).GetMarketPrice)), GetGoods('furniture').WithMarketContext(AccessPlayer.GetMarket.Self).GetPercentageDeltaAgainstBasePrice(GetGoods('furniture').WithMarketContext(AccessPlayer.GetMarket.Self).GetMarketPrice)), GetGoods('liquor').WithMarketContext(AccessPlayer.GetMarket.Self).GetPercentageDeltaAgainstBasePrice(GetGoods('liquor').WithMarketContext(AccessPlayer.GetMarket.Self).GetMarketPrice)), GetGoods('appliances').WithMarketContext(AccessPlayer.GetMarket.Self).GetPercentageDeltaAgainstBasePrice(GetGoods('appliances').WithMarketContext(AccessPlayer.GetMarket.Self).GetMarketPrice)), '(CFixedPoint)6')|%0]#!"
 		}
 
 		textbox = {
-			visible = "[And(LessThan_CFixedPoint(AccessPlayer.MakeScope.Var('fin_cpi').GetValue, '(CFixedPoint)15'), GreaterThan_CFixedPoint(AccessPlayer.MakeScope.Var('fin_cpi').GetValue, '(CFixedPoint)-15'))]"
+			visible = "[And(LessThan_CFixedPoint(Divide_CFixedPoint(Add_CFixedPoint(Add_CFixedPoint(Add_CFixedPoint(Add_CFixedPoint(Add_CFixedPoint(GetGoods('groceries').WithMarketContext(AccessPlayer.GetMarket.Self).GetPercentageDeltaAgainstBasePrice(GetGoods('groceries').WithMarketContext(AccessPlayer.GetMarket.Self).GetMarketPrice), GetGoods('grain').WithMarketContext(AccessPlayer.GetMarket.Self).GetPercentageDeltaAgainstBasePrice(GetGoods('grain').WithMarketContext(AccessPlayer.GetMarket.Self).GetMarketPrice)), GetGoods('clothes').WithMarketContext(AccessPlayer.GetMarket.Self).GetPercentageDeltaAgainstBasePrice(GetGoods('clothes').WithMarketContext(AccessPlayer.GetMarket.Self).GetMarketPrice)), GetGoods('furniture').WithMarketContext(AccessPlayer.GetMarket.Self).GetPercentageDeltaAgainstBasePrice(GetGoods('furniture').WithMarketContext(AccessPlayer.GetMarket.Self).GetMarketPrice)), GetGoods('liquor').WithMarketContext(AccessPlayer.GetMarket.Self).GetPercentageDeltaAgainstBasePrice(GetGoods('liquor').WithMarketContext(AccessPlayer.GetMarket.Self).GetMarketPrice)), GetGoods('appliances').WithMarketContext(AccessPlayer.GetMarket.Self).GetPercentageDeltaAgainstBasePrice(GetGoods('appliances').WithMarketContext(AccessPlayer.GetMarket.Self).GetMarketPrice)), '(CFixedPoint)6'), '(CFixedPoint)0.15'), GreaterThan_CFixedPoint(Divide_CFixedPoint(Add_CFixedPoint(Add_CFixedPoint(Add_CFixedPoint(Add_CFixedPoint(Add_CFixedPoint(GetGoods('groceries').WithMarketContext(AccessPlayer.GetMarket.Self).GetPercentageDeltaAgainstBasePrice(GetGoods('groceries').WithMarketContext(AccessPlayer.GetMarket.Self).GetMarketPrice), GetGoods('grain').WithMarketContext(AccessPlayer.GetMarket.Self).GetPercentageDeltaAgainstBasePrice(GetGoods('grain').WithMarketContext(AccessPlayer.GetMarket.Self).GetMarketPrice)), GetGoods('clothes').WithMarketContext(AccessPlayer.GetMarket.Self).GetPercentageDeltaAgainstBasePrice(GetGoods('clothes').WithMarketContext(AccessPlayer.GetMarket.Self).GetMarketPrice)), GetGoods('furniture').WithMarketContext(AccessPlayer.GetMarket.Self).GetPercentageDeltaAgainstBasePrice(GetGoods('furniture').WithMarketContext(AccessPlayer.GetMarket.Self).GetMarketPrice)), GetGoods('liquor').WithMarketContext(AccessPlayer.GetMarket.Self).GetPercentageDeltaAgainstBasePrice(GetGoods('liquor').WithMarketContext(AccessPlayer.GetMarket.Self).GetMarketPrice)), GetGoods('appliances').WithMarketContext(AccessPlayer.GetMarket.Self).GetPercentageDeltaAgainstBasePrice(GetGoods('appliances').WithMarketContext(AccessPlayer.GetMarket.Self).GetMarketPrice)), '(CFixedPoint)6'), '(CFixedPoint)-0.15'))]"
 			position = { 25 152 }
 			size = { 150 44 }
 			align = left|nobaseline
 			using = fontsize_xxl
 			tooltip = "RUS_ST_CPI_TT"
-			raw_text = "[AccessPlayer.MakeScope.Var('fin_cpi').GetValue|+0]%"
+			text = "[Divide_CFixedPoint(Add_CFixedPoint(Add_CFixedPoint(Add_CFixedPoint(Add_CFixedPoint(Add_CFixedPoint(GetGoods('groceries').WithMarketContext(AccessPlayer.GetMarket.Self).GetPercentageDeltaAgainstBasePrice(GetGoods('groceries').WithMarketContext(AccessPlayer.GetMarket.Self).GetMarketPrice), GetGoods('grain').WithMarketContext(AccessPlayer.GetMarket.Self).GetPercentageDeltaAgainstBasePrice(GetGoods('grain').WithMarketContext(AccessPlayer.GetMarket.Self).GetMarketPrice)), GetGoods('clothes').WithMarketContext(AccessPlayer.GetMarket.Self).GetPercentageDeltaAgainstBasePrice(GetGoods('clothes').WithMarketContext(AccessPlayer.GetMarket.Self).GetMarketPrice)), GetGoods('furniture').WithMarketContext(AccessPlayer.GetMarket.Self).GetPercentageDeltaAgainstBasePrice(GetGoods('furniture').WithMarketContext(AccessPlayer.GetMarket.Self).GetMarketPrice)), GetGoods('liquor').WithMarketContext(AccessPlayer.GetMarket.Self).GetPercentageDeltaAgainstBasePrice(GetGoods('liquor').WithMarketContext(AccessPlayer.GetMarket.Self).GetMarketPrice)), GetGoods('appliances').WithMarketContext(AccessPlayer.GetMarket.Self).GetPercentageDeltaAgainstBasePrice(GetGoods('appliances').WithMarketContext(AccessPlayer.GetMarket.Self).GetMarketPrice)), '(CFixedPoint)6')|%0]"
 		}
 
 		textbox = {
-			visible = "[LessThanOrEqualTo_CFixedPoint(AccessPlayer.MakeScope.Var('fin_cpi').GetValue, '(CFixedPoint)-15')]"
+			visible = "[LessThanOrEqualTo_CFixedPoint(Divide_CFixedPoint(Add_CFixedPoint(Add_CFixedPoint(Add_CFixedPoint(Add_CFixedPoint(Add_CFixedPoint(GetGoods('groceries').WithMarketContext(AccessPlayer.GetMarket.Self).GetPercentageDeltaAgainstBasePrice(GetGoods('groceries').WithMarketContext(AccessPlayer.GetMarket.Self).GetMarketPrice), GetGoods('grain').WithMarketContext(AccessPlayer.GetMarket.Self).GetPercentageDeltaAgainstBasePrice(GetGoods('grain').WithMarketContext(AccessPlayer.GetMarket.Self).GetMarketPrice)), GetGoods('clothes').WithMarketContext(AccessPlayer.GetMarket.Self).GetPercentageDeltaAgainstBasePrice(GetGoods('clothes').WithMarketContext(AccessPlayer.GetMarket.Self).GetMarketPrice)), GetGoods('furniture').WithMarketContext(AccessPlayer.GetMarket.Self).GetPercentageDeltaAgainstBasePrice(GetGoods('furniture').WithMarketContext(AccessPlayer.GetMarket.Self).GetMarketPrice)), GetGoods('liquor').WithMarketContext(AccessPlayer.GetMarket.Self).GetPercentageDeltaAgainstBasePrice(GetGoods('liquor').WithMarketContext(AccessPlayer.GetMarket.Self).GetMarketPrice)), GetGoods('appliances').WithMarketContext(AccessPlayer.GetMarket.Self).GetPercentageDeltaAgainstBasePrice(GetGoods('appliances').WithMarketContext(AccessPlayer.GetMarket.Self).GetMarketPrice)), '(CFixedPoint)6'), '(CFixedPoint)-0.15')]"
 			position = { 25 152 }
 			size = { 150 44 }
 			align = left|nobaseline
 			using = fontsize_xxl
 			tooltip = "RUS_ST_CPI_TT"
-			raw_text = "#negative [AccessPlayer.MakeScope.Var('fin_cpi').GetValue|+0]%#!"
+			text = "#negative [Divide_CFixedPoint(Add_CFixedPoint(Add_CFixedPoint(Add_CFixedPoint(Add_CFixedPoint(Add_CFixedPoint(GetGoods('groceries').WithMarketContext(AccessPlayer.GetMarket.Self).GetPercentageDeltaAgainstBasePrice(GetGoods('groceries').WithMarketContext(AccessPlayer.GetMarket.Self).GetMarketPrice), GetGoods('grain').WithMarketContext(AccessPlayer.GetMarket.Self).GetPercentageDeltaAgainstBasePrice(GetGoods('grain').WithMarketContext(AccessPlayer.GetMarket.Self).GetMarketPrice)), GetGoods('clothes').WithMarketContext(AccessPlayer.GetMarket.Self).GetPercentageDeltaAgainstBasePrice(GetGoods('clothes').WithMarketContext(AccessPlayer.GetMarket.Self).GetMarketPrice)), GetGoods('furniture').WithMarketContext(AccessPlayer.GetMarket.Self).GetPercentageDeltaAgainstBasePrice(GetGoods('furniture').WithMarketContext(AccessPlayer.GetMarket.Self).GetMarketPrice)), GetGoods('liquor').WithMarketContext(AccessPlayer.GetMarket.Self).GetPercentageDeltaAgainstBasePrice(GetGoods('liquor').WithMarketContext(AccessPlayer.GetMarket.Self).GetMarketPrice)), GetGoods('appliances').WithMarketContext(AccessPlayer.GetMarket.Self).GetPercentageDeltaAgainstBasePrice(GetGoods('appliances').WithMarketContext(AccessPlayer.GetMarket.Self).GetMarketPrice)), '(CFixedPoint)6')|%0]#!"
 		}
 
 		icon = {
-			visible = "[GreaterThan_CFixedPoint(AccessPlayer.MakeScope.Var('fin_cpi').GetValue, AccessPlayer.MakeScope.Var('fin_cpi_last').GetValue)]"
+			visible = "[GreaterThan_CFixedPoint(Multiply_CFixedPoint(Divide_CFixedPoint(Add_CFixedPoint(Add_CFixedPoint(Add_CFixedPoint(Add_CFixedPoint(Add_CFixedPoint(GetGoods('groceries').WithMarketContext(AccessPlayer.GetMarket.Self).GetPercentageDeltaAgainstBasePrice(GetGoods('groceries').WithMarketContext(AccessPlayer.GetMarket.Self).GetMarketPrice), GetGoods('grain').WithMarketContext(AccessPlayer.GetMarket.Self).GetPercentageDeltaAgainstBasePrice(GetGoods('grain').WithMarketContext(AccessPlayer.GetMarket.Self).GetMarketPrice)), GetGoods('clothes').WithMarketContext(AccessPlayer.GetMarket.Self).GetPercentageDeltaAgainstBasePrice(GetGoods('clothes').WithMarketContext(AccessPlayer.GetMarket.Self).GetMarketPrice)), GetGoods('furniture').WithMarketContext(AccessPlayer.GetMarket.Self).GetPercentageDeltaAgainstBasePrice(GetGoods('furniture').WithMarketContext(AccessPlayer.GetMarket.Self).GetMarketPrice)), GetGoods('liquor').WithMarketContext(AccessPlayer.GetMarket.Self).GetPercentageDeltaAgainstBasePrice(GetGoods('liquor').WithMarketContext(AccessPlayer.GetMarket.Self).GetMarketPrice)), GetGoods('appliances').WithMarketContext(AccessPlayer.GetMarket.Self).GetPercentageDeltaAgainstBasePrice(GetGoods('appliances').WithMarketContext(AccessPlayer.GetMarket.Self).GetMarketPrice)), '(CFixedPoint)6'), '(CFixedPoint)100'), Add_CFixedPoint(AccessPlayer.MakeScope.Var('fin_cpi').GetValue, '(CFixedPoint)0.5'))]"
 			position = { 175 160 }
 			size = { 30 30 }
 			texture = "gfx/interface/icons/generic_icons/trend_up.dds"
@@ -399,7 +405,7 @@ flowcontainer = {
 		}
 
 		icon = {
-			visible = "[LessThan_CFixedPoint(AccessPlayer.MakeScope.Var('fin_cpi').GetValue, AccessPlayer.MakeScope.Var('fin_cpi_last').GetValue)]"
+			visible = "[LessThan_CFixedPoint(Multiply_CFixedPoint(Divide_CFixedPoint(Add_CFixedPoint(Add_CFixedPoint(Add_CFixedPoint(Add_CFixedPoint(Add_CFixedPoint(GetGoods('groceries').WithMarketContext(AccessPlayer.GetMarket.Self).GetPercentageDeltaAgainstBasePrice(GetGoods('groceries').WithMarketContext(AccessPlayer.GetMarket.Self).GetMarketPrice), GetGoods('grain').WithMarketContext(AccessPlayer.GetMarket.Self).GetPercentageDeltaAgainstBasePrice(GetGoods('grain').WithMarketContext(AccessPlayer.GetMarket.Self).GetMarketPrice)), GetGoods('clothes').WithMarketContext(AccessPlayer.GetMarket.Self).GetPercentageDeltaAgainstBasePrice(GetGoods('clothes').WithMarketContext(AccessPlayer.GetMarket.Self).GetMarketPrice)), GetGoods('furniture').WithMarketContext(AccessPlayer.GetMarket.Self).GetPercentageDeltaAgainstBasePrice(GetGoods('furniture').WithMarketContext(AccessPlayer.GetMarket.Self).GetMarketPrice)), GetGoods('liquor').WithMarketContext(AccessPlayer.GetMarket.Self).GetPercentageDeltaAgainstBasePrice(GetGoods('liquor').WithMarketContext(AccessPlayer.GetMarket.Self).GetMarketPrice)), GetGoods('appliances').WithMarketContext(AccessPlayer.GetMarket.Self).GetPercentageDeltaAgainstBasePrice(GetGoods('appliances').WithMarketContext(AccessPlayer.GetMarket.Self).GetMarketPrice)), '(CFixedPoint)6'), '(CFixedPoint)100'), Subtract_CFixedPoint(AccessPlayer.MakeScope.Var('fin_cpi').GetValue, '(CFixedPoint)0.5'))]"
 			position = { 175 160 }
 			size = { 30 30 }
 			texture = "gfx/interface/icons/generic_icons/trend_down.dds"
@@ -407,7 +413,7 @@ flowcontainer = {
 		}
 
 		icon = {
-			visible = "[EqualTo_CFixedPoint(AccessPlayer.MakeScope.Var('fin_cpi').GetValue, AccessPlayer.MakeScope.Var('fin_cpi_last').GetValue)]"
+			visible = "[And(LessThanOrEqualTo_CFixedPoint(Multiply_CFixedPoint(Divide_CFixedPoint(Add_CFixedPoint(Add_CFixedPoint(Add_CFixedPoint(Add_CFixedPoint(Add_CFixedPoint(GetGoods('groceries').WithMarketContext(AccessPlayer.GetMarket.Self).GetPercentageDeltaAgainstBasePrice(GetGoods('groceries').WithMarketContext(AccessPlayer.GetMarket.Self).GetMarketPrice), GetGoods('grain').WithMarketContext(AccessPlayer.GetMarket.Self).GetPercentageDeltaAgainstBasePrice(GetGoods('grain').WithMarketContext(AccessPlayer.GetMarket.Self).GetMarketPrice)), GetGoods('clothes').WithMarketContext(AccessPlayer.GetMarket.Self).GetPercentageDeltaAgainstBasePrice(GetGoods('clothes').WithMarketContext(AccessPlayer.GetMarket.Self).GetMarketPrice)), GetGoods('furniture').WithMarketContext(AccessPlayer.GetMarket.Self).GetPercentageDeltaAgainstBasePrice(GetGoods('furniture').WithMarketContext(AccessPlayer.GetMarket.Self).GetMarketPrice)), GetGoods('liquor').WithMarketContext(AccessPlayer.GetMarket.Self).GetPercentageDeltaAgainstBasePrice(GetGoods('liquor').WithMarketContext(AccessPlayer.GetMarket.Self).GetMarketPrice)), GetGoods('appliances').WithMarketContext(AccessPlayer.GetMarket.Self).GetPercentageDeltaAgainstBasePrice(GetGoods('appliances').WithMarketContext(AccessPlayer.GetMarket.Self).GetMarketPrice)), '(CFixedPoint)6'), '(CFixedPoint)100'), Add_CFixedPoint(AccessPlayer.MakeScope.Var('fin_cpi').GetValue, '(CFixedPoint)0.5')), GreaterThanOrEqualTo_CFixedPoint(Multiply_CFixedPoint(Divide_CFixedPoint(Add_CFixedPoint(Add_CFixedPoint(Add_CFixedPoint(Add_CFixedPoint(Add_CFixedPoint(GetGoods('groceries').WithMarketContext(AccessPlayer.GetMarket.Self).GetPercentageDeltaAgainstBasePrice(GetGoods('groceries').WithMarketContext(AccessPlayer.GetMarket.Self).GetMarketPrice), GetGoods('grain').WithMarketContext(AccessPlayer.GetMarket.Self).GetPercentageDeltaAgainstBasePrice(GetGoods('grain').WithMarketContext(AccessPlayer.GetMarket.Self).GetMarketPrice)), GetGoods('clothes').WithMarketContext(AccessPlayer.GetMarket.Self).GetPercentageDeltaAgainstBasePrice(GetGoods('clothes').WithMarketContext(AccessPlayer.GetMarket.Self).GetMarketPrice)), GetGoods('furniture').WithMarketContext(AccessPlayer.GetMarket.Self).GetPercentageDeltaAgainstBasePrice(GetGoods('furniture').WithMarketContext(AccessPlayer.GetMarket.Self).GetMarketPrice)), GetGoods('liquor').WithMarketContext(AccessPlayer.GetMarket.Self).GetPercentageDeltaAgainstBasePrice(GetGoods('liquor').WithMarketContext(AccessPlayer.GetMarket.Self).GetMarketPrice)), GetGoods('appliances').WithMarketContext(AccessPlayer.GetMarket.Self).GetPercentageDeltaAgainstBasePrice(GetGoods('appliances').WithMarketContext(AccessPlayer.GetMarket.Self).GetMarketPrice)), '(CFixedPoint)6'), '(CFixedPoint)100'), Subtract_CFixedPoint(AccessPlayer.MakeScope.Var('fin_cpi').GetValue, '(CFixedPoint)0.5')))]"
 			position = { 175 160 }
 			size = { 30 30 }
 			texture = "gfx/interface/icons/generic_icons/trend_nochange.dds"
@@ -415,7 +421,7 @@ flowcontainer = {
 		}
 
 		textbox = {
-			visible = "[GreaterThanOrEqualTo_CFixedPoint(AccessPlayer.MakeScope.Var('fin_cpi').GetValue, '(CFixedPoint)50')]"
+			visible = "[GreaterThanOrEqualTo_CFixedPoint(Divide_CFixedPoint(Add_CFixedPoint(Add_CFixedPoint(Add_CFixedPoint(Add_CFixedPoint(Add_CFixedPoint(GetGoods('groceries').WithMarketContext(AccessPlayer.GetMarket.Self).GetPercentageDeltaAgainstBasePrice(GetGoods('groceries').WithMarketContext(AccessPlayer.GetMarket.Self).GetMarketPrice), GetGoods('grain').WithMarketContext(AccessPlayer.GetMarket.Self).GetPercentageDeltaAgainstBasePrice(GetGoods('grain').WithMarketContext(AccessPlayer.GetMarket.Self).GetMarketPrice)), GetGoods('clothes').WithMarketContext(AccessPlayer.GetMarket.Self).GetPercentageDeltaAgainstBasePrice(GetGoods('clothes').WithMarketContext(AccessPlayer.GetMarket.Self).GetMarketPrice)), GetGoods('furniture').WithMarketContext(AccessPlayer.GetMarket.Self).GetPercentageDeltaAgainstBasePrice(GetGoods('furniture').WithMarketContext(AccessPlayer.GetMarket.Self).GetMarketPrice)), GetGoods('liquor').WithMarketContext(AccessPlayer.GetMarket.Self).GetPercentageDeltaAgainstBasePrice(GetGoods('liquor').WithMarketContext(AccessPlayer.GetMarket.Self).GetMarketPrice)), GetGoods('appliances').WithMarketContext(AccessPlayer.GetMarket.Self).GetPercentageDeltaAgainstBasePrice(GetGoods('appliances').WithMarketContext(AccessPlayer.GetMarket.Self).GetMarketPrice)), '(CFixedPoint)6'), '(CFixedPoint)0.5')]"
 			position = { 215 160 }
 			size = { 270 30 }
 			align = left|nobaseline
@@ -424,7 +430,7 @@ flowcontainer = {
 		}
 
 		textbox = {
-			visible = "[And(GreaterThanOrEqualTo_CFixedPoint(AccessPlayer.MakeScope.Var('fin_cpi').GetValue, '(CFixedPoint)30'), LessThan_CFixedPoint(AccessPlayer.MakeScope.Var('fin_cpi').GetValue, '(CFixedPoint)50'))]"
+			visible = "[And(GreaterThanOrEqualTo_CFixedPoint(Divide_CFixedPoint(Add_CFixedPoint(Add_CFixedPoint(Add_CFixedPoint(Add_CFixedPoint(Add_CFixedPoint(GetGoods('groceries').WithMarketContext(AccessPlayer.GetMarket.Self).GetPercentageDeltaAgainstBasePrice(GetGoods('groceries').WithMarketContext(AccessPlayer.GetMarket.Self).GetMarketPrice), GetGoods('grain').WithMarketContext(AccessPlayer.GetMarket.Self).GetPercentageDeltaAgainstBasePrice(GetGoods('grain').WithMarketContext(AccessPlayer.GetMarket.Self).GetMarketPrice)), GetGoods('clothes').WithMarketContext(AccessPlayer.GetMarket.Self).GetPercentageDeltaAgainstBasePrice(GetGoods('clothes').WithMarketContext(AccessPlayer.GetMarket.Self).GetMarketPrice)), GetGoods('furniture').WithMarketContext(AccessPlayer.GetMarket.Self).GetPercentageDeltaAgainstBasePrice(GetGoods('furniture').WithMarketContext(AccessPlayer.GetMarket.Self).GetMarketPrice)), GetGoods('liquor').WithMarketContext(AccessPlayer.GetMarket.Self).GetPercentageDeltaAgainstBasePrice(GetGoods('liquor').WithMarketContext(AccessPlayer.GetMarket.Self).GetMarketPrice)), GetGoods('appliances').WithMarketContext(AccessPlayer.GetMarket.Self).GetPercentageDeltaAgainstBasePrice(GetGoods('appliances').WithMarketContext(AccessPlayer.GetMarket.Self).GetMarketPrice)), '(CFixedPoint)6'), '(CFixedPoint)0.3'), LessThan_CFixedPoint(Divide_CFixedPoint(Add_CFixedPoint(Add_CFixedPoint(Add_CFixedPoint(Add_CFixedPoint(Add_CFixedPoint(GetGoods('groceries').WithMarketContext(AccessPlayer.GetMarket.Self).GetPercentageDeltaAgainstBasePrice(GetGoods('groceries').WithMarketContext(AccessPlayer.GetMarket.Self).GetMarketPrice), GetGoods('grain').WithMarketContext(AccessPlayer.GetMarket.Self).GetPercentageDeltaAgainstBasePrice(GetGoods('grain').WithMarketContext(AccessPlayer.GetMarket.Self).GetMarketPrice)), GetGoods('clothes').WithMarketContext(AccessPlayer.GetMarket.Self).GetPercentageDeltaAgainstBasePrice(GetGoods('clothes').WithMarketContext(AccessPlayer.GetMarket.Self).GetMarketPrice)), GetGoods('furniture').WithMarketContext(AccessPlayer.GetMarket.Self).GetPercentageDeltaAgainstBasePrice(GetGoods('furniture').WithMarketContext(AccessPlayer.GetMarket.Self).GetMarketPrice)), GetGoods('liquor').WithMarketContext(AccessPlayer.GetMarket.Self).GetPercentageDeltaAgainstBasePrice(GetGoods('liquor').WithMarketContext(AccessPlayer.GetMarket.Self).GetMarketPrice)), GetGoods('appliances').WithMarketContext(AccessPlayer.GetMarket.Self).GetPercentageDeltaAgainstBasePrice(GetGoods('appliances').WithMarketContext(AccessPlayer.GetMarket.Self).GetMarketPrice)), '(CFixedPoint)6'), '(CFixedPoint)0.5'))]"
 			position = { 215 160 }
 			size = { 270 30 }
 			align = left|nobaseline
@@ -433,7 +439,7 @@ flowcontainer = {
 		}
 
 		textbox = {
-			visible = "[And(GreaterThanOrEqualTo_CFixedPoint(AccessPlayer.MakeScope.Var('fin_cpi').GetValue, '(CFixedPoint)15'), LessThan_CFixedPoint(AccessPlayer.MakeScope.Var('fin_cpi').GetValue, '(CFixedPoint)30'))]"
+			visible = "[And(GreaterThanOrEqualTo_CFixedPoint(Divide_CFixedPoint(Add_CFixedPoint(Add_CFixedPoint(Add_CFixedPoint(Add_CFixedPoint(Add_CFixedPoint(GetGoods('groceries').WithMarketContext(AccessPlayer.GetMarket.Self).GetPercentageDeltaAgainstBasePrice(GetGoods('groceries').WithMarketContext(AccessPlayer.GetMarket.Self).GetMarketPrice), GetGoods('grain').WithMarketContext(AccessPlayer.GetMarket.Self).GetPercentageDeltaAgainstBasePrice(GetGoods('grain').WithMarketContext(AccessPlayer.GetMarket.Self).GetMarketPrice)), GetGoods('clothes').WithMarketContext(AccessPlayer.GetMarket.Self).GetPercentageDeltaAgainstBasePrice(GetGoods('clothes').WithMarketContext(AccessPlayer.GetMarket.Self).GetMarketPrice)), GetGoods('furniture').WithMarketContext(AccessPlayer.GetMarket.Self).GetPercentageDeltaAgainstBasePrice(GetGoods('furniture').WithMarketContext(AccessPlayer.GetMarket.Self).GetMarketPrice)), GetGoods('liquor').WithMarketContext(AccessPlayer.GetMarket.Self).GetPercentageDeltaAgainstBasePrice(GetGoods('liquor').WithMarketContext(AccessPlayer.GetMarket.Self).GetMarketPrice)), GetGoods('appliances').WithMarketContext(AccessPlayer.GetMarket.Self).GetPercentageDeltaAgainstBasePrice(GetGoods('appliances').WithMarketContext(AccessPlayer.GetMarket.Self).GetMarketPrice)), '(CFixedPoint)6'), '(CFixedPoint)0.15'), LessThan_CFixedPoint(Divide_CFixedPoint(Add_CFixedPoint(Add_CFixedPoint(Add_CFixedPoint(Add_CFixedPoint(Add_CFixedPoint(GetGoods('groceries').WithMarketContext(AccessPlayer.GetMarket.Self).GetPercentageDeltaAgainstBasePrice(GetGoods('groceries').WithMarketContext(AccessPlayer.GetMarket.Self).GetMarketPrice), GetGoods('grain').WithMarketContext(AccessPlayer.GetMarket.Self).GetPercentageDeltaAgainstBasePrice(GetGoods('grain').WithMarketContext(AccessPlayer.GetMarket.Self).GetMarketPrice)), GetGoods('clothes').WithMarketContext(AccessPlayer.GetMarket.Self).GetPercentageDeltaAgainstBasePrice(GetGoods('clothes').WithMarketContext(AccessPlayer.GetMarket.Self).GetMarketPrice)), GetGoods('furniture').WithMarketContext(AccessPlayer.GetMarket.Self).GetPercentageDeltaAgainstBasePrice(GetGoods('furniture').WithMarketContext(AccessPlayer.GetMarket.Self).GetMarketPrice)), GetGoods('liquor').WithMarketContext(AccessPlayer.GetMarket.Self).GetPercentageDeltaAgainstBasePrice(GetGoods('liquor').WithMarketContext(AccessPlayer.GetMarket.Self).GetMarketPrice)), GetGoods('appliances').WithMarketContext(AccessPlayer.GetMarket.Self).GetPercentageDeltaAgainstBasePrice(GetGoods('appliances').WithMarketContext(AccessPlayer.GetMarket.Self).GetMarketPrice)), '(CFixedPoint)6'), '(CFixedPoint)0.3'))]"
 			position = { 215 160 }
 			size = { 270 30 }
 			align = left|nobaseline
@@ -442,7 +448,7 @@ flowcontainer = {
 		}
 
 		textbox = {
-			visible = "[And(GreaterThan_CFixedPoint(AccessPlayer.MakeScope.Var('fin_cpi').GetValue, '(CFixedPoint)-15'), LessThan_CFixedPoint(AccessPlayer.MakeScope.Var('fin_cpi').GetValue, '(CFixedPoint)15'))]"
+			visible = "[And(GreaterThan_CFixedPoint(Divide_CFixedPoint(Add_CFixedPoint(Add_CFixedPoint(Add_CFixedPoint(Add_CFixedPoint(Add_CFixedPoint(GetGoods('groceries').WithMarketContext(AccessPlayer.GetMarket.Self).GetPercentageDeltaAgainstBasePrice(GetGoods('groceries').WithMarketContext(AccessPlayer.GetMarket.Self).GetMarketPrice), GetGoods('grain').WithMarketContext(AccessPlayer.GetMarket.Self).GetPercentageDeltaAgainstBasePrice(GetGoods('grain').WithMarketContext(AccessPlayer.GetMarket.Self).GetMarketPrice)), GetGoods('clothes').WithMarketContext(AccessPlayer.GetMarket.Self).GetPercentageDeltaAgainstBasePrice(GetGoods('clothes').WithMarketContext(AccessPlayer.GetMarket.Self).GetMarketPrice)), GetGoods('furniture').WithMarketContext(AccessPlayer.GetMarket.Self).GetPercentageDeltaAgainstBasePrice(GetGoods('furniture').WithMarketContext(AccessPlayer.GetMarket.Self).GetMarketPrice)), GetGoods('liquor').WithMarketContext(AccessPlayer.GetMarket.Self).GetPercentageDeltaAgainstBasePrice(GetGoods('liquor').WithMarketContext(AccessPlayer.GetMarket.Self).GetMarketPrice)), GetGoods('appliances').WithMarketContext(AccessPlayer.GetMarket.Self).GetPercentageDeltaAgainstBasePrice(GetGoods('appliances').WithMarketContext(AccessPlayer.GetMarket.Self).GetMarketPrice)), '(CFixedPoint)6'), '(CFixedPoint)-0.15'), LessThan_CFixedPoint(Divide_CFixedPoint(Add_CFixedPoint(Add_CFixedPoint(Add_CFixedPoint(Add_CFixedPoint(Add_CFixedPoint(GetGoods('groceries').WithMarketContext(AccessPlayer.GetMarket.Self).GetPercentageDeltaAgainstBasePrice(GetGoods('groceries').WithMarketContext(AccessPlayer.GetMarket.Self).GetMarketPrice), GetGoods('grain').WithMarketContext(AccessPlayer.GetMarket.Self).GetPercentageDeltaAgainstBasePrice(GetGoods('grain').WithMarketContext(AccessPlayer.GetMarket.Self).GetMarketPrice)), GetGoods('clothes').WithMarketContext(AccessPlayer.GetMarket.Self).GetPercentageDeltaAgainstBasePrice(GetGoods('clothes').WithMarketContext(AccessPlayer.GetMarket.Self).GetMarketPrice)), GetGoods('furniture').WithMarketContext(AccessPlayer.GetMarket.Self).GetPercentageDeltaAgainstBasePrice(GetGoods('furniture').WithMarketContext(AccessPlayer.GetMarket.Self).GetMarketPrice)), GetGoods('liquor').WithMarketContext(AccessPlayer.GetMarket.Self).GetPercentageDeltaAgainstBasePrice(GetGoods('liquor').WithMarketContext(AccessPlayer.GetMarket.Self).GetMarketPrice)), GetGoods('appliances').WithMarketContext(AccessPlayer.GetMarket.Self).GetPercentageDeltaAgainstBasePrice(GetGoods('appliances').WithMarketContext(AccessPlayer.GetMarket.Self).GetMarketPrice)), '(CFixedPoint)6'), '(CFixedPoint)0.15'))]"
 			position = { 215 160 }
 			size = { 270 30 }
 			align = left|nobaseline
@@ -451,7 +457,7 @@ flowcontainer = {
 		}
 
 		textbox = {
-			visible = "[LessThanOrEqualTo_CFixedPoint(AccessPlayer.MakeScope.Var('fin_cpi').GetValue, '(CFixedPoint)-15')]"
+			visible = "[LessThanOrEqualTo_CFixedPoint(Divide_CFixedPoint(Add_CFixedPoint(Add_CFixedPoint(Add_CFixedPoint(Add_CFixedPoint(Add_CFixedPoint(GetGoods('groceries').WithMarketContext(AccessPlayer.GetMarket.Self).GetPercentageDeltaAgainstBasePrice(GetGoods('groceries').WithMarketContext(AccessPlayer.GetMarket.Self).GetMarketPrice), GetGoods('grain').WithMarketContext(AccessPlayer.GetMarket.Self).GetPercentageDeltaAgainstBasePrice(GetGoods('grain').WithMarketContext(AccessPlayer.GetMarket.Self).GetMarketPrice)), GetGoods('clothes').WithMarketContext(AccessPlayer.GetMarket.Self).GetPercentageDeltaAgainstBasePrice(GetGoods('clothes').WithMarketContext(AccessPlayer.GetMarket.Self).GetMarketPrice)), GetGoods('furniture').WithMarketContext(AccessPlayer.GetMarket.Self).GetPercentageDeltaAgainstBasePrice(GetGoods('furniture').WithMarketContext(AccessPlayer.GetMarket.Self).GetMarketPrice)), GetGoods('liquor').WithMarketContext(AccessPlayer.GetMarket.Self).GetPercentageDeltaAgainstBasePrice(GetGoods('liquor').WithMarketContext(AccessPlayer.GetMarket.Self).GetMarketPrice)), GetGoods('appliances').WithMarketContext(AccessPlayer.GetMarket.Self).GetPercentageDeltaAgainstBasePrice(GetGoods('appliances').WithMarketContext(AccessPlayer.GetMarket.Self).GetMarketPrice)), '(CFixedPoint)6'), '(CFixedPoint)-0.15')]"
 			position = { 215 160 }
 			size = { 270 30 }
 			align = left|nobaseline
@@ -472,18 +478,18 @@ flowcontainer = {
 				texture = "gfx/interface/icons/generic_icons/money.dds"
 			}
 			textbox = {
-				position = { 38 6 }
-				size = { 104 32 }
+				position = { 42 6 }
+				size = { 104 20 }
 				align = left|nobaseline
 				default_format = "#title"
 				text = "RUS_ST_FLIGHT_TITLE"
 			}
 			textbox = {
-				position = { 42 32 }
+				position = { 42 28 }
 				size = { 104 26 }
 				align = left|nobaseline
 				using = fontsize_large
-				raw_text = "[AccessPlayer.MakeScope.Var('fin_capital_flight').GetValue|0] / 100"
+				text = "[AccessPlayer.MakeScope.Var('fin_capital_flight').GetValue|0] / 100"
 			}
 			textbox = {
 				visible = "[LessThan_CFixedPoint(AccessPlayer.MakeScope.Var('fin_capital_flight').GetValue, '(CFixedPoint)20')]"
@@ -529,21 +535,21 @@ flowcontainer = {
 			}
 			textbox = {
 				position = { 42 6 }
-				size = { 104 32 }
+				size = { 104 20 }
 				align = left|nobaseline
 				default_format = "#title"
 				text = "RUS_ST_BONDS_TITLE"
 			}
 			textbox = {
-				position = { 25 34 }
+				position = { 42 28 }
 				size = { 104 26 }
 				align = left|nobaseline
 				using = fontsize_large
 				text = "RUS_ST_BONDS_RATIO"
 			}
 			icon = {
-				visible = "[Or(GreaterThanOrEqualTo_CFixedPoint(AccessPlayer.MakeScope.Var('fin_bond_ratio_var').GetValue, '(CFixedPoint)20'), And(GreaterThanOrEqualTo_CFixedPoint(AccessPlayer.MakeScope.Var('fin_bond_ratio_var').GetValue, '(CFixedPoint)12'), GreaterThanOrEqualTo_CFixedPoint(AccessPlayer.MakeScope.Var('fin_capital_flight').GetValue, '(CFixedPoint)60')))]"
-				position = { 118 10 }
+				visible = "[Or(GreaterThanOrEqualTo_CFixedPoint(AccessPlayer.MakeScope.Var('fin_debt_ratio_var').GetValue, '(CFixedPoint)20'), And(GreaterThanOrEqualTo_CFixedPoint(AccessPlayer.MakeScope.Var('fin_debt_ratio_var').GetValue, '(CFixedPoint)12'), GreaterThanOrEqualTo_CFixedPoint(AccessPlayer.MakeScope.Var('fin_capital_flight').GetValue, '(CFixedPoint)60')))]"
+				position = { 118 30 }
 				size = { 24 24 }
 				texture = "gfx/interface/icons/generic_icons/warning.dds"
 				tooltip = "RUS_ST_BONDS_RISK_TT"
@@ -577,7 +583,7 @@ flowcontainer = {
 				texture = "gfx/interface/icons/generic_icons/population.dds"
 			}
 			textbox = {
-				position = { 42 12 }
+				position = { 42 6 }
 				size = { 104 20 }
 				align = left|nobaseline
 				default_format = "#title"

@@ -1,0 +1,26 @@
+﻿l_spanish:
+
+ concept_smd_healthcare:0 "Sanidad"
+ concept_smd_healthcare_desc:0 "La $concept_smd_healthcare$ es la atención médica financiada por el Estado para la población, gestionada a través de la [concept_institution] del sistema sanitario. Mantenerla cuesta dinero al Estado cada mes, según la inversión, la población y el [concept_sol] medio."
+ concept_smd_education:0 "Educación"
+ concept_smd_education_desc:0 "La $concept_smd_education$ es la escolarización de la población financiada por el Estado, gestionada a través de la [concept_institution] de las escuelas. Mantenerla cuesta dinero al Estado cada mes, según la inversión, la población y el [concept_sol] medio."
+ concept_smd_police:0 "Policía"
+ concept_smd_police_desc:0 "La $concept_smd_police$ es el mantenimiento de la ley y el orden financiado por el Estado, gestionado a través de la [concept_institution] policial. Mantenerla cuesta dinero al Estado cada mes, según la inversión, la población y el [concept_sol] medio."
+
+ smd_institution_healthcare_expense_mult:0 "Contribución a los gastos de [concept_smd_healthcare]"
+ smd_institution_healthcare_expense_mult_desc:0 "Contribución relativa a los gastos nacionales de [concept_smd_healthcare]. Depende sobre todo del número de niveles de $building_government_administration$ que mantienes ([concept_bureaucracy]), además del nivel de inversión de la [concept_institution], tu población (sin contar $peasants$) y tu [concept_sol] medio.\nLas leyes del sistema sanitario cambian el coste: #tt $law_charitable_health_system$#! es la más barata, #tt $law_private_health_insurance$#! es la estándar y #tt $law_public_health_insurance$#! es la más cara. Sin ninguna ley sanitaria, no se cobra ningún gasto."
+
+ smd_institution_education_expense_mult:0 "Contribución a los gastos de [concept_smd_education]"
+ smd_institution_education_expense_mult_desc:0 "Contribución relativa a los gastos nacionales de [concept_smd_education]. Depende sobre todo del número de niveles de $building_government_administration$ que mantienes ([concept_bureaucracy]), además del nivel de inversión de la [concept_institution], tu población (sin contar $peasants$) y tu [concept_sol] medio.\nAumentada por #tt $law_public_schools$#! y #tt $law_universal_college$#!, y por las leyes de cuidado infantil #tt $law_compulsory_primary_school$#!, #tt $law_privatized_preschool_education$#! y #tt $law_universal_childcare$#!. Sin ninguna de estas leyes, no se cobra ningún gasto."
+
+ smd_institution_police_expense_mult:0 "Contribución a los gastos de [concept_smd_police]"
+ smd_institution_police_expense_mult_desc:0 "Contribución relativa a los gastos nacionales de [concept_smd_police]. Depende sobre todo del número de niveles de $building_government_administration$ que mantienes ([concept_bureaucracy]), además del nivel de inversión de la [concept_institution], tu población (sin contar $peasants$) y tu [concept_sol] medio.\n#tt $law_local_police$#! es la más barata, después #tt $law_dedicated_police$#!, y #tt $law_militarized_police$#! es la más cara. Sin ley policial, no se cobra ningún gasto."
+
+ smd_healthcare_expense_modifier:0 "Gastos de [concept_smd_healthcare]"
+ smd_healthcare_expense_modifier_desc:0 "El coste de funcionamiento del sistema sanitario estatal. Depende sobre todo del número de niveles de $building_government_administration$ que mantienes ([concept_bureaucracy]), además del nivel de inversión de la [concept_institution], tu población (sin contar $peasants$) y tu [concept_sol] medio."
+
+ smd_education_expense_modifier:0 "Gastos de [concept_smd_education]"
+ smd_education_expense_modifier_desc:0 "El coste de funcionamiento de la educación pública. Depende sobre todo del número de niveles de $building_government_administration$ que mantienes ([concept_bureaucracy]), además del nivel de inversión de la [concept_institution], tu población (sin contar $peasants$) y tu [concept_sol] medio."
+
+ smd_police_expense_modifier:0 "Gastos de [concept_smd_police]"
+ smd_police_expense_modifier_desc:0 "El coste de funcionamiento de las fuerzas del orden. Depende sobre todo del número de niveles de $building_government_administration$ que mantienes ([concept_bureaucracy]), además del nivel de inversión de la [concept_institution], tu población (sin contar $peasants$) y tu [concept_sol] medio."

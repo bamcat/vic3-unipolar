@@ -27,7 +27,7 @@ REPLACE_OR_CREATE:institution_schools = {
 	icon = "gfx/interface/icons/institution_icons/schools.dds"
 	background_texture = "gfx/interface/illustrations/institutions/schools.dds"
 	modifier = {
-		#smd_institution_education_expense_mult = 1.0
+		smd_institution_education_expense_mult = 1.0
 	}
 }
 
@@ -36,7 +36,7 @@ REPLACE_OR_CREATE:institution_police = {
     background_texture = "gfx/interface/illustrations/institutions/police.dds"
 	modifier = {
 		state_turmoil_effects_mult = -0.1
-		#smd_institution_police_expense_mult = 1.0
+		smd_institution_police_expense_mult = 1.0
 	}
 }
 
@@ -44,7 +44,7 @@ REPLACE_OR_CREATE:institution_health_system = {
 	icon = "gfx/interface/icons/institution_icons/health_service.dds"
 	background_texture = "gfx/interface/illustrations/institutions/health_service.dds"
 	modifier = {
-		#smd_institution_healthcare_expense_mult = 1.0
+		smd_institution_healthcare_expense_mult = 1.0
 	}
 }
 
@@ -82,7 +82,7 @@ REPLACE_OR_CREATE:institution_immigration = {
 	icon = "gfx/interface/icons/institution_icons/immigration.dds"
 	background_texture = "gfx/interface/illustrations/institutions/immigration.dds"
 	modifier = {
-		country_migration_restrictiveness_add = 15
+		country_migration_restrictiveness_add = -10
 	}
 }
 

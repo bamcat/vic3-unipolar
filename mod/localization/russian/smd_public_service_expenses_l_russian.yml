@@ -1,0 +1,26 @@
+﻿l_russian:
+
+ concept_smd_healthcare:0 "Здравоохранение"
+ concept_smd_healthcare_desc:0 "$concept_smd_healthcare$: финансируемая государством медицинская помощь населению, которую обеспечивает [concept_institution] системы здравоохранения. Её содержание ежемесячно обходится государству в деньги в зависимости от инвестиций, численности населения и среднего уровня жизни."
+ concept_smd_education:0 "Образование"
+ concept_smd_education_desc:0 "$concept_smd_education$: финансируемое государством обучение населения, которое обеспечивает [concept_institution] школ. Её содержание ежемесячно обходится государству в деньги в зависимости от инвестиций, численности населения и среднего уровня жизни."
+ concept_smd_police:0 "Полиция"
+ concept_smd_police_desc:0 "$concept_smd_police$: финансируемое государством поддержание закона и порядка, которое обеспечивает [concept_institution] полиции. Её содержание ежемесячно обходится государству в деньги в зависимости от инвестиций, численности населения и среднего уровня жизни."
+
+ smd_institution_healthcare_expense_mult:0 "Доля в расходах: [concept_smd_healthcare]"
+ smd_institution_healthcare_expense_mult_desc:0 "Относительная доля в общегосударственных расходах: [concept_smd_healthcare]. Зависят прежде всего от числа уровней здания «$building_government_administration$» ([concept_bureaucracy]), а также от уровня инвестиций в [concept_institution], численности населения (без группы «$peasants$») и среднего показателя «[concept_sol]».\nЗаконы о системе здравоохранения меняют стоимость: «#tt $law_charitable_health_system$#!» дешевле всего, «#tt $law_private_health_insurance$#!» стандартный вариант, а «#tt $law_public_health_insurance$#!» дороже всего. Без такого закона расходы не взимаются."
+
+ smd_institution_education_expense_mult:0 "Доля в расходах: [concept_smd_education]"
+ smd_institution_education_expense_mult_desc:0 "Относительная доля в общегосударственных расходах: [concept_smd_education]. Зависят прежде всего от числа уровней здания «$building_government_administration$» ([concept_bureaucracy]), а также от уровня инвестиций в [concept_institution], численности населения (без группы «$peasants$») и среднего показателя «[concept_sol]».\nУвеличивается законами «#tt $law_public_schools$#!» и «#tt $law_universal_college$#!», а также законами об уходе за детьми «#tt $law_compulsory_primary_school$#!», «#tt $law_privatized_preschool_education$#!» и «#tt $law_universal_childcare$#!». Без этих законов расходы не взимаются."
+
+ smd_institution_police_expense_mult:0 "Доля в расходах: [concept_smd_police]"
+ smd_institution_police_expense_mult_desc:0 "Относительная доля в общегосударственных расходах: [concept_smd_police]. Зависят прежде всего от числа уровней здания «$building_government_administration$» ([concept_bureaucracy]), а также от уровня инвестиций в [concept_institution], численности населения (без группы «$peasants$») и среднего показателя «[concept_sol]».\n«#tt $law_local_police$#!» дешевле всего, затем «#tt $law_dedicated_police$#!», а «#tt $law_militarized_police$#!» дороже всего. Без закона о полиции расходы не взимаются."
+
+ smd_healthcare_expense_modifier:0 "Расходы: [concept_smd_healthcare]"
+ smd_healthcare_expense_modifier_desc:0 "Текущие затраты на государственную систему здравоохранения. Зависят прежде всего от числа уровней здания «$building_government_administration$» ([concept_bureaucracy]), а также от уровня инвестиций в [concept_institution], численности населения (без группы «$peasants$») и среднего показателя «[concept_sol]»."
+
+ smd_education_expense_modifier:0 "Расходы: [concept_smd_education]"
+ smd_education_expense_modifier_desc:0 "Текущие затраты на государственное образование. Зависят прежде всего от числа уровней здания «$building_government_administration$» ([concept_bureaucracy]), а также от уровня инвестиций в [concept_institution], численности населения (без группы «$peasants$») и среднего показателя «[concept_sol]»."
+
+ smd_police_expense_modifier:0 "Расходы: [concept_smd_police]"
+ smd_police_expense_modifier_desc:0 "Текущие затраты на охрану правопорядка. Зависят прежде всего от числа уровней здания «$building_government_administration$» ([concept_bureaucracy]), а также от уровня инвестиций в [concept_institution], численности населения (без группы «$peasants$») и среднего показателя «[concept_sol]»."

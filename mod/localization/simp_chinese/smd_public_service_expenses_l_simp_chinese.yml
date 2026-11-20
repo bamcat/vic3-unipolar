@@ -1,0 +1,26 @@
+﻿l_simp_chinese:
+
+ concept_smd_healthcare:0 "医疗"
+ concept_smd_healthcare_desc:0 "$concept_smd_healthcare$是由国家出资、通过医疗体系[concept_institution]向民众提供的医疗服务。 维持它每月都要花费政府资金，并随投资、人口和平均[concept_sol]变化。"
+ concept_smd_education:0 "教育"
+ concept_smd_education_desc:0 "$concept_smd_education$是由国家出资、通过学校[concept_institution]向民众提供的教育。 维持它每月都要花费政府资金，并随投资、人口和平均[concept_sol]变化。"
+ concept_smd_police:0 "警察"
+ concept_smd_police_desc:0 "$concept_smd_police$是由国家出资、通过警察[concept_institution]维护的法律与秩序。 维持它每月都要花费政府资金，并随投资、人口和平均[concept_sol]变化。"
+
+ smd_institution_healthcare_expense_mult:0 "[concept_smd_healthcare]支出贡献"
+ smd_institution_healthcare_expense_mult_desc:0 "对全国[concept_smd_healthcare]支出的相对贡献。 主要取决于你运营的$building_government_administration$等级数量（[concept_bureaucracy]），同时受[concept_institution]投资水平、人口（不含$peasants$）和平均[concept_sol]影响。\n医疗体系法律会改变成本：#tt $law_charitable_health_system$#!最便宜，#tt $law_private_health_insurance$#!为标准，#tt $law_public_health_insurance$#!最昂贵。没有医疗体系法律时，不收取支出。"
+
+ smd_institution_education_expense_mult:0 "[concept_smd_education]支出贡献"
+ smd_institution_education_expense_mult_desc:0 "对全国[concept_smd_education]支出的相对贡献。 主要取决于你运营的$building_government_administration$等级数量（[concept_bureaucracy]），同时受[concept_institution]投资水平、人口（不含$peasants$）和平均[concept_sol]影响。\n#tt $law_public_schools$#!和#tt $law_universal_college$#!，以及育儿法律#tt $law_compulsory_primary_school$#!、#tt $law_privatized_preschool_education$#!和#tt $law_universal_childcare$#!会提高支出。没有这些法律时，不收取支出。"
+
+ smd_institution_police_expense_mult:0 "[concept_smd_police]支出贡献"
+ smd_institution_police_expense_mult_desc:0 "对全国[concept_smd_police]支出的相对贡献。 主要取决于你运营的$building_government_administration$等级数量（[concept_bureaucracy]），同时受[concept_institution]投资水平、人口（不含$peasants$）和平均[concept_sol]影响。\n#tt $law_local_police$#!最便宜，其次是#tt $law_dedicated_police$#!，#tt $law_militarized_police$#!最昂贵。没有警务法律时，不收取支出。"
+
+ smd_healthcare_expense_modifier:0 "[concept_smd_healthcare]支出"
+ smd_healthcare_expense_modifier_desc:0 "国家医疗体系的运行成本。 主要取决于你运营的$building_government_administration$等级数量（[concept_bureaucracy]），同时受[concept_institution]投资水平、人口（不含$peasants$）和平均[concept_sol]影响。"
+
+ smd_education_expense_modifier:0 "[concept_smd_education]支出"
+ smd_education_expense_modifier_desc:0 "公共教育的运行成本。 主要取决于你运营的$building_government_administration$等级数量（[concept_bureaucracy]），同时受[concept_institution]投资水平、人口（不含$peasants$）和平均[concept_sol]影响。"
+
+ smd_police_expense_modifier:0 "[concept_smd_police]支出"
+ smd_police_expense_modifier_desc:0 "执法机构的运行成本。 主要取决于你运营的$building_government_administration$等级数量（[concept_bureaucracy]），同时受[concept_institution]投资水平、人口（不含$peasants$）和平均[concept_sol]影响。"
