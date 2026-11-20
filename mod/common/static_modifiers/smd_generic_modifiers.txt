@@ -26,21 +26,6 @@ smd_blockade_broken = {
 	interest_group_ig_trade_unions_approval_add = -1
 }
 
-smd_border_closed = {
-	icon = gfx/interface/icons/timed_modifier_icons/modifier_flag_negative.dds
-	country_migration_restrictiveness_add = 30
-	country_prestige_add = -10
-	interest_group_ig_intelligentsia_approval_add = -1
-}
-
-smd_border_opened = {
-	icon = gfx/interface/icons/timed_modifier_icons/modifier_flag_positive.dds
-	country_migration_restrictiveness_add = -30
-	country_prestige_add = 10
-	interest_group_ig_intelligentsia_approval_add = 2
-	interest_group_ig_petty_bourgeoisie_approval_add = -1
-}
-
 smd_brain_gain = {
 	icon = gfx/interface/icons/timed_modifier_icons/modifier_lightbulb_positive.dds
 	country_weekly_innovation_mult = 0.05
@@ -56,11 +41,6 @@ smd_bread_riots_crushed = {
 smd_calm_restored = {
 	icon = gfx/interface/icons/timed_modifier_icons/modifier_statue_positive.dds
 	country_legitimacy_base_add = 5
-}
-
-smd_camp_unrest_policed = {
-	icon = gfx/interface/icons/timed_modifier_icons/modifier_fist_negative.dds
-	state_radicals_from_political_movements_mult = 0.1
 }
 
 smd_capital_flight = {
@@ -274,19 +254,6 @@ smd_hollowed_out = {
 	state_pop_qualifications_mult = -0.1
 }
 
-smd_humanitarian_reputation = {
-	icon = gfx/interface/icons/timed_modifier_icons/modifier_statue_positive.dds
-	country_prestige_add = 25
-	country_influence_add = 50
-}
-
-smd_hyperinflation = {
-	icon = gfx/interface/icons/timed_modifier_icons/modifier_coins_negative.dds
-	building_throughput_add = -0.1
-	country_legitimacy_base_add = -10
-	state_radicals_and_loyalists_from_sol_change_mult = 0.25
-}
-
 smd_indifference_charge = {
 	icon = gfx/interface/icons/timed_modifier_icons/modifier_documents_negative.dds
 	country_legitimacy_base_add = -3
@@ -353,12 +320,6 @@ smd_lockout_settlement = {
 	icon = gfx/interface/icons/timed_modifier_icons/modifier_documents_negative.dds
 	interest_group_ig_industrialists_approval_add = 1
 	interest_group_ig_trade_unions_approval_add = -2
-}
-
-smd_loose_money = {
-	icon = gfx/interface/icons/timed_modifier_icons/modifier_coins_negative.dds
-	interest_group_ig_trade_unions_approval_add = 1
-	country_legitimacy_base_add = -5
 }
 
 smd_lustration = {
@@ -512,17 +473,6 @@ smd_reform_pledge = {
 	country_influence_add = 50
 }
 
-smd_refugee_aid_appeal = {
-	icon = gfx/interface/icons/timed_modifier_icons/modifier_coins_positive.dds
-	country_prestige_add = -10
-}
-
-smd_refugee_backlash = {
-	icon = gfx/interface/icons/timed_modifier_icons/modifier_statue_negative.dds
-	country_legitimacy_base_add = -10
-	state_radicals_from_political_movements_mult = 0.15
-}
-
 smd_regional_compromise = {
 	icon = gfx/interface/icons/timed_modifier_icons/modifier_documents_positive.dds
 	state_turmoil_effects_mult = -0.15
@@ -542,6 +492,11 @@ smd_remittance_boom = {
 	icon = gfx/interface/icons/timed_modifier_icons/modifier_coins_positive.dds
 	interest_group_ig_petty_bourgeoisie_approval_add = 1
 	state_construction_mult = 0.05
+}
+
+smd_brain_drain_active = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_lightbulb_negative.dds
+	country_weekly_innovation_mult = -0.15
 }
 
 smd_research_funding = {
@@ -612,8 +567,7 @@ smd_slum_clearances = {
 
 smd_slum_upgrading = {
 	icon = gfx/interface/icons/timed_modifier_icons/modifier_statue_positive.dds
-	state_mortality_mult = -0.05
-	country_legitimacy_base_add = 3
+	state_construction_mult = 0.10
 }
 
 smd_social_state = {
@@ -654,12 +608,6 @@ smd_thick_line = {
 	country_legitimacy_base_add = 3
 	interest_group_ig_armed_forces_approval_add = 1
 	interest_group_ig_intelligentsia_approval_add = -1
-}
-
-smd_tight_money = {
-	icon = gfx/interface/icons/timed_modifier_icons/modifier_coins_negative.dds
-	state_construction_mult = -0.1
-	interest_group_ig_trade_unions_approval_add = -1
 }
 
 smd_veterans_benefits = {
@@ -713,14 +661,3 @@ smd_water_rationing = {
 	state_turmoil_effects_mult = 0.15
 }
 
-smd_xenophobia_appeased = {
-	icon = gfx/interface/icons/timed_modifier_icons/modifier_documents_negative.dds
-	country_prestige_add = -10
-	interest_group_ig_petty_bourgeoisie_approval_add = 1
-}
-
-smd_xenophobia_condemned = {
-	icon = gfx/interface/icons/timed_modifier_icons/modifier_documents_positive.dds
-	interest_group_ig_intelligentsia_approval_add = 1
-	interest_group_ig_petty_bourgeoisie_approval_add = -1
-}

@@ -1,0 +1,390 @@
+﻿smd_agi_jordan_peterson = {
+	first_name = smd_cn_jordan
+	last_name = smd_cn_peterson
+	historical = yes
+	female = no
+	dna = dna_jordan_peterson
+	birth_date = 1962.6.12
+	is_agitator = yes
+	culture = cu:anglo_canadian
+	interest_group = ig_intelligentsia
+	ideology = ideology_conservative_leader
+	traits = {
+		erudite
+		direct
+	}
+	agitator_usage = {
+		country_trigger = {
+			c:CAN ?= THIS
+		}
+		interest_group_trigger = {
+			is_interest_group_type = ig_intelligentsia
+		}
+		earliest_usage_date = 2016.9.27
+		latest_usage_date = 2040.1.1
+	}
+}
+
+smd_agi_greta_thunberg = {
+	first_name = smd_cn_greta
+	last_name = smd_cn_thunberg
+	historical = yes
+	female = yes
+	dna = dna_greta_thunburg
+	birth_date = 2003.1.3
+	is_agitator = yes
+	culture = cu:swedish
+	interest_group = ig_intelligentsia
+	ideology = ideology_green_leader
+	traits = {
+		persistent
+		direct
+	}
+	agitator_usage = {
+		country_trigger = {
+			c:SWD ?= THIS
+		}
+		interest_group_trigger = {
+			is_interest_group_type = ig_intelligentsia
+		}
+		earliest_usage_date = 2018.8.20
+		latest_usage_date = 2050.1.1
+	}
+}
+
+smd_agi_alex_jones = {
+	first_name = smd_cn_alex
+	last_name = smd_cn_jones
+	historical = yes
+	female = no
+	dna = dna_alex_jones
+	birth_date = 1974.2.11
+	is_agitator = yes
+	culture = cu:dixie
+	interest_group = ig_rural_folk
+	ideology = ideology_right_wing_populist_leader
+	traits = {
+		firebrand
+		wrathful
+	}
+	agitator_usage = {
+		country_trigger = {
+			c:USA ?= THIS
+		}
+		interest_group_trigger = {
+			is_interest_group_type = ig_rural_folk
+		}
+		earliest_usage_date = 1996.1.1
+		latest_usage_date = 2040.1.1
+	}
+}
+
+smd_agi_nick_fuentes = {
+	first_name = smd_cn_nick
+	last_name = smd_cn_fuentes
+	historical = yes
+	female = no
+	dna = dna_nick_fuentes
+	birth_date = 1998.8.18
+	is_agitator = yes
+	culture = cu:yankee
+	religion = rel:catholic
+	interest_group = ig_devout
+	ideology = ideology_right_wing_populist_leader
+	traits = {
+		demagogue
+		reckless
+	}
+	agitator_usage = {
+		country_trigger = {
+			c:USA ?= THIS
+		}
+		interest_group_trigger = {
+			is_interest_group_type = ig_devout
+		}
+		earliest_usage_date = 2017.1.1
+		latest_usage_date = 2060.1.1
+	}
+}
+
+smd_agi_tucker_carlson = {
+	first_name = smd_cn_tucker
+	last_name = smd_cn_carlson
+	historical = yes
+	female = no
+	dna = dna_tucker_carlson
+	birth_date = 1969.5.16
+	is_agitator = yes
+	culture = cu:yankee
+	interest_group = ig_rural_folk
+	ideology = ideology_right_wing_populist_leader
+	traits = {
+		charismatic
+		ambitious
+	}
+	agitator_usage = {
+		country_trigger = {
+			c:USA ?= THIS
+		}
+		interest_group_trigger = {
+			is_interest_group_type = ig_rural_folk
+		}
+		earliest_usage_date = 2009.1.1
+		latest_usage_date = 2045.1.1
+	}
+}
+
+smd_agi_rush_limbaugh = {
+	first_name = smd_cn_rush
+	last_name = smd_cn_limbaugh
+	historical = yes
+	female = no
+	dna = dna_rush_limbaugh
+	birth_date = 1951.1.12
+	is_agitator = yes
+	culture = cu:dixie
+	interest_group = ig_petty_bourgeoisie
+	ideology = ideology_conservative_leader
+	traits = {
+		inspirational_orator
+		arrogant
+	}
+	agitator_usage = {
+		country_trigger = {
+			c:USA ?= THIS
+		}
+		interest_group_trigger = {
+			is_interest_group_type = ig_petty_bourgeoisie
+		}
+		earliest_usage_date = 1992.1.1
+		latest_usage_date = 2021.2.17
+	}
+}
+
+smd_agi_hasan_piker = {
+	first_name = smd_cn_hasan
+	last_name = smd_cn_piker
+	historical = yes
+	female = no
+	dna = dna_hasan_piker
+	birth_date = 1991.7.25
+	is_agitator = yes
+	culture = cu:yankee
+	interest_group = ig_trade_unions
+	ideology = ideology_democratic_socialist_leader
+	traits = {
+		charismatic
+		direct
+	}
+	agitator_usage = {
+		country_trigger = {
+			c:USA ?= THIS
+		}
+		interest_group_trigger = {
+			is_interest_group_type = ig_trade_unions
+		}
+		earliest_usage_date = 2018.1.1
+		latest_usage_date = 2060.1.1
+	}
+}
+
+smd_agi_tupac_shakur = {
+	first_name = smd_cn_tupac
+	last_name = smd_cn_shakur
+	historical = yes
+	female = no
+	dna = dna_tupac_shakur
+	birth_date = 1971.6.16
+	is_agitator = yes
+	culture = cu:afro_american
+	interest_group = ig_trade_unions
+	ideology = ideology_left_wing_populist_leader
+	traits = {
+		literary
+		firebrand
+		reckless
+	}
+	agitator_usage = {
+		country_trigger = {
+			c:USA ?= THIS
+		}
+		interest_group_trigger = {
+			is_interest_group_type = ig_trade_unions
+		}
+		earliest_usage_date = 1992.1.1
+		latest_usage_date = 1996.9.7
+	}
+}
+
+smd_agi_rachel_maddow = {
+	first_name = smd_cn_rachel
+	last_name = smd_cn_maddow
+	historical = yes
+	female = yes
+	dna = dna_rachel_maddow
+	birth_date = 1973.4.1
+	is_agitator = yes
+	culture = cu:yankee
+	interest_group = ig_intelligentsia
+	ideology = ideology_progressive_leader
+	traits = {
+		erudite
+		meticulous
+	}
+	agitator_usage = {
+		country_trigger = {
+			c:USA ?= THIS
+		}
+		interest_group_trigger = {
+			is_interest_group_type = ig_intelligentsia
+		}
+		earliest_usage_date = 2008.9.8
+		latest_usage_date = 2045.1.1
+	}
+}
+
+smd_agi_ben_shapiro = {
+	first_name = smd_cn_ben
+	last_name = smd_cn_shapiro
+	historical = yes
+	female = no
+	dna = dna_ben_shapiro
+	birth_date = 1984.1.15
+	is_agitator = yes
+	culture = cu:yankee
+	religion = rel:jewish
+	interest_group = ig_devout
+	ideology = ideology_conservative_leader
+	traits = {
+		direct
+		persistent
+	}
+	agitator_usage = {
+		country_trigger = {
+			c:USA ?= THIS
+		}
+		interest_group_trigger = {
+			is_interest_group_type = ig_devout
+		}
+		earliest_usage_date = 2012.1.1
+		latest_usage_date = 2060.1.1
+	}
+}
+
+smd_agi_sean_hannity = {
+	first_name = smd_cn_sean
+	last_name = smd_cn_hannity
+	historical = yes
+	female = no
+	dna = dna_sean_hannity
+	birth_date = 1961.12.30
+	is_agitator = yes
+	culture = cu:yankee
+	religion = rel:catholic
+	interest_group = ig_petty_bourgeoisie
+	ideology = ideology_neocon_leader
+	traits = {
+		charismatic
+		persistent
+	}
+	agitator_usage = {
+		country_trigger = {
+			c:USA ?= THIS
+		}
+		interest_group_trigger = {
+			is_interest_group_type = ig_petty_bourgeoisie
+		}
+		earliest_usage_date = 1996.10.7
+		latest_usage_date = 2045.1.1
+	}
+}
+
+smd_agi_malala_yousafzai = {
+	first_name = smd_cn_malala
+	last_name = smd_cn_yousafzai
+	historical = yes
+	female = yes
+	dna = dna_malala_yousafzai
+	birth_date = 1997.7.12
+	is_agitator = yes
+	culture = cu:pashtun
+	religion = rel:sunni
+	interest_group = ig_intelligentsia
+	ideology = ideology_progressive_leader
+	traits = {
+		brave
+		persistent
+	}
+	agitator_usage = {
+		country_trigger = {
+			c:PAK ?= THIS
+		}
+		interest_group_trigger = {
+			is_interest_group_type = ig_intelligentsia
+		}
+		earliest_usage_date = 2012.10.9
+		latest_usage_date = 2060.1.1
+	}
+}
+
+smd_agi_piers_morgan = {
+	first_name = smd_cn_piers
+	last_name = smd_cn_morgan
+	historical = yes
+	female = no
+	dna = dna_piers_morgan
+	birth_date = 1965.3.30
+	is_agitator = yes
+	culture = cu:british
+	interest_group = ig_intelligentsia
+	ideology = ideology_moderate_leader
+	traits = {
+		arrogant
+		direct
+	}
+	agitator_usage = {
+		country_trigger = {
+			OR = {
+				c:GBR ?= THIS
+				AND = {
+					c:ENG ?= THIS
+					NOT = { exists = c:GBR }
+				}
+			}
+		}
+		interest_group_trigger = {
+			is_interest_group_type = ig_intelligentsia
+		}
+		earliest_usage_date = 2011.1.17
+		latest_usage_date = 2045.1.1
+	}
+}
+
+smd_agi_alexei_navalny = {
+	first_name = smd_cn_alexei
+	last_name = smd_cn_navalny
+	historical = yes
+	female = no
+	dna = dna_alexei_navalny
+	birth_date = 1976.6.4
+	is_agitator = yes
+	culture = cu:russian
+	religion = rel:orthodox
+	interest_group = ig_petty_bourgeoisie
+	ideology = ideology_liberal_leader
+	traits = {
+		brave
+		persistent
+		charismatic
+	}
+	agitator_usage = {
+		country_trigger = {
+			c:RUS ?= THIS
+		}
+		interest_group_trigger = {
+			is_interest_group_type = ig_petty_bourgeoisie
+		}
+		earliest_usage_date = 2008.1.1
+		latest_usage_date = 2024.2.16
+	}
+}

@@ -18,7 +18,7 @@
 	}
 
 	immediate = {
-		set_variable = { name = smd_dc_probation days = 2190 }
+		remove_variable = smd_dc_election_held
 		trigger_event = { id = smd_democracy.1 popup = yes }
 	}
 
@@ -30,7 +30,6 @@
 	on_monthly_pulse = {
 		random_events = {
 			100 = 0
-			3 = smd_democracy.2
 			3 = smd_democracy.3
 			3 = smd_democracy.4
 		}
@@ -43,20 +42,21 @@
 		conclusion_desc = smd_je_democratic_consolidation_success_desc
 		trigger = {
 			custom_tooltip = {
-				text = smd_je_democratic_consolidation_bar_tt
-				scope:journal_entry ?= {
-					"scripted_bar_progress(smd_democracy_bar)" >= 100
-				}
+				text = smd_je_democratic_consolidation_election_tt
+				has_variable = smd_dc_election_held
 			}
 			custom_tooltip = {
-				text = smd_je_democratic_consolidation_time_tt
-				NOT = { has_variable = smd_dc_probation }
+				text = smd_je_democratic_consolidation_bar_half_tt
+				scope:journal_entry ?= {
+					"scripted_bar_progress(smd_democracy_bar)" >= 50
+				}
 			}
 		}
 		effect = {
 			trigger_event = { id = smd_democracy.5 popup = yes }
 			remove_variable = smd_new_democracy
 			set_variable = smd_democracy_consolidated
+			remove_variable = smd_dc_election_held
 		}
 	}
 
@@ -237,7 +237,6 @@ smd_je_market_transition = {
 	on_monthly_pulse = {
 		random_events = {
 			100 = 0
-			3 = smd_transition.2
 			3 = smd_transition.3
 			3 = smd_transition.4
 		}

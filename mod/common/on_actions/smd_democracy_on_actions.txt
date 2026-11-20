@@ -1,0 +1,18 @@
+﻿on_election_campaign_end = {
+	on_actions = { smd_dc_election_end }
+}
+
+smd_dc_election_end = {
+	effect = {
+		if = {
+			limit = {
+				has_journal_entry = smd_je_democratic_consolidation
+				OR = {
+					has_law_or_variant = law_type:law_universal_suffrage
+					has_law_or_variant = law_type:law_census_voting
+				}
+			}
+			set_variable = smd_dc_election_held
+		}
+	}
+}

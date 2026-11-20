@@ -78,7 +78,11 @@ smd_btn_dem_judicial_reform = {
 			value = gdp
 			multiply = -0.003
 		}
-		smd_raise_institution = { INST = institution_courts }
+		custom_tooltip = smd_btn_dem_judicial_reform_institution_tt
+		hidden_effect = {
+			smd_raise_institution = { INST = institution_courts }
+		}
+		custom_tooltip = smd_btn_dem_judicial_reform_bar_tt
 		set_variable = { name = smd_judicial_reform days = 1825 }
 	}
 }
@@ -104,7 +108,11 @@ smd_btn_dem_civic_education = {
 			value = gdp
 			multiply = -0.002
 		}
-		smd_raise_institution = { INST = institution_schools }
+		custom_tooltip = smd_btn_dem_civic_education_institution_tt
+		hidden_effect = {
+			smd_raise_institution = { INST = institution_schools }
+		}
+		custom_tooltip = smd_btn_dem_civic_education_bar_tt
 		set_variable = { name = smd_civic_education days = 1825 }
 	}
 }
@@ -643,6 +651,7 @@ smd_btn_braindrain_diaspora = {
 			value = gdp
 			multiply = -0.002
 		}
+		custom_tooltip = smd_btn_braindrain_diaspora_bar_tt
 		set_variable = { name = smd_diaspora_incentives days = 1825 }
 	}
 }
@@ -668,7 +677,11 @@ smd_btn_braindrain_research = {
 			value = gdp
 			multiply = -0.003
 		}
-		smd_build_in_capital = { BUILDING = building_university }
+		custom_tooltip = smd_btn_braindrain_research_university_tt
+		hidden_effect = {
+			smd_build_in_capital = { BUILDING = building_university }
+		}
+		custom_tooltip = smd_btn_braindrain_research_bar_tt
 		set_variable = { name = smd_research_funding days = 1825 }
 		add_modifier = {
 			name = smd_research_funding
@@ -726,59 +739,6 @@ smd_btn_corruption_obstruct = {
 		add_modifier = {
 			name = smd_investigation_obstructed
 			days = 1095
-		}
-	}
-}
-
-smd_btn_refugee_camps = {
-	name = "smd_btn_refugee_camps"
-	desc = "smd_btn_refugee_camps_desc"
-	cooldown = { days = 1095 }
-
-	visible = {
-		always = yes
-	}
-
-	possible = {
-		NOT = { has_variable = smd_refugee_camps }
-		in_default = no
-	}
-
-	ai_chance = { value = 25 }
-
-	effect = {
-		add_treasury = {
-			value = gdp
-			multiply = -0.003
-		}
-		set_variable = { name = smd_refugee_camps days = 1095 }
-	}
-}
-
-smd_btn_refugee_appeal = {
-	name = "smd_btn_refugee_appeal"
-	desc = "smd_btn_refugee_appeal_desc"
-	cooldown = { days = 1095 }
-
-	visible = {
-		always = yes
-	}
-
-	possible = {
-		NOT = { has_variable = smd_refugee_aid }
-	}
-
-	ai_chance = { value = 30 }
-
-	effect = {
-		add_treasury = {
-			value = gdp
-			multiply = 0.002
-		}
-		set_variable = { name = smd_refugee_aid days = 730 }
-		add_modifier = {
-			name = smd_refugee_aid_appeal
-			days = 730
 		}
 	}
 }

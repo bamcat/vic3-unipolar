@@ -22,6 +22,10 @@ on_war_end = {
 	on_actions = { smd_generic_on_war_end }
 }
 
+on_law_enactment_started = {
+	on_actions = { smd_generic_on_law_enactment_started }
+}
+
 smd_generic_game_start = {
 	effect = {
 		every_country = {
@@ -134,9 +138,62 @@ smd_generic_game_start = {
 	}
 }
 
+smd_generic_on_law_enactment_started = {
+	effect = {
+		remove_variable = smd_dc_pending_new_type
+		remove_variable = smd_dc_pending_prev_type
+		currently_enacting_law ?= {
+			law_type = {
+				save_scope_as = smd_dc_new_lt
+			}
+			currently_active_law_in_group ?= {
+				law_type = {
+					save_scope_as = smd_dc_prev_lt
+				}
+			}
+		}
+		if = {
+			limit = {
+				exists = scope:smd_dc_new_lt
+				exists = scope:smd_dc_prev_lt
+			}
+			set_variable = {
+				name = smd_dc_pending_new_type
+				value = scope:smd_dc_new_lt
+			}
+			set_variable = {
+				name = smd_dc_pending_prev_type
+				value = scope:smd_dc_prev_lt
+			}
+		}
+	}
+}
+
 smd_generic_on_law_activated = {
 	effect = {
+		law_type = {
+			save_scope_as = smd_dc_activated_lt
+		}
+		save_scope_as = smd_dc_activated_law
 		owner = {
+			if = {
+				limit = {
+					has_variable = smd_dc_pending_new_type
+					has_variable = smd_dc_pending_prev_type
+					var:smd_dc_pending_new_type = scope:smd_dc_activated_lt
+				}
+				set_variable = {
+					name = smd_dc_struck_law
+					value = scope:smd_dc_activated_law
+				}
+				set_variable = {
+					name = smd_dc_prev_law_type
+					value = var:smd_dc_pending_prev_type
+				}
+				set_variable = { name = smd_recent_law_enacted days = 730 }
+				remove_variable = smd_dc_pending_new_type
+				remove_variable = smd_dc_pending_prev_type
+			}
 			if = {
 				limit = {
 					has_variable = smd_socialist_legacy
@@ -225,6 +282,16 @@ smd_generic_monthly_country = {
 		}
 		if = {
 			limit = {
+				is_at_war = yes
+				any_military_formation = {
+					is_army = yes
+					is_mobilized = yes
+				}
+			}
+			set_variable = { name = smd_war_mobilized days = 62 }
+		}
+		if = {
+			limit = {
 				market_capital.market ?= {
 					OR = {
 						mg:grain ?= { market_goods_pricier > 0.4 }
@@ -266,32 +333,6 @@ smd_generic_yearly_country = {
 			add_journal_entry = {
 				type = smd_je_devolution
 				target = scope:smd_devolution_target
-			}
-		}
-		if = {
-			limit = {
-				has_variable = smd_generic_ready
-				NOT = { has_variable = smd_refugee_source }
-				NOT = { has_variable = smd_refugee_cooldown }
-				NOT = { is_country_type = decentralized }
-				is_at_war = no
-				any_country = {
-					NOT = { this = ROOT }
-					is_at_war = yes
-					has_strategic_adjacency = ROOT
-				}
-			}
-			random_country = {
-				limit = {
-					NOT = { this = ROOT }
-					is_at_war = yes
-					has_strategic_adjacency = ROOT
-				}
-				save_scope_as = smd_refugee_origin
-			}
-			set_variable = {
-				name = smd_refugee_source
-				value = scope:smd_refugee_origin
 			}
 		}
 		if = {
@@ -369,13 +410,19 @@ smd_generic_on_war_end = {
 	effect = {
 		scope:actor ?= {
 			if = {
-				limit = { army_size >= 20 }
+				limit = {
+					army_size >= 20
+					has_variable = smd_war_mobilized
+				}
 				set_variable = { name = smd_war_veterans days = 1095 }
 			}
 		}
 		scope:target ?= {
 			if = {
-				limit = { army_size >= 20 }
+				limit = {
+					army_size >= 20
+					has_variable = smd_war_mobilized
+				}
 				set_variable = { name = smd_war_veterans days = 1095 }
 			}
 		}

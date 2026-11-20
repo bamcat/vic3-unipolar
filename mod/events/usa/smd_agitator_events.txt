@@ -1,0 +1,62 @@
+﻿namespace = smd_agitators
+
+smd_agitators.1 = {
+	type = country_event
+	placement = ROOT
+	title = smd_agitators.1.t
+	desc = smd_agitators.1.d
+	flavor = smd_agitators.1.f
+	event_image = {
+		video = "unspecific_sick_in_hospital"
+	}
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+	icon = "gfx/interface/icons/event_icons/event_skull.dds"
+	duration = 3
+
+	trigger = {
+		c:USA ?= THIS
+		game_date >= 1996.9.13
+		NOT = { has_global_variable = smd_tupac_shooting_done }
+		any_scope_character = {
+			has_template = smd_agi_tupac_shakur
+			is_character_alive = yes
+		}
+	}
+
+	immediate = {
+		set_global_variable = smd_tupac_shooting_done
+		random_scope_character = {
+			limit = {
+				has_template = smd_agi_tupac_shakur
+				is_character_alive = yes
+			}
+			save_scope_as = smd_tupac_scope
+		}
+	}
+
+	left_icon = scope:smd_tupac_scope
+
+	option = {
+		name = smd_agitators.1.a
+		default_option = yes
+		scope:smd_tupac_scope = {
+			kill_character = yes
+		}
+		add_radicals = {
+			value = 0.10
+			culture = cu:afro_american
+		}
+		ig:ig_intelligentsia = {
+			add_modifier = {
+				name = smd_tupac_mourning
+				months = 12
+			}
+		}
+		ig:ig_trade_unions = {
+			add_modifier = {
+				name = smd_tupac_mourning
+				months = 12
+			}
+		}
+	}
+}

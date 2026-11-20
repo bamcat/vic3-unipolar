@@ -37,50 +37,6 @@ smd_democracy.1 = {
 	}
 }
 
-smd_democracy.2 = {
-	type = country_event
-	placement = ROOT
-	title = smd_democracy.2.t
-	desc = smd_democracy.2.d
-	flavor = smd_democracy.2.f
-	event_image = { video = "southamerica_election" }
-	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
-	icon = "gfx/interface/icons/event_icons/event_election.dds"
-	duration = 3
-	cooldown = { days = normal_modifier_time }
-
-	trigger = {
-		has_journal_entry = smd_je_democratic_consolidation
-	}
-
-	option = {
-		name = smd_democracy.2.a
-		default_option = yes
-		je:smd_je_democratic_consolidation ?= {
-			add_progress = { value = 8 name = smd_democracy_bar }
-		}
-		ai_chance = { base = 70 }
-	}
-
-	option = {
-		name = smd_democracy.2.b
-		trigger = {
-			in_election_campaign = no
-		}
-		add_modifier = {
-			name = smd_annulled_election
-			days = short_modifier_time
-		}
-		call_election = {
-			months = 3
-		}
-		je:smd_je_democratic_consolidation ?= {
-			add_progress = { value = -10 name = smd_democracy_bar }
-		}
-		ai_chance = { base = 30 }
-	}
-}
-
 smd_democracy.3 = {
 	type = country_event
 	placement = ROOT
@@ -95,11 +51,27 @@ smd_democracy.3 = {
 
 	trigger = {
 		has_journal_entry = smd_je_democratic_consolidation
+		has_variable = smd_recent_law_enacted
+		has_variable = smd_dc_struck_law
+		has_variable = smd_dc_prev_law_type
+		has_law = var:smd_dc_struck_law
+		institution_investment_level = {
+			institution = institution_courts
+			value >= 1
+		}
+	}
+
+	immediate = {
+		var:smd_dc_struck_law = {
+			save_scope_as = smd_dc_struck_law_scope
+		}
 	}
 
 	option = {
 		name = smd_democracy.3.a
 		default_option = yes
+		activate_law = var:smd_dc_prev_law_type
+		smd_dc_clear_struck_law = yes
 		add_modifier = {
 			name = smd_court_respected
 			days = short_modifier_time
@@ -112,6 +84,7 @@ smd_democracy.3 = {
 
 	option = {
 		name = smd_democracy.3.b
+		smd_dc_clear_struck_law = yes
 		add_modifier = {
 			name = smd_court_defied
 			days = short_modifier_time

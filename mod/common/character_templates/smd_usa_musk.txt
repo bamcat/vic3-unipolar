@@ -1,0 +1,30 @@
+﻿USA_elon_musk = {
+	first_name = smd_cn_elon
+	last_name = smd_cn_musk
+	historical = yes
+	female = no
+	dna = dna_elon_musk
+	birth_date = 1971.6.28
+	culture = cu:caper
+	role = character_role_executive
+	interest_group = ig_industrialists
+	ideology = ideology_right_wing_libertarian_leader
+	traits = {
+		expert_entrepreneur
+		innovative
+		ambitious
+	}
+	executive_usage = {
+		country_trigger = {
+			c:USA ?= THIS
+		}
+		company_trigger = {
+			OR = {
+				is_company_type = company_type:company_tesla
+				is_company_type = company_type:company_spacex
+			}
+		}
+		earliest_usage_date = 1992.1.1
+		latest_usage_date = 2060.1.1
+	}
+}

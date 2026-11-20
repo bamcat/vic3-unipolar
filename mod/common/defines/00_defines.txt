@@ -619,7 +619,7 @@ NEconomy = {
 
 	EMPLOYMENT_DIVIDEND_ESTIMATE_MULT = 2.0			# When deciding employment overestimate dividends since they vary a lot and we really dont want to move someone to a job without a dividend that then turns out worse
 
-	GOODS_DEFAULT_TRADE_QUANTITY = 10				# Base quantity traded by trade centers if not otherwise specified in goods type
+	GOODS_DEFAULT_TRADE_QUANTITY = 3.3				# Base quantity traded by trade centers if not otherwise specified in goods type
 
 	MIN_POPS_PER_PROFESSION = 3						# A building can hire at least this many pops in a profession, even if it has fewer than this number of pops available
 	POPS_PER_PROFESSION_LOG_BASE = 10				# The number of pops in a profession is calculated as logarithm of employees count with this base
@@ -808,6 +808,7 @@ NMilitary = {
 	MILITARY_FROMATION_MAX_RESUPPLY_RATIO_PER_WEEK = 0.1						# Each week, a military formation can resupply this fraction of its total supply need
 	MILITARY_FORMATION_MIN_RESUPPLY_PER_WEEK = 10								# Each week, a military formation can resupply at least this amount of its supply need
 	MOBILIZATION_OPTION_DIFFERENCE_ORGANIZATION_IMPACT = 20 # The penalty to Organization gained for each difference by merging units between Formations with different Mobilization Options
+	MOBILIZATION_OPTION_TOGGLE_PENALTY_MIN_MOBILIZATION = 0.5 # Toggling a Mobilization Option has no while-mobilized effects on an Army that is less than this mobilized
 	FLEET_PRESENCE_GAIN_PER_DAY = 0.02						# The amount of Presence a Fleet gains per day while in Mission Area
 	FLEET_PRESENCE_DECAY_PER_DAY = 0.02						# The amount of Presence a Fleet decays per day while not in Mission Area
 	FLEET_PRESENCE_TRANSPORTING_OR_INVADING = 1.0			# Sea Presence forced on fleets transporting armies or supporting a naval invasion
@@ -818,7 +819,6 @@ NMilitary = {
 	MILITARY_FORMATION_WEEKLY_MAX_UNIT_UPGRADES_ARMY = 0.1		# Each week a mobilized army can upgrade this (0.0-1.0) fraction of its total number of units.
 	MILITARY_FORMATION_WEEKLY_MAX_UNIT_UPGRADES_FLEET = 0.05	# Each week a mobilized fleet can upgrade this (0.0-1.0) fraction of its total number of units.
 
-	MANPOWER_RATIO_REQUIRED_TO_CLEAR_DEFEATED_ADMIRALS = 0.75	# A Defeated fleet without at least this ratio of current/max manpower will remain Defeated.
 
 	MILITARY_FORMATION_AUTO_DEPLOY_DISTANCE_LIMIT = 250			# Armies are not auto-deployed to fronts that are located further than this pixel-distance from the army's current position
 
@@ -1056,8 +1056,6 @@ NDiplomacy = {
 	WAR_GOAL_LIBERATE_COUNTRY_OPPRESSOR_START_RELATIONS = -50
 	WAR_GOAL_CONTAIN_THREAT_YEARS_SINCE_CONQUEST = 10
 	WAR_GOAL_REGIME_CHANGE_MONTHS = 60 # Government in country with forced regime change is locked in for this number of months [>= 0]
-	WAR_GOAL_REGIME_CHANGE_MAX_IDEOLOGICAL_OPINION = -5 # If ideological opinion is above this, regime change can't be used
-	WAR_GOAL_REGIME_CHANGE_MIN_LAW_PROGRESSIVENESS_DIFFERENCE = 50 # If the difference between the target wargoal holder's laws in a law group are not at least this, don't change it as part of regime change
 	WAR_GOAL_INCREASE_AUTONOMY_MIN_LIBERTY_DESIRE = 75 # A subject must have at least this much LD to use the increase autonomy wargoal
 	WAR_GOAL_INDEPENDENCE_MIN_LIBERTY_DESIRE = 90 # A subject must have at least this much LD to use the independence wargoal
 
@@ -1385,6 +1383,7 @@ NDiplomacy = {
 	DISBAND_ARMY_PRESTIGE_PENALTY_MULT = 1.5				# Disbanding a battalion costs this many times the prestige it was giving
 	DISBAND_NAVY_PRESTIGE_PENALTY_MULT = 3					# Disbanding a non-obsolete ship costs this many times the prestige it was giving
 	DISBAND_PRESTIGE_PENALTY_YEARS = 10						# The prestige penalty from disbanding decays linearly to zero over this many years
+	WAR_GOAL_REGIME_CHANGE_START_RELATIONS = 50
 }
 
 NPowerBlocs = {
@@ -1641,7 +1640,7 @@ NPops = {
 	COLONY_SPEED_POPULATION_INCREMENT = 100000			# Determines the number of people across both colonizing and colonized states that should start slowing down the rate of colonization; set to 0 to disable
 	COLONY_SPEED_MALUS_PER_POPULATION_INCREMENT = 0.25	# Starting at COLONY_SPEED_THRESHOLD_FROM_POPULATION inhabitants, increase the number of days to complete by this amount proportional to population in the colony + state of province being colonized above 200K (e.g. at COLONY_SPEED_THRESHOLD_FROM_POPULATION = 200K, this set to 0.5, and at 300K total inhabitants, multiply growth by 1/1.25 = 0.8; at 600K inhabitants, multiply by 0.25)
 
-	INDIVIDUALS_PER_POP_INFRASTRUCTURE = 50000			# Multiply state_infrastructure_from_population_add by this to determine infra from population
+	INDIVIDUALS_PER_POP_INFRASTRUCTURE = 100000			# Multiply state_infrastructure_from_population_add by this to determine infra from population
 
 	QUALIFICATIONS_UPDATE_FACTOR = 0.0003				# Calculated potential values are multiplied by this value and the workforce size of the pop before being added to the existing potentials
 	QUALIFICATIONS_NUM_MONTHS_AT_START = 60				# How many months of qualifications should be seeded to pops at start of game?

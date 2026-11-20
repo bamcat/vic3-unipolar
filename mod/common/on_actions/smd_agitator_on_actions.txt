@@ -1,0 +1,9 @@
+﻿on_monthly_pulse_country = {
+	on_actions = { smd_agitator_monthly }
+}
+
+smd_agitator_monthly = {
+	events = {
+		smd_agitators.1
+	}
+}

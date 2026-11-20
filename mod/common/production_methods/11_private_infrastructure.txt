@@ -455,7 +455,7 @@ REPLACE_OR_CREATE:pm_trade_center_trade_quantity_limited = {
 	}
 	state_modifiers = {
 		unscaled = {
-			state_trade_quantity_mult = 5
+			state_trade_quantity_mult = 0.5
 		}
 	}
 }
@@ -470,7 +470,7 @@ REPLACE_OR_CREATE:pm_trade_center_trade_quantity_normal = {
 	}
 	state_modifiers = {
 		unscaled = {
-			state_trade_quantity_mult = 7
+			state_trade_quantity_mult = 1
 		}
 	}
 }
@@ -485,7 +485,7 @@ REPLACE_OR_CREATE:pm_trade_center_trade_quantity_high = {
 	}
 	state_modifiers = {
 		unscaled = {
-			state_trade_quantity_mult = 10
+			state_trade_quantity_mult = 2
 		}
 	}
 }
@@ -502,7 +502,7 @@ REPLACE_OR_CREATE:pm_trade_center_trade_quantity_very_high = {
 	}
 	state_modifiers = {
 		unscaled = {
-			state_trade_quantity_mult = 15
+			state_trade_quantity_mult = 3
 		}
 	}
 }

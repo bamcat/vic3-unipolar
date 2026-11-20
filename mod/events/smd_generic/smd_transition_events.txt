@@ -38,60 +38,6 @@ smd_transition.1 = {
 	}
 }
 
-smd_transition.2 = {
-	type = country_event
-	placement = ROOT
-	title = smd_transition.2.t
-	desc = smd_transition.2.d
-	flavor = smd_transition.2.f
-	event_image = { video = "europenorthamerica_rich_and_poor" }
-	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
-	icon = "gfx/interface/icons/event_icons/event_trade.dds"
-	duration = 3
-	cooldown = { days = normal_modifier_time }
-
-	trigger = {
-		has_journal_entry = smd_je_market_transition
-		has_variable = smd_shock_therapy
-	}
-
-	immediate = {
-		add_modifier = {
-			name = smd_hyperinflation
-			days = 365
-		}
-		add_radicals = {
-			value = small_radicals
-			strata = lower
-		}
-	}
-
-	option = {
-		name = smd_transition.2.a
-		default_option = yes
-		add_modifier = {
-			name = smd_tight_money
-			days = 730
-		}
-		je:smd_je_market_transition ?= {
-			add_progress = { value = 5 name = smd_transition_bar }
-		}
-		ai_chance = { base = 60 }
-	}
-
-	option = {
-		name = smd_transition.2.b
-		add_modifier = {
-			name = smd_loose_money
-			days = 730
-		}
-		je:smd_je_market_transition ?= {
-			add_progress = { value = -10 name = smd_transition_bar }
-		}
-		ai_chance = { base = 40 }
-	}
-}
-
 smd_transition.3 = {
 	type = country_event
 	placement = ROOT
