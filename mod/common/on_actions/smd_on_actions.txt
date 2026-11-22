@@ -1,76 +1,7 @@
-# ensures historical events fire
+﻿# ensures historical events fire
 
-on_monthly_pulse = {
+smd_oa_main_monthly_pulse = {
 	effect = {
-		every_country = {
-		set_variable = {
-			name = smd_healthcare_expense_tmp
-			value = smd_healthcare_expense_value
-		}
-		if = {
-			limit = { var:smd_healthcare_expense_tmp > 0 }
-			if = {
-				limit = { has_modifier = smd_healthcare_expense_modifier }
-				remove_modifier = smd_healthcare_expense_modifier
-			}
-			add_modifier = {
-				name = smd_healthcare_expense_modifier
-				multiplier = var:smd_healthcare_expense_tmp
-				is_hidden = yes
-			}
-		}
-		else_if = {
-			limit = { has_modifier = smd_healthcare_expense_modifier }
-			remove_modifier = smd_healthcare_expense_modifier
-		}
-		remove_variable = smd_healthcare_expense_tmp
-
-		set_variable = {
-			name = smd_education_expense_tmp
-			value = smd_education_expense_value
-		}
-		if = {
-			limit = { var:smd_education_expense_tmp > 0 }
-			if = {
-				limit = { has_modifier = smd_education_expense_modifier }
-				remove_modifier = smd_education_expense_modifier
-			}
-			add_modifier = {
-				name = smd_education_expense_modifier
-				multiplier = var:smd_education_expense_tmp
-				is_hidden = yes
-			}
-		}
-		else_if = {
-			limit = { has_modifier = smd_education_expense_modifier }
-			remove_modifier = smd_education_expense_modifier
-		}
-		remove_variable = smd_education_expense_tmp
-
-		set_variable = {
-			name = smd_police_expense_tmp
-			value = smd_police_expense_value
-		}
-		if = {
-			limit = { var:smd_police_expense_tmp > 0 }
-			if = {
-				limit = { has_modifier = smd_police_expense_modifier }
-				remove_modifier = smd_police_expense_modifier
-			}
-			add_modifier = {
-				name = smd_police_expense_modifier
-				multiplier = var:smd_police_expense_tmp
-				is_hidden = yes
-			}
-		}
-		else_if = {
-			limit = { has_modifier = smd_police_expense_modifier }
-			remove_modifier = smd_police_expense_modifier
-		}
-		remove_variable = smd_police_expense_tmp
-		smd_apply_public_service_expenses = yes
-		}
-	
 		every_country = {
 			limit = {
 				is_at_war = yes
@@ -94,7 +25,6 @@ on_monthly_pulse = {
 			}
 			nuclear_rebuild_enemy_list = yes
 		}
-	}
 		random_country = {
 			limit = {
 				country_rank >= rank_value:major_power
@@ -103,15 +33,18 @@ on_monthly_pulse = {
 				NOT = { has_modifier = olympics_recently_hosted }
 				NOT = { has_variable = olympics_declined_host }
 			}
-			events = {
-				olympics.1 
-			
-			}
-		}	
+			trigger_event = { id = olympics.1 }
+		}
+	}
 }
 
-on_monthly_pulse_country = {
-	smd_apply_public_service_expenses = yes
+on_monthly_pulse = {
+	on_actions = {
+		smd_oa_main_monthly_pulse
+	}
+}
+
+smd_oa_main_monthly_pulse_country = {
 	effect = {
 		smd_apply_public_service_expenses = yes
 		if = {
@@ -136,7 +69,13 @@ on_monthly_pulse_country = {
 	}
 }
 
-on_revolution_start = {
+on_monthly_pulse_country = {
+	on_actions = {
+		smd_oa_main_monthly_pulse_country
+	}
+}
+
+smd_oa_main_revolution_start = {
 	effect = {
 		if = {
 			limit = {
@@ -157,24 +96,14 @@ on_revolution_start = {
 		}
 	}
 }
-on_monthly_pulse_country = {
-	effect = {
-		if = {
-			limit = {
-				is_target_in_global_variable_list = { name = io_nato_members target = this }
-				has_variable = wot_article_5_answered
-				NOT = { has_variable = wot_joined_afghanistan_war }
-				c:USA ?= { has_war_with = c:AFG }
-			}
-			trigger_event = { id = wot_coalition.3 }
-		}
+
+on_revolution_start = {
+	on_actions = {
+		smd_oa_main_revolution_start
 	}
 }
 
 on_monthly_pulse_country = {
-		
-	set_global_variable = { name = un_motion_yes_votes value = 0 }
-    set_global_variable = { name = un_motion_no_votes value = 0 }
 
 	##### historical events
 	events = {
@@ -182,7 +111,7 @@ on_monthly_pulse_country = {
 		velvet_divorce.1
 	# covid
 		covid.1
-		un_events.99
+		un_events.99
 		imf_events.1
 		imf_events.10
 		north_hollywood.1
@@ -215,7 +144,7 @@ on_monthly_pulse_country = {
 		japan.1 
 		oslo_accords.1
 		intifada_2005.1
-		chechen_events.1
+		chechen_events.1
 		haiti_events.1
 		rwandan_genocide.1
 		arab_spring.18
@@ -269,25 +198,20 @@ on_half_yearly_pulse_country = {
 		}
 }
 
-on_yearly_pulse_country = {
+smd_oa_main_io_audit = {
 	effect = {
 		io_authoritarian_membership_audit = yes
 	}
 }
 
 on_yearly_pulse_country = {
-	effect = {
-		if = {
-			limit = {
-				has_global_variable = arab_spring_happening
-				NOT = { has_global_variable = arab_spring_happened }
-			}
-			arab_spring_apply_contagion_effect = yes
-		}
+	on_actions = {
+		smd_oa_main_io_audit
 	}
 }
 
-on_yearly_pulse_country = {
+smd_oa_main_ngo_yearly = {
+	effect = {
 		if = {
 			limit = {
 				NOT = { has_variable = io_ngo_amnesty_banned }
@@ -298,7 +222,6 @@ on_yearly_pulse_country = {
 			trigger_event = { id = ngo_events.3 days = 54 }
 		}
 
-		 Red Cross wartime aid offer
 		if = {
 			limit = {
 				NOT = { has_variable = io_ngo_redcross_banned }
@@ -310,7 +233,6 @@ on_yearly_pulse_country = {
 			trigger_event = { id = ngo_events.10 days = 24 }
 		}
 
-		 Red Cross wartime conduct criticism
 		if = {
 			limit = {
 				NOT = { has_variable = io_ngo_redcross_banned }
@@ -322,7 +244,6 @@ on_yearly_pulse_country = {
 			trigger_event = { id = ngo_events.11 days = 74 }
 		}
 
-		 Red Cross peacetime relief
 		if = {
 			limit = {
 				NOT = { has_variable = io_ngo_redcross_banned }
@@ -334,7 +255,6 @@ on_yearly_pulse_country = {
 			trigger_event = { id = ngo_events.12 days = 154 }
 		}
 
-		 IAEA inspection request — nuclear + no NPT
 		if = {
 			limit = {
 				NOT = { has_variable = io_ngo_iaea_banned }
@@ -346,7 +266,6 @@ on_yearly_pulse_country = {
 			trigger_event = { id = ngo_events.20 days = 1001 }
 		}
 
-		 IAEA praises NPT compliance
 		if = {
 			limit = {
 				NOT = { has_variable = io_ngo_iaea_banned }
@@ -358,7 +277,6 @@ on_yearly_pulse_country = {
 			trigger_event = { id = ngo_events.21 days = 875}
 		}
 
-		 IAEA weapons concern — nuclear + no NPT + low opinion
 		if = {
 			limit = {
 				NOT = { has_variable = io_ngo_iaea_banned }
@@ -370,7 +288,12 @@ on_yearly_pulse_country = {
 			}
 			trigger_event = { id = ngo_events.22 days = 642 }
 		}
-	events = {
+	}
+}
+
+on_yearly_pulse_country = {
+	on_actions = {
+		smd_oa_main_ngo_yearly
 	}
 }
 

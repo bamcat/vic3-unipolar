@@ -1,4 +1,4 @@
-namespace = intifada_2005
+﻿namespace = intifada_2005
 
 intifada_2005.1 = {
 	type = country_event
@@ -43,14 +43,14 @@ intifada_2005.1 = {
 			}
 		}
 
-		random_diplomatic_play = { 
-				limit = {
-					is_war = yes
-					any_scope_play_involved = c:ISR
-					any_scope_play_involved = c:PAL
-				}
-				end_play = yes
+		random_diplomatic_play = {
+			limit = {
+				is_war = yes
+				any_scope_play_involved = { c:ISR ?= this }
+				any_scope_play_involved = { c:PAL ?= this }
 			}
+			end_play = yes
+		}
 
 		intifada_2005_cleanup_effect = yes
 

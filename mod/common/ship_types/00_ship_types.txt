@@ -9,6 +9,8 @@
     can_be_flagship = yes
 
     modifier = {
+
+        ship_power_projection_add = 435
         ship_construction_progress_max_add = 25
         ship_hit_points_max_add = 4800
         ship_crew_max_add = 1200
@@ -113,6 +115,8 @@ REPLACE_OR_CREATE:ship_type_aircraft_carrier = {
     combat_power_multiplier = 2.0
 
     modifier = {
+
+        ship_power_projection_add = 345
         ship_construction_progress_max_add = 25
         ship_hit_points_max_add = 2200
         ship_crew_max_add = 600
@@ -204,6 +208,8 @@ ship_type_supercarrier = {
     combat_power_multiplier = 3.0
 
     modifier = {
+
+        ship_power_projection_add = 465
         ship_construction_progress_max_add = 25
         ship_hit_points_max_add = 2200
         ship_crew_max_add = 1000
@@ -361,6 +367,8 @@ REPLACE_OR_CREATE:ship_type_frigate = {
     can_be_flagship = yes
 
     modifier = {
+
+        ship_power_projection_add = 220
         ship_construction_progress_max_add = 25
         ship_hit_points_max_add = 1800
         ship_crew_max_add = 800
@@ -452,6 +460,8 @@ REPLACE_OR_CREATE:ship_type_armored_cruiser = {
     }
 
     modifier = {
+
+        ship_power_projection_add = 245
         ship_construction_progress_max_add = 25
         ship_hit_points_max_add = 2200
         ship_crew_max_add = 700
@@ -534,6 +544,8 @@ REPLACE_OR_CREATE:ship_type_light_cruiser = {
     can_be_flagship = yes
 
     modifier = {
+
+        ship_power_projection_add = 255
         ship_construction_progress_max_add = 25
         ship_hit_points_max_add = 2600
         ship_crew_max_add = 500
@@ -611,6 +623,8 @@ REPLACE_OR_CREATE:ship_type_submarine = {
     modification_construction_cost = 80
 
     modifier = {
+
+        ship_power_projection_add = 55
         ship_construction_progress_max_add = 25
         ship_hit_points_max_add = 2500
         ship_crew_max_add = 200
@@ -680,6 +694,8 @@ ship_type_nuclear_submarine = {
     modification_construction_cost = 80
 
     modifier = {
+
+        ship_power_projection_add = 110
         ship_construction_progress_max_add = 25
         ship_hit_points_max_add = 2500
         ship_crew_max_add = 200
@@ -750,6 +766,8 @@ REPLACE_OR_CREATE:ship_type_destroyer = {
     can_be_flagship = yes
 
     modifier = {
+
+        ship_power_projection_add = 200
         ship_construction_progress_max_add = 25
         ship_hit_points_max_add = 2500
         ship_crew_max_add = 200
@@ -829,6 +847,8 @@ ship_type_littoral_combat_ship = {
     can_be_flagship = yes
 
     modifier = {
+
+        ship_power_projection_add = 145
         ship_construction_progress_max_add = 25
         ship_hit_points_max_add = 1800
         ship_crew_max_add = 800
@@ -951,6 +971,8 @@ ship_type_helicopter_carrier = {
     combat_power_multiplier = 3.0
 
     modifier = {
+
+        ship_power_projection_add = 175
         ship_construction_progress_max_add = 25
         ship_hit_points_max_add = 1400
         ship_crew_max_add = 150
@@ -1037,6 +1059,7 @@ ship_type_stealth_destroyer = {
     can_be_flagship = yes
 	unlocking_technologies = { destroyer }
     modifier = {
+        ship_power_projection_add = 230
         ship_construction_progress_max_add = 25
         ship_hit_points_max_add = 2500
         ship_crew_max_add = 200

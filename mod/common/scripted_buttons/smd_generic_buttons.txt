@@ -376,9 +376,12 @@ smd_btn_contagion_crackdown = {
 		je:smd_je_fear_of_contagion ?= {
 			add_progress = { value = -25 name = smd_contagion_bar }
 		}
-		add_modifier = {
-			name = smd_dissident_crackdown
-			days = 730
+		random_political_movement = {
+			limit = { has_variable = smd_contagion_target }
+			add_modifier = {
+				name = smd_contagion_movement_crackdown
+				days = 730
+			}
 		}
 	}
 }
@@ -405,6 +408,13 @@ smd_btn_contagion_reassure = {
 		}
 		je:smd_je_fear_of_contagion ?= {
 			add_progress = { value = -8 name = smd_contagion_bar }
+		}
+		random_political_movement = {
+			limit = { has_variable = smd_contagion_target }
+			add_modifier = {
+				name = smd_contagion_movement_reassured
+				days = 365
+			}
 		}
 	}
 }
@@ -796,7 +806,7 @@ smd_btn_veterans_memorial = {
 		}
 		add_modifier = {
 			name = smd_war_memorial
-			days = very_long_modifier_time
+			days = long_modifier_time
 		}
 	}
 }

@@ -24,7 +24,7 @@ un_peacekeepers_deployed = {
 }
 
 un_peacekeepers_vetoed = {
-icon = "gfx/interface/icons/event_icons/modifier_rifle_positive.dds"
+icon = "gfx/interface/icons/timed_modifier_icons/modifier_rifle_negative.dds"
 country_prestige_mult = -0.05
 }
 
@@ -62,6 +62,7 @@ eu_sanctions_ready = {
 }
 
 eu_deeper_trade_ties = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_coins_positive.dds
     state_trade_capacity_mult = 0.10
 	state_trade_quantity_mult = 0.10
 	state_trade_advantage_mult = 0.15

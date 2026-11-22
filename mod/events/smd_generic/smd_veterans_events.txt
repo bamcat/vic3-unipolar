@@ -148,6 +148,7 @@ smd_veterans.4 = {
 		add_modifier = {
 			name = smd_veterans_reintegrated
 			days = normal_modifier_time
+			is_decaying = yes
 		}
 		ai_chance = { base = 100 }
 	}
@@ -173,6 +174,7 @@ smd_veterans.5 = {
 		add_modifier = {
 			name = smd_veterans_movement
 			days = normal_modifier_time
+			is_decaying = yes
 		}
 		ai_chance = { base = 100 }
 	}

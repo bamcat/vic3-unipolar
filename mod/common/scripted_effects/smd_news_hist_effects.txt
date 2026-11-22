@@ -1,0 +1,33 @@
+﻿smd_news_hist_place = {
+	if = {
+		limit = {
+			scope:news_source_country ?= {
+				any_scope_state = { state_region = s:$REGION$ }
+			}
+		}
+		scope:news_source_country = {
+			random_scope_state = {
+				limit = { state_region = s:$REGION$ }
+				save_scope_as = news_event_state
+			}
+		}
+	}
+	else_if = {
+		limit = {
+			any_state = { state_region = s:$REGION$ }
+		}
+		random_state = {
+			limit = { state_region = s:$REGION$ }
+			save_scope_as = news_event_state
+		}
+	}
+	else = {
+		smd_news_hist_place_capital = yes
+	}
+}
+
+smd_news_hist_place_capital = {
+	scope:news_source_country ?= {
+		capital ?= { save_scope_as = news_event_state }
+	}
+}

@@ -1,4 +1,4 @@
-start_israel_palestine_peacetime_journal_entry_system = {
+﻿start_israel_palestine_peacetime_journal_entry_system = {
 	if = {
 		limit = {
 			exists = c:ISR
@@ -169,18 +169,46 @@ ip_escalate_to_intifada_warning_effect = {
 		}
 	}
 
-	add_contextless_journal_entry = je_second_intifada
-	c:PAL ?= {
-		create_diplomatic_play = {
-			name = second_intifada
-
-			target_state = c:ISR.capital
-
-			war = yes
-			annex_as_civil_war = yes
-
-			type = dp_revolution
-
+	if = {
+		limit = {
+			exists = c:ISR
+			exists = c:PAL
+			NOT = { has_global_variable = intifada_started }
+			c:ISR = {
+				NOT = { has_war_with = c:PAL }
+			}
+		}
+		c:ISR = {
+			if = {
+				limit = {
+					c:PAL = { is_subject_of = c:ISR }
+				}
+				create_diplomatic_play = {
+					name = smd_second_intifada_play
+					type = smd_dp_intifada
+					target_state = c:PAL.capital
+					war = yes
+					add_war_goal = {
+						holder = c:PAL
+						type = independence
+						target_country = c:ISR
+						primary_demand = yes
+					}
+				}
+			}
+			else = {
+				create_diplomatic_play = {
+					name = smd_second_intifada_play
+					type = smd_dp_intifada
+					target_state = c:PAL.capital
+					war = yes
+					add_war_goal = {
+						holder = c:PAL
+						type = humiliation
+						target_country = c:ISR
+					}
+				}
+			}
 		}
 	}
 }
@@ -213,9 +241,14 @@ oslo_i_acceptance_effect = {
 	}
 
 	c:ISR ?= {
-		remove_diplomatic_pact = {
-		 country = c:ISR
-		 type = dominion
+		if = {
+			limit = {
+				c:PAL ?= { is_subject_of = c:ISR }
+			}
+			remove_diplomatic_pact = {
+				country = c:PAL
+				type = dominion
+			}
 		}
 	}
 	s:STATE_PALESTINE ={

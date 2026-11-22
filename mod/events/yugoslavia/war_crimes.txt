@@ -12,12 +12,16 @@ yugoslav_war_crimes.1 = {
 	duration = 2
 
 	trigger = {
+		NOT = { has_global_variable = smd_sarajevo_fired }
 		NOT = { has_variable = sarajevo_happened }
 		OR = { c:YUG ?= this c:SRP ?= this }
 		c:BOS = { enemy_occupation > 0.20 }
 		game_date >= 1992.5.1
 	}
 
+	immediate = {
+		set_global_variable = smd_sarajevo_fired
+	}
 	option = {
 		name = yugoslav_war_crimes.1.a
 		default_option = yes
@@ -57,12 +61,16 @@ yugoslav_war_crimes.2 = {
 	duration = 2
 
 	trigger = {
+		NOT = { has_global_variable = smd_srebrenica_fired }
 		NOT = { has_variable = srebrenica_happened }
 		OR = { c:YUG ?= this c:SRP ?= this }
 		c:BOS = { enemy_occupation > 0.20 }
 		game_date >= 1995.1.1
 	}
 
+	immediate = {
+		set_global_variable = smd_srebrenica_fired
+	}
 	option = {
 		name = yugoslav_war_crimes.2.a
 		default_option = yes
@@ -100,6 +108,12 @@ yugoslav_war_crimes.3 = {
 	event_image = { video = "unspecific_politicians_arguing" }
 	duration = 2
 
+	trigger = {
+		NOT = { has_variable = smd_responded_sarajevo }
+	}
+	immediate = {
+		set_variable = smd_responded_sarajevo
+	}
 	option = {
 		name = yugoslav_war_crimes.3.a
 		default_option = yes
@@ -122,6 +136,12 @@ yugoslav_war_crimes.4 = {
 	event_image = { video = "unspecific_politicians_arguing" }
 	duration = 2
 
+	trigger = {
+		NOT = { has_variable = smd_responded_srebrenica }
+	}
+	immediate = {
+		set_variable = smd_responded_srebrenica
+	}
 	option = {
 		name = yugoslav_war_crimes.4.a
 		default_option = yes

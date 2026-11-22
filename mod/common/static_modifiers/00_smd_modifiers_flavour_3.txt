@@ -65,35 +65,36 @@ left_nato = {
 	country_leverage_resistance_mult = 5.0
 }
 
-heightened_security_measures = {
-    country_authority_mult = -0.05
-    country_radicals_from_standard_of_living_mult = -0.05
-}
-
 limited_response = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_flag_negative.dds
     country_bureaucracy_mult = 0.05
     country_authority_mult = -0.05
 }
 
 bin_laden_extradition_accepted_country = {
-    country_mobilization_speed_mult = 0.1
-    country_offense_mult = 0.05
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_flag_positive.dds
+    military_formation_mobilization_speed_mult = 0.1
+    unit_army_offense_mult = 0.05
 }
 
 bin_laden_extradition_accepted_ig_armed_forces = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_rifle_positive.dds
     interest_group_approval_add = 2
 }
 
 bin_laden_extradition_rejected_country = {
-    country_mobilization_speed_mult = -0.05
-    country_defense_mult = -0.05
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_flag_negative.dds
+    military_formation_mobilization_speed_mult = -0.05
+    unit_army_defense_mult = -0.05
 }
 
 bin_laden_extradition_rejected_ig_armed_forces = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_rifle_negative.dds
     interest_group_approval_add = 2
 }
 
 bin_laden_extradition_rejected_ig_armed_forces_2 = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_rifle_negative.dds
     interest_group_approval_add = -2
 }
 
@@ -105,6 +106,7 @@ ground_zero = {
 }
 
 intensified_intelligence_operations = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_rifle_positive.dds
     country_authority_mult = 0.25
 	unit_army_offense_mult = 0.15
 }
@@ -300,61 +302,18 @@ svk_new_republic_founding = {
 }
  
 ### Active during guerrilla phase — same effect as Carlist War
-chechen_war_guerilla_warfare = {
-	icon = gfx/interface/icons/timed_modifier_icons/modifier_rifle_negative.dds
-	character_advancement_speed_mult = -0.9
-	battle_total_combat_width_mult = -0.5
-	country_prestige_mult = -0.25
-}
  
 ### Russian morale boost — scaled by war score like galvanized_forces
-chechen_war_rus_morale = {
-	icon = gfx/interface/icons/timed_modifier_icons/modifier_rifle_positive.dds
-	country_army_power_projection_mult = 0.05
-	country_prestige_mult = 0.02
-}
  
 ### Chechen mountain resistance — scaled by war score like the_last_stand
-chechen_mountain_resistance = {
-	icon = gfx/interface/icons/timed_modifier_icons/modifier_rifle_positive.dds
-	battle_defense_owned_province_mult = 0.15
-	country_prestige_mult = 0.05
-}
  
 ### Chechen ambush tactics — temporary from guerrilla events
-chechen_ambush_tactics = {
-	icon = gfx/interface/icons/timed_modifier_icons/modifier_rifle_positive.dds
-	battle_defense_owned_province_mult = 0.10
-}
  
 ### Storm Grozny aftermath
-chechen_storm_grozny = {
-	icon = gfx/interface/icons/timed_modifier_icons/modifier_rifle_negative.dds
-	state_mortality_mult = 0.05
-}
  
 ### War devastation applied to Caucasus states
-chechen_war_devastation = {
-	icon = gfx/interface/icons/timed_modifier_icons/modifier_flag_negative.dds
-	state_mortality_mult = 0.03
-	state_infrastructure_mult = -0.10
-}
  
 ### Raid expenses
-chechen_war_raid_expenses = {
-	icon = gfx/interface/icons/timed_modifier_icons/modifier_coins_negative.dds
-	country_military_goods_cost_mult = 0.1
-}
  
 ### Victory rewards
-chechen_war_rus_reward = {
-	icon = gfx/interface/icons/timed_modifier_icons/modifier_flag_positive.dds
-	country_prestige_mult = 0.10
-	country_army_power_projection_mult = 0.05
-}
  
-chechen_war_che_reward = {
-	icon = gfx/interface/icons/timed_modifier_icons/modifier_flag_positive.dds
-	country_prestige_mult = 0.15
-	country_legitimacy_base_add = 10
-}

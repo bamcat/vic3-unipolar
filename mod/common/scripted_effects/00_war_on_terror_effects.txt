@@ -30,6 +30,7 @@ wot_join_us_afghanistan_war = {
 	}
 
 	set_variable = wot_joined_afghanistan_war
+	trigger_event = { id = wot_coalition.30 days = 14 }
 }
 
 wot_create_pakistan_coalition_access_treaties = {
@@ -45,6 +46,7 @@ wot_create_pakistan_coalition_access_treaties = {
 
 
 wot_activate_northern_alliance_for_afghanistan_war = {
+	wot_ensure_northern_alliance = yes
 	if = {
 		limit = {
 			exists = c:ANA
@@ -65,6 +67,9 @@ wot_activate_northern_alliance_for_afghanistan_war = {
 
 		c:ANA ?= {
 			trigger_event = { id = wot_coalition.20 popup = yes }
+		}
+		c:USA ?= {
+			trigger_event = { id = wot_coalition.30 days = 14 }
 		}
 	}
 }
@@ -157,6 +162,61 @@ wot_northern_alliance_join_afghanistan_play_or_war = {
 
 		c:ANA ?= {
 			set_variable = wot_joined_afghanistan_war
+		}
+	}
+}
+
+wot_ensure_northern_alliance = {
+	if = {
+		limit = {
+			NOT = { exists = c:ANA }
+			exists = c:AFG
+			c:AFG = { any_scope_state = { count >= 2 } }
+		}
+		c:AFG = {
+			if = {
+				limit = { any_scope_state = { state_region = s:STATE_BALKH } }
+				random_scope_state = {
+					limit = { state_region = s:STATE_BALKH }
+					save_scope_as = wot_ana_restore_state
+				}
+			}
+			else_if = {
+				limit = { any_scope_state = { state_region = s:STATE_CENTRAL_HIGHLANDS } }
+				random_scope_state = {
+					limit = { state_region = s:STATE_CENTRAL_HIGHLANDS }
+					save_scope_as = wot_ana_restore_state
+				}
+			}
+			else = {
+				random_scope_state = {
+					limit = { is_capital = no }
+					save_scope_as = wot_ana_restore_state
+				}
+			}
+		}
+		create_country = {
+			tag = ANA
+			origin = c:AFG
+			state = scope:wot_ana_restore_state
+			on_created = {
+				set_variable = wot_northern_alliance_restored
+				activate_law = law_type:law_presidential_republic
+				activate_law = law_type:law_oligarchy
+				activate_law = law_type:law_state_religion
+				activate_law = law_type:law_national_militia
+				activate_law = law_type:law_appointed_bureaucrats
+				create_character = {
+					first_name = smd_cn_mohammed
+					last_name = smd_cn_fahim
+					culture = cu:tajik
+					historical = yes
+					ruler = yes
+					age = 44
+					interest_group = ig_armed_forces
+					ideology = ideology_conservative_leader
+				}
+			}
 		}
 	}
 }

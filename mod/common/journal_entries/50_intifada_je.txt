@@ -1,4 +1,4 @@
-je_second_intifada = {
+﻿je_second_intifada = {
 	group = je_group_international
 	icon = "gfx/interface/icons/event_icons/event_military.dds"
 
@@ -129,16 +129,26 @@ je_second_intifada = {
 					has_war_with = c:PAL
 				}
 			}
+			NOT = {
+				any_diplomatic_play = {
+					is_diplomatic_play_type = smd_dp_intifada
+				}
+			}
 		}
 		effect = {
-			every_country = {
+			if = {
 				limit = {
-					OR = {
-						c:ISR ?= this
-						c:PAL ?= this
-					}
+					NOT = { c:ISR ?= { has_modifier = intifada_2005_ceasefire } }
 				}
-				trigger_event = intifada_events.2
+				every_country = {
+					limit = {
+						OR = {
+							c:ISR ?= this
+							c:PAL ?= this
+						}
+					}
+					trigger_event = intifada_events.2
+				}
 			}
 			hidden_effect = {
 				remove_global_variable = isr_intifada_score
@@ -164,6 +174,7 @@ je_second_intifada = {
 						remove_modifier = intifada_devastation
 					}
 				}
+				restart_israel_palestine_peacetime_after_escalation = yes
 			}
 		}
 	}

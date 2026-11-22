@@ -1,4 +1,4 @@
-namespace = wot_coalition
+﻿namespace = wot_coalition
 
 wot_coalition.1 = {
 	type = country_event
@@ -264,5 +264,80 @@ wot_coalition.20 = {
 	option = {
 		name = wot_coalition.20.a
 		default_option = yes
+	}
+}
+
+wot_coalition.30 = {
+	type = country_event
+	placement = ROOT
+	duration = 3
+
+	title = smd_wot_afghan_expedition.t
+	desc = smd_wot_afghan_expedition.d
+	flavor = smd_wot_afghan_expedition.f
+
+	event_image = { video = "middleeast_battlefield_trenches" }
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+	icon = "gfx/interface/icons/event_icons/event_military.dds"
+
+	trigger = {
+		exists = c:ANA
+		NOT = { c:ANA ?= this }
+		NOT = { has_variable = wot_afghan_deployment_decided }
+		NOT = { has_war_with = c:ANA }
+		any_scope_war = {
+			is_war_participant = c:AFG
+			is_war_participant = c:ANA
+			any_scope_front = {
+				any_scope_state = { owner = c:ANA }
+			}
+		}
+		any_military_formation = {
+			is_army = yes
+			any_scope_general = { always = yes }
+		}
+	}
+
+	immediate = {
+		set_variable = wot_afghan_deployment_decided
+		random_scope_war = {
+			limit = {
+				is_war_participant = c:AFG
+				is_war_participant = c:ANA
+			}
+			random_scope_front = {
+				limit = {
+					any_scope_state = { owner = c:ANA }
+				}
+				save_scope_as = wot_afghan_front
+			}
+		}
+		random_military_formation = {
+			limit = {
+				is_army = yes
+				any_scope_general = { always = yes }
+			}
+			save_scope_as = wot_afghan_formation
+			random_scope_general = {
+				save_scope_as = wot_afghan_general
+			}
+		}
+		c:ANA.capital ?= {
+			save_scope_as = wot_ana_capital
+		}
+	}
+
+	option = {
+		name = smd_wot_afghan_expedition.a
+		default_option = yes
+		scope:wot_afghan_formation ?= {
+			teleport_to_front = scope:wot_afghan_front
+		}
+		ai_chance = { base = 60 }
+	}
+
+	option = {
+		name = smd_wot_afghan_expedition.b
+		ai_chance = { base = 40 }
 	}
 }

@@ -48,7 +48,7 @@
  nuclear_events.2.d: "Las agencias de inteligencia extranjeras, aprovechando imágenes satelitales, reportes de desertores e inteligencia de señales, han concluido con alta confianza que idx id=0/ título está operando un programa clandestino de armas nucleares. Los resultados están circulando entre los gobiernos aliados. El Consejo de Seguridad ha sido informado oficiosamente. id=3/ título puede negar, explicar o poseerlo. Cada camino tiene consecuencias."
  nuclear_events.2.f: "Nada permanece en secreto para siempre."
  nuclear_events.2.a: "Negación: las instalaciones son puramente infraestructuras de energía civil"
- nuclear_events.2.b: "El reconocimiento — id=0/ título se realiza con derecho a disuasión"
+ nuclear_events.2.b: "El reconocimiento, id=0/ título se realiza con derecho a disuasión"
 
 
  nuclear_capable_modifier: "Nuclear Threshold State"
@@ -95,25 +95,25 @@
  nuclear_events.6.d: "El Organismo Internacional de Energía Atómica ha solicitado oficialmente el acceso a instalaciones nucleares id=0/año. La solicitud sigue los informes de inteligencia, que ahora se distribuyen ampliamente entre los Estados miembros, que sugieren la existencia de un programa de enriquecimiento de grado de armas. La posición del OIEA es inequívoca: <x id=3/año es signatario de los compromisos de no proliferación. La reducción del acceso a la inspección constituiría una violación importante. Permitirlo requeriría abrir las instalaciones a la vigilancia internacional, y casi sin duda terminar el programa de armas. Los inspectores están esperando una respuesta."
  nuclear_events.6.f: "Los inspectores son educados. La solicitud no lo es."
  nuclear_events.6.a: "Acceso de subvenciones: permitir al OIEA inspeccionar nuestras instalaciones"
- nuclear_events.6.b: "Rechazar — id=0/ título no se someterá a inspección extranjera"
+ nuclear_events.6.b: "Rechazar, id=0/ título no se someterá a inspección extranjera"
 
  nuclear_events.7.t: "Consejo de Seguridad de las Naciones Unidas: Enriquecimiento de la cesación del fuego"
  nuclear_events.7.d: "El Consejo de Seguridad de las Naciones Unidas ha aprobado una resolución en la que se exige que se ponga fin inmediatamente a su programa de enriquecimiento de uranio y se someta a la verificación del OIEA. La votación no fue cercana. La resolución exige el cese total dentro de treinta días y amenaza las sanciones coordinadas si ierex id=3/propios se niega a cumplir. Esto no es una petición. Es un ultimátum."
  nuclear_events.7.f: "El Consejo de Seguridad ha hablado. Lo que hace ahora se define su lugar en el mundo."
  nuclear_events.7.a: "Comply - halt enrichment and submit to monitoring"
- nuclear_events.7.b: "Rechazar — id=0/ título continuará independientemente de las consecuencias"
+ nuclear_events.7.b: "Rechazar, id=0/ título continuará independientemente de las consecuencias"
 
  nuclear_events.8.t: "Consejo de Seguridad de la ONU: Consecuencias de desarme o de cara"
  nuclear_events.8.d: "Habiendo reconocido su programa de armas nucleares, ierex id=0/año no ha dejado al Consejo de Seguridad con ninguna ambigüedad. Una resolución ha pasado exigiendo el cese inmediato de la actividad de enriquecimiento y el desmantelamiento de la infraestructura relacionada con las armas. La resolución fue aprobada en virtud del Capítulo VII, lo que significa que no se ha descartado la ejecución militar. id=3/año tiene treinta días para cumplir."
  nuclear_events.8.f: "La honestidad no fue recompensada. El ultimátum es igual."
  nuclear_events.8.a: "Cumplir el programa y someterlo a verificación"
- nuclear_events.8.b: "Rechazar — id=0/ título no se desarma bajo presión"
+ nuclear_events.8.b: "Rechazar, id=0/ título no se desarma bajo presión"
 
  nuclear_events.9.t: "Respuesta al desafío nuclear de id=0/año"
  nuclear_events.9.d: "id=0/año ha rechazado el ultimátum del Consejo de Seguridad de las Naciones Unidas y sigue enriqueciendo uranio hacia la pureza de grado de armas. El régimen de sanciones está en su lugar.Se debe aclarar ahora la posición de id=1/ títulox id=2/ título indicadox id=3/ título. Un país en nuestra esfera estratégica está desarrollando armas nucleares en desafío del orden internacional que ayudamos a construir. La pregunta es cómo respondemos con fuerza."
  nuclear_events.9.f: "Se han intentado palabras. Este es el momento para decidir qué viene después."
  nuclear_events.9.a: "Intervene - lanzar un juego diplomático para forzar el desarme"
- nuclear_events.9.b: "Amenazarse — aclarar las consecuencias sin comprometer fuerzas"
+ nuclear_events.9.b: "Amenazarse, aclarar las consecuencias sin comprometer fuerzas"
 
  nuclear_iaea_cooperation: "Acuerdo de Cooperación del OIEA"
  nuclear_iaea_cooperation_desc: "id=0/año ha abierto sus instalaciones nucleares a la vigilancia del OIEA. A cambio de uso civil verificable, se ha ampliado el apoyo internacional a la infraestructura de energía nuclear."
@@ -209,7 +209,7 @@
  BOMBING_EXECUTE_TOOLTIP: "Ejecutar un bombardeo estratégico contra todos los estados seleccionados. La devastación se añade sobre la base del número de formaciones de aire calificadas. 30 días de refrigeración se aplica."
 
  NUCLEAR_ICBM_PROGRESS_TOOLTIP: "Progresos en el desarrollo de la ICBM. Al 100%, las armas nucleares pueden apuntar a cualquier estado a nivel mundial."
- NUCLEAR_ICBM_TOOLTIP: "Iniciar el desarrollo de misiles balísticos intercontinentales. Requiere capacidad nuclear. Lleva varios años. Una vez completas, las armas nucleares pueden dirigirse a cualquier estado del mundo, no sólo a los vecinos."
+ NUCLEAR_ICBM_TOOLTIP: "Iniciar el desarrollo de misiles balísticos intercontinentales. Requiere capacidad nuclear. Lleva varios años. Una vez completas, las armas nucleares pueden dirigirse a cualquier estado del mundo, no sólo a los vecinos. Cuesta @money![GetPlayer.MakeScope.ScriptValue('smd_icbm_programme_cost')|Dv] (10 % del PIB)."
 
  CONV_PRODUCE_MISSILES_TOOLTIP: "Fabrica una salva de 5 misiles convencionales. Pequeño costo de producción en curso. Los misiles se consumen al disparar, uno por estado objetivo."
 
@@ -233,10 +233,10 @@
  missile_strike_victim_modifier_desc: "Nuestro territorio ha sido atacado por un ataque de misiles convencionales. Los daños de infraestructura y la ansiedad pública son elevados."
 
  nuclear_events.13.t: "Retaliación nuclear - Decisión requerida"
- nuclear_events.13.d: "id=0/año lanzó armas nucleares contra idx id=1/año. Nuestras ojivas están armadas. Los códigos de lanzamiento están listos.Significados: id=2/ título obtenidosx id=3/ títuloUna huelga de represalia contra el territorio id=4/año consumiría el 25% de nuestro arsenal y atacaría todos los estados id=5/conejo. La huelga no llevaría infamia — el mundo comprenderá. La alternativa es absorber el ataque. No hay deshonra en la supervivencia."
+ nuclear_events.13.d: "id=0/año lanzó armas nucleares contra idx id=1/año. Nuestras ojivas están armadas. Los códigos de lanzamiento están listos.Significados: id=2/ título obtenidosx id=3/ títuloUna huelga de represalia contra el territorio id=4/año consumiría el 25% de nuestro arsenal y atacaría todos los estados id=5/conejo. La huelga no llevaría infamia, el mundo comprenderá. La alternativa es absorber el ataque. No hay deshonra en la supervivencia."
  nuclear_events.13.f: "El orden sólo debe ser dado una vez."
- nuclear_events.13.a: "Retaliate — lanzamiento 25% del arsenal contra id=0/"
- nuclear_events.13.b: "Bajar — absorber la huelga, preservar el arsenal"
+ nuclear_events.13.a: "Retaliate, lanzamiento 25% del arsenal contra id=0/"
+ nuclear_events.13.b: "Bajar, absorber la huelga, preservar el arsenal"
 
  nuclear_first_strike_response: "Retaliation nuclear (First Strike Response)"
  nuclear_first_strike_response_desc: "id=0/año ha lanzado un ataque nuclear en respuesta a un ataque nuclear no provocado en su territorio. La comunidad internacional reconoce el derecho a represalias: se reduce considerablemente el aumento de la infamia."
@@ -251,3 +251,6 @@
  notification_nuclear_warhead_produced_name:0 "Nuclear Warhead Produced"
  notification_nuclear_warhead_produced_desc:0 "A new warhead has joined the arsenal. [GetPlayer.GetName] now holds [GetPlayer.MakeScope.Var('nukes').GetValue|0] nuclear warheads."
  notification_nuclear_warhead_produced_tooltip:0 "#header $notification_nuclear_warhead_produced_name$#!\n$TOOLTIP_DELIMITER$\n$notification_nuclear_warhead_produced_desc$"
+ notification_smd_missiles_produced_name:0 "Missiles Produced"
+ notification_smd_missiles_produced_desc:0 "A new salvo of five conventional missiles has been added to the arsenal. [GetPlayer.GetName] now holds [GetPlayer.MakeScope.Var('conventional_missiles').GetValue|0] conventional missiles."
+ notification_smd_missiles_produced_tooltip:0 "#header $notification_smd_missiles_produced_name$#!\n$TOOLTIP_DELIMITER$\n$notification_smd_missiles_produced_desc$"

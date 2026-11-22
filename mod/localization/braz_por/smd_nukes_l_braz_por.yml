@@ -19,7 +19,7 @@
  building_nuclear_silo:0 "Silo Nuclear"
 
  je_uranium_enrichment: "Programa de Enriquecimento do Urânio"
- je_uranium_enrichment_reason: "[ROOT.GetCountry.GetName] iniciou um programa de enriquecimento de urânio. As centrífugas estão a funcionar. Os cientistas estão a trabalhar. E o mundo, se ele descobrir, vai querer respostas.\n\n O programa avança mensalmente. Outras centrais nucleares aceleram o progresso. A guerra interrompe-o. No final, [ROOT.GetCountry.GetName] possuirá capacidade nuclear — a capacidade de produzir material de grau de armas."
+ je_uranium_enrichment_reason: "[ROOT.GetCountry.GetName] iniciou um programa de enriquecimento de urânio. As centrífugas estão a funcionar. Os cientistas estão a trabalhar. E o mundo, se ele descobrir, vai querer respostas.\n\n O programa avança mensalmente. Outras centrais nucleares aceleram o progresso. A guerra interrompe-o. No final, [ROOT.GetCountry.GetName] possuirá capacidade nuclear, a capacidade de produzir material de grau de armas."
 
  je_enrichment_early_tt: "O programa está em fase inicial. Estão a ser testadas cascatas de centrifugação. Passarão anos até que o enriquecimento seja concluído."
  je_enrichment_mid_tt: "#bold O enriquecimento está a progredir. #! As cascatas estão correndo na capacidade. A equipa científica está no caminho certo."
@@ -30,7 +30,7 @@
  nuclear_enrichment_progress_bar_tt: "Evolução mensal do enriquecimento"
 
  je_nuclear_production: "Produção de ogivas nucleares"
- je_nuclear_production_reason: "[ROOT.GetCountry.GetName] está fabricando sua primeira ogiva nuclear. O material cindível está pronto. A equipa de engenharia está a montar o dispositivo. A produção é mais rápida do que o enriquecimento — o trabalho árduo já está feito."
+ je_nuclear_production_reason: "[ROOT.GetCountry.GetName] está fabricando sua primeira ogiva nuclear. O material cindível está pronto. A equipa de engenharia está a montar o dispositivo. A produção é mais rápida do que o enriquecimento, o trabalho árduo já está feito."
 
  je_production_early_tt: "A ogiva está no início da assembleia. A equipa de engenharia está dentro do horário."
  je_production_late_tt: "#bold A produção está quase completa.#! Estão a decorrer as verificações finais de montagem e armamento."
@@ -40,19 +40,19 @@
  nuclear_production_progress_bar_tt: "Evolução mensal da produção"
 
  nuclear_events.1.t: "Enriquecimento de urânio completo"
- nuclear_events.1.d: "[ROOT.GetCountry.GetName] enriqueceu com sucesso o urânio em grau de pureza das armas. O programa, realizado ao longo de vários anos em instalações construídas para o efeito, atingiu o seu objectivo técnico.\n\n O país agora possui a capacidade científica e industrial para produzir armas nucleares. Se proceder à produção é uma decisão separada — mas o limiar foi ultrapassado. [ROOT.GetCountry.GetName] é um estado de limiar nuclear."
+ nuclear_events.1.d: "[ROOT.GetCountry.GetName] enriqueceu com sucesso o urânio em grau de pureza das armas. O programa, realizado ao longo de vários anos em instalações construídas para o efeito, atingiu o seu objectivo técnico.\n\n O país agora possui a capacidade científica e industrial para produzir armas nucleares. Se proceder à produção é uma decisão separada, mas o limiar foi ultrapassado. [ROOT.GetCountry.GetName] é um estado de limiar nuclear."
  nuclear_events.1.f: "A parte difícil está feita."
  nuclear_events.1.a: "Comece a preparar-se para a produção de ogivas"
 
  nuclear_events.2.t: "Serviços de Inteligência: O programa foi exposto"
- nuclear_events.2.d: "As agências de inteligência estrangeiras — com base em imagens de satélite, relatórios de desertores e inteligência de sinais — concluíram com grande confiança que [ROOT.GetCountry.GetName] está operando um programa clandestino de armas nucleares.\n\n Os achados estão circulando entre os governos aliados. O Conselho de Segurança foi informado informalmente. [ROOT.GetCountry.GetName] pode negar, explicar ou possuir. Cada caminho tem consequências."
+ nuclear_events.2.d: "As agências de inteligência estrangeiras, com base em imagens de satélite, relatórios de desertores e inteligência de sinais, concluíram com grande confiança que [ROOT.GetCountry.GetName] está operando um programa clandestino de armas nucleares.\n\n Os achados estão circulando entre os governos aliados. O Conselho de Segurança foi informado informalmente. [ROOT.GetCountry.GetName] pode negar, explicar ou possuir. Cada caminho tem consequências."
  nuclear_events.2.f: "Nada fica em segredo para sempre."
- nuclear_events.2.a: "Negação — as instalações são infra-estruturas energéticas puramente civis"
- nuclear_events.2.b: "Reconhecer — [ROOT.GetCountry.GetName] tem o direito de dissuadir"
+ nuclear_events.2.a: "Negação, as instalações são infra-estruturas energéticas puramente civis"
+ nuclear_events.2.b: "Reconhecer, [ROOT.GetCountry.GetName] tem o direito de dissuadir"
 
 
  nuclear_capable_modifier: "Estado do Limiar Nuclear"
- nuclear_capable_modifier_desc: "[ROOT.GetCountry.GetName] alcançou capacidade nuclear — a capacidade de produzir material cindível de grau de armas. O Prestige e a posição diplomática são reforçadas. A produção de ogivas pode agora começar."
+ nuclear_capable_modifier_desc: "[ROOT.GetCountry.GetName] alcançou capacidade nuclear, a capacidade de produzir material cindível de grau de armas. O Prestige e a posição diplomática são reforçadas. A produção de ogivas pode agora começar."
 
  nuclear_programme_denied: "Programa Negado"
  nuclear_programme_denied_desc: "[ROOT.GetCountry.GetName] negou oficialmente o funcionamento de um programa nuclear. A negação não é universalmente acreditada. A geração da infâmia está aumentada."
@@ -65,7 +65,7 @@
 
  NUCLEAR_TARGETING_HEADER: "Meta nuclear"
 
- NUCLEAR_DEPLOY_10_TOOLTIP: "Lança 10% do teu arsenal nuclear. A menor greve prática — cirúrgica e de alcance limitado."
+ NUCLEAR_DEPLOY_10_TOOLTIP: "Lança 10% do teu arsenal nuclear. A menor greve prática, cirúrgica e de alcance limitado."
  NUCLEAR_DEPLOY_25_TOOLTIP: "Lança 25% do teu arsenal. Uma troca nuclear limitada."
  NUCLEAR_DEPLOY_50_TOOLTIP: "Lança metade do teu arsenal. Um grande ataque nuclear."
  NUCLEAR_DEPLOY_75_TOOLTIP: "Lança 75% do teu arsenal. Um primeiro ataque devastador."
@@ -83,37 +83,37 @@
  nuclear_events.4.t: "Lançar o ataque nuclear?"
  nuclear_events.4.d: "A solução do alvo está bloqueada. [GetPlayer.MakeScope.ScriptValue('nuclear_warheads_to_use_sv')|v0] Ogivas foram atribuídas a [GetPlayer.MakeScope.ScriptValue('nuclear_target_count_sv')|v0] estado(s).\n\nVidas civis estimadas: #R ~[GetPlayer.MakeScope.ScriptValue('nuclear_estimated_total_casualties_sv')|vD]#!\n\n Esta acção é irreversível. As ogivas serão gastas. Os Estados serão destruídos. O mundo saberá quem fez isso.\n\nVocê deseja prosseguir?"
  nuclear_events.4.f: "Não há como voltar atrás."
- nuclear_events.4.a: "#R Confirme – inicie a greve#!"
- nuclear_events.4.b: "Abortar — recuar"
+ nuclear_events.4.a: "#R Confirme, inicie a greve#!"
+ nuclear_events.4.b: "Abortar, recuar"
 
  nuclear_events.5.t: "Ataque nuclear"
- nuclear_events.5.d: "[ROOT.GetCountry.GetName] foi atingido por armas nucleares.\n\n Várias ogivas detonaram em todo o território [ROOT.GetCountry.GetAdjective]. As cidades estão a arder. As comunicações entraram em colapso nas regiões afectadas. A escala de baixas ainda não é conhecida — estimativas iniciais sugerem que o número de mortes é catastrófico.\n\n O ataque foi realizado sem aviso prévio. Não houve declaração. Sem ultimato. Não havia nada."
+ nuclear_events.5.d: "[ROOT.GetCountry.GetName] foi atingido por armas nucleares.\n\n Várias ogivas detonaram em todo o território [ROOT.GetCountry.GetAdjective]. As cidades estão a arder. As comunicações entraram em colapso nas regiões afectadas. A escala de baixas ainda não é conhecida, estimativas iniciais sugerem que o número de mortes é catastrófico.\n\n O ataque foi realizado sem aviso prévio. Não houve declaração. Sem ultimato. Não havia nada."
  nuclear_events.5.f: "Não há mais nada a dizer."
  nuclear_events.5.a: "Iniciar resposta de emergência"
 
  nuclear_events.6.t: "A AIEA solicita acesso à inspeção"
- nuclear_events.6.d: "A Agência Internacional de Energia Atómica solicitou formalmente acesso a instalações nucleares [ROOT.GetCountry.GetAdjective]. O pedido segue os relatórios de informações — agora amplamente divulgados entre os Estados-Membros — que sugerem a existência de um programa de enriquecimento de armas.\n\n A posição da AIEA é inequívoca: [ROOT.GetCountry.GetName] é signatária de compromissos de não proliferação. Recusar o acesso à inspecção constituiria uma violação material. Permitir isso exigiria a abertura das instalações para o monitoramento internacional – e quase certamente terminar o programa de armas.\n\n Os inspectores estão à espera de uma resposta."
+ nuclear_events.6.d: "A Agência Internacional de Energia Atómica solicitou formalmente acesso a instalações nucleares [ROOT.GetCountry.GetAdjective]. O pedido segue os relatórios de informações, agora amplamente divulgados entre os Estados-Membros, que sugerem a existência de um programa de enriquecimento de armas.\n\n A posição da AIEA é inequívoca: [ROOT.GetCountry.GetName] é signatária de compromissos de não proliferação. Recusar o acesso à inspecção constituiria uma violação material. Permitir isso exigiria a abertura das instalações para o monitoramento internacional, e quase certamente terminar o programa de armas.\n\n Os inspectores estão à espera de uma resposta."
  nuclear_events.6.f: "Os inspectores são educados. O pedido não é."
- nuclear_events.6.a: "Acesso ao subsídio — permitir que a AIEA inspeccione as nossas instalações"
- nuclear_events.6.b: "Recusar — [ROOT.GetCountry.GetName] não será submetido a inspecção estrangeira"
+ nuclear_events.6.a: "Acesso ao subsídio, permitir que a AIEA inspeccione as nossas instalações"
+ nuclear_events.6.b: "Recusar, [ROOT.GetCountry.GetName] não será submetido a inspecção estrangeira"
 
  nuclear_events.7.t: "Conselho de Segurança das Nações Unidas: cessar o enriquecimento"
  nuclear_events.7.d: "O Conselho de Segurança das Nações Unidas aprovou uma resolução exigindo que [ROOT.GetCountry.GetName] interrompa imediatamente o seu programa de enriquecimento de urânio e submeta à verificação da AIEA.\n\n A votação não foi estreita. A resolução exige a cessação total dentro de trinta dias e ameaça sanções coordenadas se [ROOT.GetCountry.GetName] se recusar a cumprir.\n\n Isto não é um pedido. É um ultimato."
  nuclear_events.7.f: "O Conselho de Segurança falou. O que [ROOT.GetCountry.GetName] faz agora definirá seu lugar no mundo."
- nuclear_events.7.a: "Cumprir — suspender o enriquecimento e submeter-se ao controlo"
+ nuclear_events.7.a: "Cumprir, suspender o enriquecimento e submeter-se ao controlo"
  nuclear_events.7.b: "Recusar - [ROOT.GetCountry.GetName] continuará independentemente das consequências"
 
  nuclear_events.8.t: "Conselho de Segurança da ONU: Desarme ou enfrente consequências"
- nuclear_events.8.d: "Tendo reconhecido seu programa de armas nucleares, [ROOT.GetCountry.GetName] deixou o Conselho de Segurança sem ambiguidade para trabalhar. Uma resolução passou exigindo a cessação imediata da atividade de enriquecimento e o desmantelamento da infraestrutura relacionada com armas.\n\n A resolução foi aprovada no âmbito do capítulo VII — o que significa que a aplicação militar não foi excluída. [ROOT.GetCountry.GetName] tem trinta dias para cumprir."
+ nuclear_events.8.d: "Tendo reconhecido seu programa de armas nucleares, [ROOT.GetCountry.GetName] deixou o Conselho de Segurança sem ambiguidade para trabalhar. Uma resolução passou exigindo a cessação imediata da atividade de enriquecimento e o desmantelamento da infraestrutura relacionada com armas.\n\n A resolução foi aprovada no âmbito do capítulo VII, o que significa que a aplicação militar não foi excluída. [ROOT.GetCountry.GetName] tem trinta dias para cumprir."
  nuclear_events.8.f: "A honestidade não foi recompensada. O ultimato é o mesmo."
- nuclear_events.8.a: "Cumprir — suspender o programa e submeter à verificação"
+ nuclear_events.8.a: "Cumprir, suspender o programa e submeter à verificação"
  nuclear_events.8.b: "Recusar - [ROOT.GetCountry.GetName] não irá desarmar sob pressão"
 
  nuclear_events.9.t: "Resposta à Defiance Nuclear de [SCOPE.sCountry('nuclear_state').GetName]"
  nuclear_events.9.d: "[SCOPE.sCountry('nuclear_state').GetName] recusou o ultimato do Conselho de Segurança da ONU e continua a enriquecer o urânio em direção à pureza de armas. O regime de sanções está em vigor. Um país em nossa esfera estratégica está desenvolvendo armas nucleares em desafio à ordem internacional que ajudamos a construir. A questão é como respondemos com força."
  nuclear_events.9.f: "As palavras foram tentadas. Este é o momento para decidir o que vem a seguir."
- nuclear_events.9.a: "Intervenções — lançar um jogo diplomático para forçar o desarmamento"
- nuclear_events.9.b: "Ameaçar — deixar claro as consequências sem comprometer forças"
+ nuclear_events.9.a: "Intervenções, lançar um jogo diplomático para forçar o desarmamento"
+ nuclear_events.9.b: "Ameaçar, deixar claro as consequências sem comprometer forças"
 
  nuclear_iaea_cooperation: "Acordo de Cooperação da AIEA"
  nuclear_iaea_cooperation_desc: "[ROOT.GetCountry.GetName] abriu as suas instalações nucleares para a monitorização da AIEA. Em troca de uma utilização civil verificável, o apoio internacional às infra-estruturas de energia nuclear foi alargado."
@@ -151,10 +151,10 @@
  nuclear_strike_victim_modifier_desc: "[ROOT.GetCountry.GetName] sofreu um ataque nuclear. O trauma nacional é profundo e duradouro. A recuperação levará uma geração."
 
  nuclear_disarmament: "Apreender ADMs"
- nuclear_disarmament_desc: "Exige que a nação alvo desmonte completamente o seu programa de armas nucleares e entregue o seu arsenal existente. Se for aplicado, toda a capacidade de enriquecimento, estoques de ogivas e variáveis de programa serão despojados — o país deve começar do zero."
+ nuclear_disarmament_desc: "Exige que a nação alvo desmonte completamente o seu programa de armas nucleares e entregue o seu arsenal existente. Se for aplicado, toda a capacidade de enriquecimento, estoques de ogivas e variáveis de programa serão despojados, o país deve começar do zero."
 
  nuclear_events.10.t: "O programa foi-se"
- nuclear_events.10.d: "Os termos da paz foram cumpridos. Os inspectores internacionais entraram em instalações [ROOT.GetCountry.GetAdjective], desmantelaram as cascatas de centrifugadoras, removeram o estoque e selaram os silos.\n\n Anos de trabalho científico, risco político e investimento nacional foram apagados em semanas. O programa não existe. O conhecimento permanece — mas a infra-estrutura, o material e o estatuto jurídico para o perseguir desapareceram.\n\n[ROOT.GetCountry.GetName] podem recomeçar, se assim o desejar. Essa será uma decisão diferente, tomada em circunstâncias diferentes."
+ nuclear_events.10.d: "Os termos da paz foram cumpridos. Os inspectores internacionais entraram em instalações [ROOT.GetCountry.GetAdjective], desmantelaram as cascatas de centrifugadoras, removeram o estoque e selaram os silos.\n\n Anos de trabalho científico, risco político e investimento nacional foram apagados em semanas. O programa não existe. O conhecimento permanece, mas a infra-estrutura, o material e o estatuto jurídico para o perseguir desapareceram.\n\n[ROOT.GetCountry.GetName] podem recomeçar, se assim o desejar. Essa será uma decisão diferente, tomada em circunstâncias diferentes."
  nuclear_events.10.f: "Pode ser reconstruído. Não será esquecido."
  nuclear_events.10.a: "Reconhecer os termos"
 
@@ -174,7 +174,7 @@
  military_base_projector_modifier_desc: "Este país tem forças militares estacionadas em território aliado, estendendo seu alcance estratégico."
 
  je_icbm_programme: "Programa de Desenvolvimento ICBM"
- je_icbm_programme_reason: "[ROOT.GetCountry.GetName] alcançou capacidade nuclear. A próxima fronteira é a entrega: mísseis balísticos intercontinentais capazes de chegar a qualquer ponto do globo sem aviso. O programa é longo — anos de investigação sobre foguetes, desenvolvimento de sistemas de orientação e testes de alcance — mas o pagamento estratégico é absoluto. Um estado capaz de ICBM não pode ser dissuadido pela geografia."
+ je_icbm_programme_reason: "[ROOT.GetCountry.GetName] alcançou capacidade nuclear. A próxima fronteira é a entrega: mísseis balísticos intercontinentais capazes de chegar a qualquer ponto do globo sem aviso. O programa é longo, anos de investigação sobre foguetes, desenvolvimento de sistemas de orientação e testes de alcance, mas o pagamento estratégico é absoluto. Um estado capaz de ICBM não pode ser dissuadido pela geografia."
 
  je_icbm_early_tt: "O programa ICBM está em desenvolvimento precoce. Os sistemas de orientação estão a ser testados. Levará anos até que exista um veículo de entrega intercontinental viável."
  je_icbm_late_tt: "#bold O desenvolvimento da ICBM está a aproximar-se da conclusão.#! Os testes finais de alcance e precisão estão em andamento."
@@ -209,9 +209,9 @@
  BOMBING_EXECUTE_TOOLTIP: "Executar um bombardeamento estratégico contra todos os estados visados. A devastação é adicionada com base no número de formações de ar qualificado. 30 dias de arrefecimento aplica-se."
 
  NUCLEAR_ICBM_PROGRESS_TOOLTIP: "Progresso no desenvolvimento da ICBM. A 100%, as armas nucleares podem atingir qualquer estado globalmente."
- NUCLEAR_ICBM_TOOLTIP: "Iniciar desenvolvimento de mísseis balísticos intercontinentais. Requer capacidade nuclear. Leva vários anos. Uma vez concluídas, as armas nucleares podem atingir qualquer estado do mundo — não apenas as vizinhas."
+ NUCLEAR_ICBM_TOOLTIP: "Iniciar desenvolvimento de mísseis balísticos intercontinentais. Requer capacidade nuclear. Leva vários anos. Uma vez concluídas, as armas nucleares podem atingir qualquer estado do mundo, não apenas as vizinhas. Custa @money![GetPlayer.MakeScope.ScriptValue('smd_icbm_programme_cost')|Dv] (10% do PIB)."
 
- CONV_PRODUCE_MISSILES_TOOLTIP: "Fabricação de um salva de 5 mísseis convencionais. Pequeno custo de produção em curso. Os mísseis são consumidos ao disparar — um por estado visado."
+ CONV_PRODUCE_MISSILES_TOOLTIP: "Fabricação de um salva de 5 mísseis convencionais. Pequeno custo de produção em curso. Os mísseis são consumidos ao disparar, um por estado visado."
 
  missile_production_cost:0 "Produção de mísseis"
  state_buy_orders_missiles_add:0 "Consumo de Mísseis"
@@ -225,29 +225,32 @@
  CONV_BUILDING_CHANCE_TOOLTIP: "Cada míssil disparado tem uma chance de 3% de destruir um dos seguintes edifícios em seu estado-alvo, se presente:\n\n• Aeroporto\n• Barracas\n• Base naval\n• Nuclear Power Plant\n• Nuclear Silo\n• Administração do Governo\n• Ferrovia\n\n Todos os tipos de edifícios são laminados independentemente. Um único míssil salva pode destruir vários edifícios no mesmo estado, se for grande o suficiente."
 
  nuclear_events.12.t: "Ataque de Mísseis em [ROOT.GetName]"
- nuclear_events.12.d: "[SCOPE.sCountry('missile_attacker').GetName] lançou um ataque de mísseis convencional contra [ROOT.GetAdjective] território. Estão a chegar relatórios de impactos em estados [ROOT.GetAdjective] — os danos à infra-estrutura estão a ser avaliados.\n\n Os mísseis não eram nucleares, mas a mensagem é clara. [SCOPE.sCountry('missile_attacker').GetName] está disposto a usar armas de longo alcance contra nós."
+ nuclear_events.12.d: "[SCOPE.sCountry('missile_attacker').GetName] lançou um ataque de mísseis convencional contra [ROOT.GetAdjective] território. Estão a chegar relatórios de impactos em estados [ROOT.GetAdjective], os danos à infra-estrutura estão a ser avaliados.\n\n Os mísseis não eram nucleares, mas a mensagem é clara. [SCOPE.sCountry('missile_attacker').GetName] está disposto a usar armas de longo alcance contra nós."
  nuclear_events.12.f: "As crateras já lá estão. A questão é o que fazemos a seguir."
  nuclear_events.12.a: "Avaliar os danos e responder em conformidade"
 
  missile_strike_victim_modifier: "Ataque de Mísseis Convencionais"
  missile_strike_victim_modifier_desc: "O nosso território foi alvo de um ataque de mísseis convencional. Os danos à infra-estrutura e a ansiedade pública são elevados."
 
- nuclear_events.13.t: "Retaliação nuclear — Decisão necessária"
- nuclear_events.13.d: "[SCOPE.sCountry('nuclear_attacker').GetName] lançou armas nucleares contra [ROOT.GetName]. As nossas ogivas estão armadas. Os códigos de lançamento estão prontos.\n\nUm ataque retaliatório contra o território [SCOPE.sCountry('nuclear_attacker').GetAdjective] consumiria 25% do nosso arsenal e atacaria todos os estados [SCOPE.sCountry('nuclear_attacker').GetAdjective]. A greve não traria infâmia — o mundo entenderá.\n\n A alternativa é absorver o ataque. Não há desonra na sobrevivência."
+ nuclear_events.13.t: "Retaliação nuclear, Decisão necessária"
+ nuclear_events.13.d: "[SCOPE.sCountry('nuclear_attacker').GetName] lançou armas nucleares contra [ROOT.GetName]. As nossas ogivas estão armadas. Os códigos de lançamento estão prontos.\n\nUm ataque retaliatório contra o território [SCOPE.sCountry('nuclear_attacker').GetAdjective] consumiria 25% do nosso arsenal e atacaria todos os estados [SCOPE.sCountry('nuclear_attacker').GetAdjective]. A greve não traria infâmia, o mundo entenderá.\n\n A alternativa é absorver o ataque. Não há desonra na sobrevivência."
  nuclear_events.13.f: "A ordem só precisa ser dada uma vez."
- nuclear_events.13.a: "Retaliar – lançar 25% do arsenal contra [SCOPE.sCountry('nuclear_attacker').GetName]"
- nuclear_events.13.b: "Retirar — absorver o ataque, preservar o arsenal"
+ nuclear_events.13.a: "Retaliar, lançar 25% do arsenal contra [SCOPE.sCountry('nuclear_attacker').GetName]"
+ nuclear_events.13.b: "Retirar, absorver o ataque, preservar o arsenal"
 
  nuclear_first_strike_response: "Retaliação nuclear (primeira resposta de ataque)"
- nuclear_first_strike_response_desc: "[ROOT.GetName] lançou um contra-ataque nuclear em resposta a um ataque nuclear não provocado em seu território. A comunidade internacional reconhece o direito à retaliação — o ganho infâmio é significativamente reduzido."
+ nuclear_first_strike_response_desc: "[ROOT.GetName] lançou um contra-ataque nuclear em resposta a um ataque nuclear não provocado em seu território. A comunidade internacional reconhece o direito à retaliação, o ganho infâmio é significativamente reduzido."
 
  nuclear_absorbed_first_strike: "Ataque Nuclear Absorvido"
  nuclear_absorbed_first_strike_desc: "[ROOT.GetName] sofreu um ataque nuclear sem retaliar. A contenção foi observada internacionalmente. A posição diplomática e o prestígio são consideravelmente melhorados."
 
  nuclear_events.14.t: "Retaliação Nuclear Inbound"
- nuclear_events.14.d: "O nosso ataque nuclear foi respondido. [ROOT.GetName] lançou um ataque retaliatório – as ogivas estão confirmadas na entrada.\n\nIniciámos a troca. As consequências são nossas."
+ nuclear_events.14.d: "O nosso ataque nuclear foi respondido. [ROOT.GetName] lançou um ataque retaliatório, as ogivas estão confirmadas na entrada.\n\nIniciámos a troca. As consequências são nossas."
  nuclear_events.14.f: "Cada greve convida o próximo."
  nuclear_events.14.a: "Preparar para o impacto"
  notification_nuclear_warhead_produced_name:0 "Nuclear Warhead Produced"
  notification_nuclear_warhead_produced_desc:0 "A new warhead has joined the arsenal. [GetPlayer.GetName] now holds [GetPlayer.MakeScope.Var('nukes').GetValue|0] nuclear warheads."
  notification_nuclear_warhead_produced_tooltip:0 "#header $notification_nuclear_warhead_produced_name$#!\n$TOOLTIP_DELIMITER$\n$notification_nuclear_warhead_produced_desc$"
+ notification_smd_missiles_produced_name:0 "Missiles Produced"
+ notification_smd_missiles_produced_desc:0 "A new salvo of five conventional missiles has been added to the arsenal. [GetPlayer.GetName] now holds [GetPlayer.MakeScope.Var('conventional_missiles').GetValue|0] conventional missiles."
+ notification_smd_missiles_produced_tooltip:0 "#header $notification_smd_missiles_produced_name$#!\n$TOOLTIP_DELIMITER$\n$notification_smd_missiles_produced_desc$"

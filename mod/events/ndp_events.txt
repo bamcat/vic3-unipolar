@@ -131,6 +131,7 @@ ndp_events.2 = {
 		add_modifier = {
 			name = ndp_modifier_industrial_state_investment_cost
 			months = 60
+			multiplier = smd_ndp_programme_cost
 		}
 		ai_chance = {
 			base = 50
@@ -317,6 +318,7 @@ ndp_events.12 = {
 		add_modifier = {
 			name = ndp_modifier_military_foreign_arms_cost
 			months = 60
+			multiplier = smd_ndp_programme_cost
 		}
 		ai_chance = { base = 50 }
 	}

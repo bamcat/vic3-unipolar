@@ -1,0 +1,9 @@
+# Newspaper-only localization formatting.
+# Vanilla #black is intentionally a translucent charcoal. This is darker,
+# near-black ink and does not alter the game's global #black formatting.
+textformatting = {
+    format = {
+        name = news_black
+        format = "color:{ 0.06, 0.055, 0.05, 1.0 }"
+    }
+}

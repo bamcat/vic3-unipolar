@@ -1001,6 +1001,10 @@ nuclear_begin_icbm = {
 		in_default = no
 	}
 	effect = {
+		add_treasury = {
+			value = smd_icbm_programme_cost
+			multiply = -1
+		}
 		set_variable = { name = icbm_progress value = 0 }
 		add_journal_entry = { type = je_icbm_programme }
 	}
@@ -1057,17 +1061,7 @@ produce_missiles = {
 		country_rank >= rank_value:recognized
 	}
 	effect = {
-		if = {
-			limit = { NOT = { has_variable = conventional_missiles } }
-			set_variable = { name = conventional_missiles value = 5 }
-		}
-		else = {
-			change_variable = { name = conventional_missiles add = 5 }
-		}
-		add_modifier = {
-			name = missile_production_cost
-			months = 3
-		}
+		smd_missile_produce_salvo = yes
 	}
 	ai_is_valid = { always = no }
 }
@@ -1123,26 +1117,7 @@ missile_queue_subtract = {
 missile_process_queue = {
 	scope = country
 	effect = {
-		if = {
-			limit = {
-				has_variable = missile_production_queue
-				var:missile_production_queue > 0
-				NOT = { has_modifier = missile_production_cost }
-				in_default = no
-			}
-			change_variable = { name = missile_production_queue add = -1 }
-			if = {
-				limit = { NOT = { has_variable = conventional_missiles } }
-				set_variable = { name = conventional_missiles value = 5 }
-			}
-			else = {
-				change_variable = { name = conventional_missiles add = 5 }
-			}
-			add_modifier = {
-				name = missile_production_cost
-				months = 3
-			}
-		}
+		smd_missile_process_queue = yes
 	}
 }
 

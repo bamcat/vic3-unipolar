@@ -9,9 +9,8 @@ smd_annulled_election = {
 }
 
 smd_army_purge = {
-	icon = gfx/interface/icons/timed_modifier_icons/modifier_rifle_negative.dds
-	interest_group_ig_armed_forces_approval_add = -2
-	country_legitimacy_base_add = 3
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_rifle_positive.dds
+	interest_group_ig_armed_forces_approval_add = 2
 }
 
 smd_bilingual_schools = {
@@ -36,11 +35,6 @@ smd_bread_riots_crushed = {
 	icon = gfx/interface/icons/timed_modifier_icons/modifier_fist_negative.dds
 	state_radicals_from_political_movements_mult = 0.15
 	country_legitimacy_base_add = -5
-}
-
-smd_calm_restored = {
-	icon = gfx/interface/icons/timed_modifier_icons/modifier_statue_positive.dds
-	country_legitimacy_base_add = 5
 }
 
 smd_capital_flight = {
@@ -180,12 +174,6 @@ smd_devolved_assembly = {
 	state_radicals_from_political_movements_mult = -0.5
 }
 
-smd_dissident_crackdown = {
-	icon = gfx/interface/icons/timed_modifier_icons/modifier_fist_negative.dds
-	interest_group_ig_intelligentsia_approval_add = -3
-	state_radicals_from_political_movements_mult = 0.15
-}
-
 smd_doctors_leave = {
 	icon = gfx/interface/icons/timed_modifier_icons/modifier_documents_negative.dds
 	state_mortality_mult = 0.05
@@ -211,7 +199,6 @@ smd_emergency_powers = {
 
 smd_emergency_refused = {
 	icon = gfx/interface/icons/timed_modifier_icons/modifier_flag_negative.dds
-	country_legitimacy_base_add = -5
 	interest_group_ig_armed_forces_approval_add = -2
 }
 
@@ -450,12 +437,6 @@ smd_radical_programme = {
 	interest_group_ig_industrialists_approval_add = -2
 }
 
-smd_raised_alert = {
-	icon = gfx/interface/icons/timed_modifier_icons/modifier_rifle_positive.dds
-	country_authority_mult = 0.1
-	interest_group_ig_intelligentsia_approval_add = -1
-}
-
 smd_rationing = {
 	icon = gfx/interface/icons/timed_modifier_icons/modifier_documents_negative.dds
 	interest_group_ig_petty_bourgeoisie_approval_add = -2
@@ -613,7 +594,6 @@ smd_thick_line = {
 smd_veterans_benefits = {
 	icon = gfx/interface/icons/timed_modifier_icons/modifier_rifle_positive.dds
 	interest_group_ig_armed_forces_approval_add = 3
-	country_legitimacy_base_add = 3
 }
 
 smd_veterans_ignored = {
@@ -629,25 +609,24 @@ smd_veterans_movement = {
 
 smd_veterans_reintegrated = {
 	icon = gfx/interface/icons/timed_modifier_icons/modifier_statue_positive.dds
+	country_prestige_add = 10
 	interest_group_ig_armed_forces_approval_add = 2
-	country_legitimacy_base_add = 5
 }
 
 smd_victory_parade = {
 	icon = gfx/interface/icons/timed_modifier_icons/modifier_flag_positive.dds
-	country_legitimacy_base_add = 5
-	interest_group_ig_armed_forces_approval_add = 1
+	country_prestige_add = 10
+	interest_group_ig_armed_forces_approval_add = 2
 }
 
 smd_war_memorial = {
 	icon = gfx/interface/icons/timed_modifier_icons/modifier_statue_positive.dds
-	country_legitimacy_base_add = 3
+	country_prestige_add = 15
 }
 
 smd_war_syndrome_denied = {
 	icon = gfx/interface/icons/timed_modifier_icons/modifier_lightbulb_negative.dds
 	interest_group_ig_armed_forces_approval_add = -2
-	country_legitimacy_base_add = -3
 }
 
 smd_war_syndrome_research = {
@@ -661,3 +640,53 @@ smd_water_rationing = {
 	state_turmoil_effects_mult = 0.15
 }
 
+smd_contagion_movement_watched = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_rifle_negative.dds
+	political_movement_pop_attraction_mult = -0.10
+	political_movement_radicalism_add = 0.05
+}
+
+smd_contagion_movement_tolerated = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_statue_positive.dds
+	political_movement_pop_attraction_mult = 0.10
+	political_movement_radicalism_add = -0.05
+}
+
+smd_contagion_movement_purged = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_rifle_negative.dds
+	political_movement_character_attraction_mult = -0.25
+	political_movement_radicalism_add = 0.05
+}
+
+smd_contagion_movement_crushed = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_fist_negative.dds
+	political_movement_pop_attraction_mult = -0.25
+	political_movement_radicalism_add = 0.15
+}
+
+smd_contagion_movement_emboldened = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_fist_positive.dds
+	political_movement_pop_attraction_mult = 0.15
+}
+
+smd_contagion_movement_crackdown = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_fist_negative.dds
+	political_movement_pop_attraction_mult = -0.15
+	political_movement_radicalism_add = 0.10
+}
+
+smd_contagion_movement_reassured = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_statue_positive.dds
+	political_movement_radicalism_add = -0.05
+}
+
+smd_contagion_movement_subsided = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_statue_positive.dds
+	political_movement_radicalism_add = -0.10
+}
+
+smd_social_state_movement = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_fist_positive.dds
+	political_movement_pop_attraction_mult = 0.15
+	political_movement_radicalism_add = -0.05
+}

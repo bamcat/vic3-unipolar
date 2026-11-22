@@ -61,7 +61,7 @@ NPolitics = {
 
 	NUM_TIMES_TO_LOOP_THROUGH_LAWS = 3	# When creating a law set, how many times do we loop through all law groups? This is done more than once in order to allow laws that are unlocked by other laws to be changed
 
-	DEFAULT_IDEOLOGY = "ideology_moderate" # Used as a fallback if an ideology cannot be selected for a character
+	DEFAULT_IDEOLOGY = "ideology_moderate_leader" # Used as a fallback if an ideology cannot be selected for a character
     CHILD_IDEOLOGY = "ideology_child" 	 # Children use this ideology, which is swapped out once they turn 16
 
 	MIN_POP_NUMBER_JOIN_OR_LEAVE_IG = 10		# Min for maximum amount of pops/support that will change IG in a single update (overrides below max fraction)
@@ -1956,7 +1956,7 @@ NCharacters = {
 
 	MIN_CHARACTER_HEALTH = 0.0					# Baseline is 1.0 (meaning 100%), defined in the base_values modifier. 0.0 means -100% from baseline. [any value]
 	MAX_CHARACTER_HEALTH = 2.0					# Baseline is 1.0 (meaning 100%), defined in the base_values modifier. 2.0 means +100% from baseline. [>= MIN_CHARACTER_HEALTH]
-	CHARACTER_LIFE_EXPECTANCY_BASE_YEARS = 75	# The median life expecancy in years at baseline health. It's the µ parameter of the normal distribution [> 0]
+	CHARACTER_LIFE_EXPECTANCY_BASE_YEARS = 80	# The median life expecancy in years at baseline health. It's the µ parameter of the normal distribution [> 0]
 	CHARACTER_LIFE_EXPECTANCY_STDDEV = 5		# The standard deviation for the life expectancy distribution. It's the σ parameter [> 0]
 	CHARACTER_LIFE_EXPECTANCY_CUTOFF = 3		# We clamp the distribution between this amount of σ in both directions. A range of [-3σ; +3σ] accounts for 99.73% of values. [> 0]
 

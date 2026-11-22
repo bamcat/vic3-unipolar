@@ -3,6 +3,9 @@
 
 	group = je_group_dilemmas
 
+	activation_description = {
+		always = yes
+	}
 
 	outcome = {
 		header = je_standard_completion_header
@@ -37,7 +40,11 @@
 				is_in_government = yes
 			}
 		}
+		effect = {
+			je_ig_suppression_1_cleanup = yes
+		}
 	}
+
 	status_desc = {
 		first_valid = {
 			triggered_desc = {

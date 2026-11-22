@@ -409,6 +409,12 @@ smd_je_fear_of_contagion = {
 		has_variable = smd_contagion_alert
 		NOT = { has_variable = smd_recent_upheaval }
 		NOT = { has_variable = smd_contagion_cooldown }
+		radical_fraction = {
+			value >= 0.2
+		}
+		any_political_movement = {
+			political_movement_support >= 0.15
+		}
 	}
 
 	possible = {
@@ -416,6 +422,12 @@ smd_je_fear_of_contagion = {
 	}
 
 	immediate = {
+		ordered_political_movement = {
+			limit = { political_movement_support >= 0.15 }
+			order_by = political_movement_support
+			set_variable = smd_contagion_target
+			save_scope_as = smd_contagion_movement
+		}
 		trigger_event = { id = smd_contagion.1 popup = yes }
 	}
 
@@ -474,6 +486,18 @@ smd_je_fear_of_contagion = {
 		effect_header = JOURNAL_ENTRY_ON_TIMEOUT
 		flags = { timeout }
 		conclusion_desc = smd_je_fear_of_contagion_timeout_desc
+		effect = {
+			smd_contagion_clear_movement = yes
+			set_variable = { name = smd_contagion_cooldown days = 3650 }
+		}
+	}
+
+	outcome = {
+		flags = { hidden invalid_outcome }
+		conclusion_desc = smd_je_fear_of_contagion_timeout_desc
+		trigger = {
+			NOT = { any_political_movement = { has_variable = smd_contagion_target } }
+		}
 		effect = {
 			set_variable = { name = smd_contagion_cooldown days = 3650 }
 		}

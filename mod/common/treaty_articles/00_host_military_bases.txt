@@ -9,6 +9,9 @@ REPLACE_OR_CREATE:host_military_bases = {
 	relations_progress_per_day = 0.5
 	relations_improvement_max = 25
 
+	max_target_involvement = 2000
+	target_involvement_applies_to = source_country
+
 	icon = "gfx/interface/icons/diplomatic_treaties_articles_icons/transit_rights_treaties.dds"
 
 	flags = {
@@ -196,18 +199,15 @@ REPLACE_OR_CREATE:host_military_bases = {
 			}
 		}
 
+		infamy_severity = 0.05
+		infamy_min = define:NDiplomacy|WAR_GOAL_INFAMY_MODERATE_DEMAND_MIN
+		infamy_max = define:NDiplomacy|WAR_GOAL_INFAMY_MODERATE_DEMAND_MAX
+
 		infamy = {
 			value = 0
-			add = { desc = "INFAMY_BASE_VALUE" value = 0.2 }
 
 			scope:target_country = {
-				multiply = {
-					desc = "INFAMY_TARGET_COUNTRY_POPULATION_FACTOR"
-					value = total_population
-					divide = define:NDiplomacy|WAR_GOAL_INFAMY_POPULATION_SCALING_FACTOR
-					multiply = define:NDiplomacy|WAR_GOAL_INFAMY_POPULATION_SCALING_MULTIPLIER
-					max = define:NDiplomacy|WAR_GOAL_INFAMY_POPULATION_SCALING_MULTIPLIER_MAX_TOTAL
-				}
+				add = country_infamy_value
 			}
 		}
 	}

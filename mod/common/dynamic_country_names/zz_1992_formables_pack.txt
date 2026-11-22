@@ -80,6 +80,36 @@ EAF = {
 		is_main_tag_only = yes
 		trigger = { scope:actor ?= { has_law = law_type:law_theocracy } }
 	}
+	dynamic_country_name = {
+		name = smd_dyn_c_jihad_emirate_EAF
+
+		is_main_tag_only = no
+		priority = 100
+
+		trigger = {
+			smd_coa_def_jihadist_emirate_trigger = yes
+		}
+	}
+	dynamic_country_name = {
+		name = smd_dyn_c_jihad_state_EAF
+
+		is_main_tag_only = no
+		priority = 100
+
+		trigger = {
+			smd_coa_def_jihadist_state_trigger = yes
+		}
+	}
+	dynamic_country_name = {
+		name = smd_dyn_c_jihad_shia_EAF
+
+		is_main_tag_only = no
+		priority = 100
+
+		trigger = {
+			smd_coa_def_jihadist_shia_trigger = yes
+		}
+	}
 }
 
 WAF = {
@@ -163,6 +193,36 @@ HAF = {
 		adjective = HAF_dyn_theocracy_adj
 		is_main_tag_only = yes
 		trigger = { scope:actor ?= { has_law = law_type:law_theocracy } }
+	}
+	dynamic_country_name = {
+		name = smd_dyn_c_jihad_emirate_HAF
+
+		is_main_tag_only = no
+		priority = 100
+
+		trigger = {
+			smd_coa_def_jihadist_emirate_trigger = yes
+		}
+	}
+	dynamic_country_name = {
+		name = smd_dyn_c_jihad_state_HAF
+
+		is_main_tag_only = no
+		priority = 100
+
+		trigger = {
+			smd_coa_def_jihadist_state_trigger = yes
+		}
+	}
+	dynamic_country_name = {
+		name = smd_dyn_c_jihad_shia_HAF
+
+		is_main_tag_only = no
+		priority = 100
+
+		trigger = {
+			smd_coa_def_jihadist_shia_trigger = yes
+		}
 	}
 }
 
@@ -290,6 +350,36 @@ CAU = {
 		is_main_tag_only = yes
 		trigger = { scope:actor ?= { has_law = law_type:law_theocracy } }
 	}
+	dynamic_country_name = {
+		name = smd_dyn_c_jihad_emirate_CAU
+
+		is_main_tag_only = no
+		priority = 100
+
+		trigger = {
+			smd_coa_def_jihadist_emirate_trigger = yes
+		}
+	}
+	dynamic_country_name = {
+		name = smd_dyn_c_jihad_state_CAU
+
+		is_main_tag_only = no
+		priority = 100
+
+		trigger = {
+			smd_coa_def_jihadist_state_trigger = yes
+		}
+	}
+	dynamic_country_name = {
+		name = smd_dyn_c_jihad_shia_CAU
+
+		is_main_tag_only = no
+		priority = 100
+
+		trigger = {
+			smd_coa_def_jihadist_shia_trigger = yes
+		}
+	}
 }
 
 CCA = {
@@ -310,6 +400,36 @@ CCA = {
 		adjective = CCA_dyn_theocracy_adj
 		is_main_tag_only = yes
 		trigger = { scope:actor ?= { has_law = law_type:law_theocracy } }
+	}
+	dynamic_country_name = {
+		name = smd_dyn_c_jihad_emirate_CCA
+
+		is_main_tag_only = no
+		priority = 100
+
+		trigger = {
+			smd_coa_def_jihadist_emirate_trigger = yes
+		}
+	}
+	dynamic_country_name = {
+		name = smd_dyn_c_jihad_state_CCA
+
+		is_main_tag_only = no
+		priority = 100
+
+		trigger = {
+			smd_coa_def_jihadist_state_trigger = yes
+		}
+	}
+	dynamic_country_name = {
+		name = smd_dyn_c_jihad_shia_CCA
+
+		is_main_tag_only = no
+		priority = 100
+
+		trigger = {
+			smd_coa_def_jihadist_shia_trigger = yes
+		}
 	}
 }
 
@@ -417,6 +537,36 @@ TUC = {
 		adjective = TUC_dyn_theocracy_adj
 		is_main_tag_only = yes
 		trigger = { scope:actor ?= { has_law = law_type:law_theocracy } }
+	}
+	dynamic_country_name = {
+		name = smd_dyn_c_jihad_emirate_TUC
+
+		is_main_tag_only = no
+		priority = 100
+
+		trigger = {
+			smd_coa_def_jihadist_emirate_trigger = yes
+		}
+	}
+	dynamic_country_name = {
+		name = smd_dyn_c_jihad_state_TUC
+
+		is_main_tag_only = no
+		priority = 100
+
+		trigger = {
+			smd_coa_def_jihadist_state_trigger = yes
+		}
+	}
+	dynamic_country_name = {
+		name = smd_dyn_c_jihad_shia_TUC
+
+		is_main_tag_only = no
+		priority = 100
+
+		trigger = {
+			smd_coa_def_jihadist_shia_trigger = yes
+		}
 	}
 }
 

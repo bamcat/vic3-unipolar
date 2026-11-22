@@ -1,0 +1,107 @@
+﻿wc_vs = {
+	exists = c:$A$
+	exists = c:$B$
+	is_war_participant = c:$A$
+	is_war_participant = c:$B$
+	OR = {
+		AND = {
+			is_on_defending_side = c:$A$
+			NOT = { is_on_defending_side = c:$B$ }
+		}
+		AND = {
+			is_on_defending_side = c:$B$
+			NOT = { is_on_defending_side = c:$A$ }
+		}
+	}
+}
+
+wc_with = {
+	exists = c:$A$
+	exists = c:$B$
+	is_war_participant = c:$A$
+	is_war_participant = c:$B$
+	OR = {
+		AND = {
+			is_on_defending_side = c:$A$
+			is_on_defending_side = c:$B$
+		}
+		AND = {
+			NOT = { is_on_defending_side = c:$A$ }
+			NOT = { is_on_defending_side = c:$B$ }
+		}
+	}
+}
+
+wc_has_form = {
+	OR = {
+		this = cd:GBR
+		this = cd:ENG
+		this = cd:FRA
+		this = cd:RUS
+		this = cd:AUS
+		this = cd:KUK
+		this = cd:CHI
+		this = cd:ITA
+		this = cd:GRE
+		this = cd:SER
+		this = cd:SPA
+		this = cd:POR
+	}
+}
+
+wc_civ_is = {
+	has_variable = wc_civ
+	var:wc_civ = { this = cd:$TAG$ }
+}
+
+wc_is_civil_play = {
+	scope:wc_play = {
+		OR = {
+			is_diplomatic_play_type = dp_revolution
+			is_diplomatic_play_type = dp_secession
+		}
+	}
+}
+
+wc_same_keys = {
+	OR = {
+		AND = {
+			wc_key_eq = { K = wc_k1 S = wc_new_k1 }
+			wc_key_eq = { K = wc_k2 S = wc_new_k2 }
+			OR = {
+				AND = {
+					NOT = { has_variable = wc_flavor }
+					scope:wc_slot = { NOT = { has_variable = wc_flavor } }
+				}
+				AND = {
+					has_variable = wc_flavor
+					scope:wc_slot = { has_variable = wc_flavor }
+					var:wc_flavor = scope:wc_slot.var:wc_flavor
+				}
+			}
+		}
+		AND = {
+			scope:wc_slot = { has_variable = wc_unordered }
+			has_variable = wc_k1
+			has_variable = wc_k2
+			exists = scope:wc_new_k1
+			exists = scope:wc_new_k2
+			var:wc_k1 = { this = scope:wc_new_k2 }
+			var:wc_k2 = { this = scope:wc_new_k1 }
+		}
+	}
+}
+
+wc_key_eq = {
+	OR = {
+		AND = {
+			NOT = { has_variable = $K$ }
+			NOT = { exists = scope:$S$ }
+		}
+		AND = {
+			has_variable = $K$
+			exists = scope:$S$
+			var:$K$ = { this = scope:$S$ }
+		}
+	}
+}

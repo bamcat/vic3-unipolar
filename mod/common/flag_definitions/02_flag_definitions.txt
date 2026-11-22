@@ -149,6 +149,14 @@ REPLACE_OR_CREATE:KYR = {
 			always = yes
 		}
 	}
+	flag_definition = {
+		coa = smd_jihadist_black_flag
+		subject_canton = smd_jihadist_black_flag
+		priority = 200
+		trigger = {
+			smd_coa_def_jihadist_flag_trigger = yes
+		}
+	}
 }
 
 REPLACE_OR_CREATE:PHP = { # philippines
@@ -271,6 +279,14 @@ REPLACE_OR_CREATE:ANA = {
 			coa_def_spanish_ensign_trigger = yes
 		}
 	}
+	flag_definition = {
+		coa = smd_jihadist_black_flag
+		subject_canton = smd_jihadist_black_flag
+		priority = 200
+		trigger = {
+			smd_coa_def_jihadist_flag_trigger = yes
+		}
+	}
 }
 
 REPLACE_OR_CREATE:FSY = {
@@ -307,6 +323,14 @@ REPLACE_OR_CREATE:FSY = {
 		priority = 50
 		trigger = {
 			coa_def_spanish_ensign_trigger = yes
+		}
+	}
+	flag_definition = {
+		coa = smd_jihadist_black_flag
+		subject_canton = smd_jihadist_black_flag
+		priority = 200
+		trigger = {
+			smd_coa_def_jihadist_flag_trigger = yes
 		}
 	}
 }
@@ -347,6 +371,14 @@ REPLACE_OR_CREATE:HTH = {
 			coa_def_spanish_ensign_trigger = yes
 		}
 	}
+	flag_definition = {
+		coa = smd_jihadist_black_flag
+		subject_canton = smd_jihadist_black_flag
+		priority = 200
+		trigger = {
+			smd_coa_def_jihadist_flag_trigger = yes
+		}
+	}
 }
 
 REPLACE_OR_CREATE:DRK = {
@@ -382,5 +414,13 @@ REPLACE_OR_CREATE:HMS = {
 		overlord_canton_offset = { 0.067 0.1 }
 		overlord_canton_scale = { 0.4 0.4 }
 		priority = 1
+	}
+	flag_definition = {
+		coa = smd_jihadist_black_flag
+		subject_canton = smd_jihadist_black_flag
+		priority = 200
+		trigger = {
+			smd_coa_def_jihadist_flag_trigger = yes
+		}
 	}
 }

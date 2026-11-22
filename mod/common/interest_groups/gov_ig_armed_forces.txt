@@ -282,17 +282,16 @@ REPLACE_OR_CREATE:ig_armed_forces = {
 		value = 0.5
 	}
 	
-	female_commander_chance = {	
+	female_commander_chance = {
 		value = 0.0
 		if = {
 			limit = {
 				owner = {
 					has_law = law_type:law_womens_suffrage
 				}
-
 			}
 			add = {
-				value = 0.05
+				value = 0.01
 			}
 		}
 		if = {
@@ -300,10 +299,9 @@ REPLACE_OR_CREATE:ig_armed_forces = {
 				owner = {
 					has_law = law_type:law_legal_protections
 				}
-
 			}
 			add = {
-				value = 0.15
+				value = 0.02
 			}
 		}
 		if = {
@@ -311,10 +309,9 @@ REPLACE_OR_CREATE:ig_armed_forces = {
 				owner = {
 					has_law = law_type:law_structural_egalitarianism
 				}
-
 			}
 			add = {
-				value = 0.25
+				value = 0.04
 			}
 		}
 		if = {
@@ -322,7 +319,6 @@ REPLACE_OR_CREATE:ig_armed_forces = {
 				owner = {
 					has_law = law_type:law_matriarchy
 				}
-
 			}
 			add = {
 				value = 5.0
@@ -337,10 +333,9 @@ REPLACE_OR_CREATE:ig_armed_forces = {
 				owner = {
 					has_law = law_type:law_womens_suffrage
 				}
-
 			}
 			add = {
-				value = 0.15
+				value = 0.03
 			}
 		}
 		if = {
@@ -348,10 +343,9 @@ REPLACE_OR_CREATE:ig_armed_forces = {
 				owner = {
 					has_law = law_type:law_legal_protections
 				}
-
 			}
 			add = {
-				value = 0.25
+				value = 0.05
 			}
 		}
 		if = {
@@ -359,10 +353,9 @@ REPLACE_OR_CREATE:ig_armed_forces = {
 				owner = {
 					has_law = law_type:law_structural_egalitarianism
 				}
-
 			}
 			add = {
-				value = 0.35
+				value = 0.08
 			}
 		}
 		if = {
@@ -370,7 +363,6 @@ REPLACE_OR_CREATE:ig_armed_forces = {
 				owner = {
 					has_law = law_type:law_matriarchy
 				}
-
 			}
 			add = {
 				value = 5.0
@@ -385,10 +377,9 @@ REPLACE_OR_CREATE:ig_armed_forces = {
 				owner = {
 					has_law = law_type:law_womens_suffrage
 				}
-
 			}
 			add = {
-				value = 0.15
+				value = 0.05
 			}
 		}
 		if = {
@@ -396,10 +387,9 @@ REPLACE_OR_CREATE:ig_armed_forces = {
 				owner = {
 					has_law = law_type:law_legal_protections
 				}
-
 			}
 			add = {
-				value = 0.25
+				value = 0.08
 			}
 		}
 		if = {
@@ -407,10 +397,9 @@ REPLACE_OR_CREATE:ig_armed_forces = {
 				owner = {
 					has_law = law_type:law_structural_egalitarianism
 				}
-
 			}
 			add = {
-				value = 0.35
+				value = 0.12
 			}
 		}
 		if = {
@@ -418,7 +407,6 @@ REPLACE_OR_CREATE:ig_armed_forces = {
 				owner = {
 					has_law = law_type:law_matriarchy
 				}
-
 			}
 			add = {
 				value = 5.0
@@ -427,16 +415,15 @@ REPLACE_OR_CREATE:ig_armed_forces = {
 	}	
 	
 	female_agitator_chance = {
-		value = 0.0
+		value = 0.005
 		if = {
 			limit = {
 				owner = {
 					has_law = law_type:law_womens_suffrage
 				}
-
 			}
 			add = {
-				value = 0.15
+				value = 0.05
 			}
 		}
 		if = {
@@ -444,10 +431,9 @@ REPLACE_OR_CREATE:ig_armed_forces = {
 				owner = {
 					has_law = law_type:law_legal_protections
 				}
-
 			}
 			add = {
-				value = 0.25
+				value = 0.08
 			}
 		}
 		if = {
@@ -455,10 +441,9 @@ REPLACE_OR_CREATE:ig_armed_forces = {
 				owner = {
 					has_law = law_type:law_structural_egalitarianism
 				}
-
 			}
 			add = {
-				value = 0.35
+				value = 0.12
 			}
 		}
 		if = {
@@ -466,7 +451,6 @@ REPLACE_OR_CREATE:ig_armed_forces = {
 				owner = {
 					has_law = law_type:law_matriarchy
 				}
-
 			}
 			add = {
 				value = 5.0

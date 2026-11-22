@@ -1,4 +1,4 @@
-je_israel_palestine_peacetime = {
+﻿je_israel_palestine_peacetime = {
 	group = je_group_international
 	icon = "gfx/interface/icons/event_icons/israelpalestine.dds"
 
@@ -224,6 +224,8 @@ je_israel_palestine_peacetime = {
 					remove_modifier = ip_international_scrutiny
 					remove_modifier = ip_political_backlash
 				}
+				remove_global_variable = ip_peacetime_started
+				remove_global_variable = ip_major_escalation_warning
 			}
 		}
 	}	weight = 10000

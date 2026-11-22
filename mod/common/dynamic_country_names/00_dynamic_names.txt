@@ -359,6 +359,36 @@ TUR = {
 			scope:actor ?= { has_law_or_variant = law_type:law_monarchy }
 		}
 	}
+	dynamic_country_name = {
+		name = smd_dyn_c_jihad_emirate_TUR
+
+		is_main_tag_only = no
+		priority = 100
+
+		trigger = {
+			smd_coa_def_jihadist_emirate_trigger = yes
+		}
+	}
+	dynamic_country_name = {
+		name = smd_dyn_c_jihad_state_TUR
+
+		is_main_tag_only = no
+		priority = 100
+
+		trigger = {
+			smd_coa_def_jihadist_state_trigger = yes
+		}
+	}
+	dynamic_country_name = {
+		name = smd_dyn_c_jihad_shia_TUR
+
+		is_main_tag_only = no
+		priority = 100
+
+		trigger = {
+			smd_coa_def_jihadist_shia_trigger = yes
+		}
+	}
 }
 
 MGL = {

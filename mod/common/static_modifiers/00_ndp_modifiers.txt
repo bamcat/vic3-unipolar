@@ -8,7 +8,7 @@ ndp_modifier_industrial = {
 ndp_modifier_military = {
 	icon = gfx/interface/icons/timed_modifier_icons/modifier_rifle_positive.dds
 	country_military_tech_research_speed_mult       = 0.05
-	army_offense_mult                               = 0.03
+	unit_army_offense_mult                               = 0.03
 }
 
 ndp_modifier_resource = {
@@ -58,13 +58,14 @@ ndp_modifier_industrial_state_investment = {
 
 ndp_modifier_industrial_state_investment_cost = {
 	icon = gfx/interface/icons/timed_modifier_icons/modifier_coins_negative.dds
-	country_expenses_mult                           = 0.05
+	country_expenses_add                           = 1
 }
 
 ndp_modifier_industrial_private_investment = {
 	icon = gfx/interface/icons/timed_modifier_icons/modifier_coins_positive.dds
-	country_investment_pool_efficiency_mult         = 0.10
-	country_investment_pool_contribution_add        = 0.05
+	state_capitalists_investment_pool_efficiency_mult = 0.10
+	state_shopkeepers_investment_pool_efficiency_mult = 0.10
+	state_capitalists_investment_pool_contribution_add        = 0.05
 }
 
 ndp_modifier_industrial_labour_push = {
@@ -76,23 +77,23 @@ ndp_modifier_industrial_labour_push = {
 ndp_modifier_industrial_labour_welfare = {
 	icon = gfx/interface/icons/timed_modifier_icons/modifier_fist_positive.dds
 	building_group_bg_manufacturing_throughput_add  = 0.05
-	country_turmoil_effects_mult                    = -0.10
+	state_turmoil_effects_mult                    = -0.10
 	state_pop_qualifications_mult                   = 0.05
 }
 
 ndp_modifier_military_army = {
 	icon = gfx/interface/icons/timed_modifier_icons/modifier_rifle_positive.dds
-	army_offense_mult                               = 0.05
-	army_defense_mult                               = 0.05
+	unit_army_offense_mult                               = 0.05
+	unit_army_defense_mult                               = 0.05
 	unit_morale_loss_mult                           = -0.05
 	state_conscription_rate_add                     = 0.05
 }
 
 ndp_modifier_military_navy = {
-	icon = gfx/interface/icons/timed_modifier_icons/modifier_military.dds
-	navy_offense_mult                               = 0.10
-	navy_defense_mult                               = 0.10
-	country_naval_power_projection_mult             = 0.10
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_rifle_positive.dds
+	ship_hull_damage_mult                               = 0.10
+	ship_suffered_hull_damage_mult                               = -0.10
+	ship_power_projection_mult             = 0.10
 }
 
 ndp_modifier_military_domestic_arms = {
@@ -103,13 +104,13 @@ ndp_modifier_military_domestic_arms = {
 
 ndp_modifier_military_foreign_arms = {
 	icon = gfx/interface/icons/timed_modifier_icons/modifier_rifle_positive.dds
-	army_offense_mult                               = 0.05
-	army_defense_mult                               = 0.05
+	unit_army_offense_mult                               = 0.05
+	unit_army_defense_mult                               = 0.05
 }
 
 ndp_modifier_military_foreign_arms_cost = {
 	icon = gfx/interface/icons/timed_modifier_icons/modifier_coins_negative.dds
-	country_expenses_mult                           = 0.05
+	country_expenses_add                           = 1
 }
 
 ndp_modifier_military_nationalist_morale = {
@@ -120,7 +121,7 @@ ndp_modifier_military_nationalist_morale = {
 
 ndp_modifier_military_professional_officers = {
 	icon = gfx/interface/icons/timed_modifier_icons/modifier_statue_positive.dds
-	army_offense_mult                               = 0.05
+	unit_army_offense_mult                               = 0.05
 	building_training_rate_mult                     = 0.15
 }
 
@@ -164,8 +165,8 @@ ndp_modifier_resource_intensification = {
 
 ndp_modifier_resource_export_markets = {
 	icon = gfx/interface/icons/timed_modifier_icons/modifier_coins_positive.dds
-	country_trade_route_efficiency_mult             = 0.10
-	country_export_advantage_mult                   = 0.10
+	state_trade_capacity_mult             = 0.10
+	state_export_advantage_mult                   = 0.10
 }
 
 ndp_modifier_resource_domestic_supply = {
@@ -176,8 +177,9 @@ ndp_modifier_resource_domestic_supply = {
 
 ndp_modifier_service_finance = {
 	icon = gfx/interface/icons/timed_modifier_icons/modifier_coins_positive.dds
-	country_investment_pool_efficiency_mult         = 0.10
-	country_investment_pool_contribution_add        = 0.05
+	state_capitalists_investment_pool_efficiency_mult = 0.10
+	state_shopkeepers_investment_pool_efficiency_mult = 0.10
+	state_capitalists_investment_pool_contribution_add        = 0.05
 	building_financial_district_throughput_add      = 0.15
 }
 
@@ -202,7 +204,8 @@ ndp_modifier_service_domestic_talent = {
 
 ndp_modifier_service_liberalize = {
 	icon = gfx/interface/icons/timed_modifier_icons/modifier_coins_positive.dds
-	country_investment_pool_efficiency_mult         = 0.10
+	state_capitalists_investment_pool_efficiency_mult = 0.10
+	state_shopkeepers_investment_pool_efficiency_mult = 0.10
 	country_law_enactment_success_add               = 0.10
 }
 
@@ -221,14 +224,16 @@ ndp_modifier_abandoned = {
 
 ndp_foreign_investment_secured = {
 	icon = gfx/interface/icons/timed_modifier_icons/modifier_coins_positive.dds
-	country_investment_pool_efficiency_mult         = 0.15
-	country_investment_pool_contribution_add        = 0.10
+	state_capitalists_investment_pool_efficiency_mult = 0.15
+	state_shopkeepers_investment_pool_efficiency_mult = 0.15
+	state_capitalists_investment_pool_contribution_add        = 0.10
 	country_construction_goods_cost_mult = -0.35
 }
 
 ndp_foreign_investment_rejected = {
 	icon = gfx/interface/icons/timed_modifier_icons/modifier_flag_negative.dds
-	country_investment_pool_efficiency_mult         = -0.05
+	state_capitalists_investment_pool_efficiency_mult = -0.05
+	state_shopkeepers_investment_pool_efficiency_mult = -0.05
 	country_infamy_decay_mult                       = 0.10
 	country_authority_mult                          = 0.15
 }

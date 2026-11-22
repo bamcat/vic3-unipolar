@@ -1,4 +1,4 @@
-﻿on_game_started = {
+﻿smd_oa_io_game_started = {
 	effect = {
 		io_setup_un_members = yes
 		io_setup_nato_members = yes
@@ -27,11 +27,23 @@
 	}
 }
 
-on_yearly_pulse = {
+on_game_started = {
+	on_actions = {
+		smd_oa_io_game_started
+	}
+}
+
+smd_oa_io_yearly_pulse = {
 	effect = {
 		every_country = {
 			io_ngo_check_high_support = yes
 		}
 
+	}
+}
+
+on_yearly_pulse = {
+	on_actions = {
+		smd_oa_io_yearly_pulse
 	}
 }

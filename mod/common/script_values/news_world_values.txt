@@ -1,0 +1,22 @@
+﻿
+# World-market prices use the same price range as ordinary market prices. With
+# PRICE_RANGE = 0.75 and BUY_SELL_DIFF_AT_MAX_FACTOR = 2 in vanilla defines,
+# a price 65% above base corresponds to roughly 1.866667 imports per export.
+# This value measures that world-market demand/supply pressure
+
+# mamdani help! my groceries are too expensive!
+news_world_market_price_pressure = {
+	value = 0
+	if = {
+		limit = { world_market_imports > 0 }
+		value = world_market_imports
+		if = {
+			limit = { world_market_exports > 0 }
+			divide = world_market_exports
+		}
+		else = {
+			# Demand with no exports is effectively maximum upward price pressure.
+			value = 100
+		}
+	}
+}

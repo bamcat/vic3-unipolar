@@ -15,6 +15,8 @@
 		country_ship_type_troop_ship_construction_efficiency_add = 0.3
 		country_ship_construction_efficiency_add = -0.1
 		ship_interest_gain_mult = -0.1
+		country_ship_type_early_troop_ship_construction_efficiency_add = 0.3
+		ship_power_projection_mult = -0.1
 	}
 
 	on_enact = {
@@ -91,6 +93,7 @@ REPLACE_OR_CREATE:law_professional_navy = {
 		country_officers_pol_str_mult = 0.2
 		country_ship_group_capital_ships_construction_efficiency_add = 0.25
 		country_prestige_from_navy_power_projection_mult = 0.2
+		country_ship_crew_starting_veterancy_experience_add = 125
 	}
 
 	on_enact = {
@@ -137,6 +140,7 @@ REPLACE_OR_CREATE:law_diplomatic_navy = {
 		ship_interest_gain_mult = 0.2
 		country_ship_group_cruisers_construction_efficiency_add = 0.25
 		building_naval_administration_hiring_rate_mult = 0.1
+		ship_power_projection_mult = 0.2
 	}
 
 	on_enact = {

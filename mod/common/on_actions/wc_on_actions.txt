@@ -1,0 +1,75 @@
+﻿on_game_started = {
+	on_actions = { wc_on_game_started }
+}
+
+on_monthly_pulse = {
+	on_actions = { wc_on_monthly_pulse }
+}
+
+on_diplo_play_war_start = {
+	on_actions = { wc_on_war_start }
+}
+
+on_won_war = {
+	on_actions = { wc_on_won_war }
+}
+
+on_inconclusive_war = {
+	on_actions = { wc_on_inconclusive_war }
+}
+
+on_war_end = {
+	on_actions = { wc_on_war_end }
+}
+
+wc_on_game_started = {
+	effect = {
+		wc_init = yes
+		wc_start_ticker = yes
+	}
+}
+
+wc_on_monthly_pulse = {
+	effect = {
+		wc_monthly = yes
+	}
+}
+
+wc_on_war_start = {
+	effect = {
+		wc_init = yes
+		war ?= {
+			wc_record_war = yes
+		}
+	}
+}
+
+wc_on_won_war = {
+	effect = {
+		wc_set_outcome_winner = yes
+	}
+}
+
+wc_on_inconclusive_war = {
+	effect = {
+		wc_set_outcome_inconclusive = yes
+	}
+}
+
+wc_on_war_end = {
+	effect = {
+		clear_saved_scope = wc_slot
+		var:wc_slot ?= {
+			save_scope_as = wc_slot
+		}
+		if = {
+			limit = { exists = scope:wc_slot }
+			wc_update_year = yes
+			war ?= {
+				save_scope_as = wc_war
+				scope:wc_slot = { wc_measure = yes }
+			}
+			scope:wc_slot = { wc_finish = yes }
+		}
+	}
+}

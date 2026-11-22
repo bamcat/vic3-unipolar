@@ -19,7 +19,7 @@
  building_nuclear_silo:0 "Nukleare Silo"
 
  je_uranium_enrichment: "Urananreicherungsprogramm"
- je_uranium_enrichment_reason: "[ROOT.GetCountry.GetName] hat ein Urananreicherungsprogramm initiiert. Die Zentrifugen laufen. Wissenschaftler arbeiten. Und die Welt, wenn sie herausfindet, will Antworten.\n>x id=2/> Das Programm geht jeden Monat voran. Weitere Kernkraftwerke beschleunigen den Fortschritt. Der Krieg stört ihn. Schließlich wird [ROOT.GetCountry.GetName] nukleare Fähigkeiten besitzen — die Fähigkeit, waffenfähiges Material herzustellen."
+ je_uranium_enrichment_reason: "[ROOT.GetCountry.GetName] hat ein Urananreicherungsprogramm initiiert. Die Zentrifugen laufen. Wissenschaftler arbeiten. Und die Welt, wenn sie herausfindet, will Antworten.\n>x id=2/> Das Programm geht jeden Monat voran. Weitere Kernkraftwerke beschleunigen den Fortschritt. Der Krieg stört ihn. Schließlich wird [ROOT.GetCountry.GetName] nukleare Fähigkeiten besitzen, die Fähigkeit, waffenfähiges Material herzustellen."
 
  je_enrichment_early_tt: "Das Programm ist in seinen frühen Phasen. Zentrifugenkaskaden werden getestet. Es wird Jahre dauern, bis die Anreicherung abgeschlossen ist."
  je_enrichment_mid_tt: "#bold Anreicherung geht voran.#! Die Kaskaden laufen mit Kapazität. Das wissenschaftliche Team ist auf Kurs."
@@ -30,7 +30,7 @@
  nuclear_enrichment_progress_bar_tt: "Monatlicher Anreicherungsfortschritt"
 
  je_nuclear_production: "Produktion von Kernwaffen"
- je_nuclear_production_reason: "<x id========================================== Das fissile Material ist fertig. Das Engineering-Team baut das Gerät zusammen. Die Produktion ist schneller als die Anreicherung — die harte Arbeit ist bereits erledigt."
+ je_nuclear_production_reason: "<x id========================================== Das fissile Material ist fertig. Das Engineering-Team baut das Gerät zusammen. Die Produktion ist schneller als die Anreicherung, die harte Arbeit ist bereits erledigt."
 
  je_production_early_tt: "Der Sprengkopf ist in der Frühmontage. Das Engineering-Team ist termingerecht."
  je_production_late_tt: "#bold Produktion ist nahezu vollständig.#! Die endgültigen Montage- und Rüstungskontrollen sind im Gange."
@@ -45,14 +45,14 @@
  nuclear_events.1.a: "Beginn der Vorbereitung auf die Sprengkopfproduktion"
 
  nuclear_events.2.t: "Geheimdienst: Das Programm wurde ausgeschaltet"
- nuclear_events.2.d: "Ausländische Nachrichtenagenturen — auf der Grundlage von Satellitenbildern, Fehlerberichten und Signalinformationen — haben mit hohem Vertrauen geschlossen, dass [ROOT.GetCountry.GetName] ein geheimes Kernwaffenprogramm betreibt.\nx id=2/> Die Ergebnisse zirkulieren unter den veralteten Regierungen. Der Sicherheitsrat wurde informell unterrichtet. [ROOT.GetCountry.GetName] kann es leugnen, erklären oder besitzen. Jeder Weg hat Konsequenzen."
+ nuclear_events.2.d: "Ausländische Nachrichtenagenturen, auf der Grundlage von Satellitenbildern, Fehlerberichten und Signalinformationen, haben mit hohem Vertrauen geschlossen, dass [ROOT.GetCountry.GetName] ein geheimes Kernwaffenprogramm betreibt.\nx id=2/> Die Ergebnisse zirkulieren unter den veralteten Regierungen. Der Sicherheitsrat wurde informell unterrichtet. [ROOT.GetCountry.GetName] kann es leugnen, erklären oder besitzen. Jeder Weg hat Konsequenzen."
  nuclear_events.2.f: "Nichts bleibt für immer geheim."
- nuclear_events.2.a: "Deny — die Einrichtungen sind rein zivile Energieinfrastruktur"
- nuclear_events.2.b: "Anerkennung — [ROOT.GetCountry.GetName] hat das Recht auf Abschreckung"
+ nuclear_events.2.a: "Deny, die Einrichtungen sind rein zivile Energieinfrastruktur"
+ nuclear_events.2.b: "Anerkennung, [ROOT.GetCountry.GetName] hat das Recht auf Abschreckung"
 
 
  nuclear_capable_modifier: "Nukleare Schwellenstaat"
- nuclear_capable_modifier_desc: "[ROOT.GetCountry.GetName] hat die Kernfähigkeit erreicht — die Fähigkeit, waffenfähiges fissiles Material herzustellen. Prestige und Diplomatie werden verstärkt. Die Produktion von Sprengköpfen kann jetzt beginnen."
+ nuclear_capable_modifier_desc: "[ROOT.GetCountry.GetName] hat die Kernfähigkeit erreicht, die Fähigkeit, waffenfähiges fissiles Material herzustellen. Prestige und Diplomatie werden verstärkt. Die Produktion von Sprengköpfen kann jetzt beginnen."
 
  nuclear_programme_denied: "Programm abgelehnt"
  nuclear_programme_denied_desc: "[ROOT.GetCountry.GetName] hat offiziell den Betrieb eines Atomprogramms verweigert. Die Verleugnung ist nicht allgemein geglaubt. Die infamy Generation wird erhöht."
@@ -65,7 +65,7 @@
 
  NUCLEAR_TARGETING_HEADER: "Kernziele"
 
- NUCLEAR_DEPLOY_10_TOOLTIP: "Verbringen Sie 10% Ihres Atomarsenals. Der kleinste praktische Streik — chirurgisch und begrenzt im Umfang."
+ NUCLEAR_DEPLOY_10_TOOLTIP: "Verbringen Sie 10% Ihres Atomarsenals. Der kleinste praktische Streik, chirurgisch und begrenzt im Umfang."
  NUCLEAR_DEPLOY_25_TOOLTIP: "Verbringen Sie 25% Ihres Arsenals. Ein begrenzter nuklearer Austausch."
  NUCLEAR_DEPLOY_50_TOOLTIP: "Legen Sie die Hälfte Ihrer Arsenal. Ein großer Atomstreik."
  NUCLEAR_DEPLOY_75_TOOLTIP: "Verbringen Sie 75% Ihres Arsenals. Ein verheerender erster Streik."
@@ -84,36 +84,36 @@
  nuclear_events.4.d: "Die Ziellösung wird gesperrt. [GetPlayer.MakeScope.ScriptValue('nuclear_warheads_to_use_sv')|v0] warhead(s) wurden [GetPlayer.MakeScope.ScriptValue('nuclear_target_count_sv')|v0] state(s).\nx id=3/>Estimated zivil casuals: #Rx id=5/>x id=6/>x id=7/>x id=8/> Diese Aktion ist irreversibel. Die Sprengköpfe werden verdrängt. Die Staaten werden zerstört. Die Welt wird wissen, wer dies getan hat.\nx id=10/> Möchten Sie fortfahren?"
  nuclear_events.4.f: "Es gibt keine Rücknahme."
  nuclear_events.4.a: "#R Bestätigen Sie den Streik#!"
- nuclear_events.4.b: "Abbruch — stehen"
+ nuclear_events.4.b: "Abbruch, stehen"
 
  nuclear_events.5.t: "Nuklear-Angriff"
- nuclear_events.5.d: "[ROOT.GetCountry.GetName] wurde von Atomwaffen getroffen.\nx id=2/> Mehrere Sprengköpfe haben über [ROOT.GetCountry.GetAdjective] Gebiet detoniert. Städte brennen. Die Mitteilungen sind in den betroffenen Regionen zusammengebrochen. Die Skala der Opfer ist noch nicht bekannt — frühe Schätzungen deuten darauf hin, dass die Todesmaut katastrophal ist.\nx id=5/> Der Angriff wurde ohne Warnung durchgeführt. Es gab keine Erklärung. Kein Ultimatum. Es gab nichts."
+ nuclear_events.5.d: "[ROOT.GetCountry.GetName] wurde von Atomwaffen getroffen.\nx id=2/> Mehrere Sprengköpfe haben über [ROOT.GetCountry.GetAdjective] Gebiet detoniert. Städte brennen. Die Mitteilungen sind in den betroffenen Regionen zusammengebrochen. Die Skala der Opfer ist noch nicht bekannt, frühe Schätzungen deuten darauf hin, dass die Todesmaut katastrophal ist.\nx id=5/> Der Angriff wurde ohne Warnung durchgeführt. Es gab keine Erklärung. Kein Ultimatum. Es gab nichts."
  nuclear_events.5.f: "Es gibt nichts zu sagen."
  nuclear_events.5.a: "Beginn der Notfallreaktion"
 
  nuclear_events.6.t: "IAEO beantragt Inspektionszugang"
- nuclear_events.6.d: "Die International Atomic Energy Agency hat formal den Zugang zu [ROOT.GetCountry.GetAdjective] Atomanlagen beantragt. Der Antrag folgt den Geheimdienstberichten, die jetzt in weiten Kreisen unter den Mitgliedsstaaten geführt werden, die das Vorliegen eines waffenfähigen Anreicherungsprogramms nahelegen.\nx id=2/> Die Position der IAEO ist eindeutig: [ROOT.GetCountry.GetName] ist ein Unterzeichner für Nichtverbreitungsverpflichtungen. Eine Verweigerung des Inspektionszugangs würde eine wesentliche Verletzung darstellen. Erlaubt es, die Einrichtungen zur internationalen Überwachung zu öffnen — und fast sicher das Waffenprogramm beenden.\nx id=5/> Die Inspektoren warten auf eine Antwort."
+ nuclear_events.6.d: "Die International Atomic Energy Agency hat formal den Zugang zu [ROOT.GetCountry.GetAdjective] Atomanlagen beantragt. Der Antrag folgt den Geheimdienstberichten, die jetzt in weiten Kreisen unter den Mitgliedsstaaten geführt werden, die das Vorliegen eines waffenfähigen Anreicherungsprogramms nahelegen.\nx id=2/> Die Position der IAEO ist eindeutig: [ROOT.GetCountry.GetName] ist ein Unterzeichner für Nichtverbreitungsverpflichtungen. Eine Verweigerung des Inspektionszugangs würde eine wesentliche Verletzung darstellen. Erlaubt es, die Einrichtungen zur internationalen Überwachung zu öffnen, und fast sicher das Waffenprogramm beenden.\nx id=5/> Die Inspektoren warten auf eine Antwort."
  nuclear_events.6.f: "Die Inspektoren sind höflich. Die Anfrage ist nicht."
- nuclear_events.6.a: "Zugang zu gewähren — der IAEO gestatten, unsere Einrichtungen zu prüfen"
- nuclear_events.6.b: "Verweigerung — [ROOT.GetCountry.GetName] wird nicht an ausländische Inspektionen übermittelt"
+ nuclear_events.6.a: "Zugang zu gewähren, der IAEO gestatten, unsere Einrichtungen zu prüfen"
+ nuclear_events.6.b: "Verweigerung, [ROOT.GetCountry.GetName] wird nicht an ausländische Inspektionen übermittelt"
 
  nuclear_events.7.t: "UN-Sicherheitsrat: Cease-Anreicherung"
  nuclear_events.7.d: "Der UN-Sicherheitsrat hat eine Entschließung verabschiedet, in der gefordert wird, dass [ROOT.GetCountry.GetName] sein Urananreicherungsprogramm sofort aufhalten und der IAEO-Verifikation unterziehen.\nx id=2/> Die Abstimmung war nicht nahe. Die Entschließung fordert die vollständige Einstellung innerhalb von dreißig Tagen und droht koordinierte Sanktionen, wenn [ROOT.GetCountry.GetName] die Einhaltung verweigert.\nx id=5/> Das ist keine Anfrage. Es ist ein Ultimatum."
  nuclear_events.7.f: "Der Sicherheitsrat hat gesprochen. Was [ROOT.GetCountry.GetName] nun definiert seinen Platz in der Welt."
- nuclear_events.7.a: "Vollständig — Anreicherung stoppen und der Überwachung unterwerfen"
- nuclear_events.7.b: "Refuse — [ROOT.GetCountry.GetName] wird unabhängig von den Folgen weitergehen"
+ nuclear_events.7.a: "Vollständig, Anreicherung stoppen und der Überwachung unterwerfen"
+ nuclear_events.7.b: "Refuse, [ROOT.GetCountry.GetName] wird unabhängig von den Folgen weitergehen"
 
  nuclear_events.8.t: "UN-Sicherheitsrat: Abrüstung oder Gesichtsfolgen"
  nuclear_events.8.d: "Nach der Anerkennung seines Atomwaffenprogramms hat der Sicherheitsrat dem Sicherheitsrat keine Mehrdeutigkeit zur Arbeit gelassen. Eine Entschließung hat die sofortige Einstellung der Anreicherungstätigkeit und die Demontage der waffenbezogenen Infrastruktur gefordert.\nx id=2/> Die Entschließung wurde unter Kapitel VII verabschiedet, d.h. die militärische Durchsetzung ist nicht ausgeschlossen. [ROOT.GetCountry.GetName] hat dreißig Tage zu erfüllen."
  nuclear_events.8.f: "Ehrlichkeit wurde nicht belohnt. Das Ultimatum ist genauso."
- nuclear_events.8.a: "— das Programm aufzuhalten und der Überprüfung vorzulegen"
- nuclear_events.8.b: "Refuse — [ROOT.GetCountry.GetName] wird nicht unter Druck entwaffnet"
+ nuclear_events.8.a: "Das Programm aufzuhalten und der Überprüfung vorzulegen"
+ nuclear_events.8.b: "Refuse, [ROOT.GetCountry.GetName] wird nicht unter Druck entwaffnet"
 
  nuclear_events.9.t: "Antwort auf [SCOPE.sCountry('nuclear_state').GetName]'s Nuclear Defiance"
  nuclear_events.9.d: "[SCOPE.sCountry('nuclear_state').GetName] hat das Ultimatum des UN-Sicherheitsrates abgelehnt und weiterhin Uran in Richtung auf die Reinheit der Waffenqualität angereichert. Die Sanktionsregelung ist an Ort und Stelle.\nx id=2/>x id=3/>s Position muss nun klargestellt werden. Ein Land in unserer strategischen Sphäre entwickelt nukleare Waffen, um der internationalen Ordnung, die wir bei der Konstruktion geholfen haben, zu widerstehen. Die Frage ist, wie kraftvoll wir reagieren."
  nuclear_events.9.f: "Worte wurden versucht. Dies ist der Moment, um zu entscheiden, was als nächstes kommt."
- nuclear_events.9.a: "Intervene — Einleitung eines diplomatischen Spiels zur Gewaltabwehr"
- nuclear_events.9.b: "Drohungen — die Konsequenzen klar machen, ohne Kräfte zu begehen"
+ nuclear_events.9.a: "Intervene, Einleitung eines diplomatischen Spiels zur Gewaltabwehr"
+ nuclear_events.9.b: "Drohungen, die Konsequenzen klar machen, ohne Kräfte zu begehen"
 
  nuclear_iaea_cooperation: "Kooperationsabkommen IAEA"
  nuclear_iaea_cooperation_desc: "[ROOT.GetCountry.GetName] hat seine Kernanlagen zur IAEO-Überwachung geöffnet. Im Austausch überprüfbarer ziviler Nutzung wurde die internationale Unterstützung für die Infrastruktur der Kernenergie erweitert."
@@ -151,10 +151,10 @@
  nuclear_strike_victim_modifier_desc: "[ROOT.GetCountry.GetName] hat einen Atomangriff erlitten. Das nationale Trauma ist tief und lang anhaltend. Erholung nimmt eine Generation."
 
  nuclear_disarmament: "Größe WMDs"
- nuclear_disarmament_desc: "fordert, dass die Zielnation ihr Atomwaffenprogramm vollständig abbaut und ihr bestehendes Arsenal abgibt. Wenn erzwungen wird, werden alle Anreicherungsfähigkeit, Kriegsköpfe und Programmvariablen gestoppt — das Land muss von Grund auf beginnen."
+ nuclear_disarmament_desc: "fordert, dass die Zielnation ihr Atomwaffenprogramm vollständig abbaut und ihr bestehendes Arsenal abgibt. Wenn erzwungen wird, werden alle Anreicherungsfähigkeit, Kriegsköpfe und Programmvariablen gestoppt, das Land muss von Grund auf beginnen."
 
  nuclear_events.10.t: "Das Programm ist weg"
- nuclear_events.10.d: "Die Friedensbedingungen wurden durchgeführt. Internationale Inspektoren haben [ROOT.GetCountry.GetAdjective] Einrichtungen eingetragen, die Zentrifugenkaskaden zerlegt, die Lagerbestände entfernt und die Silos versiegelt.\nx id=2/> Jahre wissenschaftlicher Arbeit, politisches Risiko und nationale Investitionen wurden in Wochen gelöscht. Das Programm existiert nicht. Das Wissen bleibt bestehen — aber die Infrastruktur, das Material und die Rechtsstellung, um es zu verfolgen, sind weg.\nx id=4/>x id=5/> können wieder beginnen, wenn es entscheidet. Das wird eine andere Entscheidung sein, die unter verschiedenen Umständen getroffen wird."
+ nuclear_events.10.d: "Die Friedensbedingungen wurden durchgeführt. Internationale Inspektoren haben [ROOT.GetCountry.GetAdjective] Einrichtungen eingetragen, die Zentrifugenkaskaden zerlegt, die Lagerbestände entfernt und die Silos versiegelt.\nx id=2/> Jahre wissenschaftlicher Arbeit, politisches Risiko und nationale Investitionen wurden in Wochen gelöscht. Das Programm existiert nicht. Das Wissen bleibt bestehen, aber die Infrastruktur, das Material und die Rechtsstellung, um es zu verfolgen, sind weg.\nx id=4/>x id=5/> können wieder beginnen, wenn es entscheidet. Das wird eine andere Entscheidung sein, die unter verschiedenen Umständen getroffen wird."
  nuclear_events.10.f: "Es kann wieder aufgebaut werden. Es wird nicht vergessen."
  nuclear_events.10.a: "Anerkennung der Begriffe"
 
@@ -174,7 +174,7 @@
  military_base_projector_modifier_desc: "Dieses Land hat militärische Kräfte in veraltetem Gebiet stationiert und erweitert seine strategische Reichweite."
 
  je_icbm_programme: "Entwicklungsprogramm von ICBM"
- je_icbm_programme_reason: "[ROOT.GetCountry.GetName] hat die Kernfähigkeit erreicht. Die nächste Grenze ist die Lieferung: interkontinentale ballistische Raketen in der Lage, jeden Punkt auf der Welt ohne Warnung zu erreichen. Das Programm ist lang — Jahre der Rocketry-Forschung, der Entwicklung des Orientierungssystems und der Range-Tests — aber die strategische Auszahlung ist absolut. Ein ICBM-fähiger Zustand kann nicht durch Geographie abgeschreckt werden."
+ je_icbm_programme_reason: "[ROOT.GetCountry.GetName] hat die Kernfähigkeit erreicht. Die nächste Grenze ist die Lieferung: interkontinentale ballistische Raketen in der Lage, jeden Punkt auf der Welt ohne Warnung zu erreichen. Das Programm ist lang, Jahre der Rocketry-Forschung, der Entwicklung des Orientierungssystems und der Range-Tests, aber die strategische Auszahlung ist absolut. Ein ICBM-fähiger Zustand kann nicht durch Geographie abgeschreckt werden."
 
  je_icbm_early_tt: "Das ICBM-Programm ist in der frühen Entwicklung. Es werden Leitsysteme getestet. Es wird Jahre dauern, bis ein tragfähiges interkontinentales Lieferfahrzeug existiert."
  je_icbm_late_tt: "#bold ICBM-Entwicklung nähert sich der Fertigstellung.#! Die letzten Reichweiten- und Genauigkeitstests sind im Gange."
@@ -209,9 +209,9 @@
  BOMBING_EXECUTE_TOOLTIP: "Führen Sie einen strategischen Bombenangriff gegen alle zielgerichteten Staaten aus. Die Devastation wird aufgrund der Anzahl der qualifizierenden Luftbildungen hinzugefügt. 30 Tage Abklingzeit gilt."
 
  NUCLEAR_ICBM_PROGRESS_TOOLTIP: "Entwicklungsfortschritt ICBM. Bei 100% können Atomwaffen jeden Staat weltweit ansprechen."
- NUCLEAR_ICBM_TOOLTIP: "Beginn der Entwicklung interkontinentaler ballistischer Raketen. Erfordert nukleare Fähigkeiten. Nimmt mehrere Jahre. Einmal vollständig, Atomwaffen können jeden Staat in der Welt angreifen - nicht nur benachbarte."
+ NUCLEAR_ICBM_TOOLTIP: "Beginn der Entwicklung interkontinentaler ballistischer Raketen. Erfordert nukleare Fähigkeiten. Nimmt mehrere Jahre. Einmal vollständig, Atomwaffen können jeden Staat in der Welt angreifen, nicht nur benachbarte. Kostet @money![GetPlayer.MakeScope.ScriptValue('smd_icbm_programme_cost')|Dv] (10 % des BIP)."
 
- CONV_PRODUCE_MISSILES_TOOLTIP: "Herstellung eines Salvos von 5 konventionellen Raketen. Kleine laufende Produktionskosten. Raketen werden beim Feuern verzehrt – ein pro zielgerichteter Zustand."
+ CONV_PRODUCE_MISSILES_TOOLTIP: "Herstellung eines Salvos von 5 konventionellen Raketen. Kleine laufende Produktionskosten. Raketen werden beim Feuern verzehrt, ein pro zielgerichteter Zustand."
 
  missile_production_cost:0 "Rakete Produktion"
  state_buy_orders_missiles_add:0 "Raketenverbrauch"
@@ -225,29 +225,32 @@
  CONV_BUILDING_CHANCE_TOOLTIP: "Jede Rakete rollt eine 3 % Chance, eines der folgenden Gebäude in ihrem zielgerichteten Zustand zu zerstören, falls vorhanden:\nx id=1/>• Airport\n• Barracks\n• Naval Base\n• Nuclear Power Plant\nx nukleare Silo\n Alle Gebäudetypen werden unabhängig gerollt. Ein einziger Raketensalvo kann mehrere Gebäude im gleichen Zustand zerstören, wenn es groß genug ist."
 
  nuclear_events.12.t: "Missile Strike auf [ROOT.GetName]"
- nuclear_events.12.d: "[SCOPE.sCountry('missile_attacker').GetName] hat einen konventionellen Raketenschlag gegen [ROOT.GetAdjective] Gebiet eingeleitet. Berichte werden von Auswirkungen auf [ROOT.GetAdjective]-Zustand gemeldet — Infrastrukturschäden werden bewertet.\nx id=4/> Die Raketen waren nicht nuklear, aber die Botschaft ist klar. [SCOPE.sCountry('missile_attacker').GetName] ist bereit, langfristige Waffen gegen uns zu verwenden."
+ nuclear_events.12.d: "[SCOPE.sCountry('missile_attacker').GetName] hat einen konventionellen Raketenschlag gegen [ROOT.GetAdjective] Gebiet eingeleitet. Berichte werden von Auswirkungen auf [ROOT.GetAdjective]-Zustand gemeldet, Infrastrukturschäden werden bewertet.\nx id=4/> Die Raketen waren nicht nuklear, aber die Botschaft ist klar. [SCOPE.sCountry('missile_attacker').GetName] ist bereit, langfristige Waffen gegen uns zu verwenden."
  nuclear_events.12.f: "Die Krater sind schon da. Die Frage ist, was wir als nächstes tun."
  nuclear_events.12.a: "Schadenersatz und entsprechend reagieren"
 
  missile_strike_victim_modifier: "Konventioneller Raketenschlag"
  missile_strike_victim_modifier_desc: "Unser Territorium wurde durch einen konventionellen Raketenschlag gezielt. Infrastrukturschäden und öffentliche Angst werden erhöht."
 
- nuclear_events.13.t: "Nukleare Vergeltung — Entscheidung erforderlich"
- nuclear_events.13.d: "[SCOPE.sCountry('nuclear_attacker').GetName] hat Atomwaffen gegen [ROOT.GetName] gestartet. Unsere Sprengköpfe sind bewaffnet. Die Startcodes sind bereit.\nx id=3/>A Vergeltungsstreik gegen [SCOPE.sCountry('nuclear_attacker').GetAdjective] Gebiet würde 25 % unseres Arsenals verbrauchen und alle <x id=>5/ Staaten treffen. Der Streik würde keine Schande tragen — die Welt wird verstehen.<x id=6/\n Die Alternative besteht darin, den Angriff aufzunehmen. Es gibt keine Unehrlichkeit im Überleben."
+ nuclear_events.13.t: "Nukleare Vergeltung, Entscheidung erforderlich"
+ nuclear_events.13.d: "[SCOPE.sCountry('nuclear_attacker').GetName] hat Atomwaffen gegen [ROOT.GetName] gestartet. Unsere Sprengköpfe sind bewaffnet. Die Startcodes sind bereit.\nx id=3/>A Vergeltungsstreik gegen [SCOPE.sCountry('nuclear_attacker').GetAdjective] Gebiet würde 25 % unseres Arsenals verbrauchen und alle <x id=>5/ Staaten treffen. Der Streik würde keine Schande tragen, die Welt wird verstehen.<x id=6/\n Die Alternative besteht darin, den Angriff aufzunehmen. Es gibt keine Unehrlichkeit im Überleben."
  nuclear_events.13.f: "Die Bestellung muss nur einmal erteilt werden."
- nuclear_events.13.a: "Retaliate — Start 25% des Arsenals gegen [SCOPE.sCountry('nuclear_attacker').GetName]"
- nuclear_events.13.b: "Stehen Sie nach unten — absorbieren Sie den Schlag, bewahren Sie den Arsenal"
+ nuclear_events.13.a: "Retaliate, Start 25% des Arsenals gegen [SCOPE.sCountry('nuclear_attacker').GetName]"
+ nuclear_events.13.b: "Stehen Sie nach unten, absorbieren Sie den Schlag, bewahren Sie den Arsenal"
 
  nuclear_first_strike_response: "Nukleare Vergeltung (Erste Schlagantwort)"
- nuclear_first_strike_response_desc: "[ROOT.GetName] hat einen nuklearen Gegenschlag als Reaktion auf einen unvorhergesehenen nuklearen Angriff auf sein Hoheitsgebiet eingeleitet. Die internationale Gemeinschaft erkennt das Recht auf Vergeltung an – der Misserfolg wird deutlich reduziert."
+ nuclear_first_strike_response_desc: "[ROOT.GetName] hat einen nuklearen Gegenschlag als Reaktion auf einen unvorhergesehenen nuklearen Angriff auf sein Hoheitsgebiet eingeleitet. Die internationale Gemeinschaft erkennt das Recht auf Vergeltung an, der Misserfolg wird deutlich reduziert."
 
  nuclear_absorbed_first_strike: "Kernstrebe absorbiert"
  nuclear_absorbed_first_strike_desc: "[ROOT.GetName] erlitten einen Atomschlag ohne Vergeltung. Die Zurückhaltung wurde international anerkannt. Diplomatisches Stehen und Prestige werden erheblich verbessert."
 
  nuclear_events.14.t: "Nukleare Vergeltung Inbound"
- nuclear_events.14.d: "Unser Atomstreik wurde beantwortet. [ROOT.GetName] hat einen Vergeltungsstreik gestartet — Warheads werden inbound bestätigt.\nx id=2/>Wir haben den Austausch initiiert. Die Folgen sind unsere zu tragen."
+ nuclear_events.14.d: "Unser Atomstreik wurde beantwortet. [ROOT.GetName] hat einen Vergeltungsstreik gestartet, Warheads werden inbound bestätigt.\nx id=2/>Wir haben den Austausch initiiert. Die Folgen sind unsere zu tragen."
  nuclear_events.14.f: "Jeder Streik lädt den nächsten ein."
  nuclear_events.14.a: "Aufschlagsicherung"
  notification_nuclear_warhead_produced_name:0 "Nuclear Warhead Produced"
  notification_nuclear_warhead_produced_desc:0 "A new warhead has joined the arsenal. [GetPlayer.GetName] now holds [GetPlayer.MakeScope.Var('nukes').GetValue|0] nuclear warheads."
  notification_nuclear_warhead_produced_tooltip:0 "#header $notification_nuclear_warhead_produced_name$#!\n$TOOLTIP_DELIMITER$\n$notification_nuclear_warhead_produced_desc$"
+ notification_smd_missiles_produced_name:0 "Missiles Produced"
+ notification_smd_missiles_produced_desc:0 "A new salvo of five conventional missiles has been added to the arsenal. [GetPlayer.GetName] now holds [GetPlayer.MakeScope.Var('conventional_missiles').GetValue|0] conventional missiles."
+ notification_smd_missiles_produced_tooltip:0 "#header $notification_smd_missiles_produced_name$#!\n$TOOLTIP_DELIMITER$\n$notification_smd_missiles_produced_desc$"

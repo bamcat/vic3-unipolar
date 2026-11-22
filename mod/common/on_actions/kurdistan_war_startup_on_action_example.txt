@@ -1,4 +1,4 @@
-on_game_started_after_lobby = {
+﻿smd_oa_kurdistan_game_started_after_lobby = {
 	effect = {
 		start_kurdistan_war_journal_entry_system = yes
 		every_country = {
@@ -70,5 +70,11 @@ on_game_started_after_lobby = {
 	smd_apply_public_service_expenses = yes
 	}
 	
+	}
+}
+
+on_game_started_after_lobby = {
+	on_actions = {
+		smd_oa_kurdistan_game_started_after_lobby
 	}
 }

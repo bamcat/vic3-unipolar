@@ -209,7 +209,7 @@
  BOMBING_EXECUTE_TOOLTIP: "Wykonać strategiczny atak bombowy przeciwko wszystkim państwom docelowym. Dewastacja jest dodawana na podstawie liczby kwalifikujących się formacji powietrza. Stosuje się 30-dniowe chłodzenie."
 
  NUCLEAR_ICBM_PROGRESS_TOOLTIP: "Postęp w rozwoju ICBM. Na 100% broń jądrowa może być skierowana do każdego państwa na całym świecie."
- NUCLEAR_ICBM_TOOLTIP: "Rozpocząć rozwój międzykontynentalnych pocisków balistycznych. Wymaga zdolności jądrowych. To trwa kilka lat. Po zakończeniu, broń jądrowa może być celem każdego państwa na świecie - nie tylko tych sąsiednich."
+ NUCLEAR_ICBM_TOOLTIP: "Rozpocząć rozwój międzykontynentalnych pocisków balistycznych. Wymaga zdolności jądrowych. To trwa kilka lat. Po zakończeniu, broń jądrowa może być celem każdego państwa na świecie, nie tylko tych sąsiednich. Koszt: @money![GetPlayer.MakeScope.ScriptValue('smd_icbm_programme_cost')|Dv] (10% PKB)."
 
  CONV_PRODUCE_MISSILES_TOOLTIP: "Wykonać salvo 5 konwencjonalnych pocisków. Niewielkie bieżące koszty produkcji. Pociski są zużywane przy odpalaniu - jeden na państwo docelowe."
 
@@ -251,3 +251,6 @@
  notification_nuclear_warhead_produced_name:0 "Nuclear Warhead Produced"
  notification_nuclear_warhead_produced_desc:0 "A new warhead has joined the arsenal. [GetPlayer.GetName] now holds [GetPlayer.MakeScope.Var('nukes').GetValue|0] nuclear warheads."
  notification_nuclear_warhead_produced_tooltip:0 "#header $notification_nuclear_warhead_produced_name$#!\n$TOOLTIP_DELIMITER$\n$notification_nuclear_warhead_produced_desc$"
+ notification_smd_missiles_produced_name:0 "Missiles Produced"
+ notification_smd_missiles_produced_desc:0 "A new salvo of five conventional missiles has been added to the arsenal. [GetPlayer.GetName] now holds [GetPlayer.MakeScope.Var('conventional_missiles').GetValue|0] conventional missiles."
+ notification_smd_missiles_produced_tooltip:0 "#header $notification_smd_missiles_produced_name$#!\n$TOOLTIP_DELIMITER$\n$notification_smd_missiles_produced_desc$"

@@ -1,4 +1,4 @@
-on_revolution_start = {
+﻿smd_oa_polarization_revolution_start = {
 	effect = {
 		c:USA ?= {
 			if = {
@@ -14,7 +14,13 @@ on_revolution_start = {
 	}
 }
 
-on_yearly_pulse = {
+on_revolution_start = {
+	on_actions = {
+		smd_oa_polarization_revolution_start
+	}
+}
+
+smd_oa_polarization_yearly_pulse = {
 	effect = {
 		c:USA ?= {
 			if = {
@@ -27,5 +33,11 @@ on_yearly_pulse = {
 				add_journal_entry = { type = je_the_great_polarization }
 			}
 		}
+	}
+}
+
+on_yearly_pulse = {
+	on_actions = {
+		smd_oa_polarization_yearly_pulse
 	}
 }

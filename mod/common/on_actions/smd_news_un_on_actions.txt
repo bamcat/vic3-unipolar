@@ -1,0 +1,50 @@
+﻿on_monthly_pulse = {
+	on_actions = {
+		smd_news_un_monthly
+	}
+}
+
+smd_news_un_monthly = {
+	effect = {
+		if = {
+			limit = {
+				any_country = {
+					has_modifier = un_sanctions_target
+					NOT = { has_variable = smd_news_un_sanctions_reported }
+					news_is_reportable_country = yes
+				}
+			}
+			random_country = {
+				limit = {
+					has_modifier = un_sanctions_target
+					NOT = { has_variable = smd_news_un_sanctions_reported }
+					news_is_reportable_country = yes
+				}
+				set_variable = { name = smd_news_un_sanctions_reported months = 60 }
+				save_scope_as = news_source_country
+				capital ?= { save_scope_as = news_event_state }
+			}
+			every_country = { limit = { is_player = yes } trigger_event = { id = smd_news_un.1 } }
+		}
+		if = {
+			limit = {
+				any_country = {
+					has_modifier = un_condemnation_target
+					NOT = { has_variable = smd_news_un_condemnation_reported }
+					news_is_reportable_country = yes
+				}
+			}
+			random_country = {
+				limit = {
+					has_modifier = un_condemnation_target
+					NOT = { has_variable = smd_news_un_condemnation_reported }
+					news_is_reportable_country = yes
+				}
+				set_variable = { name = smd_news_un_condemnation_reported months = 60 }
+				save_scope_as = news_source_country
+				capital ?= { save_scope_as = news_event_state }
+			}
+			every_country = { limit = { is_player = yes } trigger_event = { id = smd_news_un.2 } }
+		}
+	}
+}

@@ -1034,7 +1034,7 @@ mobilization_option_aerial_recon = {
 mobilization_option_first_aid = {
 
 	possible = {
-		NOT = { scope:military_formation = { has_mobilization_option = mobilization_option:mobilization_option_field_hospitals has_mobilization_option = mobilization_option:mobilization_option_medevac } }
+		NOT = { scope:military_formation = { OR = { has_mobilization_option = mobilization_option:mobilization_option_field_hospitals has_mobilization_option = mobilization_option:mobilization_option_medevac } } }
 		market ?= {
 			mg:fabric ?= {
 				market_goods_sell_orders > 0
@@ -1090,7 +1090,7 @@ mobilization_option_field_hospitals = {
 	texture = "gfx/interface/icons/mobilization_options/field_hospitals.dds"
 
 	possible = {
-		NOT = { scope:military_formation = { has_mobilization_option = mobilization_option:mobilization_option_first_aid has_mobilization_option = mobilization_option:mobilization_option_medevac } }
+		NOT = { scope:military_formation = { OR = { has_mobilization_option = mobilization_option:mobilization_option_first_aid has_mobilization_option = mobilization_option:mobilization_option_medevac } } }
 		market ?= {
 			mg:opium ?= {
 				market_goods_sell_orders > 0

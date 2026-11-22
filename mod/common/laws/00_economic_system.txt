@@ -34,6 +34,8 @@ law_traditionalism = {
 		country_leverage_resistance_mult = 0.25
 		state_market_access_price_impact = -0.15
 		country_disable_nationalization_without_compensation_bool = yes
+		state_bureaucrats_investment_pool_efficiency_mult = -0.5
+		building_self_investment_chance_add = 0.25
 	}
 
 	ai_will_do = {
@@ -71,6 +73,7 @@ law_interventionism = {
 		building_nationalization_investment_return_add = 0.5
 		country_government_dividends_reinvestment_add = 0.5
 		country_government_dividends_efficiency_add = 0.25
+		country_free_charters_add = 1
 	}
 
 	ai_enact_weight_modifier = {
@@ -140,6 +143,7 @@ law_agrarianism = {
 		country_government_dividends_efficiency_add = 0.3
 		
 		country_disable_nationalization_without_compensation_bool = yes
+		country_free_charters_add = 1
 	}
 	
 	ai_will_do = {
@@ -271,6 +275,7 @@ REPLACE_OR_CREATE:law_industry_banned = {
 		state_peasants_education_access_add = -0.10
 		country_disable_nationalization_without_compensation_bool = yes
 		country_economic_dependence_on_overlord_add = -0.5
+		country_free_charters_add = 1
 	}
 
 	ai_will_do = {
@@ -373,6 +378,7 @@ REPLACE_OR_CREATE:law_extraction_economy = {
 		building_nationalization_investment_return_add = 0.5
 		country_disable_nationalization_without_compensation_bool = yes
 		country_economic_dependence_on_overlord_add = 0.5
+		state_bureaucrats_investment_pool_efficiency_mult = -0.5
 	}
 
 	ai_will_do = {
@@ -414,7 +420,8 @@ law_laissez_faire = {
 		country_max_companies_add = 1
 		country_disable_nationalization_bool = yes
 		country_force_privatization_bool = yes
-		country_company_pay_to_establish_bool = yes
+		country_free_charters_add = 2
+		country_forbid_monopoly_bool = yes
 	}
 
 	ai_enact_weight_modifier = {
@@ -491,8 +498,9 @@ REPLACE_OR_CREATE:law_cooperative_ownership = {
 		building_group_bg_arts_allowed_collectivization_add = 1.0
 		
 		country_foreign_collectivization_bool = yes
-		country_disable_privatization_bool = yes
-		country_company_pay_to_establish_bool = yes
+		building_company_worker_dividends_add = 0.75
+		country_free_charters_add = 1
+		country_other_country_socialist_economy_hostility_impact_add = 50
 	}
 	
 	ai_enact_weight_modifier = {
@@ -585,7 +593,11 @@ REPLACE_OR_CREATE:law_command_economy = {
 		
 		country_leverage_resistance_mult = 0.25
 
-		country_disable_privatization_bool = yes
+		country_disable_non_company_privatization_bool = yes
+		state_bureaucrats_investment_pool_efficiency_mult = 0.25
+		building_company_government_dividends_add = 0.75
+		country_free_charters_add = 1
+		country_other_country_socialist_economy_hostility_impact_add = 50
 	}
 	
 	ai_will_do = {

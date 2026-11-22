@@ -1,0 +1,69 @@
+﻿namespace = smd_news_un
+
+smd_news_un.1 = {
+	type = country_event
+	placement = scope:news_event_state
+
+	title = smd_news_un.1.t
+	desc = smd_news_un.1.d
+	flavor = smd_news_un.1.f
+
+	duration = 3
+	gui_window = news_event_window
+
+	event_image = { video = "ep1_power_blocs" }
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+	icon = "gfx/interface/icons/event_icons/newspaper_icon.dds"
+
+	trigger = { is_player = yes news_no_eur_subject = yes NOT = { has_variable = smd_news_un_open_1 } }
+
+	immediate = {
+		set_variable = { name = smd_news_un_open_1 days = 90 }
+		news_set_masthead_id = yes
+		if = { limit = { exists = scope:news_source_country } set_variable = { name = smd_news_un_1_news_source_country_ref value = scope:news_source_country months = 4 } }
+		var:smd_news_un_1_news_source_country_ref ?= { save_scope_as = news_error_log_silencer }
+		if = { limit = { exists = scope:news_event_state } set_variable = { name = smd_news_un_1_news_event_state_ref value = scope:news_event_state months = 4 } }
+		var:smd_news_un_1_news_event_state_ref ?= { save_scope_as = news_error_log_silencer }
+	}
+
+	option = {
+		name = smd_news_un.1.a
+		default_option = yes
+		remove_variable = smd_news_un_open_1
+	}
+}
+
+smd_news_un.2 = {
+	type = country_event
+	placement = scope:news_event_state
+
+	title = smd_news_un.2.t
+	desc = smd_news_un.2.d
+	flavor = smd_news_un.2.f
+
+	duration = 3
+	gui_window = news_event_window
+
+	event_image = { video = "unspecific_politicians_arguing" }
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+	icon = "gfx/interface/icons/event_icons/newspaper_icon.dds"
+
+	trigger = { is_player = yes news_no_eur_subject = yes NOT = { has_variable = smd_news_un_open_2 } }
+
+	immediate = {
+		set_variable = { name = smd_news_un_open_2 days = 90 }
+		news_set_masthead_id = yes
+		if = { limit = { exists = scope:news_source_country } set_variable = { name = smd_news_un_2_news_source_country_ref value = scope:news_source_country months = 4 } }
+		var:smd_news_un_2_news_source_country_ref ?= { save_scope_as = news_error_log_silencer }
+		if = { limit = { exists = scope:news_event_state } set_variable = { name = smd_news_un_2_news_event_state_ref value = scope:news_event_state months = 4 } }
+		var:smd_news_un_2_news_event_state_ref ?= { save_scope_as = news_error_log_silencer }
+	}
+
+	option = {
+		name = smd_news_un.2.a
+		default_option = yes
+		remove_variable = smd_news_un_open_2
+	}
+}

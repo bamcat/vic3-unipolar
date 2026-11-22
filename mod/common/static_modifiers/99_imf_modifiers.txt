@@ -9,7 +9,7 @@ imf_loan_modifier = {
 }
 
 imf_great_power_obligations = {
-	icon = gfx/interface/icons/timed_modifier_icons/modifier_diplomacy_negative.dds
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_flag_negative.dds
 	country_infamy_decay_mult                   = -0.10
 	country_authority_mult                      = -0.05
 	country_leverage_mult                       = -0.10
@@ -35,13 +35,13 @@ imf_left_modifier = {
 }
 
 war_bonds_modifier = {
-	icon = gfx/interface/icons/timed_modifier_icons/modifier_military.dds
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_rifle_positive.dds
 	country_tax_mult                            = 0.05
 	unit_supply_consumption_mult                = 0.15
 	country_loan_interest_rate_mult             = 0.15
 }
 
 war_bonds_refused_modifier = {
-	icon = gfx/interface/icons/timed_modifier_icons/modifier_military.dds
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_rifle_negative.dds
 	unit_morale_loss_mult                       = 0.05
 }

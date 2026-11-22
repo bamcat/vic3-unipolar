@@ -1,8 +1,4 @@
 ﻿conquer_state = {
-	mirrored_wargoal = {
-		method = territorial
-	}
-
 	icon = "gfx/interface/icons/war_goals/conquer_state.dds"
 
 	kind = conquer_state
@@ -13,6 +9,7 @@
 		can_add_for_other_country
 		requires_interest
 
+		# Validation
 		validate_target_not_treaty_port
 		validate_conflicts_conquer_state
 
@@ -60,61 +57,9 @@
 	infamy = {
 		value = 0
 
-		add = {
-			desc = "INFAMY_BASE_VALUE"
-			value = 5
-		}
-
-		multiply = {
-			desc = "INFAMY_STATE_POPULATION_FACTOR"
-			value = scope:target_state.state_population
-			divide = define:NDiplomacy|WAR_GOAL_INFAMY_POPULATION_SCALING_FACTOR
-			multiply = define:NDiplomacy|WAR_GOAL_INFAMY_POPULATION_SCALING_MULTIPLIER
-			add = 1
-			max = define:NDiplomacy|WAR_GOAL_INFAMY_POPULATION_SCALING_MULTIPLIER_MAX_PER_STATE
-		}
-
-		multiply = {
-			desc = "IG_OTHER_FACTORS_HEADER"
-			value = 1
-
-			if = {
-				limit = {
-					scope:target_state = {
-						is_homeland_of_country_cultures = root
-					}
-				}
-				add = define:NDiplomacy|WAR_GOAL_INFAMY_HOMELAND_FACTOR
-			}
-
-			if = {
-				limit = {
-					scope:target_state = {
-						is_incorporated = no
-					}
-				}
-				add = define:NDiplomacy|WAR_GOAL_INFAMY_UNINCORPORATED_FACTOR
-			}
-		}
-
-		multiply = {
-			desc = "country_infamy_generation_against_unrecognized_mult"
-			value = 1
-			if = {
-				limit = {
-					NOR = {
-						is_country_type = unrecognized
-						is_country_type = decentralized
-					}
-					scope:target_country = {
-						OR = {
-							is_country_type = unrecognized
-							is_country_type = decentralized
-						}
-					}
-				}
-				add = modifier:country_infamy_generation_against_unrecognized_mult
-			}
+		scope:target_state = {
+			save_temporary_scope_as = infamy_ignores_claim
+			add = state_infamy_value
 		}
 
 		multiply = {
@@ -132,7 +77,7 @@
 		}
 
 		multiply = {
-			desc = "INFAMY_FROM_REBELLIOUS_SUBJECT"
+			desc = "INFAMY_FROM_REBELLIOUS_SUBJECT" # Rebellious as in they are the aggressor in the play
 			value = 1
 			if = {
 				limit = {
@@ -147,16 +92,14 @@
 				multiply = define:NDiplomacy|WAR_GOAL_INFAMY_REBELLING_SUBJECT_MULT
 			}
 		}
-
-		min = {
-			desc = "INFAMY_MINIMUM_VALUE"
-			value = 5
-		}
-
 	}
 
 	on_enforced = {
 		# script effect on top of the predefined code effect
+	}
+
+	mirrored_wargoal = {
+		method = territorial
 	}
 
 	ai = {

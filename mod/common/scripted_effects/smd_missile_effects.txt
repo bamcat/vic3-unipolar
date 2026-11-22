@@ -1,0 +1,27 @@
+﻿smd_missile_produce_salvo = {
+	if = {
+		limit = { NOT = { has_variable = conventional_missiles } }
+		set_variable = { name = conventional_missiles value = 5 }
+	}
+	else = {
+		change_variable = { name = conventional_missiles add = 5 }
+	}
+	add_modifier = {
+		name = missile_production_cost
+		months = 3
+	}
+	post_notification = smd_missiles_produced
+}
+
+smd_missile_process_queue = {
+	if = {
+		limit = {
+			has_variable = missile_production_queue
+			var:missile_production_queue > 0
+			NOT = { has_modifier = missile_production_cost }
+			in_default = no
+		}
+		change_variable = { name = missile_production_queue add = -1 }
+		smd_missile_produce_salvo = yes
+	}
+}

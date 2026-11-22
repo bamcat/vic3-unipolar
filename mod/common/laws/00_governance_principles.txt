@@ -54,6 +54,7 @@ law_monarchy = {
 		country_legitimacy_ideological_incoherence_mult = 0.1
 		interest_group_ig_landowners_pol_str_mult = 0.25
 		country_authority_add = 200
+		country_aristocrats_pol_str_mult = 0.25
 	}
 	
 	can_impose = {
@@ -146,6 +147,7 @@ law_presidential_republic = {
 		country_legitimacy_govt_total_votes_add = 20
 		country_legitimacy_ideological_incoherence_mult = 0.2
 		country_authority_add = 100
+		country_legitimacy_headofstate_add = 10
 	}
 	
 	possible_political_movements = {
@@ -423,6 +425,9 @@ law_council_republic = {
 		country_legitimacy_ideological_incoherence_mult = -0.1
 		country_machinists_pol_str_mult = 0.25
 		country_farmers_pol_str_mult = 0.25
+		interest_group_ig_trade_unions_pol_str_mult = 0.25
+		country_other_country_socialist_government_hostility_impact_add = 50
+		country_legitimacy_govt_total_votes_add = 10
 	}
 	
 	can_impose = {

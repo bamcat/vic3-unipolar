@@ -10,10 +10,14 @@ REPLACE_OR_CREATE:law_outlawed_dissent = {
 	
 	modifier = {
 		country_authority_add = 200
-		country_bolster_attraction_mult = 0.5
-		country_suppression_attraction_mult = -0.5
+		country_bolster_attraction_factor = 0.5
+		country_suppression_attraction_factor = -0.5
 		country_tech_spread_mult = -0.15
 		country_leverage_resistance_mult = 0.5
+		country_support_separatism_resistance_mult = 0.5
+		country_war_support_battles_increase_mult = -0.2
+		country_war_support_battles_decrease_mult = -0.4
+		country_war_support_casualties_mult = -0.25
 	}
 	
 
@@ -35,10 +39,14 @@ law_censorship = {
 	
 	modifier = {
 		country_authority_add = 100
-		country_bolster_attraction_mult = 0.4
-		country_suppression_attraction_mult = -0.4
+		country_bolster_attraction_factor = 0.4
+		country_suppression_attraction_factor = -0.4
 		country_tech_spread_mult = -0.10
 		country_leverage_resistance_mult = 0.25
+		country_support_separatism_resistance_mult = 0.25
+		country_war_support_battles_increase_mult = -0.15
+		country_war_support_battles_decrease_mult = -0.25
+		country_war_support_casualties_mult = -0.15
 	}
 
 
@@ -60,8 +68,12 @@ REPLACE_OR_CREATE:law_right_of_assembly = {
 	
 	modifier = {
 		country_authority_add = 50
-		country_bolster_attraction_mult = 0.3
-		country_suppression_attraction_mult = -0.3
+		country_bolster_attraction_factor = 0.3
+		country_suppression_attraction_factor = -0.3
+		country_support_separatism_resistance_mult = -0.1
+		country_war_support_battles_increase_mult = 0.15
+		country_war_support_battles_decrease_mult = 0.15
+		country_war_support_casualties_mult = 0.1
 	}
 
 	ai_enact_weight_modifier = {
@@ -84,6 +96,10 @@ REPLACE_OR_CREATE:law_protected_speech = {
 	modifier = {
 		country_tech_spread_mult = 0.25
 		country_leverage_resistance_mult = -0.25
+		country_support_separatism_resistance_mult = -0.25
+		country_war_support_battles_increase_mult = 0.3
+		country_war_support_battles_decrease_mult = 0.3
+		country_war_support_casualties_mult = 0.2
 	}
 	
 	on_activate = {

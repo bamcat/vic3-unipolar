@@ -1,0 +1,635 @@
+﻿on_monthly_pulse_country = {
+	on_actions = {
+		smd_news_hist_monthly_pulse
+	}
+}
+
+smd_news_hist_monthly_pulse = {
+	trigger = {
+		is_player = yes
+	}
+	effect = {
+		if = {
+			limit = {
+				NOT = { has_global_variable = smd_news_hist_1_seen }
+				c:PRC ?= { has_variable = southern_tour_started }
+			}
+			c:PRC ?= { save_scope_as = news_source_country }
+			smd_news_hist_place = { REGION = STATE_GUANGDONG }
+			set_global_variable = smd_news_hist_1_seen
+			every_country = { limit = { is_player = yes } trigger_event = { id = smd_news_hist.1 } }
+		}
+		if = {
+			limit = {
+				NOT = { has_global_variable = smd_news_hist_2_seen }
+				c:USA ?= { has_variable = rodney_king_riots }
+			}
+			c:USA ?= { save_scope_as = news_source_country }
+			smd_news_hist_place = { REGION = STATE_CALIFORNIA }
+			set_global_variable = smd_news_hist_2_seen
+			every_country = { limit = { is_player = yes } trigger_event = { id = smd_news_hist.2 } }
+		}
+		if = {
+			limit = {
+				NOT = { has_global_variable = smd_news_hist_3_seen }
+				OR = { c:YUG ?= { has_variable = sarajevo_happened } c:SRP ?= { has_variable = sarajevo_happened } }
+			}
+			if = { limit = { c:YUG ?= { has_variable = sarajevo_happened } } c:YUG ?= { save_scope_as = news_source_country } } else = { c:SRP ?= { save_scope_as = news_source_country } }
+			smd_news_hist_place = { REGION = STATE_BOSNIA }
+			set_global_variable = smd_news_hist_3_seen
+			every_country = { limit = { is_player = yes } trigger_event = { id = smd_news_hist.3 } }
+		}
+		if = {
+			limit = {
+				NOT = { has_global_variable = smd_news_hist_4_seen }
+				c:USA ?= { has_variable = hurricane_andrew_fired }
+			}
+			c:USA ?= { save_scope_as = news_source_country }
+			smd_news_hist_place = { REGION = STATE_FLORIDA }
+			set_global_variable = smd_news_hist_4_seen
+			every_country = { limit = { is_player = yes } trigger_event = { id = smd_news_hist.4 } }
+		}
+		if = {
+			limit = {
+				NOT = { has_global_variable = smd_news_hist_5_seen }
+				exists = c:CZC
+				exists = c:SVK
+				NOT = { exists = c:CZH }
+			}
+			c:CZC ?= { save_scope_as = news_source_country }
+			c:SVK ?= { save_scope_as = news_other_country }
+			smd_news_hist_place = { REGION = STATE_BOHEMIA }
+			set_global_variable = smd_news_hist_5_seen
+			every_country = { limit = { is_player = yes } trigger_event = { id = smd_news_hist.5 } }
+		}
+		if = {
+			limit = {
+				NOT = { has_global_variable = smd_news_hist_6_seen }
+				c:CZH ?= { has_modifier = czh_federal_union_preserved }
+			}
+			c:CZH ?= { save_scope_as = news_source_country }
+			smd_news_hist_place_capital = yes
+			set_global_variable = smd_news_hist_6_seen
+			every_country = { limit = { is_player = yes } trigger_event = { id = smd_news_hist.6 } }
+		}
+		if = {
+			limit = {
+				NOT = { has_global_variable = smd_news_hist_7_seen }
+				c:USA ?= { has_variable = wtc_1993_bombing_happened }
+			}
+			c:USA ?= { save_scope_as = news_source_country }
+			smd_news_hist_place = { REGION = STATE_NEW_YORK }
+			set_global_variable = smd_news_hist_7_seen
+			every_country = { limit = { is_player = yes } trigger_event = { id = smd_news_hist.7 } }
+		}
+		if = {
+			limit = {
+				NOT = { has_global_variable = smd_news_hist_8_seen }
+				c:ITA ?= { has_modifier = mani_pulite_investigation_begins }
+			}
+			c:ITA ?= { save_scope_as = news_source_country }
+			smd_news_hist_place = { REGION = STATE_LOMBARDY }
+			set_global_variable = smd_news_hist_8_seen
+			every_country = { limit = { is_player = yes } trigger_event = { id = smd_news_hist.8 } }
+		}
+		if = {
+			limit = {
+				NOT = { has_global_variable = smd_news_hist_9_seen }
+				c:USA ?= { has_variable = great_flood_1993_happened }
+			}
+			c:USA ?= { save_scope_as = news_source_country }
+			smd_news_hist_place = { REGION = STATE_MISSOURI }
+			set_global_variable = smd_news_hist_9_seen
+			every_country = { limit = { is_player = yes } trigger_event = { id = smd_news_hist.9 } }
+		}
+		if = {
+			limit = {
+				NOT = { has_global_variable = smd_news_hist_10_seen }
+				c:RUS ?= { has_modifier = rus_october_1993_storming }
+			}
+			c:RUS ?= { save_scope_as = news_source_country }
+			smd_news_hist_place = { REGION = STATE_MOSCOW }
+			set_global_variable = smd_news_hist_10_seen
+			every_country = { limit = { is_player = yes } trigger_event = { id = smd_news_hist.10 } }
+		}
+		if = {
+			limit = {
+				NOT = { has_global_variable = smd_news_hist_11_seen }
+				has_global_variable = io_eu_formed
+			}
+			if = { limit = { exists = c:NDL } c:NDL ?= { save_scope_as = news_source_country } } else = { c:FRA ?= { save_scope_as = news_source_country } }
+			smd_news_hist_place_capital = yes
+			set_global_variable = smd_news_hist_11_seen
+			every_country = { limit = { is_player = yes } trigger_event = { id = smd_news_hist.11 } }
+		}
+		if = {
+			limit = {
+				NOT = { has_global_variable = smd_news_hist_12_seen }
+				has_global_variable = oslo_i_signed
+			}
+			c:ISR ?= { save_scope_as = news_source_country }
+			c:PAL ?= { save_scope_as = news_other_country }
+			smd_news_hist_place = { REGION = STATE_PALESTINE }
+			set_global_variable = smd_news_hist_12_seen
+			every_country = { limit = { is_player = yes } trigger_event = { id = smd_news_hist.12 } }
+		}
+		if = {
+			limit = {
+				NOT = { has_global_variable = smd_news_hist_13_seen }
+				has_global_variable = ni_peace_downing_decl
+			}
+			c:GBR ?= { save_scope_as = news_source_country }
+			c:IRE ?= { save_scope_as = news_other_country }
+			smd_news_hist_place = { REGION = STATE_ULSTER }
+			set_global_variable = smd_news_hist_13_seen
+			every_country = { limit = { is_player = yes } trigger_event = { id = smd_news_hist.13 } }
+		}
+		if = {
+			limit = {
+				NOT = { has_global_variable = smd_news_hist_14_seen }
+				c:USA ?= { has_variable = northridge_earthquake_fired }
+			}
+			c:USA ?= { save_scope_as = news_source_country }
+			smd_news_hist_place = { REGION = STATE_CALIFORNIA }
+			set_global_variable = smd_news_hist_14_seen
+			every_country = { limit = { is_player = yes } trigger_event = { id = smd_news_hist.14 } }
+		}
+		if = {
+			limit = {
+				NOT = { has_global_variable = smd_news_hist_15_seen }
+				any_country = { has_variable = genocide_started }
+			}
+			random_country = { limit = { has_variable = genocide_started } save_scope_as = news_source_country }
+			smd_news_hist_place_capital = yes
+			set_global_variable = smd_news_hist_15_seen
+			every_country = { limit = { is_player = yes } trigger_event = { id = smd_news_hist.15 } }
+		}
+		if = {
+			limit = {
+				NOT = { has_global_variable = smd_news_hist_16_seen }
+				c:RUS ?= { has_variable = chechen_war_started }
+			}
+			c:RUS ?= { save_scope_as = news_source_country }
+			smd_news_hist_place = { REGION = STATE_NORTH_CAUCASUS }
+			set_global_variable = smd_news_hist_16_seen
+			every_country = { limit = { is_player = yes } trigger_event = { id = smd_news_hist.16 } }
+		}
+		if = {
+			limit = {
+				NOT = { has_global_variable = smd_news_hist_17_seen }
+				has_global_variable = budapest_memorandum_in_force
+			}
+			if = { limit = { c:UKR ?= { has_variable = budapest_memorandum_signed } } c:UKR ?= { save_scope_as = news_source_country } } else = { c:KZK ?= { save_scope_as = news_source_country } }
+			if = { limit = { exists = c:HUN } c:HUN = { capital ?= { save_scope_as = news_event_state } } } else = { smd_news_hist_place_capital = yes }
+			set_global_variable = smd_news_hist_17_seen
+			every_country = { limit = { is_player = yes } trigger_event = { id = smd_news_hist.17 } }
+		}
+		if = {
+			limit = {
+				NOT = { has_global_variable = smd_news_hist_18_seen }
+				exists = c:HAI
+				OR = { c:USA ?= { has_variable = haiti_intervention_1994_happened } c:HAI ?= { has_variable = haiti_intervention_1994_happened } }
+			}
+			c:USA ?= { save_scope_as = news_source_country }
+			c:HAI ?= { save_scope_as = news_other_country }
+			smd_news_hist_place = { REGION = STATE_HAITI }
+			set_global_variable = smd_news_hist_18_seen
+			every_country = { limit = { is_player = yes } trigger_event = { id = smd_news_hist.18 } }
+		}
+		if = {
+			limit = {
+				NOT = { has_global_variable = smd_news_hist_19_seen }
+				c:USA ?= { has_variable = okc_bombing_fired }
+			}
+			c:USA ?= { save_scope_as = news_source_country }
+			smd_news_hist_place = { REGION = STATE_OKLAHOMA }
+			set_global_variable = smd_news_hist_19_seen
+			every_country = { limit = { is_player = yes } trigger_event = { id = smd_news_hist.19 } }
+		}
+		if = {
+			limit = {
+				NOT = { has_global_variable = smd_news_hist_20_seen }
+				OR = { c:YUG ?= { has_variable = srebrenica_happened } c:SRP ?= { has_variable = srebrenica_happened } }
+			}
+			if = { limit = { c:YUG ?= { has_variable = srebrenica_happened } } c:YUG ?= { save_scope_as = news_source_country } } else = { c:SRP ?= { save_scope_as = news_source_country } }
+			smd_news_hist_place = { REGION = STATE_BOSNIA }
+			set_global_variable = smd_news_hist_20_seen
+			every_country = { limit = { is_player = yes } trigger_event = { id = smd_news_hist.20 } }
+		}
+		if = {
+			limit = {
+				NOT = { has_global_variable = smd_news_hist_21_seen }
+				c:CAN ?= { has_variable = 1995_quebec_referendum_already_happened }
+				c:CAN ?= { var:quebec_referendum_result = 1 }
+			}
+			c:CAN ?= { save_scope_as = news_source_country }
+			smd_news_hist_place = { REGION = STATE_QUEBEC }
+			set_global_variable = smd_news_hist_21_seen
+			every_country = { limit = { is_player = yes } trigger_event = { id = smd_news_hist.21 } }
+		}
+		if = {
+			limit = {
+				NOT = { has_global_variable = smd_news_hist_22_seen }
+				c:CAN ?= { has_variable = 1995_quebec_referendum_already_happened }
+				c:CAN ?= { var:quebec_referendum_result = 0 }
+				exists = c:QBC
+			}
+			c:QBC ?= { save_scope_as = news_source_country }
+			c:CAN ?= { save_scope_as = news_other_country }
+			smd_news_hist_place = { REGION = STATE_QUEBEC }
+			set_global_variable = smd_news_hist_22_seen
+			every_country = { limit = { is_player = yes } trigger_event = { id = smd_news_hist.22 } }
+		}
+		if = {
+			limit = {
+				NOT = { has_global_variable = smd_news_hist_23_seen }
+				has_global_variable = oslo_ii_signed
+			}
+			c:ISR ?= { save_scope_as = news_source_country }
+			c:PAL ?= { save_scope_as = news_other_country }
+			smd_news_hist_place = { REGION = STATE_PALESTINE }
+			set_global_variable = smd_news_hist_23_seen
+			every_country = { limit = { is_player = yes } trigger_event = { id = smd_news_hist.23 } }
+		}
+		if = {
+			limit = {
+				NOT = { has_global_variable = smd_news_hist_24_seen }
+				c:GBR ?= { has_variable = dunblane_fired }
+			}
+			c:GBR ?= { save_scope_as = news_source_country }
+			smd_news_hist_place = { REGION = STATE_LOWLANDS }
+			set_global_variable = smd_news_hist_24_seen
+			every_country = { limit = { is_player = yes } trigger_event = { id = smd_news_hist.24 } }
+		}
+		if = {
+			limit = {
+				NOT = { has_global_variable = smd_news_hist_25_seen }
+				has_global_variable = smd_tupac_shooting_done
+			}
+			c:USA ?= { save_scope_as = news_source_country }
+			smd_news_hist_place = { REGION = STATE_NEVADA }
+			set_global_variable = smd_news_hist_25_seen
+			every_country = { limit = { is_player = yes } trigger_event = { id = smd_news_hist.25 } }
+		}
+		if = {
+			limit = {
+				NOT = { has_global_variable = smd_news_hist_26_seen }
+				c:RUS ?= { has_modifier = rus_l90_khasavyurt_signed }
+			}
+			c:RUS ?= { save_scope_as = news_source_country }
+			smd_news_hist_place = { REGION = STATE_DAGESTAN }
+			set_global_variable = smd_news_hist_26_seen
+			every_country = { limit = { is_player = yes } trigger_event = { id = smd_news_hist.26 } }
+		}
+		if = {
+			limit = {
+				NOT = { has_global_variable = smd_news_hist_27_seen }
+				c:USA ?= { has_variable = north_hollywood_shootout_happened }
+			}
+			c:USA ?= { save_scope_as = news_source_country }
+			smd_news_hist_place = { REGION = STATE_CALIFORNIA }
+			set_global_variable = smd_news_hist_27_seen
+			every_country = { limit = { is_player = yes } trigger_event = { id = smd_news_hist.27 } }
+		}
+		if = {
+			limit = {
+				NOT = { has_global_variable = smd_news_hist_28_seen }
+				c:USA ?= { has_variable = embassy_bombing_fired }
+			}
+			c:USA ?= { save_scope_as = news_source_country }
+			smd_news_hist_place = { REGION = STATE_KENYA }
+			set_global_variable = smd_news_hist_28_seen
+			every_country = { limit = { is_player = yes } trigger_event = { id = smd_news_hist.28 } }
+		}
+		if = {
+			limit = {
+				NOT = { has_global_variable = smd_news_hist_29_seen }
+				has_global_variable = good_friday_agreement
+			}
+			c:GBR ?= { save_scope_as = news_source_country }
+			c:IRE ?= { save_scope_as = news_other_country }
+			smd_news_hist_place = { REGION = STATE_ULSTER }
+			set_global_variable = smd_news_hist_29_seen
+			every_country = { limit = { is_player = yes } trigger_event = { id = smd_news_hist.29 } }
+		}
+		if = {
+			limit = {
+				NOT = { has_global_variable = smd_news_hist_30_seen }
+				c:RUS ?= { has_modifier = rus_1998_default }
+			}
+			c:RUS ?= { save_scope_as = news_source_country }
+			smd_news_hist_place = { REGION = STATE_MOSCOW }
+			set_global_variable = smd_news_hist_30_seen
+			every_country = { limit = { is_player = yes } trigger_event = { id = smd_news_hist.30 } }
+		}
+		if = {
+			limit = {
+				NOT = { has_global_variable = smd_news_hist_31_seen }
+				c:PRC ?= { has_variable = china_floods_1998_fired }
+			}
+			c:PRC ?= { save_scope_as = news_source_country }
+			smd_news_hist_place = { REGION = STATE_EASTERN_HUBEI }
+			set_global_variable = smd_news_hist_31_seen
+			every_country = { limit = { is_player = yes } trigger_event = { id = smd_news_hist.31 } }
+		}
+		if = {
+			limit = {
+				NOT = { has_global_variable = smd_news_hist_32_seen }
+				has_global_variable = kosovo_conflict_active
+			}
+			c:YUG ?= { save_scope_as = news_source_country }
+			smd_news_hist_place = { REGION = STATE_KOSOVO }
+			set_global_variable = smd_news_hist_32_seen
+			every_country = { limit = { is_player = yes } trigger_event = { id = smd_news_hist.32 } }
+		}
+		if = {
+			limit = {
+				NOT = { has_global_variable = smd_news_hist_33_seen }
+				c:YUG ?= { has_variable = nato_bombing_started }
+			}
+			c:YUG ?= { save_scope_as = news_source_country }
+			smd_news_hist_place_capital = yes
+			set_global_variable = smd_news_hist_33_seen
+			every_country = { limit = { is_player = yes } trigger_event = { id = smd_news_hist.33 } }
+		}
+		if = {
+			limit = {
+				NOT = { has_global_variable = smd_news_hist_34_seen }
+				c:USA ?= { has_variable = columbine_already_happened }
+			}
+			c:USA ?= { save_scope_as = news_source_country }
+			smd_news_hist_place = { REGION = STATE_COLORADO }
+			set_global_variable = smd_news_hist_34_seen
+			every_country = { limit = { is_player = yes } trigger_event = { id = smd_news_hist.34 } }
+		}
+		if = {
+			limit = {
+				NOT = { has_global_variable = smd_news_hist_35_seen }
+				c:RUS ?= { has_variable = russia_apartment_bombings_fired }
+			}
+			c:RUS ?= { save_scope_as = news_source_country }
+			smd_news_hist_place = { REGION = STATE_MOSCOW }
+			set_global_variable = smd_news_hist_35_seen
+			every_country = { limit = { is_player = yes } trigger_event = { id = smd_news_hist.35 } }
+		}
+		if = {
+			limit = {
+				NOT = { has_global_variable = smd_news_hist_36_seen }
+				has_global_variable = y2k_celebration_fired
+			}
+			save_scope_as = news_source_country
+			smd_news_hist_place_capital = yes
+			set_global_variable = smd_news_hist_36_seen
+			every_country = { limit = { is_player = yes } trigger_event = { id = smd_news_hist.36 } }
+		}
+		if = {
+			limit = {
+				NOT = { has_global_variable = smd_news_hist_37_seen }
+				c:USA ?= { has_variable = uss_cole_fired }
+			}
+			c:USA ?= { save_scope_as = news_source_country }
+			smd_news_hist_place = { REGION = STATE_YEMEN }
+			set_global_variable = smd_news_hist_37_seen
+			every_country = { limit = { is_player = yes } trigger_event = { id = smd_news_hist.37 } }
+		}
+		if = {
+			limit = {
+				NOT = { has_global_variable = smd_news_hist_38_seen }
+				has_global_variable = intifada_started
+			}
+			c:PAL ?= { save_scope_as = news_source_country }
+			c:ISR ?= { save_scope_as = news_other_country }
+			smd_news_hist_place = { REGION = STATE_PALESTINE }
+			set_global_variable = smd_news_hist_38_seen
+			every_country = { limit = { is_player = yes } trigger_event = { id = smd_news_hist.38 } }
+		}
+		if = {
+			limit = {
+				NOT = { has_global_variable = smd_news_hist_39_seen }
+				has_global_variable = 911_usa
+			}
+			c:USA ?= { save_scope_as = news_source_country }
+			smd_news_hist_place = { REGION = STATE_NEW_YORK }
+			set_global_variable = smd_news_hist_39_seen
+			every_country = { limit = { is_player = yes } trigger_event = { id = smd_news_hist.39 } }
+		}
+		if = {
+			limit = {
+				NOT = { has_global_variable = smd_news_hist_40_seen }
+				has_global_variable = wot_article_5_invoked_global
+			}
+			c:USA ?= { save_scope_as = news_source_country }
+			smd_news_hist_place_capital = yes
+			set_global_variable = smd_news_hist_40_seen
+			every_country = { limit = { is_player = yes } trigger_event = { id = smd_news_hist.40 } }
+		}
+		if = {
+			limit = {
+				NOT = { has_global_variable = smd_news_hist_41_seen }
+				c:USA ?= { has_variable = anthrax_attacks_occurred }
+			}
+			c:USA ?= { save_scope_as = news_source_country }
+			smd_news_hist_place = { REGION = STATE_DISTRICT_OF_COLUMBIA }
+			set_global_variable = smd_news_hist_41_seen
+			every_country = { limit = { is_player = yes } trigger_event = { id = smd_news_hist.41 } }
+		}
+		if = {
+			limit = {
+				NOT = { has_global_variable = smd_news_hist_42_seen }
+				has_global_variable = 911_usa
+				c:USA ?= { has_war_with = c:AFG }
+			}
+			c:USA ?= { save_scope_as = news_source_country }
+			c:AFG ?= { save_scope_as = news_other_country }
+			smd_news_hist_place = { REGION = STATE_KABUL }
+			set_global_variable = smd_news_hist_42_seen
+			every_country = { limit = { is_player = yes } trigger_event = { id = smd_news_hist.42 } }
+		}
+		if = {
+			limit = {
+				NOT = { has_global_variable = smd_news_hist_43_seen }
+				has_global_variable = 911_usa
+				c:USA ?= { has_war_with = c:IRQ }
+			}
+			c:USA ?= { save_scope_as = news_source_country }
+			c:IRQ ?= { save_scope_as = news_other_country }
+			smd_news_hist_place = { REGION = STATE_BAGHDAD }
+			set_global_variable = smd_news_hist_43_seen
+			every_country = { limit = { is_player = yes } trigger_event = { id = smd_news_hist.43 } }
+		}
+		if = {
+			limit = {
+				NOT = { has_global_variable = smd_news_hist_44_seen }
+				any_country = { has_variable = tsunami_has_struck }
+			}
+			if = { limit = { c:IDS ?= { has_variable = tsunami_has_struck } } c:IDS ?= { save_scope_as = news_source_country } } else = { random_country = { limit = { has_variable = tsunami_has_struck } save_scope_as = news_source_country } }
+			smd_news_hist_place = { REGION = STATE_ACEH }
+			set_global_variable = smd_news_hist_44_seen
+			every_country = { limit = { is_player = yes } trigger_event = { id = smd_news_hist.44 } }
+		}
+		if = {
+			limit = {
+				NOT = { has_global_variable = smd_news_hist_45_seen }
+				has_global_variable = intifada_2005_white_peace_fired
+			}
+			c:ISR ?= { save_scope_as = news_source_country }
+			c:PAL ?= { save_scope_as = news_other_country }
+			smd_news_hist_place = { REGION = STATE_PALESTINE }
+			set_global_variable = smd_news_hist_45_seen
+			every_country = { limit = { is_player = yes } trigger_event = { id = smd_news_hist.45 } }
+		}
+		if = {
+			limit = {
+				NOT = { has_global_variable = smd_news_hist_46_seen }
+				c:USA ?= { has_variable = virginia_tech_fired }
+			}
+			c:USA ?= { save_scope_as = news_source_country }
+			smd_news_hist_place = { REGION = STATE_VIRGINIA }
+			set_global_variable = smd_news_hist_46_seen
+			every_country = { limit = { is_player = yes } trigger_event = { id = smd_news_hist.46 } }
+		}
+		if = {
+			limit = {
+				NOT = { has_global_variable = smd_news_hist_47_seen }
+				has_global_variable = kosovo_independence_happened
+				exists = c:KOS
+			}
+			c:KOS ?= { save_scope_as = news_source_country }
+			if = { limit = { exists = c:YUG } c:YUG ?= { save_scope_as = news_other_country } } else = { c:SRP ?= { save_scope_as = news_other_country } }
+			smd_news_hist_place = { REGION = STATE_KOSOVO }
+			set_global_variable = smd_news_hist_47_seen
+			every_country = { limit = { is_player = yes } trigger_event = { id = smd_news_hist.47 } }
+		}
+		if = {
+			limit = {
+				NOT = { has_global_variable = smd_news_hist_48_seen }
+				has_global_variable = arab_spring_happening
+				any_country = { has_variable = asp_1_event }
+			}
+			random_country = { limit = { has_variable = asp_1_event } save_scope_as = news_source_country }
+			smd_news_hist_place_capital = yes
+			set_global_variable = smd_news_hist_48_seen
+			every_country = { limit = { is_player = yes } trigger_event = { id = smd_news_hist.48 } }
+		}
+		if = {
+			limit = {
+				NOT = { has_global_variable = smd_news_hist_49_seen }
+				c:JPN ?= { has_variable = fukushima_already_happened }
+			}
+			c:JPN ?= { save_scope_as = news_source_country }
+			smd_news_hist_place = { REGION = STATE_TOHOKU }
+			set_global_variable = smd_news_hist_49_seen
+			every_country = { limit = { is_player = yes } trigger_event = { id = smd_news_hist.49 } }
+		}
+		if = {
+			limit = {
+				NOT = { has_global_variable = smd_news_hist_50_seen }
+				exists = c:SSD
+			}
+			c:SSD ?= { save_scope_as = news_source_country }
+			c:SDN ?= { save_scope_as = news_other_country }
+			smd_news_hist_place_capital = yes
+			set_global_variable = smd_news_hist_50_seen
+			every_country = { limit = { is_player = yes } trigger_event = { id = smd_news_hist.50 } }
+		}
+		if = {
+			limit = {
+				NOT = { has_global_variable = smd_news_hist_51_seen }
+				c:USA ?= { has_variable = bin_laden_captured }
+			}
+			c:USA ?= { save_scope_as = news_source_country }
+			if = { limit = { exists = c:PAK } c:PAK = { capital ?= { save_scope_as = news_event_state } } } else = { smd_news_hist_place_capital = yes }
+			set_global_variable = smd_news_hist_51_seen
+			every_country = { limit = { is_player = yes } trigger_event = { id = smd_news_hist.51 } }
+		}
+		if = {
+			limit = {
+				NOT = { has_global_variable = smd_news_hist_52_seen }
+				c:USA ?= { has_variable = osama_extradited }
+			}
+			c:USA ?= { save_scope_as = news_source_country }
+			if = { limit = { exists = c:AFG } c:AFG = { capital ?= { save_scope_as = news_event_state } } } else = { smd_news_hist_place_capital = yes }
+			set_global_variable = smd_news_hist_52_seen
+			every_country = { limit = { is_player = yes } trigger_event = { id = smd_news_hist.52 } }
+		}
+		if = {
+			limit = {
+				NOT = { has_global_variable = smd_news_hist_53_seen }
+				c:DIS ?= { has_variable = arab_spring_isis_formed }
+			}
+			c:DIS ?= { save_scope_as = news_source_country }
+			smd_news_hist_place_capital = yes
+			set_global_variable = smd_news_hist_53_seen
+			every_country = { limit = { is_player = yes } trigger_event = { id = smd_news_hist.53 } }
+		}
+		if = {
+			limit = {
+				NOT = { has_global_variable = smd_news_hist_54_seen }
+				c:USA ?= { has_variable = sandy_hook_fired }
+			}
+			c:USA ?= { save_scope_as = news_source_country }
+			smd_news_hist_place = { REGION = STATE_CONNECTICUT }
+			set_global_variable = smd_news_hist_54_seen
+			every_country = { limit = { is_player = yes } trigger_event = { id = smd_news_hist.54 } }
+		}
+		if = {
+			limit = {
+				NOT = { has_global_variable = smd_news_hist_55_seen }
+				has_global_variable = covid_pandemic
+			}
+			if = { limit = { any_state = { has_variable = plague_originator_state } } random_state = { limit = { has_variable = plague_originator_state } save_scope_as = news_event_state owner = { save_scope_as = news_source_country } } } else = { c:PRC ?= { save_scope_as = news_source_country } smd_news_hist_place_capital = yes }
+			set_global_variable = smd_news_hist_55_seen
+			every_country = { limit = { is_player = yes } trigger_event = { id = smd_news_hist.55 } }
+		}
+		if = {
+			limit = {
+				NOT = { has_global_variable = smd_news_hist_56_seen }
+				c:USA ?= { has_variable = george_floyd_event_happened }
+			}
+			c:USA ?= { save_scope_as = news_source_country }
+			smd_news_hist_place = { REGION = STATE_MINNESOTA }
+			set_global_variable = smd_news_hist_56_seen
+			every_country = { limit = { is_player = yes } trigger_event = { id = smd_news_hist.56 } }
+		}
+		if = {
+			limit = {
+				NOT = { has_global_variable = smd_news_hist_57_seen }
+				c:USA ?= { has_variable = january_6_capitol_attack_happened }
+			}
+			c:USA ?= { save_scope_as = news_source_country }
+			smd_news_hist_place = { REGION = STATE_DISTRICT_OF_COLUMBIA }
+			set_global_variable = smd_news_hist_57_seen
+			every_country = { limit = { is_player = yes } trigger_event = { id = smd_news_hist.57 } }
+		}
+		if = {
+			limit = {
+				NOT = { has_global_variable = smd_news_hist_58_seen }
+				c:USA ?= { has_variable = butler_assassination_attempt_happened }
+			}
+			c:USA ?= { save_scope_as = news_source_country }
+			smd_news_hist_place = { REGION = STATE_PENNSYLVANIA }
+			set_global_variable = smd_news_hist_58_seen
+			every_country = { limit = { is_player = yes } trigger_event = { id = smd_news_hist.58 } }
+		}
+		if = {
+			limit = {
+				NOT = { has_global_variable = smd_news_hist_59_seen }
+				has_global_variable = cancer_eradicated
+			}
+			if = { limit = { any_country = { has_modifier = cancer_eradication_prestige } } random_country = { limit = { has_modifier = cancer_eradication_prestige } save_scope_as = news_source_country } } else = { save_scope_as = news_source_country }
+			smd_news_hist_place_capital = yes
+			set_global_variable = smd_news_hist_59_seen
+			every_country = { limit = { is_player = yes } trigger_event = { id = smd_news_hist.59 } }
+		}
+		if = {
+			limit = {
+				NOT = { has_global_variable = smd_news_hist_60_seen }
+				has_global_variable = second_american_civil_war_started
+			}
+			c:USA ?= { save_scope_as = news_source_country }
+			smd_news_hist_place = { REGION = STATE_DISTRICT_OF_COLUMBIA }
+			set_global_variable = smd_news_hist_60_seen
+			every_country = { limit = { is_player = yes } trigger_event = { id = smd_news_hist.60 } }
+		}
+	}
+}

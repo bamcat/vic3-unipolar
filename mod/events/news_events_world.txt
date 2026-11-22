@@ -1,0 +1,1855 @@
+﻿namespace = news_events_world
+
+# Repeatable world-news events.
+
+#  1. MAJOR DIPLOMATIC CRISIS 
+news_events_world.1 = {
+	type = country_event
+	placement = scope:news_event_state
+
+	title = {
+		first_valid = {
+			triggered_desc = {
+				desc = news_events_world.1.t2
+				trigger = { has_variable = news_title_variant  var:news_title_variant = 2 }
+			}
+			triggered_desc = {
+				desc = news_events_world.1.t3
+				trigger = { has_variable = news_title_variant  var:news_title_variant = 3 }
+			}
+			triggered_desc = {
+				desc = news_events_world.1.t
+				trigger = { always = yes }
+			}
+		}
+	}
+	desc = news_events_world.1.d
+	flavor = news_events_world.1.f
+
+	duration = 3
+	gui_window = news_event_window
+
+	event_image = { video = "europenorthamerica_political_extremism" }
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+	icon = "gfx/interface/icons/event_icons/newspaper_icon.dds"
+
+	trigger = { is_player = yes news_no_eur_subject = yes NOT = { has_variable = news_open_world_1 } NOT = { has_variable = news_off_world_1 } }
+
+	immediate = {
+		set_variable = { name = news_open_world_1 days = 90 }
+		news_set_masthead_id = yes
+		news_pick_title_variant = yes
+		
+		if = { limit = { exists = scope:news_country_a } set_variable = { name = news_world_1_news_country_a_ref value = scope:news_country_a months = 4 } }
+		var:news_world_1_news_country_a_ref ?= { save_scope_as = news_error_log_silencer } # Silence localization-only variable warning.
+		if = { limit = { exists = scope:news_country_b } set_variable = { name = news_world_1_news_country_b_ref value = scope:news_country_b months = 4 } }
+		var:news_world_1_news_country_b_ref ?= { save_scope_as = news_error_log_silencer } # Silence localization-only variable warning.
+		if = { limit = { exists = scope:news_diplomatic_play } set_variable = { name = news_world_1_news_diplomatic_play_ref value = scope:news_diplomatic_play months = 4 } }
+		var:news_world_1_news_diplomatic_play_ref ?= { save_scope_as = news_error_log_silencer } # Silence localization-only variable warning.
+	}
+
+	option = { name = news_events_world.1.a default_option = yes remove_variable = news_open_world_1 }
+}
+
+#  2. GREAT POWER INTERVENES 
+news_events_world.2 = {
+	type = country_event
+	placement = scope:news_event_state
+
+	title = {
+		first_valid = {
+			triggered_desc = {
+				desc = news_events_world.2.t2
+				trigger = { has_variable = news_title_variant  var:news_title_variant = 2 }
+			}
+			triggered_desc = {
+				desc = news_events_world.2.t3
+				trigger = { has_variable = news_title_variant  var:news_title_variant = 3 }
+			}
+			triggered_desc = {
+				desc = news_events_world.2.t
+				trigger = { always = yes }
+			}
+		}
+	}
+	desc = news_events_world.2.d
+	flavor = news_events_world.2.f
+
+	duration = 3
+	gui_window = news_event_window
+
+	event_image = { video = "africa_diplomats_negotiating" }
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+	icon = "gfx/interface/icons/event_icons/newspaper_icon.dds"
+
+	trigger = { is_player = yes news_no_eur_subject = yes NOT = { has_variable = news_open_world_2 } NOT = { has_variable = news_off_world_2 } }
+
+	immediate = {
+		set_variable = { name = news_open_world_2 days = 90 }
+		news_set_masthead_id = yes
+		news_pick_title_variant = yes
+		
+		if = { limit = { exists = scope:news_clean_gp } set_variable = { name = news_world_2_news_clean_gp_ref value = scope:news_clean_gp months = 4 } }
+		var:news_world_2_news_clean_gp_ref ?= { save_scope_as = news_error_log_silencer } # Silence localization-only variable warning.
+		if = { limit = { exists = scope:news_diplomatic_play } set_variable = { name = news_world_2_news_diplomatic_play_ref value = scope:news_diplomatic_play months = 4 } }
+		var:news_world_2_news_diplomatic_play_ref ?= { save_scope_as = news_error_log_silencer } # Silence localization-only variable warning.
+		if = { limit = { exists = scope:news_other_country } set_variable = { name = news_world_2_news_other_country_ref value = scope:news_other_country months = 4 } }
+		var:news_world_2_news_other_country_ref ?= { save_scope_as = news_error_log_silencer } # Silence localization-only variable warning.
+	}
+
+	option = { name = news_events_world.2.a default_option = yes remove_variable = news_open_world_2 }
+}
+
+#  3. MAJOR POWERS AT WAR 
+news_events_world.3 = {
+	type = country_event
+	placement = scope:news_event_state
+
+	title = {
+		first_valid = {
+			triggered_desc = {
+				desc = news_events_world.3.t2
+				trigger = { has_variable = news_title_variant  var:news_title_variant = 2 }
+			}
+			triggered_desc = {
+				desc = news_events_world.3.t3
+				trigger = { has_variable = news_title_variant  var:news_title_variant = 3 }
+			}
+			triggered_desc = {
+				desc = news_events_world.3.t
+				trigger = { always = yes }
+			}
+		}
+	}
+	desc = news_events_world.3.d
+	flavor = news_events_world.3.f
+
+	duration = 3
+	gui_window = news_event_window
+
+	event_image = { video = "europenorthamerica_before_the_battle" }
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+	icon = "gfx/interface/icons/event_icons/newspaper_icon.dds"
+
+	trigger = { is_player = yes news_no_eur_subject = yes NOT = { has_variable = news_open_world_3 } NOT = { has_variable = news_off_world_3 } }
+
+	immediate = {
+		set_variable = { name = news_open_world_3 days = 90 }
+		news_set_masthead_id = yes
+		news_pick_title_variant = yes
+		
+		if = { limit = { exists = scope:news_country_a } set_variable = { name = news_world_3_news_country_a_ref value = scope:news_country_a months = 4 } }
+		var:news_world_3_news_country_a_ref ?= { save_scope_as = news_error_log_silencer } # Silence localization-only variable warning.
+		if = { limit = { exists = scope:news_country_b } set_variable = { name = news_world_3_news_country_b_ref value = scope:news_country_b months = 4 } }
+		var:news_world_3_news_country_b_ref ?= { save_scope_as = news_error_log_silencer } # Silence localization-only variable warning.
+		if = { limit = { exists = scope:news_diplomatic_play } set_variable = { name = news_world_3_news_diplomatic_play_ref value = scope:news_diplomatic_play months = 4 } }
+		var:news_world_3_news_diplomatic_play_ref ?= { save_scope_as = news_error_log_silencer } # Silence localization-only variable warning.
+	}
+
+	option = { name = news_events_world.3.a default_option = yes remove_variable = news_open_world_3 }
+}
+
+#  4. GREAT POWER ENTERS WAR 
+news_events_world.4 = {
+	type = country_event
+	placement = scope:news_event_state
+
+	title = {
+		first_valid = {
+			triggered_desc = {
+				desc = news_events_world.4.t2
+				trigger = { has_variable = news_title_variant  var:news_title_variant = 2 }
+			}
+			triggered_desc = {
+				desc = news_events_world.4.t3
+				trigger = { has_variable = news_title_variant  var:news_title_variant = 3 }
+			}
+			triggered_desc = {
+				desc = news_events_world.4.t
+				trigger = { always = yes }
+			}
+		}
+	}
+	desc = news_events_world.4.d
+	flavor = news_events_world.4.f
+
+	duration = 3
+	gui_window = news_event_window
+
+	event_image = { video = "unspecific_military_parade" }
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+	icon = "gfx/interface/icons/event_icons/newspaper_icon.dds"
+
+	trigger = { is_player = yes news_no_eur_subject = yes NOT = { has_variable = news_open_world_4 } NOT = { has_variable = news_off_world_4 } }
+
+	immediate = {
+		set_variable = { name = news_open_world_4 days = 90 }
+		news_set_masthead_id = yes
+		news_pick_title_variant = yes
+		
+		if = { limit = { exists = scope:news_clean_gp } set_variable = { name = news_world_4_news_clean_gp_ref value = scope:news_clean_gp months = 4 } }
+		var:news_world_4_news_clean_gp_ref ?= { save_scope_as = news_error_log_silencer } # Silence localization-only variable warning.
+		if = { limit = { exists = scope:news_diplomatic_play } set_variable = { name = news_world_4_news_diplomatic_play_ref value = scope:news_diplomatic_play months = 4 } }
+		var:news_world_4_news_diplomatic_play_ref ?= { save_scope_as = news_error_log_silencer } # Silence localization-only variable warning.
+		if = { limit = { exists = scope:news_other_country } set_variable = { name = news_world_4_news_other_country_ref value = scope:news_other_country months = 4 } }
+		var:news_world_4_news_other_country_ref ?= { save_scope_as = news_error_log_silencer } # Silence localization-only variable warning.
+	}
+
+	option = { name = news_events_world.4.a default_option = yes remove_variable = news_open_world_4 }
+}
+
+#  5. COUP OVERTURNS GOVERNMENT 
+news_events_world.5 = {
+	type = country_event
+	placement = scope:news_event_state
+
+	title = {
+		first_valid = {
+			triggered_desc = {
+				desc = news_events_world.5.t2
+				trigger = { has_variable = news_title_variant  var:news_title_variant = 2 }
+			}
+			triggered_desc = {
+				desc = news_events_world.5.t3
+				trigger = { has_variable = news_title_variant  var:news_title_variant = 3 }
+			}
+			triggered_desc = {
+				desc = news_events_world.5.t
+				trigger = { always = yes }
+			}
+		}
+	}
+	desc = news_events_world.5.d
+	flavor = news_events_world.5.f
+
+	duration = 3
+	gui_window = news_event_window
+
+	event_image = { video = "votp_conspiring" }
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+	icon = "gfx/interface/icons/event_icons/newspaper_icon.dds"
+
+	trigger = { is_player = yes news_no_eur_subject = yes NOT = { has_variable = news_open_world_5 } NOT = { has_variable = news_off_world_5 } }
+
+	immediate = {
+		set_variable = { name = news_open_world_5 days = 90 }
+		news_set_masthead_id = yes
+		news_pick_title_variant = yes
+		
+		if = { limit = { exists = scope:news_source_country } set_variable = { name = news_world_5_news_source_country_ref value = scope:news_source_country months = 4 } }
+		var:news_world_5_news_source_country_ref ?= { save_scope_as = news_error_log_silencer } # Silence localization-only variable warning.
+	}
+
+	option = { name = news_events_world.5.a default_option = yes remove_variable = news_open_world_5 }
+}
+
+#  6. ASSASSINATION SHOCKS NATION 
+news_events_world.6 = {
+	type = country_event
+	is_popup = yes
+	placement = scope:news_event_state
+
+	title = {
+		first_valid = {
+			triggered_desc = {
+				desc = news_events_world.6.t2
+				trigger = { has_variable = news_title_variant  var:news_title_variant = 2 }
+			}
+			triggered_desc = {
+				desc = news_events_world.6.t3
+				trigger = { has_variable = news_title_variant  var:news_title_variant = 3 }
+			}
+			triggered_desc = {
+				desc = news_events_world.6.t
+				trigger = { always = yes }
+			}
+		}
+	}
+	desc = news_events_world.6.d
+	flavor = news_events_world.6.f
+
+	duration = 3
+	gui_window = news_event_window
+
+	event_image = { video = "southamerica_public_figure_assassination" }
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+	icon = "gfx/interface/icons/event_icons/newspaper_icon.dds"
+
+	trigger = { is_player = yes news_no_eur_subject = yes NOT = { has_variable = news_open_world_6 } NOT = { has_variable = news_off_world_6 } }
+
+	immediate = {
+		set_variable = { name = news_open_world_6 days = 90 }
+		news_pick_title_variant = yes
+		news_set_masthead_id = yes
+		if = { limit = { exists = scope:news_character } set_variable = { name = news_world_6_character_ref value = scope:news_character months = 4 } }
+		var:news_world_6_character_ref ?= { save_scope_as = news_error_log_silencer } # Silence localization-only variable warning.
+	
+		if = { limit = { exists = scope:news_source_country } set_variable = { name = news_world_6_news_source_country_ref value = scope:news_source_country months = 4 } }
+		var:news_world_6_news_source_country_ref ?= { save_scope_as = news_error_log_silencer } # Silence localization-only variable warning.
+	}
+
+	option = { name = news_events_world.6.a default_option = yes remove_variable = news_open_world_6 }
+}
+
+#  7. GREAT POWER LEADER DIES 
+news_events_world.7 = {
+	type = country_event
+	is_popup = yes
+	placement = scope:news_event_state
+
+	title = {
+		first_valid = {
+			triggered_desc = {
+				desc = news_events_world.7.t2
+				trigger = { has_variable = news_title_variant  var:news_title_variant = 2 }
+			}
+			triggered_desc = {
+				desc = news_events_world.7.t3
+				trigger = { has_variable = news_title_variant  var:news_title_variant = 3 }
+			}
+			triggered_desc = {
+				desc = news_events_world.7.t
+				trigger = { always = yes }
+			}
+		}
+	}
+	desc = news_events_world.7.d
+	flavor = news_events_world.7.f
+
+	duration = 3
+	gui_window = news_event_window
+
+	event_image = { video = "votp_monarch_holding_court" }
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+	icon = "gfx/interface/icons/event_icons/newspaper_icon.dds"
+
+	trigger = { is_player = yes news_no_eur_subject = yes NOT = { has_variable = news_open_world_7 } NOT = { has_variable = news_off_world_7 } }
+
+	immediate = {
+		set_variable = { name = news_open_world_7 days = 90 }
+		news_pick_title_variant = yes
+		news_set_masthead_id = yes
+		if = { limit = { exists = scope:news_character } set_variable = { name = news_world_7_character_ref value = scope:news_character months = 4 } }
+		var:news_world_7_character_ref ?= { save_scope_as = news_error_log_silencer } # Silence localization-only variable warning.
+	
+		if = { limit = { exists = scope:news_source_country } set_variable = { name = news_world_7_news_source_country_ref value = scope:news_source_country months = 4 } }
+		var:news_world_7_news_source_country_ref ?= { save_scope_as = news_error_log_silencer } # Silence localization-only variable warning.
+	}
+
+	option = { name = news_events_world.7.a default_option = yes remove_variable = news_open_world_7 }
+}
+
+#  8. GREAT POWER LEADER REMOVED 
+news_events_world.8 = {
+	type = country_event
+	placement = scope:news_event_state
+
+	title = {
+		first_valid = {
+			triggered_desc = {
+				desc = news_events_world.8.t2
+				trigger = { has_variable = news_title_variant  var:news_title_variant = 2 }
+			}
+			triggered_desc = {
+				desc = news_events_world.8.t3
+				trigger = { has_variable = news_title_variant  var:news_title_variant = 3 }
+			}
+			triggered_desc = {
+				desc = news_events_world.8.t
+				trigger = { always = yes }
+			}
+		}
+	}
+	desc = news_events_world.8.d
+	flavor = news_events_world.8.f
+
+	duration = 3
+	gui_window = news_event_window
+
+	event_image = { video = "unspecific_politicians_arguing" }
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+	icon = "gfx/interface/icons/event_icons/newspaper_icon.dds"
+
+	trigger = { is_player = yes news_no_eur_subject = yes NOT = { has_variable = news_open_world_8 } NOT = { has_variable = news_off_world_8 } }
+
+	immediate = {
+		set_variable = { name = news_open_world_8 days = 90 }
+		news_pick_title_variant = yes
+		news_set_masthead_id = yes
+		if = { limit = { exists = scope:news_previous_ruler } set_variable = { name = news_world_8_previous_ruler_ref value = scope:news_previous_ruler months = 4 } }
+		var:news_world_8_previous_ruler_ref ?= { save_scope_as = news_error_log_silencer } # Silence localization-only variable warning.
+		if = { limit = { exists = scope:news_new_ruler } set_variable = { name = news_world_8_new_ruler_ref value = scope:news_new_ruler months = 4 } }
+		var:news_world_8_new_ruler_ref ?= { save_scope_as = news_error_log_silencer } # Silence localization-only variable warning.
+	
+		if = { limit = { exists = scope:news_source_country } set_variable = { name = news_world_8_news_source_country_ref value = scope:news_source_country months = 4 } }
+		var:news_world_8_news_source_country_ref ?= { save_scope_as = news_error_log_silencer } # Silence localization-only variable warning.
+	}
+
+	option = { name = news_events_world.8.a default_option = yes remove_variable = news_open_world_8 }
+}
+
+#  9. ELECTION IN LEADING POWER 
+news_events_world.9 = {
+	type = country_event
+	placement = scope:news_event_state
+
+	title = {
+		first_valid = {
+			triggered_desc = {
+				trigger = { exists = scope:news_election_presidential_party }
+				desc = news_events_world.9.t_presidential
+			}
+			triggered_desc = {
+				trigger = { exists = scope:news_election_leading_party }
+				desc = news_events_world.9.t_party
+			}
+			triggered_desc = {
+				trigger = { exists = scope:news_election_government_party }
+				desc = news_events_world.9.t_government
+			}
+			desc = news_events_world.9.t
+		}
+	}
+	desc = {
+		first_valid = {
+			triggered_desc = {
+				trigger = { exists = scope:news_election_presidential_party }
+				desc = news_events_world.9.d_presidential
+			}
+			triggered_desc = {
+				trigger = { exists = scope:news_election_leading_party }
+				desc = news_events_world.9.d_party
+			}
+			triggered_desc = {
+				trigger = { exists = scope:news_election_government_party }
+				desc = news_events_world.9.d_government
+			}
+			desc = news_events_world.9.d
+		}
+	}
+	flavor = news_events_world.9.f
+
+	duration = 3
+	gui_window = news_event_window
+
+	event_image = { video = "southamerica_election" }
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+	icon = "gfx/interface/icons/event_icons/newspaper_icon.dds"
+
+	trigger = { is_player = yes news_no_eur_subject = yes NOT = { has_variable = news_open_world_9 } NOT = { has_variable = news_off_world_9 } }
+
+	immediate = {
+		set_variable = { name = news_open_world_9 days = 90 }
+		news_pick_title_variant = yes
+		news_set_masthead_id = yes
+		if = { limit = { exists = scope:news_new_ruler } set_variable = { name = news_world_9_new_ruler_ref value = scope:news_new_ruler months = 4 } }
+		var:news_world_9_new_ruler_ref ?= { save_scope_as = news_error_log_silencer } # Silence localization-only variable warning.
+
+		# Resolve election-party information inside the newspaper event itself.
+		# Party scopes proved unreliable when carried through the world-news
+		# broadcast hop, while the source-country scope is stable.
+		scope:news_source_country = {
+			if = {
+				limit = { has_law_or_variant = law_type:law_presidential_republic }
+				ruler ?= {
+					interest_group ?= {
+						party ?= { save_scope_as = news_election_presidential_party }
+					}
+				}
+			}
+
+			# Best approximation of the electoral winner available to script:
+			# the active party with the strongest campaign momentum at the
+			# instant the election-end event is constructed.
+			ordered_active_party = {
+				limit = { party_has_members = yes }
+				order_by = momentum
+				position = 0
+				check_range_bounds = no
+				save_scope_as = news_election_leading_party
+			}
+
+			# Parliamentary / constitutional-monarchy fallback. If no campaign
+			# party scope can be resolved, identify the party represented by the
+			# strongest Interest Group currently in government. This guarantees
+			# Britain-style HM's Governments get a party-specific newspaper
+			# without pretending that the monarch personally won the election.
+			if = {
+				limit = { NOT = { exists = scope:news_election_leading_party } }
+				ordered_interest_group = {
+					limit = {
+						is_in_government = yes
+						party ?= { party_has_members = yes }
+					}
+					order_by = ig_clout
+					position = 0
+					check_range_bounds = no
+					party ?= { save_scope_as = news_election_government_party }
+				}
+			}
+		}
+	
+		if = { limit = { exists = scope:news_election_government_party } set_variable = { name = news_world_9_news_election_government_party_ref value = scope:news_election_government_party months = 4 } }
+		var:news_world_9_news_election_government_party_ref ?= { save_scope_as = news_error_log_silencer } # Silence localization-only variable warning.
+		if = { limit = { exists = scope:news_election_leading_party } set_variable = { name = news_world_9_news_election_leading_party_ref value = scope:news_election_leading_party months = 4 } }
+		var:news_world_9_news_election_leading_party_ref ?= { save_scope_as = news_error_log_silencer } # Silence localization-only variable warning.
+		if = { limit = { exists = scope:news_election_presidential_party } set_variable = { name = news_world_9_news_election_presidential_party_ref value = scope:news_election_presidential_party months = 4 } }
+		var:news_world_9_news_election_presidential_party_ref ?= { save_scope_as = news_error_log_silencer } # Silence localization-only variable warning.
+		if = { limit = { exists = scope:news_source_country } set_variable = { name = news_world_9_news_source_country_ref value = scope:news_source_country months = 4 } }
+		var:news_world_9_news_source_country_ref ?= { save_scope_as = news_error_log_silencer } # Silence localization-only variable warning.
+	}
+
+	option = { name = news_events_world.9.a default_option = yes remove_variable = news_open_world_9 }
+}
+
+#  10. HARVEST DISASTER 
+news_events_world.10 = {
+	type = country_event
+	placement = scope:news_event_state
+
+	title = {
+		first_valid = {
+			triggered_desc = {
+				trigger = { scope:news_harvest_area.type = harvest_condition_type:drought }
+				desc = news_events_world.10.t_drought
+			}
+			triggered_desc = {
+				trigger = { scope:news_harvest_area.type = harvest_condition_type:flood }
+				desc = news_events_world.10.t_flood
+			}
+			triggered_desc = {
+				trigger = { scope:news_harvest_area.type = harvest_condition_type:frost }
+				desc = news_events_world.10.t_frost
+			}
+			triggered_desc = {
+				trigger = { scope:news_harvest_area.type = harvest_condition_type:wildfire }
+				desc = news_events_world.10.t_wildfire
+			}
+			triggered_desc = {
+				trigger = { scope:news_harvest_area.type = harvest_condition_type:hailstorm }
+				desc = news_events_world.10.t_hailstorm
+			}
+			triggered_desc = {
+				trigger = { scope:news_harvest_area.type = harvest_condition_type:locust_swarm }
+				desc = news_events_world.10.t_locust_swarm
+			}
+			triggered_desc = {
+				trigger = { scope:news_harvest_area.type = harvest_condition_type:heatwave }
+				desc = news_events_world.10.t_heatwave
+			}
+			triggered_desc = {
+				trigger = { scope:news_harvest_area.type = harvest_condition_type:disease_outbreak }
+				desc = news_events_world.10.t_disease_outbreak
+			}
+			triggered_desc = {
+				trigger = { scope:news_harvest_area.type = harvest_condition_type:extreme_winds }
+				desc = news_events_world.10.t_extreme_winds
+			}
+			triggered_desc = {
+				trigger = { scope:news_harvest_area.type = harvest_condition_type:torrential_rains }
+				desc = news_events_world.10.t_torrential_rains
+			}
+			triggered_desc = {
+				trigger = { scope:news_harvest_area.type = harvest_condition_type:pollinator_surge }
+				desc = news_events_world.10.t_pollinator_surge
+			}
+			triggered_desc = {
+				trigger = { scope:news_harvest_area.type = harvest_condition_type:optimal_sunlight }
+				desc = news_events_world.10.t_optimal_sunlight
+			}
+			triggered_desc = {
+				trigger = { scope:news_harvest_area.type = harvest_condition_type:moderate_rainfall }
+				desc = news_events_world.10.t_moderate_rainfall
+			}
+			triggered_desc = {
+				trigger = { scope:news_harvest_area.type = harvest_condition_type:tsunami }
+				desc = news_events_world.10.t_tsunami
+			}
+			triggered_desc = {
+				trigger = { scope:news_harvest_area.type = harvest_condition_type:earthquake }
+				desc = news_events_world.10.t_earthquake
+			}
+			triggered_desc = {
+				trigger = { scope:news_harvest_area.type = harvest_condition_type:calm_waters }
+				desc = news_events_world.10.t_calm_waters
+			}
+			triggered_desc = {
+				trigger = { scope:news_harvest_area.type = harvest_condition_type:fog }
+				desc = news_events_world.10.t_fog
+			}
+			triggered_desc = {
+				trigger = { scope:news_harvest_area.type = harvest_condition_type:cyclone }
+				desc = news_events_world.10.t_cyclone
+			}
+			triggered_desc = {
+				trigger = { scope:news_harvest_area.type = harvest_condition_type:ice }
+				desc = news_events_world.10.t_ice
+			}
+			triggered_desc = {
+				trigger = { scope:news_harvest_area.type = harvest_condition_type:rough_waters }
+				desc = news_events_world.10.t_rough_waters
+			}
+			triggered_desc = {
+				trigger = { scope:news_harvest_area.type = harvest_condition_type:strong_winds }
+				desc = news_events_world.10.t_strong_winds
+			}
+			triggered_desc = {
+				trigger = { scope:news_harvest_area.type = harvest_condition_type:tropical_storm }
+				desc = news_events_world.10.t_tropical_storm
+			}
+			triggered_desc = {
+				trigger = { always = yes }
+				desc = news_events_world.10.t_fallback
+			}
+		}
+	}
+	desc = {
+		first_valid = {
+			triggered_desc = {
+				trigger = { scope:news_harvest_area.type = harvest_condition_type:drought }
+				desc = news_events_world.10.d_drought
+			}
+			triggered_desc = {
+				trigger = { scope:news_harvest_area.type = harvest_condition_type:flood }
+				desc = news_events_world.10.d_flood
+			}
+			triggered_desc = {
+				trigger = { scope:news_harvest_area.type = harvest_condition_type:frost }
+				desc = news_events_world.10.d_frost
+			}
+			triggered_desc = {
+				trigger = { scope:news_harvest_area.type = harvest_condition_type:wildfire }
+				desc = news_events_world.10.d_wildfire
+			}
+			triggered_desc = {
+				trigger = { scope:news_harvest_area.type = harvest_condition_type:hailstorm }
+				desc = news_events_world.10.d_hailstorm
+			}
+			triggered_desc = {
+				trigger = { scope:news_harvest_area.type = harvest_condition_type:locust_swarm }
+				desc = news_events_world.10.d_locust_swarm
+			}
+			triggered_desc = {
+				trigger = { scope:news_harvest_area.type = harvest_condition_type:heatwave }
+				desc = news_events_world.10.d_heatwave
+			}
+			triggered_desc = {
+				trigger = { scope:news_harvest_area.type = harvest_condition_type:disease_outbreak }
+				desc = news_events_world.10.d_disease_outbreak
+			}
+			triggered_desc = {
+				trigger = { scope:news_harvest_area.type = harvest_condition_type:extreme_winds }
+				desc = news_events_world.10.d_extreme_winds
+			}
+			triggered_desc = {
+				trigger = { scope:news_harvest_area.type = harvest_condition_type:torrential_rains }
+				desc = news_events_world.10.d_torrential_rains
+			}
+			triggered_desc = {
+				trigger = { scope:news_harvest_area.type = harvest_condition_type:pollinator_surge }
+				desc = news_events_world.10.d_pollinator_surge
+			}
+			triggered_desc = {
+				trigger = { scope:news_harvest_area.type = harvest_condition_type:optimal_sunlight }
+				desc = news_events_world.10.d_optimal_sunlight
+			}
+			triggered_desc = {
+				trigger = { scope:news_harvest_area.type = harvest_condition_type:moderate_rainfall }
+				desc = news_events_world.10.d_moderate_rainfall
+			}
+			triggered_desc = {
+				trigger = { scope:news_harvest_area.type = harvest_condition_type:tsunami }
+				desc = news_events_world.10.d_tsunami
+			}
+			triggered_desc = {
+				trigger = { scope:news_harvest_area.type = harvest_condition_type:earthquake }
+				desc = news_events_world.10.d_earthquake
+			}
+			triggered_desc = {
+				trigger = { scope:news_harvest_area.type = harvest_condition_type:calm_waters }
+				desc = news_events_world.10.d_calm_waters
+			}
+			triggered_desc = {
+				trigger = { scope:news_harvest_area.type = harvest_condition_type:fog }
+				desc = news_events_world.10.d_fog
+			}
+			triggered_desc = {
+				trigger = { scope:news_harvest_area.type = harvest_condition_type:cyclone }
+				desc = news_events_world.10.d_cyclone
+			}
+			triggered_desc = {
+				trigger = { scope:news_harvest_area.type = harvest_condition_type:ice }
+				desc = news_events_world.10.d_ice
+			}
+			triggered_desc = {
+				trigger = { scope:news_harvest_area.type = harvest_condition_type:rough_waters }
+				desc = news_events_world.10.d_rough_waters
+			}
+			triggered_desc = {
+				trigger = { scope:news_harvest_area.type = harvest_condition_type:strong_winds }
+				desc = news_events_world.10.d_strong_winds
+			}
+			triggered_desc = {
+				trigger = { scope:news_harvest_area.type = harvest_condition_type:tropical_storm }
+				desc = news_events_world.10.d_tropical_storm
+			}
+			triggered_desc = {
+				trigger = { always = yes }
+				desc = news_events_world.10.d_fallback
+			}
+		}
+	}
+	flavor = news_events_world.10.f
+
+	duration = 3
+	gui_window = news_event_window
+
+	event_image = { video = "unspecific_devastation" }
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+	icon = "gfx/interface/icons/event_icons/newspaper_icon.dds"
+
+	trigger = { is_player = yes news_no_eur_subject = yes NOT = { has_variable = news_open_world_10 } NOT = { has_variable = news_off_world_10 } }
+
+	immediate = {
+		set_variable = { name = news_open_world_10 days = 90 }
+		news_set_masthead_id = yes
+		news_pick_title_variant = yes
+		
+		if = { limit = { exists = scope:news_event_state } set_variable = { name = news_world_10_news_event_state_ref value = scope:news_event_state months = 4 } }
+		var:news_world_10_news_event_state_ref ?= { save_scope_as = news_error_log_silencer } # Silence localization-only variable warning.
+		if = { limit = { exists = scope:news_source_country } set_variable = { name = news_world_10_news_source_country_ref value = scope:news_source_country months = 4 } }
+		var:news_world_10_news_source_country_ref ?= { save_scope_as = news_error_log_silencer } # Silence localization-only variable warning.
+		if = { limit = { exists = scope:news_harvest_duration } set_variable = { name = news_world_10_news_harvest_duration_value value = scope:news_harvest_duration months = 4 } }
+		if = { limit = { has_variable = news_world_10_news_harvest_duration_value } save_scope_as = news_error_log_silencer } # Silence localization-only variable warning.
+		if = { limit = { exists = scope:news_harvest_intensity } set_variable = { name = news_world_10_news_harvest_intensity_value value = scope:news_harvest_intensity months = 4 } }
+	}
+
+	option = { name = news_events_world.10.a default_option = yes remove_variable = news_open_world_10 }
+}
+
+#  11. REVOLUTION BREAKS OUT 
+news_events_world.11 = {
+	type = country_event
+	placement = scope:news_event_state
+
+	title = {
+		first_valid = {
+			triggered_desc = {
+				desc = news_events_world.11.t2
+				trigger = { has_variable = news_title_variant  var:news_title_variant = 2 }
+			}
+			triggered_desc = {
+				desc = news_events_world.11.t3
+				trigger = { has_variable = news_title_variant  var:news_title_variant = 3 }
+			}
+			triggered_desc = {
+				desc = news_events_world.11.t
+				trigger = { always = yes }
+			}
+		}
+	}
+	desc = news_events_world.11.d
+	flavor = news_events_world.11.f
+
+	duration = 3
+	gui_window = news_event_window
+
+	event_image = { video = "europenorthamerica_springtime_of_nations" }
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+	icon = "gfx/interface/icons/event_icons/newspaper_icon.dds"
+
+	trigger = { is_player = yes news_no_eur_subject = yes NOT = { has_variable = news_open_world_11 } NOT = { has_variable = news_off_world_11 } }
+
+	immediate = {
+		set_variable = { name = news_open_world_11 days = 90 }
+		news_set_masthead_id = yes
+		news_pick_title_variant = yes
+		
+		if = { limit = { exists = scope:news_rebel_country } set_variable = { name = news_world_11_news_rebel_country_ref value = scope:news_rebel_country months = 4 } }
+		var:news_world_11_news_rebel_country_ref ?= { save_scope_as = news_error_log_silencer } # Silence localization-only variable warning.
+		if = { limit = { exists = scope:news_source_country } set_variable = { name = news_world_11_news_source_country_ref value = scope:news_source_country months = 4 } }
+		var:news_world_11_news_source_country_ref ?= { save_scope_as = news_error_log_silencer } # Silence localization-only variable warning.
+	}
+
+	option = { name = news_events_world.11.a default_option = yes remove_variable = news_open_world_11 }
+}
+
+#  12. REVOLUTIONARIES TRIUMPH 
+news_events_world.12 = {
+	type = country_event
+	placement = scope:news_event_state
+
+	title = {
+		first_valid = {
+			triggered_desc = {
+				desc = news_events_world.12.t2
+				trigger = { has_variable = news_title_variant  var:news_title_variant = 2 }
+			}
+			triggered_desc = {
+				desc = news_events_world.12.t3
+				trigger = { has_variable = news_title_variant  var:news_title_variant = 3 }
+			}
+			triggered_desc = {
+				desc = news_events_world.12.t
+				trigger = { always = yes }
+			}
+		}
+	}
+	desc = news_events_world.12.d
+	flavor = news_events_world.12.f
+
+	duration = 3
+	gui_window = news_event_window
+
+	event_image = { video = "europenorthamerica_political_extremism" }
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+	icon = "gfx/interface/icons/event_icons/newspaper_icon.dds"
+
+	trigger = { is_player = yes news_no_eur_subject = yes NOT = { has_variable = news_open_world_12 } NOT = { has_variable = news_off_world_12 } }
+
+	immediate = {
+		set_variable = { name = news_open_world_12 days = 90 }
+		news_set_masthead_id = yes
+		news_pick_title_variant = yes
+		
+		if = { limit = { exists = scope:news_source_country } set_variable = { name = news_world_12_news_source_country_ref value = scope:news_source_country months = 4 } }
+		var:news_world_12_news_source_country_ref ?= { save_scope_as = news_error_log_silencer } # Silence localization-only variable warning.
+	}
+
+	option = { name = news_events_world.12.a default_option = yes remove_variable = news_open_world_12 }
+}
+
+#  13. TERRITORY TRANSFERRED BY TREATY 
+news_events_world.13 = {
+	type = country_event
+	placement = scope:news_event_state
+
+	title = {
+		first_valid = {
+			triggered_desc = {
+				desc = news_events_world.13.t2
+				trigger = { has_variable = news_title_variant  var:news_title_variant = 2 }
+			}
+			triggered_desc = {
+				desc = news_events_world.13.t3
+				trigger = { has_variable = news_title_variant  var:news_title_variant = 3 }
+			}
+			triggered_desc = {
+				desc = news_events_world.13.t
+				trigger = { always = yes }
+			}
+		}
+	}
+	desc = news_events_world.13.d
+	flavor = news_events_world.13.f
+
+	duration = 3
+	gui_window = news_event_window
+
+	event_image = { video = "unspecific_signed_contract" }
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+	icon = "gfx/interface/icons/event_icons/newspaper_icon.dds"
+
+	trigger = { is_player = yes news_no_eur_subject = yes NOT = { has_variable = news_open_world_13 } NOT = { has_variable = news_off_world_13 } }
+
+	immediate = {
+		set_variable = { name = news_open_world_13 days = 90 }
+		news_set_masthead_id = yes
+		news_pick_title_variant = yes
+		
+		if = { limit = { exists = scope:news_event_state } set_variable = { name = news_world_13_news_event_state_ref value = scope:news_event_state months = 4 } }
+		var:news_world_13_news_event_state_ref ?= { save_scope_as = news_error_log_silencer } # Silence localization-only variable warning.
+		if = { limit = { exists = scope:news_state_giver } set_variable = { name = news_world_13_news_state_giver_ref value = scope:news_state_giver months = 4 } }
+		var:news_world_13_news_state_giver_ref ?= { save_scope_as = news_error_log_silencer } # Silence localization-only variable warning.
+		if = { limit = { exists = scope:news_state_taker } set_variable = { name = news_world_13_news_state_taker_ref value = scope:news_state_taker months = 4 } }
+		var:news_world_13_news_state_taker_ref ?= { save_scope_as = news_error_log_silencer } # Silence localization-only variable warning.
+		if = { limit = { exists = scope:news_treaty } set_variable = { name = news_world_13_news_treaty_ref value = scope:news_treaty months = 4 } }
+		var:news_world_13_news_treaty_ref ?= { save_scope_as = news_error_log_silencer } # Silence localization-only variable warning.
+	}
+
+	option = { name = news_events_world.13.a default_option = yes remove_variable = news_open_world_13 }
+}
+
+#  14. GREAT POWERS DECLARE RIVALRY 
+news_events_world.14 = {
+	type = country_event
+	placement = scope:news_event_state
+
+	title = {
+		first_valid = {
+			triggered_desc = {
+				desc = news_events_world.14.t2
+				trigger = { has_variable = news_title_variant  var:news_title_variant = 2 }
+			}
+			triggered_desc = {
+				desc = news_events_world.14.t3
+				trigger = { has_variable = news_title_variant  var:news_title_variant = 3 }
+			}
+			triggered_desc = {
+				desc = news_events_world.14.t
+				trigger = { always = yes }
+			}
+		}
+	}
+	desc = news_events_world.14.d
+	flavor = news_events_world.14.f
+
+	duration = 3
+	gui_window = news_event_window
+
+	event_image = { video = "ep1_clandestine_meeting" }
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+	icon = "gfx/interface/icons/event_icons/newspaper_icon.dds"
+
+	trigger = { is_player = yes news_no_eur_subject = yes NOT = { has_variable = news_open_world_14 } NOT = { has_variable = news_off_world_14 } }
+
+	immediate = {
+		set_variable = { name = news_open_world_14 days = 90 }
+		news_set_masthead_id = yes
+		news_pick_title_variant = yes
+		
+		if = { limit = { exists = scope:news_country_a } set_variable = { name = news_world_14_news_country_a_ref value = scope:news_country_a months = 4 } }
+		var:news_world_14_news_country_a_ref ?= { save_scope_as = news_error_log_silencer } # Silence localization-only variable warning.
+		if = { limit = { exists = scope:news_country_b } set_variable = { name = news_world_14_news_country_b_ref value = scope:news_country_b months = 4 } }
+		var:news_world_14_news_country_b_ref ?= { save_scope_as = news_error_log_silencer } # Silence localization-only variable warning.
+	}
+
+	option = { name = news_events_world.14.a default_option = yes remove_variable = news_open_world_14 }
+}
+
+#  15. COUNTRY DISAPPEARS FROM MAP 
+news_events_world.15 = {
+	type = country_event
+	is_popup = yes
+	placement = scope:news_event_state
+
+	title = {
+		first_valid = {
+			triggered_desc = {
+				desc = news_events_world.15.t2
+				trigger = { has_variable = news_title_variant  var:news_title_variant = 2 }
+			}
+			triggered_desc = {
+				desc = news_events_world.15.t3
+				trigger = { has_variable = news_title_variant  var:news_title_variant = 3 }
+			}
+			triggered_desc = {
+				desc = news_events_world.15.t
+				trigger = { always = yes }
+			}
+		}
+	}
+	desc = news_events_world.15.d
+	flavor = news_events_world.15.f
+
+	duration = 3
+	gui_window = news_event_window
+
+	event_image = { video = "ep1_transfer_of_authority" }
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+	icon = "gfx/interface/icons/event_icons/newspaper_icon.dds"
+
+	trigger = { is_player = yes news_no_eur_subject = yes NOT = { has_variable = news_open_world_15 } NOT = { has_variable = news_off_world_15 } }
+
+	immediate = {
+		set_variable = { name = news_open_world_15 days = 90 }
+		news_set_masthead_id = yes
+		news_pick_title_variant = yes
+		
+		if = { limit = { exists = scope:news_annexed_country } set_variable = { name = news_world_15_news_annexed_country_ref value = scope:news_annexed_country months = 4 } }
+		var:news_world_15_news_annexed_country_ref ?= { save_scope_as = news_error_log_silencer } # Silence localization-only variable warning.
+		if = { limit = { exists = scope:news_annexer } set_variable = { name = news_world_15_news_annexer_ref value = scope:news_annexer months = 4 } }
+		var:news_world_15_news_annexer_ref ?= { save_scope_as = news_error_log_silencer } # Silence localization-only variable warning.
+		if = { limit = { exists = scope:news_diplomatic_play } set_variable = { name = news_world_15_news_diplomatic_play_ref value = scope:news_diplomatic_play months = 4 } }
+		var:news_world_15_news_diplomatic_play_ref ?= { save_scope_as = news_error_log_silencer } # Silence localization-only variable warning.
+	}
+
+	option = { name = news_events_world.15.a default_option = yes remove_variable = news_open_world_15 }
+}
+
+#  16. SUCCESSION IN MAJOR POWER 
+news_events_world.16 = {
+	type = country_event
+	placement = scope:news_event_state
+
+	title = {
+		first_valid = {
+			triggered_desc = {
+				desc = news_events_world.16.t2
+				trigger = { has_variable = news_title_variant  var:news_title_variant = 2 }
+			}
+			triggered_desc = {
+				desc = news_events_world.16.t3
+				trigger = { has_variable = news_title_variant  var:news_title_variant = 3 }
+			}
+			triggered_desc = {
+				desc = news_events_world.16.t
+				trigger = { always = yes }
+			}
+		}
+	}
+	desc = news_events_world.16.d
+	flavor = news_events_world.16.f
+
+	duration = 3
+	gui_window = news_event_window
+
+	event_image = { video = "votp_monarch_holding_court" }
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+	icon = "gfx/interface/icons/event_icons/newspaper_icon.dds"
+
+	trigger = { is_player = yes news_no_eur_subject = yes NOT = { has_variable = news_open_world_16 } NOT = { has_variable = news_off_world_16 } }
+
+	immediate = {
+		set_variable = { name = news_open_world_16 days = 90 }
+		news_pick_title_variant = yes
+		news_set_masthead_id = yes
+		if = { limit = { exists = scope:news_new_ruler } set_variable = { name = news_world_16_new_ruler_ref value = scope:news_new_ruler months = 4 } }
+		var:news_world_16_new_ruler_ref ?= { save_scope_as = news_error_log_silencer } # Silence localization-only variable warning.
+	
+		if = { limit = { exists = scope:news_source_country } set_variable = { name = news_world_16_news_source_country_ref value = scope:news_source_country months = 4 } }
+		var:news_world_16_news_source_country_ref ?= { save_scope_as = news_error_log_silencer } # Silence localization-only variable warning.
+	}
+
+	option = { name = news_events_world.16.a default_option = yes remove_variable = news_open_world_16 }
+}
+
+#  17. GREAT POWER SIGNS ALLIANCE 
+news_events_world.17 = {
+	type = country_event
+	placement = scope:news_event_state
+
+	title = {
+		first_valid = {
+			triggered_desc = {
+				desc = news_events_world.17.t2
+				trigger = { has_variable = news_title_variant  var:news_title_variant = 2 }
+			}
+			triggered_desc = {
+				desc = news_events_world.17.t3
+				trigger = { has_variable = news_title_variant  var:news_title_variant = 3 }
+			}
+			triggered_desc = {
+				desc = news_events_world.17.t
+				trigger = { always = yes }
+			}
+		}
+	}
+	desc = news_events_world.17.d
+	flavor = news_events_world.17.f
+
+	duration = 3
+	gui_window = news_event_window
+
+	event_image = { video = "unspecific_signed_contract" }
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+	icon = "gfx/interface/icons/event_icons/newspaper_icon.dds"
+
+	trigger = { is_player = yes news_no_eur_subject = yes NOT = { has_variable = news_open_world_17 } NOT = { has_variable = news_off_world_17 } }
+
+	immediate = {
+		set_variable = { name = news_open_world_17 days = 90 }
+		news_set_masthead_id = yes
+		news_pick_title_variant = yes
+		
+		if = { limit = { exists = scope:news_country_a } set_variable = { name = news_world_17_news_country_a_ref value = scope:news_country_a months = 4 } }
+		var:news_world_17_news_country_a_ref ?= { save_scope_as = news_error_log_silencer } # Silence localization-only variable warning.
+		if = { limit = { exists = scope:news_country_b } set_variable = { name = news_world_17_news_country_b_ref value = scope:news_country_b months = 4 } }
+		var:news_world_17_news_country_b_ref ?= { save_scope_as = news_error_log_silencer } # Silence localization-only variable warning.
+		if = { limit = { exists = scope:news_treaty } set_variable = { name = news_world_17_news_treaty_ref value = scope:news_treaty months = 4 } }
+		var:news_world_17_news_treaty_ref ?= { save_scope_as = news_error_log_silencer } # Silence localization-only variable warning.
+	}
+
+	option = { name = news_events_world.17.a default_option = yes remove_variable = news_open_world_17 }
+}
+
+#  18. GREAT POWER CHANGES REGIME 
+news_events_world.18 = {
+	type = country_event
+	placement = scope:news_event_state
+
+	title = {
+		first_valid = {
+			triggered_desc = {
+				desc = news_events_world.18.t2
+				trigger = { has_variable = news_title_variant  var:news_title_variant = 2 }
+			}
+			triggered_desc = {
+				desc = news_events_world.18.t3
+				trigger = { has_variable = news_title_variant  var:news_title_variant = 3 }
+			}
+			triggered_desc = {
+				desc = news_events_world.18.t
+				trigger = { always = yes }
+			}
+		}
+	}
+	desc = news_events_world.18.d
+	flavor = news_events_world.18.f
+
+	duration = 3
+	gui_window = news_event_window
+
+	event_image = { video = "europenorthamerica_political_extremism" }
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+	icon = "gfx/interface/icons/event_icons/newspaper_icon.dds"
+
+	trigger = { is_player = yes news_no_eur_subject = yes NOT = { has_variable = news_open_world_18 } NOT = { has_variable = news_off_world_18 } }
+
+	immediate = {
+		set_variable = { name = news_open_world_18 days = 90 }
+		news_set_masthead_id = yes
+		news_pick_title_variant = yes
+		
+		if = { limit = { exists = scope:news_new_law } set_variable = { name = news_world_18_news_new_law_ref value = scope:news_new_law months = 4 } }
+		var:news_world_18_news_new_law_ref ?= { save_scope_as = news_error_log_silencer } # Silence localization-only variable warning.
+		if = { limit = { exists = scope:news_source_country } set_variable = { name = news_world_18_news_source_country_ref value = scope:news_source_country months = 4 } }
+		var:news_world_18_news_source_country_ref ?= { save_scope_as = news_error_log_silencer } # Silence localization-only variable warning.
+	}
+
+	option = { name = news_events_world.18.a default_option = yes remove_variable = news_open_world_18 }
+}
+
+#  19. MAJOR UNREST IN GREAT POWER 
+news_events_world.19 = {
+	type = country_event
+	placement = scope:news_event_state
+
+	title = {
+		first_valid = {
+			triggered_desc = {
+				desc = news_events_world.19.t2
+				trigger = { has_variable = news_title_variant  var:news_title_variant = 2 }
+			}
+			triggered_desc = {
+				desc = news_events_world.19.t3
+				trigger = { has_variable = news_title_variant  var:news_title_variant = 3 }
+			}
+			triggered_desc = {
+				desc = news_events_world.19.t
+				trigger = { always = yes }
+			}
+		}
+	}
+	desc = news_events_world.19.d
+	flavor = news_events_world.19.f
+
+	duration = 3
+	gui_window = news_event_window
+
+	event_image = { video = "votp_agitator_speaking" }
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+	icon = "gfx/interface/icons/event_icons/newspaper_icon.dds"
+
+	trigger = { is_player = yes news_no_eur_subject = yes NOT = { has_variable = news_open_world_19 } NOT = { has_variable = news_off_world_19 } }
+
+	immediate = {
+		set_variable = { name = news_open_world_19 days = 90 }
+		news_set_masthead_id = yes
+		news_pick_title_variant = yes
+		
+		if = { limit = { exists = scope:news_event_state } set_variable = { name = news_world_19_news_event_state_ref value = scope:news_event_state months = 4 } }
+		var:news_world_19_news_event_state_ref ?= { save_scope_as = news_error_log_silencer } # Silence localization-only variable warning.
+		if = { limit = { exists = scope:news_source_country } set_variable = { name = news_world_19_news_source_country_ref value = scope:news_source_country months = 4 } }
+		var:news_world_19_news_source_country_ref ?= { save_scope_as = news_error_log_silencer } # Silence localization-only variable warning.
+	}
+
+	option = { name = news_events_world.19.a default_option = yes remove_variable = news_open_world_19 }
+}
+
+#  20. RECESSION HITS GREAT POWER 
+news_events_world.20 = {
+	type = country_event
+	placement = scope:news_event_state
+
+	title = {
+		first_valid = {
+			triggered_desc = {
+				desc = news_events_world.20.t2
+				trigger = { has_variable = news_title_variant  var:news_title_variant = 2 }
+			}
+			triggered_desc = {
+				desc = news_events_world.20.t3
+				trigger = { has_variable = news_title_variant  var:news_title_variant = 3 }
+			}
+			triggered_desc = {
+				desc = news_events_world.20.t
+				trigger = { always = yes }
+			}
+		}
+	}
+	desc = news_events_world.20.d
+	flavor = news_events_world.20.f
+
+	duration = 3
+	gui_window = news_event_window
+
+	event_image = { video = "europenorthamerica_capitalists_meeting" }
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+	icon = "gfx/interface/icons/event_icons/newspaper_icon.dds"
+
+	trigger = { is_player = yes news_no_eur_subject = yes NOT = { has_variable = news_open_world_20 } NOT = { has_variable = news_off_world_20 } }
+
+	immediate = {
+		set_variable = { name = news_open_world_20 days = 90 }
+		news_set_masthead_id = yes
+		news_pick_title_variant = yes
+		
+		if = { limit = { exists = scope:news_source_country } set_variable = { name = news_world_20_news_source_country_ref value = scope:news_source_country months = 4 } }
+		var:news_world_20_news_source_country_ref ?= { save_scope_as = news_error_log_silencer } # Silence localization-only variable warning.
+		if = { limit = { exists = scope:news_recession_current_gdp } set_variable = { name = news_world_20_news_recession_current_gdp_value value = scope:news_recession_current_gdp months = 4 } }
+		if = { limit = { has_variable = news_world_20_news_recession_current_gdp_value } save_scope_as = news_error_log_silencer } # Silence localization-only variable warning.
+		if = { limit = { exists = scope:news_recession_drop } set_variable = { name = news_world_20_news_recession_drop_value value = scope:news_recession_drop months = 4 } }
+		if = { limit = { has_variable = news_world_20_news_recession_drop_value } save_scope_as = news_error_log_silencer } # Silence localization-only variable warning.
+		if = { limit = { exists = scope:news_recession_previous_gdp } set_variable = { name = news_world_20_news_recession_previous_gdp_value value = scope:news_recession_previous_gdp months = 4 } }
+		if = { limit = { has_variable = news_world_20_news_recession_previous_gdp_value } save_scope_as = news_error_log_silencer } # Silence localization-only variable warning.
+	}
+
+	option = { name = news_events_world.20.a default_option = yes remove_variable = news_open_world_20 }
+}
+
+#  21. WORLD FIRST: BILLION-POUND ECONOMY 
+news_events_world.21 = {
+	type = country_event
+	placement = scope:news_event_state
+
+	title = {
+		first_valid = {
+			triggered_desc = {
+				desc = news_events_world.21.t2
+				trigger = { has_variable = news_title_variant  var:news_title_variant = 2 }
+			}
+			triggered_desc = {
+				desc = news_events_world.21.t3
+				trigger = { has_variable = news_title_variant  var:news_title_variant = 3 }
+			}
+			triggered_desc = {
+				desc = news_events_world.21.t
+				trigger = { always = yes }
+			}
+		}
+	}
+	desc = news_events_world.21.d
+	flavor = news_events_world.21.f
+
+	duration = 3
+	gui_window = news_event_window
+
+	event_image = { video = "europenorthamerica_capitalists_meeting" }
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+	icon = "gfx/interface/icons/event_icons/newspaper_icon.dds"
+
+	trigger = { is_player = yes news_no_eur_subject = yes NOT = { has_variable = news_open_world_21 } NOT = { has_variable = news_off_world_21 } }
+
+	immediate = {
+		set_variable = { name = news_open_world_21 days = 90 }
+		news_set_masthead_id = yes
+		news_pick_title_variant = yes
+		
+		if = { limit = { exists = scope:news_source_country } set_variable = { name = news_world_21_news_source_country_ref value = scope:news_source_country months = 4 } }
+		var:news_world_21_news_source_country_ref ?= { save_scope_as = news_error_log_silencer } # Silence localization-only variable warning.
+		if = { limit = { exists = scope:news_billion_gdp } set_variable = { name = news_world_21_news_billion_gdp_value value = scope:news_billion_gdp months = 4 } }
+		if = { limit = { has_variable = news_world_21_news_billion_gdp_value } save_scope_as = news_error_log_silencer } # Silence localization-only variable warning.
+	}
+
+	option = { name = news_events_world.21.a default_option = yes remove_variable = news_open_world_21 }
+}
+
+#  22. NEW POWER BLOC FORMED 
+news_events_world.22 = {
+	type = country_event
+	placement = scope:news_event_state
+
+	title = {
+		first_valid = {
+			triggered_desc = {
+				desc = news_events_world.22.t2
+				trigger = { has_variable = news_title_variant  var:news_title_variant = 2 }
+			}
+			triggered_desc = {
+				desc = news_events_world.22.t3
+				trigger = { has_variable = news_title_variant  var:news_title_variant = 3 }
+			}
+			triggered_desc = {
+				desc = news_events_world.22.t
+				trigger = { always = yes }
+			}
+		}
+	}
+	desc = news_events_world.22.d
+	flavor = news_events_world.22.f
+
+	duration = 3
+	gui_window = news_event_window
+
+	event_image = { video = "ep1_power_blocs" }
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+	icon = "gfx/interface/icons/event_icons/newspaper_icon.dds"
+
+	trigger = { is_player = yes news_no_eur_subject = yes NOT = { has_variable = news_open_world_22 } NOT = { has_variable = news_off_world_22 } }
+
+	immediate = {
+		set_variable = { name = news_open_world_22 days = 90 }
+		news_set_masthead_id = yes
+		news_pick_title_variant = yes
+		
+		if = { limit = { exists = scope:news_bloc_leader } set_variable = { name = news_world_22_news_bloc_leader_ref value = scope:news_bloc_leader months = 4 } }
+		var:news_world_22_news_bloc_leader_ref ?= { save_scope_as = news_error_log_silencer } # Silence localization-only variable warning.
+	}
+
+	option = { name = news_events_world.22.a default_option = yes remove_variable = news_open_world_22 }
+}
+
+#  23. GREAT POWER DEFAULTS 
+news_events_world.23 = {
+	type = country_event
+	placement = scope:news_event_state
+
+	title = {
+		first_valid = {
+			triggered_desc = {
+				desc = news_events_world.23.t2
+				trigger = { has_variable = news_title_variant  var:news_title_variant = 2 }
+			}
+			triggered_desc = {
+				desc = news_events_world.23.t3
+				trigger = { has_variable = news_title_variant  var:news_title_variant = 3 }
+			}
+			triggered_desc = {
+				desc = news_events_world.23.t
+				trigger = { always = yes }
+			}
+		}
+	}
+	desc = news_events_world.23.d
+	flavor = news_events_world.23.f
+
+	duration = 3
+	gui_window = news_event_window
+
+	event_image = { video = "europenorthamerica_capitalists_meeting" }
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+	icon = "gfx/interface/icons/event_icons/newspaper_icon.dds"
+
+	trigger = { is_player = yes news_no_eur_subject = yes NOT = { has_variable = news_open_world_23 } NOT = { has_variable = news_off_world_23 } }
+
+	immediate = {
+		set_variable = { name = news_open_world_23 days = 90 }
+		news_set_masthead_id = yes
+		news_pick_title_variant = yes
+		
+		if = { limit = { exists = scope:news_source_country } set_variable = { name = news_world_23_news_source_country_ref value = scope:news_source_country months = 4 } }
+		var:news_world_23_news_source_country_ref ?= { save_scope_as = news_error_log_silencer } # Silence localization-only variable warning.
+		if = { limit = { exists = scope:news_default_credit_limit } set_variable = { name = news_world_23_news_default_credit_limit_value value = scope:news_default_credit_limit months = 4 } }
+		if = { limit = { has_variable = news_world_23_news_default_credit_limit_value } save_scope_as = news_error_log_silencer } # Silence localization-only variable warning.
+		if = { limit = { exists = scope:news_default_principal } set_variable = { name = news_world_23_news_default_principal_value value = scope:news_default_principal months = 4 } }
+		if = { limit = { has_variable = news_world_23_news_default_principal_value } save_scope_as = news_error_log_silencer } # Silence localization-only variable warning.
+	}
+
+	option = { name = news_events_world.23.a default_option = yes remove_variable = news_open_world_23 }
+}
+
+#  24. NEW GREAT POWER RISES 
+news_events_world.24 = {
+	type = country_event
+	placement = scope:news_event_state
+
+	title = {
+		first_valid = {
+			triggered_desc = {
+				desc = news_events_world.24.t2
+				trigger = { has_variable = news_title_variant  var:news_title_variant = 2 }
+			}
+			triggered_desc = {
+				desc = news_events_world.24.t3
+				trigger = { has_variable = news_title_variant  var:news_title_variant = 3 }
+			}
+			triggered_desc = {
+				desc = news_events_world.24.t
+				trigger = { always = yes }
+			}
+		}
+	}
+	desc = news_events_world.24.d
+	flavor = news_events_world.24.f
+
+	duration = 3
+	gui_window = news_event_window
+
+	event_image = { video = "unspecific_military_parade" }
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+	icon = "gfx/interface/icons/event_icons/newspaper_icon.dds"
+
+	trigger = { is_player = yes news_no_eur_subject = yes NOT = { has_variable = news_open_world_24 } NOT = { has_variable = news_off_world_24 } }
+
+	immediate = {
+		set_variable = { name = news_open_world_24 days = 90 }
+		news_set_masthead_id = yes
+		news_pick_title_variant = yes
+		
+		if = { limit = { exists = scope:news_source_country } set_variable = { name = news_world_24_news_source_country_ref value = scope:news_source_country months = 4 } }
+		var:news_world_24_news_source_country_ref ?= { save_scope_as = news_error_log_silencer } # Silence localization-only variable warning.
+	}
+
+	option = { name = news_events_world.24.a default_option = yes remove_variable = news_open_world_24 }
+}
+
+#  25. GREAT POWER FALLS FROM RANKS 
+news_events_world.25 = {
+	type = country_event
+	placement = scope:news_event_state
+
+	title = {
+		first_valid = {
+			triggered_desc = {
+				desc = news_events_world.25.t2
+				trigger = { has_variable = news_title_variant  var:news_title_variant = 2 }
+			}
+			triggered_desc = {
+				desc = news_events_world.25.t3
+				trigger = { has_variable = news_title_variant  var:news_title_variant = 3 }
+			}
+			triggered_desc = {
+				desc = news_events_world.25.t
+				trigger = { always = yes }
+			}
+		}
+	}
+	desc = news_events_world.25.d
+	flavor = news_events_world.25.f
+
+	duration = 3
+	gui_window = news_event_window
+
+	event_image = { video = "unspecific_politicians_arguing" }
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+	icon = "gfx/interface/icons/event_icons/newspaper_icon.dds"
+
+	trigger = { is_player = yes news_no_eur_subject = yes NOT = { has_variable = news_open_world_25 } NOT = { has_variable = news_off_world_25 } }
+
+	immediate = {
+		set_variable = { name = news_open_world_25 days = 90 }
+		news_set_masthead_id = yes
+		news_pick_title_variant = yes
+		
+		if = { limit = { exists = scope:news_source_country } set_variable = { name = news_world_25_news_source_country_ref value = scope:news_source_country months = 4 } }
+		var:news_world_25_news_source_country_ref ?= { save_scope_as = news_error_log_silencer } # Silence localization-only variable warning.
+	}
+
+	option = { name = news_events_world.25.a default_option = yes remove_variable = news_open_world_25 }
+}
+
+#  26. POWER BLOC LEADERSHIP CONTESTED 
+news_events_world.26 = {
+	type = country_event
+	placement = scope:news_event_state
+
+	title = {
+		first_valid = {
+			triggered_desc = {
+				desc = news_events_world.26.t2
+				trigger = { has_variable = news_title_variant  var:news_title_variant = 2 }
+			}
+			triggered_desc = {
+				desc = news_events_world.26.t3
+				trigger = { has_variable = news_title_variant  var:news_title_variant = 3 }
+			}
+			triggered_desc = {
+				desc = news_events_world.26.t
+				trigger = { always = yes }
+			}
+		}
+	}
+	desc = news_events_world.26.d
+	flavor = news_events_world.26.f
+
+	duration = 3
+	gui_window = news_event_window
+
+	event_image = { video = "ep1_power_blocs" }
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+	icon = "gfx/interface/icons/event_icons/newspaper_icon.dds"
+
+	trigger = { is_player = yes news_no_eur_subject = yes NOT = { has_variable = news_open_world_26 } NOT = { has_variable = news_off_world_26 } }
+
+	immediate = {
+		set_variable = { name = news_open_world_26 days = 90 }
+		news_set_masthead_id = yes
+		news_pick_title_variant = yes
+		
+		if = { limit = { exists = scope:news_bloc_contender } set_variable = { name = news_world_26_news_bloc_contender_ref value = scope:news_bloc_contender months = 4 } }
+		var:news_world_26_news_bloc_contender_ref ?= { save_scope_as = news_error_log_silencer } # Silence localization-only variable warning.
+		if = { limit = { exists = scope:news_bloc_leader } set_variable = { name = news_world_26_news_bloc_leader_ref value = scope:news_bloc_leader months = 4 } }
+		var:news_world_26_news_bloc_leader_ref ?= { save_scope_as = news_error_log_silencer } # Silence localization-only variable warning.
+	}
+
+	option = { name = news_events_world.26.a default_option = yes remove_variable = news_open_world_26 }
+}
+
+#  27. POWER BLOC LEADERSHIP CHANGES 
+news_events_world.27 = {
+	type = country_event
+	placement = scope:news_event_state
+
+	title = {
+		first_valid = {
+			triggered_desc = {
+				desc = news_events_world.27.t2
+				trigger = { has_variable = news_title_variant  var:news_title_variant = 2 }
+			}
+			triggered_desc = {
+				desc = news_events_world.27.t3
+				trigger = { has_variable = news_title_variant  var:news_title_variant = 3 }
+			}
+			triggered_desc = {
+				desc = news_events_world.27.t
+				trigger = { always = yes }
+			}
+		}
+	}
+	desc = news_events_world.27.d
+	flavor = news_events_world.27.f
+
+	duration = 3
+	gui_window = news_event_window
+
+	event_image = { video = "ep1_power_blocs" }
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+	icon = "gfx/interface/icons/event_icons/newspaper_icon.dds"
+
+	trigger = { is_player = yes news_no_eur_subject = yes NOT = { has_variable = news_open_world_27 } NOT = { has_variable = news_off_world_27 } }
+
+	immediate = {
+		set_variable = { name = news_open_world_27 days = 90 }
+		news_set_masthead_id = yes
+		news_pick_title_variant = yes
+		
+		if = { limit = { exists = scope:news_bloc_loser } set_variable = { name = news_world_27_news_bloc_loser_ref value = scope:news_bloc_loser months = 4 } }
+		var:news_world_27_news_bloc_loser_ref ?= { save_scope_as = news_error_log_silencer } # Silence localization-only variable warning.
+		if = { limit = { exists = scope:news_bloc_winner } set_variable = { name = news_world_27_news_bloc_winner_ref value = scope:news_bloc_winner months = 4 } }
+		var:news_world_27_news_bloc_winner_ref ?= { save_scope_as = news_error_log_silencer } # Silence localization-only variable warning.
+	}
+
+	option = { name = news_events_world.27.a default_option = yes remove_variable = news_open_world_27 }
+}
+
+#  28. GREAT POWER ALLIANCE COLLAPSES 
+news_events_world.28 = {
+	type = country_event
+	placement = scope:news_event_state
+
+	title = {
+		first_valid = {
+			triggered_desc = {
+				desc = news_events_world.28.t2
+				trigger = { has_variable = news_title_variant  var:news_title_variant = 2 }
+			}
+			triggered_desc = {
+				desc = news_events_world.28.t3
+				trigger = { has_variable = news_title_variant  var:news_title_variant = 3 }
+			}
+			triggered_desc = {
+				desc = news_events_world.28.t
+				trigger = { always = yes }
+			}
+		}
+	}
+	desc = news_events_world.28.d
+	flavor = news_events_world.28.f
+
+	duration = 3
+	gui_window = news_event_window
+
+	event_image = { video = "ep1_clandestine_meeting" }
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+	icon = "gfx/interface/icons/event_icons/newspaper_icon.dds"
+
+	trigger = { is_player = yes news_no_eur_subject = yes NOT = { has_variable = news_open_world_28 } NOT = { has_variable = news_off_world_28 } }
+
+	immediate = {
+		set_variable = { name = news_open_world_28 days = 90 }
+		news_set_masthead_id = yes
+		news_pick_title_variant = yes
+		
+		if = { limit = { exists = scope:news_country_a } set_variable = { name = news_world_28_news_country_a_ref value = scope:news_country_a months = 4 } }
+		var:news_world_28_news_country_a_ref ?= { save_scope_as = news_error_log_silencer } # Silence localization-only variable warning.
+		if = { limit = { exists = scope:news_country_b } set_variable = { name = news_world_28_news_country_b_ref value = scope:news_country_b months = 4 } }
+		var:news_world_28_news_country_b_ref ?= { save_scope_as = news_error_log_silencer } # Silence localization-only variable warning.
+		if = { limit = { exists = scope:news_treaty } set_variable = { name = news_world_28_news_treaty_ref value = scope:news_treaty months = 4 } }
+		var:news_world_28_news_treaty_ref ?= { save_scope_as = news_error_log_silencer } # Silence localization-only variable warning.
+	}
+
+	option = { name = news_events_world.28.a default_option = yes remove_variable = news_open_world_28 }
+}
+
+#  29. WORLD-MARKET GOODS SHORTAGE 
+news_events_world.29 = {
+	type = country_event
+	placement = scope:news_event_state
+
+	title = {
+		first_valid = {
+			triggered_desc = {
+				desc = news_events_world.29.t2
+				trigger = { has_variable = news_title_variant  var:news_title_variant = 2 }
+			}
+			triggered_desc = {
+				desc = news_events_world.29.t3
+				trigger = { has_variable = news_title_variant  var:news_title_variant = 3 }
+			}
+			triggered_desc = {
+				desc = news_events_world.29.t
+				trigger = { always = yes }
+			}
+		}
+	}
+	desc = news_events_world.29.d
+	flavor = news_events_world.29.f
+
+	duration = 3
+	gui_window = news_event_window
+
+	event_image = { video = "unspecific_factory_closed" }
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+	icon = "gfx/interface/icons/event_icons/newspaper_icon.dds"
+
+	trigger = { is_player = yes news_no_eur_subject = yes NOT = { has_variable = news_open_world_29 } NOT = { has_variable = news_off_world_29 } }
+
+	immediate = {
+		set_variable = { name = news_open_world_29 days = 90 }
+		news_set_masthead_id = yes
+		news_pick_title_variant = yes
+		
+		if = { limit = { exists = scope:news_shortage_good } set_variable = { name = news_world_29_news_shortage_good_ref value = scope:news_shortage_good months = 4 } }
+		var:news_world_29_news_shortage_good_ref ?= { save_scope_as = news_error_log_silencer } # Silence localization-only variable warning.
+		if = { limit = { exists = scope:news_shortage_exports } set_variable = { name = news_world_29_news_shortage_exports_value value = scope:news_shortage_exports months = 4 } }
+		if = { limit = { has_variable = news_world_29_news_shortage_exports_value } save_scope_as = news_error_log_silencer } # Silence localization-only variable warning.
+		if = { limit = { exists = scope:news_shortage_imports } set_variable = { name = news_world_29_news_shortage_imports_value value = scope:news_shortage_imports months = 4 } }
+		if = { limit = { has_variable = news_world_29_news_shortage_imports_value } save_scope_as = news_error_log_silencer } # Silence localization-only variable warning.
+		if = { limit = { exists = scope:news_shortage_pressure } set_variable = { name = news_world_29_news_shortage_pressure_value value = scope:news_shortage_pressure months = 4 } }
+		if = { limit = { has_variable = news_world_29_news_shortage_pressure_value } save_scope_as = news_error_log_silencer } # Silence localization-only variable warning.
+	}
+
+	option = { name = news_events_world.29.a default_option = yes remove_variable = news_open_world_29 }
+}
+
+#  30. TRADE STATES AGREEMENT 
+news_events_world.30 = {
+	type = country_event
+	placement = scope:news_event_state
+
+	title = {
+		first_valid = {
+			triggered_desc = {
+				desc = news_events_world.30.t2
+				trigger = { has_variable = news_title_variant  var:news_title_variant = 2 }
+			}
+			triggered_desc = {
+				desc = news_events_world.30.t3
+				trigger = { has_variable = news_title_variant  var:news_title_variant = 3 }
+			}
+			triggered_desc = {
+				desc = news_events_world.30.t
+				trigger = { always = yes }
+			}
+		}
+	}
+	desc = {
+		first_valid = {
+			triggered_desc = {
+				desc = news_events_world.30.d_exchange
+				trigger = { exists = scope:news_trade_state_a exists = scope:news_trade_state_b }
+			}
+			triggered_desc = {
+				desc = news_events_world.30.d_a_to_b
+				trigger = { exists = scope:news_trade_state_a }
+			}
+			triggered_desc = {
+				desc = news_events_world.30.d_b_to_a
+				trigger = { exists = scope:news_trade_state_b }
+			}
+		}
+	}
+	flavor = news_events_world.30.f
+
+	duration = 3
+	gui_window = news_event_window
+
+	event_image = { video = "unspecific_signed_contract" }
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+	icon = "gfx/interface/icons/event_icons/newspaper_icon.dds"
+
+	trigger = { is_player = yes news_no_eur_subject = yes NOT = { has_variable = news_open_world_30 } NOT = { has_variable = news_off_world_30 } }
+
+	immediate = {
+		set_variable = { name = news_open_world_30 days = 90 }
+		news_set_masthead_id = yes
+		news_pick_title_variant = yes
+		
+		if = { limit = { exists = scope:news_country_a } set_variable = { name = news_world_30_news_country_a_ref value = scope:news_country_a months = 4 } }
+		var:news_world_30_news_country_a_ref ?= { save_scope_as = news_error_log_silencer } # Silence localization-only variable warning.
+		if = { limit = { exists = scope:news_country_b } set_variable = { name = news_world_30_news_country_b_ref value = scope:news_country_b months = 4 } }
+		var:news_world_30_news_country_b_ref ?= { save_scope_as = news_error_log_silencer } # Silence localization-only variable warning.
+		if = { limit = { exists = scope:news_trade_state_a } set_variable = { name = news_world_30_news_trade_state_a_ref value = scope:news_trade_state_a months = 4 } }
+		var:news_world_30_news_trade_state_a_ref ?= { save_scope_as = news_error_log_silencer } # Silence localization-only variable warning.
+		if = { limit = { exists = scope:news_trade_state_b } set_variable = { name = news_world_30_news_trade_state_b_ref value = scope:news_trade_state_b months = 4 } }
+		var:news_world_30_news_trade_state_b_ref ?= { save_scope_as = news_error_log_silencer } # Silence localization-only variable warning.
+	}
+
+	option = { name = news_events_world.30.a default_option = yes remove_variable = news_open_world_30 }
+}
+
+#  31. WORKERS' STRIKE IN GREAT POWER 
+news_events_world.31 = {
+	type = country_event
+	placement = scope:news_event_state
+
+	title = {
+		first_valid = {
+			triggered_desc = {
+				desc = news_events_world.31.t2
+				trigger = { has_variable = news_title_variant  var:news_title_variant = 2 }
+			}
+			triggered_desc = {
+				desc = news_events_world.31.t3
+				trigger = { has_variable = news_title_variant  var:news_title_variant = 3 }
+			}
+			triggered_desc = {
+				desc = news_events_world.31.t
+				trigger = { always = yes }
+			}
+		}
+	}
+	desc = {
+		first_valid = {
+			triggered_desc = {
+				desc = news_events_world.31.d_nationwide
+				trigger = { scope:news_source_country = { has_modifier = modifier_nationwide_strikes } }
+			}
+			triggered_desc = {
+				desc = news_events_world.31.d_mining
+				trigger = { scope:news_source_country = { has_variable = mining_strike } }
+			}
+			triggered_desc = {
+				desc = news_events_world.31.d_industrial
+				trigger = { scope:news_source_country = { has_variable = industrial_strike } }
+			}
+			triggered_desc = {
+				desc = news_events_world.31.d_railway
+				trigger = { scope:news_source_country = { has_variable = railway_strike } }
+			}
+			triggered_desc = {
+				desc = news_events_world.31.d_movement
+				trigger = { scope:news_event_state = { has_modifier = modifier_movement_worker_strikes } }
+			}
+			triggered_desc = {
+				desc = news_events_world.31.d
+				trigger = { always = yes }
+			}
+		}
+	}
+	flavor = news_events_world.31.f
+
+	duration = 3
+	gui_window = news_event_window
+
+	event_image = { video = "asia_factory_accident" }
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+	icon = "gfx/interface/icons/event_icons/newspaper_icon.dds"
+
+	trigger = { is_player = yes news_no_eur_subject = yes NOT = { has_variable = news_open_world_31 } NOT = { has_variable = news_off_world_31 } }
+
+	immediate = {
+		set_variable = { name = news_open_world_31 days = 90 }
+		news_set_masthead_id = yes
+		news_pick_title_variant = yes
+		
+		if = { limit = { exists = scope:news_event_state } set_variable = { name = news_world_31_news_event_state_ref value = scope:news_event_state months = 4 } }
+		var:news_world_31_news_event_state_ref ?= { save_scope_as = news_error_log_silencer } # Silence localization-only variable warning.
+		if = { limit = { exists = scope:news_source_country } set_variable = { name = news_world_31_news_source_country_ref value = scope:news_source_country months = 4 } }
+		var:news_world_31_news_source_country_ref ?= { save_scope_as = news_error_log_silencer } # Silence localization-only variable warning.
+	}
+
+	option = { name = news_events_world.31.a default_option = yes remove_variable = news_open_world_31 }
+}
+
+#  32. MAJOR POWER BACKS DOWN
+news_events_world.32 = {
+	type = country_event
+	placement = scope:news_event_state
+
+	title = {
+		first_valid = {
+			triggered_desc = {
+				desc = news_events_world.32.t2
+				trigger = { has_variable = news_title_variant  var:news_title_variant = 2 }
+			}
+			triggered_desc = {
+				desc = news_events_world.32.t3
+				trigger = { has_variable = news_title_variant  var:news_title_variant = 3 }
+			}
+			triggered_desc = {
+				desc = news_events_world.32.t
+				trigger = { always = yes }
+			}
+		}
+	}
+	desc = news_events_world.32.d
+	flavor = news_events_world.32.f
+
+	duration = 3
+	gui_window = news_event_window
+
+	event_image = { video = "africa_diplomats_negotiating" }
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+	icon = "gfx/interface/icons/event_icons/newspaper_icon.dds"
+
+	trigger = { is_player = yes news_no_eur_subject = yes NOT = { has_variable = news_open_world_32 } NOT = { has_variable = news_off_world_32 } }
+
+	immediate = {
+		set_variable = { name = news_open_world_32 days = 90 }
+		news_pick_title_variant = yes
+		news_set_masthead_id = yes
+		if = { limit = { exists = scope:news_backdown_country } set_variable = { name = news_world_32_news_backdown_country_ref value = scope:news_backdown_country months = 4 } }
+		var:news_world_32_news_backdown_country_ref ?= { save_scope_as = news_error_log_silencer } # Silence localization-only variable warning.
+		if = { limit = { exists = scope:news_backdown_target } set_variable = { name = news_world_32_news_backdown_target_ref value = scope:news_backdown_target months = 4 } }
+		var:news_world_32_news_backdown_target_ref ?= { save_scope_as = news_error_log_silencer } # Silence localization-only variable warning.
+		if = { limit = { exists = scope:news_diplomatic_play } set_variable = { name = news_world_32_news_diplomatic_play_ref value = scope:news_diplomatic_play months = 4 } }
+		var:news_world_32_news_diplomatic_play_ref ?= { save_scope_as = news_error_log_silencer } # Silence localization-only variable warning.
+	}
+
+	option = { name = news_events_world.32.a default_option = yes remove_variable = news_open_world_32 }
+}
+

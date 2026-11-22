@@ -1,22 +1,19 @@
 ﻿unification = {
-	mirrored_wargoal = {
-		method = territorial
-	}
-
 	icon = "gfx/interface/icons/war_goals/unification.dds"
 
 	kind = unification
 
 	settings = {
 		require_target_be_part_of_war
-		annexes_entire_country
+		annexes_entire_state
 		skip_build_list
 
+		# Validation
 		validate_conflicts_war_goals_all
 		validate_sole_formation_candidate
 		validate_conflicts_conquer_state
+		conflicts_with_country_creation
 		conflicts_with_annex_state
-		conflicts_with_annex_country
 	}
 
 	execution_priority = 200
@@ -37,6 +34,19 @@
 
 	maneuvers = {
 		value = 0
+
+		add = {
+			desc = "MANEUVERS_BASE_VALUE"
+			value = 10
+		}
+
+		multiply = {
+			desc = "MANEUVERS_TARGET_STATE_POPULATION_FACTOR"
+			value = scope:target_state.state_population
+			divide = define:NDiplomacy|SWAY_OFFER_WARGOAL_MANEUVERS_COST_POPULATION_SCALING_FACTOR
+			multiply = define:NDiplomacy|SWAY_OFFER_WARGOAL_MANEUVERS_COST_POPULATION_SCALING_MULTIPLIER
+			max = define:NDiplomacy|SWAY_OFFER_WARGOAL_MANEUVERS_COST_POPULATION_SCALING_MULTIPLIER_MAX_PER_STATE
+		}
 	}
 
 	infamy = {
@@ -47,7 +57,11 @@
 		# script effect on top of the predefined code effect
 	}
 
+	mirrored_wargoal = {
+		method = territorial
+	}
+
 	ai = {
-		is_significant_demand = no
+		is_significant_demand = yes
 	}
 }

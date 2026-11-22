@@ -1,0 +1,50 @@
+﻿smd_coa_jihadist_trigger = {
+	OR = {
+		country_has_state_religion = rel:sunni
+		country_has_state_religion = rel:shiite
+		country_has_state_religion = rel:ibadi
+	}
+	OR = {
+		ruler ?= { has_ideology = ideology:ideology_jihadist_leader }
+		any_interest_group = {
+			is_in_government = yes
+			is_powerful = yes
+			leader ?= { has_ideology = ideology:ideology_jihadist_leader }
+		}
+	}
+	OR = {
+		is_revolutionary = yes
+		country_has_voting_franchise = no
+	}
+}
+
+smd_coa_def_jihadist_flag_trigger = {
+	exists = scope:actor
+	scope:actor ?= { smd_coa_jihadist_trigger = yes }
+}
+
+smd_coa_def_jihadist_emirate_trigger = {
+	exists = scope:actor
+	scope:actor ?= {
+		smd_coa_jihadist_trigger = yes
+		has_law_or_variant = law_type:law_monarchy
+		NOT = { country_has_state_religion = rel:shiite }
+	}
+}
+
+smd_coa_def_jihadist_state_trigger = {
+	exists = scope:actor
+	scope:actor ?= {
+		smd_coa_jihadist_trigger = yes
+		NOT = { has_law_or_variant = law_type:law_monarchy }
+		NOT = { country_has_state_religion = rel:shiite }
+	}
+}
+
+smd_coa_def_jihadist_shia_trigger = {
+	exists = scope:actor
+	scope:actor ?= {
+		smd_coa_jihadist_trigger = yes
+		country_has_state_religion = rel:shiite
+	}
+}

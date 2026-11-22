@@ -19,7 +19,7 @@
  building_nuclear_silo:0 "核筒仓"
 
  je_uranium_enrichment: "铀浓缩方案"
- je_uranium_enrichment_reason: "[ROOT.GetCountry.GetName] 启动了铀浓缩方案。 离心机正在运行. 科学家在工作 而世界,如果它发现,将会需要答案。\n\n 方案每月取得进展。 新增核电站加快推进. 战争破坏它。 完成后,[ROOT.GetCountry.GetName]将拥有核能力——生产武器级材料的能力。"
+ je_uranium_enrichment_reason: "[ROOT.GetCountry.GetName] 启动了铀浓缩方案。 离心机正在运行. 科学家在工作 而世界,如果它发现,将会需要答案。\n\n 方案每月取得进展。 新增核电站加快推进. 战争破坏它。 完成后,[ROOT.GetCountry.GetName]将拥有核能力，生产武器级材料的能力。"
 
  je_enrichment_early_tt: "该方案尚处于初期阶段。 正在测试离心级联。 浓缩工作要等好几年才能完成。"
  je_enrichment_mid_tt: "#bold 浓缩正在取得进展。 #! 级联正在运行中。 科研团队入轨."
@@ -30,7 +30,7 @@
  nuclear_enrichment_progress_bar_tt: "每月浓缩进度"
 
  je_nuclear_production: "核弹头生产"
- je_nuclear_production_reason: "[ROOT.GetCountry.GetName]正在制造第一颗核弹头。 裂变材料已经准备好了。 工程组正在组装设备 生产比浓缩更快——辛勤工作已经完成."
+ je_nuclear_production_reason: "[ROOT.GetCountry.GetName]正在制造第一颗核弹头。 裂变材料已经准备好了。 工程组正在组装设备 生产比浓缩更快，辛勤工作已经完成."
 
  je_production_early_tt: "弹头在早期装配. 工程组如期完成."
  je_production_late_tt: "#bold生产接近完成. #! 装配和武装检查正在进行中"
@@ -40,19 +40,19 @@
  nuclear_production_progress_bar_tt: "每月生产进度"
 
  nuclear_events.1.t: "铀浓缩完成"
- nuclear_events.1.d: "[ROOT.GetCountry.GetName]已成功地将铀浓缩到武器级的纯度。 该方案多年来在为此目的而建的设施中进行,已经实现了其技术目标。 该国现在拥有生产核武器的科学和工业能力。 是否继续生产是另外的决定——但已经越过了门槛。 [ROOT.GetCountry.GetName]是一个核门槛状态。"
+ nuclear_events.1.d: "[ROOT.GetCountry.GetName]已成功地将铀浓缩到武器级的纯度。 该方案多年来在为此目的而建的设施中进行,已经实现了其技术目标。 该国现在拥有生产核武器的科学和工业能力。 是否继续生产是另外的决定，但已经越过了门槛。 [ROOT.GetCountry.GetName]是一个核门槛状态。"
  nuclear_events.1.f: "难处已作."
  nuclear_events.1.a: "开始准备弹头的生产"
 
  nuclear_events.2.t: "情报服务:该方案已曝光"
  nuclear_events.2.d: "外国情报机构利用卫星图像、叛逃者报告和信号情报,非常有信心地得出结论认为,`x id=0'正在实施秘密核武器方案。 调查结果正在盟国政府中传播。 安全理事会听取了非正式通报。 [ROOT.GetCountry.GetName] 可以否认、解释或拥有它。 每条路都有后果"
  nuclear_events.2.f: "没有什么是永远保密的。"
- nuclear_events.2.a: "拒绝——设施纯粹是民用能源基础设施"
+ nuclear_events.2.a: "拒绝，设施纯粹是民用能源基础设施"
  nuclear_events.2.b: "承认- " x id=0 " 有权获得威慑"
 
 
  nuclear_capable_modifier: "核门槛国"
- nuclear_capable_modifier_desc: "[ROOT.GetCountry.GetName]已实现核能力——生产武器级裂变材料的能力。 提高特权和外交地位。 现在可以开始生产弹头。"
+ nuclear_capable_modifier_desc: "[ROOT.GetCountry.GetName]已实现核能力，生产武器级裂变材料的能力。 提高特权和外交地位。 现在可以开始生产弹头。"
 
  nuclear_programme_denied: "被拒绝的方案"
  nuclear_programme_denied_desc: "[ROOT.GetCountry.GetName]已正式否认运行核计划。 这种否认不是普遍相信的。 恶名相生增."
@@ -65,7 +65,7 @@
 
  NUCLEAR_TARGETING_HEADER: "核目标"
 
- NUCLEAR_DEPLOY_10_TOOLTIP: "部署10%的核武库。 最小的实际打击——外科手术和范围有限."
+ NUCLEAR_DEPLOY_10_TOOLTIP: "部署10%的核武库。 最小的实际打击，外科手术和范围有限."
  NUCLEAR_DEPLOY_25_TOOLTIP: "部署你25%的武器库 有限的核交流."
  NUCLEAR_DEPLOY_50_TOOLTIP: "部署一半的武器库 重大核打击."
  NUCLEAR_DEPLOY_75_TOOLTIP: "部署75%的军火库 一场毁灭性的第一击"
@@ -83,37 +83,37 @@
  nuclear_events.4.t: "发射核打击?"
  nuclear_events.4.d: "目标解决方案被锁定 。 [GetPlayer.MakeScope.ScriptValue('nuclear_warheads_to_use_sv')|v0] 弹头已分配到 [GetPlayer.MakeScope.ScriptValue('nuclear_target_count_sv')|v0] 状态. \n\n 估计平民伤亡: #R ~[GetPlayer.MakeScope.ScriptValue('nuclear_estimated_total_casualties_sv')|vD]#!\n\n 这一行动是不可逆转的。 弹头将用完。 诸州将灭. 世界将知道是谁干的。 \n\n 您想要继续吗?"
  nuclear_events.4.f: "无法收回它。"
- nuclear_events.4.a: "#R 确认 — 发动打击#!"
- nuclear_events.4.b: "中止——停用"
+ nuclear_events.4.a: "#R 确认 ， 发动打击#!"
+ nuclear_events.4.b: "中止，停用"
 
  nuclear_events.5.t: "核攻击"
- nuclear_events.5.d: "[ROOT.GetCountry.GetName]被核武器击中。 \n\n 多枚弹头在[ROOT.GetCountry.GetAdjective]地区被引爆。 诸城被烧. 受影响地区的通信崩溃了。 伤亡规模尚不清楚——早期估计显示死亡人数为灾难性. \n\n 袭击是在没有警告的情况下进行的。 没有宣言。 无上牒. 什么都没有"
+ nuclear_events.5.d: "[ROOT.GetCountry.GetName]被核武器击中。 \n\n 多枚弹头在[ROOT.GetCountry.GetAdjective]地区被引爆。 诸城被烧. 受影响地区的通信崩溃了。 伤亡规模尚不清楚，早期估计显示死亡人数为灾难性. \n\n 袭击是在没有警告的情况下进行的。 没有宣言。 无上牒. 什么都没有"
  nuclear_events.5.f: "没有什么可说的。"
  nuclear_events.5.a: "开始应急反应"
 
  nuclear_events.6.t: "原子能机构要求视察"
- nuclear_events.6.d: "国际原子能机构已正式要求进入[ROOT.GetCountry.GetAdjective]核设施。 请求是继情报报告之后提出的,现已在成员国中广泛分发,其中建议存在武器级浓缩方案。 原子能机构的立场是明确的: " x id=3/ " 是不扩散承诺的签署国。 拒绝视察将构成重大违约。 如果允许这样做,就需要将设施开放给国际监测——几乎可以肯定地结束武器方案。 视察员正在等待答复。"
+ nuclear_events.6.d: "国际原子能机构已正式要求进入[ROOT.GetCountry.GetAdjective]核设施。 请求是继情报报告之后提出的,现已在成员国中广泛分发,其中建议存在武器级浓缩方案。 原子能机构的立场是明确的: " x id=3/ " 是不扩散承诺的签署国。 拒绝视察将构成重大违约。 如果允许这样做,就需要将设施开放给国际监测，几乎可以肯定地结束武器方案。 视察员正在等待答复。"
  nuclear_events.6.f: "稽查员有礼. 请求不是。"
- nuclear_events.6.a: "准许进入——允许原子能机构视察我们的设施"
+ nuclear_events.6.a: "准许进入，允许原子能机构视察我们的设施"
  nuclear_events.6.b: "拒绝-[ROOT.GetCountry.GetName]不会接受外国检查"
 
  nuclear_events.7.t: "联合国安全理事会:停止浓缩"
  nuclear_events.7.d: "联合国安全理事会通过了一项决议,要求 " x id=0 " 立即停止其铀浓缩方案并提交原子能机构核查。 表决没有结束。 决议要求在30天内完全停止,并威胁如果[ROOT.GetCountry.GetName]拒绝遵守协调制裁。\n\n 这不是一个请求。 这是最后通牒。"
  nuclear_events.7.f: "安全理事会发言。 现在的“x id=0”将界定它在世界上的地位。"
- nuclear_events.7.a: "遵守——停止浓缩并接受监测"
- nuclear_events.7.b: "拒绝 — [ROOT.GetCountry.GetName] 将继续下去,无论后果如何"
+ nuclear_events.7.a: "遵守，停止浓缩并接受监测"
+ nuclear_events.7.b: "拒绝 ， [ROOT.GetCountry.GetName] 将继续下去,无论后果如何"
 
  nuclear_events.8.t: "联合国安全理事会:解除武装或面临后果"
- nuclear_events.8.d: "" x id=0 " 确认其核武器方案,使安全理事会毫不含糊地与之合作。 通过了一项决议,要求立即停止浓缩活动并拆除与武器有关的基础设施。 该决议是在第七章下通过的——这意味着没有排除军事执行。 [ROOT.GetCountry.GetName]有30天时间遵守。"
+ nuclear_events.8.d: "" x id=0 " 确认其核武器方案,使安全理事会毫不含糊地与之合作。 通过了一项决议,要求立即停止浓缩活动并拆除与武器有关的基础设施。 该决议是在第七章下通过的，这意味着没有排除军事执行。 [ROOT.GetCountry.GetName]有30天时间遵守。"
  nuclear_events.8.f: "诚实没有得到奖励。 后通牒以相随相."
- nuclear_events.8.a: "遵守——停止方案并接受核查"
+ nuclear_events.8.a: "遵守，停止方案并接受核查"
  nuclear_events.8.b: "拒绝 - [ROOT.GetCountry.GetName] 将不会在压力下解除武装"
 
  nuclear_events.9.t: "对[SCOPE.sCountry('nuclear_state').GetName] 的核防御的反应"
  nuclear_events.9.d: "[SCOPE.sCountry('nuclear_state').GetName]拒绝了联合国安全理事会的最后通牒,并继续将铀浓缩到武器级的纯度。 制裁制度已经到位。 现在必须明确立场。 我们战略领域的一个国家无视我们帮助建立的国际秩序,正在发展核武器。 问题是,我们如何有力地作出反应。"
  nuclear_events.9.f: "言已试入. 现在是决定下一步行动的时候了。"
- nuclear_events.9.a: "干涉——发动一场外交游戏来强制裁军."
- nuclear_events.9.b: "威胁——说明后果,不使用武力"
+ nuclear_events.9.a: "干涉，发动一场外交游戏来强制裁军."
+ nuclear_events.9.b: "威胁，说明后果,不使用武力"
 
  nuclear_iaea_cooperation: "原子能机构合作协定"
  nuclear_iaea_cooperation_desc: "[ROOT.GetCountry.GetName]已将其核设施开放给原子能机构监测。 为了换取可核查的民用,国际上扩大了对核能基础设施的支持。"
@@ -151,10 +151,10 @@
  nuclear_strike_victim_modifier_desc: "[ROOT.GetCountry.GetName] 遭受了核攻击。 国家创伤是深刻而持久的。 恢复需要一代人的时间。"
 
  nuclear_disarmament: "收缴大规模毁灭性武器"
- nuclear_disarmament_desc: "要求目标国家彻底拆除其核武器方案并交出其现有武库。 如果强制执行,所有浓缩能力、弹头储存和方案变量都将被取消——国家必须从零开始。"
+ nuclear_disarmament_desc: "要求目标国家彻底拆除其核武器方案并交出其现有武库。 如果强制执行,所有浓缩能力、弹头储存和方案变量都将被取消，国家必须从零开始。"
 
  nuclear_events.10.t: "方案已不复存在"
- nuclear_events.10.d: "平章已行. 国际视察员进入了[ROOT.GetCountry.GetAdjective]设施,拆除了离心机级联,取出储存,并密封了发射井。\n\n 多年的科学工作、政治风险和国家投资在几周内被抹去。 该方案不存在。 知识依然存在——但基础设施,材料,追求它的法律地位已经消失. \n\n[ROOT.GetCountry.GetName]如果它选择,可以重新开始. 这将是在不同情况下作出的不同决定。"
+ nuclear_events.10.d: "平章已行. 国际视察员进入了[ROOT.GetCountry.GetAdjective]设施,拆除了离心机级联,取出储存,并密封了发射井。\n\n 多年的科学工作、政治风险和国家投资在几周内被抹去。 该方案不存在。 知识依然存在，但基础设施,材料,追求它的法律地位已经消失. \n\n[ROOT.GetCountry.GetName]如果它选择,可以重新开始. 这将是在不同情况下作出的不同决定。"
  nuclear_events.10.f: "可以重建. 它不会被遗忘。"
  nuclear_events.10.a: "确认条件"
 
@@ -174,7 +174,7 @@
  military_base_projector_modifier_desc: "该国有军队驻扎在同盟军领土上,扩大其战略范围。"
 
  je_icbm_programme: "ICBM 发展方案"
- je_icbm_programme_reason: "[ROOT.GetCountry.GetName]已实现核能力。 下一个前沿是投放:洲际弹道导弹能够无预警地到达全球任何地方. 该方案是长期的——多年的火箭研究、指导系统开发和射程测试——但战略回报是绝对的。 地理因素无法阻止具有洲际弹道导弹能力的状态。"
+ je_icbm_programme_reason: "[ROOT.GetCountry.GetName]已实现核能力。 下一个前沿是投放:洲际弹道导弹能够无预警地到达全球任何地方. 该方案是长期的，多年的火箭研究、指导系统开发和射程测试，但战略回报是绝对的。 地理因素无法阻止具有洲际弹道导弹能力的状态。"
 
  je_icbm_early_tt: "洲际弹道导弹方案正在早期发展之中。 目前正在测试指导系统。 离可行的洲际运载工具存在还有好几年。"
  je_icbm_late_tt: "#bold ICBM开发接近完成. #! 最后的射程和准确性测试正在进行。"
@@ -209,9 +209,9 @@
  BOMBING_EXECUTE_TOOLTIP: "对所有目标州进行战略轰炸。 德瓦站根据合格机队数量而增加. 30天冷却适用."
 
  NUCLEAR_ICBM_PROGRESS_TOOLTIP: "ICBM发展进展. 100%时,核武器可以瞄准全球任何一个国家。"
- NUCLEAR_ICBM_TOOLTIP: "开始研制洲际弹道导弹。 需要核能力。 花了几年时间 一旦完成,核武器就可以以世界上任何国家为目标,而不仅仅是邻国。"
+ NUCLEAR_ICBM_TOOLTIP: "开始研制洲际弹道导弹。 需要核能力。 花了几年时间 一旦完成,核武器就可以以世界上任何国家为目标,而不仅仅是邻国。 花费@money![GetPlayer.MakeScope.ScriptValue('smd_icbm_programme_cost')|Dv]（GDP的10%）。"
 
- CONV_PRODUCE_MISSILES_TOOLTIP: "制造5枚常规导弹。 正在进行的生产成本很小。 导弹在发射时消耗——每个目标国家1枚。"
+ CONV_PRODUCE_MISSILES_TOOLTIP: "制造5枚常规导弹。 正在进行的生产成本很小。 导弹在发射时消耗，每个目标国家1枚。"
 
  missile_production_cost:0 "导弹生产"
  state_buy_orders_missiles_add:0 "导弹消耗量"
@@ -225,29 +225,32 @@
  CONV_BUILDING_CHANCE_TOOLTIP: "每枚导弹都有3%的机会在目标状态下摧毁以下建筑物之一,如果存在的话:\n\n•机场\n•营s> 海军基地\n• 核电站\n• 核ilo\n•政府管理\n• 铁路\n\n 所有建筑类型均独立滚动. 单发导弹的萨尔沃可以摧毁同一状态下的多所建筑,只要它足够大."
 
  nuclear_events.12.t: "导弹攻击 [ROOT.GetName]"
- nuclear_events.12.d: "[SCOPE.sCountry('missile_attacker').GetName]已经对 [ROOT.GetAdjective]领土发动了常规导弹攻击。 有报告显示在[ROOT.GetAdjective]州受到冲击——正在评估基础设施损坏。\n\n 导弹不是核武器,但信息很清楚。 [SCOPE.sCountry('missile_attacker').GetName]愿意对我们使用远程武器。"
+ nuclear_events.12.d: "[SCOPE.sCountry('missile_attacker').GetName]已经对 [ROOT.GetAdjective]领土发动了常规导弹攻击。 有报告显示在[ROOT.GetAdjective]州受到冲击，正在评估基础设施损坏。\n\n 导弹不是核武器,但信息很清楚。 [SCOPE.sCountry('missile_attacker').GetName]愿意对我们使用远程武器。"
  nuclear_events.12.f: "陨坑已经在那里。 问题是我们下一步要做什么。"
  nuclear_events.12.a: "评估损害并作出相应反应"
 
  missile_strike_victim_modifier: "常规导弹攻击"
  missile_strike_victim_modifier_desc: "我国领土一直是常规导弹袭击的目标。 基础设施受损和公众焦虑情绪上升."
 
- nuclear_events.13.t: "核报复——必须作出的决定"
- nuclear_events.13.d: "[SCOPE.sCountry('nuclear_attacker').GetName]已针对 [ROOT.GetName]发射了核武器。 我们的弹头有武器 发射代码已经准备好。\n\n 对[SCOPE.sCountry('nuclear_attacker').GetAdjective]领土的报复性打击将消耗25%的武库,并打击所有[SCOPE.sCountry('nuclear_attacker').GetAdjective]州。 罢工不会带来任何耻辱——世界会理解。 另一种方法是吸收攻击. 生存是没有耻辱的。"
+ nuclear_events.13.t: "核报复，必须作出的决定"
+ nuclear_events.13.d: "[SCOPE.sCountry('nuclear_attacker').GetName]已针对 [ROOT.GetName]发射了核武器。 我们的弹头有武器 发射代码已经准备好。\n\n 对[SCOPE.sCountry('nuclear_attacker').GetAdjective]领土的报复性打击将消耗25%的武库,并打击所有[SCOPE.sCountry('nuclear_attacker').GetAdjective]州。 罢工不会带来任何耻辱，世界会理解。 另一种方法是吸收攻击. 生存是没有耻辱的。"
  nuclear_events.13.f: "顺序只需一次."
- nuclear_events.13.a: "retaliate — 发射25%的军火库来对付[SCOPE.sCountry('nuclear_attacker').GetName]"
- nuclear_events.13.b: "退下——吸收打击,保存武库."
+ nuclear_events.13.a: "retaliate ， 发射25%的军火库来对付[SCOPE.sCountry('nuclear_attacker').GetName]"
+ nuclear_events.13.b: "退下，吸收打击,保存武库."
 
  nuclear_first_strike_response: "核报复(第一次打击反应)"
- nuclear_first_strike_response_desc: "[ROOT.GetName]针对其领土无端被核攻击,发动了核反击. 国际社会承认报复权——恶名昭彰的收益被大大减少。"
+ nuclear_first_strike_response_desc: "[ROOT.GetName]针对其领土无端被核攻击,发动了核反击. 国际社会承认报复权，恶名昭彰的收益被大大减少。"
 
  nuclear_absorbed_first_strike: "核打击吸收"
  nuclear_absorbed_first_strike_desc: "[ROOT.GetName] 经受了没有报复的核打击。 国际上已经注意到这种克制。 外交地位和声望得到显著提高。"
 
  nuclear_events.14.t: "核报复入境"
- nuclear_events.14.d: "我们的核打击得到了回应。 [ROOT.GetName] 发动了报复性打击—— 弹头已确认入境。 \n\n 我们启动了交换。 后果是我们的"
+ nuclear_events.14.d: "我们的核打击得到了回应。 [ROOT.GetName] 发动了报复性打击， 弹头已确认入境。 \n\n 我们启动了交换。 后果是我们的"
  nuclear_events.14.f: "每次罢工都会邀请下一场"
  nuclear_events.14.a: "设定要撞击"
  notification_nuclear_warhead_produced_name:0 "Nuclear Warhead Produced"
  notification_nuclear_warhead_produced_desc:0 "A new warhead has joined the arsenal. [GetPlayer.GetName] now holds [GetPlayer.MakeScope.Var('nukes').GetValue|0] nuclear warheads."
  notification_nuclear_warhead_produced_tooltip:0 "#header $notification_nuclear_warhead_produced_name$#!\n$TOOLTIP_DELIMITER$\n$notification_nuclear_warhead_produced_desc$"
+ notification_smd_missiles_produced_name:0 "Missiles Produced"
+ notification_smd_missiles_produced_desc:0 "A new salvo of five conventional missiles has been added to the arsenal. [GetPlayer.GetName] now holds [GetPlayer.MakeScope.Var('conventional_missiles').GetValue|0] conventional missiles."
+ notification_smd_missiles_produced_tooltip:0 "#header $notification_smd_missiles_produced_name$#!\n$TOOLTIP_DELIMITER$\n$notification_smd_missiles_produced_desc$"

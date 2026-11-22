@@ -1,0 +1,1753 @@
+﻿
+types news_event_window_types {
+	type news_event_window = widget {
+		name = "news_event_window"                       # widget chain: direct property
+		datacontext = "[EventWindow.GetEvent]"
+		size = { 100% 100% }
+
+		### The draggable window. `movable` and the popups layer are what the
+		### popup parent used to supply.
+		window = {
+			parentanchor = center
+
+			scale = "[ScaleToFitElementInside('(int32)1920', '(int32)1080')]"
+
+			movable = yes
+			layer = popups
+			allow_outside = yes
+			size = { 606 683 }
+			alpha = 0
+
+			### THE PAGE
+			icon = {
+				texture = "gfx/interface/newspaper/newspaper_bg.dds"
+				size = { 100% 100% }
+				alwaystransparent = yes
+			}
+
+			### MASTHEAD — one static texture per country, gated on
+			### news_masthead_id (Vic3 cannot build a texture path from
+			### a variable, so they are stacked and switched by id).
+			icon = {
+				parentanchor = hcenter
+				position = { 0 24 }
+				size = { 520 76 }
+				texture = "gfx/interface/newspaper_headers/neutrality_header.dds"
+				alwaystransparent = yes
+				visible = "[EqualTo_CFixedPoint( GetPlayer.MakeScope.Var('news_masthead_id').GetValue, '(CFixedPoint)0' )]"
+			}
+			icon = {
+				parentanchor = hcenter
+				position = { 0 24 }
+				size = { 520 76 }
+				texture = "gfx/interface/newspaper_headers/communism_header.dds"
+				alwaystransparent = yes
+				visible = "[EqualTo_CFixedPoint( GetPlayer.MakeScope.Var('news_masthead_id').GetValue, '(CFixedPoint)1000' )]"
+			}
+			icon = {
+				parentanchor = hcenter
+				position = { 0 24 }
+				size = { 520 76 }
+				texture = "gfx/interface/newspaper_headers/fascism_header.dds"
+				alwaystransparent = yes
+				visible = "[EqualTo_CFixedPoint( GetPlayer.MakeScope.Var('news_masthead_id').GetValue, '(CFixedPoint)2000' )]"
+			}
+			# GBR
+			icon = {
+				parentanchor = hcenter
+				position = { 0 24 }
+				size = { 520 76 }
+				texture = "gfx/interface/newspaper_headers/ENG_header.dds"
+				alwaystransparent = yes
+				visible = "[EqualTo_CFixedPoint( GetPlayer.MakeScope.Var('news_masthead_id').GetValue, '(CFixedPoint)1' )]"
+			}
+			# FRA
+			icon = {
+				parentanchor = hcenter
+				position = { 0 24 }
+				size = { 520 76 }
+				texture = "gfx/interface/newspaper_headers/FRA_header.dds"
+				alwaystransparent = yes
+				visible = "[EqualTo_CFixedPoint( GetPlayer.MakeScope.Var('news_masthead_id').GetValue, '(CFixedPoint)2' )]"
+			}
+			# GER
+			icon = {
+				parentanchor = hcenter
+				position = { 0 24 }
+				size = { 520 76 }
+				texture = "gfx/interface/newspaper_headers/GER_header.dds"
+				alwaystransparent = yes
+				visible = "[EqualTo_CFixedPoint( GetPlayer.MakeScope.Var('news_masthead_id').GetValue, '(CFixedPoint)3' )]"
+			}
+			# PRU
+			icon = {
+				parentanchor = hcenter
+				position = { 0 24 }
+				size = { 520 76 }
+				texture = "gfx/interface/newspaper_headers/GER_neutrality_header.dds"
+				alwaystransparent = yes
+				visible = "[EqualTo_CFixedPoint( GetPlayer.MakeScope.Var('news_masthead_id').GetValue, '(CFixedPoint)4' )]"
+			}
+			# USA
+			icon = {
+				parentanchor = hcenter
+				position = { 0 24 }
+				size = { 520 76 }
+				texture = "gfx/interface/newspaper_headers/USA_header.dds"
+				alwaystransparent = yes
+				visible = "[EqualTo_CFixedPoint( GetPlayer.MakeScope.Var('news_masthead_id').GetValue, '(CFixedPoint)5' )]"
+			}
+			# ITA
+			icon = {
+				parentanchor = hcenter
+				position = { 0 24 }
+				size = { 520 76 }
+				texture = "gfx/interface/newspaper_headers/ITA_header.dds"
+				alwaystransparent = yes
+				visible = "[EqualTo_CFixedPoint( GetPlayer.MakeScope.Var('news_masthead_id').GetValue, '(CFixedPoint)6' )]"
+			}
+			# JAP
+			icon = {
+				parentanchor = hcenter
+				position = { 0 24 }
+				size = { 520 76 }
+				texture = "gfx/interface/newspaper_headers/JAP_header.dds"
+				alwaystransparent = yes
+				visible = "[EqualTo_CFixedPoint( GetPlayer.MakeScope.Var('news_masthead_id').GetValue, '(CFixedPoint)7' )]"
+			}
+			# RUS
+			icon = {
+				parentanchor = hcenter
+				position = { 0 24 }
+				size = { 520 76 }
+				texture = "gfx/interface/newspaper_headers/SOV_header.dds"
+				alwaystransparent = yes
+				visible = "[EqualTo_CFixedPoint( GetPlayer.MakeScope.Var('news_masthead_id').GetValue, '(CFixedPoint)8' )]"
+			}
+			# AUS
+			icon = {
+				parentanchor = hcenter
+				position = { 0 24 }
+				size = { 520 76 }
+				texture = "gfx/interface/newspaper_headers/AUS_header.dds"
+				alwaystransparent = yes
+				visible = "[EqualTo_CFixedPoint( GetPlayer.MakeScope.Var('news_masthead_id').GetValue, '(CFixedPoint)9' )]"
+			}
+			# TUR
+			icon = {
+				parentanchor = hcenter
+				position = { 0 24 }
+				size = { 520 76 }
+				texture = "gfx/interface/newspaper_headers/OTTOMAN_header.dds"
+				alwaystransparent = yes
+				visible = "[EqualTo_CFixedPoint( GetPlayer.MakeScope.Var('news_masthead_id').GetValue, '(CFixedPoint)10' )]"
+			}
+			# POL
+			icon = {
+				parentanchor = hcenter
+				position = { 0 24 }
+				size = { 520 76 }
+				texture = "gfx/interface/newspaper_headers/POL_header.dds"
+				alwaystransparent = yes
+				visible = "[EqualTo_CFixedPoint( GetPlayer.MakeScope.Var('news_masthead_id').GetValue, '(CFixedPoint)11' )]"
+			}
+			# BRA
+			icon = {
+				parentanchor = hcenter
+				position = { 0 24 }
+				size = { 520 76 }
+				texture = "gfx/interface/newspaper_headers/BRA_header.dds"
+				alwaystransparent = yes
+				visible = "[EqualTo_CFixedPoint( GetPlayer.MakeScope.Var('news_masthead_id').GetValue, '(CFixedPoint)12' )]"
+			}
+			# MEX
+			icon = {
+				parentanchor = hcenter
+				position = { 0 24 }
+				size = { 520 76 }
+				texture = "gfx/interface/newspaper_headers/MEX_header.dds"
+				alwaystransparent = yes
+				visible = "[EqualTo_CFixedPoint( GetPlayer.MakeScope.Var('news_masthead_id').GetValue, '(CFixedPoint)13' )]"
+			}
+			# SPA
+			icon = {
+				parentanchor = hcenter
+				position = { 0 24 }
+				size = { 520 76 }
+				texture = "gfx/interface/newspaper_headers/SPR_header.dds"
+				alwaystransparent = yes
+				visible = "[EqualTo_CFixedPoint( GetPlayer.MakeScope.Var('news_masthead_id').GetValue, '(CFixedPoint)14' )]"
+			}
+			# CAN
+			icon = {
+				parentanchor = hcenter
+				position = { 0 24 }
+				size = { 520 76 }
+				texture = "gfx/interface/newspaper_headers/CAN_header.dds"
+				alwaystransparent = yes
+				visible = "[EqualTo_CFixedPoint( GetPlayer.MakeScope.Var('news_masthead_id').GetValue, '(CFixedPoint)15' )]"
+			}
+			# ROM
+			icon = {
+				parentanchor = hcenter
+				position = { 0 24 }
+				size = { 520 76 }
+				texture = "gfx/interface/newspaper_headers/ROM_header.dds"
+				alwaystransparent = yes
+				visible = "[EqualTo_CFixedPoint( GetPlayer.MakeScope.Var('news_masthead_id').GetValue, '(CFixedPoint)16' )]"
+			}
+			# BUL
+			icon = {
+				parentanchor = hcenter
+				position = { 0 24 }
+				size = { 520 76 }
+				texture = "gfx/interface/newspaper_headers/BUL_header.dds"
+				alwaystransparent = yes
+				visible = "[EqualTo_CFixedPoint( GetPlayer.MakeScope.Var('news_masthead_id').GetValue, '(CFixedPoint)17' )]"
+			}
+			# ARG
+			icon = {
+				parentanchor = hcenter
+				position = { 0 24 }
+				size = { 520 76 }
+				texture = "gfx/interface/newspaper_headers/ARG_header.dds"
+				alwaystransparent = yes
+				visible = "[EqualTo_CFixedPoint( GetPlayer.MakeScope.Var('news_masthead_id').GetValue, '(CFixedPoint)18' )]"
+			}
+			# HND
+			icon = {
+				parentanchor = hcenter
+				position = { 0 24 }
+				size = { 520 76 }
+				texture = "gfx/interface/newspaper_headers/HND_header.dds"
+				alwaystransparent = yes
+				visible = "[EqualTo_CFixedPoint( GetPlayer.MakeScope.Var('news_masthead_id').GetValue, '(CFixedPoint)19' )]"
+			}
+			# POR
+			icon = {
+				parentanchor = hcenter
+				position = { 0 24 }
+				size = { 520 76 }
+				texture = "gfx/interface/newspaper_headers/POR_header.dds"
+				alwaystransparent = yes
+				visible = "[EqualTo_CFixedPoint( GetPlayer.MakeScope.Var('news_masthead_id').GetValue, '(CFixedPoint)20' )]"
+			}
+			# GRE
+			icon = {
+				parentanchor = hcenter
+				position = { 0 24 }
+				size = { 520 76 }
+				texture = "gfx/interface/newspaper_headers/GRE_header.dds"
+				alwaystransparent = yes
+				visible = "[EqualTo_CFixedPoint( GetPlayer.MakeScope.Var('news_masthead_id').GetValue, '(CFixedPoint)21' )]"
+			}
+			# IRE
+			icon = {
+				parentanchor = hcenter
+				position = { 0 24 }
+				size = { 520 76 }
+				texture = "gfx/interface/newspaper_headers/IRE_header.dds"
+				alwaystransparent = yes
+				visible = "[EqualTo_CFixedPoint( GetPlayer.MakeScope.Var('news_masthead_id').GetValue, '(CFixedPoint)22' )]"
+			}
+			# CHL
+			icon = {
+				parentanchor = hcenter
+				position = { 0 24 }
+				size = { 520 76 }
+				texture = "gfx/interface/newspaper_headers/CHL_header.dds"
+				alwaystransparent = yes
+				visible = "[EqualTo_CFixedPoint( GetPlayer.MakeScope.Var('news_masthead_id').GetValue, '(CFixedPoint)23' )]"
+			}
+			# COL
+			icon = {
+				parentanchor = hcenter
+				position = { 0 24 }
+				size = { 520 76 }
+				texture = "gfx/interface/newspaper_headers/COL_header.dds"
+				alwaystransparent = yes
+				visible = "[EqualTo_CFixedPoint( GetPlayer.MakeScope.Var('news_masthead_id').GetValue, '(CFixedPoint)24' )]"
+			}
+			# BOL
+			icon = {
+				parentanchor = hcenter
+				position = { 0 24 }
+				size = { 520 76 }
+				texture = "gfx/interface/newspaper_headers/BOL_header.dds"
+				alwaystransparent = yes
+				visible = "[EqualTo_CFixedPoint( GetPlayer.MakeScope.Var('news_masthead_id').GetValue, '(CFixedPoint)25' )]"
+			}
+			# VNZ
+			icon = {
+				parentanchor = hcenter
+				position = { 0 24 }
+				size = { 520 76 }
+				texture = "gfx/interface/newspaper_headers/VEN_header.dds"
+				alwaystransparent = yes
+				visible = "[EqualTo_CFixedPoint( GetPlayer.MakeScope.Var('news_masthead_id').GetValue, '(CFixedPoint)26' )]"
+			}
+			# SWI
+			icon = {
+				parentanchor = hcenter
+				position = { 0 24 }
+				size = { 520 76 }
+				texture = "gfx/interface/newspaper_headers/SWI_header.dds"
+				alwaystransparent = yes
+				visible = "[EqualTo_CFixedPoint( GetPlayer.MakeScope.Var('news_masthead_id').GetValue, '(CFixedPoint)27' )]"
+			}
+			# CZH
+			icon = {
+				parentanchor = hcenter
+				position = { 0 24 }
+				size = { 520 76 }
+				texture = "gfx/interface/newspaper_headers/CZE_header.dds"
+				alwaystransparent = yes
+				visible = "[EqualTo_CFixedPoint( GetPlayer.MakeScope.Var('news_masthead_id').GetValue, '(CFixedPoint)28' )]"
+			}
+			# PRG
+			icon = {
+				parentanchor = hcenter
+				position = { 0 24 }
+				size = { 520 76 }
+				texture = "gfx/interface/newspaper_headers/PAR_header.dds"
+				alwaystransparent = yes
+				visible = "[EqualTo_CFixedPoint( GetPlayer.MakeScope.Var('news_masthead_id').GetValue, '(CFixedPoint)29' )]"
+			}
+			# URU
+			icon = {
+				parentanchor = hcenter
+				position = { 0 24 }
+				size = { 520 76 }
+				texture = "gfx/interface/newspaper_headers/URG_header.dds"
+				alwaystransparent = yes
+				visible = "[EqualTo_CFixedPoint( GetPlayer.MakeScope.Var('news_masthead_id').GetValue, '(CFixedPoint)30' )]"
+			}
+			# ECU
+			icon = {
+				parentanchor = hcenter
+				position = { 0 24 }
+				size = { 520 76 }
+				texture = "gfx/interface/newspaper_headers/ECU_header.dds"
+				alwaystransparent = yes
+				visible = "[EqualTo_CFixedPoint( GetPlayer.MakeScope.Var('news_masthead_id').GetValue, '(CFixedPoint)31' )]"
+			}
+			# CRI
+			icon = {
+				parentanchor = hcenter
+				position = { 0 24 }
+				size = { 520 76 }
+				texture = "gfx/interface/newspaper_headers/COS_header.dds"
+				alwaystransparent = yes
+				visible = "[EqualTo_CFixedPoint( GetPlayer.MakeScope.Var('news_masthead_id').GetValue, '(CFixedPoint)32' )]"
+			}
+			# SAL
+			icon = {
+				parentanchor = hcenter
+				position = { 0 24 }
+				size = { 520 76 }
+				texture = "gfx/interface/newspaper_headers/ELS_header.dds"
+				alwaystransparent = yes
+				visible = "[EqualTo_CFixedPoint( GetPlayer.MakeScope.Var('news_masthead_id').GetValue, '(CFixedPoint)33' )]"
+			}
+			# GUA
+			icon = {
+				parentanchor = hcenter
+				position = { 0 24 }
+				size = { 520 76 }
+				texture = "gfx/interface/newspaper_headers/GUA_header.dds"
+				alwaystransparent = yes
+				visible = "[EqualTo_CFixedPoint( GetPlayer.MakeScope.Var('news_masthead_id').GetValue, '(CFixedPoint)34' )]"
+			}
+			# HON
+			icon = {
+				parentanchor = hcenter
+				position = { 0 24 }
+				size = { 520 76 }
+				texture = "gfx/interface/newspaper_headers/HON_header.dds"
+				alwaystransparent = yes
+				visible = "[EqualTo_CFixedPoint( GetPlayer.MakeScope.Var('news_masthead_id').GetValue, '(CFixedPoint)35' )]"
+			}
+			# NIC
+			icon = {
+				parentanchor = hcenter
+				position = { 0 24 }
+				size = { 520 76 }
+				texture = "gfx/interface/newspaper_headers/NIC_header.dds"
+				alwaystransparent = yes
+				visible = "[EqualTo_CFixedPoint( GetPlayer.MakeScope.Var('news_masthead_id').GetValue, '(CFixedPoint)36' )]"
+			}
+			# PAN
+			icon = {
+				parentanchor = hcenter
+				position = { 0 24 }
+				size = { 520 76 }
+				texture = "gfx/interface/newspaper_headers/PAN_header.dds"
+				alwaystransparent = yes
+				visible = "[EqualTo_CFixedPoint( GetPlayer.MakeScope.Var('news_masthead_id').GetValue, '(CFixedPoint)37' )]"
+			}
+
+			# CHI / democratic
+			icon = {
+				parentanchor = hcenter
+				position = { 0 24 }
+				size = { 520 76 }
+				texture = "gfx/interface/newspaper_headers/CHI_democratic_header.dds"
+				alwaystransparent = yes
+				visible = "[EqualTo_CFixedPoint( GetPlayer.MakeScope.Var('news_masthead_id').GetValue, '(CFixedPoint)38' )]"
+			}
+			# PEU / Peru
+			icon = {
+				parentanchor = hcenter
+				position = { 0 24 }
+				size = { 520 76 }
+				texture = "gfx/interface/newspaper_headers/PRU_header.dds"
+				alwaystransparent = yes
+				visible = "[EqualTo_CFixedPoint( GetPlayer.MakeScope.Var('news_masthead_id').GetValue, '(CFixedPoint)39' )]"
+			}
+
+			### COMMUNIST COUNTRY MASTHEAD VARIANTS
+			# GBR / communism
+			icon = {
+				parentanchor = hcenter
+				position = { 0 24 }
+				size = { 520 76 }
+				texture = "gfx/interface/newspaper_headers/ENG_communism_header.dds"
+				alwaystransparent = yes
+				visible = "[EqualTo_CFixedPoint( GetPlayer.MakeScope.Var('news_masthead_id').GetValue, '(CFixedPoint)101' )]"
+			}
+			# FRA / communism
+			icon = {
+				parentanchor = hcenter
+				position = { 0 24 }
+				size = { 520 76 }
+				texture = "gfx/interface/newspaper_headers/FRA_communism_header.dds"
+				alwaystransparent = yes
+				visible = "[EqualTo_CFixedPoint( GetPlayer.MakeScope.Var('news_masthead_id').GetValue, '(CFixedPoint)102' )]"
+			}
+			# GER / communism
+			icon = {
+				parentanchor = hcenter
+				position = { 0 24 }
+				size = { 520 76 }
+				texture = "gfx/interface/newspaper_headers/GER_communism_header.dds"
+				alwaystransparent = yes
+				visible = "[EqualTo_CFixedPoint( GetPlayer.MakeScope.Var('news_masthead_id').GetValue, '(CFixedPoint)103' )]"
+			}
+			# PRU / communism
+			icon = {
+				parentanchor = hcenter
+				position = { 0 24 }
+				size = { 520 76 }
+				texture = "gfx/interface/newspaper_headers/GER_communism_header.dds"
+				alwaystransparent = yes
+				visible = "[EqualTo_CFixedPoint( GetPlayer.MakeScope.Var('news_masthead_id').GetValue, '(CFixedPoint)104' )]"
+			}
+			# USA / communism
+			icon = {
+				parentanchor = hcenter
+				position = { 0 24 }
+				size = { 520 76 }
+				texture = "gfx/interface/newspaper_headers/USA_communism_header.dds"
+				alwaystransparent = yes
+				visible = "[EqualTo_CFixedPoint( GetPlayer.MakeScope.Var('news_masthead_id').GetValue, '(CFixedPoint)105' )]"
+			}
+			# ITA / communism
+			icon = {
+				parentanchor = hcenter
+				position = { 0 24 }
+				size = { 520 76 }
+				texture = "gfx/interface/newspaper_headers/ITA_communism_header.dds"
+				alwaystransparent = yes
+				visible = "[EqualTo_CFixedPoint( GetPlayer.MakeScope.Var('news_masthead_id').GetValue, '(CFixedPoint)106' )]"
+			}
+			# JAP / communism
+			icon = {
+				parentanchor = hcenter
+				position = { 0 24 }
+				size = { 520 76 }
+				texture = "gfx/interface/newspaper_headers/JAP_communism_header.dds"
+				alwaystransparent = yes
+				visible = "[EqualTo_CFixedPoint( GetPlayer.MakeScope.Var('news_masthead_id').GetValue, '(CFixedPoint)107' )]"
+			}
+			# RUS / communism
+			icon = {
+				parentanchor = hcenter
+				position = { 0 24 }
+				size = { 520 76 }
+				texture = "gfx/interface/newspaper_headers/SOV_communism_header.dds"
+				alwaystransparent = yes
+				visible = "[EqualTo_CFixedPoint( GetPlayer.MakeScope.Var('news_masthead_id').GetValue, '(CFixedPoint)108' )]"
+			}
+			# AUS / communism
+			icon = {
+				parentanchor = hcenter
+				position = { 0 24 }
+				size = { 520 76 }
+				texture = "gfx/interface/newspaper_headers/AUS_communism_header.dds"
+				alwaystransparent = yes
+				visible = "[EqualTo_CFixedPoint( GetPlayer.MakeScope.Var('news_masthead_id').GetValue, '(CFixedPoint)109' )]"
+			}
+			# OTTOMAN / communism
+			icon = {
+				parentanchor = hcenter
+				position = { 0 24 }
+				size = { 520 76 }
+				texture = "gfx/interface/newspaper_headers/OTTOMAN_communism_header.dds"
+				alwaystransparent = yes
+				visible = "[EqualTo_CFixedPoint( GetPlayer.MakeScope.Var('news_masthead_id').GetValue, '(CFixedPoint)110' )]"
+			}
+			# POL / communism
+			icon = {
+				parentanchor = hcenter
+				position = { 0 24 }
+				size = { 520 76 }
+				texture = "gfx/interface/newspaper_headers/POL_communism_header.dds"
+				alwaystransparent = yes
+				visible = "[EqualTo_CFixedPoint( GetPlayer.MakeScope.Var('news_masthead_id').GetValue, '(CFixedPoint)111' )]"
+			}
+			# BRA / communism
+			icon = {
+				parentanchor = hcenter
+				position = { 0 24 }
+				size = { 520 76 }
+				texture = "gfx/interface/newspaper_headers/BRA_communism_header.dds"
+				alwaystransparent = yes
+				visible = "[EqualTo_CFixedPoint( GetPlayer.MakeScope.Var('news_masthead_id').GetValue, '(CFixedPoint)112' )]"
+			}
+			# MEX / communism
+			icon = {
+				parentanchor = hcenter
+				position = { 0 24 }
+				size = { 520 76 }
+				texture = "gfx/interface/newspaper_headers/MEX_communism_header.dds"
+				alwaystransparent = yes
+				visible = "[EqualTo_CFixedPoint( GetPlayer.MakeScope.Var('news_masthead_id').GetValue, '(CFixedPoint)113' )]"
+			}
+			# SPA / communism
+			icon = {
+				parentanchor = hcenter
+				position = { 0 24 }
+				size = { 520 76 }
+				texture = "gfx/interface/newspaper_headers/SPR_communism_header.dds"
+				alwaystransparent = yes
+				visible = "[EqualTo_CFixedPoint( GetPlayer.MakeScope.Var('news_masthead_id').GetValue, '(CFixedPoint)114' )]"
+			}
+			# CAN / communism
+			icon = {
+				parentanchor = hcenter
+				position = { 0 24 }
+				size = { 520 76 }
+				texture = "gfx/interface/newspaper_headers/CAN_communism_header.dds"
+				alwaystransparent = yes
+				visible = "[EqualTo_CFixedPoint( GetPlayer.MakeScope.Var('news_masthead_id').GetValue, '(CFixedPoint)115' )]"
+			}
+			# ROM / communism
+			icon = {
+				parentanchor = hcenter
+				position = { 0 24 }
+				size = { 520 76 }
+				texture = "gfx/interface/newspaper_headers/ROM_communism_header.dds"
+				alwaystransparent = yes
+				visible = "[EqualTo_CFixedPoint( GetPlayer.MakeScope.Var('news_masthead_id').GetValue, '(CFixedPoint)116' )]"
+			}
+			# BUL / communism
+			icon = {
+				parentanchor = hcenter
+				position = { 0 24 }
+				size = { 520 76 }
+				texture = "gfx/interface/newspaper_headers/BUL_communism_header.dds"
+				alwaystransparent = yes
+				visible = "[EqualTo_CFixedPoint( GetPlayer.MakeScope.Var('news_masthead_id').GetValue, '(CFixedPoint)117' )]"
+			}
+			# ARG / communism
+			icon = {
+				parentanchor = hcenter
+				position = { 0 24 }
+				size = { 520 76 }
+				texture = "gfx/interface/newspaper_headers/ARG_communism_header.dds"
+				alwaystransparent = yes
+				visible = "[EqualTo_CFixedPoint( GetPlayer.MakeScope.Var('news_masthead_id').GetValue, '(CFixedPoint)118' )]"
+			}
+			# RAJ / communism
+			icon = {
+				parentanchor = hcenter
+				position = { 0 24 }
+				size = { 520 76 }
+				texture = "gfx/interface/newspaper_headers/HND_communism_header.dds"
+				alwaystransparent = yes
+				visible = "[EqualTo_CFixedPoint( GetPlayer.MakeScope.Var('news_masthead_id').GetValue, '(CFixedPoint)119' )]"
+			}
+			# POR / communism
+			icon = {
+				parentanchor = hcenter
+				position = { 0 24 }
+				size = { 520 76 }
+				texture = "gfx/interface/newspaper_headers/POR_communism_header.dds"
+				alwaystransparent = yes
+				visible = "[EqualTo_CFixedPoint( GetPlayer.MakeScope.Var('news_masthead_id').GetValue, '(CFixedPoint)120' )]"
+			}
+			# GRE / communism
+			icon = {
+				parentanchor = hcenter
+				position = { 0 24 }
+				size = { 520 76 }
+				texture = "gfx/interface/newspaper_headers/GRE_communism_header.dds"
+				alwaystransparent = yes
+				visible = "[EqualTo_CFixedPoint( GetPlayer.MakeScope.Var('news_masthead_id').GetValue, '(CFixedPoint)121' )]"
+			}
+			# IRE / communism
+			icon = {
+				parentanchor = hcenter
+				position = { 0 24 }
+				size = { 520 76 }
+				texture = "gfx/interface/newspaper_headers/IRE_communism_header.dds"
+				alwaystransparent = yes
+				visible = "[EqualTo_CFixedPoint( GetPlayer.MakeScope.Var('news_masthead_id').GetValue, '(CFixedPoint)122' )]"
+			}
+			# CHL / communism
+			icon = {
+				parentanchor = hcenter
+				position = { 0 24 }
+				size = { 520 76 }
+				texture = "gfx/interface/newspaper_headers/CHL_communism_header.dds"
+				alwaystransparent = yes
+				visible = "[EqualTo_CFixedPoint( GetPlayer.MakeScope.Var('news_masthead_id').GetValue, '(CFixedPoint)123' )]"
+			}
+			# COL / communism
+			icon = {
+				parentanchor = hcenter
+				position = { 0 24 }
+				size = { 520 76 }
+				texture = "gfx/interface/newspaper_headers/COL_communism_header.dds"
+				alwaystransparent = yes
+				visible = "[EqualTo_CFixedPoint( GetPlayer.MakeScope.Var('news_masthead_id').GetValue, '(CFixedPoint)124' )]"
+			}
+			# BOL / communism
+			icon = {
+				parentanchor = hcenter
+				position = { 0 24 }
+				size = { 520 76 }
+				texture = "gfx/interface/newspaper_headers/BOL_communism_header.dds"
+				alwaystransparent = yes
+				visible = "[EqualTo_CFixedPoint( GetPlayer.MakeScope.Var('news_masthead_id').GetValue, '(CFixedPoint)125' )]"
+			}
+			# VEN / communism
+			icon = {
+				parentanchor = hcenter
+				position = { 0 24 }
+				size = { 520 76 }
+				texture = "gfx/interface/newspaper_headers/VEN_communism_header.dds"
+				alwaystransparent = yes
+				visible = "[EqualTo_CFixedPoint( GetPlayer.MakeScope.Var('news_masthead_id').GetValue, '(CFixedPoint)126' )]"
+			}
+			# SWI / communism
+			icon = {
+				parentanchor = hcenter
+				position = { 0 24 }
+				size = { 520 76 }
+				texture = "gfx/interface/newspaper_headers/SWI_communism_header.dds"
+				alwaystransparent = yes
+				visible = "[EqualTo_CFixedPoint( GetPlayer.MakeScope.Var('news_masthead_id').GetValue, '(CFixedPoint)127' )]"
+			}
+			# CZE / communism
+			icon = {
+				parentanchor = hcenter
+				position = { 0 24 }
+				size = { 520 76 }
+				texture = "gfx/interface/newspaper_headers/CZE_communism_header.dds"
+				alwaystransparent = yes
+				visible = "[EqualTo_CFixedPoint( GetPlayer.MakeScope.Var('news_masthead_id').GetValue, '(CFixedPoint)128' )]"
+			}
+			# PAR / communism
+			icon = {
+				parentanchor = hcenter
+				position = { 0 24 }
+				size = { 520 76 }
+				texture = "gfx/interface/newspaper_headers/PAR_communism_header.dds"
+				alwaystransparent = yes
+				visible = "[EqualTo_CFixedPoint( GetPlayer.MakeScope.Var('news_masthead_id').GetValue, '(CFixedPoint)129' )]"
+			}
+			# URG / communism
+			icon = {
+				parentanchor = hcenter
+				position = { 0 24 }
+				size = { 520 76 }
+				texture = "gfx/interface/newspaper_headers/URG_communism_header.dds"
+				alwaystransparent = yes
+				visible = "[EqualTo_CFixedPoint( GetPlayer.MakeScope.Var('news_masthead_id').GetValue, '(CFixedPoint)130' )]"
+			}
+			# ECU / communism
+			icon = {
+				parentanchor = hcenter
+				position = { 0 24 }
+				size = { 520 76 }
+				texture = "gfx/interface/newspaper_headers/ECU_communism_header.dds"
+				alwaystransparent = yes
+				visible = "[EqualTo_CFixedPoint( GetPlayer.MakeScope.Var('news_masthead_id').GetValue, '(CFixedPoint)131' )]"
+			}
+			# COS / communism
+			icon = {
+				parentanchor = hcenter
+				position = { 0 24 }
+				size = { 520 76 }
+				texture = "gfx/interface/newspaper_headers/COS_communism_header.dds"
+				alwaystransparent = yes
+				visible = "[EqualTo_CFixedPoint( GetPlayer.MakeScope.Var('news_masthead_id').GetValue, '(CFixedPoint)132' )]"
+			}
+			# ELS / communism
+			icon = {
+				parentanchor = hcenter
+				position = { 0 24 }
+				size = { 520 76 }
+				texture = "gfx/interface/newspaper_headers/ELS_communism_header.dds"
+				alwaystransparent = yes
+				visible = "[EqualTo_CFixedPoint( GetPlayer.MakeScope.Var('news_masthead_id').GetValue, '(CFixedPoint)133' )]"
+			}
+			# GUA / communism
+			icon = {
+				parentanchor = hcenter
+				position = { 0 24 }
+				size = { 520 76 }
+				texture = "gfx/interface/newspaper_headers/GUA_communism_header.dds"
+				alwaystransparent = yes
+				visible = "[EqualTo_CFixedPoint( GetPlayer.MakeScope.Var('news_masthead_id').GetValue, '(CFixedPoint)134' )]"
+			}
+			# HON / communism
+			icon = {
+				parentanchor = hcenter
+				position = { 0 24 }
+				size = { 520 76 }
+				texture = "gfx/interface/newspaper_headers/HON_communism_header.dds"
+				alwaystransparent = yes
+				visible = "[EqualTo_CFixedPoint( GetPlayer.MakeScope.Var('news_masthead_id').GetValue, '(CFixedPoint)135' )]"
+			}
+			# NIC / communism
+			icon = {
+				parentanchor = hcenter
+				position = { 0 24 }
+				size = { 520 76 }
+				texture = "gfx/interface/newspaper_headers/NIC_communism_header.dds"
+				alwaystransparent = yes
+				visible = "[EqualTo_CFixedPoint( GetPlayer.MakeScope.Var('news_masthead_id').GetValue, '(CFixedPoint)136' )]"
+			}
+			# PAN / communism
+			icon = {
+				parentanchor = hcenter
+				position = { 0 24 }
+				size = { 520 76 }
+				texture = "gfx/interface/newspaper_headers/PAN_communism_header.dds"
+				alwaystransparent = yes
+				visible = "[EqualTo_CFixedPoint( GetPlayer.MakeScope.Var('news_masthead_id').GetValue, '(CFixedPoint)137' )]"
+			}
+			# CHI / communism
+			icon = {
+				parentanchor = hcenter
+				position = { 0 24 }
+				size = { 520 76 }
+				texture = "gfx/interface/newspaper_headers/CHI_communism_header.dds"
+				alwaystransparent = yes
+				visible = "[EqualTo_CFixedPoint( GetPlayer.MakeScope.Var('news_masthead_id').GetValue, '(CFixedPoint)138' )]"
+			}
+			# PEU / Peru / communism
+			icon = {
+				parentanchor = hcenter
+				position = { 0 24 }
+				size = { 520 76 }
+				texture = "gfx/interface/newspaper_headers/PRU_communism_header.dds"
+				alwaystransparent = yes
+				visible = "[EqualTo_CFixedPoint( GetPlayer.MakeScope.Var('news_masthead_id').GetValue, '(CFixedPoint)139' )]"
+			}
+
+			### FASCIST COUNTRY MASTHEAD VARIANTS
+			# GBR / fascism
+			icon = {
+				parentanchor = hcenter
+				position = { 0 24 }
+				size = { 520 76 }
+				texture = "gfx/interface/newspaper_headers/ENG_fascism_header.dds"
+				alwaystransparent = yes
+				visible = "[EqualTo_CFixedPoint( GetPlayer.MakeScope.Var('news_masthead_id').GetValue, '(CFixedPoint)201' )]"
+			}
+			# FRA / fascism
+			icon = {
+				parentanchor = hcenter
+				position = { 0 24 }
+				size = { 520 76 }
+				texture = "gfx/interface/newspaper_headers/FRA_fascism_header.dds"
+				alwaystransparent = yes
+				visible = "[EqualTo_CFixedPoint( GetPlayer.MakeScope.Var('news_masthead_id').GetValue, '(CFixedPoint)202' )]"
+			}
+			# GER / fascism
+			icon = {
+				parentanchor = hcenter
+				position = { 0 24 }
+				size = { 520 76 }
+				texture = "gfx/interface/newspaper_headers/GER_fascism_header.dds"
+				alwaystransparent = yes
+				visible = "[EqualTo_CFixedPoint( GetPlayer.MakeScope.Var('news_masthead_id').GetValue, '(CFixedPoint)203' )]"
+			}
+			# PRU / fascism
+			icon = {
+				parentanchor = hcenter
+				position = { 0 24 }
+				size = { 520 76 }
+				texture = "gfx/interface/newspaper_headers/GER_fascism_header.dds"
+				alwaystransparent = yes
+				visible = "[EqualTo_CFixedPoint( GetPlayer.MakeScope.Var('news_masthead_id').GetValue, '(CFixedPoint)204' )]"
+			}
+			# USA / fascism
+			icon = {
+				parentanchor = hcenter
+				position = { 0 24 }
+				size = { 520 76 }
+				texture = "gfx/interface/newspaper_headers/USA_fascism_header.dds"
+				alwaystransparent = yes
+				visible = "[EqualTo_CFixedPoint( GetPlayer.MakeScope.Var('news_masthead_id').GetValue, '(CFixedPoint)205' )]"
+			}
+			# ITA / fascism
+			icon = {
+				parentanchor = hcenter
+				position = { 0 24 }
+				size = { 520 76 }
+				texture = "gfx/interface/newspaper_headers/ITA_fascism_header.dds"
+				alwaystransparent = yes
+				visible = "[EqualTo_CFixedPoint( GetPlayer.MakeScope.Var('news_masthead_id').GetValue, '(CFixedPoint)206' )]"
+			}
+			# JAP / fascism
+			icon = {
+				parentanchor = hcenter
+				position = { 0 24 }
+				size = { 520 76 }
+				texture = "gfx/interface/newspaper_headers/JAP_fascism_header.dds"
+				alwaystransparent = yes
+				visible = "[EqualTo_CFixedPoint( GetPlayer.MakeScope.Var('news_masthead_id').GetValue, '(CFixedPoint)207' )]"
+			}
+			# RUS / fascism
+			icon = {
+				parentanchor = hcenter
+				position = { 0 24 }
+				size = { 520 76 }
+				texture = "gfx/interface/newspaper_headers/SOV_fascism_header.dds"
+				alwaystransparent = yes
+				visible = "[EqualTo_CFixedPoint( GetPlayer.MakeScope.Var('news_masthead_id').GetValue, '(CFixedPoint)208' )]"
+			}
+			# AUS / fascism
+			icon = {
+				parentanchor = hcenter
+				position = { 0 24 }
+				size = { 520 76 }
+				texture = "gfx/interface/newspaper_headers/AUS_fascism_header.dds"
+				alwaystransparent = yes
+				visible = "[EqualTo_CFixedPoint( GetPlayer.MakeScope.Var('news_masthead_id').GetValue, '(CFixedPoint)209' )]"
+			}
+			# OTTOMAN / fascism
+			icon = {
+				parentanchor = hcenter
+				position = { 0 24 }
+				size = { 520 76 }
+				texture = "gfx/interface/newspaper_headers/OTTOMAN_fascism_header.dds"
+				alwaystransparent = yes
+				visible = "[EqualTo_CFixedPoint( GetPlayer.MakeScope.Var('news_masthead_id').GetValue, '(CFixedPoint)210' )]"
+			}
+			# POL / fascism
+			icon = {
+				parentanchor = hcenter
+				position = { 0 24 }
+				size = { 520 76 }
+				texture = "gfx/interface/newspaper_headers/POL_fascism_header.dds"
+				alwaystransparent = yes
+				visible = "[EqualTo_CFixedPoint( GetPlayer.MakeScope.Var('news_masthead_id').GetValue, '(CFixedPoint)211' )]"
+			}
+			# BRA / fascism
+			icon = {
+				parentanchor = hcenter
+				position = { 0 24 }
+				size = { 520 76 }
+				texture = "gfx/interface/newspaper_headers/BRA_fascism_header.dds"
+				alwaystransparent = yes
+				visible = "[EqualTo_CFixedPoint( GetPlayer.MakeScope.Var('news_masthead_id').GetValue, '(CFixedPoint)212' )]"
+			}
+			# MEX / fascism
+			icon = {
+				parentanchor = hcenter
+				position = { 0 24 }
+				size = { 520 76 }
+				texture = "gfx/interface/newspaper_headers/MEX_fascism_header.dds"
+				alwaystransparent = yes
+				visible = "[EqualTo_CFixedPoint( GetPlayer.MakeScope.Var('news_masthead_id').GetValue, '(CFixedPoint)213' )]"
+			}
+			# SPA / fascism
+			icon = {
+				parentanchor = hcenter
+				position = { 0 24 }
+				size = { 520 76 }
+				texture = "gfx/interface/newspaper_headers/SPR_fascism_header.dds"
+				alwaystransparent = yes
+				visible = "[EqualTo_CFixedPoint( GetPlayer.MakeScope.Var('news_masthead_id').GetValue, '(CFixedPoint)214' )]"
+			}
+			# CAN / fascism
+			icon = {
+				parentanchor = hcenter
+				position = { 0 24 }
+				size = { 520 76 }
+				texture = "gfx/interface/newspaper_headers/CAN_fascism_header.dds"
+				alwaystransparent = yes
+				visible = "[EqualTo_CFixedPoint( GetPlayer.MakeScope.Var('news_masthead_id').GetValue, '(CFixedPoint)215' )]"
+			}
+			# ROM / fascism
+			icon = {
+				parentanchor = hcenter
+				position = { 0 24 }
+				size = { 520 76 }
+				texture = "gfx/interface/newspaper_headers/ROM_fascism_header.dds"
+				alwaystransparent = yes
+				visible = "[EqualTo_CFixedPoint( GetPlayer.MakeScope.Var('news_masthead_id').GetValue, '(CFixedPoint)216' )]"
+			}
+			# BUL / fascism
+			icon = {
+				parentanchor = hcenter
+				position = { 0 24 }
+				size = { 520 76 }
+				texture = "gfx/interface/newspaper_headers/BUL_fascism_header.dds"
+				alwaystransparent = yes
+				visible = "[EqualTo_CFixedPoint( GetPlayer.MakeScope.Var('news_masthead_id').GetValue, '(CFixedPoint)217' )]"
+			}
+			# ARG / fascism
+			icon = {
+				parentanchor = hcenter
+				position = { 0 24 }
+				size = { 520 76 }
+				texture = "gfx/interface/newspaper_headers/ARG_fascism_header.dds"
+				alwaystransparent = yes
+				visible = "[EqualTo_CFixedPoint( GetPlayer.MakeScope.Var('news_masthead_id').GetValue, '(CFixedPoint)218' )]"
+			}
+			# RAJ / fascism
+			icon = {
+				parentanchor = hcenter
+				position = { 0 24 }
+				size = { 520 76 }
+				texture = "gfx/interface/newspaper_headers/HND_fascism_header.dds"
+				alwaystransparent = yes
+				visible = "[EqualTo_CFixedPoint( GetPlayer.MakeScope.Var('news_masthead_id').GetValue, '(CFixedPoint)219' )]"
+			}
+			# POR / fascism
+			icon = {
+				parentanchor = hcenter
+				position = { 0 24 }
+				size = { 520 76 }
+				texture = "gfx/interface/newspaper_headers/POR_fascism_header.dds"
+				alwaystransparent = yes
+				visible = "[EqualTo_CFixedPoint( GetPlayer.MakeScope.Var('news_masthead_id').GetValue, '(CFixedPoint)220' )]"
+			}
+			# GRE / fascism
+			icon = {
+				parentanchor = hcenter
+				position = { 0 24 }
+				size = { 520 76 }
+				texture = "gfx/interface/newspaper_headers/GRE_fascism_header.dds"
+				alwaystransparent = yes
+				visible = "[EqualTo_CFixedPoint( GetPlayer.MakeScope.Var('news_masthead_id').GetValue, '(CFixedPoint)221' )]"
+			}
+			# IRE / fascism
+			icon = {
+				parentanchor = hcenter
+				position = { 0 24 }
+				size = { 520 76 }
+				texture = "gfx/interface/newspaper_headers/IRE_fascism_header.dds"
+				alwaystransparent = yes
+				visible = "[EqualTo_CFixedPoint( GetPlayer.MakeScope.Var('news_masthead_id').GetValue, '(CFixedPoint)222' )]"
+			}
+			# CHL / fascism
+			icon = {
+				parentanchor = hcenter
+				position = { 0 24 }
+				size = { 520 76 }
+				texture = "gfx/interface/newspaper_headers/CHL_fascism_header.dds"
+				alwaystransparent = yes
+				visible = "[EqualTo_CFixedPoint( GetPlayer.MakeScope.Var('news_masthead_id').GetValue, '(CFixedPoint)223' )]"
+			}
+			# COL / fascism
+			icon = {
+				parentanchor = hcenter
+				position = { 0 24 }
+				size = { 520 76 }
+				texture = "gfx/interface/newspaper_headers/COL_fascism_header.dds"
+				alwaystransparent = yes
+				visible = "[EqualTo_CFixedPoint( GetPlayer.MakeScope.Var('news_masthead_id').GetValue, '(CFixedPoint)224' )]"
+			}
+			# BOL / fascism
+			icon = {
+				parentanchor = hcenter
+				position = { 0 24 }
+				size = { 520 76 }
+				texture = "gfx/interface/newspaper_headers/BOL_fascism_header.dds"
+				alwaystransparent = yes
+				visible = "[EqualTo_CFixedPoint( GetPlayer.MakeScope.Var('news_masthead_id').GetValue, '(CFixedPoint)225' )]"
+			}
+			# VEN / fascism
+			icon = {
+				parentanchor = hcenter
+				position = { 0 24 }
+				size = { 520 76 }
+				texture = "gfx/interface/newspaper_headers/VEN_fascism_header.dds"
+				alwaystransparent = yes
+				visible = "[EqualTo_CFixedPoint( GetPlayer.MakeScope.Var('news_masthead_id').GetValue, '(CFixedPoint)226' )]"
+			}
+			# SWI / fascism
+			icon = {
+				parentanchor = hcenter
+				position = { 0 24 }
+				size = { 520 76 }
+				texture = "gfx/interface/newspaper_headers/SWI_fascism_header.dds"
+				alwaystransparent = yes
+				visible = "[EqualTo_CFixedPoint( GetPlayer.MakeScope.Var('news_masthead_id').GetValue, '(CFixedPoint)227' )]"
+			}
+			# CZE / fascism
+			icon = {
+				parentanchor = hcenter
+				position = { 0 24 }
+				size = { 520 76 }
+				texture = "gfx/interface/newspaper_headers/CZE_fascism_header.dds"
+				alwaystransparent = yes
+				visible = "[EqualTo_CFixedPoint( GetPlayer.MakeScope.Var('news_masthead_id').GetValue, '(CFixedPoint)228' )]"
+			}
+			# PAR / fascism
+			icon = {
+				parentanchor = hcenter
+				position = { 0 24 }
+				size = { 520 76 }
+				texture = "gfx/interface/newspaper_headers/PAR_fascism_header.dds"
+				alwaystransparent = yes
+				visible = "[EqualTo_CFixedPoint( GetPlayer.MakeScope.Var('news_masthead_id').GetValue, '(CFixedPoint)229' )]"
+			}
+			# URG / fascism
+			icon = {
+				parentanchor = hcenter
+				position = { 0 24 }
+				size = { 520 76 }
+				texture = "gfx/interface/newspaper_headers/URG_fascism_header.dds"
+				alwaystransparent = yes
+				visible = "[EqualTo_CFixedPoint( GetPlayer.MakeScope.Var('news_masthead_id').GetValue, '(CFixedPoint)230' )]"
+			}
+			# ECU / fascism
+			icon = {
+				parentanchor = hcenter
+				position = { 0 24 }
+				size = { 520 76 }
+				texture = "gfx/interface/newspaper_headers/ECU_fascism_header.dds"
+				alwaystransparent = yes
+				visible = "[EqualTo_CFixedPoint( GetPlayer.MakeScope.Var('news_masthead_id').GetValue, '(CFixedPoint)231' )]"
+			}
+			# COS / fascism
+			icon = {
+				parentanchor = hcenter
+				position = { 0 24 }
+				size = { 520 76 }
+				texture = "gfx/interface/newspaper_headers/COS_fascism_header.dds"
+				alwaystransparent = yes
+				visible = "[EqualTo_CFixedPoint( GetPlayer.MakeScope.Var('news_masthead_id').GetValue, '(CFixedPoint)232' )]"
+			}
+			# ELS / fascism
+			icon = {
+				parentanchor = hcenter
+				position = { 0 24 }
+				size = { 520 76 }
+				texture = "gfx/interface/newspaper_headers/ELS_fascism_header.dds"
+				alwaystransparent = yes
+				visible = "[EqualTo_CFixedPoint( GetPlayer.MakeScope.Var('news_masthead_id').GetValue, '(CFixedPoint)233' )]"
+			}
+			# GUA / fascism
+			icon = {
+				parentanchor = hcenter
+				position = { 0 24 }
+				size = { 520 76 }
+				texture = "gfx/interface/newspaper_headers/GUA_fascism_header.dds"
+				alwaystransparent = yes
+				visible = "[EqualTo_CFixedPoint( GetPlayer.MakeScope.Var('news_masthead_id').GetValue, '(CFixedPoint)234' )]"
+			}
+			# HON / fascism
+			icon = {
+				parentanchor = hcenter
+				position = { 0 24 }
+				size = { 520 76 }
+				texture = "gfx/interface/newspaper_headers/HON_fascism_header.dds"
+				alwaystransparent = yes
+				visible = "[EqualTo_CFixedPoint( GetPlayer.MakeScope.Var('news_masthead_id').GetValue, '(CFixedPoint)235' )]"
+			}
+			# NIC / fascism
+			icon = {
+				parentanchor = hcenter
+				position = { 0 24 }
+				size = { 520 76 }
+				texture = "gfx/interface/newspaper_headers/NIC_fascism_header.dds"
+				alwaystransparent = yes
+				visible = "[EqualTo_CFixedPoint( GetPlayer.MakeScope.Var('news_masthead_id').GetValue, '(CFixedPoint)236' )]"
+			}
+			# PAN / fascism
+			icon = {
+				parentanchor = hcenter
+				position = { 0 24 }
+				size = { 520 76 }
+				texture = "gfx/interface/newspaper_headers/PAN_fascism_header.dds"
+				alwaystransparent = yes
+				visible = "[EqualTo_CFixedPoint( GetPlayer.MakeScope.Var('news_masthead_id').GetValue, '(CFixedPoint)237' )]"
+			}
+			# CHI / fascism (traditional fallback)
+			icon = {
+				parentanchor = hcenter
+				position = { 0 24 }
+				size = { 520 76 }
+				texture = "gfx/interface/newspaper_headers/CHI_newspaper_title.dds"
+				alwaystransparent = yes
+				visible = "[EqualTo_CFixedPoint( GetPlayer.MakeScope.Var('news_masthead_id').GetValue, '(CFixedPoint)238' )]"
+			}
+			# PEU / Peru / fascism
+			icon = {
+				parentanchor = hcenter
+				position = { 0 24 }
+				size = { 520 76 }
+				texture = "gfx/interface/newspaper_headers/PRU_fascism_header.dds"
+				alwaystransparent = yes
+				visible = "[EqualTo_CFixedPoint( GetPlayer.MakeScope.Var('news_masthead_id').GetValue, '(CFixedPoint)239' )]"
+			}
+
+			### NEUTRALITY COUNTRY MASTHEAD VARIANTS
+			# GBR / neutrality
+			icon = {
+				parentanchor = hcenter
+				position = { 0 24 }
+				size = { 520 76 }
+				texture = "gfx/interface/newspaper_headers/ENG_neutrality_header.dds"
+				alwaystransparent = yes
+				visible = "[EqualTo_CFixedPoint( GetPlayer.MakeScope.Var('news_masthead_id').GetValue, '(CFixedPoint)301' )]"
+			}
+			# FRA / neutrality
+			icon = {
+				parentanchor = hcenter
+				position = { 0 24 }
+				size = { 520 76 }
+				texture = "gfx/interface/newspaper_headers/FRA_neutrality_header.dds"
+				alwaystransparent = yes
+				visible = "[EqualTo_CFixedPoint( GetPlayer.MakeScope.Var('news_masthead_id').GetValue, '(CFixedPoint)302' )]"
+			}
+			# GER / neutrality
+			icon = {
+				parentanchor = hcenter
+				position = { 0 24 }
+				size = { 520 76 }
+				texture = "gfx/interface/newspaper_headers/GER_neutrality_header.dds"
+				alwaystransparent = yes
+				visible = "[EqualTo_CFixedPoint( GetPlayer.MakeScope.Var('news_masthead_id').GetValue, '(CFixedPoint)303' )]"
+			}
+			# PRU / neutrality
+			icon = {
+				parentanchor = hcenter
+				position = { 0 24 }
+				size = { 520 76 }
+				texture = "gfx/interface/newspaper_headers/GER_neutrality_header.dds"
+				alwaystransparent = yes
+				visible = "[EqualTo_CFixedPoint( GetPlayer.MakeScope.Var('news_masthead_id').GetValue, '(CFixedPoint)304' )]"
+			}
+			# USA / neutrality
+			icon = {
+				parentanchor = hcenter
+				position = { 0 24 }
+				size = { 520 76 }
+				texture = "gfx/interface/newspaper_headers/USA_neutrality_header.dds"
+				alwaystransparent = yes
+				visible = "[EqualTo_CFixedPoint( GetPlayer.MakeScope.Var('news_masthead_id').GetValue, '(CFixedPoint)305' )]"
+			}
+			# ITA / neutrality
+			icon = {
+				parentanchor = hcenter
+				position = { 0 24 }
+				size = { 520 76 }
+				texture = "gfx/interface/newspaper_headers/ITA_neutrality_header.dds"
+				alwaystransparent = yes
+				visible = "[EqualTo_CFixedPoint( GetPlayer.MakeScope.Var('news_masthead_id').GetValue, '(CFixedPoint)306' )]"
+			}
+			# JAP / neutrality
+			icon = {
+				parentanchor = hcenter
+				position = { 0 24 }
+				size = { 520 76 }
+				texture = "gfx/interface/newspaper_headers/JAP_neutrality_header.dds"
+				alwaystransparent = yes
+				visible = "[EqualTo_CFixedPoint( GetPlayer.MakeScope.Var('news_masthead_id').GetValue, '(CFixedPoint)307' )]"
+			}
+			# RUS / neutrality
+			icon = {
+				parentanchor = hcenter
+				position = { 0 24 }
+				size = { 520 76 }
+				texture = "gfx/interface/newspaper_headers/SOV_neutrality_header.dds"
+				alwaystransparent = yes
+				visible = "[EqualTo_CFixedPoint( GetPlayer.MakeScope.Var('news_masthead_id').GetValue, '(CFixedPoint)308' )]"
+			}
+			# AUS / neutrality
+			icon = {
+				parentanchor = hcenter
+				position = { 0 24 }
+				size = { 520 76 }
+				texture = "gfx/interface/newspaper_headers/AUS_neutrality_header.dds"
+				alwaystransparent = yes
+				visible = "[EqualTo_CFixedPoint( GetPlayer.MakeScope.Var('news_masthead_id').GetValue, '(CFixedPoint)309' )]"
+			}
+			# OTTOMAN / neutrality
+			icon = {
+				parentanchor = hcenter
+				position = { 0 24 }
+				size = { 520 76 }
+				texture = "gfx/interface/newspaper_headers/OTTOMAN_neutrality_header.dds"
+				alwaystransparent = yes
+				visible = "[EqualTo_CFixedPoint( GetPlayer.MakeScope.Var('news_masthead_id').GetValue, '(CFixedPoint)310' )]"
+			}
+			# POL / neutrality
+			icon = {
+				parentanchor = hcenter
+				position = { 0 24 }
+				size = { 520 76 }
+				texture = "gfx/interface/newspaper_headers/POL_neutrality_header.dds"
+				alwaystransparent = yes
+				visible = "[EqualTo_CFixedPoint( GetPlayer.MakeScope.Var('news_masthead_id').GetValue, '(CFixedPoint)311' )]"
+			}
+			# BRA / neutrality
+			icon = {
+				parentanchor = hcenter
+				position = { 0 24 }
+				size = { 520 76 }
+				texture = "gfx/interface/newspaper_headers/BRA_neutrality_header.dds"
+				alwaystransparent = yes
+				visible = "[EqualTo_CFixedPoint( GetPlayer.MakeScope.Var('news_masthead_id').GetValue, '(CFixedPoint)312' )]"
+			}
+			# MEX / neutrality
+			icon = {
+				parentanchor = hcenter
+				position = { 0 24 }
+				size = { 520 76 }
+				texture = "gfx/interface/newspaper_headers/MEX_neutrality_header.dds"
+				alwaystransparent = yes
+				visible = "[EqualTo_CFixedPoint( GetPlayer.MakeScope.Var('news_masthead_id').GetValue, '(CFixedPoint)313' )]"
+			}
+			# SPA / neutrality
+			icon = {
+				parentanchor = hcenter
+				position = { 0 24 }
+				size = { 520 76 }
+				texture = "gfx/interface/newspaper_headers/SPR_neutrality_header.dds"
+				alwaystransparent = yes
+				visible = "[EqualTo_CFixedPoint( GetPlayer.MakeScope.Var('news_masthead_id').GetValue, '(CFixedPoint)314' )]"
+			}
+			# CAN / neutrality
+			icon = {
+				parentanchor = hcenter
+				position = { 0 24 }
+				size = { 520 76 }
+				texture = "gfx/interface/newspaper_headers/CAN_neutrality_header.dds"
+				alwaystransparent = yes
+				visible = "[EqualTo_CFixedPoint( GetPlayer.MakeScope.Var('news_masthead_id').GetValue, '(CFixedPoint)315' )]"
+			}
+			# ROM / neutrality
+			icon = {
+				parentanchor = hcenter
+				position = { 0 24 }
+				size = { 520 76 }
+				texture = "gfx/interface/newspaper_headers/ROM_neutrality_header.dds"
+				alwaystransparent = yes
+				visible = "[EqualTo_CFixedPoint( GetPlayer.MakeScope.Var('news_masthead_id').GetValue, '(CFixedPoint)316' )]"
+			}
+			# BUL / neutrality
+			icon = {
+				parentanchor = hcenter
+				position = { 0 24 }
+				size = { 520 76 }
+				texture = "gfx/interface/newspaper_headers/BUL_neutrality_header.dds"
+				alwaystransparent = yes
+				visible = "[EqualTo_CFixedPoint( GetPlayer.MakeScope.Var('news_masthead_id').GetValue, '(CFixedPoint)317' )]"
+			}
+			# ARG / neutrality
+			icon = {
+				parentanchor = hcenter
+				position = { 0 24 }
+				size = { 520 76 }
+				texture = "gfx/interface/newspaper_headers/ARG_neutrality_header.dds"
+				alwaystransparent = yes
+				visible = "[EqualTo_CFixedPoint( GetPlayer.MakeScope.Var('news_masthead_id').GetValue, '(CFixedPoint)318' )]"
+			}
+			# RAJ / neutrality
+			icon = {
+				parentanchor = hcenter
+				position = { 0 24 }
+				size = { 520 76 }
+				texture = "gfx/interface/newspaper_headers/HND_neutrality_header.dds"
+				alwaystransparent = yes
+				visible = "[EqualTo_CFixedPoint( GetPlayer.MakeScope.Var('news_masthead_id').GetValue, '(CFixedPoint)319' )]"
+			}
+			# POR / neutrality
+			icon = {
+				parentanchor = hcenter
+				position = { 0 24 }
+				size = { 520 76 }
+				texture = "gfx/interface/newspaper_headers/POR_neutrality_header.dds"
+				alwaystransparent = yes
+				visible = "[EqualTo_CFixedPoint( GetPlayer.MakeScope.Var('news_masthead_id').GetValue, '(CFixedPoint)320' )]"
+			}
+			# GRE / neutrality
+			icon = {
+				parentanchor = hcenter
+				position = { 0 24 }
+				size = { 520 76 }
+				texture = "gfx/interface/newspaper_headers/GRE_neutrality_header.dds"
+				alwaystransparent = yes
+				visible = "[EqualTo_CFixedPoint( GetPlayer.MakeScope.Var('news_masthead_id').GetValue, '(CFixedPoint)321' )]"
+			}
+			# IRE / neutrality
+			icon = {
+				parentanchor = hcenter
+				position = { 0 24 }
+				size = { 520 76 }
+				texture = "gfx/interface/newspaper_headers/IRE_neutrality_header.dds"
+				alwaystransparent = yes
+				visible = "[EqualTo_CFixedPoint( GetPlayer.MakeScope.Var('news_masthead_id').GetValue, '(CFixedPoint)322' )]"
+			}
+			# CHL / neutrality
+			icon = {
+				parentanchor = hcenter
+				position = { 0 24 }
+				size = { 520 76 }
+				texture = "gfx/interface/newspaper_headers/CHL_neutrality_header.dds"
+				alwaystransparent = yes
+				visible = "[EqualTo_CFixedPoint( GetPlayer.MakeScope.Var('news_masthead_id').GetValue, '(CFixedPoint)323' )]"
+			}
+			# COL / neutrality
+			icon = {
+				parentanchor = hcenter
+				position = { 0 24 }
+				size = { 520 76 }
+				texture = "gfx/interface/newspaper_headers/COL_neutrality_header.dds"
+				alwaystransparent = yes
+				visible = "[EqualTo_CFixedPoint( GetPlayer.MakeScope.Var('news_masthead_id').GetValue, '(CFixedPoint)324' )]"
+			}
+			# BOL / neutrality
+			icon = {
+				parentanchor = hcenter
+				position = { 0 24 }
+				size = { 520 76 }
+				texture = "gfx/interface/newspaper_headers/BOL_neutrality_header.dds"
+				alwaystransparent = yes
+				visible = "[EqualTo_CFixedPoint( GetPlayer.MakeScope.Var('news_masthead_id').GetValue, '(CFixedPoint)325' )]"
+			}
+			# VEN / neutrality
+			icon = {
+				parentanchor = hcenter
+				position = { 0 24 }
+				size = { 520 76 }
+				texture = "gfx/interface/newspaper_headers/VEN_neutrality_header.dds"
+				alwaystransparent = yes
+				visible = "[EqualTo_CFixedPoint( GetPlayer.MakeScope.Var('news_masthead_id').GetValue, '(CFixedPoint)326' )]"
+			}
+			# SWI / neutrality
+			icon = {
+				parentanchor = hcenter
+				position = { 0 24 }
+				size = { 520 76 }
+				texture = "gfx/interface/newspaper_headers/SWI_neutrality_header.dds"
+				alwaystransparent = yes
+				visible = "[EqualTo_CFixedPoint( GetPlayer.MakeScope.Var('news_masthead_id').GetValue, '(CFixedPoint)327' )]"
+			}
+			# CZE / neutrality
+			icon = {
+				parentanchor = hcenter
+				position = { 0 24 }
+				size = { 520 76 }
+				texture = "gfx/interface/newspaper_headers/CZE_neutrality_header.dds"
+				alwaystransparent = yes
+				visible = "[EqualTo_CFixedPoint( GetPlayer.MakeScope.Var('news_masthead_id').GetValue, '(CFixedPoint)328' )]"
+			}
+			# PAR / neutrality
+			icon = {
+				parentanchor = hcenter
+				position = { 0 24 }
+				size = { 520 76 }
+				texture = "gfx/interface/newspaper_headers/PAR_neutrality_header.dds"
+				alwaystransparent = yes
+				visible = "[EqualTo_CFixedPoint( GetPlayer.MakeScope.Var('news_masthead_id').GetValue, '(CFixedPoint)329' )]"
+			}
+			# URG / neutrality
+			icon = {
+				parentanchor = hcenter
+				position = { 0 24 }
+				size = { 520 76 }
+				texture = "gfx/interface/newspaper_headers/URG_neutrality_header.dds"
+				alwaystransparent = yes
+				visible = "[EqualTo_CFixedPoint( GetPlayer.MakeScope.Var('news_masthead_id').GetValue, '(CFixedPoint)330' )]"
+			}
+			# ECU / neutrality
+			icon = {
+				parentanchor = hcenter
+				position = { 0 24 }
+				size = { 520 76 }
+				texture = "gfx/interface/newspaper_headers/ECU_neutrality_header.dds"
+				alwaystransparent = yes
+				visible = "[EqualTo_CFixedPoint( GetPlayer.MakeScope.Var('news_masthead_id').GetValue, '(CFixedPoint)331' )]"
+			}
+			# COS / neutrality
+			icon = {
+				parentanchor = hcenter
+				position = { 0 24 }
+				size = { 520 76 }
+				texture = "gfx/interface/newspaper_headers/COS_neutrality_header.dds"
+				alwaystransparent = yes
+				visible = "[EqualTo_CFixedPoint( GetPlayer.MakeScope.Var('news_masthead_id').GetValue, '(CFixedPoint)332' )]"
+			}
+			# ELS / neutrality
+			icon = {
+				parentanchor = hcenter
+				position = { 0 24 }
+				size = { 520 76 }
+				texture = "gfx/interface/newspaper_headers/ELS_neutrality_header.dds"
+				alwaystransparent = yes
+				visible = "[EqualTo_CFixedPoint( GetPlayer.MakeScope.Var('news_masthead_id').GetValue, '(CFixedPoint)333' )]"
+			}
+			# GUA / neutrality
+			icon = {
+				parentanchor = hcenter
+				position = { 0 24 }
+				size = { 520 76 }
+				texture = "gfx/interface/newspaper_headers/GUA_neutrality_header.dds"
+				alwaystransparent = yes
+				visible = "[EqualTo_CFixedPoint( GetPlayer.MakeScope.Var('news_masthead_id').GetValue, '(CFixedPoint)334' )]"
+			}
+			# HON / neutrality
+			icon = {
+				parentanchor = hcenter
+				position = { 0 24 }
+				size = { 520 76 }
+				texture = "gfx/interface/newspaper_headers/HON_neutrality_header.dds"
+				alwaystransparent = yes
+				visible = "[EqualTo_CFixedPoint( GetPlayer.MakeScope.Var('news_masthead_id').GetValue, '(CFixedPoint)335' )]"
+			}
+			# NIC / neutrality
+			icon = {
+				parentanchor = hcenter
+				position = { 0 24 }
+				size = { 520 76 }
+				texture = "gfx/interface/newspaper_headers/NIC_neutrality_header.dds"
+				alwaystransparent = yes
+				visible = "[EqualTo_CFixedPoint( GetPlayer.MakeScope.Var('news_masthead_id').GetValue, '(CFixedPoint)336' )]"
+			}
+			# PAN / neutrality
+			icon = {
+				parentanchor = hcenter
+				position = { 0 24 }
+				size = { 520 76 }
+				texture = "gfx/interface/newspaper_headers/PAN_neutrality_header.dds"
+				alwaystransparent = yes
+				visible = "[EqualTo_CFixedPoint( GetPlayer.MakeScope.Var('news_masthead_id').GetValue, '(CFixedPoint)337' )]"
+			}
+			# CHI / monarchy, Qing, authoritarian
+			icon = {
+				parentanchor = hcenter
+				position = { 0 24 }
+				size = { 520 76 }
+				texture = "gfx/interface/newspaper_headers/CHI_newspaper_title.dds"
+				alwaystransparent = yes
+				visible = "[EqualTo_CFixedPoint( GetPlayer.MakeScope.Var('news_masthead_id').GetValue, '(CFixedPoint)338' )]"
+			}
+			# PEU / Peru / neutrality
+			icon = {
+				parentanchor = hcenter
+				position = { 0 24 }
+				size = { 520 76 }
+				texture = "gfx/interface/newspaper_headers/PRU_neutrality_header.dds"
+				alwaystransparent = yes
+				visible = "[EqualTo_CFixedPoint( GetPlayer.MakeScope.Var('news_masthead_id').GetValue, '(CFixedPoint)339' )]"
+			}
+
+			### ENGRAVING — the ruled box on the left of the page.
+			### NOTE: Vic3 has no clipping, so a landscape event video stretches
+			### into this portrait box. Portrait art is the proper fix.
+			icon = {
+				visible = "[Event.HasTexture]"
+				texture = "[Event.GetTexture]"
+				position = { 38 150 }
+				size = { 196 500 }
+				alwaystransparent = yes
+			}
+			video_icon = {
+				visible = "[Event.HasVideo]"
+				video = "[Event.GetVideo]"
+				position = { 32 202 }
+				size = { 230 440 }
+				alwaystransparent = yes
+				loop = no
+			}
+
+			### DATELINE — issue number, live game date, price. Each slot shows a
+			### default unless the event defines .sub_left / .sub_middle /
+			### .sub_right. The existence test is CMF's: if Localize returns the
+			### key itself, that key was never defined.
+	
+			widget = {
+				parentanchor = hcenter
+				position = { 0 175 }
+				size = { 500 30 }
+
+				textbox = {
+					visible = "[EqualTo_string(Localize(Concatenate(Event.GetKey, '.sub_left')), Concatenate(Event.GetKey, '.sub_left'))]"
+					parentanchor = left|vcenter
+					autoresize = yes
+					align = nobaseline
+					using = fontsize_medium
+					default_format = "#news_ink_soft"
+					raw_text = "#bold No. 512#!"
+				}
+				textbox = {
+					visible = "[Not(EqualTo_string(Localize(Concatenate(Event.GetKey, '.sub_left')), Concatenate(Event.GetKey, '.sub_left')))]"
+					parentanchor = left|vcenter
+					autoresize = yes
+					align = nobaseline
+					using = fontsize_medium
+					default_format = "#news_ink_soft"
+					text = "#bold [Localize(Concatenate(Event.GetKey, '.sub_left))]"
+				}
+
+				textbox = {
+					visible = "[EqualTo_string(Localize(Concatenate(Event.GetKey, '.sub_middle')), Concatenate(Event.GetKey, '.sub_middle'))]"
+					parentanchor = hcenter|vcenter
+					autoresize = yes
+					align = hcenter|nobaseline
+					using = fontsize_medium
+					default_format = "#news_ink_soft"
+					raw_text = "#bold [TimeKeeper.GetDayOfWeek], [TimeKeeper.GetCurrentDate.Format('wmw wd, wy')]"
+				}
+				textbox = {
+					visible = "[Not(EqualTo_string(Localize(Concatenate(Event.GetKey, '.sub_middle')), Concatenate(Event.GetKey, '.sub_middle')))]"
+					parentanchor = hcenter|vcenter
+					autoresize = yes
+					align = hcenter|nobaseline
+					using = fontsize_medium
+					default_format = "#news_ink_soft"
+					text = "#bold [Localize(Concatenate(Event.GetKey, '.sub_middle))]"
+				}
+
+				textbox = {
+					visible = "[EqualTo_string(Localize(Concatenate(Event.GetKey, '.sub_right')), Concatenate(Event.GetKey, '.sub_right'))]"
+					parentanchor = right|vcenter
+					autoresize = yes
+					align = nobaseline
+					using = fontsize_medium
+					default_format = "#news_ink_soft"
+					raw_text = "#bold ONE PENNY#!"
+				}
+				textbox = {
+					visible = "[Not(EqualTo_string(Localize(Concatenate(Event.GetKey, '.sub_right')), Concatenate(Event.GetKey, '.sub_right')))]"
+					parentanchor = right|vcenter
+					autoresize = yes
+					align = nobaseline
+					using = fontsize_medium
+					default_format = "#news_ink_soft"
+					text = "[Localize(Concatenate(Event.GetKey, '.sub_right))]"
+				}
+			}
+
+			widget = {
+				parentanchor = hcenter
+				position = { 0 115 }
+				size = { 800 25 }
+				
+				### HEADLINE — the event's own title.
+				textbox = {
+					name = "headline"
+					size = { 540 84 }            
+					multiline = yes
+					maximumsize = { 550 65 }
+					fontsize = 42
+					align = hcenter|nobaseline
+					fontsize_min = 16
+					elide = right
+					parentanchor = hcenter
+					font = "NewsCheltenhamHeadline"
+					default_format = "#news_ink"
+					raw_text = "[EventWindow.GetTitle]"
+					### SHOUTED HEADLINE (all caps). The capitals are baked into the
+					### font glyphs, so the only way to vary them is a second font --
+					### hence two textboxes rather than one.
+					### Shouts only if this event defines a "<event>.shout" loc key.
+					### Read from the event, not from a shared variable, so a second
+					### event firing cannot flip this one's font while it is open.
+					visible = "[Not(EqualTo_string(Localize(Concatenate(Event.GetKey, '.shout')), Concatenate(Event.GetKey, '.shout')))]"
+				}
+
+				textbox = {
+					name = "headline_quiet"
+					size = { 540 84 }
+					multiline = yes
+					maximumsize = { 550 65 }
+					fontsize = 42
+					align = hcenter|nobaseline
+					fontsize_min = 16
+					elide = right
+					parentanchor = hcenter
+					font = "NewsCheltenhamHeadlineMixed"
+					default_format = "#news_ink"
+					raw_text = "[EventWindow.GetTitle]"
+					### ORDINARY HEADLINE (mixed case). The default: shown whenever
+					### The default: shown whenever the event defines no ".shout" key.
+					visible = "[EqualTo_string(Localize(Concatenate(Event.GetKey, '.shout')), Concatenate(Event.GetKey, '.shout'))]"
+				}
+			}
+			
+			### THE STORY — right-hand column.
+			flowcontainer = {
+				direction = vertical
+				position = { 275 186 }
+				spacing = 8
+
+				widget = { size = { 10 6 } }
+
+				textbox = {
+					name = "description"
+					multiline = yes
+					autoresize = yes
+					minimumsize = { 300 -1 }
+					maximumsize = { 300 -1 }
+					align = nobaseline
+					using = fontsize_medium
+					font = "NewsCheltenhamBody"
+					default_format = "#news_ink"
+					raw_text = "[EventWindow.GetDescription]"
+				}
+
+				divider_decorative = {}
+
+				textbox = {
+					name = "flavortext"
+					multiline = yes
+					autoresize = yes
+					minimumsize = { 300 -1 }
+					maximumsize = { 300 -1 }
+					align = nobaseline
+					using = fontsize_small
+					font = "NewsCheltenhamBody"
+					default_format = "#news_ink"
+					raw_text = "[EventWindow.GetFlavor]"
+				}
+
+				widget = { size = { 10 20 } }
+
+				### OPTION BUTTONS — reused verbatim from vanilla, then narrowed
+				### to the column. Debug buttons follow these automatically.
+										flowcontainer = {
+											direction = vertical
+											position = { 6 0 }
+											datamodel = "[EventWindow.GetOptions]"
+											spacing = 5
+
+											item = {
+												container = {
+
+													button = {
+														visible = "[EventOption.IsDefaultOption]"
+														size = { 1 1 }
+														alpha = 0
+														onclick = "[EventOption.Select]"
+														enabled = "[EventOption.IsEnabled]"
+														input_action = "confirm"
+													}
+									
+													widget = {
+														visible = "[EventOption.IsHighlightedOption]"
+										
+														button = {
+															size = { 96% 100% }
+															parentanchor = hcenter
+															using = default_button_primary_action
+															tooltip = "[EventOption.GetDesc]"
+															using = tooltip_ws
+															using = confirm_button_sound
+															onclick = "[EventOption.Select]"
+															enabled = "[EventOption.IsEnabled]"
+														}
+
+														textbox = {
+															resizeparent = yes
+															minimumsize = { 300 40 }
+															maximumsize = { 300 -1 }
+															multiline = yes
+															align = "[GetEventOptionTextAlignment]"
+															autoresize = yes
+															margin = { 12 8 }
+															text = "[EventOption.GetText]"
+														}
+													}
+
+													widget = {
+														visible = "[Not(EventOption.IsHighlightedOption)]"
+										
+														button = {
+															size = { 96% 100% }
+															parentanchor = hcenter
+															using = default_button_action
+															tooltip = "EVENT_OPTION_TOOLTIP"
+															using = tooltip_ws
+															using = confirm_button_sound
+															onclick = "[EventOption.Select]"
+															enabled = "[EventOption.IsEnabled]"
+														}
+
+														textbox = {
+															resizeparent = yes
+															minimumsize = { 300 40 }
+															maximumsize = { 300 -1 }
+															text = "[EventOption.GetText]"
+															multiline = yes
+															align = "[GetEventOptionTextAlignment]"
+															autoresize = yes
+															margin = { 12 8 }
+															margin_right = 16
+														}
+
+														### Time until the default option will be picked
+														round_progress_default = {
+															visible = "[EventOption.IsDefaultOption]"
+															parentanchor = right|vcenter
+															position = { -20 0.5 }
+															size = { 27 27 }
+															tooltip = "DEFAULT_EVENT_OPTION"
+															value = "[Event.GetPercentageRemainingDays]"
+
+															icon = {
+																size = { 26 26 }
+																position = { -0.2 -0.2 }
+																parentanchor = center
+																texture = "gfx/interface/icons/generic_icons/event_default_option.dds"
+															}
+														}
+													}
+												}
+											}
+										}
+			}
+
+			### Close / minimise, top right of the page.
+			minimize_button = {
+				parentanchor = top|right
+				position = { -14 12 }
+				onclick = "[PopupManager.HideOpenEvent(Event.Self)]"
+				shortcut = "close_window"
+			}
+
+			state = {
+				trigger_on_create = yes
+				name = 1
+				duration = 0.3
+				using = Animation_Curve_EaseOut
+				alpha = 1
+				start_sound = {
+					soundeffect = "event:/SFX/UI/Alerts/letter_appear"
+				}
+			}
+		}
+	}
+}

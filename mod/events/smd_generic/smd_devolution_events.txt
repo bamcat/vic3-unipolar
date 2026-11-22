@@ -1,1 +1,182 @@
-﻿#
+﻿namespace = smd_devolution
+
+smd_devolution.1 = {
+	type = country_event
+	placement = ROOT
+	title = smd_devolution.1.t
+	desc = smd_devolution.1.d
+	flavor = smd_devolution.1.f
+	event_image = { video = "southamerica_election" }
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+	icon = "gfx/interface/icons/event_icons/event_map.dds"
+	duration = 3
+
+	trigger = {
+		has_journal_entry = smd_je_devolution
+	}
+
+	immediate = {
+		var:smd_devolution_state ?= { save_scope_as = smd_devolution_state }
+	}
+
+	option = {
+		name = smd_devolution.1.a
+		default_option = yes
+		scope:smd_devolution_state ?= {
+			add_modifier = {
+				name = smd_regional_party_wins
+				days = normal_modifier_time
+			}
+		}
+		ai_chance = { base = 100 }
+	}
+}
+
+smd_devolution.2 = {
+	type = country_event
+	placement = ROOT
+	title = smd_devolution.2.t
+	desc = smd_devolution.2.d
+	flavor = smd_devolution.2.f
+	event_image = { video = "unspecific_politicians_arguing" }
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+	icon = "gfx/interface/icons/event_icons/event_map.dds"
+	duration = 3
+	cooldown = { days = normal_modifier_time }
+
+	trigger = {
+		has_journal_entry = smd_je_devolution
+		has_variable = smd_devolution_state
+	}
+
+	immediate = {
+		var:smd_devolution_state ?= { save_scope_as = smd_devolution_state }
+	}
+
+	option = {
+		name = smd_devolution.2.a
+		default_option = yes
+		scope:smd_devolution_state ?= {
+			add_modifier = {
+				name = smd_regional_compromise
+				days = normal_modifier_time
+			}
+		}
+		add_modifier = {
+			name = smd_devolution_backlash
+			days = 730
+		}
+		je:smd_je_devolution ?= {
+			add_progress = { value = -10 name = smd_devolution_bar }
+		}
+		ai_chance = { base = 60 }
+	}
+
+	option = {
+		name = smd_devolution.2.b
+		scope:smd_devolution_state ?= {
+			add_modifier = {
+				name = smd_regional_hardline
+				days = normal_modifier_time
+			}
+		}
+		je:smd_je_devolution ?= {
+			add_progress = { value = 10 name = smd_devolution_bar }
+		}
+		ai_chance = { base = 40 }
+	}
+}
+
+smd_devolution.3 = {
+	type = country_event
+	placement = ROOT
+	title = smd_devolution.3.t
+	desc = smd_devolution.3.d
+	flavor = smd_devolution.3.f
+	event_image = { video = "unspecific_signed_contract" }
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+	icon = "gfx/interface/icons/event_icons/event_map.dds"
+	duration = 3
+
+	trigger = {
+	}
+
+	immediate = {
+		var:smd_devolution_state ?= { save_scope_as = smd_devolution_state }
+	}
+
+	option = {
+		name = smd_devolution.3.a
+		default_option = yes
+		add_modifier = {
+			name = smd_devolution_settlement
+			days = normal_modifier_time
+		}
+		ai_chance = { base = 100 }
+	}
+}
+
+smd_devolution.4 = {
+	type = country_event
+	placement = ROOT
+	title = smd_devolution.4.t
+	desc = smd_devolution.4.d
+	flavor = smd_devolution.4.f
+	event_image = { video = "africa_public_protest" }
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+	icon = "gfx/interface/icons/event_icons/event_map.dds"
+	duration = 3
+
+	trigger = {
+	}
+
+	immediate = {
+		var:smd_devolution_state ?= { save_scope_as = smd_devolution_state }
+		if = {
+			limit = { exists = var:smd_devolution_culture }
+			var:smd_devolution_culture = { save_scope_as = smd_devolution_culture }
+		}
+		else_if = {
+			limit = {
+				exists = scope:smd_devolution_state
+				scope:smd_devolution_state = {
+					any_scope_culture = {
+						NOT = { is_primary_culture_of = ROOT }
+						has_homeland = PREV
+					}
+				}
+			}
+			scope:smd_devolution_state = {
+				random_scope_culture = {
+					limit = {
+						NOT = { is_primary_culture_of = ROOT }
+						has_homeland = PREV
+					}
+					save_scope_as = smd_devolution_culture
+				}
+			}
+		}
+	}
+
+	option = {
+		name = smd_devolution.4.a
+		default_option = yes
+		add_modifier = {
+			name = smd_separatist_crisis
+			days = normal_modifier_time
+		}
+		scope:smd_devolution_state ?= {
+			add_radicals_in_state = {
+				value = medium_radicals
+			}
+		}
+		if = {
+			limit = { exists = scope:smd_devolution_culture }
+			create_political_movement = {
+				type = movement_cultural_minority
+				culture = scope:smd_devolution_culture
+			}
+		}
+		ai_chance = { base = 100 }
+	}
+}

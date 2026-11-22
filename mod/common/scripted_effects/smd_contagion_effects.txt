@@ -1,0 +1,13 @@
+﻿smd_contagion_save_movement = {
+	random_political_movement = {
+		limit = { has_variable = smd_contagion_target }
+		save_scope_as = smd_contagion_movement
+	}
+}
+
+smd_contagion_clear_movement = {
+	every_political_movement = {
+		limit = { has_variable = smd_contagion_target }
+		remove_variable = smd_contagion_target
+	}
+}

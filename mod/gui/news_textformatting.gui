@@ -1,0 +1,19 @@
+﻿### Text formats for the newspaper.
+###
+### This is HOW you get black text on paper. Setting `color = { ... }` on a
+### textbox does not survive the format codes in `raw_text`; a named format
+### applied through `default_format` does. CMF solves it the same way.
+textformatting = {
+
+	# Body text — near-black ink.
+	format = {
+		name = news_ink
+		format = "color:{ 0.06, 0.06, 0.06}"
+	}
+
+	# Slightly lighter, for the quote and the dateline.
+	format = {
+		name = news_ink_soft
+		format = "color:{ 0.22, 0.21, 0.20}"
+	}
+}

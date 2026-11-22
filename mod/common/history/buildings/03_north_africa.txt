@@ -8877,26 +8877,17 @@
 	s:STATE_WEST_SAHARA={
 		region_state:WSH={
 			create_building={
-				building="building_construction_sector"
+				building="building_retail_services"
 				add_ownership={
-					country={
-						country="c:WSH"
+					building={
+						type="building_financial_district"
+						country="c:FRA"
 						levels=1
+						region="STATE_ILE_DE_FRANCE"
 					}
 				}
 				reserves=1
-				activate_production_methods={ "pm_wooden_buildings" }
-			}
-			create_building={
-				building="building_government_administration"
-				add_ownership={
-					country={
-						country="c:WSH"
-						levels=1
-					}
-				}
-				reserves=1
-				activate_production_methods={ "pm_simple_organization" "pm_professional_bureaucrats" "pm_religious_bureaucrats" }
+				activate_production_methods={ "pm_small_shops" "pm_manual_retail_checkout" "pm_luxury_retail" }
 			}
 			create_building={
 				building="building_port"

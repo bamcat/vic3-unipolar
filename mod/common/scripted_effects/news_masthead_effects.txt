@@ -1,0 +1,242 @@
+﻿# I used to get my news from the daily guardian, now i get it from the New York Times. Maybe even the Wall Street Journal if I'm feelin' frisky. The BBC on Sunday's, and the People's Daily for a foreign perspective.
+
+news_set_masthead_id = {
+	set_variable = { name = news_masthead_id value = 0 }
+	if = {
+		limit = { this = c:GBR }
+		set_variable = { name = news_masthead_id value = 1 }
+	}
+	if = {
+		limit = { this = c:FRA }
+		set_variable = { name = news_masthead_id value = 2 }
+	}
+	if = {
+		limit = { this = c:GER }
+		set_variable = { name = news_masthead_id value = 3 }
+	}
+	if = {
+		limit = { this = c:PRU }
+		set_variable = { name = news_masthead_id value = 4 }
+	}
+	if = {
+		limit = { this = c:USA }
+		set_variable = { name = news_masthead_id value = 5 }
+	}
+	if = {
+		limit = { this = c:ITA }
+		set_variable = { name = news_masthead_id value = 6 }
+	}
+	if = {
+		limit = { this = c:JPN }
+		set_variable = { name = news_masthead_id value = 7 }
+	}
+	if = {
+		limit = { this = c:RUS }
+		set_variable = { name = news_masthead_id value = 8 }
+	}
+	if = {
+		limit = { this = c:OST }
+		set_variable = { name = news_masthead_id value = 9 }
+	}
+	if = {
+		limit = { this = c:TRK }
+		set_variable = { name = news_masthead_id value = 10 }
+	}
+	if = {
+		limit = { this = c:POL }
+		set_variable = { name = news_masthead_id value = 11 }
+	}
+	if = {
+		limit = { this = c:BRZ }
+		set_variable = { name = news_masthead_id value = 12 }
+	}
+	if = {
+		limit = { this = c:MEX }
+		set_variable = { name = news_masthead_id value = 13 }
+	}
+	if = {
+		limit = { this = c:SPA }
+		set_variable = { name = news_masthead_id value = 14 }
+	}
+	if = {
+		limit = { this = c:CAN }
+		set_variable = { name = news_masthead_id value = 15 }
+	}
+	if = {
+		limit = { this = c:ROM }
+		set_variable = { name = news_masthead_id value = 16 }
+	}
+	if = {
+		limit = { this = c:BUL }
+		set_variable = { name = news_masthead_id value = 17 }
+	}
+	if = {
+		limit = { this = c:XAR }
+		set_variable = { name = news_masthead_id value = 18 }
+	}
+	if = {
+		limit = { this = c:HND }
+		set_variable = { name = news_masthead_id value = 19 }
+	}
+	if = {
+		limit = { this = c:XPO }
+		set_variable = { name = news_masthead_id value = 20 }
+	}
+	if = {
+		limit = { OR = { this = c:GRE this = c:GRK } }
+		set_variable = { name = news_masthead_id value = 21 }
+	}
+	if = {
+		limit = { this = c:IRE }
+		set_variable = { name = news_masthead_id value = 22 }
+	}
+	if = {
+		limit = { OR = { this = c:CHL this = c:XCH } }
+		set_variable = { name = news_masthead_id value = 23 }
+	}
+	if = {
+		limit = { this = c:CLM }
+		set_variable = { name = news_masthead_id value = 24 }
+	}
+	if = {
+		limit = { this = c:BOL }
+		set_variable = { name = news_masthead_id value = 25 }
+	}
+	if = {
+		limit = { this = c:VNZ }
+		set_variable = { name = news_masthead_id value = 26 }
+	}
+	if = {
+		limit = { this = c:SWS }
+		set_variable = { name = news_masthead_id value = 27 }
+	}
+	if = {
+		limit = { OR = { this = c:CZH this = c:CZC } }
+		set_variable = { name = news_masthead_id value = 28 }
+	}
+	if = {
+		limit = { this = c:XPR }
+		set_variable = { name = news_masthead_id value = 29 }
+	}
+	if = {
+		limit = { this = c:XUR }
+		set_variable = { name = news_masthead_id value = 30 }
+	}
+	if = {
+		limit = { this = c:XEC }
+		set_variable = { name = news_masthead_id value = 31 }
+	}
+	if = {
+		limit = { this = c:COS }
+		set_variable = { name = news_masthead_id value = 32 }
+	}
+	if = {
+		limit = { this = c:ELS }
+		set_variable = { name = news_masthead_id value = 33 }
+	}
+	if = {
+		limit = { this = c:GUT }
+		set_variable = { name = news_masthead_id value = 34 }
+	}
+	if = {
+		limit = { this = c:HON }
+		set_variable = { name = news_masthead_id value = 35 }
+	}
+	if = {
+		limit = { this = c:NIC }
+		set_variable = { name = news_masthead_id value = 36 }
+	}
+	if = {
+		limit = { this = c:PNM }
+		set_variable = { name = news_masthead_id value = 37 }
+	}
+	if = {
+		limit = { OR = { this = c:PRC this = c:ROC } }
+		set_variable = { name = news_masthead_id value = 38 }
+	}
+	if = {
+		limit = { this = c:PEU }
+		set_variable = { name = news_masthead_id value = 39 }
+	}
+	# Ideological masthead variants
+	if = {
+		limit = { var:news_masthead_id > 0 }
+
+		# China
+		if = {
+			limit = {
+				OR = { this = c:PRC this = c:ROC }
+				OR = {
+					AND = {
+						coa_republic_trigger = yes
+						NOR = {
+							coa_communist_trigger = yes
+							coa_fascist_trigger = yes
+							coa_dictatorship_trigger = yes
+							coa_oligarchy_trigger = yes
+							coa_corporate_state_trigger = yes
+						}
+					}
+					AND = {
+						is_subject = yes
+						top_overlord ?= {
+							coa_republic_trigger = yes
+							NOR = {
+								coa_communist_trigger = yes
+								coa_fascist_trigger = yes
+								coa_dictatorship_trigger = yes
+								coa_oligarchy_trigger = yes
+								coa_corporate_state_trigger = yes
+							}
+						}
+					}
+				}
+			}
+			# Keep base CHI ID 38 = democratic masthead.
+		}
+		else_if = {
+			limit = { coa_communist_trigger = yes }
+			change_variable = { name = news_masthead_id add = 100 }
+		}
+		else_if = {
+			limit = { coa_fascist_trigger = yes }
+			change_variable = { name = news_masthead_id add = 200 }
+		}
+
+		# her majesty's most illustrious institution
+		else_if = {
+			limit = {
+				this = c:GBR
+				OR = {
+					has_government_type = gov_hm_gov
+					has_government_type = gov_hm_gov_empire
+				}
+				NOT = { has_law_or_variant = law_type:law_autocracy }
+			}
+			# Keep base GBR id 1 -> ENG_header.dds.
+		}
+		else_if = {
+			limit = {
+				OR = {
+					coa_monarchy_trigger = yes
+					coa_theocracy_trigger = yes
+					coa_dictatorship_trigger = yes
+					coa_oligarchy_trigger = yes
+					coa_military_trigger = yes
+				}
+			}
+			change_variable = { name = news_masthead_id add = 300 }
+		}
+	}
+	else = {
+		if = {
+			limit = { coa_communist_trigger = yes }
+			set_variable = { name = news_masthead_id value = 1000 }
+		}
+		else_if = {
+			limit = { coa_fascist_trigger = yes }
+			set_variable = { name = news_masthead_id value = 2000 }
+		}
+	}
+
+}

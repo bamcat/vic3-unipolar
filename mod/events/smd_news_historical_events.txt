@@ -1,0 +1,2119 @@
+﻿namespace = smd_news_hist
+
+smd_news_hist.1 = {
+	type = country_event
+	placement = scope:news_event_state
+
+	title = smd_news_hist.1.t
+	desc = smd_news_hist.1.d
+	flavor = smd_news_hist.1.f
+
+	duration = 3
+	gui_window = news_event_window
+
+	event_image = { video = "parliament" }
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+	icon = "gfx/interface/icons/event_icons/newspaper_icon.dds"
+
+	trigger = { is_player = yes news_no_eur_subject = yes NOT = { has_variable = smd_news_hist_open_1 } }
+
+	immediate = {
+		set_variable = { name = smd_news_hist_open_1 days = 90 }
+		set_global_variable = smd_news_hist_1_seen
+		news_set_masthead_id = yes
+		if = { limit = { exists = scope:news_event_state } set_variable = { name = smd_news_hist_1_news_event_state_ref value = scope:news_event_state months = 4 } }
+		var:smd_news_hist_1_news_event_state_ref ?= { save_scope_as = news_error_log_silencer }
+		if = { limit = { exists = scope:news_source_country } set_variable = { name = smd_news_hist_1_news_source_country_ref value = scope:news_source_country months = 4 } }
+		var:smd_news_hist_1_news_source_country_ref ?= { save_scope_as = news_error_log_silencer }
+	}
+
+	option = {
+		remove_variable = smd_news_hist_open_1
+		name = smd_news_hist.1.a
+		default_option = yes
+	}
+}
+
+smd_news_hist.2 = {
+	type = country_event
+	placement = scope:news_event_state
+
+	title = smd_news_hist.2.t
+	desc = smd_news_hist.2.d
+	flavor = smd_news_hist.2.f
+
+	duration = 3
+	gui_window = news_event_window
+
+	event_image = { video = "africa_soldiers_breaking_protest" }
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+	icon = "gfx/interface/icons/event_icons/newspaper_icon.dds"
+
+	trigger = { is_player = yes news_no_eur_subject = yes NOT = { has_variable = smd_news_hist_open_2 } }
+
+	immediate = {
+		set_variable = { name = smd_news_hist_open_2 days = 90 }
+		set_global_variable = smd_news_hist_2_seen
+		news_set_masthead_id = yes
+		if = { limit = { exists = scope:news_event_state } set_variable = { name = smd_news_hist_2_news_event_state_ref value = scope:news_event_state months = 4 } }
+		var:smd_news_hist_2_news_event_state_ref ?= { save_scope_as = news_error_log_silencer }
+		if = { limit = { exists = scope:news_source_country } set_variable = { name = smd_news_hist_2_news_source_country_ref value = scope:news_source_country months = 4 } }
+		var:smd_news_hist_2_news_source_country_ref ?= { save_scope_as = news_error_log_silencer }
+	}
+
+	option = {
+		remove_variable = smd_news_hist_open_2
+		name = smd_news_hist.2.a
+		default_option = yes
+	}
+}
+
+smd_news_hist.3 = {
+	type = country_event
+	placement = scope:news_event_state
+
+	title = smd_news_hist.3.t
+	desc = smd_news_hist.3.d
+	flavor = smd_news_hist.3.f
+
+	duration = 3
+	gui_window = news_event_window
+
+	event_image = { video = "yugoslav_war" }
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+	icon = "gfx/interface/icons/event_icons/newspaper_icon.dds"
+
+	trigger = { is_player = yes news_no_eur_subject = yes NOT = { has_variable = smd_news_hist_open_3 } }
+
+	immediate = {
+		set_variable = { name = smd_news_hist_open_3 days = 90 }
+		set_global_variable = smd_news_hist_3_seen
+		news_set_masthead_id = yes
+		if = { limit = { exists = scope:news_event_state } set_variable = { name = smd_news_hist_3_news_event_state_ref value = scope:news_event_state months = 4 } }
+		var:smd_news_hist_3_news_event_state_ref ?= { save_scope_as = news_error_log_silencer }
+		if = { limit = { exists = scope:news_source_country } set_variable = { name = smd_news_hist_3_news_source_country_ref value = scope:news_source_country months = 4 } }
+		var:smd_news_hist_3_news_source_country_ref ?= { save_scope_as = news_error_log_silencer }
+	}
+
+	option = {
+		remove_variable = smd_news_hist_open_3
+		name = smd_news_hist.3.a
+		default_option = yes
+	}
+}
+
+smd_news_hist.4 = {
+	type = country_event
+	placement = scope:news_event_state
+
+	title = smd_news_hist.4.t
+	desc = smd_news_hist.4.d
+	flavor = smd_news_hist.4.f
+
+	duration = 3
+	gui_window = news_event_window
+
+	event_image = { video = "greatfloodof1993" }
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+	icon = "gfx/interface/icons/event_icons/newspaper_icon.dds"
+
+	trigger = { is_player = yes news_no_eur_subject = yes NOT = { has_variable = smd_news_hist_open_4 } }
+
+	immediate = {
+		set_variable = { name = smd_news_hist_open_4 days = 90 }
+		set_global_variable = smd_news_hist_4_seen
+		news_set_masthead_id = yes
+		if = { limit = { exists = scope:news_event_state } set_variable = { name = smd_news_hist_4_news_event_state_ref value = scope:news_event_state months = 4 } }
+		var:smd_news_hist_4_news_event_state_ref ?= { save_scope_as = news_error_log_silencer }
+		if = { limit = { exists = scope:news_source_country } set_variable = { name = smd_news_hist_4_news_source_country_ref value = scope:news_source_country months = 4 } }
+		var:smd_news_hist_4_news_source_country_ref ?= { save_scope_as = news_error_log_silencer }
+	}
+
+	option = {
+		remove_variable = smd_news_hist_open_4
+		name = smd_news_hist.4.a
+		default_option = yes
+	}
+}
+
+smd_news_hist.5 = {
+	type = country_event
+	placement = scope:news_event_state
+
+	title = smd_news_hist.5.t
+	desc = smd_news_hist.5.d
+	flavor = smd_news_hist.5.f
+
+	duration = 3
+	gui_window = news_event_window
+
+	event_image = { video = "opposition_speaker" }
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+	icon = "gfx/interface/icons/event_icons/newspaper_icon.dds"
+
+	trigger = { is_player = yes news_no_eur_subject = yes NOT = { has_variable = smd_news_hist_open_5 } }
+
+	immediate = {
+		set_variable = { name = smd_news_hist_open_5 days = 90 }
+		set_global_variable = smd_news_hist_5_seen
+		news_set_masthead_id = yes
+		if = { limit = { exists = scope:news_event_state } set_variable = { name = smd_news_hist_5_news_event_state_ref value = scope:news_event_state months = 4 } }
+		var:smd_news_hist_5_news_event_state_ref ?= { save_scope_as = news_error_log_silencer }
+		if = { limit = { exists = scope:news_source_country } set_variable = { name = smd_news_hist_5_news_source_country_ref value = scope:news_source_country months = 4 } }
+		var:smd_news_hist_5_news_source_country_ref ?= { save_scope_as = news_error_log_silencer }
+		if = { limit = { exists = scope:news_other_country } set_variable = { name = smd_news_hist_5_news_other_country_ref value = scope:news_other_country months = 4 } }
+		var:smd_news_hist_5_news_other_country_ref ?= { save_scope_as = news_error_log_silencer }
+	}
+
+	option = {
+		remove_variable = smd_news_hist_open_5
+		name = smd_news_hist.5.a
+		default_option = yes
+	}
+}
+
+smd_news_hist.6 = {
+	type = country_event
+	placement = scope:news_event_state
+
+	title = smd_news_hist.6.t
+	desc = smd_news_hist.6.d
+	flavor = smd_news_hist.6.f
+
+	duration = 3
+	gui_window = news_event_window
+
+	event_image = { video = "unspecific_world_fair" }
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+	icon = "gfx/interface/icons/event_icons/newspaper_icon.dds"
+
+	trigger = { is_player = yes news_no_eur_subject = yes NOT = { has_variable = smd_news_hist_open_6 } }
+
+	immediate = {
+		set_variable = { name = smd_news_hist_open_6 days = 90 }
+		set_global_variable = smd_news_hist_6_seen
+		news_set_masthead_id = yes
+		if = { limit = { exists = scope:news_event_state } set_variable = { name = smd_news_hist_6_news_event_state_ref value = scope:news_event_state months = 4 } }
+		var:smd_news_hist_6_news_event_state_ref ?= { save_scope_as = news_error_log_silencer }
+		if = { limit = { exists = scope:news_source_country } set_variable = { name = smd_news_hist_6_news_source_country_ref value = scope:news_source_country months = 4 } }
+		var:smd_news_hist_6_news_source_country_ref ?= { save_scope_as = news_error_log_silencer }
+	}
+
+	option = {
+		remove_variable = smd_news_hist_open_6
+		name = smd_news_hist.6.a
+		default_option = yes
+	}
+}
+
+smd_news_hist.7 = {
+	type = country_event
+	placement = scope:news_event_state
+
+	title = smd_news_hist.7.t
+	desc = smd_news_hist.7.d
+	flavor = smd_news_hist.7.f
+
+	duration = 3
+	gui_window = news_event_window
+
+	event_image = { video = "ip4_bomb_throwing_anarchist" }
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+	icon = "gfx/interface/icons/event_icons/newspaper_icon.dds"
+
+	trigger = { is_player = yes news_no_eur_subject = yes NOT = { has_variable = smd_news_hist_open_7 } }
+
+	immediate = {
+		set_variable = { name = smd_news_hist_open_7 days = 90 }
+		set_global_variable = smd_news_hist_7_seen
+		news_set_masthead_id = yes
+		if = { limit = { exists = scope:news_event_state } set_variable = { name = smd_news_hist_7_news_event_state_ref value = scope:news_event_state months = 4 } }
+		var:smd_news_hist_7_news_event_state_ref ?= { save_scope_as = news_error_log_silencer }
+		if = { limit = { exists = scope:news_source_country } set_variable = { name = smd_news_hist_7_news_source_country_ref value = scope:news_source_country months = 4 } }
+		var:smd_news_hist_7_news_source_country_ref ?= { save_scope_as = news_error_log_silencer }
+	}
+
+	option = {
+		remove_variable = smd_news_hist_open_7
+		name = smd_news_hist.7.a
+		default_option = yes
+	}
+}
+
+smd_news_hist.8 = {
+	type = country_event
+	placement = scope:news_event_state
+
+	title = smd_news_hist.8.t
+	desc = smd_news_hist.8.d
+	flavor = smd_news_hist.8.f
+
+	duration = 3
+	gui_window = news_event_window
+
+	event_image = { video = "votp_hostile_court" }
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+	icon = "gfx/interface/icons/event_icons/newspaper_icon.dds"
+
+	trigger = { is_player = yes news_no_eur_subject = yes NOT = { has_variable = smd_news_hist_open_8 } }
+
+	immediate = {
+		set_variable = { name = smd_news_hist_open_8 days = 90 }
+		set_global_variable = smd_news_hist_8_seen
+		news_set_masthead_id = yes
+		if = { limit = { exists = scope:news_event_state } set_variable = { name = smd_news_hist_8_news_event_state_ref value = scope:news_event_state months = 4 } }
+		var:smd_news_hist_8_news_event_state_ref ?= { save_scope_as = news_error_log_silencer }
+		if = { limit = { exists = scope:news_source_country } set_variable = { name = smd_news_hist_8_news_source_country_ref value = scope:news_source_country months = 4 } }
+		var:smd_news_hist_8_news_source_country_ref ?= { save_scope_as = news_error_log_silencer }
+	}
+
+	option = {
+		remove_variable = smd_news_hist_open_8
+		name = smd_news_hist.8.a
+		default_option = yes
+	}
+}
+
+smd_news_hist.9 = {
+	type = country_event
+	placement = scope:news_event_state
+
+	title = smd_news_hist.9.t
+	desc = smd_news_hist.9.d
+	flavor = smd_news_hist.9.f
+
+	duration = 3
+	gui_window = news_event_window
+
+	event_image = { video = "greatfloodof1993" }
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+	icon = "gfx/interface/icons/event_icons/newspaper_icon.dds"
+
+	trigger = { is_player = yes news_no_eur_subject = yes NOT = { has_variable = smd_news_hist_open_9 } }
+
+	immediate = {
+		set_variable = { name = smd_news_hist_open_9 days = 90 }
+		set_global_variable = smd_news_hist_9_seen
+		news_set_masthead_id = yes
+		if = { limit = { exists = scope:news_event_state } set_variable = { name = smd_news_hist_9_news_event_state_ref value = scope:news_event_state months = 4 } }
+		var:smd_news_hist_9_news_event_state_ref ?= { save_scope_as = news_error_log_silencer }
+		if = { limit = { exists = scope:news_source_country } set_variable = { name = smd_news_hist_9_news_source_country_ref value = scope:news_source_country months = 4 } }
+		var:smd_news_hist_9_news_source_country_ref ?= { save_scope_as = news_error_log_silencer }
+	}
+
+	option = {
+		remove_variable = smd_news_hist_open_9
+		name = smd_news_hist.9.a
+		default_option = yes
+	}
+}
+
+smd_news_hist.10 = {
+	type = country_event
+	placement = scope:news_event_state
+
+	title = smd_news_hist.10.t
+	desc = smd_news_hist.10.d
+	flavor = smd_news_hist.10.f
+
+	duration = 3
+	gui_window = news_event_window
+
+	event_image = { video = "stormingofwhitehouse" }
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+	icon = "gfx/interface/icons/event_icons/newspaper_icon.dds"
+
+	trigger = { is_player = yes news_no_eur_subject = yes NOT = { has_variable = smd_news_hist_open_10 } }
+
+	immediate = {
+		set_variable = { name = smd_news_hist_open_10 days = 90 }
+		set_global_variable = smd_news_hist_10_seen
+		news_set_masthead_id = yes
+		if = { limit = { exists = scope:news_event_state } set_variable = { name = smd_news_hist_10_news_event_state_ref value = scope:news_event_state months = 4 } }
+		var:smd_news_hist_10_news_event_state_ref ?= { save_scope_as = news_error_log_silencer }
+		if = { limit = { exists = scope:news_source_country } set_variable = { name = smd_news_hist_10_news_source_country_ref value = scope:news_source_country months = 4 } }
+		var:smd_news_hist_10_news_source_country_ref ?= { save_scope_as = news_error_log_silencer }
+	}
+
+	option = {
+		remove_variable = smd_news_hist_open_10
+		name = smd_news_hist.10.a
+		default_option = yes
+	}
+}
+
+smd_news_hist.11 = {
+	type = country_event
+	placement = scope:news_event_state
+
+	title = smd_news_hist.11.t
+	desc = smd_news_hist.11.d
+	flavor = smd_news_hist.11.f
+
+	duration = 3
+	gui_window = news_event_window
+
+	event_image = { video = "ep1_power_blocs" }
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+	icon = "gfx/interface/icons/event_icons/newspaper_icon.dds"
+
+	trigger = { is_player = yes news_no_eur_subject = yes NOT = { has_variable = smd_news_hist_open_11 } }
+
+	immediate = {
+		set_variable = { name = smd_news_hist_open_11 days = 90 }
+		set_global_variable = smd_news_hist_11_seen
+		news_set_masthead_id = yes
+		if = { limit = { exists = scope:news_event_state } set_variable = { name = smd_news_hist_11_news_event_state_ref value = scope:news_event_state months = 4 } }
+		var:smd_news_hist_11_news_event_state_ref ?= { save_scope_as = news_error_log_silencer }
+	}
+
+	option = {
+		remove_variable = smd_news_hist_open_11
+		name = smd_news_hist.11.a
+		default_option = yes
+	}
+}
+
+smd_news_hist.12 = {
+	type = country_event
+	placement = scope:news_event_state
+
+	title = smd_news_hist.12.t
+	desc = smd_news_hist.12.d
+	flavor = smd_news_hist.12.f
+
+	duration = 3
+	gui_window = news_event_window
+
+	event_image = { video = "africa_diplomats_negotiating" }
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+	icon = "gfx/interface/icons/event_icons/newspaper_icon.dds"
+
+	trigger = { is_player = yes news_no_eur_subject = yes NOT = { has_variable = smd_news_hist_open_12 } }
+
+	immediate = {
+		set_variable = { name = smd_news_hist_open_12 days = 90 }
+		set_global_variable = smd_news_hist_12_seen
+		news_set_masthead_id = yes
+		if = { limit = { exists = scope:news_event_state } set_variable = { name = smd_news_hist_12_news_event_state_ref value = scope:news_event_state months = 4 } }
+		var:smd_news_hist_12_news_event_state_ref ?= { save_scope_as = news_error_log_silencer }
+		if = { limit = { exists = scope:news_source_country } set_variable = { name = smd_news_hist_12_news_source_country_ref value = scope:news_source_country months = 4 } }
+		var:smd_news_hist_12_news_source_country_ref ?= { save_scope_as = news_error_log_silencer }
+		if = { limit = { exists = scope:news_other_country } set_variable = { name = smd_news_hist_12_news_other_country_ref value = scope:news_other_country months = 4 } }
+		var:smd_news_hist_12_news_other_country_ref ?= { save_scope_as = news_error_log_silencer }
+	}
+
+	option = {
+		remove_variable = smd_news_hist_open_12
+		name = smd_news_hist.12.a
+		default_option = yes
+	}
+}
+
+smd_news_hist.13 = {
+	type = country_event
+	placement = scope:news_event_state
+
+	title = smd_news_hist.13.t
+	desc = smd_news_hist.13.d
+	flavor = smd_news_hist.13.f
+
+	duration = 3
+	gui_window = news_event_window
+
+	event_image = { video = "parliament" }
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+	icon = "gfx/interface/icons/event_icons/newspaper_icon.dds"
+
+	trigger = { is_player = yes news_no_eur_subject = yes NOT = { has_variable = smd_news_hist_open_13 } }
+
+	immediate = {
+		set_variable = { name = smd_news_hist_open_13 days = 90 }
+		set_global_variable = smd_news_hist_13_seen
+		news_set_masthead_id = yes
+		if = { limit = { exists = scope:news_event_state } set_variable = { name = smd_news_hist_13_news_event_state_ref value = scope:news_event_state months = 4 } }
+		var:smd_news_hist_13_news_event_state_ref ?= { save_scope_as = news_error_log_silencer }
+		if = { limit = { exists = scope:news_source_country } set_variable = { name = smd_news_hist_13_news_source_country_ref value = scope:news_source_country months = 4 } }
+		var:smd_news_hist_13_news_source_country_ref ?= { save_scope_as = news_error_log_silencer }
+		if = { limit = { exists = scope:news_other_country } set_variable = { name = smd_news_hist_13_news_other_country_ref value = scope:news_other_country months = 4 } }
+		var:smd_news_hist_13_news_other_country_ref ?= { save_scope_as = news_error_log_silencer }
+	}
+
+	option = {
+		remove_variable = smd_news_hist_open_13
+		name = smd_news_hist.13.a
+		default_option = yes
+	}
+}
+
+smd_news_hist.14 = {
+	type = country_event
+	placement = scope:news_event_state
+
+	title = smd_news_hist.14.t
+	desc = smd_news_hist.14.d
+	flavor = smd_news_hist.14.f
+
+	duration = 3
+	gui_window = news_event_window
+
+	event_image = { video = "burnt_building" }
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+	icon = "gfx/interface/icons/event_icons/newspaper_icon.dds"
+
+	trigger = { is_player = yes news_no_eur_subject = yes NOT = { has_variable = smd_news_hist_open_14 } }
+
+	immediate = {
+		set_variable = { name = smd_news_hist_open_14 days = 90 }
+		set_global_variable = smd_news_hist_14_seen
+		news_set_masthead_id = yes
+		if = { limit = { exists = scope:news_event_state } set_variable = { name = smd_news_hist_14_news_event_state_ref value = scope:news_event_state months = 4 } }
+		var:smd_news_hist_14_news_event_state_ref ?= { save_scope_as = news_error_log_silencer }
+		if = { limit = { exists = scope:news_source_country } set_variable = { name = smd_news_hist_14_news_source_country_ref value = scope:news_source_country months = 4 } }
+		var:smd_news_hist_14_news_source_country_ref ?= { save_scope_as = news_error_log_silencer }
+	}
+
+	option = {
+		remove_variable = smd_news_hist_open_14
+		name = smd_news_hist.14.a
+		default_option = yes
+	}
+}
+
+smd_news_hist.15 = {
+	type = country_event
+	placement = scope:news_event_state
+
+	title = smd_news_hist.15.t
+	desc = smd_news_hist.15.d
+	flavor = smd_news_hist.15.f
+
+	duration = 3
+	gui_window = news_event_window
+
+	event_image = { video = "ip3_angry_mob_raiding_minorities" }
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+	icon = "gfx/interface/icons/event_icons/newspaper_icon.dds"
+
+	trigger = { is_player = yes news_no_eur_subject = yes NOT = { has_variable = smd_news_hist_open_15 } }
+
+	immediate = {
+		set_variable = { name = smd_news_hist_open_15 days = 90 }
+		set_global_variable = smd_news_hist_15_seen
+		news_set_masthead_id = yes
+		if = { limit = { exists = scope:news_event_state } set_variable = { name = smd_news_hist_15_news_event_state_ref value = scope:news_event_state months = 4 } }
+		var:smd_news_hist_15_news_event_state_ref ?= { save_scope_as = news_error_log_silencer }
+		if = { limit = { exists = scope:news_source_country } set_variable = { name = smd_news_hist_15_news_source_country_ref value = scope:news_source_country months = 4 } }
+		var:smd_news_hist_15_news_source_country_ref ?= { save_scope_as = news_error_log_silencer }
+	}
+
+	option = {
+		remove_variable = smd_news_hist_open_15
+		name = smd_news_hist.15.a
+		default_option = yes
+	}
+}
+
+smd_news_hist.16 = {
+	type = country_event
+	placement = scope:news_event_state
+
+	title = smd_news_hist.16.t
+	desc = smd_news_hist.16.d
+	flavor = smd_news_hist.16.f
+
+	duration = 3
+	gui_window = news_event_window
+
+	event_image = { video = "yugoslav_war" }
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+	icon = "gfx/interface/icons/event_icons/newspaper_icon.dds"
+
+	trigger = { is_player = yes news_no_eur_subject = yes NOT = { has_variable = smd_news_hist_open_16 } }
+
+	immediate = {
+		set_variable = { name = smd_news_hist_open_16 days = 90 }
+		set_global_variable = smd_news_hist_16_seen
+		news_set_masthead_id = yes
+		if = { limit = { exists = scope:news_event_state } set_variable = { name = smd_news_hist_16_news_event_state_ref value = scope:news_event_state months = 4 } }
+		var:smd_news_hist_16_news_event_state_ref ?= { save_scope_as = news_error_log_silencer }
+		if = { limit = { exists = scope:news_source_country } set_variable = { name = smd_news_hist_16_news_source_country_ref value = scope:news_source_country months = 4 } }
+		var:smd_news_hist_16_news_source_country_ref ?= { save_scope_as = news_error_log_silencer }
+	}
+
+	option = {
+		remove_variable = smd_news_hist_open_16
+		name = smd_news_hist.16.a
+		default_option = yes
+	}
+}
+
+smd_news_hist.17 = {
+	type = country_event
+	placement = scope:news_event_state
+
+	title = smd_news_hist.17.t
+	desc = smd_news_hist.17.d
+	flavor = smd_news_hist.17.f
+
+	duration = 3
+	gui_window = news_event_window
+
+	event_image = { video = "africa_diplomats_negotiating" }
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+	icon = "gfx/interface/icons/event_icons/newspaper_icon.dds"
+
+	trigger = { is_player = yes news_no_eur_subject = yes NOT = { has_variable = smd_news_hist_open_17 } }
+
+	immediate = {
+		set_variable = { name = smd_news_hist_open_17 days = 90 }
+		set_global_variable = smd_news_hist_17_seen
+		news_set_masthead_id = yes
+		if = { limit = { exists = scope:news_event_state } set_variable = { name = smd_news_hist_17_news_event_state_ref value = scope:news_event_state months = 4 } }
+		var:smd_news_hist_17_news_event_state_ref ?= { save_scope_as = news_error_log_silencer }
+		if = { limit = { exists = scope:news_source_country } set_variable = { name = smd_news_hist_17_news_source_country_ref value = scope:news_source_country months = 4 } }
+		var:smd_news_hist_17_news_source_country_ref ?= { save_scope_as = news_error_log_silencer }
+	}
+
+	option = {
+		remove_variable = smd_news_hist_open_17
+		name = smd_news_hist.17.a
+		default_option = yes
+	}
+}
+
+smd_news_hist.18 = {
+	type = country_event
+	placement = scope:news_event_state
+
+	title = smd_news_hist.18.t
+	desc = smd_news_hist.18.d
+	flavor = smd_news_hist.18.f
+
+	duration = 3
+	gui_window = news_event_window
+
+	event_image = { video = "helicopter" }
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+	icon = "gfx/interface/icons/event_icons/newspaper_icon.dds"
+
+	trigger = { is_player = yes news_no_eur_subject = yes NOT = { has_variable = smd_news_hist_open_18 } }
+
+	immediate = {
+		set_variable = { name = smd_news_hist_open_18 days = 90 }
+		set_global_variable = smd_news_hist_18_seen
+		news_set_masthead_id = yes
+		if = { limit = { exists = scope:news_event_state } set_variable = { name = smd_news_hist_18_news_event_state_ref value = scope:news_event_state months = 4 } }
+		var:smd_news_hist_18_news_event_state_ref ?= { save_scope_as = news_error_log_silencer }
+		if = { limit = { exists = scope:news_source_country } set_variable = { name = smd_news_hist_18_news_source_country_ref value = scope:news_source_country months = 4 } }
+		var:smd_news_hist_18_news_source_country_ref ?= { save_scope_as = news_error_log_silencer }
+		if = { limit = { exists = scope:news_other_country } set_variable = { name = smd_news_hist_18_news_other_country_ref value = scope:news_other_country months = 4 } }
+		var:smd_news_hist_18_news_other_country_ref ?= { save_scope_as = news_error_log_silencer }
+	}
+
+	option = {
+		remove_variable = smd_news_hist_open_18
+		name = smd_news_hist.18.a
+		default_option = yes
+	}
+}
+
+smd_news_hist.19 = {
+	type = country_event
+	placement = scope:news_event_state
+
+	title = smd_news_hist.19.t
+	desc = smd_news_hist.19.d
+	flavor = smd_news_hist.19.f
+
+	duration = 3
+	gui_window = news_event_window
+
+	event_image = { video = "bodycam" }
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+	icon = "gfx/interface/icons/event_icons/newspaper_icon.dds"
+
+	trigger = { is_player = yes news_no_eur_subject = yes NOT = { has_variable = smd_news_hist_open_19 } }
+
+	immediate = {
+		set_variable = { name = smd_news_hist_open_19 days = 90 }
+		set_global_variable = smd_news_hist_19_seen
+		news_set_masthead_id = yes
+		if = { limit = { exists = scope:news_event_state } set_variable = { name = smd_news_hist_19_news_event_state_ref value = scope:news_event_state months = 4 } }
+		var:smd_news_hist_19_news_event_state_ref ?= { save_scope_as = news_error_log_silencer }
+		if = { limit = { exists = scope:news_source_country } set_variable = { name = smd_news_hist_19_news_source_country_ref value = scope:news_source_country months = 4 } }
+		var:smd_news_hist_19_news_source_country_ref ?= { save_scope_as = news_error_log_silencer }
+	}
+
+	option = {
+		remove_variable = smd_news_hist_open_19
+		name = smd_news_hist.19.a
+		default_option = yes
+	}
+}
+
+smd_news_hist.20 = {
+	type = country_event
+	placement = scope:news_event_state
+
+	title = smd_news_hist.20.t
+	desc = smd_news_hist.20.d
+	flavor = smd_news_hist.20.f
+
+	duration = 3
+	gui_window = news_event_window
+
+	event_image = { video = "yugoslav_war" }
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+	icon = "gfx/interface/icons/event_icons/newspaper_icon.dds"
+
+	trigger = { is_player = yes news_no_eur_subject = yes NOT = { has_variable = smd_news_hist_open_20 } }
+
+	immediate = {
+		set_variable = { name = smd_news_hist_open_20 days = 90 }
+		set_global_variable = smd_news_hist_20_seen
+		news_set_masthead_id = yes
+		if = { limit = { exists = scope:news_event_state } set_variable = { name = smd_news_hist_20_news_event_state_ref value = scope:news_event_state months = 4 } }
+		var:smd_news_hist_20_news_event_state_ref ?= { save_scope_as = news_error_log_silencer }
+		if = { limit = { exists = scope:news_source_country } set_variable = { name = smd_news_hist_20_news_source_country_ref value = scope:news_source_country months = 4 } }
+		var:smd_news_hist_20_news_source_country_ref ?= { save_scope_as = news_error_log_silencer }
+	}
+
+	option = {
+		remove_variable = smd_news_hist_open_20
+		name = smd_news_hist.20.a
+		default_option = yes
+	}
+}
+
+smd_news_hist.21 = {
+	type = country_event
+	placement = scope:news_event_state
+
+	title = smd_news_hist.21.t
+	desc = smd_news_hist.21.d
+	flavor = smd_news_hist.21.f
+
+	duration = 3
+	gui_window = news_event_window
+
+	event_image = { video = "parliament" }
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+	icon = "gfx/interface/icons/event_icons/newspaper_icon.dds"
+
+	trigger = { is_player = yes news_no_eur_subject = yes NOT = { has_variable = smd_news_hist_open_21 } }
+
+	immediate = {
+		set_variable = { name = smd_news_hist_open_21 days = 90 }
+		set_global_variable = smd_news_hist_21_seen
+		news_set_masthead_id = yes
+		if = { limit = { exists = scope:news_event_state } set_variable = { name = smd_news_hist_21_news_event_state_ref value = scope:news_event_state months = 4 } }
+		var:smd_news_hist_21_news_event_state_ref ?= { save_scope_as = news_error_log_silencer }
+		if = { limit = { exists = scope:news_source_country } set_variable = { name = smd_news_hist_21_news_source_country_ref value = scope:news_source_country months = 4 } }
+		var:smd_news_hist_21_news_source_country_ref ?= { save_scope_as = news_error_log_silencer }
+	}
+
+	option = {
+		remove_variable = smd_news_hist_open_21
+		name = smd_news_hist.21.a
+		default_option = yes
+	}
+}
+
+smd_news_hist.22 = {
+	type = country_event
+	placement = scope:news_event_state
+
+	title = smd_news_hist.22.t
+	desc = smd_news_hist.22.d
+	flavor = smd_news_hist.22.f
+
+	duration = 3
+	gui_window = news_event_window
+
+	event_image = { video = "parliament" }
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+	icon = "gfx/interface/icons/event_icons/newspaper_icon.dds"
+
+	trigger = { is_player = yes news_no_eur_subject = yes NOT = { has_variable = smd_news_hist_open_22 } }
+
+	immediate = {
+		set_variable = { name = smd_news_hist_open_22 days = 90 }
+		set_global_variable = smd_news_hist_22_seen
+		news_set_masthead_id = yes
+		if = { limit = { exists = scope:news_event_state } set_variable = { name = smd_news_hist_22_news_event_state_ref value = scope:news_event_state months = 4 } }
+		var:smd_news_hist_22_news_event_state_ref ?= { save_scope_as = news_error_log_silencer }
+		if = { limit = { exists = scope:news_source_country } set_variable = { name = smd_news_hist_22_news_source_country_ref value = scope:news_source_country months = 4 } }
+		var:smd_news_hist_22_news_source_country_ref ?= { save_scope_as = news_error_log_silencer }
+		if = { limit = { exists = scope:news_other_country } set_variable = { name = smd_news_hist_22_news_other_country_ref value = scope:news_other_country months = 4 } }
+		var:smd_news_hist_22_news_other_country_ref ?= { save_scope_as = news_error_log_silencer }
+	}
+
+	option = {
+		remove_variable = smd_news_hist_open_22
+		name = smd_news_hist.22.a
+		default_option = yes
+	}
+}
+
+smd_news_hist.23 = {
+	type = country_event
+	placement = scope:news_event_state
+
+	title = smd_news_hist.23.t
+	desc = smd_news_hist.23.d
+	flavor = smd_news_hist.23.f
+
+	duration = 3
+	gui_window = news_event_window
+
+	event_image = { video = "africa_diplomats_negotiating" }
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+	icon = "gfx/interface/icons/event_icons/newspaper_icon.dds"
+
+	trigger = { is_player = yes news_no_eur_subject = yes NOT = { has_variable = smd_news_hist_open_23 } }
+
+	immediate = {
+		set_variable = { name = smd_news_hist_open_23 days = 90 }
+		set_global_variable = smd_news_hist_23_seen
+		news_set_masthead_id = yes
+		if = { limit = { exists = scope:news_event_state } set_variable = { name = smd_news_hist_23_news_event_state_ref value = scope:news_event_state months = 4 } }
+		var:smd_news_hist_23_news_event_state_ref ?= { save_scope_as = news_error_log_silencer }
+		if = { limit = { exists = scope:news_source_country } set_variable = { name = smd_news_hist_23_news_source_country_ref value = scope:news_source_country months = 4 } }
+		var:smd_news_hist_23_news_source_country_ref ?= { save_scope_as = news_error_log_silencer }
+		if = { limit = { exists = scope:news_other_country } set_variable = { name = smd_news_hist_23_news_other_country_ref value = scope:news_other_country months = 4 } }
+		var:smd_news_hist_23_news_other_country_ref ?= { save_scope_as = news_error_log_silencer }
+	}
+
+	option = {
+		remove_variable = smd_news_hist_open_23
+		name = smd_news_hist.23.a
+		default_option = yes
+	}
+}
+
+smd_news_hist.24 = {
+	type = country_event
+	placement = scope:news_event_state
+
+	title = smd_news_hist.24.t
+	desc = smd_news_hist.24.d
+	flavor = smd_news_hist.24.f
+
+	duration = 3
+	gui_window = news_event_window
+
+	event_image = { video = "columbine" }
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+	icon = "gfx/interface/icons/event_icons/newspaper_icon.dds"
+
+	trigger = { is_player = yes news_no_eur_subject = yes NOT = { has_variable = smd_news_hist_open_24 } }
+
+	immediate = {
+		set_variable = { name = smd_news_hist_open_24 days = 90 }
+		set_global_variable = smd_news_hist_24_seen
+		news_set_masthead_id = yes
+		if = { limit = { exists = scope:news_event_state } set_variable = { name = smd_news_hist_24_news_event_state_ref value = scope:news_event_state months = 4 } }
+		var:smd_news_hist_24_news_event_state_ref ?= { save_scope_as = news_error_log_silencer }
+		if = { limit = { exists = scope:news_source_country } set_variable = { name = smd_news_hist_24_news_source_country_ref value = scope:news_source_country months = 4 } }
+		var:smd_news_hist_24_news_source_country_ref ?= { save_scope_as = news_error_log_silencer }
+	}
+
+	option = {
+		remove_variable = smd_news_hist_open_24
+		name = smd_news_hist.24.a
+		default_option = yes
+	}
+}
+
+smd_news_hist.25 = {
+	type = country_event
+	placement = scope:news_event_state
+
+	title = smd_news_hist.25.t
+	desc = smd_news_hist.25.d
+	flavor = smd_news_hist.25.f
+
+	duration = 3
+	gui_window = news_event_window
+
+	event_image = { video = "unspecific_sick_in_hospital" }
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+	icon = "gfx/interface/icons/event_icons/newspaper_icon.dds"
+
+	trigger = { is_player = yes news_no_eur_subject = yes NOT = { has_variable = smd_news_hist_open_25 } }
+
+	immediate = {
+		set_variable = { name = smd_news_hist_open_25 days = 90 }
+		set_global_variable = smd_news_hist_25_seen
+		news_set_masthead_id = yes
+		if = { limit = { exists = scope:news_event_state } set_variable = { name = smd_news_hist_25_news_event_state_ref value = scope:news_event_state months = 4 } }
+		var:smd_news_hist_25_news_event_state_ref ?= { save_scope_as = news_error_log_silencer }
+		if = { limit = { exists = scope:news_source_country } set_variable = { name = smd_news_hist_25_news_source_country_ref value = scope:news_source_country months = 4 } }
+		var:smd_news_hist_25_news_source_country_ref ?= { save_scope_as = news_error_log_silencer }
+	}
+
+	option = {
+		remove_variable = smd_news_hist_open_25
+		name = smd_news_hist.25.a
+		default_option = yes
+	}
+}
+
+smd_news_hist.26 = {
+	type = country_event
+	placement = scope:news_event_state
+
+	title = smd_news_hist.26.t
+	desc = smd_news_hist.26.d
+	flavor = smd_news_hist.26.f
+
+	duration = 3
+	gui_window = news_event_window
+
+	event_image = { video = "africa_diplomats_negotiating" }
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+	icon = "gfx/interface/icons/event_icons/newspaper_icon.dds"
+
+	trigger = { is_player = yes news_no_eur_subject = yes NOT = { has_variable = smd_news_hist_open_26 } }
+
+	immediate = {
+		set_variable = { name = smd_news_hist_open_26 days = 90 }
+		set_global_variable = smd_news_hist_26_seen
+		news_set_masthead_id = yes
+		if = { limit = { exists = scope:news_event_state } set_variable = { name = smd_news_hist_26_news_event_state_ref value = scope:news_event_state months = 4 } }
+		var:smd_news_hist_26_news_event_state_ref ?= { save_scope_as = news_error_log_silencer }
+		if = { limit = { exists = scope:news_source_country } set_variable = { name = smd_news_hist_26_news_source_country_ref value = scope:news_source_country months = 4 } }
+		var:smd_news_hist_26_news_source_country_ref ?= { save_scope_as = news_error_log_silencer }
+	}
+
+	option = {
+		remove_variable = smd_news_hist_open_26
+		name = smd_news_hist.26.a
+		default_option = yes
+	}
+}
+
+smd_news_hist.27 = {
+	type = country_event
+	placement = scope:news_event_state
+
+	title = smd_news_hist.27.t
+	desc = smd_news_hist.27.d
+	flavor = smd_news_hist.27.f
+
+	duration = 3
+	gui_window = news_event_window
+
+	event_image = { video = "north_hollywood_shootout" }
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+	icon = "gfx/interface/icons/event_icons/newspaper_icon.dds"
+
+	trigger = { is_player = yes news_no_eur_subject = yes NOT = { has_variable = smd_news_hist_open_27 } }
+
+	immediate = {
+		set_variable = { name = smd_news_hist_open_27 days = 90 }
+		set_global_variable = smd_news_hist_27_seen
+		news_set_masthead_id = yes
+		if = { limit = { exists = scope:news_event_state } set_variable = { name = smd_news_hist_27_news_event_state_ref value = scope:news_event_state months = 4 } }
+		var:smd_news_hist_27_news_event_state_ref ?= { save_scope_as = news_error_log_silencer }
+		if = { limit = { exists = scope:news_source_country } set_variable = { name = smd_news_hist_27_news_source_country_ref value = scope:news_source_country months = 4 } }
+		var:smd_news_hist_27_news_source_country_ref ?= { save_scope_as = news_error_log_silencer }
+	}
+
+	option = {
+		remove_variable = smd_news_hist_open_27
+		name = smd_news_hist.27.a
+		default_option = yes
+	}
+}
+
+smd_news_hist.28 = {
+	type = country_event
+	placement = scope:news_event_state
+
+	title = smd_news_hist.28.t
+	desc = smd_news_hist.28.d
+	flavor = smd_news_hist.28.f
+
+	duration = 3
+	gui_window = news_event_window
+
+	event_image = { video = "unspecific_fire" }
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+	icon = "gfx/interface/icons/event_icons/newspaper_icon.dds"
+
+	trigger = { is_player = yes news_no_eur_subject = yes NOT = { has_variable = smd_news_hist_open_28 } }
+
+	immediate = {
+		set_variable = { name = smd_news_hist_open_28 days = 90 }
+		set_global_variable = smd_news_hist_28_seen
+		news_set_masthead_id = yes
+		if = { limit = { exists = scope:news_event_state } set_variable = { name = smd_news_hist_28_news_event_state_ref value = scope:news_event_state months = 4 } }
+		var:smd_news_hist_28_news_event_state_ref ?= { save_scope_as = news_error_log_silencer }
+		if = { limit = { exists = scope:news_source_country } set_variable = { name = smd_news_hist_28_news_source_country_ref value = scope:news_source_country months = 4 } }
+		var:smd_news_hist_28_news_source_country_ref ?= { save_scope_as = news_error_log_silencer }
+	}
+
+	option = {
+		remove_variable = smd_news_hist_open_28
+		name = smd_news_hist.28.a
+		default_option = yes
+	}
+}
+
+smd_news_hist.29 = {
+	type = country_event
+	placement = scope:news_event_state
+
+	title = smd_news_hist.29.t
+	desc = smd_news_hist.29.d
+	flavor = smd_news_hist.29.f
+
+	duration = 3
+	gui_window = news_event_window
+
+	event_image = { video = "unspecific_signed_contract" }
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+	icon = "gfx/interface/icons/event_icons/newspaper_icon.dds"
+
+	trigger = { is_player = yes news_no_eur_subject = yes NOT = { has_variable = smd_news_hist_open_29 } }
+
+	immediate = {
+		set_variable = { name = smd_news_hist_open_29 days = 90 }
+		set_global_variable = smd_news_hist_29_seen
+		news_set_masthead_id = yes
+		if = { limit = { exists = scope:news_event_state } set_variable = { name = smd_news_hist_29_news_event_state_ref value = scope:news_event_state months = 4 } }
+		var:smd_news_hist_29_news_event_state_ref ?= { save_scope_as = news_error_log_silencer }
+		if = { limit = { exists = scope:news_source_country } set_variable = { name = smd_news_hist_29_news_source_country_ref value = scope:news_source_country months = 4 } }
+		var:smd_news_hist_29_news_source_country_ref ?= { save_scope_as = news_error_log_silencer }
+		if = { limit = { exists = scope:news_other_country } set_variable = { name = smd_news_hist_29_news_other_country_ref value = scope:news_other_country months = 4 } }
+		var:smd_news_hist_29_news_other_country_ref ?= { save_scope_as = news_error_log_silencer }
+	}
+
+	option = {
+		remove_variable = smd_news_hist_open_29
+		name = smd_news_hist.29.a
+		default_option = yes
+	}
+}
+
+smd_news_hist.30 = {
+	type = country_event
+	placement = scope:news_event_state
+
+	title = smd_news_hist.30.t
+	desc = smd_news_hist.30.d
+	flavor = smd_news_hist.30.f
+
+	duration = 3
+	gui_window = news_event_window
+
+	event_image = { video = "unspecific_factory_closed" }
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+	icon = "gfx/interface/icons/event_icons/newspaper_icon.dds"
+
+	trigger = { is_player = yes news_no_eur_subject = yes NOT = { has_variable = smd_news_hist_open_30 } }
+
+	immediate = {
+		set_variable = { name = smd_news_hist_open_30 days = 90 }
+		set_global_variable = smd_news_hist_30_seen
+		news_set_masthead_id = yes
+		if = { limit = { exists = scope:news_event_state } set_variable = { name = smd_news_hist_30_news_event_state_ref value = scope:news_event_state months = 4 } }
+		var:smd_news_hist_30_news_event_state_ref ?= { save_scope_as = news_error_log_silencer }
+		if = { limit = { exists = scope:news_source_country } set_variable = { name = smd_news_hist_30_news_source_country_ref value = scope:news_source_country months = 4 } }
+		var:smd_news_hist_30_news_source_country_ref ?= { save_scope_as = news_error_log_silencer }
+	}
+
+	option = {
+		remove_variable = smd_news_hist_open_30
+		name = smd_news_hist.30.a
+		default_option = yes
+	}
+}
+
+smd_news_hist.31 = {
+	type = country_event
+	placement = scope:news_event_state
+
+	title = smd_news_hist.31.t
+	desc = smd_news_hist.31.d
+	flavor = smd_news_hist.31.f
+
+	duration = 3
+	gui_window = news_event_window
+
+	event_image = { video = "greatfloodof1993" }
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+	icon = "gfx/interface/icons/event_icons/newspaper_icon.dds"
+
+	trigger = { is_player = yes news_no_eur_subject = yes NOT = { has_variable = smd_news_hist_open_31 } }
+
+	immediate = {
+		set_variable = { name = smd_news_hist_open_31 days = 90 }
+		set_global_variable = smd_news_hist_31_seen
+		news_set_masthead_id = yes
+		if = { limit = { exists = scope:news_event_state } set_variable = { name = smd_news_hist_31_news_event_state_ref value = scope:news_event_state months = 4 } }
+		var:smd_news_hist_31_news_event_state_ref ?= { save_scope_as = news_error_log_silencer }
+		if = { limit = { exists = scope:news_source_country } set_variable = { name = smd_news_hist_31_news_source_country_ref value = scope:news_source_country months = 4 } }
+		var:smd_news_hist_31_news_source_country_ref ?= { save_scope_as = news_error_log_silencer }
+	}
+
+	option = {
+		remove_variable = smd_news_hist_open_31
+		name = smd_news_hist.31.a
+		default_option = yes
+	}
+}
+
+smd_news_hist.32 = {
+	type = country_event
+	placement = scope:news_event_state
+
+	title = smd_news_hist.32.t
+	desc = smd_news_hist.32.d
+	flavor = smd_news_hist.32.f
+
+	duration = 3
+	gui_window = news_event_window
+
+	event_image = { video = "yugoslav_war" }
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+	icon = "gfx/interface/icons/event_icons/newspaper_icon.dds"
+
+	trigger = { is_player = yes news_no_eur_subject = yes NOT = { has_variable = smd_news_hist_open_32 } }
+
+	immediate = {
+		set_variable = { name = smd_news_hist_open_32 days = 90 }
+		set_global_variable = smd_news_hist_32_seen
+		news_set_masthead_id = yes
+		if = { limit = { exists = scope:news_event_state } set_variable = { name = smd_news_hist_32_news_event_state_ref value = scope:news_event_state months = 4 } }
+		var:smd_news_hist_32_news_event_state_ref ?= { save_scope_as = news_error_log_silencer }
+		if = { limit = { exists = scope:news_source_country } set_variable = { name = smd_news_hist_32_news_source_country_ref value = scope:news_source_country months = 4 } }
+		var:smd_news_hist_32_news_source_country_ref ?= { save_scope_as = news_error_log_silencer }
+	}
+
+	option = {
+		remove_variable = smd_news_hist_open_32
+		name = smd_news_hist.32.a
+		default_option = yes
+	}
+}
+
+smd_news_hist.33 = {
+	type = country_event
+	placement = scope:news_event_state
+
+	title = smd_news_hist.33.t
+	desc = smd_news_hist.33.d
+	flavor = smd_news_hist.33.f
+
+	duration = 3
+	gui_window = news_event_window
+
+	event_image = { video = "fighterjets" }
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+	icon = "gfx/interface/icons/event_icons/newspaper_icon.dds"
+
+	trigger = { is_player = yes news_no_eur_subject = yes NOT = { has_variable = smd_news_hist_open_33 } }
+
+	immediate = {
+		set_variable = { name = smd_news_hist_open_33 days = 90 }
+		set_global_variable = smd_news_hist_33_seen
+		news_set_masthead_id = yes
+		if = { limit = { exists = scope:news_event_state } set_variable = { name = smd_news_hist_33_news_event_state_ref value = scope:news_event_state months = 4 } }
+		var:smd_news_hist_33_news_event_state_ref ?= { save_scope_as = news_error_log_silencer }
+		if = { limit = { exists = scope:news_source_country } set_variable = { name = smd_news_hist_33_news_source_country_ref value = scope:news_source_country months = 4 } }
+		var:smd_news_hist_33_news_source_country_ref ?= { save_scope_as = news_error_log_silencer }
+	}
+
+	option = {
+		remove_variable = smd_news_hist_open_33
+		name = smd_news_hist.33.a
+		default_option = yes
+	}
+}
+
+smd_news_hist.34 = {
+	type = country_event
+	placement = scope:news_event_state
+
+	title = smd_news_hist.34.t
+	desc = smd_news_hist.34.d
+	flavor = smd_news_hist.34.f
+
+	duration = 3
+	gui_window = news_event_window
+
+	event_image = { video = "columbine" }
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+	icon = "gfx/interface/icons/event_icons/newspaper_icon.dds"
+
+	trigger = { is_player = yes news_no_eur_subject = yes NOT = { has_variable = smd_news_hist_open_34 } }
+
+	immediate = {
+		set_variable = { name = smd_news_hist_open_34 days = 90 }
+		set_global_variable = smd_news_hist_34_seen
+		news_set_masthead_id = yes
+		if = { limit = { exists = scope:news_event_state } set_variable = { name = smd_news_hist_34_news_event_state_ref value = scope:news_event_state months = 4 } }
+		var:smd_news_hist_34_news_event_state_ref ?= { save_scope_as = news_error_log_silencer }
+		if = { limit = { exists = scope:news_source_country } set_variable = { name = smd_news_hist_34_news_source_country_ref value = scope:news_source_country months = 4 } }
+		var:smd_news_hist_34_news_source_country_ref ?= { save_scope_as = news_error_log_silencer }
+	}
+
+	option = {
+		remove_variable = smd_news_hist_open_34
+		name = smd_news_hist.34.a
+		default_option = yes
+	}
+}
+
+smd_news_hist.35 = {
+	type = country_event
+	placement = scope:news_event_state
+
+	title = smd_news_hist.35.t
+	desc = smd_news_hist.35.d
+	flavor = smd_news_hist.35.f
+
+	duration = 3
+	gui_window = news_event_window
+
+	event_image = { video = "bombed_city" }
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+	icon = "gfx/interface/icons/event_icons/newspaper_icon.dds"
+
+	trigger = { is_player = yes news_no_eur_subject = yes NOT = { has_variable = smd_news_hist_open_35 } }
+
+	immediate = {
+		set_variable = { name = smd_news_hist_open_35 days = 90 }
+		set_global_variable = smd_news_hist_35_seen
+		news_set_masthead_id = yes
+		if = { limit = { exists = scope:news_event_state } set_variable = { name = smd_news_hist_35_news_event_state_ref value = scope:news_event_state months = 4 } }
+		var:smd_news_hist_35_news_event_state_ref ?= { save_scope_as = news_error_log_silencer }
+		if = { limit = { exists = scope:news_source_country } set_variable = { name = smd_news_hist_35_news_source_country_ref value = scope:news_source_country months = 4 } }
+		var:smd_news_hist_35_news_source_country_ref ?= { save_scope_as = news_error_log_silencer }
+	}
+
+	option = {
+		remove_variable = smd_news_hist_open_35
+		name = smd_news_hist.35.a
+		default_option = yes
+	}
+}
+
+smd_news_hist.36 = {
+	type = country_event
+	placement = scope:news_event_state
+
+	title = smd_news_hist.36.t
+	desc = smd_news_hist.36.d
+	flavor = smd_news_hist.36.f
+
+	duration = 3
+	gui_window = news_event_window
+
+	event_image = { video = "unspecific_world_fair" }
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+	icon = "gfx/interface/icons/event_icons/newspaper_icon.dds"
+
+	trigger = { is_player = yes news_no_eur_subject = yes NOT = { has_variable = smd_news_hist_open_36 } }
+
+	immediate = {
+		set_variable = { name = smd_news_hist_open_36 days = 90 }
+		set_global_variable = smd_news_hist_36_seen
+		news_set_masthead_id = yes
+		if = { limit = { exists = scope:news_event_state } set_variable = { name = smd_news_hist_36_news_event_state_ref value = scope:news_event_state months = 4 } }
+		var:smd_news_hist_36_news_event_state_ref ?= { save_scope_as = news_error_log_silencer }
+	}
+
+	option = {
+		remove_variable = smd_news_hist_open_36
+		name = smd_news_hist.36.a
+		default_option = yes
+	}
+}
+
+smd_news_hist.37 = {
+	type = country_event
+	placement = scope:news_event_state
+
+	title = smd_news_hist.37.t
+	desc = smd_news_hist.37.d
+	flavor = smd_news_hist.37.f
+
+	duration = 3
+	gui_window = news_event_window
+
+	event_image = { video = "unspecific_naval_battle" }
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+	icon = "gfx/interface/icons/event_icons/newspaper_icon.dds"
+
+	trigger = { is_player = yes news_no_eur_subject = yes NOT = { has_variable = smd_news_hist_open_37 } }
+
+	immediate = {
+		set_variable = { name = smd_news_hist_open_37 days = 90 }
+		set_global_variable = smd_news_hist_37_seen
+		news_set_masthead_id = yes
+		if = { limit = { exists = scope:news_event_state } set_variable = { name = smd_news_hist_37_news_event_state_ref value = scope:news_event_state months = 4 } }
+		var:smd_news_hist_37_news_event_state_ref ?= { save_scope_as = news_error_log_silencer }
+		if = { limit = { exists = scope:news_source_country } set_variable = { name = smd_news_hist_37_news_source_country_ref value = scope:news_source_country months = 4 } }
+		var:smd_news_hist_37_news_source_country_ref ?= { save_scope_as = news_error_log_silencer }
+	}
+
+	option = {
+		remove_variable = smd_news_hist_open_37
+		name = smd_news_hist.37.a
+		default_option = yes
+	}
+}
+
+smd_news_hist.38 = {
+	type = country_event
+	placement = scope:news_event_state
+
+	title = smd_news_hist.38.t
+	desc = smd_news_hist.38.d
+	flavor = smd_news_hist.38.f
+
+	duration = 3
+	gui_window = news_event_window
+
+	event_image = { video = "unspecific_vandalized_storefront" }
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+	icon = "gfx/interface/icons/event_icons/newspaper_icon.dds"
+
+	trigger = { is_player = yes news_no_eur_subject = yes NOT = { has_variable = smd_news_hist_open_38 } }
+
+	immediate = {
+		set_variable = { name = smd_news_hist_open_38 days = 90 }
+		set_global_variable = smd_news_hist_38_seen
+		news_set_masthead_id = yes
+		if = { limit = { exists = scope:news_event_state } set_variable = { name = smd_news_hist_38_news_event_state_ref value = scope:news_event_state months = 4 } }
+		var:smd_news_hist_38_news_event_state_ref ?= { save_scope_as = news_error_log_silencer }
+		if = { limit = { exists = scope:news_other_country } set_variable = { name = smd_news_hist_38_news_other_country_ref value = scope:news_other_country months = 4 } }
+		var:smd_news_hist_38_news_other_country_ref ?= { save_scope_as = news_error_log_silencer }
+	}
+
+	option = {
+		remove_variable = smd_news_hist_open_38
+		name = smd_news_hist.38.a
+		default_option = yes
+	}
+}
+
+smd_news_hist.39 = {
+	type = country_event
+	placement = scope:news_event_state
+
+	title = smd_news_hist.39.t
+	desc = smd_news_hist.39.d
+	flavor = smd_news_hist.39.f
+
+	duration = 3
+	gui_window = news_event_window
+
+	event_image = { video = "9_11" }
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+	icon = "gfx/interface/icons/event_icons/newspaper_icon.dds"
+
+	trigger = { is_player = yes news_no_eur_subject = yes NOT = { has_variable = smd_news_hist_open_39 } }
+
+	immediate = {
+		set_variable = { name = smd_news_hist_open_39 days = 90 }
+		set_global_variable = smd_news_hist_39_seen
+		news_set_masthead_id = yes
+		if = { limit = { exists = scope:news_event_state } set_variable = { name = smd_news_hist_39_news_event_state_ref value = scope:news_event_state months = 4 } }
+		var:smd_news_hist_39_news_event_state_ref ?= { save_scope_as = news_error_log_silencer }
+		if = { limit = { exists = scope:news_source_country } set_variable = { name = smd_news_hist_39_news_source_country_ref value = scope:news_source_country months = 4 } }
+		var:smd_news_hist_39_news_source_country_ref ?= { save_scope_as = news_error_log_silencer }
+	}
+
+	option = {
+		remove_variable = smd_news_hist_open_39
+		name = smd_news_hist.39.a
+		default_option = yes
+	}
+}
+
+smd_news_hist.40 = {
+	type = country_event
+	placement = scope:news_event_state
+
+	title = smd_news_hist.40.t
+	desc = smd_news_hist.40.d
+	flavor = smd_news_hist.40.f
+
+	duration = 3
+	gui_window = news_event_window
+
+	event_image = { video = "waronterror" }
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+	icon = "gfx/interface/icons/event_icons/newspaper_icon.dds"
+
+	trigger = { is_player = yes news_no_eur_subject = yes NOT = { has_variable = smd_news_hist_open_40 } }
+
+	immediate = {
+		set_variable = { name = smd_news_hist_open_40 days = 90 }
+		set_global_variable = smd_news_hist_40_seen
+		news_set_masthead_id = yes
+		if = { limit = { exists = scope:news_source_country } set_variable = { name = smd_news_hist_40_news_source_country_ref value = scope:news_source_country months = 4 } }
+		var:smd_news_hist_40_news_source_country_ref ?= { save_scope_as = news_error_log_silencer }
+	}
+
+	option = {
+		remove_variable = smd_news_hist_open_40
+		name = smd_news_hist.40.a
+		default_option = yes
+	}
+}
+
+smd_news_hist.41 = {
+	type = country_event
+	placement = scope:news_event_state
+
+	title = smd_news_hist.41.t
+	desc = smd_news_hist.41.d
+	flavor = smd_news_hist.41.f
+
+	duration = 3
+	gui_window = news_event_window
+
+	event_image = { video = "unspecific_sick_in_hospital" }
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+	icon = "gfx/interface/icons/event_icons/newspaper_icon.dds"
+
+	trigger = { is_player = yes news_no_eur_subject = yes NOT = { has_variable = smd_news_hist_open_41 } }
+
+	immediate = {
+		set_variable = { name = smd_news_hist_open_41 days = 90 }
+		set_global_variable = smd_news_hist_41_seen
+		news_set_masthead_id = yes
+		if = { limit = { exists = scope:news_event_state } set_variable = { name = smd_news_hist_41_news_event_state_ref value = scope:news_event_state months = 4 } }
+		var:smd_news_hist_41_news_event_state_ref ?= { save_scope_as = news_error_log_silencer }
+		if = { limit = { exists = scope:news_source_country } set_variable = { name = smd_news_hist_41_news_source_country_ref value = scope:news_source_country months = 4 } }
+		var:smd_news_hist_41_news_source_country_ref ?= { save_scope_as = news_error_log_silencer }
+	}
+
+	option = {
+		remove_variable = smd_news_hist_open_41
+		name = smd_news_hist.41.a
+		default_option = yes
+	}
+}
+
+smd_news_hist.42 = {
+	type = country_event
+	placement = scope:news_event_state
+
+	title = smd_news_hist.42.t
+	desc = smd_news_hist.42.d
+	flavor = smd_news_hist.42.f
+
+	duration = 3
+	gui_window = news_event_window
+
+	event_image = { video = "waronterror" }
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+	icon = "gfx/interface/icons/event_icons/newspaper_icon.dds"
+
+	trigger = { is_player = yes news_no_eur_subject = yes NOT = { has_variable = smd_news_hist_open_42 } }
+
+	immediate = {
+		set_variable = { name = smd_news_hist_open_42 days = 90 }
+		set_global_variable = smd_news_hist_42_seen
+		news_set_masthead_id = yes
+		if = { limit = { exists = scope:news_event_state } set_variable = { name = smd_news_hist_42_news_event_state_ref value = scope:news_event_state months = 4 } }
+		var:smd_news_hist_42_news_event_state_ref ?= { save_scope_as = news_error_log_silencer }
+		if = { limit = { exists = scope:news_source_country } set_variable = { name = smd_news_hist_42_news_source_country_ref value = scope:news_source_country months = 4 } }
+		var:smd_news_hist_42_news_source_country_ref ?= { save_scope_as = news_error_log_silencer }
+		if = { limit = { exists = scope:news_other_country } set_variable = { name = smd_news_hist_42_news_other_country_ref value = scope:news_other_country months = 4 } }
+		var:smd_news_hist_42_news_other_country_ref ?= { save_scope_as = news_error_log_silencer }
+	}
+
+	option = {
+		remove_variable = smd_news_hist_open_42
+		name = smd_news_hist.42.a
+		default_option = yes
+	}
+}
+
+smd_news_hist.43 = {
+	type = country_event
+	placement = scope:news_event_state
+
+	title = smd_news_hist.43.t
+	desc = smd_news_hist.43.d
+	flavor = smd_news_hist.43.f
+
+	duration = 3
+	gui_window = news_event_window
+
+	event_image = { video = "iraq_war" }
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+	icon = "gfx/interface/icons/event_icons/newspaper_icon.dds"
+
+	trigger = { is_player = yes news_no_eur_subject = yes NOT = { has_variable = smd_news_hist_open_43 } }
+
+	immediate = {
+		set_variable = { name = smd_news_hist_open_43 days = 90 }
+		set_global_variable = smd_news_hist_43_seen
+		news_set_masthead_id = yes
+		if = { limit = { exists = scope:news_event_state } set_variable = { name = smd_news_hist_43_news_event_state_ref value = scope:news_event_state months = 4 } }
+		var:smd_news_hist_43_news_event_state_ref ?= { save_scope_as = news_error_log_silencer }
+		if = { limit = { exists = scope:news_source_country } set_variable = { name = smd_news_hist_43_news_source_country_ref value = scope:news_source_country months = 4 } }
+		var:smd_news_hist_43_news_source_country_ref ?= { save_scope_as = news_error_log_silencer }
+		if = { limit = { exists = scope:news_other_country } set_variable = { name = smd_news_hist_43_news_other_country_ref value = scope:news_other_country months = 4 } }
+		var:smd_news_hist_43_news_other_country_ref ?= { save_scope_as = news_error_log_silencer }
+	}
+
+	option = {
+		remove_variable = smd_news_hist_open_43
+		name = smd_news_hist.43.a
+		default_option = yes
+	}
+}
+
+smd_news_hist.44 = {
+	type = country_event
+	placement = scope:news_event_state
+
+	title = smd_news_hist.44.t
+	desc = smd_news_hist.44.d
+	flavor = smd_news_hist.44.f
+
+	duration = 3
+	gui_window = news_event_window
+
+	event_image = { video = "unspecific_devastation" }
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+	icon = "gfx/interface/icons/event_icons/newspaper_icon.dds"
+
+	trigger = { is_player = yes news_no_eur_subject = yes NOT = { has_variable = smd_news_hist_open_44 } }
+
+	immediate = {
+		set_variable = { name = smd_news_hist_open_44 days = 90 }
+		set_global_variable = smd_news_hist_44_seen
+		news_set_masthead_id = yes
+		if = { limit = { exists = scope:news_event_state } set_variable = { name = smd_news_hist_44_news_event_state_ref value = scope:news_event_state months = 4 } }
+		var:smd_news_hist_44_news_event_state_ref ?= { save_scope_as = news_error_log_silencer }
+		if = { limit = { exists = scope:news_source_country } set_variable = { name = smd_news_hist_44_news_source_country_ref value = scope:news_source_country months = 4 } }
+		var:smd_news_hist_44_news_source_country_ref ?= { save_scope_as = news_error_log_silencer }
+	}
+
+	option = {
+		remove_variable = smd_news_hist_open_44
+		name = smd_news_hist.44.a
+		default_option = yes
+	}
+}
+
+smd_news_hist.45 = {
+	type = country_event
+	placement = scope:news_event_state
+
+	title = smd_news_hist.45.t
+	desc = smd_news_hist.45.d
+	flavor = smd_news_hist.45.f
+
+	duration = 3
+	gui_window = news_event_window
+
+	event_image = { video = "africa_diplomats_negotiating" }
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+	icon = "gfx/interface/icons/event_icons/newspaper_icon.dds"
+
+	trigger = { is_player = yes news_no_eur_subject = yes NOT = { has_variable = smd_news_hist_open_45 } }
+
+	immediate = {
+		set_variable = { name = smd_news_hist_open_45 days = 90 }
+		set_global_variable = smd_news_hist_45_seen
+		news_set_masthead_id = yes
+		if = { limit = { exists = scope:news_event_state } set_variable = { name = smd_news_hist_45_news_event_state_ref value = scope:news_event_state months = 4 } }
+		var:smd_news_hist_45_news_event_state_ref ?= { save_scope_as = news_error_log_silencer }
+		if = { limit = { exists = scope:news_source_country } set_variable = { name = smd_news_hist_45_news_source_country_ref value = scope:news_source_country months = 4 } }
+		var:smd_news_hist_45_news_source_country_ref ?= { save_scope_as = news_error_log_silencer }
+		if = { limit = { exists = scope:news_other_country } set_variable = { name = smd_news_hist_45_news_other_country_ref value = scope:news_other_country months = 4 } }
+		var:smd_news_hist_45_news_other_country_ref ?= { save_scope_as = news_error_log_silencer }
+	}
+
+	option = {
+		remove_variable = smd_news_hist_open_45
+		name = smd_news_hist.45.a
+		default_option = yes
+	}
+}
+
+smd_news_hist.46 = {
+	type = country_event
+	placement = scope:news_event_state
+
+	title = smd_news_hist.46.t
+	desc = smd_news_hist.46.d
+	flavor = smd_news_hist.46.f
+
+	duration = 3
+	gui_window = news_event_window
+
+	event_image = { video = "mass_shooting" }
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+	icon = "gfx/interface/icons/event_icons/newspaper_icon.dds"
+
+	trigger = { is_player = yes news_no_eur_subject = yes NOT = { has_variable = smd_news_hist_open_46 } }
+
+	immediate = {
+		set_variable = { name = smd_news_hist_open_46 days = 90 }
+		set_global_variable = smd_news_hist_46_seen
+		news_set_masthead_id = yes
+		if = { limit = { exists = scope:news_event_state } set_variable = { name = smd_news_hist_46_news_event_state_ref value = scope:news_event_state months = 4 } }
+		var:smd_news_hist_46_news_event_state_ref ?= { save_scope_as = news_error_log_silencer }
+		if = { limit = { exists = scope:news_source_country } set_variable = { name = smd_news_hist_46_news_source_country_ref value = scope:news_source_country months = 4 } }
+		var:smd_news_hist_46_news_source_country_ref ?= { save_scope_as = news_error_log_silencer }
+	}
+
+	option = {
+		remove_variable = smd_news_hist_open_46
+		name = smd_news_hist.46.a
+		default_option = yes
+	}
+}
+
+smd_news_hist.47 = {
+	type = country_event
+	placement = scope:news_event_state
+
+	title = smd_news_hist.47.t
+	desc = smd_news_hist.47.d
+	flavor = smd_news_hist.47.f
+
+	duration = 3
+	gui_window = news_event_window
+
+	event_image = { video = "europenorthamerica_springtime_of_nations" }
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+	icon = "gfx/interface/icons/event_icons/newspaper_icon.dds"
+
+	trigger = { is_player = yes news_no_eur_subject = yes NOT = { has_variable = smd_news_hist_open_47 } }
+
+	immediate = {
+		set_variable = { name = smd_news_hist_open_47 days = 90 }
+		set_global_variable = smd_news_hist_47_seen
+		news_set_masthead_id = yes
+		if = { limit = { exists = scope:news_event_state } set_variable = { name = smd_news_hist_47_news_event_state_ref value = scope:news_event_state months = 4 } }
+		var:smd_news_hist_47_news_event_state_ref ?= { save_scope_as = news_error_log_silencer }
+		if = { limit = { exists = scope:news_source_country } set_variable = { name = smd_news_hist_47_news_source_country_ref value = scope:news_source_country months = 4 } }
+		var:smd_news_hist_47_news_source_country_ref ?= { save_scope_as = news_error_log_silencer }
+		if = { limit = { exists = scope:news_other_country } set_variable = { name = smd_news_hist_47_news_other_country_ref value = scope:news_other_country months = 4 } }
+		var:smd_news_hist_47_news_other_country_ref ?= { save_scope_as = news_error_log_silencer }
+	}
+
+	option = {
+		remove_variable = smd_news_hist_open_47
+		name = smd_news_hist.47.a
+		default_option = yes
+	}
+}
+
+smd_news_hist.48 = {
+	type = country_event
+	placement = scope:news_event_state
+
+	title = smd_news_hist.48.t
+	desc = smd_news_hist.48.d
+	flavor = smd_news_hist.48.f
+
+	duration = 3
+	gui_window = news_event_window
+
+	event_image = { video = "arab_spring" }
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+	icon = "gfx/interface/icons/event_icons/newspaper_icon.dds"
+
+	trigger = { is_player = yes news_no_eur_subject = yes NOT = { has_variable = smd_news_hist_open_48 } }
+
+	immediate = {
+		set_variable = { name = smd_news_hist_open_48 days = 90 }
+		set_global_variable = smd_news_hist_48_seen
+		news_set_masthead_id = yes
+		if = { limit = { exists = scope:news_event_state } set_variable = { name = smd_news_hist_48_news_event_state_ref value = scope:news_event_state months = 4 } }
+		var:smd_news_hist_48_news_event_state_ref ?= { save_scope_as = news_error_log_silencer }
+		if = { limit = { exists = scope:news_source_country } set_variable = { name = smd_news_hist_48_news_source_country_ref value = scope:news_source_country months = 4 } }
+		var:smd_news_hist_48_news_source_country_ref ?= { save_scope_as = news_error_log_silencer }
+	}
+
+	option = {
+		remove_variable = smd_news_hist_open_48
+		name = smd_news_hist.48.a
+		default_option = yes
+	}
+}
+
+smd_news_hist.49 = {
+	type = country_event
+	placement = scope:news_event_state
+
+	title = smd_news_hist.49.t
+	desc = smd_news_hist.49.d
+	flavor = smd_news_hist.49.f
+
+	duration = 3
+	gui_window = news_event_window
+
+	event_image = { video = "unspecific_devastation" }
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+	icon = "gfx/interface/icons/event_icons/newspaper_icon.dds"
+
+	trigger = { is_player = yes news_no_eur_subject = yes NOT = { has_variable = smd_news_hist_open_49 } }
+
+	immediate = {
+		set_variable = { name = smd_news_hist_open_49 days = 90 }
+		set_global_variable = smd_news_hist_49_seen
+		news_set_masthead_id = yes
+		if = { limit = { exists = scope:news_event_state } set_variable = { name = smd_news_hist_49_news_event_state_ref value = scope:news_event_state months = 4 } }
+		var:smd_news_hist_49_news_event_state_ref ?= { save_scope_as = news_error_log_silencer }
+		if = { limit = { exists = scope:news_source_country } set_variable = { name = smd_news_hist_49_news_source_country_ref value = scope:news_source_country months = 4 } }
+		var:smd_news_hist_49_news_source_country_ref ?= { save_scope_as = news_error_log_silencer }
+	}
+
+	option = {
+		remove_variable = smd_news_hist_open_49
+		name = smd_news_hist.49.a
+		default_option = yes
+	}
+}
+
+smd_news_hist.50 = {
+	type = country_event
+	placement = scope:news_event_state
+
+	title = smd_news_hist.50.t
+	desc = smd_news_hist.50.d
+	flavor = smd_news_hist.50.f
+
+	duration = 3
+	gui_window = news_event_window
+
+	event_image = { video = "africa_city_center" }
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+	icon = "gfx/interface/icons/event_icons/newspaper_icon.dds"
+
+	trigger = { is_player = yes news_no_eur_subject = yes NOT = { has_variable = smd_news_hist_open_50 } }
+
+	immediate = {
+		set_variable = { name = smd_news_hist_open_50 days = 90 }
+		set_global_variable = smd_news_hist_50_seen
+		news_set_masthead_id = yes
+		if = { limit = { exists = scope:news_event_state } set_variable = { name = smd_news_hist_50_news_event_state_ref value = scope:news_event_state months = 4 } }
+		var:smd_news_hist_50_news_event_state_ref ?= { save_scope_as = news_error_log_silencer }
+		if = { limit = { exists = scope:news_source_country } set_variable = { name = smd_news_hist_50_news_source_country_ref value = scope:news_source_country months = 4 } }
+		var:smd_news_hist_50_news_source_country_ref ?= { save_scope_as = news_error_log_silencer }
+		if = { limit = { exists = scope:news_other_country } set_variable = { name = smd_news_hist_50_news_other_country_ref value = scope:news_other_country months = 4 } }
+		var:smd_news_hist_50_news_other_country_ref ?= { save_scope_as = news_error_log_silencer }
+	}
+
+	option = {
+		remove_variable = smd_news_hist_open_50
+		name = smd_news_hist.50.a
+		default_option = yes
+	}
+}
+
+smd_news_hist.51 = {
+	type = country_event
+	placement = scope:news_event_state
+
+	title = smd_news_hist.51.t
+	desc = smd_news_hist.51.d
+	flavor = smd_news_hist.51.f
+
+	duration = 3
+	gui_window = news_event_window
+
+	event_image = { video = "middleeast_police_breaking_door" }
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+	icon = "gfx/interface/icons/event_icons/newspaper_icon.dds"
+
+	trigger = { is_player = yes news_no_eur_subject = yes NOT = { has_variable = smd_news_hist_open_51 } }
+
+	immediate = {
+		set_variable = { name = smd_news_hist_open_51 days = 90 }
+		set_global_variable = smd_news_hist_51_seen
+		news_set_masthead_id = yes
+		if = { limit = { exists = scope:news_event_state } set_variable = { name = smd_news_hist_51_news_event_state_ref value = scope:news_event_state months = 4 } }
+		var:smd_news_hist_51_news_event_state_ref ?= { save_scope_as = news_error_log_silencer }
+		if = { limit = { exists = scope:news_source_country } set_variable = { name = smd_news_hist_51_news_source_country_ref value = scope:news_source_country months = 4 } }
+		var:smd_news_hist_51_news_source_country_ref ?= { save_scope_as = news_error_log_silencer }
+	}
+
+	option = {
+		remove_variable = smd_news_hist_open_51
+		name = smd_news_hist.51.a
+		default_option = yes
+	}
+}
+
+smd_news_hist.52 = {
+	type = country_event
+	placement = scope:news_event_state
+
+	title = smd_news_hist.52.t
+	desc = smd_news_hist.52.d
+	flavor = smd_news_hist.52.f
+
+	duration = 3
+	gui_window = news_event_window
+
+	event_image = { video = "votp_prison" }
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+	icon = "gfx/interface/icons/event_icons/newspaper_icon.dds"
+
+	trigger = { is_player = yes news_no_eur_subject = yes NOT = { has_variable = smd_news_hist_open_52 } }
+
+	immediate = {
+		set_variable = { name = smd_news_hist_open_52 days = 90 }
+		set_global_variable = smd_news_hist_52_seen
+		news_set_masthead_id = yes
+		if = { limit = { exists = scope:news_event_state } set_variable = { name = smd_news_hist_52_news_event_state_ref value = scope:news_event_state months = 4 } }
+		var:smd_news_hist_52_news_event_state_ref ?= { save_scope_as = news_error_log_silencer }
+		if = { limit = { exists = scope:news_source_country } set_variable = { name = smd_news_hist_52_news_source_country_ref value = scope:news_source_country months = 4 } }
+		var:smd_news_hist_52_news_source_country_ref ?= { save_scope_as = news_error_log_silencer }
+	}
+
+	option = {
+		remove_variable = smd_news_hist_open_52
+		name = smd_news_hist.52.a
+		default_option = yes
+	}
+}
+
+smd_news_hist.53 = {
+	type = country_event
+	placement = scope:news_event_state
+
+	title = smd_news_hist.53.t
+	desc = smd_news_hist.53.d
+	flavor = smd_news_hist.53.f
+
+	duration = 3
+	gui_window = news_event_window
+
+	event_image = { video = "middleeast_battlefield_trenches" }
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+	icon = "gfx/interface/icons/event_icons/newspaper_icon.dds"
+
+	trigger = { is_player = yes news_no_eur_subject = yes NOT = { has_variable = smd_news_hist_open_53 } }
+
+	immediate = {
+		set_variable = { name = smd_news_hist_open_53 days = 90 }
+		set_global_variable = smd_news_hist_53_seen
+		news_set_masthead_id = yes
+		if = { limit = { exists = scope:news_event_state } set_variable = { name = smd_news_hist_53_news_event_state_ref value = scope:news_event_state months = 4 } }
+		var:smd_news_hist_53_news_event_state_ref ?= { save_scope_as = news_error_log_silencer }
+		if = { limit = { exists = scope:news_source_country } set_variable = { name = smd_news_hist_53_news_source_country_ref value = scope:news_source_country months = 4 } }
+		var:smd_news_hist_53_news_source_country_ref ?= { save_scope_as = news_error_log_silencer }
+	}
+
+	option = {
+		remove_variable = smd_news_hist_open_53
+		name = smd_news_hist.53.a
+		default_option = yes
+	}
+}
+
+smd_news_hist.54 = {
+	type = country_event
+	placement = scope:news_event_state
+
+	title = smd_news_hist.54.t
+	desc = smd_news_hist.54.d
+	flavor = smd_news_hist.54.f
+
+	duration = 3
+	gui_window = news_event_window
+
+	event_image = { video = "columbine" }
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+	icon = "gfx/interface/icons/event_icons/newspaper_icon.dds"
+
+	trigger = { is_player = yes news_no_eur_subject = yes NOT = { has_variable = smd_news_hist_open_54 } }
+
+	immediate = {
+		set_variable = { name = smd_news_hist_open_54 days = 90 }
+		set_global_variable = smd_news_hist_54_seen
+		news_set_masthead_id = yes
+		if = { limit = { exists = scope:news_event_state } set_variable = { name = smd_news_hist_54_news_event_state_ref value = scope:news_event_state months = 4 } }
+		var:smd_news_hist_54_news_event_state_ref ?= { save_scope_as = news_error_log_silencer }
+		if = { limit = { exists = scope:news_source_country } set_variable = { name = smd_news_hist_54_news_source_country_ref value = scope:news_source_country months = 4 } }
+		var:smd_news_hist_54_news_source_country_ref ?= { save_scope_as = news_error_log_silencer }
+	}
+
+	option = {
+		remove_variable = smd_news_hist_open_54
+		name = smd_news_hist.54.a
+		default_option = yes
+	}
+}
+
+smd_news_hist.55 = {
+	type = country_event
+	placement = scope:news_event_state
+
+	title = smd_news_hist.55.t
+	desc = smd_news_hist.55.d
+	flavor = smd_news_hist.55.f
+
+	duration = 3
+	gui_window = news_event_window
+
+	event_image = { video = "unspecific_sick_in_hospital" }
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+	icon = "gfx/interface/icons/event_icons/newspaper_icon.dds"
+
+	trigger = { is_player = yes news_no_eur_subject = yes NOT = { has_variable = smd_news_hist_open_55 } }
+
+	immediate = {
+		set_variable = { name = smd_news_hist_open_55 days = 90 }
+		set_global_variable = smd_news_hist_55_seen
+		news_set_masthead_id = yes
+		if = { limit = { exists = scope:news_event_state } set_variable = { name = smd_news_hist_55_news_event_state_ref value = scope:news_event_state months = 4 } }
+		var:smd_news_hist_55_news_event_state_ref ?= { save_scope_as = news_error_log_silencer }
+		if = { limit = { exists = scope:news_source_country } set_variable = { name = smd_news_hist_55_news_source_country_ref value = scope:news_source_country months = 4 } }
+		var:smd_news_hist_55_news_source_country_ref ?= { save_scope_as = news_error_log_silencer }
+	}
+
+	option = {
+		remove_variable = smd_news_hist_open_55
+		name = smd_news_hist.55.a
+		default_option = yes
+	}
+}
+
+smd_news_hist.56 = {
+	type = country_event
+	placement = scope:news_event_state
+
+	title = smd_news_hist.56.t
+	desc = smd_news_hist.56.d
+	flavor = smd_news_hist.56.f
+
+	duration = 3
+	gui_window = news_event_window
+
+	event_image = { video = "votp_barricade" }
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+	icon = "gfx/interface/icons/event_icons/newspaper_icon.dds"
+
+	trigger = { is_player = yes news_no_eur_subject = yes NOT = { has_variable = smd_news_hist_open_56 } }
+
+	immediate = {
+		set_variable = { name = smd_news_hist_open_56 days = 90 }
+		set_global_variable = smd_news_hist_56_seen
+		news_set_masthead_id = yes
+		if = { limit = { exists = scope:news_event_state } set_variable = { name = smd_news_hist_56_news_event_state_ref value = scope:news_event_state months = 4 } }
+		var:smd_news_hist_56_news_event_state_ref ?= { save_scope_as = news_error_log_silencer }
+		if = { limit = { exists = scope:news_source_country } set_variable = { name = smd_news_hist_56_news_source_country_ref value = scope:news_source_country months = 4 } }
+		var:smd_news_hist_56_news_source_country_ref ?= { save_scope_as = news_error_log_silencer }
+	}
+
+	option = {
+		remove_variable = smd_news_hist_open_56
+		name = smd_news_hist.56.a
+		default_option = yes
+	}
+}
+
+smd_news_hist.57 = {
+	type = country_event
+	placement = scope:news_event_state
+
+	title = smd_news_hist.57.t
+	desc = smd_news_hist.57.d
+	flavor = smd_news_hist.57.f
+
+	duration = 3
+	gui_window = news_event_window
+
+	event_image = { video = "votp_barricade" }
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+	icon = "gfx/interface/icons/event_icons/newspaper_icon.dds"
+
+	trigger = { is_player = yes news_no_eur_subject = yes NOT = { has_variable = smd_news_hist_open_57 } }
+
+	immediate = {
+		set_variable = { name = smd_news_hist_open_57 days = 90 }
+		set_global_variable = smd_news_hist_57_seen
+		news_set_masthead_id = yes
+		if = { limit = { exists = scope:news_event_state } set_variable = { name = smd_news_hist_57_news_event_state_ref value = scope:news_event_state months = 4 } }
+		var:smd_news_hist_57_news_event_state_ref ?= { save_scope_as = news_error_log_silencer }
+		if = { limit = { exists = scope:news_source_country } set_variable = { name = smd_news_hist_57_news_source_country_ref value = scope:news_source_country months = 4 } }
+		var:smd_news_hist_57_news_source_country_ref ?= { save_scope_as = news_error_log_silencer }
+	}
+
+	option = {
+		remove_variable = smd_news_hist_open_57
+		name = smd_news_hist.57.a
+		default_option = yes
+	}
+}
+
+smd_news_hist.58 = {
+	type = country_event
+	placement = scope:news_event_state
+
+	title = smd_news_hist.58.t
+	desc = smd_news_hist.58.d
+	flavor = smd_news_hist.58.f
+
+	duration = 3
+	gui_window = news_event_window
+
+	event_image = { video = "southamerica_public_figure_assassination" }
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+	icon = "gfx/interface/icons/event_icons/newspaper_icon.dds"
+
+	trigger = { is_player = yes news_no_eur_subject = yes NOT = { has_variable = smd_news_hist_open_58 } }
+
+	immediate = {
+		set_variable = { name = smd_news_hist_open_58 days = 90 }
+		set_global_variable = smd_news_hist_58_seen
+		news_set_masthead_id = yes
+		if = { limit = { exists = scope:news_event_state } set_variable = { name = smd_news_hist_58_news_event_state_ref value = scope:news_event_state months = 4 } }
+		var:smd_news_hist_58_news_event_state_ref ?= { save_scope_as = news_error_log_silencer }
+		if = { limit = { exists = scope:news_source_country } set_variable = { name = smd_news_hist_58_news_source_country_ref value = scope:news_source_country months = 4 } }
+		var:smd_news_hist_58_news_source_country_ref ?= { save_scope_as = news_error_log_silencer }
+	}
+
+	option = {
+		remove_variable = smd_news_hist_open_58
+		name = smd_news_hist.58.a
+		default_option = yes
+	}
+}
+
+smd_news_hist.59 = {
+	type = country_event
+	placement = scope:news_event_state
+
+	title = smd_news_hist.59.t
+	desc = smd_news_hist.59.d
+	flavor = smd_news_hist.59.f
+
+	duration = 3
+	gui_window = news_event_window
+
+	event_image = { video = "unspecific_sick_in_hospital" }
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+	icon = "gfx/interface/icons/event_icons/newspaper_icon.dds"
+
+	trigger = { is_player = yes news_no_eur_subject = yes NOT = { has_variable = smd_news_hist_open_59 } }
+
+	immediate = {
+		set_variable = { name = smd_news_hist_open_59 days = 90 }
+		set_global_variable = smd_news_hist_59_seen
+		news_set_masthead_id = yes
+		if = { limit = { exists = scope:news_event_state } set_variable = { name = smd_news_hist_59_news_event_state_ref value = scope:news_event_state months = 4 } }
+		var:smd_news_hist_59_news_event_state_ref ?= { save_scope_as = news_error_log_silencer }
+		if = { limit = { exists = scope:news_source_country } set_variable = { name = smd_news_hist_59_news_source_country_ref value = scope:news_source_country months = 4 } }
+		var:smd_news_hist_59_news_source_country_ref ?= { save_scope_as = news_error_log_silencer }
+	}
+
+	option = {
+		remove_variable = smd_news_hist_open_59
+		name = smd_news_hist.59.a
+		default_option = yes
+	}
+}
+
+smd_news_hist.60 = {
+	type = country_event
+	placement = scope:news_event_state
+
+	title = smd_news_hist.60.t
+	desc = smd_news_hist.60.d
+	flavor = smd_news_hist.60.f
+
+	duration = 3
+	gui_window = news_event_window
+
+	event_image = { video = "europenorthamerica_american_civil_war" }
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+	icon = "gfx/interface/icons/event_icons/newspaper_icon.dds"
+
+	trigger = { is_player = yes news_no_eur_subject = yes NOT = { has_variable = smd_news_hist_open_60 } }
+
+	immediate = {
+		set_variable = { name = smd_news_hist_open_60 days = 90 }
+		set_global_variable = smd_news_hist_60_seen
+		news_set_masthead_id = yes
+		if = { limit = { exists = scope:news_event_state } set_variable = { name = smd_news_hist_60_news_event_state_ref value = scope:news_event_state months = 4 } }
+		var:smd_news_hist_60_news_event_state_ref ?= { save_scope_as = news_error_log_silencer }
+		if = { limit = { exists = scope:news_source_country } set_variable = { name = smd_news_hist_60_news_source_country_ref value = scope:news_source_country months = 4 } }
+		var:smd_news_hist_60_news_source_country_ref ?= { save_scope_as = news_error_log_silencer }
+	}
+
+	option = {
+		remove_variable = smd_news_hist_open_60
+		name = smd_news_hist.60.a
+		default_option = yes
+	}
+}

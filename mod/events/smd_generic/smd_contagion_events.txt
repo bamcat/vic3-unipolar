@@ -12,14 +12,21 @@ smd_contagion.1 = {
 	duration = 3
 
 	trigger = {
+		any_political_movement = { has_variable = smd_contagion_target }
+	}
+
+	immediate = {
+		smd_contagion_save_movement = yes
 	}
 
 	option = {
 		name = smd_contagion.1.a
 		default_option = yes
-		add_modifier = {
-			name = smd_raised_alert
-			days = 730
+		scope:smd_contagion_movement ?= {
+			add_modifier = {
+				name = smd_contagion_movement_watched
+				days = 730
+			}
 		}
 		je:smd_je_fear_of_contagion ?= {
 			add_progress = { value = -10 name = smd_contagion_bar }
@@ -29,6 +36,12 @@ smd_contagion.1 = {
 
 	option = {
 		name = smd_contagion.1.b
+		scope:smd_contagion_movement ?= {
+			add_modifier = {
+				name = smd_contagion_movement_tolerated
+				days = 730
+			}
+		}
 		add_modifier = {
 			name = smd_alarm_dismissed
 			days = short_modifier_time
@@ -54,11 +67,22 @@ smd_contagion.2 = {
 
 	trigger = {
 		has_journal_entry = smd_je_fear_of_contagion
+		any_political_movement = { has_variable = smd_contagion_target }
+	}
+
+	immediate = {
+		smd_contagion_save_movement = yes
 	}
 
 	option = {
 		name = smd_contagion.2.a
 		default_option = yes
+		scope:smd_contagion_movement ?= {
+			add_modifier = {
+				name = smd_contagion_movement_purged
+				days = 1095
+			}
+		}
 		add_modifier = {
 			name = smd_army_purge
 			days = short_modifier_time
@@ -94,11 +118,22 @@ smd_contagion.3 = {
 	duration = 3
 
 	trigger = {
+		any_political_movement = { has_variable = smd_contagion_target }
+	}
+
+	immediate = {
+		smd_contagion_save_movement = yes
 	}
 
 	option = {
 		name = smd_contagion.3.a
 		default_option = yes
+		scope:smd_contagion_movement ?= {
+			add_modifier = {
+				name = smd_contagion_movement_crushed
+				days = normal_modifier_time
+			}
+		}
 		add_modifier = {
 			name = smd_emergency_powers
 			days = normal_modifier_time
@@ -115,15 +150,23 @@ smd_contagion.3 = {
 			start_enactment = law_type:law_secret_police
 			add_enactment_phase = 1
 		}
+		smd_contagion_clear_movement = yes
 		ai_chance = { base = 60 }
 	}
 
 	option = {
 		name = smd_contagion.3.b
+		scope:smd_contagion_movement ?= {
+			add_modifier = {
+				name = smd_contagion_movement_emboldened
+				days = short_modifier_time
+			}
+		}
 		add_modifier = {
 			name = smd_emergency_refused
 			days = short_modifier_time
 		}
+		smd_contagion_clear_movement = yes
 		ai_chance = { base = 40 }
 	}
 }
@@ -140,15 +183,23 @@ smd_contagion.4 = {
 	duration = 3
 
 	trigger = {
+		any_political_movement = { has_variable = smd_contagion_target }
+	}
+
+	immediate = {
+		smd_contagion_save_movement = yes
 	}
 
 	option = {
 		name = smd_contagion.4.a
 		default_option = yes
-		add_modifier = {
-			name = smd_calm_restored
-			days = short_modifier_time
+		scope:smd_contagion_movement ?= {
+			add_modifier = {
+				name = smd_contagion_movement_subsided
+				days = short_modifier_time
+			}
 		}
+		smd_contagion_clear_movement = yes
 		ai_chance = { base = 100 }
 	}
 }

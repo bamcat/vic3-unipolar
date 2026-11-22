@@ -1,0 +1,1002 @@
+﻿# it can happen anywhere.
+
+on_monthly_pulse = { on_actions = { news_events_world_monthly news_events_world_shortage_monthly news_events_world_worker_strike_monthly } }
+on_diplomatic_play_started = { on_actions = { news_events_world_diplomatic_play_started } }
+on_diplo_play_back_down = { on_actions = { news_events_world_diplo_play_back_down } }
+on_diplo_play_war_start = { on_actions = { news_events_world_war_started } }
+on_country_swayed = { on_actions = { news_events_world_country_swayed } }
+on_character_death = { on_actions = { news_events_world_character_death } }
+on_ruler_selected = { on_actions = { news_events_world_ruler_selected } }
+on_election_campaign_start = { on_actions = { news_events_world_election_start } }
+on_election_campaign_end = { on_actions = { news_events_world_election_end } }
+on_harvest_condition_started_in_country = { on_actions = { news_events_world_harvest_started } }
+on_revolution_start = { on_actions = { news_events_world_revolution_start } }
+on_civil_war_won = { on_actions = { news_events_world_civil_war_won } }
+on_treaty_entered_into_force = { on_actions = { news_events_world_treaty_entered_force } }
+on_treaty_dissolved = { on_actions = { news_events_world_treaty_dissolved } }
+on_diplomatic_proposal_accepted = { on_actions = { news_events_world_trade_states_accepted } }
+# DISABLED — capitulation/annexation stories (event 15).
+# on_wargoal_enforced = { on_actions = { news_events_world_wargoal_enforced } }
+on_law_activated = { on_actions = { news_events_world_law_activated } }
+on_country_default = { on_actions = { news_events_world_country_default } }
+on_power_bloc_struggle_started = { on_actions = { news_events_world_bloc_struggle_started } }
+on_power_bloc_struggle_ended = { on_actions = { news_events_world_bloc_struggle_ended } }
+
+# Diplomatic play: Great Power vs Great Power is always covered. 
+
+news_events_world_diplomatic_play_started = {
+    trigger = {
+        initiator = { news_is_reportable_country = yes NOT = { is_revolutionary = yes } }
+        target = { news_is_reportable_country = yes NOT = { is_revolutionary = yes } }
+        NOT = { has_variable = news_world_dp_reported }
+        NOT = {
+            OR = {
+                AND = { has_global_variable = 911_usa initiator = { c:USA ?= this } target = { OR = { c:AFG ?= this c:IRQ ?= this } } }
+                AND = { has_global_variable = 911_usa target = { c:USA ?= this } initiator = { OR = { c:AFG ?= this c:IRQ ?= this } } }
+            }
+        }
+        OR = {
+            AND = { initiator = { news_is_reportable_country = yes NOT = { is_revolutionary = yes } country_rank = rank_value:great_power } target = { news_is_reportable_country = yes NOT = { is_revolutionary = yes } country_rank = rank_value:great_power } }
+            AND = { initiator = { news_is_reportable_country = yes NOT = { is_revolutionary = yes } country_rank = rank_value:great_power OR = { infamy < 1 has_variable = news_world_was_zero_infamy } } target = { AND = { news_is_reportable_country = yes NOT = { is_revolutionary = yes } OR = { AND = { country_rank < rank_value:great_power NOT = { is_country_type = unrecognized } } country_rank = rank_value:unrecognized_major_power country_rank = rank_value:unrecognized_regional_power } } } }
+            AND = { target = { news_is_reportable_country = yes NOT = { is_revolutionary = yes } country_rank = rank_value:great_power OR = { infamy < 1 has_variable = news_world_was_zero_infamy } } initiator = { AND = { news_is_reportable_country = yes NOT = { is_revolutionary = yes } OR = { AND = { country_rank < rank_value:great_power NOT = { is_country_type = unrecognized } } country_rank = rank_value:unrecognized_major_power country_rank = rank_value:unrecognized_regional_power } } } }
+        }
+    }
+    effect = {
+        save_scope_as = news_diplomatic_play
+        set_variable = news_world_dp_reported
+        initiator = { save_scope_as = news_country_a }
+        target = { save_scope_as = news_country_b }
+        initiator = { capital = { save_scope_as = news_event_state } }
+        if = {
+            limit = { initiator = { country_rank = rank_value:great_power } target = { country_rank = rank_value:great_power } }
+            every_country = { limit = { is_player = yes } trigger_event = { id = news_events_world.1 } }
+        }
+        else = {
+            if = { limit = { initiator = { news_is_reportable_country = yes NOT = { is_revolutionary = yes } country_rank = rank_value:great_power OR = { infamy < 1 has_variable = news_world_was_zero_infamy } } } initiator = { save_scope_as = news_clean_gp } target = { save_scope_as = news_other_country } }
+            else = { target = { save_scope_as = news_clean_gp } initiator = { save_scope_as = news_other_country } }
+            set_variable = news_world_clean_gp_play
+            set_variable = { name = news_world_clean_gp_country value = scope:news_clean_gp }
+            if = {
+                limit = { scope:news_other_country = { news_is_reportable_country = yes NOT = { is_revolutionary = yes } OR = { NOT = { is_country_type = unrecognized } country_rank = rank_value:unrecognized_major_power } } }
+                every_country = { limit = { is_player = yes } trigger_event = { id = news_events_world.2 } }
+            }
+        }
+    }
+}
+
+news_events_world_war_started = {
+    trigger = {
+        initiator = { news_is_reportable_country = yes NOT = { is_revolutionary = yes } }
+        target = { news_is_reportable_country = yes NOT = { is_revolutionary = yes } }
+        NOT = { has_variable = news_world_war_reported }
+        NOT = {
+            OR = {
+                AND = { initiator = { has_variable = opium_wars_aggressor } target = { has_variable = opium_wars_target } }
+                AND = { target = { has_variable = opium_wars_aggressor } initiator = { has_variable = opium_wars_target } }
+                AND = { OR = { AND = { initiator = { c:ISR ?= this } target = { c:PAL ?= this } } AND = { initiator = { c:PAL ?= this } target = { c:ISR ?= this } } } }
+                AND = { has_global_variable = 911_usa initiator = { c:USA ?= this } target = { OR = { c:AFG ?= this c:IRQ ?= this } } }
+                AND = { has_global_variable = 911_usa target = { c:USA ?= this } initiator = { OR = { c:AFG ?= this c:IRQ ?= this } } }
+            }
+        }
+        OR = {
+            AND = { initiator = { country_rank >= rank_value:major_power } target = { country_rank >= rank_value:major_power } }
+            has_variable = news_world_clean_gp_play
+            AND = { initiator = { news_is_reportable_country = yes NOT = { is_revolutionary = yes } country_rank = rank_value:great_power OR = { infamy < 1 has_variable = news_world_was_zero_infamy } } target = { OR = { AND = { country_rank < rank_value:major_power NOT = { is_country_type = unrecognized } } country_rank = rank_value:unrecognized_major_power } } }
+            AND = { target = { news_is_reportable_country = yes NOT = { is_revolutionary = yes } country_rank = rank_value:great_power OR = { infamy < 1 has_variable = news_world_was_zero_infamy } } initiator = { OR = { AND = { country_rank < rank_value:major_power NOT = { is_country_type = unrecognized } } country_rank = rank_value:unrecognized_major_power } } }
+        }
+    }
+    effect = {
+        save_scope_as = news_diplomatic_play
+        set_variable = news_world_war_reported
+        initiator = { save_scope_as = news_country_a capital = { save_scope_as = news_event_state } }
+        target = { save_scope_as = news_country_b }
+        if = {
+            limit = { initiator = { country_rank >= rank_value:major_power } target = { country_rank >= rank_value:major_power } }
+            every_country = { limit = { is_player = yes } trigger_event = { id = news_events_world.3 } }
+        }
+        else = {
+            if = {
+                limit = { exists = var:news_world_clean_gp_country }
+                var:news_world_clean_gp_country = { save_scope_as = news_clean_gp }
+                if = { limit = { target = { NOT = { this = scope:news_clean_gp } } } target = { save_scope_as = news_other_country } }
+                else = { initiator = { save_scope_as = news_other_country } }
+            }
+            else_if = { limit = { initiator = { country_rank = rank_value:great_power } } initiator = { save_scope_as = news_clean_gp } target = { save_scope_as = news_other_country } }
+            else = { target = { save_scope_as = news_clean_gp } initiator = { save_scope_as = news_other_country } }
+            if = {
+                limit = { scope:news_other_country = { news_is_reportable_country = yes NOT = { is_revolutionary = yes } OR = { NOT = { is_country_type = unrecognized } country_rank = rank_value:unrecognized_major_power } } }
+                every_country = { limit = { is_player = yes } trigger_event = { id = news_events_world.4 } }
+            }
+        }
+    }
+}
+
+# A zero-infamy Great Power can become involved after the play has started via a sway. If the US invaded cuba after 20 years of doing fuck all, it should be covered
+news_events_world_country_swayed = {
+    trigger = { NOT = { has_variable = news_world_dp_reported } }
+    effect = {
+        save_scope_as = news_diplomatic_play
+        initiator = { save_scope_as = news_play_initiator }
+        target = { save_scope_as = news_play_target }
+        if = {
+            limit = {
+                any_country = {
+                    country_rank = rank_value:great_power
+                    OR = { infamy < 1 has_variable = news_world_was_zero_infamy }
+                    is_diplomatic_play_participant_with = scope:news_play_initiator
+                    is_diplomatic_play_participant_with = scope:news_play_target
+                }
+            }
+            random_country = {
+                limit = {
+                    country_rank = rank_value:great_power
+                    OR = { infamy < 1 has_variable = news_world_was_zero_infamy }
+                    is_diplomatic_play_participant_with = scope:news_play_initiator
+                    is_diplomatic_play_participant_with = scope:news_play_target
+                }
+                save_scope_as = news_clean_gp
+                capital = { save_scope_as = news_event_state }
+            }
+            target = { save_scope_as = news_other_country }
+            set_variable = news_world_dp_reported
+            set_variable = news_world_clean_gp_play
+            set_variable = { name = news_world_clean_gp_country value = scope:news_clean_gp }
+            if = {
+                limit = { scope:news_other_country = { news_is_reportable_country = yes NOT = { is_revolutionary = yes } OR = { NOT = { is_country_type = unrecognized } country_rank = rank_value:unrecognized_major_power } } }
+                every_country = { limit = { is_player = yes } trigger_event = { id = news_events_world.2 } }
+            }
+        }
+    }
+}
+
+
+# DIPLOMATIC PLAY BACKDOWN
+# Root = Diplomatic Play. Vanilla supplies scope:actor as the country backing down
+# and scope:target as its opponent.
+news_events_world_diplo_play_back_down = {
+    trigger = {
+        exists = scope:actor
+        scope:actor = {
+            OR = {
+                country_rank = rank_value:great_power
+                country_rank = rank_value:major_power
+            }
+            global_country_ranking <= 125
+            NOT = { is_revolutionary = yes }
+            news_is_reportable_country = yes
+        }
+        NOT = { scope:target ?= { c:EUR ?= this } }
+    }
+    effect = {
+        save_scope_as = news_diplomatic_play
+        scope:actor = {
+            save_scope_as = news_backdown_country
+            capital = { save_scope_as = news_event_state }
+        }
+        scope:target ?= { save_scope_as = news_backdown_target }
+        every_country = {
+            limit = { is_player = yes }
+            trigger_event = { id = news_events_world.32 }
+        }
+    }
+}
+
+# Ruler deaths. Generic ACW-president assassination is suppressed
+news_events_world_character_death = {
+    trigger = {
+        is_ruler_of_own_country = yes
+        exists = owner
+        owner = { country_rank >= rank_value:major_power news_is_reportable_country = yes NOT = { is_revolutionary = yes } }
+        NOT = { has_variable = abraham_lincoln }
+    }
+    effect = {
+        save_scope_as = news_character
+        owner = { save_scope_as = news_source_country capital = { save_scope_as = news_event_state } }
+        if = {
+            limit = { has_variable = assassination_ruler_var owner = { NOT = { has_variable = news_world_assassination_cooldown } } }
+            owner = { set_variable = { name = news_world_assassination_cooldown months = 6 } }
+            every_country = { limit = { is_player = yes } trigger_event = { id = news_events_world.6 popup = yes } }
+        }
+        else_if = {
+            limit = { owner = { country_rank = rank_value:great_power NOT = { has_variable = news_world_leader_death_cooldown } } }
+            owner = { set_variable = { name = news_world_leader_death_cooldown months = 6 } set_variable = { name = news_world_recent_ruler_death months = 2 } }
+            if = { limit = { has_variable = news_world_recent_ruler_death } save_scope_as = news_error_log_silencer } # Silence localization-only variable warning.
+            every_country = { limit = { is_player = yes } trigger_event = { id = news_events_world.7 popup = yes } }
+        }
+        else = {
+            owner = { set_variable = { name = news_world_recent_ruler_death months = 2 } }
+            if = { limit = { has_variable = news_world_recent_ruler_death } save_scope_as = news_error_log_silencer } # Silence localization-only variable warning.
+        }
+    }
+}
+
+news_events_world_election_start = {
+    trigger = { always = yes }
+    effect = { set_variable = { name = news_world_election_transition_window months = 18 } }
+}
+
+news_events_world_ruler_selected = {
+    trigger = { exists = scope:previous exists = owner
+        owner = { news_is_reportable_country = yes NOT = { is_revolutionary = yes } } }
+    effect = {
+        # A living predecessor in a Great Power is a removal, except elections,
+        # coups and active revolutions which have their own newspaper categories.
+        if = {
+            limit = {
+                scope:previous = { is_character_alive = yes }
+                owner = {
+                    country_rank = rank_value:great_power
+                    NOT = { has_variable = news_world_election_transition_window }
+                    NOT = { has_variable = coup_aftermath_var }
+                    NOT = { has_modifier = modifier_government_recently_couped }
+                    NOT = { has_journal_entry = je_ip4_coup }
+                    has_revolution = no
+                    NOT = { has_variable = news_world_leader_removal_cooldown }
+                }
+            }
+            scope:previous = { save_scope_as = news_previous_ruler }
+            save_scope_as = news_new_ruler
+            owner = { save_scope_as = news_source_country capital = { save_scope_as = news_event_state } set_variable = { name = news_world_leader_removal_cooldown months = 6 } }
+            every_country = { limit = { is_player = yes } trigger_event = { id = news_events_world.8 } }
+        }
+        # A dead predecessor produces a succession headline in Great/Major Powers.
+        # Suppress the American Civil War's bespoke presidential chain.
+        else_if = {
+            limit = {
+                scope:previous = { is_character_alive = no NOT = { has_variable = abraham_lincoln } }
+                owner = {
+                    country_rank >= rank_value:major_power
+                    NOT = { has_variable = news_world_succession_cooldown }
+                }
+            }
+            save_scope_as = news_new_ruler
+            owner = { save_scope_as = news_source_country capital = { save_scope_as = news_event_state } set_variable = { name = news_world_succession_cooldown months = 6 } }
+            every_country = { limit = { is_player = yes } trigger_event = { id = news_events_world.16 days = 7 } }
+        }
+    }
+}
+
+news_events_world_election_end = {
+    trigger = { global_country_ranking <= 3
+        news_is_reportable_country = yes NOT = { is_revolutionary = yes } exists = ruler NOT = { has_variable = news_world_election_cooldown } }
+    effect = {
+        save_scope_as = news_source_country
+        ruler ?= { save_scope_as = news_new_ruler }
+        capital = { save_scope_as = news_event_state }
+        set_variable = { name = news_world_election_cooldown years = 1 }
+        every_country = { limit = { is_player = yes } trigger_event = { id = news_events_world.9 } }
+    }
+}
+
+news_events_world_harvest_started = {
+    trigger = {
+        scope:intensity > 6.5
+        news_is_reportable_country = yes NOT = { is_revolutionary = yes }
+        OR = {
+            scope:area.type = harvest_condition_type:drought
+            scope:area.type = harvest_condition_type:flood
+            scope:area.type = harvest_condition_type:frost
+            scope:area.type = harvest_condition_type:wildfire
+            scope:area.type = harvest_condition_type:hailstorm
+            scope:area.type = harvest_condition_type:locust_swarm
+            scope:area.type = harvest_condition_type:heatwave
+            # DISABLED — recurring blight stories. The one-off potato
+            # blight announcement (historical.91) covers this instead.
+            # scope:area.type = harvest_condition_type:disease_outbreak
+            scope:area.type = harvest_condition_type:extreme_winds
+            scope:area.type = harvest_condition_type:torrential_rains
+            scope:area.type = harvest_condition_type:tsunami
+            scope:area.type = harvest_condition_type:earthquake
+        }
+        scope:state = {
+            state_population > 1000000
+            NOT = { has_variable = news_world_harvest_cooldown }
+        }
+    }
+    effect = {
+        save_scope_as = news_source_country
+        scope:state = {
+            save_scope_as = news_event_state
+            set_variable = { name = news_world_harvest_cooldown years = 1 }
+        }
+        # Preserve the exact HarvestConditionArea supplied by vanilla. The newspaper
+        # selects a plain-text localization branch from its type, avoiding UI formatting.
+        scope:area = { save_scope_as = news_harvest_area }
+        save_scope_value_as = { name = news_harvest_intensity value = scope:intensity }
+        save_scope_value_as = { name = news_harvest_duration value = scope:duration }
+        every_country = { limit = { is_player = yes } trigger_event = { id = news_events_world.10 } }
+    }
+}
+
+news_events_world_revolution_start = {
+    trigger = {
+        # Cover revolutions in the world's top 30 powers, regardless of recognized status.
+        global_country_ranking <= 30
+        news_is_reportable_country = yes
+        NOT = { has_variable = news_world_revolution_start_cooldown }
+        NOT = { AND = { c:USA ?= this has_global_variable = second_american_civil_war_started } }
+    }
+    effect = {
+        save_scope_as = news_source_country
+        scope:target = { save_scope_as = news_rebel_country set_variable = news_world_rebellion_from_major_power capital = { save_scope_as = news_event_state } }
+        set_variable = { name = news_world_revolution_start_cooldown years = 1 }
+        every_country = { limit = { is_player = yes } trigger_event = { id = news_events_world.11 } }
+    }
+}
+
+news_events_world_civil_war_won = {
+    trigger = { has_variable = news_world_rebellion_from_major_power
+        news_is_reportable_country = yes NOT = { has_variable = news_world_revolution_win_cooldown } }
+    effect = {
+        save_scope_as = news_source_country
+        capital = { save_scope_as = news_event_state }
+        set_variable = { name = news_world_revolution_win_cooldown years = 1 }
+        every_country = { limit = { is_player = yes } trigger_event = { id = news_events_world.12 } }
+    }
+}
+
+news_events_world_treaty_entered_force = {
+    trigger = { first_country = { news_is_reportable_country = yes NOT = { is_revolutionary = yes } }
+        second_country = { news_is_reportable_country = yes NOT = { is_revolutionary = yes } }
+        OR = { any_scope_article = { has_type = state_transfer } any_scope_article = { has_type = alliance } } }
+    effect = {
+        save_scope_as = news_treaty
+        # One territorial headline per treaty entry into force, even if several
+        # state-transfer articles are bundled in the same settlement.
+        if = {
+            limit = { any_scope_article = { has_type = state_transfer } NOT = { has_variable = news_world_state_transfer_reported } }
+            set_variable = news_world_state_transfer_reported
+            random_scope_article = {
+                limit = { has_type = state_transfer }
+                input_state = { save_scope_as = news_event_state }
+                source_country = { save_scope_as = news_state_giver }
+                target_country = { save_scope_as = news_state_taker }
+            }
+            every_country = { limit = { is_player = yes } trigger_event = { id = news_events_world.13 } }
+        }
+        if = {
+            limit = {
+                any_scope_article = { has_type = alliance }
+                NOT = { has_variable = news_world_alliance_reported }
+                OR = { first_country = { country_rank = rank_value:great_power NOT = { has_variable = news_world_alliance_cooldown } } second_country = { country_rank = rank_value:great_power NOT = { has_variable = news_world_alliance_cooldown } } }
+            }
+            set_variable = news_world_alliance_reported
+            first_country = { save_scope_as = news_country_a }
+            second_country = { save_scope_as = news_country_b }
+            if = { limit = { first_country = { country_rank = rank_value:great_power } } first_country = { capital = { save_scope_as = news_event_state } } }
+            else = { second_country = { capital = { save_scope_as = news_event_state } } }
+            first_country = { if = { limit = { country_rank = rank_value:great_power } set_variable = { name = news_world_alliance_cooldown months = 6 } } }
+            second_country = { if = { limit = { country_rank = rank_value:great_power } set_variable = { name = news_world_alliance_cooldown months = 6 } } }
+            every_country = { limit = { is_player = yes } trigger_event = { id = news_events_world.17 } }
+        }
+    }
+}
+
+news_events_world_treaty_dissolved = {
+    trigger = {
+        first_country = { news_is_reportable_country = yes NOT = { is_revolutionary = yes } }
+        second_country = { news_is_reportable_country = yes NOT = { is_revolutionary = yes } }
+        any_scope_article = { has_type = alliance }
+        OR = { first_country = { country_rank = rank_value:great_power NOT = { has_variable = news_world_alliance_break_cooldown } } second_country = { country_rank = rank_value:great_power NOT = { has_variable = news_world_alliance_break_cooldown } } }
+    }
+    effect = {
+        save_scope_as = news_treaty
+        if = { limit = { first_country = { country_rank = rank_value:great_power } } first_country = { save_scope_as = news_country_a capital = { save_scope_as = news_event_state } } second_country = { save_scope_as = news_country_b } }
+        else = { second_country = { save_scope_as = news_country_a capital = { save_scope_as = news_event_state } } first_country = { save_scope_as = news_country_b } }
+        first_country = { if = { limit = { country_rank = rank_value:great_power } set_variable = { name = news_world_alliance_break_cooldown years = 1 } } }
+        second_country = { if = { limit = { country_rank = rank_value:great_power } set_variable = { name = news_world_alliance_break_cooldown years = 1 } } }
+        every_country = { limit = { is_player = yes } trigger_event = { id = news_events_world.28 } }
+    }
+}
+
+news_events_world_wargoal_enforced = {
+    trigger = {
+        # Do not publish capitulation/annexation stories when either side is revolutionary.
+        # Revolutionary governments are covered by the dedicated revolution stories instead.
+        NOT = { is_revolutionary = yes }
+        exists = scope:target
+        scope:target = {
+            news_is_reportable_country = yes
+            is_country_alive = no
+            is_revolutionary = no
+            # Only report the fall of a country of some standing.
+            global_country_ranking <= 125
+            NOT = { has_variable = news_world_annexation_reported }
+        }
+    }
+    effect = {
+        scope:diplomatic_play ?= { save_scope_as = news_diplomatic_play }
+        scope:target = { save_scope_as = news_annexed_country set_variable = news_world_annexation_reported }
+        save_scope_as = news_annexer
+        capital = { save_scope_as = news_event_state }
+        # DISABLED — capitulation/annexation story.
+        # every_country = { limit = { is_player = yes } trigger_event = { id = news_events_world.15 popup = yes } }
+    }
+}
+
+# Major government changes in Great Powers. Routine switches between presidential
+# and parliamentary republics are not enough by themselves; transitions to/from
+# monarchy, theocracy, council republic, corporate state, autocracy, single-party
+# state or anarchy are treated as systemic regime changes.
+news_events_world_law_activated = {
+    trigger = {
+        owner = {
+            news_is_reportable_country = yes NOT = { is_revolutionary = yes }
+            country_rank = rank_value:great_power
+            NOT = { has_variable = news_world_regime_change_cooldown }
+            NOT = { has_variable = coup_aftermath_var }
+            NOT = { has_modifier = modifier_government_recently_couped }
+            NOT = { has_journal_entry = je_ip4_coup }
+            has_revolution = no
+        }
+        OR = {
+            root.type ?= law_type:law_monarchy
+            root.type ?= law_type:law_theocracy
+            root.type ?= law_type:law_council_republic
+            root.type ?= law_type:law_corporate_state
+            root.type ?= law_type:law_autocracy
+            root.type ?= law_type:law_single_party_state
+            root.type ?= law_type:law_anarchy
+            AND = {
+                OR = { root.type ?= law_type:law_presidential_republic root.type ?= law_type:law_parliamentary_republic }
+                owner = { exists = var:news_world_previous_governance }
+                OR = {
+                    owner = { var:news_world_previous_governance ?= law_type:law_monarchy }
+                    owner = { var:news_world_previous_governance ?= law_type:law_theocracy }
+                    owner = { var:news_world_previous_governance ?= law_type:law_council_republic }
+                    owner = { var:news_world_previous_governance ?= law_type:law_corporate_state }
+                }
+            }
+            AND = {
+                OR = { root.type ?= law_type:law_universal_suffrage root.type ?= law_type:law_census_voting root.type ?= law_type:law_wealth_voting }
+                owner = { exists = var:news_world_previous_distribution }
+                OR = {
+                    owner = { var:news_world_previous_distribution ?= law_type:law_autocracy }
+                    owner = { var:news_world_previous_distribution ?= law_type:law_single_party_state }
+                    owner = { var:news_world_previous_distribution ?= law_type:law_anarchy }
+                }
+            }
+        }
+    }
+    effect = {
+        save_scope_as = news_new_law
+        owner = { save_scope_as = news_source_country capital = { save_scope_as = news_event_state } set_variable = { name = news_world_regime_change_cooldown months = 6 } }
+        every_country = { limit = { is_player = yes } trigger_event = { id = news_events_world.18 } }
+    }
+}
+
+news_events_world_country_default = {
+    trigger = { country_rank = rank_value:great_power
+        news_is_reportable_country = yes NOT = { is_revolutionary = yes } NOT = { has_variable = news_world_default_cooldown } }
+    effect = {
+        save_scope_as = news_source_country
+        save_scope_value_as = { name = news_default_principal value = principal }
+        save_scope_value_as = { name = news_default_credit_limit value = credit }
+        capital = { save_scope_as = news_event_state }
+        set_variable = { name = news_world_default_cooldown years = 1 }
+        every_country = { limit = { is_player = yes } trigger_event = { id = news_events_world.23 } }
+    }
+}
+
+news_events_world_bloc_struggle_started = {
+    trigger = {
+        game_date >= 1993.1.1
+        news_is_reportable_country = yes
+        NOT = { power_bloc ?= { power_bloc_leader ?= { c:EUR ?= this } } }
+        NOT = { is_revolutionary = yes } NOT = { has_variable = news_world_bloc_struggle_cooldown } }
+    effect = {
+        save_scope_as = news_bloc_contender
+        set_variable = { name = news_world_bloc_struggle_cooldown years = 1 }
+        power_bloc = {
+            save_scope_as = news_power_bloc
+            power_bloc_leader = { save_scope_as = news_bloc_leader capital = { save_scope_as = news_event_state } }
+        }
+        every_country = { limit = { is_player = yes } trigger_event = { id = news_events_world.26 } }
+    }
+}
+
+news_events_world_bloc_struggle_ended = {
+    trigger = {
+        game_date >= 1993.1.1
+        NOT = { scope:successful_contender ?= { c:EUR ?= this } }
+        NOT = { scope:failed_contender ?= { c:EUR ?= this } }
+        NOT = { is_revolutionary = yes } exists = scope:successful_contender exists = scope:failed_contender scope:successful_contender = { NOT = { has_variable = news_world_bloc_leadership_cooldown } } }
+    effect = {
+        scope:successful_contender = { save_scope_as = news_bloc_winner capital = { save_scope_as = news_event_state } set_variable = { name = news_world_bloc_leadership_cooldown years = 1 } }
+        scope:failed_contender = { save_scope_as = news_bloc_loser }
+        every_country = { limit = { is_player = yes } trigger_event = { id = news_events_world.27 } }
+    }
+}
+
+
+news_events_world_monthly = {
+    trigger = { always = yes }
+    effect = {
+        # v16 repeat-suppression migration. Rivalries and coup aftermaths that
+        # already exist when this version first runs are old news and are
+        # registered before the recurring scanner evaluates them.
+        if = {
+            limit = { NOT = { has_global_variable = news_world_repeat_baseline_v16 } }
+            set_global_variable = news_world_repeat_baseline_v16
+            every_country = {
+                if = {
+                    limit = { OR = { has_variable = coup_aftermath_var has_modifier = modifier_government_recently_couped } }
+                    set_variable = news_world_coup_announced_active
+                }
+                every_scope_diplomatic_pact = {
+                    if = {
+                        limit = { is_diplomatic_action_type = rivalry }
+                        first_country = { save_temporary_scope_as = news_v16_rival_a }
+                        second_country = { save_temporary_scope_as = news_v16_rival_b }
+                        scope:news_v16_rival_a = {
+                            add_to_variable_list = { name = news_world_known_rivals target = scope:news_v16_rival_b }
+                        }
+                        scope:news_v16_rival_b = {
+                            add_to_variable_list = { name = news_world_known_rivals target = scope:news_v16_rival_a }
+                        }
+                    }
+                }
+            }
+        }
+        # v11 Power Bloc transition baseline. Existing leaders are old news. The
+        # country-side marker is much more stable than variables on Bloc objects.
+        if = {
+            limit = { NOT = { has_global_variable = news_world_bloc_transition_v11_initialized } }
+            set_global_variable = news_world_bloc_transition_v11_initialized
+            every_country = {
+                if = { limit = { is_power_bloc_leader = yes } set_variable = news_world_was_bloc_leader }
+            }
+        }
+        if = {
+            limit = { NOT = { has_global_variable = news_world_initialized } }
+            set_global_variable = news_world_initialized
+            # Existing blocs/rivalries are pre-game facts, not new headlines.
+            every_country = {
+                set_variable = news_world_rank_initialized
+                if = { limit = { country_rank = rank_value:great_power } set_variable = news_world_was_great_power }
+                if = { limit = { is_power_bloc_leader = yes } set_variable = news_world_was_bloc_leader }
+                set_variable = { name = news_world_last_gdp value = gdp }
+                if = { limit = { exists = active_law:lawgroup_governance_principles } set_variable = { name = news_world_previous_governance value = active_law:lawgroup_governance_principles.type } }
+                if = { limit = { exists = active_law:lawgroup_distribution_of_power } set_variable = { name = news_world_previous_distribution value = active_law:lawgroup_distribution_of_power.type } }
+                if = { limit = { country_rank = rank_value:great_power infamy < 1 } set_variable = news_world_was_zero_infamy }
+            }
+            if = { limit = { any_country = { gdp >= 1000000000 } } set_global_variable = news_world_first_billion_seen }
+        }
+        else = {
+            # Coup success. The one-year vanilla aftermath marker is persistent, so
+            # use a separate active-incident latch: one coup can generate one paper,
+            # regardless of how long the aftermath variable/modifier remains true.
+            every_country = {
+                if = {
+                    limit = { OR = { has_variable = coup_aftermath_var has_modifier = modifier_government_recently_couped } }
+                    if = {
+                        limit = {
+                            # Coups are internationally newsworthy in any country ranked 45th or better.
+                            global_country_ranking <= 45
+                            NOT = { has_variable = news_world_coup_announced_active }
+                            NOT = { has_variable = news_world_coup_cooldown }
+                        }
+                        set_variable = news_world_coup_announced_active
+                        save_scope_as = news_source_country
+                        capital = { save_scope_as = news_event_state }
+                        set_variable = { name = news_world_coup_cooldown years = 1 }
+                        every_country = { limit = { is_player = yes } trigger_event = { id = news_events_world.5 } }
+                    }
+                }
+                else_if = {
+                    limit = { has_variable = news_world_coup_announced_active }
+                    remove_variable = news_world_coup_announced_active
+                }
+            }
+
+            # Severe unrest: 35% turmoil enters the alert state; it must fall below 25%
+            # before that state can generate another story. A Great Power can generate at
+            # most one unrest headline every three years; if several states erupt together,
+            # the most turbulent eligible state is selected.
+            every_country = {
+                limit = { news_is_reportable_country = yes NOT = { is_revolutionary = yes } country_rank = rank_value:great_power }
+                every_scope_state = {
+                    if = { limit = { has_variable = news_world_unrest_active turmoil < 0.25 } remove_variable = news_world_unrest_active }
+                }
+                if = {
+                    limit = {
+                        # Without a WORLD cooldown each great power carries its
+                        # own timer, so several unrest stories can print in the
+                        # same pulse. One per year worldwide.
+                        NOT = { has_global_variable = news_world_unrest_global_cooldown }
+                        NOT = { has_variable = news_world_unrest_country_cooldown }
+                        any_scope_state = { turmoil >= 0.35 NOT = { has_variable = news_world_unrest_active } NOT = { has_variable = news_world_unrest_cooldown } }
+                    }
+                    save_scope_as = news_source_country
+                    set_global_variable = { name = news_world_unrest_global_cooldown years = 1 }
+                    set_variable = { name = news_world_unrest_country_cooldown years = 3 }
+                    ordered_scope_state = {
+                        limit = { turmoil >= 0.35 NOT = { has_variable = news_world_unrest_active } NOT = { has_variable = news_world_unrest_cooldown } }
+                        order_by = turmoil
+                        position = 0
+                        check_range_bounds = no
+                        set_variable = news_world_unrest_active
+                        set_variable = { name = news_world_unrest_cooldown years = 3 }
+                        save_scope_as = news_event_state
+                    }
+                    # DISABLED — unrest/turmoil story.
+                    # every_country = { limit = { is_player = yes } trigger_event = { id = news_events_world.19 } }
+                }
+            }
+
+            # GDP shock: >7.5% month-to-month fall, with a six-month country cooldown.
+            every_country = {
+                if = {
+                    limit = { exists = var:news_world_last_gdp var:news_world_last_gdp > 0 }
+                    set_variable = { name = news_world_recession_threshold value = var:news_world_last_gdp }
+                    change_variable = { name = news_world_recession_threshold multiply = 0.925 }
+                    if = {
+                        limit = { country_rank = rank_value:great_power gdp < var:news_world_recession_threshold NOT = { has_variable = news_world_recession_cooldown } }
+                        save_scope_as = news_source_country
+                        save_scope_value_as = { name = news_recession_previous_gdp value = var:news_world_last_gdp }
+                        save_scope_value_as = { name = news_recession_current_gdp value = gdp }
+                        set_variable = { name = news_world_recession_drop value = var:news_world_last_gdp }
+                        change_variable = { name = news_world_recession_drop subtract = gdp }
+                        change_variable = { name = news_world_recession_drop divide = var:news_world_last_gdp }
+                        save_scope_value_as = { name = news_recession_drop value = var:news_world_recession_drop }
+                        remove_variable = news_world_recession_drop
+                        capital = { save_scope_as = news_event_state }
+                        set_variable = { name = news_world_recession_cooldown months = 6 }
+                        every_country = { limit = { is_player = yes } trigger_event = { id = news_events_world.20 } }
+                    }
+                    remove_variable = news_world_recession_threshold
+                }
+                set_variable = { name = news_world_last_gdp value = gdp }
+            }
+
+            # First ever billion-pound GDP milestone.
+            if = {
+                limit = { NOT = { has_global_variable = news_world_first_billion_seen } any_country = { gdp >= 1000000000 } }
+                set_global_variable = news_world_first_billion_seen
+                ordered_country = {
+                    limit = { gdp >= 1000000000 }
+                    order_by = gdp
+                    position = 0
+                    check_range_bounds = no
+                    save_scope_as = news_source_country
+                    save_scope_value_as = { name = news_billion_gdp value = gdp }
+                    capital = { save_scope_as = news_event_state }
+                }
+                every_country = { limit = { is_player = yes } trigger_event = { id = news_events_world.21 } }
+            }
+
+            # Power Bloc formation: detect the durable country transition from
+            # non-leader to leader. Current leaders were baselined above, so blocs
+            # existing at game start or before a v11 upgrade cannot generate papers.
+            every_country = {
+                if = {
+                    limit = {
+                        is_power_bloc_leader = yes
+                        NOT = { has_variable = news_world_was_bloc_leader }
+                    }
+                    set_variable = news_world_was_bloc_leader
+                    if = {
+                        limit = {
+                            NOT = { has_variable = news_world_bloc_formation_cooldown }
+                            # Leadership struggles already have their own headline.
+                            NOT = { has_variable = news_world_bloc_leadership_cooldown }
+                        }
+                        save_scope_as = news_bloc_leader
+                        capital = { save_scope_as = news_event_state }
+                        set_variable = { name = news_world_bloc_formation_cooldown years = 1 }
+                        every_country = { limit = { is_player = yes } trigger_event = { id = news_events_world.22 } }
+                    }
+                }
+                else_if = {
+                    limit = {
+                        is_power_bloc_leader = no
+                        has_variable = news_world_was_bloc_leader
+                    }
+                    remove_variable = news_world_was_bloc_leader
+                }
+            }
+
+            # Great Power rivalries.
+            every_country = {
+                limit = { news_is_reportable_country = yes NOT = { is_revolutionary = yes } country_rank = rank_value:great_power }
+                every_scope_diplomatic_pact = {
+                    if = {
+                        limit = {
+                            is_diplomatic_action_type = rivalry
+                            first_country = { country_rank = rank_value:great_power }
+                            second_country = { country_rank = rank_value:great_power }
+                        }
+                        first_country = { save_temporary_scope_as = news_rival_a }
+                        second_country = { save_temporary_scope_as = news_rival_b }
+                        if = {
+                            limit = {
+                                scope:news_rival_a = {
+                                    NOT = { is_target_in_variable_list = { name = news_world_known_rivals target = scope:news_rival_b } }
+                                    NOT = { has_variable = news_world_rivalry_cooldown }
+                                }
+                                scope:news_rival_b = { NOT = { has_variable = news_world_rivalry_cooldown } }
+                            }
+                            scope:news_rival_a = {
+                                add_to_variable_list = { name = news_world_known_rivals target = scope:news_rival_b }
+                                save_scope_as = news_country_a
+                                capital = { save_scope_as = news_event_state }
+                                set_variable = { name = news_world_rivalry_cooldown months = 6 }
+                            }
+                            scope:news_rival_b = {
+                                add_to_variable_list = { name = news_world_known_rivals target = scope:news_rival_a }
+                                save_scope_as = news_country_b
+                                set_variable = { name = news_world_rivalry_cooldown months = 6 }
+                            }
+                            # DISABLED — rivalry story.
+                            # every_country = { limit = { is_player = yes } trigger_event = { id = news_events_world.14 } }
+                        }
+                    }
+                }
+            }
+
+            # Great Power status changes, with a one-year repeat cooldown.
+            every_country = {
+                if = {
+                    limit = { has_variable = news_world_rank_initialized country_rank = rank_value:great_power NOT = { has_variable = news_world_was_great_power } }
+                    set_variable = news_world_was_great_power
+                    if = {
+                        limit = { NOT = { has_variable = news_world_rank_change_cooldown } }
+                        save_scope_as = news_source_country
+                        capital = { save_scope_as = news_event_state }
+                        set_variable = { name = news_world_rank_change_cooldown years = 1 }
+                        # DISABLED — rise to great power story.
+                        # every_country = { limit = { is_player = yes } trigger_event = { id = news_events_world.24 } }
+                    }
+                }
+                else_if = {
+                    limit = { has_variable = news_world_rank_initialized country_rank != rank_value:great_power has_variable = news_world_was_great_power }
+                    remove_variable = news_world_was_great_power
+                    if = {
+                        limit = { NOT = { has_variable = news_world_rank_change_cooldown } }
+                        save_scope_as = news_source_country
+                        capital = { save_scope_as = news_event_state }
+                        set_variable = { name = news_world_rank_change_cooldown years = 1 }
+                        # DISABLED — fall from great power story.
+                        # every_country = { limit = { is_player = yes } trigger_event = { id = news_events_world.25 } }
+                    }
+                }
+                if = { limit = { NOT = { has_variable = news_world_rank_initialized } } set_variable = news_world_rank_initialized }
+            }
+
+            # Keep previous-law snapshots for detecting major regime transitions.
+            every_country = {
+                if = { limit = { exists = active_law:lawgroup_governance_principles } set_variable = { name = news_world_previous_governance value = active_law:lawgroup_governance_principles.type } }
+                if = { limit = { exists = active_law:lawgroup_distribution_of_power } set_variable = { name = news_world_previous_distribution value = active_law:lawgroup_distribution_of_power.type } }
+                if = {
+                    limit = { country_rank = rank_value:great_power infamy < 1 }
+                    set_variable = news_world_was_zero_infamy
+                }
+                else = { remove_variable = news_world_was_zero_infamy }
+            }
+        }
+    }
+}
+
+# WORLD-MARKET SHORTAGE WATCH
+# The world-market price itself is GUI-facing, but vanilla exposes world-market
+# imports/exports to script. Vanilla PRICE_RANGE (0.75) and
+# BUY_SELL_DIFF_AT_MAX_FACTOR (2) mean +65% price pressure is reached at an
+# imports/exports ratio of about 1.866667. One shortage story may run globally
+# per 12 months. Oil is deliberately ignored before 1910.
+news_events_world_shortage_monthly = {
+    trigger = {
+        NOT = { has_global_variable = news_world_shortage_cooldown }
+        OR = {
+            AND = { year >= 1910 g:oil = { news_world_market_price_pressure > 1.866667 } }
+            g:steel = { news_world_market_price_pressure > 1.866667 }
+            g:iron = { news_world_market_price_pressure > 1.866667 }
+            g:wood = { news_world_market_price_pressure > 1.866667 }
+            g:coal = { news_world_market_price_pressure > 1.866667 }
+            g:grain = { news_world_market_price_pressure > 1.866667 }
+            g:engines = { news_world_market_price_pressure > 1.866667 }
+            g:rubber = { news_world_market_price_pressure > 1.866667 }
+            g:tools = { news_world_market_price_pressure > 1.866667 }
+            g:paper = { news_world_market_price_pressure > 1.866667 }
+            g:groceries = { news_world_market_price_pressure > 1.866667 }
+        }
+    }
+    effect = {
+        # If several goods are simultaneously above the threshold, report the
+        # first in the requested priority list. The global cooldown prevents a
+        # burst of ten shortage papers at once.
+        if = {
+            limit = { year >= 1910 g:oil = { news_world_market_price_pressure > 1.866667 } }
+            g:oil = {
+                save_scope_as = news_shortage_good
+                save_scope_value_as = { name = news_shortage_imports value = world_market_imports }
+                save_scope_value_as = { name = news_shortage_exports value = world_market_exports }
+                save_scope_value_as = { name = news_shortage_pressure value = news_world_market_price_pressure }
+            }
+        }
+        else_if = {
+            limit = { g:steel = { news_world_market_price_pressure > 1.866667 } }
+            g:steel = {
+                save_scope_as = news_shortage_good
+                save_scope_value_as = { name = news_shortage_imports value = world_market_imports }
+                save_scope_value_as = { name = news_shortage_exports value = world_market_exports }
+                save_scope_value_as = { name = news_shortage_pressure value = news_world_market_price_pressure }
+            }
+        }
+        else_if = {
+            limit = { g:iron = { news_world_market_price_pressure > 1.866667 } }
+            g:iron = {
+                save_scope_as = news_shortage_good
+                save_scope_value_as = { name = news_shortage_imports value = world_market_imports }
+                save_scope_value_as = { name = news_shortage_exports value = world_market_exports }
+                save_scope_value_as = { name = news_shortage_pressure value = news_world_market_price_pressure }
+            }
+        }
+        else_if = {
+            limit = { g:wood = { news_world_market_price_pressure > 1.866667 } }
+            g:wood = {
+                save_scope_as = news_shortage_good
+                save_scope_value_as = { name = news_shortage_imports value = world_market_imports }
+                save_scope_value_as = { name = news_shortage_exports value = world_market_exports }
+                save_scope_value_as = { name = news_shortage_pressure value = news_world_market_price_pressure }
+            }
+        }
+        else_if = {
+            limit = { g:coal = { news_world_market_price_pressure > 1.866667 } }
+            g:coal = {
+                save_scope_as = news_shortage_good
+                save_scope_value_as = { name = news_shortage_imports value = world_market_imports }
+                save_scope_value_as = { name = news_shortage_exports value = world_market_exports }
+                save_scope_value_as = { name = news_shortage_pressure value = news_world_market_price_pressure }
+            }
+        }
+        else_if = {
+            limit = { g:grain = { news_world_market_price_pressure > 1.866667 } }
+            g:grain = {
+                save_scope_as = news_shortage_good
+                save_scope_value_as = { name = news_shortage_imports value = world_market_imports }
+                save_scope_value_as = { name = news_shortage_exports value = world_market_exports }
+                save_scope_value_as = { name = news_shortage_pressure value = news_world_market_price_pressure }
+            }
+        }
+        else_if = {
+            limit = { g:engines = { news_world_market_price_pressure > 1.866667 } }
+            g:engines = {
+                save_scope_as = news_shortage_good
+                save_scope_value_as = { name = news_shortage_imports value = world_market_imports }
+                save_scope_value_as = { name = news_shortage_exports value = world_market_exports }
+                save_scope_value_as = { name = news_shortage_pressure value = news_world_market_price_pressure }
+            }
+        }
+        else_if = {
+            limit = { g:rubber = { news_world_market_price_pressure > 1.866667 } }
+            g:rubber = {
+                save_scope_as = news_shortage_good
+                save_scope_value_as = { name = news_shortage_imports value = world_market_imports }
+                save_scope_value_as = { name = news_shortage_exports value = world_market_exports }
+                save_scope_value_as = { name = news_shortage_pressure value = news_world_market_price_pressure }
+            }
+        }
+        else_if = {
+            limit = { g:tools = { news_world_market_price_pressure > 1.866667 } }
+            g:tools = {
+                save_scope_as = news_shortage_good
+                save_scope_value_as = { name = news_shortage_imports value = world_market_imports }
+                save_scope_value_as = { name = news_shortage_exports value = world_market_exports }
+                save_scope_value_as = { name = news_shortage_pressure value = news_world_market_price_pressure }
+            }
+        }
+        else_if = {
+            limit = { g:paper = { news_world_market_price_pressure > 1.866667 } }
+            g:paper = {
+                save_scope_as = news_shortage_good
+                save_scope_value_as = { name = news_shortage_imports value = world_market_imports }
+                save_scope_value_as = { name = news_shortage_exports value = world_market_exports }
+                save_scope_value_as = { name = news_shortage_pressure value = news_world_market_price_pressure }
+            }
+        }
+        else = {
+            g:groceries = {
+                save_scope_as = news_shortage_good
+                save_scope_value_as = { name = news_shortage_imports value = world_market_imports }
+                save_scope_value_as = { name = news_shortage_exports value = world_market_exports }
+                save_scope_value_as = { name = news_shortage_pressure value = news_world_market_price_pressure }
+            }
+        }
+
+        set_global_variable = { name = news_world_shortage_cooldown years = 1 }
+        every_country = {
+            limit = { is_player = yes }
+            capital = { save_scope_as = news_event_state }
+            trigger_event = { id = news_events_world.29 }
+        }
+    }
+}
+
+# TRADE STATES AGREEMENTS 
+news_events_world_trade_states_accepted = {
+    trigger = {
+        is_diplomatic_action_type = trade_states
+        scope:actor = { news_is_reportable_country = yes NOT = { is_revolutionary = yes } }
+        scope:target = { news_is_reportable_country = yes NOT = { is_revolutionary = yes } }
+        OR = { exists = scope:first_state exists = scope:second_state }
+        exists = scope:actor
+        exists = scope:target_country
+    }
+    effect = {
+        scope:actor = { save_scope_as = news_country_a }
+        scope:target_country = { save_scope_as = news_country_b }
+        if = {
+            limit = { exists = scope:first_state }
+            scope:first_state = { save_scope_as = news_trade_state_a save_scope_as = news_event_state }
+        }
+        if = {
+            limit = { exists = scope:second_state }
+            scope:second_state = {
+                save_scope_as = news_trade_state_b
+                if = { limit = { NOT = { exists = scope:news_event_state } } save_scope_as = news_event_state }
+            }
+        }
+        every_country = {
+            limit = { is_player = yes }
+            trigger_event = { id = news_events_world.30 }
+        }
+    }
+}
+
+# WORKERS' STRIKE
+news_events_world_worker_strike_monthly = {
+    trigger = { always = yes }
+    effect = {
+        every_country = {
+            if = {
+                limit = {
+                    news_is_reportable_country = yes NOT = { is_revolutionary = yes }
+                    country_rank = rank_value:great_power
+                    OR = {
+                        has_journal_entry = je_strike
+                        has_modifier = modifier_nationwide_strikes
+                        any_scope_state = { has_modifier = modifier_movement_worker_strikes }
+                    }
+                }
+                if = {
+                    limit = { NOT = { has_variable = news_world_workers_strike_active } }
+                    set_variable = news_world_workers_strike_active
+                    save_scope_as = news_source_country
+
+                    # Prefer the largest state that is explicitly carrying a
+                    # strike modifier. The dedicated Strike JE adds industrial,
+                    # mining or railway modifiers after the government's first
+                    # response; movement strikes have their own state modifier.
+                    ordered_scope_state = {
+                        limit = {
+                            OR = {
+                                has_modifier = modifier_movement_worker_strikes
+                                has_modifier = industrial_strike_modifier
+                                has_modifier = mining_strike_modifier
+                                has_modifier = railway_strike_modifier
+                            }
+                        }
+                        order_by = state_population
+                        position = 0
+                        check_range_bounds = no
+                        save_scope_as = news_event_state
+                    }
+                    if = {
+                        limit = { NOT = { exists = scope:news_event_state } }
+                        capital = { save_scope_as = news_event_state }
+                    }
+
+                    every_country = {
+                        limit = { is_player = yes }
+                        trigger_event = { id = news_events_world.31 }
+                    }
+                }
+            }
+            else_if = {
+                limit = { has_variable = news_world_workers_strike_active }
+                remove_variable = news_world_workers_strike_active
+            }
+        }
+    }
+}
+

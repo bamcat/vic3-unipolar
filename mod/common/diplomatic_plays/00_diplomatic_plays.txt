@@ -1441,3 +1441,215 @@ dp_restore_union = {
 		}
 	}
 }
+
+dp_return_state_to_subject = {
+	requires_interest_marker = no
+
+	war_goal = return_state
+
+	texture = "gfx/interface/icons/war_goals/return_state.dds"
+
+	selectable_in_lens = {
+		is_ai = no
+		any_direct_subject = {
+			number_of_claims > 0
+		}
+	}
+
+	possible = {
+		smd_io_no_alliance_conflict = yes
+		NOT = { is_country_type = decentralized }
+		aggressive_diplomatic_plays_permitted = yes
+		NOT = { is_subject_of = scope:target_country }
+		scope:target_country = {
+			NOT = { is_country_type = decentralized }
+		}
+		diplomatic_play_has_no_relations_blockers = yes
+	}
+
+	ai_acceptance_max = 90
+
+	on_weekly_pulse = {}
+
+	on_war_begins = {}
+
+	on_war_end = {}
+}
+
+dp_release_as_subject = {
+	war_goal = release_as_subject
+
+	texture = "gfx/interface/icons/war_goals/liberate_country.dds"
+
+	possible = {
+		NOT = { is_country_type = decentralized }
+		aggressive_diplomatic_plays_permitted = yes
+		NOT = { is_subject_of = scope:target_country }
+		diplomatic_play_has_no_relations_blockers = yes
+	}
+
+	ai_acceptance_max = 90
+
+	on_weekly_pulse = {}
+
+	on_war_begins = {}
+
+	on_war_end = {}
+}
+
+dp_demand_strait_access = {
+	war_goal = demand_strait_access
+
+	texture = "gfx/interface/icons/war_goals/enforce_treaty_article.dds"
+
+	add_infamy_for_starting_target_wargoals = yes
+
+	possible = {
+		smd_io_no_alliance_conflict = yes
+		NOT = { is_country_type = decentralized }
+		aggressive_diplomatic_plays_permitted = yes
+		has_technology_researched = international_relations
+		NOT = { is_subject_of = scope:target_country }
+		scope:target_country = {
+			NOT = { is_country_type = decentralized }
+			NOT = { is_subject_of = root }
+			has_any_strait_province_in_hierarchy = yes
+			has_any_strait_control = yes
+		}
+		custom_tooltip = {
+			text = dp_demand_strait_access_already_has_access_tt
+			NOT = { has_military_strait_access_through = scope:target_country }
+		}
+	}
+
+	ai_acceptance_max = 100
+
+	on_weekly_pulse = {}
+
+	on_war_begins = {}
+
+	on_war_end = {}
+}
+
+dp_demand_toll_exemption = {
+	war_goal = demand_toll_exemption
+
+	texture = "gfx/interface/icons/war_goals/enforce_treaty_article.dds"
+
+	add_infamy_for_starting_target_wargoals = yes
+
+	possible = {
+		smd_io_no_alliance_conflict = yes
+		NOT = { is_country_type = decentralized }
+		aggressive_diplomatic_plays_permitted = yes
+		has_technology_researched = international_relations
+		NOT = { is_subject_of = scope:target_country }
+		scope:target_country = {
+			NOT = { is_country_type = decentralized }
+			NOT = { is_subject_of = root }
+			charges_strait_toll = yes
+		}
+		custom_tooltip = {
+			text = dp_demand_toll_exemption_already_exempt_tt
+			NOT = { has_strait_toll_exemption_from = scope:target_country }
+		}
+	}
+
+	ai_acceptance_max = 100
+
+	on_weekly_pulse = {}
+
+	on_war_begins = {}
+
+	on_war_end = {}
+}
+
+dp_demand_no_tolls = {
+	war_goal = demand_no_tolls
+
+	texture = "gfx/interface/icons/war_goals/enforce_treaty_article.dds"
+
+	add_infamy_for_starting_target_wargoals = yes
+
+	possible = {
+		smd_io_no_alliance_conflict = yes
+		NOT = { is_country_type = decentralized }
+		aggressive_diplomatic_plays_permitted = yes
+		has_technology_researched = international_relations
+		NOT = { is_subject_of = scope:target_country }
+		scope:target_country = {
+			NOT = { is_country_type = decentralized }
+			NOT = { is_subject_of = root }
+			charges_strait_toll = yes
+			custom_tooltip = {
+				text = dp_demand_no_tolls_already_bound_tt
+				can_toll_straits = yes
+			}
+		}
+	}
+
+	ai_acceptance_max = 100
+
+	on_weekly_pulse = {}
+
+	on_war_begins = {}
+
+	on_war_end = {}
+}
+
+dp_demand_no_strait_closure = {
+	war_goal = demand_no_strait_closure
+
+	texture = "gfx/interface/icons/war_goals/enforce_treaty_article.dds"
+
+	add_infamy_for_starting_target_wargoals = yes
+
+	possible = {
+		smd_io_no_alliance_conflict = yes
+		NOT = { is_country_type = decentralized }
+		aggressive_diplomatic_plays_permitted = yes
+		has_technology_researched = international_relations
+		NOT = { is_subject_of = scope:target_country }
+		scope:target_country = {
+			NOT = { is_country_type = decentralized }
+			NOT = { is_subject_of = root }
+			has_any_strait_province_in_hierarchy = yes
+			has_any_strait_control = yes
+			custom_tooltip = {
+				text = dp_demand_no_strait_closure_already_bound_tt
+				can_close_straits = yes
+			}
+		}
+	}
+
+	ai_acceptance_max = 100
+
+	on_weekly_pulse = {}
+
+	on_war_begins = {}
+
+	on_war_end = {}
+}
+
+smd_dp_intifada = {
+	war_goal = annex_country
+
+	add_infamy_for_starting_initiator_wargoals = no
+	initiator_can_add_war_goals = no
+
+	texture = "gfx/interface/icons/war_goals/annex_country.dds"
+
+	selectable_in_lens = {
+		always = no
+	}
+
+	possible = {}
+
+	ai_acceptance_max = 75
+
+	on_weekly_pulse = {}
+
+	on_war_begins = {}
+
+	on_war_end = {}
+}

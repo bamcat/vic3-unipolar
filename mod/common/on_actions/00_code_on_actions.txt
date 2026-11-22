@@ -2380,28 +2380,6 @@ on_character_creation = {
 	effect = {
 		if = {
 			limit = {
-				has_ideology = ideology:ideology_traditionalist_minoritarian
-				owner.religion ?= religion
-			}
-			set_ideology = ideology:ideology_traditionalist
-		}
-		else_if = {
-			limit = {
-				has_ideology = ideology:ideology_traditionalist
-				NOT = {
-					owner.religion ?= religion
-				}
-			}
-			set_ideology = ideology:ideology_traditionalist_minoritarian
-		}
-		if = {
-			limit = {
-				has_ideology = ideology:ideology_nihilist
-			}
-			change_character_religion = rel:atheist
-		}
-		if = {
-			limit = {
 				OR = {
 					has_role_of_type = admiral
 					has_role_of_type = general

@@ -292,6 +292,18 @@ smd_generic_monthly_country = {
 		}
 		if = {
 			limit = {
+				is_at_war = yes
+				any_scope_war = {
+					num_country_casualties = {
+						target = ROOT
+						value >= smd_big_war_casualties
+					}
+				}
+			}
+			set_variable = { name = smd_big_war days = 62 }
+		}
+		if = {
+			limit = {
 				market_capital.market ?= {
 					OR = {
 						mg:grain ?= { market_goods_pricier > 0.4 }
@@ -413,6 +425,7 @@ smd_generic_on_war_end = {
 				limit = {
 					army_size >= 20
 					has_variable = smd_war_mobilized
+					has_variable = smd_big_war
 				}
 				set_variable = { name = smd_war_veterans days = 1095 }
 			}
@@ -422,6 +435,7 @@ smd_generic_on_war_end = {
 				limit = {
 					army_size >= 20
 					has_variable = smd_war_mobilized
+					has_variable = smd_big_war
 				}
 				set_variable = { name = smd_war_veterans days = 1095 }
 			}

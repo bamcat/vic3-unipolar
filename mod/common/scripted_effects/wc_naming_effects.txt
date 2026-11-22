@@ -1,0 +1,858 @@
+﻿wc_classify = {
+	save_scope_as = wc_slot
+	scope:wc_war = {
+		attacker_warleader = { save_scope_as = wc_att }
+		defender_warleader = { save_scope_as = wc_def }
+	}
+	remove_variable = wc_type
+	remove_variable = wc_flavor
+	remove_variable = wc_locked
+	set_variable = { name = wc_x value = scope:wc_att.country_definition }
+	set_variable = { name = wc_y value = scope:wc_def.country_definition }
+	if = {
+		limit = { scope:wc_att = { is_revolutionary = yes } }
+		set_variable = { name = wc_civ value = scope:wc_def.country_definition }
+		set_variable = { name = wc_rev value = scope:wc_att.country_definition }
+	}
+	else = {
+		set_variable = { name = wc_civ value = scope:wc_att.country_definition }
+		set_variable = { name = wc_rev value = scope:wc_def.country_definition }
+	}
+	set_variable = { name = wc_pp value = scope:wc_def.army_power_projection }
+	change_variable = { name = wc_pp multiply = 4 }
+	if = {
+		limit = {
+			scope:wc_play = { is_diplomatic_play_type = dp_taiping_rebellion }
+		}
+		wc_set_type = { T = 104 }
+	}
+	else_if = {
+		limit = {
+			scope:wc_play = { is_diplomatic_play_type = dp_sepoy_mutiny }
+		}
+		wc_set_type = { T = 105 }
+	}
+	else_if = {
+		limit = {
+			scope:wc_play = { is_diplomatic_play_type = dp_hungarian_revolution }
+		}
+		wc_set_type = { T = 106 }
+	}
+	else_if = {
+		limit = {
+			scope:wc_play = { is_diplomatic_play_type = dp_polish_uprising }
+		}
+		wc_set_type = { T = 107 }
+	}
+	else_if = {
+		limit = {
+			wc_is_civil_play = yes
+			exists = c:USA
+			scope:wc_war = { is_war_participant = c:USA }
+			OR = { wc_civ_is = { TAG = USA } scope:wc_war = { OR = { attacker_warleader = { c:USA ?= this } defender_warleader = { c:USA ?= this } } } }
+		}
+		set_variable = { name = wc_x value = var:wc_civ }
+		wc_set_type = { T = 113 }
+	}
+	else_if = {
+		limit = {
+			wc_is_civil_play = yes
+			wc_civ_is = { TAG = JAP }
+			year < 1885
+		}
+		set_variable = { name = wc_x value = var:wc_civ }
+		wc_set_type = { T = 108 }
+	}
+	else_if = {
+		limit = {
+			scope:wc_play = { is_diplomatic_play_type = dp_revolution }
+			wc_civ_is = { TAG = SPA }
+			year < 1900
+		}
+		set_variable = { name = wc_x value = var:wc_civ }
+		wc_set_type = { T = 116 }
+	}
+	else_if = {
+		limit = {
+			wc_is_civil_play = yes
+			wc_civ_is = { TAG = SWI }
+			year < 1870
+		}
+		set_variable = { name = wc_x value = var:wc_civ }
+		wc_set_type = { T = 117 }
+	}
+	else_if = {
+		limit = {
+			scope:wc_war = { wc_vs = { A = TEX B = MEX } }
+			year < 1850
+		}
+		wc_set_type = { T = 118 }
+	}
+	else_if = {
+		limit = {
+			scope:wc_war = { wc_vs = { A = GBR B = CHI } }
+			year < 1880
+		}
+		wc_set_type = { T = 101 }
+	}
+	else_if = {
+		limit = {
+			scope:wc_war = { wc_vs = { A = RUS B = TUR } }
+			scope:wc_war = { OR = { wc_with = { A = TUR B = GBR } wc_with = { A = TUR B = FRA } } }
+			year >= 1845
+			year < 1870
+		}
+		wc_set_type = { T = 102 }
+	}
+	else_if = {
+		limit = {
+			scope:wc_war = { wc_vs = { A = USA B = MEX } }
+			year < 1870
+		}
+		wc_set_type = { T = 103 }
+	}
+	else_if = {
+		limit = {
+			scope:wc_war = { OR = { wc_vs = { A = PRG B = BRZ } wc_vs = { A = PRG B = ARG } wc_vs = { A = PRG B = URU } } }
+			year < 1885
+		}
+		wc_set_type = { T = 109 }
+	}
+	else_if = {
+		limit = {
+			scope:wc_war = { OR = { wc_vs = { A = CHL B = PEU } wc_vs = { A = CHL B = BOL } } }
+			year >= 1860
+			year < 1900
+		}
+		wc_set_type = { T = 110 }
+	}
+	else_if = {
+		limit = {
+			scope:wc_war = { wc_vs = { A = GBR B = ZUL } }
+		}
+		wc_set_type = { T = 111 }
+	}
+	else_if = {
+		limit = {
+			scope:wc_war = { OR = { wc_vs = { A = DEN B = PRU } wc_vs = { A = DEN B = GER } wc_vs = { A = DEN B = AUS } } }
+			year < 1880
+		}
+		wc_set_type = { T = 112 }
+	}
+	else_if = {
+		limit = {
+			scope:wc_war = { wc_vs = { A = SPA B = USA } }
+			year >= 1880
+		}
+		wc_set_type = { T = 114 }
+	}
+	else_if = {
+		limit = {
+			scope:wc_war = { OR = { wc_vs = { A = GBR B = TRN } wc_vs = { A = GBR B = ORA } } }
+		}
+		wc_set_type = { T = 115 }
+	}
+	else_if = {
+		limit = {
+			scope:wc_war = { wc_vs = { A = BRZ B = ARG } }
+			year < 1860
+		}
+		wc_set_type = { T = 119 }
+	}
+	else_if = {
+		limit = {
+			scope:wc_war = { OR = { wc_vs = { A = AUS B = SAR } wc_vs = { A = AUS B = ITA } } }
+			year < 1880
+		}
+		wc_set_type = { T = 120 }
+	}
+	else_if = {
+		limit = {
+			scope:wc_war = { wc_vs = { A = EGY B = TUR } }
+			year < 1860
+		}
+		wc_set_type = { T = 121 }
+	}
+	else_if = {
+		limit = {
+			scope:wc_war = { wc_vs = { A = FRA B = MEX } }
+			year < 1850
+		}
+		wc_set_type = { T = 122 }
+	}
+	else_if = {
+		limit = {
+			scope:wc_war = { OR = { wc_vs = { A = GBR B = KAB } wc_vs = { A = GBR B = AFG } } }
+		}
+		wc_set_type = { T = 123 }
+	}
+	else_if = {
+		limit = {
+			scope:wc_war = { wc_vs = { A = GBR B = PAN } }
+		}
+		wc_set_type = { T = 124 }
+	}
+	else_if = {
+		limit = {
+			scope:wc_war = { wc_vs = { A = GBR B = BUR } }
+		}
+		wc_set_type = { T = 125 }
+	}
+	else_if = {
+		limit = {
+			scope:wc_war = { wc_vs = { A = GBR B = PER } }
+			year < 1900
+		}
+		wc_set_type = { T = 126 }
+	}
+	else_if = {
+		limit = {
+			scope:wc_war = { wc_vs = { A = GBR B = EGY } }
+			year >= 1860
+		}
+		wc_set_type = { T = 127 }
+	}
+	else_if = {
+		limit = {
+			scope:wc_war = { wc_vs = { A = RUS B = CIR } }
+		}
+		wc_set_type = { T = 128 }
+	}
+	else_if = {
+		limit = {
+			scope:wc_war = { wc_vs = { A = RUS B = CHC } }
+		}
+		wc_set_type = { T = 129 }
+	}
+	else_if = {
+		limit = {
+			scope:wc_war = { wc_vs = { A = GBR B = ASH } }
+		}
+		wc_set_type = { T = 130 }
+	}
+	else_if = {
+		limit = {
+			scope:wc_war = { wc_vs = { A = SPA B = CUB } }
+			year < 1885
+		}
+		wc_set_type = { T = 131 }
+	}
+	else_if = {
+		limit = {
+			scope:wc_war = { wc_vs = { A = SPA B = CUB } }
+		}
+		wc_set_type = { T = 132 }
+	}
+	else_if = {
+		limit = {
+			scope:wc_war = { wc_vs = { A = SPA B = PHI } }
+		}
+		wc_set_type = { T = 133 }
+	}
+	else_if = {
+		limit = {
+			scope:wc_war = { wc_vs = { A = USA B = PHI } }
+		}
+		wc_set_type = { T = 134 }
+	}
+	else_if = {
+		limit = {
+			scope:wc_war = { wc_vs = { A = FRA B = MEX } }
+			year < 1880
+		}
+		wc_set_type = { T = 135 }
+	}
+	else_if = {
+		limit = {
+			scope:wc_war = { wc_vs = { A = BOL B = PRG } }
+			year >= 1900
+		}
+		wc_set_type = { T = 136 }
+	}
+	else_if = {
+		limit = {
+			scope:wc_war = { wc_vs = { A = RUS B = FIN } }
+			year >= 1900
+		}
+		wc_set_type = { T = 137 }
+	}
+	else_if = {
+		limit = {
+			scope:wc_war = { wc_vs = { A = NET B = ACE } }
+		}
+		wc_set_type = { T = 138 }
+	}
+	else_if = {
+		limit = {
+			scope:wc_war = { wc_vs = { A = BRZ B = URU } }
+			year < 1880
+		}
+		wc_set_type = { T = 139 }
+	}
+	else_if = {
+		limit = {
+			scope:wc_war = { OR = { wc_vs = { A = CHL B = PEU } wc_vs = { A = CHL B = BOL } } }
+			year < 1845
+		}
+		wc_set_type = { T = 140 }
+	}
+	else_if = {
+		limit = {
+			scope:wc_war = { OR = { wc_vs = { A = GBR B = SUD } wc_vs = { A = EGY B = SUD } } }
+		}
+		wc_set_type = { T = 141 }
+	}
+	else_if = {
+		limit = {
+			scope:wc_war = { wc_vs = { A = USA B = GBR } }
+			year >= 1855
+			year < 1865
+		}
+		wc_set_type = { T = 142 }
+	}
+	else_if = {
+		limit = {
+			scope:wc_war = { wc_vs = { A = USA B = GBR } }
+			year < 1845
+		}
+		wc_set_type = { T = 143 }
+	}
+	else_if = {
+		limit = {
+			scope:wc_play = { is_diplomatic_play_type = dp_revolution }
+		}
+		set_variable = { name = wc_x value = var:wc_civ }
+		wc_set_type = { T = 4 }
+	}
+	else_if = {
+		limit = {
+			scope:wc_play = { is_diplomatic_play_type = dp_secession }
+		}
+		set_variable = { name = wc_x value = var:wc_rev }
+		wc_set_type = { T = 7 }
+	}
+	else_if = {
+		limit = {
+			scope:wc_play = { is_diplomatic_play_type = dp_independence }
+		}
+		set_variable = { name = wc_x value = scope:wc_att.country_definition }
+		wc_set_type = { T = 7 }
+	}
+	else_if = {
+		limit = {
+			var:wc_gp_a >= 3
+			var:wc_gp_b >= 3
+			year >= 1900
+		}
+		wc_set_type = { T = 2 }
+	}
+	else_if = {
+		limit = {
+			var:wc_gp_a >= 3
+			var:wc_gp_b >= 3
+		}
+		wc_set_type = { T = 3 }
+	}
+	else_if = {
+		limit = {
+			scope:wc_play = { is_diplomatic_play_type = dp_unify_germany }
+		}
+		set_variable = { name = wc_flavor value = 1 }
+		wc_set_type = { T = 10 }
+	}
+	else_if = {
+		limit = {
+			scope:wc_play = { is_diplomatic_play_type = dp_unify_italy }
+		}
+		set_variable = { name = wc_flavor value = 2 }
+		wc_set_type = { T = 10 }
+	}
+	else_if = {
+		limit = {
+			scope:wc_play = { is_diplomatic_play_type = dp_unify_scandinavia }
+		}
+		set_variable = { name = wc_flavor value = 3 }
+		wc_set_type = { T = 10 }
+	}
+	else_if = {
+		limit = {
+			scope:wc_play = { is_diplomatic_play_type = dp_unify_ethiopia }
+		}
+		set_variable = { name = wc_flavor value = 4 }
+		wc_set_type = { T = 10 }
+	}
+	else_if = {
+		limit = {
+			scope:wc_play = { is_diplomatic_play_type = dp_unify_china }
+		}
+		set_variable = { name = wc_flavor value = 5 }
+		wc_set_type = { T = 10 }
+	}
+	else_if = {
+		limit = {
+			scope:wc_play = { is_diplomatic_play_type = dp_unify_arabia }
+		}
+		set_variable = { name = wc_flavor value = 6 }
+		wc_set_type = { T = 10 }
+	}
+	else_if = {
+		limit = {
+			scope:wc_play = { is_diplomatic_play_type = dp_unify_india }
+		}
+		set_variable = { name = wc_flavor value = 7 }
+		wc_set_type = { T = 10 }
+	}
+	else_if = {
+		limit = {
+			scope:wc_play = { is_diplomatic_play_type = dp_unify_indonesia }
+		}
+		set_variable = { name = wc_flavor value = 8 }
+		wc_set_type = { T = 10 }
+	}
+	else_if = {
+		limit = {
+			scope:wc_play = { is_diplomatic_play_type = dp_unify_andes }
+		}
+		set_variable = { name = wc_flavor value = 9 }
+		wc_set_type = { T = 10 }
+	}
+	else_if = {
+		limit = {
+			scope:wc_play = { is_diplomatic_play_type = dp_unify_russia }
+		}
+		set_variable = { name = wc_flavor value = 10 }
+		wc_set_type = { T = 10 }
+	}
+	else_if = {
+		limit = {
+			scope:wc_play = { is_diplomatic_play_type = dp_unify_yugoslavia }
+		}
+		set_variable = { name = wc_flavor value = 11 }
+		wc_set_type = { T = 10 }
+	}
+	else_if = {
+		limit = {
+			scope:wc_play = { is_diplomatic_play_type = dp_leadership_germany }
+		}
+		set_variable = { name = wc_flavor value = 1 }
+		wc_set_type = { T = 11 }
+	}
+	else_if = {
+		limit = {
+			scope:wc_play = { is_diplomatic_play_type = dp_leadership_italy }
+		}
+		set_variable = { name = wc_flavor value = 2 }
+		wc_set_type = { T = 11 }
+	}
+	else_if = {
+		limit = {
+			scope:wc_play = { is_diplomatic_play_type = dp_leadership_scandinavia }
+		}
+		set_variable = { name = wc_flavor value = 3 }
+		wc_set_type = { T = 11 }
+	}
+	else_if = {
+		limit = {
+			scope:wc_play = { is_diplomatic_play_type = dp_leadership_andes }
+		}
+		set_variable = { name = wc_flavor value = 9 }
+		wc_set_type = { T = 11 }
+	}
+	else_if = {
+		limit = {
+			scope:wc_play = { is_diplomatic_play_type = dp_leadership_yugoslavia }
+		}
+		set_variable = { name = wc_flavor value = 11 }
+		wc_set_type = { T = 11 }
+	}
+	else_if = {
+		limit = {
+			scope:wc_play = { is_diplomatic_play_type = dp_balkan_war }
+		}
+		wc_set_type = { T = 16 }
+	}
+	else_if = {
+		limit = {
+			scope:wc_play = { is_diplomatic_play_type = dp_native_uprising }
+		}
+		wc_set_type = { T = 15 }
+	}
+	else_if = {
+		limit = {
+			scope:wc_def = { is_country_type = unrecognized NOT = { country_rank = rank_value:unrecognized_major_power } }
+			scope:wc_att = { NOT = { is_country_type = unrecognized } }
+		}
+		wc_set_type = { T = 8 }
+	}
+	else_if = {
+		limit = {
+			scope:wc_play = { is_diplomatic_play_type = dp_ban_slavery }
+		}
+		wc_set_type = { T = 18 }
+	}
+	else_if = {
+		limit = {
+			var:wc_n_b = 1
+			var:wc_n_a <= 2
+			scope:wc_att = { NOT = { is_country_type = unrecognized } }
+			scope:wc_def = { NOT = { country_rank = rank_value:great_power } }
+			scope:wc_att = { army_power_projection >= scope:wc_slot.var:wc_pp }
+		}
+		wc_set_type = { T = 9 }
+	}
+	else_if = {
+		limit = {
+			scope:wc_play = { is_diplomatic_play_type = dp_regime_change }
+		}
+		wc_set_type = { T = 12 }
+	}
+	else_if = {
+		limit = {
+			scope:wc_play = { is_diplomatic_play_type = dp_take_treaty_port }
+		}
+		wc_set_type = { T = 19 }
+	}
+	else_if = {
+		limit = {
+			scope:wc_play = { is_diplomatic_play_type = dp_open_market }
+		}
+		wc_set_type = { T = 19 }
+	}
+	else_if = {
+		limit = {
+			scope:wc_play = { is_diplomatic_play_type = dp_annex_war }
+		}
+		wc_set_type = { T = 20 }
+	}
+	else_if = {
+		limit = {
+			scope:wc_play = { is_diplomatic_play_type = dp_make_protectorate }
+		}
+		wc_set_type = { T = 21 }
+	}
+	else_if = {
+		limit = {
+			scope:wc_play = { is_diplomatic_play_type = dp_make_tributary }
+		}
+		wc_set_type = { T = 21 }
+	}
+	else_if = {
+		limit = {
+			scope:wc_play = { is_diplomatic_play_type = dp_make_dominion }
+		}
+		wc_set_type = { T = 21 }
+	}
+	else_if = {
+		limit = {
+			scope:wc_play = { is_diplomatic_play_type = dp_increase_autonomy }
+		}
+		wc_set_type = { T = 22 }
+	}
+	else_if = {
+		limit = {
+			scope:wc_play = { is_diplomatic_play_type = dp_reduce_autonomy }
+		}
+		wc_set_type = { T = 23 }
+	}
+	else_if = {
+		limit = {
+			scope:wc_play = { is_diplomatic_play_type = dp_liberate_country }
+		}
+		wc_set_type = { T = 24 }
+	}
+	else_if = {
+		limit = {
+			scope:wc_play = { is_diplomatic_play_type = dp_humiliation }
+		}
+		wc_set_type = { T = 25 }
+	}
+	else_if = {
+		limit = {
+			scope:wc_play = { is_diplomatic_play_type = dp_contain_threat }
+			var:wc_n_a >= 3
+		}
+		wc_set_type = { T = 13 }
+	}
+	else_if = {
+		limit = {
+			wc_total_participants >= 5
+		}
+		wc_set_type = { T = 14 }
+	}
+	else = {
+		wc_set_type = { T = 1 }
+		if = {
+			limit = {
+				var:wc_y = { wc_has_form = yes }
+				var:wc_x = { NOT = { wc_has_form = yes } }
+			}
+			set_variable = { name = wc_x value = scope:wc_def.country_definition }
+			set_variable = { name = wc_y value = scope:wc_att.country_definition }
+		}
+	}
+	remove_variable = wc_pp
+	wc_set_keys = yes
+}
+
+wc_set_type = {
+	set_variable = { name = wc_type value = $T$ }
+	set_variable = { name = wc_base_type value = $T$ }
+	if = {
+		limit = {
+			OR = {
+				var:wc_type = 2
+				var:wc_type = 3
+				var:wc_type = 4
+				var:wc_type = 5
+				var:wc_type = 6
+				var:wc_type = 7
+				var:wc_type = 10
+				var:wc_type = 11
+				var:wc_type = 15
+				var:wc_type = 16
+				var:wc_type = 17
+				var:wc_type = 101
+				var:wc_type = 102
+				var:wc_type = 103
+				var:wc_type = 104
+				var:wc_type = 105
+				var:wc_type = 106
+				var:wc_type = 107
+				var:wc_type = 108
+				var:wc_type = 109
+				var:wc_type = 110
+				var:wc_type = 111
+				var:wc_type = 112
+				var:wc_type = 113
+				var:wc_type = 114
+				var:wc_type = 115
+				var:wc_type = 116
+				var:wc_type = 117
+				var:wc_type = 118
+				var:wc_type = 119
+				var:wc_type = 120
+				var:wc_type = 121
+				var:wc_type = 122
+				var:wc_type = 123
+				var:wc_type = 124
+				var:wc_type = 125
+				var:wc_type = 126
+				var:wc_type = 127
+				var:wc_type = 128
+				var:wc_type = 129
+				var:wc_type = 130
+				var:wc_type = 131
+				var:wc_type = 132
+				var:wc_type = 133
+				var:wc_type = 134
+				var:wc_type = 135
+				var:wc_type = 136
+				var:wc_type = 137
+				var:wc_type = 138
+				var:wc_type = 139
+				var:wc_type = 140
+				var:wc_type = 141
+				var:wc_type = 142
+				var:wc_type = 143
+			}
+		}
+		set_variable = wc_locked
+	}
+}
+
+wc_set_keys = {
+	remove_variable = wc_k1
+	remove_variable = wc_k2
+	remove_variable = wc_unordered
+	remove_variable = wc_noord
+	if = {
+		limit = {
+			OR = {
+				var:wc_type = 1
+			}
+		}
+		set_variable = { name = wc_k1 value = var:wc_x }
+		set_variable = { name = wc_k2 value = var:wc_y }
+		set_variable = wc_unordered
+	}
+	if = {
+		limit = {
+			OR = {
+				var:wc_type = 4
+				var:wc_type = 7
+				var:wc_type = 15
+				var:wc_type = 22
+			}
+		}
+		set_variable = { name = wc_k1 value = var:wc_x }
+	}
+	if = {
+		limit = {
+			OR = {
+				var:wc_type = 8
+			}
+		}
+		set_variable = { name = wc_k1 value = var:wc_x }
+		if = { limit = { exists = var:wc_region } set_variable = { name = wc_k2 value = var:wc_region } }
+	}
+	if = {
+		limit = {
+			OR = {
+				var:wc_type = 9
+				var:wc_type = 12
+				var:wc_type = 19
+				var:wc_type = 20
+				var:wc_type = 21
+				var:wc_type = 23
+				var:wc_type = 24
+				var:wc_type = 25
+			}
+		}
+		set_variable = { name = wc_k1 value = var:wc_x }
+		set_variable = { name = wc_k2 value = var:wc_y }
+	}
+	if = {
+		limit = {
+			OR = {
+				var:wc_type = 13
+				var:wc_type = 18
+			}
+		}
+		set_variable = { name = wc_k1 value = var:wc_y }
+	}
+	if = {
+		limit = {
+			OR = {
+				var:wc_type = 14
+			}
+		}
+		if = { limit = { exists = var:wc_region } set_variable = { name = wc_k1 value = var:wc_region } }
+	}
+	if = {
+		limit = {
+			OR = {
+				var:wc_type = 5
+				var:wc_type = 6
+				var:wc_type = 17
+				var:wc_type = 105
+				var:wc_type = 106
+				var:wc_type = 107
+			}
+		}
+		set_variable = wc_noord
+	}
+}
+
+wc_assign_ordinal = {
+	save_scope_as = wc_slot
+	set_variable = { name = wc_ord value = 1 }
+	clear_saved_scope = wc_new_k1
+	clear_saved_scope = wc_new_k2
+	if = {
+		limit = { has_variable = wc_k1 }
+		var:wc_k1 = { save_scope_as = wc_new_k1 }
+	}
+	if = {
+		limit = { has_variable = wc_k2 }
+		var:wc_k2 = { save_scope_as = wc_new_k2 }
+	}
+	if = {
+		limit = { NOT = { has_variable = wc_noord } }
+		every_in_global_list = {
+			variable = wc_records
+			limit = {
+				NOT = { this = scope:wc_slot }
+				has_variable = wc_type
+				var:wc_type = scope:wc_slot.var:wc_type
+				var:wc_index < scope:wc_slot.var:wc_index
+				wc_same_keys = yes
+			}
+			set_variable = wc_has_sequel
+			scope:wc_slot = { change_variable = { name = wc_ord add = 1 } }
+		}
+	}
+}
+
+wc_reclassify = {
+	save_scope_as = wc_slot
+	if = {
+		limit = {
+			NOT = { has_variable = wc_locked }
+			var:wc_gp_a >= 3
+			var:wc_gp_b >= 3
+		}
+		if = {
+			limit = { var:wc_year >= 1900 }
+			wc_set_type = { T = 2 }
+		}
+		else = {
+			wc_set_type = { T = 3 }
+		}
+		wc_set_keys = yes
+		wc_assign_ordinal = yes
+	}
+	else_if = {
+		limit = {
+			NOT = { has_variable = wc_locked }
+			var:wc_type = 1
+			wc_total_participants >= 5
+		}
+		wc_set_type = { T = 14 }
+		wc_set_keys = yes
+		wc_assign_ordinal = yes
+	}
+}
+
+wc_rename_at_end = {
+	if = {
+		limit = {
+			OR = {
+				var:wc_base_type = 4
+				var:wc_type = 5
+				var:wc_type = 6
+			}
+			has_variable = wc_end_m
+		}
+		set_variable = { name = wc_type value = 4 }
+		if = {
+			limit = {
+				has_variable = wc_outcome
+				NOT = { var:wc_outcome = 3 }
+				exists = var:wc_civ
+				OR = {
+					AND = {
+						var:wc_outcome = 1
+						NOT = { is_target_in_variable_list = { name = wc_side_a target = var:wc_civ } }
+					}
+					AND = {
+						var:wc_outcome = 2
+						NOT = { is_target_in_variable_list = { name = wc_side_b target = var:wc_civ } }
+					}
+				}
+				wc_duration_months <= 12
+			}
+			set_variable = { name = wc_type value = 5 }
+		}
+		else_if = {
+			limit = {
+				has_variable = wc_outcome
+				NOT = { var:wc_outcome = 3 }
+				wc_duration_months <= 6
+			}
+			set_variable = { name = wc_type value = 6 }
+		}
+	}
+	else_if = {
+		limit = {
+			OR = {
+				var:wc_type = 1
+				var:wc_type = 14
+				var:wc_type = 17
+			}
+			has_variable = wc_end_m
+			wc_duration_years >= 7
+		}
+		set_variable = { name = wc_type value = 17 }
+		set_variable = { name = wc_years value = wc_duration_years }
+	}
+}

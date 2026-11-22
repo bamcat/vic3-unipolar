@@ -450,7 +450,7 @@ REPLACE_OR_CREATE:pm_trade_center_trade_quantity_limited = {
 
 	building_modifiers = {
 		workforce_scaled = {
-			goods_input_merchant_marine_add = 3
+			goods_input_merchant_marine_add = 0.75
 		}
 	}
 	state_modifiers = {
@@ -465,7 +465,7 @@ REPLACE_OR_CREATE:pm_trade_center_trade_quantity_normal = {
 
 	building_modifiers = {
 		workforce_scaled = {
-			goods_input_merchant_marine_add = 4
+			goods_input_merchant_marine_add = 1.5
 		}
 	}
 	state_modifiers = {
@@ -480,7 +480,7 @@ REPLACE_OR_CREATE:pm_trade_center_trade_quantity_high = {
 
 	building_modifiers = {
 		workforce_scaled = {
-			goods_input_merchant_marine_add = 5
+			goods_input_merchant_marine_add = 2.5
 		}
 	}
 	state_modifiers = {
@@ -497,7 +497,7 @@ REPLACE_OR_CREATE:pm_trade_center_trade_quantity_very_high = {
 
 	building_modifiers = {
 		workforce_scaled = {
-			goods_input_merchant_marine_add = 6
+			goods_input_merchant_marine_add = 4
 		}
 	}
 	state_modifiers = {

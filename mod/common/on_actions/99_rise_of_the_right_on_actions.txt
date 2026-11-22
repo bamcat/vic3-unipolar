@@ -1,4 +1,4 @@
-on_yearly_pulse = {
+﻿smd_oa_rotr_yearly_pulse = {
 	effect = {
 		every_country = {
 			limit = {
@@ -6,5 +6,11 @@ on_yearly_pulse = {
 			}
 			add_journal_entry = { type = je_rise_of_the_right }
 		}
+	}
+}
+
+on_yearly_pulse = {
+	on_actions = {
+		smd_oa_rotr_yearly_pulse
 	}
 }

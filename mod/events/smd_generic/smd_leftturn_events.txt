@@ -141,6 +141,19 @@ smd_leftturn.4 = {
 			name = smd_social_state
 			days = long_modifier_time
 		}
+		every_political_movement = {
+			limit = {
+				OR = {
+					is_political_movement_type = movement_socialist
+					is_political_movement_type = movement_social_democratic
+					is_political_movement_type = movement_communist
+				}
+			}
+			add_modifier = {
+				name = smd_social_state_movement
+				days = normal_modifier_time
+			}
+		}
 		ai_chance = { base = 100 }
 	}
 }

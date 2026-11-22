@@ -1,0 +1,24 @@
+﻿# A country may only be REPORTED ON by a news story if the press of the age
+# would plausibly cover it.
+#
+# Decentralized nations are never reported, at any rank. Note that
+# decentralized is a DISTINCT country type from unrecognized, so
+# `NOT = { is_country_type = unrecognized }` does not exclude it on its own.
+#
+# This governs who stories are ABOUT, not who reads them. Never apply it to
+# an `is_player = yes` delivery loop.
+news_is_reportable_country = {
+	NOT = { is_country_type = decentralized }
+	NOT = { c:EUR ?= this }
+}
+
+# Stricter form: also excludes unrecognized states below major/regional power.
+news_is_reportable_power = {
+	NOT = { is_country_type = decentralized }
+	NOT = { c:EUR ?= this }
+	OR = {
+		NOT = { is_country_type = unrecognized }
+		country_rank = rank_value:unrecognized_major_power
+		country_rank = rank_value:unrecognized_regional_power
+	}
+}

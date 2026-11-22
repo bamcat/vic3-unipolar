@@ -126,7 +126,7 @@ democratic_party = {
 				leader ?= { has_ideology = ideology:ideology_moderate_leader }
 				year < 2000
 			}
-			add = { value = 180 desc = "new_democrats_era" }
+			add = { value = 400 desc = "new_democrats_era" }
 		}
 		if = {
 			limit = {

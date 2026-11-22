@@ -1,9 +1,4 @@
 ﻿join_power_bloc = {
-	mirrored_wargoal = {
-		method = swap
-		type = leave_power_bloc
-	}
-
 	icon = "gfx/interface/icons/war_goals/join_power_bloc.dds"
 
 	kind = join_power_bloc
@@ -11,6 +6,7 @@
 	settings = {
 		require_target_be_part_of_war
 
+		# Validation
 		conflicts_with_make_subject
 		validate_join_power_bloc
 		validate_conflicts_make_subject
@@ -18,7 +14,7 @@
 
 	execution_priority = 30
 
-	contestion_type = control_target_country_capital
+	contestion_type = control_half_target_country_states
 
 	target_type = country
 
@@ -43,12 +39,25 @@
 		}
 	}
 
+	infamy_severity = 0.05
+	infamy_min = define:NDiplomacy|WAR_GOAL_INFAMY_MODERATE_DEMAND_MIN
+	infamy_max = define:NDiplomacy|WAR_GOAL_INFAMY_MODERATE_DEMAND_MAX
+
 	infamy = {
 		value = 0
+
+		scope:target_country = {
+			add = country_infamy_value
+		}
 	}
 
 	on_enforced = {
 		# script effect on top of the predefined code effect
+	}
+
+	mirrored_wargoal = {
+		method = swap
+		type = leave_power_bloc
 	}
 
 	ai = {

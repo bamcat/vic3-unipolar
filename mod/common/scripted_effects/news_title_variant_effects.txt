@@ -1,0 +1,17 @@
+﻿# Picks one of three headline variants so a story that recurs through a long
+# campaign does not always print the same words.
+#
+# Called in each world event's immediate block. The event's title is a
+# first_valid list keyed on news_title_variant, exactly as vanilla does it
+# (see belle_epoque_events, which uses block titles in 26 events).
+#
+# The variable is scoped to the reading country and refreshed every time the
+# story fires, so two players can even see different headlines for the same
+# world event.
+news_pick_title_variant = {
+	random_list = {
+		1 = { set_variable = { name = news_title_variant value = 1 months = 4 } }
+		1 = { set_variable = { name = news_title_variant value = 2 months = 4 } }
+		1 = { set_variable = { name = news_title_variant value = 3 months = 4 } }
+	}
+}

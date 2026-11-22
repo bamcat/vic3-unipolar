@@ -1,0 +1,117 @@
+﻿wl_vs = {
+	exists = c:$A$
+	exists = c:$B$
+	is_war_participant = c:$A$
+	is_war_participant = c:$B$
+	OR = {
+		AND = {
+			is_on_defending_side = c:$A$
+			NOT = { is_on_defending_side = c:$B$ }
+		}
+		AND = {
+			is_on_defending_side = c:$B$
+			NOT = { is_on_defending_side = c:$A$ }
+		}
+	}
+}
+
+wl_with = {
+	exists = c:$A$
+	exists = c:$B$
+	is_war_participant = c:$A$
+	is_war_participant = c:$B$
+	OR = {
+		AND = {
+			is_on_defending_side = c:$A$
+			is_on_defending_side = c:$B$
+		}
+		AND = {
+			NOT = { is_on_defending_side = c:$A$ }
+			NOT = { is_on_defending_side = c:$B$ }
+		}
+	}
+}
+
+wl_has_form = {
+	OR = {
+		this = cd:GBR
+		this = cd:ENG
+		this = cd:FRA
+		this = cd:RUS
+		this = cd:AUS
+		this = cd:KUK
+		this = cd:CHI
+		this = cd:ITA
+		this = cd:GRE
+		this = cd:SER
+		this = cd:SPA
+		this = cd:POR
+	}
+}
+
+wl_civ_is = {
+	has_variable = wl_civ
+	var:wl_civ = { this = cd:$TAG$ }
+}
+
+wl_is_civil_play = {
+	scope:wl_play = {
+		OR = {
+			is_diplomatic_play_type = dp_revolution
+			is_diplomatic_play_type = dp_secession
+		}
+	}
+}
+
+wl_same_keys = {
+	OR = {
+		AND = {
+			wl_key_eq = { K = wl_k1 S = wl_new_k1 }
+			wl_key_eq = { K = wl_k2 S = wl_new_k2 }
+			OR = {
+				AND = {
+					NOT = { has_variable = wl_flavor }
+					scope:wl_slot = { NOT = { has_variable = wl_flavor } }
+				}
+				AND = {
+					has_variable = wl_flavor
+					scope:wl_slot = { has_variable = wl_flavor }
+					var:wl_flavor = scope:wl_slot.var:wl_flavor
+				}
+			}
+		}
+		AND = {
+			scope:wl_slot = { has_variable = wl_unordered }
+			has_variable = wl_k1
+			has_variable = wl_k2
+			exists = scope:wl_new_k1
+			exists = scope:wl_new_k2
+			var:wl_k1 = { this = scope:wl_new_k2 }
+			var:wl_k2 = { this = scope:wl_new_k1 }
+		}
+	}
+}
+
+wl_key_eq = {
+	OR = {
+		AND = {
+			NOT = { has_variable = $K$ }
+			NOT = { exists = scope:$S$ }
+		}
+		AND = {
+			has_variable = $K$
+			exists = scope:$S$
+			var:$K$ = { this = scope:$S$ }
+		}
+	}
+}
+
+wl_is_great_war_size = {
+	has_variable = wl_gp_a
+	has_variable = wl_gp_b
+	has_variable = wl_pw_a
+	has_variable = wl_pw_b
+	var:wl_pw_a >= 3
+	var:wl_pw_b >= 3
+	wl_gp_total >= 2
+}

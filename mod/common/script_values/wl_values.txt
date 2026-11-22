@@ -1,0 +1,62 @@
+﻿wl_order_index = {
+	value = var:wl_index
+}
+
+wl_age = {
+	value = 0
+	subtract = var:wl_index
+}
+
+wl_duration_months = {
+	value = var:wl_end_m
+	subtract = var:wl_start_m
+}
+
+wl_duration_years = {
+	value = var:wl_end_m
+	subtract = var:wl_start_m
+	divide = 12
+	floor = yes
+}
+
+wl_total_participants = {
+	value = var:wl_n_a
+	add = var:wl_n_b
+}
+
+wl_order_cas = {
+	value = var:wl_cas
+}
+
+wl_order_dead = {
+	value = var:wl_dead
+}
+
+wl_order_display = {
+	value = var:wl_index
+	if = {
+		limit = { has_variable = wl_great }
+		add = 2000000
+	}
+	else_if = {
+		limit = { has_variable = wl_has_gp }
+		add = 1000000
+	}
+}
+
+wl_order_duration = {
+	value = 0
+	if = {
+		limit = {
+			has_variable = wl_end_m
+			has_variable = wl_start_m
+		}
+		value = var:wl_end_m
+		subtract = var:wl_start_m
+	}
+}
+
+wl_gp_total = {
+	value = var:wl_gp_a
+	add = var:wl_gp_b
+}

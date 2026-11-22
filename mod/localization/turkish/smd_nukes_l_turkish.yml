@@ -84,7 +84,7 @@
  nuclear_events.4.d: "Hedef çözümü kilitlidir. [GetPlayer.MakeScope.ScriptValue('nuclear_warheads_to_use_sv')|v0] Savaş sonrası (s) [GetPlayer.MakeScope.ScriptValue('nuclear_target_count_sv')|v0] devlet(s) \n\nEstimed sivil kayıplar: #R[GetPlayer.MakeScope.ScriptValue('nuclear_estimated_total_casualties_sv')|vD]#!\n\n\n\n Bu eylem geri dönüşümlüdür. Savaş kafaları genişletilecek. Devletler yok edilecek. Dünya bunu kimin yaptığını bilecek.\n\n Devam etmek ister misiniz?"
  nuclear_events.4.f: "Onu geri alma yok."
  nuclear_events.4.a: "#R Onay - grevi başlatın#!"
- nuclear_events.4.b: "Abort – ayağa kalkın"
+ nuclear_events.4.b: "Abort, ayağa kalkın"
 
  nuclear_events.5.t: "Nükleer Saldırı"
  nuclear_events.5.d: "[ROOT.GetCountry.GetName] Nükleer silahlar tarafından vuruldu.\n\n Birden çok savaş kafaları [ROOT.GetCountry.GetAdjective] bölge boyunca dağılmıştır. Şehirler yanıyor. İletişim etkilenen bölgelerde çöktü. Kayıpların ölçeği henüz bilinmemektedir - erken tahminler ölümlerin felaket olduğunu önerir.\n\n\n Saldırı uyarı olmadan yapıldı. Hiçbir bildirim yoktu. No ultimatum. Hiçbir şey yoktu."
@@ -95,19 +95,19 @@
  nuclear_events.6.d: "Uluslararası Atom Enerji Ajansı resmi olarak [ROOT.GetCountry.GetAdjective] Nükleer tesislere erişim talep etti. İstek istihbarat raporlarını takip eder - şimdi üye devletler arasında yaygın olarak dolaşımda bulundu - bir silah sınıfı zenginleştirme programının varlığını önerir.\n\n>\n IAEA'nın pozisyonu belirsizdir: [ROOT.GetCountry.GetName], proliferasyon taahhütlerine işaretleyicidir. Güvenilir denetim erişimi malzeme ihlali oluşturur. Tesisleri uluslararası izlemeye açmanız gerekir - ve neredeyse kesinlikle silah programını bitir.\n\n\n denetçiler bir cevap bekliyor."
  nuclear_events.6.f: "denetçiler kibardır. İstek değil."
  nuclear_events.6.a: "Grant access - IAEA'nın tesislerimizi incelemesine izin verin"
- nuclear_events.6.b: "Refuse – [ROOT.GetCountry.GetName] yabancı denetime teslim olmayacak"
+ nuclear_events.6.b: "Refuse, [ROOT.GetCountry.GetName] yabancı denetime teslim olmayacak"
 
  nuclear_events.7.t: "BM Güvenlik Konseyi: Hastalıklar Zenginleştirme"
  nuclear_events.7.d: "Birleşmiş Milletler Güvenlik Konseyi, [ROOT.GetCountry.GetName]'nin Uranium zenginleştirme programını hemen durdurmasını ve IAEA doğrulamasını sunmasını talep etti.\n\n Oy yakın değildi. Karar, otuz gün içinde tam The talep eder ve [ROOT.GetCountry.GetName] uymayı reddeder.\n\n Bu bir istek değildir. Bu bir ultimatum."
  nuclear_events.7.f: "Güvenlik Konseyi konuştu. [ROOT.GetCountry.GetName] şimdi dünyadaki yerini tanımlayacaktır."
  nuclear_events.7.a: "Tamam - Zenginleştirmeyi durdurun ve izlemeyi gönderin"
- nuclear_events.7.b: "Refuse – [ROOT.GetCountry.GetName] sonuçları ne olursa olsun devam edecek"
+ nuclear_events.7.b: "Refuse, [ROOT.GetCountry.GetName] sonuçları ne olursa olsun devam edecek"
 
  nuclear_events.8.t: "UN Security Council: Disarm veya Face Consequences"
  nuclear_events.8.d: "Nükleer silah programını kabul ettikten sonra [ROOT.GetCountry.GetName] Güvenlik Konseyi'ni birlikte çalışmak için belirsizliğe bıraktı. Bir karar, zenginleştirme aktivitesinin acil cessationini ve silahla ilgili altyapının ortadan kaldırılmasını talep etti.\n\n Karar Bölüm VII'nin altında geçti - yani askeri uygulama yönetilmedi. [ROOT.GetCountry.GetName] uymak için otuz gün vardır."
  nuclear_events.8.f: "Dürüst ödüllendirilmedi. ultimatum da aynı."
  nuclear_events.8.a: "Tamam - programı durdur ve doğrulamayı gönderin"
- nuclear_events.8.b: "Refuse – [ROOT.GetCountry.GetName] baskı altında silahsızlanmayacaktır"
+ nuclear_events.8.b: "Refuse, [ROOT.GetCountry.GetName] baskı altında silahsızlanmayacaktır"
 
  nuclear_events.9.t: "[SCOPE.sCountry('nuclear_state').GetName] Nükleer Tanıma"
  nuclear_events.9.d: "[SCOPE.sCountry('nuclear_state').GetName] UN Security Council'in ultimatum'u reddetti ve Uranium'u silahlara göre zenginleştirmeye devam etti. yaptırımlar rejim yerindedir.\n\n[ROOT.GetCountry.GetName] şu anda açıklanmalıdır. Stratejik alanımızda bir ülke, inşa etmemize yardımcı olduğumuz uluslararası düzene karşı nükleer silahlar geliştiriyor. Soru, nasıl tepki verdiğimizdir."
@@ -209,7 +209,7 @@
  BOMBING_EXECUTE_TOOLTIP: "Tüm hedefli devletlere karşı stratejik bir bombalama yürütür. Devastation, uygun hava formlarının sayısına göre eklenir. 30 gün cooldown uygulanır."
 
  NUCLEAR_ICBM_PROGRESS_TOOLTIP: "ICBM gelişimi ilerlemektedir.% 100'te, nükleer silahlar dünya çapında herhangi bir devleti hedefleyebilir."
- NUCLEAR_ICBM_TOOLTIP: "kıtalararası balistik füzelerin geliştirilmesine başlayın. Nükleer kapasite gerektirir. Birkaç yıl alır. Tamamlandığında, nükleer silahlar dünyadaki herhangi bir devleti hedefleyebilir - sadece komşu olanları değil."
+ NUCLEAR_ICBM_TOOLTIP: "kıtalararası balistik füzelerin geliştirilmesine başlayın. Nükleer kapasite gerektirir. Birkaç yıl alır. Tamamlandığında, nükleer silahlar dünyadaki herhangi bir devleti hedefleyebilir, sadece komşu olanları değil. Maliyeti @money![GetPlayer.MakeScope.ScriptValue('smd_icbm_programme_cost')|Dv] (GSYİH'nin %10'u)."
 
  CONV_PRODUCE_MISSILES_TOOLTIP: "5 geleneksel füzenin bir salvo üretti. Küçük devam eden üretim maliyeti. Füzeler ateş altında tüketiliyor - hedefli bir devlet için."
 
@@ -251,3 +251,6 @@
  notification_nuclear_warhead_produced_name:0 "Nuclear Warhead Produced"
  notification_nuclear_warhead_produced_desc:0 "A new warhead has joined the arsenal. [GetPlayer.GetName] now holds [GetPlayer.MakeScope.Var('nukes').GetValue|0] nuclear warheads."
  notification_nuclear_warhead_produced_tooltip:0 "#header $notification_nuclear_warhead_produced_name$#!\n$TOOLTIP_DELIMITER$\n$notification_nuclear_warhead_produced_desc$"
+ notification_smd_missiles_produced_name:0 "Missiles Produced"
+ notification_smd_missiles_produced_desc:0 "A new salvo of five conventional missiles has been added to the arsenal. [GetPlayer.GetName] now holds [GetPlayer.MakeScope.Var('conventional_missiles').GetValue|0] conventional missiles."
+ notification_smd_missiles_produced_tooltip:0 "#header $notification_smd_missiles_produced_name$#!\n$TOOLTIP_DELIMITER$\n$notification_smd_missiles_produced_desc$"

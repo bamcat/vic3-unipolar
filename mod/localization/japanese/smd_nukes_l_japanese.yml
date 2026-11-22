@@ -45,10 +45,10 @@
  nuclear_events.1.a: "源泉の生産の準備を始めて下さい"
 
  nuclear_events.2.t: "インテリジェンスサービス:プログラムが公開されました"
- nuclear_events.2.d: "外部知能機関 — 衛星画像、欠陥報告、シグナルインテリジェンスの描画 — [ROOT.GetCountry.GetName] が clandestine 核兵器プログラムを運用しているという高い信頼を結んだ。\n\n 調査結果は、同盟政府間で循環しています。 セキュリティ協議会は、正式に説明会を行いました。 [ROOT.GetCountry.GetName] は拒否、説明、または所有できます。 各パスは結果を持っています。"
+ nuclear_events.2.d: "外部知能機関 、 衛星画像、欠陥報告、シグナルインテリジェンスの描画 、 [ROOT.GetCountry.GetName] が clandestine 核兵器プログラムを運用しているという高い信頼を結んだ。\n\n 調査結果は、同盟政府間で循環しています。 セキュリティ協議会は、正式に説明会を行いました。 [ROOT.GetCountry.GetName] は拒否、説明、または所有できます。 各パスは結果を持っています。"
  nuclear_events.2.f: "決して秘密を永遠に残さない。"
- nuclear_events.2.a: "Deny — 純粋に市民のエネルギーインフラ"
- nuclear_events.2.b: "Acknowledge — [ROOT.GetCountry.GetName] は、deterrent に正しい"
+ nuclear_events.2.a: "Deny 、 純粋に市民のエネルギーインフラ"
+ nuclear_events.2.b: "Acknowledge 、 [ROOT.GetCountry.GetName] は、deterrent に正しい"
 
 
  nuclear_capable_modifier: "核の境界状態"
@@ -65,7 +65,7 @@
 
  NUCLEAR_TARGETING_HEADER: "核ターゲット"
 
- NUCLEAR_DEPLOY_10_TOOLTIP: "原発の 10% の展開。 最小限の実用的なストライキ — 手術とスコープに限られます。"
+ NUCLEAR_DEPLOY_10_TOOLTIP: "原発の 10% の展開。 最小限の実用的なストライキ 、 手術とスコープに限られます。"
  NUCLEAR_DEPLOY_25_TOOLTIP: "arsenalの25%をデプロイします。 限られた原子力交換。"
  NUCLEAR_DEPLOY_50_TOOLTIP: "半分のarsenalをデプロイします。 主要な原子力ストライキ。"
  NUCLEAR_DEPLOY_75_TOOLTIP: "arsenalの75%をデプロイします。 ファーストストライキを壊す。"
@@ -83,11 +83,11 @@
  nuclear_events.4.t: "原子力ストライクを起動しますか?"
  nuclear_events.4.d: "ターゲティングソリューションはロックされています。 [GetPlayer.MakeScope.ScriptValue('nuclear_warheads_to_use_sv')|v0] warhead(s) は [GetPlayer.MakeScope.ScriptValue('nuclear_target_count_sv')|v0] state(s) に割り当てられました。\n\nEstimated Civilian Casualties: #R ~[GetPlayer.MakeScope.ScriptValue('nuclear_estimated_total_casualties_sv')|vD]#!\n\n このアクションは不可逆です。 警戒が期待されます。 状態は破壊されます。 この世界は誰がこのことをしたかを知っています。\n\n"
  nuclear_events.4.f: "持ち帰りは出来ません。"
- nuclear_events.4.a: "#R 確認 — 起動#!"
- nuclear_events.4.b: "Abort — スタンドダウン"
+ nuclear_events.4.a: "#R 確認 、 起動#!"
+ nuclear_events.4.b: "Abort 、 スタンドダウン"
 
  nuclear_events.5.t: "核攻撃"
- nuclear_events.5.d: "[ROOT.GetCountry.GetName] は、核兵器によってスタックされています。\n\n [ROOT.GetCountry.GetAdjective] の領域で区切られた複数の警戒。 都市は燃えています。 影響を受けた地域で通信が崩壊しました。 偶然のスケールはまだ知られていません — 初期の推定では、死の通行料が壊滅的であることを示唆しています。\n\n 警告なしに攻撃が行われました。 宣言はありません。 立方ない。 何もなかった。"
+ nuclear_events.5.d: "[ROOT.GetCountry.GetName] は、核兵器によってスタックされています。\n\n [ROOT.GetCountry.GetAdjective] の領域で区切られた複数の警戒。 都市は燃えています。 影響を受けた地域で通信が崩壊しました。 偶然のスケールはまだ知られていません 、 初期の推定では、死の通行料が壊滅的であることを示唆しています。\n\n 警告なしに攻撃が行われました。 宣言はありません。 立方ない。 何もなかった。"
  nuclear_events.5.f: "左から言うまでもありません。"
  nuclear_events.5.a: "緊急対応開始"
 
@@ -95,25 +95,25 @@
  nuclear_events.6.d: "国際原子エネルギー機関は、正式に[ROOT.GetCountry.GetAdjective]原子力施設へのアクセスを要求しました。 インテリジェンスリクエストは、メンバーの州間で広く循環し、武器レベルの濃縮プログラムの存在を示唆しています。\n\n IAEAの立場は非曖昧です:[ROOT.GetCountry.GetName]は非拡散の約束への署名です。 検査アクセスを拒否すると、材料の侵害が発生します。 これにより、施設を国際監視に開く必要があります。そして、ほぼ確実に武器プログラムを終了します。\n\n 検査員が回答をお待ちしています。"
  nuclear_events.6.f: "検査員は丁寧です。 リクエストはありません。"
  nuclear_events.6.a: "助成金アクセス - IAEAが施設を検査できるようにする"
- nuclear_events.6.b: "拒否 — [ROOT.GetCountry.GetName] は外部検査に提出しません"
+ nuclear_events.6.b: "拒否 、 [ROOT.GetCountry.GetName] は外部検査に提出しません"
 
  nuclear_events.7.t: "国連安全保障委員会:Cease Enrichment"
  nuclear_events.7.d: "UN Security Council は、[ROOT.GetCountry.GetName] が尿素の濃縮プログラムを直ちに停止し、IAEA の検証に提出するという要求の解決を通過しました。\n\n 投票は終了していませんでした。 [ROOT.GetCountry.GetName] が遵守を拒否した場合、解像度は30日以内にフルな必要を要求し、調整された制裁を脅迫します。\n\n リクエストではありません。 立方体です。"
  nuclear_events.7.f: "セキュリティ評議会は話しました。 [ROOT.GetCountry.GetName] は、世界中にその場所を定義します。"
- nuclear_events.7.a: "Comply — ハルトの豊かさと監視に提出"
- nuclear_events.7.b: "参照 — [ROOT.GetCountry.GetName] は結果に関係なく継続します"
+ nuclear_events.7.a: "Comply 、 ハルトの豊かさと監視に提出"
+ nuclear_events.7.b: "参照 、 [ROOT.GetCountry.GetName] は結果に関係なく継続します"
 
  nuclear_events.8.t: "国連安全保障協議会: 武装または顔の結果"
  nuclear_events.8.d: "核兵器プログラムを認めた、[ROOT.GetCountry.GetName] は、労働を許さないセキュリティ協議会を離れました。 決議は、強化活動の即時の必要性と、武器関連インフラの解体に直面しました。\n\n 決議は、第VII章で受け継がれていました。つまり、軍事執行が除外されていないということです。 [ROOT.GetCountry.GetName] は、30 日を守っています。"
  nuclear_events.8.f: "正直は報われていませんでした。 ultimatumはどちらかのやり方です。"
- nuclear_events.8.a: "Comply — プログラムを中断し、検証に提出する"
- nuclear_events.8.b: "注意 — [ROOT.GetCountry.GetName] は圧力下で武装しません"
+ nuclear_events.8.a: "Comply 、 プログラムを中断し、検証に提出する"
+ nuclear_events.8.b: "注意 、 [ROOT.GetCountry.GetName] は圧力下で武装しません"
 
  nuclear_events.9.t: "[SCOPE.sCountry('nuclear_state').GetName]の核欠損への対応"
  nuclear_events.9.d: "[SCOPE.sCountry('nuclear_state').GetName] は、国連保安評議会の有限を拒絶し、武器の等級の純度に対するウランを豊かにし続けています。 sanctions の regime が配置されています。\n\n[ROOT.GetCountry.GetName] の 位置が明確になさなければなりません。 戦略的圏の国は、国際秩序の欠損で核兵器を開発しています。 質問は、私たちがどのように強く反応するかです。"
  nuclear_events.9.f: "ワードを試しました。 今後何が起こるかを決定する瞬間です。"
  nuclear_events.9.a: "インターベニー - 難聴を強制するためにdiplomatic遊びを起動"
- nuclear_events.9.b: "Threaten — 強制をコミットせずに結果を明確にする"
+ nuclear_events.9.b: "Threaten 、 強制をコミットせずに結果を明確にする"
 
  nuclear_iaea_cooperation: "IAEA 協力協定"
  nuclear_iaea_cooperation_desc: "[ROOT.GetCountry.GetName] は、原子力施設をIAEAモニタリングに開設しました。 市民が利用する際の交換において、原子力インフラの国際的サポートが拡大しました。"
@@ -174,7 +174,7 @@
  military_base_projector_modifier_desc: "この国は、その戦略的到達範囲を拡張し、同盟国に駐在する軍部隊を持っています。"
 
  je_icbm_programme: "ICBM開発プログラム"
- je_icbm_programme_reason: "[ROOT.GetCountry.GetName] は核能力を達成しました。 次のフロンティアは配達です:警告なしで地球上の任意のポイントに達することができる大陸間弾道ミサイル。 プログラムは長い - ロケットの研究の年, ガイダンスシステムの開発, 範囲のテスト — しかし、戦略的なペイオフは絶対. ICBM対応状態は地理的に劣化することができません。"
+ je_icbm_programme_reason: "[ROOT.GetCountry.GetName] は核能力を達成しました。 次のフロンティアは配達です:警告なしで地球上の任意のポイントに達することができる大陸間弾道ミサイル。 プログラムは長い - ロケットの研究の年, ガイダンスシステムの開発, 範囲のテスト 、 しかし、戦略的なペイオフは絶対. ICBM対応状態は地理的に劣化することができません。"
 
  je_icbm_early_tt: "ICBMプログラムは、初期開発中です。 ガイダンスシステムのテスト 有利な大陸間配送車両が存在するのは何年も前です。"
  je_icbm_late_tt: "#bold ICBMの開発は完了に近づいています。#! 最終的な範囲および正確さテストは進行中です。"
@@ -209,7 +209,7 @@
  BOMBING_EXECUTE_TOOLTIP: "対象となるすべての状態に対して戦略的な爆弾を実行します。 空気の形成の数に基づいて破壊が加えられます。 30日間のクールダウンが適用されます。"
 
  NUCLEAR_ICBM_PROGRESS_TOOLTIP: "ICBMの開発の進歩。 100%では、核兵器は世界中どの国をターゲットにすることができます。"
- NUCLEAR_ICBM_TOOLTIP: "大陸間弾道ミサイルの開発を開始 原子力能力が必要です。 数年かかる 完了すると、核兵器は世界のどんな状態をターゲットにすることができます。"
+ NUCLEAR_ICBM_TOOLTIP: "大陸間弾道ミサイルの開発を開始 原子力能力が必要です。 数年かかる 完了すると、核兵器は世界のどんな状態をターゲットにすることができます。 費用：@money![GetPlayer.MakeScope.ScriptValue('smd_icbm_programme_cost')|Dv]（GDPの10%）。"
 
  CONV_PRODUCE_MISSILES_TOOLTIP: "5つの従来のミサイルのサルボを製造。 小規模な生産コスト。 ミサイルは、対象となる状態の1つであるフィリングに消費されます。"
 
@@ -233,10 +233,10 @@
  missile_strike_victim_modifier_desc: "従来のミサイルのストライキを狙った領土。 インフラの損傷や公共の不安が高まっています。"
 
  nuclear_events.13.t: "核再帰 - 決定が必要"
- nuclear_events.13.d: "[SCOPE.sCountry('nuclear_attacker').GetName] は [ROOT.GetName] に対する核兵器を発売しました。 わたしたちの警戒は武装しています。 起動コードは準備が整います。\n\n[SCOPE.sCountry('nuclear_attacker').GetAdjective] 領域に対するレタリトリートストライキは、アセンシャルの25%を消費し、すべての [SCOPE.sCountry('nuclear_attacker').GetAdjective] 状態をストライキさせます。 ストライキは不敬を運ぶだろう — 世界は理解します。\n\n 代替は攻撃を吸収することです。 生存に不名誉はありません。"
+ nuclear_events.13.d: "[SCOPE.sCountry('nuclear_attacker').GetName] は [ROOT.GetName] に対する核兵器を発売しました。 わたしたちの警戒は武装しています。 起動コードは準備が整います。\n\n[SCOPE.sCountry('nuclear_attacker').GetAdjective] 領域に対するレタリトリートストライキは、アセンシャルの25%を消費し、すべての [SCOPE.sCountry('nuclear_attacker').GetAdjective] 状態をストライキさせます。 ストライキは不敬を運ぶだろう 、 世界は理解します。\n\n 代替は攻撃を吸収することです。 生存に不名誉はありません。"
  nuclear_events.13.f: "注文は一度だけ必要です。"
- nuclear_events.13.a: "Retaliate — [SCOPE.sCountry('nuclear_attacker').GetName] に対する arsenal の 25% を起動"
- nuclear_events.13.b: "スタンドダウン — ストライキを吸収し、アセンシャルを維持"
+ nuclear_events.13.a: "Retaliate 、 [SCOPE.sCountry('nuclear_attacker').GetName] に対する arsenal の 25% を起動"
+ nuclear_events.13.b: "スタンドダウン 、 ストライキを吸収し、アセンシャルを維持"
 
  nuclear_first_strike_response: "核再帰(第一ストライク応答)"
  nuclear_first_strike_response_desc: "[ROOT.GetName] は、その領土に未曾有の核攻撃に反応して核対抗者を発足しました。 国際的なコミュニティは、再帰の権利を認識する - 親愛なる利益は大幅に削減されます。"
@@ -251,3 +251,6 @@
  notification_nuclear_warhead_produced_name:0 "Nuclear Warhead Produced"
  notification_nuclear_warhead_produced_desc:0 "A new warhead has joined the arsenal. [GetPlayer.GetName] now holds [GetPlayer.MakeScope.Var('nukes').GetValue|0] nuclear warheads."
  notification_nuclear_warhead_produced_tooltip:0 "#header $notification_nuclear_warhead_produced_name$#!\n$TOOLTIP_DELIMITER$\n$notification_nuclear_warhead_produced_desc$"
+ notification_smd_missiles_produced_name:0 "Missiles Produced"
+ notification_smd_missiles_produced_desc:0 "A new salvo of five conventional missiles has been added to the arsenal. [GetPlayer.GetName] now holds [GetPlayer.MakeScope.Var('conventional_missiles').GetValue|0] conventional missiles."
+ notification_smd_missiles_produced_tooltip:0 "#header $notification_smd_missiles_produced_name$#!\n$TOOLTIP_DELIMITER$\n$notification_smd_missiles_produced_desc$"

@@ -216,7 +216,7 @@
  BOMBING_EXECUTE_TOOLTIP: "Execute a strategic bombing run against all targeted states. Devastation is added based on the number of qualifying air formations. 30 day cooldown applies."
 
  NUCLEAR_ICBM_PROGRESS_TOOLTIP: "ICBM development progress. At 100%, nuclear weapons can target any state globally."
- NUCLEAR_ICBM_TOOLTIP: "Begin development of intercontinental ballistic missiles. Requires nuclear capability. Takes several years. Once complete, nuclear weapons can target any state in the world, not just neighbouring ones."
+ NUCLEAR_ICBM_TOOLTIP: "Begin development of intercontinental ballistic missiles. Requires nuclear capability. Takes several years. Once complete, nuclear weapons can target any state in the world, not just neighbouring ones. Costs @money![GetPlayer.MakeScope.ScriptValue('smd_icbm_programme_cost')|Dv] (10% of GDP)."
 
  CONV_PRODUCE_MISSILES_TOOLTIP: "Manufacture a salvo of 5 conventional missiles. Small ongoing production cost. Missiles are consumed on firing, one per targeted state."
 
@@ -277,3 +277,6 @@
  notification_nuclear_warhead_produced_name:0 "Nuclear Warhead Produced"
  notification_nuclear_warhead_produced_desc:0 "A new warhead has joined the arsenal. [GetPlayer.GetName] now holds [GetPlayer.MakeScope.Var('nukes').GetValue|0] nuclear warheads."
  notification_nuclear_warhead_produced_tooltip:0 "#header $notification_nuclear_warhead_produced_name$#!\n$TOOLTIP_DELIMITER$\n$notification_nuclear_warhead_produced_desc$"
+ notification_smd_missiles_produced_name:0 "Missiles Produced"
+ notification_smd_missiles_produced_desc:0 "A new salvo of five conventional missiles has been added to the arsenal. [GetPlayer.GetName] now holds [GetPlayer.MakeScope.Var('conventional_missiles').GetValue|0] conventional missiles."
+ notification_smd_missiles_produced_tooltip:0 "#header $notification_smd_missiles_produced_name$#!\n$TOOLTIP_DELIMITER$\n$notification_smd_missiles_produced_desc$"

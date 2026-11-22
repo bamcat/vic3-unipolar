@@ -1,8 +1,4 @@
 ﻿open_market = {
-	mirrored_wargoal = {
-		method = reparations
-	}
-
 	icon = "gfx/interface/icons/war_goals/open_market.dds"
 
 	kind = open_market
@@ -10,6 +6,7 @@
 	settings = {
 		require_target_be_part_of_war
 
+		# Validation
 		validate_conflicts_war_goals_all
 	}
 
@@ -45,57 +42,15 @@
 		}
 	}
 
+	infamy_severity = 0.02
+	infamy_min = define:NDiplomacy|WAR_GOAL_INFAMY_MINOR_DEMAND_MIN
+	infamy_max = define:NDiplomacy|WAR_GOAL_INFAMY_MINOR_DEMAND_MAX
+
 	infamy = {
-		add = {
-			desc = "INFAMY_BASE_VALUE"
-			value = 0.1
-		}
+		value = 0
 
 		scope:target_country = {
-			multiply = {
-				desc = "INFAMY_TARGET_COUNTRY_POPULATION_FACTOR"
-				add = {
-					every_scope_state = {
-						add = {
-							value = state_population
-							divide = define:NDiplomacy|WAR_GOAL_INFAMY_POPULATION_SCALING_FACTOR
-							multiply = define:NDiplomacy|WAR_GOAL_INFAMY_POPULATION_SCALING_MULTIPLIER
-							multiply = {
-								value = 1
-								if = {
-									limit = {
-										is_incorporated = no
-									}
-									add = define:NDiplomacy|WAR_GOAL_INFAMY_UNINCORPORATED_FACTOR
-								}
-							}
-							max = define:NDiplomacy|WAR_GOAL_INFAMY_POPULATION_SCALING_MULTIPLIER_MAX_PER_STATE
-						}
-					}
-				}
-				add = 1
-				max = define:NDiplomacy|WAR_GOAL_INFAMY_POPULATION_SCALING_MULTIPLIER_MAX_TOTAL
-			}
-		}
-
-		multiply = {
-			desc = "country_infamy_generation_against_unrecognized_mult"
-			value = 1
-			if = {
-				limit = {
-					NOR = {
-						is_country_type = unrecognized
-						is_country_type = decentralized
-					}
-					scope:target_country = {
-						OR = {
-							is_country_type = unrecognized
-							is_country_type = decentralized
-						}
-					}
-				}
-				add = modifier:country_infamy_generation_against_unrecognized_mult
-			}
+			add = country_infamy_value
 		}
 
 		multiply = {
@@ -114,7 +69,7 @@
 		}
 
 		multiply = {
-			desc = "INFAMY_FROM_REBELLIOUS_SUBJECT"
+			desc = "INFAMY_FROM_REBELLIOUS_SUBJECT" # Rebellious as in they are the aggressor in the play
 			value = 1
 
 			if = {
@@ -130,15 +85,14 @@
 				multiply = define:NDiplomacy|WAR_GOAL_INFAMY_REBELLING_SUBJECT_MULT
 			}
 		}
-
-		min = {
-			desc = "INFAMY_MINIMUM_VALUE"
-			value = 0.1
-		}
 	}
 
 	on_enforced = {
 		# script effect on top of the predefined code effect
+	}
+
+	mirrored_wargoal = {
+		method = reparations
 	}
 
 	ai = {

@@ -1,0 +1,692 @@
+﻿wc_init = {
+	if = {
+		limit = { NOT = { has_global_variable = wc_initialized } }
+		set_global_variable = wc_initialized
+		set_global_variable = { name = wc_next value = 1 }
+		set_global_variable = { name = wc_months value = 0 }
+		every_state_region = {
+			add_to_global_variable_list = { name = wc_free target = this }
+		}
+		wc_update_year = yes
+	}
+}
+
+wc_update_year = {
+	set_global_variable = { name = wc_year value = 1700 }
+	wc_year_step = { S = 256 }
+	wc_year_step = { S = 128 }
+	wc_year_step = { S = 64 }
+	wc_year_step = { S = 32 }
+	wc_year_step = { S = 16 }
+	wc_year_step = { S = 8 }
+	wc_year_step = { S = 4 }
+	wc_year_step = { S = 2 }
+	wc_year_step = { S = 1 }
+}
+
+wc_year_step = {
+	change_global_variable = { name = wc_year add = $S$ }
+	if = {
+		limit = { NOT = { year >= global_var:wc_year } }
+		change_global_variable = { name = wc_year subtract = $S$ }
+	}
+}
+
+wc_monthly = {
+	wc_init = yes
+	change_global_variable = { name = wc_months add = 1 }
+	if = {
+		limit = { NOT = { has_global_variable = wc_tick_alive } }
+		wc_start_ticker = yes
+	}
+}
+
+wc_start_ticker = {
+	set_global_variable = { name = wc_tick_alive days = 10 }
+	random_country = {
+		limit = { NOT = { is_country_type = decentralized } }
+		trigger_event = { id = wc_events.1 days = 7 }
+	}
+}
+
+wc_weekly = {
+	wc_init = yes
+	wc_update_year = yes
+	every_country = {
+		limit = { any_scope_war = { always = yes } }
+		every_scope_war = {
+			wc_record_war = yes
+		}
+	}
+	clear_global_variable_list = wc_finished
+	every_in_global_list = {
+		variable = wc_active
+		save_scope_as = wc_slot
+		if = {
+			limit = { exists = var:wc_war }
+			var:wc_war = { save_scope_as = wc_war }
+			wc_scan_sides = yes
+			wc_measure = yes
+			wc_reclassify = yes
+		}
+		else = {
+			add_to_global_variable_list = { name = wc_finished target = this }
+		}
+	}
+	every_in_global_list = {
+		variable = wc_finished
+		wc_finish = yes
+	}
+	clear_global_variable_list = wc_finished
+	wc_rebuild_display = yes
+}
+
+wc_take_slot = {
+	clear_saved_scope = wc_slot
+	if = {
+		limit = {
+			any_in_global_list = {
+				variable = wc_free
+				always = yes
+			}
+		}
+		random_in_global_list = {
+			variable = wc_free
+			save_scope_as = wc_slot
+		}
+		remove_list_global_variable = { name = wc_free target = scope:wc_slot }
+	}
+	else = {
+		ordered_in_global_list = {
+			variable = wc_records
+			limit = { has_variable = wc_ended }
+			order_by = wc_age
+			position = 0
+			check_range_bounds = no
+			save_scope_as = wc_slot
+		}
+		if = {
+			limit = { exists = scope:wc_slot }
+			remove_list_global_variable = { name = wc_records target = scope:wc_slot }
+			scope:wc_slot = { wc_clear_slot = yes }
+		}
+	}
+}
+
+wc_clear_slot = {
+	remove_variable = wc_used
+	remove_variable = wc_index
+	remove_variable = wc_war
+	remove_variable = wc_play
+	remove_variable = wc_a
+	remove_variable = wc_b
+	remove_variable = wc_x
+	remove_variable = wc_y
+	remove_variable = wc_k1
+	remove_variable = wc_k2
+	remove_variable = wc_region
+	remove_variable = wc_flavor
+	remove_variable = wc_type
+	remove_variable = wc_base_type
+	remove_variable = wc_ord
+	remove_variable = wc_noord
+	remove_variable = wc_unordered
+	remove_variable = wc_has_sequel
+	remove_variable = wc_year
+	remove_variable = wc_end_year
+	remove_variable = wc_start_m
+	remove_variable = wc_end_m
+	remove_variable = wc_ended
+	remove_variable = wc_outcome
+	remove_variable = wc_cas
+	remove_variable = wc_dead
+	remove_variable = wc_n_a
+	remove_variable = wc_n_b
+	remove_variable = wc_gp_a
+	remove_variable = wc_gp_b
+	remove_variable = wc_pp
+	remove_variable = wc_years
+	clear_variable_list = wc_side_a
+	clear_variable_list = wc_side_b
+	clear_variable_list = wc_sup_a
+	clear_variable_list = wc_sup_b
+	clear_variable_list = wc_sup_a_c
+	clear_variable_list = wc_sup_b_c
+	clear_variable_list = wc_war_l
+	clear_variable_list = wc_lead_a_l
+	clear_variable_list = wc_lead_b_l
+	clear_variable_list = wc_lead_a_cl
+	clear_variable_list = wc_lead_b_cl
+	remove_variable = wc_great
+	remove_variable = wc_has_gp
+	remove_variable = wc_lead_a_c
+	remove_variable = wc_lead_b_c
+	remove_variable = wc_sup_n_a
+	remove_variable = wc_sup_n_b
+	remove_variable = wc_cas_a
+	remove_variable = wc_cas_b
+	remove_variable = wc_dead_a
+	remove_variable = wc_dead_b
+}
+
+wc_record_war = {
+	clear_saved_scope = wc_war
+	clear_saved_scope = wc_play
+	clear_saved_scope = wc_slot
+	clear_saved_scope = wc_att
+	clear_saved_scope = wc_def
+	save_scope_as = wc_war
+	diplomatic_play ?= { save_scope_as = wc_play }
+	if = {
+		limit = {
+			exists = scope:wc_play
+			scope:wc_play = { NOT = { has_variable = wc_slot } }
+			exists = attacker_warleader
+			exists = defender_warleader
+		}
+		wc_init = yes
+		wc_take_slot = yes
+		if = {
+			limit = { exists = scope:wc_slot }
+			attacker_warleader = { save_scope_as = wc_att }
+			defender_warleader = { save_scope_as = wc_def }
+			scope:wc_play = { set_variable = { name = wc_slot value = scope:wc_slot } }
+			scope:wc_slot = {
+				set_variable = wc_used
+				set_variable = { name = wc_index value = global_var:wc_next }
+				set_variable = { name = wc_war value = scope:wc_war }
+				set_variable = { name = wc_play value = scope:wc_play }
+				set_variable = { name = wc_a value = scope:wc_att.country_definition }
+				set_variable = { name = wc_b value = scope:wc_def.country_definition }
+				set_variable = { name = wc_year value = global_var:wc_year }
+				set_variable = { name = wc_start_m value = global_var:wc_months }
+				set_variable = { name = wc_cas value = 0 }
+				set_variable = { name = wc_dead value = 0 }
+				set_variable = { name = wc_cas_a value = 0 }
+				set_variable = { name = wc_cas_b value = 0 }
+				set_variable = { name = wc_dead_a value = 0 }
+				set_variable = { name = wc_dead_b value = 0 }
+				set_variable = { name = wc_region value = scope:wc_play.region }
+			}
+			change_global_variable = { name = wc_next add = 1 }
+			add_to_global_variable_list = { name = wc_records target = scope:wc_slot }
+			add_to_global_variable_list = { name = wc_active target = scope:wc_slot }
+			scope:wc_slot = {
+				wc_scan_sides = yes
+				wc_classify = yes
+				wc_assign_ordinal = yes
+			}
+			wc_rebuild_display = yes
+		}
+	}
+}
+
+wc_scan_sides = {
+	save_scope_as = wc_slot
+	set_variable = { name = wc_n_a value = 0 }
+	set_variable = { name = wc_n_b value = 0 }
+	set_variable = { name = wc_gp_a value = 0 }
+	set_variable = { name = wc_gp_b value = 0 }
+	set_variable = { name = wc_sup_n_a value = 0 }
+	set_variable = { name = wc_sup_n_b value = 0 }
+	clear_variable_list = wc_sup_a_c
+	clear_variable_list = wc_sup_b_c
+	scope:wc_war = {
+		attacker_warleader = { save_scope_as = wc_lead_a }
+		defender_warleader = { save_scope_as = wc_lead_b }
+		every_war_participant = {
+			save_scope_as = wc_p
+			if = {
+				limit = { scope:wc_war = { is_on_defending_side = scope:wc_p } }
+				scope:wc_slot = {
+					change_variable = { name = wc_n_b add = 1 }
+					if = {
+						limit = { scope:wc_p = { country_rank = rank_value:great_power } }
+						change_variable = { name = wc_gp_b add = 1 }
+					}
+					if = {
+						limit = { NOT = { is_target_in_variable_list = { name = wc_side_b target = scope:wc_p.country_definition } } }
+						add_to_variable_list = { name = wc_side_b target = scope:wc_p.country_definition }
+					}
+					if = {
+						limit = { scope:wc_p = { this = scope:wc_lead_b } }
+						set_variable = { name = wc_lead_b_c value = scope:wc_p }
+					}
+					else = {
+						change_variable = { name = wc_sup_n_b add = 1 }
+						if = {
+							limit = { NOT = { is_target_in_variable_list = { name = wc_sup_b target = scope:wc_p.country_definition } } }
+							add_to_variable_list = { name = wc_sup_b target = scope:wc_p.country_definition }
+						}
+						if = {
+							limit = { NOT = { is_target_in_variable_list = { name = wc_sup_b_c target = scope:wc_p } } }
+							add_to_variable_list = { name = wc_sup_b_c target = scope:wc_p }
+						}
+					}
+				}
+			}
+			else = {
+				scope:wc_slot = {
+					change_variable = { name = wc_n_a add = 1 }
+					if = {
+						limit = { scope:wc_p = { country_rank = rank_value:great_power } }
+						change_variable = { name = wc_gp_a add = 1 }
+					}
+					if = {
+						limit = { NOT = { is_target_in_variable_list = { name = wc_side_a target = scope:wc_p.country_definition } } }
+						add_to_variable_list = { name = wc_side_a target = scope:wc_p.country_definition }
+					}
+					if = {
+						limit = { scope:wc_p = { this = scope:wc_lead_a } }
+						set_variable = { name = wc_lead_a_c value = scope:wc_p }
+					}
+					else = {
+						change_variable = { name = wc_sup_n_a add = 1 }
+						if = {
+							limit = { NOT = { is_target_in_variable_list = { name = wc_sup_a target = scope:wc_p.country_definition } } }
+							add_to_variable_list = { name = wc_sup_a target = scope:wc_p.country_definition }
+						}
+						if = {
+							limit = { NOT = { is_target_in_variable_list = { name = wc_sup_a_c target = scope:wc_p } } }
+							add_to_variable_list = { name = wc_sup_a_c target = scope:wc_p }
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
+wc_measure = {
+	save_scope_as = wc_slot
+	set_variable = { name = wc_cas_m value = 0 }
+	wc_cas_step = { S = 67108864 }
+	wc_cas_step = { S = 33554432 }
+	wc_cas_step = { S = 16777216 }
+	wc_cas_step = { S = 8388608 }
+	wc_cas_step = { S = 4194304 }
+	wc_cas_step = { S = 2097152 }
+	wc_cas_step = { S = 1048576 }
+	wc_cas_step = { S = 524288 }
+	wc_cas_step = { S = 262144 }
+	wc_cas_step = { S = 131072 }
+	wc_cas_step = { S = 65536 }
+	wc_cas_step = { S = 32768 }
+	wc_cas_step = { S = 16384 }
+	wc_cas_step = { S = 8192 }
+	wc_cas_step = { S = 4096 }
+	wc_cas_step = { S = 2048 }
+	wc_cas_step = { S = 1024 }
+	wc_cas_step = { S = 512 }
+	wc_cas_step = { S = 256 }
+	wc_cas_step = { S = 128 }
+	wc_cas_step = { S = 64 }
+	set_variable = { name = wc_dead_m value = 0 }
+	wc_dead_step = { S = 67108864 }
+	wc_dead_step = { S = 33554432 }
+	wc_dead_step = { S = 16777216 }
+	wc_dead_step = { S = 8388608 }
+	wc_dead_step = { S = 4194304 }
+	wc_dead_step = { S = 2097152 }
+	wc_dead_step = { S = 1048576 }
+	wc_dead_step = { S = 524288 }
+	wc_dead_step = { S = 262144 }
+	wc_dead_step = { S = 131072 }
+	wc_dead_step = { S = 65536 }
+	wc_dead_step = { S = 32768 }
+	wc_dead_step = { S = 16384 }
+	wc_dead_step = { S = 8192 }
+	wc_dead_step = { S = 4096 }
+	wc_dead_step = { S = 2048 }
+	wc_dead_step = { S = 1024 }
+	wc_dead_step = { S = 512 }
+	wc_dead_step = { S = 256 }
+	wc_dead_step = { S = 128 }
+	wc_dead_step = { S = 64 }
+	set_variable = { name = wc_cas_a_m value = 0 }
+	set_variable = { name = wc_cas_b_m value = 0 }
+	set_variable = { name = wc_dead_a_m value = 0 }
+	set_variable = { name = wc_dead_b_m value = 0 }
+	scope:wc_war = {
+		every_war_participant = {
+			save_scope_as = wc_p
+			scope:wc_slot = { wc_country_measure = yes }
+			if = {
+				limit = { scope:wc_war = { is_on_defending_side = scope:wc_p } }
+				scope:wc_slot = {
+					change_variable = { name = wc_cas_b_m add = var:wc_tc }
+					change_variable = { name = wc_dead_b_m add = var:wc_td }
+				}
+			}
+			else = {
+				scope:wc_slot = {
+					change_variable = { name = wc_cas_a_m add = var:wc_tc }
+					change_variable = { name = wc_dead_a_m add = var:wc_td }
+				}
+			}
+		}
+	}
+	wc_keep_max = { V = wc_cas_a }
+	wc_keep_max = { V = wc_cas_b }
+	wc_keep_max = { V = wc_dead_a }
+	wc_keep_max = { V = wc_dead_b }
+	remove_variable = wc_tc
+	remove_variable = wc_td
+	if = {
+		limit = {
+			OR = {
+				NOT = { has_variable = wc_cas }
+				var:wc_cas_m > var:wc_cas
+			}
+		}
+		set_variable = { name = wc_cas value = var:wc_cas_m }
+	}
+	if = {
+		limit = {
+			OR = {
+				NOT = { has_variable = wc_dead }
+				var:wc_dead_m > var:wc_dead
+			}
+		}
+		set_variable = { name = wc_dead value = var:wc_dead_m }
+	}
+	remove_variable = wc_cas_m
+	remove_variable = wc_dead_m
+}
+
+wc_keep_max = {
+	if = {
+		limit = {
+			OR = {
+				NOT = { has_variable = $V$ }
+				var:$V$_m > var:$V$
+			}
+		}
+		set_variable = { name = $V$ value = var:$V$_m }
+	}
+	remove_variable = $V$_m
+}
+
+wc_country_measure = {
+	set_variable = { name = wc_tc value = 0 }
+	wc_cc_step = { S = 33554432 }
+	wc_cc_step = { S = 16777216 }
+	wc_cc_step = { S = 8388608 }
+	wc_cc_step = { S = 4194304 }
+	wc_cc_step = { S = 2097152 }
+	wc_cc_step = { S = 1048576 }
+	wc_cc_step = { S = 524288 }
+	wc_cc_step = { S = 262144 }
+	wc_cc_step = { S = 131072 }
+	wc_cc_step = { S = 65536 }
+	wc_cc_step = { S = 32768 }
+	wc_cc_step = { S = 16384 }
+	wc_cc_step = { S = 8192 }
+	wc_cc_step = { S = 4096 }
+	wc_cc_step = { S = 2048 }
+	wc_cc_step = { S = 1024 }
+	wc_cc_step = { S = 512 }
+	wc_cc_step = { S = 256 }
+	wc_cc_step = { S = 128 }
+	wc_cc_step = { S = 64 }
+	set_variable = { name = wc_td value = 0 }
+	wc_cd_step = { S = 33554432 }
+	wc_cd_step = { S = 16777216 }
+	wc_cd_step = { S = 8388608 }
+	wc_cd_step = { S = 4194304 }
+	wc_cd_step = { S = 2097152 }
+	wc_cd_step = { S = 1048576 }
+	wc_cd_step = { S = 524288 }
+	wc_cd_step = { S = 262144 }
+	wc_cd_step = { S = 131072 }
+	wc_cd_step = { S = 65536 }
+	wc_cd_step = { S = 32768 }
+	wc_cd_step = { S = 16384 }
+	wc_cd_step = { S = 8192 }
+	wc_cd_step = { S = 4096 }
+	wc_cd_step = { S = 2048 }
+	wc_cd_step = { S = 1024 }
+	wc_cd_step = { S = 512 }
+	wc_cd_step = { S = 256 }
+	wc_cd_step = { S = 128 }
+	wc_cd_step = { S = 64 }
+}
+
+wc_cc_step = {
+	change_variable = { name = wc_tc add = $S$ }
+	if = {
+		limit = {
+			NOT = {
+				scope:wc_war = {
+					num_country_casualties = {
+						target = scope:wc_p
+						value >= scope:wc_slot.var:wc_tc
+					}
+				}
+			}
+		}
+		change_variable = { name = wc_tc subtract = $S$ }
+	}
+}
+
+wc_cd_step = {
+	change_variable = { name = wc_td add = $S$ }
+	if = {
+		limit = {
+			NOT = {
+				scope:wc_war = {
+					num_country_dead = {
+						target = scope:wc_p
+						value >= scope:wc_slot.var:wc_td
+					}
+				}
+			}
+		}
+		change_variable = { name = wc_td subtract = $S$ }
+	}
+}
+
+
+wc_cas_step = {
+	change_variable = { name = wc_cas_m add = $S$ }
+	if = {
+		limit = { NOT = { scope:wc_war = { num_casualties >= scope:wc_slot.var:wc_cas_m } } }
+		change_variable = { name = wc_cas_m subtract = $S$ }
+	}
+}
+
+wc_dead_step = {
+	change_variable = { name = wc_dead_m add = $S$ }
+	if = {
+		limit = { NOT = { scope:wc_war = { num_dead >= scope:wc_slot.var:wc_dead_m } } }
+		change_variable = { name = wc_dead_m subtract = $S$ }
+	}
+}
+
+wc_set_outcome_winner = {
+	clear_saved_scope = wc_slot
+	scope:diplomatic_play ?= {
+		var:wc_slot ?= { save_scope_as = wc_slot }
+	}
+	if = {
+		limit = { exists = scope:wc_slot }
+		scope:war ?= {
+			save_scope_as = wc_war
+			scope:wc_slot = { wc_measure = yes }
+		}
+		scope:wc_slot = {
+			if = {
+				limit = { is_target_in_variable_list = { name = wc_side_a target = root.country_definition } }
+				set_variable = { name = wc_outcome value = 1 }
+			}
+			else = {
+				set_variable = { name = wc_outcome value = 2 }
+			}
+			if = {
+				limit = { has_variable = wc_ended }
+				wc_rename_at_end = yes
+			}
+		}
+	}
+}
+
+wc_set_outcome_inconclusive = {
+	clear_saved_scope = wc_slot
+	scope:diplomatic_play ?= {
+		var:wc_slot ?= { save_scope_as = wc_slot }
+	}
+	if = {
+		limit = { exists = scope:wc_slot }
+		scope:war ?= {
+			save_scope_as = wc_war
+			scope:wc_slot = { wc_measure = yes }
+		}
+		scope:wc_slot = {
+			set_variable = { name = wc_outcome value = 3 }
+		}
+	}
+}
+
+wc_finish = {
+	if = {
+		limit = { NOT = { has_variable = wc_ended } }
+		set_variable = wc_ended
+		set_variable = { name = wc_end_year value = global_var:wc_year }
+		set_variable = { name = wc_end_m value = global_var:wc_months }
+		if = {
+			limit = { NOT = { has_variable = wc_outcome } }
+			set_variable = { name = wc_outcome value = 3 }
+		}
+		remove_list_global_variable = { name = wc_active target = this }
+		remove_variable = wc_war
+		remove_variable = wc_play
+		wc_rename_at_end = yes
+		wc_rebuild_display = yes
+	}
+}
+
+wc_rebuild_display = {
+	every_in_global_list = {
+		variable = wc_records
+		wc_refresh_lists = yes
+	}
+	wc_fill_display = { N = 1 ORDER = wc_order_display }
+	wc_fill_past_sorted = { NAME = wc_past_dur ORDER = wc_order_duration }
+	wc_fill_past_sorted = { NAME = wc_past_old ORDER = wc_age }
+	wc_fill_past_sorted = { NAME = wc_past_new ORDER = wc_order_index }
+	every_country = {
+		limit = { is_player = yes }
+		save_scope_as = wc_me
+		clear_variable_list = wc_past_us
+		ordered_in_global_list = {
+			variable = wc_records
+			limit = {
+				has_variable = wc_ended
+				OR = {
+					is_target_in_variable_list = { name = wc_side_a target = scope:wc_me.country_definition }
+					is_target_in_variable_list = { name = wc_side_b target = scope:wc_me.country_definition }
+				}
+			}
+			order_by = wc_order_index
+			max = 100000
+			check_range_bounds = no
+			save_scope_as = wc_rec
+			scope:wc_me = { add_to_variable_list = { name = wc_past_us target = scope:wc_rec } }
+		}
+	}
+}
+
+wc_fill_past_sorted = {
+	clear_global_variable_list = $NAME$
+	ordered_in_global_list = {
+		variable = wc_records
+		limit = { has_variable = wc_ended }
+		order_by = $ORDER$
+		max = 100000
+		check_range_bounds = no
+		add_to_global_variable_list = { name = $NAME$ target = this }
+	}
+}
+
+wc_fill_display = {
+	clear_global_variable_list = wc_on_$N$
+	clear_global_variable_list = wc_past_$N$
+	ordered_in_global_list = {
+		variable = wc_records
+		limit = { NOT = { has_variable = wc_ended } }
+		order_by = $ORDER$
+		max = 100000
+		check_range_bounds = no
+		add_to_global_variable_list = { name = wc_on_$N$ target = this }
+	}
+	ordered_in_global_list = {
+		variable = wc_records
+		limit = { has_variable = wc_ended }
+		order_by = $ORDER$
+		max = 100000
+		check_range_bounds = no
+		add_to_global_variable_list = { name = wc_past_$N$ target = this }
+	}
+}
+
+wc_refresh_lists = {
+	remove_variable = wc_great
+	remove_variable = wc_has_gp
+	if = {
+		limit = {
+			has_variable = wc_type
+			var:wc_type = 2
+		}
+		set_variable = wc_great
+	}
+	if = {
+		limit = {
+			OR = {
+				AND = {
+					has_variable = wc_gp_a
+					var:wc_gp_a > 0
+				}
+				AND = {
+					has_variable = wc_gp_b
+					var:wc_gp_b > 0
+				}
+			}
+		}
+		set_variable = wc_has_gp
+	}
+	clear_variable_list = wc_war_l
+	clear_variable_list = wc_lead_a_l
+	clear_variable_list = wc_lead_b_l
+	clear_variable_list = wc_lead_a_cl
+	clear_variable_list = wc_lead_b_cl
+	if = {
+		limit = { has_variable = wc_a }
+		add_to_variable_list = { name = wc_lead_a_l target = var:wc_a }
+	}
+	if = {
+		limit = { has_variable = wc_b }
+		add_to_variable_list = { name = wc_lead_b_l target = var:wc_b }
+	}
+	if = {
+		limit = {
+			NOT = { has_variable = wc_ended }
+			has_variable = wc_war
+			exists = var:wc_war
+		}
+		add_to_variable_list = { name = wc_war_l target = var:wc_war }
+		if = {
+			limit = {
+				has_variable = wc_lead_a_c
+				exists = var:wc_lead_a_c
+			}
+			add_to_variable_list = { name = wc_lead_a_cl target = var:wc_lead_a_c }
+		}
+		if = {
+			limit = {
+				has_variable = wc_lead_b_c
+				exists = var:wc_lead_b_c
+			}
+			add_to_variable_list = { name = wc_lead_b_cl target = var:wc_lead_b_c }
+		}
+	}
+}

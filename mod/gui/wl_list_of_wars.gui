@@ -1,0 +1,645 @@
+﻿types wl_list_of_wars_types
+{
+	type wl_wars_tab_content = flowcontainer {
+		direction = vertical
+		using = default_list_position
+		using = default_content_fade
+		minimumsize = { 560 -1 }
+		maximumsize = { 560 -1 }
+		margin_top = 10
+		spacing = 8
+
+		default_header = {
+			parentanchor = hcenter
+			blockoverride "text" {
+				text = "WL_ONGOING"
+			}
+		}
+
+		empty_state = {
+			blockoverride "visible" {
+				visible = "[IsDataModelEmpty(GetGlobalList('wl_on_1'))]"
+			}
+			blockoverride "text" {
+				text = "WL_EMPTY_ONGOING"
+			}
+		}
+
+		flowcontainer = {
+			parentanchor = hcenter
+			direction = vertical
+			spacing = 4
+			datamodel = "[GetGlobalList('wl_on_1')]"
+
+			item = {
+				wl_war_entry_live = {}
+			}
+		}
+
+
+		widget = {
+			size = { 10 6 }
+		}
+
+		default_header = {
+			parentanchor = hcenter
+			blockoverride "text" {
+				text = "WL_PAST"
+			}
+		}
+
+		empty_state = {
+			blockoverride "visible" {
+				visible = "[IsDataModelEmpty(GetGlobalList('wl_past_1'))]"
+			}
+			blockoverride "text" {
+				text = "WL_EMPTY_PAST"
+			}
+		}
+
+		flowcontainer = {
+			parentanchor = hcenter
+			spacing = 4
+			visible = "[Not( IsDataModelEmpty( GetGlobalList('wl_past_1') ) )]"
+
+			filter_button = {
+				visible = "[Not( GetVariableSystem.HasValue( 'wl_past_sort', 'dur' ) )]"
+				tooltip = "WL_SORT_DURATION_TT"
+
+				blockoverride "size" {
+					size = { 128 30 }
+				}
+				blockoverride "text" {
+					text = "WL_SORT_DURATION"
+				}
+				blockoverride "onclick" {
+					onclick = "[GetVariableSystem.Set( 'wl_past_sort', 'dur' )]"
+				}
+			}
+
+			filter_button = {
+				visible = "[GetVariableSystem.HasValue( 'wl_past_sort', 'dur' )]"
+				tooltip = "WL_SORT_CLEAR_TT"
+
+				blockoverride "size" {
+					size = { 128 30 }
+				}
+				blockoverride "text" {
+					text = "WL_SORT_DURATION"
+				}
+				blockoverride "onclick" {
+					onclick = "[GetVariableSystem.Clear( 'wl_past_sort' )]"
+				}
+
+				icon = {
+					size = { 100% 100% }
+					using = highlighted_square_selection
+					alwaystransparent = yes
+				}
+			}
+
+			filter_button = {
+				visible = "[Not( GetVariableSystem.HasValue( 'wl_past_sort', 'old' ) )]"
+				tooltip = "WL_SORT_OLDEST_TT"
+
+				blockoverride "size" {
+					size = { 128 30 }
+				}
+				blockoverride "text" {
+					text = "WL_SORT_OLDEST"
+				}
+				blockoverride "onclick" {
+					onclick = "[GetVariableSystem.Set( 'wl_past_sort', 'old' )]"
+				}
+			}
+
+			filter_button = {
+				visible = "[GetVariableSystem.HasValue( 'wl_past_sort', 'old' )]"
+				tooltip = "WL_SORT_CLEAR_TT"
+
+				blockoverride "size" {
+					size = { 128 30 }
+				}
+				blockoverride "text" {
+					text = "WL_SORT_OLDEST"
+				}
+				blockoverride "onclick" {
+					onclick = "[GetVariableSystem.Clear( 'wl_past_sort' )]"
+				}
+
+				icon = {
+					size = { 100% 100% }
+					using = highlighted_square_selection
+					alwaystransparent = yes
+				}
+			}
+
+			filter_button = {
+				visible = "[Not( GetVariableSystem.HasValue( 'wl_past_sort', 'new' ) )]"
+				tooltip = "WL_SORT_NEWEST_TT"
+
+				blockoverride "size" {
+					size = { 128 30 }
+				}
+				blockoverride "text" {
+					text = "WL_SORT_NEWEST"
+				}
+				blockoverride "onclick" {
+					onclick = "[GetVariableSystem.Set( 'wl_past_sort', 'new' )]"
+				}
+			}
+
+			filter_button = {
+				visible = "[GetVariableSystem.HasValue( 'wl_past_sort', 'new' )]"
+				tooltip = "WL_SORT_CLEAR_TT"
+
+				blockoverride "size" {
+					size = { 128 30 }
+				}
+				blockoverride "text" {
+					text = "WL_SORT_NEWEST"
+				}
+				blockoverride "onclick" {
+					onclick = "[GetVariableSystem.Clear( 'wl_past_sort' )]"
+				}
+
+				icon = {
+					size = { 100% 100% }
+					using = highlighted_square_selection
+					alwaystransparent = yes
+				}
+			}
+
+			filter_button = {
+				visible = "[Not( GetVariableSystem.HasValue( 'wl_past_sort', 'us' ) )]"
+				tooltip = "WL_SORT_US_TT"
+
+				blockoverride "size" {
+					size = { 128 30 }
+				}
+				blockoverride "text" {
+					text = "WL_SORT_US"
+				}
+				blockoverride "onclick" {
+					onclick = "[GetVariableSystem.Set( 'wl_past_sort', 'us' )]"
+				}
+			}
+
+			filter_button = {
+				visible = "[GetVariableSystem.HasValue( 'wl_past_sort', 'us' )]"
+				tooltip = "WL_SORT_CLEAR_TT"
+
+				blockoverride "size" {
+					size = { 128 30 }
+				}
+				blockoverride "text" {
+					text = "WL_SORT_US"
+				}
+				blockoverride "onclick" {
+					onclick = "[GetVariableSystem.Clear( 'wl_past_sort' )]"
+				}
+
+				icon = {
+					size = { 100% 100% }
+					using = highlighted_square_selection
+					alwaystransparent = yes
+				}
+			}
+		}
+
+		empty_state = {
+			blockoverride "visible" {
+				visible = "[And( GetVariableSystem.HasValue( 'wl_past_sort', 'us' ), And( Not( IsDataModelEmpty( GetGlobalList('wl_past_1') ) ), IsDataModelEmpty( GetPlayer.MakeScope.GetList('wl_past_us') ) ) )]"
+			}
+			blockoverride "text" {
+				text = "WL_EMPTY_US"
+			}
+		}
+
+		flowcontainer = {
+			parentanchor = hcenter
+			direction = vertical
+			spacing = 4
+			visible = "[Not( GetVariableSystem.Exists( 'wl_past_sort' ) )]"
+			datamodel = "[GetGlobalList('wl_past_1')]"
+
+			item = {
+				wl_war_entry_past = {}
+			}
+		}
+
+		flowcontainer = {
+			parentanchor = hcenter
+			direction = vertical
+			spacing = 4
+			visible = "[GetVariableSystem.HasValue( 'wl_past_sort', 'dur' )]"
+			datamodel = "[GetGlobalList('wl_past_dur')]"
+
+			item = {
+				wl_war_entry_past = {}
+			}
+		}
+
+		flowcontainer = {
+			parentanchor = hcenter
+			direction = vertical
+			spacing = 4
+			visible = "[GetVariableSystem.HasValue( 'wl_past_sort', 'old' )]"
+			datamodel = "[GetGlobalList('wl_past_old')]"
+
+			item = {
+				wl_war_entry_past = {}
+			}
+		}
+
+		flowcontainer = {
+			parentanchor = hcenter
+			direction = vertical
+			spacing = 4
+			visible = "[GetVariableSystem.HasValue( 'wl_past_sort', 'new' )]"
+			datamodel = "[GetGlobalList('wl_past_new')]"
+
+			item = {
+				wl_war_entry_past = {}
+			}
+		}
+
+		flowcontainer = {
+			parentanchor = hcenter
+			direction = vertical
+			spacing = 4
+			visible = "[GetVariableSystem.HasValue( 'wl_past_sort', 'us' )]"
+			datamodel = "[GetPlayer.MakeScope.GetList('wl_past_us')]"
+
+			item = {
+				wl_war_entry_past = {}
+			}
+		}
+
+	}
+
+	type wl_war_body = flowcontainer {
+		direction = vertical
+		resizeparent = yes
+		minimumsize = { 540 -1 }
+		maximumsize = { 540 -1 }
+		margin = { 12 8 }
+		spacing = 3
+
+		flowcontainer = {
+			flowcontainer = {
+				direction = vertical
+				minimumsize = { 210 -1 }
+				maximumsize = { 210 -1 }
+
+				textbox = {
+					text = "#bold [StateRegion.GetCustom('wl_name')]#!"
+					autoresize = yes
+					multiline = yes
+					maximumsize = { 210 -1 }
+					align = left|nobaseline
+					default_format = "#white"
+					alwaystransparent = yes
+
+					icon = {
+						size = { 100% 1 }
+						parentanchor = bottom|left
+						texture = "gfx/interface/backgrounds/white.dds"
+						alwaystransparent = yes
+					}
+				}
+			}
+
+			widget = {
+				size = { 96 1 }
+			}
+
+			textbox = {
+				text = "WL_DATES_LINE"
+				autoresize = yes
+				multiline = yes
+				minimumsize = { 210 -1 }
+				maximumsize = { 210 -1 }
+				align = right|nobaseline
+				using = fontsize_small
+				alwaystransparent = yes
+			}
+		}
+
+		flowcontainer = {
+			flowcontainer = {
+				direction = vertical
+				minimumsize = { 210 -1 }
+				maximumsize = { 210 -1 }
+
+				flowcontainer = {
+					spacing = 4
+
+					widget = {
+						size = { 36 24 }
+
+						flowcontainer = {
+							visible = "[Not( IsDataModelEmpty( StateRegion.MakeScope.GetList('wl_lead_a_cl') ) )]"
+							datamodel = "[StateRegion.MakeScope.GetList('wl_lead_a_cl')]"
+
+							item = {
+								wl_lead_flag_live = {}
+							}
+						}
+
+						flowcontainer = {
+							visible = "[IsDataModelEmpty( StateRegion.MakeScope.GetList('wl_lead_a_cl') )]"
+							datamodel = "[StateRegion.MakeScope.GetList('wl_lead_a_l')]"
+
+							item = {
+								wl_lead_flag_past = {}
+							}
+						}
+					}
+
+					dynamicgridbox = {
+						visible = "[Not( StateRegion.MakeScope.Var('wl_ended').IsSet )]"
+						parentanchor = vcenter
+						datamodel_wrap = 6
+						datamodel = "[StateRegion.MakeScope.GetList('wl_sup_a_c')]"
+
+						item = {
+							wl_flag_live = {}
+						}
+					}
+
+					dynamicgridbox = {
+						visible = "[StateRegion.MakeScope.Var('wl_ended').IsSet]"
+						parentanchor = vcenter
+						datamodel_wrap = 6
+						datamodel = "[StateRegion.MakeScope.GetList('wl_sup_a')]"
+
+						item = {
+							wl_flag_past = {}
+						}
+					}
+				}
+			}
+
+			widget = {
+				size = { 96 1 }
+			}
+
+			flowcontainer = {
+				direction = vertical
+				minimumsize = { 210 -1 }
+				maximumsize = { 210 -1 }
+
+				flowcontainer = {
+					parentanchor = right
+					spacing = 4
+
+					dynamicgridbox = {
+						visible = "[Not( StateRegion.MakeScope.Var('wl_ended').IsSet )]"
+						parentanchor = vcenter
+						datamodel_wrap = 6
+						datamodel = "[StateRegion.MakeScope.GetList('wl_sup_b_c')]"
+
+						item = {
+							wl_flag_live = {}
+						}
+					}
+
+					dynamicgridbox = {
+						visible = "[StateRegion.MakeScope.Var('wl_ended').IsSet]"
+						parentanchor = vcenter
+						datamodel_wrap = 6
+						datamodel = "[StateRegion.MakeScope.GetList('wl_sup_b')]"
+
+						item = {
+							wl_flag_past = {}
+						}
+					}
+
+					widget = {
+						size = { 36 24 }
+
+						flowcontainer = {
+							visible = "[Not( IsDataModelEmpty( StateRegion.MakeScope.GetList('wl_lead_b_cl') ) )]"
+							datamodel = "[StateRegion.MakeScope.GetList('wl_lead_b_cl')]"
+
+							item = {
+								wl_lead_flag_live = {}
+							}
+						}
+
+						flowcontainer = {
+							visible = "[IsDataModelEmpty( StateRegion.MakeScope.GetList('wl_lead_b_cl') )]"
+							datamodel = "[StateRegion.MakeScope.GetList('wl_lead_b_l')]"
+
+							item = {
+								wl_lead_flag_past = {}
+							}
+						}
+					}
+				}
+			}
+		}
+
+		flowcontainer = {
+			textbox = {
+				text = "WL_ROW_CAS_A"
+				autoresize = yes
+				multiline = yes
+				minimumsize = { 210 -1 }
+				maximumsize = { 210 -1 }
+				align = left|nobaseline
+				using = fontsize_small
+				alwaystransparent = yes
+			}
+
+			widget = {
+				size = { 96 1 }
+			}
+
+			textbox = {
+				text = "WL_ROW_CAS_B"
+				autoresize = yes
+				multiline = yes
+				minimumsize = { 210 -1 }
+				maximumsize = { 210 -1 }
+				align = right|nobaseline
+				using = fontsize_small
+				alwaystransparent = yes
+			}
+		}
+	}
+
+	type wl_great_glow = widget {
+		size = { 100% 100% }
+		alwaystransparent = yes
+		visible = "[StateRegion.MakeScope.Var('wl_great').IsSet]"
+
+		icon = {
+			size = { 100% 2 }
+			parentanchor = top|left
+			texture = "gfx/interface/backgrounds/white.dds"
+			color = { 0.86 0.68 0.3 1 }
+			alwaystransparent = yes
+		}
+
+		icon = {
+			size = { 100% 2 }
+			parentanchor = bottom|left
+			texture = "gfx/interface/backgrounds/white.dds"
+			color = { 0.86 0.68 0.3 1 }
+			alwaystransparent = yes
+		}
+
+		icon = {
+			size = { 2 100% }
+			parentanchor = top|left
+			texture = "gfx/interface/backgrounds/white.dds"
+			color = { 0.86 0.68 0.3 1 }
+			alwaystransparent = yes
+		}
+
+		icon = {
+			size = { 2 100% }
+			parentanchor = top|right
+			texture = "gfx/interface/backgrounds/white.dds"
+			color = { 0.86 0.68 0.3 1 }
+			alwaystransparent = yes
+		}
+
+		divider_gold = {
+			parentanchor = top|hcenter
+			position = { 0 2 }
+			size = { 96% 3 }
+			alwaystransparent = yes
+		}
+
+		divider_gold = {
+			parentanchor = bottom|hcenter
+			position = { 0 -2 }
+			size = { 96% 3 }
+			alwaystransparent = yes
+		}
+	}
+
+	type wl_war_icon = icon {
+		parentanchor = center
+		size = { 95 84 }
+		texture = "gfx/interface/outliner/war_button_icon.dds"
+		alwaystransparent = yes
+	}
+
+	type wl_war_entry_live = flowcontainer {
+		parentanchor = hcenter
+		direction = vertical
+		datacontext = "[Scope.GetStateRegion]"
+		visible = "[Scope.GetStateRegion.IsValid]"
+
+		flowcontainer = {
+			direction = vertical
+			datamodel = "[StateRegion.MakeScope.GetList('wl_war_l')]"
+
+			item = {
+				button = {
+					using = clean_button
+					tooltip = "WL_ENTRY_LIVE_TT"
+					onclick = "[WarManager.ToggleWarPanel( Scope.GetWar.AccessSelf )]"
+
+					wl_war_body = {}
+
+					wl_great_glow = {}
+
+					wl_war_icon = {}
+				}
+			}
+		}
+
+		widget = {
+			visible = "[IsDataModelEmpty( StateRegion.MakeScope.GetList('wl_war_l') )]"
+			tooltip = "WL_ENTRY_PAST_TT"
+
+			background = {
+				using = entry_bg_simple
+			}
+
+			wl_war_body = {}
+
+			wl_great_glow = {}
+
+			wl_war_icon = {}
+		}
+	}
+
+	type wl_war_entry_past = widget {
+		parentanchor = hcenter
+		datacontext = "[Scope.GetStateRegion]"
+		visible = "[Scope.GetStateRegion.IsValid]"
+		tooltip = "WL_ENTRY_PAST_TT"
+
+		background = {
+			using = entry_bg_simple
+		}
+
+		wl_war_body = {}
+
+		wl_great_glow = {}
+
+		wl_war_icon = {}
+	}
+
+	type wl_flag_live = widget {
+		size = { 26 18 }
+		visible = "[Scope.GetCountry.IsValid]"
+
+		icon = {
+			parentanchor = center
+			size = { 24 16 }
+			texture = "[Scope.GetCountry.GetFlag.GetMediumFlagTexture]"
+			frame = "[Scope.GetCountry.GetFlag.GetMediumFlagFrame]"
+			framesize = "[GetMediumFlagFrameSize]"
+			tooltip = "WL_FLAG_LIVE_TT"
+			using = flag_overlay
+		}
+	}
+
+	type wl_flag_past = widget {
+		size = { 26 18 }
+
+		icon = {
+			parentanchor = center
+			size = { 24 16 }
+			texture = "[Scope.GetCountryDefinition.GetBaseFlag.GetMediumFlagTexture]"
+			frame = "[Scope.GetCountryDefinition.GetBaseFlag.GetMediumFlagFrame]"
+			framesize = "[GetMediumFlagFrameSize]"
+			tooltip = "WL_LIST_COUNTRY"
+			using = flag_overlay
+		}
+	}
+
+	type wl_lead_flag_live = widget {
+		size = { 36 24 }
+		visible = "[Scope.GetCountry.IsValid]"
+
+		icon = {
+			size = { 36 24 }
+			texture = "[Scope.GetCountry.GetFlag.GetMediumFlagTexture]"
+			frame = "[Scope.GetCountry.GetFlag.GetMediumFlagFrame]"
+			framesize = "[GetMediumFlagFrameSize]"
+			tooltip = "WL_FLAG_LIVE_TT"
+			using = flag_overlay
+		}
+	}
+
+	type wl_lead_flag_past = widget {
+		size = { 36 24 }
+
+		icon = {
+			size = { 36 24 }
+			texture = "[Scope.GetCountryDefinition.GetBaseFlag.GetMediumFlagTexture]"
+			frame = "[Scope.GetCountryDefinition.GetBaseFlag.GetMediumFlagFrame]"
+			framesize = "[GetMediumFlagFrameSize]"
+			tooltip = "WL_LIST_COUNTRY"
+			using = flag_overlay
+		}
+	}
+}

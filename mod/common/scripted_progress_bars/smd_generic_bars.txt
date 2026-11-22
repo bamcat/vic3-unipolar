@@ -611,6 +611,30 @@ smd_contagion_bar = {
 		}
 		progress_condition = {
 			limit = {
+				any_political_movement = {
+					has_variable = smd_contagion_target
+					political_movement_support >= 0.25
+				}
+			}
+			add = {
+				value = 1.5
+				desc = "smd_contagion_bar_movement_support"
+			}
+		}
+		progress_condition = {
+			limit = {
+				any_political_movement = {
+					has_variable = smd_contagion_target
+					political_movement_radicalism >= 0.5
+				}
+			}
+			add = {
+				value = 1.5
+				desc = "smd_contagion_bar_movement_radical"
+			}
+		}
+		progress_condition = {
+			limit = {
 				any_interest_group = {
 					is_powerful = yes
 					OR = {

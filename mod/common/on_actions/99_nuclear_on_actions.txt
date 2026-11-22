@@ -3,7 +3,7 @@
 # 99_ prefix is required because paradox is doing meth
 # ==========================================
 
-on_monthly_pulse_country = {
+smd_oa_nuclear_monthly_pulse_country = {
 	effect = {
 		every_country = {
 			limit = {
@@ -31,11 +31,17 @@ on_monthly_pulse_country = {
 	}
 }
 
+on_monthly_pulse_country = {
+	on_actions = {
+		smd_oa_nuclear_monthly_pulse_country
+	}
+}
+
 # ==========================================
 # NUCLEAR TOP 5 — TRACKING
 # ==========================================
 
-on_monthly_pulse = {
+smd_oa_nuclear_monthly_pulse = {
 	effect = {
 		nuclear_recompute_top_5 = yes
 
@@ -44,7 +50,13 @@ on_monthly_pulse = {
 				has_variable = missile_production_queue
 				var:missile_production_queue > 0
 			}
-			missile_process_queue = yes
+			smd_missile_process_queue = yes
 		}
+	}
+}
+
+on_monthly_pulse = {
+	on_actions = {
+		smd_oa_nuclear_monthly_pulse
 	}
 }
