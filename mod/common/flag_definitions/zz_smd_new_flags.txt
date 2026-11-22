@@ -1,0 +1,170 @@
+﻿REPLACE_OR_CREATE:LEV = {
+	flag_definition = {
+		coa = smd_flag_levant_federation
+		subject_canton = smd_flag_levant_federation
+		priority = 1
+		allow_overlord_canton = yes
+	}
+}
+
+REPLACE_OR_CREATE:ARU = {
+	flag_definition = {
+		coa = smd_flag_arab_union
+		subject_canton = smd_flag_arab_union
+		priority = 1
+		allow_overlord_canton = yes
+	}
+	flag_definition = {
+		coa = smd_flag_arab_union_mon
+		subject_canton = smd_flag_arab_union_mon
+		priority = 200
+		allow_overlord_canton = yes
+		trigger = {
+			coa_def_monarchy_flag_trigger = yes
+		}
+	}
+	flag_definition = {
+		coa = smd_flag_arab_union_com
+		subject_canton = smd_flag_arab_union_com
+		priority = 300
+		allow_overlord_canton = yes
+		trigger = {
+			coa_def_communist_flag_trigger = yes
+		}
+	}
+}
+
+REPLACE_OR_CREATE:WAF = {
+	flag_definition = {
+		coa = smd_flag_west_african_federation
+		subject_canton = smd_flag_west_african_federation
+		priority = 1
+		allow_overlord_canton = yes
+	}
+	flag_definition = {
+		coa = smd_flag_west_african_federation_com
+		subject_canton = smd_flag_west_african_federation_com
+		priority = 300
+		allow_overlord_canton = yes
+		trigger = {
+			coa_def_communist_flag_trigger = yes
+		}
+	}
+}
+
+REPLACE_OR_CREATE:XMA = {
+	flag_definition = {
+		coa = smd_flag_mesoamerican_union
+		subject_canton = smd_flag_mesoamerican_union
+		priority = 1
+		allow_overlord_canton = yes
+	}
+	flag_definition = {
+		coa = smd_flag_mesoamerican_union_com
+		subject_canton = smd_flag_mesoamerican_union_com
+		priority = 300
+		allow_overlord_canton = yes
+		trigger = {
+			coa_def_communist_flag_trigger = yes
+		}
+	}
+}
+
+REPLACE_OR_CREATE:UNS = {
+	flag_definition = {
+		coa = smd_flag_south_american_union
+		subject_canton = smd_flag_south_american_union
+		priority = 1
+		allow_overlord_canton = yes
+	}
+	flag_definition = {
+		coa = smd_flag_south_american_union_com
+		subject_canton = smd_flag_south_american_union_com
+		priority = 300
+		allow_overlord_canton = yes
+		trigger = {
+			coa_def_communist_flag_trigger = yes
+		}
+	}
+}
+
+REPLACE_OR_CREATE:AFU = {
+	flag_definition = {
+		coa = smd_flag_african_union
+		subject_canton = smd_flag_african_union
+		priority = 1
+		allow_overlord_canton = yes
+	}
+}
+
+REPLACE_OR_CREATE:HAF = {
+	flag_definition = {
+		coa = smd_flag_horn_of_africa
+		subject_canton = smd_flag_horn_of_africa
+		priority = 1
+		allow_overlord_canton = yes
+	}
+}
+
+REPLACE_OR_CREATE:ASN = {
+	flag_definition = {
+		coa = smd_flag_asean
+		subject_canton = smd_flag_asean
+		priority = 1
+		allow_overlord_canton = yes
+	}
+	flag_definition = {
+		coa = smd_flag_asean_com
+		subject_canton = smd_flag_asean_com
+		priority = 300
+		allow_overlord_canton = yes
+		trigger = {
+			coa_def_communist_flag_trigger = yes
+		}
+	}
+}
+
+REPLACE_OR_CREATE:KOU = {
+	flag_definition = {
+		coa = smd_flag_korean_flag
+		subject_canton = smd_flag_korean_flag
+		priority = 1
+		allow_overlord_canton = yes
+	}
+	flag_definition = {
+		coa = smd_flag_korean_flag_com
+		subject_canton = smd_flag_korean_flag_com
+		priority = 300
+		allow_overlord_canton = yes
+		trigger = {
+			coa_def_communist_flag_trigger = yes
+		}
+	}
+}
+
+REPLACE_OR_CREATE:CAS = {
+	flag_definition = {
+		coa = smd_flag_cascadia
+		subject_canton = smd_flag_cascadia
+		priority = 1
+		allow_overlord_canton = yes
+	}
+	flag_definition = {
+		coa = smd_flag_cascadia_fasc
+		subject_canton = smd_flag_cascadia_fasc
+		priority = 300
+		allow_overlord_canton = yes
+		trigger = {
+			coa_def_fascist_flag_trigger = yes
+		}
+	}
+	flag_definition = {
+		coa = smd_flag_cascadia_com
+		subject_canton = smd_flag_cascadia_com
+		priority = 300
+		allow_overlord_canton = yes
+		trigger = {
+			coa_def_communist_flag_trigger = yes
+		}
+	}
+}

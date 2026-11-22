@@ -1,0 +1,230 @@
+﻿
+
+PSU = { # Pan-Slavic Union
+	dynamic_country_name = {
+		name = smd_dyn_c_psu_1
+		adjective = smd_dyn_c_psu_1_adj
+		
+		is_main_tag_only = yes
+		priority = 100
+		
+		trigger = {
+			exists = scope:actor
+			scope:actor = {
+				has_law = law_type:law_monarchy
+				was_formed_from = RUS
+			}
+		}
+	}
+	dynamic_country_name = {
+		name = smd_dyn_c_psu_2
+		adjective = smd_dyn_c_psu_2_adj
+
+		is_main_tag_only = yes
+		priority = 200
+
+		trigger = {
+			exists = scope:actor
+			scope:actor = {
+				OR = {
+					has_law = law_type:law_parliamentary_republic
+					has_law = law_type:law_presidential_republic
+				}
+			}
+		}
+	}
+	dynamic_country_name = {
+		name = smd_dyn_c_psu_3
+		adjective = smd_dyn_c_psu_3_adj
+
+		is_main_tag_only = yes
+		priority = 300
+		
+		trigger = {
+			exists = scope:actor
+			scope:actor = {
+				has_law = law_type:law_council_republic
+			}
+		}
+	}
+}
+
+ALP = { # Alps
+	dynamic_country_name = {
+		name = smd_dyn_c_impero_alpino
+		adjective = smd_dyn_c_impero_alpino_adj
+		
+		is_main_tag_only = yes
+		priority = 15
+		
+		trigger = {
+			exists = scope:actor
+			scope:actor = {
+				has_law = law_type:law_monarchy
+				was_formed_from = SAR
+			}
+		}
+	}
+	dynamic_country_name = {
+		name = smd_dyn_c_alpenreich
+		adjective = smd_dyn_c_alpenreich_adj
+		
+		is_main_tag_only = yes
+		priority = 15
+		
+		trigger = {
+			exists = scope:actor
+			scope:actor = {
+				has_law = law_type:law_monarchy
+				was_formed_from = BAV
+			}
+		}
+	}
+	dynamic_country_name = {
+		name = smd_dyn_c_helvetii
+		adjective = smd_dyn_c_helvetii_adj
+
+		is_main_tag_only = yes
+		priority = 30
+		
+		trigger = {
+			exists = scope:actor
+			scope:actor = {
+				has_law = law_type:law_council_republic
+			}
+		}
+	}
+}
+
+BLK = { # Balkans
+	dynamic_country_name = {
+		name = smd_dyn_c_blk_1
+		adjective = smd_dyn_c_blk_1_adj
+		
+		is_main_tag_only = yes
+		priority = 200
+		
+		trigger = {
+			exists = scope:actor
+			scope:actor = {
+				has_law = law_type:law_monarchy
+				was_formed_from = TUR
+			}
+		}
+	}
+}
+
+RMN = { # Roman Empire
+	dynamic_country_name = {
+		name = smd_dyn_c_rmn_1
+		adjective = smd_dyn_c_rmn_1_adj
+
+		is_main_tag_only = yes
+		priority = 100
+
+		trigger = {
+			exists = scope:actor
+			scope:actor = {
+				OR = {
+					has_law = law_type:law_parliamentary_republic
+					has_law = law_type:law_presidential_republic
+					has_law = law_type:law_council_republic
+				}
+			}
+		}
+	}
+}
+
+DNI = { # Romania-Ukraine
+	dynamic_country_name = {
+		name = smd_dyn_c_dni_1
+		adjective = smd_dyn_c_dni_1_adj
+
+		is_main_tag_only = yes
+		priority = 100
+
+		trigger = {
+			exists = scope:actor
+			scope:actor = {
+				OR = {
+					has_law = law_type:law_parliamentary_republic
+					has_law = law_type:law_presidential_republic
+					has_law = law_type:law_council_republic
+				}
+			}
+		}
+	}
+}
+
+PAS = { # Pashtunistan
+	dynamic_country_name = {
+		name = smd_dyn_c_pas_1
+		adjective = smd_dyn_c_pas_1_adj
+
+		is_main_tag_only = yes
+		priority = 100
+
+		trigger = {
+			exists = scope:actor
+			scope:actor = {
+				has_law = law_type:law_monarchy
+			}
+		}
+	}
+}
+
+KYV = { # Kyivan Rus
+	dynamic_country_name = {
+		name = smd_dyn_c_kyv_1
+		adjective = smd_dyn_c_kyv_1_adj
+
+		is_main_tag_only = yes
+		priority = 100
+
+		trigger = {
+			exists = scope:actor
+			scope:actor = {
+				OR = {
+					has_law = law_type:law_parliamentary_republic
+					has_law = law_type:law_presidential_republic
+					has_law = law_type:law_council_republic
+				}
+			}
+		}
+	}
+}
+
+INO = { # Indochina
+	dynamic_country_name = {
+		name = smd_dyn_c_ino_1
+		adjective = smd_dyn_c_ino_1_adj
+
+		is_main_tag_only = yes
+		priority = 100
+
+		trigger = {
+			exists = scope:actor
+			scope:actor = {
+				has_law = law_type:law_monarchy
+			}
+		}
+	}
+}
+
+MLK = { # United States of New Africa
+	dynamic_country_name = {
+		name = smd_dyn_c_mlk_1
+		adjective = smd_dyn_c_mlk_1_adj
+
+		is_main_tag_only = yes
+		priority = 100
+
+		trigger = {
+			exists = scope:actor
+			scope:actor = {
+				has_law = law_type:law_monarchy
+			}
+		}
+	}
+}
+

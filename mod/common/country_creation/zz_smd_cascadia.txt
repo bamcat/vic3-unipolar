@@ -1,0 +1,14 @@
+﻿REPLACE_OR_CREATE:CAS = {
+	states = {
+		STATE_WASHINGTON
+		STATE_OREGON
+		STATE_IDAHO
+		STATE_BRITISH_COLUMBIA
+	}
+
+	ai_will_do = { always = no }
+
+	possible = {
+		NOT = { has_game_rule = plausible_releasable_nations }
+	}
+}
