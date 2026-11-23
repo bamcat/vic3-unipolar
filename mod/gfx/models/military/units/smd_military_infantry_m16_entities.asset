@@ -1,0 +1,283 @@
+entity = {
+	name = "smd_military_arms_m16_fx_entity"
+	clone = "military_arms_tommygun_entity"
+	pdxmesh = "m16_mesh"
+}
+
+entity = {
+	name = "smd_modern_infantry_ak_entity"
+	pdxmesh = "smd_modern_infantry_mesh"
+	scale = 1
+	attach = { name = weapon r_hand_attach = "military_arms_chauchat_entity" }
+
+	get_state_from_parent = yes
+	default_state = "walk"
+
+	state = { name = "idle"
+		animation = "infantry_blunderbuss_idle_01_animation"
+		looping = yes
+		propagate_state = { weapon = "idle" }
+		event = { time = 0.0 keep_sound = no sound = { soundeffect = "event:/SFX/Animation/generic/infantry/anm_infantry_blunderbuss_idle_01_animation" }}
+	}
+
+	state = { name = "walk"
+		animation = "infantry_blunderbuss_walk_01_animation"
+		looping = yes
+		propagate_state = { weapon = "idle" }
+		event = { time = 0.0 keep_sound = no sound = { soundeffect = "event:/SFX/Animation/generic/infantry/anm_infantry_blunderbuss_walk_01_animation" }}
+	}
+
+	state = { name = "victory"
+		time_offset = { 0.0 10.0 }
+		animation = "infantry_blunderbuss_victory_01_animation"
+		looping = yes
+		event = { time = 0.0 keep_sound = no sound = { soundeffect = "event:/SFX/Animation/generic/infantry/anm_infantry_blunderbuss_victory_01_animation" }}
+	}
+
+	state = { name = "defeat"
+		chance = 1
+		animation = "infantry_blunderbuss_defeat_01_animation"
+		looping = no
+		propagate_state = { weapon = "idle" }
+		event = { time = 0.0 keep_sound = no sound = { soundeffect = "event:/SFX/Animation/generic/infantry/anm_infantry_blunderbuss_defeat_01_animation" }}
+	}
+
+	state = { name = "defeat"
+		chance = 1
+		animation = "infantry_blunderbuss_defeat_02_animation"
+		looping = no
+		propagate_state = { weapon = "idle" }
+		event = { time = 0.0 keep_sound = no sound = { soundeffect = "event:/SFX/Animation/generic/infantry/anm_infantry_blunderbuss_defeat_02_animation" }}
+	}
+
+	state = { name = "defend"
+		time_offset = { 0.0 10.0 }
+		animation = "infantry_chauchat_fire_defensive_animation"
+		looping = yes
+		propagate_state = { weapon = "fire_defensive_01" }
+	}
+
+	state = { name = "advance"
+		time_offset = { 0.0 10.0 }
+		animation = "infantry_chauchat_fire_aggressive_animation"
+		looping = yes
+		propagate_state = { weapon = "fire_aggressive_01" }
+	}
+}
+
+entity = {
+	name = "smd_modern_infantry_m16_entity"
+	pdxmesh = "smd_modern_infantry_mesh"
+
+	attach = { name = weapon r_hand_attach = "smd_military_arms_m16_fx_entity" }
+	scale = 1
+	get_state_from_parent = yes
+	default_state = "walk"
+
+	state = { name = "idle"
+		animation = "infantry_blunderbuss_idle_01_animation"
+		looping = yes
+		propagate_state = { weapon = "idle" }
+		event = { time = 0.0 keep_sound = no sound = { soundeffect = "event:/SFX/Animation/generic/infantry/anm_infantry_blunderbuss_idle_01_animation" }}
+	}
+
+	state = { name = "walk"
+		animation = "infantry_blunderbuss_walk_01_animation"
+		looping = yes
+		propagate_state = { weapon = "idle" }
+		event = { time = 0.0 keep_sound = no sound = { soundeffect = "event:/SFX/Animation/generic/infantry/anm_infantry_blunderbuss_walk_01_animation" }}
+	}
+
+	state = { name = "victory"
+		time_offset = { 0.0 10.0 }
+		animation = "infantry_blunderbuss_victory_01_animation"
+		looping = yes
+		event = { time = 0.0 keep_sound = no sound = { soundeffect = "event:/SFX/Animation/generic/infantry/anm_infantry_blunderbuss_victory_01_animation" }}
+	}
+
+	state = { name = "defeat"
+		chance = 1
+		animation = "infantry_blunderbuss_defeat_01_animation"
+		looping = no
+		propagate_state = { weapon = "idle" }
+		event = { time = 0.0 keep_sound = no sound = { soundeffect = "event:/SFX/Animation/generic/infantry/anm_infantry_blunderbuss_defeat_01_animation" }}
+	}
+
+	state = { name = "defeat"
+		chance = 1
+		animation = "infantry_blunderbuss_defeat_02_animation"
+		looping = no
+		propagate_state = { weapon = "idle" }
+		event = { time = 0.0 keep_sound = no sound = { soundeffect = "event:/SFX/Animation/generic/infantry/anm_infantry_blunderbuss_defeat_02_animation" }}
+	}
+
+	state = { name = "defend"
+		time_offset = { 0.0 10.0 }
+		animation = "infantry_tommygun_fire_defensive_animation"
+		looping = yes
+		propagate_state = { weapon = "fire_defensive_01" }
+	}
+
+	state = { name = "advance"
+		time_offset = { 0.0 10.0 }
+		animation = "infantry_tommygun_fire_aggressive_animation"
+		looping = yes
+		propagate_state = { weapon = "fire_aggressive_01" }
+	}
+}
+
+entity = {
+	clone = "smd_modern_infantry_ak_entity"
+	name = "smd_modern_infantry_ak_usa_entity"
+	pdxmesh = "smd_modern_infantry_usa_mesh"
+}
+
+entity = {
+	clone = "smd_modern_infantry_m16_entity"
+	name = "smd_modern_infantry_m16_usa_entity"
+	pdxmesh = "smd_modern_infantry_usa_mesh"
+}
+
+entity = {
+	clone = "smd_modern_infantry_ak_entity"
+	name = "smd_modern_infantry_ak_eng_entity"
+	pdxmesh = "smd_modern_infantry_eng_mesh"
+}
+
+entity = {
+	clone = "smd_modern_infantry_m16_entity"
+	name = "smd_modern_infantry_m16_eng_entity"
+	pdxmesh = "smd_modern_infantry_eng_mesh"
+}
+
+entity = {
+	clone = "smd_modern_infantry_ak_entity"
+	name = "smd_modern_infantry_ak_fra_entity"
+	pdxmesh = "smd_modern_infantry_fra_mesh"
+}
+
+entity = {
+	clone = "smd_modern_infantry_m16_entity"
+	name = "smd_modern_infantry_m16_fra_entity"
+	pdxmesh = "smd_modern_infantry_fra_mesh"
+}
+
+entity = {
+	clone = "smd_modern_infantry_ak_entity"
+	name = "smd_modern_infantry_ak_ger_entity"
+	pdxmesh = "smd_modern_infantry_ger_mesh"
+}
+
+entity = {
+	clone = "smd_modern_infantry_m16_entity"
+	name = "smd_modern_infantry_m16_ger_entity"
+	pdxmesh = "smd_modern_infantry_ger_mesh"
+}
+
+entity = {
+	clone = "smd_modern_infantry_ak_entity"
+	name = "smd_modern_infantry_ak_jap_entity"
+	pdxmesh = "smd_modern_infantry_jap_mesh"
+}
+
+entity = {
+	clone = "smd_modern_infantry_m16_entity"
+	name = "smd_modern_infantry_m16_jap_entity"
+	pdxmesh = "smd_modern_infantry_jap_mesh"
+}
+
+entity = {
+	clone = "smd_modern_infantry_ak_entity"
+	name = "smd_modern_infantry_ak_rus_entity"
+	pdxmesh = "smd_modern_infantry_rus_mesh"
+}
+
+entity = {
+	clone = "smd_modern_infantry_m16_entity"
+	name = "smd_modern_infantry_m16_rus_entity"
+	pdxmesh = "smd_modern_infantry_rus_mesh"
+}
+
+entity = {
+	clone = "smd_modern_infantry_ak_entity"
+	name = "smd_modern_infantry_ak_eeu_entity"
+	pdxmesh = "smd_modern_infantry_eeu_mesh"
+}
+
+entity = {
+	clone = "smd_modern_infantry_m16_entity"
+	name = "smd_modern_infantry_m16_eeu_entity"
+	pdxmesh = "smd_modern_infantry_eeu_mesh"
+}
+
+entity = {
+	clone = "smd_modern_infantry_ak_entity"
+	name = "smd_modern_infantry_ak_african_entity"
+	pdxmesh = "smd_modern_infantry_african_mesh"
+}
+
+entity = {
+	clone = "smd_modern_infantry_m16_entity"
+	name = "smd_modern_infantry_m16_african_entity"
+	pdxmesh = "smd_modern_infantry_african_mesh"
+}
+
+entity = {
+	clone = "smd_modern_infantry_ak_entity"
+	name = "smd_modern_infantry_ak_me_entity"
+	pdxmesh = "smd_modern_infantry_me_mesh"
+}
+
+entity = {
+	clone = "smd_modern_infantry_m16_entity"
+	name = "smd_modern_infantry_m16_me_entity"
+	pdxmesh = "smd_modern_infantry_me_mesh"
+}
+
+entity = {
+	clone = "smd_modern_infantry_ak_entity"
+	name = "smd_modern_infantry_ak_sa_entity"
+	pdxmesh = "smd_modern_infantry_sa_mesh"
+}
+
+entity = {
+	clone = "smd_modern_infantry_m16_entity"
+	name = "smd_modern_infantry_m16_sa_entity"
+	pdxmesh = "smd_modern_infantry_sa_mesh"
+}
+
+entity = {
+	clone = "smd_modern_infantry_ak_entity"
+	name = "smd_irregular_infantry_european_entity"
+	pdxmesh = "military_infantry_european_t3_mesh"
+}
+
+entity = {
+	clone = "smd_modern_infantry_ak_entity"
+	name = "smd_irregular_infantry_african_entity"
+	pdxmesh = "military_infantry_african_t3_mesh"
+}
+
+entity = {
+	clone = "smd_modern_infantry_ak_entity"
+	name = "smd_irregular_infantry_arabic_entity"
+	pdxmesh = "military_infantry_arabic_t3_mesh"
+}
+
+entity = {
+	clone = "smd_modern_infantry_ak_entity"
+	name = "smd_irregular_infantry_eastasian_entity"
+	pdxmesh = "military_infantry_eastasian_t3_mesh"
+}
+
+entity = {
+	clone = "smd_modern_infantry_ak_entity"
+	name = "smd_irregular_infantry_southasian_entity"
+	pdxmesh = "military_infantry_southasian_t3_mesh"
+}
+
+entity = {
+	clone = "smd_modern_infantry_ak_entity"
+	name = "smd_irregular_infantry_nativeamerican_entity"
+	pdxmesh = "military_infantry_nativeamerican_t1_mesh"
+}

@@ -1,0 +1,40 @@
+﻿io_vote_unsc_members = {
+	value = 0
+	every_country = {
+		limit = {
+			has_modifier = permanent_unsc_member
+			NOT = { this = root }
+		}
+		add = 1
+	}
+}
+
+io_vote_unsc_against_projected = {
+	value = 0
+	every_country = {
+		limit = {
+			has_modifier = permanent_unsc_member
+			NOT = { this = root }
+			io_member_rule_veto = yes
+		}
+		add = 1
+	}
+}
+
+io_vote_unsc_against_ai = {
+	value = 0
+	every_country = {
+		limit = {
+			has_modifier = permanent_unsc_member
+			NOT = { this = root }
+			is_ai = yes
+			io_member_rule_veto = yes
+		}
+		add = 1
+	}
+}
+
+io_vote_unsc_for_projected = {
+	value = io_vote_unsc_members
+	subtract = io_vote_unsc_against_projected
+}

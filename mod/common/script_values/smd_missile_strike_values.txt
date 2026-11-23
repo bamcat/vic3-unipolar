@@ -1,0 +1,22 @@
+﻿smd_conv_missiles_per_target_sv = {
+	value = conventional_missiles_to_use_sv
+	divide = {
+		value = conventional_target_count_sv
+		min = 1
+	}
+	min = 1
+}
+
+smd_conv_devastation_per_target_sv = {
+	value = smd_conv_missiles_per_target_sv
+	multiply = 4
+	min = 8
+	max = 40
+}
+
+smd_conv_casualty_percent_per_target_sv = {
+	value = smd_conv_missiles_per_target_sv
+	multiply = 0.0015
+	min = 0.002
+	max = 0.02
+}

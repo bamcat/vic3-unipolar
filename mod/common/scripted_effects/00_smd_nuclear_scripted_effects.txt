@@ -1,4 +1,4 @@
-smd_effect_advance_enrichment = {
+﻿smd_effect_advance_enrichment = {
 	if = {
 		limit = {
 			has_variable = smd_enrichment_active
@@ -135,6 +135,7 @@ smd_effect_complete_production = {
 }
 
 nuclear_rebuild_enemy_list = {
+	save_scope_as = smd_wmd_owner
 	clear_variable_list = nuclear_enemy_list
 	clear_variable_list = nuclear_enemy_states_list
 	clear_variable_list = nuclear_ranged_states_list
@@ -143,11 +144,11 @@ nuclear_rebuild_enemy_list = {
 		limit = { is_at_war = yes }
 		every_country = {
 			limit = {
-				has_war_with = ROOT
+				has_war_with = scope:smd_wmd_owner
 				is_subject = no
 				country_rank >= rank_value:unrecognized
 			}
-			ROOT = {
+			scope:smd_wmd_owner = {
 				add_to_variable_list = {
 					name = nuclear_enemy_list
 					target = PREV
@@ -157,22 +158,22 @@ nuclear_rebuild_enemy_list = {
 				limit = { owner = PREV 
 					OR = {
 						any_neighbouring_state = {
-							owner = ROOT
+							owner = scope:smd_wmd_owner
 						}
 						any_neighbouring_state = {
 							owner = {
 								any_scope_treaty = {
 									any_scope_article = {
 										has_type = host_military_bases
-										source_country = ROOT
+										source_country = scope:smd_wmd_owner
 									}
 								}
 							}
 						}
-						is_blockaded_by = ROOT
+						is_blockaded_by = scope:smd_wmd_owner
 					}
 				}
-				ROOT = {
+				scope:smd_wmd_owner = {
 					add_to_variable_list = {
 						name = nuclear_enemy_states_list
 						target = PREV
@@ -184,23 +185,23 @@ nuclear_rebuild_enemy_list = {
 					owner = PREV
 					OR = {
 						any_neighbouring_state = {
-							owner = ROOT
+							owner = scope:smd_wmd_owner
 						}
 						any_neighbouring_state = {
 							owner = {
 								any_scope_treaty = {
 									any_scope_article = {
 										has_type = host_military_bases
-										source_country = ROOT
+										source_country = scope:smd_wmd_owner
 									}
 								}
 							}
 						}
-						is_blockaded_by = ROOT
-						ROOT = { has_variable = icbm_programme_complete }
+						is_blockaded_by = scope:smd_wmd_owner
+						scope:smd_wmd_owner = { has_variable = icbm_programme_complete }
 					}
 				}
-				ROOT = {
+				scope:smd_wmd_owner = {
 					add_to_variable_list = {
 						name = nuclear_ranged_states_list
 						target = PREV
@@ -214,18 +215,18 @@ nuclear_rebuild_enemy_list = {
 		variable = wmd_target_list
 		limit = {
 			OR = {
-				owner = { NOT = { has_war_with = ROOT } }
+				owner = { NOT = { has_war_with = scope:smd_wmd_owner } }
 				AND = {
-					NOT = { ROOT = { has_variable = icbm_programme_complete } }
+					NOT = { scope:smd_wmd_owner = { has_variable = icbm_programme_complete } }
 					NOT = {
 						any_neighbouring_state = {
-							owner = ROOT
+							owner = scope:smd_wmd_owner
 						}
 					}
 				}
 			}
 		}
-		ROOT = {
+		scope:smd_wmd_owner = {
 			remove_list_variable = {
 				name = wmd_target_list
 				target = PREV
@@ -242,7 +243,7 @@ nuclear_rebuild_enemy_list = {
 				}
 			}
 		}
-		ROOT = {
+		scope:smd_wmd_owner = {
 			remove_list_variable = {
 				name = wmd_target_list_c
 				target = PREV
@@ -253,9 +254,9 @@ nuclear_rebuild_enemy_list = {
 	every_in_list = {
 		variable = conventional_target_list
 		limit = {
-			owner = { NOT = { has_war_with = ROOT } }
+			owner = { NOT = { has_war_with = scope:smd_wmd_owner } }
 		}
-		ROOT = {
+		scope:smd_wmd_owner = {
 			remove_list_variable = {
 				name = conventional_target_list
 				target = PREV
@@ -272,7 +273,7 @@ nuclear_rebuild_enemy_list = {
 				}
 			}
 		}
-		ROOT = {
+		scope:smd_wmd_owner = {
 			remove_list_variable = {
 				name = conventional_target_list_c
 				target = PREV
@@ -283,9 +284,9 @@ nuclear_rebuild_enemy_list = {
 	every_in_list = {
 		variable = bombing_target_list
 		limit = {
-			owner = { NOT = { has_war_with = ROOT } }
+			owner = { NOT = { has_war_with = scope:smd_wmd_owner } }
 		}
-		ROOT = {
+		scope:smd_wmd_owner = {
 			remove_list_variable = {
 				name = bombing_target_list
 				target = PREV
@@ -304,6 +305,9 @@ nuclear_update_kill_rate_cache = {
 }
 
 conventional_missile_strike = {
+	save_scope_value_as = { name = smd_missile_devastation value = smd_conv_devastation_per_target_sv }
+	save_scope_value_as = { name = smd_missile_casualties value = smd_conv_casualty_percent_per_target_sv }
+	save_scope_value_as = { name = smd_missiles_per_target value = smd_conv_missiles_per_target_sv }
 	change_variable = {
 		name = conventional_missiles
 		subtract = conventional_missiles_to_use_sv
@@ -315,52 +319,62 @@ conventional_missile_strike = {
 
 	every_in_list = {
 		variable = conventional_target_list
+		add_devastation = scope:smd_missile_devastation
+		kill_population_percent_in_state = { percent = scope:smd_missile_casualties }
+		if = {
+			limit = { scope:smd_missiles_per_target >= 10 }
+			smd_missile_building_strikes = { HIGH = 30 LOW = 20 }
+		}
+		else_if = {
+			limit = { scope:smd_missiles_per_target >= 5 }
+			smd_missile_building_strikes = { HIGH = 18 LOW = 12 }
+		}
+		else = {
+			smd_missile_building_strikes = { HIGH = 10 LOW = 7 }
+		}
+	}
+}
 
-		#   10% deploy = fewer missiles = fewer rolls
-		#   100% deploy = full salvo = maximum rolls
-
-		random = {
-			chance = 8
-			if = { limit = { has_building = building_airport } remove_building = building_airport }
-		}
-		random = {
-			chance = 8
-			if = { limit = { has_building = building_barracks } remove_building = building_barracks }
-		}
-		random = {
-			chance = 8
-			if = { limit = { has_building = building_naval_base } remove_building = building_naval_base }
-		}
-		random = {
-			chance = 8
-			if = { limit = { has_building = building_nuclear_plant } remove_building = building_nuclear_plant }
-		}
-		random = {
-			chance = 8
-			if = { limit = { has_building = building_nuclear_silo } remove_building = building_nuclear_silo }
-		}
-		random = {
-			chance = 8
-			if = { limit = { has_building = building_government_administration } remove_building = building_government_administration }
-		}
-		random = {
-			chance = 8
-			if = { limit = { has_building = building_railway } remove_building = building_railway }
-		}
-		random = {
-			chance = 6
-			if = { limit = { has_building = building_power_plant } remove_building = building_power_plant }
-		}
-		random = {
-			chance = 6
-			if = { limit = { has_building = building_port } remove_building = building_port }
-		}
-		random = {
-			chance = 6
-			if = { limit = { has_building = building_oil_rig } remove_building = building_oil_rig }
-		}
-
-		add_devastation = conventional_missile_devastation_sv
+smd_missile_building_strikes = {
+	random = {
+		chance = $HIGH$
+		if = { limit = { has_building = building_airport } remove_building = building_airport }
+	}
+	random = {
+		chance = $HIGH$
+		if = { limit = { has_building = building_barracks } remove_building = building_barracks }
+	}
+	random = {
+		chance = $HIGH$
+		if = { limit = { has_building = building_naval_base } remove_building = building_naval_base }
+	}
+	random = {
+		chance = $HIGH$
+		if = { limit = { has_building = building_nuclear_plant } remove_building = building_nuclear_plant }
+	}
+	random = {
+		chance = $HIGH$
+		if = { limit = { has_building = building_nuclear_silo } remove_building = building_nuclear_silo }
+	}
+	random = {
+		chance = $HIGH$
+		if = { limit = { has_building = building_government_administration } remove_building = building_government_administration }
+	}
+	random = {
+		chance = $HIGH$
+		if = { limit = { has_building = building_railway } remove_building = building_railway }
+	}
+	random = {
+		chance = $LOW$
+		if = { limit = { has_building = building_power_plant } remove_building = building_power_plant }
+	}
+	random = {
+		chance = $LOW$
+		if = { limit = { has_building = building_port } remove_building = building_port }
+	}
+	random = {
+		chance = $LOW$
+		if = { limit = { has_building = building_oil_rig } remove_building = building_oil_rig }
 	}
 }
  
@@ -370,13 +384,15 @@ conventional_missile_strike = {
 # ==========================================
  
 strategic_bombing_run = {
+	save_scope_value_as = { name = smd_bombing_devastation value = bombing_devastation_per_run_sv }
+	save_scope_as = smd_bomber
 	every_in_list = {
 		variable = bombing_target_list
  
-		add_devastation = bombing_devastation_per_run_sv
+		add_devastation = scope:smd_bombing_devastation
  
 		if = {
-			limit = { has_variable = conventional_missiles }
+			limit = { scope:smd_bomber = { has_variable = conventional_missiles } }
 			random = {
 				chance = 1
 				if = {
@@ -386,7 +402,7 @@ strategic_bombing_run = {
 			}
 		}
 		if = {
-			limit = { has_variable = conventional_missiles }
+			limit = { scope:smd_bomber = { has_variable = conventional_missiles } }
 			random = {
 				chance = 1
 				if = {
@@ -396,7 +412,7 @@ strategic_bombing_run = {
 			}
 		}
 		if = {
-			limit = { has_variable = conventional_missiles }
+			limit = { scope:smd_bomber = { has_variable = conventional_missiles } }
 			random = {
 				chance = 1
 				if = {
@@ -406,7 +422,7 @@ strategic_bombing_run = {
 			}
 		}
 		if = {
-			limit = { has_variable = conventional_missiles }
+			limit = { scope:smd_bomber = { has_variable = conventional_missiles } }
 			random = {
 				chance = 1
 				if = {
@@ -416,7 +432,7 @@ strategic_bombing_run = {
 			}
 		}
 		if = {
-			limit = { has_variable = conventional_missiles }
+			limit = { scope:smd_bomber = { has_variable = conventional_missiles } }
 			random = {
 				chance = 1
 				if = {
@@ -426,7 +442,7 @@ strategic_bombing_run = {
 			}
 		}
 		if = {
-			limit = { has_variable = conventional_missiles }
+			limit = { scope:smd_bomber = { has_variable = conventional_missiles } }
 			random = {
 				chance = 1
 				if = {
@@ -436,7 +452,7 @@ strategic_bombing_run = {
 			}
 		}
 		if = {
-			limit = { has_variable = conventional_missiles }
+			limit = { scope:smd_bomber = { has_variable = conventional_missiles } }
 			random = {
 				chance = 1
 				if = {

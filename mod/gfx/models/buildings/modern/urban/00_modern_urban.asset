@@ -4,22 +4,28 @@ pdxmesh = {
 
 	scale = 2
 
-	lod_percentages = {
-		lod = { index = 1 percent = 12.0 }
-		lod = { index = 2 percent = 6.0 }
-	}
-
 	meshsettings = {
 		name = "airport.001"
 		index = 0
 		texture_diffuse = "airport_diffuse.dds"
-		texture_normal = "normal_none.dds"
+		texture_normal = "airport_diffuse_normal.dds"
 		texture_specular = "properties.dds"
+		texture = { file = "modern_building_gradient.dds" index = 5 }
 		shader = "standard"
-		additional_shader_defines = { "PDX_MESH_SNAP_VERTICES_TO_TERRAIN" "TINT_COLOR" "EMISSIVE_NIGHT" "EMISSIVE_NIGHT_RANDOM" "SOL_VISUALS" "HUB_BUILDING" }
+		additional_shader_defines = { "PDX_MESH_SNAP_VERTICES_TO_TERRAIN" "TINT_COLOR" "SOL_VISUALS" "HUB_BUILDING" }
 		shader_file = "gfx/FX/pdxmesh.shader"
 	}
 
+	meshsettings = {
+		name = "airport.001_local_decal"
+		index = 0
+		texture_diffuse = "decal_urban_residential_01_diffuse.dds"
+		texture_normal = "decal_urban_residential_01_normal.dds"
+		texture_specular = "decal_urban_residential_01_properties.dds"
+		shader = "decal_local"
+		shader_file = "gfx/FX/pdxmesh_decal.shader"
+		subpass = "LocalDecals"
+	}
 }
 
 entity = {
@@ -33,22 +39,28 @@ pdxmesh = {
 
 	scale = 2
 
-	lod_percentages = {
-		lod = { index = 1 percent = 12.0 }
-		lod = { index = 2 percent = 6.0 }
-	}
-
 	meshsettings = {
 		name = "modern_professional_service"
 		index = 0
 		texture_diffuse = "professional_service_diffuse.dds"
-		texture_normal = "normal_2.dds"
+		texture_normal = "professional_service_diffuse_normal.dds"
 		texture_specular = "properties.dds"
+		texture = { file = "modern_building_gradient.dds" index = 5 }
 		shader = "standard"
 		additional_shader_defines = { "PDX_MESH_SNAP_VERTICES_TO_TERRAIN" "TINT_COLOR" "EMISSIVE_NIGHT" "EMISSIVE_NIGHT_RANDOM" "SOL_VISUALS" "HUB_BUILDING" }
 		shader_file = "gfx/FX/pdxmesh.shader"
 	}
 
+	meshsettings = {
+		name = "modern_professional_service_local_decal"
+		index = 0
+		texture_diffuse = "decal_urban_residential_01_diffuse.dds"
+		texture_normal = "decal_urban_residential_01_normal.dds"
+		texture_specular = "decal_urban_residential_01_properties.dds"
+		shader = "decal_local"
+		shader_file = "gfx/FX/pdxmesh_decal.shader"
+		subpass = "LocalDecals"
+	}
 }
 
 entity = {

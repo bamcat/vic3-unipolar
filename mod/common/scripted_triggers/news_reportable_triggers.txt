@@ -22,3 +22,37 @@ news_is_reportable_power = {
 		country_rank = rank_value:unrecognized_regional_power
 	}
 }
+
+news_no_eur_subject = {
+	NOR = {
+		scope:news_annexed_country ?= { c:EUR ?= this }
+		scope:news_annexer ?= { c:EUR ?= this }
+		scope:news_backdown_country ?= { c:EUR ?= this }
+		scope:news_backdown_target ?= { c:EUR ?= this }
+		scope:news_bloc_contender ?= { c:EUR ?= this }
+		scope:news_bloc_leader ?= { c:EUR ?= this }
+		scope:news_bloc_loser ?= { c:EUR ?= this }
+		scope:news_bloc_winner ?= { c:EUR ?= this }
+		scope:news_clean_gp ?= { c:EUR ?= this }
+		scope:news_country_a ?= { c:EUR ?= this }
+		scope:news_country_b ?= { c:EUR ?= this }
+		scope:news_other_country ?= { c:EUR ?= this }
+		scope:news_play_initiator ?= { c:EUR ?= this }
+		scope:news_play_target ?= { c:EUR ?= this }
+		scope:news_rebel_country ?= { c:EUR ?= this }
+		scope:news_source_country ?= { c:EUR ?= this }
+		scope:news_state_giver ?= { c:EUR ?= this }
+		scope:news_state_taker ?= { c:EUR ?= this }
+		scope:news_event_state ?= { owner ?= { c:EUR ?= this } }
+		scope:news_trade_state_a ?= { owner ?= { c:EUR ?= this } }
+		scope:news_trade_state_b ?= { owner ?= { c:EUR ?= this } }
+		scope:news_character ?= { owner ?= { c:EUR ?= this } }
+		scope:news_new_ruler ?= { owner ?= { c:EUR ?= this } }
+		scope:news_previous_ruler ?= { owner ?= { c:EUR ?= this } }
+		scope:news_power_bloc ?= { power_bloc_leader ?= { c:EUR ?= this } }
+		scope:news_diplomatic_play ?= { initiator ?= { c:EUR ?= this } }
+		scope:news_diplomatic_play ?= { target ?= { c:EUR ?= this } }
+		scope:news_treaty ?= { first_country ?= { c:EUR ?= this } }
+		scope:news_treaty ?= { second_country ?= { c:EUR ?= this } }
+	}
+}

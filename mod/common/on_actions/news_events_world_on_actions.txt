@@ -1,4 +1,4 @@
-﻿# it can happen anywhere.
+# it can happen anywhere.
 
 on_monthly_pulse = { on_actions = { news_events_world_monthly news_events_world_shortage_monthly news_events_world_worker_strike_monthly } }
 on_diplomatic_play_started = { on_actions = { news_events_world_diplomatic_play_started } }
@@ -631,7 +631,7 @@ news_events_world_monthly = {
                     set_variable = { name = news_world_recession_threshold value = var:news_world_last_gdp }
                     change_variable = { name = news_world_recession_threshold multiply = 0.925 }
                     if = {
-                        limit = { country_rank = rank_value:great_power gdp < var:news_world_recession_threshold NOT = { has_variable = news_world_recession_cooldown } }
+                        limit = { game_date >= 1994.1.1 country_rank = rank_value:great_power NOT = { c:EUR ?= this } gdp < var:news_world_recession_threshold NOT = { has_variable = news_world_recession_cooldown } NOT = { has_global_variable = news_world_recession_global_cooldown } }
                         save_scope_as = news_source_country
                         save_scope_value_as = { name = news_recession_previous_gdp value = var:news_world_last_gdp }
                         save_scope_value_as = { name = news_recession_current_gdp value = gdp }
@@ -641,7 +641,8 @@ news_events_world_monthly = {
                         save_scope_value_as = { name = news_recession_drop value = var:news_world_recession_drop }
                         remove_variable = news_world_recession_drop
                         capital = { save_scope_as = news_event_state }
-                        set_variable = { name = news_world_recession_cooldown months = 6 }
+                        set_variable = { name = news_world_recession_cooldown months = 24 }
+                        set_global_variable = { name = news_world_recession_global_cooldown months = 6 }
                         every_country = { limit = { is_player = yes } trigger_event = { id = news_events_world.20 } }
                     }
                     remove_variable = news_world_recession_threshold

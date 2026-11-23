@@ -1,0 +1,10 @@
+﻿smd_un_motion_targets_self_or_ally = {
+	exists = global_var:un_sanction_target
+	OR = {
+		this = global_var:un_sanction_target
+		has_diplomatic_pact = {
+			who = global_var:un_sanction_target
+			type = alliance
+		}
+	}
+}

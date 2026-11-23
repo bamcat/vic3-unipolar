@@ -10,6 +10,10 @@ default_city = {
 
 	rich_building_meshes = {
 		"high_modern_01_mesh"
+		"smd_tower_balcony_slab_mesh"
+		"smd_tower_stepped_wedge_mesh"
+		"smd_tower_jenga_mesh"
+		"smd_tower_diamond_mesh"
 		"modern_medium_02"
 		"mid_modern_03_mesh"
 		"mid_modern_03_mesh"
@@ -17,6 +21,13 @@ default_city = {
 		"european_urban_residential_rich_01_mesh"
 		"european_urban_residential_rich_03_mesh"
 		"european_urban_residential_rich_02_mesh"
+		"smd_apt_terraced_mesh"
+		"smd_apt_courtyard_mesh"
+		"smd_apt_l_block_mesh"
+		"smd_apt_slab_mesh"
+		"smd_apt_offset_wings_entity"
+		"smd_apt_offset_wings_mesh"
+		"smd_apt_stepped_z_mesh"
 	}
 	rich_building_offsets = {
 		position = 0.0	#in grid-space units. 1.0 means the mesh can be placed anywhere inside its allotted cell
@@ -30,6 +41,9 @@ default_city = {
 		"european_urban_residential_mid_03_mesh"
 		"european_urban_residential_mid_02_mesh"
 		"low_modern_02_mesh"
+		"smd_apt_courtyard_mesh"
+		"smd_apt_l_block_mesh"
+		"smd_apt_slab_mesh"
 	}
 	mid_building_offsets = {
 		position = 0.2

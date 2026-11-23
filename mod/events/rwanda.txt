@@ -75,14 +75,29 @@ rwandan_genocide.3 = {
     option = {
         name = rwandan_genocide.3.a
         custom_tooltip = rwandan_genocide_request_peacekeepers_tt
+        set_global_variable = {
+            name = peacekeeper_requestor
+            value = ROOT
+        }
+        if = {
+            limit = { has_variable = already_got_peacekeep }
+            remove_variable = already_got_peacekeep
+        }
+        set_global_variable = { name = un_peacekeeping_votes value = 0 }
+        set_global_variable = { name = un_peacekeeping_num_votes value = 0 }
+        set_global_variable = { name = un_p5_count value = 0 }
         every_country = {
-			limit = { has_modifier = permanent_unsc_member }
-			trigger_event = { id = un_events.2 days = 1 }
-		}
-		set_global_variable = {
-			name = peacekeeper_requestor
-			value = ROOT
-		}
+            limit = { has_modifier = permanent_unsc_member }
+            change_global_variable = { name = un_p5_count add = 1 }
+        }
+        every_country = {
+            limit = { has_variable = already_got_participation_trophy }
+            remove_variable = already_got_participation_trophy
+        }
+        every_country = {
+            limit = { has_modifier = permanent_unsc_member }
+            trigger_event = { id = un_events.2 days = 1 }
+        }
     }
     option = {
         name = rwandan_genocide.3.b

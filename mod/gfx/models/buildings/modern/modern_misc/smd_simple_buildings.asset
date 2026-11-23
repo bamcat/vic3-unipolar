@@ -1,0 +1,845 @@
+pdxmesh = {
+	name = "smd_apt_slab_mesh"
+	file = "smd_apt_slab.mesh"
+
+	scale = 2
+
+	meshsettings = {
+		name = "apt_slab_walls"
+		index = 0
+		texture_diffuse = "smd_facade_03_diffuse.dds"
+		texture_normal = "smd_facade_03_normal.dds"
+		texture_specular = "smd_building_properties.dds"
+		texture = { file = "modern_building_gradient.dds" index = 5 }
+		shader = "standard"
+		additional_shader_defines = { "PDX_MESH_SNAP_VERTICES_TO_TERRAIN" "TINT_COLOR" "SOL_VISUALS" "HUB_BUILDING" "EMISSIVE_NIGHT" "EMISSIVE_NIGHT_RANDOM" }
+		shader_file = "gfx/FX/pdxmesh.shader"
+	}
+
+	meshsettings = {
+		name = "apt_slab_roof"
+		index = 0
+		texture_diffuse = "smd_roof_diffuse.dds"
+		texture_normal = "smd_roof_normal.dds"
+		texture_specular = "smd_building_properties.dds"
+		texture = { file = "modern_building_gradient.dds" index = 5 }
+		shader = "standard"
+		additional_shader_defines = { "PDX_MESH_SNAP_VERTICES_TO_TERRAIN" "TINT_COLOR" "SOL_VISUALS" "HUB_BUILDING" }
+		shader_file = "gfx/FX/pdxmesh.shader"
+	}
+
+	meshsettings = {
+		name = "apt_slab_decal"
+		index = 0
+		texture_diffuse = "decal_urban_residential_01_diffuse.dds"
+		texture_normal = "decal_urban_residential_01_normal.dds"
+		texture_specular = "decal_urban_residential_01_properties.dds"
+		shader = "decal_local"
+		shader_file = "gfx/FX/pdxmesh_decal.shader"
+		subpass = "LocalDecals"
+	}
+}
+
+entity = {
+	name = "smd_apt_slab_entity"
+	pdxmesh = "smd_apt_slab_mesh"
+}
+
+pdxmesh = {
+	name = "smd_apt_l_block_mesh"
+	file = "smd_apt_l_block.mesh"
+
+	scale = 2
+
+	meshsettings = {
+		name = "apt_l_block_walls"
+		index = 0
+		texture_diffuse = "smd_facade_08_diffuse.dds"
+		texture_normal = "smd_facade_08_normal.dds"
+		texture_specular = "smd_building_properties.dds"
+		texture = { file = "modern_building_gradient.dds" index = 5 }
+		shader = "standard"
+		additional_shader_defines = { "PDX_MESH_SNAP_VERTICES_TO_TERRAIN" "TINT_COLOR" "SOL_VISUALS" "HUB_BUILDING" "EMISSIVE_NIGHT" "EMISSIVE_NIGHT_RANDOM" }
+		shader_file = "gfx/FX/pdxmesh.shader"
+	}
+
+	meshsettings = {
+		name = "apt_l_block_roof"
+		index = 0
+		texture_diffuse = "smd_roof_diffuse.dds"
+		texture_normal = "smd_roof_normal.dds"
+		texture_specular = "smd_building_properties.dds"
+		texture = { file = "modern_building_gradient.dds" index = 5 }
+		shader = "standard"
+		additional_shader_defines = { "PDX_MESH_SNAP_VERTICES_TO_TERRAIN" "TINT_COLOR" "SOL_VISUALS" "HUB_BUILDING" }
+		shader_file = "gfx/FX/pdxmesh.shader"
+	}
+
+	meshsettings = {
+		name = "apt_l_block_decal"
+		index = 0
+		texture_diffuse = "decal_urban_residential_01_diffuse.dds"
+		texture_normal = "decal_urban_residential_01_normal.dds"
+		texture_specular = "decal_urban_residential_01_properties.dds"
+		shader = "decal_local"
+		shader_file = "gfx/FX/pdxmesh_decal.shader"
+		subpass = "LocalDecals"
+	}
+}
+
+entity = {
+	name = "smd_apt_l_block_entity"
+	pdxmesh = "smd_apt_l_block_mesh"
+}
+
+pdxmesh = {
+	name = "smd_apt_courtyard_mesh"
+	file = "smd_apt_courtyard.mesh"
+
+	scale = 2
+
+	meshsettings = {
+		name = "apt_courtyard_walls"
+		index = 0
+		texture_diffuse = "smd_facade_01_diffuse.dds"
+		texture_normal = "smd_facade_01_normal.dds"
+		texture_specular = "smd_building_properties.dds"
+		texture = { file = "modern_building_gradient.dds" index = 5 }
+		shader = "standard"
+		additional_shader_defines = { "PDX_MESH_SNAP_VERTICES_TO_TERRAIN" "TINT_COLOR" "SOL_VISUALS" "HUB_BUILDING" "EMISSIVE_NIGHT" "EMISSIVE_NIGHT_RANDOM" }
+		shader_file = "gfx/FX/pdxmesh.shader"
+	}
+
+	meshsettings = {
+		name = "apt_courtyard_roof"
+		index = 0
+		texture_diffuse = "smd_roof_diffuse.dds"
+		texture_normal = "smd_roof_normal.dds"
+		texture_specular = "smd_building_properties.dds"
+		texture = { file = "modern_building_gradient.dds" index = 5 }
+		shader = "standard"
+		additional_shader_defines = { "PDX_MESH_SNAP_VERTICES_TO_TERRAIN" "TINT_COLOR" "SOL_VISUALS" "HUB_BUILDING" }
+		shader_file = "gfx/FX/pdxmesh.shader"
+	}
+
+	meshsettings = {
+		name = "apt_courtyard_decal"
+		index = 0
+		texture_diffuse = "decal_urban_residential_01_diffuse.dds"
+		texture_normal = "decal_urban_residential_01_normal.dds"
+		texture_specular = "decal_urban_residential_01_properties.dds"
+		shader = "decal_local"
+		shader_file = "gfx/FX/pdxmesh_decal.shader"
+		subpass = "LocalDecals"
+	}
+}
+
+entity = {
+	name = "smd_apt_courtyard_entity"
+	pdxmesh = "smd_apt_courtyard_mesh"
+}
+
+pdxmesh = {
+	name = "smd_apt_terraced_mesh"
+	file = "smd_apt_terraced.mesh"
+
+	scale = 2
+
+	meshsettings = {
+		name = "apt_terraced_walls"
+		index = 0
+		texture_diffuse = "smd_facade_09_diffuse.dds"
+		texture_normal = "smd_facade_09_normal.dds"
+		texture_specular = "smd_building_properties.dds"
+		texture = { file = "modern_building_gradient.dds" index = 5 }
+		shader = "standard"
+		additional_shader_defines = { "PDX_MESH_SNAP_VERTICES_TO_TERRAIN" "TINT_COLOR" "SOL_VISUALS" "HUB_BUILDING" "EMISSIVE_NIGHT" "EMISSIVE_NIGHT_RANDOM" }
+		shader_file = "gfx/FX/pdxmesh.shader"
+	}
+
+	meshsettings = {
+		name = "apt_terraced_roof"
+		index = 0
+		texture_diffuse = "smd_roof_diffuse.dds"
+		texture_normal = "smd_roof_normal.dds"
+		texture_specular = "smd_building_properties.dds"
+		texture = { file = "modern_building_gradient.dds" index = 5 }
+		shader = "standard"
+		additional_shader_defines = { "PDX_MESH_SNAP_VERTICES_TO_TERRAIN" "TINT_COLOR" "SOL_VISUALS" "HUB_BUILDING" }
+		shader_file = "gfx/FX/pdxmesh.shader"
+	}
+
+	meshsettings = {
+		name = "apt_terraced_decal"
+		index = 0
+		texture_diffuse = "decal_urban_residential_01_diffuse.dds"
+		texture_normal = "decal_urban_residential_01_normal.dds"
+		texture_specular = "decal_urban_residential_01_properties.dds"
+		shader = "decal_local"
+		shader_file = "gfx/FX/pdxmesh_decal.shader"
+		subpass = "LocalDecals"
+	}
+}
+
+entity = {
+	name = "smd_apt_terraced_entity"
+	pdxmesh = "smd_apt_terraced_mesh"
+}
+
+pdxmesh = {
+	name = "smd_apt_twin_slabs_mesh"
+	file = "smd_apt_twin_slabs.mesh"
+
+	scale = 2
+
+	meshsettings = {
+		name = "apt_twin_slabs_walls"
+		index = 0
+		texture_diffuse = "smd_facade_04_diffuse.dds"
+		texture_normal = "smd_facade_04_normal.dds"
+		texture_specular = "smd_building_properties.dds"
+		texture = { file = "modern_building_gradient.dds" index = 5 }
+		shader = "standard"
+		additional_shader_defines = { "PDX_MESH_SNAP_VERTICES_TO_TERRAIN" "TINT_COLOR" "SOL_VISUALS" "HUB_BUILDING" "EMISSIVE_NIGHT" "EMISSIVE_NIGHT_RANDOM" }
+		shader_file = "gfx/FX/pdxmesh.shader"
+	}
+
+	meshsettings = {
+		name = "apt_twin_slabs_roof"
+		index = 0
+		texture_diffuse = "smd_roof_diffuse.dds"
+		texture_normal = "smd_roof_normal.dds"
+		texture_specular = "smd_building_properties.dds"
+		texture = { file = "modern_building_gradient.dds" index = 5 }
+		shader = "standard"
+		additional_shader_defines = { "PDX_MESH_SNAP_VERTICES_TO_TERRAIN" "TINT_COLOR" "SOL_VISUALS" "HUB_BUILDING" }
+		shader_file = "gfx/FX/pdxmesh.shader"
+	}
+
+	meshsettings = {
+		name = "apt_twin_slabs_decal"
+		index = 0
+		texture_diffuse = "decal_urban_residential_01_diffuse.dds"
+		texture_normal = "decal_urban_residential_01_normal.dds"
+		texture_specular = "decal_urban_residential_01_properties.dds"
+		shader = "decal_local"
+		shader_file = "gfx/FX/pdxmesh_decal.shader"
+		subpass = "LocalDecals"
+	}
+}
+
+entity = {
+	name = "smd_apt_twin_slabs_entity"
+	pdxmesh = "smd_apt_twin_slabs_mesh"
+}
+
+pdxmesh = {
+	name = "smd_apt_point_block_mesh"
+	file = "smd_apt_point_block.mesh"
+
+	scale = 2
+
+	meshsettings = {
+		name = "apt_point_block_walls"
+		index = 0
+		texture_diffuse = "smd_facade_03_diffuse.dds"
+		texture_normal = "smd_facade_03_normal.dds"
+		texture_specular = "smd_building_properties.dds"
+		texture = { file = "modern_building_gradient.dds" index = 5 }
+		shader = "standard"
+		additional_shader_defines = { "PDX_MESH_SNAP_VERTICES_TO_TERRAIN" "TINT_COLOR" "SOL_VISUALS" "HUB_BUILDING" "EMISSIVE_NIGHT" "EMISSIVE_NIGHT_RANDOM" }
+		shader_file = "gfx/FX/pdxmesh.shader"
+	}
+
+	meshsettings = {
+		name = "apt_point_block_roof"
+		index = 0
+		texture_diffuse = "smd_roof_diffuse.dds"
+		texture_normal = "smd_roof_normal.dds"
+		texture_specular = "smd_building_properties.dds"
+		texture = { file = "modern_building_gradient.dds" index = 5 }
+		shader = "standard"
+		additional_shader_defines = { "PDX_MESH_SNAP_VERTICES_TO_TERRAIN" "TINT_COLOR" "SOL_VISUALS" "HUB_BUILDING" }
+		shader_file = "gfx/FX/pdxmesh.shader"
+	}
+
+	meshsettings = {
+		name = "apt_point_block_decal"
+		index = 0
+		texture_diffuse = "decal_urban_residential_01_diffuse.dds"
+		texture_normal = "decal_urban_residential_01_normal.dds"
+		texture_specular = "decal_urban_residential_01_properties.dds"
+		shader = "decal_local"
+		shader_file = "gfx/FX/pdxmesh_decal.shader"
+		subpass = "LocalDecals"
+	}
+}
+
+entity = {
+	name = "smd_apt_point_block_entity"
+	pdxmesh = "smd_apt_point_block_mesh"
+}
+
+pdxmesh = {
+	name = "smd_apt_stepped_z_mesh"
+	file = "smd_apt_stepped_z.mesh"
+
+	scale = 2
+
+	meshsettings = {
+		name = "apt_stepped_z_walls"
+		index = 0
+		texture_diffuse = "smd_facade_07_diffuse.dds"
+		texture_normal = "smd_facade_07_normal.dds"
+		texture_specular = "smd_building_properties.dds"
+		texture = { file = "modern_building_gradient.dds" index = 5 }
+		shader = "standard"
+		additional_shader_defines = { "PDX_MESH_SNAP_VERTICES_TO_TERRAIN" "TINT_COLOR" "SOL_VISUALS" "HUB_BUILDING" "EMISSIVE_NIGHT" "EMISSIVE_NIGHT_RANDOM" }
+		shader_file = "gfx/FX/pdxmesh.shader"
+	}
+
+	meshsettings = {
+		name = "apt_stepped_z_roof"
+		index = 0
+		texture_diffuse = "smd_roof_diffuse.dds"
+		texture_normal = "smd_roof_normal.dds"
+		texture_specular = "smd_building_properties.dds"
+		texture = { file = "modern_building_gradient.dds" index = 5 }
+		shader = "standard"
+		additional_shader_defines = { "PDX_MESH_SNAP_VERTICES_TO_TERRAIN" "TINT_COLOR" "SOL_VISUALS" "HUB_BUILDING" }
+		shader_file = "gfx/FX/pdxmesh.shader"
+	}
+
+	meshsettings = {
+		name = "apt_stepped_z_decal"
+		index = 0
+		texture_diffuse = "decal_urban_residential_01_diffuse.dds"
+		texture_normal = "decal_urban_residential_01_normal.dds"
+		texture_specular = "decal_urban_residential_01_properties.dds"
+		shader = "decal_local"
+		shader_file = "gfx/FX/pdxmesh_decal.shader"
+		subpass = "LocalDecals"
+	}
+}
+
+entity = {
+	name = "smd_apt_stepped_z_entity"
+	pdxmesh = "smd_apt_stepped_z_mesh"
+}
+
+pdxmesh = {
+	name = "smd_apt_offset_wings_mesh"
+	file = "smd_apt_offset_wings.mesh"
+
+	scale = 2
+
+	meshsettings = {
+		name = "apt_offset_wings_walls"
+		index = 0
+		texture_diffuse = "smd_facade_06_diffuse.dds"
+		texture_normal = "smd_facade_06_normal.dds"
+		texture_specular = "smd_building_properties.dds"
+		texture = { file = "modern_building_gradient.dds" index = 5 }
+		shader = "standard"
+		additional_shader_defines = { "PDX_MESH_SNAP_VERTICES_TO_TERRAIN" "TINT_COLOR" "SOL_VISUALS" "HUB_BUILDING" "EMISSIVE_NIGHT" "EMISSIVE_NIGHT_RANDOM" }
+		shader_file = "gfx/FX/pdxmesh.shader"
+	}
+
+	meshsettings = {
+		name = "apt_offset_wings_roof"
+		index = 0
+		texture_diffuse = "smd_roof_diffuse.dds"
+		texture_normal = "smd_roof_normal.dds"
+		texture_specular = "smd_building_properties.dds"
+		texture = { file = "modern_building_gradient.dds" index = 5 }
+		shader = "standard"
+		additional_shader_defines = { "PDX_MESH_SNAP_VERTICES_TO_TERRAIN" "TINT_COLOR" "SOL_VISUALS" "HUB_BUILDING" }
+		shader_file = "gfx/FX/pdxmesh.shader"
+	}
+
+	meshsettings = {
+		name = "apt_offset_wings_decal"
+		index = 0
+		texture_diffuse = "decal_urban_residential_01_diffuse.dds"
+		texture_normal = "decal_urban_residential_01_normal.dds"
+		texture_specular = "decal_urban_residential_01_properties.dds"
+		shader = "decal_local"
+		shader_file = "gfx/FX/pdxmesh_decal.shader"
+		subpass = "LocalDecals"
+	}
+}
+
+entity = {
+	name = "smd_apt_offset_wings_entity"
+	pdxmesh = "smd_apt_offset_wings_mesh"
+}
+
+pdxmesh = {
+	name = "smd_tower_glass_podium_mesh"
+	file = "smd_tower_glass_podium.mesh"
+
+	scale = 2
+
+	meshsettings = {
+		name = "tower_glass_podium_walls"
+		index = 0
+		texture_diffuse = "smd_facade_02_diffuse.dds"
+		texture_normal = "smd_facade_02_normal.dds"
+		texture_specular = "smd_building_properties.dds"
+		texture = { file = "modern_building_gradient.dds" index = 5 }
+		shader = "standard"
+		additional_shader_defines = { "PDX_MESH_SNAP_VERTICES_TO_TERRAIN" "TINT_COLOR" "SOL_VISUALS" "HUB_BUILDING" "EMISSIVE_NIGHT" "EMISSIVE_NIGHT_RANDOM" }
+		shader_file = "gfx/FX/pdxmesh.shader"
+	}
+
+	meshsettings = {
+		name = "tower_glass_podium_roof"
+		index = 0
+		texture_diffuse = "smd_roof_diffuse.dds"
+		texture_normal = "smd_roof_normal.dds"
+		texture_specular = "smd_building_properties.dds"
+		texture = { file = "modern_building_gradient.dds" index = 5 }
+		shader = "standard"
+		additional_shader_defines = { "PDX_MESH_SNAP_VERTICES_TO_TERRAIN" "TINT_COLOR" "SOL_VISUALS" "HUB_BUILDING" }
+		shader_file = "gfx/FX/pdxmesh.shader"
+	}
+
+	meshsettings = {
+		name = "tower_glass_podium_decal"
+		index = 0
+		texture_diffuse = "decal_urban_residential_01_diffuse.dds"
+		texture_normal = "decal_urban_residential_01_normal.dds"
+		texture_specular = "decal_urban_residential_01_properties.dds"
+		shader = "decal_local"
+		shader_file = "gfx/FX/pdxmesh_decal.shader"
+		subpass = "LocalDecals"
+	}
+}
+
+entity = {
+	name = "smd_tower_glass_podium_entity"
+	pdxmesh = "smd_tower_glass_podium_mesh"
+}
+
+pdxmesh = {
+	name = "smd_tower_wedding_cake_mesh"
+	file = "smd_tower_wedding_cake.mesh"
+
+	scale = 2
+
+	meshsettings = {
+		name = "tower_wedding_cake_walls"
+		index = 0
+		texture_diffuse = "smd_facade_05_diffuse.dds"
+		texture_normal = "smd_facade_05_normal.dds"
+		texture_specular = "smd_building_properties.dds"
+		texture = { file = "modern_building_gradient.dds" index = 5 }
+		shader = "standard"
+		additional_shader_defines = { "PDX_MESH_SNAP_VERTICES_TO_TERRAIN" "TINT_COLOR" "SOL_VISUALS" "HUB_BUILDING" "EMISSIVE_NIGHT" "EMISSIVE_NIGHT_RANDOM" }
+		shader_file = "gfx/FX/pdxmesh.shader"
+	}
+
+	meshsettings = {
+		name = "tower_wedding_cake_roof"
+		index = 0
+		texture_diffuse = "smd_roof_diffuse.dds"
+		texture_normal = "smd_roof_normal.dds"
+		texture_specular = "smd_building_properties.dds"
+		texture = { file = "modern_building_gradient.dds" index = 5 }
+		shader = "standard"
+		additional_shader_defines = { "PDX_MESH_SNAP_VERTICES_TO_TERRAIN" "TINT_COLOR" "SOL_VISUALS" "HUB_BUILDING" }
+		shader_file = "gfx/FX/pdxmesh.shader"
+	}
+
+	meshsettings = {
+		name = "tower_wedding_cake_decal"
+		index = 0
+		texture_diffuse = "decal_urban_residential_01_diffuse.dds"
+		texture_normal = "decal_urban_residential_01_normal.dds"
+		texture_specular = "decal_urban_residential_01_properties.dds"
+		shader = "decal_local"
+		shader_file = "gfx/FX/pdxmesh_decal.shader"
+		subpass = "LocalDecals"
+	}
+}
+
+entity = {
+	name = "smd_tower_wedding_cake_entity"
+	pdxmesh = "smd_tower_wedding_cake_mesh"
+}
+
+pdxmesh = {
+	name = "smd_tower_twin_skybridge_mesh"
+	file = "smd_tower_twin_skybridge.mesh"
+
+	scale = 2
+
+	meshsettings = {
+		name = "tower_twin_skybridge_walls"
+		index = 0
+		texture_diffuse = "smd_facade_02_diffuse.dds"
+		texture_normal = "smd_facade_02_normal.dds"
+		texture_specular = "smd_building_properties.dds"
+		texture = { file = "modern_building_gradient.dds" index = 5 }
+		shader = "standard"
+		additional_shader_defines = { "PDX_MESH_SNAP_VERTICES_TO_TERRAIN" "TINT_COLOR" "SOL_VISUALS" "HUB_BUILDING" "EMISSIVE_NIGHT" "EMISSIVE_NIGHT_RANDOM" }
+		shader_file = "gfx/FX/pdxmesh.shader"
+	}
+
+	meshsettings = {
+		name = "tower_twin_skybridge_roof"
+		index = 0
+		texture_diffuse = "smd_roof_diffuse.dds"
+		texture_normal = "smd_roof_normal.dds"
+		texture_specular = "smd_building_properties.dds"
+		texture = { file = "modern_building_gradient.dds" index = 5 }
+		shader = "standard"
+		additional_shader_defines = { "PDX_MESH_SNAP_VERTICES_TO_TERRAIN" "TINT_COLOR" "SOL_VISUALS" "HUB_BUILDING" }
+		shader_file = "gfx/FX/pdxmesh.shader"
+	}
+
+	meshsettings = {
+		name = "tower_twin_skybridge_decal"
+		index = 0
+		texture_diffuse = "decal_urban_residential_01_diffuse.dds"
+		texture_normal = "decal_urban_residential_01_normal.dds"
+		texture_specular = "decal_urban_residential_01_properties.dds"
+		shader = "decal_local"
+		shader_file = "gfx/FX/pdxmesh_decal.shader"
+		subpass = "LocalDecals"
+	}
+}
+
+entity = {
+	name = "smd_tower_twin_skybridge_entity"
+	pdxmesh = "smd_tower_twin_skybridge_mesh"
+}
+
+pdxmesh = {
+	name = "smd_tower_cross_plan_mesh"
+	file = "smd_tower_cross_plan.mesh"
+
+	scale = 2
+
+	meshsettings = {
+		name = "tower_cross_plan_walls"
+		index = 0
+		texture_diffuse = "smd_facade_06_diffuse.dds"
+		texture_normal = "smd_facade_06_normal.dds"
+		texture_specular = "smd_building_properties.dds"
+		texture = { file = "modern_building_gradient.dds" index = 5 }
+		shader = "standard"
+		additional_shader_defines = { "PDX_MESH_SNAP_VERTICES_TO_TERRAIN" "TINT_COLOR" "SOL_VISUALS" "HUB_BUILDING" "EMISSIVE_NIGHT" "EMISSIVE_NIGHT_RANDOM" }
+		shader_file = "gfx/FX/pdxmesh.shader"
+	}
+
+	meshsettings = {
+		name = "tower_cross_plan_roof"
+		index = 0
+		texture_diffuse = "smd_roof_diffuse.dds"
+		texture_normal = "smd_roof_normal.dds"
+		texture_specular = "smd_building_properties.dds"
+		texture = { file = "modern_building_gradient.dds" index = 5 }
+		shader = "standard"
+		additional_shader_defines = { "PDX_MESH_SNAP_VERTICES_TO_TERRAIN" "TINT_COLOR" "SOL_VISUALS" "HUB_BUILDING" }
+		shader_file = "gfx/FX/pdxmesh.shader"
+	}
+
+	meshsettings = {
+		name = "tower_cross_plan_decal"
+		index = 0
+		texture_diffuse = "decal_urban_residential_01_diffuse.dds"
+		texture_normal = "decal_urban_residential_01_normal.dds"
+		texture_specular = "decal_urban_residential_01_properties.dds"
+		shader = "decal_local"
+		shader_file = "gfx/FX/pdxmesh_decal.shader"
+		subpass = "LocalDecals"
+	}
+}
+
+entity = {
+	name = "smd_tower_cross_plan_entity"
+	pdxmesh = "smd_tower_cross_plan_mesh"
+}
+
+pdxmesh = {
+	name = "smd_tower_twisted_stack_mesh"
+	file = "smd_tower_twisted_stack.mesh"
+
+	scale = 2
+
+	meshsettings = {
+		name = "tower_twisted_stack_walls"
+		index = 0
+		texture_diffuse = "smd_facade_02_diffuse.dds"
+		texture_normal = "smd_facade_02_normal.dds"
+		texture_specular = "smd_building_properties.dds"
+		texture = { file = "modern_building_gradient.dds" index = 5 }
+		shader = "standard"
+		additional_shader_defines = { "PDX_MESH_SNAP_VERTICES_TO_TERRAIN" "TINT_COLOR" "SOL_VISUALS" "HUB_BUILDING" "EMISSIVE_NIGHT" "EMISSIVE_NIGHT_RANDOM" }
+		shader_file = "gfx/FX/pdxmesh.shader"
+	}
+
+	meshsettings = {
+		name = "tower_twisted_stack_roof"
+		index = 0
+		texture_diffuse = "smd_roof_diffuse.dds"
+		texture_normal = "smd_roof_normal.dds"
+		texture_specular = "smd_building_properties.dds"
+		texture = { file = "modern_building_gradient.dds" index = 5 }
+		shader = "standard"
+		additional_shader_defines = { "PDX_MESH_SNAP_VERTICES_TO_TERRAIN" "TINT_COLOR" "SOL_VISUALS" "HUB_BUILDING" }
+		shader_file = "gfx/FX/pdxmesh.shader"
+	}
+
+	meshsettings = {
+		name = "tower_twisted_stack_decal"
+		index = 0
+		texture_diffuse = "decal_urban_residential_01_diffuse.dds"
+		texture_normal = "decal_urban_residential_01_normal.dds"
+		texture_specular = "decal_urban_residential_01_properties.dds"
+		shader = "decal_local"
+		shader_file = "gfx/FX/pdxmesh_decal.shader"
+		subpass = "LocalDecals"
+	}
+}
+
+entity = {
+	name = "smd_tower_twisted_stack_entity"
+	pdxmesh = "smd_tower_twisted_stack_mesh"
+}
+
+pdxmesh = {
+	name = "smd_tower_jenga_mesh"
+	file = "smd_tower_jenga.mesh"
+
+	scale = 2
+
+	meshsettings = {
+		name = "tower_jenga_walls"
+		index = 0
+		texture_diffuse = "smd_facade_06_diffuse.dds"
+		texture_normal = "smd_facade_06_normal.dds"
+		texture_specular = "smd_building_properties.dds"
+		texture = { file = "modern_building_gradient.dds" index = 5 }
+		shader = "standard"
+		additional_shader_defines = { "PDX_MESH_SNAP_VERTICES_TO_TERRAIN" "TINT_COLOR" "SOL_VISUALS" "HUB_BUILDING" "EMISSIVE_NIGHT" "EMISSIVE_NIGHT_RANDOM" }
+		shader_file = "gfx/FX/pdxmesh.shader"
+	}
+
+	meshsettings = {
+		name = "tower_jenga_roof"
+		index = 0
+		texture_diffuse = "smd_roof_diffuse.dds"
+		texture_normal = "smd_roof_normal.dds"
+		texture_specular = "smd_building_properties.dds"
+		texture = { file = "modern_building_gradient.dds" index = 5 }
+		shader = "standard"
+		additional_shader_defines = { "PDX_MESH_SNAP_VERTICES_TO_TERRAIN" "TINT_COLOR" "SOL_VISUALS" "HUB_BUILDING" }
+		shader_file = "gfx/FX/pdxmesh.shader"
+	}
+
+	meshsettings = {
+		name = "tower_jenga_decal"
+		index = 0
+		texture_diffuse = "decal_urban_residential_01_diffuse.dds"
+		texture_normal = "decal_urban_residential_01_normal.dds"
+		texture_specular = "decal_urban_residential_01_properties.dds"
+		shader = "decal_local"
+		shader_file = "gfx/FX/pdxmesh_decal.shader"
+		subpass = "LocalDecals"
+	}
+}
+
+entity = {
+	name = "smd_tower_jenga_entity"
+	pdxmesh = "smd_tower_jenga_mesh"
+}
+
+pdxmesh = {
+	name = "smd_tower_diamond_mesh"
+	file = "smd_tower_diamond.mesh"
+
+	scale = 2
+
+	meshsettings = {
+		name = "tower_diamond_walls"
+		index = 0
+		texture_diffuse = "smd_facade_02_diffuse.dds"
+		texture_normal = "smd_facade_02_normal.dds"
+		texture_specular = "smd_building_properties.dds"
+		texture = { file = "modern_building_gradient.dds" index = 5 }
+		shader = "standard"
+		additional_shader_defines = { "PDX_MESH_SNAP_VERTICES_TO_TERRAIN" "TINT_COLOR" "SOL_VISUALS" "HUB_BUILDING" "EMISSIVE_NIGHT" "EMISSIVE_NIGHT_RANDOM" }
+		shader_file = "gfx/FX/pdxmesh.shader"
+	}
+
+	meshsettings = {
+		name = "tower_diamond_roof"
+		index = 0
+		texture_diffuse = "smd_roof_diffuse.dds"
+		texture_normal = "smd_roof_normal.dds"
+		texture_specular = "smd_building_properties.dds"
+		texture = { file = "modern_building_gradient.dds" index = 5 }
+		shader = "standard"
+		additional_shader_defines = { "PDX_MESH_SNAP_VERTICES_TO_TERRAIN" "TINT_COLOR" "SOL_VISUALS" "HUB_BUILDING" }
+		shader_file = "gfx/FX/pdxmesh.shader"
+	}
+
+	meshsettings = {
+		name = "tower_diamond_decal"
+		index = 0
+		texture_diffuse = "decal_urban_residential_01_diffuse.dds"
+		texture_normal = "decal_urban_residential_01_normal.dds"
+		texture_specular = "decal_urban_residential_01_properties.dds"
+		shader = "decal_local"
+		shader_file = "gfx/FX/pdxmesh_decal.shader"
+		subpass = "LocalDecals"
+	}
+}
+
+entity = {
+	name = "smd_tower_diamond_entity"
+	pdxmesh = "smd_tower_diamond_mesh"
+}
+
+pdxmesh = {
+	name = "smd_tower_stepped_wedge_mesh"
+	file = "smd_tower_stepped_wedge.mesh"
+
+	scale = 2
+
+	meshsettings = {
+		name = "tower_stepped_wedge_walls"
+		index = 0
+		texture_diffuse = "smd_facade_05_diffuse.dds"
+		texture_normal = "smd_facade_05_normal.dds"
+		texture_specular = "smd_building_properties.dds"
+		texture = { file = "modern_building_gradient.dds" index = 5 }
+		shader = "standard"
+		additional_shader_defines = { "PDX_MESH_SNAP_VERTICES_TO_TERRAIN" "TINT_COLOR" "SOL_VISUALS" "HUB_BUILDING" "EMISSIVE_NIGHT" "EMISSIVE_NIGHT_RANDOM" }
+		shader_file = "gfx/FX/pdxmesh.shader"
+	}
+
+	meshsettings = {
+		name = "tower_stepped_wedge_roof"
+		index = 0
+		texture_diffuse = "smd_roof_diffuse.dds"
+		texture_normal = "smd_roof_normal.dds"
+		texture_specular = "smd_building_properties.dds"
+		texture = { file = "modern_building_gradient.dds" index = 5 }
+		shader = "standard"
+		additional_shader_defines = { "PDX_MESH_SNAP_VERTICES_TO_TERRAIN" "TINT_COLOR" "SOL_VISUALS" "HUB_BUILDING" }
+		shader_file = "gfx/FX/pdxmesh.shader"
+	}
+
+	meshsettings = {
+		name = "tower_stepped_wedge_decal"
+		index = 0
+		texture_diffuse = "decal_urban_residential_01_diffuse.dds"
+		texture_normal = "decal_urban_residential_01_normal.dds"
+		texture_specular = "decal_urban_residential_01_properties.dds"
+		shader = "decal_local"
+		shader_file = "gfx/FX/pdxmesh_decal.shader"
+		subpass = "LocalDecals"
+	}
+}
+
+entity = {
+	name = "smd_tower_stepped_wedge_entity"
+	pdxmesh = "smd_tower_stepped_wedge_mesh"
+}
+
+pdxmesh = {
+	name = "smd_tower_brick_setback_mesh"
+	file = "smd_tower_brick_setback.mesh"
+
+	scale = 2
+
+	meshsettings = {
+		name = "tower_brick_setback_walls"
+		index = 0
+		texture_diffuse = "smd_facade_07_diffuse.dds"
+		texture_normal = "smd_facade_07_normal.dds"
+		texture_specular = "smd_building_properties.dds"
+		texture = { file = "modern_building_gradient.dds" index = 5 }
+		shader = "standard"
+		additional_shader_defines = { "PDX_MESH_SNAP_VERTICES_TO_TERRAIN" "TINT_COLOR" "SOL_VISUALS" "HUB_BUILDING" "EMISSIVE_NIGHT" "EMISSIVE_NIGHT_RANDOM" }
+		shader_file = "gfx/FX/pdxmesh.shader"
+	}
+
+	meshsettings = {
+		name = "tower_brick_setback_roof"
+		index = 0
+		texture_diffuse = "smd_roof_diffuse.dds"
+		texture_normal = "smd_roof_normal.dds"
+		texture_specular = "smd_building_properties.dds"
+		texture = { file = "modern_building_gradient.dds" index = 5 }
+		shader = "standard"
+		additional_shader_defines = { "PDX_MESH_SNAP_VERTICES_TO_TERRAIN" "TINT_COLOR" "SOL_VISUALS" "HUB_BUILDING" }
+		shader_file = "gfx/FX/pdxmesh.shader"
+	}
+
+	meshsettings = {
+		name = "tower_brick_setback_decal"
+		index = 0
+		texture_diffuse = "decal_urban_residential_01_diffuse.dds"
+		texture_normal = "decal_urban_residential_01_normal.dds"
+		texture_specular = "decal_urban_residential_01_properties.dds"
+		shader = "decal_local"
+		shader_file = "gfx/FX/pdxmesh_decal.shader"
+		subpass = "LocalDecals"
+	}
+}
+
+entity = {
+	name = "smd_tower_brick_setback_entity"
+	pdxmesh = "smd_tower_brick_setback_mesh"
+}
+
+pdxmesh = {
+	name = "smd_tower_balcony_slab_mesh"
+	file = "smd_tower_balcony_slab.mesh"
+
+	scale = 2
+
+	meshsettings = {
+		name = "tower_balcony_slab_walls"
+		index = 0
+		texture_diffuse = "smd_facade_04_diffuse.dds"
+		texture_normal = "smd_facade_04_normal.dds"
+		texture_specular = "smd_building_properties.dds"
+		texture = { file = "modern_building_gradient.dds" index = 5 }
+		shader = "standard"
+		additional_shader_defines = { "PDX_MESH_SNAP_VERTICES_TO_TERRAIN" "TINT_COLOR" "SOL_VISUALS" "HUB_BUILDING" "EMISSIVE_NIGHT" "EMISSIVE_NIGHT_RANDOM" }
+		shader_file = "gfx/FX/pdxmesh.shader"
+	}
+
+	meshsettings = {
+		name = "tower_balcony_slab_roof"
+		index = 0
+		texture_diffuse = "smd_roof_diffuse.dds"
+		texture_normal = "smd_roof_normal.dds"
+		texture_specular = "smd_building_properties.dds"
+		texture = { file = "modern_building_gradient.dds" index = 5 }
+		shader = "standard"
+		additional_shader_defines = { "PDX_MESH_SNAP_VERTICES_TO_TERRAIN" "TINT_COLOR" "SOL_VISUALS" "HUB_BUILDING" }
+		shader_file = "gfx/FX/pdxmesh.shader"
+	}
+
+	meshsettings = {
+		name = "tower_balcony_slab_decal"
+		index = 0
+		texture_diffuse = "decal_urban_residential_01_diffuse.dds"
+		texture_normal = "decal_urban_residential_01_normal.dds"
+		texture_specular = "decal_urban_residential_01_properties.dds"
+		shader = "decal_local"
+		shader_file = "gfx/FX/pdxmesh_decal.shader"
+		subpass = "LocalDecals"
+	}
+}
+
+entity = {
+	name = "smd_tower_balcony_slab_entity"
+	pdxmesh = "smd_tower_balcony_slab_mesh"
+}

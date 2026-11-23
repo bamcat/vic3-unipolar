@@ -1,0 +1,62 @@
+pdxmesh = {
+	name = "smd_abrams_mesh"
+	file = "abrams.mesh"
+
+	meshsettings = {
+		name = "MeshShape.002"
+		index = 0
+		texture_diffuse = "abrams_diffuse.dds"
+		texture_normal = "abrams_normal.dds"
+		texture_specular = "abrams_properties.dds"
+		shader = "standard"
+		shader_file = "gfx/FX/pdxmesh.shader"
+	}
+
+	animation = { id = "tank_idle_animation" type = "abrams_idle.anim" }
+	animation = { id = "tank_scout_animation" type = "abrams_scout.anim" }
+	animation = { id = "tank_fire_aggressive_animation" type = "abrams_fire_aggressive.anim" }
+	animation = { id = "tank_fire_defensive_animation" type = "abrams_fire_defensive.anim" }
+	animation = { id = "tank_defeat_animation" type = "abrams_defeat.anim" }
+}
+
+entity = {
+	name = "smd_abrams_entity"
+	pdxmesh = "smd_abrams_mesh"
+	scale = 1.2
+
+	get_state_from_parent = yes
+	default_state = "walk"
+
+	state = { name = "idle"
+		animation = "tank_idle_animation"
+		looping = yes
+	}
+
+	state = { name = "walk"
+		animation = "tank_scout_animation"
+		looping = yes
+	}
+
+	state = { name = "victory"
+		time_offset = { 0.0 10.0 }
+		animation = "tank_idle_animation"
+		looping = yes
+	}
+
+	state = { name = "defeat"
+		animation = "tank_defeat_animation"
+		looping = no
+	}
+
+	state = { name = "defend"
+		time_offset = { 0.0 10.0 }
+		animation = "tank_fire_defensive_animation"
+		looping = yes
+	}
+
+	state = { name = "advance"
+		time_offset = { 0.0 10.0 }
+		animation = "tank_fire_aggressive_animation"
+		looping = yes
+	}
+}

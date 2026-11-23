@@ -245,6 +245,7 @@ un_events.202 = {
 	immediate = {
 		if = {
 			limit = {
+				NOT = { has_global_variable = smd_un_motion_vetoed }
 				je:je_united_nations ?= {
 					"scripted_bar_progress(un_motion_progress_bar)" > 0
 				}
@@ -299,6 +300,7 @@ un_events.202 = {
 			}
 		}
 		remove_global_variable = un_motion_active
+		remove_global_variable = smd_un_motion_vetoed
 		remove_global_variable = un_sanction_target
 		set_global_variable = { name = un_motion_yes_votes value = 0 }
 		set_global_variable = { name = un_motion_no_votes value = 0 }
@@ -324,6 +326,8 @@ un_events.1 = {
 			remove_variable = already_got_peacekeep
 		}
 		set_global_variable = { name = un_p5_count value = 0 }
+		set_global_variable = { name = un_peacekeeping_votes value = 0 }
+		set_global_variable = { name = un_peacekeeping_num_votes value = 0 }
 		every_country = {
 			limit = { has_modifier = permanent_unsc_member }
 			change_global_variable = { name = un_p5_count add = 1 }
@@ -376,7 +380,7 @@ un_events.2 = {
 	option = {
 		name = un_events.2.c
 		custom_tooltip = you_vote_no
-		change_global_variable = { name = un_peacekeeping_votes subtract = -1 }
+		change_global_variable = { name = un_peacekeeping_votes add = -1 }
 		change_global_variable = { name = un_peacekeeping_num_votes add = 1 }
 		hidden_effect = { 
 			global_var:peacekeeper_requestor = {
@@ -389,7 +393,7 @@ un_events.2 = {
 	option = {
 		name = un_events.2.e
 		custom_tooltip = you_veto
-		change_global_variable = { name = un_peacekeeping_votes subtract = -5 }
+		change_global_variable = { name = un_peacekeeping_votes add = -5 }
 		change_global_variable = { name = un_peacekeeping_num_votes add = 1 }
 		hidden_effect = { 
 			global_var:peacekeeper_requestor = {
@@ -441,9 +445,9 @@ un_events.4 = {
 	event_image = { video = "africa_diplomats_negotiating" }
 	
 	trigger = {
-		global_var:un_peacekeeping_votes <= 2.5
+		global_var:un_peacekeeping_votes < 2.5
 		global_var:un_peacekeeping_num_votes >= global_var:un_p5_count
-		has_variable = already_got_peacekeep
+		NOT = { has_variable = already_got_peacekeep }
 	}
 	
 	immediate = {
@@ -472,8 +476,8 @@ un_events.5 = {
  
 	trigger = {
 		NOT = { has_variable = already_got_participation_trophy }
-		NOT = { has_war_with = scope:peacekeeper_requestor }
-		NOT = { scope:peacekeeper_requestor ?= this }
+		NOT = { has_war_with = global_var:peacekeeper_requestor }
+		NOT = { this = global_var:peacekeeper_requestor }
 		any_scope_character = {
 				is_busy = no
 				is_ruler = no

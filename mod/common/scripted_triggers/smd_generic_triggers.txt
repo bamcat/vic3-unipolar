@@ -23,6 +23,26 @@
 	}
 }
 
+smd_is_western = {
+	OR = {
+		AND = {
+			has_global_variable_list = io_nato_members
+			is_target_in_global_variable_list = { name = io_nato_members target = this }
+		}
+		c:AUZ ?= this
+		c:NZL ?= this
+		c:IRE ?= this
+		c:SWD ?= this
+		c:OST ?= this
+		c:SWS ?= this
+		c:ISR ?= this
+		c:STK ?= this
+		c:JPN ?= this
+		c:ROC ?= this
+	}
+}
+
+
 smd_has_bespoke_separatism_content = {
 	OR = {
 		has_journal_entry = je_quebec_happiness

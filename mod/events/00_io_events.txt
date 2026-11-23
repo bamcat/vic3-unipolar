@@ -8,7 +8,69 @@ io_events.1 = {
 	type = country_event
 	placement = ROOT
 	title = io_events.1.t
-	desc = io_events.1.d
+	desc = {
+		first_valid = {
+			triggered_desc = {
+				desc = io_events.1.d_un
+				trigger = { scope:io_applicant ?= { var:io_pending_org = 1 } }
+			}
+			triggered_desc = {
+				desc = io_events.1.d_nato
+				trigger = { scope:io_applicant ?= { var:io_pending_org = 2 } }
+			}
+			triggered_desc = {
+				desc = io_events.1.d_g7
+				trigger = { scope:io_applicant ?= { var:io_pending_org = 3 } }
+			}
+			triggered_desc = {
+				desc = io_events.1.d_opec
+				trigger = { scope:io_applicant ?= { var:io_pending_org = 4 } }
+			}
+			triggered_desc = {
+				desc = io_events.1.d_eec
+				trigger = { scope:io_applicant ?= { var:io_pending_org = 5 } }
+			}
+			triggered_desc = {
+				desc = io_events.1.d_eu
+				trigger = { scope:io_applicant ?= { var:io_pending_org = 6 } }
+			}
+			triggered_desc = {
+				desc = io_events.1.d_arab_league
+				trigger = { scope:io_applicant ?= { var:io_pending_org = 7 } }
+			}
+			triggered_desc = {
+				desc = io_events.1.d_imf
+				trigger = { scope:io_applicant ?= { var:io_pending_org = 8 } }
+			}
+			triggered_desc = {
+				desc = io_events.1.d_esa
+				trigger = { scope:io_applicant ?= { var:io_pending_org = 9 } }
+			}
+			triggered_desc = {
+				desc = io_events.1.d_asean
+				trigger = { scope:io_applicant ?= { var:io_pending_org = 10 } }
+			}
+			triggered_desc = {
+				desc = io_events.1.d_saarc
+				trigger = { scope:io_applicant ?= { var:io_pending_org = 11 } }
+			}
+			triggered_desc = {
+				desc = io_events.1.d_cis
+				trigger = { scope:io_applicant ?= { var:io_pending_org = 12 } }
+			}
+			triggered_desc = {
+				desc = io_events.1.d_who
+				trigger = { scope:io_applicant ?= { var:io_pending_org = 13 } }
+			}
+			triggered_desc = {
+				desc = io_events.1.d_unsc
+				trigger = { scope:io_applicant ?= { var:io_pending_org = 14 } }
+			}
+			triggered_desc = {
+				desc = io_events.1.d
+			}
+		}
+	}
 	icon = "gfx/interface/icons/event_icons/event_diplomacy.dds"
 	event_image = { video = "africa_diplomats_negotiating" }
 	duration = 3
@@ -131,6 +193,11 @@ io_events.2 = {
 			limit = { var:io_pending_org = 13 }
 			add_to_global_variable_list = { name = io_who_members target = ROOT }
 		}
+		if = {
+			limit = { var:io_pending_org = 14 }
+			add_modifier = { name = permanent_unsc_member days = -1 }
+			add_to_global_variable_list = { name = io_unsc_members target = ROOT }
+		}
 
 		remove_variable = io_pending_org
 	}
@@ -235,6 +302,10 @@ io_events.20 = {
 		if = {
 			limit = { var:io_pending_org = 13 }
 			io_resolve_application = { ORG = who TIER = open }
+		}
+		if = {
+			limit = { var:io_pending_org = 14 }
+			io_resolve_application = { ORG = unsc TIER = veto }
 		}
 	}
 }

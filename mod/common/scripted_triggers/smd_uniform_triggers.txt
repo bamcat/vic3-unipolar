@@ -1,0 +1,76 @@
+﻿smd_has_country_uniform = {
+	OR = {
+		c:USA ?= this
+		c:GBR ?= this
+		c:FRA ?= this
+		c:GER ?= this
+		c:JPN ?= this
+		c:RUS ?= this
+	}
+}
+
+smd_uses_irregular_look = {
+	OR = {
+		c:ISL ?= this
+		AND = {
+			c:KDS ?= this
+			game_date < 2001.1.1
+		}
+		AND = {
+			c:CCH ?= this
+			game_date < 2008.1.1
+		}
+		AND = {
+			c:AFG ?= this
+			game_date < 2011.1.1
+		}
+	}
+}
+
+smd_route_irregular = {
+	OR = {
+		smd_uses_irregular_look = yes
+		country_army_unit_type_fraction = {
+			target = unit_type:combat_unit_type_irregular_infantry
+			value >= 0.5
+		}
+	}
+}
+
+smd_route_culture_european = {
+	any_primary_culture = { OR = { has_culture_graphics = european has_culture_graphics = french has_culture_graphics = brazilian has_culture_graphics = balkan } }
+}
+
+smd_route_culture_african = {
+	NOT = { smd_route_culture_european = yes }
+	any_primary_culture = { OR = { has_culture_graphics = african } }
+}
+
+smd_route_culture_arabic = {
+	NOT = { smd_route_culture_european = yes }
+	NOT = { smd_route_culture_african = yes }
+	any_primary_culture = { OR = { has_culture_graphics = arabic has_culture_graphics = mideast_indian } }
+}
+
+smd_route_culture_eastasian = {
+	NOT = { smd_route_culture_european = yes }
+	NOT = { smd_route_culture_african = yes }
+	NOT = { smd_route_culture_arabic = yes }
+	any_primary_culture = { OR = { has_culture_graphics = east_asian } }
+}
+
+smd_route_culture_southasian = {
+	NOT = { smd_route_culture_european = yes }
+	NOT = { smd_route_culture_african = yes }
+	NOT = { smd_route_culture_arabic = yes }
+	NOT = { smd_route_culture_eastasian = yes }
+	any_primary_culture = { OR = { has_culture_graphics = south_asian } }
+}
+
+smd_route_culture_other = {
+	NOT = { smd_route_culture_european = yes }
+	NOT = { smd_route_culture_african = yes }
+	NOT = { smd_route_culture_arabic = yes }
+	NOT = { smd_route_culture_eastasian = yes }
+	NOT = { smd_route_culture_southasian = yes }
+}

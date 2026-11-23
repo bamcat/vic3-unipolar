@@ -1,0 +1,47 @@
+pdxmesh = {
+	name = "car_90s_sedan_mesh"
+	file = "car_90s_sedan.mesh"
+
+	animation = { id = "idle_animation" type = "car_90s_sedan_idle.anim" }
+	animation = { id = "moving_animation" type = "car_90s_sedan_moving.anim" }
+
+	meshsettings = {
+		name = "car_90s_sedanShape"
+		index = 0
+		texture_diffuse = "car_90s_sedan_diffuse.dds"
+		texture_normal = "car_90s_sedan_normal.dds"
+		texture_specular = "car_90s_sedan_properties.dds"
+		shader = "standard"
+		additional_shader_defines = { "EMISSIVE_NIGHT" }
+		shader_file = "gfx/FX/pdxmesh.shader"
+	}
+}
+
+entity = {
+	name = "car_90s_sedan_entity"
+	pdxmesh = "car_90s_sedan_mesh"
+
+	default_state = "moving"
+
+	state = {
+		name = "idle"
+		animation = "idle_animation"
+		looping = no
+
+		start_event = { sound = { soundeffect = "event:/SFX/Vehicles/car" } keep_sound = yes }
+
+		next_state = "idle"
+	}
+
+	state = {
+		name = "moving"
+		animation = "moving_animation"
+		looping = yes
+
+		start_event = { sound = { soundeffect = "event:/SFX/Vehicles/car" } keep_sound = yes }
+
+		event = { time = 0 node = "locator_wheel_back_02" particle = "vehicles/european_car_effects" trigger_once = yes }
+	}
+
+	scale = 0.16
+}

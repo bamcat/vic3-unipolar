@@ -1,0 +1,82 @@
+﻿smd_un_veto_motion_button = {
+	name = "smd_un_veto_motion_button"
+	desc = "smd_un_veto_motion_button_desc"
+
+	visible = {
+		has_modifier = permanent_unsc_member
+		has_global_variable = un_motion_active
+		NOT = { has_global_variable = smd_un_motion_vetoed }
+		NOT = { has_variable = un_voted_on_motion }
+		OR = {
+			global_var:un_current_motion_type = flag:motion_sanctions
+			global_var:un_current_motion_type = flag:motion_condemnation
+		}
+	}
+
+	possible = {
+		always = yes
+	}
+
+	ai_chance = {
+		value = 0
+		modifier = {
+			trigger = { smd_un_motion_targets_self_or_ally = yes }
+			add = 100
+		}
+	}
+
+	effect = {
+		set_variable = un_voted_on_motion
+		set_global_variable = {
+			name = smd_un_motion_vetoed
+			value = root
+		}
+		change_infamy = 15
+		every_country = {
+			post_notification = smd_un_resolution_vetoed
+		}
+	}
+}
+
+smd_un_apply_unsc_button = {
+	name = "smd_un_apply_unsc_button"
+	desc = "smd_un_apply_unsc_button_desc"
+
+	visible = {
+		NOT = { has_modifier = permanent_unsc_member }
+		is_target_in_global_variable_list = { name = io_un_members target = this }
+	}
+
+	possible = {
+		country_rank = rank_value:great_power
+		global_country_ranking <= 5
+		custom_tooltip = {
+			text = smd_un_unsc_needs_nukes_tt
+			has_variable = nukes
+			var:nukes >= 1
+		}
+		custom_tooltip = {
+			text = smd_un_unsc_no_pending_tt
+			NOT = { has_variable = io_pending_org }
+			NOT = { has_variable = io_cooldown_unsc }
+		}
+	}
+
+	ai_chance = {
+		value = 50
+	}
+
+	effect = {
+		hidden_effect = {
+			clear_global_variable_list = io_unsc_members
+			every_country = {
+				limit = { has_modifier = permanent_unsc_member }
+				add_to_global_variable_list = { name = io_unsc_members target = this }
+			}
+		}
+		custom_tooltip = io_vote_projection_unsc_tt
+		io_apply_to_org = { ORG = unsc CODE = 14 TIER = veto }
+		set_variable = { name = io_cooldown_unsc years = 10 }
+		post_notification = io_join_request_sent_notification
+	}
+}

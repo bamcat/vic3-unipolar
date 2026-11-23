@@ -93,6 +93,14 @@ un_vote_yay_button = {
 	visible = {
 		has_global_variable = un_motion_active
 		NOT = { has_variable = un_voted_on_motion }
+		NOT = { has_global_variable = smd_un_motion_vetoed }
+		NOT = {
+			AND = {
+				is_player = no
+				has_modifier = permanent_unsc_member
+				smd_un_motion_targets_self_or_ally = yes
+			}
+		}
 	}
  
 	possible = {
@@ -117,13 +125,7 @@ un_vote_yay_button = {
 		set_variable = un_voted_on_motion
 		if = {
 			limit = {
-				OR = {
-					c:USA ?= this
-					c:FRA ?= this
-					c:GBR ?= this
-					c:RUS ?= this
-					c:PRC ?= this
-				}
+				has_modifier = permanent_unsc_member
 			}
 			je:je_united_nations = {
 				add_progress = {
@@ -154,6 +156,14 @@ un_vote_nay_button = {
 	visible = {
 		has_global_variable = un_motion_active
 		NOT = { has_variable = un_voted_on_motion }
+		NOT = { has_global_variable = smd_un_motion_vetoed }
+		NOT = {
+			AND = {
+				is_player = no
+				has_modifier = permanent_unsc_member
+				smd_un_motion_targets_self_or_ally = yes
+			}
+		}
 	}
  
 	possible = {
@@ -177,13 +187,7 @@ un_vote_nay_button = {
 		set_variable = un_voted_on_motion
 		if = {
 			limit = {
-				OR = {
-					c:USA ?= this
-					c:FRA ?= this
-					c:GBR ?= this
-					c:RUS ?= this
-					c:PRC ?= this
-				}
+				has_modifier = permanent_unsc_member
 			}
 			je:je_united_nations = {
 				add_progress = {

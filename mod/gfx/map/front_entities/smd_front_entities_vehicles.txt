@@ -1,0 +1,86 @@
+﻿smd_main_battle_tank_diorama_entity = {
+	entity = "t55_entity"
+
+	group = "cavalry"
+
+	trigger = {
+		scope:country = { NOT = { smd_is_western = yes } }
+		OR = {
+			scope:combat_unit_type = unit_type:combat_unit_type_armored_infantry
+			scope:combat_unit_type = unit_type:combat_unit_type_robotic_combat_vehicle
+			scope:combat_unit_type = unit_type:combat_unit_type_mech_infantry
+			scope:military_formation = { any_combat_unit = { OR = { has_unit_type = unit_type:combat_unit_type_armored_infantry has_unit_type = unit_type:combat_unit_type_robotic_combat_vehicle has_unit_type = unit_type:combat_unit_type_mech_infantry } } }
+		}
+	}
+}
+
+smd_abrams_diorama_entity = {
+	entity = "smd_abrams_entity"
+
+	group = "cavalry"
+
+	trigger = {
+		scope:country = { smd_is_western = yes }
+		OR = {
+			scope:combat_unit_type = unit_type:combat_unit_type_armored_infantry
+			scope:combat_unit_type = unit_type:combat_unit_type_robotic_combat_vehicle
+			scope:combat_unit_type = unit_type:combat_unit_type_mech_infantry
+			scope:military_formation = { any_combat_unit = { OR = { has_unit_type = unit_type:combat_unit_type_armored_infantry has_unit_type = unit_type:combat_unit_type_robotic_combat_vehicle has_unit_type = unit_type:combat_unit_type_mech_infantry } } }
+		}
+	}
+}
+
+smd_btr_diorama_entity = {
+	entity = "smd_btr_entity"
+
+	group = "cavalry"
+
+	trigger = {
+		scope:country = { NOT = { smd_is_western = yes } }
+		OR = {
+			scope:combat_unit_type = unit_type:combat_unit_type_armored_personnel_carrier
+			scope:combat_unit_type = unit_type:combat_unit_type_mechanized_infantry
+			scope:military_formation = { any_combat_unit = { OR = { has_unit_type = unit_type:combat_unit_type_armored_personnel_carrier has_unit_type = unit_type:combat_unit_type_mechanized_infantry } } }
+		}
+	}
+}
+
+smd_stryker_diorama_entity = {
+	entity = "smd_stryker_entity"
+
+	group = "cavalry"
+
+	trigger = {
+		scope:country = { smd_is_western = yes }
+		OR = {
+			scope:combat_unit_type = unit_type:combat_unit_type_armored_personnel_carrier
+			scope:combat_unit_type = unit_type:combat_unit_type_mechanized_infantry
+			scope:military_formation = { any_combat_unit = { OR = { has_unit_type = unit_type:combat_unit_type_armored_personnel_carrier has_unit_type = unit_type:combat_unit_type_mechanized_infantry } } }
+		}
+	}
+}
+
+smd_humvee_diorama_entity = {
+	entity = "smd_humvee_entity"
+
+	group = "cavalry"
+
+	trigger = {
+		OR = {
+			scope:combat_unit_type = unit_type:combat_unit_type_technicals
+			scope:military_formation = { any_combat_unit = { OR = { has_unit_type = unit_type:combat_unit_type_technicals } } }
+		}
+	}
+}
+
+smd_motorized_recon_humvee_diorama_entity = {
+	entity = "smd_humvee_entity"
+
+	group = "flamethrower"
+
+	trigger = {
+		scope:military_formation = {
+			has_mobilization_option = mobilization_option:mobilization_option_motorized_recon
+		}
+	}
+}

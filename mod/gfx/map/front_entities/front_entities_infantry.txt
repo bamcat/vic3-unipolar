@@ -1,257 +1,721 @@
-﻿#diorama_entity_example = {
-#	# The asset to show
-#	entity = "military_barricade_irregular_01_entity"
-#
-#	# Group is used in diorama script to determine which entities to pick the entity from for each diorama locator
-#	group = "barricade"
-#
-#	# Trigger to check if the current entity is valid to show in the diorama
-#	# root - country of the unit
-#	# scope:country - country of the unit (same as root)
-#	# scope:culture - culture of the unit
-#	# scope:combat_unit_type - combat unit type
-#	trigger = {
-#		scope:country = {
-#			has_technology_researched = rifling
-#		}
-#		scope:culture = {
-#			has_culture_graphics = european
-#		}
-#		scope:combat_unit_type = unit_type:combat_unit_type_irregular_infantry
-#	}
-#}
-
-
-
-#################################################################
-#####					INFANTRY UNITS						#####
-#################################################################
-
-
-#################################################
-###       			European     			  ###
-#################################################
-
-REPLACE_OR_CREATE:military_infantry_european_squad_diorama_entity = {
-	entity = "military_infantry_european_squad_entity"
+﻿smd_irregular_infantry_european_diorama_entity = {
+	entity = "smd_irregular_infantry_european_entity"
 
 	group = "infantry"
-	
+
 	trigger = {
-		scope:culture = {
-			has_culture_graphics = european
-		}
+		scope:culture = { OR = { has_culture_graphics = european has_culture_graphics = french has_culture_graphics = brazilian has_culture_graphics = balkan } }
 		OR = {
-		scope:combat_unit_type = unit_type:combat_unit_type_irregular_infantry
-		scope:combat_unit_type = unit_type:combat_unit_type_foot_infantry
-		scope:combat_unit_type = unit_type:combat_unit_type_light_infantry
-		scope:combat_unit_type = unit_type:combat_unit_type_marines
-		scope:combat_unit_type = unit_type:combat_unit_type_airborne_infantry
-		scope:combat_unit_type = unit_type:combat_unit_type_spec_ops
+			scope:combat_unit_type = unit_type:combat_unit_type_irregular_infantry
+			AND = {
+				scope:country = { smd_uses_irregular_look = yes }
+				OR = {
+					scope:combat_unit_type = unit_type:combat_unit_type_foot_infantry
+					scope:combat_unit_type = unit_type:combat_unit_type_light_infantry
+					scope:combat_unit_type = unit_type:combat_unit_type_marines
+					scope:combat_unit_type = unit_type:combat_unit_type_airborne_infantry
+					scope:combat_unit_type = unit_type:combat_unit_type_spec_ops
+					scope:combat_unit_type = unit_type:combat_unit_type_space_marines
+					scope:combat_unit_type = unit_type:combat_unit_type_networked_infantry
+					scope:combat_unit_type = unit_type:combat_unit_type_cybernetic_infantry
+				}
+			}
 		}
 	}
 }
 
-REPLACE_OR_CREATE:military_infantry_european_mechanized_diorama_entity = {
-	entity = "military_infantry_european_mechanized_entity"
+smd_irregular_infantry_african_diorama_entity = {
+	entity = "smd_irregular_infantry_african_entity"
 
 	group = "infantry"
-	
+
 	trigger = {
-		scope:culture = {
-			has_culture_graphics = european
-		}
+		scope:culture = { OR = { has_culture_graphics = african } }
 		OR = {
-		scope:combat_unit_type = unit_type:combat_unit_type_space_marines
-		scope:combat_unit_type = unit_type:combat_unit_type_networked_infantry
-		scope:combat_unit_type = unit_type:combat_unit_type_cybernetic_infantry
+			scope:combat_unit_type = unit_type:combat_unit_type_irregular_infantry
+			AND = {
+				scope:country = { smd_uses_irregular_look = yes }
+				OR = {
+					scope:combat_unit_type = unit_type:combat_unit_type_foot_infantry
+					scope:combat_unit_type = unit_type:combat_unit_type_light_infantry
+					scope:combat_unit_type = unit_type:combat_unit_type_marines
+					scope:combat_unit_type = unit_type:combat_unit_type_airborne_infantry
+					scope:combat_unit_type = unit_type:combat_unit_type_spec_ops
+					scope:combat_unit_type = unit_type:combat_unit_type_space_marines
+					scope:combat_unit_type = unit_type:combat_unit_type_networked_infantry
+					scope:combat_unit_type = unit_type:combat_unit_type_cybernetic_infantry
+				}
+			}
 		}
 	}
 }
 
-
-#################################################
-###       			African     			  ###
-#################################################
-
-REPLACE_OR_CREATE:military_infantry_african_squad_diorama_entity = {
-	entity = "military_infantry_african_squad_entity"
+smd_irregular_infantry_arabic_diorama_entity = {
+	entity = "smd_irregular_infantry_arabic_entity"
 
 	group = "infantry"
-	
+
 	trigger = {
-		scope:culture = {
-			has_culture_graphics = african
-		}
+		scope:culture = { OR = { has_culture_graphics = arabic has_culture_graphics = mideast_indian } }
 		OR = {
-		scope:combat_unit_type = unit_type:combat_unit_type_irregular_infantry
-		scope:combat_unit_type = unit_type:combat_unit_type_foot_infantry
-		scope:combat_unit_type = unit_type:combat_unit_type_light_infantry
-		scope:combat_unit_type = unit_type:combat_unit_type_marines
-		scope:combat_unit_type = unit_type:combat_unit_type_airborne_infantry
-		scope:combat_unit_type = unit_type:combat_unit_type_spec_ops
+			scope:combat_unit_type = unit_type:combat_unit_type_irregular_infantry
+			AND = {
+				scope:country = { smd_uses_irregular_look = yes }
+				OR = {
+					scope:combat_unit_type = unit_type:combat_unit_type_foot_infantry
+					scope:combat_unit_type = unit_type:combat_unit_type_light_infantry
+					scope:combat_unit_type = unit_type:combat_unit_type_marines
+					scope:combat_unit_type = unit_type:combat_unit_type_airborne_infantry
+					scope:combat_unit_type = unit_type:combat_unit_type_spec_ops
+					scope:combat_unit_type = unit_type:combat_unit_type_space_marines
+					scope:combat_unit_type = unit_type:combat_unit_type_networked_infantry
+					scope:combat_unit_type = unit_type:combat_unit_type_cybernetic_infantry
+				}
+			}
 		}
 	}
 }
 
-REPLACE_OR_CREATE:military_infantry_african_mechanized_diorama_entity = {
-	entity = "military_infantry_african_mechanized_entity"
+smd_irregular_infantry_eastasian_diorama_entity = {
+	entity = "smd_irregular_infantry_eastasian_entity"
 
 	group = "infantry"
-	
+
 	trigger = {
-		scope:culture = {
-			has_culture_graphics = african
-		}
+		scope:culture = { OR = { has_culture_graphics = east_asian } }
 		OR = {
-		scope:combat_unit_type = unit_type:combat_unit_type_space_marines
-		scope:combat_unit_type = unit_type:combat_unit_type_networked_infantry
-		scope:combat_unit_type = unit_type:combat_unit_type_cybernetic_infantry
+			scope:combat_unit_type = unit_type:combat_unit_type_irregular_infantry
+			AND = {
+				scope:country = { smd_uses_irregular_look = yes }
+				OR = {
+					scope:combat_unit_type = unit_type:combat_unit_type_foot_infantry
+					scope:combat_unit_type = unit_type:combat_unit_type_light_infantry
+					scope:combat_unit_type = unit_type:combat_unit_type_marines
+					scope:combat_unit_type = unit_type:combat_unit_type_airborne_infantry
+					scope:combat_unit_type = unit_type:combat_unit_type_spec_ops
+					scope:combat_unit_type = unit_type:combat_unit_type_space_marines
+					scope:combat_unit_type = unit_type:combat_unit_type_networked_infantry
+					scope:combat_unit_type = unit_type:combat_unit_type_cybernetic_infantry
+				}
+			}
 		}
 	}
 }
 
-
-#################################################
-###       			Arabic     				  ###
-#################################################
-
-
-REPLACE_OR_CREATE:military_infantry_arabic_squad_diorama_entity = {
-	entity = "military_infantry_arabic_squad_entity"
+smd_irregular_infantry_southasian_diorama_entity = {
+	entity = "smd_irregular_infantry_southasian_entity"
 
 	group = "infantry"
-	
+
 	trigger = {
-		scope:culture = {
-			has_culture_graphics = arabic
-		}
+		scope:culture = { OR = { has_culture_graphics = south_asian } }
 		OR = {
-		scope:combat_unit_type = unit_type:combat_unit_type_irregular_infantry
-		scope:combat_unit_type = unit_type:combat_unit_type_foot_infantry
-		scope:combat_unit_type = unit_type:combat_unit_type_light_infantry
-		scope:combat_unit_type = unit_type:combat_unit_type_marines
-		scope:combat_unit_type = unit_type:combat_unit_type_airborne_infantry
-		scope:combat_unit_type = unit_type:combat_unit_type_spec_ops
+			scope:combat_unit_type = unit_type:combat_unit_type_irregular_infantry
+			AND = {
+				scope:country = { smd_uses_irregular_look = yes }
+				OR = {
+					scope:combat_unit_type = unit_type:combat_unit_type_foot_infantry
+					scope:combat_unit_type = unit_type:combat_unit_type_light_infantry
+					scope:combat_unit_type = unit_type:combat_unit_type_marines
+					scope:combat_unit_type = unit_type:combat_unit_type_airborne_infantry
+					scope:combat_unit_type = unit_type:combat_unit_type_spec_ops
+					scope:combat_unit_type = unit_type:combat_unit_type_space_marines
+					scope:combat_unit_type = unit_type:combat_unit_type_networked_infantry
+					scope:combat_unit_type = unit_type:combat_unit_type_cybernetic_infantry
+				}
+			}
 		}
 	}
 }
 
-REPLACE_OR_CREATE:military_infantry_arabic_mechanized_diorama_entity = {
-	entity = "military_infantry_arabic_mechanized_entity"
+smd_irregular_infantry_nativeamerican_diorama_entity = {
+	entity = "smd_irregular_infantry_nativeamerican_entity"
 
 	group = "infantry"
-	
+
 	trigger = {
-		scope:culture = {
-			has_culture_graphics = arabic
-		}
+		scope:culture = { OR = { has_culture_graphics = decentralised_americas has_culture_graphics = polynesian } }
 		OR = {
-		scope:combat_unit_type = unit_type:combat_unit_type_space_marines
-		scope:combat_unit_type = unit_type:combat_unit_type_networked_infantry
-		scope:combat_unit_type = unit_type:combat_unit_type_cybernetic_infantry
+			scope:combat_unit_type = unit_type:combat_unit_type_irregular_infantry
+			AND = {
+				scope:country = { smd_uses_irregular_look = yes }
+				OR = {
+					scope:combat_unit_type = unit_type:combat_unit_type_foot_infantry
+					scope:combat_unit_type = unit_type:combat_unit_type_light_infantry
+					scope:combat_unit_type = unit_type:combat_unit_type_marines
+					scope:combat_unit_type = unit_type:combat_unit_type_airborne_infantry
+					scope:combat_unit_type = unit_type:combat_unit_type_spec_ops
+					scope:combat_unit_type = unit_type:combat_unit_type_space_marines
+					scope:combat_unit_type = unit_type:combat_unit_type_networked_infantry
+					scope:combat_unit_type = unit_type:combat_unit_type_cybernetic_infantry
+				}
+			}
 		}
 	}
 }
 
-
-#################################################
-###       			East Asian     			  ###
-#################################################
-
-
-REPLACE_OR_CREATE:military_infantry_eastasian_squad_diorama_entity = {
-	entity = "military_infantry_eastasian_squad_entity"
+smd_irregular_infantry_other_diorama_entity = {
+	entity = "smd_irregular_infantry_european_entity"
 
 	group = "infantry"
-	
+
 	trigger = {
-		scope:culture = {
-			has_culture_graphics = east_asian
-		}
+		scope:culture = { NOT = { has_culture_graphics = european has_culture_graphics = french has_culture_graphics = brazilian has_culture_graphics = balkan has_culture_graphics = african has_culture_graphics = arabic has_culture_graphics = mideast_indian has_culture_graphics = east_asian has_culture_graphics = south_asian has_culture_graphics = decentralised_americas has_culture_graphics = polynesian } }
 		OR = {
-		scope:combat_unit_type = unit_type:combat_unit_type_irregular_infantry
-		scope:combat_unit_type = unit_type:combat_unit_type_foot_infantry
-		scope:combat_unit_type = unit_type:combat_unit_type_light_infantry
-		scope:combat_unit_type = unit_type:combat_unit_type_marines
-		scope:combat_unit_type = unit_type:combat_unit_type_airborne_infantry
-		scope:combat_unit_type = unit_type:combat_unit_type_spec_ops
+			scope:combat_unit_type = unit_type:combat_unit_type_irregular_infantry
+			AND = {
+				scope:country = { smd_uses_irregular_look = yes }
+				OR = {
+					scope:combat_unit_type = unit_type:combat_unit_type_foot_infantry
+					scope:combat_unit_type = unit_type:combat_unit_type_light_infantry
+					scope:combat_unit_type = unit_type:combat_unit_type_marines
+					scope:combat_unit_type = unit_type:combat_unit_type_airborne_infantry
+					scope:combat_unit_type = unit_type:combat_unit_type_spec_ops
+					scope:combat_unit_type = unit_type:combat_unit_type_space_marines
+					scope:combat_unit_type = unit_type:combat_unit_type_networked_infantry
+					scope:combat_unit_type = unit_type:combat_unit_type_cybernetic_infantry
+				}
+			}
 		}
 	}
 }
 
-REPLACE_OR_CREATE:military_infantry_eastasian_mechanized_diorama_entity = {
-	entity = "military_infantry_eastasian_mechanized_entity"
+smd_modern_infantry_usa_ak_diorama_entity = {
+	entity = "smd_modern_infantry_ak_usa_entity"
 
 	group = "infantry"
-	
+
 	trigger = {
-		scope:culture = {
-			has_culture_graphics = east_asian
-		}
+		scope:country = { c:USA ?= this }
+		scope:country = { NOT = { smd_uses_irregular_look = yes } }
+		scope:country = { NOT = { smd_is_western = yes } }
 		OR = {
-		scope:combat_unit_type = unit_type:combat_unit_type_space_marines
-		scope:combat_unit_type = unit_type:combat_unit_type_networked_infantry
-		scope:combat_unit_type = unit_type:combat_unit_type_cybernetic_infantry
+			scope:combat_unit_type = unit_type:combat_unit_type_foot_infantry
+			scope:combat_unit_type = unit_type:combat_unit_type_light_infantry
+			scope:combat_unit_type = unit_type:combat_unit_type_marines
+			scope:combat_unit_type = unit_type:combat_unit_type_airborne_infantry
+			scope:combat_unit_type = unit_type:combat_unit_type_spec_ops
+			scope:combat_unit_type = unit_type:combat_unit_type_space_marines
+			scope:combat_unit_type = unit_type:combat_unit_type_networked_infantry
+			scope:combat_unit_type = unit_type:combat_unit_type_cybernetic_infantry
 		}
 	}
 }
 
-
-#################################################
-###       			South Asian     		  ###
-#################################################
-
-REPLACE_OR_CREATE:military_infantry_southasian_squad_diorama_entity = {
-	entity = "military_infantry_southasian_squad_entity"
+smd_modern_infantry_usa_m16_diorama_entity = {
+	entity = "smd_modern_infantry_m16_usa_entity"
 
 	group = "infantry"
-	
+
 	trigger = {
-		scope:culture = {
-			has_culture_graphics = south_asian
-		}
+		scope:country = { c:USA ?= this }
+		scope:country = { NOT = { smd_uses_irregular_look = yes } }
+		scope:country = { smd_is_western = yes }
 		OR = {
-		scope:combat_unit_type = unit_type:combat_unit_type_irregular_infantry
-		scope:combat_unit_type = unit_type:combat_unit_type_foot_infantry
-		scope:combat_unit_type = unit_type:combat_unit_type_light_infantry
-		scope:combat_unit_type = unit_type:combat_unit_type_marines
-		scope:combat_unit_type = unit_type:combat_unit_type_airborne_infantry
-		scope:combat_unit_type = unit_type:combat_unit_type_spec_ops
+			scope:combat_unit_type = unit_type:combat_unit_type_foot_infantry
+			scope:combat_unit_type = unit_type:combat_unit_type_light_infantry
+			scope:combat_unit_type = unit_type:combat_unit_type_marines
+			scope:combat_unit_type = unit_type:combat_unit_type_airborne_infantry
+			scope:combat_unit_type = unit_type:combat_unit_type_spec_ops
+			scope:combat_unit_type = unit_type:combat_unit_type_space_marines
+			scope:combat_unit_type = unit_type:combat_unit_type_networked_infantry
+			scope:combat_unit_type = unit_type:combat_unit_type_cybernetic_infantry
 		}
 	}
 }
 
-REPLACE_OR_CREATE:military_infantry_southasian_mechanized_diorama_entity = {
-	entity = "military_infantry_southasian_mechanized_entity"
+smd_modern_infantry_eng_ak_diorama_entity = {
+	entity = "smd_modern_infantry_ak_eng_entity"
 
 	group = "infantry"
-	
+
 	trigger = {
-		scope:culture = {
-			has_culture_graphics = south_asian
-		}
+		scope:country = { c:GBR ?= this }
+		scope:country = { NOT = { smd_uses_irregular_look = yes } }
+		scope:country = { NOT = { smd_is_western = yes } }
 		OR = {
-		scope:combat_unit_type = unit_type:combat_unit_type_space_marines
-		scope:combat_unit_type = unit_type:combat_unit_type_networked_infantry
-		scope:combat_unit_type = unit_type:combat_unit_type_cybernetic_infantry
+			scope:combat_unit_type = unit_type:combat_unit_type_foot_infantry
+			scope:combat_unit_type = unit_type:combat_unit_type_light_infantry
+			scope:combat_unit_type = unit_type:combat_unit_type_marines
+			scope:combat_unit_type = unit_type:combat_unit_type_airborne_infantry
+			scope:combat_unit_type = unit_type:combat_unit_type_spec_ops
+			scope:combat_unit_type = unit_type:combat_unit_type_space_marines
+			scope:combat_unit_type = unit_type:combat_unit_type_networked_infantry
+			scope:combat_unit_type = unit_type:combat_unit_type_cybernetic_infantry
 		}
 	}
 }
 
-#################################################
-###       		 Native American     		  ###
-#################################################
-
-REPLACE_OR_CREATE:military_infantry_nativeamerican_irregular_diorama_entity = {
-	entity = "military_infantry_nativeamerican_irregular_entity"
+smd_modern_infantry_eng_m16_diorama_entity = {
+	entity = "smd_modern_infantry_m16_eng_entity"
 
 	group = "infantry"
-	
+
 	trigger = {
-		scope:culture = {
-			has_culture_graphics = decentralised_americas
+		scope:country = { c:GBR ?= this }
+		scope:country = { NOT = { smd_uses_irregular_look = yes } }
+		scope:country = { smd_is_western = yes }
+		OR = {
+			scope:combat_unit_type = unit_type:combat_unit_type_foot_infantry
+			scope:combat_unit_type = unit_type:combat_unit_type_light_infantry
+			scope:combat_unit_type = unit_type:combat_unit_type_marines
+			scope:combat_unit_type = unit_type:combat_unit_type_airborne_infantry
+			scope:combat_unit_type = unit_type:combat_unit_type_spec_ops
+			scope:combat_unit_type = unit_type:combat_unit_type_space_marines
+			scope:combat_unit_type = unit_type:combat_unit_type_networked_infantry
+			scope:combat_unit_type = unit_type:combat_unit_type_cybernetic_infantry
 		}
-		scope:combat_unit_type = unit_type:combat_unit_type_irregular_infantry
+	}
+}
+
+smd_modern_infantry_fra_ak_diorama_entity = {
+	entity = "smd_modern_infantry_ak_fra_entity"
+
+	group = "infantry"
+
+	trigger = {
+		scope:country = { c:FRA ?= this }
+		scope:country = { NOT = { smd_uses_irregular_look = yes } }
+		scope:country = { NOT = { smd_is_western = yes } }
+		OR = {
+			scope:combat_unit_type = unit_type:combat_unit_type_foot_infantry
+			scope:combat_unit_type = unit_type:combat_unit_type_light_infantry
+			scope:combat_unit_type = unit_type:combat_unit_type_marines
+			scope:combat_unit_type = unit_type:combat_unit_type_airborne_infantry
+			scope:combat_unit_type = unit_type:combat_unit_type_spec_ops
+			scope:combat_unit_type = unit_type:combat_unit_type_space_marines
+			scope:combat_unit_type = unit_type:combat_unit_type_networked_infantry
+			scope:combat_unit_type = unit_type:combat_unit_type_cybernetic_infantry
+		}
+	}
+}
+
+smd_modern_infantry_fra_m16_diorama_entity = {
+	entity = "smd_modern_infantry_m16_fra_entity"
+
+	group = "infantry"
+
+	trigger = {
+		scope:country = { c:FRA ?= this }
+		scope:country = { NOT = { smd_uses_irregular_look = yes } }
+		scope:country = { smd_is_western = yes }
+		OR = {
+			scope:combat_unit_type = unit_type:combat_unit_type_foot_infantry
+			scope:combat_unit_type = unit_type:combat_unit_type_light_infantry
+			scope:combat_unit_type = unit_type:combat_unit_type_marines
+			scope:combat_unit_type = unit_type:combat_unit_type_airborne_infantry
+			scope:combat_unit_type = unit_type:combat_unit_type_spec_ops
+			scope:combat_unit_type = unit_type:combat_unit_type_space_marines
+			scope:combat_unit_type = unit_type:combat_unit_type_networked_infantry
+			scope:combat_unit_type = unit_type:combat_unit_type_cybernetic_infantry
+		}
+	}
+}
+
+smd_modern_infantry_ger_ak_diorama_entity = {
+	entity = "smd_modern_infantry_ak_ger_entity"
+
+	group = "infantry"
+
+	trigger = {
+		scope:country = { c:GER ?= this }
+		scope:country = { NOT = { smd_uses_irregular_look = yes } }
+		scope:country = { NOT = { smd_is_western = yes } }
+		OR = {
+			scope:combat_unit_type = unit_type:combat_unit_type_foot_infantry
+			scope:combat_unit_type = unit_type:combat_unit_type_light_infantry
+			scope:combat_unit_type = unit_type:combat_unit_type_marines
+			scope:combat_unit_type = unit_type:combat_unit_type_airborne_infantry
+			scope:combat_unit_type = unit_type:combat_unit_type_spec_ops
+			scope:combat_unit_type = unit_type:combat_unit_type_space_marines
+			scope:combat_unit_type = unit_type:combat_unit_type_networked_infantry
+			scope:combat_unit_type = unit_type:combat_unit_type_cybernetic_infantry
+		}
+	}
+}
+
+smd_modern_infantry_ger_m16_diorama_entity = {
+	entity = "smd_modern_infantry_m16_ger_entity"
+
+	group = "infantry"
+
+	trigger = {
+		scope:country = { c:GER ?= this }
+		scope:country = { NOT = { smd_uses_irregular_look = yes } }
+		scope:country = { smd_is_western = yes }
+		OR = {
+			scope:combat_unit_type = unit_type:combat_unit_type_foot_infantry
+			scope:combat_unit_type = unit_type:combat_unit_type_light_infantry
+			scope:combat_unit_type = unit_type:combat_unit_type_marines
+			scope:combat_unit_type = unit_type:combat_unit_type_airborne_infantry
+			scope:combat_unit_type = unit_type:combat_unit_type_spec_ops
+			scope:combat_unit_type = unit_type:combat_unit_type_space_marines
+			scope:combat_unit_type = unit_type:combat_unit_type_networked_infantry
+			scope:combat_unit_type = unit_type:combat_unit_type_cybernetic_infantry
+		}
+	}
+}
+
+smd_modern_infantry_jap_ak_diorama_entity = {
+	entity = "smd_modern_infantry_ak_jap_entity"
+
+	group = "infantry"
+
+	trigger = {
+		scope:country = { c:JPN ?= this }
+		scope:country = { NOT = { smd_uses_irregular_look = yes } }
+		scope:country = { NOT = { smd_is_western = yes } }
+		OR = {
+			scope:combat_unit_type = unit_type:combat_unit_type_foot_infantry
+			scope:combat_unit_type = unit_type:combat_unit_type_light_infantry
+			scope:combat_unit_type = unit_type:combat_unit_type_marines
+			scope:combat_unit_type = unit_type:combat_unit_type_airborne_infantry
+			scope:combat_unit_type = unit_type:combat_unit_type_spec_ops
+			scope:combat_unit_type = unit_type:combat_unit_type_space_marines
+			scope:combat_unit_type = unit_type:combat_unit_type_networked_infantry
+			scope:combat_unit_type = unit_type:combat_unit_type_cybernetic_infantry
+		}
+	}
+}
+
+smd_modern_infantry_jap_m16_diorama_entity = {
+	entity = "smd_modern_infantry_m16_jap_entity"
+
+	group = "infantry"
+
+	trigger = {
+		scope:country = { c:JPN ?= this }
+		scope:country = { NOT = { smd_uses_irregular_look = yes } }
+		scope:country = { smd_is_western = yes }
+		OR = {
+			scope:combat_unit_type = unit_type:combat_unit_type_foot_infantry
+			scope:combat_unit_type = unit_type:combat_unit_type_light_infantry
+			scope:combat_unit_type = unit_type:combat_unit_type_marines
+			scope:combat_unit_type = unit_type:combat_unit_type_airborne_infantry
+			scope:combat_unit_type = unit_type:combat_unit_type_spec_ops
+			scope:combat_unit_type = unit_type:combat_unit_type_space_marines
+			scope:combat_unit_type = unit_type:combat_unit_type_networked_infantry
+			scope:combat_unit_type = unit_type:combat_unit_type_cybernetic_infantry
+		}
+	}
+}
+
+smd_modern_infantry_rus_ak_diorama_entity = {
+	entity = "smd_modern_infantry_ak_rus_entity"
+
+	group = "infantry"
+
+	trigger = {
+		scope:country = { c:RUS ?= this }
+		scope:country = { NOT = { smd_uses_irregular_look = yes } }
+		scope:country = { NOT = { smd_is_western = yes } }
+		OR = {
+			scope:combat_unit_type = unit_type:combat_unit_type_foot_infantry
+			scope:combat_unit_type = unit_type:combat_unit_type_light_infantry
+			scope:combat_unit_type = unit_type:combat_unit_type_marines
+			scope:combat_unit_type = unit_type:combat_unit_type_airborne_infantry
+			scope:combat_unit_type = unit_type:combat_unit_type_spec_ops
+			scope:combat_unit_type = unit_type:combat_unit_type_space_marines
+			scope:combat_unit_type = unit_type:combat_unit_type_networked_infantry
+			scope:combat_unit_type = unit_type:combat_unit_type_cybernetic_infantry
+		}
+	}
+}
+
+smd_modern_infantry_rus_m16_diorama_entity = {
+	entity = "smd_modern_infantry_m16_rus_entity"
+
+	group = "infantry"
+
+	trigger = {
+		scope:country = { c:RUS ?= this }
+		scope:country = { NOT = { smd_uses_irregular_look = yes } }
+		scope:country = { smd_is_western = yes }
+		OR = {
+			scope:combat_unit_type = unit_type:combat_unit_type_foot_infantry
+			scope:combat_unit_type = unit_type:combat_unit_type_light_infantry
+			scope:combat_unit_type = unit_type:combat_unit_type_marines
+			scope:combat_unit_type = unit_type:combat_unit_type_airborne_infantry
+			scope:combat_unit_type = unit_type:combat_unit_type_spec_ops
+			scope:combat_unit_type = unit_type:combat_unit_type_space_marines
+			scope:combat_unit_type = unit_type:combat_unit_type_networked_infantry
+			scope:combat_unit_type = unit_type:combat_unit_type_cybernetic_infantry
+		}
+	}
+}
+
+smd_modern_infantry_eeu_ak_diorama_entity = {
+	entity = "smd_modern_infantry_ak_eeu_entity"
+
+	group = "infantry"
+
+	trigger = {
+		scope:country = { NOT = { smd_has_country_uniform = yes } }
+		scope:country = { NOT = { smd_uses_irregular_look = yes } }
+		scope:culture = { OR = { has_culture_graphics = european has_culture_graphics = french has_culture_graphics = brazilian has_culture_graphics = balkan } }
+		scope:country = { NOT = { smd_is_western = yes } }
+		OR = {
+			scope:combat_unit_type = unit_type:combat_unit_type_foot_infantry
+			scope:combat_unit_type = unit_type:combat_unit_type_light_infantry
+			scope:combat_unit_type = unit_type:combat_unit_type_marines
+			scope:combat_unit_type = unit_type:combat_unit_type_airborne_infantry
+			scope:combat_unit_type = unit_type:combat_unit_type_spec_ops
+			scope:combat_unit_type = unit_type:combat_unit_type_space_marines
+			scope:combat_unit_type = unit_type:combat_unit_type_networked_infantry
+			scope:combat_unit_type = unit_type:combat_unit_type_cybernetic_infantry
+		}
+	}
+}
+
+smd_modern_infantry_european_m16_diorama_entity = {
+	entity = "smd_modern_infantry_m16_entity"
+
+	group = "infantry"
+
+	trigger = {
+		scope:country = { NOT = { smd_has_country_uniform = yes } }
+		scope:country = { NOT = { smd_uses_irregular_look = yes } }
+		scope:culture = { OR = { has_culture_graphics = european has_culture_graphics = french has_culture_graphics = brazilian has_culture_graphics = balkan } }
+		scope:country = { smd_is_western = yes }
+		OR = {
+			scope:combat_unit_type = unit_type:combat_unit_type_foot_infantry
+			scope:combat_unit_type = unit_type:combat_unit_type_light_infantry
+			scope:combat_unit_type = unit_type:combat_unit_type_marines
+			scope:combat_unit_type = unit_type:combat_unit_type_airborne_infantry
+			scope:combat_unit_type = unit_type:combat_unit_type_spec_ops
+			scope:combat_unit_type = unit_type:combat_unit_type_space_marines
+			scope:combat_unit_type = unit_type:combat_unit_type_networked_infantry
+			scope:combat_unit_type = unit_type:combat_unit_type_cybernetic_infantry
+		}
+	}
+}
+
+smd_modern_infantry_african_ak_diorama_entity = {
+	entity = "smd_modern_infantry_ak_african_entity"
+
+	group = "infantry"
+
+	trigger = {
+		scope:country = { NOT = { smd_has_country_uniform = yes } }
+		scope:country = { NOT = { smd_uses_irregular_look = yes } }
+		scope:culture = { OR = { has_culture_graphics = african } }
+		scope:country = { NOT = { smd_is_western = yes } }
+		OR = {
+			scope:combat_unit_type = unit_type:combat_unit_type_foot_infantry
+			scope:combat_unit_type = unit_type:combat_unit_type_light_infantry
+			scope:combat_unit_type = unit_type:combat_unit_type_marines
+			scope:combat_unit_type = unit_type:combat_unit_type_airborne_infantry
+			scope:combat_unit_type = unit_type:combat_unit_type_spec_ops
+			scope:combat_unit_type = unit_type:combat_unit_type_space_marines
+			scope:combat_unit_type = unit_type:combat_unit_type_networked_infantry
+			scope:combat_unit_type = unit_type:combat_unit_type_cybernetic_infantry
+		}
+	}
+}
+
+smd_modern_infantry_eastasian_ak_diorama_entity = {
+	entity = "smd_modern_infantry_ak_jap_entity"
+
+	group = "infantry"
+
+	trigger = {
+		scope:country = { NOT = { smd_has_country_uniform = yes } }
+		scope:country = { NOT = { smd_uses_irregular_look = yes } }
+		scope:culture = { OR = { has_culture_graphics = east_asian } }
+		scope:country = { NOT = { smd_is_western = yes } }
+		OR = {
+			scope:combat_unit_type = unit_type:combat_unit_type_foot_infantry
+			scope:combat_unit_type = unit_type:combat_unit_type_light_infantry
+			scope:combat_unit_type = unit_type:combat_unit_type_marines
+			scope:combat_unit_type = unit_type:combat_unit_type_airborne_infantry
+			scope:combat_unit_type = unit_type:combat_unit_type_spec_ops
+			scope:combat_unit_type = unit_type:combat_unit_type_space_marines
+			scope:combat_unit_type = unit_type:combat_unit_type_networked_infantry
+			scope:combat_unit_type = unit_type:combat_unit_type_cybernetic_infantry
+		}
+	}
+}
+
+smd_modern_infantry_middleeast_ak_diorama_entity = {
+	entity = "smd_modern_infantry_ak_me_entity"
+
+	group = "infantry"
+
+	trigger = {
+		scope:country = { NOT = { smd_has_country_uniform = yes } }
+		scope:country = { NOT = { smd_uses_irregular_look = yes } }
+		scope:culture = { OR = { has_culture_graphics = arabic has_culture_graphics = mideast_indian } }
+		scope:country = { NOT = { smd_is_western = yes } }
+		OR = {
+			scope:combat_unit_type = unit_type:combat_unit_type_foot_infantry
+			scope:combat_unit_type = unit_type:combat_unit_type_light_infantry
+			scope:combat_unit_type = unit_type:combat_unit_type_marines
+			scope:combat_unit_type = unit_type:combat_unit_type_airborne_infantry
+			scope:combat_unit_type = unit_type:combat_unit_type_spec_ops
+			scope:combat_unit_type = unit_type:combat_unit_type_space_marines
+			scope:combat_unit_type = unit_type:combat_unit_type_networked_infantry
+			scope:combat_unit_type = unit_type:combat_unit_type_cybernetic_infantry
+		}
+	}
+}
+
+smd_modern_infantry_southasia_ak_diorama_entity = {
+	entity = "smd_modern_infantry_ak_sa_entity"
+
+	group = "infantry"
+
+	trigger = {
+		scope:country = { NOT = { smd_has_country_uniform = yes } }
+		scope:country = { NOT = { smd_uses_irregular_look = yes } }
+		scope:culture = { OR = { has_culture_graphics = south_asian } }
+		scope:country = { NOT = { smd_is_western = yes } }
+		OR = {
+			scope:combat_unit_type = unit_type:combat_unit_type_foot_infantry
+			scope:combat_unit_type = unit_type:combat_unit_type_light_infantry
+			scope:combat_unit_type = unit_type:combat_unit_type_marines
+			scope:combat_unit_type = unit_type:combat_unit_type_airborne_infantry
+			scope:combat_unit_type = unit_type:combat_unit_type_spec_ops
+			scope:combat_unit_type = unit_type:combat_unit_type_space_marines
+			scope:combat_unit_type = unit_type:combat_unit_type_networked_infantry
+			scope:combat_unit_type = unit_type:combat_unit_type_cybernetic_infantry
+		}
+	}
+}
+
+smd_modern_infantry_other_ak_diorama_entity = {
+	entity = "smd_modern_infantry_ak_entity"
+
+	group = "infantry"
+
+	trigger = {
+		scope:country = { NOT = { smd_has_country_uniform = yes } }
+		scope:country = { NOT = { smd_uses_irregular_look = yes } }
+		scope:culture = { NOT = { has_culture_graphics = european has_culture_graphics = french has_culture_graphics = brazilian has_culture_graphics = balkan has_culture_graphics = arabic has_culture_graphics = mideast_indian has_culture_graphics = african has_culture_graphics = east_asian has_culture_graphics = south_asian } }
+		scope:country = { NOT = { smd_is_western = yes } }
+		OR = {
+			scope:combat_unit_type = unit_type:combat_unit_type_foot_infantry
+			scope:combat_unit_type = unit_type:combat_unit_type_light_infantry
+			scope:combat_unit_type = unit_type:combat_unit_type_marines
+			scope:combat_unit_type = unit_type:combat_unit_type_airborne_infantry
+			scope:combat_unit_type = unit_type:combat_unit_type_spec_ops
+			scope:combat_unit_type = unit_type:combat_unit_type_space_marines
+			scope:combat_unit_type = unit_type:combat_unit_type_networked_infantry
+			scope:combat_unit_type = unit_type:combat_unit_type_cybernetic_infantry
+		}
+	}
+}
+
+smd_modern_infantry_african_m16_diorama_entity = {
+	entity = "smd_modern_infantry_m16_african_entity"
+
+	group = "infantry"
+
+	trigger = {
+		scope:country = { NOT = { smd_has_country_uniform = yes } }
+		scope:country = { NOT = { smd_uses_irregular_look = yes } }
+		scope:culture = { OR = { has_culture_graphics = african } }
+		scope:country = { smd_is_western = yes }
+		OR = {
+			scope:combat_unit_type = unit_type:combat_unit_type_foot_infantry
+			scope:combat_unit_type = unit_type:combat_unit_type_light_infantry
+			scope:combat_unit_type = unit_type:combat_unit_type_marines
+			scope:combat_unit_type = unit_type:combat_unit_type_airborne_infantry
+			scope:combat_unit_type = unit_type:combat_unit_type_spec_ops
+			scope:combat_unit_type = unit_type:combat_unit_type_space_marines
+			scope:combat_unit_type = unit_type:combat_unit_type_networked_infantry
+			scope:combat_unit_type = unit_type:combat_unit_type_cybernetic_infantry
+		}
+	}
+}
+
+smd_modern_infantry_eastasian_m16_diorama_entity = {
+	entity = "smd_modern_infantry_m16_jap_entity"
+
+	group = "infantry"
+
+	trigger = {
+		scope:country = { NOT = { smd_has_country_uniform = yes } }
+		scope:country = { NOT = { smd_uses_irregular_look = yes } }
+		scope:culture = { OR = { has_culture_graphics = east_asian } }
+		scope:country = { smd_is_western = yes }
+		OR = {
+			scope:combat_unit_type = unit_type:combat_unit_type_foot_infantry
+			scope:combat_unit_type = unit_type:combat_unit_type_light_infantry
+			scope:combat_unit_type = unit_type:combat_unit_type_marines
+			scope:combat_unit_type = unit_type:combat_unit_type_airborne_infantry
+			scope:combat_unit_type = unit_type:combat_unit_type_spec_ops
+			scope:combat_unit_type = unit_type:combat_unit_type_space_marines
+			scope:combat_unit_type = unit_type:combat_unit_type_networked_infantry
+			scope:combat_unit_type = unit_type:combat_unit_type_cybernetic_infantry
+		}
+	}
+}
+
+smd_modern_infantry_middleeast_m16_diorama_entity = {
+	entity = "smd_modern_infantry_m16_me_entity"
+
+	group = "infantry"
+
+	trigger = {
+		scope:country = { NOT = { smd_has_country_uniform = yes } }
+		scope:country = { NOT = { smd_uses_irregular_look = yes } }
+		scope:culture = { OR = { has_culture_graphics = arabic has_culture_graphics = mideast_indian } }
+		scope:country = { smd_is_western = yes }
+		OR = {
+			scope:combat_unit_type = unit_type:combat_unit_type_foot_infantry
+			scope:combat_unit_type = unit_type:combat_unit_type_light_infantry
+			scope:combat_unit_type = unit_type:combat_unit_type_marines
+			scope:combat_unit_type = unit_type:combat_unit_type_airborne_infantry
+			scope:combat_unit_type = unit_type:combat_unit_type_spec_ops
+			scope:combat_unit_type = unit_type:combat_unit_type_space_marines
+			scope:combat_unit_type = unit_type:combat_unit_type_networked_infantry
+			scope:combat_unit_type = unit_type:combat_unit_type_cybernetic_infantry
+		}
+	}
+}
+
+smd_modern_infantry_southasia_m16_diorama_entity = {
+	entity = "smd_modern_infantry_m16_sa_entity"
+
+	group = "infantry"
+
+	trigger = {
+		scope:country = { NOT = { smd_has_country_uniform = yes } }
+		scope:country = { NOT = { smd_uses_irregular_look = yes } }
+		scope:culture = { OR = { has_culture_graphics = south_asian } }
+		scope:country = { smd_is_western = yes }
+		OR = {
+			scope:combat_unit_type = unit_type:combat_unit_type_foot_infantry
+			scope:combat_unit_type = unit_type:combat_unit_type_light_infantry
+			scope:combat_unit_type = unit_type:combat_unit_type_marines
+			scope:combat_unit_type = unit_type:combat_unit_type_airborne_infantry
+			scope:combat_unit_type = unit_type:combat_unit_type_spec_ops
+			scope:combat_unit_type = unit_type:combat_unit_type_space_marines
+			scope:combat_unit_type = unit_type:combat_unit_type_networked_infantry
+			scope:combat_unit_type = unit_type:combat_unit_type_cybernetic_infantry
+		}
+	}
+}
+
+smd_modern_infantry_other_m16_diorama_entity = {
+	entity = "smd_modern_infantry_m16_entity"
+
+	group = "infantry"
+
+	trigger = {
+		scope:country = { NOT = { smd_has_country_uniform = yes } }
+		scope:country = { NOT = { smd_uses_irregular_look = yes } }
+		scope:culture = { NOT = { has_culture_graphics = european has_culture_graphics = french has_culture_graphics = brazilian has_culture_graphics = balkan has_culture_graphics = arabic has_culture_graphics = mideast_indian has_culture_graphics = african has_culture_graphics = east_asian has_culture_graphics = south_asian } }
+		scope:country = { smd_is_western = yes }
+		OR = {
+			scope:combat_unit_type = unit_type:combat_unit_type_foot_infantry
+			scope:combat_unit_type = unit_type:combat_unit_type_light_infantry
+			scope:combat_unit_type = unit_type:combat_unit_type_marines
+			scope:combat_unit_type = unit_type:combat_unit_type_airborne_infantry
+			scope:combat_unit_type = unit_type:combat_unit_type_spec_ops
+			scope:combat_unit_type = unit_type:combat_unit_type_space_marines
+			scope:combat_unit_type = unit_type:combat_unit_type_networked_infantry
+			scope:combat_unit_type = unit_type:combat_unit_type_cybernetic_infantry
+		}
 	}
 }

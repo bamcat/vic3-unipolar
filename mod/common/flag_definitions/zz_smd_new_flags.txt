@@ -168,3 +168,30 @@ REPLACE_OR_CREATE:CAS = {
 		}
 	}
 }
+
+REPLACE_OR_CREATE:EAF = {
+	flag_definition = {
+		coa = smd_flag_eaf
+		subject_canton = smd_flag_eaf
+		priority = 1
+		allow_overlord_canton = yes
+	}
+	flag_definition = {
+		coa = smd_flag_eaf_fasc
+		subject_canton = smd_flag_eaf_fasc
+		priority = 300
+		allow_overlord_canton = yes
+		trigger = {
+			coa_def_fascist_flag_trigger = yes
+		}
+	}
+	flag_definition = {
+		coa = smd_flag_eaf_com
+		subject_canton = smd_flag_eaf_com
+		priority = 300
+		allow_overlord_canton = yes
+		trigger = {
+			coa_def_communist_flag_trigger = yes
+		}
+	}
+}
